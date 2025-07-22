@@ -3,5 +3,6 @@ An implementation of the proposed attack analysis framework is released, includi
 
 Alongside the tool, we provide a dataset of real-world smart contract exploits and the corresponding contract code to support replication and future research.
 
-The data folder contains the source code and transaction traces related to attack incidents.
-The code folder contains the core modules of the analysis tool.
+The `data` folder contains the source code and transaction traces related to attack incidents.
+
+The `code` folder contains the core modules of the analysis tool.
