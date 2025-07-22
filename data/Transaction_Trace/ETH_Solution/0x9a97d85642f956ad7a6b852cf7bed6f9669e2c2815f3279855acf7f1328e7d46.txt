@@ -1,0 +1,201 @@
+[1][CALL] from=0x001b91, to=0x253dd8, 0x1f158c06() -> None
+  [2][STATICCALL] from=0x253dd8, to=FiatTokenProxy, balanceOf(account(address): 0x6b8D6E) -> 1000000000000
+    [3][DELEGATECALL] from=FiatTokenProxy, to=FiatTokenV2_1, balanceOf(account(address): 0x6b8D6E) -> 1000000000000
+  [2][STATICCALL] from=0x253dd8, to=FiatTokenProxy, allowance(owner(address): 0x6b8D6E, spender(address): 0x3335A8) -> 115792089237316195423570985008687907853269984665640564039457584007913129639935
+    [3][DELEGATECALL] from=FiatTokenProxy, to=FiatTokenV2_1, allowance(owner(address): 0x6b8D6E, spender(address): 0x3335A8) -> 115792089237316195423570985008687907853269984665640564039457584007913129639935
+  [2][CALL] from=0x253dd8, to=RubicProxy, routerCallNative(_params(tuple): {'srcInputToken': '0x000000000000000000000..., _data(bytes): b'#\xb8r\xdd\x00\x00\x00\x00\x00\x00\x00\x...) -> None
+    [3][CALL] from=RubicProxy, to=FiatTokenProxy, transferFrom(from(address): 0x6b8D6E, to(address): 0x253dD8, value(uint256): 1000000000000) -> True
+      [4][DELEGATECALL] from=FiatTokenProxy, to=FiatTokenV2_1, transferFrom(from(address): 0x6b8D6E, to(address): 0x253dD8, value(uint256): 1000000000000) -> True
+  [2][STATICCALL] from=0x253dd8, to=FiatTokenProxy, balanceOf(account(address): 0x036B58) -> 23848557317
+    [3][DELEGATECALL] from=FiatTokenProxy, to=FiatTokenV2_1, balanceOf(account(address): 0x036B58) -> 23848557317
+  [2][STATICCALL] from=0x253dd8, to=FiatTokenProxy, allowance(owner(address): 0x036B58, spender(address): 0x3335A8) -> 115792089237316195423570985008687907853269984665640564039457584007913129639935
+    [3][DELEGATECALL] from=FiatTokenProxy, to=FiatTokenV2_1, allowance(owner(address): 0x036B58, spender(address): 0x3335A8) -> 115792089237316195423570985008687907853269984665640564039457584007913129639935
+  [2][CALL] from=0x253dd8, to=RubicProxy, routerCallNative(_params(tuple): {'srcInputToken': '0x000000000000000000000..., _data(bytes): b'#\xb8r\xdd\x00\x00\x00\x00\x00\x00\x00\x...) -> None
+    [3][CALL] from=RubicProxy, to=FiatTokenProxy, transferFrom(from(address): 0x036B58, to(address): 0x253dD8, value(uint256): 23848557317) -> True
+      [4][DELEGATECALL] from=FiatTokenProxy, to=FiatTokenV2_1, transferFrom(from(address): 0x036B58, to(address): 0x253dD8, value(uint256): 23848557317) -> True
+  [2][STATICCALL] from=0x253dd8, to=FiatTokenProxy, balanceOf(account(address): 0xED9c18) -> 22488170373
+    [3][DELEGATECALL] from=FiatTokenProxy, to=FiatTokenV2_1, balanceOf(account(address): 0xED9c18) -> 22488170373
+  [2][STATICCALL] from=0x253dd8, to=FiatTokenProxy, allowance(owner(address): 0xED9c18, spender(address): 0x3335A8) -> 115792089237316195423570985008687907853269984665640564039457584007898068639935
+    [3][DELEGATECALL] from=FiatTokenProxy, to=FiatTokenV2_1, allowance(owner(address): 0xED9c18, spender(address): 0x3335A8) -> 115792089237316195423570985008687907853269984665640564039457584007898068639935
+  [2][CALL] from=0x253dd8, to=RubicProxy, routerCallNative(_params(tuple): {'srcInputToken': '0x000000000000000000000..., _data(bytes): b'#\xb8r\xdd\x00\x00\x00\x00\x00\x00\x00\x...) -> None
+    [3][CALL] from=RubicProxy, to=FiatTokenProxy, transferFrom(from(address): 0xED9c18, to(address): 0x253dD8, value(uint256): 22488170373) -> True
+      [4][DELEGATECALL] from=FiatTokenProxy, to=FiatTokenV2_1, transferFrom(from(address): 0xED9c18, to(address): 0x253dD8, value(uint256): 22488170373) -> True
+  [2][STATICCALL] from=0x253dd8, to=FiatTokenProxy, balanceOf(account(address): 0xff266f) -> 10479679167
+    [3][DELEGATECALL] from=FiatTokenProxy, to=FiatTokenV2_1, balanceOf(account(address): 0xff266f) -> 10479679167
+  [2][STATICCALL] from=0x253dd8, to=FiatTokenProxy, allowance(owner(address): 0xff266f, spender(address): 0x3335A8) -> 115792089237316195423570985008687907853269984665640564039457584007912793604682
+    [3][DELEGATECALL] from=FiatTokenProxy, to=FiatTokenV2_1, allowance(owner(address): 0xff266f, spender(address): 0x3335A8) -> 115792089237316195423570985008687907853269984665640564039457584007912793604682
+  [2][CALL] from=0x253dd8, to=RubicProxy, routerCallNative(_params(tuple): {'srcInputToken': '0x000000000000000000000..., _data(bytes): b'#\xb8r\xdd\x00\x00\x00\x00\x00\x00\x00\x...) -> None
+    [3][CALL] from=RubicProxy, to=FiatTokenProxy, transferFrom(from(address): 0xff266f, to(address): 0x253dD8, value(uint256): 10479679167) -> True
+      [4][DELEGATECALL] from=FiatTokenProxy, to=FiatTokenV2_1, transferFrom(from(address): 0xff266f, to(address): 0x253dD8, value(uint256): 10479679167) -> True
+  [2][STATICCALL] from=0x253dd8, to=FiatTokenProxy, balanceOf(account(address): 0x90d9b9) -> 5116733422
+    [3][DELEGATECALL] from=FiatTokenProxy, to=FiatTokenV2_1, balanceOf(account(address): 0x90d9b9) -> 5116733422
+  [2][STATICCALL] from=0x253dd8, to=FiatTokenProxy, allowance(owner(address): 0x90d9b9, spender(address): 0x3335A8) -> 115792089237316195423570985008687907853269984665640564039457584007912499005935
+    [3][DELEGATECALL] from=FiatTokenProxy, to=FiatTokenV2_1, allowance(owner(address): 0x90d9b9, spender(address): 0x3335A8) -> 115792089237316195423570985008687907853269984665640564039457584007912499005935
+  [2][CALL] from=0x253dd8, to=RubicProxy, routerCallNative(_params(tuple): {'srcInputToken': '0x000000000000000000000..., _data(bytes): b'#\xb8r\xdd\x00\x00\x00\x00\x00\x00\x00\x...) -> None
+    [3][CALL] from=RubicProxy, to=FiatTokenProxy, transferFrom(from(address): 0x90d9b9, to(address): 0x253dD8, value(uint256): 5116733422) -> True
+      [4][DELEGATECALL] from=FiatTokenProxy, to=FiatTokenV2_1, transferFrom(from(address): 0x90d9b9, to(address): 0x253dD8, value(uint256): 5116733422) -> True
+  [2][STATICCALL] from=0x253dd8, to=FiatTokenProxy, balanceOf(account(address): 0x1dAeB3) -> 4998362723
+    [3][DELEGATECALL] from=FiatTokenProxy, to=FiatTokenV2_1, balanceOf(account(address): 0x1dAeB3) -> 4998362723
+  [2][STATICCALL] from=0x253dd8, to=FiatTokenProxy, allowance(owner(address): 0x1dAeB3, spender(address): 0x3335A8) -> 115792089237316195423570985008687907853269984665640564039457584007903129639935
+    [3][DELEGATECALL] from=FiatTokenProxy, to=FiatTokenV2_1, allowance(owner(address): 0x1dAeB3, spender(address): 0x3335A8) -> 115792089237316195423570985008687907853269984665640564039457584007903129639935
+  [2][CALL] from=0x253dd8, to=RubicProxy, routerCallNative(_params(tuple): {'srcInputToken': '0x000000000000000000000..., _data(bytes): b'#\xb8r\xdd\x00\x00\x00\x00\x00\x00\x00\x...) -> None
+    [3][CALL] from=RubicProxy, to=FiatTokenProxy, transferFrom(from(address): 0x1dAeB3, to(address): 0x253dD8, value(uint256): 4998362723) -> True
+      [4][DELEGATECALL] from=FiatTokenProxy, to=FiatTokenV2_1, transferFrom(from(address): 0x1dAeB3, to(address): 0x253dD8, value(uint256): 4998362723) -> True
+  [2][STATICCALL] from=0x253dd8, to=FiatTokenProxy, balanceOf(account(address): 0xF2E362) -> 3949562500
+    [3][DELEGATECALL] from=FiatTokenProxy, to=FiatTokenV2_1, balanceOf(account(address): 0xF2E362) -> 3949562500
+  [2][STATICCALL] from=0x253dd8, to=FiatTokenProxy, allowance(owner(address): 0xF2E362, spender(address): 0x3335A8) -> 115792089237316195423570985008687907853269984665640564039457584007913129639935
+    [3][DELEGATECALL] from=FiatTokenProxy, to=FiatTokenV2_1, allowance(owner(address): 0xF2E362, spender(address): 0x3335A8) -> 115792089237316195423570985008687907853269984665640564039457584007913129639935
+  [2][CALL] from=0x253dd8, to=RubicProxy, routerCallNative(_params(tuple): {'srcInputToken': '0x000000000000000000000..., _data(bytes): b'#\xb8r\xdd\x00\x00\x00\x00\x00\x00\x00\x...) -> None
+    [3][CALL] from=RubicProxy, to=FiatTokenProxy, transferFrom(from(address): 0xF2E362, to(address): 0x253dD8, value(uint256): 3949562500) -> True
+      [4][DELEGATECALL] from=FiatTokenProxy, to=FiatTokenV2_1, transferFrom(from(address): 0xF2E362, to(address): 0x253dD8, value(uint256): 3949562500) -> True
+  [2][STATICCALL] from=0x253dd8, to=FiatTokenProxy, balanceOf(account(address): 0xf3f447) -> 3866825000
+    [3][DELEGATECALL] from=FiatTokenProxy, to=FiatTokenV2_1, balanceOf(account(address): 0xf3f447) -> 3866825000
+  [2][STATICCALL] from=0x253dd8, to=FiatTokenProxy, allowance(owner(address): 0xf3f447, spender(address): 0x3335A8) -> 115792089237316195423570985008687907853269984665640564039457584007907368361298
+    [3][DELEGATECALL] from=FiatTokenProxy, to=FiatTokenV2_1, allowance(owner(address): 0xf3f447, spender(address): 0x3335A8) -> 115792089237316195423570985008687907853269984665640564039457584007907368361298
+  [2][CALL] from=0x253dd8, to=RubicProxy, routerCallNative(_params(tuple): {'srcInputToken': '0x000000000000000000000..., _data(bytes): b'#\xb8r\xdd\x00\x00\x00\x00\x00\x00\x00\x...) -> None
+    [3][CALL] from=RubicProxy, to=FiatTokenProxy, transferFrom(from(address): 0xf3f447, to(address): 0x253dD8, value(uint256): 3866825000) -> True
+      [4][DELEGATECALL] from=FiatTokenProxy, to=FiatTokenV2_1, transferFrom(from(address): 0xf3f447, to(address): 0x253dD8, value(uint256): 3866825000) -> True
+  [2][STATICCALL] from=0x253dd8, to=FiatTokenProxy, balanceOf(account(address): 0x915E88) -> 109025621338
+    [3][DELEGATECALL] from=FiatTokenProxy, to=FiatTokenV2_1, balanceOf(account(address): 0x915E88) -> 109025621338
+  [2][STATICCALL] from=0x253dd8, to=FiatTokenProxy, allowance(owner(address): 0x915E88, spender(address): 0x33388C) -> 115792089237316195423570985008687907853269984665640564039457584007900913671995
+    [3][DELEGATECALL] from=FiatTokenProxy, to=FiatTokenV2_1, allowance(owner(address): 0x915E88, spender(address): 0x33388C) -> 115792089237316195423570985008687907853269984665640564039457584007900913671995
+  [2][CALL] from=0x253dd8, to=RubicProxy, routerCallNative(_providerInfo(string): , _params(tuple): {'srcInputToken': '0x000000000000000000000..., _data(bytes): b'#\xb8r\xdd\x00\x00\x00\x00\x00\x00\x00\x...) -> None
+    [3][CALL] from=RubicProxy, to=FiatTokenProxy, transferFrom(from(address): 0x915E88, to(address): 0x253dD8, value(uint256): 109025621338) -> True
+      [4][DELEGATECALL] from=FiatTokenProxy, to=FiatTokenV2_1, transferFrom(from(address): 0x915E88, to(address): 0x253dD8, value(uint256): 109025621338) -> True
+  [2][STATICCALL] from=0x253dd8, to=FiatTokenProxy, balanceOf(account(address): 0xD6aD4b) -> 69210204476
+    [3][DELEGATECALL] from=FiatTokenProxy, to=FiatTokenV2_1, balanceOf(account(address): 0xD6aD4b) -> 69210204476
+  [2][STATICCALL] from=0x253dd8, to=FiatTokenProxy, allowance(owner(address): 0xD6aD4b, spender(address): 0x33388C) -> 115792089237316195423570985008687907853269984665640564039457584007913129639935
+    [3][DELEGATECALL] from=FiatTokenProxy, to=FiatTokenV2_1, allowance(owner(address): 0xD6aD4b, spender(address): 0x33388C) -> 115792089237316195423570985008687907853269984665640564039457584007913129639935
+  [2][CALL] from=0x253dd8, to=RubicProxy, routerCallNative(_providerInfo(string): , _params(tuple): {'srcInputToken': '0x000000000000000000000..., _data(bytes): b'#\xb8r\xdd\x00\x00\x00\x00\x00\x00\x00\x...) -> None
+    [3][CALL] from=RubicProxy, to=FiatTokenProxy, transferFrom(from(address): 0xD6aD4b, to(address): 0x253dD8, value(uint256): 69210204476) -> True
+      [4][DELEGATECALL] from=FiatTokenProxy, to=FiatTokenV2_1, transferFrom(from(address): 0xD6aD4b, to(address): 0x253dD8, value(uint256): 69210204476) -> True
+  [2][STATICCALL] from=0x253dd8, to=FiatTokenProxy, balanceOf(account(address): 0x2afeF7) -> 57663959422
+    [3][DELEGATECALL] from=FiatTokenProxy, to=FiatTokenV2_1, balanceOf(account(address): 0x2afeF7) -> 57663959422
+  [2][STATICCALL] from=0x253dd8, to=FiatTokenProxy, allowance(owner(address): 0x2afeF7, spender(address): 0x33388C) -> 115792089237316195423570985008687907853269984665640564039457584007897529639935
+    [3][DELEGATECALL] from=FiatTokenProxy, to=FiatTokenV2_1, allowance(owner(address): 0x2afeF7, spender(address): 0x33388C) -> 115792089237316195423570985008687907853269984665640564039457584007897529639935
+  [2][CALL] from=0x253dd8, to=RubicProxy, routerCallNative(_providerInfo(string): , _params(tuple): {'srcInputToken': '0x000000000000000000000..., _data(bytes): b'#\xb8r\xdd\x00\x00\x00\x00\x00\x00\x00\x...) -> None
+    [3][CALL] from=RubicProxy, to=FiatTokenProxy, transferFrom(from(address): 0x2afeF7, to(address): 0x253dD8, value(uint256): 57663959422) -> True
+      [4][DELEGATECALL] from=FiatTokenProxy, to=FiatTokenV2_1, transferFrom(from(address): 0x2afeF7, to(address): 0x253dD8, value(uint256): 57663959422) -> True
+  [2][STATICCALL] from=0x253dd8, to=FiatTokenProxy, balanceOf(account(address): 0x21FeBb) -> 32263535621
+    [3][DELEGATECALL] from=FiatTokenProxy, to=FiatTokenV2_1, balanceOf(account(address): 0x21FeBb) -> 32263535621
+  [2][STATICCALL] from=0x253dd8, to=FiatTokenProxy, allowance(owner(address): 0x21FeBb, spender(address): 0x33388C) -> 115792089237316195423570985008687907853269984665640564039457584007912629639935
+    [3][DELEGATECALL] from=FiatTokenProxy, to=FiatTokenV2_1, allowance(owner(address): 0x21FeBb, spender(address): 0x33388C) -> 115792089237316195423570985008687907853269984665640564039457584007912629639935
+  [2][CALL] from=0x253dd8, to=RubicProxy, routerCallNative(_providerInfo(string): , _params(tuple): {'srcInputToken': '0x000000000000000000000..., _data(bytes): b'#\xb8r\xdd\x00\x00\x00\x00\x00\x00\x00\x...) -> None
+    [3][CALL] from=RubicProxy, to=FiatTokenProxy, transferFrom(from(address): 0x21FeBb, to(address): 0x253dD8, value(uint256): 32263535621) -> True
+      [4][DELEGATECALL] from=FiatTokenProxy, to=FiatTokenV2_1, transferFrom(from(address): 0x21FeBb, to(address): 0x253dD8, value(uint256): 32263535621) -> True
+  [2][STATICCALL] from=0x253dd8, to=FiatTokenProxy, balanceOf(account(address): 0xDbDDb2) -> 25059860000
+    [3][DELEGATECALL] from=FiatTokenProxy, to=FiatTokenV2_1, balanceOf(account(address): 0xDbDDb2) -> 25059860000
+  [2][STATICCALL] from=0x253dd8, to=FiatTokenProxy, allowance(owner(address): 0xDbDDb2, spender(address): 0x33388C) -> 115792089237316195423570985008687907853269984665640564039457584007913129639935
+    [3][DELEGATECALL] from=FiatTokenProxy, to=FiatTokenV2_1, allowance(owner(address): 0xDbDDb2, spender(address): 0x33388C) -> 115792089237316195423570985008687907853269984665640564039457584007913129639935
+  [2][CALL] from=0x253dd8, to=RubicProxy, routerCallNative(_providerInfo(string): , _params(tuple): {'srcInputToken': '0x000000000000000000000..., _data(bytes): b'#\xb8r\xdd\x00\x00\x00\x00\x00\x00\x00\x...) -> None
+    [3][CALL] from=RubicProxy, to=FiatTokenProxy, transferFrom(from(address): 0xDbDDb2, to(address): 0x253dD8, value(uint256): 25059860000) -> True
+      [4][DELEGATECALL] from=FiatTokenProxy, to=FiatTokenV2_1, transferFrom(from(address): 0xDbDDb2, to(address): 0x253dD8, value(uint256): 25059860000) -> True
+  [2][STATICCALL] from=0x253dd8, to=FiatTokenProxy, balanceOf(account(address): 0x58709C) -> 17484076961
+    [3][DELEGATECALL] from=FiatTokenProxy, to=FiatTokenV2_1, balanceOf(account(address): 0x58709C) -> 17484076961
+  [2][STATICCALL] from=0x253dd8, to=FiatTokenProxy, allowance(owner(address): 0x58709C, spender(address): 0x33388C) -> 115792089237316195423570985008687907853269984665640564039457584007912879639935
+    [3][DELEGATECALL] from=FiatTokenProxy, to=FiatTokenV2_1, allowance(owner(address): 0x58709C, spender(address): 0x33388C) -> 115792089237316195423570985008687907853269984665640564039457584007912879639935
+  [2][CALL] from=0x253dd8, to=RubicProxy, routerCallNative(_providerInfo(string): , _params(tuple): {'srcInputToken': '0x000000000000000000000..., _data(bytes): b'#\xb8r\xdd\x00\x00\x00\x00\x00\x00\x00\x...) -> None
+    [3][CALL] from=RubicProxy, to=FiatTokenProxy, transferFrom(from(address): 0x58709C, to(address): 0x253dD8, value(uint256): 17484076961) -> True
+      [4][DELEGATECALL] from=FiatTokenProxy, to=FiatTokenV2_1, transferFrom(from(address): 0x58709C, to(address): 0x253dD8, value(uint256): 17484076961) -> True
+  [2][STATICCALL] from=0x253dd8, to=FiatTokenProxy, balanceOf(account(address): 0xD2C919) -> 14954991900
+    [3][DELEGATECALL] from=FiatTokenProxy, to=FiatTokenV2_1, balanceOf(account(address): 0xD2C919) -> 14954991900
+  [2][STATICCALL] from=0x253dd8, to=FiatTokenProxy, allowance(owner(address): 0xD2C919, spender(address): 0x33388C) -> 115792089237316195423570985008687907853269984665640564039457584007903129639935
+    [3][DELEGATECALL] from=FiatTokenProxy, to=FiatTokenV2_1, allowance(owner(address): 0xD2C919, spender(address): 0x33388C) -> 115792089237316195423570985008687907853269984665640564039457584007903129639935
+  [2][CALL] from=0x253dd8, to=RubicProxy, routerCallNative(_providerInfo(string): , _params(tuple): {'srcInputToken': '0x000000000000000000000..., _data(bytes): b'#\xb8r\xdd\x00\x00\x00\x00\x00\x00\x00\x...) -> None
+    [3][CALL] from=RubicProxy, to=FiatTokenProxy, transferFrom(from(address): 0xD2C919, to(address): 0x253dD8, value(uint256): 14954991900) -> True
+      [4][DELEGATECALL] from=FiatTokenProxy, to=FiatTokenV2_1, transferFrom(from(address): 0xD2C919, to(address): 0x253dD8, value(uint256): 14954991900) -> True
+  [2][STATICCALL] from=0x253dd8, to=FiatTokenProxy, balanceOf(account(address): 0xfE2439) -> 12900478948
+    [3][DELEGATECALL] from=FiatTokenProxy, to=FiatTokenV2_1, balanceOf(account(address): 0xfE2439) -> 12900478948
+  [2][STATICCALL] from=0x253dd8, to=FiatTokenProxy, allowance(owner(address): 0xfE2439, spender(address): 0x33388C) -> 115792089237316195423570985008687907853269984665640564039457584007912622639935
+    [3][DELEGATECALL] from=FiatTokenProxy, to=FiatTokenV2_1, allowance(owner(address): 0xfE2439, spender(address): 0x33388C) -> 115792089237316195423570985008687907853269984665640564039457584007912622639935
+  [2][CALL] from=0x253dd8, to=RubicProxy, routerCallNative(_providerInfo(string): , _params(tuple): {'srcInputToken': '0x000000000000000000000..., _data(bytes): b'#\xb8r\xdd\x00\x00\x00\x00\x00\x00\x00\x...) -> None
+    [3][CALL] from=RubicProxy, to=FiatTokenProxy, transferFrom(from(address): 0xfE2439, to(address): 0x253dD8, value(uint256): 12900478948) -> True
+      [4][DELEGATECALL] from=FiatTokenProxy, to=FiatTokenV2_1, transferFrom(from(address): 0xfE2439, to(address): 0x253dD8, value(uint256): 12900478948) -> True
+  [2][STATICCALL] from=0x253dd8, to=FiatTokenProxy, balanceOf(account(address): 0xd5BD94) -> 12294912470
+    [3][DELEGATECALL] from=FiatTokenProxy, to=FiatTokenV2_1, balanceOf(account(address): 0xd5BD94) -> 12294912470
+  [2][STATICCALL] from=0x253dd8, to=FiatTokenProxy, allowance(owner(address): 0xd5BD94, spender(address): 0x33388C) -> 115792089237316195423570985008687907853269984665640564039457584007911679639935
+    [3][DELEGATECALL] from=FiatTokenProxy, to=FiatTokenV2_1, allowance(owner(address): 0xd5BD94, spender(address): 0x33388C) -> 115792089237316195423570985008687907853269984665640564039457584007911679639935
+  [2][CALL] from=0x253dd8, to=RubicProxy, routerCallNative(_providerInfo(string): , _params(tuple): {'srcInputToken': '0x000000000000000000000..., _data(bytes): b'#\xb8r\xdd\x00\x00\x00\x00\x00\x00\x00\x...) -> None
+    [3][CALL] from=RubicProxy, to=FiatTokenProxy, transferFrom(from(address): 0xd5BD94, to(address): 0x253dD8, value(uint256): 12294912470) -> True
+      [4][DELEGATECALL] from=FiatTokenProxy, to=FiatTokenV2_1, transferFrom(from(address): 0xd5BD94, to(address): 0x253dD8, value(uint256): 12294912470) -> True
+  [2][STATICCALL] from=0x253dd8, to=FiatTokenProxy, balanceOf(account(address): 0xd6389E) -> 8066091613
+    [3][DELEGATECALL] from=FiatTokenProxy, to=FiatTokenV2_1, balanceOf(account(address): 0xd6389E) -> 8066091613
+  [2][STATICCALL] from=0x253dd8, to=FiatTokenProxy, allowance(owner(address): 0xd6389E, spender(address): 0x33388C) -> 115792089237316195423570985008687907853269984665640564039457584007912129639935
+    [3][DELEGATECALL] from=FiatTokenProxy, to=FiatTokenV2_1, allowance(owner(address): 0xd6389E, spender(address): 0x33388C) -> 115792089237316195423570985008687907853269984665640564039457584007912129639935
+  [2][CALL] from=0x253dd8, to=RubicProxy, routerCallNative(_providerInfo(string): , _params(tuple): {'srcInputToken': '0x000000000000000000000..., _data(bytes): b'#\xb8r\xdd\x00\x00\x00\x00\x00\x00\x00\x...) -> None
+    [3][CALL] from=RubicProxy, to=FiatTokenProxy, transferFrom(from(address): 0xd6389E, to(address): 0x253dD8, value(uint256): 8066091613) -> True
+      [4][DELEGATECALL] from=FiatTokenProxy, to=FiatTokenV2_1, transferFrom(from(address): 0xd6389E, to(address): 0x253dD8, value(uint256): 8066091613) -> True
+  [2][STATICCALL] from=0x253dd8, to=FiatTokenProxy, balanceOf(account(address): 0x9f3119) -> 7945929389
+    [3][DELEGATECALL] from=FiatTokenProxy, to=FiatTokenV2_1, balanceOf(account(address): 0x9f3119) -> 7945929389
+  [2][STATICCALL] from=0x253dd8, to=FiatTokenProxy, allowance(owner(address): 0x9f3119, spender(address): 0x33388C) -> 115792089237316195423570985008687907853269984665640564039457584007913129639935
+    [3][DELEGATECALL] from=FiatTokenProxy, to=FiatTokenV2_1, allowance(owner(address): 0x9f3119, spender(address): 0x33388C) -> 115792089237316195423570985008687907853269984665640564039457584007913129639935
+  [2][CALL] from=0x253dd8, to=RubicProxy, routerCallNative(_providerInfo(string): , _params(tuple): {'srcInputToken': '0x000000000000000000000..., _data(bytes): b'#\xb8r\xdd\x00\x00\x00\x00\x00\x00\x00\x...) -> None
+    [3][CALL] from=RubicProxy, to=FiatTokenProxy, transferFrom(from(address): 0x9f3119, to(address): 0x253dD8, value(uint256): 7945929389) -> True
+      [4][DELEGATECALL] from=FiatTokenProxy, to=FiatTokenV2_1, transferFrom(from(address): 0x9f3119, to(address): 0x253dD8, value(uint256): 7945929389) -> True
+  [2][STATICCALL] from=0x253dd8, to=FiatTokenProxy, balanceOf(account(address): 0x8a4295) -> 6610000000
+    [3][DELEGATECALL] from=FiatTokenProxy, to=FiatTokenV2_1, balanceOf(account(address): 0x8a4295) -> 6610000000
+  [2][STATICCALL] from=0x253dd8, to=FiatTokenProxy, allowance(owner(address): 0x8a4295, spender(address): 0x33388C) -> 115792089237316195423570985008687907853269984665640564039457584007913029639935
+    [3][DELEGATECALL] from=FiatTokenProxy, to=FiatTokenV2_1, allowance(owner(address): 0x8a4295, spender(address): 0x33388C) -> 115792089237316195423570985008687907853269984665640564039457584007913029639935
+  [2][CALL] from=0x253dd8, to=RubicProxy, routerCallNative(_providerInfo(string): , _params(tuple): {'srcInputToken': '0x000000000000000000000..., _data(bytes): b'#\xb8r\xdd\x00\x00\x00\x00\x00\x00\x00\x...) -> None
+    [3][CALL] from=RubicProxy, to=FiatTokenProxy, transferFrom(from(address): 0x8a4295, to(address): 0x253dD8, value(uint256): 6610000000) -> True
+      [4][DELEGATECALL] from=FiatTokenProxy, to=FiatTokenV2_1, transferFrom(from(address): 0x8a4295, to(address): 0x253dD8, value(uint256): 6610000000) -> True
+  [2][STATICCALL] from=0x253dd8, to=FiatTokenProxy, balanceOf(account(address): 0xf4BA06) -> 6485949957
+    [3][DELEGATECALL] from=FiatTokenProxy, to=FiatTokenV2_1, balanceOf(account(address): 0xf4BA06) -> 6485949957
+  [2][STATICCALL] from=0x253dd8, to=FiatTokenProxy, allowance(owner(address): 0xf4BA06, spender(address): 0x33388C) -> 115792089237316195423570985008687907853269984665640564039457584007912949461625
+    [3][DELEGATECALL] from=FiatTokenProxy, to=FiatTokenV2_1, allowance(owner(address): 0xf4BA06, spender(address): 0x33388C) -> 115792089237316195423570985008687907853269984665640564039457584007912949461625
+  [2][CALL] from=0x253dd8, to=RubicProxy, routerCallNative(_providerInfo(string): , _params(tuple): {'srcInputToken': '0x000000000000000000000..., _data(bytes): b'#\xb8r\xdd\x00\x00\x00\x00\x00\x00\x00\x...) -> None
+    [3][CALL] from=RubicProxy, to=FiatTokenProxy, transferFrom(from(address): 0xf4BA06, to(address): 0x253dD8, value(uint256): 6485949957) -> True
+      [4][DELEGATECALL] from=FiatTokenProxy, to=FiatTokenV2_1, transferFrom(from(address): 0xf4BA06, to(address): 0x253dD8, value(uint256): 6485949957) -> True
+  [2][STATICCALL] from=0x253dd8, to=FiatTokenProxy, balanceOf(account(address): 0x483274) -> 5907316688
+    [3][DELEGATECALL] from=FiatTokenProxy, to=FiatTokenV2_1, balanceOf(account(address): 0x483274) -> 5907316688
+  [2][STATICCALL] from=0x253dd8, to=FiatTokenProxy, allowance(owner(address): 0x483274, spender(address): 0x33388C) -> 115792089237316195423570985008687907853269984665640564039457584007911825239011
+    [3][DELEGATECALL] from=FiatTokenProxy, to=FiatTokenV2_1, allowance(owner(address): 0x483274, spender(address): 0x33388C) -> 115792089237316195423570985008687907853269984665640564039457584007911825239011
+  [2][CALL] from=0x253dd8, to=RubicProxy, routerCallNative(_providerInfo(string): , _params(tuple): {'srcInputToken': '0x000000000000000000000..., _data(bytes): b'#\xb8r\xdd\x00\x00\x00\x00\x00\x00\x00\x...) -> None
+    [3][CALL] from=RubicProxy, to=FiatTokenProxy, transferFrom(from(address): 0x483274, to(address): 0x253dD8, value(uint256): 5907316688) -> True
+      [4][DELEGATECALL] from=FiatTokenProxy, to=FiatTokenV2_1, transferFrom(from(address): 0x483274, to(address): 0x253dD8, value(uint256): 5907316688) -> True
+  [2][STATICCALL] from=0x253dd8, to=FiatTokenProxy, balanceOf(account(address): 0x192FcF) -> 4500288300
+    [3][DELEGATECALL] from=FiatTokenProxy, to=FiatTokenV2_1, balanceOf(account(address): 0x192FcF) -> 4500288300
+  [2][STATICCALL] from=0x253dd8, to=FiatTokenProxy, allowance(owner(address): 0x192FcF, spender(address): 0x33388C) -> 115792089237316195423570985008687907853269984665640564039457584007913129639935
+    [3][DELEGATECALL] from=FiatTokenProxy, to=FiatTokenV2_1, allowance(owner(address): 0x192FcF, spender(address): 0x33388C) -> 115792089237316195423570985008687907853269984665640564039457584007913129639935
+  [2][CALL] from=0x253dd8, to=RubicProxy, routerCallNative(_providerInfo(string): , _params(tuple): {'srcInputToken': '0x000000000000000000000..., _data(bytes): b'#\xb8r\xdd\x00\x00\x00\x00\x00\x00\x00\x...) -> None
+    [3][CALL] from=RubicProxy, to=FiatTokenProxy, transferFrom(from(address): 0x192FcF, to(address): 0x253dD8, value(uint256): 4500288300) -> True
+      [4][DELEGATECALL] from=FiatTokenProxy, to=FiatTokenV2_1, transferFrom(from(address): 0x192FcF, to(address): 0x253dD8, value(uint256): 4500288300) -> True
+  [2][STATICCALL] from=0x253dd8, to=FiatTokenProxy, balanceOf(account(address): 0x82Bdfc) -> 3943960000
+    [3][DELEGATECALL] from=FiatTokenProxy, to=FiatTokenV2_1, balanceOf(account(address): 0x82Bdfc) -> 3943960000
+  [2][STATICCALL] from=0x253dd8, to=FiatTokenProxy, allowance(owner(address): 0x82Bdfc, spender(address): 0x33388C) -> 115792089237316195423570985008687907853269984665640564039457584007913129639935
+    [3][DELEGATECALL] from=FiatTokenProxy, to=FiatTokenV2_1, allowance(owner(address): 0x82Bdfc, spender(address): 0x33388C) -> 115792089237316195423570985008687907853269984665640564039457584007913129639935
+  [2][CALL] from=0x253dd8, to=RubicProxy, routerCallNative(_providerInfo(string): , _params(tuple): {'srcInputToken': '0x000000000000000000000..., _data(bytes): b'#\xb8r\xdd\x00\x00\x00\x00\x00\x00\x00\x...) -> None
+    [3][CALL] from=RubicProxy, to=FiatTokenProxy, transferFrom(from(address): 0x82Bdfc, to(address): 0x253dD8, value(uint256): 3943960000) -> True
+      [4][DELEGATECALL] from=FiatTokenProxy, to=FiatTokenV2_1, transferFrom(from(address): 0x82Bdfc, to(address): 0x253dD8, value(uint256): 3943960000) -> True
+  [2][STATICCALL] from=0x253dd8, to=FiatTokenProxy, balanceOf(account(address): 0xf3f447) -> 0
+    [3][DELEGATECALL] from=FiatTokenProxy, to=FiatTokenV2_1, balanceOf(account(address): 0xf3f447) -> 0
+  [2][STATICCALL] from=0x253dd8, to=FiatTokenProxy, balanceOf(account(address): 0x44a59A) -> 3436554727
+    [3][DELEGATECALL] from=FiatTokenProxy, to=FiatTokenV2_1, balanceOf(account(address): 0x44a59A) -> 3436554727
+  [2][STATICCALL] from=0x253dd8, to=FiatTokenProxy, allowance(owner(address): 0x44a59A, spender(address): 0x33388C) -> 115792089237316195423570985008687907853269984665640564039457584007913129639935
+    [3][DELEGATECALL] from=FiatTokenProxy, to=FiatTokenV2_1, allowance(owner(address): 0x44a59A, spender(address): 0x33388C) -> 115792089237316195423570985008687907853269984665640564039457584007913129639935
+  [2][CALL] from=0x253dd8, to=RubicProxy, routerCallNative(_providerInfo(string): , _params(tuple): {'srcInputToken': '0x000000000000000000000..., _data(bytes): b'#\xb8r\xdd\x00\x00\x00\x00\x00\x00\x00\x...) -> None
+    [3][CALL] from=RubicProxy, to=FiatTokenProxy, transferFrom(from(address): 0x44a59A, to(address): 0x253dD8, value(uint256): 3436554727) -> True
+      [4][DELEGATECALL] from=FiatTokenProxy, to=FiatTokenV2_1, transferFrom(from(address): 0x44a59A, to(address): 0x253dD8, value(uint256): 3436554727) -> True
+  [2][STATICCALL] from=0x253dd8, to=FiatTokenProxy, balanceOf(account(address): 0xD0245a) -> 2990189101
+    [3][DELEGATECALL] from=FiatTokenProxy, to=FiatTokenV2_1, balanceOf(account(address): 0xD0245a) -> 2990189101
+  [2][STATICCALL] from=0x253dd8, to=FiatTokenProxy, allowance(owner(address): 0xD0245a, spender(address): 0x33388C) -> 115792089237316195423570985008687907853269984665640564039457584007910327813359
+    [3][DELEGATECALL] from=FiatTokenProxy, to=FiatTokenV2_1, allowance(owner(address): 0xD0245a, spender(address): 0x33388C) -> 115792089237316195423570985008687907853269984665640564039457584007910327813359
+  [2][CALL] from=0x253dd8, to=RubicProxy, routerCallNative(_providerInfo(string): , _params(tuple): {'srcInputToken': '0x000000000000000000000..., _data(bytes): b'#\xb8r\xdd\x00\x00\x00\x00\x00\x00\x00\x...) -> None
+    [3][CALL] from=RubicProxy, to=FiatTokenProxy, transferFrom(from(address): 0xD0245a, to(address): 0x253dD8, value(uint256): 2990189101) -> True
+      [4][DELEGATECALL] from=FiatTokenProxy, to=FiatTokenV2_1, transferFrom(from(address): 0xD0245a, to(address): 0x253dD8, value(uint256): 2990189101) -> True
+  [2][STATICCALL] from=0x253dd8, to=FiatTokenProxy, balanceOf(account(address): 0x253dD8) -> 1475491811413
+    [3][DELEGATECALL] from=FiatTokenProxy, to=FiatTokenV2_1, balanceOf(account(address): 0x253dD8) -> 1475491811413
+  [2][CALL] from=0x253dd8, to=FiatTokenProxy, approve(spender(address): 0x7a250d, value(uint256): 1475491811413) -> True
+    [3][DELEGATECALL] from=FiatTokenProxy, to=FiatTokenV2_1, approve(spender(address): 0x7a250d, value(uint256): 1475491811413) -> True
+  [2][CALL] from=0x253dd8, to=UniswapV2Router02, swapExactTokensForETH(amountIn(uint256): 1475491811413, amountOutMin(uint256): 0, path(address[]): ['0xA0b86991c6218b36c1d19D4a2e9Eb0cE3606eB..., to(address): 0x001B91, deadline(uint256): 1671957071) -> [1475491811413, 1161550285917089507094]
+    [3][STATICCALL] from=UniswapV2Router02, to=UniswapV2Pair, getReserves() -> ['36924363656700', '30316954953385717334872', '1671957035']
+    [3][CALL] from=UniswapV2Router02, to=FiatTokenProxy, transferFrom(from(address): 0x253dD8, to(address): 0xB4e16d, value(uint256): 1475491811413) -> True
+      [4][DELEGATECALL] from=FiatTokenProxy, to=FiatTokenV2_1, transferFrom(from(address): 0x253dD8, to(address): 0xB4e16d, value(uint256): 1475491811413) -> True
+    [3][CALL] from=UniswapV2Router02, to=UniswapV2Pair, swap(amount0Out(uint256): 0, amount1Out(uint256): 1161550285917089507094, to(address): 0x7a250d, data(bytes): b'') -> None
+      [4][CALL] from=UniswapV2Pair, to=WETH9, transfer(dst(address): 0x7a250d, wad(uint256): 1161550285917089507094) -> True
+      [4][STATICCALL] from=UniswapV2Pair, to=FiatTokenProxy, balanceOf(account(address): 0xB4e16d) -> 38399855468113
+        [5][DELEGATECALL] from=FiatTokenProxy, to=FiatTokenV2_1, balanceOf(account(address): 0xB4e16d) -> 38399855468113
+      [4][STATICCALL] from=UniswapV2Pair, to=WETH9, balanceOf((address): 0xB4e16d) -> 29155404667468627827778
+    [3][CALL] from=UniswapV2Router02, to=WETH9, withdraw(wad(uint256): 1161550285917089507094) -> None
+      [4][CALL][1161.5502859170895] from=WETH9, to=UniswapV2Router02
+    [3][CALL][1161.5502859170895] from=UniswapV2Router02, to=0x001b91

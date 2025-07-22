@@ -1,0 +1,15 @@
+[1][CALL] from=0x8efab8, to=0x10c509, 0x4a0b0c38() -> None
+  [2][CALL] from=0x10c509, to=RewardsHypervisor, deposit(visrDeposit(uint256): 100000000000000000000000000, from(address): 0x10C509, to(address): 0x8Efab8) -> 97624975481815716136709737
+    [3][STATICCALL] from=RewardsHypervisor, to=vVISR, totalSupply() -> 9000242001852185487035933
+    [3][STATICCALL] from=RewardsHypervisor, to=ERC20, balanceOf(account(address): 0xC9f27A) -> 9219200268612237484049971
+    [3][STATICCALL] from=RewardsHypervisor, to=vVISR, totalSupply() -> 9000242001852185487035933
+    [3][CALL] from=RewardsHypervisor, to=0x10c509, owner() -> 0x000000
+    [3][CALL] from=RewardsHypervisor, to=0x10c509, delegatedTransferERC20address() -> None
+      [4][CALL] from=0x10c509, to=RewardsHypervisor, deposit(visrDeposit(uint256): 100000000000000000000000000, from(address): 0x10C509, to(address): 0x8Efab8) -> 97624975481815716136709737
+        [5][STATICCALL] from=RewardsHypervisor, to=vVISR, totalSupply() -> 9000242001852185487035933
+        [5][STATICCALL] from=RewardsHypervisor, to=ERC20, balanceOf(account(address): 0xC9f27A) -> 9219200268612237484049971
+        [5][STATICCALL] from=RewardsHypervisor, to=vVISR, totalSupply() -> 9000242001852185487035933
+        [5][CALL] from=RewardsHypervisor, to=0x10c509, owner() -> 0x000000
+        [5][CALL] from=RewardsHypervisor, to=0x10c509, delegatedTransferERC20address() -> None
+        [5][CALL] from=RewardsHypervisor, to=vVISR, mint(account(address): 0x8Efab8, amount(uint256): 97624975481815716136709737) -> None
+    [3][CALL] from=RewardsHypervisor, to=vVISR, mint(account(address): 0x8Efab8, amount(uint256): 97624975481815716136709737) -> None

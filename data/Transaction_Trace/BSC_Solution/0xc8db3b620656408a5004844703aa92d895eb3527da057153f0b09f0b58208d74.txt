@@ -1,0 +1,239 @@
+[1][CALL] from=0xd87fc9, to=0xa722ca, 0x8d858860() -> None
+  [2][CALL] from=0xa722ca, to=DPPAdvanced, flashLoan(baseAmount(uint256): 1800000000000000000000, quoteAmount(uint256): 0, assetTo(address): 0xA722ca, data(bytes): b'\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00...) -> None
+    [3][CALL] from=DPPAdvanced, to=WBNB, transfer(dst(address): 0xA722ca, wad(uint256): 1800000000000000000000) -> True
+    [3][CALL] from=DPPAdvanced, to=0xa722ca, DPPFlashLoanCalladdress() -> None
+      [4][CALL] from=0xa722ca, to=WBNB, approve(guy(address): 0x879EAD, wad(uint256): 115792089237316195423570985008687907853269...) -> True
+      [4][CALL] from=0xa722ca, to=RouterProxy, swapExactTokensForTokens(amountIn(uint256): 672810000000000000000, amountOutMin(uint256): 1000000000000000000, path(address[]): ['0xbb4CdB9CBd36B01bD1cBaEBF2De08d9173bc09..., to(address): 0xA722ca, deadline(uint256): 1661293930) -> [672810000000000000000, 125023339230692800833825]
+        [5][DELEGATECALL] from=RouterProxy, to=KaoyaswapRouter, swapExactTokensForTokens(amountIn(uint256): 672810000000000000000, amountOutMin(uint256): 1000000000000000000, path(address[]): ['0xbb4CdB9CBd36B01bD1cBaEBF2De08d9173bc09..., to(address): 0xA722ca, deadline(uint256): 1661293930) -> [672810000000000000000, 125023339230692800833825]
+          [6][STATICCALL] from=RouterProxy, to=UniswapV2Pair, getReserves() -> ['165949781905004429325160', '219583902533270771560', '1661274496']
+          [6][STATICCALL] from=RouterProxy, to=WBNB, balanceOf((address): 0x879EAD) -> 248290582165522220924
+          [6][CALL] from=RouterProxy, to=WBNB, transferFrom(src(address): 0xA722ca, dst(address): 0x879EAD, wad(uint256): 672810000000000000000) -> True
+          [6][STATICCALL] from=RouterProxy, to=WBNB, balanceOf((address): 0x879EAD) -> 921100582165522220924
+          [6][STATICCALL] from=RouterProxy, to=KaoyaProxy, balanceOf(account(address): 0x879EAD) -> 488293752596722859055604
+            [7][DELEGATECALL] from=KaoyaProxy, to=Kaoya, balanceOf(account(address): 0x879EAD) -> 488293752596722859055604
+          [6][CALL] from=RouterProxy, to=KaoyaProxy, transfer(recipient(address): 0xA722ca, amount(uint256): 125023339230692800833825) -> True
+            [7][DELEGATECALL] from=KaoyaProxy, to=Kaoya, transfer(recipient(address): 0xA722ca, amount(uint256): 125023339230692800833825) -> True
+          [6][CALL] from=RouterProxy, to=UniswapV2Pair, swap(amount0Out(uint256): 125023339230692800833825, amount1Out(uint256): 0, to(address): 0xA722ca, data(bytes): b'') -> None
+            [7][STATICCALL] from=UniswapV2Pair, to=RouterProxy, getTokenInPair(pair(address): 0x150587, token(address): 0xa8a33e) -> 40926442674311628491335
+              [8][DELEGATECALL] from=RouterProxy, to=KaoyaswapRouter, getTokenInPair(pair(address): 0x150587, token(address): 0xa8a33e) -> 40926442674311628491335
+            [7][STATICCALL] from=UniswapV2Pair, to=RouterProxy, getTokenInPair(pair(address): 0x150587, token(address): 0xbb4CdB) -> 892393902533270771560
+              [8][DELEGATECALL] from=RouterProxy, to=KaoyaswapRouter, getTokenInPair(pair(address): 0x150587, token(address): 0xbb4CdB) -> 892393902533270771560
+      [4][CALL] from=0xa722ca, to=WBNB, approve(guy(address): 0x879EAD, wad(uint256): 115792089237316195423570985008687907853269...) -> True
+      [4][CALL] from=0xa722ca, to=RouterProxy, swapExactTokensForTokens(amountIn(uint256): 100000000000000000000, amountOutMin(uint256): 1000000000000000000, path(address[]): ['0xbb4CdB9CBd36B01bD1cBaEBF2De08d9173bc09..., to(address): 0xA722ca, deadline(uint256): 1661293930) -> [100000000000000000000, 6666515840463859476306]
+        [5][DELEGATECALL] from=RouterProxy, to=KaoyaswapRouter, swapExactTokensForTokens(amountIn(uint256): 100000000000000000000, amountOutMin(uint256): 1000000000000000000, path(address[]): ['0xbb4CdB9CBd36B01bD1cBaEBF2De08d9173bc09..., to(address): 0xA722ca, deadline(uint256): 1661293930) -> [100000000000000000000, 6666515840463859476306]
+          [6][STATICCALL] from=RouterProxy, to=UniswapV2Pair, getReserves() -> ['28706679632251449361', '8586009666898418427247', '1661263951']
+          [6][STATICCALL] from=RouterProxy, to=WBNB, balanceOf((address): 0x879EAD) -> 921100582165522220924
+          [6][CALL] from=RouterProxy, to=WBNB, transferFrom(src(address): 0xA722ca, dst(address): 0x879EAD, wad(uint256): 100000000000000000000) -> True
+          [6][STATICCALL] from=RouterProxy, to=WBNB, balanceOf((address): 0x879EAD) -> 1021100582165522220924
+          [6][STATICCALL] from=RouterProxy, to=BEP20Token, balanceOf(account(address): 0x879EAD) -> 130733165582030456724947
+          [6][CALL] from=RouterProxy, to=BEP20Token, transfer(recipient(address): 0xA722ca, amount(uint256): 6666515840463859476306) -> True
+          [6][CALL] from=RouterProxy, to=UniswapV2Pair, swap(amount0Out(uint256): 0, amount1Out(uint256): 6666515840463859476306, to(address): 0xA722ca, data(bytes): b'') -> None
+            [7][STATICCALL] from=UniswapV2Pair, to=RouterProxy, getTokenInPair(pair(address): 0x51a94D, token(address): 0xbb4CdB) -> 128706679632251449361
+              [8][DELEGATECALL] from=RouterProxy, to=KaoyaswapRouter, getTokenInPair(pair(address): 0x51a94D, token(address): 0xbb4CdB) -> 128706679632251449361
+            [7][STATICCALL] from=UniswapV2Pair, to=RouterProxy, getTokenInPair(pair(address): 0x51a94D, token(address): 0xe9e7CE) -> 1919493826434558950941
+              [8][DELEGATECALL] from=RouterProxy, to=KaoyaswapRouter, getTokenInPair(pair(address): 0x51a94D, token(address): 0xe9e7CE) -> 1919493826434558950941
+      [4][CALL] from=0xa722ca, to=WBNB, approve(guy(address): 0x879EAD, wad(uint256): 115792089237316195423570985008687907853269...) -> True
+      [4][CALL] from=0xa722ca, to=0x74ef69, approveaddress() -> 0x000000
+      [4][CALL] from=0xa722ca, to=0xd84379, approveaddress() -> 0x000000
+      [4][CALL] from=0xa722ca, to=WBNB, approve(guy(address): 0x879EAD, wad(uint256): 115792089237316195423570985008687907853269...) -> True
+      [4][CALL] from=0xa722ca, to=RouterProxy, addLiquidity(tokenA(address): 0xbb4CdB, tokenB(address): 0x74eF69, amountADesired(uint256): 1026190000000000000000, amountBDesired(uint256): 50000000000000000000, amountAMin(uint256): 380, amountBMin(uint256): 40, to(address): 0xA722ca, deadline(uint256): 1661293930) -> ['1026190000000000000000', '50000000000000000000', '226516003849617653338']
+        [5][DELEGATECALL] from=RouterProxy, to=KaoyaswapRouter, addLiquidity(tokenA(address): 0xbb4CdB, tokenB(address): 0x74eF69, amountADesired(uint256): 1026190000000000000000, amountBDesired(uint256): 50000000000000000000, amountAMin(uint256): 380, amountBMin(uint256): 40, to(address): 0xA722ca, deadline(uint256): 1661293930) -> ['1026190000000000000000', '50000000000000000000', '226516003849617653338']
+          [6][STATICCALL] from=RouterProxy, to=UniswapV2Factory, getPair((address): 0x74eF69) -> 0x000000
+          [6][CALL] from=RouterProxy, to=UniswapV2Factory, createPair(tokenA(address): 0xbb4CdB, tokenB(address): 0x74eF69) -> 0x81fd07
+            [7][CREATE2] from=UniswapV2Factory, to=UniswapV2Pair, atInversebrahint248() -> 0x608060
+            [7][CALL] from=UniswapV2Factory, to=UniswapV2Pair, initialize(_token0(address): 0x74eF69, _token1(address): 0xbb4CdB, _router(address): 0x879EAD) -> None
+          [6][STATICCALL] from=RouterProxy, to=UniswapV2Pair, getReserves() -> ['0', '0', '0']
+          [6][STATICCALL] from=RouterProxy, to=WBNB, balanceOf((address): 0x879EAD) -> 1021100582165522220924
+          [6][CALL] from=RouterProxy, to=WBNB, transferFrom(src(address): 0xA722ca, dst(address): 0x879EAD, wad(uint256): 1026190000000000000000) -> True
+          [6][STATICCALL] from=RouterProxy, to=WBNB, balanceOf((address): 0x879EAD) -> 2047290582165522220924
+          [6][STATICCALL] from=RouterProxy, to=0x74ef69, balanceOfaddress() -> 0x000000
+          [6][CALL] from=RouterProxy, to=0x74ef69, transferFromaddress() -> 0x000000
+          [6][STATICCALL] from=RouterProxy, to=0x74ef69, balanceOfaddress() -> 0x000000
+          [6][CALL] from=RouterProxy, to=UniswapV2Pair, mint(to(address): 0xA722ca) -> 226516003849617653338
+            [7][STATICCALL] from=UniswapV2Pair, to=RouterProxy, getTokenInPair(pair(address): 0x81fD07, token(address): 0x74eF69) -> 50000000000000000000
+              [8][DELEGATECALL] from=RouterProxy, to=KaoyaswapRouter, getTokenInPair(pair(address): 0x81fD07, token(address): 0x74eF69) -> 50000000000000000000
+            [7][STATICCALL] from=UniswapV2Pair, to=RouterProxy, getTokenInPair(pair(address): 0x81fD07, token(address): 0xbb4CdB) -> 1026190000000000000000
+              [8][DELEGATECALL] from=RouterProxy, to=KaoyaswapRouter, getTokenInPair(pair(address): 0x81fD07, token(address): 0xbb4CdB) -> 1026190000000000000000
+            [7][STATICCALL] from=UniswapV2Pair, to=UniswapV2Factory, feeTo() -> 0x000000
+            [7][STATICCALL] from=UniswapV2Pair, to=UniswapV2Factory, migrator() -> 0x000000
+      [4][CALL] from=0xa722ca, to=RouterProxy, addLiquidity(tokenA(address): 0xbb4CdB, tokenB(address): 0xD84379, amountADesired(uint256): 1000000000000000000, amountBDesired(uint256): 1000000000000000000, amountAMin(uint256): 1, amountBMin(uint256): 1, to(address): 0xA722ca, deadline(uint256): 1661293930) -> ['1000000000000000000', '1000000000000000000', '999999999999999000']
+        [5][DELEGATECALL] from=RouterProxy, to=KaoyaswapRouter, addLiquidity(tokenA(address): 0xbb4CdB, tokenB(address): 0xD84379, amountADesired(uint256): 1000000000000000000, amountBDesired(uint256): 1000000000000000000, amountAMin(uint256): 1, amountBMin(uint256): 1, to(address): 0xA722ca, deadline(uint256): 1661293930) -> ['1000000000000000000', '1000000000000000000', '999999999999999000']
+          [6][STATICCALL] from=RouterProxy, to=UniswapV2Factory, getPair((address): 0xD84379) -> 0x000000
+          [6][CALL] from=RouterProxy, to=UniswapV2Factory, createPair(tokenA(address): 0xbb4CdB, tokenB(address): 0xD84379) -> 0x8374a4
+            [7][CREATE2] from=UniswapV2Factory, to=UniswapV2Pair, atInversebrahint248() -> 0x608060
+            [7][CALL] from=UniswapV2Factory, to=UniswapV2Pair, initialize(_token0(address): 0xbb4CdB, _token1(address): 0xD84379, _router(address): 0x879EAD) -> None
+          [6][STATICCALL] from=RouterProxy, to=UniswapV2Pair, getReserves() -> ['0', '0', '0']
+          [6][STATICCALL] from=RouterProxy, to=WBNB, balanceOf((address): 0x879EAD) -> 2047290582165522220924
+          [6][CALL] from=RouterProxy, to=WBNB, transferFrom(src(address): 0xA722ca, dst(address): 0x879EAD, wad(uint256): 1000000000000000000) -> True
+          [6][STATICCALL] from=RouterProxy, to=WBNB, balanceOf((address): 0x879EAD) -> 2048290582165522220924
+          [6][STATICCALL] from=RouterProxy, to=0xd84379, balanceOfaddress() -> 0x000000
+          [6][CALL] from=RouterProxy, to=0xd84379, transferFromaddress() -> 0x000000
+          [6][STATICCALL] from=RouterProxy, to=0xd84379, balanceOfaddress() -> 0x000000
+          [6][CALL] from=RouterProxy, to=UniswapV2Pair, mint(to(address): 0xA722ca) -> 999999999999999000
+            [7][STATICCALL] from=UniswapV2Pair, to=RouterProxy, getTokenInPair(pair(address): 0x8374A4, token(address): 0xbb4CdB) -> 1000000000000000000
+              [8][DELEGATECALL] from=RouterProxy, to=KaoyaswapRouter, getTokenInPair(pair(address): 0x8374A4, token(address): 0xbb4CdB) -> 1000000000000000000
+            [7][STATICCALL] from=UniswapV2Pair, to=RouterProxy, getTokenInPair(pair(address): 0x8374A4, token(address): 0xD84379) -> 1000000000000000000
+              [8][DELEGATECALL] from=RouterProxy, to=KaoyaswapRouter, getTokenInPair(pair(address): 0x8374A4, token(address): 0xD84379) -> 1000000000000000000
+            [7][STATICCALL] from=UniswapV2Pair, to=UniswapV2Factory, feeTo() -> 0x000000
+            [7][STATICCALL] from=UniswapV2Pair, to=UniswapV2Factory, migrator() -> 0x000000
+      [4][CALL] from=0xa722ca, to=RouterProxy, addLiquidity(tokenA(address): 0xD84379, tokenB(address): 0x74eF69, amountADesired(uint256): 1000000000000000000, amountBDesired(uint256): 1000000000000000000, amountAMin(uint256): 1, amountBMin(uint256): 1, to(address): 0xA722ca, deadline(uint256): 1661293930) -> ['1000000000000000000', '1000000000000000000', '999999999999999000']
+        [5][DELEGATECALL] from=RouterProxy, to=KaoyaswapRouter, addLiquidity(tokenA(address): 0xD84379, tokenB(address): 0x74eF69, amountADesired(uint256): 1000000000000000000, amountBDesired(uint256): 1000000000000000000, amountAMin(uint256): 1, amountBMin(uint256): 1, to(address): 0xA722ca, deadline(uint256): 1661293930) -> ['1000000000000000000', '1000000000000000000', '999999999999999000']
+          [6][STATICCALL] from=RouterProxy, to=UniswapV2Factory, getPair((address): 0x74eF69) -> 0x000000
+          [6][CALL] from=RouterProxy, to=UniswapV2Factory, createPair(tokenA(address): 0xD84379, tokenB(address): 0x74eF69) -> 0x0a90d2
+            [7][CREATE2] from=UniswapV2Factory, to=UniswapV2Pair, atInversebrahint248() -> 0x608060
+            [7][CALL] from=UniswapV2Factory, to=UniswapV2Pair, initialize(_token0(address): 0x74eF69, _token1(address): 0xD84379, _router(address): 0x879EAD) -> None
+          [6][STATICCALL] from=RouterProxy, to=UniswapV2Pair, getReserves() -> ['0', '0', '0']
+          [6][STATICCALL] from=RouterProxy, to=0xd84379, balanceOfaddress() -> 0x000000
+          [6][CALL] from=RouterProxy, to=0xd84379, transferFromaddress() -> 0x000000
+          [6][STATICCALL] from=RouterProxy, to=0xd84379, balanceOfaddress() -> 0x000000
+          [6][STATICCALL] from=RouterProxy, to=0x74ef69, balanceOfaddress() -> 0x000000
+          [6][CALL] from=RouterProxy, to=0x74ef69, transferFromaddress() -> 0x000000
+          [6][STATICCALL] from=RouterProxy, to=0x74ef69, balanceOfaddress() -> 0x000000
+          [6][CALL] from=RouterProxy, to=UniswapV2Pair, mint(to(address): 0xA722ca) -> 999999999999999000
+            [7][STATICCALL] from=UniswapV2Pair, to=RouterProxy, getTokenInPair(pair(address): 0x0A90d2, token(address): 0x74eF69) -> 1000000000000000000
+              [8][DELEGATECALL] from=RouterProxy, to=KaoyaswapRouter, getTokenInPair(pair(address): 0x0A90d2, token(address): 0x74eF69) -> 1000000000000000000
+            [7][STATICCALL] from=UniswapV2Pair, to=RouterProxy, getTokenInPair(pair(address): 0x0A90d2, token(address): 0xD84379) -> 1000000000000000000
+              [8][DELEGATECALL] from=RouterProxy, to=KaoyaswapRouter, getTokenInPair(pair(address): 0x0A90d2, token(address): 0xD84379) -> 1000000000000000000
+            [7][STATICCALL] from=UniswapV2Pair, to=UniswapV2Factory, feeTo() -> 0x000000
+            [7][STATICCALL] from=UniswapV2Pair, to=UniswapV2Factory, migrator() -> 0x000000
+      [4][CALL] from=0xa722ca, to=RouterProxy, swapExactTokensForETHSupportingFeeOnTransferTokens(amountIn(uint256): 8000000000000000000000, amountOutMin(uint256): 1, path(address[]): ['0x74eF69Defe8bae1Fe660fB93265FC1bc79c9bD..., to(address): 0xA722ca, deadline(uint256): 1661293930) -> None
+        [5][DELEGATECALL] from=RouterProxy, to=KaoyaswapRouter, swapExactTokensForETHSupportingFeeOnTransferTokens(amountIn(uint256): 8000000000000000000000, amountOutMin(uint256): 1, path(address[]): ['0x74eF69Defe8bae1Fe660fB93265FC1bc79c9bD..., to(address): 0xA722ca, deadline(uint256): 1661293930) -> None
+          [6][STATICCALL] from=RouterProxy, to=0x74ef69, balanceOfaddress() -> 0x000000
+          [6][CALL] from=RouterProxy, to=0x74ef69, transferFromaddress() -> 0x000000
+          [6][STATICCALL] from=RouterProxy, to=0x74ef69, balanceOfaddress() -> 0x000000
+          [6][STATICCALL] from=RouterProxy, to=UniswapV2Pair, getReserves() -> ['50000000000000000000', '1026190000000000000000', '1661293930']
+          [6][CALL] from=RouterProxy, to=UniswapV2Pair, swap(amount0Out(uint256): 0, amount1Out(uint256): 1019797089459257413406, to(address): 0x879EAD, data(bytes): b'') -> None
+            [7][STATICCALL] from=UniswapV2Pair, to=RouterProxy, getTokenInPair(pair(address): 0x81fD07, token(address): 0x74eF69) -> 8050000000000000000000
+              [8][DELEGATECALL] from=RouterProxy, to=KaoyaswapRouter, getTokenInPair(pair(address): 0x81fD07, token(address): 0x74eF69) -> 8050000000000000000000
+            [7][STATICCALL] from=UniswapV2Pair, to=RouterProxy, getTokenInPair(pair(address): 0x81fD07, token(address): 0xbb4CdB) -> 6392910540742586594
+              [8][DELEGATECALL] from=RouterProxy, to=KaoyaswapRouter, getTokenInPair(pair(address): 0x81fD07, token(address): 0xbb4CdB) -> 6392910540742586594
+          [6][STATICCALL] from=RouterProxy, to=UniswapV2Pair, getReserves() -> ['1000000000000000000', '1000000000000000000', '1661293930']
+          [6][CALL] from=RouterProxy, to=UniswapV2Pair, swap(amount0Out(uint256): 0, amount1Out(uint256): 999017428555729447, to(address): 0x879EAD, data(bytes): b'') -> None
+            [7][STATICCALL] from=UniswapV2Pair, to=RouterProxy, getTokenInPair(pair(address): 0x8374A4, token(address): 0xbb4CdB) -> 1020797089459257413406
+              [8][DELEGATECALL] from=RouterProxy, to=KaoyaswapRouter, getTokenInPair(pair(address): 0x8374A4, token(address): 0xbb4CdB) -> 1020797089459257413406
+            [7][STATICCALL] from=UniswapV2Pair, to=RouterProxy, getTokenInPair(pair(address): 0x8374A4, token(address): 0xD84379) -> 982571444270553
+              [8][DELEGATECALL] from=RouterProxy, to=KaoyaswapRouter, getTokenInPair(pair(address): 0x8374A4, token(address): 0xD84379) -> 982571444270553
+          [6][STATICCALL] from=RouterProxy, to=UniswapV2Pair, getReserves() -> ['1000000000000000000', '1000000000000000000', '1661293930']
+          [6][CALL] from=RouterProxy, to=UniswapV2Pair, swap(amount0Out(uint256): 499003110444850664, amount1Out(uint256): 0, to(address): 0x879EAD, data(bytes): b'') -> None
+            [7][STATICCALL] from=UniswapV2Pair, to=RouterProxy, getTokenInPair(pair(address): 0x0A90d2, token(address): 0x74eF69) -> 500996889555149336
+              [8][DELEGATECALL] from=RouterProxy, to=KaoyaswapRouter, getTokenInPair(pair(address): 0x0A90d2, token(address): 0x74eF69) -> 500996889555149336
+            [7][STATICCALL] from=UniswapV2Pair, to=RouterProxy, getTokenInPair(pair(address): 0x0A90d2, token(address): 0xD84379) -> 1999017428555729447
+              [8][DELEGATECALL] from=RouterProxy, to=KaoyaswapRouter, getTokenInPair(pair(address): 0x0A90d2, token(address): 0xD84379) -> 1999017428555729447
+          [6][STATICCALL] from=RouterProxy, to=UniswapV2Pair, getReserves() -> ['8050000000000000000000', '6392910540742586594', '1661293930']
+          [6][CALL] from=RouterProxy, to=UniswapV2Pair, swap(amount0Out(uint256): 0, amount1Out(uint256): 395070241992122, to(address): 0x879EAD, data(bytes): b'') -> None
+            [7][STATICCALL] from=UniswapV2Pair, to=RouterProxy, getTokenInPair(pair(address): 0x81fD07, token(address): 0x74eF69) -> 8050499003110444850664
+              [8][DELEGATECALL] from=RouterProxy, to=KaoyaswapRouter, getTokenInPair(pair(address): 0x81fD07, token(address): 0x74eF69) -> 8050499003110444850664
+            [7][STATICCALL] from=UniswapV2Pair, to=RouterProxy, getTokenInPair(pair(address): 0x81fD07, token(address): 0xbb4CdB) -> 6392515470500594472
+              [8][DELEGATECALL] from=RouterProxy, to=KaoyaswapRouter, getTokenInPair(pair(address): 0x81fD07, token(address): 0xbb4CdB) -> 6392515470500594472
+          [6][STATICCALL] from=RouterProxy, to=WBNB, balanceOf((address): 0x879EAD) -> 2048290582165522220924
+          [6][CALL] from=RouterProxy, to=WBNB, withdraw(wad(uint256): 1019797484529499405528) -> None
+            [7][CALL][1019.7974845294995] from=WBNB, to=RouterProxy
+          [6][CALL][1019.7974845294995] from=RouterProxy, to=0xa722ca
+      [4][CALL] from=0xa722ca, to=UniswapV2Pair, approve(spender(address): 0x879EAD, value(uint256): 115792089237316195423570985008687907853269...) -> True
+      [4][STATICCALL] from=0xa722ca, to=UniswapV2Pair, balanceOf((address): 0xA722ca) -> 226516003849617653338
+      [4][CALL] from=0xa722ca, to=RouterProxy, removeLiquidityETHSupportingFeeOnTransferTokens(token(address): 0x74eF69, liquidity(uint256): 226516003849617653338, amountTokenMin(uint256): 1, amountETHMin(uint256): 1, to(address): 0xA722ca, deadline(uint256): 1661293930) -> 6392515470500594443
+        [5][DELEGATECALL] from=RouterProxy, to=KaoyaswapRouter, removeLiquidityETHSupportingFeeOnTransferTokens(token(address): 0x74eF69, liquidity(uint256): 226516003849617653338, amountTokenMin(uint256): 1, amountETHMin(uint256): 1, to(address): 0xA722ca, deadline(uint256): 1661293930) -> 6392515470500594443
+          [6][CALL] from=RouterProxy, to=UniswapV2Pair, transferFrom(from(address): 0xA722ca, to(address): 0x81fD07, value(uint256): 226516003849617653338) -> True
+          [6][CALL] from=RouterProxy, to=UniswapV2Pair, burn(to(address): 0x879EAD) -> ['8050499003110444815123', '6392515470500594443']
+            [7][STATICCALL] from=UniswapV2Pair, to=RouterProxy, getTokenInPair(pair(address): 0x81fD07, token(address): 0x74eF69) -> 8050499003110444850664
+              [8][DELEGATECALL] from=RouterProxy, to=KaoyaswapRouter, getTokenInPair(pair(address): 0x81fD07, token(address): 0x74eF69) -> 8050499003110444850664
+            [7][STATICCALL] from=UniswapV2Pair, to=RouterProxy, getTokenInPair(pair(address): 0x81fD07, token(address): 0xbb4CdB) -> 6392515470500594472
+              [8][DELEGATECALL] from=RouterProxy, to=KaoyaswapRouter, getTokenInPair(pair(address): 0x81fD07, token(address): 0xbb4CdB) -> 6392515470500594472
+            [7][STATICCALL] from=UniswapV2Pair, to=UniswapV2Factory, feeTo() -> 0x000000
+          [6][STATICCALL] from=RouterProxy, to=0x74ef69, balanceOfaddress() -> 0x000000
+          [6][CALL] from=RouterProxy, to=0x74ef69, transferaddress() -> 0x000000
+          [6][STATICCALL] from=RouterProxy, to=WBNB, balanceOf((address): 0x879EAD) -> 1028493097636022815396
+          [6][CALL] from=RouterProxy, to=WBNB, withdraw(wad(uint256): 6392515470500594443) -> None
+            [7][CALL][6.392515470500594] from=WBNB, to=RouterProxy
+          [6][CALL][6.392515470500594] from=RouterProxy, to=0xa722ca
+      [4][CALL] from=0xa722ca, to=UniswapV2Pair, approve(spender(address): 0x879EAD, value(uint256): 115792089237316195423570985008687907853269...) -> True
+      [4][STATICCALL] from=0xa722ca, to=UniswapV2Pair, balanceOf((address): 0xA722ca) -> 999999999999999000
+      [4][CALL] from=0xa722ca, to=RouterProxy, removeLiquidityETHSupportingFeeOnTransferTokens(token(address): 0xD84379, liquidity(uint256): 999999999999999000, amountTokenMin(uint256): 1, amountETHMin(uint256): 1, to(address): 0xA722ca, deadline(uint256): 1661293930) -> 1020797089459256392608
+        [5][DELEGATECALL] from=RouterProxy, to=KaoyaswapRouter, removeLiquidityETHSupportingFeeOnTransferTokens(token(address): 0xD84379, liquidity(uint256): 999999999999999000, amountTokenMin(uint256): 1, amountETHMin(uint256): 1, to(address): 0xA722ca, deadline(uint256): 1661293930) -> 1020797089459256392608
+          [6][CALL] from=RouterProxy, to=UniswapV2Pair, transferFrom(from(address): 0xA722ca, to(address): 0x8374A4, value(uint256): 999999999999999000) -> True
+          [6][CALL] from=RouterProxy, to=UniswapV2Pair, burn(to(address): 0x879EAD) -> ['1020797089459256392608', '982571444270552']
+            [7][STATICCALL] from=UniswapV2Pair, to=RouterProxy, getTokenInPair(pair(address): 0x8374A4, token(address): 0xbb4CdB) -> 1020797089459257413406
+              [8][DELEGATECALL] from=RouterProxy, to=KaoyaswapRouter, getTokenInPair(pair(address): 0x8374A4, token(address): 0xbb4CdB) -> 1020797089459257413406
+            [7][STATICCALL] from=UniswapV2Pair, to=RouterProxy, getTokenInPair(pair(address): 0x8374A4, token(address): 0xD84379) -> 982571444270553
+              [8][DELEGATECALL] from=RouterProxy, to=KaoyaswapRouter, getTokenInPair(pair(address): 0x8374A4, token(address): 0xD84379) -> 982571444270553
+            [7][STATICCALL] from=UniswapV2Pair, to=UniswapV2Factory, feeTo() -> 0x000000
+          [6][STATICCALL] from=RouterProxy, to=0xd84379, balanceOfaddress() -> 0x000000
+          [6][CALL] from=RouterProxy, to=0xd84379, transferaddress() -> 0x000000
+          [6][STATICCALL] from=RouterProxy, to=WBNB, balanceOf((address): 0x879EAD) -> 1022100582165522220953
+          [6][CALL] from=RouterProxy, to=WBNB, withdraw(wad(uint256): 1020797089459256392608) -> None
+            [7][CALL][1020.7970894592564] from=WBNB, to=RouterProxy
+          [6][CALL][1020.7970894592564] from=RouterProxy, to=0xa722ca
+      [4][CALL] from=0xa722ca, to=UniswapV2Pair, approve(spender(address): 0x879EAD, value(uint256): 115792089237316195423570985008687907853269...) -> True
+      [4][STATICCALL] from=0xa722ca, to=UniswapV2Pair, balanceOf((address): 0xA722ca) -> 999999999999999000
+      [4][CALL] from=0xa722ca, to=RouterProxy, removeLiquidity(tokenA(address): 0x74eF69, tokenB(address): 0xD84379, liquidity(uint256): 999999999999999000, amountAMin(uint256): 1, amountBMin(uint256): 1, to(address): 0xA722ca, deadline(uint256): 1661293930) -> ['500996889555148835', '1999017428555727447']
+        [5][DELEGATECALL] from=RouterProxy, to=KaoyaswapRouter, removeLiquidity(tokenA(address): 0x74eF69, tokenB(address): 0xD84379, liquidity(uint256): 999999999999999000, amountAMin(uint256): 1, amountBMin(uint256): 1, to(address): 0xA722ca, deadline(uint256): 1661293930) -> ['500996889555148835', '1999017428555727447']
+          [6][CALL] from=RouterProxy, to=UniswapV2Pair, transferFrom(from(address): 0xA722ca, to(address): 0x0A90d2, value(uint256): 999999999999999000) -> True
+          [6][CALL] from=RouterProxy, to=UniswapV2Pair, burn(to(address): 0xA722ca) -> ['500996889555148835', '1999017428555727447']
+            [7][STATICCALL] from=UniswapV2Pair, to=RouterProxy, getTokenInPair(pair(address): 0x0A90d2, token(address): 0x74eF69) -> 500996889555149336
+              [8][DELEGATECALL] from=RouterProxy, to=KaoyaswapRouter, getTokenInPair(pair(address): 0x0A90d2, token(address): 0x74eF69) -> 500996889555149336
+            [7][STATICCALL] from=UniswapV2Pair, to=RouterProxy, getTokenInPair(pair(address): 0x0A90d2, token(address): 0xD84379) -> 1999017428555729447
+              [8][DELEGATECALL] from=RouterProxy, to=KaoyaswapRouter, getTokenInPair(pair(address): 0x0A90d2, token(address): 0xD84379) -> 1999017428555729447
+            [7][STATICCALL] from=UniswapV2Pair, to=UniswapV2Factory, feeTo() -> 0x000000
+          [6][STATICCALL] from=RouterProxy, to=0x74ef69, balanceOfaddress() -> 0x000000
+          [6][CALL] from=RouterProxy, to=0x74ef69, transferaddress() -> 0x000000
+          [6][STATICCALL] from=RouterProxy, to=0xd84379, balanceOfaddress() -> 0x000000
+          [6][CALL] from=RouterProxy, to=0xd84379, transferaddress() -> 0x000000
+      [4][CALL] from=0xa722ca, to=WBNB, deposit() -> None
+      [4][STATICCALL] from=0xa722ca, to=UniswapV2Pair, getReserves() -> ['322343970691718429730444', '122147155915132038297690', '1661290939']
+      [4][STATICCALL] from=0xa722ca, to=PancakePair, getReserves() -> ['68144961881882272046522', '26473179358691835660448', '1661284519']
+      [4][STATICCALL] from=0xa722ca, to=PancakePair, getReserves() -> ['89746799089113166387869', '117319001322099751136', '1661284519']
+      [4][STATICCALL] from=0xa722ca, to=KaoyaProxy, balanceOf(account(address): 0xA722ca) -> 125023339230692800833825
+        [5][DELEGATECALL] from=KaoyaProxy, to=Kaoya, balanceOf(account(address): 0xA722ca) -> 125023339230692800833825
+      [4][CALL] from=0xa722ca, to=KaoyaProxy, approve(spender(address): 0x879EAD, amount(uint256): 115792089237316195423570985008687907853269...) -> True
+        [5][DELEGATECALL] from=KaoyaProxy, to=Kaoya, approve(spender(address): 0x879EAD, amount(uint256): 115792089237316195423570985008687907853269...) -> True
+      [4][CALL] from=0xa722ca, to=RouterProxy, swapExactTokensForTokens(amountIn(uint256): 83918202956758863643552, amountOutMin(uint256): 1000000000000000000, path(address[]): ['0xa8a33e365D5a03c94C3258A10Dd5d6dfE68694..., to(address): 0xA722ca, deadline(uint256): 1661293930) -> [83918202956758863643552, 25170828707767588457149]
+        [5][DELEGATECALL] from=RouterProxy, to=KaoyaswapRouter, swapExactTokensForTokens(amountIn(uint256): 83918202956758863643552, amountOutMin(uint256): 1000000000000000000, path(address[]): ['0xa8a33e365D5a03c94C3258A10Dd5d6dfE68694..., to(address): 0xA722ca, deadline(uint256): 1661293930) -> [83918202956758863643552, 25170828707767588457149]
+          [6][STATICCALL] from=RouterProxy, to=UniswapV2Pair, getReserves() -> ['322343970691718429730444', '122147155915132038297690', '1661290939']
+          [6][STATICCALL] from=RouterProxy, to=KaoyaProxy, balanceOf(account(address): 0x879EAD) -> 363270413366030058221779
+            [7][DELEGATECALL] from=KaoyaProxy, to=Kaoya, balanceOf(account(address): 0x879EAD) -> 363270413366030058221779
+          [6][CALL] from=RouterProxy, to=KaoyaProxy, transferFrom(sender(address): 0xA722ca, recipient(address): 0x879EAD, amount(uint256): 83918202956758863643552) -> True
+            [7][DELEGATECALL] from=KaoyaProxy, to=Kaoya, transferFrom(sender(address): 0xA722ca, recipient(address): 0x879EAD, amount(uint256): 83918202956758863643552) -> True
+          [6][STATICCALL] from=RouterProxy, to=KaoyaProxy, balanceOf(account(address): 0x879EAD) -> 447188616322788921865331
+            [7][DELEGATECALL] from=KaoyaProxy, to=Kaoya, balanceOf(account(address): 0x879EAD) -> 447188616322788921865331
+          [6][STATICCALL] from=RouterProxy, to=BEP20Token, balanceOf(account(address): 0x879EAD) -> 124066649741566597248641
+          [6][CALL] from=RouterProxy, to=BEP20Token, transfer(recipient(address): 0xA722ca, amount(uint256): 25170828707767588457149) -> True
+          [6][CALL] from=RouterProxy, to=UniswapV2Pair, swap(amount0Out(uint256): 0, amount1Out(uint256): 25170828707767588457149, to(address): 0xA722ca, data(bytes): b'') -> None
+            [7][STATICCALL] from=UniswapV2Pair, to=RouterProxy, getTokenInPair(pair(address): 0x3533d7, token(address): 0xa8a33e) -> 406262173648477293373996
+              [8][DELEGATECALL] from=RouterProxy, to=KaoyaswapRouter, getTokenInPair(pair(address): 0x3533d7, token(address): 0xa8a33e) -> 406262173648477293373996
+            [7][STATICCALL] from=UniswapV2Pair, to=RouterProxy, getTokenInPair(pair(address): 0x3533d7, token(address): 0xe9e7CE) -> 96976327207364449840541
+              [8][DELEGATECALL] from=RouterProxy, to=KaoyaswapRouter, getTokenInPair(pair(address): 0x3533d7, token(address): 0xe9e7CE) -> 96976327207364449840541
+      [4][CALL] from=0xa722ca, to=KaoyaProxy, approve(spender(address): 0x10ED43, amount(uint256): 115792089237316195423570985008687907853269...) -> True
+        [5][DELEGATECALL] from=KaoyaProxy, to=Kaoya, approve(spender(address): 0x10ED43, amount(uint256): 115792089237316195423570985008687907853269...) -> True
+      [4][CALL] from=0xa722ca, to=PancakeRouter, swapExactTokensForTokens(amountIn(uint256): 17740684677342760255783, amountOutMin(uint256): 1000000000000000000, path(address[]): ['0xa8a33e365D5a03c94C3258A10Dd5d6dfE68694..., to(address): 0xA722ca, deadline(uint256): 1661293930) -> [17740684677342760255783, 5457492194436982265534]
+        [5][STATICCALL] from=PancakeRouter, to=PancakePair, getReserves() -> ['68144961881882272046522', '26473179358691835660448', '1661284519']
+        [5][CALL] from=PancakeRouter, to=KaoyaProxy, transferFrom(sender(address): 0xA722ca, recipient(address): 0x7a1288, amount(uint256): 17740684677342760255783) -> True
+          [6][DELEGATECALL] from=KaoyaProxy, to=Kaoya, transferFrom(sender(address): 0xA722ca, recipient(address): 0x7a1288, amount(uint256): 17740684677342760255783) -> True
+        [5][CALL] from=PancakeRouter, to=PancakePair, swap(amount0Out(uint256): 0, amount1Out(uint256): 5457492194436982265534, to(address): 0xA722ca, data(bytes): b'') -> None
+          [6][CALL] from=PancakePair, to=BEP20Token, transfer(recipient(address): 0xA722ca, amount(uint256): 5457492194436982265534) -> True
+          [6][STATICCALL] from=PancakePair, to=KaoyaProxy, balanceOf(account(address): 0x7a1288) -> 85885646559225032302305
+            [7][DELEGATECALL] from=KaoyaProxy, to=Kaoya, balanceOf(account(address): 0x7a1288) -> 85885646559225032302305
+          [6][STATICCALL] from=PancakePair, to=BEP20Token, balanceOf(account(address): 0x7a1288) -> 21015687164254853394914
+      [4][CALL] from=0xa722ca, to=KaoyaProxy, approve(spender(address): 0x10ED43, amount(uint256): 115792089237316195423570985008687907853269...) -> True
+        [5][DELEGATECALL] from=KaoyaProxy, to=Kaoya, approve(spender(address): 0x10ED43, amount(uint256): 115792089237316195423570985008687907853269...) -> True
+      [4][CALL] from=0xa722ca, to=PancakeRouter, swapExactTokensForTokens(amountIn(uint256): 23364451596591176934489, amountOutMin(uint256): 1000000000000000000, path(address[]): ['0xa8a33e365D5a03c94C3258A10Dd5d6dfE68694..., to(address): 0xA722ca, deadline(uint256): 1661293930) -> [23364451596591176934489, 24185517171902696072]
+        [5][STATICCALL] from=PancakeRouter, to=PancakePair, getReserves() -> ['89746799089113166387869', '117319001322099751136', '1661284519']
+        [5][CALL] from=PancakeRouter, to=KaoyaProxy, transferFrom(sender(address): 0xA722ca, recipient(address): 0x7B1dD2, amount(uint256): 23364451596591176934489) -> True
+          [6][DELEGATECALL] from=KaoyaProxy, to=Kaoya, transferFrom(sender(address): 0xA722ca, recipient(address): 0x7B1dD2, amount(uint256): 23364451596591176934489) -> True
+        [5][CALL] from=PancakeRouter, to=PancakePair, swap(amount0Out(uint256): 0, amount1Out(uint256): 24185517171902696072, to(address): 0xA722ca, data(bytes): b'') -> None
+          [6][CALL] from=PancakePair, to=WBNB, transfer(dst(address): 0xA722ca, wad(uint256): 24185517171902696072) -> True
+          [6][STATICCALL] from=PancakePair, to=KaoyaProxy, balanceOf(account(address): 0x7B1dD2) -> 113111250685704343322358
+            [7][DELEGATECALL] from=KaoyaProxy, to=Kaoya, balanceOf(account(address): 0x7B1dD2) -> 113111250685704343322358
+          [6][STATICCALL] from=PancakePair, to=WBNB, balanceOf((address): 0x7B1dD2) -> 93133484150197055064
+      [4][CALL] from=0xa722ca, to=WBNB, transfer(dst(address): 0x0fe261, wad(uint256): 1800000000000000000000) -> True
+      [4][STATICCALL] from=0xa722ca, to=WBNB, balanceOf((address): 0xA722ca) -> 271172606631159088651
+      [4][STATICCALL] from=0xa722ca, to=BEP20Token, balanceOf(account(address): 0xA722ca) -> 37294836742668430198989
+      [4][STATICCALL] from=0xa722ca, to=KaoyaProxy, balanceOf(account(address): 0xA722ca) -> 1
+        [5][DELEGATECALL] from=KaoyaProxy, to=Kaoya, balanceOf(account(address): 0xA722ca) -> 1
+      [4][CALL] from=0xa722ca, to=KaoyaProxy, transfer(recipient(address): 0xd87FC9, amount(uint256): 1) -> True
+        [5][DELEGATECALL] from=KaoyaProxy, to=Kaoya, transfer(recipient(address): 0xd87FC9, amount(uint256): 1) -> True
+      [4][CALL] from=0xa722ca, to=BEP20Token, transfer(recipient(address): 0xd87FC9, amount(uint256): 37294836742668430198989) -> True
+      [4][CALL] from=0xa722ca, to=WBNB, transfer(dst(address): 0xd87FC9, wad(uint256): 271172606631159088651) -> True
+    [3][STATICCALL] from=DPPAdvanced, to=WBNB, balanceOf((address): 0x0fe261) -> 1833562958311053463131
+    [3][STATICCALL] from=DPPAdvanced, to=BEP20Token, balanceOf(account(address): 0x0fe261) -> 473231432553100247867821
+    [3][STATICCALL] from=DPPAdvanced, to=WBNB, balanceOf((address): 0x0fe261) -> 1833562958311053463131
+    [3][STATICCALL] from=DPPAdvanced, to=BEP20Token, balanceOf(account(address): 0x0fe261) -> 473231432553100247867821

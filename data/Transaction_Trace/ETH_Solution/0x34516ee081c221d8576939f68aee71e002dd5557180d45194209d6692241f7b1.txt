@@ -1,0 +1,1 @@
+[1][CALL] from=0x6fb0b9, to=Land, _burn(from(address): 0x9cfA73, owner(address): 0x9cfA73, id(uint256): 3738) -> None

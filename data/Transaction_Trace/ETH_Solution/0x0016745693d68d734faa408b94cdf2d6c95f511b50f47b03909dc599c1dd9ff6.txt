@@ -1,0 +1,91 @@
+[1][CALL] from=0xce1f4b, to=0xbd51cb, startuint256() -> None
+  [2][CALL] from=0xbd51cb, to=ERC1820Registry, setInterfaceImplementer(_addr(address): 0xbd51Cb, _interfaceHash(bytes32): b'\xfa5-ch\xbb\xc6C\xbc\xf9\xd5(\xff\xab\x..., _implementer(address): 0xbd51Cb) -> None
+  [2][CALL] from=0xbd51cb, to=UniswapV2Pair, swap(amount0Out(uint256): 0, amount1Out(uint256): 100000000000000000000, to(address): 0xbd51Cb, data(bytes): b'\x00') -> None
+    [3][CALL] from=UniswapV2Pair, to=WETH9, transfer(dst(address): 0xbd51Cb, wad(uint256): 100000000000000000000) -> True
+    [3][CALL] from=UniswapV2Pair, to=0xbd51cb, uniswapV2Calladdress() -> None
+      [4][CALL] from=0xbd51cb, to=WETH9, approve(guy(address): 0x2Db6c8, wad(uint256): 115792089237316195423570985008687907853269...) -> True
+      [4][CALL] from=0xbd51cb, to=WETH9, withdraw(wad(uint256): 100000000000000000000) -> None
+        [5][CALL][100.0] from=WETH9, to=0xbd51cb
+      [4][CALL] from=0xbd51cb, to=CEther, mint() -> None
+        [5][STATICCALL] from=CEther, to=TripleSlopeRateModel, getBorrowRate(cash(uint256): 4443560095611431796877, borrows(uint256): 1377250384702791942720, reserves(uint256): 3451520873905887730) -> 16891295157
+        [5][CALL] from=CEther, to=Unitroller, mintAllowed(cToken(address): 0xD06527, minter(address): 0xbd51Cb, mintAmount(uint256): 100000000000000000000) -> 0
+          [6][DELEGATECALL] from=Unitroller, to=Comptroller, mintAllowed(cToken(address): 0xD06527, minter(address): 0xbd51Cb, mintAmount(uint256): 100000000000000000000) -> 0
+        [5][CALL] from=CEther, to=Unitroller, mintVerify(cToken(address): 0xD06527, minter(address): 0xbd51Cb, actualMintAmount(uint256): 100000000000000000000, mintTokens(uint256): 483446999826) -> None
+          [6][DELEGATECALL] from=Unitroller, to=Comptroller, mintVerify(cToken(address): 0xD06527, minter(address): 0xbd51Cb, actualMintAmount(uint256): 100000000000000000000, mintTokens(uint256): 483446999826) -> None
+      [4][CALL] from=0xbd51cb, to=Unitroller, enterMarkets(cTokens(address[]): ['0xD06527D5e56A3495252A528C4987003b712860...) -> [0]
+        [5][DELEGATECALL] from=Unitroller, to=Comptroller, enterMarkets(cTokens(address[]): ['0xD06527D5e56A3495252A528C4987003b712860...) -> [0]
+      [4][CALL] from=0xbd51cb, to=CErc20Delegator, borrow(borrowAmount(uint256): 3896000000000000000000000) -> 0
+        [5][DELEGATECALL] from=CErc20Delegator, to=CCollateralCapErc20Delegate, borrow(borrowAmount(uint256): 3896000000000000000000000) -> 0
+          [6][STATICCALL] from=CErc20Delegator, to=TripleSlopeRateModel, getBorrowRate(cash(uint256): 480094604933752548996506920, borrows(uint256): 23726433833519733273711409, reserves(uint256): 203244325956208614164648) -> 4481733705
+          [6][CALL] from=CErc20Delegator, to=Unitroller, borrowAllowed(cToken(address): 0x2Db6c8, borrower(address): 0xbd51Cb, borrowAmount(uint256): 3896000000000000000000000) -> 0
+            [7][DELEGATECALL] from=Unitroller, to=Comptroller, borrowAllowed(cToken(address): 0x2Db6c8, borrower(address): 0xbd51Cb, borrowAmount(uint256): 3896000000000000000000000) -> 0
+              [8][CALL] from=Unitroller, to=CErc20Delegator, registerCollateral(account(address): 0xbd51Cb) -> 0
+                [9][DELEGATECALL] from=CErc20Delegator, to=CCollateralCapErc20Delegate, registerCollateral(account(address): 0xbd51Cb) -> 0
+                  [10][STATICCALL] from=CErc20Delegator, to=Unitroller, checkMembership(account(address): 0xbd51Cb, cToken(address): 0x2Db6c8) -> False
+                    [11][DELEGATECALL] from=Unitroller, to=Comptroller, checkMembership(account(address): 0xbd51Cb, cToken(address): 0x2Db6c8) -> False
+              [8][STATICCALL] from=Unitroller, to=PriceOracleProxy, getUnderlyingPrice(cToken(address): 0x2Db6c8) -> 18511682305690
+                [9][STATICCALL] from=PriceOracleProxy, to=CErc20Delegator, underlying() -> 0xff2081
+                [9][STATICCALL] from=PriceOracleProxy, to=FeedRegistry, latestRoundData(base(address): 0xfF2081, quote(address): 0x000000) -> ['18446744073709559174', '5863100', '1630294891', '1630294891', '18446744073709559174']
+                  [10][STATICCALL] from=FeedRegistry, to=AccessControlledOffchainAggregator, latestRoundData() -> ['7558', '5863100', '1630294891', '1630294891', '7558']
+                [9][STATICCALL] from=PriceOracleProxy, to=FeedRegistry, decimals(base(address): 0xfF2081, quote(address): 0x000000) -> 8
+                  [10][STATICCALL] from=FeedRegistry, to=AccessControlledOffchainAggregator, decimals() -> 8
+                [9][STATICCALL] from=PriceOracleProxy, to=FeedRegistry, latestRoundData(base(address): 0xA0b869, quote(address): 0xEeeeeE) -> ['18446744073709555151', '315731990000000', '1630295166', '1630295166', '18446744073709555151']
+                  [10][STATICCALL] from=FeedRegistry, to=AccessControlledOffchainAggregator, latestRoundData() -> ['3535', '315731990000000', '1630295166', '1630295166', '3535']
+                [9][STATICCALL] from=PriceOracleProxy, to=FeedRegistry, decimals(base(address): 0xA0b869, quote(address): 0xEeeeeE) -> 18
+                  [10][STATICCALL] from=FeedRegistry, to=AccessControlledOffchainAggregator, decimals() -> 18
+                [9][STATICCALL] from=PriceOracleProxy, to=FiatTokenProxy, decimals() -> 6
+                  [10][DELEGATECALL] from=FiatTokenProxy, to=FiatTokenV2_1, decimals() -> 6
+                [9][STATICCALL] from=PriceOracleProxy, to=Amp, decimals() -> 18
+              [8][STATICCALL] from=Unitroller, to=CEther, getAccountSnapshot(account(address): 0xbd51Cb) -> ['0', '483446999826', '0', '206847906876968262131122890']
+              [8][STATICCALL] from=Unitroller, to=PriceOracleProxy, getUnderlyingPrice(cToken(address): 0xD06527) -> 1000000000000000000
+              [8][STATICCALL] from=Unitroller, to=CErc20Delegator, getAccountSnapshot(account(address): 0xbd51Cb) -> ['0', '0', '0', '200195307396609303228755332']
+                [9][STATICCALL] from=CErc20Delegator, to=CErc20Delegator, delegateToImplementationbytes() -> 0x000000
+                  [10][DELEGATECALL] from=CErc20Delegator, to=CCollateralCapErc20Delegate, getAccountSnapshot(account(address): 0xbd51Cb) -> ['0', '0', '0', '200195307396609303228755332']
+              [8][STATICCALL] from=Unitroller, to=PriceOracleProxy, getUnderlyingPrice(cToken(address): 0x2Db6c8) -> 18511682305690
+                [9][STATICCALL] from=PriceOracleProxy, to=CErc20Delegator, underlying() -> 0xff2081
+                [9][STATICCALL] from=PriceOracleProxy, to=FeedRegistry, latestRoundData(base(address): 0xfF2081, quote(address): 0x000000) -> ['18446744073709559174', '5863100', '1630294891', '1630294891', '18446744073709559174']
+                  [10][STATICCALL] from=FeedRegistry, to=AccessControlledOffchainAggregator, latestRoundData() -> ['7558', '5863100', '1630294891', '1630294891', '7558']
+                [9][STATICCALL] from=PriceOracleProxy, to=FeedRegistry, decimals(base(address): 0xfF2081, quote(address): 0x000000) -> 8
+                  [10][STATICCALL] from=FeedRegistry, to=AccessControlledOffchainAggregator, decimals() -> 8
+                [9][STATICCALL] from=PriceOracleProxy, to=FeedRegistry, latestRoundData(base(address): 0xA0b869, quote(address): 0xEeeeeE) -> ['18446744073709555151', '315731990000000', '1630295166', '1630295166', '18446744073709555151']
+                  [10][STATICCALL] from=FeedRegistry, to=AccessControlledOffchainAggregator, latestRoundData() -> ['3535', '315731990000000', '1630295166', '1630295166', '3535']
+                [9][STATICCALL] from=PriceOracleProxy, to=FeedRegistry, decimals(base(address): 0xA0b869, quote(address): 0xEeeeeE) -> 18
+                  [10][STATICCALL] from=FeedRegistry, to=AccessControlledOffchainAggregator, decimals() -> 18
+                [9][STATICCALL] from=PriceOracleProxy, to=FiatTokenProxy, decimals() -> 6
+                  [10][DELEGATECALL] from=FiatTokenProxy, to=FiatTokenV2_1, decimals() -> 6
+                [9][STATICCALL] from=PriceOracleProxy, to=Amp, decimals() -> 18
+          [6][CALL] from=CErc20Delegator, to=Amp, transfer(_to(address): 0xbd51Cb, _value(uint256): 3896000000000000000000000) -> True
+            [7][STATICCALL] from=Amp, to=ERC1820Registry, getInterfaceImplementer(_addr(address): 0x2Db6c8, _interfaceHash(bytes32): b'`\x88\x1bX\xa7\xad\x1e\xbd;\xc0\xe9+\x82...) -> 0x000000
+            [7][STATICCALL] from=Amp, to=ERC1820Registry, getInterfaceImplementer(_addr(address): 0xbd51Cb, _interfaceHash(bytes32): b'\xfa5-ch\xbb\xc6C\xbc\xf9\xd5(\xff\xab\x...) -> 0xbd51cb
+            [7][CALL] from=Amp, to=0xbd51cb, tokensReceivedbytes4() -> None
+              [8][CALL] from=0xbd51cb, to=CEther, borrow(borrowAmount(uint256): 71000000000000000000) -> 0
+                [9][CALL] from=CEther, to=Unitroller, borrowAllowed(cToken(address): 0xD06527, borrower(address): 0xbd51Cb, borrowAmount(uint256): 71000000000000000000) -> 0
+                  [10][DELEGATECALL] from=Unitroller, to=Comptroller, borrowAllowed(cToken(address): 0xD06527, borrower(address): 0xbd51Cb, borrowAmount(uint256): 71000000000000000000) -> 0
+                    [11][STATICCALL] from=Unitroller, to=PriceOracleProxy, getUnderlyingPrice(cToken(address): 0xD06527) -> 1000000000000000000
+                    [11][STATICCALL] from=Unitroller, to=CEther, getAccountSnapshot(account(address): 0xbd51Cb) -> ['0', '483446999826', '0', '206847906876968262131122890']
+                    [11][STATICCALL] from=Unitroller, to=PriceOracleProxy, getUnderlyingPrice(cToken(address): 0xD06527) -> 1000000000000000000
+                    [11][STATICCALL] from=Unitroller, to=CErc20Delegator, getAccountSnapshot(account(address): 0xbd51Cb) -> ['0', '0', '0', '200195307396609303228755332']
+                      [12][STATICCALL] from=CErc20Delegator, to=CErc20Delegator, delegateToImplementationbytes() -> 0x000000
+                        [13][DELEGATECALL] from=CErc20Delegator, to=CCollateralCapErc20Delegate, getAccountSnapshot(account(address): 0xbd51Cb) -> ['0', '0', '0', '200195307396609303228755332']
+                [9][CALL][71.0] from=CEther, to=0xbd51cb
+                [9][CALL] from=CEther, to=Unitroller, borrowVerify(cToken(address): 0xD06527, borrower(address): 0xbd51Cb, borrowAmount(uint256): 71000000000000000000) -> None
+                  [10][DELEGATECALL] from=Unitroller, to=Comptroller, borrowVerify(cToken(address): 0xD06527, borrower(address): 0xbd51Cb, borrowAmount(uint256): 71000000000000000000) -> None
+      [4][CALL] from=0xbd51cb, to=WETH9, deposit() -> None
+      [4][CALL] from=0xbd51cb, to=Amp, approve(_spender(address): 0x7a250d, _value(uint256): 115792089237316195423570985008687907853269...) -> True
+      [4][STATICCALL] from=0xbd51cb, to=WETH9, balanceOf((address): 0xbd51Cb) -> 71000000000000000000
+      [4][CALL] from=0xbd51cb, to=UniswapV2Router02, swapTokensForExactTokens(amountOut(uint256): 29310000000000000000, amountInMax(uint256): 115792089237316195423570985008687907853269..., path(address[]): ['0xfF20817765cB7f73d4bde2e66e067E58D11095..., to(address): 0xbd51Cb, deadline(uint256): 1630296220) -> [1649668813982746997229183, 29310000000000000000]
+        [5][STATICCALL] from=UniswapV2Router02, to=UniswapV2Pair, getReserves() -> ['976510762317055905363', '53151820385554624894067359', '1630292521']
+        [5][CALL] from=UniswapV2Router02, to=Amp, transferFrom(_from(address): 0xbd51Cb, _to(address): 0x08650b, _value(uint256): 1649668813982746997229183) -> True
+          [6][STATICCALL] from=Amp, to=ERC1820Registry, getInterfaceImplementer(_addr(address): 0xbd51Cb, _interfaceHash(bytes32): b'`\x88\x1bX\xa7\xad\x1e\xbd;\xc0\xe9+\x82...) -> 0x000000
+          [6][STATICCALL] from=Amp, to=ERC1820Registry, getInterfaceImplementer(_addr(address): 0x08650b, _interfaceHash(bytes32): b'\xfa5-ch\xbb\xc6C\xbc\xf9\xd5(\xff\xab\x...) -> 0x000000
+        [5][CALL] from=UniswapV2Router02, to=UniswapV2Pair, swap(amount0Out(uint256): 29310000000000000000, amount1Out(uint256): 0, to(address): 0xbd51Cb, data(bytes): b'') -> None
+          [6][CALL] from=UniswapV2Pair, to=WETH9, transfer(dst(address): 0xbd51Cb, wad(uint256): 29310000000000000000) -> True
+          [6][STATICCALL] from=UniswapV2Pair, to=WETH9, balanceOf((address): 0x08650b) -> 947200762317055905363
+          [6][STATICCALL] from=UniswapV2Pair, to=Amp, balanceOf(_tokenHolder(address): 0x08650b) -> 54801489199537371891296542
+      [4][CALL] from=0xbd51cb, to=WETH9, transfer(dst(address): 0x21b806, wad(uint256): 100310000000000000000) -> True
+    [3][STATICCALL] from=UniswapV2Pair, to=WiseToken, balanceOf(account(address): 0x21b806) -> 305438357976074292887305382
+    [3][STATICCALL] from=UniswapV2Pair, to=WETH9, balanceOf((address): 0x21b806) -> 48496545732400395469071
+  [2][STATICCALL] from=0xbd51cb, to=Amp, balanceOf(_tokenHolder(address): 0xbd51Cb) -> 2246331186017253002770817
+  [2][CALL] from=0xbd51cb, to=Amp, transfer(_to(address): 0xcE1F4B, _value(uint256): 2246331186017253002770817) -> True
+    [3][STATICCALL] from=Amp, to=ERC1820Registry, getInterfaceImplementer(_addr(address): 0xbd51Cb, _interfaceHash(bytes32): b'`\x88\x1bX\xa7\xad\x1e\xbd;\xc0\xe9+\x82...) -> 0x000000
+    [3][STATICCALL] from=Amp, to=ERC1820Registry, getInterfaceImplementer(_addr(address): 0xcE1F4B, _interfaceHash(bytes32): b'\xfa5-ch\xbb\xc6C\xbc\xf9\xd5(\xff\xab\x...) -> 0x000000

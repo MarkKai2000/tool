@@ -1,0 +1,38 @@
+[1][CALL] from=0x0348d2, to=0xed42Cb, 0xfc42acfb() -> None
+  [2][CALL] from=0xed42Cb, to=Vault, flashLoan(recipient(address): 0xed42Cb, tokens(address[]): ['0xC02aaA39b223FE8D0A0e5C4F27eAD9083C756C..., amounts(uint256[]): [72500000000000000000], userData(bytes): b'\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00...) -> None
+    [3][STATICCALL] from=Vault, to=WETH9, balanceOf((address): 0xBA1222) -> 150595305800397677345602
+    [3][STATICCALL] from=Vault, to=ProtocolFeesCollector, getFlashLoanFeePercentage() -> 0
+    [3][CALL] from=Vault, to=WETH9, transfer(dst(address): 0xed42Cb, wad(uint256): 72500000000000000000) -> True
+    [3][CALL] from=Vault, to=0xed42Cb, receiveFlashLoanaddress[]() -> None
+      [4][CALL] from=0xed42Cb, to=WETH9, withdraw(wad(uint256): 72500000000000000000) -> None
+        [5][CALL][72.5] from=WETH9, to=0xed42Cb
+      [4][CALL] from=0xed42Cb, to=JAY, buyJay(erc721TokenAddress(address[]): [], erc721Ids(uint256[]): [], erc1155TokenAddress(address[]): [], erc1155Ids(uint256[]): [], erc1155Amounts(uint256[]): []) -> None
+        [5][CALL][0.6470588235294118] from=JAY, to=TheSplitoooor
+      [4][CALL] from=0xed42Cb, to=JAY, buyJay(erc721TokenAddress(address[]): ['0xed42Cb11b9D03c807ED1ba9c2eD1d3BA5Bf373..., erc721Ids(uint256[]): [0], erc1155TokenAddress(address[]): [], erc1155Ids(uint256[]): [], erc1155Amounts(uint256[]): []) -> None
+        [5][CALL] from=JAY, to=0xed42Cb, transferFromaddress() -> 0x000000
+          [6][STATICCALL] from=0xed42Cb, to=JAY, balanceOf(account(address): 0xed42Cb) -> 13584899853779845952188
+          [6][CALL] from=0xed42Cb, to=JAY, sell(value(uint256): 13584899853779845952188) -> None
+            [7][CALL][41.65943361361946] from=JAY, to=0xed42Cb
+            [7][CALL][1.4026745324450998] from=JAY, to=TheSplitoooor
+        [5][CALL][1.4852941176470589] from=JAY, to=TheSplitoooor
+      [4][STATICCALL] from=0xed42Cb, to=JAY, balanceOf(account(address): 0xed42Cb) -> 4313025058290613910965927
+      [4][CALL] from=0xed42Cb, to=JAY, sell(value(uint256): 4313025058290613910965927) -> None
+        [5][CALL][44.113149281907944] from=JAY, to=0xed42Cb
+        [5][CALL][1.485291221613062] from=JAY, to=TheSplitoooor
+      [4][CALL] from=0xed42Cb, to=JAY, buyJay(erc721TokenAddress(address[]): [], erc721Ids(uint256[]): [], erc1155TokenAddress(address[]): [], erc1155Ids(uint256[]): [], erc1155Amounts(uint256[]): []) -> None
+        [5][CALL][0.10294117647058823] from=JAY, to=TheSplitoooor
+      [4][CALL] from=0xed42Cb, to=JAY, buyJay(erc721TokenAddress(address[]): ['0xed42Cb11b9D03c807ED1ba9c2eD1d3BA5Bf373..., erc721Ids(uint256[]): [0], erc1155TokenAddress(address[]): [], erc1155Ids(uint256[]): [], erc1155Amounts(uint256[]): []) -> None
+        [5][CALL] from=JAY, to=0xed42Cb, transferFromaddress() -> 0x000000
+          [6][STATICCALL] from=0xed42Cb, to=JAY, balanceOf(account(address): 0xed42Cb) -> 13221999944300134342235
+          [6][CALL] from=0xed42Cb, to=JAY, sell(value(uint256): 13221999944300134342235) -> None
+            [7][CALL][6.563751031787677] from=JAY, to=0xed42Cb
+            [7][CALL][0.22100171824200934] from=JAY, to=TheSplitoooor
+        [5][CALL][0.23529411764705882] from=JAY, to=TheSplitoooor
+      [4][STATICCALL] from=0xed42Cb, to=JAY, balanceOf(account(address): 0xed42Cb) -> 578675968434609156630781
+      [4][CALL] from=0xed42Cb, to=JAY, sell(value(uint256): 578675968434609156630781) -> None
+        [5][CALL][6.988135803746588] from=JAY, to=0xed42Cb
+        [5][CALL][0.2352907678029154] from=JAY, to=TheSplitoooor
+      [4][CALL] from=0xed42Cb, to=WETH9, deposit() -> None
+      [4][CALL] from=0xed42Cb, to=WETH9, transfer(dst(address): 0xBA1222, wad(uint256): 72500000000000000000) -> True
+    [3][STATICCALL] from=Vault, to=WETH9, balanceOf((address): 0xBA1222) -> 150595305800397677345602
+  [2][CALL][15.324469731061672] from=0xed42Cb, to=0x0348d2

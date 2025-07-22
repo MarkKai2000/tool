@@ -1,0 +1,33 @@
+[1][CREATE] from=0x03560a, to=0xee4538, atInversebrahint248() -> 0x608060
+  [2][CREATE] from=0xee4538, to=0x74840E, atInversebrahint248() -> 0x608060
+  [2][CALL] from=0xee4538, to=TransparentUpgradeableProxy, claimMultipleStaking(claimContracts(address[]): ['0x74840EdC21fab546f0fc085869862a3137f48E..., _account(address): 0xee4538, _minCvgCvxAmountOut(uint256): 1, _isConvert(bool): True, cvxRewardCount(uint256): 1) -> None
+    [3][DELEGATECALL] from=TransparentUpgradeableProxy, to=CvxRewardDistributor, claimMultipleStaking(claimContracts(address[]): ['0x74840EdC21fab546f0fc085869862a3137f48E..., _account(address): 0xee4538, _minCvgCvxAmountOut(uint256): 1, _isConvert(bool): True, cvxRewardCount(uint256): 1) -> None
+      [4][CALL] from=TransparentUpgradeableProxy, to=0x74840E, 0x011f20bf() -> 0xffffff
+      [4][CALL] from=TransparentUpgradeableProxy, to=Cvg, mintStaking(account(address): 0xee4538, amount(uint256): 115792089237316195423570985008687907853269...) -> None
+        [5][STATICCALL] from=Cvg, to=TransparentUpgradeableProxy, isStakingContract((address): 0x2b083b) -> True
+          [6][DELEGATECALL] from=TransparentUpgradeableProxy, to=CvgControlTowerV2, isStakingContract((address): 0x2b083b) -> True
+  [2][STATICCALL] from=0xee4538, to=Cvg, balanceOf(account(address): 0xee4538) -> 58718395056818121904518498
+  [2][CALL] from=0xee4538, to=Cvg, approve(spender(address): 0x004C16, amount(uint256): 52846555551136309714066648) -> True
+  [2][CALL] from=0xee4538, to=CurveTwocryptoOptimized, exchange(i(uint256): 1, j(uint256): 0, dx(uint256): 52846555551136309714066648, min_dy(uint256): 0) -> 60058285738671884767
+    [3][STATICCALL] from=CurveTwocryptoOptimized, to=Cvg, balanceOf(account(address): 0x004C16) -> 1709066327912816286498822
+    [3][CALL] from=CurveTwocryptoOptimized, to=Cvg, transferFrom(from(address): 0xee4538, to(address): 0x004C16, amount(uint256): 52846555551136309714066648) -> True
+    [3][STATICCALL] from=CurveTwocryptoOptimized, to=Cvg, balanceOf(account(address): 0x004C16) -> 54555621879049126000565470
+    [3][STATICCALL] from=CurveTwocryptoOptimized, to=CurveTwocryptoMathOptimized, get_y(_ANN(uint256): 400000, _gamma(uint256): 145000000000000, _x(uint256[2]): [62235887096197492112, 3328404727182776559..., _D(uint256): 161346010470137792599, i(uint256): 0) -> [1906143937740052270, 974844512069599575]
+    [3][STATICCALL] from=CurveTwocryptoOptimized, to=CurveTwocryptoMathOptimized, wad_exp(x(int256): -13413394919168591224) -> 1494984200853
+    [3][STATICCALL] from=CurveTwocryptoOptimized, to=CurveTwocryptoMathOptimized, wad_exp(x(int256): -186380848469289519) -> 829957446760296790
+    [3][STATICCALL] from=CurveTwocryptoOptimized, to=CurveTwocryptoMathOptimized, newton_D(ANN(uint256): 400000, gamma(uint256): 145000000000000, x_unsorted(uint256[2]): [2177601357525607345, 33284047271827765595...) -> 172401699044956032894
+    [3][STATICCALL] from=CurveTwocryptoOptimized, to=CurveTwocryptoMathOptimized, get_p(_xp(uint256[2]): [2177601357525607345, 33284047271827765595..., _D(uint256): 172401699044956032894, _A_gamma(uint256[2]): [400000, 145000000000000]) -> 660009956274938
+    [3][STATICCALL] from=CurveTwocryptoOptimized, to=CurveTwocryptoMathOptimized, newton_D(ANN(uint256): 400000, gamma(uint256): 145000000000000, x_unsorted(uint256[2]): [2177601357525607345, 30632504405868012832...) -> 165362176936020418346
+    [3][CALL] from=CurveTwocryptoOptimized, to=WETH9, transfer(dst(address): 0x03560A, wad(uint256): 60058285738671884767) -> True
+  [2][CALL] from=0xee4538, to=Cvg, approve(spender(address): 0xa7B0E9, amount(uint256): 5871839505681812190451850) -> True
+  [2][CALL] from=0xee4538, to=Vyper_contract, exchange(i(uint256): 0, j(uint256): 1, dx(uint256): 5871839505681812190451850, min_dy(uint256): 0) -> 15925234299672041310152
+    [3][DELEGATECALL] from=Vyper_contract, to=Vyper_contract, exchange(i(uint256): 0, j(uint256): 1, dx(uint256): 5871839505681812190451850, min_dy(uint256): 0) -> 15925234299672041310152
+      [4][CALL] from=Vyper_contract, to=Cvg, transferFrom(from(address): 0xee4538, to(address): 0xa7B0E9, amount(uint256): 5871839505681812190451850) -> True
+      [4][STATICCALL] from=Vyper_contract, to=0x000000, fallback() -> 0x000000
+      [4][CALL] from=Vyper_contract, to=Vyper_contract, transfer(_to(address): 0x03560A, _value(uint256): 15925234299672041310152) -> True
+      [4][STATICCALL] from=Vyper_contract, to=0x000000, fallback() -> 0x000000
+      [4][STATICCALL] from=Vyper_contract, to=Vyper_contract, totalSupply() -> 47954309179326620099993
+        [5][DELEGATECALL] from=Vyper_contract, to=Vyper_contract, totalSupply() -> 47954309179326620099993
+  [2][STATICCALL] from=0xee4538, to=WETH9, balanceOf((address): 0xee4538) -> 0
+  [2][STATICCALL] from=0xee4538, to=Vyper_contract, balanceOf(arg0(address): 0xee4538) -> 0
+  [2][STATICCALL] from=0xee4538, to=Cvg, balanceOf(account(address): 0xee4538) -> 0

@@ -1,0 +1,402 @@
+[1][CALL] from=0x7fe83f, to=0x414831, 0x82be0b96() -> None
+  [2][STATICCALL] from=0x414831, to=TroveManager, collateralToken() -> 0x7f39c5
+    [3][DELEGATECALL] from=TroveManager, to=TroveManager, collateralToken() -> 0x7f39c5
+  [2][CALL] from=0x414831, to=PriceFeed, fetchPrice(_token(address): 0x7f39C5) -> 4149566095531868420331
+    [3][STATICCALL] from=PriceFeed, to=EACAggregatorProxy, latestRoundData() -> ['18446744073709552581', '998621407212709500', '1711569011', '1711569011', '18446744073709552581']
+      [4][STATICCALL] from=EACAggregatorProxy, to=AccessControlledOffchainAggregator, latestRoundData() -> ['965', '998621407212709500', '1711569011', '1711569011', '965']
+    [3][STATICCALL] from=PriceFeed, to=EACAggregatorProxy, latestRoundData() -> ['110680464442257324095', '357691910000', '1711627559', '1711627559', '110680464442257324095']
+      [4][STATICCALL] from=EACAggregatorProxy, to=AccessControlledOffchainAggregator, latestRoundData() -> ['14399', '357691910000', '1711627559', '1711627559', '14399']
+  [2][STATICCALL] from=0x414831, to=TroveManager, collateralToken() -> 0x7f39c5
+    [3][DELEGATECALL] from=TroveManager, to=TroveManager, collateralToken() -> 0x7f39c5
+  [2][STATICCALL] from=0x414831, to=TroveManager, getTroveCollAndDebt(_borrower(address): 0x4A3Fce) -> ['87929056870938236432', '61708062712632139715407']
+    [3][DELEGATECALL] from=TroveManager, to=TroveManager, getTroveCollAndDebt(_borrower(address): 0x4A3Fce) -> ['87929056870938236432', '61708062712632139715407']
+  [2][CALL] from=0x414831, to=DebtToken, flashLoan(receiver(address): 0xcC7218, token(address): 0x4591DB, amount(uint256): 61708062712632139715407, data(bytes): b"\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00...) -> True
+    [3][CALL] from=DebtToken, to=MigrateTroveZap, onFlashLoan((address): 0x4591DB, amount(address): 61708062712632139715407, fee(uint256): 55537256441368925743, data(uint256): b"\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00...) -> 0x439148a291b069d8882abf8cf18dd9
+      [4][CALL] from=MigrateTroveZap, to=BorrowerOperations, closeTrove(troveManager(address): 0x1CC79f, account(address): 0x4A3Fce) -> None
+        [5][CALL] from=BorrowerOperations, to=TroveManager, getEntireSystemBalances() -> ['14015674457905566515617', '12641087173434032520833658', '4149566095531868420331']
+          [6][DELEGATECALL] from=TroveManager, to=TroveManager, getEntireSystemBalances() -> ['14015674457905566515617', '12641087173434032520833658', '4149566095531868420331']
+            [7][STATICCALL] from=TroveManager, to=PrismaCore, priceFeed() -> 0xc105ce
+            [7][CALL] from=TroveManager, to=PriceFeed, fetchPrice(_token(address): 0x7f39C5) -> 4149566095531868420331
+        [5][CALL] from=BorrowerOperations, to=TroveManager, getEntireSystemBalances() -> ['5450257651976284958566', '6261776053937667767510747', '3930882808203813871884']
+          [6][DELEGATECALL] from=TroveManager, to=TroveManager, getEntireSystemBalances() -> ['5450257651976284958566', '6261776053937667767510747', '3930882808203813871884']
+            [7][STATICCALL] from=TroveManager, to=PrismaCore, priceFeed() -> 0xc105ce
+            [7][CALL] from=TroveManager, to=PriceFeed, fetchPrice(_token(address): 0xae7873) -> 3930882808203813871884
+              [8][STATICCALL] from=PriceFeed, to=EACAggregatorProxy, latestRoundData() -> ['18446744073709552012', '1098957705865870400', '1711566647', '1711566647', '18446744073709552012']
+                [9][STATICCALL] from=EACAggregatorProxy, to=AccessControlledOffchainAggregator, latestRoundData() -> ['396', '1098957705865870400', '1711566647', '1711566647', '396']
+        [5][CALL] from=BorrowerOperations, to=TroveManager, getEntireSystemBalances() -> ['1449823148572984694848', '3211913151165317269222587', '3805018136658360621072']
+          [6][DELEGATECALL] from=TroveManager, to=TroveManager, getEntireSystemBalances() -> ['1449823148572984694848', '3211913151165317269222587', '3805018136658360621072']
+            [7][STATICCALL] from=TroveManager, to=PrismaCore, priceFeed() -> 0xc105ce
+            [7][CALL] from=TroveManager, to=PriceFeed, fetchPrice(_token(address): 0xBe9895) -> 3805018136658360621072
+              [8][STATICCALL] from=PriceFeed, to=EACAggregatorProxy, latestRoundData() -> ['18446744073709552134', '1063769694052728400', '1711582691', '1711582691', '18446744073709552134']
+                [9][STATICCALL] from=EACAggregatorProxy, to=AccessControlledOffchainAggregator, latestRoundData() -> ['518', '1063769694052728400', '1711582691', '1711582691', '518']
+        [5][CALL] from=BorrowerOperations, to=TroveManager, getEntireSystemBalances() -> ['12210309614077347828484', '6284515407859350549467604', '3813451207493670011456']
+          [6][DELEGATECALL] from=TroveManager, to=TroveManager, getEntireSystemBalances() -> ['12210309614077347828484', '6284515407859350549467604', '3813451207493670011456']
+            [7][STATICCALL] from=TroveManager, to=PrismaCore, priceFeed() -> 0xc105ce
+            [7][CALL] from=TroveManager, to=PriceFeed, fetchPrice(_token(address): 0xac3E01) -> 3813451207493670011456
+              [8][STATICCALL] from=PriceFeed, to=SfrxEthFraxOracle, latestRoundData() -> ['360', '1066127329380658906', '1711568939', '1711568939', '360']
+        [5][CALL] from=BorrowerOperations, to=TroveManager, getEntireSystemBalances() -> ['2096216947911988207215', '4598598149744339629099606', '4149566095531868420331']
+          [6][DELEGATECALL] from=TroveManager, to=TroveManager, getEntireSystemBalances() -> ['2096216947911988207215', '4598598149744339629099606', '4149566095531868420331']
+            [7][STATICCALL] from=TroveManager, to=PrismaCore, priceFeed() -> 0xc105ce
+            [7][CALL] from=TroveManager, to=PriceFeed, fetchPrice(_token(address): 0x7f39C5) -> 4149566095531868420331
+        [5][CALL] from=BorrowerOperations, to=TroveManager, getEntireSystemBalances() -> ['4686140039386635007797', '5313093793585574270017018', '3813451207493670011456']
+          [6][DELEGATECALL] from=TroveManager, to=TroveManager, getEntireSystemBalances() -> ['4686140039386635007797', '5313093793585574270017018', '3813451207493670011456']
+            [7][STATICCALL] from=TroveManager, to=PrismaCore, priceFeed() -> 0xc105ce
+            [7][CALL] from=TroveManager, to=PriceFeed, fetchPrice(_token(address): 0xac3E01) -> 3813451207493670011456
+        [5][CALL] from=BorrowerOperations, to=TroveManager, getEntireSystemBalances() -> ['2181736411404864496854', '4137368230200663181830888', '3930882808203813871884']
+          [6][DELEGATECALL] from=TroveManager, to=TroveManager, getEntireSystemBalances() -> ['2181736411404864496854', '4137368230200663181830888', '3930882808203813871884']
+            [7][STATICCALL] from=TroveManager, to=PrismaCore, priceFeed() -> 0xc105ce
+            [7][CALL] from=TroveManager, to=PriceFeed, fetchPrice(_token(address): 0xae7873) -> 3930882808203813871884
+        [5][CALL] from=BorrowerOperations, to=TroveManager, getEntireSystemBalances() -> ['28669200442514927430', '26998093984283300047489', '3805018136658360621072']
+          [6][DELEGATECALL] from=TroveManager, to=TroveManager, getEntireSystemBalances() -> ['28669200442514927430', '26998093984283300047489', '3805018136658360621072']
+            [7][STATICCALL] from=TroveManager, to=PrismaCore, priceFeed() -> 0xc105ce
+            [7][CALL] from=TroveManager, to=PriceFeed, fetchPrice(_token(address): 0xBe9895) -> 3805018136658360621072
+        [5][CALL] from=BorrowerOperations, to=TroveManager, applyPendingRewards(_borrower(address): 0x4A3Fce) -> ['87929056870938236432', '61708062712632139715407']
+          [6][DELEGATECALL] from=TroveManager, to=TroveManager, applyPendingRewards(_borrower(address): 0x4A3Fce) -> ['87929056870938236432', '61708062712632139715407']
+        [5][CALL] from=BorrowerOperations, to=TroveManager, closeTrove(_borrower(address): 0x4A3Fce, _receiver(address): 0xcC7218, collAmount(uint256): 87929056870938236432, debtAmount(uint256): 61708062712632139715407) -> None
+          [6][DELEGATECALL] from=TroveManager, to=TroveManager, closeTrove(_borrower(address): 0x4A3Fce, _receiver(address): 0xcC7218, collAmount(uint256): 87929056870938236432, debtAmount(uint256): 61708062712632139715407) -> None
+            [7][STATICCALL] from=TroveManager, to=SortedTroves, getSize() -> 26
+              [8][DELEGATECALL] from=SortedTroves, to=SortedTroves, getSize() -> 26
+            [7][CALL] from=TroveManager, to=SortedTroves, remove(_id(address): 0x4A3Fce) -> None
+              [8][DELEGATECALL] from=SortedTroves, to=SortedTroves, remove(_id(address): 0x4A3Fce) -> None
+            [7][CALL] from=TroveManager, to=WstETH, transfer(recipient(address): 0xcC7218, amount(uint256): 87929056870938236432) -> True
+        [5][CALL] from=BorrowerOperations, to=DebtToken, burnWithGasCompensation(_account(address): 0xcC7218, _amount(uint256): 61508062712632139715407) -> True
+      [4][CALL] from=MigrateTroveZap, to=BorrowerOperations, openTrove(troveManager(address): 0x1CC79f, account(address): 0x4A3Fce, _maxFeePercentage(uint256): 5000000325833471, _collateralAmount(uint256): 19848509671109025031, _debtAmount(uint256): 61763599969073508641150, _upperHint(address): 0xE87C6f, _lowerHint(address): 0x89Ee26) -> None
+        [5][STATICCALL] from=BorrowerOperations, to=PrismaCore, paused() -> False
+        [5][CALL] from=BorrowerOperations, to=TroveManager, getEntireSystemBalances() -> ['14015674457905566515617', '12641087173434032520833658', '4149566095531868420331']
+          [6][DELEGATECALL] from=TroveManager, to=TroveManager, getEntireSystemBalances() -> ['14015674457905566515617', '12641087173434032520833658', '4149566095531868420331']
+            [7][STATICCALL] from=TroveManager, to=PrismaCore, priceFeed() -> 0xc105ce
+            [7][CALL] from=TroveManager, to=PriceFeed, fetchPrice(_token(address): 0x7f39C5) -> 4149566095531868420331
+        [5][CALL] from=BorrowerOperations, to=TroveManager, getEntireSystemBalances() -> ['5450257651976284958566', '6261776053937667767510747', '3930882808203813871884']
+          [6][DELEGATECALL] from=TroveManager, to=TroveManager, getEntireSystemBalances() -> ['5450257651976284958566', '6261776053937667767510747', '3930882808203813871884']
+            [7][STATICCALL] from=TroveManager, to=PrismaCore, priceFeed() -> 0xc105ce
+            [7][CALL] from=TroveManager, to=PriceFeed, fetchPrice(_token(address): 0xae7873) -> 3930882808203813871884
+        [5][CALL] from=BorrowerOperations, to=TroveManager, getEntireSystemBalances() -> ['1449823148572984694848', '3211913151165317269222587', '3805018136658360621072']
+          [6][DELEGATECALL] from=TroveManager, to=TroveManager, getEntireSystemBalances() -> ['1449823148572984694848', '3211913151165317269222587', '3805018136658360621072']
+            [7][STATICCALL] from=TroveManager, to=PrismaCore, priceFeed() -> 0xc105ce
+            [7][CALL] from=TroveManager, to=PriceFeed, fetchPrice(_token(address): 0xBe9895) -> 3805018136658360621072
+        [5][CALL] from=BorrowerOperations, to=TroveManager, getEntireSystemBalances() -> ['12210309614077347828484', '6284515407859350549467604', '3813451207493670011456']
+          [6][DELEGATECALL] from=TroveManager, to=TroveManager, getEntireSystemBalances() -> ['12210309614077347828484', '6284515407859350549467604', '3813451207493670011456']
+            [7][STATICCALL] from=TroveManager, to=PrismaCore, priceFeed() -> 0xc105ce
+            [7][CALL] from=TroveManager, to=PriceFeed, fetchPrice(_token(address): 0xac3E01) -> 3813451207493670011456
+        [5][CALL] from=BorrowerOperations, to=TroveManager, getEntireSystemBalances() -> ['2008287891041049970783', '4536890087031707489384199', '4149566095531868420331']
+          [6][DELEGATECALL] from=TroveManager, to=TroveManager, getEntireSystemBalances() -> ['2008287891041049970783', '4536890087031707489384199', '4149566095531868420331']
+            [7][STATICCALL] from=TroveManager, to=PrismaCore, priceFeed() -> 0xc105ce
+            [7][CALL] from=TroveManager, to=PriceFeed, fetchPrice(_token(address): 0x7f39C5) -> 4149566095531868420331
+        [5][CALL] from=BorrowerOperations, to=TroveManager, getEntireSystemBalances() -> ['4686140039386635007797', '5313093793585574270017018', '3813451207493670011456']
+          [6][DELEGATECALL] from=TroveManager, to=TroveManager, getEntireSystemBalances() -> ['4686140039386635007797', '5313093793585574270017018', '3813451207493670011456']
+            [7][STATICCALL] from=TroveManager, to=PrismaCore, priceFeed() -> 0xc105ce
+            [7][CALL] from=TroveManager, to=PriceFeed, fetchPrice(_token(address): 0xac3E01) -> 3813451207493670011456
+        [5][CALL] from=BorrowerOperations, to=TroveManager, getEntireSystemBalances() -> ['2181736411404864496854', '4137368230200663181830888', '3930882808203813871884']
+          [6][DELEGATECALL] from=TroveManager, to=TroveManager, getEntireSystemBalances() -> ['2181736411404864496854', '4137368230200663181830888', '3930882808203813871884']
+            [7][STATICCALL] from=TroveManager, to=PrismaCore, priceFeed() -> 0xc105ce
+            [7][CALL] from=TroveManager, to=PriceFeed, fetchPrice(_token(address): 0xae7873) -> 3930882808203813871884
+        [5][CALL] from=BorrowerOperations, to=TroveManager, getEntireSystemBalances() -> ['28669200442514927430', '26998093984283300047489', '3805018136658360621072']
+          [6][DELEGATECALL] from=TroveManager, to=TroveManager, getEntireSystemBalances() -> ['28669200442514927430', '26998093984283300047489', '3805018136658360621072']
+            [7][STATICCALL] from=TroveManager, to=PrismaCore, priceFeed() -> 0xc105ce
+            [7][CALL] from=TroveManager, to=PriceFeed, fetchPrice(_token(address): 0xBe9895) -> 3805018136658360621072
+        [5][CALL] from=BorrowerOperations, to=TroveManager, decayBaseRateAndGetBorrowingFee(_debt(uint256): 61763599969073508641150) -> 628516893097
+          [6][DELEGATECALL] from=TroveManager, to=TroveManager, decayBaseRateAndGetBorrowingFee(_debt(uint256): 61763599969073508641150) -> 628516893097
+        [5][STATICCALL] from=BorrowerOperations, to=PrismaCore, feeReceiver() -> 0xfdce02
+        [5][CALL] from=BorrowerOperations, to=DebtToken, mint(_account(address): 0xfdCE02, _amount(uint256): 628516893097) -> None
+        [5][STATICCALL] from=BorrowerOperations, to=TroveManager, MCR() -> 1100000000000000000
+          [6][DELEGATECALL] from=TroveManager, to=TroveManager, MCR() -> 1100000000000000000
+        [5][CALL] from=BorrowerOperations, to=TroveManager, openTrove(_borrower(address): 0x4A3Fce, _collateralAmount(uint256): 19848509671109025031, _compositeDebt(uint256): 61963599969702025534247, NICR(uint256): 32032531487541448, _upperHint(address): 0xE87C6f, _lowerHint(address): 0x89Ee26, _isRecoveryMode(bool): False) -> ['19848509671109025031', '25']
+          [6][DELEGATECALL] from=TroveManager, to=TroveManager, openTrove(_borrower(address): 0x4A3Fce, _collateralAmount(uint256): 19848509671109025031, _compositeDebt(uint256): 61963599969702025534247, NICR(uint256): 32032531487541448, _upperHint(address): 0xE87C6f, _lowerHint(address): 0x89Ee26, _isRecoveryMode(bool): False) -> ['19848509671109025031', '25']
+            [7][CALL] from=TroveManager, to=SortedTroves, insert(_id(address): 0x4A3Fce, _NICR(uint256): 32032531487541448, _prevId(address): 0xE87C6f, _nextId(address): 0x89Ee26) -> None
+              [8][DELEGATECALL] from=SortedTroves, to=SortedTroves, insert(_id(address): 0x4A3Fce, _NICR(uint256): 32032531487541448, _prevId(address): 0xE87C6f, _nextId(address): 0x89Ee26) -> None
+                [9][STATICCALL] from=SortedTroves, to=TroveManager, getNominalICR(_borrower(address): 0x183D05) -> 89847533809981275
+                  [10][DELEGATECALL] from=TroveManager, to=TroveManager, getNominalICR(_borrower(address): 0x183D05) -> 89847533809981275
+                [9][STATICCALL] from=SortedTroves, to=TroveManager, getNominalICR(_borrower(address): 0x183D05) -> 89847533809981275
+                  [10][DELEGATECALL] from=TroveManager, to=TroveManager, getNominalICR(_borrower(address): 0x183D05) -> 89847533809981275
+                [9][STATICCALL] from=SortedTroves, to=TroveManager, getNominalICR(_borrower(address): 0xA22eb3) -> 76870276960591117
+                  [10][DELEGATECALL] from=TroveManager, to=TroveManager, getNominalICR(_borrower(address): 0xA22eb3) -> 76870276960591117
+                [9][STATICCALL] from=SortedTroves, to=TroveManager, getNominalICR(_borrower(address): 0xA22eb3) -> 76870276960591117
+                  [10][DELEGATECALL] from=TroveManager, to=TroveManager, getNominalICR(_borrower(address): 0xA22eb3) -> 76870276960591117
+                [9][STATICCALL] from=SortedTroves, to=TroveManager, getNominalICR(_borrower(address): 0xD143Ed) -> 74203590927043314
+                  [10][DELEGATECALL] from=TroveManager, to=TroveManager, getNominalICR(_borrower(address): 0xD143Ed) -> 74203590927043314
+                [9][STATICCALL] from=SortedTroves, to=TroveManager, getNominalICR(_borrower(address): 0xD143Ed) -> 74203590927043314
+                  [10][DELEGATECALL] from=TroveManager, to=TroveManager, getNominalICR(_borrower(address): 0xD143Ed) -> 74203590927043314
+                [9][STATICCALL] from=SortedTroves, to=TroveManager, getNominalICR(_borrower(address): 0x3F3E30) -> 73242995882487580
+                  [10][DELEGATECALL] from=TroveManager, to=TroveManager, getNominalICR(_borrower(address): 0x3F3E30) -> 73242995882487580
+                [9][STATICCALL] from=SortedTroves, to=TroveManager, getNominalICR(_borrower(address): 0x3F3E30) -> 73242995882487580
+                  [10][DELEGATECALL] from=TroveManager, to=TroveManager, getNominalICR(_borrower(address): 0x3F3E30) -> 73242995882487580
+                [9][STATICCALL] from=SortedTroves, to=TroveManager, getNominalICR(_borrower(address): 0x1428BD) -> 65529851391716102
+                  [10][DELEGATECALL] from=TroveManager, to=TroveManager, getNominalICR(_borrower(address): 0x1428BD) -> 65529851391716102
+                [9][STATICCALL] from=SortedTroves, to=TroveManager, getNominalICR(_borrower(address): 0x1428BD) -> 65529851391716102
+                  [10][DELEGATECALL] from=TroveManager, to=TroveManager, getNominalICR(_borrower(address): 0x1428BD) -> 65529851391716102
+                [9][STATICCALL] from=SortedTroves, to=TroveManager, getNominalICR(_borrower(address): 0x308fD4) -> 62669075805258470
+                  [10][DELEGATECALL] from=TroveManager, to=TroveManager, getNominalICR(_borrower(address): 0x308fD4) -> 62669075805258470
+                [9][STATICCALL] from=SortedTroves, to=TroveManager, getNominalICR(_borrower(address): 0x308fD4) -> 62669075805258470
+                  [10][DELEGATECALL] from=TroveManager, to=TroveManager, getNominalICR(_borrower(address): 0x308fD4) -> 62669075805258470
+                [9][STATICCALL] from=SortedTroves, to=TroveManager, getNominalICR(_borrower(address): 0x0c9836) -> 62368412463326347
+                  [10][DELEGATECALL] from=TroveManager, to=TroveManager, getNominalICR(_borrower(address): 0x0c9836) -> 62368412463326347
+                [9][STATICCALL] from=SortedTroves, to=TroveManager, getNominalICR(_borrower(address): 0x0c9836) -> 62368412463326347
+                  [10][DELEGATECALL] from=TroveManager, to=TroveManager, getNominalICR(_borrower(address): 0x0c9836) -> 62368412463326347
+                [9][STATICCALL] from=SortedTroves, to=TroveManager, getNominalICR(_borrower(address): 0x17ad4E) -> 59991125636452384
+                  [10][DELEGATECALL] from=TroveManager, to=TroveManager, getNominalICR(_borrower(address): 0x17ad4E) -> 59991125636452384
+                [9][STATICCALL] from=SortedTroves, to=TroveManager, getNominalICR(_borrower(address): 0x17ad4E) -> 59991125636452384
+                  [10][DELEGATECALL] from=TroveManager, to=TroveManager, getNominalICR(_borrower(address): 0x17ad4E) -> 59991125636452384
+                [9][STATICCALL] from=SortedTroves, to=TroveManager, getNominalICR(_borrower(address): 0x82af4e) -> 49975300948984438
+                  [10][DELEGATECALL] from=TroveManager, to=TroveManager, getNominalICR(_borrower(address): 0x82af4e) -> 49975300948984438
+                [9][STATICCALL] from=SortedTroves, to=TroveManager, getNominalICR(_borrower(address): 0x82af4e) -> 49975300948984438
+                  [10][DELEGATECALL] from=TroveManager, to=TroveManager, getNominalICR(_borrower(address): 0x82af4e) -> 49975300948984438
+                [9][STATICCALL] from=SortedTroves, to=TroveManager, getNominalICR(_borrower(address): 0x0b45eF) -> 35511827106398975
+                  [10][DELEGATECALL] from=TroveManager, to=TroveManager, getNominalICR(_borrower(address): 0x0b45eF) -> 35511827106398975
+                [9][STATICCALL] from=SortedTroves, to=TroveManager, getNominalICR(_borrower(address): 0x0b45eF) -> 35511827106398975
+                  [10][DELEGATECALL] from=TroveManager, to=TroveManager, getNominalICR(_borrower(address): 0x0b45eF) -> 35511827106398975
+                [9][STATICCALL] from=SortedTroves, to=TroveManager, getNominalICR(_borrower(address): 0x9FceDE) -> 32115695914762337
+                  [10][DELEGATECALL] from=TroveManager, to=TroveManager, getNominalICR(_borrower(address): 0x9FceDE) -> 32115695914762337
+                [9][STATICCALL] from=SortedTroves, to=TroveManager, getNominalICR(_borrower(address): 0x9FceDE) -> 32115695914762337
+                  [10][DELEGATECALL] from=TroveManager, to=TroveManager, getNominalICR(_borrower(address): 0x9FceDE) -> 32115695914762337
+                [9][STATICCALL] from=SortedTroves, to=TroveManager, getNominalICR(_borrower(address): 0xC48737) -> 32114273650112501
+                  [10][DELEGATECALL] from=TroveManager, to=TroveManager, getNominalICR(_borrower(address): 0xC48737) -> 32114273650112501
+                [9][STATICCALL] from=SortedTroves, to=TroveManager, getNominalICR(_borrower(address): 0xC48737) -> 32114273650112501
+                  [10][DELEGATECALL] from=TroveManager, to=TroveManager, getNominalICR(_borrower(address): 0xC48737) -> 32114273650112501
+                [9][STATICCALL] from=SortedTroves, to=TroveManager, getNominalICR(_borrower(address): 0x56A201) -> 32084621959733577
+                  [10][DELEGATECALL] from=TroveManager, to=TroveManager, getNominalICR(_borrower(address): 0x56A201) -> 32084621959733577
+                [9][STATICCALL] from=SortedTroves, to=TroveManager, getNominalICR(_borrower(address): 0x56A201) -> 32084621959733577
+                  [10][DELEGATECALL] from=TroveManager, to=TroveManager, getNominalICR(_borrower(address): 0x56A201) -> 32084621959733577
+                [9][STATICCALL] from=SortedTroves, to=TroveManager, getNominalICR(_borrower(address): 0xcbfDfF) -> 32078388506663104
+                  [10][DELEGATECALL] from=TroveManager, to=TroveManager, getNominalICR(_borrower(address): 0xcbfDfF) -> 32078388506663104
+                [9][STATICCALL] from=SortedTroves, to=TroveManager, getNominalICR(_borrower(address): 0xcbfDfF) -> 32078388506663104
+                  [10][DELEGATECALL] from=TroveManager, to=TroveManager, getNominalICR(_borrower(address): 0xcbfDfF) -> 32078388506663104
+                [9][STATICCALL] from=SortedTroves, to=TroveManager, getNominalICR(_borrower(address): 0x1B72Ba) -> 32045947728053114
+                  [10][DELEGATECALL] from=TroveManager, to=TroveManager, getNominalICR(_borrower(address): 0x1B72Ba) -> 32045947728053114
+                [9][STATICCALL] from=SortedTroves, to=TroveManager, getNominalICR(_borrower(address): 0x1B72Ba) -> 32045947728053114
+                  [10][DELEGATECALL] from=TroveManager, to=TroveManager, getNominalICR(_borrower(address): 0x1B72Ba) -> 32045947728053114
+                [9][STATICCALL] from=SortedTroves, to=TroveManager, getNominalICR(_borrower(address): 0x16F570) -> 32025892841538547
+                  [10][DELEGATECALL] from=TroveManager, to=TroveManager, getNominalICR(_borrower(address): 0x16F570) -> 32025892841538547
+        [5][CALL] from=BorrowerOperations, to=WstETH, transferFrom(sender(address): 0xcC7218, recipient(address): 0x1CC79f, amount(uint256): 19848509671109025031) -> True
+        [5][CALL] from=BorrowerOperations, to=DebtToken, mintWithGasCompensation(_account(address): 0xcC7218, _amount(uint256): 61763599969073508641150) -> True
+    [3][STATICCALL] from=DebtToken, to=PrismaCore, feeReceiver() -> 0xfdce02
+  [2][CALL] from=0x414831, to=Vault, flashLoan(recipient(address): 0x414831, tokens(address[]): ['0x7f39C581F595B53c5cb19bD0b3f8dA6c935E2C..., amounts(uint256[]): [1000000000000000000], userData(bytes): b'\x00') -> None
+    [3][STATICCALL] from=Vault, to=WstETH, balanceOf(account(address): 0xBA1222) -> 17227981500877491389928
+    [3][STATICCALL] from=Vault, to=ProtocolFeesCollector, getFlashLoanFeePercentage() -> 0
+    [3][CALL] from=Vault, to=WstETH, transfer(recipient(address): 0x414831, amount(uint256): 1000000000000000000) -> True
+    [3][CALL] from=Vault, to=0x414831, receiveFlashLoanaddress[]() -> None
+      [4][CALL] from=0x414831, to=WstETH, approve(spender(address): 0x72c590, amount(uint256): 115792089237316195423570985008687907853269...) -> True
+      [4][CALL] from=0x414831, to=BorrowerOperations, setDelegateApproval(_delegate(address): 0xcC7218, _isApproved(bool): True) -> None
+      [4][CALL] from=0x414831, to=BorrowerOperations, openTrove(troveManager(address): 0x1CC79f, account(address): 0x414831, _maxFeePercentage(uint256): 5000000325833471, _collateralAmount(uint256): 1000000000000000000, _debtAmount(uint256): 2000000000000000000000, _upperHint(address): 0xE87C6f, _lowerHint(address): 0x89Ee26) -> None
+        [5][STATICCALL] from=BorrowerOperations, to=PrismaCore, paused() -> False
+        [5][CALL] from=BorrowerOperations, to=TroveManager, getEntireSystemBalances() -> ['14015674457905566515617', '12641087173434032520833658', '4149566095531868420331']
+          [6][DELEGATECALL] from=TroveManager, to=TroveManager, getEntireSystemBalances() -> ['14015674457905566515617', '12641087173434032520833658', '4149566095531868420331']
+            [7][STATICCALL] from=TroveManager, to=PrismaCore, priceFeed() -> 0xc105ce
+            [7][CALL] from=TroveManager, to=PriceFeed, fetchPrice(_token(address): 0x7f39C5) -> 4149566095531868420331
+        [5][CALL] from=BorrowerOperations, to=TroveManager, getEntireSystemBalances() -> ['5450257651976284958566', '6261776053937667767510747', '3930882808203813871884']
+          [6][DELEGATECALL] from=TroveManager, to=TroveManager, getEntireSystemBalances() -> ['5450257651976284958566', '6261776053937667767510747', '3930882808203813871884']
+            [7][STATICCALL] from=TroveManager, to=PrismaCore, priceFeed() -> 0xc105ce
+            [7][CALL] from=TroveManager, to=PriceFeed, fetchPrice(_token(address): 0xae7873) -> 3930882808203813871884
+        [5][CALL] from=BorrowerOperations, to=TroveManager, getEntireSystemBalances() -> ['1449823148572984694848', '3211913151165317269222587', '3805018136658360621072']
+          [6][DELEGATECALL] from=TroveManager, to=TroveManager, getEntireSystemBalances() -> ['1449823148572984694848', '3211913151165317269222587', '3805018136658360621072']
+            [7][STATICCALL] from=TroveManager, to=PrismaCore, priceFeed() -> 0xc105ce
+            [7][CALL] from=TroveManager, to=PriceFeed, fetchPrice(_token(address): 0xBe9895) -> 3805018136658360621072
+        [5][CALL] from=BorrowerOperations, to=TroveManager, getEntireSystemBalances() -> ['12210309614077347828484', '6284515407859350549467604', '3813451207493670011456']
+          [6][DELEGATECALL] from=TroveManager, to=TroveManager, getEntireSystemBalances() -> ['12210309614077347828484', '6284515407859350549467604', '3813451207493670011456']
+            [7][STATICCALL] from=TroveManager, to=PrismaCore, priceFeed() -> 0xc105ce
+            [7][CALL] from=TroveManager, to=PriceFeed, fetchPrice(_token(address): 0xac3E01) -> 3813451207493670011456
+        [5][CALL] from=BorrowerOperations, to=TroveManager, getEntireSystemBalances() -> ['2028136400712158995814', '4598853687001409514918446', '4149566095531868420331']
+          [6][DELEGATECALL] from=TroveManager, to=TroveManager, getEntireSystemBalances() -> ['2028136400712158995814', '4598853687001409514918446', '4149566095531868420331']
+            [7][STATICCALL] from=TroveManager, to=PrismaCore, priceFeed() -> 0xc105ce
+            [7][CALL] from=TroveManager, to=PriceFeed, fetchPrice(_token(address): 0x7f39C5) -> 4149566095531868420331
+        [5][CALL] from=BorrowerOperations, to=TroveManager, getEntireSystemBalances() -> ['4686140039386635007797', '5313093793585574270017018', '3813451207493670011456']
+          [6][DELEGATECALL] from=TroveManager, to=TroveManager, getEntireSystemBalances() -> ['4686140039386635007797', '5313093793585574270017018', '3813451207493670011456']
+            [7][STATICCALL] from=TroveManager, to=PrismaCore, priceFeed() -> 0xc105ce
+            [7][CALL] from=TroveManager, to=PriceFeed, fetchPrice(_token(address): 0xac3E01) -> 3813451207493670011456
+        [5][CALL] from=BorrowerOperations, to=TroveManager, getEntireSystemBalances() -> ['2181736411404864496854', '4137368230200663181830888', '3930882808203813871884']
+          [6][DELEGATECALL] from=TroveManager, to=TroveManager, getEntireSystemBalances() -> ['2181736411404864496854', '4137368230200663181830888', '3930882808203813871884']
+            [7][STATICCALL] from=TroveManager, to=PrismaCore, priceFeed() -> 0xc105ce
+            [7][CALL] from=TroveManager, to=PriceFeed, fetchPrice(_token(address): 0xae7873) -> 3930882808203813871884
+        [5][CALL] from=BorrowerOperations, to=TroveManager, getEntireSystemBalances() -> ['28669200442514927430', '26998093984283300047489', '3805018136658360621072']
+          [6][DELEGATECALL] from=TroveManager, to=TroveManager, getEntireSystemBalances() -> ['28669200442514927430', '26998093984283300047489', '3805018136658360621072']
+            [7][STATICCALL] from=TroveManager, to=PrismaCore, priceFeed() -> 0xc105ce
+            [7][CALL] from=TroveManager, to=PriceFeed, fetchPrice(_token(address): 0xBe9895) -> 3805018136658360621072
+        [5][CALL] from=BorrowerOperations, to=TroveManager, decayBaseRateAndGetBorrowingFee(_debt(uint256): 2000000000000000000000) -> 20352340000
+          [6][DELEGATECALL] from=TroveManager, to=TroveManager, decayBaseRateAndGetBorrowingFee(_debt(uint256): 2000000000000000000000) -> 20352340000
+        [5][STATICCALL] from=BorrowerOperations, to=PrismaCore, feeReceiver() -> 0xfdce02
+        [5][CALL] from=BorrowerOperations, to=DebtToken, mint(_account(address): 0xfdCE02, _amount(uint256): 20352340000) -> None
+        [5][STATICCALL] from=BorrowerOperations, to=TroveManager, MCR() -> 1100000000000000000
+          [6][DELEGATECALL] from=TroveManager, to=TroveManager, MCR() -> 1100000000000000000
+        [5][CALL] from=BorrowerOperations, to=TroveManager, openTrove(_borrower(address): 0x414831, _collateralAmount(uint256): 1000000000000000000, _compositeDebt(uint256): 2200000000020352340000, NICR(uint256): 45454545454124951, _upperHint(address): 0xE87C6f, _lowerHint(address): 0x89Ee26, _isRecoveryMode(bool): False) -> ['1000000000000000000', '26']
+          [6][DELEGATECALL] from=TroveManager, to=TroveManager, openTrove(_borrower(address): 0x414831, _collateralAmount(uint256): 1000000000000000000, _compositeDebt(uint256): 2200000000020352340000, NICR(uint256): 45454545454124951, _upperHint(address): 0xE87C6f, _lowerHint(address): 0x89Ee26, _isRecoveryMode(bool): False) -> ['1000000000000000000', '26']
+            [7][CALL] from=TroveManager, to=SortedTroves, insert(_id(address): 0x414831, _NICR(uint256): 45454545454124951, _prevId(address): 0xE87C6f, _nextId(address): 0x89Ee26) -> None
+              [8][DELEGATECALL] from=SortedTroves, to=SortedTroves, insert(_id(address): 0x414831, _NICR(uint256): 45454545454124951, _prevId(address): 0xE87C6f, _nextId(address): 0x89Ee26) -> None
+                [9][STATICCALL] from=SortedTroves, to=TroveManager, getNominalICR(_borrower(address): 0x183D05) -> 89847533809981275
+                  [10][DELEGATECALL] from=TroveManager, to=TroveManager, getNominalICR(_borrower(address): 0x183D05) -> 89847533809981275
+                [9][STATICCALL] from=SortedTroves, to=TroveManager, getNominalICR(_borrower(address): 0x183D05) -> 89847533809981275
+                  [10][DELEGATECALL] from=TroveManager, to=TroveManager, getNominalICR(_borrower(address): 0x183D05) -> 89847533809981275
+                [9][STATICCALL] from=SortedTroves, to=TroveManager, getNominalICR(_borrower(address): 0xA22eb3) -> 76870276960591117
+                  [10][DELEGATECALL] from=TroveManager, to=TroveManager, getNominalICR(_borrower(address): 0xA22eb3) -> 76870276960591117
+                [9][STATICCALL] from=SortedTroves, to=TroveManager, getNominalICR(_borrower(address): 0xA22eb3) -> 76870276960591117
+                  [10][DELEGATECALL] from=TroveManager, to=TroveManager, getNominalICR(_borrower(address): 0xA22eb3) -> 76870276960591117
+                [9][STATICCALL] from=SortedTroves, to=TroveManager, getNominalICR(_borrower(address): 0xD143Ed) -> 74203590927043314
+                  [10][DELEGATECALL] from=TroveManager, to=TroveManager, getNominalICR(_borrower(address): 0xD143Ed) -> 74203590927043314
+                [9][STATICCALL] from=SortedTroves, to=TroveManager, getNominalICR(_borrower(address): 0xD143Ed) -> 74203590927043314
+                  [10][DELEGATECALL] from=TroveManager, to=TroveManager, getNominalICR(_borrower(address): 0xD143Ed) -> 74203590927043314
+                [9][STATICCALL] from=SortedTroves, to=TroveManager, getNominalICR(_borrower(address): 0x3F3E30) -> 73242995882487580
+                  [10][DELEGATECALL] from=TroveManager, to=TroveManager, getNominalICR(_borrower(address): 0x3F3E30) -> 73242995882487580
+                [9][STATICCALL] from=SortedTroves, to=TroveManager, getNominalICR(_borrower(address): 0x3F3E30) -> 73242995882487580
+                  [10][DELEGATECALL] from=TroveManager, to=TroveManager, getNominalICR(_borrower(address): 0x3F3E30) -> 73242995882487580
+                [9][STATICCALL] from=SortedTroves, to=TroveManager, getNominalICR(_borrower(address): 0x1428BD) -> 65529851391716102
+                  [10][DELEGATECALL] from=TroveManager, to=TroveManager, getNominalICR(_borrower(address): 0x1428BD) -> 65529851391716102
+                [9][STATICCALL] from=SortedTroves, to=TroveManager, getNominalICR(_borrower(address): 0x1428BD) -> 65529851391716102
+                  [10][DELEGATECALL] from=TroveManager, to=TroveManager, getNominalICR(_borrower(address): 0x1428BD) -> 65529851391716102
+                [9][STATICCALL] from=SortedTroves, to=TroveManager, getNominalICR(_borrower(address): 0x308fD4) -> 62669075805258470
+                  [10][DELEGATECALL] from=TroveManager, to=TroveManager, getNominalICR(_borrower(address): 0x308fD4) -> 62669075805258470
+                [9][STATICCALL] from=SortedTroves, to=TroveManager, getNominalICR(_borrower(address): 0x308fD4) -> 62669075805258470
+                  [10][DELEGATECALL] from=TroveManager, to=TroveManager, getNominalICR(_borrower(address): 0x308fD4) -> 62669075805258470
+                [9][STATICCALL] from=SortedTroves, to=TroveManager, getNominalICR(_borrower(address): 0x0c9836) -> 62368412463326347
+                  [10][DELEGATECALL] from=TroveManager, to=TroveManager, getNominalICR(_borrower(address): 0x0c9836) -> 62368412463326347
+                [9][STATICCALL] from=SortedTroves, to=TroveManager, getNominalICR(_borrower(address): 0x0c9836) -> 62368412463326347
+                  [10][DELEGATECALL] from=TroveManager, to=TroveManager, getNominalICR(_borrower(address): 0x0c9836) -> 62368412463326347
+                [9][STATICCALL] from=SortedTroves, to=TroveManager, getNominalICR(_borrower(address): 0x17ad4E) -> 59991125636452384
+                  [10][DELEGATECALL] from=TroveManager, to=TroveManager, getNominalICR(_borrower(address): 0x17ad4E) -> 59991125636452384
+                [9][STATICCALL] from=SortedTroves, to=TroveManager, getNominalICR(_borrower(address): 0x17ad4E) -> 59991125636452384
+                  [10][DELEGATECALL] from=TroveManager, to=TroveManager, getNominalICR(_borrower(address): 0x17ad4E) -> 59991125636452384
+                [9][STATICCALL] from=SortedTroves, to=TroveManager, getNominalICR(_borrower(address): 0x82af4e) -> 49975300948984438
+                  [10][DELEGATECALL] from=TroveManager, to=TroveManager, getNominalICR(_borrower(address): 0x82af4e) -> 49975300948984438
+                [9][STATICCALL] from=SortedTroves, to=TroveManager, getNominalICR(_borrower(address): 0x82af4e) -> 49975300948984438
+                  [10][DELEGATECALL] from=TroveManager, to=TroveManager, getNominalICR(_borrower(address): 0x82af4e) -> 49975300948984438
+                [9][STATICCALL] from=SortedTroves, to=TroveManager, getNominalICR(_borrower(address): 0x0b45eF) -> 35511827106398975
+                  [10][DELEGATECALL] from=TroveManager, to=TroveManager, getNominalICR(_borrower(address): 0x0b45eF) -> 35511827106398975
+        [5][CALL] from=BorrowerOperations, to=WstETH, transferFrom(sender(address): 0x414831, recipient(address): 0x1CC79f, amount(uint256): 1000000000000000000) -> True
+        [5][CALL] from=BorrowerOperations, to=DebtToken, mintWithGasCompensation(_account(address): 0x414831, _amount(uint256): 2000000000000000000000) -> True
+      [4][STATICCALL] from=0x414831, to=WstETH, balanceOf(account(address): 0xcC7218) -> 68180547199829211401
+      [4][CALL] from=0x414831, to=DebtToken, flashLoan(receiver(address): 0xcC7218, token(address): 0x4591DB, amount(uint256): 2000000000000000000000, data(bytes): b"\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00...) -> True
+        [5][CALL] from=DebtToken, to=MigrateTroveZap, onFlashLoan((address): 0x4591DB, amount(address): 2000000000000000000000, fee(uint256): 1800000000000000000, data(uint256): b"\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00...) -> 0x439148a291b069d8882abf8cf18dd9
+          [6][CALL] from=MigrateTroveZap, to=BorrowerOperations, closeTrove(troveManager(address): 0x1CC79f, account(address): 0x414831) -> None
+            [7][CALL] from=BorrowerOperations, to=TroveManager, getEntireSystemBalances() -> ['14015674457905566515617', '12641087173434032520833658', '4149566095531868420331']
+              [8][DELEGATECALL] from=TroveManager, to=TroveManager, getEntireSystemBalances() -> ['14015674457905566515617', '12641087173434032520833658', '4149566095531868420331']
+                [9][STATICCALL] from=TroveManager, to=PrismaCore, priceFeed() -> 0xc105ce
+                [9][CALL] from=TroveManager, to=PriceFeed, fetchPrice(_token(address): 0x7f39C5) -> 4149566095531868420331
+            [7][CALL] from=BorrowerOperations, to=TroveManager, getEntireSystemBalances() -> ['5450257651976284958566', '6261776053937667767510747', '3930882808203813871884']
+              [8][DELEGATECALL] from=TroveManager, to=TroveManager, getEntireSystemBalances() -> ['5450257651976284958566', '6261776053937667767510747', '3930882808203813871884']
+                [9][STATICCALL] from=TroveManager, to=PrismaCore, priceFeed() -> 0xc105ce
+                [9][CALL] from=TroveManager, to=PriceFeed, fetchPrice(_token(address): 0xae7873) -> 3930882808203813871884
+            [7][CALL] from=BorrowerOperations, to=TroveManager, getEntireSystemBalances() -> ['1449823148572984694848', '3211913151165317269222587', '3805018136658360621072']
+              [8][DELEGATECALL] from=TroveManager, to=TroveManager, getEntireSystemBalances() -> ['1449823148572984694848', '3211913151165317269222587', '3805018136658360621072']
+                [9][STATICCALL] from=TroveManager, to=PrismaCore, priceFeed() -> 0xc105ce
+                [9][CALL] from=TroveManager, to=PriceFeed, fetchPrice(_token(address): 0xBe9895) -> 3805018136658360621072
+            [7][CALL] from=BorrowerOperations, to=TroveManager, getEntireSystemBalances() -> ['12210309614077347828484', '6284515407859350549467604', '3813451207493670011456']
+              [8][DELEGATECALL] from=TroveManager, to=TroveManager, getEntireSystemBalances() -> ['12210309614077347828484', '6284515407859350549467604', '3813451207493670011456']
+                [9][STATICCALL] from=TroveManager, to=PrismaCore, priceFeed() -> 0xc105ce
+                [9][CALL] from=TroveManager, to=PriceFeed, fetchPrice(_token(address): 0xac3E01) -> 3813451207493670011456
+            [7][CALL] from=BorrowerOperations, to=TroveManager, getEntireSystemBalances() -> ['2029136400712158995814', '4601053687001429867258446', '4149566095531868420331']
+              [8][DELEGATECALL] from=TroveManager, to=TroveManager, getEntireSystemBalances() -> ['2029136400712158995814', '4601053687001429867258446', '4149566095531868420331']
+                [9][STATICCALL] from=TroveManager, to=PrismaCore, priceFeed() -> 0xc105ce
+                [9][CALL] from=TroveManager, to=PriceFeed, fetchPrice(_token(address): 0x7f39C5) -> 4149566095531868420331
+            [7][CALL] from=BorrowerOperations, to=TroveManager, getEntireSystemBalances() -> ['4686140039386635007797', '5313093793585574270017018', '3813451207493670011456']
+              [8][DELEGATECALL] from=TroveManager, to=TroveManager, getEntireSystemBalances() -> ['4686140039386635007797', '5313093793585574270017018', '3813451207493670011456']
+                [9][STATICCALL] from=TroveManager, to=PrismaCore, priceFeed() -> 0xc105ce
+                [9][CALL] from=TroveManager, to=PriceFeed, fetchPrice(_token(address): 0xac3E01) -> 3813451207493670011456
+            [7][CALL] from=BorrowerOperations, to=TroveManager, getEntireSystemBalances() -> ['2181736411404864496854', '4137368230200663181830888', '3930882808203813871884']
+              [8][DELEGATECALL] from=TroveManager, to=TroveManager, getEntireSystemBalances() -> ['2181736411404864496854', '4137368230200663181830888', '3930882808203813871884']
+                [9][STATICCALL] from=TroveManager, to=PrismaCore, priceFeed() -> 0xc105ce
+                [9][CALL] from=TroveManager, to=PriceFeed, fetchPrice(_token(address): 0xae7873) -> 3930882808203813871884
+            [7][CALL] from=BorrowerOperations, to=TroveManager, getEntireSystemBalances() -> ['28669200442514927430', '26998093984283300047489', '3805018136658360621072']
+              [8][DELEGATECALL] from=TroveManager, to=TroveManager, getEntireSystemBalances() -> ['28669200442514927430', '26998093984283300047489', '3805018136658360621072']
+                [9][STATICCALL] from=TroveManager, to=PrismaCore, priceFeed() -> 0xc105ce
+                [9][CALL] from=TroveManager, to=PriceFeed, fetchPrice(_token(address): 0xBe9895) -> 3805018136658360621072
+            [7][CALL] from=BorrowerOperations, to=TroveManager, applyPendingRewards(_borrower(address): 0x414831) -> ['1000000000000000000', '2200000000020352340000']
+              [8][DELEGATECALL] from=TroveManager, to=TroveManager, applyPendingRewards(_borrower(address): 0x414831) -> ['1000000000000000000', '2200000000020352340000']
+            [7][CALL] from=BorrowerOperations, to=TroveManager, closeTrove(_borrower(address): 0x414831, _receiver(address): 0xcC7218, collAmount(uint256): 1000000000000000000, debtAmount(uint256): 2200000000020352340000) -> None
+              [8][DELEGATECALL] from=TroveManager, to=TroveManager, closeTrove(_borrower(address): 0x414831, _receiver(address): 0xcC7218, collAmount(uint256): 1000000000000000000, debtAmount(uint256): 2200000000020352340000) -> None
+                [9][STATICCALL] from=TroveManager, to=SortedTroves, getSize() -> 27
+                  [10][DELEGATECALL] from=SortedTroves, to=SortedTroves, getSize() -> 27
+                [9][CALL] from=TroveManager, to=SortedTroves, remove(_id(address): 0x414831) -> None
+                  [10][DELEGATECALL] from=SortedTroves, to=SortedTroves, remove(_id(address): 0x414831) -> None
+                [9][CALL] from=TroveManager, to=WstETH, transfer(recipient(address): 0xcC7218, amount(uint256): 1000000000000000000) -> True
+            [7][CALL] from=BorrowerOperations, to=DebtToken, burnWithGasCompensation(_account(address): 0xcC7218, _amount(uint256): 2000000000020352340000) -> True
+          [6][CALL] from=MigrateTroveZap, to=BorrowerOperations, openTrove(troveManager(address): 0x1CC79f, account(address): 0x414831, _maxFeePercentage(uint256): 5000000325833471, _collateralAmount(uint256): 69080547199829211401, _debtAmount(uint256): 2001800000000000000000, _upperHint(address): 0xE87C6f, _lowerHint(address): 0x89Ee26) -> None
+            [7][STATICCALL] from=BorrowerOperations, to=PrismaCore, paused() -> False
+            [7][CALL] from=BorrowerOperations, to=TroveManager, getEntireSystemBalances() -> ['14015674457905566515617', '12641087173434032520833658', '4149566095531868420331']
+              [8][DELEGATECALL] from=TroveManager, to=TroveManager, getEntireSystemBalances() -> ['14015674457905566515617', '12641087173434032520833658', '4149566095531868420331']
+                [9][STATICCALL] from=TroveManager, to=PrismaCore, priceFeed() -> 0xc105ce
+                [9][CALL] from=TroveManager, to=PriceFeed, fetchPrice(_token(address): 0x7f39C5) -> 4149566095531868420331
+            [7][CALL] from=BorrowerOperations, to=TroveManager, getEntireSystemBalances() -> ['5450257651976284958566', '6261776053937667767510747', '3930882808203813871884']
+              [8][DELEGATECALL] from=TroveManager, to=TroveManager, getEntireSystemBalances() -> ['5450257651976284958566', '6261776053937667767510747', '3930882808203813871884']
+                [9][STATICCALL] from=TroveManager, to=PrismaCore, priceFeed() -> 0xc105ce
+                [9][CALL] from=TroveManager, to=PriceFeed, fetchPrice(_token(address): 0xae7873) -> 3930882808203813871884
+            [7][CALL] from=BorrowerOperations, to=TroveManager, getEntireSystemBalances() -> ['1449823148572984694848', '3211913151165317269222587', '3805018136658360621072']
+              [8][DELEGATECALL] from=TroveManager, to=TroveManager, getEntireSystemBalances() -> ['1449823148572984694848', '3211913151165317269222587', '3805018136658360621072']
+                [9][STATICCALL] from=TroveManager, to=PrismaCore, priceFeed() -> 0xc105ce
+                [9][CALL] from=TroveManager, to=PriceFeed, fetchPrice(_token(address): 0xBe9895) -> 3805018136658360621072
+            [7][CALL] from=BorrowerOperations, to=TroveManager, getEntireSystemBalances() -> ['12210309614077347828484', '6284515407859350549467604', '3813451207493670011456']
+              [8][DELEGATECALL] from=TroveManager, to=TroveManager, getEntireSystemBalances() -> ['12210309614077347828484', '6284515407859350549467604', '3813451207493670011456']
+                [9][STATICCALL] from=TroveManager, to=PrismaCore, priceFeed() -> 0xc105ce
+                [9][CALL] from=TroveManager, to=PriceFeed, fetchPrice(_token(address): 0xac3E01) -> 3813451207493670011456
+            [7][CALL] from=BorrowerOperations, to=TroveManager, getEntireSystemBalances() -> ['2028136400712158995814', '4598853687001409514918446', '4149566095531868420331']
+              [8][DELEGATECALL] from=TroveManager, to=TroveManager, getEntireSystemBalances() -> ['2028136400712158995814', '4598853687001409514918446', '4149566095531868420331']
+                [9][STATICCALL] from=TroveManager, to=PrismaCore, priceFeed() -> 0xc105ce
+                [9][CALL] from=TroveManager, to=PriceFeed, fetchPrice(_token(address): 0x7f39C5) -> 4149566095531868420331
+            [7][CALL] from=BorrowerOperations, to=TroveManager, getEntireSystemBalances() -> ['4686140039386635007797', '5313093793585574270017018', '3813451207493670011456']
+              [8][DELEGATECALL] from=TroveManager, to=TroveManager, getEntireSystemBalances() -> ['4686140039386635007797', '5313093793585574270017018', '3813451207493670011456']
+                [9][STATICCALL] from=TroveManager, to=PrismaCore, priceFeed() -> 0xc105ce
+                [9][CALL] from=TroveManager, to=PriceFeed, fetchPrice(_token(address): 0xac3E01) -> 3813451207493670011456
+            [7][CALL] from=BorrowerOperations, to=TroveManager, getEntireSystemBalances() -> ['2181736411404864496854', '4137368230200663181830888', '3930882808203813871884']
+              [8][DELEGATECALL] from=TroveManager, to=TroveManager, getEntireSystemBalances() -> ['2181736411404864496854', '4137368230200663181830888', '3930882808203813871884']
+                [9][STATICCALL] from=TroveManager, to=PrismaCore, priceFeed() -> 0xc105ce
+                [9][CALL] from=TroveManager, to=PriceFeed, fetchPrice(_token(address): 0xae7873) -> 3930882808203813871884
+            [7][CALL] from=BorrowerOperations, to=TroveManager, getEntireSystemBalances() -> ['28669200442514927430', '26998093984283300047489', '3805018136658360621072']
+              [8][DELEGATECALL] from=TroveManager, to=TroveManager, getEntireSystemBalances() -> ['28669200442514927430', '26998093984283300047489', '3805018136658360621072']
+                [9][STATICCALL] from=TroveManager, to=PrismaCore, priceFeed() -> 0xc105ce
+                [9][CALL] from=TroveManager, to=PriceFeed, fetchPrice(_token(address): 0xBe9895) -> 3805018136658360621072
+            [7][CALL] from=BorrowerOperations, to=TroveManager, decayBaseRateAndGetBorrowingFee(_debt(uint256): 2001800000000000000000) -> 20370657106
+              [8][DELEGATECALL] from=TroveManager, to=TroveManager, decayBaseRateAndGetBorrowingFee(_debt(uint256): 2001800000000000000000) -> 20370657106
+            [7][STATICCALL] from=BorrowerOperations, to=PrismaCore, feeReceiver() -> 0xfdce02
+            [7][CALL] from=BorrowerOperations, to=DebtToken, mint(_account(address): 0xfdCE02, _amount(uint256): 20370657106) -> None
+            [7][STATICCALL] from=BorrowerOperations, to=TroveManager, MCR() -> 1100000000000000000
+              [8][DELEGATECALL] from=TroveManager, to=TroveManager, MCR() -> 1100000000000000000
+            [7][CALL] from=BorrowerOperations, to=TroveManager, openTrove(_borrower(address): 0x414831, _collateralAmount(uint256): 69080547199829211401, _compositeDebt(uint256): 2201800000020370657106, NICR(uint256): 3137457861712693733, _upperHint(address): 0xE87C6f, _lowerHint(address): 0x89Ee26, _isRecoveryMode(bool): False) -> ['69080547199829211401', '26']
+              [8][DELEGATECALL] from=TroveManager, to=TroveManager, openTrove(_borrower(address): 0x414831, _collateralAmount(uint256): 69080547199829211401, _compositeDebt(uint256): 2201800000020370657106, NICR(uint256): 3137457861712693733, _upperHint(address): 0xE87C6f, _lowerHint(address): 0x89Ee26, _isRecoveryMode(bool): False) -> ['69080547199829211401', '26']
+                [9][CALL] from=TroveManager, to=SortedTroves, insert(_id(address): 0x414831, _NICR(uint256): 3137457861712693733, _prevId(address): 0xE87C6f, _nextId(address): 0x89Ee26) -> None
+                  [10][DELEGATECALL] from=SortedTroves, to=SortedTroves, insert(_id(address): 0x414831, _NICR(uint256): 3137457861712693733, _prevId(address): 0xE87C6f, _nextId(address): 0x89Ee26) -> None
+                    [11][STATICCALL] from=SortedTroves, to=TroveManager, getNominalICR(_borrower(address): 0x183D05) -> 89847533809981275
+                      [12][DELEGATECALL] from=TroveManager, to=TroveManager, getNominalICR(_borrower(address): 0x183D05) -> 89847533809981275
+            [7][CALL] from=BorrowerOperations, to=WstETH, transferFrom(sender(address): 0xcC7218, recipient(address): 0x1CC79f, amount(uint256): 69080547199829211401) -> True
+            [7][CALL] from=BorrowerOperations, to=DebtToken, mintWithGasCompensation(_account(address): 0xcC7218, _amount(uint256): 2001800000000000000000) -> True
+        [5][STATICCALL] from=DebtToken, to=PrismaCore, feeReceiver() -> 0xfdce02
+      [4][CALL] from=0x414831, to=BorrowerOperations, closeTrove(troveManager(address): 0x1CC79f, account(address): 0x414831) -> None
+        [5][CALL] from=BorrowerOperations, to=TroveManager, getEntireSystemBalances() -> ['14015674457905566515617', '12641087173434032520833658', '4149566095531868420331']
+          [6][DELEGATECALL] from=TroveManager, to=TroveManager, getEntireSystemBalances() -> ['14015674457905566515617', '12641087173434032520833658', '4149566095531868420331']
+            [7][STATICCALL] from=TroveManager, to=PrismaCore, priceFeed() -> 0xc105ce
+            [7][CALL] from=TroveManager, to=PriceFeed, fetchPrice(_token(address): 0x7f39C5) -> 4149566095531868420331
+        [5][CALL] from=BorrowerOperations, to=TroveManager, getEntireSystemBalances() -> ['5450257651976284958566', '6261776053937667767510747', '3930882808203813871884']
+          [6][DELEGATECALL] from=TroveManager, to=TroveManager, getEntireSystemBalances() -> ['5450257651976284958566', '6261776053937667767510747', '3930882808203813871884']
+            [7][STATICCALL] from=TroveManager, to=PrismaCore, priceFeed() -> 0xc105ce
+            [7][CALL] from=TroveManager, to=PriceFeed, fetchPrice(_token(address): 0xae7873) -> 3930882808203813871884
+        [5][CALL] from=BorrowerOperations, to=TroveManager, getEntireSystemBalances() -> ['1449823148572984694848', '3211913151165317269222587', '3805018136658360621072']
+          [6][DELEGATECALL] from=TroveManager, to=TroveManager, getEntireSystemBalances() -> ['1449823148572984694848', '3211913151165317269222587', '3805018136658360621072']
+            [7][STATICCALL] from=TroveManager, to=PrismaCore, priceFeed() -> 0xc105ce
+            [7][CALL] from=TroveManager, to=PriceFeed, fetchPrice(_token(address): 0xBe9895) -> 3805018136658360621072
+        [5][CALL] from=BorrowerOperations, to=TroveManager, getEntireSystemBalances() -> ['12210309614077347828484', '6284515407859350549467604', '3813451207493670011456']
+          [6][DELEGATECALL] from=TroveManager, to=TroveManager, getEntireSystemBalances() -> ['12210309614077347828484', '6284515407859350549467604', '3813451207493670011456']
+            [7][STATICCALL] from=TroveManager, to=PrismaCore, priceFeed() -> 0xc105ce
+            [7][CALL] from=TroveManager, to=PriceFeed, fetchPrice(_token(address): 0xac3E01) -> 3813451207493670011456
+        [5][CALL] from=BorrowerOperations, to=TroveManager, getEntireSystemBalances() -> ['2097216947911988207215', '4601055487001429885575552', '4149566095531868420331']
+          [6][DELEGATECALL] from=TroveManager, to=TroveManager, getEntireSystemBalances() -> ['2097216947911988207215', '4601055487001429885575552', '4149566095531868420331']
+            [7][STATICCALL] from=TroveManager, to=PrismaCore, priceFeed() -> 0xc105ce
+            [7][CALL] from=TroveManager, to=PriceFeed, fetchPrice(_token(address): 0x7f39C5) -> 4149566095531868420331
+        [5][CALL] from=BorrowerOperations, to=TroveManager, getEntireSystemBalances() -> ['4686140039386635007797', '5313093793585574270017018', '3813451207493670011456']
+          [6][DELEGATECALL] from=TroveManager, to=TroveManager, getEntireSystemBalances() -> ['4686140039386635007797', '5313093793585574270017018', '3813451207493670011456']
+            [7][STATICCALL] from=TroveManager, to=PrismaCore, priceFeed() -> 0xc105ce
+            [7][CALL] from=TroveManager, to=PriceFeed, fetchPrice(_token(address): 0xac3E01) -> 3813451207493670011456
+        [5][CALL] from=BorrowerOperations, to=TroveManager, getEntireSystemBalances() -> ['2181736411404864496854', '4137368230200663181830888', '3930882808203813871884']
+          [6][DELEGATECALL] from=TroveManager, to=TroveManager, getEntireSystemBalances() -> ['2181736411404864496854', '4137368230200663181830888', '3930882808203813871884']
+            [7][STATICCALL] from=TroveManager, to=PrismaCore, priceFeed() -> 0xc105ce
+            [7][CALL] from=TroveManager, to=PriceFeed, fetchPrice(_token(address): 0xae7873) -> 3930882808203813871884
+        [5][CALL] from=BorrowerOperations, to=TroveManager, getEntireSystemBalances() -> ['28669200442514927430', '26998093984283300047489', '3805018136658360621072']
+          [6][DELEGATECALL] from=TroveManager, to=TroveManager, getEntireSystemBalances() -> ['28669200442514927430', '26998093984283300047489', '3805018136658360621072']
+            [7][STATICCALL] from=TroveManager, to=PrismaCore, priceFeed() -> 0xc105ce
+            [7][CALL] from=TroveManager, to=PriceFeed, fetchPrice(_token(address): 0xBe9895) -> 3805018136658360621072
+        [5][CALL] from=BorrowerOperations, to=TroveManager, applyPendingRewards(_borrower(address): 0x414831) -> ['69080547199829211401', '2201800000020370657106']
+          [6][DELEGATECALL] from=TroveManager, to=TroveManager, applyPendingRewards(_borrower(address): 0x414831) -> ['69080547199829211401', '2201800000020370657106']
+        [5][CALL] from=BorrowerOperations, to=TroveManager, closeTrove(_borrower(address): 0x414831, _receiver(address): 0x414831, collAmount(uint256): 69080547199829211401, debtAmount(uint256): 2201800000020370657106) -> None
+          [6][DELEGATECALL] from=TroveManager, to=TroveManager, closeTrove(_borrower(address): 0x414831, _receiver(address): 0x414831, collAmount(uint256): 69080547199829211401, debtAmount(uint256): 2201800000020370657106) -> None
+            [7][STATICCALL] from=TroveManager, to=SortedTroves, getSize() -> 27
+              [8][DELEGATECALL] from=SortedTroves, to=SortedTroves, getSize() -> 27
+            [7][CALL] from=TroveManager, to=SortedTroves, remove(_id(address): 0x414831) -> None
+              [8][DELEGATECALL] from=SortedTroves, to=SortedTroves, remove(_id(address): 0x414831) -> None
+            [7][CALL] from=TroveManager, to=WstETH, transfer(recipient(address): 0x414831, amount(uint256): 69080547199829211401) -> True
+        [5][CALL] from=BorrowerOperations, to=DebtToken, burnWithGasCompensation(_account(address): 0x414831, _amount(uint256): 2001800000020370657106) -> True
+      [4][CALL] from=0x414831, to=WstETH, transfer(recipient(address): 0xBA1222, amount(uint256): 1000000000000000000) -> True
+    [3][STATICCALL] from=Vault, to=WstETH, balanceOf(account(address): 0xBA1222) -> 17227981500877491389928

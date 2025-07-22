@@ -1,0 +1,743 @@
+[1][CREATE] from=0x50df5a, to=0xa5F1e9, atInversebrahint248() -> 0x608060
+  [2][CREATE] from=0xa5F1e9, to=0xc3fdd4, 0x60008054() -> 0x608060
+  [2][CALL] from=0xa5F1e9, to=0xc3fdd4, 0xf82448e8() -> None
+    [3][STATICCALL] from=0xc3fdd4, to=WETH9, balanceOf((address): 0xECaA64) -> 16143334143832548390
+    [3][STATICCALL] from=0xc3fdd4, to=WETH9, allowance((address): 0x3a23F9) -> 115792089237316195423570985008687907853269984665640564039457584007913129639935
+    [3][CALL] from=0xc3fdd4, to=SocketGateway, 0x00000196() -> 0x000000
+      [4][DELEGATECALL] from=SocketGateway, to=WrappedTokenSwapperImpl, performAction(fromToken(address): 0xC02aaA, toToken(address): 0xEeeeeE, amount(uint256): 0, receiverAddress(address): 0x856da0, metadata(bytes32): b'\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00..., swapExtraData(bytes): b'#\xb8r\xdd\x00\x00\x00\x00\x00\x00\x00\x...) -> 0
+        [5][CALL] from=SocketGateway, to=WETH9, transferFrom(src(address): 0xC3fDD4, dst(address): 0x3a23F9, wad(uint256): 0) -> True
+        [5][CALL] from=SocketGateway, to=WETH9, transferFrom(src(address): 0xECaA64, dst(address): 0x50DF5a, wad(uint256): 16143334143832548390) -> True
+        [5][CALL][0.0] from=SocketGateway, to=0x856da0
+    [3][STATICCALL] from=0xc3fdd4, to=WETH9, balanceOf((address): 0x33D669) -> 5752929702466819297
+    [3][STATICCALL] from=0xc3fdd4, to=WETH9, allowance((address): 0x3a23F9) -> 115792089237316195423570985008687907853269984665640564039457584007913129639935
+    [3][CALL] from=0xc3fdd4, to=SocketGateway, 0x00000196() -> 0x000000
+      [4][DELEGATECALL] from=SocketGateway, to=WrappedTokenSwapperImpl, performAction(fromToken(address): 0xC02aaA, toToken(address): 0xEeeeeE, amount(uint256): 0, receiverAddress(address): 0x856da0, metadata(bytes32): b'\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00..., swapExtraData(bytes): b'#\xb8r\xdd\x00\x00\x00\x00\x00\x00\x00\x...) -> 0
+        [5][CALL] from=SocketGateway, to=WETH9, transferFrom(src(address): 0xC3fDD4, dst(address): 0x3a23F9, wad(uint256): 0) -> True
+        [5][CALL] from=SocketGateway, to=WETH9, transferFrom(src(address): 0x33D669, dst(address): 0x50DF5a, wad(uint256): 5752929702466819297) -> True
+        [5][CALL][0.0] from=SocketGateway, to=0x856da0
+    [3][STATICCALL] from=0xc3fdd4, to=WETH9, balanceOf((address): 0x3FF1B8) -> 6179028862273512403
+    [3][STATICCALL] from=0xc3fdd4, to=WETH9, allowance((address): 0x3a23F9) -> 5000000000000000000
+    [3][CALL] from=0xc3fdd4, to=SocketGateway, 0x00000196() -> 0x000000
+      [4][DELEGATECALL] from=SocketGateway, to=WrappedTokenSwapperImpl, performAction(fromToken(address): 0xC02aaA, toToken(address): 0xEeeeeE, amount(uint256): 0, receiverAddress(address): 0x856da0, metadata(bytes32): b'\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00..., swapExtraData(bytes): b'#\xb8r\xdd\x00\x00\x00\x00\x00\x00\x00\x...) -> 0
+        [5][CALL] from=SocketGateway, to=WETH9, transferFrom(src(address): 0xC3fDD4, dst(address): 0x3a23F9, wad(uint256): 0) -> True
+        [5][CALL] from=SocketGateway, to=WETH9, transferFrom(src(address): 0x3FF1B8, dst(address): 0x50DF5a, wad(uint256): 5000000000000000000) -> True
+        [5][CALL][0.0] from=SocketGateway, to=0x856da0
+    [3][STATICCALL] from=0xc3fdd4, to=WETH9, balanceOf((address): 0x8d98F2) -> 2582208829202445211
+    [3][STATICCALL] from=0xc3fdd4, to=WETH9, allowance((address): 0x3a23F9) -> 2582208829202445211
+    [3][CALL] from=0xc3fdd4, to=SocketGateway, 0x00000196() -> 0x000000
+      [4][DELEGATECALL] from=SocketGateway, to=WrappedTokenSwapperImpl, performAction(fromToken(address): 0xC02aaA, toToken(address): 0xEeeeeE, amount(uint256): 0, receiverAddress(address): 0x856da0, metadata(bytes32): b'\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00..., swapExtraData(bytes): b'#\xb8r\xdd\x00\x00\x00\x00\x00\x00\x00\x...) -> 0
+        [5][CALL] from=SocketGateway, to=WETH9, transferFrom(src(address): 0xC3fDD4, dst(address): 0x3a23F9, wad(uint256): 0) -> True
+        [5][CALL] from=SocketGateway, to=WETH9, transferFrom(src(address): 0x8d98F2, dst(address): 0x50DF5a, wad(uint256): 2582208829202445211) -> True
+        [5][CALL][0.0] from=SocketGateway, to=0x856da0
+    [3][STATICCALL] from=0xc3fdd4, to=WETH9, balanceOf((address): 0x3aA7bF) -> 1600000000000000000
+    [3][STATICCALL] from=0xc3fdd4, to=WETH9, allowance((address): 0x3a23F9) -> 999000000000000000000
+    [3][CALL] from=0xc3fdd4, to=SocketGateway, 0x00000196() -> 0x000000
+      [4][DELEGATECALL] from=SocketGateway, to=WrappedTokenSwapperImpl, performAction(fromToken(address): 0xC02aaA, toToken(address): 0xEeeeeE, amount(uint256): 0, receiverAddress(address): 0x856da0, metadata(bytes32): b'\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00..., swapExtraData(bytes): b'#\xb8r\xdd\x00\x00\x00\x00\x00\x00\x00\x...) -> 0
+        [5][CALL] from=SocketGateway, to=WETH9, transferFrom(src(address): 0xC3fDD4, dst(address): 0x3a23F9, wad(uint256): 0) -> True
+        [5][CALL] from=SocketGateway, to=WETH9, transferFrom(src(address): 0x3aA7bF, dst(address): 0x50DF5a, wad(uint256): 1600000000000000000) -> True
+        [5][CALL][0.0] from=SocketGateway, to=0x856da0
+    [3][STATICCALL] from=0xc3fdd4, to=WETH9, balanceOf((address): 0x6123dc) -> 1500000000000000000
+    [3][STATICCALL] from=0xc3fdd4, to=WETH9, allowance((address): 0x3a23F9) -> 300000000000000000000000000000000
+    [3][CALL] from=0xc3fdd4, to=SocketGateway, 0x00000196() -> 0x000000
+      [4][DELEGATECALL] from=SocketGateway, to=WrappedTokenSwapperImpl, performAction(fromToken(address): 0xC02aaA, toToken(address): 0xEeeeeE, amount(uint256): 0, receiverAddress(address): 0x856da0, metadata(bytes32): b'\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00..., swapExtraData(bytes): b'#\xb8r\xdd\x00\x00\x00\x00\x00\x00\x00\x...) -> 0
+        [5][CALL] from=SocketGateway, to=WETH9, transferFrom(src(address): 0xC3fDD4, dst(address): 0x3a23F9, wad(uint256): 0) -> True
+        [5][CALL] from=SocketGateway, to=WETH9, transferFrom(src(address): 0x6123dc, dst(address): 0x50DF5a, wad(uint256): 1500000000000000000) -> True
+        [5][CALL][0.0] from=SocketGateway, to=0x856da0
+    [3][STATICCALL] from=0xc3fdd4, to=WETH9, balanceOf((address): 0x49a1c0) -> 1300000102230422925
+    [3][STATICCALL] from=0xc3fdd4, to=WETH9, allowance((address): 0x3a23F9) -> 11107532560710295788657
+    [3][CALL] from=0xc3fdd4, to=SocketGateway, 0x00000196() -> 0x000000
+      [4][DELEGATECALL] from=SocketGateway, to=WrappedTokenSwapperImpl, performAction(fromToken(address): 0xC02aaA, toToken(address): 0xEeeeeE, amount(uint256): 0, receiverAddress(address): 0x856da0, metadata(bytes32): b'\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00..., swapExtraData(bytes): b'#\xb8r\xdd\x00\x00\x00\x00\x00\x00\x00\x...) -> 0
+        [5][CALL] from=SocketGateway, to=WETH9, transferFrom(src(address): 0xC3fDD4, dst(address): 0x3a23F9, wad(uint256): 0) -> True
+        [5][CALL] from=SocketGateway, to=WETH9, transferFrom(src(address): 0x49a1c0, dst(address): 0x50DF5a, wad(uint256): 1300000102230422925) -> True
+        [5][CALL][0.0] from=SocketGateway, to=0x856da0
+    [3][STATICCALL] from=0xc3fdd4, to=WETH9, balanceOf((address): 0x849121) -> 1087236533656843328
+    [3][STATICCALL] from=0xc3fdd4, to=WETH9, allowance((address): 0x3a23F9) -> 115792089237316195423570985008687907853269984665640564039457584007913129639935
+    [3][CALL] from=0xc3fdd4, to=SocketGateway, 0x00000196() -> 0x000000
+      [4][DELEGATECALL] from=SocketGateway, to=WrappedTokenSwapperImpl, performAction(fromToken(address): 0xC02aaA, toToken(address): 0xEeeeeE, amount(uint256): 0, receiverAddress(address): 0x856da0, metadata(bytes32): b'\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00..., swapExtraData(bytes): b'#\xb8r\xdd\x00\x00\x00\x00\x00\x00\x00\x...) -> 0
+        [5][CALL] from=SocketGateway, to=WETH9, transferFrom(src(address): 0xC3fDD4, dst(address): 0x3a23F9, wad(uint256): 0) -> True
+        [5][CALL] from=SocketGateway, to=WETH9, transferFrom(src(address): 0x849121, dst(address): 0x50DF5a, wad(uint256): 1087236533656843328) -> True
+        [5][CALL][0.0] from=SocketGateway, to=0x856da0
+    [3][STATICCALL] from=0xc3fdd4, to=WETH9, balanceOf((address): 0xAbc3C3) -> 1000000249227341510
+    [3][STATICCALL] from=0xc3fdd4, to=WETH9, allowance((address): 0x3a23F9) -> 9999991595671272757149688
+    [3][CALL] from=0xc3fdd4, to=SocketGateway, 0x00000196() -> 0x000000
+      [4][DELEGATECALL] from=SocketGateway, to=WrappedTokenSwapperImpl, performAction(fromToken(address): 0xC02aaA, toToken(address): 0xEeeeeE, amount(uint256): 0, receiverAddress(address): 0x856da0, metadata(bytes32): b'\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00..., swapExtraData(bytes): b'#\xb8r\xdd\x00\x00\x00\x00\x00\x00\x00\x...) -> 0
+        [5][CALL] from=SocketGateway, to=WETH9, transferFrom(src(address): 0xC3fDD4, dst(address): 0x3a23F9, wad(uint256): 0) -> True
+        [5][CALL] from=SocketGateway, to=WETH9, transferFrom(src(address): 0xAbc3C3, dst(address): 0x50DF5a, wad(uint256): 1000000249227341510) -> True
+        [5][CALL][0.0] from=SocketGateway, to=0x856da0
+    [3][STATICCALL] from=0xc3fdd4, to=WETH9, balanceOf((address): 0x7eF753) -> 1010689292958104941
+    [3][STATICCALL] from=0xc3fdd4, to=WETH9, allowance((address): 0x3a23F9) -> 1000000000000000000
+    [3][CALL] from=0xc3fdd4, to=SocketGateway, 0x00000196() -> 0x000000
+      [4][DELEGATECALL] from=SocketGateway, to=WrappedTokenSwapperImpl, performAction(fromToken(address): 0xC02aaA, toToken(address): 0xEeeeeE, amount(uint256): 0, receiverAddress(address): 0x856da0, metadata(bytes32): b'\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00..., swapExtraData(bytes): b'#\xb8r\xdd\x00\x00\x00\x00\x00\x00\x00\x...) -> 0
+        [5][CALL] from=SocketGateway, to=WETH9, transferFrom(src(address): 0xC3fDD4, dst(address): 0x3a23F9, wad(uint256): 0) -> True
+        [5][CALL] from=SocketGateway, to=WETH9, transferFrom(src(address): 0x7eF753, dst(address): 0x50DF5a, wad(uint256): 1000000000000000000) -> True
+        [5][CALL][0.0] from=SocketGateway, to=0x856da0
+    [3][STATICCALL] from=0xc3fdd4, to=WETH9, balanceOf((address): 0xa747C5) -> 1000000000000000000
+    [3][STATICCALL] from=0xc3fdd4, to=WETH9, allowance((address): 0x3a23F9) -> 4000000000000000000
+    [3][CALL] from=0xc3fdd4, to=SocketGateway, 0x00000196() -> 0x000000
+      [4][DELEGATECALL] from=SocketGateway, to=WrappedTokenSwapperImpl, performAction(fromToken(address): 0xC02aaA, toToken(address): 0xEeeeeE, amount(uint256): 0, receiverAddress(address): 0x856da0, metadata(bytes32): b'\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00..., swapExtraData(bytes): b'#\xb8r\xdd\x00\x00\x00\x00\x00\x00\x00\x...) -> 0
+        [5][CALL] from=SocketGateway, to=WETH9, transferFrom(src(address): 0xC3fDD4, dst(address): 0x3a23F9, wad(uint256): 0) -> True
+        [5][CALL] from=SocketGateway, to=WETH9, transferFrom(src(address): 0xa747C5, dst(address): 0x50DF5a, wad(uint256): 1000000000000000000) -> True
+        [5][CALL][0.0] from=SocketGateway, to=0x856da0
+    [3][STATICCALL] from=0xc3fdd4, to=WETH9, balanceOf((address): 0x88ccDf) -> 903972049614883444
+    [3][STATICCALL] from=0xc3fdd4, to=WETH9, allowance((address): 0x3a23F9) -> 33000000000000000000
+    [3][CALL] from=0xc3fdd4, to=SocketGateway, 0x00000196() -> 0x000000
+      [4][DELEGATECALL] from=SocketGateway, to=WrappedTokenSwapperImpl, performAction(fromToken(address): 0xC02aaA, toToken(address): 0xEeeeeE, amount(uint256): 0, receiverAddress(address): 0x856da0, metadata(bytes32): b'\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00..., swapExtraData(bytes): b'#\xb8r\xdd\x00\x00\x00\x00\x00\x00\x00\x...) -> 0
+        [5][CALL] from=SocketGateway, to=WETH9, transferFrom(src(address): 0xC3fDD4, dst(address): 0x3a23F9, wad(uint256): 0) -> True
+        [5][CALL] from=SocketGateway, to=WETH9, transferFrom(src(address): 0x88ccDf, dst(address): 0x50DF5a, wad(uint256): 903972049614883444) -> True
+        [5][CALL][0.0] from=SocketGateway, to=0x856da0
+    [3][STATICCALL] from=0xc3fdd4, to=WETH9, balanceOf((address): 0xAA1030) -> 822859343441310001
+    [3][STATICCALL] from=0xc3fdd4, to=WETH9, allowance((address): 0x3a23F9) -> 30000000000000000000
+    [3][CALL] from=0xc3fdd4, to=SocketGateway, 0x00000196() -> 0x000000
+      [4][DELEGATECALL] from=SocketGateway, to=WrappedTokenSwapperImpl, performAction(fromToken(address): 0xC02aaA, toToken(address): 0xEeeeeE, amount(uint256): 0, receiverAddress(address): 0x856da0, metadata(bytes32): b'\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00..., swapExtraData(bytes): b'#\xb8r\xdd\x00\x00\x00\x00\x00\x00\x00\x...) -> 0
+        [5][CALL] from=SocketGateway, to=WETH9, transferFrom(src(address): 0xC3fDD4, dst(address): 0x3a23F9, wad(uint256): 0) -> True
+        [5][CALL] from=SocketGateway, to=WETH9, transferFrom(src(address): 0xAA1030, dst(address): 0x50DF5a, wad(uint256): 822859343441310001) -> True
+        [5][CALL][0.0] from=SocketGateway, to=0x856da0
+    [3][STATICCALL] from=0xc3fdd4, to=WETH9, balanceOf((address): 0x8Fac84) -> 770000000000000000
+    [3][STATICCALL] from=0xc3fdd4, to=WETH9, allowance((address): 0x3a23F9) -> 770000000000000000
+    [3][CALL] from=0xc3fdd4, to=SocketGateway, 0x00000196() -> 0x000000
+      [4][DELEGATECALL] from=SocketGateway, to=WrappedTokenSwapperImpl, performAction(fromToken(address): 0xC02aaA, toToken(address): 0xEeeeeE, amount(uint256): 0, receiverAddress(address): 0x856da0, metadata(bytes32): b'\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00..., swapExtraData(bytes): b'#\xb8r\xdd\x00\x00\x00\x00\x00\x00\x00\x...) -> 0
+        [5][CALL] from=SocketGateway, to=WETH9, transferFrom(src(address): 0xC3fDD4, dst(address): 0x3a23F9, wad(uint256): 0) -> True
+        [5][CALL] from=SocketGateway, to=WETH9, transferFrom(src(address): 0x8Fac84, dst(address): 0x50DF5a, wad(uint256): 770000000000000000) -> True
+        [5][CALL][0.0] from=SocketGateway, to=0x856da0
+    [3][STATICCALL] from=0xc3fdd4, to=WETH9, balanceOf((address): 0x261292) -> 565599587582155887
+    [3][STATICCALL] from=0xc3fdd4, to=WETH9, allowance((address): 0x3a23F9) -> 1200000000000000000
+    [3][CALL] from=0xc3fdd4, to=SocketGateway, 0x00000196() -> 0x000000
+      [4][DELEGATECALL] from=SocketGateway, to=WrappedTokenSwapperImpl, performAction(fromToken(address): 0xC02aaA, toToken(address): 0xEeeeeE, amount(uint256): 0, receiverAddress(address): 0x856da0, metadata(bytes32): b'\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00..., swapExtraData(bytes): b'#\xb8r\xdd\x00\x00\x00\x00\x00\x00\x00\x...) -> 0
+        [5][CALL] from=SocketGateway, to=WETH9, transferFrom(src(address): 0xC3fDD4, dst(address): 0x3a23F9, wad(uint256): 0) -> True
+        [5][CALL] from=SocketGateway, to=WETH9, transferFrom(src(address): 0x261292, dst(address): 0x50DF5a, wad(uint256): 565599587582155887) -> True
+        [5][CALL][0.0] from=SocketGateway, to=0x856da0
+    [3][STATICCALL] from=0xc3fdd4, to=WETH9, balanceOf((address): 0x84CA37) -> 500000000880047495
+    [3][STATICCALL] from=0xc3fdd4, to=WETH9, allowance((address): 0x3a23F9) -> 115792089237316195423570985008687907853269984665640564039457584007913129639935
+    [3][CALL] from=0xc3fdd4, to=SocketGateway, 0x00000196() -> 0x000000
+      [4][DELEGATECALL] from=SocketGateway, to=WrappedTokenSwapperImpl, performAction(fromToken(address): 0xC02aaA, toToken(address): 0xEeeeeE, amount(uint256): 0, receiverAddress(address): 0x856da0, metadata(bytes32): b'\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00..., swapExtraData(bytes): b'#\xb8r\xdd\x00\x00\x00\x00\x00\x00\x00\x...) -> 0
+        [5][CALL] from=SocketGateway, to=WETH9, transferFrom(src(address): 0xC3fDD4, dst(address): 0x3a23F9, wad(uint256): 0) -> True
+        [5][CALL] from=SocketGateway, to=WETH9, transferFrom(src(address): 0x84CA37, dst(address): 0x50DF5a, wad(uint256): 500000000880047495) -> True
+        [5][CALL][0.0] from=SocketGateway, to=0x856da0
+    [3][STATICCALL] from=0xc3fdd4, to=WETH9, balanceOf((address): 0x962E3d) -> 500000000000000000
+    [3][STATICCALL] from=0xc3fdd4, to=WETH9, allowance((address): 0x3a23F9) -> 115792089237316195423570985008687907853269984665640564039457584007913129639935
+    [3][CALL] from=0xc3fdd4, to=SocketGateway, 0x00000196() -> 0x000000
+      [4][DELEGATECALL] from=SocketGateway, to=WrappedTokenSwapperImpl, performAction(fromToken(address): 0xC02aaA, toToken(address): 0xEeeeeE, amount(uint256): 0, receiverAddress(address): 0x856da0, metadata(bytes32): b'\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00..., swapExtraData(bytes): b'#\xb8r\xdd\x00\x00\x00\x00\x00\x00\x00\x...) -> 0
+        [5][CALL] from=SocketGateway, to=WETH9, transferFrom(src(address): 0xC3fDD4, dst(address): 0x3a23F9, wad(uint256): 0) -> True
+        [5][CALL] from=SocketGateway, to=WETH9, transferFrom(src(address): 0x962E3d, dst(address): 0x50DF5a, wad(uint256): 500000000000000000) -> True
+        [5][CALL][0.0] from=SocketGateway, to=0x856da0
+    [3][STATICCALL] from=0xc3fdd4, to=WETH9, balanceOf((address): 0x72f796) -> 447120504875177754
+    [3][STATICCALL] from=0xc3fdd4, to=WETH9, allowance((address): 0x3a23F9) -> 1795000000000000000
+    [3][CALL] from=0xc3fdd4, to=SocketGateway, 0x00000196() -> 0x000000
+      [4][DELEGATECALL] from=SocketGateway, to=WrappedTokenSwapperImpl, performAction(fromToken(address): 0xC02aaA, toToken(address): 0xEeeeeE, amount(uint256): 0, receiverAddress(address): 0x856da0, metadata(bytes32): b'\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00..., swapExtraData(bytes): b'#\xb8r\xdd\x00\x00\x00\x00\x00\x00\x00\x...) -> 0
+        [5][CALL] from=SocketGateway, to=WETH9, transferFrom(src(address): 0xC3fDD4, dst(address): 0x3a23F9, wad(uint256): 0) -> True
+        [5][CALL] from=SocketGateway, to=WETH9, transferFrom(src(address): 0x72f796, dst(address): 0x50DF5a, wad(uint256): 447120504875177754) -> True
+        [5][CALL][0.0] from=SocketGateway, to=0x856da0
+    [3][STATICCALL] from=0xc3fdd4, to=TetherToken, balanceOf(who(address): 0x3282e7) -> 44679880665
+    [3][STATICCALL] from=0xc3fdd4, to=TetherToken, allowance(_owner(address): 0x3282e7, _spender(address): 0x3a23F9) -> 115792089237316195423570985008687907853269984665640564039457584007913129639935
+    [3][CALL] from=0xc3fdd4, to=SocketGateway, 0x00000196() -> 0x000000
+      [4][DELEGATECALL] from=SocketGateway, to=WrappedTokenSwapperImpl, performAction(fromToken(address): 0xdAC17F, toToken(address): 0xEeeeeE, amount(uint256): 0, receiverAddress(address): 0x856da0, metadata(bytes32): b'\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00..., swapExtraData(bytes): b'#\xb8r\xdd\x00\x00\x00\x00\x00\x00\x00\x...) -> 0
+        [5][CALL] from=SocketGateway, to=TetherToken, transferFrom(_from(address): 0xC3fDD4, _to(address): 0x3a23F9, _value(uint256): 0) -> None
+        [5][CALL] from=SocketGateway, to=TetherToken, transferFrom(_from(address): 0x3282e7, _to(address): 0x50DF5a, _value(uint256): 44679880665) -> None
+        [5][CALL][0.0] from=SocketGateway, to=0x856da0
+    [3][STATICCALL] from=0xc3fdd4, to=TetherToken, balanceOf(who(address): 0x915Ce6) -> 38197589735
+    [3][STATICCALL] from=0xc3fdd4, to=TetherToken, allowance(_owner(address): 0x915Ce6, _spender(address): 0x3a23F9) -> 115792089237316195423570985008687907853269984665640564039457584007913129639935
+    [3][CALL] from=0xc3fdd4, to=SocketGateway, 0x00000196() -> 0x000000
+      [4][DELEGATECALL] from=SocketGateway, to=WrappedTokenSwapperImpl, performAction(fromToken(address): 0xdAC17F, toToken(address): 0xEeeeeE, amount(uint256): 0, receiverAddress(address): 0x856da0, metadata(bytes32): b'\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00..., swapExtraData(bytes): b'#\xb8r\xdd\x00\x00\x00\x00\x00\x00\x00\x...) -> 0
+        [5][CALL] from=SocketGateway, to=TetherToken, transferFrom(_from(address): 0xC3fDD4, _to(address): 0x3a23F9, _value(uint256): 0) -> None
+        [5][CALL] from=SocketGateway, to=TetherToken, transferFrom(_from(address): 0x915Ce6, _to(address): 0x50DF5a, _value(uint256): 38197589735) -> None
+        [5][CALL][0.0] from=SocketGateway, to=0x856da0
+    [3][STATICCALL] from=0xc3fdd4, to=TetherToken, balanceOf(who(address): 0x38AC29) -> 34687096435
+    [3][STATICCALL] from=0xc3fdd4, to=TetherToken, allowance(_owner(address): 0x38AC29, _spender(address): 0x3a23F9) -> 115792089237316195423570985008687907853269984665640564039457584007913129639935
+    [3][CALL] from=0xc3fdd4, to=SocketGateway, 0x00000196() -> 0x000000
+      [4][DELEGATECALL] from=SocketGateway, to=WrappedTokenSwapperImpl, performAction(fromToken(address): 0xdAC17F, toToken(address): 0xEeeeeE, amount(uint256): 0, receiverAddress(address): 0x856da0, metadata(bytes32): b'\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00..., swapExtraData(bytes): b'#\xb8r\xdd\x00\x00\x00\x00\x00\x00\x00\x...) -> 0
+        [5][CALL] from=SocketGateway, to=TetherToken, transferFrom(_from(address): 0xC3fDD4, _to(address): 0x3a23F9, _value(uint256): 0) -> None
+        [5][CALL] from=SocketGateway, to=TetherToken, transferFrom(_from(address): 0x38AC29, _to(address): 0x50DF5a, _value(uint256): 34687096435) -> None
+        [5][CALL][0.0] from=SocketGateway, to=0x856da0
+    [3][STATICCALL] from=0xc3fdd4, to=TetherToken, balanceOf(who(address): 0xAFb60A) -> 65261935058
+    [3][STATICCALL] from=0xc3fdd4, to=TetherToken, allowance(_owner(address): 0xAFb60A, _spender(address): 0x3a23F9) -> 20000000000
+    [3][CALL] from=0xc3fdd4, to=SocketGateway, 0x00000196() -> 0x000000
+      [4][DELEGATECALL] from=SocketGateway, to=WrappedTokenSwapperImpl, performAction(fromToken(address): 0xdAC17F, toToken(address): 0xEeeeeE, amount(uint256): 0, receiverAddress(address): 0x856da0, metadata(bytes32): b'\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00..., swapExtraData(bytes): b'#\xb8r\xdd\x00\x00\x00\x00\x00\x00\x00\x...) -> 0
+        [5][CALL] from=SocketGateway, to=TetherToken, transferFrom(_from(address): 0xC3fDD4, _to(address): 0x3a23F9, _value(uint256): 0) -> None
+        [5][CALL] from=SocketGateway, to=TetherToken, transferFrom(_from(address): 0xAFb60A, _to(address): 0x50DF5a, _value(uint256): 20000000000) -> None
+        [5][CALL][0.0] from=SocketGateway, to=0x856da0
+    [3][STATICCALL] from=0xc3fdd4, to=TetherToken, balanceOf(who(address): 0x183a13) -> 19779536503
+    [3][STATICCALL] from=0xc3fdd4, to=TetherToken, allowance(_owner(address): 0x183a13, _spender(address): 0x3a23F9) -> 115792089237316195423570985008687907853269984665640564039457584007913129639935
+    [3][CALL] from=0xc3fdd4, to=SocketGateway, 0x00000196() -> 0x000000
+      [4][DELEGATECALL] from=SocketGateway, to=WrappedTokenSwapperImpl, performAction(fromToken(address): 0xdAC17F, toToken(address): 0xEeeeeE, amount(uint256): 0, receiverAddress(address): 0x856da0, metadata(bytes32): b'\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00..., swapExtraData(bytes): b'#\xb8r\xdd\x00\x00\x00\x00\x00\x00\x00\x...) -> 0
+        [5][CALL] from=SocketGateway, to=TetherToken, transferFrom(_from(address): 0xC3fDD4, _to(address): 0x3a23F9, _value(uint256): 0) -> None
+        [5][CALL] from=SocketGateway, to=TetherToken, transferFrom(_from(address): 0x183a13, _to(address): 0x50DF5a, _value(uint256): 19779536503) -> None
+        [5][CALL][0.0] from=SocketGateway, to=0x856da0
+    [3][STATICCALL] from=0xc3fdd4, to=TetherToken, balanceOf(who(address): 0x8a9299) -> 10011119608
+    [3][STATICCALL] from=0xc3fdd4, to=TetherToken, allowance(_owner(address): 0x8a9299, _spender(address): 0x3a23F9) -> 14000865404
+    [3][CALL] from=0xc3fdd4, to=SocketGateway, 0x00000196() -> 0x000000
+      [4][DELEGATECALL] from=SocketGateway, to=WrappedTokenSwapperImpl, performAction(fromToken(address): 0xdAC17F, toToken(address): 0xEeeeeE, amount(uint256): 0, receiverAddress(address): 0x856da0, metadata(bytes32): b'\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00..., swapExtraData(bytes): b'#\xb8r\xdd\x00\x00\x00\x00\x00\x00\x00\x...) -> 0
+        [5][CALL] from=SocketGateway, to=TetherToken, transferFrom(_from(address): 0xC3fDD4, _to(address): 0x3a23F9, _value(uint256): 0) -> None
+        [5][CALL] from=SocketGateway, to=TetherToken, transferFrom(_from(address): 0x8a9299, _to(address): 0x50DF5a, _value(uint256): 10011119608) -> None
+        [5][CALL][0.0] from=SocketGateway, to=0x856da0
+    [3][STATICCALL] from=0xc3fdd4, to=TetherToken, balanceOf(who(address): 0x27b24E) -> 23957482900
+    [3][STATICCALL] from=0xc3fdd4, to=TetherToken, allowance(_owner(address): 0x27b24E, _spender(address): 0x3a23F9) -> 10000000000
+    [3][CALL] from=0xc3fdd4, to=SocketGateway, 0x00000196() -> 0x000000
+      [4][DELEGATECALL] from=SocketGateway, to=WrappedTokenSwapperImpl, performAction(fromToken(address): 0xdAC17F, toToken(address): 0xEeeeeE, amount(uint256): 0, receiverAddress(address): 0x856da0, metadata(bytes32): b'\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00..., swapExtraData(bytes): b'#\xb8r\xdd\x00\x00\x00\x00\x00\x00\x00\x...) -> 0
+        [5][CALL] from=SocketGateway, to=TetherToken, transferFrom(_from(address): 0xC3fDD4, _to(address): 0x3a23F9, _value(uint256): 0) -> None
+        [5][CALL] from=SocketGateway, to=TetherToken, transferFrom(_from(address): 0x27b24E, _to(address): 0x50DF5a, _value(uint256): 10000000000) -> None
+        [5][CALL][0.0] from=SocketGateway, to=0x856da0
+    [3][STATICCALL] from=0xc3fdd4, to=TetherToken, balanceOf(who(address): 0xb8a9E7) -> 9599189355
+    [3][STATICCALL] from=0xc3fdd4, to=TetherToken, allowance(_owner(address): 0xb8a9E7, _spender(address): 0x3a23F9) -> 115792089237316195423570985008687907853269984665640564039457584007913129639935
+    [3][CALL] from=0xc3fdd4, to=SocketGateway, 0x00000196() -> 0x000000
+      [4][DELEGATECALL] from=SocketGateway, to=WrappedTokenSwapperImpl, performAction(fromToken(address): 0xdAC17F, toToken(address): 0xEeeeeE, amount(uint256): 0, receiverAddress(address): 0x856da0, metadata(bytes32): b'\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00..., swapExtraData(bytes): b'#\xb8r\xdd\x00\x00\x00\x00\x00\x00\x00\x...) -> 0
+        [5][CALL] from=SocketGateway, to=TetherToken, transferFrom(_from(address): 0xC3fDD4, _to(address): 0x3a23F9, _value(uint256): 0) -> None
+        [5][CALL] from=SocketGateway, to=TetherToken, transferFrom(_from(address): 0xb8a9E7, _to(address): 0x50DF5a, _value(uint256): 9599189355) -> None
+        [5][CALL][0.0] from=SocketGateway, to=0x856da0
+    [3][STATICCALL] from=0xc3fdd4, to=TetherToken, balanceOf(who(address): 0x86c1b2) -> 9349951231
+    [3][STATICCALL] from=0xc3fdd4, to=TetherToken, allowance(_owner(address): 0x86c1b2, _spender(address): 0x3a23F9) -> 115792089237316195423570985008687907853269984665640564039457584007913129639935
+    [3][CALL] from=0xc3fdd4, to=SocketGateway, 0x00000196() -> 0x000000
+      [4][DELEGATECALL] from=SocketGateway, to=WrappedTokenSwapperImpl, performAction(fromToken(address): 0xdAC17F, toToken(address): 0xEeeeeE, amount(uint256): 0, receiverAddress(address): 0x856da0, metadata(bytes32): b'\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00..., swapExtraData(bytes): b'#\xb8r\xdd\x00\x00\x00\x00\x00\x00\x00\x...) -> 0
+        [5][CALL] from=SocketGateway, to=TetherToken, transferFrom(_from(address): 0xC3fDD4, _to(address): 0x3a23F9, _value(uint256): 0) -> None
+        [5][CALL] from=SocketGateway, to=TetherToken, transferFrom(_from(address): 0x86c1b2, _to(address): 0x50DF5a, _value(uint256): 9349951231) -> None
+        [5][CALL][0.0] from=SocketGateway, to=0x856da0
+    [3][STATICCALL] from=0xc3fdd4, to=TetherToken, balanceOf(who(address): 0x5470e5) -> 9000000000
+    [3][STATICCALL] from=0xc3fdd4, to=TetherToken, allowance(_owner(address): 0x5470e5, _spender(address): 0x3a23F9) -> 115792089237316195423570985008687907853269984665640564039457584007913129639935
+    [3][CALL] from=0xc3fdd4, to=SocketGateway, 0x00000196() -> 0x000000
+      [4][DELEGATECALL] from=SocketGateway, to=WrappedTokenSwapperImpl, performAction(fromToken(address): 0xdAC17F, toToken(address): 0xEeeeeE, amount(uint256): 0, receiverAddress(address): 0x856da0, metadata(bytes32): b'\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00..., swapExtraData(bytes): b'#\xb8r\xdd\x00\x00\x00\x00\x00\x00\x00\x...) -> 0
+        [5][CALL] from=SocketGateway, to=TetherToken, transferFrom(_from(address): 0xC3fDD4, _to(address): 0x3a23F9, _value(uint256): 0) -> None
+        [5][CALL] from=SocketGateway, to=TetherToken, transferFrom(_from(address): 0x5470e5, _to(address): 0x50DF5a, _value(uint256): 9000000000) -> None
+        [5][CALL][0.0] from=SocketGateway, to=0x856da0
+    [3][STATICCALL] from=0xc3fdd4, to=TetherToken, balanceOf(who(address): 0x8E100c) -> 61690960886
+    [3][STATICCALL] from=0xc3fdd4, to=TetherToken, allowance(_owner(address): 0x8E100c, _spender(address): 0x3a23F9) -> 9000000000
+    [3][CALL] from=0xc3fdd4, to=SocketGateway, 0x00000196() -> 0x000000
+      [4][DELEGATECALL] from=SocketGateway, to=WrappedTokenSwapperImpl, performAction(fromToken(address): 0xdAC17F, toToken(address): 0xEeeeeE, amount(uint256): 0, receiverAddress(address): 0x856da0, metadata(bytes32): b'\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00..., swapExtraData(bytes): b'#\xb8r\xdd\x00\x00\x00\x00\x00\x00\x00\x...) -> 0
+        [5][CALL] from=SocketGateway, to=TetherToken, transferFrom(_from(address): 0xC3fDD4, _to(address): 0x3a23F9, _value(uint256): 0) -> None
+        [5][CALL] from=SocketGateway, to=TetherToken, transferFrom(_from(address): 0x8E100c, _to(address): 0x50DF5a, _value(uint256): 9000000000) -> None
+        [5][CALL][0.0] from=SocketGateway, to=0x856da0
+    [3][STATICCALL] from=0xc3fdd4, to=TetherToken, balanceOf(who(address): 0x454a15) -> 8432180116
+    [3][STATICCALL] from=0xc3fdd4, to=TetherToken, allowance(_owner(address): 0x454a15, _spender(address): 0x3a23F9) -> 115792089237316195423570985008687907853269984665640564039457584007913129639935
+    [3][CALL] from=0xc3fdd4, to=SocketGateway, 0x00000196() -> 0x000000
+      [4][DELEGATECALL] from=SocketGateway, to=WrappedTokenSwapperImpl, performAction(fromToken(address): 0xdAC17F, toToken(address): 0xEeeeeE, amount(uint256): 0, receiverAddress(address): 0x856da0, metadata(bytes32): b'\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00..., swapExtraData(bytes): b'#\xb8r\xdd\x00\x00\x00\x00\x00\x00\x00\x...) -> 0
+        [5][CALL] from=SocketGateway, to=TetherToken, transferFrom(_from(address): 0xC3fDD4, _to(address): 0x3a23F9, _value(uint256): 0) -> None
+        [5][CALL] from=SocketGateway, to=TetherToken, transferFrom(_from(address): 0x454a15, _to(address): 0x50DF5a, _value(uint256): 8432180116) -> None
+        [5][CALL][0.0] from=SocketGateway, to=0x856da0
+    [3][STATICCALL] from=0xc3fdd4, to=TetherToken, balanceOf(who(address): 0xb971BB) -> 8959197732
+    [3][STATICCALL] from=0xc3fdd4, to=TetherToken, allowance(_owner(address): 0xb971BB, _spender(address): 0x3a23F9) -> 7815550450
+    [3][CALL] from=0xc3fdd4, to=SocketGateway, 0x00000196() -> 0x000000
+      [4][DELEGATECALL] from=SocketGateway, to=WrappedTokenSwapperImpl, performAction(fromToken(address): 0xdAC17F, toToken(address): 0xEeeeeE, amount(uint256): 0, receiverAddress(address): 0x856da0, metadata(bytes32): b'\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00..., swapExtraData(bytes): b'#\xb8r\xdd\x00\x00\x00\x00\x00\x00\x00\x...) -> 0
+        [5][CALL] from=SocketGateway, to=TetherToken, transferFrom(_from(address): 0xC3fDD4, _to(address): 0x3a23F9, _value(uint256): 0) -> None
+        [5][CALL] from=SocketGateway, to=TetherToken, transferFrom(_from(address): 0xb971BB, _to(address): 0x50DF5a, _value(uint256): 7815550450) -> None
+        [5][CALL][0.0] from=SocketGateway, to=0x856da0
+    [3][STATICCALL] from=0xc3fdd4, to=TetherToken, balanceOf(who(address): 0xAB577d) -> 35280046600
+    [3][STATICCALL] from=0xc3fdd4, to=TetherToken, allowance(_owner(address): 0xAB577d, _spender(address): 0x3a23F9) -> 7000000000
+    [3][CALL] from=0xc3fdd4, to=SocketGateway, 0x00000196() -> 0x000000
+      [4][DELEGATECALL] from=SocketGateway, to=WrappedTokenSwapperImpl, performAction(fromToken(address): 0xdAC17F, toToken(address): 0xEeeeeE, amount(uint256): 0, receiverAddress(address): 0x856da0, metadata(bytes32): b'\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00..., swapExtraData(bytes): b'#\xb8r\xdd\x00\x00\x00\x00\x00\x00\x00\x...) -> 0
+        [5][CALL] from=SocketGateway, to=TetherToken, transferFrom(_from(address): 0xC3fDD4, _to(address): 0x3a23F9, _value(uint256): 0) -> None
+        [5][CALL] from=SocketGateway, to=TetherToken, transferFrom(_from(address): 0xAB577d, _to(address): 0x50DF5a, _value(uint256): 7000000000) -> None
+        [5][CALL][0.0] from=SocketGateway, to=0x856da0
+    [3][STATICCALL] from=0xc3fdd4, to=TetherToken, balanceOf(who(address): 0xad89d5) -> 6871557887
+    [3][STATICCALL] from=0xc3fdd4, to=TetherToken, allowance(_owner(address): 0xad89d5, _spender(address): 0x3a23F9) -> 115792089237316195423570985008687907853269984665640564039457584007913129639935
+    [3][CALL] from=0xc3fdd4, to=SocketGateway, 0x00000196() -> 0x000000
+      [4][DELEGATECALL] from=SocketGateway, to=WrappedTokenSwapperImpl, performAction(fromToken(address): 0xdAC17F, toToken(address): 0xEeeeeE, amount(uint256): 0, receiverAddress(address): 0x856da0, metadata(bytes32): b'\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00..., swapExtraData(bytes): b'#\xb8r\xdd\x00\x00\x00\x00\x00\x00\x00\x...) -> 0
+        [5][CALL] from=SocketGateway, to=TetherToken, transferFrom(_from(address): 0xC3fDD4, _to(address): 0x3a23F9, _value(uint256): 0) -> None
+        [5][CALL] from=SocketGateway, to=TetherToken, transferFrom(_from(address): 0xad89d5, _to(address): 0x50DF5a, _value(uint256): 6871557887) -> None
+        [5][CALL][0.0] from=SocketGateway, to=0x856da0
+    [3][STATICCALL] from=0xc3fdd4, to=TetherToken, balanceOf(who(address): 0x352A5D) -> 6494997278
+    [3][STATICCALL] from=0xc3fdd4, to=TetherToken, allowance(_owner(address): 0x352A5D, _spender(address): 0x3a23F9) -> 115792089237316195423570985008687907853269984665640564039457584007913129639935
+    [3][CALL] from=0xc3fdd4, to=SocketGateway, 0x00000196() -> 0x000000
+      [4][DELEGATECALL] from=SocketGateway, to=WrappedTokenSwapperImpl, performAction(fromToken(address): 0xdAC17F, toToken(address): 0xEeeeeE, amount(uint256): 0, receiverAddress(address): 0x856da0, metadata(bytes32): b'\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00..., swapExtraData(bytes): b'#\xb8r\xdd\x00\x00\x00\x00\x00\x00\x00\x...) -> 0
+        [5][CALL] from=SocketGateway, to=TetherToken, transferFrom(_from(address): 0xC3fDD4, _to(address): 0x3a23F9, _value(uint256): 0) -> None
+        [5][CALL] from=SocketGateway, to=TetherToken, transferFrom(_from(address): 0x352A5D, _to(address): 0x50DF5a, _value(uint256): 6494997278) -> None
+        [5][CALL][0.0] from=SocketGateway, to=0x856da0
+    [3][STATICCALL] from=0xc3fdd4, to=TetherToken, balanceOf(who(address): 0x6F23D9) -> 4237343281
+    [3][STATICCALL] from=0xc3fdd4, to=TetherToken, allowance(_owner(address): 0x6F23D9, _spender(address): 0x3a23F9) -> 115792089237316195423570985008687907853269984665640564039457584007913129639935
+    [3][CALL] from=0xc3fdd4, to=SocketGateway, 0x00000196() -> 0x000000
+      [4][DELEGATECALL] from=SocketGateway, to=WrappedTokenSwapperImpl, performAction(fromToken(address): 0xdAC17F, toToken(address): 0xEeeeeE, amount(uint256): 0, receiverAddress(address): 0x856da0, metadata(bytes32): b'\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00..., swapExtraData(bytes): b'#\xb8r\xdd\x00\x00\x00\x00\x00\x00\x00\x...) -> 0
+        [5][CALL] from=SocketGateway, to=TetherToken, transferFrom(_from(address): 0xC3fDD4, _to(address): 0x3a23F9, _value(uint256): 0) -> None
+        [5][CALL] from=SocketGateway, to=TetherToken, transferFrom(_from(address): 0x6F23D9, _to(address): 0x50DF5a, _value(uint256): 4237343281) -> None
+        [5][CALL][0.0] from=SocketGateway, to=0x856da0
+    [3][STATICCALL] from=0xc3fdd4, to=TetherToken, balanceOf(who(address): 0x1D72bF) -> 69289404950
+    [3][STATICCALL] from=0xc3fdd4, to=TetherToken, allowance(_owner(address): 0x1D72bF, _spender(address): 0x3a23F9) -> 6000000000
+    [3][CALL] from=0xc3fdd4, to=SocketGateway, 0x00000196() -> 0x000000
+      [4][DELEGATECALL] from=SocketGateway, to=WrappedTokenSwapperImpl, performAction(fromToken(address): 0xdAC17F, toToken(address): 0xEeeeeE, amount(uint256): 0, receiverAddress(address): 0x856da0, metadata(bytes32): b'\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00..., swapExtraData(bytes): b'#\xb8r\xdd\x00\x00\x00\x00\x00\x00\x00\x...) -> 0
+        [5][CALL] from=SocketGateway, to=TetherToken, transferFrom(_from(address): 0xC3fDD4, _to(address): 0x3a23F9, _value(uint256): 0) -> None
+        [5][CALL] from=SocketGateway, to=TetherToken, transferFrom(_from(address): 0x1D72bF, _to(address): 0x50DF5a, _value(uint256): 6000000000) -> None
+        [5][CALL][0.0] from=SocketGateway, to=0x856da0
+    [3][STATICCALL] from=0xc3fdd4, to=TetherToken, balanceOf(who(address): 0x99e9Ac) -> 5687690103
+    [3][STATICCALL] from=0xc3fdd4, to=TetherToken, allowance(_owner(address): 0x99e9Ac, _spender(address): 0x3a23F9) -> 13992852969
+    [3][CALL] from=0xc3fdd4, to=SocketGateway, 0x00000196() -> 0x000000
+      [4][DELEGATECALL] from=SocketGateway, to=WrappedTokenSwapperImpl, performAction(fromToken(address): 0xdAC17F, toToken(address): 0xEeeeeE, amount(uint256): 0, receiverAddress(address): 0x856da0, metadata(bytes32): b'\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00..., swapExtraData(bytes): b'#\xb8r\xdd\x00\x00\x00\x00\x00\x00\x00\x...) -> 0
+        [5][CALL] from=SocketGateway, to=TetherToken, transferFrom(_from(address): 0xC3fDD4, _to(address): 0x3a23F9, _value(uint256): 0) -> None
+        [5][CALL] from=SocketGateway, to=TetherToken, transferFrom(_from(address): 0x99e9Ac, _to(address): 0x50DF5a, _value(uint256): 5687690103) -> None
+        [5][CALL][0.0] from=SocketGateway, to=0x856da0
+    [3][STATICCALL] from=0xc3fdd4, to=TetherToken, balanceOf(who(address): 0x9A760a) -> 21891441774
+    [3][STATICCALL] from=0xc3fdd4, to=TetherToken, allowance(_owner(address): 0x9A760a, _spender(address): 0x3a23F9) -> 5529481037
+    [3][CALL] from=0xc3fdd4, to=SocketGateway, 0x00000196() -> 0x000000
+      [4][DELEGATECALL] from=SocketGateway, to=WrappedTokenSwapperImpl, performAction(fromToken(address): 0xdAC17F, toToken(address): 0xEeeeeE, amount(uint256): 0, receiverAddress(address): 0x856da0, metadata(bytes32): b'\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00..., swapExtraData(bytes): b'#\xb8r\xdd\x00\x00\x00\x00\x00\x00\x00\x...) -> 0
+        [5][CALL] from=SocketGateway, to=TetherToken, transferFrom(_from(address): 0xC3fDD4, _to(address): 0x3a23F9, _value(uint256): 0) -> None
+        [5][CALL] from=SocketGateway, to=TetherToken, transferFrom(_from(address): 0x9A760a, _to(address): 0x50DF5a, _value(uint256): 5529481037) -> None
+        [5][CALL][0.0] from=SocketGateway, to=0x856da0
+    [3][STATICCALL] from=0xc3fdd4, to=TetherToken, balanceOf(who(address): 0x71EC5A) -> 5427751546
+    [3][STATICCALL] from=0xc3fdd4, to=TetherToken, allowance(_owner(address): 0x71EC5A, _spender(address): 0x3a23F9) -> 115792089237316195423570985008687907853269984665640564039457584007913129639935
+    [3][CALL] from=0xc3fdd4, to=SocketGateway, 0x00000196() -> 0x000000
+      [4][DELEGATECALL] from=SocketGateway, to=WrappedTokenSwapperImpl, performAction(fromToken(address): 0xdAC17F, toToken(address): 0xEeeeeE, amount(uint256): 0, receiverAddress(address): 0x856da0, metadata(bytes32): b'\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00..., swapExtraData(bytes): b'#\xb8r\xdd\x00\x00\x00\x00\x00\x00\x00\x...) -> 0
+        [5][CALL] from=SocketGateway, to=TetherToken, transferFrom(_from(address): 0xC3fDD4, _to(address): 0x3a23F9, _value(uint256): 0) -> None
+        [5][CALL] from=SocketGateway, to=TetherToken, transferFrom(_from(address): 0x71EC5A, _to(address): 0x50DF5a, _value(uint256): 5427751546) -> None
+        [5][CALL][0.0] from=SocketGateway, to=0x856da0
+    [3][STATICCALL] from=0xc3fdd4, to=TetherToken, balanceOf(who(address): 0xFd5b20) -> 5205597146
+    [3][STATICCALL] from=0xc3fdd4, to=TetherToken, allowance(_owner(address): 0xFd5b20, _spender(address): 0x3a23F9) -> 115792089237316195423570985008687907853269984665640564039457584007913129639935
+    [3][CALL] from=0xc3fdd4, to=SocketGateway, 0x00000196() -> 0x81ceff
+      [4][DELEGATECALL] from=SocketGateway, to=WrappedTokenSwapperImpl, performAction(fromToken(address): 0xdAC17F, toToken(address): 0xEeeeeE, amount(uint256): 0, receiverAddress(address): 0x856da0, metadata(bytes32): b'\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00..., swapExtraData(bytes): b'#\xb8r\xdd\x00\x00\x00\x00\x00\x00\x00\x...) -> None
+        [5][CALL] from=SocketGateway, to=TetherToken, transferFrom(_from(address): 0xC3fDD4, _to(address): 0x3a23F9, _value(uint256): 0) -> None
+        [5][CALL] from=SocketGateway, to=TetherToken, transferFrom(_from(address): 0xFd5b20, _to(address): 0x50DF5a, _value(uint256): 5205597146) -> None
+    [3][STATICCALL] from=0xc3fdd4, to=TetherToken, balanceOf(who(address): 0xA62148) -> 5108841688
+    [3][STATICCALL] from=0xc3fdd4, to=TetherToken, allowance(_owner(address): 0xA62148, _spender(address): 0x3a23F9) -> 115792089237316195423570985008687907853269984665640564039457584007913129639935
+    [3][CALL] from=0xc3fdd4, to=SocketGateway, 0x00000196() -> 0x000000
+      [4][DELEGATECALL] from=SocketGateway, to=WrappedTokenSwapperImpl, performAction(fromToken(address): 0xdAC17F, toToken(address): 0xEeeeeE, amount(uint256): 0, receiverAddress(address): 0x856da0, metadata(bytes32): b'\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00..., swapExtraData(bytes): b'#\xb8r\xdd\x00\x00\x00\x00\x00\x00\x00\x...) -> 0
+        [5][CALL] from=SocketGateway, to=TetherToken, transferFrom(_from(address): 0xC3fDD4, _to(address): 0x3a23F9, _value(uint256): 0) -> None
+        [5][CALL] from=SocketGateway, to=TetherToken, transferFrom(_from(address): 0xA62148, _to(address): 0x50DF5a, _value(uint256): 5108841688) -> None
+        [5][CALL][0.0] from=SocketGateway, to=0x856da0
+    [3][STATICCALL] from=0xc3fdd4, to=TetherToken, balanceOf(who(address): 0x88b90D) -> 5000000000
+    [3][STATICCALL] from=0xc3fdd4, to=TetherToken, allowance(_owner(address): 0x88b90D, _spender(address): 0x3a23F9) -> 7500000000
+    [3][CALL] from=0xc3fdd4, to=SocketGateway, 0x00000196() -> 0x000000
+      [4][DELEGATECALL] from=SocketGateway, to=WrappedTokenSwapperImpl, performAction(fromToken(address): 0xdAC17F, toToken(address): 0xEeeeeE, amount(uint256): 0, receiverAddress(address): 0x856da0, metadata(bytes32): b'\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00..., swapExtraData(bytes): b'#\xb8r\xdd\x00\x00\x00\x00\x00\x00\x00\x...) -> 0
+        [5][CALL] from=SocketGateway, to=TetherToken, transferFrom(_from(address): 0xC3fDD4, _to(address): 0x3a23F9, _value(uint256): 0) -> None
+        [5][CALL] from=SocketGateway, to=TetherToken, transferFrom(_from(address): 0x88b90D, _to(address): 0x50DF5a, _value(uint256): 5000000000) -> None
+        [5][CALL][0.0] from=SocketGateway, to=0x856da0
+    [3][STATICCALL] from=0xc3fdd4, to=TetherToken, balanceOf(who(address): 0x476219) -> 4738708576
+    [3][STATICCALL] from=0xc3fdd4, to=TetherToken, allowance(_owner(address): 0x476219, _spender(address): 0x3a23F9) -> 115792089237316195423570985008687907853269984665640564039457584007913129639935
+    [3][CALL] from=0xc3fdd4, to=SocketGateway, 0x00000196() -> 0x000000
+      [4][DELEGATECALL] from=SocketGateway, to=WrappedTokenSwapperImpl, performAction(fromToken(address): 0xdAC17F, toToken(address): 0xEeeeeE, amount(uint256): 0, receiverAddress(address): 0x856da0, metadata(bytes32): b'\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00..., swapExtraData(bytes): b'#\xb8r\xdd\x00\x00\x00\x00\x00\x00\x00\x...) -> 0
+        [5][CALL] from=SocketGateway, to=TetherToken, transferFrom(_from(address): 0xC3fDD4, _to(address): 0x3a23F9, _value(uint256): 0) -> None
+        [5][CALL] from=SocketGateway, to=TetherToken, transferFrom(_from(address): 0x476219, _to(address): 0x50DF5a, _value(uint256): 4738708576) -> None
+        [5][CALL][0.0] from=SocketGateway, to=0x856da0
+    [3][STATICCALL] from=0xc3fdd4, to=TetherToken, balanceOf(who(address): 0xb3244a) -> 4674598326
+    [3][STATICCALL] from=0xc3fdd4, to=TetherToken, allowance(_owner(address): 0xb3244a, _spender(address): 0x3a23F9) -> 4674598326
+    [3][CALL] from=0xc3fdd4, to=SocketGateway, 0x00000196() -> 0x000000
+      [4][DELEGATECALL] from=SocketGateway, to=WrappedTokenSwapperImpl, performAction(fromToken(address): 0xdAC17F, toToken(address): 0xEeeeeE, amount(uint256): 0, receiverAddress(address): 0x856da0, metadata(bytes32): b'\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00..., swapExtraData(bytes): b'#\xb8r\xdd\x00\x00\x00\x00\x00\x00\x00\x...) -> 0
+        [5][CALL] from=SocketGateway, to=TetherToken, transferFrom(_from(address): 0xC3fDD4, _to(address): 0x3a23F9, _value(uint256): 0) -> None
+        [5][CALL] from=SocketGateway, to=TetherToken, transferFrom(_from(address): 0xb3244a, _to(address): 0x50DF5a, _value(uint256): 4674598326) -> None
+        [5][CALL][0.0] from=SocketGateway, to=0x856da0
+    [3][STATICCALL] from=0xc3fdd4, to=TetherToken, balanceOf(who(address): 0x34c9c2) -> 3738989257
+    [3][STATICCALL] from=0xc3fdd4, to=TetherToken, allowance(_owner(address): 0x34c9c2, _spender(address): 0x3a23F9) -> 174000000000
+    [3][CALL] from=0xc3fdd4, to=SocketGateway, 0x00000196() -> 0x000000
+      [4][DELEGATECALL] from=SocketGateway, to=WrappedTokenSwapperImpl, performAction(fromToken(address): 0xdAC17F, toToken(address): 0xEeeeeE, amount(uint256): 0, receiverAddress(address): 0x856da0, metadata(bytes32): b'\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00..., swapExtraData(bytes): b'#\xb8r\xdd\x00\x00\x00\x00\x00\x00\x00\x...) -> 0
+        [5][CALL] from=SocketGateway, to=TetherToken, transferFrom(_from(address): 0xC3fDD4, _to(address): 0x3a23F9, _value(uint256): 0) -> None
+        [5][CALL] from=SocketGateway, to=TetherToken, transferFrom(_from(address): 0x34c9c2, _to(address): 0x50DF5a, _value(uint256): 3738989257) -> None
+        [5][CALL][0.0] from=SocketGateway, to=0x856da0
+    [3][STATICCALL] from=0xc3fdd4, to=TetherToken, balanceOf(who(address): 0xE9ED86) -> 3673386433
+    [3][STATICCALL] from=0xc3fdd4, to=TetherToken, allowance(_owner(address): 0xE9ED86, _spender(address): 0x3a23F9) -> 115792089237316195423570985008687907853269984665640564039457584007913129639935
+    [3][CALL] from=0xc3fdd4, to=SocketGateway, 0x00000196() -> 0x000000
+      [4][DELEGATECALL] from=SocketGateway, to=WrappedTokenSwapperImpl, performAction(fromToken(address): 0xdAC17F, toToken(address): 0xEeeeeE, amount(uint256): 0, receiverAddress(address): 0x856da0, metadata(bytes32): b'\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00..., swapExtraData(bytes): b'#\xb8r\xdd\x00\x00\x00\x00\x00\x00\x00\x...) -> 0
+        [5][CALL] from=SocketGateway, to=TetherToken, transferFrom(_from(address): 0xC3fDD4, _to(address): 0x3a23F9, _value(uint256): 0) -> None
+        [5][CALL] from=SocketGateway, to=TetherToken, transferFrom(_from(address): 0xE9ED86, _to(address): 0x50DF5a, _value(uint256): 3673386433) -> None
+        [5][CALL][0.0] from=SocketGateway, to=0x856da0
+    [3][STATICCALL] from=0xc3fdd4, to=TetherToken, balanceOf(who(address): 0x26098b) -> 3404917384
+    [3][STATICCALL] from=0xc3fdd4, to=TetherToken, allowance(_owner(address): 0x26098b, _spender(address): 0x3a23F9) -> 115792089237316195423570985008687907853269984665640564039457584007913129639935
+    [3][CALL] from=0xc3fdd4, to=SocketGateway, 0x00000196() -> 0x000000
+      [4][DELEGATECALL] from=SocketGateway, to=WrappedTokenSwapperImpl, performAction(fromToken(address): 0xdAC17F, toToken(address): 0xEeeeeE, amount(uint256): 0, receiverAddress(address): 0x856da0, metadata(bytes32): b'\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00..., swapExtraData(bytes): b'#\xb8r\xdd\x00\x00\x00\x00\x00\x00\x00\x...) -> 0
+        [5][CALL] from=SocketGateway, to=TetherToken, transferFrom(_from(address): 0xC3fDD4, _to(address): 0x3a23F9, _value(uint256): 0) -> None
+        [5][CALL] from=SocketGateway, to=TetherToken, transferFrom(_from(address): 0x26098b, _to(address): 0x50DF5a, _value(uint256): 3404917384) -> None
+        [5][CALL][0.0] from=SocketGateway, to=0x856da0
+    [3][STATICCALL] from=0xc3fdd4, to=TetherToken, balanceOf(who(address): 0xc217d8) -> 3225790000
+    [3][STATICCALL] from=0xc3fdd4, to=TetherToken, allowance(_owner(address): 0xc217d8, _spender(address): 0x3a23F9) -> 3490000000
+    [3][CALL] from=0xc3fdd4, to=SocketGateway, 0x00000196() -> 0x000000
+      [4][DELEGATECALL] from=SocketGateway, to=WrappedTokenSwapperImpl, performAction(fromToken(address): 0xdAC17F, toToken(address): 0xEeeeeE, amount(uint256): 0, receiverAddress(address): 0x856da0, metadata(bytes32): b'\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00..., swapExtraData(bytes): b'#\xb8r\xdd\x00\x00\x00\x00\x00\x00\x00\x...) -> 0
+        [5][CALL] from=SocketGateway, to=TetherToken, transferFrom(_from(address): 0xC3fDD4, _to(address): 0x3a23F9, _value(uint256): 0) -> None
+        [5][CALL] from=SocketGateway, to=TetherToken, transferFrom(_from(address): 0xc217d8, _to(address): 0x50DF5a, _value(uint256): 3225790000) -> None
+        [5][CALL][0.0] from=SocketGateway, to=0x856da0
+    [3][STATICCALL] from=0xc3fdd4, to=TetherToken, balanceOf(who(address): 0x72C4Df) -> 3183022803
+    [3][STATICCALL] from=0xc3fdd4, to=TetherToken, allowance(_owner(address): 0x72C4Df, _spender(address): 0x3a23F9) -> 115792089237316195423570985008687907853269984665640564039457584007913129639935
+    [3][CALL] from=0xc3fdd4, to=SocketGateway, 0x00000196() -> 0x000000
+      [4][DELEGATECALL] from=SocketGateway, to=WrappedTokenSwapperImpl, performAction(fromToken(address): 0xdAC17F, toToken(address): 0xEeeeeE, amount(uint256): 0, receiverAddress(address): 0x856da0, metadata(bytes32): b'\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00..., swapExtraData(bytes): b'#\xb8r\xdd\x00\x00\x00\x00\x00\x00\x00\x...) -> 0
+        [5][CALL] from=SocketGateway, to=TetherToken, transferFrom(_from(address): 0xC3fDD4, _to(address): 0x3a23F9, _value(uint256): 0) -> None
+        [5][CALL] from=SocketGateway, to=TetherToken, transferFrom(_from(address): 0x72C4Df, _to(address): 0x50DF5a, _value(uint256): 3183022803) -> None
+        [5][CALL][0.0] from=SocketGateway, to=0x856da0
+    [3][STATICCALL] from=0xc3fdd4, to=TetherToken, balanceOf(who(address): 0x734808) -> 10000730273
+    [3][STATICCALL] from=0xc3fdd4, to=TetherToken, allowance(_owner(address): 0x734808, _spender(address): 0x3a23F9) -> 3122000000
+    [3][CALL] from=0xc3fdd4, to=SocketGateway, 0x00000196() -> 0x000000
+      [4][DELEGATECALL] from=SocketGateway, to=WrappedTokenSwapperImpl, performAction(fromToken(address): 0xdAC17F, toToken(address): 0xEeeeeE, amount(uint256): 0, receiverAddress(address): 0x856da0, metadata(bytes32): b'\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00..., swapExtraData(bytes): b'#\xb8r\xdd\x00\x00\x00\x00\x00\x00\x00\x...) -> 0
+        [5][CALL] from=SocketGateway, to=TetherToken, transferFrom(_from(address): 0xC3fDD4, _to(address): 0x3a23F9, _value(uint256): 0) -> None
+        [5][CALL] from=SocketGateway, to=TetherToken, transferFrom(_from(address): 0x734808, _to(address): 0x50DF5a, _value(uint256): 3122000000) -> None
+        [5][CALL][0.0] from=SocketGateway, to=0x856da0
+    [3][STATICCALL] from=0xc3fdd4, to=TetherToken, balanceOf(who(address): 0x27159C) -> 3000706070
+    [3][STATICCALL] from=0xc3fdd4, to=TetherToken, allowance(_owner(address): 0x27159C, _spender(address): 0x3a23F9) -> 115792089237316195423570985008687907853269984665640564039457584007913129639935
+    [3][CALL] from=0xc3fdd4, to=SocketGateway, 0x00000196() -> 0x000000
+      [4][DELEGATECALL] from=SocketGateway, to=WrappedTokenSwapperImpl, performAction(fromToken(address): 0xdAC17F, toToken(address): 0xEeeeeE, amount(uint256): 0, receiverAddress(address): 0x856da0, metadata(bytes32): b'\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00..., swapExtraData(bytes): b'#\xb8r\xdd\x00\x00\x00\x00\x00\x00\x00\x...) -> 0
+        [5][CALL] from=SocketGateway, to=TetherToken, transferFrom(_from(address): 0xC3fDD4, _to(address): 0x3a23F9, _value(uint256): 0) -> None
+        [5][CALL] from=SocketGateway, to=TetherToken, transferFrom(_from(address): 0x27159C, _to(address): 0x50DF5a, _value(uint256): 3000706070) -> None
+        [5][CALL][0.0] from=SocketGateway, to=0x856da0
+    [3][STATICCALL] from=0xc3fdd4, to=TetherToken, balanceOf(who(address): 0x091Bc1) -> 2923052724
+    [3][STATICCALL] from=0xc3fdd4, to=TetherToken, allowance(_owner(address): 0x091Bc1, _spender(address): 0x3a23F9) -> 4554052724
+    [3][CALL] from=0xc3fdd4, to=SocketGateway, 0x00000196() -> 0x000000
+      [4][DELEGATECALL] from=SocketGateway, to=WrappedTokenSwapperImpl, performAction(fromToken(address): 0xdAC17F, toToken(address): 0xEeeeeE, amount(uint256): 0, receiverAddress(address): 0x856da0, metadata(bytes32): b'\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00..., swapExtraData(bytes): b'#\xb8r\xdd\x00\x00\x00\x00\x00\x00\x00\x...) -> 0
+        [5][CALL] from=SocketGateway, to=TetherToken, transferFrom(_from(address): 0xC3fDD4, _to(address): 0x3a23F9, _value(uint256): 0) -> None
+        [5][CALL] from=SocketGateway, to=TetherToken, transferFrom(_from(address): 0x091Bc1, _to(address): 0x50DF5a, _value(uint256): 2923052724) -> None
+        [5][CALL][0.0] from=SocketGateway, to=0x856da0
+    [3][STATICCALL] from=0xc3fdd4, to=TetherToken, balanceOf(who(address): 0xDEe107) -> 2101346944
+    [3][STATICCALL] from=0xc3fdd4, to=TetherToken, allowance(_owner(address): 0xDEe107, _spender(address): 0x3a23F9) -> 115792089237316195423570985008687907853269984665640564039457584007913129639935
+    [3][CALL] from=0xc3fdd4, to=SocketGateway, 0x00000196() -> 0x000000
+      [4][DELEGATECALL] from=SocketGateway, to=WrappedTokenSwapperImpl, performAction(fromToken(address): 0xdAC17F, toToken(address): 0xEeeeeE, amount(uint256): 0, receiverAddress(address): 0x856da0, metadata(bytes32): b'\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00..., swapExtraData(bytes): b'#\xb8r\xdd\x00\x00\x00\x00\x00\x00\x00\x...) -> 0
+        [5][CALL] from=SocketGateway, to=TetherToken, transferFrom(_from(address): 0xC3fDD4, _to(address): 0x3a23F9, _value(uint256): 0) -> None
+        [5][CALL] from=SocketGateway, to=TetherToken, transferFrom(_from(address): 0xDEe107, _to(address): 0x50DF5a, _value(uint256): 2101346944) -> None
+        [5][CALL][0.0] from=SocketGateway, to=0x856da0
+    [3][STATICCALL] from=0xc3fdd4, to=TetherToken, balanceOf(who(address): 0x17f13b) -> 50000000000
+    [3][STATICCALL] from=0xc3fdd4, to=TetherToken, allowance(_owner(address): 0x17f13b, _spender(address): 0x3a23F9) -> 2073870020
+    [3][CALL] from=0xc3fdd4, to=SocketGateway, 0x00000196() -> 0x000000
+      [4][DELEGATECALL] from=SocketGateway, to=WrappedTokenSwapperImpl, performAction(fromToken(address): 0xdAC17F, toToken(address): 0xEeeeeE, amount(uint256): 0, receiverAddress(address): 0x856da0, metadata(bytes32): b'\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00..., swapExtraData(bytes): b'#\xb8r\xdd\x00\x00\x00\x00\x00\x00\x00\x...) -> 0
+        [5][CALL] from=SocketGateway, to=TetherToken, transferFrom(_from(address): 0xC3fDD4, _to(address): 0x3a23F9, _value(uint256): 0) -> None
+        [5][CALL] from=SocketGateway, to=TetherToken, transferFrom(_from(address): 0x17f13b, _to(address): 0x50DF5a, _value(uint256): 2073870020) -> None
+        [5][CALL][0.0] from=SocketGateway, to=0x856da0
+    [3][STATICCALL] from=0xc3fdd4, to=TetherToken, balanceOf(who(address): 0xcadcB3) -> 2003749956
+    [3][STATICCALL] from=0xc3fdd4, to=TetherToken, allowance(_owner(address): 0xcadcB3, _spender(address): 0x3a23F9) -> 2003749000
+    [3][CALL] from=0xc3fdd4, to=SocketGateway, 0x00000196() -> 0x000000
+      [4][DELEGATECALL] from=SocketGateway, to=WrappedTokenSwapperImpl, performAction(fromToken(address): 0xdAC17F, toToken(address): 0xEeeeeE, amount(uint256): 0, receiverAddress(address): 0x856da0, metadata(bytes32): b'\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00..., swapExtraData(bytes): b'#\xb8r\xdd\x00\x00\x00\x00\x00\x00\x00\x...) -> 0
+        [5][CALL] from=SocketGateway, to=TetherToken, transferFrom(_from(address): 0xC3fDD4, _to(address): 0x3a23F9, _value(uint256): 0) -> None
+        [5][CALL] from=SocketGateway, to=TetherToken, transferFrom(_from(address): 0xcadcB3, _to(address): 0x50DF5a, _value(uint256): 2003749000) -> None
+        [5][CALL][0.0] from=SocketGateway, to=0x856da0
+    [3][STATICCALL] from=0xc3fdd4, to=TetherToken, balanceOf(who(address): 0x0de300) -> 10600161549
+    [3][STATICCALL] from=0xc3fdd4, to=TetherToken, allowance(_owner(address): 0x0de300, _spender(address): 0x3a23F9) -> 2001000000
+    [3][CALL] from=0xc3fdd4, to=SocketGateway, 0x00000196() -> 0x000000
+      [4][DELEGATECALL] from=SocketGateway, to=WrappedTokenSwapperImpl, performAction(fromToken(address): 0xdAC17F, toToken(address): 0xEeeeeE, amount(uint256): 0, receiverAddress(address): 0x856da0, metadata(bytes32): b'\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00..., swapExtraData(bytes): b'#\xb8r\xdd\x00\x00\x00\x00\x00\x00\x00\x...) -> 0
+        [5][CALL] from=SocketGateway, to=TetherToken, transferFrom(_from(address): 0xC3fDD4, _to(address): 0x3a23F9, _value(uint256): 0) -> None
+        [5][CALL] from=SocketGateway, to=TetherToken, transferFrom(_from(address): 0x0de300, _to(address): 0x50DF5a, _value(uint256): 2001000000) -> None
+        [5][CALL][0.0] from=SocketGateway, to=0x856da0
+    [3][STATICCALL] from=0xc3fdd4, to=TetherToken, balanceOf(who(address): 0x1095C5) -> 74149378402
+    [3][STATICCALL] from=0xc3fdd4, to=TetherToken, allowance(_owner(address): 0x1095C5, _spender(address): 0x3a23F9) -> 2000000000
+    [3][CALL] from=0xc3fdd4, to=SocketGateway, 0x00000196() -> 0x000000
+      [4][DELEGATECALL] from=SocketGateway, to=WrappedTokenSwapperImpl, performAction(fromToken(address): 0xdAC17F, toToken(address): 0xEeeeeE, amount(uint256): 0, receiverAddress(address): 0x856da0, metadata(bytes32): b'\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00..., swapExtraData(bytes): b'#\xb8r\xdd\x00\x00\x00\x00\x00\x00\x00\x...) -> 0
+        [5][CALL] from=SocketGateway, to=TetherToken, transferFrom(_from(address): 0xC3fDD4, _to(address): 0x3a23F9, _value(uint256): 0) -> None
+        [5][CALL] from=SocketGateway, to=TetherToken, transferFrom(_from(address): 0x1095C5, _to(address): 0x50DF5a, _value(uint256): 2000000000) -> None
+        [5][CALL][0.0] from=SocketGateway, to=0x856da0
+    [3][STATICCALL] from=0xc3fdd4, to=TetherToken, balanceOf(who(address): 0x887F43) -> 1597402342
+    [3][STATICCALL] from=0xc3fdd4, to=TetherToken, allowance(_owner(address): 0x887F43, _spender(address): 0x3a23F9) -> 115792089237316195423570985008687907853269984665640564039457584007913129639935
+    [3][CALL] from=0xc3fdd4, to=SocketGateway, 0x00000196() -> 0x000000
+      [4][DELEGATECALL] from=SocketGateway, to=WrappedTokenSwapperImpl, performAction(fromToken(address): 0xdAC17F, toToken(address): 0xEeeeeE, amount(uint256): 0, receiverAddress(address): 0x856da0, metadata(bytes32): b'\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00..., swapExtraData(bytes): b'#\xb8r\xdd\x00\x00\x00\x00\x00\x00\x00\x...) -> 0
+        [5][CALL] from=SocketGateway, to=TetherToken, transferFrom(_from(address): 0xC3fDD4, _to(address): 0x3a23F9, _value(uint256): 0) -> None
+        [5][CALL] from=SocketGateway, to=TetherToken, transferFrom(_from(address): 0x887F43, _to(address): 0x50DF5a, _value(uint256): 1597402342) -> None
+        [5][CALL][0.0] from=SocketGateway, to=0x856da0
+    [3][STATICCALL] from=0xc3fdd4, to=TetherToken, balanceOf(who(address): 0x8baB5e) -> 1524378889
+    [3][STATICCALL] from=0xc3fdd4, to=TetherToken, allowance(_owner(address): 0x8baB5e, _spender(address): 0x3a23F9) -> 115792089237316195423570985008687907853269984665640564039457584007913129639935
+    [3][CALL] from=0xc3fdd4, to=SocketGateway, 0x00000196() -> 0x000000
+      [4][DELEGATECALL] from=SocketGateway, to=WrappedTokenSwapperImpl, performAction(fromToken(address): 0xdAC17F, toToken(address): 0xEeeeeE, amount(uint256): 0, receiverAddress(address): 0x856da0, metadata(bytes32): b'\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00..., swapExtraData(bytes): b'#\xb8r\xdd\x00\x00\x00\x00\x00\x00\x00\x...) -> 0
+        [5][CALL] from=SocketGateway, to=TetherToken, transferFrom(_from(address): 0xC3fDD4, _to(address): 0x3a23F9, _value(uint256): 0) -> None
+        [5][CALL] from=SocketGateway, to=TetherToken, transferFrom(_from(address): 0x8baB5e, _to(address): 0x50DF5a, _value(uint256): 1524378889) -> None
+        [5][CALL][0.0] from=SocketGateway, to=0x856da0
+    [3][STATICCALL] from=0xc3fdd4, to=TetherToken, balanceOf(who(address): 0xA457cF) -> 1358572973
+    [3][STATICCALL] from=0xc3fdd4, to=TetherToken, allowance(_owner(address): 0xA457cF, _spender(address): 0x3a23F9) -> 115792089237316195423570985008687907853269984665640564039457584007913129639935
+    [3][CALL] from=0xc3fdd4, to=SocketGateway, 0x00000196() -> 0x000000
+      [4][DELEGATECALL] from=SocketGateway, to=WrappedTokenSwapperImpl, performAction(fromToken(address): 0xdAC17F, toToken(address): 0xEeeeeE, amount(uint256): 0, receiverAddress(address): 0x856da0, metadata(bytes32): b'\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00..., swapExtraData(bytes): b'#\xb8r\xdd\x00\x00\x00\x00\x00\x00\x00\x...) -> 0
+        [5][CALL] from=SocketGateway, to=TetherToken, transferFrom(_from(address): 0xC3fDD4, _to(address): 0x3a23F9, _value(uint256): 0) -> None
+        [5][CALL] from=SocketGateway, to=TetherToken, transferFrom(_from(address): 0xA457cF, _to(address): 0x50DF5a, _value(uint256): 1358572973) -> None
+        [5][CALL][0.0] from=SocketGateway, to=0x856da0
+    [3][STATICCALL] from=0xc3fdd4, to=TetherToken, balanceOf(who(address): 0x427AE8) -> 1008037041
+    [3][STATICCALL] from=0xc3fdd4, to=TetherToken, allowance(_owner(address): 0x427AE8, _spender(address): 0x3a23F9) -> 115792089237316195423570985008687907853269984665640564039457584007913129639935
+    [3][CALL] from=0xc3fdd4, to=SocketGateway, 0x00000196() -> 0x000000
+      [4][DELEGATECALL] from=SocketGateway, to=WrappedTokenSwapperImpl, performAction(fromToken(address): 0xdAC17F, toToken(address): 0xEeeeeE, amount(uint256): 0, receiverAddress(address): 0x856da0, metadata(bytes32): b'\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00..., swapExtraData(bytes): b'#\xb8r\xdd\x00\x00\x00\x00\x00\x00\x00\x...) -> 0
+        [5][CALL] from=SocketGateway, to=TetherToken, transferFrom(_from(address): 0xC3fDD4, _to(address): 0x3a23F9, _value(uint256): 0) -> None
+        [5][CALL] from=SocketGateway, to=TetherToken, transferFrom(_from(address): 0x427AE8, _to(address): 0x50DF5a, _value(uint256): 1008037041) -> None
+        [5][CALL][0.0] from=SocketGateway, to=0x856da0
+    [3][STATICCALL] from=0xc3fdd4, to=TetherToken, balanceOf(who(address): 0x0CA9A4) -> 11690321530
+    [3][STATICCALL] from=0xc3fdd4, to=TetherToken, allowance(_owner(address): 0x0CA9A4, _spender(address): 0x3a23F9) -> 1000000000
+    [3][CALL] from=0xc3fdd4, to=SocketGateway, 0x00000196() -> 0x000000
+      [4][DELEGATECALL] from=SocketGateway, to=WrappedTokenSwapperImpl, performAction(fromToken(address): 0xdAC17F, toToken(address): 0xEeeeeE, amount(uint256): 0, receiverAddress(address): 0x856da0, metadata(bytes32): b'\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00..., swapExtraData(bytes): b'#\xb8r\xdd\x00\x00\x00\x00\x00\x00\x00\x...) -> 0
+        [5][CALL] from=SocketGateway, to=TetherToken, transferFrom(_from(address): 0xC3fDD4, _to(address): 0x3a23F9, _value(uint256): 0) -> None
+        [5][CALL] from=SocketGateway, to=TetherToken, transferFrom(_from(address): 0x0CA9A4, _to(address): 0x50DF5a, _value(uint256): 1000000000) -> None
+        [5][CALL][0.0] from=SocketGateway, to=0x856da0
+    [3][STATICCALL] from=0xc3fdd4, to=TetherToken, balanceOf(who(address): 0x449A7E) -> 2749767427
+    [3][STATICCALL] from=0xc3fdd4, to=TetherToken, allowance(_owner(address): 0x449A7E, _spender(address): 0x3a23F9) -> 115792089237316195423570985008687907853269984665640564039457584007913129639935
+    [3][CALL] from=0xc3fdd4, to=SocketGateway, 0x00000196() -> 0x000000
+      [4][DELEGATECALL] from=SocketGateway, to=WrappedTokenSwapperImpl, performAction(fromToken(address): 0xdAC17F, toToken(address): 0xEeeeeE, amount(uint256): 0, receiverAddress(address): 0x856da0, metadata(bytes32): b'\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00..., swapExtraData(bytes): b'#\xb8r\xdd\x00\x00\x00\x00\x00\x00\x00\x...) -> 0
+        [5][CALL] from=SocketGateway, to=TetherToken, transferFrom(_from(address): 0xC3fDD4, _to(address): 0x3a23F9, _value(uint256): 0) -> None
+        [5][CALL] from=SocketGateway, to=TetherToken, transferFrom(_from(address): 0x449A7E, _to(address): 0x50DF5a, _value(uint256): 2749767427) -> None
+        [5][CALL][0.0] from=SocketGateway, to=0x856da0
+    [3][STATICCALL] from=0xc3fdd4, to=TetherToken, balanceOf(who(address): 0x6abFD1) -> 1679699791
+    [3][STATICCALL] from=0xc3fdd4, to=TetherToken, allowance(_owner(address): 0x6abFD1, _spender(address): 0x3a23F9) -> 1000000000
+    [3][CALL] from=0xc3fdd4, to=SocketGateway, 0x00000196() -> 0x000000
+      [4][DELEGATECALL] from=SocketGateway, to=WrappedTokenSwapperImpl, performAction(fromToken(address): 0xdAC17F, toToken(address): 0xEeeeeE, amount(uint256): 0, receiverAddress(address): 0x856da0, metadata(bytes32): b'\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00..., swapExtraData(bytes): b'#\xb8r\xdd\x00\x00\x00\x00\x00\x00\x00\x...) -> 0
+        [5][CALL] from=SocketGateway, to=TetherToken, transferFrom(_from(address): 0xC3fDD4, _to(address): 0x3a23F9, _value(uint256): 0) -> None
+        [5][CALL] from=SocketGateway, to=TetherToken, transferFrom(_from(address): 0x6abFD1, _to(address): 0x50DF5a, _value(uint256): 1000000000) -> None
+        [5][CALL][0.0] from=SocketGateway, to=0x856da0
+    [3][STATICCALL] from=0xc3fdd4, to=TetherToken, balanceOf(who(address): 0x80cF8E) -> 3450000000
+    [3][STATICCALL] from=0xc3fdd4, to=TetherToken, allowance(_owner(address): 0x80cF8E, _spender(address): 0x3a23F9) -> 1000000000
+    [3][CALL] from=0xc3fdd4, to=SocketGateway, 0x00000196() -> 0x000000
+      [4][DELEGATECALL] from=SocketGateway, to=WrappedTokenSwapperImpl, performAction(fromToken(address): 0xdAC17F, toToken(address): 0xEeeeeE, amount(uint256): 0, receiverAddress(address): 0x856da0, metadata(bytes32): b'\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00..., swapExtraData(bytes): b'#\xb8r\xdd\x00\x00\x00\x00\x00\x00\x00\x...) -> 0
+        [5][CALL] from=SocketGateway, to=TetherToken, transferFrom(_from(address): 0xC3fDD4, _to(address): 0x3a23F9, _value(uint256): 0) -> None
+        [5][CALL] from=SocketGateway, to=TetherToken, transferFrom(_from(address): 0x80cF8E, _to(address): 0x50DF5a, _value(uint256): 1000000000) -> None
+        [5][CALL][0.0] from=SocketGateway, to=0x856da0
+    [3][STATICCALL] from=0xc3fdd4, to=TetherToken, balanceOf(who(address): 0x9e7033) -> 8250749250
+    [3][STATICCALL] from=0xc3fdd4, to=TetherToken, allowance(_owner(address): 0x9e7033, _spender(address): 0x3a23F9) -> 1000000000
+    [3][CALL] from=0xc3fdd4, to=SocketGateway, 0x00000196() -> 0x000000
+      [4][DELEGATECALL] from=SocketGateway, to=WrappedTokenSwapperImpl, performAction(fromToken(address): 0xdAC17F, toToken(address): 0xEeeeeE, amount(uint256): 0, receiverAddress(address): 0x856da0, metadata(bytes32): b'\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00..., swapExtraData(bytes): b'#\xb8r\xdd\x00\x00\x00\x00\x00\x00\x00\x...) -> 0
+        [5][CALL] from=SocketGateway, to=TetherToken, transferFrom(_from(address): 0xC3fDD4, _to(address): 0x3a23F9, _value(uint256): 0) -> None
+        [5][CALL] from=SocketGateway, to=TetherToken, transferFrom(_from(address): 0x9e7033, _to(address): 0x50DF5a, _value(uint256): 1000000000) -> None
+        [5][CALL][0.0] from=SocketGateway, to=0x856da0
+    [3][STATICCALL] from=0xc3fdd4, to=TetherToken, balanceOf(who(address): 0x1fF64f) -> 992599896
+    [3][STATICCALL] from=0xc3fdd4, to=TetherToken, allowance(_owner(address): 0x1fF64f, _spender(address): 0x3a23F9) -> 5621437373
+    [3][CALL] from=0xc3fdd4, to=SocketGateway, 0x00000196() -> 0x000000
+      [4][DELEGATECALL] from=SocketGateway, to=WrappedTokenSwapperImpl, performAction(fromToken(address): 0xdAC17F, toToken(address): 0xEeeeeE, amount(uint256): 0, receiverAddress(address): 0x856da0, metadata(bytes32): b'\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00..., swapExtraData(bytes): b'#\xb8r\xdd\x00\x00\x00\x00\x00\x00\x00\x...) -> 0
+        [5][CALL] from=SocketGateway, to=TetherToken, transferFrom(_from(address): 0xC3fDD4, _to(address): 0x3a23F9, _value(uint256): 0) -> None
+        [5][CALL] from=SocketGateway, to=TetherToken, transferFrom(_from(address): 0x1fF64f, _to(address): 0x50DF5a, _value(uint256): 992599896) -> None
+        [5][CALL][0.0] from=SocketGateway, to=0x856da0
+    [3][STATICCALL] from=0xc3fdd4, to=WBTC, balanceOf(_owner(address): 0x7a1eDf) -> 161817824
+    [3][STATICCALL] from=0xc3fdd4, to=WBTC, allowance(_owner(address): 0x7a1eDf, _spender(address): 0x3a23F9) -> 115792089237316195423570985008687907853269984665640564039457584007912833061464
+    [3][CALL] from=0xc3fdd4, to=SocketGateway, 0x00000196() -> 0x000000
+      [4][DELEGATECALL] from=SocketGateway, to=WrappedTokenSwapperImpl, performAction(fromToken(address): 0x2260FA, toToken(address): 0xEeeeeE, amount(uint256): 0, receiverAddress(address): 0x856da0, metadata(bytes32): b'\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00..., swapExtraData(bytes): b'#\xb8r\xdd\x00\x00\x00\x00\x00\x00\x00\x...) -> 0
+        [5][CALL] from=SocketGateway, to=WBTC, transferFrom(_from(address): 0xC3fDD4, _to(address): 0x3a23F9, _value(uint256): 0) -> True
+        [5][CALL] from=SocketGateway, to=WBTC, transferFrom(_from(address): 0x7a1eDf, _to(address): 0x50DF5a, _value(uint256): 161817824) -> True
+        [5][CALL][0.0] from=SocketGateway, to=0x856da0
+    [3][STATICCALL] from=0xc3fdd4, to=WBTC, balanceOf(_owner(address): 0x0EC06F) -> 40102089
+    [3][STATICCALL] from=0xc3fdd4, to=WBTC, allowance(_owner(address): 0x0EC06F, _spender(address): 0x3a23F9) -> 50475003
+    [3][CALL] from=0xc3fdd4, to=SocketGateway, 0x00000196() -> 0x000000
+      [4][DELEGATECALL] from=SocketGateway, to=WrappedTokenSwapperImpl, performAction(fromToken(address): 0x2260FA, toToken(address): 0xEeeeeE, amount(uint256): 0, receiverAddress(address): 0x856da0, metadata(bytes32): b'\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00..., swapExtraData(bytes): b'#\xb8r\xdd\x00\x00\x00\x00\x00\x00\x00\x...) -> 0
+        [5][CALL] from=SocketGateway, to=WBTC, transferFrom(_from(address): 0xC3fDD4, _to(address): 0x3a23F9, _value(uint256): 0) -> True
+        [5][CALL] from=SocketGateway, to=WBTC, transferFrom(_from(address): 0x0EC06F, _to(address): 0x50DF5a, _value(uint256): 40102089) -> True
+        [5][CALL][0.0] from=SocketGateway, to=0x856da0
+    [3][STATICCALL] from=0xc3fdd4, to=WBTC, balanceOf(_owner(address): 0x12Ea0D) -> 29540542
+    [3][STATICCALL] from=0xc3fdd4, to=WBTC, allowance(_owner(address): 0x12Ea0D, _spender(address): 0x3a23F9) -> 39494117
+    [3][CALL] from=0xc3fdd4, to=SocketGateway, 0x00000196() -> 0x000000
+      [4][DELEGATECALL] from=SocketGateway, to=WrappedTokenSwapperImpl, performAction(fromToken(address): 0x2260FA, toToken(address): 0xEeeeeE, amount(uint256): 0, receiverAddress(address): 0x856da0, metadata(bytes32): b'\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00..., swapExtraData(bytes): b'#\xb8r\xdd\x00\x00\x00\x00\x00\x00\x00\x...) -> 0
+        [5][CALL] from=SocketGateway, to=WBTC, transferFrom(_from(address): 0xC3fDD4, _to(address): 0x3a23F9, _value(uint256): 0) -> True
+        [5][CALL] from=SocketGateway, to=WBTC, transferFrom(_from(address): 0x12Ea0D, _to(address): 0x50DF5a, _value(uint256): 29540542) -> True
+        [5][CALL][0.0] from=SocketGateway, to=0x856da0
+    [3][STATICCALL] from=0xc3fdd4, to=WBTC, balanceOf(_owner(address): 0x008d7a) -> 13199489
+    [3][STATICCALL] from=0xc3fdd4, to=WBTC, allowance(_owner(address): 0x008d7a, _spender(address): 0x3a23F9) -> 23199000
+    [3][CALL] from=0xc3fdd4, to=SocketGateway, 0x00000196() -> 0x000000
+      [4][DELEGATECALL] from=SocketGateway, to=WrappedTokenSwapperImpl, performAction(fromToken(address): 0x2260FA, toToken(address): 0xEeeeeE, amount(uint256): 0, receiverAddress(address): 0x856da0, metadata(bytes32): b'\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00..., swapExtraData(bytes): b'#\xb8r\xdd\x00\x00\x00\x00\x00\x00\x00\x...) -> 0
+        [5][CALL] from=SocketGateway, to=WBTC, transferFrom(_from(address): 0xC3fDD4, _to(address): 0x3a23F9, _value(uint256): 0) -> True
+        [5][CALL] from=SocketGateway, to=WBTC, transferFrom(_from(address): 0x008d7a, _to(address): 0x50DF5a, _value(uint256): 13199489) -> True
+        [5][CALL][0.0] from=SocketGateway, to=0x856da0
+    [3][STATICCALL] from=0xc3fdd4, to=WBTC, balanceOf(_owner(address): 0xf4936E) -> 8890074
+    [3][STATICCALL] from=0xc3fdd4, to=WBTC, allowance(_owner(address): 0xf4936E, _spender(address): 0x3a23F9) -> 115792089237316195423570985008687907853269984665640564039457584007913124639935
+    [3][CALL] from=0xc3fdd4, to=SocketGateway, 0x00000196() -> 0x000000
+      [4][DELEGATECALL] from=SocketGateway, to=WrappedTokenSwapperImpl, performAction(fromToken(address): 0x2260FA, toToken(address): 0xEeeeeE, amount(uint256): 0, receiverAddress(address): 0x856da0, metadata(bytes32): b'\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00..., swapExtraData(bytes): b'#\xb8r\xdd\x00\x00\x00\x00\x00\x00\x00\x...) -> 0
+        [5][CALL] from=SocketGateway, to=WBTC, transferFrom(_from(address): 0xC3fDD4, _to(address): 0x3a23F9, _value(uint256): 0) -> True
+        [5][CALL] from=SocketGateway, to=WBTC, transferFrom(_from(address): 0xf4936E, _to(address): 0x50DF5a, _value(uint256): 8890074) -> True
+        [5][CALL][0.0] from=SocketGateway, to=0x856da0
+    [3][STATICCALL] from=0xc3fdd4, to=WBTC, balanceOf(_owner(address): 0x63084B) -> 8406032
+    [3][STATICCALL] from=0xc3fdd4, to=WBTC, allowance(_owner(address): 0x63084B, _spender(address): 0x3a23F9) -> 115792089237316195423570985008687907853269984665640564039457584007913129639935
+    [3][CALL] from=0xc3fdd4, to=SocketGateway, 0x00000196() -> 0x000000
+      [4][DELEGATECALL] from=SocketGateway, to=WrappedTokenSwapperImpl, performAction(fromToken(address): 0x2260FA, toToken(address): 0xEeeeeE, amount(uint256): 0, receiverAddress(address): 0x856da0, metadata(bytes32): b'\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00..., swapExtraData(bytes): b'#\xb8r\xdd\x00\x00\x00\x00\x00\x00\x00\x...) -> 0
+        [5][CALL] from=SocketGateway, to=WBTC, transferFrom(_from(address): 0xC3fDD4, _to(address): 0x3a23F9, _value(uint256): 0) -> True
+        [5][CALL] from=SocketGateway, to=WBTC, transferFrom(_from(address): 0x63084B, _to(address): 0x50DF5a, _value(uint256): 8406032) -> True
+        [5][CALL][0.0] from=SocketGateway, to=0x856da0
+    [3][STATICCALL] from=0xc3fdd4, to=WBTC, balanceOf(_owner(address): 0x6CA5C4) -> 7717384
+    [3][STATICCALL] from=0xc3fdd4, to=WBTC, allowance(_owner(address): 0x6CA5C4, _spender(address): 0x3a23F9) -> 6878924
+    [3][CALL] from=0xc3fdd4, to=SocketGateway, 0x00000196() -> 0x000000
+      [4][DELEGATECALL] from=SocketGateway, to=WrappedTokenSwapperImpl, performAction(fromToken(address): 0x2260FA, toToken(address): 0xEeeeeE, amount(uint256): 0, receiverAddress(address): 0x856da0, metadata(bytes32): b'\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00..., swapExtraData(bytes): b'#\xb8r\xdd\x00\x00\x00\x00\x00\x00\x00\x...) -> 0
+        [5][CALL] from=SocketGateway, to=WBTC, transferFrom(_from(address): 0xC3fDD4, _to(address): 0x3a23F9, _value(uint256): 0) -> True
+        [5][CALL] from=SocketGateway, to=WBTC, transferFrom(_from(address): 0x6CA5C4, _to(address): 0x50DF5a, _value(uint256): 6878924) -> True
+        [5][CALL][0.0] from=SocketGateway, to=0x856da0
+    [3][STATICCALL] from=0xc3fdd4, to=WBTC, balanceOf(_owner(address): 0x6B24F4) -> 6411515
+    [3][STATICCALL] from=0xc3fdd4, to=WBTC, allowance(_owner(address): 0x6B24F4, _spender(address): 0x3a23F9) -> 10000000
+    [3][CALL] from=0xc3fdd4, to=SocketGateway, 0x00000196() -> 0x000000
+      [4][DELEGATECALL] from=SocketGateway, to=WrappedTokenSwapperImpl, performAction(fromToken(address): 0x2260FA, toToken(address): 0xEeeeeE, amount(uint256): 0, receiverAddress(address): 0x856da0, metadata(bytes32): b'\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00..., swapExtraData(bytes): b'#\xb8r\xdd\x00\x00\x00\x00\x00\x00\x00\x...) -> 0
+        [5][CALL] from=SocketGateway, to=WBTC, transferFrom(_from(address): 0xC3fDD4, _to(address): 0x3a23F9, _value(uint256): 0) -> True
+        [5][CALL] from=SocketGateway, to=WBTC, transferFrom(_from(address): 0x6B24F4, _to(address): 0x50DF5a, _value(uint256): 6411515) -> True
+        [5][CALL][0.0] from=SocketGateway, to=0x856da0
+    [3][STATICCALL] from=0xc3fdd4, to=WBTC, balanceOf(_owner(address): 0x805a57) -> 3439224
+    [3][STATICCALL] from=0xc3fdd4, to=WBTC, allowance(_owner(address): 0x805a57, _spender(address): 0x3a23F9) -> 115792089237316195423570985008687907853269984665640564039457584007913129639935
+    [3][CALL] from=0xc3fdd4, to=SocketGateway, 0x00000196() -> 0x000000
+      [4][DELEGATECALL] from=SocketGateway, to=WrappedTokenSwapperImpl, performAction(fromToken(address): 0x2260FA, toToken(address): 0xEeeeeE, amount(uint256): 0, receiverAddress(address): 0x856da0, metadata(bytes32): b'\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00..., swapExtraData(bytes): b'#\xb8r\xdd\x00\x00\x00\x00\x00\x00\x00\x...) -> 0
+        [5][CALL] from=SocketGateway, to=WBTC, transferFrom(_from(address): 0xC3fDD4, _to(address): 0x3a23F9, _value(uint256): 0) -> True
+        [5][CALL] from=SocketGateway, to=WBTC, transferFrom(_from(address): 0x805a57, _to(address): 0x50DF5a, _value(uint256): 3439224) -> True
+        [5][CALL][0.0] from=SocketGateway, to=0x856da0
+    [3][STATICCALL] from=0xc3fdd4, to=WBTC, balanceOf(_owner(address): 0x2fe207) -> 11866686
+    [3][STATICCALL] from=0xc3fdd4, to=WBTC, allowance(_owner(address): 0x2fe207, _spender(address): 0x3a23F9) -> 3409124
+    [3][CALL] from=0xc3fdd4, to=SocketGateway, 0x00000196() -> 0x000000
+      [4][DELEGATECALL] from=SocketGateway, to=WrappedTokenSwapperImpl, performAction(fromToken(address): 0x2260FA, toToken(address): 0xEeeeeE, amount(uint256): 0, receiverAddress(address): 0x856da0, metadata(bytes32): b'\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00..., swapExtraData(bytes): b'#\xb8r\xdd\x00\x00\x00\x00\x00\x00\x00\x...) -> 0
+        [5][CALL] from=SocketGateway, to=WBTC, transferFrom(_from(address): 0xC3fDD4, _to(address): 0x3a23F9, _value(uint256): 0) -> True
+        [5][CALL] from=SocketGateway, to=WBTC, transferFrom(_from(address): 0x2fe207, _to(address): 0x50DF5a, _value(uint256): 3409124) -> True
+        [5][CALL][0.0] from=SocketGateway, to=0x856da0
+    [3][STATICCALL] from=0xc3fdd4, to=WBTC, balanceOf(_owner(address): 0x325AA0) -> 2258559
+    [3][STATICCALL] from=0xc3fdd4, to=WBTC, allowance(_owner(address): 0x325AA0, _spender(address): 0x3a23F9) -> 115792089237316195423570985008687907853269984665640564039457584007913104275002
+    [3][CALL] from=0xc3fdd4, to=SocketGateway, 0x00000196() -> 0x000000
+      [4][DELEGATECALL] from=SocketGateway, to=WrappedTokenSwapperImpl, performAction(fromToken(address): 0x2260FA, toToken(address): 0xEeeeeE, amount(uint256): 0, receiverAddress(address): 0x856da0, metadata(bytes32): b'\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00..., swapExtraData(bytes): b'#\xb8r\xdd\x00\x00\x00\x00\x00\x00\x00\x...) -> 0
+        [5][CALL] from=SocketGateway, to=WBTC, transferFrom(_from(address): 0xC3fDD4, _to(address): 0x3a23F9, _value(uint256): 0) -> True
+        [5][CALL] from=SocketGateway, to=WBTC, transferFrom(_from(address): 0x325AA0, _to(address): 0x50DF5a, _value(uint256): 2258559) -> True
+        [5][CALL][0.0] from=SocketGateway, to=0x856da0
+    [3][STATICCALL] from=0xc3fdd4, to=WBTC, balanceOf(_owner(address): 0x9265Bf) -> 5984958
+    [3][STATICCALL] from=0xc3fdd4, to=WBTC, allowance(_owner(address): 0x9265Bf, _spender(address): 0x3a23F9) -> 1660000
+    [3][CALL] from=0xc3fdd4, to=SocketGateway, 0x00000196() -> 0x000000
+      [4][DELEGATECALL] from=SocketGateway, to=WrappedTokenSwapperImpl, performAction(fromToken(address): 0x2260FA, toToken(address): 0xEeeeeE, amount(uint256): 0, receiverAddress(address): 0x856da0, metadata(bytes32): b'\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00..., swapExtraData(bytes): b'#\xb8r\xdd\x00\x00\x00\x00\x00\x00\x00\x...) -> 0
+        [5][CALL] from=SocketGateway, to=WBTC, transferFrom(_from(address): 0xC3fDD4, _to(address): 0x3a23F9, _value(uint256): 0) -> True
+        [5][CALL] from=SocketGateway, to=WBTC, transferFrom(_from(address): 0x9265Bf, _to(address): 0x50DF5a, _value(uint256): 1660000) -> True
+        [5][CALL][0.0] from=SocketGateway, to=0x856da0
+    [3][STATICCALL] from=0xc3fdd4, to=WBTC, balanceOf(_owner(address): 0xaf0FDd) -> 1640766
+    [3][STATICCALL] from=0xc3fdd4, to=WBTC, allowance(_owner(address): 0xaf0FDd, _spender(address): 0x3a23F9) -> 473236600
+    [3][CALL] from=0xc3fdd4, to=SocketGateway, 0x00000196() -> 0x000000
+      [4][DELEGATECALL] from=SocketGateway, to=WrappedTokenSwapperImpl, performAction(fromToken(address): 0x2260FA, toToken(address): 0xEeeeeE, amount(uint256): 0, receiverAddress(address): 0x856da0, metadata(bytes32): b'\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00..., swapExtraData(bytes): b'#\xb8r\xdd\x00\x00\x00\x00\x00\x00\x00\x...) -> 0
+        [5][CALL] from=SocketGateway, to=WBTC, transferFrom(_from(address): 0xC3fDD4, _to(address): 0x3a23F9, _value(uint256): 0) -> True
+        [5][CALL] from=SocketGateway, to=WBTC, transferFrom(_from(address): 0xaf0FDd, _to(address): 0x50DF5a, _value(uint256): 1640766) -> True
+        [5][CALL][0.0] from=SocketGateway, to=0x856da0
+    [3][STATICCALL] from=0xc3fdd4, to=WBTC, balanceOf(_owner(address): 0x611B0C) -> 528908
+    [3][STATICCALL] from=0xc3fdd4, to=WBTC, allowance(_owner(address): 0x611B0C, _spender(address): 0x3a23F9) -> 10033139999668599
+    [3][CALL] from=0xc3fdd4, to=SocketGateway, 0x00000196() -> 0x000000
+      [4][DELEGATECALL] from=SocketGateway, to=WrappedTokenSwapperImpl, performAction(fromToken(address): 0x2260FA, toToken(address): 0xEeeeeE, amount(uint256): 0, receiverAddress(address): 0x856da0, metadata(bytes32): b'\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00..., swapExtraData(bytes): b'#\xb8r\xdd\x00\x00\x00\x00\x00\x00\x00\x...) -> 0
+        [5][CALL] from=SocketGateway, to=WBTC, transferFrom(_from(address): 0xC3fDD4, _to(address): 0x3a23F9, _value(uint256): 0) -> True
+        [5][CALL] from=SocketGateway, to=WBTC, transferFrom(_from(address): 0x611B0C, _to(address): 0x50DF5a, _value(uint256): 528908) -> True
+        [5][CALL][0.0] from=SocketGateway, to=0x856da0
+    [3][STATICCALL] from=0xc3fdd4, to=WBTC, balanceOf(_owner(address): 0x1e2c2a) -> 500000
+    [3][STATICCALL] from=0xc3fdd4, to=WBTC, allowance(_owner(address): 0x1e2c2a, _spender(address): 0x3a23F9) -> 500000
+    [3][CALL] from=0xc3fdd4, to=SocketGateway, 0x00000196() -> 0x000000
+      [4][DELEGATECALL] from=SocketGateway, to=WrappedTokenSwapperImpl, performAction(fromToken(address): 0x2260FA, toToken(address): 0xEeeeeE, amount(uint256): 0, receiverAddress(address): 0x856da0, metadata(bytes32): b'\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00..., swapExtraData(bytes): b'#\xb8r\xdd\x00\x00\x00\x00\x00\x00\x00\x...) -> 0
+        [5][CALL] from=SocketGateway, to=WBTC, transferFrom(_from(address): 0xC3fDD4, _to(address): 0x3a23F9, _value(uint256): 0) -> True
+        [5][CALL] from=SocketGateway, to=WBTC, transferFrom(_from(address): 0x1e2c2a, _to(address): 0x50DF5a, _value(uint256): 500000) -> True
+        [5][CALL][0.0] from=SocketGateway, to=0x856da0
+    [3][STATICCALL] from=0xc3fdd4, to=WBTC, balanceOf(_owner(address): 0xd85158) -> 279084
+    [3][STATICCALL] from=0xc3fdd4, to=WBTC, allowance(_owner(address): 0xd85158, _spender(address): 0x3a23F9) -> 10000000
+    [3][CALL] from=0xc3fdd4, to=SocketGateway, 0x00000196() -> 0x000000
+      [4][DELEGATECALL] from=SocketGateway, to=WrappedTokenSwapperImpl, performAction(fromToken(address): 0x2260FA, toToken(address): 0xEeeeeE, amount(uint256): 0, receiverAddress(address): 0x856da0, metadata(bytes32): b'\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00..., swapExtraData(bytes): b'#\xb8r\xdd\x00\x00\x00\x00\x00\x00\x00\x...) -> 0
+        [5][CALL] from=SocketGateway, to=WBTC, transferFrom(_from(address): 0xC3fDD4, _to(address): 0x3a23F9, _value(uint256): 0) -> True
+        [5][CALL] from=SocketGateway, to=WBTC, transferFrom(_from(address): 0xd85158, _to(address): 0x50DF5a, _value(uint256): 279084) -> True
+        [5][CALL][0.0] from=SocketGateway, to=0x856da0
+    [3][STATICCALL] from=0xc3fdd4, to=Dai, balanceOf((address): 0x9c0407) -> 9816808827275514639308
+    [3][STATICCALL] from=0xc3fdd4, to=Dai, allowance((address): 0x3a23F9) -> 115792089237316195423570985008687907853269984665640564039457584007913129639935
+    [3][CALL] from=0xc3fdd4, to=SocketGateway, 0x00000196() -> 0x000000
+      [4][DELEGATECALL] from=SocketGateway, to=WrappedTokenSwapperImpl, performAction(fromToken(address): 0x6B1754, toToken(address): 0xEeeeeE, amount(uint256): 0, receiverAddress(address): 0x856da0, metadata(bytes32): b'\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00..., swapExtraData(bytes): b'#\xb8r\xdd\x00\x00\x00\x00\x00\x00\x00\x...) -> 0
+        [5][CALL] from=SocketGateway, to=Dai, transferFrom(src(address): 0xC3fDD4, dst(address): 0x3a23F9, wad(uint256): 0) -> True
+        [5][CALL] from=SocketGateway, to=Dai, transferFrom(src(address): 0x9c0407, dst(address): 0x50DF5a, wad(uint256): 9816808827275514639308) -> True
+        [5][CALL][0.0] from=SocketGateway, to=0x856da0
+    [3][STATICCALL] from=0xc3fdd4, to=Dai, balanceOf((address): 0x777A04) -> 2539821135231502628741
+    [3][STATICCALL] from=0xc3fdd4, to=Dai, allowance((address): 0x3a23F9) -> 2539821135231502628741
+    [3][CALL] from=0xc3fdd4, to=SocketGateway, 0x00000196() -> 0x000000
+      [4][DELEGATECALL] from=SocketGateway, to=WrappedTokenSwapperImpl, performAction(fromToken(address): 0x6B1754, toToken(address): 0xEeeeeE, amount(uint256): 0, receiverAddress(address): 0x856da0, metadata(bytes32): b'\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00..., swapExtraData(bytes): b'#\xb8r\xdd\x00\x00\x00\x00\x00\x00\x00\x...) -> 0
+        [5][CALL] from=SocketGateway, to=Dai, transferFrom(src(address): 0xC3fDD4, dst(address): 0x3a23F9, wad(uint256): 0) -> True
+        [5][CALL] from=SocketGateway, to=Dai, transferFrom(src(address): 0x777A04, dst(address): 0x50DF5a, wad(uint256): 2539821135231502628741) -> True
+        [5][CALL][0.0] from=SocketGateway, to=0x856da0
+    [3][STATICCALL] from=0xc3fdd4, to=Dai, balanceOf((address): 0x50B25e) -> 1289861533975342196946
+    [3][STATICCALL] from=0xc3fdd4, to=Dai, allowance((address): 0x3a23F9) -> 481000000000000000000
+    [3][CALL] from=0xc3fdd4, to=SocketGateway, 0x00000196() -> 0x000000
+      [4][DELEGATECALL] from=SocketGateway, to=WrappedTokenSwapperImpl, performAction(fromToken(address): 0x6B1754, toToken(address): 0xEeeeeE, amount(uint256): 0, receiverAddress(address): 0x856da0, metadata(bytes32): b'\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00..., swapExtraData(bytes): b'#\xb8r\xdd\x00\x00\x00\x00\x00\x00\x00\x...) -> 0
+        [5][CALL] from=SocketGateway, to=Dai, transferFrom(src(address): 0xC3fDD4, dst(address): 0x3a23F9, wad(uint256): 0) -> True
+        [5][CALL] from=SocketGateway, to=Dai, transferFrom(src(address): 0x50B25e, dst(address): 0x50DF5a, wad(uint256): 481000000000000000000) -> True
+        [5][CALL][0.0] from=SocketGateway, to=0x856da0
+    [3][STATICCALL] from=0xc3fdd4, to=Dai, balanceOf((address): 0x083347) -> 317653065468659406179
+    [3][STATICCALL] from=0xc3fdd4, to=Dai, allowance((address): 0x3a23F9) -> 317653065468659406179
+    [3][CALL] from=0xc3fdd4, to=SocketGateway, 0x00000196() -> 0x000000
+      [4][DELEGATECALL] from=SocketGateway, to=WrappedTokenSwapperImpl, performAction(fromToken(address): 0x6B1754, toToken(address): 0xEeeeeE, amount(uint256): 0, receiverAddress(address): 0x856da0, metadata(bytes32): b'\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00..., swapExtraData(bytes): b'#\xb8r\xdd\x00\x00\x00\x00\x00\x00\x00\x...) -> 0
+        [5][CALL] from=SocketGateway, to=Dai, transferFrom(src(address): 0xC3fDD4, dst(address): 0x3a23F9, wad(uint256): 0) -> True
+        [5][CALL] from=SocketGateway, to=Dai, transferFrom(src(address): 0x083347, dst(address): 0x50DF5a, wad(uint256): 317653065468659406179) -> True
+        [5][CALL][0.0] from=SocketGateway, to=0x856da0
+    [3][STATICCALL] from=0xc3fdd4, to=Dai, balanceOf((address): 0x213f4c) -> 216966250148926323613
+    [3][STATICCALL] from=0xc3fdd4, to=Dai, allowance((address): 0x3a23F9) -> 115792089237316195423570985008687907853269984665640564039457584007913129639935
+    [3][CALL] from=0xc3fdd4, to=SocketGateway, 0x00000196() -> 0x000000
+      [4][DELEGATECALL] from=SocketGateway, to=WrappedTokenSwapperImpl, performAction(fromToken(address): 0x6B1754, toToken(address): 0xEeeeeE, amount(uint256): 0, receiverAddress(address): 0x856da0, metadata(bytes32): b'\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00..., swapExtraData(bytes): b'#\xb8r\xdd\x00\x00\x00\x00\x00\x00\x00\x...) -> 0
+        [5][CALL] from=SocketGateway, to=Dai, transferFrom(src(address): 0xC3fDD4, dst(address): 0x3a23F9, wad(uint256): 0) -> True
+        [5][CALL] from=SocketGateway, to=Dai, transferFrom(src(address): 0x213f4c, dst(address): 0x50DF5a, wad(uint256): 216966250148926323613) -> True
+        [5][CALL][0.0] from=SocketGateway, to=0x856da0
+    [3][STATICCALL] from=0xc3fdd4, to=Dai, balanceOf((address): 0xF9f668) -> 142000000000000000000
+    [3][STATICCALL] from=0xc3fdd4, to=Dai, allowance((address): 0x3a23F9) -> 115792089237316195423570985008687907853269984665640564039457584007913129639935
+    [3][CALL] from=0xc3fdd4, to=SocketGateway, 0x00000196() -> 0x000000
+      [4][DELEGATECALL] from=SocketGateway, to=WrappedTokenSwapperImpl, performAction(fromToken(address): 0x6B1754, toToken(address): 0xEeeeeE, amount(uint256): 0, receiverAddress(address): 0x856da0, metadata(bytes32): b'\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00..., swapExtraData(bytes): b'#\xb8r\xdd\x00\x00\x00\x00\x00\x00\x00\x...) -> 0
+        [5][CALL] from=SocketGateway, to=Dai, transferFrom(src(address): 0xC3fDD4, dst(address): 0x3a23F9, wad(uint256): 0) -> True
+        [5][CALL] from=SocketGateway, to=Dai, transferFrom(src(address): 0xF9f668, dst(address): 0x50DF5a, wad(uint256): 142000000000000000000) -> True
+        [5][CALL][0.0] from=SocketGateway, to=0x856da0
+    [3][STATICCALL] from=0xc3fdd4, to=Dai, balanceOf((address): 0xce74a2) -> 106764553963829973307
+    [3][STATICCALL] from=0xc3fdd4, to=Dai, allowance((address): 0x3a23F9) -> 106764553963829973307
+    [3][CALL] from=0xc3fdd4, to=SocketGateway, 0x00000196() -> 0x000000
+      [4][DELEGATECALL] from=SocketGateway, to=WrappedTokenSwapperImpl, performAction(fromToken(address): 0x6B1754, toToken(address): 0xEeeeeE, amount(uint256): 0, receiverAddress(address): 0x856da0, metadata(bytes32): b'\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00..., swapExtraData(bytes): b'#\xb8r\xdd\x00\x00\x00\x00\x00\x00\x00\x...) -> 0
+        [5][CALL] from=SocketGateway, to=Dai, transferFrom(src(address): 0xC3fDD4, dst(address): 0x3a23F9, wad(uint256): 0) -> True
+        [5][CALL] from=SocketGateway, to=Dai, transferFrom(src(address): 0xce74a2, dst(address): 0x50DF5a, wad(uint256): 106764553963829973307) -> True
+        [5][CALL][0.0] from=SocketGateway, to=0x856da0
+    [3][STATICCALL] from=0xc3fdd4, to=Dai, balanceOf((address): 0xCfBc33) -> 1857330233880034045051
+    [3][STATICCALL] from=0xc3fdd4, to=Dai, allowance((address): 0x3a23F9) -> 100000000000000000000
+    [3][CALL] from=0xc3fdd4, to=SocketGateway, 0x00000196() -> 0x000000
+      [4][DELEGATECALL] from=SocketGateway, to=WrappedTokenSwapperImpl, performAction(fromToken(address): 0x6B1754, toToken(address): 0xEeeeeE, amount(uint256): 0, receiverAddress(address): 0x856da0, metadata(bytes32): b'\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00..., swapExtraData(bytes): b'#\xb8r\xdd\x00\x00\x00\x00\x00\x00\x00\x...) -> 0
+        [5][CALL] from=SocketGateway, to=Dai, transferFrom(src(address): 0xC3fDD4, dst(address): 0x3a23F9, wad(uint256): 0) -> True
+        [5][CALL] from=SocketGateway, to=Dai, transferFrom(src(address): 0xCfBc33, dst(address): 0x50DF5a, wad(uint256): 100000000000000000000) -> True
+        [5][CALL][0.0] from=SocketGateway, to=0x856da0
+    [3][STATICCALL] from=0xc3fdd4, to=Dai, balanceOf((address): 0xE9E54D) -> 378636493335039220165
+    [3][STATICCALL] from=0xc3fdd4, to=Dai, allowance((address): 0x3a23F9) -> 100000000000000000000
+    [3][CALL] from=0xc3fdd4, to=SocketGateway, 0x00000196() -> 0x000000
+      [4][DELEGATECALL] from=SocketGateway, to=WrappedTokenSwapperImpl, performAction(fromToken(address): 0x6B1754, toToken(address): 0xEeeeeE, amount(uint256): 0, receiverAddress(address): 0x856da0, metadata(bytes32): b'\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00..., swapExtraData(bytes): b'#\xb8r\xdd\x00\x00\x00\x00\x00\x00\x00\x...) -> 0
+        [5][CALL] from=SocketGateway, to=Dai, transferFrom(src(address): 0xC3fDD4, dst(address): 0x3a23F9, wad(uint256): 0) -> True
+        [5][CALL] from=SocketGateway, to=Dai, transferFrom(src(address): 0xE9E54D, dst(address): 0x50DF5a, wad(uint256): 100000000000000000000) -> True
+        [5][CALL][0.0] from=SocketGateway, to=0x856da0
+    [3][STATICCALL] from=0xc3fdd4, to=MaticToken, balanceOf(owner(address): 0xCEaA4E) -> 109469778355310750432584
+    [3][STATICCALL] from=0xc3fdd4, to=MaticToken, allowance(owner(address): 0xCEaA4E, spender(address): 0x3a23F9) -> 115792089237316195423570985008687907853269984665640564027675551607324027639935
+    [3][CALL] from=0xc3fdd4, to=SocketGateway, 0x00000196() -> 0x000000
+      [4][DELEGATECALL] from=SocketGateway, to=WrappedTokenSwapperImpl, performAction(fromToken(address): 0x7D1AfA, toToken(address): 0xEeeeeE, amount(uint256): 0, receiverAddress(address): 0x856da0, metadata(bytes32): b'\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00..., swapExtraData(bytes): b'#\xb8r\xdd\x00\x00\x00\x00\x00\x00\x00\x...) -> 0
+        [5][CALL] from=SocketGateway, to=MaticToken, transferFrom(from(address): 0xC3fDD4, to(address): 0x3a23F9, value(uint256): 0) -> True
+        [5][CALL] from=SocketGateway, to=MaticToken, transferFrom(from(address): 0xCEaA4E, to(address): 0x50DF5a, value(uint256): 109469778355310750432584) -> True
+        [5][CALL][0.0] from=SocketGateway, to=0x856da0
+    [3][STATICCALL] from=0xc3fdd4, to=MaticToken, balanceOf(owner(address): 0x03A5A3) -> 20543848650131488581320
+    [3][STATICCALL] from=0xc3fdd4, to=MaticToken, allowance(owner(address): 0x03A5A3, spender(address): 0x3a23F9) -> 115792089237316195423570985008687907853269984665640564036583057107132216239935
+    [3][CALL] from=0xc3fdd4, to=SocketGateway, 0x00000196() -> 0x000000
+      [4][DELEGATECALL] from=SocketGateway, to=WrappedTokenSwapperImpl, performAction(fromToken(address): 0x7D1AfA, toToken(address): 0xEeeeeE, amount(uint256): 0, receiverAddress(address): 0x856da0, metadata(bytes32): b'\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00..., swapExtraData(bytes): b'#\xb8r\xdd\x00\x00\x00\x00\x00\x00\x00\x...) -> 0
+        [5][CALL] from=SocketGateway, to=MaticToken, transferFrom(from(address): 0xC3fDD4, to(address): 0x3a23F9, value(uint256): 0) -> True
+        [5][CALL] from=SocketGateway, to=MaticToken, transferFrom(from(address): 0x03A5A3, to(address): 0x50DF5a, value(uint256): 20543848650131488581320) -> True
+        [5][CALL][0.0] from=SocketGateway, to=0x856da0
+    [3][STATICCALL] from=0xc3fdd4, to=MaticToken, balanceOf(owner(address): 0x76963b) -> 9674200000000000000000
+    [3][STATICCALL] from=0xc3fdd4, to=MaticToken, allowance(owner(address): 0x76963b, spender(address): 0x3a23F9) -> 115792089237316195423570985008687907853269984665640564029783384007913129639935
+    [3][CALL] from=0xc3fdd4, to=SocketGateway, 0x00000196() -> 0x000000
+      [4][DELEGATECALL] from=SocketGateway, to=WrappedTokenSwapperImpl, performAction(fromToken(address): 0x7D1AfA, toToken(address): 0xEeeeeE, amount(uint256): 0, receiverAddress(address): 0x856da0, metadata(bytes32): b'\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00..., swapExtraData(bytes): b'#\xb8r\xdd\x00\x00\x00\x00\x00\x00\x00\x...) -> 0
+        [5][CALL] from=SocketGateway, to=MaticToken, transferFrom(from(address): 0xC3fDD4, to(address): 0x3a23F9, value(uint256): 0) -> True
+        [5][CALL] from=SocketGateway, to=MaticToken, transferFrom(from(address): 0x76963b, to(address): 0x50DF5a, value(uint256): 9674200000000000000000) -> True
+        [5][CALL][0.0] from=SocketGateway, to=0x856da0
+    [3][STATICCALL] from=0xc3fdd4, to=MaticToken, balanceOf(owner(address): 0x4f670C) -> 5890000000000000000000
+    [3][STATICCALL] from=0xc3fdd4, to=MaticToken, allowance(owner(address): 0x4f670C, spender(address): 0x3a23F9) -> 115792089237316195423570985008687907853269984665640564039357584007913129639935
+    [3][CALL] from=0xc3fdd4, to=SocketGateway, 0x00000196() -> 0x000000
+      [4][DELEGATECALL] from=SocketGateway, to=WrappedTokenSwapperImpl, performAction(fromToken(address): 0x7D1AfA, toToken(address): 0xEeeeeE, amount(uint256): 0, receiverAddress(address): 0x856da0, metadata(bytes32): b'\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00..., swapExtraData(bytes): b'#\xb8r\xdd\x00\x00\x00\x00\x00\x00\x00\x...) -> 0
+        [5][CALL] from=SocketGateway, to=MaticToken, transferFrom(from(address): 0xC3fDD4, to(address): 0x3a23F9, value(uint256): 0) -> True
+        [5][CALL] from=SocketGateway, to=MaticToken, transferFrom(from(address): 0x4f670C, to(address): 0x50DF5a, value(uint256): 5890000000000000000000) -> True
+        [5][CALL][0.0] from=SocketGateway, to=0x856da0
+    [3][STATICCALL] from=0xc3fdd4, to=MaticToken, balanceOf(owner(address): 0x0b3D3b) -> 4496199344063645462000
+    [3][STATICCALL] from=0xc3fdd4, to=MaticToken, allowance(owner(address): 0x0b3D3b, spender(address): 0x3a23F9) -> 115792089237316195423570985008687907853269984665640564039404298986332695899935
+    [3][CALL] from=0xc3fdd4, to=SocketGateway, 0x00000196() -> 0x000000
+      [4][DELEGATECALL] from=SocketGateway, to=WrappedTokenSwapperImpl, performAction(fromToken(address): 0x7D1AfA, toToken(address): 0xEeeeeE, amount(uint256): 0, receiverAddress(address): 0x856da0, metadata(bytes32): b'\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00..., swapExtraData(bytes): b'#\xb8r\xdd\x00\x00\x00\x00\x00\x00\x00\x...) -> 0
+        [5][CALL] from=SocketGateway, to=MaticToken, transferFrom(from(address): 0xC3fDD4, to(address): 0x3a23F9, value(uint256): 0) -> True
+        [5][CALL] from=SocketGateway, to=MaticToken, transferFrom(from(address): 0x0b3D3b, to(address): 0x50DF5a, value(uint256): 4496199344063645462000) -> True
+        [5][CALL][0.0] from=SocketGateway, to=0x856da0
+    [3][STATICCALL] from=0xc3fdd4, to=MaticToken, balanceOf(owner(address): 0x6E9522) -> 4133906512311379100000
+    [3][STATICCALL] from=0xc3fdd4, to=MaticToken, allowance(owner(address): 0x6E9522, spender(address): 0x3a23F9) -> 115792089237316195423570985008687907853269984665640564038870246993934508739935
+    [3][CALL] from=0xc3fdd4, to=SocketGateway, 0x00000196() -> 0x000000
+      [4][DELEGATECALL] from=SocketGateway, to=WrappedTokenSwapperImpl, performAction(fromToken(address): 0x7D1AfA, toToken(address): 0xEeeeeE, amount(uint256): 0, receiverAddress(address): 0x856da0, metadata(bytes32): b'\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00..., swapExtraData(bytes): b'#\xb8r\xdd\x00\x00\x00\x00\x00\x00\x00\x...) -> 0
+        [5][CALL] from=SocketGateway, to=MaticToken, transferFrom(from(address): 0xC3fDD4, to(address): 0x3a23F9, value(uint256): 0) -> True
+        [5][CALL] from=SocketGateway, to=MaticToken, transferFrom(from(address): 0x6E9522, to(address): 0x50DF5a, value(uint256): 4133906512311379100000) -> True
+        [5][CALL][0.0] from=SocketGateway, to=0x856da0
+    [3][STATICCALL] from=0xc3fdd4, to=MaticToken, balanceOf(owner(address): 0x620573) -> 2250723295270061024000
+    [3][STATICCALL] from=0xc3fdd4, to=MaticToken, allowance(owner(address): 0x620573, spender(address): 0x3a23F9) -> 115792089237316195423570985008687907853269984665640564039445462061128476023935
+    [3][CALL] from=0xc3fdd4, to=SocketGateway, 0x00000196() -> 0x000000
+      [4][DELEGATECALL] from=SocketGateway, to=WrappedTokenSwapperImpl, performAction(fromToken(address): 0x7D1AfA, toToken(address): 0xEeeeeE, amount(uint256): 0, receiverAddress(address): 0x856da0, metadata(bytes32): b'\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00..., swapExtraData(bytes): b'#\xb8r\xdd\x00\x00\x00\x00\x00\x00\x00\x...) -> 0
+        [5][CALL] from=SocketGateway, to=MaticToken, transferFrom(from(address): 0xC3fDD4, to(address): 0x3a23F9, value(uint256): 0) -> True
+        [5][CALL] from=SocketGateway, to=MaticToken, transferFrom(from(address): 0x620573, to(address): 0x50DF5a, value(uint256): 2250723295270061024000) -> True
+        [5][CALL][0.0] from=SocketGateway, to=0x856da0
+    [3][STATICCALL] from=0xc3fdd4, to=MaticToken, balanceOf(owner(address): 0x41e5EE) -> 2228393053447823895052
+    [3][STATICCALL] from=0xc3fdd4, to=MaticToken, allowance(owner(address): 0x41e5EE, spender(address): 0x3a23F9) -> 115792089237316195423570985008687907853269984665640564037203823273662301669405
+    [3][CALL] from=0xc3fdd4, to=SocketGateway, 0x00000196() -> 0x000000
+      [4][DELEGATECALL] from=SocketGateway, to=WrappedTokenSwapperImpl, performAction(fromToken(address): 0x7D1AfA, toToken(address): 0xEeeeeE, amount(uint256): 0, receiverAddress(address): 0x856da0, metadata(bytes32): b'\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00..., swapExtraData(bytes): b'#\xb8r\xdd\x00\x00\x00\x00\x00\x00\x00\x...) -> 0
+        [5][CALL] from=SocketGateway, to=MaticToken, transferFrom(from(address): 0xC3fDD4, to(address): 0x3a23F9, value(uint256): 0) -> True
+        [5][CALL] from=SocketGateway, to=MaticToken, transferFrom(from(address): 0x41e5EE, to(address): 0x50DF5a, value(uint256): 2228393053447823895052) -> True
+        [5][CALL][0.0] from=SocketGateway, to=0x856da0
+    [3][STATICCALL] from=0xc3fdd4, to=MaticToken, balanceOf(owner(address): 0x809bE0) -> 1463504026086044404063
+    [3][STATICCALL] from=0xc3fdd4, to=MaticToken, allowance(owner(address): 0x809bE0, spender(address): 0x3a23F9) -> 115792089237316195423570985008687907853269984665640564039334249030113425649935
+    [3][CALL] from=0xc3fdd4, to=SocketGateway, 0x00000196() -> 0x000000
+      [4][DELEGATECALL] from=SocketGateway, to=WrappedTokenSwapperImpl, performAction(fromToken(address): 0x7D1AfA, toToken(address): 0xEeeeeE, amount(uint256): 0, receiverAddress(address): 0x856da0, metadata(bytes32): b'\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00..., swapExtraData(bytes): b'#\xb8r\xdd\x00\x00\x00\x00\x00\x00\x00\x...) -> 0
+        [5][CALL] from=SocketGateway, to=MaticToken, transferFrom(from(address): 0xC3fDD4, to(address): 0x3a23F9, value(uint256): 0) -> True
+        [5][CALL] from=SocketGateway, to=MaticToken, transferFrom(from(address): 0x809bE0, to(address): 0x50DF5a, value(uint256): 1463504026086044404063) -> True
+        [5][CALL][0.0] from=SocketGateway, to=0x856da0
+    [3][STATICCALL] from=0xc3fdd4, to=MaticToken, balanceOf(owner(address): 0xB920Da) -> 1409147369016777612570
+    [3][STATICCALL] from=0xc3fdd4, to=MaticToken, allowance(owner(address): 0xB920Da, spender(address): 0x3a23F9) -> 115792089237316195423570985008687907853269984665640564039445840716268481644935
+    [3][CALL] from=0xc3fdd4, to=SocketGateway, 0x00000196() -> 0x000000
+      [4][DELEGATECALL] from=SocketGateway, to=WrappedTokenSwapperImpl, performAction(fromToken(address): 0x7D1AfA, toToken(address): 0xEeeeeE, amount(uint256): 0, receiverAddress(address): 0x856da0, metadata(bytes32): b'\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00..., swapExtraData(bytes): b'#\xb8r\xdd\x00\x00\x00\x00\x00\x00\x00\x...) -> 0
+        [5][CALL] from=SocketGateway, to=MaticToken, transferFrom(from(address): 0xC3fDD4, to(address): 0x3a23F9, value(uint256): 0) -> True
+        [5][CALL] from=SocketGateway, to=MaticToken, transferFrom(from(address): 0xB920Da, to(address): 0x50DF5a, value(uint256): 1409147369016777612570) -> True
+        [5][CALL][0.0] from=SocketGateway, to=0x856da0
+    [3][STATICCALL] from=0xc3fdd4, to=MaticToken, balanceOf(owner(address): 0x04474D) -> 1400642181186482902583
+    [3][STATICCALL] from=0xc3fdd4, to=MaticToken, allowance(owner(address): 0x04474D, spender(address): 0x3a23F9) -> 115792089237316195423570985008687907853269984665640564039457584007913129639935
+    [3][CALL] from=0xc3fdd4, to=SocketGateway, 0x00000196() -> 0x000000
+      [4][DELEGATECALL] from=SocketGateway, to=WrappedTokenSwapperImpl, performAction(fromToken(address): 0x7D1AfA, toToken(address): 0xEeeeeE, amount(uint256): 0, receiverAddress(address): 0x856da0, metadata(bytes32): b'\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00..., swapExtraData(bytes): b'#\xb8r\xdd\x00\x00\x00\x00\x00\x00\x00\x...) -> 0
+        [5][CALL] from=SocketGateway, to=MaticToken, transferFrom(from(address): 0xC3fDD4, to(address): 0x3a23F9, value(uint256): 0) -> True
+        [5][CALL] from=SocketGateway, to=MaticToken, transferFrom(from(address): 0x04474D, to(address): 0x50DF5a, value(uint256): 1400642181186482902583) -> True
+        [5][CALL][0.0] from=SocketGateway, to=0x856da0
+    [3][STATICCALL] from=0xc3fdd4, to=MaticToken, balanceOf(owner(address): 0x21901b) -> 1300746001808609457793
+    [3][STATICCALL] from=0xc3fdd4, to=MaticToken, allowance(owner(address): 0x21901b, spender(address): 0x3a23F9) -> 115792089237316195423570985008687907853269984665640564039357584007913129639935
+    [3][CALL] from=0xc3fdd4, to=SocketGateway, 0x00000196() -> 0x000000
+      [4][DELEGATECALL] from=SocketGateway, to=WrappedTokenSwapperImpl, performAction(fromToken(address): 0x7D1AfA, toToken(address): 0xEeeeeE, amount(uint256): 0, receiverAddress(address): 0x856da0, metadata(bytes32): b'\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00..., swapExtraData(bytes): b'#\xb8r\xdd\x00\x00\x00\x00\x00\x00\x00\x...) -> 0
+        [5][CALL] from=SocketGateway, to=MaticToken, transferFrom(from(address): 0xC3fDD4, to(address): 0x3a23F9, value(uint256): 0) -> True
+        [5][CALL] from=SocketGateway, to=MaticToken, transferFrom(from(address): 0x21901b, to(address): 0x50DF5a, value(uint256): 1300746001808609457793) -> True
+        [5][CALL][0.0] from=SocketGateway, to=0x856da0
+    [3][STATICCALL] from=0xc3fdd4, to=MaticToken, balanceOf(owner(address): 0x5bdD3e) -> 1095902822793750580000
+    [3][STATICCALL] from=0xc3fdd4, to=MaticToken, allowance(owner(address): 0x5bdD3e, spender(address): 0x3a23F9) -> 115792089237316195423570985008687907853269984665640564039355025164776880219935
+    [3][CALL] from=0xc3fdd4, to=SocketGateway, 0x00000196() -> 0x000000
+      [4][DELEGATECALL] from=SocketGateway, to=WrappedTokenSwapperImpl, performAction(fromToken(address): 0x7D1AfA, toToken(address): 0xEeeeeE, amount(uint256): 0, receiverAddress(address): 0x856da0, metadata(bytes32): b'\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00..., swapExtraData(bytes): b'#\xb8r\xdd\x00\x00\x00\x00\x00\x00\x00\x...) -> 0
+        [5][CALL] from=SocketGateway, to=MaticToken, transferFrom(from(address): 0xC3fDD4, to(address): 0x3a23F9, value(uint256): 0) -> True
+        [5][CALL] from=SocketGateway, to=MaticToken, transferFrom(from(address): 0x5bdD3e, to(address): 0x50DF5a, value(uint256): 1095902822793750580000) -> True
+        [5][CALL][0.0] from=SocketGateway, to=0x856da0
+    [3][STATICCALL] from=0xc3fdd4, to=MaticToken, balanceOf(owner(address): 0xe23B25) -> 840000000000000000000
+    [3][STATICCALL] from=0xc3fdd4, to=MaticToken, allowance(owner(address): 0xe23B25, spender(address): 0x3a23F9) -> 115792089237316195423570985008687907853269984665640564039307584007913129639935
+    [3][CALL] from=0xc3fdd4, to=SocketGateway, 0x00000196() -> None
+      [4][DELEGATECALL] from=SocketGateway, to=WrappedTokenSwapperImpl, performAction(fromToken(address): 0x7D1AfA, toToken(address): 0xEeeeeE, amount(uint256): 0, receiverAddress(address): 0x856da0, metadata(bytes32): b'\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00..., swapExtraData(bytes): b'#\xb8r\xdd\x00\x00\x00\x00\x00\x00\x00\x...) -> None
+        [5][CALL] from=SocketGateway, to=MaticToken, transferFrom(from(address): 0xC3fDD4, to(address): 0x3a23F9, value(uint256): 0) -> True
+        [5][CALL] from=SocketGateway, to=MaticToken, transferFrom(from(address): 0xe23B25, to(address): 0x50DF5a, value(uint256): 840000000000000000000) -> None

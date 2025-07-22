@@ -1,0 +1,403 @@
+[1][CALL] from=0x63341b, to=0x7336F8, 0xaf8271f7() -> None
+  [2][CALL] from=0x7336F8, to=Proxy, deferLiquidityCheckaddress() -> None
+    [3][CALL] from=Proxy, to=Euler, dispatch() -> None
+      [4][DELEGATECALL] from=Euler, to=Exec, deferLiquidityCheck(account(address): 0x7336F8, data(bytes): b'\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00...) -> None
+        [5][CALL] from=Euler, to=0x7336F8, onDeferredLiquidityCheckbytes() -> None
+          [6][CALL] from=0x7336F8, to=0x84721a, borrowuint256() -> None
+            [7][CALL] from=0x84721a, to=Euler, dispatch() -> None
+              [8][DELEGATECALL] from=Euler, to=DToken, borrow(subAccountId(uint256): 0, amount(uint256): 15000000000000) -> None
+                [9][STATICCALL] from=Euler, to=FiatTokenProxy, balanceOf(account(address): 0x271828) -> 30752825468632
+                  [10][DELEGATECALL] from=FiatTokenProxy, to=FiatTokenV2_1, balanceOf(account(address): 0x271828) -> 30752825468632
+                [9][CALL] from=Euler, to=FiatTokenProxy, transfer(to(address): 0x7336F8, value(uint256): 15000000000000) -> True
+                  [10][DELEGATECALL] from=FiatTokenProxy, to=FiatTokenV2_1, transfer(to(address): 0x7336F8, value(uint256): 15000000000000) -> True
+                [9][STATICCALL] from=Euler, to=FiatTokenProxy, balanceOf(account(address): 0x271828) -> 15752825468632
+                  [10][DELEGATECALL] from=FiatTokenProxy, to=FiatTokenV2_1, balanceOf(account(address): 0x271828) -> 15752825468632
+                [9][DELEGATECALL] from=Euler, to=IRMClassStable, computeInterestRate(underlying(address): 0xA0b869, utilisation(uint32): 3895454212) -> 12327223955107931480
+                [9][CALL] from=Euler, to=0x84721a, 0x03ddf252() -> None
+          [6][CALL] from=0x7336F8, to=FiatTokenProxy, approve(spender(address): 0xA5407e, value(uint256): 115792089237316195423570985008687907853269...) -> True
+            [7][DELEGATECALL] from=FiatTokenProxy, to=FiatTokenV2_1, approve(spender(address): 0xA5407e, value(uint256): 115792089237316195423570985008687907853269...) -> True
+          [6][CALL] from=0x7336F8, to=ProxyERC20, approve(spender(address): 0xA5407e, value(uint256): 115792089237316195423570985008687907853269...) -> True
+            [7][CALL] from=ProxyERC20, to=MultiCollateralSynth, setMessageSender(sender(address): 0x7336F8) -> None
+            [7][CALL] from=ProxyERC20, to=MultiCollateralSynth, approve(spender(address): 0xA5407e, value(uint256): 115792089237316195423570985008687907853269...) -> True
+              [8][CALL] from=MultiCollateralSynth, to=TokenState, setAllowance(tokenOwner(address): 0x7336F8, spender(address): 0xA5407e, value(uint256): 115792089237316195423570985008687907853269...) -> None
+              [8][CALL] from=MultiCollateralSynth, to=ProxyERC20, _emit(callData(bytes): b'\xff\xff\xff\xff\xff\xff\xff\xff\xff\xff..., numTopics(uint256): 3, topic1(bytes32): b'\x8c[\xe1\xe5\xeb\xec}[\xd1OqB}\x1e\x84\..., topic2(bytes32): b'\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00..., topic3(bytes32): b'\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00..., topic4(bytes32): b'\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00...) -> None
+          [6][CALL] from=0x7336F8, to=TetherToken, approve(_spender(address): 0xA5407e, _value(uint256): 115792089237316195423570985008687907853269...) -> None
+          [6][CALL] from=0x7336F8, to=Dai, approve(usr(address): 0xA5407e, wad(uint256): 115792089237316195423570985008687907853269...) -> True
+          [6][CALL] from=0x7336F8, to=ProxyERC20, approve(spender(address): 0x824dcD, value(uint256): 115792089237316195423570985008687907853269...) -> True
+            [7][CALL] from=ProxyERC20, to=MultiCollateralSynth, setMessageSender(sender(address): 0x7336F8) -> None
+            [7][CALL] from=ProxyERC20, to=MultiCollateralSynth, approve(spender(address): 0x824dcD, value(uint256): 115792089237316195423570985008687907853269...) -> True
+              [8][CALL] from=MultiCollateralSynth, to=TokenState, setAllowance(tokenOwner(address): 0x7336F8, spender(address): 0x824dcD, value(uint256): 115792089237316195423570985008687907853269...) -> None
+              [8][CALL] from=MultiCollateralSynth, to=ProxyERC20, _emit(callData(bytes): b'\xff\xff\xff\xff\xff\xff\xff\xff\xff\xff..., numTopics(uint256): 3, topic1(bytes32): b'\x8c[\xe1\xe5\xeb\xec}[\xd1OqB}\x1e\x84\..., topic2(bytes32): b'\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00..., topic3(bytes32): b'\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00..., topic4(bytes32): b'\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00...) -> None
+          [6][CALL] from=0x7336F8, to=LPToken, approve(spender(address): 0x824dcD, amount(uint256): 115792089237316195423570985008687907853269...) -> True
+            [7][DELEGATECALL] from=LPToken, to=LPToken, approve(spender(address): 0x824dcD, amount(uint256): 115792089237316195423570985008687907853269...) -> True
+          [6][CALL] from=0x7336F8, to=Vyper_contract, exchange(i(int128): 1, j(int128): 3, dx(uint256): 15000000000000, min_dy(uint256): 0) -> None
+            [7][CALL] from=Vyper_contract, to=FiatTokenProxy, transferFrom(from(address): 0x7336F8, to(address): 0xA5407e, value(uint256): 15000000000000) -> True
+              [8][DELEGATECALL] from=FiatTokenProxy, to=FiatTokenV2_1, transferFrom(from(address): 0x7336F8, to(address): 0xA5407e, value(uint256): 15000000000000) -> True
+            [7][CALL] from=Vyper_contract, to=ProxyERC20, transfer(to(address): 0x7336F8, value(uint256): 14800272147571999524518901) -> True
+              [8][CALL] from=ProxyERC20, to=MultiCollateralSynth, setMessageSender(sender(address): 0xA5407e) -> None
+              [8][CALL] from=ProxyERC20, to=MultiCollateralSynth, transfer(to(address): 0x7336F8, value(uint256): 14800272147571999524518901) -> True
+                [9][STATICCALL] from=MultiCollateralSynth, to=ExchangerWithFeeRecAlternatives, maxSecsLeftInWaitingPeriod(account(address): 0xA5407e, currencyKey(bytes32): b'sUSD\x00\x00\x00\x00\x00\x00\x00\x00\x00...) -> 0
+                  [10][STATICCALL] from=ExchangerWithFeeRecAlternatives, to=ExchangeState, getMaxTimestamp(account(address): 0xA5407e, currencyKey(bytes32): b'sUSD\x00\x00\x00\x00\x00\x00\x00\x00\x00...) -> 0
+                  [10][STATICCALL] from=ExchangerWithFeeRecAlternatives, to=FlexibleStorage, getUIntValue(contractName(bytes32): b'SystemSettings\x00\x00\x00\x00\x00\x00\x..., record(bytes32): b'waitingPeriodSecs\x00\x00\x00\x00\x00\x0...) -> 360
+                [9][STATICCALL] from=MultiCollateralSynth, to=ExchangerWithFeeRecAlternatives, settlementOwing(account(address): 0xA5407e, currencyKey(bytes32): b'sUSD\x00\x00\x00\x00\x00\x00\x00\x00\x00...) -> ['0', '0', '0']
+                  [10][STATICCALL] from=ExchangerWithFeeRecAlternatives, to=ExchangeState, getLengthOfEntries(account(address): 0xA5407e, currencyKey(bytes32): b'sUSD\x00\x00\x00\x00\x00\x00\x00\x00\x00...) -> 0
+                [9][STATICCALL] from=MultiCollateralSynth, to=TokenState, balanceOf((address): 0xA5407e) -> 24123963294776330213468517
+                [9][STATICCALL] from=MultiCollateralSynth, to=SystemStatus, requireSynthActive(currencyKey(bytes32): b'sUSD\x00\x00\x00\x00\x00\x00\x00\x00\x00...) -> None
+                [9][STATICCALL] from=MultiCollateralSynth, to=TokenState, balanceOf((address): 0xA5407e) -> 24123963294776330213468517
+                [9][CALL] from=MultiCollateralSynth, to=TokenState, setBalanceOf(account(address): 0xA5407e, value(uint256): 9323691147204330688949616) -> None
+                [9][STATICCALL] from=MultiCollateralSynth, to=TokenState, balanceOf((address): 0x7336F8) -> 0
+                [9][CALL] from=MultiCollateralSynth, to=TokenState, setBalanceOf(account(address): 0x7336F8, value(uint256): 14800272147571999524518901) -> None
+                [9][CALL] from=MultiCollateralSynth, to=ProxyERC20, _emit(callData(bytes): b'\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00..., numTopics(uint256): 3, topic1(bytes32): b'\xdd\xf2R\xad\x1b\xe2\xc8\x9bi\xc2\xb0h\..., topic2(bytes32): b'\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00..., topic3(bytes32): b'\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00..., topic4(bytes32): b'\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00...) -> None
+          [6][STATICCALL] from=0x7336F8, to=ProxyERC20, balanceOf(owner(address): 0x7336F8) -> 14800272147571999524518901
+            [7][CALL] from=ProxyERC20, to=MultiCollateralSynth, balanceOf(account(address): 0x7336F8) -> 14800272147571999524518901
+              [8][STATICCALL] from=MultiCollateralSynth, to=TokenState, balanceOf((address): 0x7336F8) -> 14800272147571999524518901
+          [6][CALL] from=0x7336F8, to=MetaSwap, swapuint8() -> 0x000000
+            [7][DELEGATECALL] from=MetaSwap, to=MetaSwapUtils, 0x98414eed() -> 0x000000
+              [8][STATICCALL] from=MetaSwap, to=ProxyERC20, balanceOf(owner(address): 0x7336F8) -> 14800272147571999524518901
+                [9][CALL] from=ProxyERC20, to=MultiCollateralSynth, balanceOf(account(address): 0x7336F8) -> 14800272147571999524518901
+                  [10][STATICCALL] from=MultiCollateralSynth, to=TokenState, balanceOf((address): 0x7336F8) -> 14800272147571999524518901
+              [8][STATICCALL] from=MetaSwap, to=ProxyERC20, balanceOf(owner(address): 0x824dcD) -> 8133884478747092063607602
+                [9][CALL] from=ProxyERC20, to=MultiCollateralSynth, balanceOf(account(address): 0x824dcD) -> 8133884478747092063607602
+                  [10][STATICCALL] from=MultiCollateralSynth, to=TokenState, balanceOf((address): 0x824dcD) -> 8133884478747092063607602
+              [8][CALL] from=MetaSwap, to=ProxyERC20, transferFrom(from(address): 0x7336F8, to(address): 0x824dcD, value(uint256): 14800272147571999524518901) -> True
+                [9][CALL] from=ProxyERC20, to=MultiCollateralSynth, setMessageSender(sender(address): 0x824dcD) -> None
+                [9][CALL] from=ProxyERC20, to=MultiCollateralSynth, transferFrom(from(address): 0x7336F8, to(address): 0x824dcD, value(uint256): 14800272147571999524518901) -> True
+                  [10][STATICCALL] from=MultiCollateralSynth, to=ExchangerWithFeeRecAlternatives, maxSecsLeftInWaitingPeriod(account(address): 0x7336F8, currencyKey(bytes32): b'sUSD\x00\x00\x00\x00\x00\x00\x00\x00\x00...) -> 0
+                    [11][STATICCALL] from=ExchangerWithFeeRecAlternatives, to=ExchangeState, getMaxTimestamp(account(address): 0x7336F8, currencyKey(bytes32): b'sUSD\x00\x00\x00\x00\x00\x00\x00\x00\x00...) -> 0
+                    [11][STATICCALL] from=ExchangerWithFeeRecAlternatives, to=FlexibleStorage, getUIntValue(contractName(bytes32): b'SystemSettings\x00\x00\x00\x00\x00\x00\x..., record(bytes32): b'waitingPeriodSecs\x00\x00\x00\x00\x00\x0...) -> 360
+                  [10][STATICCALL] from=MultiCollateralSynth, to=ExchangerWithFeeRecAlternatives, settlementOwing(account(address): 0x7336F8, currencyKey(bytes32): b'sUSD\x00\x00\x00\x00\x00\x00\x00\x00\x00...) -> ['0', '0', '0']
+                    [11][STATICCALL] from=ExchangerWithFeeRecAlternatives, to=ExchangeState, getLengthOfEntries(account(address): 0x7336F8, currencyKey(bytes32): b'sUSD\x00\x00\x00\x00\x00\x00\x00\x00\x00...) -> 0
+                  [10][STATICCALL] from=MultiCollateralSynth, to=TokenState, balanceOf((address): 0x7336F8) -> 14800272147571999524518901
+                  [10][STATICCALL] from=MultiCollateralSynth, to=SystemStatus, requireSynthActive(currencyKey(bytes32): b'sUSD\x00\x00\x00\x00\x00\x00\x00\x00\x00...) -> None
+                  [10][STATICCALL] from=MultiCollateralSynth, to=TokenState, allowance((address): 0x824dcD) -> 115792089237316195423570985008687907853269984665640564039457584007913129639935
+                  [10][STATICCALL] from=MultiCollateralSynth, to=TokenState, balanceOf((address): 0x7336F8) -> 14800272147571999524518901
+                  [10][CALL] from=MultiCollateralSynth, to=TokenState, setBalanceOf(account(address): 0x7336F8, value(uint256): 0) -> None
+                  [10][STATICCALL] from=MultiCollateralSynth, to=TokenState, balanceOf((address): 0x824dcD) -> 8133884478747092063607602
+                  [10][CALL] from=MultiCollateralSynth, to=TokenState, setBalanceOf(account(address): 0x824dcD, value(uint256): 22934156626319091588126503) -> None
+                  [10][CALL] from=MultiCollateralSynth, to=ProxyERC20, _emit(callData(bytes): b'\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00..., numTopics(uint256): 3, topic1(bytes32): b'\xdd\xf2R\xad\x1b\xe2\xc8\x9bi\xc2\xb0h\..., topic2(bytes32): b'\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00..., topic3(bytes32): b'\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00..., topic4(bytes32): b'\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00...) -> None
+              [8][STATICCALL] from=MetaSwap, to=ProxyERC20, balanceOf(owner(address): 0x824dcD) -> 22934156626319091588126503
+                [9][CALL] from=ProxyERC20, to=MultiCollateralSynth, balanceOf(account(address): 0x824dcD) -> 22934156626319091588126503
+                  [10][STATICCALL] from=MultiCollateralSynth, to=TokenState, balanceOf((address): 0x824dcD) -> 22934156626319091588126503
+              [8][STATICCALL] from=MetaSwap, to=SwapFlashLoan, getVirtualPrice() -> 1003317462560691470
+                [9][DELEGATECALL] from=SwapFlashLoan, to=SwapFlashLoan, getVirtualPrice() -> 1003317462560691470
+                  [10][DELEGATECALL] from=SwapFlashLoan, to=SwapUtils, 0x71906c2c() -> 0x000000
+                    [11][STATICCALL] from=SwapFlashLoan, to=LPToken, totalSupply() -> 17634629772328871405964935
+                      [12][DELEGATECALL] from=LPToken, to=LPToken, totalSupply() -> 17634629772328871405964935
+              [8][CALL] from=MetaSwap, to=LPToken, transfer(recipient(address): 0x7336F8, amount(uint256): 9657586884342671474923252) -> True
+                [9][DELEGATECALL] from=LPToken, to=LPToken, transfer(recipient(address): 0x7336F8, amount(uint256): 9657586884342671474923252) -> True
+          [6][STATICCALL] from=0x7336F8, to=LPToken, balanceOf(account(address): 0x7336F8) -> 9657586884342671474923252
+            [7][DELEGATECALL] from=LPToken, to=LPToken, balanceOf(account(address): 0x7336F8) -> 9657586884342671474923252
+          [6][CALL] from=0x7336F8, to=MetaSwap, swapuint8() -> 0x000000
+            [7][DELEGATECALL] from=MetaSwap, to=MetaSwapUtils, 0x98414eed() -> 0x000000
+              [8][STATICCALL] from=MetaSwap, to=LPToken, balanceOf(account(address): 0x7336F8) -> 9657586884342671474923252
+                [9][DELEGATECALL] from=LPToken, to=LPToken, balanceOf(account(address): 0x7336F8) -> 9657586884342671474923252
+              [8][STATICCALL] from=MetaSwap, to=LPToken, balanceOf(account(address): 0x824dcD) -> 52476645635712209112797
+                [9][DELEGATECALL] from=LPToken, to=LPToken, balanceOf(account(address): 0x824dcD) -> 52476645635712209112797
+              [8][CALL] from=MetaSwap, to=LPToken, transferFrom(sender(address): 0x7336F8, recipient(address): 0x824dcD, amount(uint256): 9657586884342671474923252) -> True
+                [9][DELEGATECALL] from=LPToken, to=LPToken, transferFrom(sender(address): 0x7336F8, recipient(address): 0x824dcD, amount(uint256): 9657586884342671474923252) -> True
+              [8][STATICCALL] from=MetaSwap, to=LPToken, balanceOf(account(address): 0x824dcD) -> 9710063529978383684036049
+                [9][DELEGATECALL] from=LPToken, to=LPToken, balanceOf(account(address): 0x824dcD) -> 9710063529978383684036049
+              [8][CALL] from=MetaSwap, to=ProxyERC20, transfer(to(address): 0x7336F8, value(uint256): 16860043913565513300299221) -> True
+                [9][CALL] from=ProxyERC20, to=MultiCollateralSynth, setMessageSender(sender(address): 0x824dcD) -> None
+                [9][CALL] from=ProxyERC20, to=MultiCollateralSynth, transfer(to(address): 0x7336F8, value(uint256): 16860043913565513300299221) -> True
+                  [10][STATICCALL] from=MultiCollateralSynth, to=ExchangerWithFeeRecAlternatives, maxSecsLeftInWaitingPeriod(account(address): 0x824dcD, currencyKey(bytes32): b'sUSD\x00\x00\x00\x00\x00\x00\x00\x00\x00...) -> 0
+                    [11][STATICCALL] from=ExchangerWithFeeRecAlternatives, to=ExchangeState, getMaxTimestamp(account(address): 0x824dcD, currencyKey(bytes32): b'sUSD\x00\x00\x00\x00\x00\x00\x00\x00\x00...) -> 0
+                    [11][STATICCALL] from=ExchangerWithFeeRecAlternatives, to=FlexibleStorage, getUIntValue(contractName(bytes32): b'SystemSettings\x00\x00\x00\x00\x00\x00\x..., record(bytes32): b'waitingPeriodSecs\x00\x00\x00\x00\x00\x0...) -> 360
+                  [10][STATICCALL] from=MultiCollateralSynth, to=ExchangerWithFeeRecAlternatives, settlementOwing(account(address): 0x824dcD, currencyKey(bytes32): b'sUSD\x00\x00\x00\x00\x00\x00\x00\x00\x00...) -> ['0', '0', '0']
+                    [11][STATICCALL] from=ExchangerWithFeeRecAlternatives, to=ExchangeState, getLengthOfEntries(account(address): 0x824dcD, currencyKey(bytes32): b'sUSD\x00\x00\x00\x00\x00\x00\x00\x00\x00...) -> 0
+                  [10][STATICCALL] from=MultiCollateralSynth, to=TokenState, balanceOf((address): 0x824dcD) -> 22934156626319091588126503
+                  [10][STATICCALL] from=MultiCollateralSynth, to=SystemStatus, requireSynthActive(currencyKey(bytes32): b'sUSD\x00\x00\x00\x00\x00\x00\x00\x00\x00...) -> None
+                  [10][STATICCALL] from=MultiCollateralSynth, to=TokenState, balanceOf((address): 0x824dcD) -> 22934156626319091588126503
+                  [10][CALL] from=MultiCollateralSynth, to=TokenState, setBalanceOf(account(address): 0x824dcD, value(uint256): 6074112712753578287827282) -> None
+                  [10][STATICCALL] from=MultiCollateralSynth, to=TokenState, balanceOf((address): 0x7336F8) -> 0
+                  [10][CALL] from=MultiCollateralSynth, to=TokenState, setBalanceOf(account(address): 0x7336F8, value(uint256): 16860043913565513300299221) -> None
+                  [10][CALL] from=MultiCollateralSynth, to=ProxyERC20, _emit(callData(bytes): b'\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00..., numTopics(uint256): 3, topic1(bytes32): b'\xdd\xf2R\xad\x1b\xe2\xc8\x9bi\xc2\xb0h\..., topic2(bytes32): b'\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00..., topic3(bytes32): b'\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00..., topic4(bytes32): b'\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00...) -> None
+          [6][CALL] from=0x7336F8, to=MetaSwap, swapuint8() -> 0x000000
+            [7][DELEGATECALL] from=MetaSwap, to=MetaSwapUtils, 0x98414eed() -> 0x000000
+              [8][STATICCALL] from=MetaSwap, to=ProxyERC20, balanceOf(owner(address): 0x7336F8) -> 16860043913565513300299221
+                [9][CALL] from=ProxyERC20, to=MultiCollateralSynth, balanceOf(account(address): 0x7336F8) -> 16860043913565513300299221
+                  [10][STATICCALL] from=MultiCollateralSynth, to=TokenState, balanceOf((address): 0x7336F8) -> 16860043913565513300299221
+              [8][STATICCALL] from=MetaSwap, to=ProxyERC20, balanceOf(owner(address): 0x824dcD) -> 6074112712753578287827282
+                [9][CALL] from=ProxyERC20, to=MultiCollateralSynth, balanceOf(account(address): 0x824dcD) -> 6074112712753578287827282
+                  [10][STATICCALL] from=MultiCollateralSynth, to=TokenState, balanceOf((address): 0x824dcD) -> 6074112712753578287827282
+              [8][CALL] from=MetaSwap, to=ProxyERC20, transferFrom(from(address): 0x7336F8, to(address): 0x824dcD, value(uint256): 14800272147571999524518901) -> True
+                [9][CALL] from=ProxyERC20, to=MultiCollateralSynth, setMessageSender(sender(address): 0x824dcD) -> None
+                [9][CALL] from=ProxyERC20, to=MultiCollateralSynth, transferFrom(from(address): 0x7336F8, to(address): 0x824dcD, value(uint256): 14800272147571999524518901) -> True
+                  [10][STATICCALL] from=MultiCollateralSynth, to=ExchangerWithFeeRecAlternatives, maxSecsLeftInWaitingPeriod(account(address): 0x7336F8, currencyKey(bytes32): b'sUSD\x00\x00\x00\x00\x00\x00\x00\x00\x00...) -> 0
+                    [11][STATICCALL] from=ExchangerWithFeeRecAlternatives, to=ExchangeState, getMaxTimestamp(account(address): 0x7336F8, currencyKey(bytes32): b'sUSD\x00\x00\x00\x00\x00\x00\x00\x00\x00...) -> 0
+                    [11][STATICCALL] from=ExchangerWithFeeRecAlternatives, to=FlexibleStorage, getUIntValue(contractName(bytes32): b'SystemSettings\x00\x00\x00\x00\x00\x00\x..., record(bytes32): b'waitingPeriodSecs\x00\x00\x00\x00\x00\x0...) -> 360
+                  [10][STATICCALL] from=MultiCollateralSynth, to=ExchangerWithFeeRecAlternatives, settlementOwing(account(address): 0x7336F8, currencyKey(bytes32): b'sUSD\x00\x00\x00\x00\x00\x00\x00\x00\x00...) -> ['0', '0', '0']
+                    [11][STATICCALL] from=ExchangerWithFeeRecAlternatives, to=ExchangeState, getLengthOfEntries(account(address): 0x7336F8, currencyKey(bytes32): b'sUSD\x00\x00\x00\x00\x00\x00\x00\x00\x00...) -> 0
+                  [10][STATICCALL] from=MultiCollateralSynth, to=TokenState, balanceOf((address): 0x7336F8) -> 16860043913565513300299221
+                  [10][STATICCALL] from=MultiCollateralSynth, to=SystemStatus, requireSynthActive(currencyKey(bytes32): b'sUSD\x00\x00\x00\x00\x00\x00\x00\x00\x00...) -> None
+                  [10][STATICCALL] from=MultiCollateralSynth, to=TokenState, allowance((address): 0x824dcD) -> 115792089237316195423570985008687907853269984665640564039457584007913129639935
+                  [10][STATICCALL] from=MultiCollateralSynth, to=TokenState, balanceOf((address): 0x7336F8) -> 16860043913565513300299221
+                  [10][CALL] from=MultiCollateralSynth, to=TokenState, setBalanceOf(account(address): 0x7336F8, value(uint256): 2059771765993513775780320) -> None
+                  [10][STATICCALL] from=MultiCollateralSynth, to=TokenState, balanceOf((address): 0x824dcD) -> 6074112712753578287827282
+                  [10][CALL] from=MultiCollateralSynth, to=TokenState, setBalanceOf(account(address): 0x824dcD, value(uint256): 20874384860325577812346183) -> None
+                  [10][CALL] from=MultiCollateralSynth, to=ProxyERC20, _emit(callData(bytes): b'\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00..., numTopics(uint256): 3, topic1(bytes32): b'\xdd\xf2R\xad\x1b\xe2\xc8\x9bi\xc2\xb0h\..., topic2(bytes32): b'\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00..., topic3(bytes32): b'\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00..., topic4(bytes32): b'\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00...) -> None
+              [8][STATICCALL] from=MetaSwap, to=ProxyERC20, balanceOf(owner(address): 0x824dcD) -> 20874384860325577812346183
+                [9][CALL] from=ProxyERC20, to=MultiCollateralSynth, balanceOf(account(address): 0x824dcD) -> 20874384860325577812346183
+                  [10][STATICCALL] from=MultiCollateralSynth, to=TokenState, balanceOf((address): 0x824dcD) -> 20874384860325577812346183
+              [8][CALL] from=MetaSwap, to=LPToken, transfer(recipient(address): 0x7336F8, amount(uint256): 9669749439299164955998576) -> True
+                [9][DELEGATECALL] from=LPToken, to=LPToken, transfer(recipient(address): 0x7336F8, amount(uint256): 9669749439299164955998576) -> True
+          [6][STATICCALL] from=0x7336F8, to=LPToken, balanceOf(account(address): 0x7336F8) -> 9669749439299164955998576
+            [7][DELEGATECALL] from=LPToken, to=LPToken, balanceOf(account(address): 0x7336F8) -> 9669749439299164955998576
+          [6][CALL] from=0x7336F8, to=MetaSwap, swapuint8() -> 0x000000
+            [7][DELEGATECALL] from=MetaSwap, to=MetaSwapUtils, 0x98414eed() -> 0x000000
+              [8][STATICCALL] from=MetaSwap, to=LPToken, balanceOf(account(address): 0x7336F8) -> 9669749439299164955998576
+                [9][DELEGATECALL] from=LPToken, to=LPToken, balanceOf(account(address): 0x7336F8) -> 9669749439299164955998576
+              [8][STATICCALL] from=MetaSwap, to=LPToken, balanceOf(account(address): 0x824dcD) -> 40314090679218728037473
+                [9][DELEGATECALL] from=LPToken, to=LPToken, balanceOf(account(address): 0x824dcD) -> 40314090679218728037473
+              [8][CALL] from=MetaSwap, to=LPToken, transferFrom(sender(address): 0x7336F8, recipient(address): 0x824dcD, amount(uint256): 9669749439299164955998576) -> True
+                [9][DELEGATECALL] from=LPToken, to=LPToken, transferFrom(sender(address): 0x7336F8, recipient(address): 0x824dcD, amount(uint256): 9669749439299164955998576) -> True
+              [8][STATICCALL] from=MetaSwap, to=LPToken, balanceOf(account(address): 0x824dcD) -> 9710063529978383684036049
+                [9][DELEGATECALL] from=LPToken, to=LPToken, balanceOf(account(address): 0x824dcD) -> 9710063529978383684036049
+              [8][CALL] from=MetaSwap, to=ProxyERC20, transfer(to(address): 0x7336F8, value(uint256): 17791840344841252243663688) -> True
+                [9][CALL] from=ProxyERC20, to=MultiCollateralSynth, setMessageSender(sender(address): 0x824dcD) -> None
+                [9][CALL] from=ProxyERC20, to=MultiCollateralSynth, transfer(to(address): 0x7336F8, value(uint256): 17791840344841252243663688) -> True
+                  [10][STATICCALL] from=MultiCollateralSynth, to=ExchangerWithFeeRecAlternatives, maxSecsLeftInWaitingPeriod(account(address): 0x824dcD, currencyKey(bytes32): b'sUSD\x00\x00\x00\x00\x00\x00\x00\x00\x00...) -> 0
+                    [11][STATICCALL] from=ExchangerWithFeeRecAlternatives, to=ExchangeState, getMaxTimestamp(account(address): 0x824dcD, currencyKey(bytes32): b'sUSD\x00\x00\x00\x00\x00\x00\x00\x00\x00...) -> 0
+                    [11][STATICCALL] from=ExchangerWithFeeRecAlternatives, to=FlexibleStorage, getUIntValue(contractName(bytes32): b'SystemSettings\x00\x00\x00\x00\x00\x00\x..., record(bytes32): b'waitingPeriodSecs\x00\x00\x00\x00\x00\x0...) -> 360
+                  [10][STATICCALL] from=MultiCollateralSynth, to=ExchangerWithFeeRecAlternatives, settlementOwing(account(address): 0x824dcD, currencyKey(bytes32): b'sUSD\x00\x00\x00\x00\x00\x00\x00\x00\x00...) -> ['0', '0', '0']
+                    [11][STATICCALL] from=ExchangerWithFeeRecAlternatives, to=ExchangeState, getLengthOfEntries(account(address): 0x824dcD, currencyKey(bytes32): b'sUSD\x00\x00\x00\x00\x00\x00\x00\x00\x00...) -> 0
+                  [10][STATICCALL] from=MultiCollateralSynth, to=TokenState, balanceOf((address): 0x824dcD) -> 20874384860325577812346183
+                  [10][STATICCALL] from=MultiCollateralSynth, to=SystemStatus, requireSynthActive(currencyKey(bytes32): b'sUSD\x00\x00\x00\x00\x00\x00\x00\x00\x00...) -> None
+                  [10][STATICCALL] from=MultiCollateralSynth, to=TokenState, balanceOf((address): 0x824dcD) -> 20874384860325577812346183
+                  [10][CALL] from=MultiCollateralSynth, to=TokenState, setBalanceOf(account(address): 0x824dcD, value(uint256): 3082544515484325568682495) -> None
+                  [10][STATICCALL] from=MultiCollateralSynth, to=TokenState, balanceOf((address): 0x7336F8) -> 2059771765993513775780320
+                  [10][CALL] from=MultiCollateralSynth, to=TokenState, setBalanceOf(account(address): 0x7336F8, value(uint256): 19851612110834766019444008) -> None
+                  [10][CALL] from=MultiCollateralSynth, to=ProxyERC20, _emit(callData(bytes): b'\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00..., numTopics(uint256): 3, topic1(bytes32): b'\xdd\xf2R\xad\x1b\xe2\xc8\x9bi\xc2\xb0h\..., topic2(bytes32): b'\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00..., topic3(bytes32): b'\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00..., topic4(bytes32): b'\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00...) -> None
+          [6][STATICCALL] from=0x7336F8, to=ProxyERC20, balanceOf(owner(address): 0x7336F8) -> 19851612110834766019444008
+            [7][CALL] from=ProxyERC20, to=MultiCollateralSynth, balanceOf(account(address): 0x7336F8) -> 19851612110834766019444008
+              [8][STATICCALL] from=MultiCollateralSynth, to=TokenState, balanceOf((address): 0x7336F8) -> 19851612110834766019444008
+          [6][CALL] from=0x7336F8, to=MetaSwap, swapuint8() -> 0x000000
+            [7][DELEGATECALL] from=MetaSwap, to=MetaSwapUtils, 0x98414eed() -> 0x000000
+              [8][STATICCALL] from=MetaSwap, to=ProxyERC20, balanceOf(owner(address): 0x7336F8) -> 19851612110834766019444008
+                [9][CALL] from=ProxyERC20, to=MultiCollateralSynth, balanceOf(account(address): 0x7336F8) -> 19851612110834766019444008
+                  [10][STATICCALL] from=MultiCollateralSynth, to=TokenState, balanceOf((address): 0x7336F8) -> 19851612110834766019444008
+              [8][STATICCALL] from=MetaSwap, to=ProxyERC20, balanceOf(owner(address): 0x824dcD) -> 3082544515484325568682495
+                [9][CALL] from=ProxyERC20, to=MultiCollateralSynth, balanceOf(account(address): 0x824dcD) -> 3082544515484325568682495
+                  [10][STATICCALL] from=MultiCollateralSynth, to=TokenState, balanceOf((address): 0x824dcD) -> 3082544515484325568682495
+              [8][CALL] from=MetaSwap, to=ProxyERC20, transferFrom(from(address): 0x7336F8, to(address): 0x824dcD, value(uint256): 5000000000000000000000000) -> True
+                [9][CALL] from=ProxyERC20, to=MultiCollateralSynth, setMessageSender(sender(address): 0x824dcD) -> None
+                [9][CALL] from=ProxyERC20, to=MultiCollateralSynth, transferFrom(from(address): 0x7336F8, to(address): 0x824dcD, value(uint256): 5000000000000000000000000) -> True
+                  [10][STATICCALL] from=MultiCollateralSynth, to=ExchangerWithFeeRecAlternatives, maxSecsLeftInWaitingPeriod(account(address): 0x7336F8, currencyKey(bytes32): b'sUSD\x00\x00\x00\x00\x00\x00\x00\x00\x00...) -> 0
+                    [11][STATICCALL] from=ExchangerWithFeeRecAlternatives, to=ExchangeState, getMaxTimestamp(account(address): 0x7336F8, currencyKey(bytes32): b'sUSD\x00\x00\x00\x00\x00\x00\x00\x00\x00...) -> 0
+                    [11][STATICCALL] from=ExchangerWithFeeRecAlternatives, to=FlexibleStorage, getUIntValue(contractName(bytes32): b'SystemSettings\x00\x00\x00\x00\x00\x00\x..., record(bytes32): b'waitingPeriodSecs\x00\x00\x00\x00\x00\x0...) -> 360
+                  [10][STATICCALL] from=MultiCollateralSynth, to=ExchangerWithFeeRecAlternatives, settlementOwing(account(address): 0x7336F8, currencyKey(bytes32): b'sUSD\x00\x00\x00\x00\x00\x00\x00\x00\x00...) -> ['0', '0', '0']
+                    [11][STATICCALL] from=ExchangerWithFeeRecAlternatives, to=ExchangeState, getLengthOfEntries(account(address): 0x7336F8, currencyKey(bytes32): b'sUSD\x00\x00\x00\x00\x00\x00\x00\x00\x00...) -> 0
+                  [10][STATICCALL] from=MultiCollateralSynth, to=TokenState, balanceOf((address): 0x7336F8) -> 19851612110834766019444008
+                  [10][STATICCALL] from=MultiCollateralSynth, to=SystemStatus, requireSynthActive(currencyKey(bytes32): b'sUSD\x00\x00\x00\x00\x00\x00\x00\x00\x00...) -> None
+                  [10][STATICCALL] from=MultiCollateralSynth, to=TokenState, allowance((address): 0x824dcD) -> 115792089237316195423570985008687907853269984665640564039457584007913129639935
+                  [10][STATICCALL] from=MultiCollateralSynth, to=TokenState, balanceOf((address): 0x7336F8) -> 19851612110834766019444008
+                  [10][CALL] from=MultiCollateralSynth, to=TokenState, setBalanceOf(account(address): 0x7336F8, value(uint256): 14851612110834766019444008) -> None
+                  [10][STATICCALL] from=MultiCollateralSynth, to=TokenState, balanceOf((address): 0x824dcD) -> 3082544515484325568682495
+                  [10][CALL] from=MultiCollateralSynth, to=TokenState, setBalanceOf(account(address): 0x824dcD, value(uint256): 8082544515484325568682495) -> None
+                  [10][CALL] from=MultiCollateralSynth, to=ProxyERC20, _emit(callData(bytes): b'\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00..., numTopics(uint256): 3, topic1(bytes32): b'\xdd\xf2R\xad\x1b\xe2\xc8\x9bi\xc2\xb0h\..., topic2(bytes32): b'\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00..., topic3(bytes32): b'\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00..., topic4(bytes32): b'\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00...) -> None
+              [8][STATICCALL] from=MetaSwap, to=ProxyERC20, balanceOf(owner(address): 0x824dcD) -> 8082544515484325568682495
+                [9][CALL] from=ProxyERC20, to=MultiCollateralSynth, balanceOf(account(address): 0x824dcD) -> 8082544515484325568682495
+                  [10][STATICCALL] from=MultiCollateralSynth, to=TokenState, balanceOf((address): 0x824dcD) -> 8082544515484325568682495
+              [8][CALL] from=MetaSwap, to=LPToken, transfer(recipient(address): 0x7336F8, amount(uint256): 5016537096730963109713838) -> True
+                [9][DELEGATECALL] from=LPToken, to=LPToken, transfer(recipient(address): 0x7336F8, amount(uint256): 5016537096730963109713838) -> True
+          [6][STATICCALL] from=0x7336F8, to=ProxyERC20, balanceOf(owner(address): 0x7336F8) -> 14851612110834766019444008
+            [7][CALL] from=ProxyERC20, to=MultiCollateralSynth, balanceOf(account(address): 0x7336F8) -> 14851612110834766019444008
+              [8][STATICCALL] from=MultiCollateralSynth, to=TokenState, balanceOf((address): 0x7336F8) -> 14851612110834766019444008
+          [6][STATICCALL] from=0x7336F8, to=LPToken, balanceOf(account(address): 0x7336F8) -> 5016537096730963109713838
+            [7][DELEGATECALL] from=LPToken, to=LPToken, balanceOf(account(address): 0x7336F8) -> 5016537096730963109713838
+          [6][CALL] from=0x7336F8, to=MetaSwap, swapuint8() -> 0x000000
+            [7][DELEGATECALL] from=MetaSwap, to=MetaSwapUtils, 0x98414eed() -> 0x000000
+              [8][STATICCALL] from=MetaSwap, to=ProxyERC20, balanceOf(owner(address): 0x7336F8) -> 14851612110834766019444008
+                [9][CALL] from=ProxyERC20, to=MultiCollateralSynth, balanceOf(account(address): 0x7336F8) -> 14851612110834766019444008
+                  [10][STATICCALL] from=MultiCollateralSynth, to=TokenState, balanceOf((address): 0x7336F8) -> 14851612110834766019444008
+              [8][STATICCALL] from=MetaSwap, to=ProxyERC20, balanceOf(owner(address): 0x824dcD) -> 8082544515484325568682495
+                [9][CALL] from=ProxyERC20, to=MultiCollateralSynth, balanceOf(account(address): 0x824dcD) -> 8082544515484325568682495
+                  [10][STATICCALL] from=MultiCollateralSynth, to=TokenState, balanceOf((address): 0x824dcD) -> 8082544515484325568682495
+              [8][CALL] from=MetaSwap, to=ProxyERC20, transferFrom(from(address): 0x7336F8, to(address): 0x824dcD, value(uint256): 10000000000000000000000000) -> True
+                [9][CALL] from=ProxyERC20, to=MultiCollateralSynth, setMessageSender(sender(address): 0x824dcD) -> None
+                [9][CALL] from=ProxyERC20, to=MultiCollateralSynth, transferFrom(from(address): 0x7336F8, to(address): 0x824dcD, value(uint256): 10000000000000000000000000) -> True
+                  [10][STATICCALL] from=MultiCollateralSynth, to=ExchangerWithFeeRecAlternatives, maxSecsLeftInWaitingPeriod(account(address): 0x7336F8, currencyKey(bytes32): b'sUSD\x00\x00\x00\x00\x00\x00\x00\x00\x00...) -> 0
+                    [11][STATICCALL] from=ExchangerWithFeeRecAlternatives, to=ExchangeState, getMaxTimestamp(account(address): 0x7336F8, currencyKey(bytes32): b'sUSD\x00\x00\x00\x00\x00\x00\x00\x00\x00...) -> 0
+                    [11][STATICCALL] from=ExchangerWithFeeRecAlternatives, to=FlexibleStorage, getUIntValue(contractName(bytes32): b'SystemSettings\x00\x00\x00\x00\x00\x00\x..., record(bytes32): b'waitingPeriodSecs\x00\x00\x00\x00\x00\x0...) -> 360
+                  [10][STATICCALL] from=MultiCollateralSynth, to=ExchangerWithFeeRecAlternatives, settlementOwing(account(address): 0x7336F8, currencyKey(bytes32): b'sUSD\x00\x00\x00\x00\x00\x00\x00\x00\x00...) -> ['0', '0', '0']
+                    [11][STATICCALL] from=ExchangerWithFeeRecAlternatives, to=ExchangeState, getLengthOfEntries(account(address): 0x7336F8, currencyKey(bytes32): b'sUSD\x00\x00\x00\x00\x00\x00\x00\x00\x00...) -> 0
+                  [10][STATICCALL] from=MultiCollateralSynth, to=TokenState, balanceOf((address): 0x7336F8) -> 14851612110834766019444008
+                  [10][STATICCALL] from=MultiCollateralSynth, to=SystemStatus, requireSynthActive(currencyKey(bytes32): b'sUSD\x00\x00\x00\x00\x00\x00\x00\x00\x00...) -> None
+                  [10][STATICCALL] from=MultiCollateralSynth, to=TokenState, allowance((address): 0x824dcD) -> 115792089237316195423570985008687907853269984665640564039457584007913129639935
+                  [10][STATICCALL] from=MultiCollateralSynth, to=TokenState, balanceOf((address): 0x7336F8) -> 14851612110834766019444008
+                  [10][CALL] from=MultiCollateralSynth, to=TokenState, setBalanceOf(account(address): 0x7336F8, value(uint256): 4851612110834766019444008) -> None
+                  [10][STATICCALL] from=MultiCollateralSynth, to=TokenState, balanceOf((address): 0x824dcD) -> 8082544515484325568682495
+                  [10][CALL] from=MultiCollateralSynth, to=TokenState, setBalanceOf(account(address): 0x824dcD, value(uint256): 18082544515484325568682495) -> None
+                  [10][CALL] from=MultiCollateralSynth, to=ProxyERC20, _emit(callData(bytes): b'\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00..., numTopics(uint256): 3, topic1(bytes32): b'\xdd\xf2R\xad\x1b\xe2\xc8\x9bi\xc2\xb0h\..., topic2(bytes32): b'\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00..., topic3(bytes32): b'\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00..., topic4(bytes32): b'\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00...) -> None
+              [8][STATICCALL] from=MetaSwap, to=ProxyERC20, balanceOf(owner(address): 0x824dcD) -> 18082544515484325568682495
+                [9][CALL] from=ProxyERC20, to=MultiCollateralSynth, balanceOf(account(address): 0x824dcD) -> 18082544515484325568682495
+                  [10][STATICCALL] from=MultiCollateralSynth, to=TokenState, balanceOf((address): 0x824dcD) -> 18082544515484325568682495
+              [8][CALL] from=MetaSwap, to=LPToken, transfer(recipient(address): 0x7336F8, amount(uint256): 4654333077089603189182019) -> True
+                [9][DELEGATECALL] from=LPToken, to=LPToken, transfer(recipient(address): 0x7336F8, amount(uint256): 4654333077089603189182019) -> True
+          [6][STATICCALL] from=0x7336F8, to=LPToken, balanceOf(account(address): 0x7336F8) -> 9670870173820566298895857
+            [7][DELEGATECALL] from=LPToken, to=LPToken, balanceOf(account(address): 0x7336F8) -> 9670870173820566298895857
+          [6][CALL] from=0x7336F8, to=MetaSwap, swapuint8() -> 0x000000
+            [7][DELEGATECALL] from=MetaSwap, to=MetaSwapUtils, 0x98414eed() -> 0x000000
+              [8][STATICCALL] from=MetaSwap, to=LPToken, balanceOf(account(address): 0x7336F8) -> 9670870173820566298895857
+                [9][DELEGATECALL] from=LPToken, to=LPToken, balanceOf(account(address): 0x7336F8) -> 9670870173820566298895857
+              [8][STATICCALL] from=MetaSwap, to=LPToken, balanceOf(account(address): 0x824dcD) -> 39193356157817385140192
+                [9][DELEGATECALL] from=LPToken, to=LPToken, balanceOf(account(address): 0x824dcD) -> 39193356157817385140192
+              [8][CALL] from=MetaSwap, to=LPToken, transferFrom(sender(address): 0x7336F8, recipient(address): 0x824dcD, amount(uint256): 4654333077089603189182019) -> True
+                [9][DELEGATECALL] from=LPToken, to=LPToken, transferFrom(sender(address): 0x7336F8, recipient(address): 0x824dcD, amount(uint256): 4654333077089603189182019) -> True
+              [8][STATICCALL] from=MetaSwap, to=LPToken, balanceOf(account(address): 0x824dcD) -> 4693526433247420574322211
+                [9][DELEGATECALL] from=LPToken, to=LPToken, balanceOf(account(address): 0x824dcD) -> 4693526433247420574322211
+              [8][CALL] from=MetaSwap, to=ProxyERC20, transfer(to(address): 0x7336F8, value(uint256): 11911969813689433873820900) -> True
+                [9][CALL] from=ProxyERC20, to=MultiCollateralSynth, setMessageSender(sender(address): 0x824dcD) -> None
+                [9][CALL] from=ProxyERC20, to=MultiCollateralSynth, transfer(to(address): 0x7336F8, value(uint256): 11911969813689433873820900) -> True
+                  [10][STATICCALL] from=MultiCollateralSynth, to=ExchangerWithFeeRecAlternatives, maxSecsLeftInWaitingPeriod(account(address): 0x824dcD, currencyKey(bytes32): b'sUSD\x00\x00\x00\x00\x00\x00\x00\x00\x00...) -> 0
+                    [11][STATICCALL] from=ExchangerWithFeeRecAlternatives, to=ExchangeState, getMaxTimestamp(account(address): 0x824dcD, currencyKey(bytes32): b'sUSD\x00\x00\x00\x00\x00\x00\x00\x00\x00...) -> 0
+                    [11][STATICCALL] from=ExchangerWithFeeRecAlternatives, to=FlexibleStorage, getUIntValue(contractName(bytes32): b'SystemSettings\x00\x00\x00\x00\x00\x00\x..., record(bytes32): b'waitingPeriodSecs\x00\x00\x00\x00\x00\x0...) -> 360
+                  [10][STATICCALL] from=MultiCollateralSynth, to=ExchangerWithFeeRecAlternatives, settlementOwing(account(address): 0x824dcD, currencyKey(bytes32): b'sUSD\x00\x00\x00\x00\x00\x00\x00\x00\x00...) -> ['0', '0', '0']
+                    [11][STATICCALL] from=ExchangerWithFeeRecAlternatives, to=ExchangeState, getLengthOfEntries(account(address): 0x824dcD, currencyKey(bytes32): b'sUSD\x00\x00\x00\x00\x00\x00\x00\x00\x00...) -> 0
+                  [10][STATICCALL] from=MultiCollateralSynth, to=TokenState, balanceOf((address): 0x824dcD) -> 18082544515484325568682495
+                  [10][STATICCALL] from=MultiCollateralSynth, to=SystemStatus, requireSynthActive(currencyKey(bytes32): b'sUSD\x00\x00\x00\x00\x00\x00\x00\x00\x00...) -> None
+                  [10][STATICCALL] from=MultiCollateralSynth, to=TokenState, balanceOf((address): 0x824dcD) -> 18082544515484325568682495
+                  [10][CALL] from=MultiCollateralSynth, to=TokenState, setBalanceOf(account(address): 0x824dcD, value(uint256): 6170574701794891694861595) -> None
+                  [10][STATICCALL] from=MultiCollateralSynth, to=TokenState, balanceOf((address): 0x7336F8) -> 4851612110834766019444008
+                  [10][CALL] from=MultiCollateralSynth, to=TokenState, setBalanceOf(account(address): 0x7336F8, value(uint256): 16763581924524199893264908) -> None
+                  [10][CALL] from=MultiCollateralSynth, to=ProxyERC20, _emit(callData(bytes): b'\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00..., numTopics(uint256): 3, topic1(bytes32): b'\xdd\xf2R\xad\x1b\xe2\xc8\x9bi\xc2\xb0h\..., topic2(bytes32): b'\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00..., topic3(bytes32): b'\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00..., topic4(bytes32): b'\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00...) -> None
+          [6][CALL] from=0x7336F8, to=MetaSwap, swapuint8() -> 0x000000
+            [7][DELEGATECALL] from=MetaSwap, to=MetaSwapUtils, 0x98414eed() -> 0x000000
+              [8][STATICCALL] from=MetaSwap, to=ProxyERC20, balanceOf(owner(address): 0x7336F8) -> 16763581924524199893264908
+                [9][CALL] from=ProxyERC20, to=MultiCollateralSynth, balanceOf(account(address): 0x7336F8) -> 16763581924524199893264908
+                  [10][STATICCALL] from=MultiCollateralSynth, to=TokenState, balanceOf((address): 0x7336F8) -> 16763581924524199893264908
+              [8][STATICCALL] from=MetaSwap, to=ProxyERC20, balanceOf(owner(address): 0x824dcD) -> 6170574701794891694861595
+                [9][CALL] from=ProxyERC20, to=MultiCollateralSynth, balanceOf(account(address): 0x824dcD) -> 6170574701794891694861595
+                  [10][STATICCALL] from=MultiCollateralSynth, to=TokenState, balanceOf((address): 0x824dcD) -> 6170574701794891694861595
+              [8][CALL] from=MetaSwap, to=ProxyERC20, transferFrom(from(address): 0x7336F8, to(address): 0x824dcD, value(uint256): 10000000000000000000000000) -> True
+                [9][CALL] from=ProxyERC20, to=MultiCollateralSynth, setMessageSender(sender(address): 0x824dcD) -> None
+                [9][CALL] from=ProxyERC20, to=MultiCollateralSynth, transferFrom(from(address): 0x7336F8, to(address): 0x824dcD, value(uint256): 10000000000000000000000000) -> True
+                  [10][STATICCALL] from=MultiCollateralSynth, to=ExchangerWithFeeRecAlternatives, maxSecsLeftInWaitingPeriod(account(address): 0x7336F8, currencyKey(bytes32): b'sUSD\x00\x00\x00\x00\x00\x00\x00\x00\x00...) -> 0
+                    [11][STATICCALL] from=ExchangerWithFeeRecAlternatives, to=ExchangeState, getMaxTimestamp(account(address): 0x7336F8, currencyKey(bytes32): b'sUSD\x00\x00\x00\x00\x00\x00\x00\x00\x00...) -> 0
+                    [11][STATICCALL] from=ExchangerWithFeeRecAlternatives, to=FlexibleStorage, getUIntValue(contractName(bytes32): b'SystemSettings\x00\x00\x00\x00\x00\x00\x..., record(bytes32): b'waitingPeriodSecs\x00\x00\x00\x00\x00\x0...) -> 360
+                  [10][STATICCALL] from=MultiCollateralSynth, to=ExchangerWithFeeRecAlternatives, settlementOwing(account(address): 0x7336F8, currencyKey(bytes32): b'sUSD\x00\x00\x00\x00\x00\x00\x00\x00\x00...) -> ['0', '0', '0']
+                    [11][STATICCALL] from=ExchangerWithFeeRecAlternatives, to=ExchangeState, getLengthOfEntries(account(address): 0x7336F8, currencyKey(bytes32): b'sUSD\x00\x00\x00\x00\x00\x00\x00\x00\x00...) -> 0
+                  [10][STATICCALL] from=MultiCollateralSynth, to=TokenState, balanceOf((address): 0x7336F8) -> 16763581924524199893264908
+                  [10][STATICCALL] from=MultiCollateralSynth, to=SystemStatus, requireSynthActive(currencyKey(bytes32): b'sUSD\x00\x00\x00\x00\x00\x00\x00\x00\x00...) -> None
+                  [10][STATICCALL] from=MultiCollateralSynth, to=TokenState, allowance((address): 0x824dcD) -> 115792089237316195423570985008687907853269984665640564039457584007913129639935
+                  [10][STATICCALL] from=MultiCollateralSynth, to=TokenState, balanceOf((address): 0x7336F8) -> 16763581924524199893264908
+                  [10][CALL] from=MultiCollateralSynth, to=TokenState, setBalanceOf(account(address): 0x7336F8, value(uint256): 6763581924524199893264908) -> None
+                  [10][STATICCALL] from=MultiCollateralSynth, to=TokenState, balanceOf((address): 0x824dcD) -> 6170574701794891694861595
+                  [10][CALL] from=MultiCollateralSynth, to=TokenState, setBalanceOf(account(address): 0x824dcD, value(uint256): 16170574701794891694861595) -> None
+                  [10][CALL] from=MultiCollateralSynth, to=ProxyERC20, _emit(callData(bytes): b'\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00..., numTopics(uint256): 3, topic1(bytes32): b'\xdd\xf2R\xad\x1b\xe2\xc8\x9bi\xc2\xb0h\..., topic2(bytes32): b'\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00..., topic3(bytes32): b'\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00..., topic4(bytes32): b'\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00...) -> None
+              [8][STATICCALL] from=MetaSwap, to=ProxyERC20, balanceOf(owner(address): 0x824dcD) -> 16170574701794891694861595
+                [9][CALL] from=ProxyERC20, to=MultiCollateralSynth, balanceOf(account(address): 0x824dcD) -> 16170574701794891694861595
+                  [10][STATICCALL] from=MultiCollateralSynth, to=TokenState, balanceOf((address): 0x824dcD) -> 16170574701794891694861595
+              [8][CALL] from=MetaSwap, to=LPToken, transfer(recipient(address): 0x7336F8, amount(uint256): 4661615013534255756105730) -> True
+                [9][DELEGATECALL] from=LPToken, to=LPToken, transfer(recipient(address): 0x7336F8, amount(uint256): 4661615013534255756105730) -> True
+          [6][STATICCALL] from=0x7336F8, to=LPToken, balanceOf(account(address): 0x7336F8) -> 9678152110265218865819568
+            [7][DELEGATECALL] from=LPToken, to=LPToken, balanceOf(account(address): 0x7336F8) -> 9678152110265218865819568
+          [6][CALL] from=0x7336F8, to=MetaSwap, swapuint8() -> 0x000000
+            [7][DELEGATECALL] from=MetaSwap, to=MetaSwapUtils, 0x98414eed() -> 0x000000
+              [8][STATICCALL] from=MetaSwap, to=LPToken, balanceOf(account(address): 0x7336F8) -> 9678152110265218865819568
+                [9][DELEGATECALL] from=LPToken, to=LPToken, balanceOf(account(address): 0x7336F8) -> 9678152110265218865819568
+              [8][STATICCALL] from=MetaSwap, to=LPToken, balanceOf(account(address): 0x824dcD) -> 31911419713164818216481
+                [9][DELEGATECALL] from=LPToken, to=LPToken, balanceOf(account(address): 0x824dcD) -> 31911419713164818216481
+              [8][CALL] from=MetaSwap, to=LPToken, transferFrom(sender(address): 0x7336F8, recipient(address): 0x824dcD, amount(uint256): 4661615013534255756105730) -> True
+                [9][DELEGATECALL] from=LPToken, to=LPToken, transferFrom(sender(address): 0x7336F8, recipient(address): 0x824dcD, amount(uint256): 4661615013534255756105730) -> True
+              [8][STATICCALL] from=MetaSwap, to=LPToken, balanceOf(account(address): 0x824dcD) -> 4693526433247420574322211
+                [9][DELEGATECALL] from=LPToken, to=LPToken, balanceOf(account(address): 0x824dcD) -> 4693526433247420574322211
+              [8][CALL] from=MetaSwap, to=ProxyERC20, transfer(to(address): 0x7336F8, value(uint256): 13324772362788771518189244) -> True
+                [9][CALL] from=ProxyERC20, to=MultiCollateralSynth, setMessageSender(sender(address): 0x824dcD) -> None
+                [9][CALL] from=ProxyERC20, to=MultiCollateralSynth, transfer(to(address): 0x7336F8, value(uint256): 13324772362788771518189244) -> True
+                  [10][STATICCALL] from=MultiCollateralSynth, to=ExchangerWithFeeRecAlternatives, maxSecsLeftInWaitingPeriod(account(address): 0x824dcD, currencyKey(bytes32): b'sUSD\x00\x00\x00\x00\x00\x00\x00\x00\x00...) -> 0
+                    [11][STATICCALL] from=ExchangerWithFeeRecAlternatives, to=ExchangeState, getMaxTimestamp(account(address): 0x824dcD, currencyKey(bytes32): b'sUSD\x00\x00\x00\x00\x00\x00\x00\x00\x00...) -> 0
+                    [11][STATICCALL] from=ExchangerWithFeeRecAlternatives, to=FlexibleStorage, getUIntValue(contractName(bytes32): b'SystemSettings\x00\x00\x00\x00\x00\x00\x..., record(bytes32): b'waitingPeriodSecs\x00\x00\x00\x00\x00\x0...) -> 360
+                  [10][STATICCALL] from=MultiCollateralSynth, to=ExchangerWithFeeRecAlternatives, settlementOwing(account(address): 0x824dcD, currencyKey(bytes32): b'sUSD\x00\x00\x00\x00\x00\x00\x00\x00\x00...) -> ['0', '0', '0']
+                    [11][STATICCALL] from=ExchangerWithFeeRecAlternatives, to=ExchangeState, getLengthOfEntries(account(address): 0x824dcD, currencyKey(bytes32): b'sUSD\x00\x00\x00\x00\x00\x00\x00\x00\x00...) -> 0
+                  [10][STATICCALL] from=MultiCollateralSynth, to=TokenState, balanceOf((address): 0x824dcD) -> 16170574701794891694861595
+                  [10][STATICCALL] from=MultiCollateralSynth, to=SystemStatus, requireSynthActive(currencyKey(bytes32): b'sUSD\x00\x00\x00\x00\x00\x00\x00\x00\x00...) -> None
+                  [10][STATICCALL] from=MultiCollateralSynth, to=TokenState, balanceOf((address): 0x824dcD) -> 16170574701794891694861595
+                  [10][CALL] from=MultiCollateralSynth, to=TokenState, setBalanceOf(account(address): 0x824dcD, value(uint256): 2845802339006120176672351) -> None
+                  [10][STATICCALL] from=MultiCollateralSynth, to=TokenState, balanceOf((address): 0x7336F8) -> 6763581924524199893264908
+                  [10][CALL] from=MultiCollateralSynth, to=TokenState, setBalanceOf(account(address): 0x7336F8, value(uint256): 20088354287312971411454152) -> None
+                  [10][CALL] from=MultiCollateralSynth, to=ProxyERC20, _emit(callData(bytes): b'\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00..., numTopics(uint256): 3, topic1(bytes32): b'\xdd\xf2R\xad\x1b\xe2\xc8\x9bi\xc2\xb0h\..., topic2(bytes32): b'\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00..., topic3(bytes32): b'\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00..., topic4(bytes32): b'\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00...) -> None
+          [6][STATICCALL] from=0x7336F8, to=ProxyERC20, balanceOf(owner(address): 0x7336F8) -> 20088354287312971411454152
+            [7][CALL] from=ProxyERC20, to=MultiCollateralSynth, balanceOf(account(address): 0x7336F8) -> 20088354287312971411454152
+              [8][STATICCALL] from=MultiCollateralSynth, to=TokenState, balanceOf((address): 0x7336F8) -> 20088354287312971411454152
+          [6][STATICCALL] from=0x7336F8, to=LPToken, balanceOf(account(address): 0x7336F8) -> 5016537096730963109713838
+            [7][DELEGATECALL] from=LPToken, to=LPToken, balanceOf(account(address): 0x7336F8) -> 5016537096730963109713838
+          [6][CALL] from=0x7336F8, to=LPToken, approve(spender(address): 0xaCb83E, amount(uint256): 115792089237316195423570985008687907853269...) -> True
+            [7][DELEGATECALL] from=LPToken, to=LPToken, approve(spender(address): 0xaCb83E, amount(uint256): 115792089237316195423570985008687907853269...) -> True
+          [6][CALL] from=0x7336F8, to=SwapFlashLoan, removeLiquidity(amount(uint256): 5016537096730963109713838, minAmounts(uint256[]): [0, 0, 0], deadline(uint256): 1651304424) -> [1810723455638732389504479, 1691981791323, 1530488975938]
+            [7][DELEGATECALL] from=SwapFlashLoan, to=SwapFlashLoan, removeLiquidity(amount(uint256): 5016537096730963109713838, minAmounts(uint256[]): [0, 0, 0], deadline(uint256): 1651304424) -> [1810723455638732389504479, 1691981791323, 1530488975938]
+              [8][DELEGATECALL] from=SwapFlashLoan, to=SwapUtils, 0x73fd6b3e() -> 0x000000
+                [9][STATICCALL] from=SwapFlashLoan, to=LPToken, balanceOf(account(address): 0x7336F8) -> 5016537096730963109713838
+                  [10][DELEGATECALL] from=LPToken, to=LPToken, balanceOf(account(address): 0x7336F8) -> 5016537096730963109713838
+                [9][STATICCALL] from=SwapFlashLoan, to=LPToken, totalSupply() -> 17634629772328871405964935
+                  [10][DELEGATECALL] from=LPToken, to=LPToken, totalSupply() -> 17634629772328871405964935
+                [9][CALL] from=SwapFlashLoan, to=Dai, transfer(dst(address): 0x7336F8, wad(uint256): 1810723455638732389504479) -> True
+                [9][CALL] from=SwapFlashLoan, to=FiatTokenProxy, transfer(to(address): 0x7336F8, value(uint256): 1691981791323) -> True
+                  [10][DELEGATECALL] from=FiatTokenProxy, to=FiatTokenV2_1, transfer(to(address): 0x7336F8, value(uint256): 1691981791323) -> True
+                [9][CALL] from=SwapFlashLoan, to=TetherToken, transfer(_to(address): 0x7336F8, _value(uint256): 1530488975938) -> None
+                [9][CALL] from=SwapFlashLoan, to=LPToken, burnFrom(account(address): 0x7336F8, amount(uint256): 5016537096730963109713838) -> None
+                  [10][DELEGATECALL] from=LPToken, to=LPToken, burnFrom(account(address): 0x7336F8, amount(uint256): 5016537096730963109713838) -> None
+          [6][STATICCALL] from=0x7336F8, to=Dai, balanceOf((address): 0x7336F8) -> 1810723455638732389504479
+          [6][STATICCALL] from=0x7336F8, to=TetherToken, balanceOf(who(address): 0x7336F8) -> 1530488975938
+          [6][CALL] from=0x7336F8, to=Vyper_contract, exchange(i(int128): 3, j(int128): 1, dx(uint256): 20088354287312971411454152, min_dy(uint256): 0) -> None
+            [7][CALL] from=Vyper_contract, to=ProxyERC20, transferFrom(from(address): 0x7336F8, to(address): 0xA5407e, value(uint256): 20088354287312971411454152) -> True
+              [8][CALL] from=ProxyERC20, to=MultiCollateralSynth, setMessageSender(sender(address): 0xA5407e) -> None
+              [8][CALL] from=ProxyERC20, to=MultiCollateralSynth, transferFrom(from(address): 0x7336F8, to(address): 0xA5407e, value(uint256): 20088354287312971411454152) -> True
+                [9][STATICCALL] from=MultiCollateralSynth, to=ExchangerWithFeeRecAlternatives, maxSecsLeftInWaitingPeriod(account(address): 0x7336F8, currencyKey(bytes32): b'sUSD\x00\x00\x00\x00\x00\x00\x00\x00\x00...) -> 0
+                  [10][STATICCALL] from=ExchangerWithFeeRecAlternatives, to=ExchangeState, getMaxTimestamp(account(address): 0x7336F8, currencyKey(bytes32): b'sUSD\x00\x00\x00\x00\x00\x00\x00\x00\x00...) -> 0
+                  [10][STATICCALL] from=ExchangerWithFeeRecAlternatives, to=FlexibleStorage, getUIntValue(contractName(bytes32): b'SystemSettings\x00\x00\x00\x00\x00\x00\x..., record(bytes32): b'waitingPeriodSecs\x00\x00\x00\x00\x00\x0...) -> 360
+                [9][STATICCALL] from=MultiCollateralSynth, to=ExchangerWithFeeRecAlternatives, settlementOwing(account(address): 0x7336F8, currencyKey(bytes32): b'sUSD\x00\x00\x00\x00\x00\x00\x00\x00\x00...) -> ['0', '0', '0']
+                  [10][STATICCALL] from=ExchangerWithFeeRecAlternatives, to=ExchangeState, getLengthOfEntries(account(address): 0x7336F8, currencyKey(bytes32): b'sUSD\x00\x00\x00\x00\x00\x00\x00\x00\x00...) -> 0
+                [9][STATICCALL] from=MultiCollateralSynth, to=TokenState, balanceOf((address): 0x7336F8) -> 20088354287312971411454152
+                [9][STATICCALL] from=MultiCollateralSynth, to=SystemStatus, requireSynthActive(currencyKey(bytes32): b'sUSD\x00\x00\x00\x00\x00\x00\x00\x00\x00...) -> None
+                [9][STATICCALL] from=MultiCollateralSynth, to=TokenState, allowance((address): 0xA5407e) -> 115792089237316195423570985008687907853269984665640564039457584007913129639935
+                [9][STATICCALL] from=MultiCollateralSynth, to=TokenState, balanceOf((address): 0x7336F8) -> 20088354287312971411454152
+                [9][CALL] from=MultiCollateralSynth, to=TokenState, setBalanceOf(account(address): 0x7336F8, value(uint256): 0) -> None
+                [9][STATICCALL] from=MultiCollateralSynth, to=TokenState, balanceOf((address): 0xA5407e) -> 9323691147204330688949616
+                [9][CALL] from=MultiCollateralSynth, to=TokenState, setBalanceOf(account(address): 0xA5407e, value(uint256): 29412045434517302100403768) -> None
+                [9][CALL] from=MultiCollateralSynth, to=ProxyERC20, _emit(callData(bytes): b'\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00..., numTopics(uint256): 3, topic1(bytes32): b'\xdd\xf2R\xad\x1b\xe2\xc8\x9bi\xc2\xb0h\..., topic2(bytes32): b'\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00..., topic3(bytes32): b'\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00..., topic4(bytes32): b'\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00...) -> None
+            [7][CALL] from=Vyper_contract, to=FiatTokenProxy, transfer(to(address): 0x7336F8, value(uint256): 20272319109484) -> True
+              [8][DELEGATECALL] from=FiatTokenProxy, to=FiatTokenV2_1, transfer(to(address): 0x7336F8, value(uint256): 20272319109484) -> True
+          [6][CALL] from=0x7336F8, to=Vyper_contract, exchange(i(int128): 0, j(int128): 1, dx(uint256): 1810723455638732389504479, min_dy(uint256): 0) -> None
+            [7][CALL] from=Vyper_contract, to=Dai, transferFrom(src(address): 0x7336F8, dst(address): 0xA5407e, wad(uint256): 1810723455638732389504479) -> True
+            [7][CALL] from=Vyper_contract, to=FiatTokenProxy, transfer(to(address): 0x7336F8, value(uint256): 1804689257866) -> True
+              [8][DELEGATECALL] from=FiatTokenProxy, to=FiatTokenV2_1, transfer(to(address): 0x7336F8, value(uint256): 1804689257866) -> True
+          [6][CALL] from=0x7336F8, to=Vyper_contract, exchange(i(int128): 2, j(int128): 1, dx(uint256): 1530488975938, min_dy(uint256): 0) -> None
+            [7][CALL] from=Vyper_contract, to=TetherToken, transferFrom(_from(address): 0x7336F8, _to(address): 0xA5407e, _value(uint256): 1530488975938) -> None
+            [7][CALL] from=Vyper_contract, to=FiatTokenProxy, transfer(to(address): 0x7336F8, value(uint256): 1523820480037) -> True
+              [8][DELEGATECALL] from=FiatTokenProxy, to=FiatTokenV2_1, transfer(to(address): 0x7336F8, value(uint256): 1523820480037) -> True
+          [6][STATICCALL] from=0x7336F8, to=FiatTokenProxy, balanceOf(account(address): 0x7336F8) -> 25292810638710
+            [7][DELEGATECALL] from=FiatTokenProxy, to=FiatTokenV2_1, balanceOf(account(address): 0x7336F8) -> 25292810638710
+          [6][CALL] from=0x7336F8, to=FiatTokenProxy, approve(spender(address): 0x271828, value(uint256): 115792089237316195423570985008687907853269...) -> True
+            [7][DELEGATECALL] from=FiatTokenProxy, to=FiatTokenV2_1, approve(spender(address): 0x271828, value(uint256): 115792089237316195423570985008687907853269...) -> True
+          [6][CALL] from=0x7336F8, to=0x84721a, repayuint256() -> None
+            [7][CALL] from=0x84721a, to=Euler, dispatch() -> None
+              [8][DELEGATECALL] from=Euler, to=DToken, repay(subAccountId(uint256): 0, amount(uint256): 15000000000000) -> None
+                [9][STATICCALL] from=Euler, to=FiatTokenProxy, balanceOf(account(address): 0x271828) -> 15752825468632
+                  [10][DELEGATECALL] from=FiatTokenProxy, to=FiatTokenV2_1, balanceOf(account(address): 0x271828) -> 15752825468632
+                [9][CALL] from=Euler, to=FiatTokenProxy, transferFrom(from(address): 0x7336F8, to(address): 0x271828, value(uint256): 15000000000000) -> True
+                  [10][DELEGATECALL] from=FiatTokenProxy, to=FiatTokenV2_1, transferFrom(from(address): 0x7336F8, to(address): 0x271828, value(uint256): 15000000000000) -> True
+                [9][STATICCALL] from=Euler, to=FiatTokenProxy, balanceOf(account(address): 0x271828) -> 30752825468632
+                  [10][DELEGATECALL] from=FiatTokenProxy, to=FiatTokenV2_1, balanceOf(account(address): 0x271828) -> 30752825468632
+                [9][DELEGATECALL] from=Euler, to=IRMClassStable, computeInterestRate(underlying(address): 0xA0b869, utilisation(uint32): 3515033808) -> 3150074357976576732
+                [9][CALL] from=Euler, to=0x84721a, 0x03ddf252() -> None
+        [5][DELEGATECALL] from=Euler, to=RiskManager, requireLiquidity(account(address): 0x7336F8) -> None
+  [2][STATICCALL] from=0x7336F8, to=FiatTokenProxy, balanceOf(account(address): 0x7336F8) -> 10292810638710
+    [3][DELEGATECALL] from=FiatTokenProxy, to=FiatTokenV2_1, balanceOf(account(address): 0x7336F8) -> 10292810638710
+  [2][CALL] from=0x7336F8, to=FiatTokenProxy, approve(spender(address): 0x68b346, value(uint256): 115792089237316195423570985008687907853269...) -> True
+    [3][DELEGATECALL] from=FiatTokenProxy, to=FiatTokenV2_1, approve(spender(address): 0x68b346, value(uint256): 115792089237316195423570985008687907853269...) -> True
+  [2][CALL] from=0x7336F8, to=SwapRouter02, swapExactTokensForTokens(amountIn(uint256): 10292810638710, amountOutMin(uint256): 0, path(address[]): ['0xA0b86991c6218b36c1d19D4a2e9Eb0cE3606eB..., to(address): 0x7336F8) -> 3375672900685060401652
+    [3][CALL] from=SwapRouter02, to=FiatTokenProxy, transferFrom(from(address): 0x7336F8, to(address): 0xB4e16d, value(uint256): 10292810638710) -> True
+      [4][DELEGATECALL] from=FiatTokenProxy, to=FiatTokenV2_1, transferFrom(from(address): 0x7336F8, to(address): 0xB4e16d, value(uint256): 10292810638710) -> True
+    [3][STATICCALL] from=SwapRouter02, to=WETH9, balanceOf((address): 0x7336F8) -> 0
+    [3][STATICCALL] from=SwapRouter02, to=UniswapV2Pair, getReserves() -> ['136527975124567', '48286687369118720657499', '1651304424']
+    [3][STATICCALL] from=SwapRouter02, to=FiatTokenProxy, balanceOf(account(address): 0xB4e16d) -> 146820785763277
+      [4][DELEGATECALL] from=FiatTokenProxy, to=FiatTokenV2_1, balanceOf(account(address): 0xB4e16d) -> 146820785763277
+    [3][CALL] from=SwapRouter02, to=UniswapV2Pair, swap(amount0Out(uint256): 0, amount1Out(uint256): 3375672900685060401652, to(address): 0x7336F8, data(bytes): b'') -> None
+      [4][CALL] from=UniswapV2Pair, to=WETH9, transfer(dst(address): 0x7336F8, wad(uint256): 3375672900685060401652) -> True
+      [4][STATICCALL] from=UniswapV2Pair, to=FiatTokenProxy, balanceOf(account(address): 0xB4e16d) -> 146820785763277
+        [5][DELEGATECALL] from=FiatTokenProxy, to=FiatTokenV2_1, balanceOf(account(address): 0xB4e16d) -> 146820785763277
+      [4][STATICCALL] from=UniswapV2Pair, to=WETH9, balanceOf((address): 0xB4e16d) -> 44911014468433660255847
+    [3][STATICCALL] from=SwapRouter02, to=WETH9, balanceOf((address): 0x7336F8) -> 3375672900685060401652
+  [2][STATICCALL] from=0x7336F8, to=WETH9, balanceOf((address): 0x7336F8) -> 3375672900685060401652
+  [2][CALL] from=0x7336F8, to=WETH9, transfer(dst(address): 0x63341B, wad(uint256): 3375672900685060401652) -> True

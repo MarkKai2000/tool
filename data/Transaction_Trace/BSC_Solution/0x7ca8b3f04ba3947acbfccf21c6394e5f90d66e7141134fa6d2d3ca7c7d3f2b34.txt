@@ -1,0 +1,151 @@
+[1][CALL] from=0x52d65a, to=0xcda2b0, 0x2f573b38() -> 0x000000
+  [2][CALL] from=0xcda2b0, to=TransparentUpgradeableProxy, _transferOwnership(newOwner(address): 0xCda2B0) -> None
+    [3][DELEGATECALL] from=TransparentUpgradeableProxy, to=LiveCryptoPartyStakingV2, _transferOwnership(newOwner(address): 0xCda2B0) -> None
+  [2][CALL] from=0xcda2b0, to=TransparentUpgradeableProxy, SetFees(_feeReciever(address): 0x000000, _penaltyFee(uint256): 0, _claimFee(uint256): 0) -> None
+    [3][DELEGATECALL] from=TransparentUpgradeableProxy, to=LiveCryptoPartyStakingV2, SetFees(_feeReciever(address): 0x000000, _penaltyFee(uint256): 0, _claimFee(uint256): 0) -> None
+  [2][CALL] from=0xcda2b0, to=TransparentUpgradeableProxy, _transferOwnership(newOwner(address): 0xa4d3a0) -> None
+    [3][DELEGATECALL] from=TransparentUpgradeableProxy, to=LiveCryptoPartyStakingV2, _transferOwnership(newOwner(address): 0xa4d3a0) -> None
+  [2][CALL] from=0xcda2b0, to=TransparentUpgradeableProxy, withdraw(index(uint256): 0) -> None
+    [3][DELEGATECALL] from=TransparentUpgradeableProxy, to=LiveCryptoPartyStakingV2, withdraw(index(uint256): 0) -> None
+      [4][CALL] from=TransparentUpgradeableProxy, to=LiveCryptoParty, transfer(recipient(address): 0xCda2B0, amount(uint256): 1) -> True
+      [4][CALL] from=TransparentUpgradeableProxy, to=LiveCryptoParty, transferFrom(sender(address): 0xa4d3a0, recipient(address): 0xCda2B0, amount(uint256): 1697452606298515) -> True
+      [4][CALL][0.0] from=TransparentUpgradeableProxy, to=0x000000
+  [2][CALL] from=0xcda2b0, to=TransparentUpgradeableProxy, _transferOwnership(newOwner(address): 0x3ECc16) -> None
+    [3][DELEGATECALL] from=TransparentUpgradeableProxy, to=LiveCryptoPartyStakingV2, _transferOwnership(newOwner(address): 0x3ECc16) -> None
+  [2][CALL] from=0xcda2b0, to=TransparentUpgradeableProxy, withdraw(index(uint256): 1) -> None
+    [3][DELEGATECALL] from=TransparentUpgradeableProxy, to=LiveCryptoPartyStakingV2, withdraw(index(uint256): 1) -> None
+      [4][CALL] from=TransparentUpgradeableProxy, to=LiveCryptoParty, transfer(recipient(address): 0xCda2B0, amount(uint256): 1) -> True
+      [4][CALL] from=TransparentUpgradeableProxy, to=LiveCryptoParty, transferFrom(sender(address): 0x3ECc16, recipient(address): 0xCda2B0, amount(uint256): 100792289207686) -> True
+      [4][CALL][0.0] from=TransparentUpgradeableProxy, to=0x000000
+  [2][CALL] from=0xcda2b0, to=TransparentUpgradeableProxy, _transferOwnership(newOwner(address): 0x07E722) -> None
+    [3][DELEGATECALL] from=TransparentUpgradeableProxy, to=LiveCryptoPartyStakingV2, _transferOwnership(newOwner(address): 0x07E722) -> None
+  [2][CALL] from=0xcda2b0, to=TransparentUpgradeableProxy, withdraw(index(uint256): 2) -> None
+    [3][DELEGATECALL] from=TransparentUpgradeableProxy, to=LiveCryptoPartyStakingV2, withdraw(index(uint256): 2) -> None
+      [4][CALL] from=TransparentUpgradeableProxy, to=LiveCryptoParty, transfer(recipient(address): 0xCda2B0, amount(uint256): 1) -> True
+      [4][CALL] from=TransparentUpgradeableProxy, to=LiveCryptoParty, transferFrom(sender(address): 0x07E722, recipient(address): 0xCda2B0, amount(uint256): 1592122561894197) -> True
+      [4][CALL][0.0] from=TransparentUpgradeableProxy, to=0x000000
+  [2][CALL] from=0xcda2b0, to=TransparentUpgradeableProxy, _transferOwnership(newOwner(address): 0xfFdf96) -> None
+    [3][DELEGATECALL] from=TransparentUpgradeableProxy, to=LiveCryptoPartyStakingV2, _transferOwnership(newOwner(address): 0xfFdf96) -> None
+  [2][CALL] from=0xcda2b0, to=TransparentUpgradeableProxy, withdraw(index(uint256): 3) -> None
+    [3][DELEGATECALL] from=TransparentUpgradeableProxy, to=LiveCryptoPartyStakingV2, withdraw(index(uint256): 3) -> None
+      [4][CALL] from=TransparentUpgradeableProxy, to=LiveCryptoParty, transfer(recipient(address): 0xCda2B0, amount(uint256): 1) -> True
+      [4][CALL] from=TransparentUpgradeableProxy, to=LiveCryptoParty, transferFrom(sender(address): 0xfFdf96, recipient(address): 0xCda2B0, amount(uint256): 187220747874249) -> True
+      [4][CALL][0.0] from=TransparentUpgradeableProxy, to=0x000000
+  [2][CALL] from=0xcda2b0, to=TransparentUpgradeableProxy, _transferOwnership(newOwner(address): 0xfD1dB3) -> None
+    [3][DELEGATECALL] from=TransparentUpgradeableProxy, to=LiveCryptoPartyStakingV2, _transferOwnership(newOwner(address): 0xfD1dB3) -> None
+  [2][CALL] from=0xcda2b0, to=TransparentUpgradeableProxy, withdraw(index(uint256): 4) -> None
+    [3][DELEGATECALL] from=TransparentUpgradeableProxy, to=LiveCryptoPartyStakingV2, withdraw(index(uint256): 4) -> None
+      [4][CALL] from=TransparentUpgradeableProxy, to=LiveCryptoParty, transfer(recipient(address): 0xCda2B0, amount(uint256): 1) -> True
+      [4][CALL] from=TransparentUpgradeableProxy, to=LiveCryptoParty, transferFrom(sender(address): 0xfD1dB3, recipient(address): 0xCda2B0, amount(uint256): 214998969628456) -> True
+      [4][CALL][0.0] from=TransparentUpgradeableProxy, to=0x000000
+  [2][CALL] from=0xcda2b0, to=TransparentUpgradeableProxy, _transferOwnership(newOwner(address): 0xCda2B0) -> None
+    [3][DELEGATECALL] from=TransparentUpgradeableProxy, to=LiveCryptoPartyStakingV2, _transferOwnership(newOwner(address): 0xCda2B0) -> None
+  [2][CALL] from=0xcda2b0, to=LiveCryptoParty, approve(spender(address): 0x38b0EF, amount(uint256): 115792089237316195423570985008687907853269...) -> True
+  [2][CALL] from=0xcda2b0, to=TransparentUpgradeableProxy, withdraw(index(uint256): 5) -> None
+    [3][DELEGATECALL] from=TransparentUpgradeableProxy, to=LiveCryptoPartyStakingV2, withdraw(index(uint256): 5) -> None
+      [4][CALL] from=TransparentUpgradeableProxy, to=LiveCryptoParty, transfer(recipient(address): 0xCda2B0, amount(uint256): 1830098499999995) -> True
+      [4][CALL] from=TransparentUpgradeableProxy, to=LiveCryptoParty, transferFrom(sender(address): 0xCda2B0, recipient(address): 0xCda2B0, amount(uint256): 1830098499999) -> True
+      [4][CALL][0.0] from=TransparentUpgradeableProxy, to=0x000000
+  [2][CALL] from=0xcda2b0, to=TransparentUpgradeableProxy, SetFees(_feeReciever(address): 0x712655, _penaltyFee(uint256): 5000000000000000, _claimFee(uint256): 2000000000000000) -> None
+    [3][DELEGATECALL] from=TransparentUpgradeableProxy, to=LiveCryptoPartyStakingV2, SetFees(_feeReciever(address): 0x712655, _penaltyFee(uint256): 5000000000000000, _claimFee(uint256): 2000000000000000) -> None
+  [2][CALL] from=0xcda2b0, to=TransparentUpgradeableProxy, _transferOwnership(newOwner(address): 0x712655) -> None
+    [3][DELEGATECALL] from=TransparentUpgradeableProxy, to=LiveCryptoPartyStakingV2, _transferOwnership(newOwner(address): 0x712655) -> None
+  [2][STATICCALL] from=0xcda2b0, to=LiveCryptoParty, balanceOf(account(address): 0xCda2B0) -> 5622685674903103
+  [2][CALL] from=0xcda2b0, to=LiveCryptoParty, approve(spender(address): 0x6AC689, amount(uint256): 5622685674903103) -> True
+  [2][STATICCALL] from=0xcda2b0, to=OptimizedTransparentUpgradeableProxy, getSwapFees(amountIn(uint256): 5622685674903103, path(address[]): ['0x7150363247D59F1539C5D2Af5E9b743Be07e2F...) -> 25130495110123495
+    [3][DELEGATECALL] from=OptimizedTransparentUpgradeableProxy, to=SafeSwapTradeRouter, getSwapFees(amountIn(uint256): 5622685674903103, path(address[]): ['0x7150363247D59F1539C5D2Af5E9b743Be07e2F...) -> 25130495110123495
+      [4][STATICCALL] from=OptimizedTransparentUpgradeableProxy, to=OptimizedTransparentUpgradeableProxy, getAmountsOut(amountIn(uint256): 5622685674903103, path(address[]): ['0x7150363247D59F1539C5D2Af5E9b743Be07e2F...) -> [5622685674903103, 10052198044049398370]
+        [5][DELEGATECALL] from=OptimizedTransparentUpgradeableProxy, to=SafeswapRouterProxy1, getAmountsOut(amountIn(uint256): 5622685674903103, path(address[]): ['0x7150363247D59F1539C5D2Af5E9b743Be07e2F...) -> [5622685674903103, 10052198044049398370]
+          [6][STATICCALL] from=OptimizedTransparentUpgradeableProxy, to=OptimizedTransparentUpgradeableProxy, getPair((address): 0xbb4CdB) -> 0xa8822c
+            [7][DELEGATECALL] from=OptimizedTransparentUpgradeableProxy, to=SafeswapFactory, getPair((address): 0xbb4CdB) -> 0xa8822c
+          [6][STATICCALL] from=OptimizedTransparentUpgradeableProxy, to=OptimizedTransparentUpgradeableProxy, getPair((address): 0xbb4CdB) -> 0xa8822c
+            [7][DELEGATECALL] from=OptimizedTransparentUpgradeableProxy, to=SafeswapFactory, getPair((address): 0xbb4CdB) -> 0xa8822c
+          [6][STATICCALL] from=OptimizedTransparentUpgradeableProxy, to=OptimizedTransparentUpgradeableProxy, getReserves() -> ['3063935190255881', '15540857222528309246', '1675629941']
+            [7][STATICCALL] from=OptimizedTransparentUpgradeableProxy, to=OptimizedTransparentUpgradeableProxy, implementation() -> 0x35e072
+              [8][DELEGATECALL] from=OptimizedTransparentUpgradeableProxy, to=SafeswapFactory, implementation() -> 0x35e072
+            [7][DELEGATECALL] from=OptimizedTransparentUpgradeableProxy, to=SafeswapPair, getReserves() -> ['3063935190255881', '15540857222528309246', '1675629941']
+      [4][STATICCALL] from=OptimizedTransparentUpgradeableProxy, to=LiveCryptoParty, decimals() -> 9
+      [4][STATICCALL] from=OptimizedTransparentUpgradeableProxy, to=OptimizedTransparentUpgradeableProxy, WETH() -> 0xbb4cdb
+        [5][DELEGATECALL] from=OptimizedTransparentUpgradeableProxy, to=SafeswapRouterProxy1, WETH() -> 0xbb4cdb
+      [4][STATICCALL] from=OptimizedTransparentUpgradeableProxy, to=OptimizedTransparentUpgradeableProxy, WETH() -> 0xbb4cdb
+        [5][DELEGATECALL] from=OptimizedTransparentUpgradeableProxy, to=SafeswapRouterProxy1, WETH() -> 0xbb4cdb
+      [4][STATICCALL] from=OptimizedTransparentUpgradeableProxy, to=OptimizedTransparentUpgradeableProxy, getAmountsOut(amountIn(uint256): 5622685674903103, path(address[]): ['0x7150363247D59F1539C5D2Af5E9b743Be07e2F...) -> [5622685674903103, 10052198044049398370]
+        [5][DELEGATECALL] from=OptimizedTransparentUpgradeableProxy, to=SafeswapRouterProxy1, getAmountsOut(amountIn(uint256): 5622685674903103, path(address[]): ['0x7150363247D59F1539C5D2Af5E9b743Be07e2F...) -> [5622685674903103, 10052198044049398370]
+          [6][STATICCALL] from=OptimizedTransparentUpgradeableProxy, to=OptimizedTransparentUpgradeableProxy, getPair((address): 0xbb4CdB) -> 0xa8822c
+            [7][DELEGATECALL] from=OptimizedTransparentUpgradeableProxy, to=SafeswapFactory, getPair((address): 0xbb4CdB) -> 0xa8822c
+          [6][STATICCALL] from=OptimizedTransparentUpgradeableProxy, to=OptimizedTransparentUpgradeableProxy, getPair((address): 0xbb4CdB) -> 0xa8822c
+            [7][DELEGATECALL] from=OptimizedTransparentUpgradeableProxy, to=SafeswapFactory, getPair((address): 0xbb4CdB) -> 0xa8822c
+          [6][STATICCALL] from=OptimizedTransparentUpgradeableProxy, to=OptimizedTransparentUpgradeableProxy, getReserves() -> ['3063935190255881', '15540857222528309246', '1675629941']
+            [7][STATICCALL] from=OptimizedTransparentUpgradeableProxy, to=OptimizedTransparentUpgradeableProxy, implementation() -> 0x35e072
+              [8][DELEGATECALL] from=OptimizedTransparentUpgradeableProxy, to=SafeswapFactory, implementation() -> 0x35e072
+            [7][DELEGATECALL] from=OptimizedTransparentUpgradeableProxy, to=SafeswapPair, getReserves() -> ['3063935190255881', '15540857222528309246', '1675629941']
+  [2][CALL] from=0xcda2b0, to=OptimizedTransparentUpgradeableProxy, swapExactTokensForTokensWithFeeAmount(trade(tuple): {'amountIn': 5622685674903103, 'amountOut'...) -> None
+    [3][DELEGATECALL] from=OptimizedTransparentUpgradeableProxy, to=SafeSwapTradeRouter, swapExactTokensForTokensWithFeeAmount(trade(tuple): {'amountIn': 5622685674903103, 'amountOut'...) -> None
+      [4][STATICCALL] from=OptimizedTransparentUpgradeableProxy, to=OptimizedTransparentUpgradeableProxy, getAmountsOut(amountIn(uint256): 5622685674903103, path(address[]): ['0x7150363247D59F1539C5D2Af5E9b743Be07e2F...) -> [5622685674903103, 10052198044049398370]
+        [5][DELEGATECALL] from=OptimizedTransparentUpgradeableProxy, to=SafeswapRouterProxy1, getAmountsOut(amountIn(uint256): 5622685674903103, path(address[]): ['0x7150363247D59F1539C5D2Af5E9b743Be07e2F...) -> [5622685674903103, 10052198044049398370]
+          [6][STATICCALL] from=OptimizedTransparentUpgradeableProxy, to=OptimizedTransparentUpgradeableProxy, getPair((address): 0xbb4CdB) -> 0xa8822c
+            [7][DELEGATECALL] from=OptimizedTransparentUpgradeableProxy, to=SafeswapFactory, getPair((address): 0xbb4CdB) -> 0xa8822c
+          [6][STATICCALL] from=OptimizedTransparentUpgradeableProxy, to=OptimizedTransparentUpgradeableProxy, getPair((address): 0xbb4CdB) -> 0xa8822c
+            [7][DELEGATECALL] from=OptimizedTransparentUpgradeableProxy, to=SafeswapFactory, getPair((address): 0xbb4CdB) -> 0xa8822c
+          [6][STATICCALL] from=OptimizedTransparentUpgradeableProxy, to=OptimizedTransparentUpgradeableProxy, getReserves() -> ['3063935190255881', '15540857222528309246', '1675629941']
+            [7][STATICCALL] from=OptimizedTransparentUpgradeableProxy, to=OptimizedTransparentUpgradeableProxy, implementation() -> 0x35e072
+              [8][DELEGATECALL] from=OptimizedTransparentUpgradeableProxy, to=SafeswapFactory, implementation() -> 0x35e072
+            [7][DELEGATECALL] from=OptimizedTransparentUpgradeableProxy, to=SafeswapPair, getReserves() -> ['3063935190255881', '15540857222528309246', '1675629941']
+      [4][STATICCALL] from=OptimizedTransparentUpgradeableProxy, to=LiveCryptoParty, decimals() -> 9
+      [4][STATICCALL] from=OptimizedTransparentUpgradeableProxy, to=OptimizedTransparentUpgradeableProxy, WETH() -> 0xbb4cdb
+        [5][DELEGATECALL] from=OptimizedTransparentUpgradeableProxy, to=SafeswapRouterProxy1, WETH() -> 0xbb4cdb
+      [4][STATICCALL] from=OptimizedTransparentUpgradeableProxy, to=OptimizedTransparentUpgradeableProxy, WETH() -> 0xbb4cdb
+        [5][DELEGATECALL] from=OptimizedTransparentUpgradeableProxy, to=SafeswapRouterProxy1, WETH() -> 0xbb4cdb
+      [4][STATICCALL] from=OptimizedTransparentUpgradeableProxy, to=OptimizedTransparentUpgradeableProxy, getAmountsOut(amountIn(uint256): 5622685674903103, path(address[]): ['0x7150363247D59F1539C5D2Af5E9b743Be07e2F...) -> [5622685674903103, 10052198044049398370]
+        [5][DELEGATECALL] from=OptimizedTransparentUpgradeableProxy, to=SafeswapRouterProxy1, getAmountsOut(amountIn(uint256): 5622685674903103, path(address[]): ['0x7150363247D59F1539C5D2Af5E9b743Be07e2F...) -> [5622685674903103, 10052198044049398370]
+          [6][STATICCALL] from=OptimizedTransparentUpgradeableProxy, to=OptimizedTransparentUpgradeableProxy, getPair((address): 0xbb4CdB) -> 0xa8822c
+            [7][DELEGATECALL] from=OptimizedTransparentUpgradeableProxy, to=SafeswapFactory, getPair((address): 0xbb4CdB) -> 0xa8822c
+          [6][STATICCALL] from=OptimizedTransparentUpgradeableProxy, to=OptimizedTransparentUpgradeableProxy, getPair((address): 0xbb4CdB) -> 0xa8822c
+            [7][DELEGATECALL] from=OptimizedTransparentUpgradeableProxy, to=SafeswapFactory, getPair((address): 0xbb4CdB) -> 0xa8822c
+          [6][STATICCALL] from=OptimizedTransparentUpgradeableProxy, to=OptimizedTransparentUpgradeableProxy, getReserves() -> ['3063935190255881', '15540857222528309246', '1675629941']
+            [7][STATICCALL] from=OptimizedTransparentUpgradeableProxy, to=OptimizedTransparentUpgradeableProxy, implementation() -> 0x35e072
+              [8][DELEGATECALL] from=OptimizedTransparentUpgradeableProxy, to=SafeswapFactory, implementation() -> 0x35e072
+            [7][DELEGATECALL] from=OptimizedTransparentUpgradeableProxy, to=SafeswapPair, getReserves() -> ['3063935190255881', '15540857222528309246', '1675629941']
+      [4][CALL] from=OptimizedTransparentUpgradeableProxy, to=OptimizedTransparentUpgradeableProxy, fee() -> ['3015659413214819', '5026099022024699', '17088736674883976']
+        [5][DELEGATECALL] from=OptimizedTransparentUpgradeableProxy, to=FeeJar, fee() -> ['3015659413214819', '5026099022024699', '17088736674883976']
+          [6][CALL][0.003015659413214819] from=OptimizedTransparentUpgradeableProxy, to=OptimizedTransparentUpgradeableProxy
+            [7][DELEGATECALL][0.003015659413214819] from=OptimizedTransparentUpgradeableProxy, to=BuyBackBurn
+          [6][STATICCALL] from=OptimizedTransparentUpgradeableProxy, to=OptimizedTransparentUpgradeableProxy, feeTo() -> 0x92425f
+            [7][DELEGATECALL] from=OptimizedTransparentUpgradeableProxy, to=SafeswapFactory, feeTo() -> 0x92425f
+          [6][CALL][0.005026099022024699] from=OptimizedTransparentUpgradeableProxy, to=0x92425f
+          [6][CALL][0.017088736674883975] from=OptimizedTransparentUpgradeableProxy, to=TransparentUpgradeableProxy
+            [7][DELEGATECALL][0.017088736674883975] from=TransparentUpgradeableProxy, to=Safemoon
+      [4][CALL] from=OptimizedTransparentUpgradeableProxy, to=OptimizedTransparentUpgradeableProxy, swapExactTokensForTokensSupportingFeeOnTransferTokensuint256() -> None
+        [5][DELEGATECALL] from=OptimizedTransparentUpgradeableProxy, to=SafeswapRouterProxy1, swapExactTokensForTokensSupportingFeeOnTransferTokensuint256() -> None
+          [6][DELEGATECALL] from=OptimizedTransparentUpgradeableProxy, to=SafeswapRouterProxy2, swapExactTokensForTokensSupportingFeeOnTransferTokens(amountIn(uint256): 5622685674903103, amountOutMin(uint256): 0, path(address[]): ['0x7150363247D59F1539C5D2Af5E9b743Be07e2F..., from(address): 0xCda2B0, to(uint256): 0xCda2B0) -> None
+            [7][STATICCALL] from=OptimizedTransparentUpgradeableProxy, to=OptimizedTransparentUpgradeableProxy, getPair((address): 0xbb4CdB) -> 0xa8822c
+              [8][DELEGATECALL] from=OptimizedTransparentUpgradeableProxy, to=SafeswapFactory, getPair((address): 0xbb4CdB) -> 0xa8822c
+            [7][CALL] from=OptimizedTransparentUpgradeableProxy, to=LiveCryptoParty, transferFrom(sender(address): 0xCda2B0, recipient(address): 0xa8822c, amount(uint256): 5622685674903103) -> True
+            [7][STATICCALL] from=OptimizedTransparentUpgradeableProxy, to=WBNB, balanceOf((address): 0xCda2B0) -> 0
+            [7][STATICCALL] from=OptimizedTransparentUpgradeableProxy, to=OptimizedTransparentUpgradeableProxy, getPair((address): 0xbb4CdB) -> 0xa8822c
+              [8][DELEGATECALL] from=OptimizedTransparentUpgradeableProxy, to=SafeswapFactory, getPair((address): 0xbb4CdB) -> 0xa8822c
+            [7][STATICCALL] from=OptimizedTransparentUpgradeableProxy, to=OptimizedTransparentUpgradeableProxy, getReserves() -> ['3063935190255881', '15540857222528309246', '1675629941']
+              [8][STATICCALL] from=OptimizedTransparentUpgradeableProxy, to=OptimizedTransparentUpgradeableProxy, implementation() -> 0x35e072
+                [9][DELEGATECALL] from=OptimizedTransparentUpgradeableProxy, to=SafeswapFactory, implementation() -> 0x35e072
+              [8][DELEGATECALL] from=OptimizedTransparentUpgradeableProxy, to=SafeswapPair, getReserves() -> ['3063935190255881', '15540857222528309246', '1675629941']
+            [7][STATICCALL] from=OptimizedTransparentUpgradeableProxy, to=LiveCryptoParty, balanceOf(account(address): 0xa8822c) -> 8658507436784469
+            [7][CALL] from=OptimizedTransparentUpgradeableProxy, to=OptimizedTransparentUpgradeableProxy, swap(amount0Out(uint256): 0, amount1Out(uint256): 10034389469017506969, to(address): 0xCda2B0, data(bytes): b'') -> None
+              [8][STATICCALL] from=OptimizedTransparentUpgradeableProxy, to=OptimizedTransparentUpgradeableProxy, implementation() -> 0x35e072
+                [9][DELEGATECALL] from=OptimizedTransparentUpgradeableProxy, to=SafeswapFactory, implementation() -> 0x35e072
+              [8][DELEGATECALL] from=OptimizedTransparentUpgradeableProxy, to=SafeswapPair, swap(amount0Out(uint256): 0, amount1Out(uint256): 10034389469017506969, to(address): 0xCda2B0, data(bytes): b'') -> None
+                [9][STATICCALL] from=OptimizedTransparentUpgradeableProxy, to=OptimizedTransparentUpgradeableProxy, router() -> 0x6ac689
+                  [10][DELEGATECALL] from=OptimizedTransparentUpgradeableProxy, to=SafeswapFactory, router() -> 0x6ac689
+                [9][STATICCALL] from=OptimizedTransparentUpgradeableProxy, to=OptimizedTransparentUpgradeableProxy, isBlacklistedStatus((address): 0xCda2B0) -> False
+                  [10][DELEGATECALL] from=OptimizedTransparentUpgradeableProxy, to=SafeswapFactory, isBlacklistedStatus((address): 0xCda2B0) -> False
+                [9][CALL] from=OptimizedTransparentUpgradeableProxy, to=WBNB, transfer(dst(address): 0xCda2B0, wad(uint256): 10034389469017506969) -> True
+                [9][STATICCALL] from=OptimizedTransparentUpgradeableProxy, to=OptimizedTransparentUpgradeableProxy, router() -> 0x6ac689
+                  [10][DELEGATECALL] from=OptimizedTransparentUpgradeableProxy, to=SafeswapFactory, router() -> 0x6ac689
+                [9][STATICCALL] from=OptimizedTransparentUpgradeableProxy, to=OptimizedTransparentUpgradeableProxy, 0x9d248f56() -> 0x000000
+                  [10][DELEGATECALL] from=OptimizedTransparentUpgradeableProxy, to=SafeswapRouterProxy1, 0x9d248f56() -> 0x000000
+                    [11][DELEGATECALL] from=OptimizedTransparentUpgradeableProxy, to=SafeswapRouterProxy2, getTokenDeduction(token(address): 0xbb4CdB, amount(uint256): 10034389469017506969) -> ['0', '0x000000']
+                [9][STATICCALL] from=OptimizedTransparentUpgradeableProxy, to=LiveCryptoParty, balanceOf(account(address): 0xa8822c) -> 8658507436784469
+                [9][STATICCALL] from=OptimizedTransparentUpgradeableProxy, to=WBNB, balanceOf((address): 0xa8822c) -> 5506467753510802277
+            [7][STATICCALL] from=OptimizedTransparentUpgradeableProxy, to=WBNB, balanceOf((address): 0xCda2B0) -> 10034389469017506969
+  [2][STATICCALL] from=0xcda2b0, to=WBNB, balanceOf((address): 0xCda2B0) -> 10034389469017506969
+  [2][CALL] from=0xcda2b0, to=WBNB, transfer(dst(address): 0x52D65a, wad(uint256): 10034389469017506969) -> True
+  [2][CALL][0.004869504889876505] from=0xcda2b0, to=0x52d65a

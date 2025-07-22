@@ -1,0 +1,80 @@
+[1][CALL] from=0x631366, to=0xae5919, 0x8892170a() -> None
+  [2][CALL] from=0xae5919, to=FiatTokenProxy, allowance(owner(address): 0x07d768, spender(address): 0x4622aF) -> 115792089237316195423570985008687907853269984665640564039457584007912948854512
+    [3][DELEGATECALL] from=FiatTokenProxy, to=FiatTokenV2_2, allowance(owner(address): 0x07d768, spender(address): 0x4622aF) -> 115792089237316195423570985008687907853269984665640564039457584007912948854512
+  [2][CALL] from=0xae5919, to=FiatTokenProxy, balanceOf(account(address): 0x07d768) -> 114146247097
+    [3][DELEGATECALL] from=FiatTokenProxy, to=FiatTokenV2_2, balanceOf(account(address): 0x07d768) -> 114146247097
+  [2][CALL] from=0xae5919, to=BMIZapper, zapToBMI(_from(address): 0x4Fabb1, _amount(uint256): 0, _fromUnderlying(address): 0x000000, _fromUnderlyingAmount(uint256): 0, _minBMIRecv(uint256): 0, _bmiConstituents(address[]): [], _bmiConstituentsWeightings(uint256[]): [1000000000000000000], _aggregator(address): 0xA0b869, _aggregatorData(bytes): b'#\xb8r\xdd\x00\x00\x00\x00\x00\x00\x00\x..., refundDust(bool): True) -> 0
+    [3][CALL] from=BMIZapper, to=AdminUpgradeabilityProxy, transferFrom(_from(address): 0xae5919, _to(address): 0x4622aF, _value(uint256): 0) -> True
+      [4][DELEGATECALL] from=AdminUpgradeabilityProxy, to=BUSDImplementation, transferFrom(_from(address): 0xae5919, _to(address): 0x4622aF, _value(uint256): 0) -> True
+    [3][CALL] from=BMIZapper, to=AdminUpgradeabilityProxy, approve(_spender(address): 0xA0b869, _value(uint256): 0) -> True
+      [4][DELEGATECALL] from=AdminUpgradeabilityProxy, to=BUSDImplementation, approve(_spender(address): 0xA0b869, _value(uint256): 0) -> True
+    [3][CALL] from=BMIZapper, to=AdminUpgradeabilityProxy, approve(_spender(address): 0xA0b869, _value(uint256): 0) -> True
+      [4][DELEGATECALL] from=AdminUpgradeabilityProxy, to=BUSDImplementation, approve(_spender(address): 0xA0b869, _value(uint256): 0) -> True
+    [3][CALL] from=BMIZapper, to=FiatTokenProxy, transferFrom(from(address): 0x07d768, to(address): 0xae5919, value(uint256): 114146247097) -> True
+      [4][DELEGATECALL] from=FiatTokenProxy, to=FiatTokenV2_2, transferFrom(from(address): 0x07d768, to(address): 0xae5919, value(uint256): 114146247097) -> True
+    [3][STATICCALL] from=BMIZapper, to=Root, totalSupply() -> 258039016510113339064747
+      [4][DELEGATECALL] from=Root, to=Logic, totalSupply() -> 258039016510113339064747
+    [3][STATICCALL] from=BMIZapper, to=FiatTokenProxy, balanceOf(account(address): 0x4622aF) -> 0
+      [4][DELEGATECALL] from=FiatTokenProxy, to=FiatTokenV2_2, balanceOf(account(address): 0x4622aF) -> 0
+    [3][CALL] from=BMIZapper, to=Root, mint(_amountOut(uint256): 0) -> None
+      [4][DELEGATECALL] from=Root, to=Logic, mint(_amountOut(uint256): 0) -> None
+        [5][STATICCALL] from=Root, to=Vyper_contract, balanceOf(arg0(address): 0x0aC003) -> 13481963961123493925908
+          [6][DELEGATECALL] from=Vyper_contract, to=Vyper_contract, balanceOf(arg0(address): 0x0aC003) -> 13481963961123493925908
+        [5][STATICCALL] from=Root, to=Vyper_contract, balanceOf(arg0(address): 0x0aC003) -> 50444707592934502830323
+          [6][DELEGATECALL] from=Vyper_contract, to=Vyper_contract, balanceOf(arg0(address): 0x0aC003) -> 50444707592934502830323
+        [5][STATICCALL] from=Root, to=Vyper_contract, balanceOf(arg0(address): 0x0aC003) -> 49062689600479175353702
+          [6][DELEGATECALL] from=Vyper_contract, to=Vyper_contract, balanceOf(arg0(address): 0x0aC003) -> 49062689600479175353702
+        [5][STATICCALL] from=Root, to=Vyper_contract, balanceOf(arg0(address): 0x0aC003) -> 41260700541500909230127
+          [6][DELEGATECALL] from=Vyper_contract, to=Vyper_contract, balanceOf(arg0(address): 0x0aC003) -> 41260700541500909230127
+        [5][STATICCALL] from=Root, to=Vyper_contract, balanceOf(arg0(address): 0x0aC003) -> 8590586891348196856470
+          [6][DELEGATECALL] from=Vyper_contract, to=Vyper_contract, balanceOf(arg0(address): 0x0aC003) -> 8590586891348196856470
+        [5][STATICCALL] from=Root, to=Vyper_contract, balanceOf(arg0(address): 0x0aC003) -> 49186395420842146362684
+          [6][DELEGATECALL] from=Vyper_contract, to=Vyper_contract, balanceOf(arg0(address): 0x0aC003) -> 49186395420842146362684
+        [5][STATICCALL] from=Root, to=Vyper_contract, balanceOf(arg0(address): 0x0aC003) -> 12625830812777963880156
+          [6][DELEGATECALL] from=Vyper_contract, to=Vyper_contract, balanceOf(arg0(address): 0x0aC003) -> 12625830812777963880156
+        [5][STATICCALL] from=Root, to=Vyper_contract, balanceOf(arg0(address): 0x0aC003) -> 23665720835579771346300
+          [6][DELEGATECALL] from=Vyper_contract, to=Vyper_contract, balanceOf(arg0(address): 0x0aC003) -> 23665720835579771346300
+        [5][CALL] from=Root, to=Vyper_contract, transferFrom(sender(address): 0x4622aF, receiver(address): 0x0aC003, amount(uint256): 0) -> True
+          [6][DELEGATECALL] from=Vyper_contract, to=Vyper_contract, transferFrom(sender(address): 0x4622aF, receiver(address): 0x0aC003, amount(uint256): 0) -> True
+        [5][CALL] from=Root, to=Vyper_contract, transferFrom(sender(address): 0x4622aF, receiver(address): 0x0aC003, amount(uint256): 0) -> True
+          [6][DELEGATECALL] from=Vyper_contract, to=Vyper_contract, transferFrom(sender(address): 0x4622aF, receiver(address): 0x0aC003, amount(uint256): 0) -> True
+        [5][CALL] from=Root, to=Vyper_contract, transferFrom(sender(address): 0x4622aF, receiver(address): 0x0aC003, amount(uint256): 0) -> True
+          [6][DELEGATECALL] from=Vyper_contract, to=Vyper_contract, transferFrom(sender(address): 0x4622aF, receiver(address): 0x0aC003, amount(uint256): 0) -> True
+        [5][CALL] from=Root, to=Vyper_contract, transferFrom(sender(address): 0x4622aF, receiver(address): 0x0aC003, amount(uint256): 0) -> True
+          [6][DELEGATECALL] from=Vyper_contract, to=Vyper_contract, transferFrom(sender(address): 0x4622aF, receiver(address): 0x0aC003, amount(uint256): 0) -> True
+        [5][CALL] from=Root, to=Vyper_contract, transferFrom(sender(address): 0x4622aF, receiver(address): 0x0aC003, amount(uint256): 0) -> True
+          [6][DELEGATECALL] from=Vyper_contract, to=Vyper_contract, transferFrom(sender(address): 0x4622aF, receiver(address): 0x0aC003, amount(uint256): 0) -> True
+        [5][CALL] from=Root, to=Vyper_contract, transferFrom(sender(address): 0x4622aF, receiver(address): 0x0aC003, amount(uint256): 0) -> True
+          [6][DELEGATECALL] from=Vyper_contract, to=Vyper_contract, transferFrom(sender(address): 0x4622aF, receiver(address): 0x0aC003, amount(uint256): 0) -> True
+        [5][CALL] from=Root, to=Vyper_contract, transferFrom(sender(address): 0x4622aF, receiver(address): 0x0aC003, amount(uint256): 0) -> True
+          [6][DELEGATECALL] from=Vyper_contract, to=Vyper_contract, transferFrom(sender(address): 0x4622aF, receiver(address): 0x0aC003, amount(uint256): 0) -> True
+        [5][CALL] from=Root, to=Vyper_contract, transferFrom(sender(address): 0x4622aF, receiver(address): 0x0aC003, amount(uint256): 0) -> True
+          [6][DELEGATECALL] from=Vyper_contract, to=Vyper_contract, transferFrom(sender(address): 0x4622aF, receiver(address): 0x0aC003, amount(uint256): 0) -> True
+    [3][STATICCALL] from=BMIZapper, to=Root, balanceOf(account(address): 0x4622aF) -> 0
+      [4][DELEGATECALL] from=Root, to=Logic, balanceOf(account(address): 0x4622aF) -> 0
+    [3][CALL] from=BMIZapper, to=Root, transfer(recipient(address): 0xae5919, amount(uint256): 0) -> True
+      [4][DELEGATECALL] from=Root, to=Logic, transfer(recipient(address): 0xae5919, amount(uint256): 0) -> True
+    [3][STATICCALL] from=BMIZapper, to=FiatTokenProxy, balanceOf(account(address): 0x4622aF) -> 0
+      [4][DELEGATECALL] from=FiatTokenProxy, to=FiatTokenV2_2, balanceOf(account(address): 0x4622aF) -> 0
+    [3][CALL] from=BMIZapper, to=FiatTokenProxy, transfer(to(address): 0xae5919, value(uint256): 0) -> True
+      [4][DELEGATECALL] from=FiatTokenProxy, to=FiatTokenV2_2, transfer(to(address): 0xae5919, value(uint256): 0) -> True
+  [2][CALL] from=0xae5919, to=FiatTokenProxy, allowance(owner(address): 0xae5919, spender(address): 0x7a250d) -> 0
+    [3][DELEGATECALL] from=FiatTokenProxy, to=FiatTokenV2_2, allowance(owner(address): 0xae5919, spender(address): 0x7a250d) -> 0
+  [2][CALL] from=0xae5919, to=FiatTokenProxy, approve(spender(address): 0x7a250d, value(uint256): 115792089237316195423570985008687907853269...) -> True
+    [3][DELEGATECALL] from=FiatTokenProxy, to=FiatTokenV2_2, approve(spender(address): 0x7a250d, value(uint256): 115792089237316195423570985008687907853269...) -> True
+  [2][CALL] from=0xae5919, to=FiatTokenProxy, balanceOf(account(address): 0xae5919) -> 114146247097
+    [3][DELEGATECALL] from=FiatTokenProxy, to=FiatTokenV2_2, balanceOf(account(address): 0xae5919) -> 114146247097
+  [2][CALL] from=0xae5919, to=UniswapV2Router02, swapExactTokensForETH(amountIn(uint256): 114146247097, amountOutMin(uint256): 0, path(address[]): ['0xA0b86991c6218b36c1d19D4a2e9Eb0cE3606eB..., to(address): 0xae5919, deadline(uint256): 1705527071) -> [114146247097, 44793029123778146440]
+    [3][STATICCALL] from=UniswapV2Router02, to=UniswapV2Pair, getReserves() -> ['51988834415559', '20507529801593063736436', '1705526867']
+    [3][CALL] from=UniswapV2Router02, to=FiatTokenProxy, transferFrom(from(address): 0xae5919, to(address): 0xB4e16d, value(uint256): 114146247097) -> True
+      [4][DELEGATECALL] from=FiatTokenProxy, to=FiatTokenV2_2, transferFrom(from(address): 0xae5919, to(address): 0xB4e16d, value(uint256): 114146247097) -> True
+    [3][CALL] from=UniswapV2Router02, to=UniswapV2Pair, swap(amount0Out(uint256): 0, amount1Out(uint256): 44793029123778146440, to(address): 0x7a250d, data(bytes): b'') -> None
+      [4][CALL] from=UniswapV2Pair, to=WETH9, transfer(dst(address): 0x7a250d, wad(uint256): 44793029123778146440) -> True
+      [4][STATICCALL] from=UniswapV2Pair, to=FiatTokenProxy, balanceOf(account(address): 0xB4e16d) -> 52102980662656
+        [5][DELEGATECALL] from=FiatTokenProxy, to=FiatTokenV2_2, balanceOf(account(address): 0xB4e16d) -> 52102980662656
+      [4][STATICCALL] from=UniswapV2Pair, to=WETH9, balanceOf((address): 0xB4e16d) -> 20462736772469285589996
+    [3][CALL] from=UniswapV2Router02, to=WETH9, withdraw(wad(uint256): 44793029123778146440) -> None
+      [4][CALL][44.79302912377815] from=WETH9, to=UniswapV2Router02
+    [3][CALL][44.79302912377815] from=UniswapV2Router02, to=0xae5919
+  [2][CALL][2.2396514561889074] from=0xae5919, to=0x7e2a2f
+  [2][CALL][42.55337766758924] from=0xae5919, to=0x631366

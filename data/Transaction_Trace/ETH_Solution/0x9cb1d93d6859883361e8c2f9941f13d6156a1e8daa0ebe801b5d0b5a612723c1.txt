@@ -1,0 +1,52 @@
+[1][CALL] from=0x60f3fd, to=0xBD2250, 0xdaf8be1f() -> 0x000000
+  [2][CALL] from=0xBD2250, to=GasToken2, freeFromUpTo(from(address): 0xC64D18, value(uint256): 10) -> 10
+    [3][CALL][0.0] from=GasToken2, to=0x8c0719
+      [4][SELFDESTRUCT][0.0] from=0x8c0719, to=GasToken2
+    [3][CALL][0.0] from=GasToken2, to=0x78feb7
+      [4][SELFDESTRUCT][0.0] from=0x78feb7, to=GasToken2
+    [3][CALL][0.0] from=GasToken2, to=0x856be1
+      [4][SELFDESTRUCT][0.0] from=0x856be1, to=GasToken2
+    [3][CALL][0.0] from=GasToken2, to=0xf1d203
+      [4][SELFDESTRUCT][0.0] from=0xf1d203, to=GasToken2
+    [3][CALL][0.0] from=GasToken2, to=0xebfcb3
+      [4][SELFDESTRUCT][0.0] from=0xebfcb3, to=GasToken2
+    [3][CALL][0.0] from=GasToken2, to=0xc80c6d
+      [4][SELFDESTRUCT][0.0] from=0xc80c6d, to=GasToken2
+    [3][CALL][0.0] from=GasToken2, to=0x40ce44
+      [4][SELFDESTRUCT][0.0] from=0x40ce44, to=GasToken2
+    [3][CALL][0.0] from=GasToken2, to=0x6ef3f0
+      [4][SELFDESTRUCT][0.0] from=0x6ef3f0, to=GasToken2
+    [3][CALL][0.0] from=GasToken2, to=0x3a7401
+      [4][SELFDESTRUCT][0.0] from=0x3a7401, to=GasToken2
+    [3][CALL][0.0] from=GasToken2, to=0x901ec2
+      [4][SELFDESTRUCT][0.0] from=0x901ec2, to=GasToken2
+  [2][CALL] from=0xBD2250, to=0xe7bb30, withdrawAll() -> 0x000000
+    [3][CALL][500.2693222020317] from=0xe7bb30, to=0xBD2250
+  [2][STATICCALL] from=0xBD2250, to=Vyper_contract, getExchange(token(address): 0x3212b2) -> 0xffcf45
+  [2][CALL] from=0xBD2250, to=0xFFcf45, ethToTokenSwapInput(min_tokens(uint256): 1, deadline(uint256): 115792089237316195423570985008687907853269...) -> 31759
+    [3][DELEGATECALL] from=0xFFcf45, to=Vyper_contract, ethToTokenSwapInput(min_tokens(uint256): 1, deadline(uint256): 115792089237316195423570985008687907853269...) -> 31759
+      [4][STATICCALL] from=0xFFcf45, to=IMBTC, balanceOf(who(address): 0xFFcf45) -> 32270
+      [4][CALL] from=0xFFcf45, to=IMBTC, transfer(recipient(address): 0xBD2250, amount(uint256): 31759) -> True
+        [5][STATICCALL] from=IMBTC, to=ERC1820Registry, getInterfaceImplementer(_addr(address): 0xFFcf45, _interfaceHash(bytes32): b')\xdd\xb5\x89\xb1\xfb_\xc7\xcf9Ia\xc1\xa...) -> 0x000000
+        [5][STATICCALL] from=IMBTC, to=ERC1820Registry, getInterfaceImplementer(_addr(address): 0xBD2250, _interfaceHash(bytes32): b'\xb2\x81\xfc\x8c\x12\x95M"TM\xb4]\xe3\x1...) -> 0xbd2250
+        [5][CALL] from=IMBTC, to=0xBD2250, tokensReceivedaddress() -> None
+  [2][CALL] from=0xBD2250, to=IMBTC, approve(spender(address): 0xFFcf45, value(uint256): 115792089237316195423570985008687907853269...) -> True
+  [2][CALL] from=0xBD2250, to=0xFFcf45, tokenToEthSwapInput(tokens_sold(uint256): 15879, min_eth(uint256): 1, deadline(uint256): 115792089237316195423570985008687907853269...) -> 984253946794823082
+    [3][DELEGATECALL] from=0xFFcf45, to=Vyper_contract, tokenToEthSwapInput(tokens_sold(uint256): 15879, min_eth(uint256): 1, deadline(uint256): 115792089237316195423570985008687907853269...) -> 984253946794823082
+      [4][STATICCALL] from=0xFFcf45, to=IMBTC, balanceOf(who(address): 0xFFcf45) -> 511
+      [4][CALL][0.984253946794823] from=0xFFcf45, to=0xBD2250
+      [4][CALL] from=0xFFcf45, to=IMBTC, transferFrom(holder(address): 0xBD2250, recipient(address): 0xFFcf45, amount(uint256): 15879) -> True
+        [5][STATICCALL] from=IMBTC, to=ERC1820Registry, getInterfaceImplementer(_addr(address): 0xBD2250, _interfaceHash(bytes32): b')\xdd\xb5\x89\xb1\xfb_\xc7\xcf9Ia\xc1\xa...) -> 0xbd2250
+        [5][CALL] from=IMBTC, to=0xBD2250, tokensToSendaddress() -> None
+          [6][STATICCALL] from=0xBD2250, to=Vyper_contract, getExchange(token(address): 0x3212b2) -> 0xffcf45
+          [6][CALL] from=0xBD2250, to=0xFFcf45, tokenToEthSwapInput(tokens_sold(uint256): 15879, min_eth(uint256): 1, deadline(uint256): 115792089237316195423570985008687907853269...) -> 30776073619962707
+            [7][DELEGATECALL] from=0xFFcf45, to=Vyper_contract, tokenToEthSwapInput(tokens_sold(uint256): 15879, min_eth(uint256): 1, deadline(uint256): 115792089237316195423570985008687907853269...) -> 30776073619962707
+              [8][STATICCALL] from=0xFFcf45, to=IMBTC, balanceOf(who(address): 0xFFcf45) -> 511
+              [8][CALL][0.030776073619962707] from=0xFFcf45, to=0xBD2250
+              [8][CALL] from=0xFFcf45, to=IMBTC, transferFrom(holder(address): 0xBD2250, recipient(address): 0xFFcf45, amount(uint256): 15879) -> True
+                [9][STATICCALL] from=IMBTC, to=ERC1820Registry, getInterfaceImplementer(_addr(address): 0xBD2250, _interfaceHash(bytes32): b')\xdd\xb5\x89\xb1\xfb_\xc7\xcf9Ia\xc1\xa...) -> 0xbd2250
+                [9][CALL] from=IMBTC, to=0xBD2250, tokensToSendaddress() -> None
+                [9][STATICCALL] from=IMBTC, to=ERC1820Registry, getInterfaceImplementer(_addr(address): 0xFFcf45, _interfaceHash(bytes32): b'\xb2\x81\xfc\x8c\x12\x95M"TM\xb4]\xe3\x1...) -> 0x000000
+        [5][STATICCALL] from=IMBTC, to=ERC1820Registry, getInterfaceImplementer(_addr(address): 0xFFcf45, _interfaceHash(bytes32): b'\xb2\x81\xfc\x8c\x12\x95M"TM\xb4]\xe3\x1...) -> 0x000000
+  [2][CALL][500.2693222020317] from=0xBD2250, to=0xe7bb30
+  [2][CALL][0.015030020414785789] from=0xBD2250, to=0x60f3fd

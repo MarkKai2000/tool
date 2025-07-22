@@ -1,0 +1,50 @@
+[1][CREATE] from=0xc8021b, to=0xb59abc, atInversebrahint248() -> None
+  [2][CALL] from=0xb59abc, to=StoxSmartToken, balanceOf((address): 0x00000f) -> 0
+  [2][CALL] from=0xb59abc, to=StoxSmartToken, allowance((address): 0x5f5805) -> 115792089237316195423570985008687907853269984665640564039457584007913129639935
+  [2][CALL] from=0xb59abc, to=StoxSmartToken, balanceOf((address): 0x00000f) -> 0
+  [2][CALL] from=0xb59abc, to=StoxSmartToken, allowance((address): 0x8dFEB8) -> 115792089237316195423570985008687907853269984665640564039457584007913129639935
+  [2][CALL] from=0xb59abc, to=StoxSmartToken, balanceOf((address): 0x2933d6) -> 40869070699650909829866
+  [2][CALL] from=0xb59abc, to=StoxSmartToken, allowance((address): 0x8dFEB8) -> 0
+  [2][CALL] from=0xb59abc, to=CrowdsaleToken, balanceOf(_owner(address): 0x00923B) -> 19734968794271298601106
+  [2][CALL] from=0xb59abc, to=CrowdsaleToken, allowance(_owner(address): 0x00923B, _spender(address): 0x5f5805) -> 115792089237316195423570985008687907853269984665640564039457584007913129639935
+  [2][CALL] from=0xb59abc, to=BancorNetwork, safeTransferFrom(_token(address): 0x0Cf0Ee, _from(address): 0x00923B, _to(address): 0x29551F, _value(uint256): 19734968794271298601106) -> None
+    [3][CALL] from=BancorNetwork, to=CrowdsaleToken, transferFrom(_from(address): 0x00923B, _to(address): 0x29551F, _value(uint256): 19734968794271298601106) -> True
+  [2][CALL] from=0xb59abc, to=CrowdsaleToken, balanceOf(_owner(address): 0x00000f) -> 0
+  [2][CALL] from=0xb59abc, to=CrowdsaleToken, allowance(_owner(address): 0x00000f, _spender(address): 0x5f5805) -> 115792089237316195423570985008687907853269984665640564039457584007913129639935
+  [2][CALL] from=0xb59abc, to=CrowdsaleToken, balanceOf(_owner(address): 0x00000f) -> 0
+  [2][CALL] from=0xb59abc, to=CrowdsaleToken, allowance(_owner(address): 0x00000f, _spender(address): 0x8dFEB8) -> 115792089237316195423570985008687907853269984665640564036515144817644156523707
+  [2][CALL] from=0xb59abc, to=CrowdsaleToken, balanceOf(_owner(address): 0x00923B) -> 0
+  [2][CALL] from=0xb59abc, to=CrowdsaleToken, allowance(_owner(address): 0x00923B, _spender(address): 0x8dFEB8) -> 115792089237316195423570985008687907853269984665640564039457584007913129639935
+  [2][CALL] from=0xb59abc, to=CrowdsaleToken, balanceOf(_owner(address): 0x8a3960) -> 0
+  [2][CALL] from=0xb59abc, to=CrowdsaleToken, allowance(_owner(address): 0x8a3960, _spender(address): 0x8dFEB8) -> 115792089237316195423570985008687907853269984665640564032322267075655595845848
+  [2][CALL] from=0xb59abc, to=CrowdsaleToken, balanceOf(_owner(address): 0x693c18) -> 3822934621302117229
+  [2][CALL] from=0xb59abc, to=CrowdsaleToken, allowance(_owner(address): 0x693c18, _spender(address): 0x8dFEB8) -> 115792089237316195423570985008687907853269984665640564033834554653030575075003
+  [2][CALL] from=0xb59abc, to=BancorNetwork, safeTransferFrom(_token(address): 0x0Cf0Ee, _from(address): 0x693c18, _to(address): 0x29551F, _value(uint256): 3822934621302117229) -> None
+    [3][CALL] from=BancorNetwork, to=CrowdsaleToken, transferFrom(_from(address): 0x693c18, _to(address): 0x29551F, _value(uint256): 3822934621302117229) -> True
+  [2][CALL] from=0xb59abc, to=J8TToken, balanceOf(_owner(address): 0xEE7587) -> 0
+  [2][CALL] from=0xb59abc, to=J8TToken, allowance(_owner(address): 0xEE7587, _spender(address): 0x5f5805) -> 194996186539480381344102
+  [2][CALL] from=0xb59abc, to=BAToken, balanceOf(_owner(address): 0xc3037b) -> 0
+  [2][CALL] from=0xb59abc, to=BAToken, allowance(_owner(address): 0xc3037b, _spender(address): 0x5f5805) -> 115792089237316195423570985008687907853269984665640563972457584007913129639935
+  [2][CALL] from=0xb59abc, to=BAToken, balanceOf(_owner(address): 0x0087C5) -> 0
+  [2][CALL] from=0xb59abc, to=BAToken, allowance(_owner(address): 0x0087C5, _spender(address): 0x5f5805) -> 115792089237316195423570985008687907853269984665640564024753756003702228434074
+  [2][CALL] from=0xb59abc, to=BAToken, balanceOf(_owner(address): 0xd0C81E) -> 15639151113094502538
+  [2][CALL] from=0xb59abc, to=BAToken, allowance(_owner(address): 0xd0C81E, _spender(address): 0x5f5805) -> 40000000000000000000000000000
+  [2][CALL] from=0xb59abc, to=BancorNetwork, safeTransferFrom(_token(address): 0x0D8775, _from(address): 0xd0C81E, _to(address): 0x29551F, _value(uint256): 15639151113094502538) -> None
+    [3][CALL] from=BancorNetwork, to=BAToken, transferFrom(_from(address): 0xd0C81E, _to(address): 0x29551F, _value(uint256): 15639151113094502538) -> True
+  [2][CALL] from=0xb59abc, to=BAToken, balanceOf(_owner(address): 0x5f7a00) -> 0
+  [2][CALL] from=0xb59abc, to=BAToken, allowance(_owner(address): 0x5f7a00, _spender(address): 0x5f5805) -> 0
+  [2][CALL] from=0xb59abc, to=BAToken, balanceOf(_owner(address): 0x8a3960) -> 0
+  [2][CALL] from=0xb59abc, to=BAToken, allowance(_owner(address): 0x8a3960, _spender(address): 0x5f5805) -> 115792089237316195423570985008687907853269984665640564034238629016019700510970
+  [2][CALL] from=0xb59abc, to=BAToken, balanceOf(_owner(address): 0x00000f) -> 9
+  [2][CALL] from=0xb59abc, to=BAToken, allowance(_owner(address): 0x00000f, _spender(address): 0x5f5805) -> 115792089237316195423570985008687907853269984665640564035488080844444006894460
+  [2][CALL] from=0xb59abc, to=BancorNetwork, safeTransferFrom(_token(address): 0x0D8775, _from(address): 0x00000f, _to(address): 0x29551F, _value(uint256): 9) -> None
+    [3][CALL] from=BancorNetwork, to=BAToken, transferFrom(_from(address): 0x00000f, _to(address): 0x29551F, _value(uint256): 9) -> True
+  [2][CALL] from=0xb59abc, to=BAToken, balanceOf(_owner(address): 0x22F5C5) -> 127
+  [2][CALL] from=0xb59abc, to=BAToken, allowance(_owner(address): 0x22F5C5, _spender(address): 0x5f5805) -> 115339776388732929035197660848497720713218148788040405583909500036227088252027
+  [2][CALL] from=0xb59abc, to=BancorNetwork, safeTransferFrom(_token(address): 0x0D8775, _from(address): 0x22F5C5, _to(address): 0x29551F, _value(uint256): 127) -> None
+    [3][CALL] from=BancorNetwork, to=BAToken, transferFrom(_from(address): 0x22F5C5, _to(address): 0x29551F, _value(uint256): 127) -> True
+  [2][CALL] from=0xb59abc, to=BAToken, balanceOf(_owner(address): 0x00000f) -> 0
+  [2][CALL] from=0xb59abc, to=BAToken, allowance(_owner(address): 0x00000f, _spender(address): 0x8dFEB8) -> 115792089237316195423570985008687907853269984665640564039457584007913129639935
+  [2][CALL] from=0xb59abc, to=BAToken, balanceOf(_owner(address): 0x0087C5) -> 0
+  [2][CALL] from=0xb59abc, to=BAToken, allowance(_owner(address): 0x0087C5, _spender(address): 0x8dFEB8) -> 115792089237316195423570985008687907853269984665640564039457584007913129639935
+  [2][SELFDESTRUCT][0.0] from=0xb59abc, to=0x29551f

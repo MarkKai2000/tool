@@ -1,0 +1,457 @@
+[1][CALL] from=0x2525c8, to=0x1e2a25, execute() -> None
+  [2][CALL] from=0x1e2a25, to=DPPOracle, flashLoan(baseAmount(uint256): 1000000000000000000000, quoteAmount(uint256): 0, _assetTo(address): 0x1e2A25, data(bytes): b'\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00...) -> None
+    [3][CALL] from=DPPOracle, to=WBNB, transfer(dst(address): 0x1e2A25, wad(uint256): 1000000000000000000000) -> True
+    [3][CALL] from=DPPOracle, to=0x1e2a25, DPPFlashLoanCalladdress() -> None
+      [4][CALL] from=0x1e2a25, to=PancakeV3Pool, flash(recipient(address): 0x1e2A25, amount0(uint256): 0, amount1(uint256): 500000000000000000000000, data(bytes): b'\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00...) -> None
+        [5][STATICCALL] from=PancakeV3Pool, to=WBNB, balanceOf((address): 0xA2C1e0) -> 432955834142211855864
+        [5][STATICCALL] from=PancakeV3Pool, to=CellFrame, balanceOf(account(address): 0xA2C1e0) -> 576885545003427727871843
+        [5][CALL] from=PancakeV3Pool, to=CellFrame, transfer(recipient(address): 0x1e2A25, amount(uint256): 500000000000000000000000) -> True
+        [5][CALL] from=PancakeV3Pool, to=0x1e2a25, 0xa1d48336() -> None
+          [6][STATICCALL] from=0x1e2a25, to=WBNB, balanceOf((address): 0x1e2A25) -> 1000000000000000000000
+          [6][CALL] from=0x1e2a25, to=CellFrame, approve(spender(address): 0x10ED43, amount(uint256): 115792089237316195423570985008687907853269...) -> True
+          [6][CALL] from=0x1e2a25, to=PancakeRouter, swapExactTokensForTokensSupportingFeeOnTransferTokens(amountIn(uint256): 500000000000000000000000, amountOutMin(uint256): 0, path(address[]): ['0xd98438889Ae7364c7E2A3540547Fad042FB246..., to(address): 0x1e2A25, deadline(uint256): 1685589275) -> None
+            [7][CALL] from=PancakeRouter, to=CellFrame, transferFrom(sender(address): 0x1e2A25, recipient(address): 0x1c15f4, amount(uint256): 500000000000000000000000) -> True
+              [8][STATICCALL] from=CellFrame, to=PancakeRouter, WETH() -> 0xbb4cdb
+              [8][CALL] from=CellFrame, to=PancakeRouter, swapExactTokensForETHSupportingFeeOnTransferTokens(amountIn(uint256): 2000000000000000000, amountOutMin(uint256): 0, path(address[]): ['0xd98438889Ae7364c7E2A3540547Fad042FB246..., to(address): 0xd98438, deadline(uint256): 1685585275) -> None
+                [9][CALL] from=PancakeRouter, to=CellFrame, transferFrom(sender(address): 0xd98438, recipient(address): 0x1c15f4, amount(uint256): 2000000000000000000) -> True
+                [9][STATICCALL] from=PancakeRouter, to=PancakePair, getReserves() -> ['58633127806922528249', '77607810399258401479418', '1685580918']
+                [9][STATICCALL] from=PancakeRouter, to=CellFrame, balanceOf(account(address): 0x1c15f4) -> 77609810399258401479418
+                [9][CALL] from=PancakeRouter, to=PancakePair, swap(amount0Out(uint256): 1507194733617102, amount1Out(uint256): 0, to(address): 0x10ED43, data(bytes): b'') -> None
+                  [10][CALL] from=PancakePair, to=WBNB, transfer(dst(address): 0x10ED43, wad(uint256): 1507194733617102) -> True
+                  [10][STATICCALL] from=PancakePair, to=WBNB, balanceOf((address): 0x1c15f4) -> 58631620612188911147
+                  [10][STATICCALL] from=PancakePair, to=CellFrame, balanceOf(account(address): 0x1c15f4) -> 77609810399258401479418
+                [9][STATICCALL] from=PancakeRouter, to=WBNB, balanceOf((address): 0x10ED43) -> 1507194733617102
+                [9][CALL] from=PancakeRouter, to=WBNB, withdraw(wad(uint256): 1507194733617102) -> None
+                  [10][CALL][0.001507194733617102] from=WBNB, to=PancakeRouter
+                [9][CALL][0.001507194733617102] from=PancakeRouter, to=CellFrame
+              [8][CALL][21.921323319804287] from=CellFrame, to=GnosisSafeProxy
+                [9][DELEGATECALL][21.921323319804287] from=GnosisSafeProxy, to=GnosisSafeL2
+            [7][STATICCALL] from=PancakeRouter, to=WBNB, balanceOf((address): 0x1e2A25) -> 1000000000000000000000
+            [7][STATICCALL] from=PancakeRouter, to=PancakePair, getReserves() -> ['58631620612188911147', '77609810399258401479418', '1685585275']
+            [7][STATICCALL] from=PancakeRouter, to=CellFrame, balanceOf(account(address): 0x1c15f4) -> 552609810399258401479418
+            [7][CALL] from=PancakeRouter, to=PancakePair, swap(amount0Out(uint256): 50379526213218158256, amount1Out(uint256): 0, to(address): 0x1e2A25, data(bytes): b'') -> None
+              [8][CALL] from=PancakePair, to=WBNB, transfer(dst(address): 0x1e2A25, wad(uint256): 50379526213218158256) -> True
+              [8][STATICCALL] from=PancakePair, to=WBNB, balanceOf((address): 0x1c15f4) -> 8252094398970752891
+              [8][STATICCALL] from=PancakePair, to=CellFrame, balanceOf(account(address): 0x1c15f4) -> 552609810399258401479418
+            [7][STATICCALL] from=PancakeRouter, to=WBNB, balanceOf((address): 0x1e2A25) -> 1050379526213218158256
+          [6][STATICCALL] from=0x1e2a25, to=WBNB, balanceOf((address): 0x1e2A25) -> 1050379526213218158256
+          [6][STATICCALL] from=0x1e2a25, to=CellToken, balanceOf(account(address): 0x1e2A25) -> 1893061496724412611
+          [6][CALL] from=0x1e2a25, to=WBNB, approve(guy(address): 0x10ED43, wad(uint256): 115792089237316195423570985008687907853269...) -> True
+          [6][CALL] from=0x1e2a25, to=PancakeRouter, swapExactTokensForTokensSupportingFeeOnTransferTokens(amountIn(uint256): 900000000000000000000, amountOutMin(uint256): 0, path(address[]): ['0xbb4CdB9CBd36B01bD1cBaEBF2De08d9173bc09..., to(address): 0x1e2A25, deadline(uint256): 1685589275) -> None
+            [7][CALL] from=PancakeRouter, to=WBNB, transferFrom(src(address): 0x1e2A25, dst(address): 0x061550, wad(uint256): 900000000000000000000) -> True
+            [7][STATICCALL] from=PancakeRouter, to=CellToken, balanceOf(account(address): 0x1e2A25) -> 1893061496724412611
+            [7][STATICCALL] from=PancakeRouter, to=PancakePair, getReserves() -> ['2282153855339697120', '2886046297287843526526', '1685585275']
+            [7][STATICCALL] from=PancakeRouter, to=WBNB, balanceOf((address): 0x061550) -> 902282153855339697120
+            [7][CALL] from=PancakeRouter, to=PancakePair, swap(amount0Out(uint256): 0, amount1Out(uint256): 2878728334639696926579, to(address): 0x1e2A25, data(bytes): b'') -> None
+              [8][CALL] from=PancakePair, to=CellToken, transfer(recipient(address): 0x1e2A25, amount(uint256): 2878728334639696926579) -> True
+              [8][STATICCALL] from=PancakePair, to=WBNB, balanceOf((address): 0x061550) -> 902282153855339697120
+              [8][STATICCALL] from=PancakePair, to=CellToken, balanceOf(account(address): 0x061550) -> 7317962648146599947
+            [7][STATICCALL] from=PancakeRouter, to=CellToken, balanceOf(account(address): 0x1e2A25) -> 2736684979404436492862
+          [6][STATICCALL] from=0x1e2a25, to=CellToken, balanceOf(account(address): 0x1e2A25) -> 2736684979404436492862
+          [6][STATICCALL] from=0x1e2a25, to=PancakePair, balanceOf((address): 0x1e2A25) -> 1285052547256630513
+          [6][CALL] from=0x1e2a25, to=LpMigration, migrate(amountLP(uint256): 128505254725663051) -> None
+            [7][CALL] from=LpMigration, to=PancakePair, transferFrom(from(address): 0x1e2A25, to(address): 0xB4E47c, value(uint256): 128505254725663051) -> True
+            [7][CALL] from=LpMigration, to=PancakePair, approve(spender(address): 0x10ED43, value(uint256): 128505254725663051) -> True
+            [7][CALL] from=LpMigration, to=PancakeRouter, removeLiquidity(tokenA(address): 0xbb4CdB, tokenB(address): 0xf3E144, liquidity(uint256): 128505254725663051, amountAMin(uint256): 0, amountBMin(uint256): 0, to(address): 0xB4E47c, deadline(uint256): 1685590275) -> ['1597830731238074674', '12959211882113411']
+              [8][CALL] from=PancakeRouter, to=PancakePair, transferFrom(from(address): 0xB4E47c, to(address): 0x061550, value(uint256): 128505254725663051) -> True
+              [8][CALL] from=PancakeRouter, to=PancakePair, burn(to(address): 0xB4E47c) -> ['1597830731238074674', '12959211882113411']
+                [9][STATICCALL] from=PancakePair, to=WBNB, balanceOf((address): 0x061550) -> 902282153855339697120
+                [9][STATICCALL] from=PancakePair, to=CellToken, balanceOf(account(address): 0x061550) -> 7317962648146599947
+                [9][STATICCALL] from=PancakePair, to=PancakeFactory, feeTo() -> 0x0ed943
+                [9][CALL] from=PancakePair, to=WBNB, transfer(dst(address): 0xB4E47c, wad(uint256): 1597830731238074674) -> True
+                [9][CALL] from=PancakePair, to=CellToken, transfer(recipient(address): 0xB4E47c, amount(uint256): 12959211882113411) -> True
+                [9][STATICCALL] from=PancakePair, to=WBNB, balanceOf((address): 0x061550) -> 900684323124101622446
+                [9][STATICCALL] from=PancakePair, to=CellToken, balanceOf(account(address): 0x061550) -> 7305003436264486536
+            [7][STATICCALL] from=LpMigration, to=PancakePair, getReserves() -> ['8252094398970752891', '552609810399258401479418', '1685585275']
+            [7][CALL] from=LpMigration, to=CellFrame, approve(spender(address): 0x10ED43, amount(uint256): 107000332748088908619084) -> True
+            [7][CALL] from=LpMigration, to=WBNB, approve(guy(address): 0x10ED43, wad(uint256): 1597830731238074674) -> True
+            [7][CALL] from=LpMigration, to=PancakeRouter, addLiquidity(tokenA(address): 0xbb4CdB, tokenB(address): 0xd98438, amountADesired(uint256): 1597830731238074674, amountBDesired(uint256): 107000332748088908619084, amountAMin(uint256): 0, amountBMin(uint256): 0, to(address): 0x1e2A25, deadline(uint256): 1685590275) -> ['1597830566780137385', '107000332748088908619084', '377713942001128533256']
+              [8][STATICCALL] from=PancakeRouter, to=PancakeFactory, getPair((address): 0xd98438) -> 0x1c15f4
+              [8][STATICCALL] from=PancakeRouter, to=PancakePair, getReserves() -> ['8252094398970752891', '552609810399258401479418', '1685585275']
+              [8][CALL] from=PancakeRouter, to=WBNB, transferFrom(src(address): 0xB4E47c, dst(address): 0x1c15f4, wad(uint256): 1597830566780137385) -> True
+              [8][CALL] from=PancakeRouter, to=CellFrame, transferFrom(sender(address): 0xB4E47c, recipient(address): 0x1c15f4, amount(uint256): 107000332748088908619084) -> True
+              [8][CALL] from=PancakeRouter, to=PancakePair, mint(to(address): 0x1e2A25) -> 377713942001128533256
+                [9][STATICCALL] from=PancakePair, to=WBNB, balanceOf((address): 0x1c15f4) -> 9849924965750890276
+                [9][STATICCALL] from=PancakePair, to=CellFrame, balanceOf(account(address): 0x1c15f4) -> 659610143147347310098502
+                [9][STATICCALL] from=PancakePair, to=PancakeFactory, feeTo() -> 0x0ed943
+            [7][STATICCALL] from=LpMigration, to=CellToken, balanceOf(account(address): 0xB4E47c) -> 12311251288007741
+            [7][CALL] from=LpMigration, to=CellToken, transfer(recipient(address): 0xC3b8A6, amount(uint256): 12311251288007741) -> True
+            [7][CALL] from=LpMigration, to=WBNB, transfer(dst(address): 0x1e2A25, wad(uint256): 164457937289) -> True
+          [6][CALL] from=0x1e2a25, to=LpMigration, migrate(amountLP(uint256): 128505254725663051) -> None
+            [7][CALL] from=LpMigration, to=PancakePair, transferFrom(from(address): 0x1e2A25, to(address): 0xB4E47c, value(uint256): 128505254725663051) -> True
+            [7][CALL] from=LpMigration, to=PancakePair, approve(spender(address): 0x10ED43, value(uint256): 128505254725663051) -> True
+            [7][CALL] from=LpMigration, to=PancakeRouter, removeLiquidity(tokenA(address): 0xbb4CdB, tokenB(address): 0xf3E144, liquidity(uint256): 128505254725663051, amountAMin(uint256): 0, amountBMin(uint256): 0, to(address): 0xB4E47c, deadline(uint256): 1685590275) -> ['1597830731238074674', '12959211882113411']
+              [8][CALL] from=PancakeRouter, to=PancakePair, transferFrom(from(address): 0xB4E47c, to(address): 0x061550, value(uint256): 128505254725663051) -> True
+              [8][CALL] from=PancakeRouter, to=PancakePair, burn(to(address): 0xB4E47c) -> ['1597830731238074674', '12959211882113411']
+                [9][STATICCALL] from=PancakePair, to=WBNB, balanceOf((address): 0x061550) -> 900684323124101622446
+                [9][STATICCALL] from=PancakePair, to=CellToken, balanceOf(account(address): 0x061550) -> 7305003436264486536
+                [9][STATICCALL] from=PancakePair, to=PancakeFactory, feeTo() -> 0x0ed943
+                [9][CALL] from=PancakePair, to=WBNB, transfer(dst(address): 0xB4E47c, wad(uint256): 1597830731238074674) -> True
+                [9][CALL] from=PancakePair, to=CellToken, transfer(recipient(address): 0xB4E47c, amount(uint256): 12959211882113411) -> True
+                [9][STATICCALL] from=PancakePair, to=WBNB, balanceOf((address): 0x061550) -> 899086492392863547772
+                [9][STATICCALL] from=PancakePair, to=CellToken, balanceOf(account(address): 0x061550) -> 7292044224382373125
+            [7][STATICCALL] from=LpMigration, to=PancakePair, getReserves() -> ['9849924965750890276', '659610143147347310098502', '1685585275']
+            [7][CALL] from=LpMigration, to=CellFrame, approve(spender(address): 0x10ED43, amount(uint256): 107000332748088908619084) -> True
+            [7][CALL] from=LpMigration, to=WBNB, approve(guy(address): 0x10ED43, wad(uint256): 1597830731238074674) -> True
+            [7][CALL] from=LpMigration, to=PancakeRouter, addLiquidity(tokenA(address): 0xbb4CdB, tokenB(address): 0xd98438, amountADesired(uint256): 1597830731238074674, amountBDesired(uint256): 107000332748088908619084, amountAMin(uint256): 0, amountBMin(uint256): 0, to(address): 0x1e2A25, deadline(uint256): 1685590275) -> ['1597830566780137385', '107000332748088908619084', '377713942001128533256']
+              [8][STATICCALL] from=PancakeRouter, to=PancakeFactory, getPair((address): 0xd98438) -> 0x1c15f4
+              [8][STATICCALL] from=PancakeRouter, to=PancakePair, getReserves() -> ['9849924965750890276', '659610143147347310098502', '1685585275']
+              [8][CALL] from=PancakeRouter, to=WBNB, transferFrom(src(address): 0xB4E47c, dst(address): 0x1c15f4, wad(uint256): 1597830566780137385) -> True
+              [8][CALL] from=PancakeRouter, to=CellFrame, transferFrom(sender(address): 0xB4E47c, recipient(address): 0x1c15f4, amount(uint256): 107000332748088908619084) -> True
+              [8][CALL] from=PancakeRouter, to=PancakePair, mint(to(address): 0x1e2A25) -> 377713942001128533256
+                [9][STATICCALL] from=PancakePair, to=WBNB, balanceOf((address): 0x1c15f4) -> 11447755532531027661
+                [9][STATICCALL] from=PancakePair, to=CellFrame, balanceOf(account(address): 0x1c15f4) -> 766610475895436218717586
+                [9][STATICCALL] from=PancakePair, to=PancakeFactory, feeTo() -> 0x0ed943
+            [7][STATICCALL] from=LpMigration, to=CellToken, balanceOf(account(address): 0xB4E47c) -> 12311251288007741
+            [7][CALL] from=LpMigration, to=CellToken, transfer(recipient(address): 0xC3b8A6, amount(uint256): 12311251288007741) -> True
+            [7][CALL] from=LpMigration, to=WBNB, transfer(dst(address): 0x1e2A25, wad(uint256): 164457937289) -> True
+          [6][CALL] from=0x1e2a25, to=LpMigration, migrate(amountLP(uint256): 128505254725663051) -> None
+            [7][CALL] from=LpMigration, to=PancakePair, transferFrom(from(address): 0x1e2A25, to(address): 0xB4E47c, value(uint256): 128505254725663051) -> True
+            [7][CALL] from=LpMigration, to=PancakePair, approve(spender(address): 0x10ED43, value(uint256): 128505254725663051) -> True
+            [7][CALL] from=LpMigration, to=PancakeRouter, removeLiquidity(tokenA(address): 0xbb4CdB, tokenB(address): 0xf3E144, liquidity(uint256): 128505254725663051, amountAMin(uint256): 0, amountBMin(uint256): 0, to(address): 0xB4E47c, deadline(uint256): 1685590275) -> ['1597830731238074674', '12959211882113411']
+              [8][CALL] from=PancakeRouter, to=PancakePair, transferFrom(from(address): 0xB4E47c, to(address): 0x061550, value(uint256): 128505254725663051) -> True
+              [8][CALL] from=PancakeRouter, to=PancakePair, burn(to(address): 0xB4E47c) -> ['1597830731238074674', '12959211882113411']
+                [9][STATICCALL] from=PancakePair, to=WBNB, balanceOf((address): 0x061550) -> 899086492392863547772
+                [9][STATICCALL] from=PancakePair, to=CellToken, balanceOf(account(address): 0x061550) -> 7292044224382373125
+                [9][STATICCALL] from=PancakePair, to=PancakeFactory, feeTo() -> 0x0ed943
+                [9][CALL] from=PancakePair, to=WBNB, transfer(dst(address): 0xB4E47c, wad(uint256): 1597830731238074674) -> True
+                [9][CALL] from=PancakePair, to=CellToken, transfer(recipient(address): 0xB4E47c, amount(uint256): 12959211882113411) -> True
+                [9][STATICCALL] from=PancakePair, to=WBNB, balanceOf((address): 0x061550) -> 897488661661625473098
+                [9][STATICCALL] from=PancakePair, to=CellToken, balanceOf(account(address): 0x061550) -> 7279085012500259714
+            [7][STATICCALL] from=LpMigration, to=PancakePair, getReserves() -> ['11447755532531027661', '766610475895436218717586', '1685585275']
+            [7][CALL] from=LpMigration, to=CellFrame, approve(spender(address): 0x10ED43, amount(uint256): 107000332748088908619084) -> True
+            [7][CALL] from=LpMigration, to=WBNB, approve(guy(address): 0x10ED43, wad(uint256): 1597830731238074674) -> True
+            [7][CALL] from=LpMigration, to=PancakeRouter, addLiquidity(tokenA(address): 0xbb4CdB, tokenB(address): 0xd98438, amountADesired(uint256): 1597830731238074674, amountBDesired(uint256): 107000332748088908619084, amountAMin(uint256): 0, amountBMin(uint256): 0, to(address): 0x1e2A25, deadline(uint256): 1685590275) -> ['1597830566780137385', '107000332748088908619084', '377713942001128533256']
+              [8][STATICCALL] from=PancakeRouter, to=PancakeFactory, getPair((address): 0xd98438) -> 0x1c15f4
+              [8][STATICCALL] from=PancakeRouter, to=PancakePair, getReserves() -> ['11447755532531027661', '766610475895436218717586', '1685585275']
+              [8][CALL] from=PancakeRouter, to=WBNB, transferFrom(src(address): 0xB4E47c, dst(address): 0x1c15f4, wad(uint256): 1597830566780137385) -> True
+              [8][CALL] from=PancakeRouter, to=CellFrame, transferFrom(sender(address): 0xB4E47c, recipient(address): 0x1c15f4, amount(uint256): 107000332748088908619084) -> True
+              [8][CALL] from=PancakeRouter, to=PancakePair, mint(to(address): 0x1e2A25) -> 377713942001128533256
+                [9][STATICCALL] from=PancakePair, to=WBNB, balanceOf((address): 0x1c15f4) -> 13045586099311165046
+                [9][STATICCALL] from=PancakePair, to=CellFrame, balanceOf(account(address): 0x1c15f4) -> 873610808643525127336670
+                [9][STATICCALL] from=PancakePair, to=PancakeFactory, feeTo() -> 0x0ed943
+            [7][STATICCALL] from=LpMigration, to=CellToken, balanceOf(account(address): 0xB4E47c) -> 12311251288007741
+            [7][CALL] from=LpMigration, to=CellToken, transfer(recipient(address): 0xC3b8A6, amount(uint256): 12311251288007741) -> True
+            [7][CALL] from=LpMigration, to=WBNB, transfer(dst(address): 0x1e2A25, wad(uint256): 164457937289) -> True
+          [6][CALL] from=0x1e2a25, to=LpMigration, migrate(amountLP(uint256): 128505254725663051) -> None
+            [7][CALL] from=LpMigration, to=PancakePair, transferFrom(from(address): 0x1e2A25, to(address): 0xB4E47c, value(uint256): 128505254725663051) -> True
+            [7][CALL] from=LpMigration, to=PancakePair, approve(spender(address): 0x10ED43, value(uint256): 128505254725663051) -> True
+            [7][CALL] from=LpMigration, to=PancakeRouter, removeLiquidity(tokenA(address): 0xbb4CdB, tokenB(address): 0xf3E144, liquidity(uint256): 128505254725663051, amountAMin(uint256): 0, amountBMin(uint256): 0, to(address): 0xB4E47c, deadline(uint256): 1685590275) -> ['1597830731238074674', '12959211882113411']
+              [8][CALL] from=PancakeRouter, to=PancakePair, transferFrom(from(address): 0xB4E47c, to(address): 0x061550, value(uint256): 128505254725663051) -> True
+              [8][CALL] from=PancakeRouter, to=PancakePair, burn(to(address): 0xB4E47c) -> ['1597830731238074674', '12959211882113411']
+                [9][STATICCALL] from=PancakePair, to=WBNB, balanceOf((address): 0x061550) -> 897488661661625473098
+                [9][STATICCALL] from=PancakePair, to=CellToken, balanceOf(account(address): 0x061550) -> 7279085012500259714
+                [9][STATICCALL] from=PancakePair, to=PancakeFactory, feeTo() -> 0x0ed943
+                [9][CALL] from=PancakePair, to=WBNB, transfer(dst(address): 0xB4E47c, wad(uint256): 1597830731238074674) -> True
+                [9][CALL] from=PancakePair, to=CellToken, transfer(recipient(address): 0xB4E47c, amount(uint256): 12959211882113411) -> True
+                [9][STATICCALL] from=PancakePair, to=WBNB, balanceOf((address): 0x061550) -> 895890830930387398424
+                [9][STATICCALL] from=PancakePair, to=CellToken, balanceOf(account(address): 0x061550) -> 7266125800618146303
+            [7][STATICCALL] from=LpMigration, to=PancakePair, getReserves() -> ['13045586099311165046', '873610808643525127336670', '1685585275']
+            [7][CALL] from=LpMigration, to=CellFrame, approve(spender(address): 0x10ED43, amount(uint256): 107000332748088908619084) -> True
+            [7][CALL] from=LpMigration, to=WBNB, approve(guy(address): 0x10ED43, wad(uint256): 1597830731238074674) -> True
+            [7][CALL] from=LpMigration, to=PancakeRouter, addLiquidity(tokenA(address): 0xbb4CdB, tokenB(address): 0xd98438, amountADesired(uint256): 1597830731238074674, amountBDesired(uint256): 107000332748088908619084, amountAMin(uint256): 0, amountBMin(uint256): 0, to(address): 0x1e2A25, deadline(uint256): 1685590275) -> ['1597830566780137385', '107000332748088908619084', '377713942001128533256']
+              [8][STATICCALL] from=PancakeRouter, to=PancakeFactory, getPair((address): 0xd98438) -> 0x1c15f4
+              [8][STATICCALL] from=PancakeRouter, to=PancakePair, getReserves() -> ['13045586099311165046', '873610808643525127336670', '1685585275']
+              [8][CALL] from=PancakeRouter, to=WBNB, transferFrom(src(address): 0xB4E47c, dst(address): 0x1c15f4, wad(uint256): 1597830566780137385) -> True
+              [8][CALL] from=PancakeRouter, to=CellFrame, transferFrom(sender(address): 0xB4E47c, recipient(address): 0x1c15f4, amount(uint256): 107000332748088908619084) -> True
+              [8][CALL] from=PancakeRouter, to=PancakePair, mint(to(address): 0x1e2A25) -> 377713942001128533256
+                [9][STATICCALL] from=PancakePair, to=WBNB, balanceOf((address): 0x1c15f4) -> 14643416666091302431
+                [9][STATICCALL] from=PancakePair, to=CellFrame, balanceOf(account(address): 0x1c15f4) -> 980611141391614035955754
+                [9][STATICCALL] from=PancakePair, to=PancakeFactory, feeTo() -> 0x0ed943
+            [7][STATICCALL] from=LpMigration, to=CellToken, balanceOf(account(address): 0xB4E47c) -> 12311251288007741
+            [7][CALL] from=LpMigration, to=CellToken, transfer(recipient(address): 0xC3b8A6, amount(uint256): 12311251288007741) -> True
+            [7][CALL] from=LpMigration, to=WBNB, transfer(dst(address): 0x1e2A25, wad(uint256): 164457937289) -> True
+          [6][CALL] from=0x1e2a25, to=LpMigration, migrate(amountLP(uint256): 128505254725663051) -> None
+            [7][CALL] from=LpMigration, to=PancakePair, transferFrom(from(address): 0x1e2A25, to(address): 0xB4E47c, value(uint256): 128505254725663051) -> True
+            [7][CALL] from=LpMigration, to=PancakePair, approve(spender(address): 0x10ED43, value(uint256): 128505254725663051) -> True
+            [7][CALL] from=LpMigration, to=PancakeRouter, removeLiquidity(tokenA(address): 0xbb4CdB, tokenB(address): 0xf3E144, liquidity(uint256): 128505254725663051, amountAMin(uint256): 0, amountBMin(uint256): 0, to(address): 0xB4E47c, deadline(uint256): 1685590275) -> ['1597830731238074674', '12959211882113411']
+              [8][CALL] from=PancakeRouter, to=PancakePair, transferFrom(from(address): 0xB4E47c, to(address): 0x061550, value(uint256): 128505254725663051) -> True
+              [8][CALL] from=PancakeRouter, to=PancakePair, burn(to(address): 0xB4E47c) -> ['1597830731238074674', '12959211882113411']
+                [9][STATICCALL] from=PancakePair, to=WBNB, balanceOf((address): 0x061550) -> 895890830930387398424
+                [9][STATICCALL] from=PancakePair, to=CellToken, balanceOf(account(address): 0x061550) -> 7266125800618146303
+                [9][STATICCALL] from=PancakePair, to=PancakeFactory, feeTo() -> 0x0ed943
+                [9][CALL] from=PancakePair, to=WBNB, transfer(dst(address): 0xB4E47c, wad(uint256): 1597830731238074674) -> True
+                [9][CALL] from=PancakePair, to=CellToken, transfer(recipient(address): 0xB4E47c, amount(uint256): 12959211882113411) -> True
+                [9][STATICCALL] from=PancakePair, to=WBNB, balanceOf((address): 0x061550) -> 894293000199149323750
+                [9][STATICCALL] from=PancakePair, to=CellToken, balanceOf(account(address): 0x061550) -> 7253166588736032892
+            [7][STATICCALL] from=LpMigration, to=PancakePair, getReserves() -> ['14643416666091302431', '980611141391614035955754', '1685585275']
+            [7][CALL] from=LpMigration, to=CellFrame, approve(spender(address): 0x10ED43, amount(uint256): 107000332748088908619084) -> True
+            [7][CALL] from=LpMigration, to=WBNB, approve(guy(address): 0x10ED43, wad(uint256): 1597830731238074674) -> True
+            [7][CALL] from=LpMigration, to=PancakeRouter, addLiquidity(tokenA(address): 0xbb4CdB, tokenB(address): 0xd98438, amountADesired(uint256): 1597830731238074674, amountBDesired(uint256): 107000332748088908619084, amountAMin(uint256): 0, amountBMin(uint256): 0, to(address): 0x1e2A25, deadline(uint256): 1685590275) -> ['1597830566780137385', '107000332748088908619084', '377713942001128533256']
+              [8][STATICCALL] from=PancakeRouter, to=PancakeFactory, getPair((address): 0xd98438) -> 0x1c15f4
+              [8][STATICCALL] from=PancakeRouter, to=PancakePair, getReserves() -> ['14643416666091302431', '980611141391614035955754', '1685585275']
+              [8][CALL] from=PancakeRouter, to=WBNB, transferFrom(src(address): 0xB4E47c, dst(address): 0x1c15f4, wad(uint256): 1597830566780137385) -> True
+              [8][CALL] from=PancakeRouter, to=CellFrame, transferFrom(sender(address): 0xB4E47c, recipient(address): 0x1c15f4, amount(uint256): 107000332748088908619084) -> True
+              [8][CALL] from=PancakeRouter, to=PancakePair, mint(to(address): 0x1e2A25) -> 377713942001128533256
+                [9][STATICCALL] from=PancakePair, to=WBNB, balanceOf((address): 0x1c15f4) -> 16241247232871439816
+                [9][STATICCALL] from=PancakePair, to=CellFrame, balanceOf(account(address): 0x1c15f4) -> 1087611474139702944574838
+                [9][STATICCALL] from=PancakePair, to=PancakeFactory, feeTo() -> 0x0ed943
+            [7][STATICCALL] from=LpMigration, to=CellToken, balanceOf(account(address): 0xB4E47c) -> 12311251288007741
+            [7][CALL] from=LpMigration, to=CellToken, transfer(recipient(address): 0xC3b8A6, amount(uint256): 12311251288007741) -> True
+            [7][CALL] from=LpMigration, to=WBNB, transfer(dst(address): 0x1e2A25, wad(uint256): 164457937289) -> True
+          [6][CALL] from=0x1e2a25, to=LpMigration, migrate(amountLP(uint256): 128505254725663051) -> None
+            [7][CALL] from=LpMigration, to=PancakePair, transferFrom(from(address): 0x1e2A25, to(address): 0xB4E47c, value(uint256): 128505254725663051) -> True
+            [7][CALL] from=LpMigration, to=PancakePair, approve(spender(address): 0x10ED43, value(uint256): 128505254725663051) -> True
+            [7][CALL] from=LpMigration, to=PancakeRouter, removeLiquidity(tokenA(address): 0xbb4CdB, tokenB(address): 0xf3E144, liquidity(uint256): 128505254725663051, amountAMin(uint256): 0, amountBMin(uint256): 0, to(address): 0xB4E47c, deadline(uint256): 1685590275) -> ['1597830731238074674', '12959211882113411']
+              [8][CALL] from=PancakeRouter, to=PancakePair, transferFrom(from(address): 0xB4E47c, to(address): 0x061550, value(uint256): 128505254725663051) -> True
+              [8][CALL] from=PancakeRouter, to=PancakePair, burn(to(address): 0xB4E47c) -> ['1597830731238074674', '12959211882113411']
+                [9][STATICCALL] from=PancakePair, to=WBNB, balanceOf((address): 0x061550) -> 894293000199149323750
+                [9][STATICCALL] from=PancakePair, to=CellToken, balanceOf(account(address): 0x061550) -> 7253166588736032892
+                [9][STATICCALL] from=PancakePair, to=PancakeFactory, feeTo() -> 0x0ed943
+                [9][CALL] from=PancakePair, to=WBNB, transfer(dst(address): 0xB4E47c, wad(uint256): 1597830731238074674) -> True
+                [9][CALL] from=PancakePair, to=CellToken, transfer(recipient(address): 0xB4E47c, amount(uint256): 12959211882113411) -> True
+                [9][STATICCALL] from=PancakePair, to=WBNB, balanceOf((address): 0x061550) -> 892695169467911249076
+                [9][STATICCALL] from=PancakePair, to=CellToken, balanceOf(account(address): 0x061550) -> 7240207376853919481
+            [7][STATICCALL] from=LpMigration, to=PancakePair, getReserves() -> ['16241247232871439816', '1087611474139702944574838', '1685585275']
+            [7][CALL] from=LpMigration, to=CellFrame, approve(spender(address): 0x10ED43, amount(uint256): 107000332748088908619084) -> True
+            [7][CALL] from=LpMigration, to=WBNB, approve(guy(address): 0x10ED43, wad(uint256): 1597830731238074674) -> True
+            [7][CALL] from=LpMigration, to=PancakeRouter, addLiquidity(tokenA(address): 0xbb4CdB, tokenB(address): 0xd98438, amountADesired(uint256): 1597830731238074674, amountBDesired(uint256): 107000332748088908619084, amountAMin(uint256): 0, amountBMin(uint256): 0, to(address): 0x1e2A25, deadline(uint256): 1685590275) -> ['1597830566780137385', '107000332748088908619084', '377713942001128533256']
+              [8][STATICCALL] from=PancakeRouter, to=PancakeFactory, getPair((address): 0xd98438) -> 0x1c15f4
+              [8][STATICCALL] from=PancakeRouter, to=PancakePair, getReserves() -> ['16241247232871439816', '1087611474139702944574838', '1685585275']
+              [8][CALL] from=PancakeRouter, to=WBNB, transferFrom(src(address): 0xB4E47c, dst(address): 0x1c15f4, wad(uint256): 1597830566780137385) -> True
+              [8][CALL] from=PancakeRouter, to=CellFrame, transferFrom(sender(address): 0xB4E47c, recipient(address): 0x1c15f4, amount(uint256): 107000332748088908619084) -> True
+              [8][CALL] from=PancakeRouter, to=PancakePair, mint(to(address): 0x1e2A25) -> 377713942001128533256
+                [9][STATICCALL] from=PancakePair, to=WBNB, balanceOf((address): 0x1c15f4) -> 17839077799651577201
+                [9][STATICCALL] from=PancakePair, to=CellFrame, balanceOf(account(address): 0x1c15f4) -> 1194611806887791853193922
+                [9][STATICCALL] from=PancakePair, to=PancakeFactory, feeTo() -> 0x0ed943
+            [7][STATICCALL] from=LpMigration, to=CellToken, balanceOf(account(address): 0xB4E47c) -> 12311251288007741
+            [7][CALL] from=LpMigration, to=CellToken, transfer(recipient(address): 0xC3b8A6, amount(uint256): 12311251288007741) -> True
+            [7][CALL] from=LpMigration, to=WBNB, transfer(dst(address): 0x1e2A25, wad(uint256): 164457937289) -> True
+          [6][CALL] from=0x1e2a25, to=LpMigration, migrate(amountLP(uint256): 128505254725663051) -> None
+            [7][CALL] from=LpMigration, to=PancakePair, transferFrom(from(address): 0x1e2A25, to(address): 0xB4E47c, value(uint256): 128505254725663051) -> True
+            [7][CALL] from=LpMigration, to=PancakePair, approve(spender(address): 0x10ED43, value(uint256): 128505254725663051) -> True
+            [7][CALL] from=LpMigration, to=PancakeRouter, removeLiquidity(tokenA(address): 0xbb4CdB, tokenB(address): 0xf3E144, liquidity(uint256): 128505254725663051, amountAMin(uint256): 0, amountBMin(uint256): 0, to(address): 0xB4E47c, deadline(uint256): 1685590275) -> ['1597830731238074674', '12959211882113411']
+              [8][CALL] from=PancakeRouter, to=PancakePair, transferFrom(from(address): 0xB4E47c, to(address): 0x061550, value(uint256): 128505254725663051) -> True
+              [8][CALL] from=PancakeRouter, to=PancakePair, burn(to(address): 0xB4E47c) -> ['1597830731238074674', '12959211882113411']
+                [9][STATICCALL] from=PancakePair, to=WBNB, balanceOf((address): 0x061550) -> 892695169467911249076
+                [9][STATICCALL] from=PancakePair, to=CellToken, balanceOf(account(address): 0x061550) -> 7240207376853919481
+                [9][STATICCALL] from=PancakePair, to=PancakeFactory, feeTo() -> 0x0ed943
+                [9][CALL] from=PancakePair, to=WBNB, transfer(dst(address): 0xB4E47c, wad(uint256): 1597830731238074674) -> True
+                [9][CALL] from=PancakePair, to=CellToken, transfer(recipient(address): 0xB4E47c, amount(uint256): 12959211882113411) -> True
+                [9][STATICCALL] from=PancakePair, to=WBNB, balanceOf((address): 0x061550) -> 891097338736673174402
+                [9][STATICCALL] from=PancakePair, to=CellToken, balanceOf(account(address): 0x061550) -> 7227248164971806070
+            [7][STATICCALL] from=LpMigration, to=PancakePair, getReserves() -> ['17839077799651577201', '1194611806887791853193922', '1685585275']
+            [7][CALL] from=LpMigration, to=CellFrame, approve(spender(address): 0x10ED43, amount(uint256): 107000332748088908619084) -> True
+            [7][CALL] from=LpMigration, to=WBNB, approve(guy(address): 0x10ED43, wad(uint256): 1597830731238074674) -> True
+            [7][CALL] from=LpMigration, to=PancakeRouter, addLiquidity(tokenA(address): 0xbb4CdB, tokenB(address): 0xd98438, amountADesired(uint256): 1597830731238074674, amountBDesired(uint256): 107000332748088908619084, amountAMin(uint256): 0, amountBMin(uint256): 0, to(address): 0x1e2A25, deadline(uint256): 1685590275) -> ['1597830566780137385', '107000332748088908619084', '377713942001128533256']
+              [8][STATICCALL] from=PancakeRouter, to=PancakeFactory, getPair((address): 0xd98438) -> 0x1c15f4
+              [8][STATICCALL] from=PancakeRouter, to=PancakePair, getReserves() -> ['17839077799651577201', '1194611806887791853193922', '1685585275']
+              [8][CALL] from=PancakeRouter, to=WBNB, transferFrom(src(address): 0xB4E47c, dst(address): 0x1c15f4, wad(uint256): 1597830566780137385) -> True
+              [8][CALL] from=PancakeRouter, to=CellFrame, transferFrom(sender(address): 0xB4E47c, recipient(address): 0x1c15f4, amount(uint256): 107000332748088908619084) -> True
+              [8][CALL] from=PancakeRouter, to=PancakePair, mint(to(address): 0x1e2A25) -> 377713942001128533256
+                [9][STATICCALL] from=PancakePair, to=WBNB, balanceOf((address): 0x1c15f4) -> 19436908366431714586
+                [9][STATICCALL] from=PancakePair, to=CellFrame, balanceOf(account(address): 0x1c15f4) -> 1301612139635880761813006
+                [9][STATICCALL] from=PancakePair, to=PancakeFactory, feeTo() -> 0x0ed943
+            [7][STATICCALL] from=LpMigration, to=CellToken, balanceOf(account(address): 0xB4E47c) -> 12311251288007741
+            [7][CALL] from=LpMigration, to=CellToken, transfer(recipient(address): 0xC3b8A6, amount(uint256): 12311251288007741) -> True
+            [7][CALL] from=LpMigration, to=WBNB, transfer(dst(address): 0x1e2A25, wad(uint256): 164457937289) -> True
+          [6][CALL] from=0x1e2a25, to=LpMigration, migrate(amountLP(uint256): 128505254725663051) -> None
+            [7][CALL] from=LpMigration, to=PancakePair, transferFrom(from(address): 0x1e2A25, to(address): 0xB4E47c, value(uint256): 128505254725663051) -> True
+            [7][CALL] from=LpMigration, to=PancakePair, approve(spender(address): 0x10ED43, value(uint256): 128505254725663051) -> True
+            [7][CALL] from=LpMigration, to=PancakeRouter, removeLiquidity(tokenA(address): 0xbb4CdB, tokenB(address): 0xf3E144, liquidity(uint256): 128505254725663051, amountAMin(uint256): 0, amountBMin(uint256): 0, to(address): 0xB4E47c, deadline(uint256): 1685590275) -> ['1597830731238074674', '12959211882113411']
+              [8][CALL] from=PancakeRouter, to=PancakePair, transferFrom(from(address): 0xB4E47c, to(address): 0x061550, value(uint256): 128505254725663051) -> True
+              [8][CALL] from=PancakeRouter, to=PancakePair, burn(to(address): 0xB4E47c) -> ['1597830731238074674', '12959211882113411']
+                [9][STATICCALL] from=PancakePair, to=WBNB, balanceOf((address): 0x061550) -> 891097338736673174402
+                [9][STATICCALL] from=PancakePair, to=CellToken, balanceOf(account(address): 0x061550) -> 7227248164971806070
+                [9][STATICCALL] from=PancakePair, to=PancakeFactory, feeTo() -> 0x0ed943
+                [9][CALL] from=PancakePair, to=WBNB, transfer(dst(address): 0xB4E47c, wad(uint256): 1597830731238074674) -> True
+                [9][CALL] from=PancakePair, to=CellToken, transfer(recipient(address): 0xB4E47c, amount(uint256): 12959211882113411) -> True
+                [9][STATICCALL] from=PancakePair, to=WBNB, balanceOf((address): 0x061550) -> 889499508005435099728
+                [9][STATICCALL] from=PancakePair, to=CellToken, balanceOf(account(address): 0x061550) -> 7214288953089692659
+            [7][STATICCALL] from=LpMigration, to=PancakePair, getReserves() -> ['19436908366431714586', '1301612139635880761813006', '1685585275']
+            [7][CALL] from=LpMigration, to=CellFrame, approve(spender(address): 0x10ED43, amount(uint256): 107000332748088908619084) -> True
+            [7][CALL] from=LpMigration, to=WBNB, approve(guy(address): 0x10ED43, wad(uint256): 1597830731238074674) -> True
+            [7][CALL] from=LpMigration, to=PancakeRouter, addLiquidity(tokenA(address): 0xbb4CdB, tokenB(address): 0xd98438, amountADesired(uint256): 1597830731238074674, amountBDesired(uint256): 107000332748088908619084, amountAMin(uint256): 0, amountBMin(uint256): 0, to(address): 0x1e2A25, deadline(uint256): 1685590275) -> ['1597830566780137385', '107000332748088908619084', '377713942001128533256']
+              [8][STATICCALL] from=PancakeRouter, to=PancakeFactory, getPair((address): 0xd98438) -> 0x1c15f4
+              [8][STATICCALL] from=PancakeRouter, to=PancakePair, getReserves() -> ['19436908366431714586', '1301612139635880761813006', '1685585275']
+              [8][CALL] from=PancakeRouter, to=WBNB, transferFrom(src(address): 0xB4E47c, dst(address): 0x1c15f4, wad(uint256): 1597830566780137385) -> True
+              [8][CALL] from=PancakeRouter, to=CellFrame, transferFrom(sender(address): 0xB4E47c, recipient(address): 0x1c15f4, amount(uint256): 107000332748088908619084) -> True
+              [8][CALL] from=PancakeRouter, to=PancakePair, mint(to(address): 0x1e2A25) -> 377713942001128533256
+                [9][STATICCALL] from=PancakePair, to=WBNB, balanceOf((address): 0x1c15f4) -> 21034738933211851971
+                [9][STATICCALL] from=PancakePair, to=CellFrame, balanceOf(account(address): 0x1c15f4) -> 1408612472383969670432090
+                [9][STATICCALL] from=PancakePair, to=PancakeFactory, feeTo() -> 0x0ed943
+            [7][STATICCALL] from=LpMigration, to=CellToken, balanceOf(account(address): 0xB4E47c) -> 12311251288007741
+            [7][CALL] from=LpMigration, to=CellToken, transfer(recipient(address): 0xC3b8A6, amount(uint256): 12311251288007741) -> True
+            [7][CALL] from=LpMigration, to=WBNB, transfer(dst(address): 0x1e2A25, wad(uint256): 164457937289) -> True
+          [6][CALL] from=0x1e2a25, to=LpMigration, migrate(amountLP(uint256): 128505254725663051) -> None
+            [7][CALL] from=LpMigration, to=PancakePair, transferFrom(from(address): 0x1e2A25, to(address): 0xB4E47c, value(uint256): 128505254725663051) -> True
+            [7][CALL] from=LpMigration, to=PancakePair, approve(spender(address): 0x10ED43, value(uint256): 128505254725663051) -> True
+            [7][CALL] from=LpMigration, to=PancakeRouter, removeLiquidity(tokenA(address): 0xbb4CdB, tokenB(address): 0xf3E144, liquidity(uint256): 128505254725663051, amountAMin(uint256): 0, amountBMin(uint256): 0, to(address): 0xB4E47c, deadline(uint256): 1685590275) -> ['1597830731238074674', '12959211882113411']
+              [8][CALL] from=PancakeRouter, to=PancakePair, transferFrom(from(address): 0xB4E47c, to(address): 0x061550, value(uint256): 128505254725663051) -> True
+              [8][CALL] from=PancakeRouter, to=PancakePair, burn(to(address): 0xB4E47c) -> ['1597830731238074674', '12959211882113411']
+                [9][STATICCALL] from=PancakePair, to=WBNB, balanceOf((address): 0x061550) -> 889499508005435099728
+                [9][STATICCALL] from=PancakePair, to=CellToken, balanceOf(account(address): 0x061550) -> 7214288953089692659
+                [9][STATICCALL] from=PancakePair, to=PancakeFactory, feeTo() -> 0x0ed943
+                [9][CALL] from=PancakePair, to=WBNB, transfer(dst(address): 0xB4E47c, wad(uint256): 1597830731238074674) -> True
+                [9][CALL] from=PancakePair, to=CellToken, transfer(recipient(address): 0xB4E47c, amount(uint256): 12959211882113411) -> True
+                [9][STATICCALL] from=PancakePair, to=WBNB, balanceOf((address): 0x061550) -> 887901677274197025054
+                [9][STATICCALL] from=PancakePair, to=CellToken, balanceOf(account(address): 0x061550) -> 7201329741207579248
+            [7][STATICCALL] from=LpMigration, to=PancakePair, getReserves() -> ['21034738933211851971', '1408612472383969670432090', '1685585275']
+            [7][CALL] from=LpMigration, to=CellFrame, approve(spender(address): 0x10ED43, amount(uint256): 107000332748088908619084) -> True
+            [7][CALL] from=LpMigration, to=WBNB, approve(guy(address): 0x10ED43, wad(uint256): 1597830731238074674) -> True
+            [7][CALL] from=LpMigration, to=PancakeRouter, addLiquidity(tokenA(address): 0xbb4CdB, tokenB(address): 0xd98438, amountADesired(uint256): 1597830731238074674, amountBDesired(uint256): 107000332748088908619084, amountAMin(uint256): 0, amountBMin(uint256): 0, to(address): 0x1e2A25, deadline(uint256): 1685590275) -> ['1597830566780137385', '107000332748088908619084', '377713942001128533256']
+              [8][STATICCALL] from=PancakeRouter, to=PancakeFactory, getPair((address): 0xd98438) -> 0x1c15f4
+              [8][STATICCALL] from=PancakeRouter, to=PancakePair, getReserves() -> ['21034738933211851971', '1408612472383969670432090', '1685585275']
+              [8][CALL] from=PancakeRouter, to=WBNB, transferFrom(src(address): 0xB4E47c, dst(address): 0x1c15f4, wad(uint256): 1597830566780137385) -> True
+              [8][CALL] from=PancakeRouter, to=CellFrame, transferFrom(sender(address): 0xB4E47c, recipient(address): 0x1c15f4, amount(uint256): 107000332748088908619084) -> True
+              [8][CALL] from=PancakeRouter, to=PancakePair, mint(to(address): 0x1e2A25) -> 377713942001128533256
+                [9][STATICCALL] from=PancakePair, to=WBNB, balanceOf((address): 0x1c15f4) -> 22632569499991989356
+                [9][STATICCALL] from=PancakePair, to=CellFrame, balanceOf(account(address): 0x1c15f4) -> 1515612805132058579051174
+                [9][STATICCALL] from=PancakePair, to=PancakeFactory, feeTo() -> 0x0ed943
+            [7][STATICCALL] from=LpMigration, to=CellToken, balanceOf(account(address): 0xB4E47c) -> 12311251288007741
+            [7][CALL] from=LpMigration, to=CellToken, transfer(recipient(address): 0xC3b8A6, amount(uint256): 12311251288007741) -> True
+            [7][CALL] from=LpMigration, to=WBNB, transfer(dst(address): 0x1e2A25, wad(uint256): 164457937289) -> True
+          [6][CALL] from=0x1e2a25, to=LpMigration, migrate(amountLP(uint256): 128505254725663051) -> []
+            [7][CALL] from=LpMigration, to=PancakePair, transferFrom(from(address): 0x1e2A25, to(address): 0xB4E47c, value(uint256): 128505254725663051) -> True
+            [7][CALL] from=LpMigration, to=PancakePair, approve(spender(address): 0x10ED43, value(uint256): 128505254725663051) -> True
+            [7][CALL] from=LpMigration, to=PancakeRouter, removeLiquidity(tokenA(address): 0xbb4CdB, tokenB(address): 0xf3E144, liquidity(uint256): 128505254725663051, amountAMin(uint256): 0, amountBMin(uint256): 0, to(address): 0xB4E47c, deadline(uint256): 1685590275) -> ['1597830731238074674', '12959211882113411']
+              [8][CALL] from=PancakeRouter, to=PancakePair, transferFrom(from(address): 0xB4E47c, to(address): 0x061550, value(uint256): 128505254725663051) -> True
+              [8][CALL] from=PancakeRouter, to=PancakePair, burn(to(address): 0xB4E47c) -> ['1597830731238074674', '12959211882113411']
+                [9][STATICCALL] from=PancakePair, to=WBNB, balanceOf((address): 0x061550) -> 887901677274197025054
+                [9][STATICCALL] from=PancakePair, to=CellToken, balanceOf(account(address): 0x061550) -> 7201329741207579248
+                [9][STATICCALL] from=PancakePair, to=PancakeFactory, feeTo() -> 0x0ed943
+                [9][CALL] from=PancakePair, to=WBNB, transfer(dst(address): 0xB4E47c, wad(uint256): 1597830731238074674) -> True
+                [9][CALL] from=PancakePair, to=CellToken, transfer(recipient(address): 0xB4E47c, amount(uint256): 12959211882113411) -> True
+                [9][STATICCALL] from=PancakePair, to=WBNB, balanceOf((address): 0x061550) -> 886303846542958950380
+                [9][STATICCALL] from=PancakePair, to=CellToken, balanceOf(account(address): 0x061550) -> 7188370529325465837
+            [7][STATICCALL] from=LpMigration, to=PancakePair, getReserves() -> ['22632569499991989356', '1515612805132058579051174', '1685585275']
+            [7][CALL] from=LpMigration, to=CellFrame, approve(spender(address): 0x10ED43, amount(uint256): 107000332748088908619084) -> True
+            [7][CALL] from=LpMigration, to=WBNB, approve(guy(address): 0x10ED43, wad(uint256): 1597830731238074674) -> True
+            [7][CALL] from=LpMigration, to=PancakeRouter, addLiquidity(tokenA(address): 0xbb4CdB, tokenB(address): 0xd98438, amountADesired(uint256): 1597830731238074674, amountBDesired(uint256): 107000332748088908619084, amountAMin(uint256): 0, amountBMin(uint256): 0, to(address): 0x1e2A25, deadline(uint256): 1685590275) -> ['3963877391197344453575983046348115674221700746820753546331534351508065746944', '862718293348820473429344482784628181556388621521298319395315527974912', '979451365963766574087307771853635596334973034459934101565131045884495']
+              [8][STATICCALL] from=PancakeRouter, to=PancakeFactory, getPair((address): 0xd98438) -> 0x1c15f4
+              [8][STATICCALL] from=PancakeRouter, to=PancakePair, getReserves() -> ['22632569499991989356', '1515612805132058579051174', '1685585275']
+              [8][CALL] from=PancakeRouter, to=WBNB, transferFrom(src(address): 0xB4E47c, dst(address): 0x1c15f4, wad(uint256): 1597830566780137385) -> True
+              [8][CALL] from=PancakeRouter, to=CellFrame, transferFrom(sender(address): 0xB4E47c, recipient(address): 0x1c15f4, amount(uint256): 107000332748088908619084) -> None
+          [6][STATICCALL] from=0x1e2a25, to=PancakePair, balanceOf((address): 0x1e2A25) -> 3399425478010156799304
+          [6][CALL] from=0x1e2a25, to=PancakePair, transfer(to(address): 0x1c15f4, value(uint256): 3399425478010156799304) -> True
+          [6][CALL] from=0x1e2a25, to=PancakePair, burn(to(address): 0x1e2A25) -> ['14380475101021236464', '963002994732800177432741']
+            [7][STATICCALL] from=PancakePair, to=WBNB, balanceOf((address): 0x1c15f4) -> 22632569499991989356
+            [7][STATICCALL] from=PancakePair, to=CellFrame, balanceOf(account(address): 0x1c15f4) -> 1515612805132058579051174
+            [7][STATICCALL] from=PancakePair, to=PancakeFactory, feeTo() -> 0x0ed943
+            [7][CALL] from=PancakePair, to=WBNB, transfer(dst(address): 0x1e2A25, wad(uint256): 14380475101021236464) -> True
+            [7][CALL] from=PancakePair, to=CellFrame, transfer(recipient(address): 0x1e2A25, amount(uint256): 963002994732800177432741) -> True
+            [7][STATICCALL] from=PancakePair, to=WBNB, balanceOf((address): 0x1c15f4) -> 8252094398970752892
+            [7][STATICCALL] from=PancakePair, to=CellFrame, balanceOf(account(address): 0x1c15f4) -> 552609810399258401618433
+          [6][STATICCALL] from=0x1e2a25, to=WBNB, balanceOf((address): 0x1e2A25) -> 164760002794360830321
+          [6][STATICCALL] from=0x1e2a25, to=CellFrame, balanceOf(account(address): 0x1e2A25) -> 914852844996160168561104
+          [6][CALL] from=0x1e2a25, to=WBNB, approve(guy(address): 0x10ED43, wad(uint256): 115792089237316195423570985008687907853269...) -> True
+          [6][CALL] from=0x1e2a25, to=PancakeRouter, swapExactTokensForTokensSupportingFeeOnTransferTokens(amountIn(uint256): 164760002794360830321, amountOutMin(uint256): 0, path(address[]): ['0xbb4CdB9CBd36B01bD1cBaEBF2De08d9173bc09..., to(address): 0x1e2A25, deadline(uint256): 1685589275) -> None
+            [7][CALL] from=PancakeRouter, to=WBNB, transferFrom(src(address): 0x1e2A25, dst(address): 0x1c15f4, wad(uint256): 164760002794360830321) -> True
+            [7][STATICCALL] from=PancakeRouter, to=CellFrame, balanceOf(account(address): 0x1e2A25) -> 914852844996160168561104
+            [7][STATICCALL] from=PancakeRouter, to=PancakePair, getReserves() -> ['8252094398970752892', '552609810399258401618433', '1685585275']
+            [7][STATICCALL] from=PancakeRouter, to=WBNB, balanceOf((address): 0x1c15f4) -> 173012097193331583213
+            [7][CALL] from=PancakeRouter, to=PancakePair, swap(amount0Out(uint256): 0, amount1Out(uint256): 526189282522985707052306, to(address): 0x1e2A25, data(bytes): b'') -> None
+              [8][CALL] from=PancakePair, to=CellFrame, transfer(recipient(address): 0x1e2A25, amount(uint256): 526189282522985707052306) -> True
+              [8][STATICCALL] from=PancakePair, to=WBNB, balanceOf((address): 0x1c15f4) -> 173012097193331583213
+              [8][STATICCALL] from=PancakePair, to=CellFrame, balanceOf(account(address): 0x1c15f4) -> 26420527876272694566127
+            [7][STATICCALL] from=PancakeRouter, to=CellFrame, balanceOf(account(address): 0x1e2A25) -> 1414732663392996590260795
+          [6][STATICCALL] from=0x1e2a25, to=CellFrame, balanceOf(account(address): 0x1e2A25) -> 1414732663392996590260795
+          [6][STATICCALL] from=0x1e2a25, to=CellToken, balanceOf(account(address): 0x1e2A25) -> 2736684979404436492862
+          [6][STATICCALL] from=0x1e2a25, to=WBNB, balanceOf((address): 0x1e2A25) -> 0
+          [6][CALL] from=0x1e2a25, to=CellToken, approve(spender(address): 0x10ED43, amount(uint256): 115792089237316195423570985008687907853269...) -> True
+          [6][CALL] from=0x1e2a25, to=PancakeRouter, swapExactTokensForTokensSupportingFeeOnTransferTokens(amountIn(uint256): 2736684979404436492862, amountOutMin(uint256): 0, path(address[]): ['0xf3E1449DDB6b218dA2C9463D4594CEccC89343..., to(address): 0x1e2A25, deadline(uint256): 1685589275) -> None
+            [7][CALL] from=PancakeRouter, to=CellToken, transferFrom(sender(address): 0x1e2A25, recipient(address): 0x061550, amount(uint256): 2736684979404436492862) -> True
+              [8][STATICCALL] from=CellToken, to=PancakeRouter, WETH() -> 0xbb4cdb
+              [8][CALL] from=CellToken, to=PancakeRouter, swapExactTokensForETHSupportingFeeOnTransferTokens(amountIn(uint256): 144026594824151584, amountOutMin(uint256): 0, path(address[]): ['0xf3E1449DDB6b218dA2C9463D4594CEccC89343..., to(address): 0xf3E144, deadline(uint256): 1685585275) -> None
+                [9][CALL] from=PancakeRouter, to=CellToken, transferFrom(sender(address): 0xf3E144, recipient(address): 0x061550, amount(uint256): 144026594824151584) -> True
+                [9][STATICCALL] from=PancakeRouter, to=PancakePair, getReserves() -> ['887901677274197025054', '7201329741207579248', '1685585275']
+                [9][STATICCALL] from=PancakeRouter, to=CellToken, balanceOf(account(address): 0x061550) -> 7345356336031730832
+                [9][CALL] from=PancakeRouter, to=PancakePair, swap(amount0Out(uint256): 17367163548821246663, amount1Out(uint256): 0, to(address): 0x10ED43, data(bytes): b'') -> None
+                  [10][CALL] from=PancakePair, to=WBNB, transfer(dst(address): 0x10ED43, wad(uint256): 17367163548821246663) -> True
+                  [10][STATICCALL] from=PancakePair, to=WBNB, balanceOf((address): 0x061550) -> 870534513725375778391
+                  [10][STATICCALL] from=PancakePair, to=CellToken, balanceOf(account(address): 0x061550) -> 7345356336031730832
+                [9][STATICCALL] from=PancakeRouter, to=WBNB, balanceOf((address): 0x10ED43) -> 17367163548821246663
+                [9][CALL] from=PancakeRouter, to=WBNB, withdraw(wad(uint256): 17367163548821246663) -> None
+                  [10][CALL][17.367163548821246] from=WBNB, to=PancakeRouter
+                [9][CALL][17.367163548821246] from=PancakeRouter, to=CellToken
+              [8][CALL][17.367163548821246] from=CellToken, to=GnosisSafeProxy
+                [9][DELEGATECALL][17.367163548821246] from=GnosisSafeProxy, to=GnosisSafeL2
+            [7][STATICCALL] from=PancakeRouter, to=WBNB, balanceOf((address): 0x1e2A25) -> 0
+            [7][STATICCALL] from=PancakeRouter, to=PancakePair, getReserves() -> ['870534513725375778391', '7345356336031730832', '1685585275']
+            [7][STATICCALL] from=PancakeRouter, to=CellToken, balanceOf(account(address): 0x061550) -> 2607196086770246399051
+            [7][CALL] from=PancakeRouter, to=PancakePair, swap(amount0Out(uint256): 868075793030895237757, amount1Out(uint256): 0, to(address): 0x1e2A25, data(bytes): b'') -> None
+              [8][CALL] from=PancakePair, to=WBNB, transfer(dst(address): 0x1e2A25, wad(uint256): 868075793030895237757) -> True
+              [8][STATICCALL] from=PancakePair, to=WBNB, balanceOf((address): 0x061550) -> 2458720694480540634
+              [8][STATICCALL] from=PancakePair, to=CellToken, balanceOf(account(address): 0x061550) -> 2607196086770246399051
+            [7][STATICCALL] from=PancakeRouter, to=WBNB, balanceOf((address): 0x1e2A25) -> 868075793030895237757
+          [6][STATICCALL] from=0x1e2a25, to=WBNB, balanceOf((address): 0x1e2A25) -> 868075793030895237757
+          [6][CALL] from=0x1e2a25, to=CellFrame, transfer(recipient(address): 0xA2C1e0, amount(uint256): 500250000000000000000000) -> True
+        [5][STATICCALL] from=PancakeV3Pool, to=WBNB, balanceOf((address): 0xA2C1e0) -> 432955834142211855864
+        [5][STATICCALL] from=PancakeV3Pool, to=CellFrame, balanceOf(account(address): 0xA2C1e0) -> 577135545003427727871843
+      [4][STATICCALL] from=0x1e2a25, to=CellFrame, balanceOf(account(address): 0x1e2A25) -> 914482663392996590260795
+      [4][STATICCALL] from=0x1e2a25, to=WBNB, balanceOf((address): 0x1e2A25) -> 868075793030895237757
+      [4][CALL] from=0x1e2a25, to=CellFrame, approve(spender(address): 0x13f4EA, amount(uint256): 115792089237316195423570985008687907853269...) -> True
+      [4][CALL] from=0x1e2a25, to=SmartRouter, 0x04e45aaf() -> 0x000000
+        [5][DELEGATECALL] from=SmartRouter, to=SmartRouterHelper, getPool(deployer(address): 0x41ff9A, tokenA(address): 0xd98438, tokenB(address): 0xbb4CdB, fee(uint24): 500) -> None
+        [5][CALL] from=SmartRouter, to=PancakeV3Pool, swap(recipient(address): 0x1e2A25, zeroForOne(bool): False, amountSpecified(int256): 768165437250117135819067, sqrtPriceLimitX96(uint160): 146144670348521010328727305220398882237872..., data(bytes): b'\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00...) -> ['-247156148864929476532', '768165437250117135819067']
+          [6][CALL] from=PancakeV3Pool, to=WBNB, transfer(dst(address): 0x1e2A25, wad(uint256): 247156148864929476532) -> True
+          [6][STATICCALL] from=PancakeV3Pool, to=CellFrame, balanceOf(account(address): 0xA2C1e0) -> 577135545003427727871843
+          [6][CALL] from=PancakeV3Pool, to=SmartRouter, 0x23a69e75() -> None
+            [7][DELEGATECALL] from=SmartRouter, to=SmartRouterHelper, verifyCallback(deployer(address): 0x41ff9A, tokenA(address): 0xd98438, tokenB(address): 0xbb4CdB, fee(uint24): 500) -> None
+            [7][CALL] from=SmartRouter, to=CellFrame, transferFrom(sender(address): 0x1e2A25, recipient(address): 0xA2C1e0, amount(uint256): 768165437250117135819067) -> True
+          [6][STATICCALL] from=PancakeV3Pool, to=CellFrame, balanceOf(account(address): 0xA2C1e0) -> 1345300982253544863690910
+      [4][STATICCALL] from=0x1e2a25, to=WBNB, balanceOf((address): 0x1e2A25) -> 1115231941895824714289
+      [4][STATICCALL] from=0x1e2a25, to=WBNB, balanceOf((address): 0x1e2A25) -> 1115231941895824714289
+      [4][CALL] from=0x1e2a25, to=CellFrame, approve(spender(address): 0x10ED43, amount(uint256): 115792089237316195423570985008687907853269...) -> True
+      [4][CALL] from=0x1e2a25, to=PancakeRouter, swapExactTokensForTokensSupportingFeeOnTransferTokens(amountIn(uint256): 94191714329478648796861, amountOutMin(uint256): 0, path(address[]): ['0xd98438889Ae7364c7E2A3540547Fad042FB246..., to(address): 0x1e2A25, deadline(uint256): 1685589275) -> None
+        [5][CALL] from=PancakeRouter, to=CellFrame, transferFrom(sender(address): 0x1e2A25, recipient(address): 0x1c15f4, amount(uint256): 94191714329478648796861) -> True
+          [6][STATICCALL] from=CellFrame, to=PancakeRouter, WETH() -> 0xbb4cdb
+          [6][CALL] from=CellFrame, to=PancakeRouter, swapExactTokensForETHSupportingFeeOnTransferTokens(amountIn(uint256): 528410557525453891322, amountOutMin(uint256): 0, path(address[]): ['0xd98438889Ae7364c7E2A3540547Fad042FB246..., to(address): 0xd98438, deadline(uint256): 1685585275) -> None
+            [7][CALL] from=PancakeRouter, to=CellFrame, transferFrom(sender(address): 0xd98438, recipient(address): 0x1c15f4, amount(uint256): 528410557525453891322) -> True
+            [7][STATICCALL] from=PancakeRouter, to=PancakePair, getReserves() -> ['173012097193331583213', '26420527876272694566127', '1685585275']
+            [7][STATICCALL] from=PancakeRouter, to=CellFrame, balanceOf(account(address): 0x1c15f4) -> 26948938433798148457449
+            [7][CALL] from=PancakeRouter, to=PancakePair, swap(amount0Out(uint256): 3384078963681518785, amount1Out(uint256): 0, to(address): 0x10ED43, data(bytes): b'') -> None
+              [8][CALL] from=PancakePair, to=WBNB, transfer(dst(address): 0x10ED43, wad(uint256): 3384078963681518785) -> True
+              [8][STATICCALL] from=PancakePair, to=WBNB, balanceOf((address): 0x1c15f4) -> 169628018229650064428
+              [8][STATICCALL] from=PancakePair, to=CellFrame, balanceOf(account(address): 0x1c15f4) -> 26948938433798148457449
+            [7][STATICCALL] from=PancakeRouter, to=WBNB, balanceOf((address): 0x10ED43) -> 3384078963681518785
+            [7][CALL] from=PancakeRouter, to=WBNB, withdraw(wad(uint256): 3384078963681518785) -> None
+              [8][CALL][3.3840789636815187] from=WBNB, to=PancakeRouter
+            [7][CALL][3.3840789636815187] from=PancakeRouter, to=CellFrame
+          [6][CALL][25.305402283485805] from=CellFrame, to=GnosisSafeProxy
+            [7][DELEGATECALL][25.305402283485805] from=GnosisSafeProxy, to=GnosisSafeL2
+        [5][STATICCALL] from=PancakeRouter, to=WBNB, balanceOf((address): 0x1e2A25) -> 1115231941895824714289
+        [5][STATICCALL] from=PancakeRouter, to=PancakePair, getReserves() -> ['169628018229650064428', '26948938433798148457449', '1685585275']
+        [5][STATICCALL] from=PancakeRouter, to=CellFrame, balanceOf(account(address): 0x1c15f4) -> 116431067046802864814467
+        [5][CALL] from=PancakeRouter, to=PancakePair, swap(amount0Out(uint256): 130290622112481700079, amount1Out(uint256): 0, to(address): 0x1e2A25, data(bytes): b'') -> None
+          [6][CALL] from=PancakePair, to=WBNB, transfer(dst(address): 0x1e2A25, wad(uint256): 130290622112481700079) -> True
+          [6][STATICCALL] from=PancakePair, to=WBNB, balanceOf((address): 0x1c15f4) -> 39337396117168364349
+          [6][STATICCALL] from=PancakePair, to=CellFrame, balanceOf(account(address): 0x1c15f4) -> 116431067046802864814467
+        [5][STATICCALL] from=PancakeRouter, to=WBNB, balanceOf((address): 0x1e2A25) -> 1245522564008306414368
+      [4][STATICCALL] from=0x1e2a25, to=WBNB, balanceOf((address): 0x1e2A25) -> 1245522564008306414368
+      [4][STATICCALL] from=0x1e2a25, to=CellFrame, balanceOf(account(address): 0x1e2A25) -> 52125511813400805644867
+      [4][STATICCALL] from=0x1e2a25, to=BEP20Token, balanceOf(account(address): 0x1e2A25) -> 0
+      [4][CALL] from=0x1e2a25, to=CellFrame, approve(spender(address): 0x10ED43, amount(uint256): 115792089237316195423570985008687907853269...) -> True
+      [4][CALL] from=0x1e2a25, to=PancakeRouter, swapExactTokensForTokensSupportingFeeOnTransferTokens(amountIn(uint256): 52125511813400805644867, amountOutMin(uint256): 0, path(address[]): ['0xd98438889Ae7364c7E2A3540547Fad042FB246..., to(address): 0x1e2A25, deadline(uint256): 1685589275) -> None
+        [5][CALL] from=PancakeRouter, to=CellFrame, transferFrom(sender(address): 0x1e2A25, recipient(address): 0x338006, amount(uint256): 52125511813400805644867) -> True
+        [5][STATICCALL] from=PancakeRouter, to=BEP20Token, balanceOf(account(address): 0x1e2A25) -> 0
+        [5][STATICCALL] from=PancakeRouter, to=PancakePair, getReserves() -> ['322784518082275755', '80450611731615999', '1679472288']
+        [5][STATICCALL] from=PancakeRouter, to=CellFrame, balanceOf(account(address): 0x338006) -> 52125834597918887920622
+        [5][CALL] from=PancakeRouter, to=PancakePair, swap(amount0Out(uint256): 0, amount1Out(uint256): 80450112299904796, to(address): 0x1e2A25, data(bytes): b'') -> None
+          [6][CALL] from=PancakePair, to=BEP20Token, transfer(recipient(address): 0x1e2A25, amount(uint256): 80450112299904796) -> True
+          [6][STATICCALL] from=PancakePair, to=CellFrame, balanceOf(account(address): 0x338006) -> 52125834597918887920622
+          [6][STATICCALL] from=PancakePair, to=BEP20Token, balanceOf(account(address): 0x338006) -> 499431711203
+        [5][STATICCALL] from=PancakeRouter, to=BEP20Token, balanceOf(account(address): 0x1e2A25) -> 80450112299904796
+      [4][STATICCALL] from=0x1e2a25, to=BEP20Token, balanceOf(account(address): 0x1e2A25) -> 80450112299904796
+      [4][STATICCALL] from=0x1e2a25, to=WBNB, balanceOf((address): 0x1e2A25) -> 1245522564008306414368
+      [4][CALL] from=0x1e2a25, to=BEP20Token, approve(spender(address): 0x10ED43, amount(uint256): 115792089237316195423570985008687907853269...) -> True
+      [4][CALL] from=0x1e2a25, to=PancakeRouter, swapExactTokensForTokensSupportingFeeOnTransferTokens(amountIn(uint256): 80450112299904796, amountOutMin(uint256): 0, path(address[]): ['0xe9e7CEA3DedcA5984780Bafc599bD69ADd087D..., to(address): 0x1e2A25, deadline(uint256): 1685589275) -> None
+        [5][CALL] from=PancakeRouter, to=BEP20Token, transferFrom(sender(address): 0x1e2A25, recipient(address): 0x58F876, amount(uint256): 80450112299904796) -> True
+        [5][STATICCALL] from=PancakeRouter, to=WBNB, balanceOf((address): 0x1e2A25) -> 1245522564008306414368
+        [5][STATICCALL] from=PancakeRouter, to=PancakePair, getReserves() -> ['64344310815433535399831', '19695571431672435309740326', '1685585272']
+        [5][STATICCALL] from=PancakeRouter, to=BEP20Token, balanceOf(account(address): 0x58F876) -> 19695571512122547609645122
+        [5][CALL] from=PancakeRouter, to=PancakePair, swap(amount0Out(uint256): 262168871832877, amount1Out(uint256): 0, to(address): 0x1e2A25, data(bytes): b'') -> None
+          [6][CALL] from=PancakePair, to=WBNB, transfer(dst(address): 0x1e2A25, wad(uint256): 262168871832877) -> True
+          [6][STATICCALL] from=PancakePair, to=WBNB, balanceOf((address): 0x58F876) -> 64344310553264663566954
+          [6][STATICCALL] from=PancakePair, to=BEP20Token, balanceOf(account(address): 0x58F876) -> 19695571512122547609645122
+        [5][STATICCALL] from=PancakeRouter, to=WBNB, balanceOf((address): 0x1e2A25) -> 1245522826177178247245
+      [4][STATICCALL] from=0x1e2a25, to=WBNB, balanceOf((address): 0x1e2A25) -> 1245522826177178247245
+      [4][CALL] from=0x1e2a25, to=WBNB, transfer(dst(address): 0xFeAFe2, wad(uint256): 1000000000000000000000) -> True
+    [3][STATICCALL] from=DPPOracle, to=WBNB, balanceOf((address): 0xFeAFe2) -> 2379879355296719759623
+    [3][STATICCALL] from=DPPOracle, to=BEP20USDT, balanceOf(account(address): 0xFeAFe2) -> 307428801450540072248990
+    [3][STATICCALL] from=DPPOracle, to=WBNB, balanceOf((address): 0xFeAFe2) -> 2379879355296719759623
+    [3][STATICCALL] from=DPPOracle, to=BEP20USDT, balanceOf(account(address): 0xFeAFe2) -> 307428801450540072248990
+  [2][STATICCALL] from=0x1e2a25, to=WBNB, balanceOf((address): 0x1e2A25) -> 245522826177178247245
+  [2][CALL] from=0x1e2a25, to=WBNB, withdraw(wad(uint256): 245522826177178247245) -> None
+    [3][CALL][245.52282617717825] from=WBNB, to=0x1e2a25
+  [2][CALL][245.52282617717825] from=0x1e2a25, to=0x2525c8

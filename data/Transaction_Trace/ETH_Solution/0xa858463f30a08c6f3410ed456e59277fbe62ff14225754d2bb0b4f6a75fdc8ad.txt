@@ -1,0 +1,43 @@
+[1][CALL] from=0x915c2d, to=0xe78702, 0x08e9147b() -> None
+  [2][CALL] from=0xe78702, to=LiquidityPoolV1, borrow(_token(address): 0xEeeeeE, _amount(uint256): 856000000000000000000, _data(bytes): b'') -> None
+    [3][CALL][856.0] from=LiquidityPoolV1, to=0xe78702
+      [4][STATICCALL] from=0xe78702, to=Vyper_contract, getExchange(token(address): 0xA0b869) -> 0x97dec8
+      [4][STATICCALL] from=0xe78702, to=Vyper_contract, getExchange(token(address): 0xA0b869) -> 0x97dec8
+      [4][STATICCALL] from=0xe78702, to=Vyper_contract, getExchange(token(address): 0x951D51) -> 0x7623a5
+      [4][STATICCALL] from=0xe78702, to=Vyper_contract, getExchange(token(address): 0x951D51) -> 0x7623a5
+      [4][CALL] from=0xe78702, to=FiatTokenProxy, approve(_spender(address): 0x97deC8, _value(uint256): 100000000000000000000) -> True
+        [5][DELEGATECALL] from=FiatTokenProxy, to=FiatTokenV1, approve(_spender(address): 0x97deC8, _value(uint256): 100000000000000000000) -> True
+      [4][CALL] from=0xe78702, to=FiatTokenProxy, approve(_spender(address): 0x951D51, _value(uint256): 100000000000000000000) -> True
+        [5][DELEGATECALL] from=FiatTokenProxy, to=FiatTokenV1, approve(_spender(address): 0x951D51, _value(uint256): 100000000000000000000) -> True
+      [4][CALL] from=0xe78702, to=0x97deC8, ethToTokenSwapInput(min_tokens(uint256): 1, deadline(uint256): 1699997362) -> 93405889405
+        [5][DELEGATECALL] from=0x97deC8, to=Vyper_contract, ethToTokenSwapInput(min_tokens(uint256): 1, deadline(uint256): 1699997362) -> 93405889405
+          [6][STATICCALL] from=0x97deC8, to=FiatTokenProxy, balanceOf(account(address): 0x97deC8) -> 1446640410066
+            [7][DELEGATECALL] from=FiatTokenProxy, to=FiatTokenV1, balanceOf(account(address): 0x97deC8) -> 1446640410066
+          [6][CALL] from=0x97deC8, to=FiatTokenProxy, transfer(_to(address): 0xe78702, _value(uint256): 93405889405) -> True
+            [7][DELEGATECALL] from=FiatTokenProxy, to=FiatTokenV1, transfer(_to(address): 0xe78702, _value(uint256): 93405889405) -> True
+      [4][CALL] from=0xe78702, to=0x7623a5, ethToTokenSwapInput(min_tokens(uint256): 1, deadline(uint256): 1699997362) -> 4225167052
+        [5][DELEGATECALL] from=0x7623a5, to=Vyper_contract, ethToTokenSwapInput(min_tokens(uint256): 1, deadline(uint256): 1699997362) -> 4225167052
+          [6][STATICCALL] from=0x7623a5, to=oToken, balanceOf(account(address): 0x7623a5) -> 5199382660
+          [6][CALL] from=0x7623a5, to=oToken, transfer(recipient(address): 0xe78702, amount(uint256): 4225167052) -> True
+      [4][CALL] from=0xe78702, to=oToken, createERC20CollateralOption(amtToCreate(uint256): 2720000000, amtCollateral(uint256): 89900000000, receiver(address): 0xe78702) -> None
+        [5][CALL] from=oToken, to=FiatTokenProxy, transferFrom(_from(address): 0xe78702, _to(address): 0x951D51, _value(uint256): 89900000000) -> True
+          [6][DELEGATECALL] from=FiatTokenProxy, to=FiatTokenV1, transferFrom(_from(address): 0xe78702, _to(address): 0x951D51, _value(uint256): 89900000000) -> True
+      [4][CALL] from=0xe78702, to=oToken, exercise(oTokensToExercise(uint256): 5440000000, vaultsToExerciseFrom(address[]): ['0xe7870231992Ab4b1A01814FA0A599115FE9420...) -> None
+        [5][CALL] from=oToken, to=FiatTokenProxy, transfer(_to(address): 0xe78702, _value(uint256): 89760000000) -> True
+          [6][DELEGATECALL] from=FiatTokenProxy, to=FiatTokenV1, transfer(_to(address): 0xe78702, _value(uint256): 89760000000) -> True
+        [5][CALL] from=oToken, to=FiatTokenProxy, transfer(_to(address): 0xe78702, _value(uint256): 89760000000) -> True
+          [6][DELEGATECALL] from=FiatTokenProxy, to=FiatTokenV1, transfer(_to(address): 0xe78702, _value(uint256): 89760000000) -> True
+      [4][CALL] from=0xe78702, to=oToken, removeUnderlying() -> None
+        [5][CALL][272.0] from=oToken, to=0xe78702
+      [4][STATICCALL] from=0xe78702, to=FiatTokenProxy, balanceOf(account(address): 0xe78702) -> 183025889405
+        [5][DELEGATECALL] from=FiatTokenProxy, to=FiatTokenV1, balanceOf(account(address): 0xe78702) -> 183025889405
+      [4][CALL] from=0xe78702, to=0x97deC8, tokenToEthSwapInput(tokens_sold(uint256): 183025889405, min_eth(uint256): 1, deadline(uint256): 1699997362) -> 467955046403639596466
+        [5][DELEGATECALL] from=0x97deC8, to=Vyper_contract, tokenToEthSwapInput(tokens_sold(uint256): 183025889405, min_eth(uint256): 1, deadline(uint256): 1699997362) -> 467955046403639596466
+          [6][STATICCALL] from=0x97deC8, to=FiatTokenProxy, balanceOf(account(address): 0x97deC8) -> 1353234520661
+            [7][DELEGATECALL] from=FiatTokenProxy, to=FiatTokenV1, balanceOf(account(address): 0x97deC8) -> 1353234520661
+          [6][CALL][467.9550464036396] from=0x97deC8, to=0xe78702
+          [6][CALL] from=0x97deC8, to=FiatTokenProxy, transferFrom(_from(address): 0xe78702, _to(address): 0x97deC8, _value(uint256): 183025889405) -> True
+            [7][DELEGATECALL] from=FiatTokenProxy, to=FiatTokenV1, transferFrom(_from(address): 0xe78702, _to(address): 0x97deC8, _value(uint256): 183025889405) -> True
+      [4][CALL][856.1] from=0xe78702, to=LiquidityPoolV1
+    [3][CALL] from=LiquidityPoolV1, to=BorrowerProxy, lend(_caller(address): 0xe78702, _data(bytes): b'') -> None
+      [4][CALL][0.0] from=BorrowerProxy, to=0xe78702

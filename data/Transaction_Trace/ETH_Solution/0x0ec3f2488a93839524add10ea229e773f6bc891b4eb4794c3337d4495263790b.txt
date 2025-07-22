@@ -1,0 +1,81 @@
+[1][CALL] from=0x969837, to=0xc0ee9d, 0xc4463c80() -> 0x000000
+  [2][CALL][137.62451099999998] from=0xc0ee9d, to=0xf35e2c
+  [2][CALL] from=0xc0ee9d, to=DAO, splitDAO(_proposalID(uint256): 59, _newCurator(address): 0xB656b2) -> True
+    [3][CALL] from=DAO, to=0x4a5745, 0xe2faf044() -> 0x000000
+      [4][CREATE] from=0x4a5745, to=DAO, 0x60606040() -> 0x606060
+        [5][CREATE] from=DAO, to=ManagedAccount, 0x60606040() -> 0x606060
+        [5][CREATE] from=DAO, to=ManagedAccount, 0x60606040() -> 0x606060
+        [5][CREATE] from=DAO, to=ManagedAccount, 0x60606040() -> 0x606060
+    [3][CALL] from=DAO, to=DAO, createTokenProxy(_tokenHolder(address): 0xC0ee9d) -> True
+      [4][CALL][0.0] from=DAO, to=ManagedAccount
+    [3][CALL] from=DAO, to=ManagedAccount, accumulatedInput() -> 1000000000000000
+    [3][CALL] from=DAO, to=ManagedAccount, accumulatedInput() -> 1000000000000000
+    [3][CALL] from=DAO, to=ManagedAccount, payOut(_recipient(address): 0xC0ee9d, _amount(uint256): 22190537131) -> True
+      [4][CALL][2.2190537131e-08] from=ManagedAccount, to=0xc0ee9d
+        [5][CALL] from=0xc0ee9d, to=DAO, rewardAccount() -> 0xd2e16a
+        [5][CALL] from=0xc0ee9d, to=DAO, splitDAO(_proposalID(uint256): 59, _newCurator(address): 0xB656b2) -> True
+          [6][CALL] from=DAO, to=DAO, createTokenProxy(_tokenHolder(address): 0xC0ee9d) -> True
+            [7][CALL][0.0] from=DAO, to=ManagedAccount
+          [6][CALL] from=DAO, to=ManagedAccount, accumulatedInput() -> 1000000000000000
+          [6][CALL] from=DAO, to=ManagedAccount, accumulatedInput() -> 1000000000000000
+          [6][CALL] from=DAO, to=ManagedAccount, payOut(_recipient(address): 0xC0ee9d, _amount(uint256): 22190537131) -> True
+            [7][CALL][2.2190537131e-08] from=ManagedAccount, to=0xc0ee9d
+              [8][CALL] from=0xc0ee9d, to=DAO, rewardAccount() -> 0xd2e16a
+              [8][CALL] from=0xc0ee9d, to=DAO, splitDAO(_proposalID(uint256): 59, _newCurator(address): 0xB656b2) -> True
+                [9][CALL] from=DAO, to=DAO, createTokenProxy(_tokenHolder(address): 0xC0ee9d) -> True
+                  [10][CALL][0.0] from=DAO, to=ManagedAccount
+                [9][CALL] from=DAO, to=ManagedAccount, accumulatedInput() -> 1000000000000000
+                [9][CALL] from=DAO, to=ManagedAccount, accumulatedInput() -> 1000000000000000
+                [9][CALL] from=DAO, to=ManagedAccount, payOut(_recipient(address): 0xC0ee9d, _amount(uint256): 22190537131) -> True
+                  [10][CALL][2.2190537131e-08] from=ManagedAccount, to=0xc0ee9d
+                    [11][CALL] from=0xc0ee9d, to=DAO, rewardAccount() -> 0xd2e16a
+                    [11][CALL] from=0xc0ee9d, to=DAO, splitDAO(_proposalID(uint256): 59, _newCurator(address): 0xB656b2) -> True
+                      [12][CALL] from=DAO, to=DAO, createTokenProxy(_tokenHolder(address): 0xC0ee9d) -> True
+                        [13][CALL][0.0] from=DAO, to=ManagedAccount
+                      [12][CALL] from=DAO, to=ManagedAccount, accumulatedInput() -> 1000000000000000
+                      [12][CALL] from=DAO, to=ManagedAccount, accumulatedInput() -> 1000000000000000
+                      [12][CALL] from=DAO, to=ManagedAccount, payOut(_recipient(address): 0xC0ee9d, _amount(uint256): 22190537131) -> True
+                        [13][CALL][2.2190537131e-08] from=ManagedAccount, to=0xc0ee9d
+                          [14][CALL] from=0xc0ee9d, to=DAO, rewardAccount() -> 0xd2e16a
+                          [14][CALL] from=0xc0ee9d, to=DAO, splitDAO(_proposalID(uint256): 59, _newCurator(address): 0xB656b2) -> True
+                            [15][CALL] from=DAO, to=DAO, createTokenProxy(_tokenHolder(address): 0xC0ee9d) -> True
+                              [16][CALL][0.0] from=DAO, to=ManagedAccount
+                            [15][CALL] from=DAO, to=ManagedAccount, accumulatedInput() -> 1000000000000000
+                            [15][CALL] from=DAO, to=ManagedAccount, accumulatedInput() -> 1000000000000000
+                            [15][CALL] from=DAO, to=ManagedAccount, payOut(_recipient(address): 0xC0ee9d, _amount(uint256): 22190537131) -> True
+                              [16][CALL][2.2190537131e-08] from=ManagedAccount, to=0xc0ee9d
+                                [17][CALL] from=0xc0ee9d, to=DAO, rewardAccount() -> 0xd2e16a
+                                [17][CALL] from=0xc0ee9d, to=DAO, splitDAO(_proposalID(uint256): 59, _newCurator(address): 0xB656b2) -> True
+                                  [18][CALL] from=DAO, to=DAO, createTokenProxy(_tokenHolder(address): 0xC0ee9d) -> True
+                                    [19][CALL][0.0] from=DAO, to=ManagedAccount
+                                  [18][CALL] from=DAO, to=ManagedAccount, accumulatedInput() -> 1000000000000000
+                                  [18][CALL] from=DAO, to=ManagedAccount, accumulatedInput() -> 1000000000000000
+                                  [18][CALL] from=DAO, to=ManagedAccount, payOut(_recipient(address): 0xC0ee9d, _amount(uint256): 22190537131) -> True
+                                    [19][CALL][2.2190537131e-08] from=ManagedAccount, to=0xc0ee9d
+                                      [20][CALL] from=0xc0ee9d, to=DAO, rewardAccount() -> 0xd2e16a
+                                      [20][CALL] from=0xc0ee9d, to=DAO, splitDAO(_proposalID(uint256): 59, _newCurator(address): 0xB656b2) -> True
+                                        [21][CALL] from=DAO, to=DAO, createTokenProxy(_tokenHolder(address): 0xC0ee9d) -> True
+                                          [22][CALL][0.0] from=DAO, to=ManagedAccount
+                                        [21][CALL] from=DAO, to=ManagedAccount, accumulatedInput() -> 1000000000000000
+                                        [21][CALL] from=DAO, to=ManagedAccount, accumulatedInput() -> 1000000000000000
+                                        [21][CALL] from=DAO, to=ManagedAccount, payOut(_recipient(address): 0xC0ee9d, _amount(uint256): 22190537131) -> True
+                                          [22][CALL][2.2190537131e-08] from=ManagedAccount, to=0xc0ee9d
+                                            [23][CALL] from=0xc0ee9d, to=DAO, rewardAccount() -> 0xd2e16a
+                                            [23][CALL] from=0xc0ee9d, to=DAO, splitDAO(_proposalID(uint256): 59, _newCurator(address): 0xB656b2) -> True
+                                              [24][CALL] from=DAO, to=DAO, createTokenProxy(_tokenHolder(address): 0xC0ee9d) -> True
+                                                [25][CALL][0.0] from=DAO, to=ManagedAccount
+                                              [24][CALL] from=DAO, to=ManagedAccount, accumulatedInput() -> 1000000000000000
+                                              [24][CALL] from=DAO, to=ManagedAccount, accumulatedInput() -> 1000000000000000
+                                              [24][CALL] from=DAO, to=ManagedAccount, payOut(_recipient(address): 0xC0ee9d, _amount(uint256): 22190537131) -> True
+                                                [25][CALL][2.2190537131e-08] from=ManagedAccount, to=0xc0ee9d
+                                                  [26][CALL] from=0xc0ee9d, to=DAO, rewardAccount() -> 0xd2e16a
+                                                  [26][CALL] from=0xc0ee9d, to=DAO, splitDAO(_proposalID(uint256): 59, _newCurator(address): 0xB656b2) -> True
+                                                    [27][CALL] from=DAO, to=DAO, createTokenProxy(_tokenHolder(address): 0xC0ee9d) -> True
+                                                      [28][CALL][0.0] from=DAO, to=ManagedAccount
+                                                    [27][CALL] from=DAO, to=ManagedAccount, accumulatedInput() -> 1000000000000000
+                                                    [27][CALL] from=DAO, to=ManagedAccount, accumulatedInput() -> 1000000000000000
+                                                    [27][CALL] from=DAO, to=ManagedAccount, payOut(_recipient(address): 0xC0ee9d, _amount(uint256): 22190537131) -> True
+                                                      [28][CALL][2.2190537131e-08] from=ManagedAccount, to=0xc0ee9d
+                                                        [29][CALL] from=0xc0ee9d, to=DAO, rewardAccount() -> 0xd2e16a
+                                                        [29][CALL] from=0xc0ee9d, to=DAO, balanceOf(_owner(address): 0xC0ee9d) -> 258056141471000000000
+                                                        [29][CALL] from=0xc0ee9d, to=DAO, transfer(_to(address): 0xF835A0, _value(uint256): 258056141471000000000) -> True

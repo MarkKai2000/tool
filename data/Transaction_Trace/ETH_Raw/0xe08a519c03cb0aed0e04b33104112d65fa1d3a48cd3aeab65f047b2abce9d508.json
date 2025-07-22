@@ -1,0 +1,1 @@
+{"from": "0xa169DF5ED3363cfC4c92ac96C6C5f2A42fCCBF85", "to": "0xA62142888ABa8370742bE823c1782D17A0389Da1", "value": "0x0", "type": "CALL", "input": "0x3ccfd60b", "output": null, "calls": [{"from": "0xA62142888ABa8370742bE823c1782D17A0389Da1", "to": "0xa169DF5ED3363cfC4c92ac96C6C5f2A42fCCBF85", "value": "0x2378fb84e34852249b5", "type": "CALL", "input": "0x", "output": null}]}

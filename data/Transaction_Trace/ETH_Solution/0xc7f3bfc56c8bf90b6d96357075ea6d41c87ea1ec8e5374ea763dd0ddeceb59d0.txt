@@ -1,0 +1,10 @@
+[1][CALL] from=0x0333e3, to=0xe30dc9, initaddress() -> None
+  [2][CALL] from=0xe30dc9, to=KeanuInu, approve(spender(address): 0x35C674, amount(uint256): 115792089237316195423570985008687907853269...) -> True
+  [2][CALL] from=0xe30dc9, to=WETH9, approve(guy(address): 0x7a250d, wad(uint256): 115792089237316195423570985008687907853269...) -> True
+  [2][CALL] from=0xe30dc9, to=Memefund, approve(spender(address): 0x7a250d, value(uint256): 115792089237316195423570985008687907853269...) -> True
+  [2][CALL] from=0xe30dc9, to=SanshuInu, approve(spender(address): 0x7a250d, amount(uint256): 115792089237316195423570985008687907853269...) -> True
+  [2][CALL] from=0xe30dc9, to=KeanuInu, approve(spender(address): 0x7a250d, amount(uint256): 115792089237316195423570985008687907853269...) -> True
+  [2][CALL] from=0xe30dc9, to=AKITAERC20Token, approve(spender(address): 0x7a250d, value(uint256): 115792089237316195423570985008687907853269...) -> True
+  [2][CALL] from=0xe30dc9, to=KeanuInu, approve(spender(address): 0xFEe480, amount(uint256): 115792089237316195423570985008687907853269...) -> True
+  [2][CALL] from=0xe30dc9, to=KeanuInu, approve(spender(address): 0xeEF226, amount(uint256): 115792089237316195423570985008687907853269...) -> True
+  [2][CALL] from=0xe30dc9, to=KeanuInu, approve(spender(address): 0x97B4A8, amount(uint256): 115792089237316195423570985008687907853269...) -> True

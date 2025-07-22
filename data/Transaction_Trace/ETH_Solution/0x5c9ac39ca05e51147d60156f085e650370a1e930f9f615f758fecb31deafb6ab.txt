@@ -1,0 +1,90 @@
+[1][CALL] from=0x89640e, to=0xb5aef6, 0x9b9f4f29() -> None
+  [2][CALL] from=0xb5aef6, to=InitializableImmutableAdminUpgradeabilityProxy, flashLoan(receiverAddress(address): 0xb5aef6, assets(address[]): ['0xdAC17F958D2ee523a2206206994597C13D831e..., amounts(uint256[]): [1000000000000], modes(uint256[]): [0], onBehalfOf(address): 0xb5aef6, params(bytes): b'', referralCode(uint16): 0) -> None
+    [3][DELEGATECALL] from=InitializableImmutableAdminUpgradeabilityProxy, to=LendingPool, flashLoan(receiverAddress(address): 0xb5aef6, assets(address[]): ['0xdAC17F958D2ee523a2206206994597C13D831e..., amounts(uint256[]): [1000000000000], modes(uint256[]): [0], onBehalfOf(address): 0xb5aef6, params(bytes): b'', referralCode(uint16): 0) -> None
+      [4][CALL] from=InitializableImmutableAdminUpgradeabilityProxy, to=InitializableImmutableAdminUpgradeabilityProxy, transferUnderlyingTo(target(address): 0xb5aef6, amount(uint256): 1000000000000) -> 1000000000000
+        [5][DELEGATECALL] from=InitializableImmutableAdminUpgradeabilityProxy, to=AToken, transferUnderlyingTo(target(address): 0xb5aef6, amount(uint256): 1000000000000) -> 1000000000000
+          [6][CALL] from=InitializableImmutableAdminUpgradeabilityProxy, to=TetherToken, transfer(_to(address): 0xb5aef6, _value(uint256): 1000000000000) -> None
+      [4][CALL] from=InitializableImmutableAdminUpgradeabilityProxy, to=0xb5aef6, executeOperationaddress[]() -> 0x000000
+        [5][CALL] from=0xb5aef6, to=TetherToken, approve(_spender(address): 0x7d2768, _value(uint256): 115792089237316195423570985008687907853269...) -> None
+        [5][STATICCALL] from=0xb5aef6, to=TetherToken, balanceOf(who(address): 0xb5aef6) -> 1000000000000
+        [5][CALL] from=0xb5aef6, to=TetherToken, transfer(_to(address): 0xB058b2, _value(uint256): 1000000000000) -> None
+        [5][CALL] from=0xb5aef6, to=LPFarmingV2, stake(amount(uint256): 100) -> None
+          [6][STATICCALL] from=LPFarmingV2, to=0xb058b2, balanceOfaddress() -> 0x000000
+          [6][STATICCALL] from=LPFarmingV2, to=0xb058b2, totalSupply() -> 0x000000
+          [6][STATICCALL] from=LPFarmingV2, to=TetherToken, balanceOf(who(address): 0xB058b2) -> 1068403460820
+          [6][CALL] from=LPFarmingV2, to=0xb058b2, transferFromaddress() -> 0x000000
+        [5][CALL] from=0xb5aef6, to=0xb058b2, skimaddress() -> None
+          [6][STATICCALL] from=0xb058b2, to=FormToken, balanceOf(tokenOwner(address): 0xB058b2) -> 716612780846900272314811
+          [6][CALL] from=0xb058b2, to=FormToken, transfer(to(address): 0xb5aef6, tokens(uint256): 0) -> True
+          [6][STATICCALL] from=0xb058b2, to=TetherToken, balanceOf(who(address): 0xB058b2) -> 1068403460820
+          [6][CALL] from=0xb058b2, to=TetherToken, transfer(_to(address): 0xb5aef6, _value(uint256): 1000000000000) -> None
+        [5][STATICCALL] from=0xb5aef6, to=LPFarmingV2, getUsersYieldAmount(user(address): 0xb5aef6) -> 232392
+          [6][STATICCALL] from=LPFarmingV2, to=0xb058b2, totalSupply() -> 0x000000
+          [6][STATICCALL] from=LPFarmingV2, to=TetherToken, balanceOf(who(address): 0xB058b2) -> 68403460820
+        [5][STATICCALL] from=0xb5aef6, to=FormToken, balanceOf(tokenOwner(address): 0x62931d) -> 253601674593667955532416
+        [5][STATICCALL] from=0xb5aef6, to=TetherToken, balanceOf(who(address): 0xB058b2) -> 68403460820
+        [5][STATICCALL] from=0xb5aef6, to=FormToken, balanceOf(tokenOwner(address): 0xB058b2) -> 716612780846900272314811
+        [5][CALL] from=0xb5aef6, to=0xb058b2, swapuint256() -> None
+          [6][CALL] from=0xb058b2, to=TetherToken, transfer(_to(address): 0xb5aef6, _value(uint256): 68402744207) -> None
+          [6][CALL] from=0xb058b2, to=0xb5aef6, uniswapV2Calladdress() -> None
+            [7][STATICCALL] from=0xb5aef6, to=LPFarmingV2, stakingBalanceLp((address): 0xb5aef6) -> 659232145521824
+            [7][CALL] from=0xb5aef6, to=LPFarmingV2, unstake(amount(uint256): 659232145521824) -> None
+              [8][STATICCALL] from=LPFarmingV2, to=0xb058b2, totalSupply() -> 0x000000
+              [8][STATICCALL] from=LPFarmingV2, to=TetherToken, balanceOf(who(address): 0xB058b2) -> 716613
+              [8][STATICCALL] from=LPFarmingV2, to=FormToken, balanceOf(tokenOwner(address): 0xB058b2) -> 716612780846900272314811
+              [8][STATICCALL] from=LPFarmingV2, to=TetherToken, balanceOf(who(address): 0xB058b2) -> 716613
+              [8][CALL] from=LPFarmingV2, to=0xb058b2, transferaddress() -> 0x000000
+              [8][CALL] from=LPFarmingV2, to=FormToken, transfer(to(address): 0xb5aef6, tokens(uint256): 232392000000000000000000) -> True
+            [7][CALL] from=0xb5aef6, to=TetherToken, transfer(_to(address): 0xB058b2, _value(uint256): 68614792714) -> None
+            [7][CALL] from=0xb5aef6, to=FormToken, transfer(to(address): 0xB058b2, tokens(uint256): 0) -> True
+          [6][STATICCALL] from=0xb058b2, to=FormToken, balanceOf(tokenOwner(address): 0xB058b2) -> 716612780846900272314811
+          [6][STATICCALL] from=0xb058b2, to=TetherToken, balanceOf(who(address): 0xB058b2) -> 68615509327
+        [5][STATICCALL] from=0xb5aef6, to=0xb058b2, balanceOfaddress() -> 0x000000
+        [5][CALL] from=0xb5aef6, to=0xb058b2, transferaddress() -> 0x000000
+        [5][CALL] from=0xb5aef6, to=0xb058b2, burnaddress() -> 0x000000
+          [6][STATICCALL] from=0xb058b2, to=FormToken, balanceOf(tokenOwner(address): 0xB058b2) -> 716612780846900272314811
+          [6][STATICCALL] from=0xb058b2, to=TetherToken, balanceOf(who(address): 0xB058b2) -> 68615509327
+          [6][STATICCALL] from=0xb058b2, to=UniswapV2Factory, feeTo() -> 0x98a8f3
+          [6][CALL] from=0xb058b2, to=FormToken, transfer(to(address): 0xb5aef6, tokens(uint256): 2141619225660926944765) -> True
+          [6][CALL] from=0xb058b2, to=TetherToken, transfer(_to(address): 0xb5aef6, _value(uint256): 205059549) -> None
+          [6][STATICCALL] from=0xb058b2, to=FormToken, balanceOf(tokenOwner(address): 0xB058b2) -> 714471161621239345370046
+          [6][STATICCALL] from=0xb058b2, to=TetherToken, balanceOf(who(address): 0xB058b2) -> 68410449778
+        [5][STATICCALL] from=0xb5aef6, to=FormToken, balanceOf(tokenOwner(address): 0xb5aef6) -> 234533634985336145829948
+        [5][CALL] from=0xb5aef6, to=UniswapV2Router02, swapExactTokensForTokens(amountIn(uint256): 234533634985336145829948, amountOutMin(uint256): 0, path(address[]): ['0x21381e026Ad6d8266244f2A583b35F9E4413FA..., to(address): 0xb5aef6, deadline(uint256): 1637655508) -> [234533634985336145829948, 16868499033]
+          [6][STATICCALL] from=UniswapV2Router02, to=0xb058b2, getReserves() -> 0x000000
+          [6][CALL] from=UniswapV2Router02, to=FormToken, transferFrom(from(address): 0xb5aef6, to(address): 0xB058b2, tokens(uint256): 234533634985336145829948) -> True
+          [6][CALL] from=UniswapV2Router02, to=0xb058b2, swapuint256() -> None
+            [7][CALL] from=0xb058b2, to=TetherToken, transfer(_to(address): 0xb5aef6, _value(uint256): 16868499033) -> None
+            [7][STATICCALL] from=0xb058b2, to=FormToken, balanceOf(tokenOwner(address): 0xB058b2) -> 949004796606575491199994
+            [7][STATICCALL] from=0xb058b2, to=TetherToken, balanceOf(who(address): 0xB058b2) -> 51541950745
+      [4][STATICCALL] from=InitializableImmutableAdminUpgradeabilityProxy, to=InitializableImmutableAdminUpgradeabilityProxy, scaledTotalSupply() -> 846745516332110
+        [5][DELEGATECALL] from=InitializableImmutableAdminUpgradeabilityProxy, to=VariableDebtToken, scaledTotalSupply() -> 846745516332110
+      [4][STATICCALL] from=InitializableImmutableAdminUpgradeabilityProxy, to=InitializableImmutableAdminUpgradeabilityProxy, getSupplyData() -> ['15562116068538', '15563713045292', '114542081757893556231523492', '1637627256']
+        [5][DELEGATECALL] from=InitializableImmutableAdminUpgradeabilityProxy, to=StableDebtToken, getSupplyData() -> ['15562116068538', '15563713045292', '114542081757893556231523492', '1637627256']
+      [4][CALL] from=InitializableImmutableAdminUpgradeabilityProxy, to=InitializableImmutableAdminUpgradeabilityProxy, mintToTreasury(amount(uint256): 2865019, index(uint256): 1072040830779103024308453457) -> None
+        [5][DELEGATECALL] from=InitializableImmutableAdminUpgradeabilityProxy, to=AToken, mintToTreasury(amount(uint256): 2865019, index(uint256): 1072040830779103024308453457) -> None
+          [6][CALL] from=InitializableImmutableAdminUpgradeabilityProxy, to=InitializableImmutableAdminUpgradeabilityProxy, handleAction(user(address): 0x464C71, totalSupply(uint256): 1038224869734840, userBalance(uint256): 3704916336416) -> None
+            [7][DELEGATECALL] from=InitializableImmutableAdminUpgradeabilityProxy, to=StakedTokenIncentivesController, handleAction(user(address): 0x464C71, totalSupply(uint256): 1038224869734840, userBalance(uint256): 3704916336416) -> None
+      [4][STATICCALL] from=InitializableImmutableAdminUpgradeabilityProxy, to=InitializableImmutableAdminUpgradeabilityProxy, totalSupply() -> 1113019454751083
+        [5][DELEGATECALL] from=InitializableImmutableAdminUpgradeabilityProxy, to=AToken, totalSupply() -> 1113019454751083
+          [6][STATICCALL] from=InitializableImmutableAdminUpgradeabilityProxy, to=InitializableImmutableAdminUpgradeabilityProxy, getReserveNormalizedIncome(asset(address): 0xdAC17F) -> 1072040830779103024308453457
+            [7][DELEGATECALL] from=InitializableImmutableAdminUpgradeabilityProxy, to=LendingPool, getReserveNormalizedIncome(asset(address): 0xdAC17F) -> 1072040830779103024308453457
+      [4][STATICCALL] from=InitializableImmutableAdminUpgradeabilityProxy, to=InitializableImmutableAdminUpgradeabilityProxy, getTotalSupplyAndAvgRate() -> ['15563713045292', '114542081757893556231523492']
+        [5][DELEGATECALL] from=InitializableImmutableAdminUpgradeabilityProxy, to=StableDebtToken, getTotalSupplyAndAvgRate() -> ['15563713045292', '114542081757893556231523492']
+      [4][STATICCALL] from=InitializableImmutableAdminUpgradeabilityProxy, to=InitializableImmutableAdminUpgradeabilityProxy, scaledTotalSupply() -> 846745516332110
+        [5][DELEGATECALL] from=InitializableImmutableAdminUpgradeabilityProxy, to=VariableDebtToken, scaledTotalSupply() -> 846745516332110
+      [4][STATICCALL] from=InitializableImmutableAdminUpgradeabilityProxy, to=TetherToken, balanceOf(who(address): 0x3Ed3B4) -> 156514284920648
+      [4][STATICCALL] from=InitializableImmutableAdminUpgradeabilityProxy, to=DefaultReserveInterestRateStrategy, calculateInterestRates(reserve(address): 0xdAC17F, availableLiquidity(uint256): 157515184920648, totalStableDebt(uint256): 15563713045292, totalVariableDebt(uint256): 939952771962326, averageStableBorrowRate(uint256): 114542081757893556231523492, reserveFactor(uint256): 1000) -> ['30440905619205196109340955', '119077354437007574545241697', '38154708874015149090483394']
+        [5][STATICCALL] from=DefaultReserveInterestRateStrategy, to=LendingPoolAddressesProvider, getLendingRateOracle() -> 0x8a32f4
+        [5][STATICCALL] from=DefaultReserveInterestRateStrategy, to=LendingRateOracle, getMarketBorrowRate(asset(address): 0xdAC17F) -> 100000000000000000000000000
+      [4][CALL] from=InitializableImmutableAdminUpgradeabilityProxy, to=TetherToken, transferFrom(_from(address): 0xb5aef6, _to(address): 0x3Ed3B4, _value(uint256): 1000900000000) -> None
+  [2][STATICCALL] from=0xb5aef6, to=TetherToken, balanceOf(who(address): 0xb5aef6) -> 15961510075
+  [2][CALL] from=0xb5aef6, to=UniswapV2Router02, swapExactTokensForTokens(amountIn(uint256): 15961510075, amountOutMin(uint256): 0, path(address[]): ['0xdAC17F958D2ee523a2206206994597C13D831e..., to(address): 0xb5aef6, deadline(uint256): 1637655508) -> [15961510075, 3866434390702405230]
+    [3][STATICCALL] from=UniswapV2Router02, to=UniswapV2Pair, getReserves() -> ['25535220309564484608593', '105082969000502', '1637655484']
+    [3][CALL] from=UniswapV2Router02, to=TetherToken, transferFrom(_from(address): 0xb5aef6, _to(address): 0x0d4a11, _value(uint256): 15961510075) -> None
+    [3][CALL] from=UniswapV2Router02, to=UniswapV2Pair, swap(amount0Out(uint256): 3866434390702405230, amount1Out(uint256): 0, to(address): 0xb5aef6, data(bytes): b'') -> None
+      [4][CALL] from=UniswapV2Pair, to=WETH9, transfer(dst(address): 0xb5aef6, wad(uint256): 3866434390702405230) -> True
+      [4][STATICCALL] from=UniswapV2Pair, to=WETH9, balanceOf((address): 0x0d4a11) -> 25531353875173782203363
+      [4][STATICCALL] from=UniswapV2Pair, to=TetherToken, balanceOf(who(address): 0x0d4a11) -> 105098930510577
+  [2][STATICCALL] from=0xb5aef6, to=WETH9, balanceOf((address): 0xb5aef6) -> 3866434390702405230
+  [2][CALL] from=0xb5aef6, to=WETH9, transfer(dst(address): 0x89640e, wad(uint256): 3866434390702405230) -> True

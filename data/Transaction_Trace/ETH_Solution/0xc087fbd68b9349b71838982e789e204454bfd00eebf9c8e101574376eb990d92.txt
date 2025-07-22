@@ -1,0 +1,56 @@
+[1][CALL] from=0xce6397, to=0xe6c6e8, 0x30f5d90e() -> None
+  [2][STATICCALL] from=0xe6c6e8, to=MOG, balanceOf(account(address): 0x4189ad) -> 7644407423323066647459234468
+  [2][STATICCALL] from=0xe6c6e8, to=MOG, allowance(holder(address): 0x4189ad, spender(address): 0x80a64c) -> 115792089237316195423570985008687907853269984665640564039457584007913129639935
+  [2][CALL] from=0xe6c6e8, to=0x80a64c, 0x9239127f() -> 0x000000
+    [3][DELEGATECALL] from=0x80a64c, to=0x8eae98, 0x9239127f() -> 0x000000
+      [4][CALL] from=0x80a64c, to=MOG, transferFrom(sender(address): 0x4189ad, recipient(address): 0xe6C6E8, amount(uint256): 7644407423323066647459234468) -> True
+  [2][STATICCALL] from=0xe6c6e8, to=MOG, balanceOf(account(address): 0xD0b4EE) -> 48204641774314921136106786239
+  [2][STATICCALL] from=0xe6c6e8, to=MOG, allowance(holder(address): 0xD0b4EE, spender(address): 0x80a64c) -> 115792089237316195423570985008687907853269984665640564039457584007913129639935
+  [2][CALL] from=0xe6c6e8, to=0x80a64c, 0x9239127f() -> 0x000000
+    [3][DELEGATECALL] from=0x80a64c, to=0x8eae98, 0x9239127f() -> 0x000000
+      [4][CALL] from=0x80a64c, to=MOG, transferFrom(sender(address): 0xD0b4EE, recipient(address): 0xe6C6E8, amount(uint256): 48204641774314921136106786239) -> True
+  [2][STATICCALL] from=0xe6c6e8, to=MOG, balanceOf(account(address): 0xe84180) -> 80397781241681974651232867727
+  [2][STATICCALL] from=0xe6c6e8, to=MOG, allowance(holder(address): 0xe84180, spender(address): 0x80a64c) -> 115792089237316195423570985008687907853269984665640564039457584007913129639935
+  [2][CALL] from=0xe6c6e8, to=0x80a64c, 0x9239127f() -> 0x000000
+    [3][DELEGATECALL] from=0x80a64c, to=0x8eae98, 0x9239127f() -> 0x000000
+      [4][CALL] from=0x80a64c, to=MOG, transferFrom(sender(address): 0xe84180, recipient(address): 0xe6C6E8, amount(uint256): 80397781241681974651232867727) -> True
+  [2][STATICCALL] from=0xe6c6e8, to=MOG, balanceOf(account(address): 0x647642) -> 334490752124122713685016489776
+  [2][STATICCALL] from=0xe6c6e8, to=MOG, allowance(holder(address): 0x647642, spender(address): 0x80a64c) -> 115792089237316195423570985008687907853269984665640564039457584007913129639935
+  [2][CALL] from=0xe6c6e8, to=0x80a64c, 0x9239127f() -> 0x000000
+    [3][DELEGATECALL] from=0x80a64c, to=0x8eae98, 0x9239127f() -> 0x000000
+      [4][CALL] from=0x80a64c, to=MOG, transferFrom(sender(address): 0x647642, recipient(address): 0xe6C6E8, amount(uint256): 334490752124122713685016489776) -> True
+  [2][STATICCALL] from=0xe6c6e8, to=MOG, balanceOf(account(address): 0xe84180) -> 0
+  [2][STATICCALL] from=0xe6c6e8, to=MOG, allowance(holder(address): 0xe84180, spender(address): 0x80a64c) -> 115792089237316195423570985008687907853269984665640564039457584007913129639935
+  [2][STATICCALL] from=0xe6c6e8, to=MOG, balanceOf(account(address): 0x942beC) -> 81546385133717720246700811579
+  [2][STATICCALL] from=0xe6c6e8, to=MOG, allowance(holder(address): 0x942beC, spender(address): 0x80a64c) -> 115792089237316195423570985008687907853269984665640564039457584007913129639935
+  [2][CALL] from=0xe6c6e8, to=0x80a64c, 0x9239127f() -> 0x000000
+    [3][DELEGATECALL] from=0x80a64c, to=0x8eae98, 0x9239127f() -> 0x000000
+      [4][CALL] from=0x80a64c, to=MOG, transferFrom(sender(address): 0x942beC, recipient(address): 0xe6C6E8, amount(uint256): 81546385133717720246700811579) -> True
+  [2][STATICCALL] from=0xe6c6e8, to=MOG, balanceOf(account(address): 0x968907) -> 7755411711468452260359557922
+  [2][STATICCALL] from=0xe6c6e8, to=MOG, allowance(holder(address): 0x968907, spender(address): 0x80a64c) -> 115792089237316195423570985008687907853269984665640564039457584007913129639935
+  [2][CALL] from=0xe6c6e8, to=0x80a64c, 0x9239127f() -> 0x000000
+    [3][DELEGATECALL] from=0x80a64c, to=0x8eae98, 0x9239127f() -> 0x000000
+      [4][CALL] from=0x80a64c, to=MOG, transferFrom(sender(address): 0x968907, recipient(address): 0xe6C6E8, amount(uint256): 7755411711468452260359557922) -> True
+  [2][STATICCALL] from=0xe6c6e8, to=MOG, balanceOf(account(address): 0xA51621) -> 5424143385553749039595786285
+  [2][STATICCALL] from=0xe6c6e8, to=MOG, allowance(holder(address): 0xA51621, spender(address): 0x80a64c) -> 115792089237316195423570985008687907853269984665640564039457584007913129639935
+  [2][CALL] from=0xe6c6e8, to=0x80a64c, 0x9239127f() -> 0x000000
+    [3][DELEGATECALL] from=0x80a64c, to=0x8eae98, 0x9239127f() -> 0x000000
+      [4][CALL] from=0x80a64c, to=MOG, transferFrom(sender(address): 0xA51621, recipient(address): 0xe6C6E8, amount(uint256): 5424143385553749039595786285) -> True
+  [2][STATICCALL] from=0xe6c6e8, to=MOG, balanceOf(account(address): 0xe6C6E8) -> 565463522794182597666471533996
+  [2][CALL] from=0xe6c6e8, to=MOG, approve(spender(address): 0x7a250d, amount(uint256): 565463522794182597666471533996) -> True
+  [2][STATICCALL] from=0xe6c6e8, to=UniswapV2Router02, getAmountsOut(amountIn(uint256): 565463522794182597666471533996, path(address[]): ['0xaaeE1A9723aaDB7afA2810263653A34bA2C21C...) -> [565463522794182597666471533996, 14040863116812856819]
+    [3][STATICCALL] from=UniswapV2Router02, to=UniswapV2Pair, getReserves() -> ['11897161313381593492873417976057', '310344787079742609888', '1698187883']
+  [2][CALL] from=0xe6c6e8, to=UniswapV2Router02, swapExactTokensForTokensSupportingFeeOnTransferTokens(amountIn(uint256): 565463522794182597666471533996, amountOutMin(uint256): 0, path(address[]): ['0xaaeE1A9723aaDB7afA2810263653A34bA2C21C..., to(address): 0xe6C6E8, deadline(uint256): 1698188027) -> None
+    [3][CALL] from=UniswapV2Router02, to=MOG, transferFrom(sender(address): 0xe6C6E8, recipient(address): 0xc2eaB7, amount(uint256): 565463522794182597666471533996) -> True
+    [3][STATICCALL] from=UniswapV2Router02, to=WETH9, balanceOf((address): 0xe6C6E8) -> 0
+    [3][STATICCALL] from=UniswapV2Router02, to=UniswapV2Pair, getReserves() -> ['11897161313381593492873417976057', '310344787079742609888', '1698187883']
+    [3][STATICCALL] from=UniswapV2Router02, to=MOG, balanceOf(account(address): 0xc2eaB7) -> 12462624836175776090539889510053
+    [3][CALL] from=UniswapV2Router02, to=UniswapV2Pair, swap(amount0Out(uint256): 0, amount1Out(uint256): 14040863116812856819, to(address): 0xe6C6E8, data(bytes): b'') -> None
+      [4][CALL] from=UniswapV2Pair, to=WETH9, transfer(dst(address): 0xe6C6E8, wad(uint256): 14040863116812856819) -> True
+      [4][STATICCALL] from=UniswapV2Pair, to=MOG, balanceOf(account(address): 0xc2eaB7) -> 12462624836175776090539889510053
+      [4][STATICCALL] from=UniswapV2Pair, to=WETH9, balanceOf((address): 0xc2eaB7) -> 296303923962929753069
+    [3][STATICCALL] from=UniswapV2Router02, to=WETH9, balanceOf((address): 0xe6C6E8) -> 14040863116812856819
+  [2][STATICCALL] from=0xe6c6e8, to=WETH9, balanceOf((address): 0xe6C6E8) -> 14040863116812856819
+  [2][CALL] from=0xe6c6e8, to=WETH9, withdraw(wad(uint256): 14040863116812856819) -> None
+    [3][CALL][14.040863116812856] from=WETH9, to=0xe6c6e8
+  [2][CALL][14.040863116812856] from=0xe6c6e8, to=0xce6397

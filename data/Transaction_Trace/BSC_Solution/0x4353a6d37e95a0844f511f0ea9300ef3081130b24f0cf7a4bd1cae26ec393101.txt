@@ -1,0 +1,123 @@
+[1][CALL] from=0x132d9b, to=0x2bd898, 0x0b4d6b52() -> None
+  [2][CALL] from=0x2bd898, to=PancakePair, swap(amount0Out(uint256): 0, amount1Out(uint256): 400000000000000000000, to(address): 0x2Bd898, data(bytes): b'0') -> None
+    [3][CALL] from=PancakePair, to=WBNB, transfer(dst(address): 0x2Bd898, wad(uint256): 400000000000000000000) -> True
+    [3][CALL] from=PancakePair, to=0x2bd898, pancakeCalladdress() -> None
+      [4][STATICCALL] from=0x2bd898, to=WBNB, balanceOf((address): 0x2Bd898) -> 400000000000000000000
+      [4][CALL] from=0x2bd898, to=WBNB, withdraw(wad(uint256): 400000000000000000000) -> None
+        [5][CALL][400.0] from=WBNB, to=0x2bd898
+      [4][CALL][43.14057955975081] from=0x2bd898, to=WMRP
+        [5][CALL] from=WMRP, to=MRP, transfer(to(address): 0x2Bd898, value(uint256): 5119503118145631718751) -> True
+          [6][STATICCALL] from=MRP, to=0x2bd898, 0x1457b0ed() -> 0x000000
+      [4][CALL] from=0x2bd898, to=WMRP, transfer(to(address): 0x35F5cE, value(uint256): 0) -> True
+      [4][STATICCALL] from=0x2bd898, to=MRP, balanceOf(account(address): 0x2Bd898) -> 5119503118145631718751
+      [4][CALL] from=0x2bd898, to=MRP, transfer(to(address): 0x35F5cE, value(uint256): 5119503118145631718751) -> True
+        [5][CALL] from=MRP, to=WMRP, handle(account(address): 0x2Bd898, amount(uint256): 5119503118145631718751) -> True
+      [4][STATICCALL] from=0x2bd898, to=WMRP, balanceOf(account(address): 0x35F5cE) -> 2332327398831067599393
+      [4][STATICCALL] from=0x2bd898, to=WMRP, getLPAmount(value(uint256): 2332327398831067599393, isEth(bool): False) -> 58398821189089608209
+      [4][CALL][58.39882118908961] from=0x2bd898, to=WMRP
+        [5][CALL] from=WMRP, to=MRP, transfer(to(address): 0x2Bd898, value(uint256): 2787175719314564119358) -> True
+          [6][STATICCALL] from=MRP, to=0x2bd898, 0x1457b0ed() -> 0x000000
+      [4][STATICCALL] from=0x2bd898, to=WMRP, LPBalanceOf(account(address): 0x2Bd898) -> 1394915106063806057579
+      [4][STATICCALL] from=0x2bd898, to=WMRP, LPTotalSupply() -> 2789830212127612115158
+      [4][STATICCALL] from=0x2bd898, to=WMRP, balanceOf(account(address): 0x35F5cE) -> 4664654797662135198786
+      [4][CALL] from=0x2bd898, to=WMRP, transfer(to(address): 0x2Bd898, value(uint256): 0) -> True
+        [5][CALL][58.39882118908961] from=WMRP, to=0x2bd898
+          [6][STATICCALL] from=0x2bd898, to=WMRP, balanceOf(account(address): 0x35F5cE) -> 4664654797662135198786
+          [6][STATICCALL] from=0x2bd898, to=WMRP, getContractEthAmount() -> 58398821189089608209
+          [6][CALL][58.39882118908961] from=0x2bd898, to=WMRP
+            [7][CALL] from=WMRP, to=MRP, transfer(to(address): 0x2Bd898, value(uint256): 2247735213381236132006) -> True
+              [8][STATICCALL] from=MRP, to=0x2bd898, 0x1457b0ed() -> 0x000000
+        [5][CALL] from=WMRP, to=MRP, transfer(to(address): 0x2Bd898, value(uint256): 2332327398831067599393) -> True
+          [6][STATICCALL] from=MRP, to=0x2bd898, 0x1457b0ed() -> 0x000000
+      [4][STATICCALL] from=0x2bd898, to=WMRP, balanceOf(account(address): 0x35F5cE) -> 84592185449831467387
+      [4][STATICCALL] from=0x2bd898, to=MRP, balanceOf(account(address): 0x2Bd898) -> 7367238331526867850757
+      [4][CALL] from=0x2bd898, to=MRP, transfer(to(address): 0x35F5cE, value(uint256): 1268882781747472010805) -> True
+        [5][CALL] from=MRP, to=WMRP, handle(account(address): 0x2Bd898, amount(uint256): 1268882781747472010805) -> True
+          [6][CALL][102.49540607633874] from=WMRP, to=0x2bd898
+      [4][CALL] from=0x2bd898, to=WMRP, transfer(to(address): 0x35F5cE, value(uint256): 0) -> True
+      [4][STATICCALL] from=0x2bd898, to=MRP, balanceOf(account(address): 0x2Bd898) -> 6098355549779395839952
+      [4][CALL] from=0x2bd898, to=MRP, transfer(to(address): 0xA0Ba9d, value(uint256): 304917777488969791997) -> True
+        [5][CALL][0.047776404931410256] from=MRP, to=0x2712c5
+        [5][CALL][0.9077516936967949] from=MRP, to=0x2bd898
+        [5][CALL] from=MRP, to=MRPDestroy, dividendHandle(amount(uint256): 9147533324669093759) -> None
+      [4][CALL] from=0x2bd898, to=MRP, transfer(to(address): 0xA0Ba9d, value(uint256): 304917777488969791997) -> True
+        [5][CALL][0.047776404931410256] from=MRP, to=0x2712c5
+        [5][CALL][0.9077516936967949] from=MRP, to=0x2bd898
+        [5][CALL] from=MRP, to=MRPDestroy, dividendHandle(amount(uint256): 9147533324669093759) -> None
+      [4][CALL] from=0x2bd898, to=MRP, transfer(to(address): 0xA0Ba9d, value(uint256): 304917777488969791997) -> True
+        [5][CALL][0.047776404931410256] from=MRP, to=0x2712c5
+        [5][CALL][0.9077516936967949] from=MRP, to=0x2bd898
+        [5][CALL] from=MRP, to=MRPDestroy, dividendHandle(amount(uint256): 9147533324669093759) -> None
+      [4][CALL] from=0x2bd898, to=MRP, transfer(to(address): 0xA0Ba9d, value(uint256): 304917777488969791997) -> True
+        [5][CALL][0.047776404931410256] from=MRP, to=0x2712c5
+        [5][CALL][0.9077516936967949] from=MRP, to=0x2bd898
+        [5][CALL] from=MRP, to=MRPDestroy, dividendHandle(amount(uint256): 9147533324669093759) -> None
+      [4][CALL] from=0x2bd898, to=MRP, transfer(to(address): 0xA0Ba9d, value(uint256): 304917777488969791997) -> True
+        [5][CALL][0.047776404931410256] from=MRP, to=0x2712c5
+        [5][CALL][0.9077516936967949] from=MRP, to=0x2bd898
+        [5][CALL] from=MRP, to=MRPDestroy, dividendHandle(amount(uint256): 9147533324669093759) -> None
+      [4][CALL] from=0x2bd898, to=MRP, transfer(to(address): 0xA0Ba9d, value(uint256): 304917777488969791997) -> True
+        [5][CALL][0.047776404931410256] from=MRP, to=0x2712c5
+        [5][CALL][0.9077516936967949] from=MRP, to=0x2bd898
+        [5][CALL] from=MRP, to=MRPDestroy, dividendHandle(amount(uint256): 9147533324669093759) -> None
+      [4][CALL] from=0x2bd898, to=MRP, transfer(to(address): 0xA0Ba9d, value(uint256): 304917777488969791997) -> True
+        [5][CALL][0.047776404931410256] from=MRP, to=0x2712c5
+        [5][CALL][0.9077516936967949] from=MRP, to=0x2bd898
+        [5][CALL] from=MRP, to=MRPDestroy, dividendHandle(amount(uint256): 9147533324669093759) -> None
+      [4][CALL] from=0x2bd898, to=MRP, transfer(to(address): 0xA0Ba9d, value(uint256): 304917777488969791997) -> True
+        [5][CALL][0.047776404931410256] from=MRP, to=0x2712c5
+        [5][CALL][0.9077516936967949] from=MRP, to=0x2bd898
+        [5][CALL] from=MRP, to=MRPDestroy, dividendHandle(amount(uint256): 9147533324669093759) -> None
+      [4][CALL] from=0x2bd898, to=MRP, transfer(to(address): 0xA0Ba9d, value(uint256): 304917777488969791997) -> True
+        [5][CALL][0.047776404931410256] from=MRP, to=0x2712c5
+        [5][CALL][0.9077516936967949] from=MRP, to=0x2bd898
+        [5][CALL] from=MRP, to=MRPDestroy, dividendHandle(amount(uint256): 9147533324669093759) -> None
+      [4][CALL] from=0x2bd898, to=MRP, transfer(to(address): 0xA0Ba9d, value(uint256): 304917777488969791997) -> True
+        [5][CALL][0.047776404931410256] from=MRP, to=0x2712c5
+        [5][CALL][0.9077516936967949] from=MRP, to=0x2bd898
+        [5][CALL] from=MRP, to=MRPDestroy, dividendHandle(amount(uint256): 9147533324669093759) -> None
+      [4][CALL] from=0x2bd898, to=MRP, transfer(to(address): 0xA0Ba9d, value(uint256): 304917777488969791997) -> True
+        [5][CALL][0.047776404931410256] from=MRP, to=0x2712c5
+        [5][CALL][0.9077516936967949] from=MRP, to=0x2bd898
+        [5][CALL] from=MRP, to=MRPDestroy, dividendHandle(amount(uint256): 9147533324669093759) -> None
+      [4][CALL] from=0x2bd898, to=MRP, transfer(to(address): 0xA0Ba9d, value(uint256): 304917777488969791997) -> True
+        [5][CALL][0.047776404931410256] from=MRP, to=0x2712c5
+        [5][CALL][0.9077516936967949] from=MRP, to=0x2bd898
+        [5][CALL] from=MRP, to=MRPDestroy, dividendHandle(amount(uint256): 9147533324669093759) -> None
+      [4][CALL] from=0x2bd898, to=MRP, transfer(to(address): 0xA0Ba9d, value(uint256): 304917777488969791997) -> True
+        [5][CALL][0.047776404931410256] from=MRP, to=0x2712c5
+        [5][CALL][0.9077516936967949] from=MRP, to=0x2bd898
+        [5][CALL] from=MRP, to=MRPDestroy, dividendHandle(amount(uint256): 9147533324669093759) -> None
+      [4][CALL] from=0x2bd898, to=MRP, transfer(to(address): 0xA0Ba9d, value(uint256): 304917777488969791997) -> True
+        [5][CALL][0.047776404931410256] from=MRP, to=0x2712c5
+        [5][CALL][0.9077516936967949] from=MRP, to=0x2bd898
+        [5][CALL] from=MRP, to=MRPDestroy, dividendHandle(amount(uint256): 9147533324669093759) -> None
+      [4][CALL] from=0x2bd898, to=MRP, transfer(to(address): 0xA0Ba9d, value(uint256): 304917777488969791997) -> True
+        [5][CALL][0.047776404931410256] from=MRP, to=0x2712c5
+        [5][CALL][0.9077516936967949] from=MRP, to=0x2bd898
+        [5][CALL] from=MRP, to=MRPDestroy, dividendHandle(amount(uint256): 9147533324669093759) -> None
+      [4][CALL] from=0x2bd898, to=MRP, transfer(to(address): 0xA0Ba9d, value(uint256): 304917777488969791997) -> True
+        [5][CALL][0.047776404931410256] from=MRP, to=0x2712c5
+        [5][CALL][0.9077516936967949] from=MRP, to=0x2bd898
+        [5][CALL] from=MRP, to=MRPDestroy, dividendHandle(amount(uint256): 9147533324669093759) -> None
+      [4][CALL] from=0x2bd898, to=MRP, transfer(to(address): 0xA0Ba9d, value(uint256): 304917777488969791997) -> True
+        [5][CALL][0.047776404931410256] from=MRP, to=0x2712c5
+        [5][CALL][0.9077516936967949] from=MRP, to=0x2bd898
+        [5][CALL] from=MRP, to=MRPDestroy, dividendHandle(amount(uint256): 9147533324669093759) -> None
+      [4][CALL] from=0x2bd898, to=MRP, transfer(to(address): 0xA0Ba9d, value(uint256): 304917777488969791997) -> True
+        [5][CALL][0.047776404931410256] from=MRP, to=0x2712c5
+        [5][CALL][0.9077516936967949] from=MRP, to=0x2bd898
+        [5][CALL] from=MRP, to=MRPDestroy, dividendHandle(amount(uint256): 9147533324669093759) -> None
+      [4][CALL] from=0x2bd898, to=MRP, transfer(to(address): 0xA0Ba9d, value(uint256): 304917777488969791997) -> True
+        [5][CALL][0.047776404931410256] from=MRP, to=0x2712c5
+        [5][CALL][0.9077516936967949] from=MRP, to=0x2bd898
+        [5][CALL] from=MRP, to=MRPDestroy, dividendHandle(amount(uint256): 9147533324669093759) -> None
+      [4][CALL] from=0x2bd898, to=MRP, transfer(to(address): 0xA0Ba9d, value(uint256): 304917777488969791997) -> True
+        [5][CALL][0.047776404931410256] from=MRP, to=0x2712c5
+        [5][CALL][0.9077516936967949] from=MRP, to=0x2bd898
+        [5][CALL] from=MRP, to=MRPDestroy, dividendHandle(amount(uint256): 9147533324669093759) -> None
+      [4][CALL] from=0x2bd898, to=WBNB, deposit() -> None
+      [4][CALL] from=0x2bd898, to=WBNB, transfer(dst(address): 0x0eD7e5, wad(uint256): 401200000000000000000) -> True
+    [3][STATICCALL] from=PancakePair, to=CakeToken, balanceOf(account(address): 0x0eD7e5) -> 13098934842693784471845409
+    [3][STATICCALL] from=PancakePair, to=WBNB, balanceOf((address): 0x0eD7e5) -> 48033160808995804775118
+  [2][CALL][17.91103920143422] from=0x2bd898, to=0x132d9b

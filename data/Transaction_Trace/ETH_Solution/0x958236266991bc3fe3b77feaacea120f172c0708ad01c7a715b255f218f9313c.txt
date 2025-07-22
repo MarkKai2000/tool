@@ -1,0 +1,228 @@
+[1][CALL] from=0x7b792e, to=0xf508c5, start() -> None
+  [2][CALL] from=0xf508c5, to=InitializableImmutableAdminUpgradeabilityProxy, flashLoan(receiverAddress(address): 0xf508c5, assets(address[]): ['0x2260FAC5E5542a773Aa44fBCfeDf7C193bc2C5..., amounts(uint256[]): [2700000000000], modes(uint256[]): [0], onBehalfOf(address): 0xf508c5, params(bytes): b'', referralCode(uint16): 0) -> None
+    [3][DELEGATECALL] from=InitializableImmutableAdminUpgradeabilityProxy, to=LendingPool, flashLoan(receiverAddress(address): 0xf508c5, assets(address[]): ['0x2260FAC5E5542a773Aa44fBCfeDf7C193bc2C5..., amounts(uint256[]): [2700000000000], modes(uint256[]): [0], onBehalfOf(address): 0xf508c5, params(bytes): b'', referralCode(uint16): 0) -> None
+      [4][CALL] from=InitializableImmutableAdminUpgradeabilityProxy, to=InitializableImmutableAdminUpgradeabilityProxy, transferUnderlyingTo(target(address): 0xf508c5, amount(uint256): 2700000000000) -> 2700000000000
+        [5][DELEGATECALL] from=InitializableImmutableAdminUpgradeabilityProxy, to=AToken, transferUnderlyingTo(target(address): 0xf508c5, amount(uint256): 2700000000000) -> 2700000000000
+          [6][CALL] from=InitializableImmutableAdminUpgradeabilityProxy, to=WBTC, transfer(_to(address): 0xf508c5, _value(uint256): 2700000000000) -> True
+      [4][CALL] from=InitializableImmutableAdminUpgradeabilityProxy, to=0xf508c5, executeOperationaddress[]() -> 0x000000
+        [5][CALL] from=0xf508c5, to=WBTC, approve(_spender(address): 0xD51a44, _value(uint256): 22500000000) -> True
+        [5][CALL] from=0xf508c5, to=Vyper_contract, add_liquidity(amounts(uint256[3]): [0, 22500000000, 0], min_mint_amount(uint256): 0) -> None
+          [6][CALL] from=Vyper_contract, to=WBTC, transferFrom(_from(address): 0xf508c5, _to(address): 0xD51a44, _value(uint256): 22500000000) -> True
+          [6][STATICCALL] from=Vyper_contract, to=Vyper_contract, newton_D(ANN(uint256): 1707629, gamma(uint256): 11809167828997, x_unsorted(uint256[3]): [87636422228320000000000000, 9467156460394...) -> 272647499393736645480262817
+          [6][STATICCALL] from=Vyper_contract, to=Vyper_contract, totalSupply() -> 294784628633376673301214
+          [6][STATICCALL] from=Vyper_contract, to=Vyper_contract, reduction_coefficient(x(uint256[3]): [87636422228320000000000000, 9467156460394..., fee_gamma(uint256): 500000000000000) -> 248918372550279504
+          [6][CALL] from=Vyper_contract, to=Vyper_contract, mint(_to(address): 0xf508c5, _value(uint256): 5375596969399930881565) -> True
+          [6][STATICCALL] from=Vyper_contract, to=Vyper_contract, halfpow(power(uint256): 105000000000000000, precision(uint256): 10000000000) -> 929804949119518011
+          [6][STATICCALL] from=Vyper_contract, to=Vyper_contract, totalSupply() -> 300160225602776604182779
+          [6][STATICCALL] from=Vyper_contract, to=Vyper_contract, geometric_mean(unsorted_x(uint256[3]): [90882499797912215160087605, 4096276518082...) -> 304210217432320753264287
+          [6][STATICCALL] from=Vyper_contract, to=Vyper_contract, sqrt_int(x(uint256): 1229975902731894) -> 35071012285531394
+          [6][STATICCALL] from=Vyper_contract, to=Vyper_contract, newton_D(ANN(uint256): 1707629, gamma(uint256): 11809167828997, x_unsorted(uint256[3]): [87636422228320000000000000, 9454533499871...) -> 272390555105421602265292704
+          [6][STATICCALL] from=Vyper_contract, to=Vyper_contract, geometric_mean(unsorted_x(uint256[3]): [90796851701807200755097568, 4097880044744...) -> 304209964025298278260359
+        [5][STATICCALL] from=0xf508c5, to=Vyper_contract, A() -> 1707629
+        [5][STATICCALL] from=0xf508c5, to=Vyper_contract, balanceOf(arg0(address): 0xf508c5) -> 5375596969399930881565
+        [5][CALL] from=0xf508c5, to=Vyper_contract, approve(_spender(address): 0xE537B5, _value(uint256): 5375596969399930881565) -> True
+        [5][CALL] from=0xf508c5, to=Vyper_contract, deposit() -> 4906754677503974414310
+          [6][DELEGATECALL] from=Vyper_contract, to=Vyper_contract, deposit() -> 4906754677503974414310
+            [7][STATICCALL] from=Vyper_contract, to=Vyper_contract, balanceOf(arg0(address): 0xE537B5) -> 88070837524464488763
+            [7][STATICCALL] from=Vyper_contract, to=Vyper_contract, balanceOf(arg0(address): 0xE537B5) -> 88070837524464488763
+            [7][CALL] from=Vyper_contract, to=0x000000, transferFromaddress() -> 0x23b872
+            [7][CALL] from=Vyper_contract, to=0x000000, fallback() -> 0x000000
+            [7][CALL] from=Vyper_contract, to=Vyper_contract, transferFrom(_from(address): 0xf508c5, _to(address): 0xE537B5, _value(uint256): 5375596969399930881565) -> True
+            [7][CALL] from=Vyper_contract, to=0x000000, fallback() -> 0x000000
+        [5][STATICCALL] from=0xf508c5, to=Vyper_contract, balanceOf(arg0(address): 0xf508c5) -> 4906754677503974414310
+          [6][DELEGATECALL] from=Vyper_contract, to=Vyper_contract, balanceOf(arg0(address): 0xf508c5) -> 4906754677503974414310
+        [5][CALL] from=0xf508c5, to=Vyper_contract, approve(spender(address): 0x1429a9, amount(uint256): 100000000000000000000000000000000000000000...) -> True
+          [6][DELEGATECALL] from=Vyper_contract, to=Vyper_contract, approve(spender(address): 0x1429a9, amount(uint256): 100000000000000000000000000000000000000000...) -> True
+        [5][CALL] from=0xf508c5, to=CErc20ImmutableYearn, mint(mintAmount(uint256): 4906754677503974414310) -> 0
+          [6][STATICCALL] from=CErc20ImmutableYearn, to=Vyper_contract, balanceOf(arg0(address): 0x1429a9) -> 0
+            [7][DELEGATECALL] from=Vyper_contract, to=Vyper_contract, balanceOf(arg0(address): 0x1429a9) -> 0
+          [6][STATICCALL] from=CErc20ImmutableYearn, to=JumpRateModelV2, getBorrowRate(cash(uint256): 0, borrows(uint256): 0, reserves(uint256): 0) -> 0
+          [6][CALL] from=CErc20ImmutableYearn, to=Unitroller, mintAllowed(cToken(address): 0x1429a9, minter(address): 0xf508c5, mintAmount(uint256): 4906754677503974414310) -> 0
+            [7][DELEGATECALL] from=Unitroller, to=Comptroller, mintAllowed(cToken(address): 0x1429a9, minter(address): 0xf508c5, mintAmount(uint256): 4906754677503974414310) -> 0
+              [8][STATICCALL] from=Unitroller, to=CErc20ImmutableYearn, balanceOf(owner(address): 0xf508c5) -> 0
+          [6][STATICCALL] from=CErc20ImmutableYearn, to=Vyper_contract, balanceOf(arg0(address): 0x1429a9) -> 0
+            [7][DELEGATECALL] from=Vyper_contract, to=Vyper_contract, balanceOf(arg0(address): 0x1429a9) -> 0
+          [6][CALL] from=CErc20ImmutableYearn, to=Vyper_contract, transferFrom(sender(address): 0xf508c5, receiver(address): 0x1429a9, amount(uint256): 4906754677503974414310) -> True
+            [7][DELEGATECALL] from=Vyper_contract, to=Vyper_contract, transferFrom(sender(address): 0xf508c5, receiver(address): 0x1429a9, amount(uint256): 4906754677503974414310) -> True
+          [6][STATICCALL] from=CErc20ImmutableYearn, to=Vyper_contract, balanceOf(arg0(address): 0x1429a9) -> 4906754677503974414310
+            [7][DELEGATECALL] from=Vyper_contract, to=Vyper_contract, balanceOf(arg0(address): 0x1429a9) -> 4906754677503974414310
+          [6][CALL] from=CErc20ImmutableYearn, to=Unitroller, mintVerify(cToken(address): 0x1429a9, minter(address): 0xf508c5, actualMintAmount(uint256): 4906754677503974414310, mintTokens(uint256): 24533773387519) -> None
+            [7][DELEGATECALL] from=Unitroller, to=Comptroller, mintVerify(cToken(address): 0x1429a9, minter(address): 0xf508c5, actualMintAmount(uint256): 4906754677503974414310, mintTokens(uint256): 24533773387519) -> None
+        [5][CALL] from=0xf508c5, to=Unitroller, enterMarkets(cTokens(address[]): ['0x1429a930ec3bcf5Aa32EF298ccc5aB09836EF5...) -> [0]
+          [6][DELEGATECALL] from=Unitroller, to=Comptroller, enterMarkets(cTokens(address[]): ['0x1429a930ec3bcf5Aa32EF298ccc5aB09836EF5...) -> [0]
+        [5][STATICCALL] from=0xf508c5, to=WBTC, balanceOf(_owner(address): 0xf508c5) -> 2677500000000
+        [5][STATICCALL] from=0xf508c5, to=YVCrv3CryptoFeed, latestAnswer() -> 979943357748941122174
+          [6][STATICCALL] from=YVCrv3CryptoFeed, to=EACAggregatorProxy, latestAnswer() -> 2175882582458
+            [7][STATICCALL] from=EACAggregatorProxy, to=AccessControlledOffchainAggregator, latestAnswer() -> 2175882582458
+          [6][STATICCALL] from=YVCrv3CryptoFeed, to=WBTC, balanceOf(_owner(address): 0xD51a44) -> 426705810117
+          [6][STATICCALL] from=YVCrv3CryptoFeed, to=EACAggregatorProxy, latestAnswer() -> 117081386761
+            [7][STATICCALL] from=EACAggregatorProxy, to=AccessControlledOffchainAggregator, latestAnswer() -> 117081386761
+          [6][STATICCALL] from=YVCrv3CryptoFeed, to=WETH9, balanceOf((address): 0xD51a44) -> 75269151943667682615597
+          [6][STATICCALL] from=YVCrv3CryptoFeed, to=EACAggregatorProxy, latestAnswer() -> 99860000
+            [7][STATICCALL] from=EACAggregatorProxy, to=AccessControlledOffchainAggregator, latestAnswer() -> 99860000
+          [6][STATICCALL] from=YVCrv3CryptoFeed, to=TetherToken, balanceOf(who(address): 0xD51a44) -> 87636422228320
+          [6][STATICCALL] from=YVCrv3CryptoFeed, to=Vyper_contract, totalSupply() -> 300160225602776604182779
+          [6][STATICCALL] from=YVCrv3CryptoFeed, to=Vyper_contract, pricePerShare() -> 1095550383646743201
+            [7][DELEGATECALL] from=Vyper_contract, to=Vyper_contract, pricePerShare() -> 1095550383646743201
+              [8][STATICCALL] from=Vyper_contract, to=Vyper_contract, balanceOf(arg0(address): 0xE537B5) -> 5463667806924395370328
+        [5][CALL] from=0xf508c5, to=Vyper_contract, exchange(_pool(address): 0xD51a44, _from(address): 0x2260FA, _to(address): 0xdAC17F, _amount(uint256): 2677500000000, _expected(uint256): 0) -> 75403376186072
+          [6][STATICCALL] from=Vyper_contract, to=Vyper_contract, get_lp_token(arg0(address): 0xD51a44) -> 0xc4ad29
+          [6][STATICCALL] from=Vyper_contract, to=Vyper_contract, get_coin_indices(_pool(address): 0xD51a44, _from(address): 0x2260FA, _to(address): 0xdAC17F) -> ['1', '0']
+          [6][CALL] from=Vyper_contract, to=WBTC, transferFrom(_from(address): 0xf508c5, _to(address): 0x8e764b, _value(uint256): 2677500000000) -> True
+          [6][STATICCALL] from=Vyper_contract, to=0x000000, fallback() -> 0x000000
+          [6][CALL] from=Vyper_contract, to=WBTC, approve(_spender(address): 0xD51a44, _value(uint256): 115792089237316195423570985008687907853269...) -> True
+          [6][STATICCALL] from=Vyper_contract, to=0x000000, fallback() -> 0x000000
+          [6][CALL] from=Vyper_contract, to=Vyper_contract, exchange(i(uint256): 1, j(uint256): 0, dx(uint256): 2677500000000, min_dy(uint256): 0) -> None
+            [7][CALL] from=Vyper_contract, to=WBTC, transferFrom(_from(address): 0x8e764b, _to(address): 0xD51a44, _value(uint256): 2677500000000) -> True
+            [7][STATICCALL] from=Vyper_contract, to=Vyper_contract, newton_y(ANN(uint256): 1707629, gamma(uint256): 11809167828997, x(uint256[3]): [87636422228320000000000000, 6877998172604..., D(uint256): 272390555105421602265292704, i(uint256): 0) -> 12006254053580525700055622
+            [7][STATICCALL] from=Vyper_contract, to=Vyper_contract, reduction_coefficient(x(uint256[3]): [12006254053580525700055622, 6877998172604..., fee_gamma(uint256): 500000000000000) -> 521010270634859
+            [7][CALL] from=Vyper_contract, to=TetherToken, transfer(_to(address): 0x8e764b, _value(uint256): 75403376186072) -> None
+            [7][STATICCALL] from=Vyper_contract, to=Vyper_contract, newton_D(ANN(uint256): 1707629, gamma(uint256): 11809167828997, x_unsorted(uint256[3]): [12233046042248000000000000, 6877998172604...) -> 274093987584542717828476985
+            [7][STATICCALL] from=Vyper_contract, to=Vyper_contract, totalSupply() -> 300160225602776604182779
+            [7][STATICCALL] from=Vyper_contract, to=Vyper_contract, geometric_mean(unsorted_x(uint256[3]): [91364662528180905942825661, 4123506711429...) -> 306112383633762320277768
+            [7][STATICCALL] from=Vyper_contract, to=Vyper_contract, sqrt_int(x(uint256): 1096806266540708) -> 33118065561573912
+            [7][STATICCALL] from=Vyper_contract, to=Vyper_contract, newton_D(ANN(uint256): 1707629, gamma(uint256): 11809167828997, x_unsorted(uint256[3]): [12233046042248000000000000, 6868828249324...) -> 273835844854279859821383143
+            [7][STATICCALL] from=Vyper_contract, to=Vyper_contract, geometric_mean(unsorted_x(uint256[3]): [91278614951426619940461047, 4125122897046...) -> 306112311536407716263932
+          [6][STATICCALL] from=Vyper_contract, to=TetherToken, balanceOf(who(address): 0x8e764b) -> 75403376186072
+          [6][CALL] from=Vyper_contract, to=TetherToken, transfer(_to(address): 0xf508c5, _value(uint256): 75403376186072) -> None
+          [6][STATICCALL] from=Vyper_contract, to=0x000000, fallback() -> 0x000000
+        [5][STATICCALL] from=0xf508c5, to=YVCrv3CryptoFeed, latestAnswer() -> 2831510989208155228660
+          [6][STATICCALL] from=YVCrv3CryptoFeed, to=EACAggregatorProxy, latestAnswer() -> 2175882582458
+            [7][STATICCALL] from=EACAggregatorProxy, to=AccessControlledOffchainAggregator, latestAnswer() -> 2175882582458
+          [6][STATICCALL] from=YVCrv3CryptoFeed, to=WBTC, balanceOf(_owner(address): 0xD51a44) -> 3104205810117
+          [6][STATICCALL] from=YVCrv3CryptoFeed, to=EACAggregatorProxy, latestAnswer() -> 117081386761
+            [7][STATICCALL] from=EACAggregatorProxy, to=AccessControlledOffchainAggregator, latestAnswer() -> 117081386761
+          [6][STATICCALL] from=YVCrv3CryptoFeed, to=WETH9, balanceOf((address): 0xD51a44) -> 75269151943667682615597
+          [6][STATICCALL] from=YVCrv3CryptoFeed, to=EACAggregatorProxy, latestAnswer() -> 99860000
+            [7][STATICCALL] from=EACAggregatorProxy, to=AccessControlledOffchainAggregator, latestAnswer() -> 99860000
+          [6][STATICCALL] from=YVCrv3CryptoFeed, to=TetherToken, balanceOf(who(address): 0xD51a44) -> 12233046042248
+          [6][STATICCALL] from=YVCrv3CryptoFeed, to=Vyper_contract, totalSupply() -> 300160225602776604182779
+          [6][STATICCALL] from=YVCrv3CryptoFeed, to=Vyper_contract, pricePerShare() -> 1095550383646743201
+            [7][DELEGATECALL] from=Vyper_contract, to=Vyper_contract, pricePerShare() -> 1095550383646743201
+              [8][STATICCALL] from=Vyper_contract, to=Vyper_contract, balanceOf(arg0(address): 0xE537B5) -> 5463667806924395370328
+        [5][STATICCALL] from=0xf508c5, to=ERC20, balanceOf((address): 0x7Fcb7D) -> 10133949192393802606886848
+        [5][CALL] from=0xf508c5, to=CErc20Immutable, borrow(borrowAmount(uint256): 10133949192393802606886848) -> 0
+          [6][STATICCALL] from=CErc20Immutable, to=ERC20, balanceOf((address): 0x7Fcb7D) -> 10133949192393802606886848
+          [6][STATICCALL] from=CErc20Immutable, to=JumpRateModelV2, getBorrowRate(cash(uint256): 10133949192393802606886848, borrows(uint256): 6409743066423676067170699, reserves(uint256): 28803729629958507208215) -> 9845739809
+          [6][CALL] from=CErc20Immutable, to=Unitroller, borrowAllowed(cToken(address): 0x7Fcb7D, borrower(address): 0xf508c5, borrowAmount(uint256): 10133949192393802606886848) -> 0
+            [7][DELEGATECALL] from=Unitroller, to=Comptroller, borrowAllowed(cToken(address): 0x7Fcb7D, borrower(address): 0xf508c5, borrowAmount(uint256): 10133949192393802606886848) -> 0
+              [8][STATICCALL] from=Unitroller, to=Oracle, getUnderlyingPrice(cToken_(address): 0x7Fcb7D) -> 1000000000000000000
+              [8][STATICCALL] from=Unitroller, to=CErc20ImmutableYearn, getAccountSnapshot(account(address): 0xf508c5) -> ['0', '24533773387519', '0', '200000000000007109151423430']
+                [9][STATICCALL] from=CErc20ImmutableYearn, to=Vyper_contract, balanceOf(arg0(address): 0x1429a9) -> 4906754677503974414310
+                  [10][DELEGATECALL] from=Vyper_contract, to=Vyper_contract, balanceOf(arg0(address): 0x1429a9) -> 4906754677503974414310
+              [8][STATICCALL] from=Unitroller, to=Oracle, getUnderlyingPrice(cToken_(address): 0x1429a9) -> 2831510989208155228660
+                [9][STATICCALL] from=Oracle, to=YVCrv3CryptoFeed, decimals() -> 18
+                [9][STATICCALL] from=Oracle, to=YVCrv3CryptoFeed, latestAnswer() -> 2831510989208155228660
+                  [10][STATICCALL] from=YVCrv3CryptoFeed, to=EACAggregatorProxy, latestAnswer() -> 2175882582458
+                    [11][STATICCALL] from=EACAggregatorProxy, to=AccessControlledOffchainAggregator, latestAnswer() -> 2175882582458
+                  [10][STATICCALL] from=YVCrv3CryptoFeed, to=WBTC, balanceOf(_owner(address): 0xD51a44) -> 3104205810117
+                  [10][STATICCALL] from=YVCrv3CryptoFeed, to=EACAggregatorProxy, latestAnswer() -> 117081386761
+                    [11][STATICCALL] from=EACAggregatorProxy, to=AccessControlledOffchainAggregator, latestAnswer() -> 117081386761
+                  [10][STATICCALL] from=YVCrv3CryptoFeed, to=WETH9, balanceOf((address): 0xD51a44) -> 75269151943667682615597
+                  [10][STATICCALL] from=YVCrv3CryptoFeed, to=EACAggregatorProxy, latestAnswer() -> 99860000
+                    [11][STATICCALL] from=EACAggregatorProxy, to=AccessControlledOffchainAggregator, latestAnswer() -> 99860000
+                  [10][STATICCALL] from=YVCrv3CryptoFeed, to=TetherToken, balanceOf(who(address): 0xD51a44) -> 12233046042248
+                  [10][STATICCALL] from=YVCrv3CryptoFeed, to=Vyper_contract, totalSupply() -> 300160225602776604182779
+                  [10][STATICCALL] from=YVCrv3CryptoFeed, to=Vyper_contract, pricePerShare() -> 1095550383646743201
+                    [11][DELEGATECALL] from=Vyper_contract, to=Vyper_contract, pricePerShare() -> 1095550383646743201
+                      [12][STATICCALL] from=Vyper_contract, to=Vyper_contract, balanceOf(arg0(address): 0xE537B5) -> 5463667806924395370328
+              [8][STATICCALL] from=Unitroller, to=CErc20Immutable, getAccountSnapshot(account(address): 0xf508c5) -> ['0', '0', '0', '213165823663335843574818787']
+                [9][STATICCALL] from=CErc20Immutable, to=ERC20, balanceOf((address): 0x7Fcb7D) -> 10133949192393802606886848
+              [8][STATICCALL] from=Unitroller, to=Oracle, getUnderlyingPrice(cToken_(address): 0x7Fcb7D) -> 1000000000000000000
+              [8][STATICCALL] from=Unitroller, to=CErc20Immutable, borrowIndex() -> 1106517052199362854
+          [6][STATICCALL] from=CErc20Immutable, to=ERC20, balanceOf((address): 0x7Fcb7D) -> 10133949192393802606886848
+          [6][CALL] from=CErc20Immutable, to=ERC20, transfer(to(address): 0xf508c5, value(uint256): 10133949192393802606886848) -> True
+          [6][CALL] from=CErc20Immutable, to=Unitroller, borrowVerify(cToken(address): 0x7Fcb7D, borrower(address): 0xf508c5, borrowAmount(uint256): 10133949192393802606886848) -> None
+            [7][DELEGATECALL] from=Unitroller, to=Comptroller, borrowVerify(cToken(address): 0x7Fcb7D, borrower(address): 0xf508c5, borrowAmount(uint256): 10133949192393802606886848) -> None
+        [5][STATICCALL] from=0xf508c5, to=TetherToken, balanceOf(who(address): 0xf508c5) -> 75403376186072
+        [5][CALL] from=0xf508c5, to=Vyper_contract, exchange(_pool(address): 0xD51a44, _from(address): 0xdAC17F, _to(address): 0x2260FA, _amount(uint256): 75403376186072, _expected(uint256): 0) -> 2662649457574
+          [6][STATICCALL] from=Vyper_contract, to=Vyper_contract, get_lp_token(arg0(address): 0xD51a44) -> 0xc4ad29
+          [6][STATICCALL] from=Vyper_contract, to=Vyper_contract, get_coin_indices(_pool(address): 0xD51a44, _from(address): 0xdAC17F, _to(address): 0x2260FA) -> ['0', '1']
+          [6][CALL] from=Vyper_contract, to=TetherToken, transferFrom(_from(address): 0xf508c5, _to(address): 0x8e764b, _value(uint256): 75403376186072) -> None
+          [6][STATICCALL] from=Vyper_contract, to=0x000000, fallback() -> 0x000000
+          [6][CALL] from=Vyper_contract, to=Vyper_contract, exchange(i(uint256): 0, j(uint256): 1, dx(uint256): 75403376186072, min_dy(uint256): 0) -> None
+            [7][CALL] from=Vyper_contract, to=TetherToken, transferFrom(_from(address): 0x8e764b, _to(address): 0xD51a44, _value(uint256): 75403376186072) -> None
+            [7][STATICCALL] from=Vyper_contract, to=Vyper_contract, newton_y(ANN(uint256): 1707629, gamma(uint256): 11809167828997, x(uint256[3]): [87636422228320000000000000, 6868828249324..., D(uint256): 273835844854279859821383143, i(uint256): 1) -> 96198051283289348807394424
+            [7][STATICCALL] from=Vyper_contract, to=Vyper_contract, reduction_coefficient(x(uint256[3]): [87636422228320000000000000, 9619805128328..., fee_gamma(uint256): 500000000000000) -> 179296028293526882
+            [7][CALL] from=Vyper_contract, to=WBTC, transfer(_to(address): 0x8e764b, _value(uint256): 2662649457574) -> True
+            [7][STATICCALL] from=Vyper_contract, to=Vyper_contract, newton_D(ANN(uint256): 1707629, gamma(uint256): 11809167828997, x_unsorted(uint256[3]): [87636422228320000000000000, 9770533700217...) -> 275261581266882929656313148
+            [7][STATICCALL] from=Vyper_contract, to=Vyper_contract, totalSupply() -> 300160225602776604182779
+            [7][STATICCALL] from=Vyper_contract, to=Vyper_contract, geometric_mean(unsorted_x(uint256[3]): [91753860422294309885437716, 4146600501353...) -> 307706096561650842572822
+            [7][STATICCALL] from=Vyper_contract, to=Vyper_contract, sqrt_int(x(uint256): 971091482196742) -> 31162340768895105
+            [7][STATICCALL] from=Vyper_contract, to=Vyper_contract, newton_D(ANN(uint256): 1707629, gamma(uint256): 11809167828997, x_unsorted(uint256[3]): [87636422228320000000000000, 9757508516697...) -> 275002237348076055686897701
+            [7][STATICCALL] from=Vyper_contract, to=Vyper_contract, geometric_mean(unsorted_x(uint256[3]): [91667412449358685228965900, 4148223721140...) -> 307705909200344990384768
+          [6][STATICCALL] from=Vyper_contract, to=WBTC, balanceOf(_owner(address): 0x8e764b) -> 2662649457574
+          [6][CALL] from=Vyper_contract, to=WBTC, transfer(_to(address): 0xf508c5, _value(uint256): 2662649457574) -> True
+          [6][STATICCALL] from=Vyper_contract, to=0x000000, fallback() -> 0x000000
+        [5][STATICCALL] from=0xf508c5, to=ERC20, balanceOf((address): 0xf508c5) -> 10133949192393802606886848
+        [5][CALL] from=0xf508c5, to=Vyper_contract, exchange(_pool(address): 0xAA5A67, _from(address): 0x865377, _to(address): 0x6c3F90, _amount(uint256): 10133949192393802606886848, _expected(uint256): 0) -> 9881355040729892287779421
+          [6][STATICCALL] from=Vyper_contract, to=Vyper_contract, get_lp_token(arg0(address): 0xAA5A67) -> 0x000000
+          [6][STATICCALL] from=Vyper_contract, to=Vyper_contract, get_lp_token(arg0(address): 0xAA5A67) -> 0x000000
+          [6][STATICCALL] from=Vyper_contract, to=Vyper_contract, get_coin_indices(_pool(address): 0xAA5A67, _from(address): 0x865377, _to(address): 0x6c3F90) -> ['0', '1', 'False']
+          [6][CALL] from=Vyper_contract, to=ERC20, transferFrom(from(address): 0xf508c5, to(address): 0x8e764b, value(uint256): 10133949192393802606886848) -> True
+          [6][STATICCALL] from=Vyper_contract, to=0x000000, fallback() -> 0x000000
+          [6][CALL] from=Vyper_contract, to=Vyper_contract, exchange(i(int128): 0, j(int128): 1, _dx(uint256): 10133949192393802606886848, _min_dy(uint256): 0) -> 9881355040729892287779421
+            [7][DELEGATECALL] from=Vyper_contract, to=Vyper_contract, exchange(i(int128): 0, j(int128): 1, _dx(uint256): 10133949192393802606886848, _min_dy(uint256): 0) -> 9881355040729892287779421
+              [8][STATICCALL] from=Vyper_contract, to=Vyper_contract, get_virtual_price() -> 1021546298877583653
+                [9][STATICCALL] from=Vyper_contract, to=Vyper_contract, totalSupply() -> 1144075250367992226225177362
+              [8][CALL] from=Vyper_contract, to=0x000000, transferFromaddress() -> 0x23b872
+              [8][CALL] from=Vyper_contract, to=0x000000, fallback() -> 0x000000
+              [8][CALL] from=Vyper_contract, to=ERC20, transferFrom(from(address): 0x8e764b, to(address): 0xAA5A67, value(uint256): 10133949192393802606886848) -> True
+              [8][CALL] from=Vyper_contract, to=0x000000, fallback() -> 0x000000
+              [8][CALL] from=Vyper_contract, to=0x000000, transferaddress() -> 0xa9059c
+              [8][CALL] from=Vyper_contract, to=0x000000, fallback() -> 0x000000
+              [8][CALL] from=Vyper_contract, to=Vyper_contract, transfer(_to(address): 0x8e764b, _value(uint256): 9881355040729892287779421) -> True
+              [8][CALL] from=Vyper_contract, to=0x000000, fallback() -> 0x000000
+          [6][STATICCALL] from=Vyper_contract, to=Vyper_contract, balanceOf(arg0(address): 0x8e764b) -> 9881355040729892287779421
+          [6][CALL] from=Vyper_contract, to=Vyper_contract, transfer(_to(address): 0xf508c5, _value(uint256): 9881355040729892287779421) -> True
+          [6][STATICCALL] from=Vyper_contract, to=0x000000, fallback() -> 0x000000
+        [5][STATICCALL] from=0xf508c5, to=Vyper_contract, balanceOf(arg0(address): 0xf508c5) -> 9881355040729892287779421
+        [5][CALL] from=0xf508c5, to=Vyper_contract, remove_liquidity_one_coin(_token_amount(uint256): 9881355040729892287779421, i(int128): 2, min_amount(uint256): 0) -> None
+          [6][STATICCALL] from=Vyper_contract, to=Vyper_contract, totalSupply() -> 1144075250367992226225177362
+          [6][CALL] from=Vyper_contract, to=Vyper_contract, burnFrom(_to(address): 0xf508c5, _value(uint256): 9881355040729892287779421) -> True
+          [6][CALL] from=Vyper_contract, to=0x000000, transferaddress() -> 0xa9059c
+          [6][CALL] from=Vyper_contract, to=0x000000, fallback() -> 0x000000
+          [6][CALL] from=Vyper_contract, to=TetherToken, transfer(_to(address): 0xf508c5, _value(uint256): 10099976294967) -> None
+          [6][CALL] from=Vyper_contract, to=0x000000, fallback() -> 0x000000
+        [5][STATICCALL] from=0xf508c5, to=WBTC, balanceOf(_owner(address): 0xf508c5) -> 2662649457574
+        [5][CALL] from=0xf508c5, to=Vyper_contract, exchange(_pool(address): 0xD51a44, _from(address): 0xdAC17F, _to(address): 0x2260FA, _amount(uint256): 10000000000000, _expected(uint256): 0) -> 45104988967
+          [6][STATICCALL] from=Vyper_contract, to=Vyper_contract, get_lp_token(arg0(address): 0xD51a44) -> 0xc4ad29
+          [6][STATICCALL] from=Vyper_contract, to=Vyper_contract, get_coin_indices(_pool(address): 0xD51a44, _from(address): 0xdAC17F, _to(address): 0x2260FA) -> ['0', '1']
+          [6][CALL] from=Vyper_contract, to=TetherToken, transferFrom(_from(address): 0xf508c5, _to(address): 0x8e764b, _value(uint256): 10000000000000) -> None
+          [6][STATICCALL] from=Vyper_contract, to=0x000000, fallback() -> 0x000000
+          [6][CALL] from=Vyper_contract, to=Vyper_contract, exchange(i(uint256): 0, j(uint256): 1, dx(uint256): 10000000000000, min_dy(uint256): 0) -> None
+            [7][CALL] from=Vyper_contract, to=TetherToken, transferFrom(_from(address): 0x8e764b, _to(address): 0xD51a44, _value(uint256): 10000000000000) -> None
+            [7][STATICCALL] from=Vyper_contract, to=Vyper_contract, newton_y(ANN(uint256): 1707629, gamma(uint256): 11809167828997, x(uint256[3]): [97636422228320000000000000, 9757508516697..., D(uint256): 275002237348076055686897701, i(uint256): 1) -> 87581177151198720454083481
+            [7][STATICCALL] from=Vyper_contract, to=Vyper_contract, reduction_coefficient(x(uint256[3]): [97636422228320000000000000, 8758117715119..., fee_gamma(uint256): 500000000000000) -> 134895273730197998
+            [7][CALL] from=Vyper_contract, to=WBTC, transfer(_to(address): 0x8e764b, _value(uint256): 45104988967) -> True
+            [7][STATICCALL] from=Vyper_contract, to=Vyper_contract, newton_D(ANN(uint256): 1707629, gamma(uint256): 11809167828997, x_unsorted(uint256[3]): [97636422228320000000000000, 8760778854772...) -> 275030047693451111778329275
+            [7][STATICCALL] from=Vyper_contract, to=Vyper_contract, totalSupply() -> 300160225602776604182779
+            [7][STATICCALL] from=Vyper_contract, to=Vyper_contract, geometric_mean(unsorted_x(uint256[3]): [91676682564483703926109758, 4148643221488...) -> 307737026793028339920551
+            [7][STATICCALL] from=Vyper_contract, to=Vyper_contract, sqrt_int(x(uint256): 852863913533903) -> 29203833884164986
+            [7][STATICCALL] from=Vyper_contract, to=Vyper_contract, newton_D(ANN(uint256): 1707629, gamma(uint256): 11809167828997, x_unsorted(uint256[3]): [97636422228320000000000000, 8749100809869...) -> 274771344945951110388189747
+            [7][STATICCALL] from=Vyper_contract, to=Vyper_contract, geometric_mean(unsorted_x(uint256[3]): [91590448315317036796063249, 4150273143976...) -> 307737311920720606335542
+          [6][STATICCALL] from=Vyper_contract, to=WBTC, balanceOf(_owner(address): 0x8e764b) -> 45104988967
+          [6][CALL] from=Vyper_contract, to=WBTC, transfer(_to(address): 0xf508c5, _value(uint256): 45104988967) -> True
+          [6][STATICCALL] from=Vyper_contract, to=0x000000, fallback() -> 0x000000
+        [5][CALL] from=0xf508c5, to=WBTC, approve(_spender(address): 0x7d2768, _value(uint256): 2702430000000) -> True
+      [4][STATICCALL] from=InitializableImmutableAdminUpgradeabilityProxy, to=InitializableImmutableAdminUpgradeabilityProxy, scaledTotalSupply() -> 85150980565
+        [5][DELEGATECALL] from=InitializableImmutableAdminUpgradeabilityProxy, to=VariableDebtToken, scaledTotalSupply() -> 85150980565
+      [4][STATICCALL] from=InitializableImmutableAdminUpgradeabilityProxy, to=InitializableImmutableAdminUpgradeabilityProxy, getSupplyData() -> ['871362885', '871392563', '34357719876168648151682522', '1655338016']
+        [5][DELEGATECALL] from=InitializableImmutableAdminUpgradeabilityProxy, to=StableDebtToken, getSupplyData() -> ['871362885', '871392563', '34357719876168648151682522', '1655338016']
+      [4][CALL] from=InitializableImmutableAdminUpgradeabilityProxy, to=InitializableImmutableAdminUpgradeabilityProxy, mintToTreasury(amount(uint256): 4148, index(uint256): 1001642309914381806203630395) -> None
+        [5][DELEGATECALL] from=InitializableImmutableAdminUpgradeabilityProxy, to=AToken, mintToTreasury(amount(uint256): 4148, index(uint256): 1001642309914381806203630395) -> None
+          [6][CALL] from=InitializableImmutableAdminUpgradeabilityProxy, to=InitializableImmutableAdminUpgradeabilityProxy, handleAction(user(address): 0x464C71, totalSupply(uint256): 3045522588515, userBalance(uint256): 283477958) -> None
+            [7][DELEGATECALL] from=InitializableImmutableAdminUpgradeabilityProxy, to=StakedTokenIncentivesController, handleAction(user(address): 0x464C71, totalSupply(uint256): 3045522588515, userBalance(uint256): 283477958) -> None
+      [4][STATICCALL] from=InitializableImmutableAdminUpgradeabilityProxy, to=InitializableImmutableAdminUpgradeabilityProxy, totalSupply() -> 3050524284604
+        [5][DELEGATECALL] from=InitializableImmutableAdminUpgradeabilityProxy, to=AToken, totalSupply() -> 3050524284604
+          [6][STATICCALL] from=InitializableImmutableAdminUpgradeabilityProxy, to=InitializableImmutableAdminUpgradeabilityProxy, getReserveNormalizedIncome(asset(address): 0x2260FA) -> 1001642309914381806203630395
+            [7][DELEGATECALL] from=InitializableImmutableAdminUpgradeabilityProxy, to=LendingPool, getReserveNormalizedIncome(asset(address): 0x2260FA) -> 1001642309914381806203630395
+      [4][STATICCALL] from=InitializableImmutableAdminUpgradeabilityProxy, to=InitializableImmutableAdminUpgradeabilityProxy, getTotalSupplyAndAvgRate() -> ['871392563', '34357719876168648151682522']
+        [5][DELEGATECALL] from=InitializableImmutableAdminUpgradeabilityProxy, to=StableDebtToken, getTotalSupplyAndAvgRate() -> ['871392563', '34357719876168648151682522']
+      [4][STATICCALL] from=InitializableImmutableAdminUpgradeabilityProxy, to=InitializableImmutableAdminUpgradeabilityProxy, scaledTotalSupply() -> 85150980565
+        [5][DELEGATECALL] from=InitializableImmutableAdminUpgradeabilityProxy, to=VariableDebtToken, scaledTotalSupply() -> 85150980565
+      [4][STATICCALL] from=InitializableImmutableAdminUpgradeabilityProxy, to=WBTC, balanceOf(_owner(address): 0x9ff58f) -> 263584624614
+      [4][STATICCALL] from=InitializableImmutableAdminUpgradeabilityProxy, to=DefaultReserveInterestRateStrategy, calculateInterestRates(reserve(address): 0x2260FA, availableLiquidity(uint256): 2966014624614, totalStableDebt(uint256): 871392563, totalVariableDebt(uint256): 86068267236, averageStableBorrowRate(uint256): 34357719876168648151682522, reserveFactor(uint256): 2000) -> ['86892564217038938594982', '34381111222351940018240843', '3504888977881552014592674']
+        [5][STATICCALL] from=DefaultReserveInterestRateStrategy, to=LendingPoolAddressesProvider, getLendingRateOracle() -> 0x8a32f4
+        [5][STATICCALL] from=DefaultReserveInterestRateStrategy, to=LendingRateOracle, getMarketBorrowRate(asset(address): 0x2260FA) -> 30000000000000000000000000
+      [4][CALL] from=InitializableImmutableAdminUpgradeabilityProxy, to=WBTC, transferFrom(_from(address): 0xf508c5, _to(address): 0x9ff58f, _value(uint256): 2702430000000) -> True

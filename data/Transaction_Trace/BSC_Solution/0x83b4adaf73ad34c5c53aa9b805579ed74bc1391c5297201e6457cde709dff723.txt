@@ -1,0 +1,16 @@
+[1][CALL] from=0xeda506, to=InitializableProductProxy, 0xa653d60c() -> None
+  [2][STATICCALL] from=InitializableProductProxy, to=AdminUpgradeabilityProxy, productImplementations((bytes32): b'MappingToken\x00\x00\x00\x00\x00\x00\x00...) -> 0xe92998
+    [3][DELEGATECALL] from=AdminUpgradeabilityProxy, to=Factory, productImplementations((bytes32): b'MappingToken\x00\x00\x00\x00\x00\x00\x00...) -> 0xe92998
+  [2][DELEGATECALL] from=InitializableProductProxy, to=0xe92998, 0xa653d60c() -> None
+    [3][STATICCALL] from=InitializableProductProxy, to=AdminUpgradeabilityProxy, getConfig(key(bytes32): b'fee\x00\x00\x00\x00\x00\x00\x00\x00\x00\...) -> 5000000000000000
+      [4][DELEGATECALL] from=AdminUpgradeabilityProxy, to=Factory, getConfig(key(bytes32): b'fee\x00\x00\x00\x00\x00\x00\x00\x00\x00\...) -> 5000000000000000
+    [3][STATICCALL] from=InitializableProductProxy, to=AdminUpgradeabilityProxy, getConfig(key(bytes32): b'feeTo\x00\x00\x00\x00\x00\x00\x00\x00\x0...) -> 1092231956132077843581392735619386827940833757861
+      [4][DELEGATECALL] from=AdminUpgradeabilityProxy, to=Factory, getConfig(key(bytes32): b'feeTo\x00\x00\x00\x00\x00\x00\x00\x00\x0...) -> 1092231956132077843581392735619386827940833757861
+    [3][CALL][0.005] from=InitializableProductProxy, to=AdminUpgradeabilityProxy
+    [3][STATICCALL] from=InitializableProductProxy, to=AdminUpgradeabilityProxy, getConfig(key(bytes32): b'minSignatures\x00\x00\x00\x00\x00\x00\x0...) -> 1
+      [4][DELEGATECALL] from=AdminUpgradeabilityProxy, to=Factory, getConfig(key(bytes32): b'minSignatures\x00\x00\x00\x00\x00\x00\x0...) -> 1
+    [3][STATICCALL] from=InitializableProductProxy, to=0x000000, 0x054051b6() -> 0x000000
+    [3][STATICCALL] from=InitializableProductProxy, to=AdminUpgradeabilityProxy, getConfig(key(bytes32): b'autoQuotaRatio\x00\x00\x00\x00\x00\x00\x...) -> 1000000000000000
+      [4][DELEGATECALL] from=AdminUpgradeabilityProxy, to=Factory, getConfig(key(bytes32): b'autoQuotaRatio\x00\x00\x00\x00\x00\x00\x...) -> 1000000000000000
+    [3][STATICCALL] from=InitializableProductProxy, to=AdminUpgradeabilityProxy, getConfig(key(bytes32): b'autoQuotaPeriod\x00\x00\x00\x00\x00\x00\...) -> 86400
+      [4][DELEGATECALL] from=AdminUpgradeabilityProxy, to=Factory, getConfig(key(bytes32): b'autoQuotaPeriod\x00\x00\x00\x00\x00\x00\...) -> 86400

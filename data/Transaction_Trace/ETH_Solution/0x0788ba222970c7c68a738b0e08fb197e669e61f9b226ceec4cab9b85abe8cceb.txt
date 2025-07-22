@@ -1,0 +1,807 @@
+[1][CALL] from=0x5f4C21, to=0xA21a2B, 0x03d52f91() -> None
+  [2][STATICCALL] from=0xA21a2B, to=FiatTokenProxy, balanceOf(account(address): 0xBA1222) -> 9037299897274
+    [3][DELEGATECALL] from=FiatTokenProxy, to=FiatTokenV2_1, balanceOf(account(address): 0xBA1222) -> 9037299897274
+  [2][CALL] from=0xA21a2B, to=UniswapV3Pool, flash(recipient(address): 0xA21a2B, amount0(uint256): 0, amount1(uint256): 7000000000000, data(bytes): b'\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00...) -> None
+    [3][STATICCALL] from=UniswapV3Pool, to=FiatTokenProxy, balanceOf(account(address): 0x3416cF) -> 1786965154576
+      [4][DELEGATECALL] from=FiatTokenProxy, to=FiatTokenV2_1, balanceOf(account(address): 0x3416cF) -> 1786965154576
+    [3][STATICCALL] from=UniswapV3Pool, to=TetherToken, balanceOf(who(address): 0x3416cF) -> 76659436010984
+    [3][CALL] from=UniswapV3Pool, to=TetherToken, transfer(_to(address): 0xA21a2B, _value(uint256): 7000000000000) -> None
+    [3][CALL] from=UniswapV3Pool, to=0xA21a2B, uniswapV3FlashCallbackuint256() -> None
+      [4][CALL] from=0xA21a2B, to=Vault, flashLoan(recipient(address): 0xA21a2B, tokens(address[]): ['0xA0b86991c6218b36c1d19D4a2e9Eb0cE3606eB..., amounts(uint256[]): [7000000000000, 10011000000000000000000], userData(bytes): b'\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00...) -> None
+        [5][STATICCALL] from=Vault, to=FiatTokenProxy, balanceOf(account(address): 0xBA1222) -> 9037299897274
+          [6][DELEGATECALL] from=FiatTokenProxy, to=FiatTokenV2_1, balanceOf(account(address): 0xBA1222) -> 9037299897274
+        [5][STATICCALL] from=Vault, to=ProtocolFeesCollector, getFlashLoanFeePercentage() -> 0
+        [5][CALL] from=Vault, to=FiatTokenProxy, transfer(to(address): 0xA21a2B, value(uint256): 7000000000000) -> True
+          [6][DELEGATECALL] from=FiatTokenProxy, to=FiatTokenV2_1, transfer(to(address): 0xA21a2B, value(uint256): 7000000000000) -> True
+        [5][STATICCALL] from=Vault, to=WETH9, balanceOf((address): 0xBA1222) -> 65192982448092721624711
+        [5][STATICCALL] from=Vault, to=ProtocolFeesCollector, getFlashLoanFeePercentage() -> 0
+        [5][CALL] from=Vault, to=WETH9, transfer(dst(address): 0xA21a2B, wad(uint256): 10011000000000000000000) -> True
+        [5][CALL] from=Vault, to=0xA21a2B, receiveFlashLoanaddress[]() -> None
+          [6][CALL] from=0xA21a2B, to=FiatTokenProxy, approve(spender(address): 0xDcEF96, value(uint256): 115792089237316195423570985008687907853269...) -> True
+            [7][DELEGATECALL] from=FiatTokenProxy, to=FiatTokenV2_1, approve(spender(address): 0xDcEF96, value(uint256): 115792089237316195423570985008687907853269...) -> True
+          [6][CALL] from=0xA21a2B, to=Vyper_contract, approve(_spender(address): 0x68934F, _value(uint256): 115792089237316195423570985008687907853269...) -> True
+          [6][CALL] from=0xA21a2B, to=UZD, approve(spender(address): 0x68934F, amount(uint256): 115792089237316195423570985008687907853269...) -> True
+          [6][CALL] from=0xA21a2B, to=FiatTokenProxy, approve(spender(address): 0x4DEcE6, value(uint256): 115792089237316195423570985008687907853269...) -> True
+            [7][DELEGATECALL] from=FiatTokenProxy, to=FiatTokenV2_1, approve(spender(address): 0x4DEcE6, value(uint256): 115792089237316195423570985008687907853269...) -> True
+          [6][CALL] from=0xA21a2B, to=crvUSD Stablecoin, approve(_spender(address): 0x4DEcE6, _value(uint256): 115792089237316195423570985008687907853269...) -> True
+          [6][CALL] from=0xA21a2B, to=crvUSD Stablecoin, approve(_spender(address): 0xfC636D, _value(uint256): 115792089237316195423570985008687907853269...) -> True
+          [6][CALL] from=0xA21a2B, to=UZD, approve(spender(address): 0xfC636D, amount(uint256): 115792089237316195423570985008687907853269...) -> True
+          [6][CALL] from=0xA21a2B, to=WETH9, approve(guy(address): 0xfB8814, wad(uint256): 115792089237316195423570985008687907853269...) -> True
+          [6][CALL] from=0xA21a2B, to=FiatTokenProxy, approve(spender(address): 0xbEbc44, value(uint256): 115792089237316195423570985008687907853269...) -> True
+            [7][DELEGATECALL] from=FiatTokenProxy, to=FiatTokenV2_1, approve(spender(address): 0xbEbc44, value(uint256): 115792089237316195423570985008687907853269...) -> True
+          [6][CALL] from=0xA21a2B, to=FiatTokenProxy, approve(spender(address): 0x88e6A0, value(uint256): 115792089237316195423570985008687907853269...) -> True
+            [7][DELEGATECALL] from=FiatTokenProxy, to=FiatTokenV2_1, approve(spender(address): 0x88e6A0, value(uint256): 115792089237316195423570985008687907853269...) -> True
+          [6][CALL] from=0xA21a2B, to=WETH9, approve(guy(address): 0xd9e1cE, wad(uint256): 115792089237316195423570985008687907853269...) -> True
+          [6][CALL] from=0xA21a2B, to=SDT, approve(spender(address): 0xd9e1cE, amount(uint256): 115792089237316195423570985008687907853269...) -> True
+          [6][CALL] from=0xA21a2B, to=TetherToken, approve(_spender(address): 0xd9e1cE, _value(uint256): 578960446186580977117854925043439539266349...) -> None
+          [6][CALL] from=0xA21a2B, to=FRAXStablecoin, approve(spender(address): 0xDcEF96, amount(uint256): 115792089237316195423570985008687907853269...) -> True
+          [6][CALL] from=0xA21a2B, to=Vyper_contract, add_liquidity(_amounts(uint256[2]): [0, 5750000000000], _min_mint_amount(uint256): 0) -> 5746896148637989514024055
+            [7][STATICCALL] from=Vyper_contract, to=Vyper_contract, totalSupply() -> 458005118613239970209620319
+            [7][STATICCALL] from=Vyper_contract, to=0x000000, transferFromaddress() -> 0x23b872
+            [7][CALL] from=Vyper_contract, to=FiatTokenProxy, transferFrom(from(address): 0xA21a2B, to(address): 0xDcEF96, value(uint256): 5750000000000) -> True
+              [8][DELEGATECALL] from=FiatTokenProxy, to=FiatTokenV2_1, transferFrom(from(address): 0xA21a2B, to(address): 0xDcEF96, value(uint256): 5750000000000) -> True
+            [7][STATICCALL] from=Vyper_contract, to=0x000000, fallback() -> 0x000000
+            [7][CALL] from=Vyper_contract, to=Vyper_contract, mint(_to(address): 0xA21a2B, _value(uint256): 5746896148637989514024055) -> True
+          [6][CALL] from=0xA21a2B, to=Vyper_contract, exchange(i(int128): 1, j(int128): 0, _dx(uint256): 5746896148637989514024055, _min_dy(uint256): 0) -> 4082036167832726632955764
+            [7][DELEGATECALL] from=Vyper_contract, to=Vyper_contract, exchange(i(int128): 1, j(int128): 0, _dx(uint256): 5746896148637989514024055, _min_dy(uint256): 0) -> 4082036167832726632955764
+              [8][STATICCALL] from=Vyper_contract, to=Vyper_contract, get_virtual_price() -> 1001340774532351226
+                [9][STATICCALL] from=Vyper_contract, to=Vyper_contract, totalSupply() -> 463752014761877959723644374
+              [8][CALL] from=Vyper_contract, to=Vyper_contract, transferFrom(_from(address): 0xA21a2B, _to(address): 0x68934F, _value(uint256): 5746896148637989514024055) -> True
+              [8][STATICCALL] from=Vyper_contract, to=0x000000, fallback() -> 0x000000
+              [8][CALL] from=Vyper_contract, to=UZD, transfer(to(address): 0xA21a2B, amount(uint256): 4082036167832726632955764) -> True
+              [8][STATICCALL] from=Vyper_contract, to=0x000000, fallback() -> 0x000000
+          [6][CALL] from=0xA21a2B, to=Vyper_contract, exchange(i(int128): 0, j(int128): 1, _dx(uint256): 1250000000000, _min_dy(uint256): 0) -> 1250333511232814705862884
+            [7][DELEGATECALL] from=Vyper_contract, to=Vyper_contract, exchange(i(int128): 0, j(int128): 1, _dx(uint256): 1250000000000, _min_dy(uint256): 0) -> 1250333511232814705862884
+              [8][CALL] from=Vyper_contract, to=FiatTokenProxy, transferFrom(from(address): 0xA21a2B, to(address): 0x4DEcE6, value(uint256): 1250000000000) -> True
+                [9][DELEGATECALL] from=FiatTokenProxy, to=FiatTokenV2_1, transferFrom(from(address): 0xA21a2B, to(address): 0x4DEcE6, value(uint256): 1250000000000) -> True
+              [8][CALL] from=Vyper_contract, to=crvUSD Stablecoin, transfer(_to(address): 0xA21a2B, _value(uint256): 1250333511232814705862884) -> True
+          [6][STATICCALL] from=0xA21a2B, to=UZD, balanceOf(account(address): 0xA21a2B) -> 4082036167832726632955764
+          [6][STATICCALL] from=0xA21a2B, to=crvUSD Stablecoin, balanceOf(arg0(address): 0xA21a2B) -> 1250333511232814705862884
+          [6][CALL] from=0xA21a2B, to=Vyper_contract, exchange(i(int128): 1, j(int128): 0, _dx(uint256): 1250333511232814705862884, _min_dy(uint256): 0) -> 791280423737014253868058
+            [7][DELEGATECALL] from=Vyper_contract, to=Vyper_contract, exchange(i(int128): 1, j(int128): 0, _dx(uint256): 1250333511232814705862884, _min_dy(uint256): 0) -> 791280423737014253868058
+              [8][CALL] from=Vyper_contract, to=crvUSD Stablecoin, transferFrom(_from(address): 0xA21a2B, _to(address): 0xfC636D, _value(uint256): 1250333511232814705862884) -> True
+              [8][CALL] from=Vyper_contract, to=UZD, transfer(to(address): 0xA21a2B, amount(uint256): 791280423737014253868058) -> True
+          [6][STATICCALL] from=0xA21a2B, to=UZD, balanceOf(account(address): 0xA21a2B) -> 4873316591569740886823823
+          [6][CALL] from=0xA21a2B, to=Vyper_contract, exchange(i(uint256): 0, j(uint256): 1, dx(uint256): 11000000000000000000, min_dy(uint256): 0) -> 55981929088875410767708
+            [7][DELEGATECALL] from=Vyper_contract, to=Vyper_contract, exchange(i(uint256): 0, j(uint256): 1, dx(uint256): 11000000000000000000, min_dy(uint256): 0) -> 55981929088875410767708
+              [8][CALL] from=Vyper_contract, to=WETH9, transferFrom(src(address): 0xA21a2B, dst(address): 0xfB8814, wad(uint256): 11000000000000000000) -> True
+              [8][STATICCALL] from=Vyper_contract, to=0x000000, fallback() -> 0x000000
+              [8][CALL] from=Vyper_contract, to=WETH9, withdraw(wad(uint256): 11000000000000000000) -> None
+                [9][CALL][11.0] from=WETH9, to=Vyper_contract
+                  [10][DELEGATECALL][11.0] from=Vyper_contract, to=Vyper_contract
+              [8][CALL] from=Vyper_contract, to=SDT, transfer(recipient(address): 0xA21a2B, amount(uint256): 55981929088875410767708) -> True
+              [8][STATICCALL] from=Vyper_contract, to=0x000000, fallback() -> 0x000000
+              [8][STATICCALL] from=Vyper_contract, to=Vyper_contract, totalSupply() -> 19504164714632842166833
+                [9][DELEGATECALL] from=Vyper_contract, to=Vyper_contract, totalSupply() -> 19504164714632842166833
+          [6][STATICCALL] from=0xA21a2B, to=SDT, balanceOf(account(address): 0xA21a2B) -> 55981929088875410767708
+          [6][CALL] from=0xA21a2B, to=SDT, transfer(recipient(address): 0x9848ED, amount(uint256): 55981929088875410767708) -> True
+          [6][CALL] from=0xA21a2B, to=UniswapV2Router02, swapExactTokensForTokens(amountIn(uint256): 10000000000000000000000, amountOutMin(uint256): 0, path(address[]): ['0xC02aaA39b223FE8D0A0e5C4F27eAD9083C756C..., to(address): 0xA21a2B, deadline(uint256): 1691976087) -> [10000000000000000000000, 58042675342679660602132]
+            [7][STATICCALL] from=UniswapV2Router02, to=UniswapV2Pair, getReserves() -> ['58106355785964986371638', '10938400337447069881', '1691955299']
+            [7][CALL] from=UniswapV2Router02, to=WETH9, transferFrom(src(address): 0xA21a2B, dst(address): 0x22DEF8, wad(uint256): 10000000000000000000000) -> True
+            [7][CALL] from=UniswapV2Router02, to=UniswapV2Pair, swap(amount0Out(uint256): 58042675342679660602132, amount1Out(uint256): 0, to(address): 0xA21a2B, data(bytes): b'') -> None
+              [8][CALL] from=UniswapV2Pair, to=SDT, transfer(recipient(address): 0xA21a2B, amount(uint256): 58042675342679660602132) -> True
+              [8][STATICCALL] from=UniswapV2Pair, to=SDT, balanceOf(account(address): 0x22DEF8) -> 63680443285325769506
+              [8][STATICCALL] from=UniswapV2Pair, to=WETH9, balanceOf((address): 0x22DEF8) -> 10010938400337447069881
+          [6][CALL] from=0xA21a2B, to=UniswapV2Router02, swapExactTokensForTokens(amountIn(uint256): 7000000000000, amountOutMin(uint256): 0, path(address[]): ['0xdAC17F958D2ee523a2206206994597C13D831e..., to(address): 0xA21a2B, deadline(uint256): 1691976087) -> [7000000000000, 2154941186993935615183]
+            [7][STATICCALL] from=UniswapV2Router02, to=UniswapV2Pair, getReserves() -> ['5020112436512393763787', '9279153543064', '1691965655']
+            [7][CALL] from=UniswapV2Router02, to=TetherToken, transferFrom(_from(address): 0xA21a2B, _to(address): 0x06da0f, _value(uint256): 7000000000000) -> None
+            [7][CALL] from=UniswapV2Router02, to=UniswapV2Pair, swap(amount0Out(uint256): 2154941186993935615183, amount1Out(uint256): 0, to(address): 0xA21a2B, data(bytes): b'') -> None
+              [8][CALL] from=UniswapV2Pair, to=WETH9, transfer(dst(address): 0xA21a2B, wad(uint256): 2154941186993935615183) -> True
+              [8][STATICCALL] from=UniswapV2Pair, to=WETH9, balanceOf((address): 0x06da0f) -> 2865171249518458148604
+              [8][STATICCALL] from=UniswapV2Pair, to=TetherToken, balanceOf(who(address): 0x06da0f) -> 16279153543064
+          [6][CALL] from=0xA21a2B, to=UZD, cacheAssetPrice() -> None
+            [7][STATICCALL] from=UZD, to=Zunami, lpPrice() -> 3165200435397696033
+              [8][STATICCALL] from=Zunami, to=USDNCurveConvex, totalHoldings() -> 0
+                [9][STATICCALL] from=USDNCurveConvex, to=USDN, balanceOf(account(address): 0x7eae19) -> 0
+                [9][STATICCALL] from=USDNCurveConvex, to=Vyper_contract, get_virtual_price() -> 1066677785421490688
+                  [10][STATICCALL] from=Vyper_contract, to=Vyper_contract, get_virtual_price() -> 1026938342935417528
+                    [11][STATICCALL] from=Vyper_contract, to=Vyper_contract, totalSupply() -> 214969782000634689613451979
+                  [10][STATICCALL] from=Vyper_contract, to=Vyper_contract, totalSupply() -> 3892243985671929512816272
+                [9][STATICCALL] from=USDNCurveConvex, to=BaseRewardPool, balanceOf(account(address): 0x7eae19) -> 0
+                [9][STATICCALL] from=USDNCurveConvex, to=BaseRewardPool, earned(account(address): 0x7eae19) -> 0
+                [9][STATICCALL] from=USDNCurveConvex, to=ConvexToken, totalCliffs() -> 1000
+                [9][STATICCALL] from=USDNCurveConvex, to=ConvexToken, reductionPerCliff() -> 100000000000000000000000
+                [9][STATICCALL] from=USDNCurveConvex, to=ConvexToken, totalSupply() -> 98757216475903576536392859
+                [9][STATICCALL] from=USDNCurveConvex, to=ConvexToken, balanceOf(account(address): 0x7eae19) -> 0
+                [9][STATICCALL] from=USDNCurveConvex, to=Vyper_contract, balanceOf(arg0(address): 0x7eae19) -> 0
+                [9][STATICCALL] from=USDNCurveConvex, to=Dai, balanceOf((address): 0x7eae19) -> 0
+                [9][STATICCALL] from=USDNCurveConvex, to=FiatTokenProxy, balanceOf(account(address): 0x7eae19) -> 0
+                  [10][DELEGATECALL] from=FiatTokenProxy, to=FiatTokenV2_1, balanceOf(account(address): 0x7eae19) -> 0
+                [9][STATICCALL] from=USDNCurveConvex, to=TetherToken, balanceOf(who(address): 0x7eae19) -> 0
+              [8][STATICCALL] from=Zunami, to=USDNCurveConvex, totalHoldings() -> 0
+                [9][STATICCALL] from=USDNCurveConvex, to=USDN, balanceOf(account(address): 0xc2bbED) -> 0
+                [9][STATICCALL] from=USDNCurveConvex, to=Vyper_contract, get_virtual_price() -> 1066677785421490688
+                  [10][STATICCALL] from=Vyper_contract, to=Vyper_contract, get_virtual_price() -> 1026938342935417528
+                    [11][STATICCALL] from=Vyper_contract, to=Vyper_contract, totalSupply() -> 214969782000634689613451979
+                  [10][STATICCALL] from=Vyper_contract, to=Vyper_contract, totalSupply() -> 3892243985671929512816272
+                [9][STATICCALL] from=USDNCurveConvex, to=BaseRewardPool, balanceOf(account(address): 0xc2bbED) -> 0
+                [9][STATICCALL] from=USDNCurveConvex, to=BaseRewardPool, earned(account(address): 0xc2bbED) -> 0
+                [9][STATICCALL] from=USDNCurveConvex, to=ConvexToken, totalCliffs() -> 1000
+                [9][STATICCALL] from=USDNCurveConvex, to=ConvexToken, reductionPerCliff() -> 100000000000000000000000
+                [9][STATICCALL] from=USDNCurveConvex, to=ConvexToken, totalSupply() -> 98757216475903576536392859
+                [9][STATICCALL] from=USDNCurveConvex, to=ConvexToken, balanceOf(account(address): 0xc2bbED) -> 0
+                [9][STATICCALL] from=USDNCurveConvex, to=Vyper_contract, balanceOf(arg0(address): 0xc2bbED) -> 0
+                [9][STATICCALL] from=USDNCurveConvex, to=Dai, balanceOf((address): 0xc2bbED) -> 0
+                [9][STATICCALL] from=USDNCurveConvex, to=FiatTokenProxy, balanceOf(account(address): 0xc2bbED) -> 0
+                  [10][DELEGATECALL] from=FiatTokenProxy, to=FiatTokenV2_1, balanceOf(account(address): 0xc2bbED) -> 0
+                [9][STATICCALL] from=USDNCurveConvex, to=TetherToken, balanceOf(who(address): 0xc2bbED) -> 0
+              [8][STATICCALL] from=Zunami, to=LUSDCurveConvex, totalHoldings() -> 0
+                [9][STATICCALL] from=LUSDCurveConvex, to=LUSDToken, balanceOf(account(address): 0x9903AB) -> 0
+                [9][STATICCALL] from=LUSDCurveConvex, to=Vyper_contract, get_virtual_price() -> 1025412698216304763
+                  [10][DELEGATECALL] from=Vyper_contract, to=Vyper_contract, get_virtual_price() -> 1025412698216304763
+                    [11][STATICCALL] from=Vyper_contract, to=Vyper_contract, get_virtual_price() -> 1026938342935417528
+                      [12][STATICCALL] from=Vyper_contract, to=Vyper_contract, totalSupply() -> 214969782000634689613451979
+                [9][STATICCALL] from=LUSDCurveConvex, to=BaseRewardPool, balanceOf(account(address): 0x9903AB) -> 0
+                [9][STATICCALL] from=LUSDCurveConvex, to=BaseRewardPool, earned(account(address): 0x9903AB) -> 0
+                [9][STATICCALL] from=LUSDCurveConvex, to=ConvexToken, totalCliffs() -> 1000
+                [9][STATICCALL] from=LUSDCurveConvex, to=ConvexToken, reductionPerCliff() -> 100000000000000000000000
+                [9][STATICCALL] from=LUSDCurveConvex, to=ConvexToken, totalSupply() -> 98757216475903576536392859
+                [9][STATICCALL] from=LUSDCurveConvex, to=ConvexToken, balanceOf(account(address): 0x9903AB) -> 0
+                [9][STATICCALL] from=LUSDCurveConvex, to=Vyper_contract, balanceOf(arg0(address): 0x9903AB) -> 0
+                [9][STATICCALL] from=LUSDCurveConvex, to=Dai, balanceOf((address): 0x9903AB) -> 0
+                [9][STATICCALL] from=LUSDCurveConvex, to=FiatTokenProxy, balanceOf(account(address): 0x9903AB) -> 0
+                  [10][DELEGATECALL] from=FiatTokenProxy, to=FiatTokenV2_1, balanceOf(account(address): 0x9903AB) -> 0
+                [9][STATICCALL] from=LUSDCurveConvex, to=TetherToken, balanceOf(who(address): 0x9903AB) -> 0
+              [8][STATICCALL] from=Zunami, to=AnchorStrat, totalHoldings() -> 0
+                [9][STATICCALL] from=AnchorStrat, to=SimpleProxy, feeder() -> 0xb12b82
+                  [10][DELEGATECALL] from=SimpleProxy, to=ConversionPoolV2, feeder() -> 0xb12b82
+                [9][STATICCALL] from=AnchorStrat, to=ExchangeRateFeeder, exchangeRateOf(_token(address): 0x6B1754, _simulate(bool): False) -> 1200614818936324665
+                [9][STATICCALL] from=AnchorStrat, to=ERC20Controlled, balanceOf(account(address): 0x360F8d) -> 0
+                [9][STATICCALL] from=AnchorStrat, to=Dai, balanceOf((address): 0x360F8d) -> 0
+                [9][STATICCALL] from=AnchorStrat, to=SimpleProxy, feeder() -> 0xb12b82
+                  [10][DELEGATECALL] from=SimpleProxy, to=ConversionPoolV2, feeder() -> 0xb12b82
+                [9][STATICCALL] from=AnchorStrat, to=ExchangeRateFeeder, exchangeRateOf(_token(address): 0xA0b869, _simulate(bool): False) -> 1230365143567926916
+                [9][STATICCALL] from=AnchorStrat, to=ERC20Controlled, balanceOf(account(address): 0x360F8d) -> 0
+                [9][STATICCALL] from=AnchorStrat, to=FiatTokenProxy, balanceOf(account(address): 0x360F8d) -> 0
+                  [10][DELEGATECALL] from=FiatTokenProxy, to=FiatTokenV2_1, balanceOf(account(address): 0x360F8d) -> 0
+                [9][STATICCALL] from=AnchorStrat, to=SimpleProxy, feeder() -> 0xb12b82
+                  [10][DELEGATECALL] from=SimpleProxy, to=ConversionPoolV2, feeder() -> 0xb12b82
+                [9][STATICCALL] from=AnchorStrat, to=ExchangeRateFeeder, exchangeRateOf(_token(address): 0xdAC17F, _simulate(bool): False) -> 1200991643538921871
+                [9][STATICCALL] from=AnchorStrat, to=ERC20Controlled, balanceOf(account(address): 0x360F8d) -> 0
+                [9][STATICCALL] from=AnchorStrat, to=TetherToken, balanceOf(who(address): 0x360F8d) -> 0
+              [8][STATICCALL] from=Zunami, to=RebalancingStrat, totalHoldings() -> 0
+                [9][STATICCALL] from=RebalancingStrat, to=Dai, balanceOf((address): 0x6fCC3B) -> 0
+                [9][STATICCALL] from=RebalancingStrat, to=FiatTokenProxy, balanceOf(account(address): 0x6fCC3B) -> 0
+                  [10][DELEGATECALL] from=FiatTokenProxy, to=FiatTokenV2_1, balanceOf(account(address): 0x6fCC3B) -> 0
+                [9][STATICCALL] from=RebalancingStrat, to=TetherToken, balanceOf(who(address): 0x6fCC3B) -> 0
+              [8][STATICCALL] from=Zunami, to=MIMCurveConvex, totalHoldings() -> 0
+                [9][STATICCALL] from=MIMCurveConvex, to=Spell, balanceOf((address): 0x946C33) -> 0
+                [9][STATICCALL] from=MIMCurveConvex, to=VirtualBalanceRewardPool, earned(account(address): 0x946C33) -> 0
+                  [10][STATICCALL] from=VirtualBalanceRewardPool, to=BaseRewardPool, totalSupply() -> 39087610647128271250608498
+                  [10][STATICCALL] from=VirtualBalanceRewardPool, to=BaseRewardPool, totalSupply() -> 39087610647128271250608498
+                  [10][STATICCALL] from=VirtualBalanceRewardPool, to=BaseRewardPool, balanceOf(account(address): 0x946C33) -> 0
+                [9][STATICCALL] from=MIMCurveConvex, to=MagicInternetMoneyV1, balanceOf((address): 0x946C33) -> 0
+                [9][STATICCALL] from=MIMCurveConvex, to=Vyper_contract, get_virtual_price() -> 1011411260251583305
+                  [10][DELEGATECALL] from=Vyper_contract, to=Vyper_contract, get_virtual_price() -> 1011411260251583305
+                    [11][STATICCALL] from=Vyper_contract, to=Vyper_contract, get_virtual_price() -> 1026938342935417528
+                      [12][STATICCALL] from=Vyper_contract, to=Vyper_contract, totalSupply() -> 214969782000634689613451979
+                [9][STATICCALL] from=MIMCurveConvex, to=BaseRewardPool, balanceOf(account(address): 0x946C33) -> 0
+                [9][STATICCALL] from=MIMCurveConvex, to=BaseRewardPool, earned(account(address): 0x946C33) -> 0
+                [9][STATICCALL] from=MIMCurveConvex, to=ConvexToken, totalCliffs() -> 1000
+                [9][STATICCALL] from=MIMCurveConvex, to=ConvexToken, reductionPerCliff() -> 100000000000000000000000
+                [9][STATICCALL] from=MIMCurveConvex, to=ConvexToken, totalSupply() -> 98757216475903576536392859
+                [9][STATICCALL] from=MIMCurveConvex, to=ConvexToken, balanceOf(account(address): 0x946C33) -> 0
+                [9][STATICCALL] from=MIMCurveConvex, to=Vyper_contract, balanceOf(arg0(address): 0x946C33) -> 0
+                [9][STATICCALL] from=MIMCurveConvex, to=Dai, balanceOf((address): 0x946C33) -> 0
+                [9][STATICCALL] from=MIMCurveConvex, to=FiatTokenProxy, balanceOf(account(address): 0x946C33) -> 0
+                  [10][DELEGATECALL] from=FiatTokenProxy, to=FiatTokenV2_1, balanceOf(account(address): 0x946C33) -> 0
+                [9][STATICCALL] from=MIMCurveConvex, to=TetherToken, balanceOf(who(address): 0x946C33) -> 0
+              [8][STATICCALL] from=Zunami, to=PUSDCurveConvex, totalHoldings() -> 0
+                [9][STATICCALL] from=PUSDCurveConvex, to=StableCoin, balanceOf(account(address): 0x7e3e10) -> 0
+                [9][STATICCALL] from=PUSDCurveConvex, to=Vyper_contract, get_virtual_price() -> 1005319608883898137
+                  [10][DELEGATECALL] from=Vyper_contract, to=Vyper_contract, get_virtual_price() -> 1005319608883898137
+                    [11][STATICCALL] from=Vyper_contract, to=Vyper_contract, get_virtual_price() -> 1026938342935417528
+                      [12][STATICCALL] from=Vyper_contract, to=Vyper_contract, totalSupply() -> 214969782000634689613451979
+                [9][STATICCALL] from=PUSDCurveConvex, to=BaseRewardPool, balanceOf(account(address): 0x7e3e10) -> 0
+                [9][STATICCALL] from=PUSDCurveConvex, to=BaseRewardPool, earned(account(address): 0x7e3e10) -> 0
+                [9][STATICCALL] from=PUSDCurveConvex, to=ConvexToken, totalCliffs() -> 1000
+                [9][STATICCALL] from=PUSDCurveConvex, to=ConvexToken, reductionPerCliff() -> 100000000000000000000000
+                [9][STATICCALL] from=PUSDCurveConvex, to=ConvexToken, totalSupply() -> 98757216475903576536392859
+                [9][STATICCALL] from=PUSDCurveConvex, to=ConvexToken, balanceOf(account(address): 0x7e3e10) -> 0
+                [9][STATICCALL] from=PUSDCurveConvex, to=Vyper_contract, balanceOf(arg0(address): 0x7e3e10) -> 0
+                [9][STATICCALL] from=PUSDCurveConvex, to=Dai, balanceOf((address): 0x7e3e10) -> 0
+                [9][STATICCALL] from=PUSDCurveConvex, to=FiatTokenProxy, balanceOf(account(address): 0x7e3e10) -> 0
+                  [10][DELEGATECALL] from=FiatTokenProxy, to=FiatTokenV2_1, balanceOf(account(address): 0x7e3e10) -> 0
+                [9][STATICCALL] from=PUSDCurveConvex, to=TetherToken, balanceOf(who(address): 0x7e3e10) -> 0
+              [8][STATICCALL] from=Zunami, to=USDDCurveConvex, totalHoldings() -> 0
+                [9][STATICCALL] from=USDDCurveConvex, to=USDD, balanceOf(account(address): 0x63d82e) -> 0
+                [9][STATICCALL] from=USDDCurveConvex, to=Vyper_contract, get_virtual_price() -> 1007016506872634877
+                  [10][DELEGATECALL] from=Vyper_contract, to=Vyper_contract, get_virtual_price() -> 1007016506872634877
+                    [11][STATICCALL] from=Vyper_contract, to=Vyper_contract, get_virtual_price() -> 1026938342935417528
+                      [12][STATICCALL] from=Vyper_contract, to=Vyper_contract, totalSupply() -> 214969782000634689613451979
+                [9][STATICCALL] from=USDDCurveConvex, to=BaseRewardPool, balanceOf(account(address): 0x63d82e) -> 0
+                [9][STATICCALL] from=USDDCurveConvex, to=BaseRewardPool, earned(account(address): 0x63d82e) -> 0
+                [9][STATICCALL] from=USDDCurveConvex, to=ConvexToken, totalCliffs() -> 1000
+                [9][STATICCALL] from=USDDCurveConvex, to=ConvexToken, reductionPerCliff() -> 100000000000000000000000
+                [9][STATICCALL] from=USDDCurveConvex, to=ConvexToken, totalSupply() -> 98757216475903576536392859
+                [9][STATICCALL] from=USDDCurveConvex, to=ConvexToken, balanceOf(account(address): 0x63d82e) -> 0
+                [9][STATICCALL] from=USDDCurveConvex, to=Vyper_contract, balanceOf(arg0(address): 0x63d82e) -> 0
+                [9][STATICCALL] from=USDDCurveConvex, to=Dai, balanceOf((address): 0x63d82e) -> 0
+                [9][STATICCALL] from=USDDCurveConvex, to=FiatTokenProxy, balanceOf(account(address): 0x63d82e) -> 0
+                  [10][DELEGATECALL] from=FiatTokenProxy, to=FiatTokenV2_1, balanceOf(account(address): 0x63d82e) -> 0
+                [9][STATICCALL] from=USDDCurveConvex, to=TetherToken, balanceOf(who(address): 0x63d82e) -> 0
+              [8][STATICCALL] from=Zunami, to=USDDCurveConvex, totalHoldings() -> 0
+                [9][STATICCALL] from=USDDCurveConvex, to=USDD, balanceOf(account(address): 0xE8dB19) -> 0
+                [9][STATICCALL] from=USDDCurveConvex, to=Vyper_contract, get_virtual_price() -> 1007016506872634877
+                  [10][DELEGATECALL] from=Vyper_contract, to=Vyper_contract, get_virtual_price() -> 1007016506872634877
+                    [11][STATICCALL] from=Vyper_contract, to=Vyper_contract, get_virtual_price() -> 1026938342935417528
+                      [12][STATICCALL] from=Vyper_contract, to=Vyper_contract, totalSupply() -> 214969782000634689613451979
+                [9][STATICCALL] from=USDDCurveConvex, to=BaseRewardPool, balanceOf(account(address): 0xE8dB19) -> 0
+                [9][STATICCALL] from=USDDCurveConvex, to=BaseRewardPool, earned(account(address): 0xE8dB19) -> 0
+                [9][STATICCALL] from=USDDCurveConvex, to=ConvexToken, totalCliffs() -> 1000
+                [9][STATICCALL] from=USDDCurveConvex, to=ConvexToken, reductionPerCliff() -> 100000000000000000000000
+                [9][STATICCALL] from=USDDCurveConvex, to=ConvexToken, totalSupply() -> 98757216475903576536392859
+                [9][STATICCALL] from=USDDCurveConvex, to=ConvexToken, balanceOf(account(address): 0xE8dB19) -> 0
+                [9][STATICCALL] from=USDDCurveConvex, to=Vyper_contract, balanceOf(arg0(address): 0xE8dB19) -> 0
+                [9][STATICCALL] from=USDDCurveConvex, to=Dai, balanceOf((address): 0xE8dB19) -> 0
+                [9][STATICCALL] from=USDDCurveConvex, to=FiatTokenProxy, balanceOf(account(address): 0xE8dB19) -> 0
+                  [10][DELEGATECALL] from=FiatTokenProxy, to=FiatTokenV2_1, balanceOf(account(address): 0xE8dB19) -> 0
+                [9][STATICCALL] from=USDDCurveConvex, to=TetherToken, balanceOf(who(address): 0xE8dB19) -> 0
+              [8][STATICCALL] from=Zunami, to=DolaCurveConvex, totalHoldings() -> 0
+                [9][STATICCALL] from=DolaCurveConvex, to=ERC20, balanceOf((address): 0x4a062f) -> 0
+                [9][STATICCALL] from=DolaCurveConvex, to=Vyper_contract, get_virtual_price() -> 1012605409337392911
+                  [10][DELEGATECALL] from=Vyper_contract, to=Vyper_contract, get_virtual_price() -> 1012605409337392911
+                    [11][STATICCALL] from=Vyper_contract, to=Vyper_contract, get_virtual_price() -> 1026938342935417528
+                      [12][STATICCALL] from=Vyper_contract, to=Vyper_contract, totalSupply() -> 214969782000634689613451979
+                [9][STATICCALL] from=DolaCurveConvex, to=BaseRewardPool, balanceOf(account(address): 0x4a062f) -> 0
+                [9][STATICCALL] from=DolaCurveConvex, to=BaseRewardPool, earned(account(address): 0x4a062f) -> 0
+                [9][STATICCALL] from=DolaCurveConvex, to=ConvexToken, totalCliffs() -> 1000
+                [9][STATICCALL] from=DolaCurveConvex, to=ConvexToken, reductionPerCliff() -> 100000000000000000000000
+                [9][STATICCALL] from=DolaCurveConvex, to=ConvexToken, totalSupply() -> 98757216475903576536392859
+                [9][STATICCALL] from=DolaCurveConvex, to=ConvexToken, balanceOf(account(address): 0x4a062f) -> 0
+                [9][STATICCALL] from=DolaCurveConvex, to=Vyper_contract, balanceOf(arg0(address): 0x4a062f) -> 0
+                [9][STATICCALL] from=DolaCurveConvex, to=Dai, balanceOf((address): 0x4a062f) -> 0
+                [9][STATICCALL] from=DolaCurveConvex, to=FiatTokenProxy, balanceOf(account(address): 0x4a062f) -> 0
+                  [10][DELEGATECALL] from=FiatTokenProxy, to=FiatTokenV2_1, balanceOf(account(address): 0x4a062f) -> 0
+                [9][STATICCALL] from=DolaCurveConvex, to=TetherToken, balanceOf(who(address): 0x4a062f) -> 0
+              [8][STATICCALL] from=Zunami, to=USDNCurveConvex, totalHoldings() -> 0
+                [9][STATICCALL] from=USDNCurveConvex, to=USDN, balanceOf(account(address): 0xBFaA92) -> 0
+                [9][STATICCALL] from=USDNCurveConvex, to=Vyper_contract, get_virtual_price() -> 1066677785421490688
+                  [10][STATICCALL] from=Vyper_contract, to=Vyper_contract, get_virtual_price() -> 1026938342935417528
+                    [11][STATICCALL] from=Vyper_contract, to=Vyper_contract, totalSupply() -> 214969782000634689613451979
+                  [10][STATICCALL] from=Vyper_contract, to=Vyper_contract, totalSupply() -> 3892243985671929512816272
+                [9][STATICCALL] from=USDNCurveConvex, to=BaseRewardPool, balanceOf(account(address): 0xBFaA92) -> 0
+                [9][STATICCALL] from=USDNCurveConvex, to=BaseRewardPool, earned(account(address): 0xBFaA92) -> 0
+                [9][STATICCALL] from=USDNCurveConvex, to=ConvexToken, totalCliffs() -> 1000
+                [9][STATICCALL] from=USDNCurveConvex, to=ConvexToken, reductionPerCliff() -> 100000000000000000000000
+                [9][STATICCALL] from=USDNCurveConvex, to=ConvexToken, totalSupply() -> 98757216475903576536392859
+                [9][STATICCALL] from=USDNCurveConvex, to=ConvexToken, balanceOf(account(address): 0xBFaA92) -> 0
+                [9][STATICCALL] from=USDNCurveConvex, to=Vyper_contract, balanceOf(arg0(address): 0xBFaA92) -> 0
+                [9][STATICCALL] from=USDNCurveConvex, to=Dai, balanceOf((address): 0xBFaA92) -> 0
+                [9][STATICCALL] from=USDNCurveConvex, to=FiatTokenProxy, balanceOf(account(address): 0xBFaA92) -> 0
+                  [10][DELEGATECALL] from=FiatTokenProxy, to=FiatTokenV2_1, balanceOf(account(address): 0xBFaA92) -> 0
+                [9][STATICCALL] from=USDNCurveConvex, to=TetherToken, balanceOf(who(address): 0xBFaA92) -> 0
+              [8][STATICCALL] from=Zunami, to=LUSDFraxBP, totalHoldings() -> 0
+                [9][STATICCALL] from=LUSDFraxBP, to=LUSDToken, balanceOf(account(address): 0x185bF3) -> 0
+                [9][STATICCALL] from=LUSDFraxBP, to=Vyper_contract, get_virtual_price() -> 1004634354398043344
+                  [10][DELEGATECALL] from=Vyper_contract, to=Vyper_contract, get_virtual_price() -> 1004634354398043344
+                    [11][STATICCALL] from=Vyper_contract, to=Vyper_contract, get_virtual_price() -> 1001340774532351226
+                      [12][STATICCALL] from=Vyper_contract, to=Vyper_contract, totalSupply() -> 463752014761877959723644374
+                [9][STATICCALL] from=LUSDFraxBP, to=BaseRewardPool, balanceOf(account(address): 0x185bF3) -> 0
+                [9][STATICCALL] from=LUSDFraxBP, to=BaseRewardPool, earned(account(address): 0x185bF3) -> 0
+                [9][STATICCALL] from=LUSDFraxBP, to=ConvexToken, totalCliffs() -> 1000
+                [9][STATICCALL] from=LUSDFraxBP, to=ConvexToken, reductionPerCliff() -> 100000000000000000000000
+                [9][STATICCALL] from=LUSDFraxBP, to=ConvexToken, totalSupply() -> 98757216475903576536392859
+                [9][STATICCALL] from=LUSDFraxBP, to=ConvexToken, balanceOf(account(address): 0x185bF3) -> 0
+                [9][STATICCALL] from=LUSDFraxBP, to=Vyper_contract, balanceOf(arg0(address): 0x185bF3) -> 0
+                [9][STATICCALL] from=LUSDFraxBP, to=Dai, balanceOf((address): 0x185bF3) -> 0
+                [9][STATICCALL] from=LUSDFraxBP, to=FiatTokenProxy, balanceOf(account(address): 0x185bF3) -> 0
+                  [10][DELEGATECALL] from=FiatTokenProxy, to=FiatTokenV2_1, balanceOf(account(address): 0x185bF3) -> 0
+                [9][STATICCALL] from=LUSDFraxBP, to=TetherToken, balanceOf(who(address): 0x185bF3) -> 0
+              [8][STATICCALL] from=Zunami, to=MIMCurveStakeDao, totalHoldings() -> 12645055766381000000000000
+                [9][STATICCALL] from=MIMCurveStakeDao, to=CurveVault, liquidityGauge() -> 0x287660
+                  [10][DELEGATECALL] from=CurveVault, to=CurveVault, liquidityGauge() -> 0x287660
+                [9][STATICCALL] from=MIMCurveStakeDao, to=Vyper_contract, claimable_reward(_user(address): 0x9848ED, _reward_token(address): 0x090185) -> 0
+                  [10][DELEGATECALL] from=Vyper_contract, to=Vyper_contract, claimable_reward(_user(address): 0x9848ED, _reward_token(address): 0x090185) -> 0
+                [9][STATICCALL] from=MIMCurveStakeDao, to=Spell, balanceOf((address): 0x9848ED) -> 0
+                [9][STATICCALL] from=MIMCurveStakeDao, to=MagicInternetMoneyV1, balanceOf((address): 0x9848ED) -> 0
+                [9][STATICCALL] from=MIMCurveStakeDao, to=Vyper_contract, get_virtual_price() -> 1011411260251583305
+                  [10][DELEGATECALL] from=Vyper_contract, to=Vyper_contract, get_virtual_price() -> 1011411260251583305
+                    [11][STATICCALL] from=Vyper_contract, to=Vyper_contract, get_virtual_price() -> 1026938342935417528
+                      [12][STATICCALL] from=Vyper_contract, to=Vyper_contract, totalSupply() -> 214969782000634689613451979
+                [9][STATICCALL] from=MIMCurveStakeDao, to=CurveVault, liquidityGauge() -> 0x287660
+                  [10][DELEGATECALL] from=CurveVault, to=CurveVault, liquidityGauge() -> 0x287660
+                [9][STATICCALL] from=MIMCurveStakeDao, to=Vyper_contract, balanceOf(arg0(address): 0x9848ED) -> 0
+                  [10][DELEGATECALL] from=Vyper_contract, to=Vyper_contract, balanceOf(arg0(address): 0x9848ED) -> 0
+                [9][STATICCALL] from=MIMCurveStakeDao, to=CurveVault, liquidityGauge() -> 0x287660
+                  [10][DELEGATECALL] from=CurveVault, to=CurveVault, liquidityGauge() -> 0x287660
+                [9][STATICCALL] from=MIMCurveStakeDao, to=Vyper_contract, claimable_reward(_user(address): 0x9848ED, _reward_token(address): 0x73968b) -> 0
+                  [10][DELEGATECALL] from=Vyper_contract, to=Vyper_contract, claimable_reward(_user(address): 0x9848ED, _reward_token(address): 0x73968b) -> 0
+                [9][STATICCALL] from=MIMCurveStakeDao, to=SDT, balanceOf(account(address): 0x9848ED) -> 55981929088875410767708
+                [9][STATICCALL] from=MIMCurveStakeDao, to=UniswapV2Router02, getAmountsOut(amountIn(uint256): 55981929088875410767708, path(address[]): ['0x73968b9a57c6E53d41345FD57a6E6ae27d6CDB...) -> [55981929088875410767708, 9999529530454374495777, 12645055766381]
+                  [10][STATICCALL] from=UniswapV2Router02, to=UniswapV2Pair, getReserves() -> ['63680443285325769506', '10010938400337447069881', '1691966087']
+                  [10][STATICCALL] from=UniswapV2Router02, to=UniswapV2Pair, getReserves() -> ['2865171249518458148604', '16279153543064', '1691966087']
+                [9][STATICCALL] from=MIMCurveStakeDao, to=CurveVault, liquidityGauge() -> 0x287660
+                  [10][DELEGATECALL] from=CurveVault, to=CurveVault, liquidityGauge() -> 0x287660
+                [9][STATICCALL] from=MIMCurveStakeDao, to=Vyper_contract, claimable_reward(_user(address): 0x9848ED, _reward_token(address): 0xD533a9) -> 0
+                  [10][DELEGATECALL] from=Vyper_contract, to=Vyper_contract, claimable_reward(_user(address): 0x9848ED, _reward_token(address): 0xD533a9) -> 0
+                [9][STATICCALL] from=MIMCurveStakeDao, to=Vyper_contract, balanceOf(arg0(address): 0x9848ED) -> 0
+                [9][STATICCALL] from=MIMCurveStakeDao, to=Dai, balanceOf((address): 0x9848ED) -> 0
+                [9][STATICCALL] from=MIMCurveStakeDao, to=FiatTokenProxy, balanceOf(account(address): 0x9848ED) -> 0
+                  [10][DELEGATECALL] from=FiatTokenProxy, to=FiatTokenV2_1, balanceOf(account(address): 0x9848ED) -> 0
+                [9][STATICCALL] from=MIMCurveStakeDao, to=TetherToken, balanceOf(who(address): 0x9848ED) -> 0
+              [8][STATICCALL] from=Zunami, to=XAIStakingFraxCurveConvex, totalHoldings() -> 0
+                [9][STATICCALL] from=XAIStakingFraxCurveConvex, to=Vyper_contract, get_virtual_price() -> 1001430422244826333
+                  [10][DELEGATECALL] from=Vyper_contract, to=Vyper_contract, get_virtual_price() -> 1001430422244826333
+                    [11][STATICCALL] from=Vyper_contract, to=Vyper_contract, get_virtual_price() -> 1001340774532351226
+                      [12][STATICCALL] from=Vyper_contract, to=Vyper_contract, totalSupply() -> 463752014761877959723644374
+                [9][STATICCALL] from=XAIStakingFraxCurveConvex, to=StakingProxyConvex, stakingAddress() -> 0x4edf7c
+                  [10][DELEGATECALL] from=StakingProxyConvex, to=StakingProxyConvex, stakingAddress() -> 0x4edf7c
+                [9][STATICCALL] from=XAIStakingFraxCurveConvex, to=FraxUnifiedFarm_ERC20_Convex_FRAXBP_Stable, lockedLiquidityOf(account(address): 0xA624BC) -> 0
+                [9][STATICCALL] from=XAIStakingFraxCurveConvex, to=StakingProxyConvex, earned() -> [['0x3432b6', '0xd533a9', '0x4e3fbd'], [0, 0, 0]]
+                  [10][DELEGATECALL] from=StakingProxyConvex, to=StakingProxyConvex, earned() -> [['0x3432b6', '0xd533a9', '0x4e3fbd'], [0, 0, 0]]
+                    [11][STATICCALL] from=StakingProxyConvex, to=FraxUnifiedFarm_ERC20_Convex_FRAXBP_Stable, getAllRewardTokens() -> ['0x3432b6']
+                    [11][STATICCALL] from=StakingProxyConvex, to=FraxUnifiedFarm_ERC20_Convex_FRAXBP_Stable, earned(account(address): 0xA624BC) -> [0]
+                      [12][STATICCALL] from=FraxUnifiedFarm_ERC20_Convex_FRAXBP_Stable, to=Vyper_contract, global_emission_rate() -> 72337962962962960
+                    [11][STATICCALL] from=StakingProxyConvex, to=ConvexStakingWrapperFrax, earnedView(_account(address): 0xA624BC) -> None
+                      [12][DELEGATECALL] from=ConvexStakingWrapperFrax, to=ConvexStakingWrapperFrax, earnedView(_account(address): 0xA624BC) -> None
+                        [13][STATICCALL] from=ConvexStakingWrapperFrax, to=Vyper_contract, balanceOf(arg0(address): 0x19f0a6) -> 11827940962063969866011
+                        [13][STATICCALL] from=ConvexStakingWrapperFrax, to=BaseRewardPool, earned(account(address): 0x19f0a6) -> 0
+                        [13][STATICCALL] from=ConvexStakingWrapperFrax, to=FraxUnifiedFarm_ERC20_Convex_FRAXBP_Stable, lockedLiquidityOf(account(address): 0xA624BC) -> 0
+                        [13][STATICCALL] from=ConvexStakingWrapperFrax, to=BaseRewardPool, earned(account(address): 0x19f0a6) -> 0
+                        [13][STATICCALL] from=ConvexStakingWrapperFrax, to=FraxUnifiedFarm_ERC20_Convex_FRAXBP_Stable, lockedLiquidityOf(account(address): 0xA624BC) -> 0
+                        [13][DELEGATECALL] from=ConvexStakingWrapperFrax, to=CvxMining, ConvertCrvToCvx(_amount(uint256): 0) -> 0
+                          [14][STATICCALL] from=ConvexStakingWrapperFrax, to=ConvexToken, totalSupply() -> 98757216475903576536392859
+                          [14][STATICCALL] from=ConvexStakingWrapperFrax, to=ConvexToken, reductionPerCliff() -> 100000000000000000000000
+                          [14][STATICCALL] from=ConvexStakingWrapperFrax, to=ConvexToken, totalCliffs() -> 1000
+                          [14][STATICCALL] from=ConvexStakingWrapperFrax, to=ConvexToken, maxSupply() -> 100000000000000000000000000
+                        [13][STATICCALL] from=ConvexStakingWrapperFrax, to=ConvexToken, balanceOf(account(address): 0x19f0a6) -> 177045295139684261189
+                        [13][STATICCALL] from=ConvexStakingWrapperFrax, to=FraxUnifiedFarm_ERC20_Convex_FRAXBP_Stable, lockedLiquidityOf(account(address): 0xA624BC) -> 0
+                    [11][STATICCALL] from=StakingProxyConvex, to=MultiRewards, rewardTokenLength() -> 0
+                      [12][DELEGATECALL] from=MultiRewards, to=MultiRewards, rewardTokenLength() -> 0
+                    [11][STATICCALL] from=StakingProxyConvex, to=FRAXShares, balanceOf(account(address): 0xA624BC) -> 0
+                    [11][STATICCALL] from=StakingProxyConvex, to=MultiRewards, claimableRewards(_account(address): 0xA624BC) -> None
+                      [12][DELEGATECALL] from=MultiRewards, to=MultiRewards, claimableRewards(_account(address): 0xA624BC) -> None
+                [9][STATICCALL] from=XAIStakingFraxCurveConvex, to=FRAXShares, balanceOf(account(address): 0x4d258A) -> 0
+                [9][STATICCALL] from=XAIStakingFraxCurveConvex, to=Vyper_contract, balanceOf(arg0(address): 0x4d258A) -> 0
+                [9][STATICCALL] from=XAIStakingFraxCurveConvex, to=ConvexToken, balanceOf(account(address): 0x4d258A) -> 0
+                [9][STATICCALL] from=XAIStakingFraxCurveConvex, to=Dai, balanceOf((address): 0x4d258A) -> 0
+                [9][STATICCALL] from=XAIStakingFraxCurveConvex, to=FiatTokenProxy, balanceOf(account(address): 0x4d258A) -> 0
+                  [10][DELEGATECALL] from=FiatTokenProxy, to=FiatTokenV2_1, balanceOf(account(address): 0x4d258A) -> 0
+                [9][STATICCALL] from=XAIStakingFraxCurveConvex, to=TetherToken, balanceOf(who(address): 0x4d258A) -> 0
+              [8][STATICCALL] from=Zunami, to=XAIStakingFraxCurveConvex, totalHoldings() -> 0
+                [9][STATICCALL] from=XAIStakingFraxCurveConvex, to=Vyper_contract, get_virtual_price() -> 1001430422244826333
+                  [10][DELEGATECALL] from=Vyper_contract, to=Vyper_contract, get_virtual_price() -> 1001430422244826333
+                    [11][STATICCALL] from=Vyper_contract, to=Vyper_contract, get_virtual_price() -> 1001340774532351226
+                      [12][STATICCALL] from=Vyper_contract, to=Vyper_contract, totalSupply() -> 463752014761877959723644374
+                [9][STATICCALL] from=XAIStakingFraxCurveConvex, to=StakingProxyConvex, stakingAddress() -> 0x4edf7c
+                  [10][DELEGATECALL] from=StakingProxyConvex, to=StakingProxyConvex, stakingAddress() -> 0x4edf7c
+                [9][STATICCALL] from=XAIStakingFraxCurveConvex, to=FraxUnifiedFarm_ERC20_Convex_FRAXBP_Stable, lockedLiquidityOf(account(address): 0xa1f5a6) -> 0
+                [9][STATICCALL] from=XAIStakingFraxCurveConvex, to=StakingProxyConvex, earned() -> [['0x3432b6', '0xd533a9', '0x4e3fbd'], [0, 0, 0]]
+                  [10][DELEGATECALL] from=StakingProxyConvex, to=StakingProxyConvex, earned() -> [['0x3432b6', '0xd533a9', '0x4e3fbd'], [0, 0, 0]]
+                    [11][STATICCALL] from=StakingProxyConvex, to=FraxUnifiedFarm_ERC20_Convex_FRAXBP_Stable, getAllRewardTokens() -> ['0x3432b6']
+                    [11][STATICCALL] from=StakingProxyConvex, to=FraxUnifiedFarm_ERC20_Convex_FRAXBP_Stable, earned(account(address): 0xa1f5a6) -> [0]
+                      [12][STATICCALL] from=FraxUnifiedFarm_ERC20_Convex_FRAXBP_Stable, to=Vyper_contract, global_emission_rate() -> 72337962962962960
+                    [11][STATICCALL] from=StakingProxyConvex, to=ConvexStakingWrapperFrax, earnedView(_account(address): 0xa1f5a6) -> None
+                      [12][DELEGATECALL] from=ConvexStakingWrapperFrax, to=ConvexStakingWrapperFrax, earnedView(_account(address): 0xa1f5a6) -> None
+                        [13][STATICCALL] from=ConvexStakingWrapperFrax, to=Vyper_contract, balanceOf(arg0(address): 0x19f0a6) -> 11827940962063969866011
+                        [13][STATICCALL] from=ConvexStakingWrapperFrax, to=BaseRewardPool, earned(account(address): 0x19f0a6) -> 0
+                        [13][STATICCALL] from=ConvexStakingWrapperFrax, to=FraxUnifiedFarm_ERC20_Convex_FRAXBP_Stable, lockedLiquidityOf(account(address): 0xa1f5a6) -> 0
+                        [13][STATICCALL] from=ConvexStakingWrapperFrax, to=BaseRewardPool, earned(account(address): 0x19f0a6) -> 0
+                        [13][STATICCALL] from=ConvexStakingWrapperFrax, to=FraxUnifiedFarm_ERC20_Convex_FRAXBP_Stable, lockedLiquidityOf(account(address): 0xa1f5a6) -> 0
+                        [13][DELEGATECALL] from=ConvexStakingWrapperFrax, to=CvxMining, ConvertCrvToCvx(_amount(uint256): 0) -> 0
+                          [14][STATICCALL] from=ConvexStakingWrapperFrax, to=ConvexToken, totalSupply() -> 98757216475903576536392859
+                          [14][STATICCALL] from=ConvexStakingWrapperFrax, to=ConvexToken, reductionPerCliff() -> 100000000000000000000000
+                          [14][STATICCALL] from=ConvexStakingWrapperFrax, to=ConvexToken, totalCliffs() -> 1000
+                          [14][STATICCALL] from=ConvexStakingWrapperFrax, to=ConvexToken, maxSupply() -> 100000000000000000000000000
+                        [13][STATICCALL] from=ConvexStakingWrapperFrax, to=ConvexToken, balanceOf(account(address): 0x19f0a6) -> 177045295139684261189
+                        [13][STATICCALL] from=ConvexStakingWrapperFrax, to=FraxUnifiedFarm_ERC20_Convex_FRAXBP_Stable, lockedLiquidityOf(account(address): 0xa1f5a6) -> 0
+                    [11][STATICCALL] from=StakingProxyConvex, to=MultiRewards, rewardTokenLength() -> 0
+                      [12][DELEGATECALL] from=MultiRewards, to=MultiRewards, rewardTokenLength() -> 0
+                    [11][STATICCALL] from=StakingProxyConvex, to=FRAXShares, balanceOf(account(address): 0xa1f5a6) -> 0
+                    [11][STATICCALL] from=StakingProxyConvex, to=MultiRewards, claimableRewards(_account(address): 0xa1f5a6) -> None
+                      [12][DELEGATECALL] from=MultiRewards, to=MultiRewards, claimableRewards(_account(address): 0xa1f5a6) -> None
+                [9][STATICCALL] from=XAIStakingFraxCurveConvex, to=FRAXShares, balanceOf(account(address): 0xD84610) -> 0
+                [9][STATICCALL] from=XAIStakingFraxCurveConvex, to=Vyper_contract, balanceOf(arg0(address): 0xD84610) -> 0
+                [9][STATICCALL] from=XAIStakingFraxCurveConvex, to=ConvexToken, balanceOf(account(address): 0xD84610) -> 0
+                [9][STATICCALL] from=XAIStakingFraxCurveConvex, to=Dai, balanceOf((address): 0xD84610) -> 0
+                [9][STATICCALL] from=XAIStakingFraxCurveConvex, to=FiatTokenProxy, balanceOf(account(address): 0xD84610) -> 0
+                  [10][DELEGATECALL] from=FiatTokenProxy, to=FiatTokenV2_1, balanceOf(account(address): 0xD84610) -> 0
+                [9][STATICCALL] from=XAIStakingFraxCurveConvex, to=TetherToken, balanceOf(who(address): 0xD84610) -> 0
+              [8][STATICCALL] from=Zunami, to=XAIStakingFraxCurveConvex, totalHoldings() -> 720057803890406560249921
+                [9][STATICCALL] from=XAIStakingFraxCurveConvex, to=Vyper_contract, get_virtual_price() -> 1001430422244826333
+                  [10][DELEGATECALL] from=Vyper_contract, to=Vyper_contract, get_virtual_price() -> 1001430422244826333
+                    [11][STATICCALL] from=Vyper_contract, to=Vyper_contract, get_virtual_price() -> 1001340774532351226
+                      [12][STATICCALL] from=Vyper_contract, to=Vyper_contract, totalSupply() -> 463752014761877959723644374
+                [9][STATICCALL] from=XAIStakingFraxCurveConvex, to=StakingProxyConvex, stakingAddress() -> 0x4edf7c
+                  [10][DELEGATECALL] from=StakingProxyConvex, to=StakingProxyConvex, stakingAddress() -> 0x4edf7c
+                [9][STATICCALL] from=XAIStakingFraxCurveConvex, to=FraxUnifiedFarm_ERC20_Convex_FRAXBP_Stable, lockedLiquidityOf(account(address): 0x5708E8) -> 718594963470637993490062
+                [9][STATICCALL] from=XAIStakingFraxCurveConvex, to=StakingProxyConvex, earned() -> [['0x3432b6', '0xd533a9', '0x4e3fbd'], [63470268768046426984, 45479000956450389419, 1182454024867701688]]
+                  [10][DELEGATECALL] from=StakingProxyConvex, to=StakingProxyConvex, earned() -> [['0x3432b6', '0xd533a9', '0x4e3fbd'], [63470268768046426984, 45479000956450389419, 1182454024867701688]]
+                    [11][STATICCALL] from=StakingProxyConvex, to=FraxUnifiedFarm_ERC20_Convex_FRAXBP_Stable, getAllRewardTokens() -> ['0x3432b6']
+                    [11][STATICCALL] from=StakingProxyConvex, to=FraxUnifiedFarm_ERC20_Convex_FRAXBP_Stable, earned(account(address): 0x5708E8) -> [63470268768046426984]
+                      [12][STATICCALL] from=FraxUnifiedFarm_ERC20_Convex_FRAXBP_Stable, to=Vyper_contract, global_emission_rate() -> 72337962962962960
+                    [11][STATICCALL] from=StakingProxyConvex, to=ConvexStakingWrapperFrax, earnedView(_account(address): 0x5708E8) -> None
+                      [12][DELEGATECALL] from=ConvexStakingWrapperFrax, to=ConvexStakingWrapperFrax, earnedView(_account(address): 0x5708E8) -> None
+                        [13][STATICCALL] from=ConvexStakingWrapperFrax, to=Vyper_contract, balanceOf(arg0(address): 0x19f0a6) -> 11827940962063969866011
+                        [13][STATICCALL] from=ConvexStakingWrapperFrax, to=BaseRewardPool, earned(account(address): 0x19f0a6) -> 0
+                        [13][STATICCALL] from=ConvexStakingWrapperFrax, to=FraxUnifiedFarm_ERC20_Convex_FRAXBP_Stable, lockedLiquidityOf(account(address): 0x5708E8) -> 718594963470637993490062
+                        [13][STATICCALL] from=ConvexStakingWrapperFrax, to=BaseRewardPool, earned(account(address): 0x19f0a6) -> 0
+                        [13][STATICCALL] from=ConvexStakingWrapperFrax, to=FraxUnifiedFarm_ERC20_Convex_FRAXBP_Stable, lockedLiquidityOf(account(address): 0x5708E8) -> 718594963470637993490062
+                        [13][DELEGATECALL] from=ConvexStakingWrapperFrax, to=CvxMining, ConvertCrvToCvx(_amount(uint256): 45479000956450389419) -> 591227012433855062
+                          [14][STATICCALL] from=ConvexStakingWrapperFrax, to=ConvexToken, totalSupply() -> 98757216475903576536392859
+                          [14][STATICCALL] from=ConvexStakingWrapperFrax, to=ConvexToken, reductionPerCliff() -> 100000000000000000000000
+                          [14][STATICCALL] from=ConvexStakingWrapperFrax, to=ConvexToken, totalCliffs() -> 1000
+                          [14][STATICCALL] from=ConvexStakingWrapperFrax, to=ConvexToken, maxSupply() -> 100000000000000000000000000
+                        [13][STATICCALL] from=ConvexStakingWrapperFrax, to=ConvexToken, balanceOf(account(address): 0x19f0a6) -> 177045295139684261189
+                        [13][STATICCALL] from=ConvexStakingWrapperFrax, to=FraxUnifiedFarm_ERC20_Convex_FRAXBP_Stable, lockedLiquidityOf(account(address): 0x5708E8) -> 718594963470637993490062
+                    [11][STATICCALL] from=StakingProxyConvex, to=MultiRewards, rewardTokenLength() -> 0
+                      [12][DELEGATECALL] from=MultiRewards, to=MultiRewards, rewardTokenLength() -> 0
+                    [11][STATICCALL] from=StakingProxyConvex, to=FRAXShares, balanceOf(account(address): 0x5708E8) -> 0
+                    [11][STATICCALL] from=StakingProxyConvex, to=MultiRewards, claimableRewards(_account(address): 0x5708E8) -> None
+                      [12][DELEGATECALL] from=MultiRewards, to=MultiRewards, claimableRewards(_account(address): 0x5708E8) -> None
+                [9][STATICCALL] from=XAIStakingFraxCurveConvex, to=FRAXShares, balanceOf(account(address): 0x12aDa2) -> 0
+                [9][STATICCALL] from=XAIStakingFraxCurveConvex, to=SplitSellingCurveRewardManagerV2, valuate(reward(address): 0x3432B6, amount(uint256): 63470268768046426984, feeToken(address): 0xA0b869) -> 405031432
+                  [10][STATICCALL] from=SplitSellingCurveRewardManagerV2, to=Vyper_contract, get_dy(i(uint256): 1, j(uint256): 0, dx(uint256): 63470268768046426984) -> 219836364163808422
+                    [11][DELEGATECALL] from=Vyper_contract, to=Vyper_contract, get_dy(i(uint256): 1, j(uint256): 0, dx(uint256): 63470268768046426984) -> 219836364163808422
+                  [10][STATICCALL] from=SplitSellingCurveRewardManagerV2, to=Vyper_contract, get_dy(i(uint256): 2, j(uint256): 0, dx(uint256): 219836364163808422) -> 405443439
+                    [11][STATICCALL] from=Vyper_contract, to=Vyper_contract, get_dy(i(uint256): 2, j(uint256): 0, dx(uint256): 219836364163808422) -> 405443439
+                      [12][STATICCALL] from=Vyper_contract, to=Vyper_contract, price_scale(k(uint256): 0) -> 29396563932323139772183
+                      [12][STATICCALL] from=Vyper_contract, to=Vyper_contract, price_scale(k(uint256): 1) -> 1845263336598454568979
+                      [12][STATICCALL] from=Vyper_contract, to=Vyper_contract, balances(arg0(uint256): 0) -> 29200427307343
+                      [12][STATICCALL] from=Vyper_contract, to=Vyper_contract, balances(arg0(uint256): 1) -> 99969974233
+                      [12][STATICCALL] from=Vyper_contract, to=Vyper_contract, balances(arg0(uint256): 2) -> 15848230901306747965732
+                      [12][STATICCALL] from=Vyper_contract, to=Vyper_contract, A() -> 1707629
+                      [12][STATICCALL] from=Vyper_contract, to=Vyper_contract, gamma() -> 11809167828997
+                      [12][STATICCALL] from=Vyper_contract, to=Vyper_contract, D() -> 87832304750312735960169268
+                      [12][STATICCALL] from=Vyper_contract, to=Vyper_contract, newton_y(ANN(uint256): 1707629, gamma(uint256): 11809167828997, x(uint256[3]): [29200427307343000000000000, 2938773738853..., D(uint256): 87832304750312735960169268, i(uint256): 0) -> 29200021718210880709086390
+                      [12][STATICCALL] from=Vyper_contract, to=Vyper_contract, fee_calc(xp(uint256[3]): [29200021718210880709086390, 2938773738853...) -> 3592155
+                        [13][STATICCALL] from=Vyper_contract, to=Vyper_contract, reduction_coefficient(x(uint256[3]): [29200021718210880709086390, 2938773738853..., fee_gamma(uint256): 500000000000000) -> 978068322508322746
+                  [10][STATICCALL] from=SplitSellingCurveRewardManagerV2, to=StableConverter, valuate(from(address): 0xdAC17F, to(address): 0xA0b869, amount(uint256): 405443439) -> 405031432
+                    [11][STATICCALL] from=StableConverter, to=Vyper_contract, get_dy(i(int128): 2, j(int128): 1, dx(uint256): 405443439) -> 405031432
+                [9][STATICCALL] from=XAIStakingFraxCurveConvex, to=Vyper_contract, balanceOf(arg0(address): 0x12aDa2) -> 0
+                [9][STATICCALL] from=XAIStakingFraxCurveConvex, to=SplitSellingCurveRewardManagerV2, valuate(reward(address): 0xD533a9, amount(uint256): 45479000956450389419, feeToken(address): 0xA0b869) -> 26254305
+                  [10][STATICCALL] from=SplitSellingCurveRewardManagerV2, to=CurveTricryptoOptimizedWETH, get_dy(i(uint256): 2, j(uint256): 1, dx(uint256): 45479000956450389419) -> 14249860155816623
+                    [11][STATICCALL] from=CurveTricryptoOptimizedWETH, to=CurveTricryptoFactory, views_implementation() -> 0x064253
+                    [11][STATICCALL] from=CurveTricryptoOptimizedWETH, to=CurveCryptoViews3Optimized, get_dy(i(uint256): 2, j(uint256): 1, dx(uint256): 45479000956450389419, swap(address): 0x4eBdF7) -> 14249860155816623
+                      [12][STATICCALL] from=CurveCryptoViews3Optimized, to=CurveTricryptoOptimizedWETH, MATH() -> 0xcbff30
+                      [12][STATICCALL] from=CurveCryptoViews3Optimized, to=CurveTricryptoOptimizedWETH, precisions() -> [1, 1, 1]
+                      [12][STATICCALL] from=CurveCryptoViews3Optimized, to=CurveTricryptoOptimizedWETH, totalSupply() -> 443269053957709499672282
+                      [12][STATICCALL] from=CurveCryptoViews3Optimized, to=CurveTricryptoOptimizedWETH, balances(arg0(uint256): 0) -> 4657015035743679645007096
+                      [12][STATICCALL] from=CurveCryptoViews3Optimized, to=CurveTricryptoOptimizedWETH, balances(arg0(uint256): 1) -> 2526150592912619063137
+                      [12][STATICCALL] from=CurveCryptoViews3Optimized, to=CurveTricryptoOptimizedWETH, balances(arg0(uint256): 2) -> 8036063394550317569672538
+                      [12][STATICCALL] from=CurveCryptoViews3Optimized, to=CurveTricryptoOptimizedWETH, price_scale(k(uint256): 0) -> 1849581120251303601470
+                      [12][STATICCALL] from=CurveCryptoViews3Optimized, to=CurveTricryptoOptimizedWETH, price_scale(k(uint256): 1) -> 576616306354124470
+                      [12][STATICCALL] from=CurveCryptoViews3Optimized, to=CurveTricryptoOptimizedWETH, A() -> 2700000
+                      [12][STATICCALL] from=CurveCryptoViews3Optimized, to=CurveTricryptoOptimizedWETH, gamma() -> 1300000000000
+                      [12][STATICCALL] from=CurveCryptoViews3Optimized, to=CurveTricryptoOptimizedWETH, MATH() -> 0xcbff30
+                      [12][STATICCALL] from=CurveCryptoViews3Optimized, to=CurveTricryptoOptimizedWETH, D() -> 13963024662666049887540409
+                      [12][STATICCALL] from=CurveCryptoViews3Optimized, to=CurveTricryptoOptimizedWETH, future_A_gamma_time() -> 0
+                      [12][STATICCALL] from=CurveCryptoViews3Optimized, to=CurveTricryptoMathOptimized, get_y(_ANN(uint256): 2700000, _gamma(uint256): 1300000000000, x(uint256[3]): [4657015035743679645007096, 46723204435628..., _D(uint256): 13963024662666049887540409, i(uint256): 1) -> [4672294069761301592524737, 999990305595882609]
+                      [12][STATICCALL] from=CurveCryptoViews3Optimized, to=CurveTricryptoOptimizedWETH, fee_calc(xp(uint256[3]): [4657015035743679645007096, 46722940697613...) -> 6646446
+                        [13][STATICCALL] from=CurveTricryptoOptimizedWETH, to=CurveTricryptoMathOptimized, reduction_coefficient(x(uint256[3]): [4657015035743679645007096, 46722940697613..., fee_gamma(uint256): 350000000000000) -> 952643539779639825
+                  [10][STATICCALL] from=SplitSellingCurveRewardManagerV2, to=Vyper_contract, get_dy(i(uint256): 2, j(uint256): 0, dx(uint256): 14249860155816623) -> 26281011
+                    [11][STATICCALL] from=Vyper_contract, to=Vyper_contract, get_dy(i(uint256): 2, j(uint256): 0, dx(uint256): 14249860155816623) -> 26281011
+                      [12][STATICCALL] from=Vyper_contract, to=Vyper_contract, price_scale(k(uint256): 0) -> 29396563932323139772183
+                      [12][STATICCALL] from=Vyper_contract, to=Vyper_contract, price_scale(k(uint256): 1) -> 1845263336598454568979
+                      [12][STATICCALL] from=Vyper_contract, to=Vyper_contract, balances(arg0(uint256): 0) -> 29200427307343
+                      [12][STATICCALL] from=Vyper_contract, to=Vyper_contract, balances(arg0(uint256): 1) -> 99969974233
+                      [12][STATICCALL] from=Vyper_contract, to=Vyper_contract, balances(arg0(uint256): 2) -> 15848230901306747965732
+                      [12][STATICCALL] from=Vyper_contract, to=Vyper_contract, A() -> 1707629
+                      [12][STATICCALL] from=Vyper_contract, to=Vyper_contract, gamma() -> 11809167828997
+                      [12][STATICCALL] from=Vyper_contract, to=Vyper_contract, D() -> 87832304750312735960169268
+                      [12][STATICCALL] from=Vyper_contract, to=Vyper_contract, newton_y(ANN(uint256): 1707629, gamma(uint256): 11809167828997, x(uint256[3]): [29200427307343000000000000, 2938773738853..., D(uint256): 87832304750312735960169268, i(uint256): 0) -> 29200401016890742125190196
+                      [12][STATICCALL] from=Vyper_contract, to=Vyper_contract, fee_calc(xp(uint256[3]): [29200401016890742125190196, 2938773738853...) -> 3591142
+                        [13][STATICCALL] from=Vyper_contract, to=Vyper_contract, reduction_coefficient(x(uint256[3]): [29200401016890742125190196, 2938773738853..., fee_gamma(uint256): 500000000000000) -> 978105849907688531
+                  [10][STATICCALL] from=SplitSellingCurveRewardManagerV2, to=StableConverter, valuate(from(address): 0xdAC17F, to(address): 0xA0b869, amount(uint256): 26281011) -> 26254305
+                    [11][STATICCALL] from=StableConverter, to=Vyper_contract, get_dy(i(int128): 2, j(int128): 1, dx(uint256): 26281011) -> 26254305
+                [9][STATICCALL] from=XAIStakingFraxCurveConvex, to=ConvexToken, balanceOf(account(address): 0x12aDa2) -> 0
+                [9][STATICCALL] from=XAIStakingFraxCurveConvex, to=SplitSellingCurveRewardManagerV2, valuate(reward(address): 0x4e3FBD, amount(uint256): 1182454024867701688, feeToken(address): 0xA0b869) -> 3660462
+                  [10][STATICCALL] from=SplitSellingCurveRewardManagerV2, to=Vyper_contract, get_dy(i(uint256): 1, j(uint256): 0, dx(uint256): 1182454024867701688) -> 1986762711545757
+                  [10][STATICCALL] from=SplitSellingCurveRewardManagerV2, to=Vyper_contract, get_dy(i(uint256): 2, j(uint256): 0, dx(uint256): 1986762711545757) -> 3664186
+                    [11][STATICCALL] from=Vyper_contract, to=Vyper_contract, get_dy(i(uint256): 2, j(uint256): 0, dx(uint256): 1986762711545757) -> 3664186
+                      [12][STATICCALL] from=Vyper_contract, to=Vyper_contract, price_scale(k(uint256): 0) -> 29396563932323139772183
+                      [12][STATICCALL] from=Vyper_contract, to=Vyper_contract, price_scale(k(uint256): 1) -> 1845263336598454568979
+                      [12][STATICCALL] from=Vyper_contract, to=Vyper_contract, balances(arg0(uint256): 0) -> 29200427307343
+                      [12][STATICCALL] from=Vyper_contract, to=Vyper_contract, balances(arg0(uint256): 1) -> 99969974233
+                      [12][STATICCALL] from=Vyper_contract, to=Vyper_contract, balances(arg0(uint256): 2) -> 15848230901306747965732
+                      [12][STATICCALL] from=Vyper_contract, to=Vyper_contract, A() -> 1707629
+                      [12][STATICCALL] from=Vyper_contract, to=Vyper_contract, gamma() -> 11809167828997
+                      [12][STATICCALL] from=Vyper_contract, to=Vyper_contract, D() -> 87832304750312735960169268
+                      [12][STATICCALL] from=Vyper_contract, to=Vyper_contract, newton_y(ANN(uint256): 1707629, gamma(uint256): 11809167828997, x(uint256[3]): [29200427307343000000000000, 2938773738853..., D(uint256): 87832304750312735960169268, i(uint256): 0) -> 29200423641840707337620403
+                      [12][STATICCALL] from=Vyper_contract, to=Vyper_contract, fee_calc(xp(uint256[3]): [29200423641840707337620403, 2938773738853...) -> 3591082
+                        [13][STATICCALL] from=Vyper_contract, to=Vyper_contract, reduction_coefficient(x(uint256[3]): [29200423641840707337620403, 2938773738853..., fee_gamma(uint256): 500000000000000) -> 978108068110913855
+                  [10][STATICCALL] from=SplitSellingCurveRewardManagerV2, to=StableConverter, valuate(from(address): 0xdAC17F, to(address): 0xA0b869, amount(uint256): 3664186) -> 3660462
+                    [11][STATICCALL] from=StableConverter, to=Vyper_contract, get_dy(i(int128): 2, j(int128): 1, dx(uint256): 3664186) -> 3660462
+                [9][STATICCALL] from=XAIStakingFraxCurveConvex, to=Dai, balanceOf((address): 0x12aDa2) -> 1150
+                [9][STATICCALL] from=XAIStakingFraxCurveConvex, to=FiatTokenProxy, balanceOf(account(address): 0x12aDa2) -> 0
+                  [10][DELEGATECALL] from=FiatTokenProxy, to=FiatTokenV2_1, balanceOf(account(address): 0x12aDa2) -> 0
+                [9][STATICCALL] from=XAIStakingFraxCurveConvex, to=TetherToken, balanceOf(who(address): 0x12aDa2) -> 0
+              [8][STATICCALL] from=Zunami, to=MIMCurveStakeDao, totalHoldings() -> 0
+                [9][STATICCALL] from=MIMCurveStakeDao, to=CurveVault, liquidityGauge() -> 0x287660
+                  [10][DELEGATECALL] from=CurveVault, to=CurveVault, liquidityGauge() -> 0x287660
+                [9][STATICCALL] from=MIMCurveStakeDao, to=Vyper_contract, claimable_reward(_user(address): 0xE9ACC5, _reward_token(address): 0x090185) -> 0
+                  [10][DELEGATECALL] from=Vyper_contract, to=Vyper_contract, claimable_reward(_user(address): 0xE9ACC5, _reward_token(address): 0x090185) -> 0
+                [9][STATICCALL] from=MIMCurveStakeDao, to=Spell, balanceOf((address): 0xE9ACC5) -> 0
+                [9][STATICCALL] from=MIMCurveStakeDao, to=SellingCurveRewardManager, valuate(reward(address): 0x090185, amount(uint256): 0, feeToken(address): 0xdAC17F) -> 0
+                [9][STATICCALL] from=MIMCurveStakeDao, to=MagicInternetMoneyV1, balanceOf((address): 0xE9ACC5) -> 0
+                [9][STATICCALL] from=MIMCurveStakeDao, to=Vyper_contract, get_virtual_price() -> 1011411260251583305
+                  [10][DELEGATECALL] from=Vyper_contract, to=Vyper_contract, get_virtual_price() -> 1011411260251583305
+                    [11][STATICCALL] from=Vyper_contract, to=Vyper_contract, get_virtual_price() -> 1026938342935417528
+                      [12][STATICCALL] from=Vyper_contract, to=Vyper_contract, totalSupply() -> 214969782000634689613451979
+                [9][STATICCALL] from=MIMCurveStakeDao, to=CurveVault, liquidityGauge() -> 0x287660
+                  [10][DELEGATECALL] from=CurveVault, to=CurveVault, liquidityGauge() -> 0x287660
+                [9][STATICCALL] from=MIMCurveStakeDao, to=Vyper_contract, balanceOf(arg0(address): 0xE9ACC5) -> 0
+                  [10][DELEGATECALL] from=Vyper_contract, to=Vyper_contract, balanceOf(arg0(address): 0xE9ACC5) -> 0
+                [9][STATICCALL] from=MIMCurveStakeDao, to=CurveVault, liquidityGauge() -> 0x287660
+                  [10][DELEGATECALL] from=CurveVault, to=CurveVault, liquidityGauge() -> 0x287660
+                [9][STATICCALL] from=MIMCurveStakeDao, to=Vyper_contract, claimable_reward(_user(address): 0xE9ACC5, _reward_token(address): 0xD533a9) -> 0
+                  [10][DELEGATECALL] from=Vyper_contract, to=Vyper_contract, claimable_reward(_user(address): 0xE9ACC5, _reward_token(address): 0xD533a9) -> 0
+                [9][STATICCALL] from=MIMCurveStakeDao, to=Vyper_contract, balanceOf(arg0(address): 0xE9ACC5) -> 0
+                [9][STATICCALL] from=MIMCurveStakeDao, to=SellingCurveRewardManager, valuate(reward(address): 0xD533a9, amount(uint256): 0, feeToken(address): 0xdAC17F) -> 0
+                [9][STATICCALL] from=MIMCurveStakeDao, to=CurveVault, liquidityGauge() -> 0x287660
+                  [10][DELEGATECALL] from=CurveVault, to=CurveVault, liquidityGauge() -> 0x287660
+                [9][STATICCALL] from=MIMCurveStakeDao, to=Vyper_contract, claimable_reward(_user(address): 0xE9ACC5, _reward_token(address): 0x73968b) -> 0
+                  [10][DELEGATECALL] from=Vyper_contract, to=Vyper_contract, claimable_reward(_user(address): 0xE9ACC5, _reward_token(address): 0x73968b) -> 0
+                [9][STATICCALL] from=MIMCurveStakeDao, to=SDT, balanceOf(account(address): 0xE9ACC5) -> 0
+                [9][STATICCALL] from=MIMCurveStakeDao, to=SellingCurveRewardManager, valuate(reward(address): 0x73968b, amount(uint256): 0, feeToken(address): 0xdAC17F) -> 0
+                [9][STATICCALL] from=MIMCurveStakeDao, to=Dai, balanceOf((address): 0xE9ACC5) -> 0
+                [9][STATICCALL] from=MIMCurveStakeDao, to=FiatTokenProxy, balanceOf(account(address): 0xE9ACC5) -> 0
+                  [10][DELEGATECALL] from=FiatTokenProxy, to=FiatTokenV2_1, balanceOf(account(address): 0xE9ACC5) -> 0
+                [9][STATICCALL] from=MIMCurveStakeDao, to=TetherToken, balanceOf(who(address): 0xE9ACC5) -> 0
+              [8][STATICCALL] from=Zunami, to=alUSDStakingFraxCurveConvex, totalHoldings() -> 0
+                [9][STATICCALL] from=alUSDStakingFraxCurveConvex, to=Vyper_contract, get_virtual_price() -> 1002008714036363690
+                  [10][DELEGATECALL] from=Vyper_contract, to=Vyper_contract, get_virtual_price() -> 1002008714036363690
+                    [11][STATICCALL] from=Vyper_contract, to=Vyper_contract, get_virtual_price() -> 1001340774532351226
+                      [12][STATICCALL] from=Vyper_contract, to=Vyper_contract, totalSupply() -> 463752014761877959723644374
+                [9][STATICCALL] from=alUSDStakingFraxCurveConvex, to=StakingProxyConvex, stakingAddress() -> 0x711d65
+                  [10][DELEGATECALL] from=StakingProxyConvex, to=StakingProxyConvex, stakingAddress() -> 0x711d65
+                [9][STATICCALL] from=alUSDStakingFraxCurveConvex, to=FraxUnifiedFarm_ERC20_Convex_stkcvxalUSDFRAXBP, lockedLiquidityOf(account(address): 0x1E0513) -> 0
+                [9][STATICCALL] from=alUSDStakingFraxCurveConvex, to=StakingProxyConvex, earned() -> [['0x3432b6', '0xd533a9', '0x4e3fbd'], [0, 0, 0]]
+                  [10][DELEGATECALL] from=StakingProxyConvex, to=StakingProxyConvex, earned() -> [['0x3432b6', '0xd533a9', '0x4e3fbd'], [0, 0, 0]]
+                    [11][STATICCALL] from=StakingProxyConvex, to=FraxUnifiedFarm_ERC20_Convex_stkcvxalUSDFRAXBP, getAllRewardTokens() -> ['0x3432b6']
+                    [11][STATICCALL] from=StakingProxyConvex, to=FraxUnifiedFarm_ERC20_Convex_stkcvxalUSDFRAXBP, earned(account(address): 0x1E0513) -> [0]
+                      [12][STATICCALL] from=FraxUnifiedFarm_ERC20_Convex_stkcvxalUSDFRAXBP, to=Vyper_contract, global_emission_rate() -> 72337962962962960
+                    [11][STATICCALL] from=StakingProxyConvex, to=ConvexStakingWrapperFrax, earned(_account(address): 0x1E0513) -> None
+                      [12][DELEGATECALL] from=ConvexStakingWrapperFrax, to=ConvexStakingWrapperFrax, earned(_account(address): 0x1E0513) -> None
+                        [13][STATICCALL] from=ConvexStakingWrapperFrax, to=Vyper_contract, balanceOf(arg0(address): 0xBE1C91) -> 143469226655089968273078
+                        [13][STATICCALL] from=ConvexStakingWrapperFrax, to=BaseRewardPool, earned(account(address): 0xBE1C91) -> 5044071007382527382563
+                        [13][STATICCALL] from=ConvexStakingWrapperFrax, to=FraxUnifiedFarm_ERC20_Convex_stkcvxalUSDFRAXBP, lockedLiquidityOf(account(address): 0x1E0513) -> 0
+                        [13][STATICCALL] from=ConvexStakingWrapperFrax, to=BaseRewardPool, earned(account(address): 0xBE1C91) -> 5044071007382527382563
+                        [13][STATICCALL] from=ConvexStakingWrapperFrax, to=FraxUnifiedFarm_ERC20_Convex_stkcvxalUSDFRAXBP, lockedLiquidityOf(account(address): 0x1E0513) -> 0
+                        [13][DELEGATECALL] from=ConvexStakingWrapperFrax, to=CvxMining, ConvertCrvToCvx(_amount(uint256): 0) -> 0
+                          [14][STATICCALL] from=ConvexStakingWrapperFrax, to=ConvexToken, totalSupply() -> 98757216475903576536392859
+                          [14][STATICCALL] from=ConvexStakingWrapperFrax, to=ConvexToken, reductionPerCliff() -> 100000000000000000000000
+                          [14][STATICCALL] from=ConvexStakingWrapperFrax, to=ConvexToken, totalCliffs() -> 1000
+                          [14][STATICCALL] from=ConvexStakingWrapperFrax, to=ConvexToken, maxSupply() -> 100000000000000000000000000
+                    [11][STATICCALL] from=StakingProxyConvex, to=MultiRewards, rewardTokenLength() -> 0
+                      [12][DELEGATECALL] from=MultiRewards, to=MultiRewards, rewardTokenLength() -> 0
+                    [11][STATICCALL] from=StakingProxyConvex, to=FRAXShares, balanceOf(account(address): 0x1E0513) -> 0
+                    [11][STATICCALL] from=StakingProxyConvex, to=MultiRewards, claimableRewards(_account(address): 0x1E0513) -> None
+                      [12][DELEGATECALL] from=MultiRewards, to=MultiRewards, claimableRewards(_account(address): 0x1E0513) -> None
+                [9][STATICCALL] from=alUSDStakingFraxCurveConvex, to=FRAXShares, balanceOf(account(address): 0x1Eb1f8) -> 0
+                [9][STATICCALL] from=alUSDStakingFraxCurveConvex, to=Vyper_contract, balanceOf(arg0(address): 0x1Eb1f8) -> 0
+                [9][STATICCALL] from=alUSDStakingFraxCurveConvex, to=ConvexToken, balanceOf(account(address): 0x1Eb1f8) -> 0
+                [9][STATICCALL] from=alUSDStakingFraxCurveConvex, to=Dai, balanceOf((address): 0x1Eb1f8) -> 0
+                [9][STATICCALL] from=alUSDStakingFraxCurveConvex, to=FiatTokenProxy, balanceOf(account(address): 0x1Eb1f8) -> 0
+                  [10][DELEGATECALL] from=FiatTokenProxy, to=FiatTokenV2_1, balanceOf(account(address): 0x1Eb1f8) -> 0
+                [9][STATICCALL] from=alUSDStakingFraxCurveConvex, to=TetherToken, balanceOf(who(address): 0x1Eb1f8) -> 0
+              [8][STATICCALL] from=Zunami, to=clevUSDStakingFraxCurveConvex, totalHoldings() -> 0
+                [9][STATICCALL] from=clevUSDStakingFraxCurveConvex, to=Vyper_contract, get_virtual_price() -> 1001278761949365279
+                  [10][DELEGATECALL] from=Vyper_contract, to=Vyper_contract, get_virtual_price() -> 1001278761949365279
+                    [11][STATICCALL] from=Vyper_contract, to=Vyper_contract, get_virtual_price() -> 1001340774532351226
+                      [12][STATICCALL] from=Vyper_contract, to=Vyper_contract, totalSupply() -> 463752014761877959723644374
+                [9][STATICCALL] from=clevUSDStakingFraxCurveConvex, to=StakingProxyConvex, stakingAddress() -> 0x574550
+                  [10][DELEGATECALL] from=StakingProxyConvex, to=StakingProxyConvex, stakingAddress() -> 0x574550
+                [9][STATICCALL] from=clevUSDStakingFraxCurveConvex, to=FraxUnifiedFarm_ERC20_Convex_FRAXBP_Stable, lockedLiquidityOf(account(address): 0x008B02) -> 0
+                [9][STATICCALL] from=clevUSDStakingFraxCurveConvex, to=StakingProxyConvex, earned() -> [['0x3432b6', '0xd533a9', '0x4e3fbd'], [0, 0, 0]]
+                  [10][DELEGATECALL] from=StakingProxyConvex, to=StakingProxyConvex, earned() -> [['0x3432b6', '0xd533a9', '0x4e3fbd'], [0, 0, 0]]
+                    [11][STATICCALL] from=StakingProxyConvex, to=FraxUnifiedFarm_ERC20_Convex_FRAXBP_Stable, getAllRewardTokens() -> ['0x3432b6']
+                    [11][STATICCALL] from=StakingProxyConvex, to=FraxUnifiedFarm_ERC20_Convex_FRAXBP_Stable, earned(account(address): 0x008B02) -> [0]
+                      [12][STATICCALL] from=FraxUnifiedFarm_ERC20_Convex_FRAXBP_Stable, to=Vyper_contract, global_emission_rate() -> 72337962962962960
+                    [11][STATICCALL] from=StakingProxyConvex, to=ConvexStakingWrapperFrax, earnedView(_account(address): 0x008B02) -> None
+                      [12][DELEGATECALL] from=ConvexStakingWrapperFrax, to=ConvexStakingWrapperFrax, earnedView(_account(address): 0x008B02) -> None
+                        [13][STATICCALL] from=ConvexStakingWrapperFrax, to=Vyper_contract, balanceOf(arg0(address): 0x3199a1) -> 1484568172361947384072
+                        [13][STATICCALL] from=ConvexStakingWrapperFrax, to=BaseRewardPool, earned(account(address): 0x3199a1) -> 354518075109987664204
+                        [13][STATICCALL] from=ConvexStakingWrapperFrax, to=FraxUnifiedFarm_ERC20_Convex_FRAXBP_Stable, lockedLiquidityOf(account(address): 0x008B02) -> 0
+                        [13][STATICCALL] from=ConvexStakingWrapperFrax, to=BaseRewardPool, earned(account(address): 0x3199a1) -> 354518075109987664204
+                        [13][STATICCALL] from=ConvexStakingWrapperFrax, to=FraxUnifiedFarm_ERC20_Convex_FRAXBP_Stable, lockedLiquidityOf(account(address): 0x008B02) -> 0
+                        [13][DELEGATECALL] from=ConvexStakingWrapperFrax, to=CvxMining, ConvertCrvToCvx(_amount(uint256): 0) -> 0
+                          [14][STATICCALL] from=ConvexStakingWrapperFrax, to=ConvexToken, totalSupply() -> 98757216475903576536392859
+                          [14][STATICCALL] from=ConvexStakingWrapperFrax, to=ConvexToken, reductionPerCliff() -> 100000000000000000000000
+                          [14][STATICCALL] from=ConvexStakingWrapperFrax, to=ConvexToken, totalCliffs() -> 1000
+                          [14][STATICCALL] from=ConvexStakingWrapperFrax, to=ConvexToken, maxSupply() -> 100000000000000000000000000
+                        [13][STATICCALL] from=ConvexStakingWrapperFrax, to=ConvexToken, balanceOf(account(address): 0x3199a1) -> 20040235700870888042
+                        [13][STATICCALL] from=ConvexStakingWrapperFrax, to=FraxUnifiedFarm_ERC20_Convex_FRAXBP_Stable, lockedLiquidityOf(account(address): 0x008B02) -> 0
+                    [11][STATICCALL] from=StakingProxyConvex, to=MultiRewards, rewardTokenLength() -> 0
+                      [12][DELEGATECALL] from=MultiRewards, to=MultiRewards, rewardTokenLength() -> 0
+                    [11][STATICCALL] from=StakingProxyConvex, to=FRAXShares, balanceOf(account(address): 0x008B02) -> 0
+                    [11][STATICCALL] from=StakingProxyConvex, to=MultiRewards, claimableRewards(_account(address): 0x008B02) -> None
+                      [12][DELEGATECALL] from=MultiRewards, to=MultiRewards, claimableRewards(_account(address): 0x008B02) -> None
+                [9][STATICCALL] from=clevUSDStakingFraxCurveConvex, to=FRAXShares, balanceOf(account(address): 0x06A62C) -> 0
+                [9][STATICCALL] from=clevUSDStakingFraxCurveConvex, to=Vyper_contract, balanceOf(arg0(address): 0x06A62C) -> 0
+                [9][STATICCALL] from=clevUSDStakingFraxCurveConvex, to=ConvexToken, balanceOf(account(address): 0x06A62C) -> 0
+                [9][STATICCALL] from=clevUSDStakingFraxCurveConvex, to=Dai, balanceOf((address): 0x06A62C) -> 0
+                [9][STATICCALL] from=clevUSDStakingFraxCurveConvex, to=FiatTokenProxy, balanceOf(account(address): 0x06A62C) -> 0
+                  [10][DELEGATECALL] from=FiatTokenProxy, to=FiatTokenV2_1, balanceOf(account(address): 0x06A62C) -> 0
+                [9][STATICCALL] from=clevUSDStakingFraxCurveConvex, to=TetherToken, balanceOf(who(address): 0x06A62C) -> 0
+              [8][STATICCALL] from=Zunami, to=eUSDStakingFraxCurveConvex, totalHoldings() -> 2419686111350197156482685
+                [9][STATICCALL] from=eUSDStakingFraxCurveConvex, to=Vyper_contract, get_virtual_price() -> 1000861012749409547
+                  [10][DELEGATECALL] from=Vyper_contract, to=Vyper_contract, get_virtual_price() -> 1000861012749409547
+                    [11][STATICCALL] from=Vyper_contract, to=Vyper_contract, get_virtual_price() -> 1001340774532351226
+                      [12][STATICCALL] from=Vyper_contract, to=Vyper_contract, totalSupply() -> 463752014761877959723644374
+                [9][STATICCALL] from=eUSDStakingFraxCurveConvex, to=StakingProxyConvex, stakingAddress() -> 0x4c9ad8
+                  [10][DELEGATECALL] from=StakingProxyConvex, to=StakingProxyConvex, stakingAddress() -> 0x4c9ad8
+                [9][STATICCALL] from=eUSDStakingFraxCurveConvex, to=FraxUnifiedFarm_ERC20_Convex_FRAXBP_Stable, lockedLiquidityOf(account(address): 0xdd6964) -> 2417604523032835698121386
+                [9][STATICCALL] from=eUSDStakingFraxCurveConvex, to=Dai, balanceOf((address): 0xfF68b4) -> 0
+                [9][STATICCALL] from=eUSDStakingFraxCurveConvex, to=FiatTokenProxy, balanceOf(account(address): 0xfF68b4) -> 0
+                  [10][DELEGATECALL] from=FiatTokenProxy, to=FiatTokenV2_1, balanceOf(account(address): 0xfF68b4) -> 0
+                [9][STATICCALL] from=eUSDStakingFraxCurveConvex, to=TetherToken, balanceOf(who(address): 0xfF68b4) -> 0
+              [8][STATICCALL] from=Zunami, to=CrvUSDUsdtCurveStakeDao, totalHoldings() -> 1991814636198445593960450
+                [9][STATICCALL] from=CrvUSDUsdtCurveStakeDao, to=crvUSD Stablecoin, balanceOf(arg0(address): 0x45DF43) -> 0
+                [9][STATICCALL] from=CrvUSDUsdtCurveStakeDao, to=Vyper_contract, get_virtual_price() -> 1003821241314757833
+                  [10][DELEGATECALL] from=Vyper_contract, to=Vyper_contract, get_virtual_price() -> 1003821241314757833
+                [9][STATICCALL] from=CrvUSDUsdtCurveStakeDao, to=CurveVault, liquidityGauge() -> 0x4875d5
+                  [10][DELEGATECALL] from=CurveVault, to=CurveVault, liquidityGauge() -> 0x4875d5
+                [9][STATICCALL] from=CrvUSDUsdtCurveStakeDao, to=Vyper_contract, balanceOf(arg0(address): 0x45DF43) -> 1981450848115464831862045
+                  [10][DELEGATECALL] from=Vyper_contract, to=Vyper_contract, balanceOf(arg0(address): 0x45DF43) -> 1981450848115464831862045
+                [9][STATICCALL] from=CrvUSDUsdtCurveStakeDao, to=CurveVault, liquidityGauge() -> 0x4875d5
+                  [10][DELEGATECALL] from=CurveVault, to=CurveVault, liquidityGauge() -> 0x4875d5
+                [9][STATICCALL] from=CrvUSDUsdtCurveStakeDao, to=Vyper_contract, claimable_reward(_user(address): 0x45DF43, _reward_token(address): 0xD533a9) -> 4329916363269745472392
+                  [10][DELEGATECALL] from=Vyper_contract, to=Vyper_contract, claimable_reward(_user(address): 0x45DF43, _reward_token(address): 0xD533a9) -> 4329916363269745472392
+                [9][STATICCALL] from=CrvUSDUsdtCurveStakeDao, to=Vyper_contract, balanceOf(arg0(address): 0x45DF43) -> 0
+                [9][STATICCALL] from=CrvUSDUsdtCurveStakeDao, to=SplitSellingCurveRewardManagerV2, valuate(reward(address): 0xD533a9, amount(uint256): 4329916363269745472392, feeToken(address): 0xdAC17F) -> 2500814443
+                  [10][STATICCALL] from=SplitSellingCurveRewardManagerV2, to=CurveTricryptoOptimizedWETH, get_dy(i(uint256): 2, j(uint256): 1, dx(uint256): 4329916363269745472392) -> 1355984639319431805
+                    [11][STATICCALL] from=CurveTricryptoOptimizedWETH, to=CurveTricryptoFactory, views_implementation() -> 0x064253
+                    [11][STATICCALL] from=CurveTricryptoOptimizedWETH, to=CurveCryptoViews3Optimized, get_dy(i(uint256): 2, j(uint256): 1, dx(uint256): 4329916363269745472392, swap(address): 0x4eBdF7) -> 1355984639319431805
+                      [12][STATICCALL] from=CurveCryptoViews3Optimized, to=CurveTricryptoOptimizedWETH, MATH() -> 0xcbff30
+                      [12][STATICCALL] from=CurveCryptoViews3Optimized, to=CurveTricryptoOptimizedWETH, precisions() -> [1, 1, 1]
+                      [12][STATICCALL] from=CurveCryptoViews3Optimized, to=CurveTricryptoOptimizedWETH, totalSupply() -> 443269053957709499672282
+                      [12][STATICCALL] from=CurveCryptoViews3Optimized, to=CurveTricryptoOptimizedWETH, balances(arg0(uint256): 0) -> 4657015035743679645007096
+                      [12][STATICCALL] from=CurveCryptoViews3Optimized, to=CurveTricryptoOptimizedWETH, balances(arg0(uint256): 1) -> 2526150592912619063137
+                      [12][STATICCALL] from=CurveCryptoViews3Optimized, to=CurveTricryptoOptimizedWETH, balances(arg0(uint256): 2) -> 8036063394550317569672538
+                      [12][STATICCALL] from=CurveCryptoViews3Optimized, to=CurveTricryptoOptimizedWETH, price_scale(k(uint256): 0) -> 1849581120251303601470
+                      [12][STATICCALL] from=CurveCryptoViews3Optimized, to=CurveTricryptoOptimizedWETH, price_scale(k(uint256): 1) -> 576616306354124470
+                      [12][STATICCALL] from=CurveCryptoViews3Optimized, to=CurveTricryptoOptimizedWETH, A() -> 2700000
+                      [12][STATICCALL] from=CurveCryptoViews3Optimized, to=CurveTricryptoOptimizedWETH, gamma() -> 1300000000000
+                      [12][STATICCALL] from=CurveCryptoViews3Optimized, to=CurveTricryptoOptimizedWETH, MATH() -> 0xcbff30
+                      [12][STATICCALL] from=CurveCryptoViews3Optimized, to=CurveTricryptoOptimizedWETH, D() -> 13963024662666049887540409
+                      [12][STATICCALL] from=CurveCryptoViews3Optimized, to=CurveTricryptoOptimizedWETH, future_A_gamma_time() -> 0
+                      [12][STATICCALL] from=CurveCryptoViews3Optimized, to=CurveTricryptoMathOptimized, get_y(_ANN(uint256): 2700000, _gamma(uint256): 1300000000000, x(uint256[3]): [4657015035743679645007096, 46723204435628..., _D(uint256): 13963024662666049887540409, i(uint256): 1) -> [4669810981098075006126752, 999991720920581361]
+                      [12][STATICCALL] from=CurveCryptoViews3Optimized, to=CurveTricryptoOptimizedWETH, fee_calc(xp(uint256[3]): [4657015035743679645007096, 46698109810980...) -> 5813502
+                        [13][STATICCALL] from=CurveTricryptoOptimizedWETH, to=CurveTricryptoMathOptimized, reduction_coefficient(x(uint256[3]): [4657015035743679645007096, 46698109810980..., fee_gamma(uint256): 350000000000000) -> 963460992393660936
+                  [10][STATICCALL] from=SplitSellingCurveRewardManagerV2, to=Vyper_contract, get_dy(i(uint256): 2, j(uint256): 0, dx(uint256): 1355984639319431805) -> 2500814443
+                    [11][STATICCALL] from=Vyper_contract, to=Vyper_contract, get_dy(i(uint256): 2, j(uint256): 0, dx(uint256): 1355984639319431805) -> 2500814443
+                      [12][STATICCALL] from=Vyper_contract, to=Vyper_contract, price_scale(k(uint256): 0) -> 29396563932323139772183
+                      [12][STATICCALL] from=Vyper_contract, to=Vyper_contract, price_scale(k(uint256): 1) -> 1845263336598454568979
+                      [12][STATICCALL] from=Vyper_contract, to=Vyper_contract, balances(arg0(uint256): 0) -> 29200427307343
+                      [12][STATICCALL] from=Vyper_contract, to=Vyper_contract, balances(arg0(uint256): 1) -> 99969974233
+                      [12][STATICCALL] from=Vyper_contract, to=Vyper_contract, balances(arg0(uint256): 2) -> 15848230901306747965732
+                      [12][STATICCALL] from=Vyper_contract, to=Vyper_contract, A() -> 1707629
+                      [12][STATICCALL] from=Vyper_contract, to=Vyper_contract, gamma() -> 11809167828997
+                      [12][STATICCALL] from=Vyper_contract, to=Vyper_contract, D() -> 87832304750312735960169268
+                      [12][STATICCALL] from=Vyper_contract, to=Vyper_contract, newton_y(ANN(uint256): 1707629, gamma(uint256): 11809167828997, x(uint256[3]): [29200427307343000000000000, 2938773738853..., D(uint256): 87832304750312735960169268, i(uint256): 0) -> 29197925592766389811355399
+                      [12][STATICCALL] from=Vyper_contract, to=Vyper_contract, fee_calc(xp(uint256[3]): [29197925592766389811355399, 2938773738853...) -> 3598067
+                        [13][STATICCALL] from=Vyper_contract, to=Vyper_contract, reduction_coefficient(x(uint256[3]): [29197925592766389811355399, 2938773738853..., fee_gamma(uint256): 500000000000000) -> 977849365446078517
+                [9][STATICCALL] from=CrvUSDUsdtCurveStakeDao, to=CurveVault, liquidityGauge() -> 0x4875d5
+                  [10][DELEGATECALL] from=CurveVault, to=CurveVault, liquidityGauge() -> 0x4875d5
+                [9][STATICCALL] from=CrvUSDUsdtCurveStakeDao, to=Vyper_contract, claimable_reward(_user(address): 0x45DF43, _reward_token(address): 0x73968b) -> 793373646753019035686
+                  [10][DELEGATECALL] from=Vyper_contract, to=Vyper_contract, claimable_reward(_user(address): 0x45DF43, _reward_token(address): 0x73968b) -> 793373646753019035686
+                [9][STATICCALL] from=CrvUSDUsdtCurveStakeDao, to=SDT, balanceOf(account(address): 0x45DF43) -> 0
+                [9][STATICCALL] from=CrvUSDUsdtCurveStakeDao, to=SplitSellingCurveRewardManagerV2, valuate(reward(address): 0x73968b, amount(uint256): 793373646753019035686, feeToken(address): 0xdAC17F) -> 291371796
+                  [10][STATICCALL] from=SplitSellingCurveRewardManagerV2, to=Vyper_contract, get_dy(i(uint256): 1, j(uint256): 0, dx(uint256): 793373646753019035686) -> 157985252525478216
+                    [11][DELEGATECALL] from=Vyper_contract, to=Vyper_contract, get_dy(i(uint256): 1, j(uint256): 0, dx(uint256): 793373646753019035686) -> 157985252525478216
+                  [10][STATICCALL] from=SplitSellingCurveRewardManagerV2, to=Vyper_contract, get_dy(i(uint256): 2, j(uint256): 0, dx(uint256): 157985252525478216) -> 291371796
+                    [11][STATICCALL] from=Vyper_contract, to=Vyper_contract, get_dy(i(uint256): 2, j(uint256): 0, dx(uint256): 157985252525478216) -> 291371796
+                      [12][STATICCALL] from=Vyper_contract, to=Vyper_contract, price_scale(k(uint256): 0) -> 29396563932323139772183
+                      [12][STATICCALL] from=Vyper_contract, to=Vyper_contract, price_scale(k(uint256): 1) -> 1845263336598454568979
+                      [12][STATICCALL] from=Vyper_contract, to=Vyper_contract, balances(arg0(uint256): 0) -> 29200427307343
+                      [12][STATICCALL] from=Vyper_contract, to=Vyper_contract, balances(arg0(uint256): 1) -> 99969974233
+                      [12][STATICCALL] from=Vyper_contract, to=Vyper_contract, balances(arg0(uint256): 2) -> 15848230901306747965732
+                      [12][STATICCALL] from=Vyper_contract, to=Vyper_contract, A() -> 1707629
+                      [12][STATICCALL] from=Vyper_contract, to=Vyper_contract, gamma() -> 11809167828997
+                      [12][STATICCALL] from=Vyper_contract, to=Vyper_contract, D() -> 87832304750312735960169268
+                      [12][STATICCALL] from=Vyper_contract, to=Vyper_contract, newton_y(ANN(uint256): 1707629, gamma(uint256): 11809167828997, x(uint256[3]): [29200427307343000000000000, 2938773738853..., D(uint256): 87832304750312735960169268, i(uint256): 0) -> 29200135830853958749572756
+                      [12][STATICCALL] from=Vyper_contract, to=Vyper_contract, fee_calc(xp(uint256[3]): [29200135830853958749572756, 2938773738853...) -> 3591848
+                        [13][STATICCALL] from=Vyper_contract, to=Vyper_contract, reduction_coefficient(x(uint256[3]): [29200135830853958749572756, 2938773738853..., fee_gamma(uint256): 500000000000000) -> 978079680188378469
+                [9][STATICCALL] from=CrvUSDUsdtCurveStakeDao, to=Dai, balanceOf((address): 0x45DF43) -> 0
+                [9][STATICCALL] from=CrvUSDUsdtCurveStakeDao, to=FiatTokenProxy, balanceOf(account(address): 0x45DF43) -> 0
+                  [10][DELEGATECALL] from=FiatTokenProxy, to=FiatTokenV2_1, balanceOf(account(address): 0x45DF43) -> 0
+                [9][STATICCALL] from=CrvUSDUsdtCurveStakeDao, to=TetherToken, balanceOf(who(address): 0x45DF43) -> 0
+              [8][STATICCALL] from=Zunami, to=VaultStrat, totalHoldings() -> 0
+                [9][STATICCALL] from=VaultStrat, to=Dai, balanceOf((address): 0x2D09Fa) -> 0
+                [9][STATICCALL] from=VaultStrat, to=FiatTokenProxy, balanceOf(account(address): 0x2D09Fa) -> 0
+                  [10][DELEGATECALL] from=FiatTokenProxy, to=FiatTokenV2_1, balanceOf(account(address): 0x2D09Fa) -> 0
+                [9][STATICCALL] from=VaultStrat, to=TetherToken, balanceOf(who(address): 0x2D09Fa) -> 0
+          [6][STATICCALL] from=0xA21a2B, to=SDT, balanceOf(account(address): 0xA21a2B) -> 58042675342679660602132
+          [6][CALL] from=0xA21a2B, to=UniswapV2Router02, swapExactTokensForTokens(amountIn(uint256): 58042675342679660602132, amountOutMin(uint256): 0, path(address[]): ['0x73968b9a57c6E53d41345FD57a6E6ae27d6CDB..., to(address): 0xA21a2B, deadline(uint256): 1691976087) -> [58042675342679660602132, 9999934145543771713930]
+            [7][STATICCALL] from=UniswapV2Router02, to=UniswapV2Pair, getReserves() -> ['63680443285325769506', '10010938400337447069881', '1691966087']
+            [7][CALL] from=UniswapV2Router02, to=SDT, transferFrom(sender(address): 0xA21a2B, recipient(address): 0x22DEF8, amount(uint256): 58042675342679660602132) -> True
+            [7][CALL] from=UniswapV2Router02, to=UniswapV2Pair, swap(amount0Out(uint256): 0, amount1Out(uint256): 9999934145543771713930, to(address): 0xA21a2B, data(bytes): b'') -> None
+              [8][CALL] from=UniswapV2Pair, to=WETH9, transfer(dst(address): 0xA21a2B, wad(uint256): 9999934145543771713930) -> True
+              [8][STATICCALL] from=UniswapV2Pair, to=SDT, balanceOf(account(address): 0x22DEF8) -> 58106355785964986371638
+              [8][STATICCALL] from=UniswapV2Pair, to=WETH9, balanceOf((address): 0x22DEF8) -> 11004254793675355951
+          [6][CALL] from=0xA21a2B, to=UniswapV2Router02, swapExactTokensForTokens(amountIn(uint256): 2154941186993935615183, amountOutMin(uint256): 0, path(address[]): ['0xC02aaA39b223FE8D0A0e5C4F27eAD9083C756C..., to(address): 0xA21a2B, deadline(uint256): 1691976087) -> [2154941186993935615183, 6976034078186]
+            [7][STATICCALL] from=UniswapV2Router02, to=UniswapV2Pair, getReserves() -> ['2865171249518458148604', '16279153543064', '1691966087']
+            [7][CALL] from=UniswapV2Router02, to=WETH9, transferFrom(src(address): 0xA21a2B, dst(address): 0x06da0f, wad(uint256): 2154941186993935615183) -> True
+            [7][CALL] from=UniswapV2Router02, to=UniswapV2Pair, swap(amount0Out(uint256): 0, amount1Out(uint256): 6976034078186, to(address): 0xA21a2B, data(bytes): b'') -> None
+              [8][CALL] from=UniswapV2Pair, to=TetherToken, transfer(_to(address): 0xA21a2B, _value(uint256): 6976034078186) -> None
+              [8][STATICCALL] from=UniswapV2Pair, to=WETH9, balanceOf((address): 0x06da0f) -> 5020112436512393763787
+              [8][STATICCALL] from=UniswapV2Pair, to=TetherToken, balanceOf(who(address): 0x06da0f) -> 9303119464878
+          [6][STATICCALL] from=0xA21a2B, to=UZD, balanceOf(account(address): 0xA21a2B) -> 16902957867826454463927803
+          [6][CALL] from=0xA21a2B, to=Vyper_contract, exchange(i(int128): 0, j(int128): 1, _dx(uint256): 14158424568430362969746046, _min_dy(uint256): 0) -> 7281124331503463861742547
+            [7][DELEGATECALL] from=Vyper_contract, to=Vyper_contract, exchange(i(int128): 0, j(int128): 1, _dx(uint256): 14158424568430362969746046, _min_dy(uint256): 0) -> 7281124331503463861742547
+              [8][STATICCALL] from=Vyper_contract, to=Vyper_contract, get_virtual_price() -> 1001340774532351226
+                [9][STATICCALL] from=Vyper_contract, to=Vyper_contract, totalSupply() -> 463752014761877959723644374
+              [8][CALL] from=Vyper_contract, to=UZD, transferFrom(from(address): 0xA21a2B, to(address): 0x68934F, amount(uint256): 14158424568430362969746046) -> True
+              [8][STATICCALL] from=Vyper_contract, to=0x000000, fallback() -> 0x000000
+              [8][CALL] from=Vyper_contract, to=Vyper_contract, transfer(_to(address): 0xA21a2B, _value(uint256): 7281124331503463861742547) -> True
+              [8][STATICCALL] from=Vyper_contract, to=0x000000, fallback() -> 0x000000
+          [6][STATICCALL] from=0xA21a2B, to=UZD, balanceOf(account(address): 0xA21a2B) -> 2744533299396091494181756
+          [6][CALL] from=0xA21a2B, to=Vyper_contract, exchange(i(int128): 0, j(int128): 1, _dx(uint256): 2744533299396091494181756, _min_dy(uint256): 0) -> 1891351039599104146378322
+            [7][DELEGATECALL] from=Vyper_contract, to=Vyper_contract, exchange(i(int128): 0, j(int128): 1, _dx(uint256): 2744533299396091494181756, _min_dy(uint256): 0) -> 1891351039599104146378322
+              [8][CALL] from=Vyper_contract, to=UZD, transferFrom(from(address): 0xA21a2B, to(address): 0xfC636D, amount(uint256): 2744533299396091494181756) -> True
+              [8][CALL] from=Vyper_contract, to=crvUSD Stablecoin, transfer(_to(address): 0xA21a2B, _value(uint256): 1891351039599104146378322) -> True
+          [6][STATICCALL] from=0xA21a2B, to=UZD, balanceOf(account(address): 0xA21a2B) -> 0
+          [6][STATICCALL] from=0xA21a2B, to=Vyper_contract, balanceOf(arg0(address): 0xA21a2B) -> 7281124331503463861742547
+          [6][CALL] from=0xA21a2B, to=Vyper_contract, remove_liquidity(_amount(uint256): 7281124331503463861742547, _min_amounts(uint256[2]): [0, 0]) -> [5515624754558190377240830, 1776128413205]
+            [7][STATICCALL] from=Vyper_contract, to=Vyper_contract, totalSupply() -> 463752014761877959723644374
+            [7][STATICCALL] from=Vyper_contract, to=0x000000, transferaddress() -> 0xa9059c
+            [7][CALL] from=Vyper_contract, to=FRAXStablecoin, transfer(recipient(address): 0xA21a2B, amount(uint256): 5515624754558190377240830) -> True
+            [7][STATICCALL] from=Vyper_contract, to=0x000000, fallback() -> 0x000000
+            [7][STATICCALL] from=Vyper_contract, to=0x000000, transferaddress() -> 0xa9059c
+            [7][CALL] from=Vyper_contract, to=FiatTokenProxy, transfer(to(address): 0xA21a2B, value(uint256): 1776128413205) -> True
+              [8][DELEGATECALL] from=FiatTokenProxy, to=FiatTokenV2_1, transfer(to(address): 0xA21a2B, value(uint256): 1776128413205) -> True
+            [7][STATICCALL] from=Vyper_contract, to=0x000000, fallback() -> 0x000000
+            [7][CALL] from=Vyper_contract, to=Vyper_contract, burnFrom(_to(address): 0xA21a2B, _value(uint256): 7281124331503463861742547) -> True
+          [6][STATICCALL] from=0xA21a2B, to=FRAXStablecoin, balanceOf(account(address): 0xA21a2B) -> 5515624754558190377240830
+          [6][CALL] from=0xA21a2B, to=Vyper_contract, exchange(i(int128): 0, j(int128): 1, _dx(uint256): 5515624754558190377240830, _min_dy(uint256): 0) -> 5507731455606
+            [7][STATICCALL] from=Vyper_contract, to=0x000000, transferFromaddress() -> 0x23b872
+            [7][CALL] from=Vyper_contract, to=FRAXStablecoin, transferFrom(sender(address): 0xA21a2B, recipient(address): 0xDcEF96, amount(uint256): 5515624754558190377240830) -> True
+            [7][STATICCALL] from=Vyper_contract, to=0x000000, fallback() -> 0x000000
+            [7][STATICCALL] from=Vyper_contract, to=0x000000, transferaddress() -> 0xa9059c
+            [7][CALL] from=Vyper_contract, to=FiatTokenProxy, transfer(to(address): 0xA21a2B, value(uint256): 5507731455606) -> True
+              [8][DELEGATECALL] from=FiatTokenProxy, to=FiatTokenV2_1, transfer(to(address): 0xA21a2B, value(uint256): 5507731455606) -> True
+            [7][STATICCALL] from=Vyper_contract, to=0x000000, fallback() -> 0x000000
+          [6][STATICCALL] from=0xA21a2B, to=crvUSD Stablecoin, balanceOf(arg0(address): 0xA21a2B) -> 1891351039599104146378322
+          [6][CALL] from=0xA21a2B, to=Vyper_contract, exchange(i(int128): 1, j(int128): 0, _dx(uint256): 1891351039599104146378322, _min_dy(uint256): 0) -> 1890364973134
+            [7][DELEGATECALL] from=Vyper_contract, to=Vyper_contract, exchange(i(int128): 1, j(int128): 0, _dx(uint256): 1891351039599104146378322, _min_dy(uint256): 0) -> 1890364973134
+              [8][CALL] from=Vyper_contract, to=crvUSD Stablecoin, transferFrom(_from(address): 0xA21a2B, _to(address): 0x4DEcE6, _value(uint256): 1891351039599104146378322) -> True
+              [8][CALL] from=Vyper_contract, to=FiatTokenProxy, transfer(to(address): 0xA21a2B, value(uint256): 1890364973134) -> True
+                [9][DELEGATECALL] from=FiatTokenProxy, to=FiatTokenV2_1, transfer(to(address): 0xA21a2B, value(uint256): 1890364973134) -> True
+          [6][CALL] from=0xA21a2B, to=TetherToken, balanceOf(who(address): 0xA21a2B) -> 6976034078186
+          [6][CALL] from=0xA21a2B, to=Vyper_contract, exchange(i(int128): 1, j(int128): 2, dx(uint256): 25920217904, min_dy(uint256): 0) -> None
+            [7][CALL] from=Vyper_contract, to=0x000000, transferFromaddress() -> 0x23b872
+            [7][CALL] from=Vyper_contract, to=0x000000, fallback() -> 0x000000
+            [7][CALL] from=Vyper_contract, to=FiatTokenProxy, transferFrom(from(address): 0xA21a2B, to(address): 0xbEbc44, value(uint256): 25920217904) -> True
+              [8][DELEGATECALL] from=FiatTokenProxy, to=FiatTokenV2_1, transferFrom(from(address): 0xA21a2B, to(address): 0xbEbc44, value(uint256): 25920217904) -> True
+            [7][CALL] from=Vyper_contract, to=0x000000, fallback() -> 0x000000
+            [7][CALL] from=Vyper_contract, to=0x000000, transferaddress() -> 0xa9059c
+            [7][CALL] from=Vyper_contract, to=0x000000, fallback() -> 0x000000
+            [7][CALL] from=Vyper_contract, to=TetherToken, transfer(_to(address): 0xA21a2B, _value(uint256): 25941378859) -> None
+            [7][CALL] from=Vyper_contract, to=0x000000, fallback() -> 0x000000
+          [6][STATICCALL] from=0xA21a2B, to=FiatTokenProxy, balanceOf(account(address): 0xA21a2B) -> 9148304624041
+            [7][DELEGATECALL] from=FiatTokenProxy, to=FiatTokenV2_1, balanceOf(account(address): 0xA21a2B) -> 9148304624041
+          [6][CALL] from=0xA21a2B, to=0x88e6A0, swapaddress() -> 0x000000
+            [7][CALL] from=0x88e6A0, to=WETH9, transfer(dst(address): 0xA21a2B, wad(uint256): 1164004475572877971732) -> True
+            [7][STATICCALL] from=0x88e6A0, to=FiatTokenProxy, balanceOf(account(address): 0x88e6A0) -> 104110620310874
+              [8][DELEGATECALL] from=FiatTokenProxy, to=FiatTokenV2_1, balanceOf(account(address): 0x88e6A0) -> 104110620310874
+            [7][CALL] from=0x88e6A0, to=0xA21a2B, uniswapV3SwapCallbackint256() -> None
+              [8][CALL] from=0xA21a2B, to=FiatTokenProxy, transfer(to(address): 0x88e6A0, value(uint256): 2148304624041) -> True
+                [9][DELEGATECALL] from=FiatTokenProxy, to=FiatTokenV2_1, transfer(to(address): 0x88e6A0, value(uint256): 2148304624041) -> True
+            [7][STATICCALL] from=0x88e6A0, to=FiatTokenProxy, balanceOf(account(address): 0x88e6A0) -> 106258924934915
+              [8][DELEGATECALL] from=FiatTokenProxy, to=FiatTokenV2_1, balanceOf(account(address): 0x88e6A0) -> 106258924934915
+          [6][CALL] from=0xA21a2B, to=WETH9, transfer(dst(address): 0xBA1222, wad(uint256): 10011000000000000000000) -> True
+          [6][CALL] from=0xA21a2B, to=FiatTokenProxy, transfer(to(address): 0xBA1222, value(uint256): 7000000000000) -> True
+            [7][DELEGATECALL] from=FiatTokenProxy, to=FiatTokenV2_1, transfer(to(address): 0xBA1222, value(uint256): 7000000000000) -> True
+        [5][STATICCALL] from=Vault, to=FiatTokenProxy, balanceOf(account(address): 0xBA1222) -> 9037299897274
+          [6][DELEGATECALL] from=FiatTokenProxy, to=FiatTokenV2_1, balanceOf(account(address): 0xBA1222) -> 9037299897274
+        [5][STATICCALL] from=Vault, to=WETH9, balanceOf((address): 0xBA1222) -> 65192982448092721624711
+      [4][CALL] from=0xA21a2B, to=TetherToken, transfer(_to(address): 0x3416cF, _value(uint256): 7000710000000) -> None
+    [3][STATICCALL] from=UniswapV3Pool, to=FiatTokenProxy, balanceOf(account(address): 0x3416cF) -> 1786965154576
+      [4][DELEGATECALL] from=FiatTokenProxy, to=FiatTokenV2_1, balanceOf(account(address): 0x3416cF) -> 1786965154576
+    [3][STATICCALL] from=UniswapV3Pool, to=TetherToken, balanceOf(who(address): 0x3416cF) -> 76660146010984
+  [2][STATICCALL] from=0xA21a2B, to=Vyper_contract, balanceOf(arg0(address): 0x68934F) -> 3346670208931278323763
+  [2][STATICCALL] from=0xA21a2B, to=crvUSD Stablecoin, balanceOf(arg0(address): 0xfC636D) -> 1964943710220373521023
+  [2][STATICCALL] from=0xA21a2B, to=FiatTokenProxy, balanceOf(account(address): 0xA21a2B) -> 0
+    [3][DELEGATECALL] from=FiatTokenProxy, to=FiatTokenV2_1, balanceOf(account(address): 0xA21a2B) -> 0
+  [2][STATICCALL] from=0xA21a2B, to=TetherToken, balanceOf(who(address): 0xA21a2B) -> 1265457045
+  [2][STATICCALL] from=0xA21a2B, to=WETH9, balanceOf((address): 0xA21a2B) -> 1152938621116649685662
+  [2][STATICCALL] from=0xA21a2B, to=WETH9, balanceOf((address): 0xA21a2B) -> 1152938621116649685662
+  [2][CALL] from=0xA21a2B, to=WETH9, withdraw(wad(uint256): 1152938621116649685662) -> None
+    [3][CALL][1152.9386211166498] from=WETH9, to=0xA21a2B
+  [2][CALL][1152.9386211166498] from=0xA21a2B, to=0x5f4C21
+  [2][CALL] from=0xA21a2B, to=TetherToken, balanceOf(who(address): 0xA21a2B) -> 1265457045
+  [2][CALL] from=0xA21a2B, to=TetherToken, transfer(_to(address): 0x5f4C21, _value(uint256): 1265457045) -> None
+  [2][STATICCALL] from=0xA21a2B, to=FiatTokenProxy, balanceOf(account(address): 0xA21a2B) -> 0
+    [3][DELEGATECALL] from=FiatTokenProxy, to=FiatTokenV2_1, balanceOf(account(address): 0xA21a2B) -> 0

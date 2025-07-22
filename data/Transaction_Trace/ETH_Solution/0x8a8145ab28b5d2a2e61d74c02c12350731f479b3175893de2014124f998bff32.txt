@@ -1,0 +1,58 @@
+[1][CALL] from=0xb792fa, to=0x000000, morph() -> None
+  [2][CALL] from=0x000000, to=0x000000, call() -> None
+    [3][CALL] from=0x000000, to=0xa68ccE, 0xef78cabc() -> None
+      [4][STATICCALL] from=0xa68ccE, to=TokenProxy, balanceOf(owner(address): 0x78AC26) -> 557754450001980916242788
+        [5][DELEGATECALL] from=TokenProxy, to=ERC677InitializableToken, balanceOf(owner(address): 0x78AC26) -> 557754450001980916242788
+      [4][STATICCALL] from=0xa68ccE, to=TokenProxy, allowance(owner(address): 0x78AC26, spender(address): 0x765277) -> 115792089237316195423570985008687907853269984665640563939356584007913129639935
+        [5][DELEGATECALL] from=TokenProxy, to=ERC677InitializableToken, allowance(owner(address): 0x78AC26, spender(address): 0x765277) -> 115792089237316195423570985008687907853269984665640563939356584007913129639935
+      [4][CALL] from=0xa68ccE, to=AnyswapV4Router, anySwapOutUnderlyingWithPermit(from(address): 0x78AC26, token(address): 0xa68ccE, to(address): 0xa68ccE, amount(uint256): 557754450001980916242788, deadline(uint256): 100000000000000000000, v(uint8): 0, r(bytes32): b'0x\x00\x00\x00\x00\x00\x00\x00\x00\x00\x..., s(bytes32): b'0x\x00\x00\x00\x00\x00\x00\x00\x00\x00\x..., toChainID(uint256): 12) -> None
+        [5][STATICCALL] from=AnyswapV4Router, to=0xa68ccE, underlying() -> 0x000000
+        [5][CALL] from=AnyswapV4Router, to=TokenProxy, permitaddress() -> None
+          [6][DELEGATECALL] from=TokenProxy, to=ERC677InitializableToken, permitaddress() -> None
+        [5][CALL] from=AnyswapV4Router, to=TokenProxy, transferFrom(from(address): 0x78AC26, to(address): 0xa68ccE, value(uint256): 557754450001980916242788) -> True
+          [6][DELEGATECALL] from=TokenProxy, to=ERC677InitializableToken, transferFrom(from(address): 0x78AC26, to(address): 0xa68ccE, value(uint256): 557754450001980916242788) -> True
+        [5][CALL] from=AnyswapV4Router, to=0xa68ccE, depositVaultuint256() -> 0x000000
+        [5][CALL] from=AnyswapV4Router, to=0xa68ccE, burnaddress() -> 0x000000
+      [4][STATICCALL] from=0xa68ccE, to=TokenProxy, balanceOf(owner(address): 0xa68ccE) -> 557754450001980916242788
+        [5][DELEGATECALL] from=TokenProxy, to=ERC677InitializableToken, balanceOf(owner(address): 0xa68ccE) -> 557754450001980916242788
+      [4][CALL] from=0xa68ccE, to=TokenProxy, transfer(_to(address): 0x68b346, _value(uint256): 557754450001980916242788) -> True
+        [5][DELEGATECALL] from=TokenProxy, to=ERC677InitializableToken, transfer(_to(address): 0x68b346, _value(uint256): 557754450001980916242788) -> True
+          [6][CALL] from=TokenProxy, to=SwapRouter02, onTokenTransferaddress() -> None
+      [4][CALL] from=0xa68ccE, to=SwapRouter02, swapExactTokensForTokens(amountIn(uint256): 0, amountOutMin(uint256): 0, path(address[]): ['0x3496B523e5C00a4b4150D6721320CdDb234c30..., to(address): 0x68b346) -> 13822280101
+        [5][STATICCALL] from=SwapRouter02, to=TokenProxy, balanceOf(owner(address): 0x68b346) -> 557754450001980916242788
+          [6][DELEGATECALL] from=TokenProxy, to=ERC677InitializableToken, balanceOf(owner(address): 0x68b346) -> 557754450001980916242788
+        [5][CALL] from=SwapRouter02, to=TokenProxy, transfer(_to(address): 0x22527f, _value(uint256): 557754450001980916242788) -> True
+          [6][DELEGATECALL] from=TokenProxy, to=ERC677InitializableToken, transfer(_to(address): 0x22527f, _value(uint256): 557754450001980916242788) -> True
+            [7][CALL] from=TokenProxy, to=UniswapV2Pair, onTokenTransferaddress() -> None
+        [5][STATICCALL] from=SwapRouter02, to=FiatTokenProxy, balanceOf(account(address): 0x68b346) -> 0
+          [6][DELEGATECALL] from=FiatTokenProxy, to=FiatTokenV2_1, balanceOf(account(address): 0x68b346) -> 0
+        [5][STATICCALL] from=SwapRouter02, to=UniswapV2Pair, getReserves() -> ['4471975987887882437324911', '124980337944', '1669161515']
+        [5][STATICCALL] from=SwapRouter02, to=TokenProxy, balanceOf(owner(address): 0x22527f) -> 5029730437889863353567699
+          [6][DELEGATECALL] from=TokenProxy, to=ERC677InitializableToken, balanceOf(owner(address): 0x22527f) -> 5029730437889863353567699
+        [5][CALL] from=SwapRouter02, to=UniswapV2Pair, swap(amount0Out(uint256): 0, amount1Out(uint256): 13822280101, to(address): 0x68b346, data(bytes): b'') -> None
+          [6][CALL] from=UniswapV2Pair, to=FiatTokenProxy, transfer(to(address): 0x68b346, value(uint256): 13822280101) -> True
+            [7][DELEGATECALL] from=FiatTokenProxy, to=FiatTokenV2_1, transfer(to(address): 0x68b346, value(uint256): 13822280101) -> True
+          [6][STATICCALL] from=UniswapV2Pair, to=TokenProxy, balanceOf(owner(address): 0x22527f) -> 5029730437889863353567699
+            [7][DELEGATECALL] from=TokenProxy, to=ERC677InitializableToken, balanceOf(owner(address): 0x22527f) -> 5029730437889863353567699
+          [6][STATICCALL] from=UniswapV2Pair, to=FiatTokenProxy, balanceOf(account(address): 0x22527f) -> 111158057843
+            [7][DELEGATECALL] from=FiatTokenProxy, to=FiatTokenV2_1, balanceOf(account(address): 0x22527f) -> 111158057843
+        [5][STATICCALL] from=SwapRouter02, to=FiatTokenProxy, balanceOf(account(address): 0x68b346) -> 13822280101
+          [6][DELEGATECALL] from=FiatTokenProxy, to=FiatTokenV2_1, balanceOf(account(address): 0x68b346) -> 13822280101
+      [4][CALL] from=0xa68ccE, to=SwapRouter02, exactInputSingle(params(tuple): {'tokenIn': '0xA0b86991c6218b36c1d19D4a2e9...) -> 11925388884037488410
+        [5][STATICCALL] from=SwapRouter02, to=FiatTokenProxy, balanceOf(account(address): 0x68b346) -> 13822280101
+          [6][DELEGATECALL] from=FiatTokenProxy, to=FiatTokenV2_1, balanceOf(account(address): 0x68b346) -> 13822280101
+        [5][CALL] from=SwapRouter02, to=0x88e6A0, swapaddress() -> 0x000000
+          [6][CALL] from=0x88e6A0, to=WETH9, transfer(dst(address): 0xa68ccE, wad(uint256): 11925388884037488410) -> True
+          [6][STATICCALL] from=0x88e6A0, to=FiatTokenProxy, balanceOf(account(address): 0x88e6A0) -> 38389175054085
+            [7][DELEGATECALL] from=FiatTokenProxy, to=FiatTokenV2_1, balanceOf(account(address): 0x88e6A0) -> 38389175054085
+          [6][CALL] from=0x88e6A0, to=SwapRouter02, uniswapV3SwapCallback(amount0Delta(int256): 13822280101, amount1Delta(int256): -11925388884037488410, _data(bytes): b"\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00...) -> None
+            [7][CALL] from=SwapRouter02, to=FiatTokenProxy, transfer(to(address): 0x88e6A0, value(uint256): 13822280101) -> True
+              [8][DELEGATECALL] from=FiatTokenProxy, to=FiatTokenV2_1, transfer(to(address): 0x88e6A0, value(uint256): 13822280101) -> True
+          [6][STATICCALL] from=0x88e6A0, to=FiatTokenProxy, balanceOf(account(address): 0x88e6A0) -> 38402997334186
+            [7][DELEGATECALL] from=FiatTokenProxy, to=FiatTokenV2_1, balanceOf(account(address): 0x88e6A0) -> 38402997334186
+      [4][STATICCALL] from=0xa68ccE, to=WETH9, balanceOf((address): 0xa68ccE) -> 11925388884037488410
+      [4][CALL] from=0xa68ccE, to=WETH9, withdraw(wad(uint256): 11925388884037488410) -> None
+        [5][CALL][11.925388884037488] from=WETH9, to=0xa68ccE
+      [4][CALL][11.925388884037488] from=0xa68ccE, to=0x000000
+  [2][CALL][10.091424440903925] from=0x000000, to=0x690B9A
+  [2][CALL][1.8339644431335642] from=0x000000, to=0xb792fa

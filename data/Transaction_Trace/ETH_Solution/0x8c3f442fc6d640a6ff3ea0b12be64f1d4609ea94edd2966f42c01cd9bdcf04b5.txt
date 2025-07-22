@@ -1,0 +1,7 @@
+[1][CALL] from=0x9c9fb3, to=0x2df9c1, 0x233805fb() -> None
+  [2][STATICCALL] from=0x2df9c1, to=StaxLP, balanceOf(account(address): 0xd28690) -> 321154865567124596801893
+  [2][CALL] from=0x2df9c1, to=StaxLPStaking, migrateStake(oldStaking(address): 0x9bdb04, amount(uint256): 321154865567124596801893) -> None
+    [3][CALL] from=StaxLPStaking, to=0x9bdb04, migrateWithdrawaddress() -> None
+  [2][CALL] from=0x2df9c1, to=StaxLPStaking, withdrawAll(claim(bool): False) -> None
+    [3][CALL] from=StaxLPStaking, to=StaxLP, transfer(to(address): 0x2Df9c1, amount(uint256): 321154865567124596801893) -> True
+  [2][STATICCALL] from=0x2df9c1, to=StaxLP, balanceOf(account(address): 0x2Df9c1) -> 321154865567124596801893

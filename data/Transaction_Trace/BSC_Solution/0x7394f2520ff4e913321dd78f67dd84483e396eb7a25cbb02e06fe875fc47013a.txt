@@ -1,0 +1,1820 @@
+[1][CALL] from=0x6b67f9, to=0xc04c49, 0x27984575() -> None
+  [2][STATICCALL] from=0xc04c49, to=SNKToken, balanceOf(account(address): 0x795709) -> 89932866866586490307501
+  [2][CALL] from=0xc04c49, to=PancakePair, swap(amount0Out(uint256): 89932866866586490307500, amount1Out(uint256): 0, to(address): 0xC04c49, data(bytes): b'\x00') -> None
+    [3][CALL] from=PancakePair, to=SNKToken, transfer(recipient(address): 0xC04c49, amount(uint256): 89932866866586490307500) -> True
+    [3][CALL] from=PancakePair, to=0xc04c49, pancakeCalladdress() -> None
+      [4][STATICCALL] from=0xc04c49, to=SNKToken, balanceOf(account(address): 0xA3f5ea) -> 1823619504165333317431575
+      [4][STATICCALL] from=0xc04c49, to=SNKToken, balanceOf(account(address): 0xC04c49) -> 396264020618767698414035
+      [4][STATICCALL] from=0xc04c49, to=SNKMiner, privateEarned(account(address): 0x9A50A1) -> 82841381279896498
+      [4][CREATE] from=0xc04c49, to=0xff3bcc, atInversebrahint248() -> 0x608060
+      [4][CALL] from=0xc04c49, to=0xff3bcc, 0x0e6da604() -> None
+        [5][CALL] from=0xff3bcc, to=SNKMiner, bindParent(parent(address): 0x9A50A1) -> None
+          [6][STATICCALL] from=SNKMiner, to=Invite, getInviter(user(address): 0xfF3Bcc) -> 0x000000
+          [6][CALL] from=SNKMiner, to=Invite, invite(user(address): 0xfF3Bcc, parent(address): 0x9A50A1) -> True
+      [4][CALL] from=0xc04c49, to=SNKToken, transfer(recipient(address): 0xfF3Bcc, amount(uint256): 396264020618767698414035) -> True
+      [4][CALL] from=0xc04c49, to=0xff3bcc, 0xd5584171() -> None
+        [5][CALL] from=0xff3bcc, to=SNKToken, approve(spender(address): 0xA3f5ea, amount(uint256): 396264020618767698414035) -> True
+        [5][CALL] from=0xff3bcc, to=SNKMiner, stake(amount(uint256): 396264020618767698414035) -> None
+          [6][STATICCALL] from=SNKMiner, to=Invite, getInviterSuns(user(address): 0xfF3Bcc) -> []
+          [6][CALL] from=SNKMiner, to=SNKToken, transferFrom(sender(address): 0xfF3Bcc, recipient(address): 0xA3f5ea, amount(uint256): 396264020618767698414035) -> True
+          [6][STATICCALL] from=SNKMiner, to=Invite, getInviterSuns(user(address): 0xfF3Bcc) -> []
+          [6][STATICCALL] from=SNKMiner, to=Invite, getInviter(user(address): 0xfF3Bcc) -> 0x9a50a1
+          [6][STATICCALL] from=SNKMiner, to=Invite, getInviterSuns(user(address): 0x9A50A1) -> ['0xff3bcc']
+          [6][STATICCALL] from=SNKMiner, to=Invite, getInviter(user(address): 0x9A50A1) -> 0x000000
+      [4][CALL] from=0xc04c49, to=0x9a50a1, 0x04811f9a() -> None
+        [5][CALL] from=0x9a50a1, to=SNKMiner, getReward() -> None
+          [6][STATICCALL] from=SNKMiner, to=Invite, getInviterSuns(user(address): 0x9A50A1) -> ['0xff3bcc']
+          [6][STATICCALL] from=SNKMiner, to=Invite, getInviterSuns(user(address): 0x9A50A1) -> ['0xff3bcc']
+          [6][STATICCALL] from=SNKMiner, to=Invite, getInviterSuns(user(address): 0x9A50A1) -> ['0xff3bcc']
+          [6][CALL] from=SNKMiner, to=SNKToken, transfer(recipient(address): 0x9A50A1, amount(uint256): 4220704689613521621992) -> True
+      [4][CALL] from=0xc04c49, to=0x9a50a1, transferaddress() -> None
+        [5][STATICCALL] from=0x9a50a1, to=SNKToken, balanceOf(account(address): 0x9A50A1) -> 4220704689613521621992
+        [5][CALL] from=0x9a50a1, to=SNKToken, transfer(recipient(address): 0xC04c49, amount(uint256): 4220704689613521621992) -> True
+      [4][CALL] from=0xc04c49, to=0xff3bcc, 0x22a678a3() -> None
+        [5][CALL] from=0xff3bcc, to=SNKMiner, exit() -> None
+          [6][STATICCALL] from=SNKMiner, to=Invite, getInviterSuns(user(address): 0xfF3Bcc) -> []
+          [6][STATICCALL] from=SNKMiner, to=Invite, getInviterSuns(user(address): 0xfF3Bcc) -> []
+          [6][CALL] from=SNKMiner, to=SNKToken, transfer(recipient(address): 0xfF3Bcc, amount(uint256): 396264020618767698414035) -> True
+          [6][STATICCALL] from=SNKMiner, to=Invite, getInviterSuns(user(address): 0xfF3Bcc) -> []
+          [6][STATICCALL] from=SNKMiner, to=Invite, getInviter(user(address): 0xfF3Bcc) -> 0x9a50a1
+          [6][STATICCALL] from=SNKMiner, to=Invite, getInviterSuns(user(address): 0x9A50A1) -> ['0xff3bcc']
+          [6][STATICCALL] from=SNKMiner, to=Invite, getInviter(user(address): 0x9A50A1) -> 0x000000
+          [6][STATICCALL] from=SNKMiner, to=Invite, getInviterSuns(user(address): 0xfF3Bcc) -> []
+      [4][CALL] from=0xc04c49, to=0xff3bcc, transferaddress() -> None
+        [5][STATICCALL] from=0xff3bcc, to=SNKToken, balanceOf(account(address): 0xfF3Bcc) -> 396264020618767698414035
+        [5][CALL] from=0xff3bcc, to=SNKToken, transfer(recipient(address): 0xC04c49, amount(uint256): 396264020618767698414035) -> True
+      [4][STATICCALL] from=0xc04c49, to=SNKToken, balanceOf(account(address): 0xA3f5ea) -> 1819398799475719795809583
+      [4][STATICCALL] from=0xc04c49, to=SNKToken, balanceOf(account(address): 0xC04c49) -> 400484725308381220036027
+      [4][STATICCALL] from=0xc04c49, to=SNKMiner, privateEarned(account(address): 0x4e01F6) -> 82841381279896498
+      [4][CREATE] from=0xc04c49, to=0xfc0d1a, atInversebrahint248() -> 0x608060
+      [4][CALL] from=0xc04c49, to=0xfc0d1a, 0x0e6da604() -> None
+        [5][CALL] from=0xfc0d1a, to=SNKMiner, bindParent(parent(address): 0x4e01F6) -> None
+          [6][STATICCALL] from=SNKMiner, to=Invite, getInviter(user(address): 0xfC0d1A) -> 0x000000
+          [6][CALL] from=SNKMiner, to=Invite, invite(user(address): 0xfC0d1A, parent(address): 0x4e01F6) -> True
+      [4][CALL] from=0xc04c49, to=SNKToken, transfer(recipient(address): 0xfC0d1A, amount(uint256): 400484725308381220036027) -> True
+      [4][CALL] from=0xc04c49, to=0xfc0d1a, 0xd5584171() -> None
+        [5][CALL] from=0xfc0d1a, to=SNKToken, approve(spender(address): 0xA3f5ea, amount(uint256): 400484725308381220036027) -> True
+        [5][CALL] from=0xfc0d1a, to=SNKMiner, stake(amount(uint256): 400484725308381220036027) -> None
+          [6][STATICCALL] from=SNKMiner, to=Invite, getInviterSuns(user(address): 0xfC0d1A) -> []
+          [6][CALL] from=SNKMiner, to=SNKToken, transferFrom(sender(address): 0xfC0d1A, recipient(address): 0xA3f5ea, amount(uint256): 400484725308381220036027) -> True
+          [6][STATICCALL] from=SNKMiner, to=Invite, getInviterSuns(user(address): 0xfC0d1A) -> []
+          [6][STATICCALL] from=SNKMiner, to=Invite, getInviter(user(address): 0xfC0d1A) -> 0x4e01f6
+          [6][STATICCALL] from=SNKMiner, to=Invite, getInviterSuns(user(address): 0x4e01F6) -> ['0xfc0d1a']
+          [6][STATICCALL] from=SNKMiner, to=Invite, getInviter(user(address): 0x4e01F6) -> 0x000000
+      [4][CALL] from=0xc04c49, to=0x4e01f6, 0x04811f9a() -> None
+        [5][CALL] from=0x4e01f6, to=SNKMiner, getReward() -> None
+          [6][STATICCALL] from=SNKMiner, to=Invite, getInviterSuns(user(address): 0x4e01F6) -> ['0xfc0d1a']
+          [6][STATICCALL] from=SNKMiner, to=Invite, getInviterSuns(user(address): 0x4e01F6) -> ['0xfc0d1a']
+          [6][STATICCALL] from=SNKMiner, to=Invite, getInviterSuns(user(address): 0x4e01F6) -> ['0xfc0d1a']
+          [6][CALL] from=SNKMiner, to=SNKToken, transfer(recipient(address): 0x4e01F6, amount(uint256): 4265659561872937172598) -> True
+      [4][CALL] from=0xc04c49, to=0x4e01f6, transferaddress() -> None
+        [5][STATICCALL] from=0x4e01f6, to=SNKToken, balanceOf(account(address): 0x4e01F6) -> 4265659561872937172598
+        [5][CALL] from=0x4e01f6, to=SNKToken, transfer(recipient(address): 0xC04c49, amount(uint256): 4265659561872937172598) -> True
+      [4][CALL] from=0xc04c49, to=0xfc0d1a, 0x22a678a3() -> None
+        [5][CALL] from=0xfc0d1a, to=SNKMiner, exit() -> None
+          [6][STATICCALL] from=SNKMiner, to=Invite, getInviterSuns(user(address): 0xfC0d1A) -> []
+          [6][STATICCALL] from=SNKMiner, to=Invite, getInviterSuns(user(address): 0xfC0d1A) -> []
+          [6][CALL] from=SNKMiner, to=SNKToken, transfer(recipient(address): 0xfC0d1A, amount(uint256): 400484725308381220036027) -> True
+          [6][STATICCALL] from=SNKMiner, to=Invite, getInviterSuns(user(address): 0xfC0d1A) -> []
+          [6][STATICCALL] from=SNKMiner, to=Invite, getInviter(user(address): 0xfC0d1A) -> 0x4e01f6
+          [6][STATICCALL] from=SNKMiner, to=Invite, getInviterSuns(user(address): 0x4e01F6) -> ['0xfc0d1a']
+          [6][STATICCALL] from=SNKMiner, to=Invite, getInviter(user(address): 0x4e01F6) -> 0x000000
+          [6][STATICCALL] from=SNKMiner, to=Invite, getInviterSuns(user(address): 0xfC0d1A) -> []
+      [4][CALL] from=0xc04c49, to=0xfc0d1a, transferaddress() -> None
+        [5][STATICCALL] from=0xfc0d1a, to=SNKToken, balanceOf(account(address): 0xfC0d1A) -> 400484725308381220036027
+        [5][CALL] from=0xfc0d1a, to=SNKToken, transfer(recipient(address): 0xC04c49, amount(uint256): 400484725308381220036027) -> True
+      [4][STATICCALL] from=0xc04c49, to=SNKToken, balanceOf(account(address): 0xA3f5ea) -> 1815133139913846858636985
+      [4][STATICCALL] from=0xc04c49, to=SNKToken, balanceOf(account(address): 0xC04c49) -> 404750384870254157208625
+      [4][STATICCALL] from=0xc04c49, to=SNKMiner, privateEarned(account(address): 0x536CDC) -> 82841381279896498
+      [4][CREATE] from=0xc04c49, to=0x9d116e, atInversebrahint248() -> 0x608060
+      [4][CALL] from=0xc04c49, to=0x9d116e, 0x0e6da604() -> None
+        [5][CALL] from=0x9d116e, to=SNKMiner, bindParent(parent(address): 0x536CDC) -> None
+          [6][STATICCALL] from=SNKMiner, to=Invite, getInviter(user(address): 0x9D116e) -> 0x000000
+          [6][CALL] from=SNKMiner, to=Invite, invite(user(address): 0x9D116e, parent(address): 0x536CDC) -> True
+      [4][CALL] from=0xc04c49, to=SNKToken, transfer(recipient(address): 0x9D116e, amount(uint256): 404750384870254157208625) -> True
+      [4][CALL] from=0xc04c49, to=0x9d116e, 0xd5584171() -> None
+        [5][CALL] from=0x9d116e, to=SNKToken, approve(spender(address): 0xA3f5ea, amount(uint256): 404750384870254157208625) -> True
+        [5][CALL] from=0x9d116e, to=SNKMiner, stake(amount(uint256): 404750384870254157208625) -> None
+          [6][STATICCALL] from=SNKMiner, to=Invite, getInviterSuns(user(address): 0x9D116e) -> []
+          [6][CALL] from=SNKMiner, to=SNKToken, transferFrom(sender(address): 0x9D116e, recipient(address): 0xA3f5ea, amount(uint256): 404750384870254157208625) -> True
+          [6][STATICCALL] from=SNKMiner, to=Invite, getInviterSuns(user(address): 0x9D116e) -> []
+          [6][STATICCALL] from=SNKMiner, to=Invite, getInviter(user(address): 0x9D116e) -> 0x536cdc
+          [6][STATICCALL] from=SNKMiner, to=Invite, getInviterSuns(user(address): 0x536CDC) -> ['0x9d116e']
+          [6][STATICCALL] from=SNKMiner, to=Invite, getInviter(user(address): 0x536CDC) -> 0x000000
+      [4][CALL] from=0xc04c49, to=0x536cdc, 0x04811f9a() -> None
+        [5][CALL] from=0x536cdc, to=SNKMiner, getReward() -> None
+          [6][STATICCALL] from=SNKMiner, to=Invite, getInviterSuns(user(address): 0x536CDC) -> ['0x9d116e']
+          [6][STATICCALL] from=SNKMiner, to=Invite, getInviterSuns(user(address): 0x536CDC) -> ['0x9d116e']
+          [6][STATICCALL] from=SNKMiner, to=Invite, getInviterSuns(user(address): 0x536CDC) -> ['0x9d116e']
+          [6][CALL] from=SNKMiner, to=SNKToken, transfer(recipient(address): 0x536CDC, amount(uint256): 4311093250038339602803) -> True
+      [4][CALL] from=0xc04c49, to=0x536cdc, transferaddress() -> None
+        [5][STATICCALL] from=0x536cdc, to=SNKToken, balanceOf(account(address): 0x536CDC) -> 4311093250038339602803
+        [5][CALL] from=0x536cdc, to=SNKToken, transfer(recipient(address): 0xC04c49, amount(uint256): 4311093250038339602803) -> True
+      [4][CALL] from=0xc04c49, to=0x9d116e, 0x22a678a3() -> None
+        [5][CALL] from=0x9d116e, to=SNKMiner, exit() -> None
+          [6][STATICCALL] from=SNKMiner, to=Invite, getInviterSuns(user(address): 0x9D116e) -> []
+          [6][STATICCALL] from=SNKMiner, to=Invite, getInviterSuns(user(address): 0x9D116e) -> []
+          [6][CALL] from=SNKMiner, to=SNKToken, transfer(recipient(address): 0x9D116e, amount(uint256): 404750384870254157208625) -> True
+          [6][STATICCALL] from=SNKMiner, to=Invite, getInviterSuns(user(address): 0x9D116e) -> []
+          [6][STATICCALL] from=SNKMiner, to=Invite, getInviter(user(address): 0x9D116e) -> 0x536cdc
+          [6][STATICCALL] from=SNKMiner, to=Invite, getInviterSuns(user(address): 0x536CDC) -> ['0x9d116e']
+          [6][STATICCALL] from=SNKMiner, to=Invite, getInviter(user(address): 0x536CDC) -> 0x000000
+          [6][STATICCALL] from=SNKMiner, to=Invite, getInviterSuns(user(address): 0x9D116e) -> []
+      [4][CALL] from=0xc04c49, to=0x9d116e, transferaddress() -> None
+        [5][STATICCALL] from=0x9d116e, to=SNKToken, balanceOf(account(address): 0x9D116e) -> 404750384870254157208625
+        [5][CALL] from=0x9d116e, to=SNKToken, transfer(recipient(address): 0xC04c49, amount(uint256): 404750384870254157208625) -> True
+      [4][STATICCALL] from=0xc04c49, to=SNKToken, balanceOf(account(address): 0xA3f5ea) -> 1810822046663808519034182
+      [4][STATICCALL] from=0xc04c49, to=SNKToken, balanceOf(account(address): 0xC04c49) -> 409061478120292496811428
+      [4][STATICCALL] from=0xc04c49, to=SNKMiner, privateEarned(account(address): 0xC299d7) -> 82841381279896498
+      [4][CREATE] from=0xc04c49, to=0xbd19ef, atInversebrahint248() -> 0x608060
+      [4][CALL] from=0xc04c49, to=0xbd19ef, 0x0e6da604() -> None
+        [5][CALL] from=0xbd19ef, to=SNKMiner, bindParent(parent(address): 0xC299d7) -> None
+          [6][STATICCALL] from=SNKMiner, to=Invite, getInviter(user(address): 0xBD19eF) -> 0x000000
+          [6][CALL] from=SNKMiner, to=Invite, invite(user(address): 0xBD19eF, parent(address): 0xC299d7) -> True
+      [4][CALL] from=0xc04c49, to=SNKToken, transfer(recipient(address): 0xBD19eF, amount(uint256): 409061478120292496811428) -> True
+      [4][CALL] from=0xc04c49, to=0xbd19ef, 0xd5584171() -> None
+        [5][CALL] from=0xbd19ef, to=SNKToken, approve(spender(address): 0xA3f5ea, amount(uint256): 409061478120292496811428) -> True
+        [5][CALL] from=0xbd19ef, to=SNKMiner, stake(amount(uint256): 409061478120292496811428) -> None
+          [6][STATICCALL] from=SNKMiner, to=Invite, getInviterSuns(user(address): 0xBD19eF) -> []
+          [6][CALL] from=SNKMiner, to=SNKToken, transferFrom(sender(address): 0xBD19eF, recipient(address): 0xA3f5ea, amount(uint256): 409061478120292496811428) -> True
+          [6][STATICCALL] from=SNKMiner, to=Invite, getInviterSuns(user(address): 0xBD19eF) -> []
+          [6][STATICCALL] from=SNKMiner, to=Invite, getInviter(user(address): 0xBD19eF) -> 0xc299d7
+          [6][STATICCALL] from=SNKMiner, to=Invite, getInviterSuns(user(address): 0xC299d7) -> ['0xbd19ef']
+          [6][STATICCALL] from=SNKMiner, to=Invite, getInviter(user(address): 0xC299d7) -> 0x000000
+      [4][CALL] from=0xc04c49, to=0xc299d7, 0x04811f9a() -> None
+        [5][CALL] from=0xc299d7, to=SNKMiner, getReward() -> None
+          [6][STATICCALL] from=SNKMiner, to=Invite, getInviterSuns(user(address): 0xC299d7) -> ['0xbd19ef']
+          [6][STATICCALL] from=SNKMiner, to=Invite, getInviterSuns(user(address): 0xC299d7) -> ['0xbd19ef']
+          [6][STATICCALL] from=SNKMiner, to=Invite, getInviterSuns(user(address): 0xC299d7) -> ['0xbd19ef']
+          [6][CALL] from=SNKMiner, to=SNKToken, transfer(recipient(address): 0xC299d7, amount(uint256): 4357010853994575721802) -> True
+      [4][CALL] from=0xc04c49, to=0xc299d7, transferaddress() -> None
+        [5][STATICCALL] from=0xc299d7, to=SNKToken, balanceOf(account(address): 0xC299d7) -> 4357010853994575721802
+        [5][CALL] from=0xc299d7, to=SNKToken, transfer(recipient(address): 0xC04c49, amount(uint256): 4357010853994575721802) -> True
+      [4][CALL] from=0xc04c49, to=0xbd19ef, 0x22a678a3() -> None
+        [5][CALL] from=0xbd19ef, to=SNKMiner, exit() -> None
+          [6][STATICCALL] from=SNKMiner, to=Invite, getInviterSuns(user(address): 0xBD19eF) -> []
+          [6][STATICCALL] from=SNKMiner, to=Invite, getInviterSuns(user(address): 0xBD19eF) -> []
+          [6][CALL] from=SNKMiner, to=SNKToken, transfer(recipient(address): 0xBD19eF, amount(uint256): 409061478120292496811428) -> True
+          [6][STATICCALL] from=SNKMiner, to=Invite, getInviterSuns(user(address): 0xBD19eF) -> []
+          [6][STATICCALL] from=SNKMiner, to=Invite, getInviter(user(address): 0xBD19eF) -> 0xc299d7
+          [6][STATICCALL] from=SNKMiner, to=Invite, getInviterSuns(user(address): 0xC299d7) -> ['0xbd19ef']
+          [6][STATICCALL] from=SNKMiner, to=Invite, getInviter(user(address): 0xC299d7) -> 0x000000
+          [6][STATICCALL] from=SNKMiner, to=Invite, getInviterSuns(user(address): 0xBD19eF) -> []
+      [4][CALL] from=0xc04c49, to=0xbd19ef, transferaddress() -> None
+        [5][STATICCALL] from=0xbd19ef, to=SNKToken, balanceOf(account(address): 0xBD19eF) -> 409061478120292496811428
+        [5][CALL] from=0xbd19ef, to=SNKToken, transfer(recipient(address): 0xC04c49, amount(uint256): 409061478120292496811428) -> True
+      [4][STATICCALL] from=0xc04c49, to=SNKToken, balanceOf(account(address): 0xA3f5ea) -> 1806465035809813943312380
+      [4][STATICCALL] from=0xc04c49, to=SNKToken, balanceOf(account(address): 0xC04c49) -> 413418488974287072533230
+      [4][STATICCALL] from=0xc04c49, to=SNKMiner, privateEarned(account(address): 0x29F62d) -> 82841381279896498
+      [4][CREATE] from=0xc04c49, to=0xa7593f, atInversebrahint248() -> 0x608060
+      [4][CALL] from=0xc04c49, to=0xa7593f, 0x0e6da604() -> None
+        [5][CALL] from=0xa7593f, to=SNKMiner, bindParent(parent(address): 0x29F62d) -> None
+          [6][STATICCALL] from=SNKMiner, to=Invite, getInviter(user(address): 0xa7593F) -> 0x000000
+          [6][CALL] from=SNKMiner, to=Invite, invite(user(address): 0xa7593F, parent(address): 0x29F62d) -> True
+      [4][CALL] from=0xc04c49, to=SNKToken, transfer(recipient(address): 0xa7593F, amount(uint256): 413418488974287072533230) -> True
+      [4][CALL] from=0xc04c49, to=0xa7593f, 0xd5584171() -> None
+        [5][CALL] from=0xa7593f, to=SNKToken, approve(spender(address): 0xA3f5ea, amount(uint256): 413418488974287072533230) -> True
+        [5][CALL] from=0xa7593f, to=SNKMiner, stake(amount(uint256): 413418488974287072533230) -> None
+          [6][STATICCALL] from=SNKMiner, to=Invite, getInviterSuns(user(address): 0xa7593F) -> []
+          [6][CALL] from=SNKMiner, to=SNKToken, transferFrom(sender(address): 0xa7593F, recipient(address): 0xA3f5ea, amount(uint256): 413418488974287072533230) -> True
+          [6][STATICCALL] from=SNKMiner, to=Invite, getInviterSuns(user(address): 0xa7593F) -> []
+          [6][STATICCALL] from=SNKMiner, to=Invite, getInviter(user(address): 0xa7593F) -> 0x29f62d
+          [6][STATICCALL] from=SNKMiner, to=Invite, getInviterSuns(user(address): 0x29F62d) -> ['0xa7593f']
+          [6][STATICCALL] from=SNKMiner, to=Invite, getInviter(user(address): 0x29F62d) -> 0x000000
+      [4][CALL] from=0xc04c49, to=0x29f62d, 0x04811f9a() -> None
+        [5][CALL] from=0x29f62d, to=SNKMiner, getReward() -> None
+          [6][STATICCALL] from=SNKMiner, to=Invite, getInviterSuns(user(address): 0x29F62d) -> ['0xa7593f']
+          [6][STATICCALL] from=SNKMiner, to=Invite, getInviterSuns(user(address): 0x29F62d) -> ['0xa7593f']
+          [6][STATICCALL] from=SNKMiner, to=Invite, getInviterSuns(user(address): 0x29F62d) -> ['0xa7593f']
+          [6][CALL] from=SNKMiner, to=SNKToken, transfer(recipient(address): 0x29F62d, amount(uint256): 4403417527945542991685) -> True
+      [4][CALL] from=0xc04c49, to=0x29f62d, transferaddress() -> None
+        [5][STATICCALL] from=0x29f62d, to=SNKToken, balanceOf(account(address): 0x29F62d) -> 4403417527945542991685
+        [5][CALL] from=0x29f62d, to=SNKToken, transfer(recipient(address): 0xC04c49, amount(uint256): 4403417527945542991685) -> True
+      [4][CALL] from=0xc04c49, to=0xa7593f, 0x22a678a3() -> None
+        [5][CALL] from=0xa7593f, to=SNKMiner, exit() -> None
+          [6][STATICCALL] from=SNKMiner, to=Invite, getInviterSuns(user(address): 0xa7593F) -> []
+          [6][STATICCALL] from=SNKMiner, to=Invite, getInviterSuns(user(address): 0xa7593F) -> []
+          [6][CALL] from=SNKMiner, to=SNKToken, transfer(recipient(address): 0xa7593F, amount(uint256): 413418488974287072533230) -> True
+          [6][STATICCALL] from=SNKMiner, to=Invite, getInviterSuns(user(address): 0xa7593F) -> []
+          [6][STATICCALL] from=SNKMiner, to=Invite, getInviter(user(address): 0xa7593F) -> 0x29f62d
+          [6][STATICCALL] from=SNKMiner, to=Invite, getInviterSuns(user(address): 0x29F62d) -> ['0xa7593f']
+          [6][STATICCALL] from=SNKMiner, to=Invite, getInviter(user(address): 0x29F62d) -> 0x000000
+          [6][STATICCALL] from=SNKMiner, to=Invite, getInviterSuns(user(address): 0xa7593F) -> []
+      [4][CALL] from=0xc04c49, to=0xa7593f, transferaddress() -> None
+        [5][STATICCALL] from=0xa7593f, to=SNKToken, balanceOf(account(address): 0xa7593F) -> 413418488974287072533230
+        [5][CALL] from=0xa7593f, to=SNKToken, transfer(recipient(address): 0xC04c49, amount(uint256): 413418488974287072533230) -> True
+      [4][STATICCALL] from=0xc04c49, to=SNKToken, balanceOf(account(address): 0xA3f5ea) -> 1802061618281868400320695
+      [4][STATICCALL] from=0xc04c49, to=SNKToken, balanceOf(account(address): 0xC04c49) -> 417821906502232615524915
+      [4][STATICCALL] from=0xc04c49, to=SNKMiner, privateEarned(account(address): 0xfc9b7a) -> 82841381279896498
+      [4][CREATE] from=0xc04c49, to=0x4f9639, atInversebrahint248() -> 0x608060
+      [4][CALL] from=0xc04c49, to=0x4f9639, 0x0e6da604() -> None
+        [5][CALL] from=0x4f9639, to=SNKMiner, bindParent(parent(address): 0xfc9b7a) -> None
+          [6][STATICCALL] from=SNKMiner, to=Invite, getInviter(user(address): 0x4F9639) -> 0x000000
+          [6][CALL] from=SNKMiner, to=Invite, invite(user(address): 0x4F9639, parent(address): 0xfc9b7a) -> True
+      [4][CALL] from=0xc04c49, to=SNKToken, transfer(recipient(address): 0x4F9639, amount(uint256): 417821906502232615524915) -> True
+      [4][CALL] from=0xc04c49, to=0x4f9639, 0xd5584171() -> None
+        [5][CALL] from=0x4f9639, to=SNKToken, approve(spender(address): 0xA3f5ea, amount(uint256): 417821906502232615524915) -> True
+        [5][CALL] from=0x4f9639, to=SNKMiner, stake(amount(uint256): 417821906502232615524915) -> None
+          [6][STATICCALL] from=SNKMiner, to=Invite, getInviterSuns(user(address): 0x4F9639) -> []
+          [6][CALL] from=SNKMiner, to=SNKToken, transferFrom(sender(address): 0x4F9639, recipient(address): 0xA3f5ea, amount(uint256): 417821906502232615524915) -> True
+          [6][STATICCALL] from=SNKMiner, to=Invite, getInviterSuns(user(address): 0x4F9639) -> []
+          [6][STATICCALL] from=SNKMiner, to=Invite, getInviter(user(address): 0x4F9639) -> 0xfc9b7a
+          [6][STATICCALL] from=SNKMiner, to=Invite, getInviterSuns(user(address): 0xfc9b7a) -> ['0x4f9639']
+          [6][STATICCALL] from=SNKMiner, to=Invite, getInviter(user(address): 0xfc9b7a) -> 0x000000
+      [4][CALL] from=0xc04c49, to=0xfc9b7a, 0x04811f9a() -> None
+        [5][CALL] from=0xfc9b7a, to=SNKMiner, getReward() -> None
+          [6][STATICCALL] from=SNKMiner, to=Invite, getInviterSuns(user(address): 0xfc9b7a) -> ['0x4f9639']
+          [6][STATICCALL] from=SNKMiner, to=Invite, getInviterSuns(user(address): 0xfc9b7a) -> ['0x4f9639']
+          [6][STATICCALL] from=SNKMiner, to=Invite, getInviterSuns(user(address): 0xfc9b7a) -> ['0x4f9639']
+          [6][CALL] from=SNKMiner, to=SNKToken, transfer(recipient(address): 0xfc9b7a, amount(uint256): 4450318480992743622767) -> True
+      [4][CALL] from=0xc04c49, to=0xfc9b7a, transferaddress() -> None
+        [5][STATICCALL] from=0xfc9b7a, to=SNKToken, balanceOf(account(address): 0xfc9b7a) -> 4450318480992743622767
+        [5][CALL] from=0xfc9b7a, to=SNKToken, transfer(recipient(address): 0xC04c49, amount(uint256): 4450318480992743622767) -> True
+      [4][CALL] from=0xc04c49, to=0x4f9639, 0x22a678a3() -> None
+        [5][CALL] from=0x4f9639, to=SNKMiner, exit() -> None
+          [6][STATICCALL] from=SNKMiner, to=Invite, getInviterSuns(user(address): 0x4F9639) -> []
+          [6][STATICCALL] from=SNKMiner, to=Invite, getInviterSuns(user(address): 0x4F9639) -> []
+          [6][CALL] from=SNKMiner, to=SNKToken, transfer(recipient(address): 0x4F9639, amount(uint256): 417821906502232615524915) -> True
+          [6][STATICCALL] from=SNKMiner, to=Invite, getInviterSuns(user(address): 0x4F9639) -> []
+          [6][STATICCALL] from=SNKMiner, to=Invite, getInviter(user(address): 0x4F9639) -> 0xfc9b7a
+          [6][STATICCALL] from=SNKMiner, to=Invite, getInviterSuns(user(address): 0xfc9b7a) -> ['0x4f9639']
+          [6][STATICCALL] from=SNKMiner, to=Invite, getInviter(user(address): 0xfc9b7a) -> 0x000000
+          [6][STATICCALL] from=SNKMiner, to=Invite, getInviterSuns(user(address): 0x4F9639) -> []
+      [4][CALL] from=0xc04c49, to=0x4f9639, transferaddress() -> None
+        [5][STATICCALL] from=0x4f9639, to=SNKToken, balanceOf(account(address): 0x4F9639) -> 417821906502232615524915
+        [5][CALL] from=0x4f9639, to=SNKToken, transfer(recipient(address): 0xC04c49, amount(uint256): 417821906502232615524915) -> True
+      [4][STATICCALL] from=0xc04c49, to=SNKToken, balanceOf(account(address): 0xA3f5ea) -> 1797611299800875656697928
+      [4][STATICCALL] from=0xc04c49, to=SNKToken, balanceOf(account(address): 0xC04c49) -> 422272224983225359147682
+      [4][STATICCALL] from=0xc04c49, to=SNKMiner, privateEarned(account(address): 0x5F2F83) -> 82841381279896498
+      [4][CREATE] from=0xc04c49, to=0xf4d741, atInversebrahint248() -> 0x608060
+      [4][CALL] from=0xc04c49, to=0xf4d741, 0x0e6da604() -> None
+        [5][CALL] from=0xf4d741, to=SNKMiner, bindParent(parent(address): 0x5F2F83) -> None
+          [6][STATICCALL] from=SNKMiner, to=Invite, getInviter(user(address): 0xf4d741) -> 0x000000
+          [6][CALL] from=SNKMiner, to=Invite, invite(user(address): 0xf4d741, parent(address): 0x5F2F83) -> True
+      [4][CALL] from=0xc04c49, to=SNKToken, transfer(recipient(address): 0xf4d741, amount(uint256): 422272224983225359147682) -> True
+      [4][CALL] from=0xc04c49, to=0xf4d741, 0xd5584171() -> None
+        [5][CALL] from=0xf4d741, to=SNKToken, approve(spender(address): 0xA3f5ea, amount(uint256): 422272224983225359147682) -> True
+        [5][CALL] from=0xf4d741, to=SNKMiner, stake(amount(uint256): 422272224983225359147682) -> None
+          [6][STATICCALL] from=SNKMiner, to=Invite, getInviterSuns(user(address): 0xf4d741) -> []
+          [6][CALL] from=SNKMiner, to=SNKToken, transferFrom(sender(address): 0xf4d741, recipient(address): 0xA3f5ea, amount(uint256): 422272224983225359147682) -> True
+          [6][STATICCALL] from=SNKMiner, to=Invite, getInviterSuns(user(address): 0xf4d741) -> []
+          [6][STATICCALL] from=SNKMiner, to=Invite, getInviter(user(address): 0xf4d741) -> 0x5f2f83
+          [6][STATICCALL] from=SNKMiner, to=Invite, getInviterSuns(user(address): 0x5F2F83) -> ['0xf4d741']
+          [6][STATICCALL] from=SNKMiner, to=Invite, getInviter(user(address): 0x5F2F83) -> 0x000000
+      [4][CALL] from=0xc04c49, to=0x5f2f83, 0x04811f9a() -> None
+        [5][CALL] from=0x5f2f83, to=SNKMiner, getReward() -> None
+          [6][STATICCALL] from=SNKMiner, to=Invite, getInviterSuns(user(address): 0x5F2F83) -> ['0xf4d741']
+          [6][STATICCALL] from=SNKMiner, to=Invite, getInviterSuns(user(address): 0x5F2F83) -> ['0xf4d741']
+          [6][STATICCALL] from=SNKMiner, to=Invite, getInviterSuns(user(address): 0x5F2F83) -> ['0xf4d741']
+          [6][CALL] from=SNKMiner, to=SNKToken, transfer(recipient(address): 0x5F2F83, amount(uint256): 4497718977720000868689) -> True
+      [4][CALL] from=0xc04c49, to=0x5f2f83, transferaddress() -> None
+        [5][STATICCALL] from=0x5f2f83, to=SNKToken, balanceOf(account(address): 0x5F2F83) -> 4497718977720000868689
+        [5][CALL] from=0x5f2f83, to=SNKToken, transfer(recipient(address): 0xC04c49, amount(uint256): 4497718977720000868689) -> True
+      [4][CALL] from=0xc04c49, to=0xf4d741, 0x22a678a3() -> None
+        [5][CALL] from=0xf4d741, to=SNKMiner, exit() -> None
+          [6][STATICCALL] from=SNKMiner, to=Invite, getInviterSuns(user(address): 0xf4d741) -> []
+          [6][STATICCALL] from=SNKMiner, to=Invite, getInviterSuns(user(address): 0xf4d741) -> []
+          [6][CALL] from=SNKMiner, to=SNKToken, transfer(recipient(address): 0xf4d741, amount(uint256): 422272224983225359147682) -> True
+          [6][STATICCALL] from=SNKMiner, to=Invite, getInviterSuns(user(address): 0xf4d741) -> []
+          [6][STATICCALL] from=SNKMiner, to=Invite, getInviter(user(address): 0xf4d741) -> 0x5f2f83
+          [6][STATICCALL] from=SNKMiner, to=Invite, getInviterSuns(user(address): 0x5F2F83) -> ['0xf4d741']
+          [6][STATICCALL] from=SNKMiner, to=Invite, getInviter(user(address): 0x5F2F83) -> 0x000000
+          [6][STATICCALL] from=SNKMiner, to=Invite, getInviterSuns(user(address): 0xf4d741) -> []
+      [4][CALL] from=0xc04c49, to=0xf4d741, transferaddress() -> None
+        [5][STATICCALL] from=0xf4d741, to=SNKToken, balanceOf(account(address): 0xf4d741) -> 422272224983225359147682
+        [5][CALL] from=0xf4d741, to=SNKToken, transfer(recipient(address): 0xC04c49, amount(uint256): 422272224983225359147682) -> True
+      [4][STATICCALL] from=0xc04c49, to=SNKToken, balanceOf(account(address): 0xA3f5ea) -> 1793113580823155655829239
+      [4][STATICCALL] from=0xc04c49, to=SNKToken, balanceOf(account(address): 0xC04c49) -> 426769943960945360016371
+      [4][STATICCALL] from=0xc04c49, to=SNKMiner, privateEarned(account(address): 0x3acA26) -> 82841381279896498
+      [4][CREATE] from=0xc04c49, to=0x558c89, atInversebrahint248() -> 0x608060
+      [4][CALL] from=0xc04c49, to=0x558c89, 0x0e6da604() -> None
+        [5][CALL] from=0x558c89, to=SNKMiner, bindParent(parent(address): 0x3acA26) -> None
+          [6][STATICCALL] from=SNKMiner, to=Invite, getInviter(user(address): 0x558c89) -> 0x000000
+          [6][CALL] from=SNKMiner, to=Invite, invite(user(address): 0x558c89, parent(address): 0x3acA26) -> True
+      [4][CALL] from=0xc04c49, to=SNKToken, transfer(recipient(address): 0x558c89, amount(uint256): 426769943960945360016371) -> True
+      [4][CALL] from=0xc04c49, to=0x558c89, 0xd5584171() -> None
+        [5][CALL] from=0x558c89, to=SNKToken, approve(spender(address): 0xA3f5ea, amount(uint256): 426769943960945360016371) -> True
+        [5][CALL] from=0x558c89, to=SNKMiner, stake(amount(uint256): 426769943960945360016371) -> None
+          [6][STATICCALL] from=SNKMiner, to=Invite, getInviterSuns(user(address): 0x558c89) -> []
+          [6][CALL] from=SNKMiner, to=SNKToken, transferFrom(sender(address): 0x558c89, recipient(address): 0xA3f5ea, amount(uint256): 426769943960945360016371) -> True
+          [6][STATICCALL] from=SNKMiner, to=Invite, getInviterSuns(user(address): 0x558c89) -> []
+          [6][STATICCALL] from=SNKMiner, to=Invite, getInviter(user(address): 0x558c89) -> 0x3aca26
+          [6][STATICCALL] from=SNKMiner, to=Invite, getInviterSuns(user(address): 0x3acA26) -> ['0x558c89']
+          [6][STATICCALL] from=SNKMiner, to=Invite, getInviter(user(address): 0x3acA26) -> 0x000000
+      [4][CALL] from=0xc04c49, to=0x3aca26, 0x04811f9a() -> None
+        [5][CALL] from=0x3aca26, to=SNKMiner, getReward() -> None
+          [6][STATICCALL] from=SNKMiner, to=Invite, getInviterSuns(user(address): 0x3acA26) -> ['0x558c89']
+          [6][STATICCALL] from=SNKMiner, to=Invite, getInviterSuns(user(address): 0x3acA26) -> ['0x558c89']
+          [6][STATICCALL] from=SNKMiner, to=Invite, getInviterSuns(user(address): 0x3acA26) -> ['0x558c89']
+          [6][CALL] from=SNKMiner, to=SNKToken, transfer(recipient(address): 0x3acA26, amount(uint256): 4545624338784403155078) -> True
+      [4][CALL] from=0xc04c49, to=0x3aca26, transferaddress() -> None
+        [5][STATICCALL] from=0x3aca26, to=SNKToken, balanceOf(account(address): 0x3acA26) -> 4545624338784403155078
+        [5][CALL] from=0x3aca26, to=SNKToken, transfer(recipient(address): 0xC04c49, amount(uint256): 4545624338784403155078) -> True
+      [4][CALL] from=0xc04c49, to=0x558c89, 0x22a678a3() -> None
+        [5][CALL] from=0x558c89, to=SNKMiner, exit() -> None
+          [6][STATICCALL] from=SNKMiner, to=Invite, getInviterSuns(user(address): 0x558c89) -> []
+          [6][STATICCALL] from=SNKMiner, to=Invite, getInviterSuns(user(address): 0x558c89) -> []
+          [6][CALL] from=SNKMiner, to=SNKToken, transfer(recipient(address): 0x558c89, amount(uint256): 426769943960945360016371) -> True
+          [6][STATICCALL] from=SNKMiner, to=Invite, getInviterSuns(user(address): 0x558c89) -> []
+          [6][STATICCALL] from=SNKMiner, to=Invite, getInviter(user(address): 0x558c89) -> 0x3aca26
+          [6][STATICCALL] from=SNKMiner, to=Invite, getInviterSuns(user(address): 0x3acA26) -> ['0x558c89']
+          [6][STATICCALL] from=SNKMiner, to=Invite, getInviter(user(address): 0x3acA26) -> 0x000000
+          [6][STATICCALL] from=SNKMiner, to=Invite, getInviterSuns(user(address): 0x558c89) -> []
+      [4][CALL] from=0xc04c49, to=0x558c89, transferaddress() -> None
+        [5][STATICCALL] from=0x558c89, to=SNKToken, balanceOf(account(address): 0x558c89) -> 426769943960945360016371
+        [5][CALL] from=0x558c89, to=SNKToken, transfer(recipient(address): 0xC04c49, amount(uint256): 426769943960945360016371) -> True
+      [4][STATICCALL] from=0xc04c49, to=SNKToken, balanceOf(account(address): 0xA3f5ea) -> 1788567956484371252674161
+      [4][STATICCALL] from=0xc04c49, to=SNKToken, balanceOf(account(address): 0xC04c49) -> 431315568299729763171449
+      [4][STATICCALL] from=0xc04c49, to=SNKMiner, privateEarned(account(address): 0x4764e8) -> 82841381279896498
+      [4][CREATE] from=0xc04c49, to=0xb3e75d, atInversebrahint248() -> 0x608060
+      [4][CALL] from=0xc04c49, to=0xb3e75d, 0x0e6da604() -> None
+        [5][CALL] from=0xb3e75d, to=SNKMiner, bindParent(parent(address): 0x4764e8) -> None
+          [6][STATICCALL] from=SNKMiner, to=Invite, getInviter(user(address): 0xB3E75D) -> 0x000000
+          [6][CALL] from=SNKMiner, to=Invite, invite(user(address): 0xB3E75D, parent(address): 0x4764e8) -> True
+      [4][CALL] from=0xc04c49, to=SNKToken, transfer(recipient(address): 0xB3E75D, amount(uint256): 431315568299729763171449) -> True
+      [4][CALL] from=0xc04c49, to=0xb3e75d, 0xd5584171() -> None
+        [5][CALL] from=0xb3e75d, to=SNKToken, approve(spender(address): 0xA3f5ea, amount(uint256): 431315568299729763171449) -> True
+        [5][CALL] from=0xb3e75d, to=SNKMiner, stake(amount(uint256): 431315568299729763171449) -> None
+          [6][STATICCALL] from=SNKMiner, to=Invite, getInviterSuns(user(address): 0xB3E75D) -> []
+          [6][CALL] from=SNKMiner, to=SNKToken, transferFrom(sender(address): 0xB3E75D, recipient(address): 0xA3f5ea, amount(uint256): 431315568299729763171449) -> True
+          [6][STATICCALL] from=SNKMiner, to=Invite, getInviterSuns(user(address): 0xB3E75D) -> []
+          [6][STATICCALL] from=SNKMiner, to=Invite, getInviter(user(address): 0xB3E75D) -> 0x4764e8
+          [6][STATICCALL] from=SNKMiner, to=Invite, getInviterSuns(user(address): 0x4764e8) -> ['0xb3e75d']
+          [6][STATICCALL] from=SNKMiner, to=Invite, getInviter(user(address): 0x4764e8) -> 0x000000
+      [4][CALL] from=0xc04c49, to=0x4764e8, 0x04811f9a() -> None
+        [5][CALL] from=0x4764e8, to=SNKMiner, getReward() -> None
+          [6][STATICCALL] from=SNKMiner, to=Invite, getInviterSuns(user(address): 0x4764e8) -> ['0xb3e75d']
+          [6][STATICCALL] from=SNKMiner, to=Invite, getInviterSuns(user(address): 0x4764e8) -> ['0xb3e75d']
+          [6][STATICCALL] from=SNKMiner, to=Invite, getInviterSuns(user(address): 0x4764e8) -> ['0xb3e75d']
+          [6][CALL] from=SNKMiner, to=SNKToken, transfer(recipient(address): 0x4764e8, amount(uint256): 4594039941513542374656) -> True
+      [4][CALL] from=0xc04c49, to=0x4764e8, transferaddress() -> None
+        [5][STATICCALL] from=0x4764e8, to=SNKToken, balanceOf(account(address): 0x4764e8) -> 4594039941513542374656
+        [5][CALL] from=0x4764e8, to=SNKToken, transfer(recipient(address): 0xC04c49, amount(uint256): 4594039941513542374656) -> True
+      [4][CALL] from=0xc04c49, to=0xb3e75d, 0x22a678a3() -> None
+        [5][CALL] from=0xb3e75d, to=SNKMiner, exit() -> None
+          [6][STATICCALL] from=SNKMiner, to=Invite, getInviterSuns(user(address): 0xB3E75D) -> []
+          [6][STATICCALL] from=SNKMiner, to=Invite, getInviterSuns(user(address): 0xB3E75D) -> []
+          [6][CALL] from=SNKMiner, to=SNKToken, transfer(recipient(address): 0xB3E75D, amount(uint256): 431315568299729763171449) -> True
+          [6][STATICCALL] from=SNKMiner, to=Invite, getInviterSuns(user(address): 0xB3E75D) -> []
+          [6][STATICCALL] from=SNKMiner, to=Invite, getInviter(user(address): 0xB3E75D) -> 0x4764e8
+          [6][STATICCALL] from=SNKMiner, to=Invite, getInviterSuns(user(address): 0x4764e8) -> ['0xb3e75d']
+          [6][STATICCALL] from=SNKMiner, to=Invite, getInviter(user(address): 0x4764e8) -> 0x000000
+          [6][STATICCALL] from=SNKMiner, to=Invite, getInviterSuns(user(address): 0xB3E75D) -> []
+      [4][CALL] from=0xc04c49, to=0xb3e75d, transferaddress() -> None
+        [5][STATICCALL] from=0xb3e75d, to=SNKToken, balanceOf(account(address): 0xB3E75D) -> 431315568299729763171449
+        [5][CALL] from=0xb3e75d, to=SNKToken, transfer(recipient(address): 0xC04c49, amount(uint256): 431315568299729763171449) -> True
+      [4][STATICCALL] from=0xc04c49, to=SNKToken, balanceOf(account(address): 0xA3f5ea) -> 1783973916542857710299505
+      [4][STATICCALL] from=0xc04c49, to=SNKToken, balanceOf(account(address): 0xC04c49) -> 435909608241243305546105
+      [4][STATICCALL] from=0xc04c49, to=SNKMiner, privateEarned(account(address): 0x1E8258) -> 82841381279896498
+      [4][CREATE] from=0xc04c49, to=0xc1bad7, atInversebrahint248() -> 0x608060
+      [4][CALL] from=0xc04c49, to=0xc1bad7, 0x0e6da604() -> None
+        [5][CALL] from=0xc1bad7, to=SNKMiner, bindParent(parent(address): 0x1E8258) -> None
+          [6][STATICCALL] from=SNKMiner, to=Invite, getInviter(user(address): 0xc1bad7) -> 0x000000
+          [6][CALL] from=SNKMiner, to=Invite, invite(user(address): 0xc1bad7, parent(address): 0x1E8258) -> True
+      [4][CALL] from=0xc04c49, to=SNKToken, transfer(recipient(address): 0xc1bad7, amount(uint256): 435909608241243305546105) -> True
+      [4][CALL] from=0xc04c49, to=0xc1bad7, 0xd5584171() -> None
+        [5][CALL] from=0xc1bad7, to=SNKToken, approve(spender(address): 0xA3f5ea, amount(uint256): 435909608241243305546105) -> True
+        [5][CALL] from=0xc1bad7, to=SNKMiner, stake(amount(uint256): 435909608241243305546105) -> None
+          [6][STATICCALL] from=SNKMiner, to=Invite, getInviterSuns(user(address): 0xc1bad7) -> []
+          [6][CALL] from=SNKMiner, to=SNKToken, transferFrom(sender(address): 0xc1bad7, recipient(address): 0xA3f5ea, amount(uint256): 435909608241243305546105) -> True
+          [6][STATICCALL] from=SNKMiner, to=Invite, getInviterSuns(user(address): 0xc1bad7) -> []
+          [6][STATICCALL] from=SNKMiner, to=Invite, getInviter(user(address): 0xc1bad7) -> 0x1e8258
+          [6][STATICCALL] from=SNKMiner, to=Invite, getInviterSuns(user(address): 0x1E8258) -> ['0xc1bad7']
+          [6][STATICCALL] from=SNKMiner, to=Invite, getInviter(user(address): 0x1E8258) -> 0x000000
+      [4][CALL] from=0xc04c49, to=0x1e8258, 0x04811f9a() -> None
+        [5][CALL] from=0x1e8258, to=SNKMiner, getReward() -> None
+          [6][STATICCALL] from=SNKMiner, to=Invite, getInviterSuns(user(address): 0x1E8258) -> ['0xc1bad7']
+          [6][STATICCALL] from=SNKMiner, to=Invite, getInviterSuns(user(address): 0x1E8258) -> ['0xc1bad7']
+          [6][STATICCALL] from=SNKMiner, to=Invite, getInviterSuns(user(address): 0x1E8258) -> ['0xc1bad7']
+          [6][CALL] from=SNKMiner, to=SNKToken, transfer(recipient(address): 0x1E8258, amount(uint256): 4642971220509113388176) -> True
+      [4][CALL] from=0xc04c49, to=0x1e8258, transferaddress() -> None
+        [5][STATICCALL] from=0x1e8258, to=SNKToken, balanceOf(account(address): 0x1E8258) -> 4642971220509113388176
+        [5][CALL] from=0x1e8258, to=SNKToken, transfer(recipient(address): 0xC04c49, amount(uint256): 4642971220509113388176) -> True
+      [4][CALL] from=0xc04c49, to=0xc1bad7, 0x22a678a3() -> None
+        [5][CALL] from=0xc1bad7, to=SNKMiner, exit() -> None
+          [6][STATICCALL] from=SNKMiner, to=Invite, getInviterSuns(user(address): 0xc1bad7) -> []
+          [6][STATICCALL] from=SNKMiner, to=Invite, getInviterSuns(user(address): 0xc1bad7) -> []
+          [6][CALL] from=SNKMiner, to=SNKToken, transfer(recipient(address): 0xc1bad7, amount(uint256): 435909608241243305546105) -> True
+          [6][STATICCALL] from=SNKMiner, to=Invite, getInviterSuns(user(address): 0xc1bad7) -> []
+          [6][STATICCALL] from=SNKMiner, to=Invite, getInviter(user(address): 0xc1bad7) -> 0x1e8258
+          [6][STATICCALL] from=SNKMiner, to=Invite, getInviterSuns(user(address): 0x1E8258) -> ['0xc1bad7']
+          [6][STATICCALL] from=SNKMiner, to=Invite, getInviter(user(address): 0x1E8258) -> 0x000000
+          [6][STATICCALL] from=SNKMiner, to=Invite, getInviterSuns(user(address): 0xc1bad7) -> []
+      [4][CALL] from=0xc04c49, to=0xc1bad7, transferaddress() -> None
+        [5][STATICCALL] from=0xc1bad7, to=SNKToken, balanceOf(account(address): 0xc1bad7) -> 435909608241243305546105
+        [5][CALL] from=0xc1bad7, to=SNKToken, transfer(recipient(address): 0xC04c49, amount(uint256): 435909608241243305546105) -> True
+      [4][STATICCALL] from=0xc04c49, to=SNKToken, balanceOf(account(address): 0xA3f5ea) -> 1779330945322348596911329
+      [4][STATICCALL] from=0xc04c49, to=SNKToken, balanceOf(account(address): 0xC04c49) -> 440552579461752418934281
+      [4][STATICCALL] from=0xc04c49, to=SNKMiner, privateEarned(account(address): 0x55FC24) -> 82841381279896498
+      [4][CREATE] from=0xc04c49, to=0xe57535, atInversebrahint248() -> 0x608060
+      [4][CALL] from=0xc04c49, to=0xe57535, 0x0e6da604() -> None
+        [5][CALL] from=0xe57535, to=SNKMiner, bindParent(parent(address): 0x55FC24) -> None
+          [6][STATICCALL] from=SNKMiner, to=Invite, getInviter(user(address): 0xE57535) -> 0x000000
+          [6][CALL] from=SNKMiner, to=Invite, invite(user(address): 0xE57535, parent(address): 0x55FC24) -> True
+      [4][CALL] from=0xc04c49, to=SNKToken, transfer(recipient(address): 0xE57535, amount(uint256): 440552579461752418934281) -> True
+      [4][CALL] from=0xc04c49, to=0xe57535, 0xd5584171() -> None
+        [5][CALL] from=0xe57535, to=SNKToken, approve(spender(address): 0xA3f5ea, amount(uint256): 440552579461752418934281) -> True
+        [5][CALL] from=0xe57535, to=SNKMiner, stake(amount(uint256): 440552579461752418934281) -> None
+          [6][STATICCALL] from=SNKMiner, to=Invite, getInviterSuns(user(address): 0xE57535) -> []
+          [6][CALL] from=SNKMiner, to=SNKToken, transferFrom(sender(address): 0xE57535, recipient(address): 0xA3f5ea, amount(uint256): 440552579461752418934281) -> True
+          [6][STATICCALL] from=SNKMiner, to=Invite, getInviterSuns(user(address): 0xE57535) -> []
+          [6][STATICCALL] from=SNKMiner, to=Invite, getInviter(user(address): 0xE57535) -> 0x55fc24
+          [6][STATICCALL] from=SNKMiner, to=Invite, getInviterSuns(user(address): 0x55FC24) -> ['0xe57535']
+          [6][STATICCALL] from=SNKMiner, to=Invite, getInviter(user(address): 0x55FC24) -> 0x000000
+      [4][CALL] from=0xc04c49, to=0x55fc24, 0x04811f9a() -> None
+        [5][CALL] from=0x55fc24, to=SNKMiner, getReward() -> None
+          [6][STATICCALL] from=SNKMiner, to=Invite, getInviterSuns(user(address): 0x55FC24) -> ['0xe57535']
+          [6][STATICCALL] from=SNKMiner, to=Invite, getInviterSuns(user(address): 0x55FC24) -> ['0xe57535']
+          [6][STATICCALL] from=SNKMiner, to=Invite, getInviterSuns(user(address): 0x55FC24) -> ['0xe57535']
+          [6][CALL] from=SNKMiner, to=SNKToken, transfer(recipient(address): 0x55FC24, amount(uint256): 4692423668256942484603) -> True
+      [4][CALL] from=0xc04c49, to=0x55fc24, transferaddress() -> None
+        [5][STATICCALL] from=0x55fc24, to=SNKToken, balanceOf(account(address): 0x55FC24) -> 4692423668256942484603
+        [5][CALL] from=0x55fc24, to=SNKToken, transfer(recipient(address): 0xC04c49, amount(uint256): 4692423668256942484603) -> True
+      [4][CALL] from=0xc04c49, to=0xe57535, 0x22a678a3() -> None
+        [5][CALL] from=0xe57535, to=SNKMiner, exit() -> None
+          [6][STATICCALL] from=SNKMiner, to=Invite, getInviterSuns(user(address): 0xE57535) -> []
+          [6][STATICCALL] from=SNKMiner, to=Invite, getInviterSuns(user(address): 0xE57535) -> []
+          [6][CALL] from=SNKMiner, to=SNKToken, transfer(recipient(address): 0xE57535, amount(uint256): 440552579461752418934281) -> True
+          [6][STATICCALL] from=SNKMiner, to=Invite, getInviterSuns(user(address): 0xE57535) -> []
+          [6][STATICCALL] from=SNKMiner, to=Invite, getInviter(user(address): 0xE57535) -> 0x55fc24
+          [6][STATICCALL] from=SNKMiner, to=Invite, getInviterSuns(user(address): 0x55FC24) -> ['0xe57535']
+          [6][STATICCALL] from=SNKMiner, to=Invite, getInviter(user(address): 0x55FC24) -> 0x000000
+          [6][STATICCALL] from=SNKMiner, to=Invite, getInviterSuns(user(address): 0xE57535) -> []
+      [4][CALL] from=0xc04c49, to=0xe57535, transferaddress() -> None
+        [5][STATICCALL] from=0xe57535, to=SNKToken, balanceOf(account(address): 0xE57535) -> 440552579461752418934281
+        [5][CALL] from=0xe57535, to=SNKToken, transfer(recipient(address): 0xC04c49, amount(uint256): 440552579461752418934281) -> True
+      [4][STATICCALL] from=0xc04c49, to=SNKToken, balanceOf(account(address): 0xA3f5ea) -> 1774638521654091654426726
+      [4][STATICCALL] from=0xc04c49, to=SNKToken, balanceOf(account(address): 0xC04c49) -> 445245003130009361418884
+      [4][STATICCALL] from=0xc04c49, to=SNKMiner, privateEarned(account(address): 0x8E5890) -> 82841381279896498
+      [4][CREATE] from=0xc04c49, to=0xd061c1, atInversebrahint248() -> 0x608060
+      [4][CALL] from=0xc04c49, to=0xd061c1, 0x0e6da604() -> None
+        [5][CALL] from=0xd061c1, to=SNKMiner, bindParent(parent(address): 0x8E5890) -> None
+          [6][STATICCALL] from=SNKMiner, to=Invite, getInviter(user(address): 0xd061c1) -> 0x000000
+          [6][CALL] from=SNKMiner, to=Invite, invite(user(address): 0xd061c1, parent(address): 0x8E5890) -> True
+      [4][CALL] from=0xc04c49, to=SNKToken, transfer(recipient(address): 0xd061c1, amount(uint256): 445245003130009361418884) -> True
+      [4][CALL] from=0xc04c49, to=0xd061c1, 0xd5584171() -> None
+        [5][CALL] from=0xd061c1, to=SNKToken, approve(spender(address): 0xA3f5ea, amount(uint256): 445245003130009361418884) -> True
+        [5][CALL] from=0xd061c1, to=SNKMiner, stake(amount(uint256): 445245003130009361418884) -> None
+          [6][STATICCALL] from=SNKMiner, to=Invite, getInviterSuns(user(address): 0xd061c1) -> []
+          [6][CALL] from=SNKMiner, to=SNKToken, transferFrom(sender(address): 0xd061c1, recipient(address): 0xA3f5ea, amount(uint256): 445245003130009361418884) -> True
+          [6][STATICCALL] from=SNKMiner, to=Invite, getInviterSuns(user(address): 0xd061c1) -> []
+          [6][STATICCALL] from=SNKMiner, to=Invite, getInviter(user(address): 0xd061c1) -> 0x8e5890
+          [6][STATICCALL] from=SNKMiner, to=Invite, getInviterSuns(user(address): 0x8E5890) -> ['0xd061c1']
+          [6][STATICCALL] from=SNKMiner, to=Invite, getInviter(user(address): 0x8E5890) -> 0x000000
+      [4][CALL] from=0xc04c49, to=0x8e5890, 0x04811f9a() -> None
+        [5][CALL] from=0x8e5890, to=SNKMiner, getReward() -> None
+          [6][STATICCALL] from=SNKMiner, to=Invite, getInviterSuns(user(address): 0x8E5890) -> ['0xd061c1']
+          [6][STATICCALL] from=SNKMiner, to=Invite, getInviterSuns(user(address): 0x8E5890) -> ['0xd061c1']
+          [6][STATICCALL] from=SNKMiner, to=Invite, getInviterSuns(user(address): 0x8E5890) -> ['0xd061c1']
+          [6][CALL] from=SNKMiner, to=SNKToken, transfer(recipient(address): 0x8E5890, amount(uint256): 4742402835743513275621) -> True
+      [4][CALL] from=0xc04c49, to=0x8e5890, transferaddress() -> None
+        [5][STATICCALL] from=0x8e5890, to=SNKToken, balanceOf(account(address): 0x8E5890) -> 4742402835743513275621
+        [5][CALL] from=0x8e5890, to=SNKToken, transfer(recipient(address): 0xC04c49, amount(uint256): 4742402835743513275621) -> True
+      [4][CALL] from=0xc04c49, to=0xd061c1, 0x22a678a3() -> None
+        [5][CALL] from=0xd061c1, to=SNKMiner, exit() -> None
+          [6][STATICCALL] from=SNKMiner, to=Invite, getInviterSuns(user(address): 0xd061c1) -> []
+          [6][STATICCALL] from=SNKMiner, to=Invite, getInviterSuns(user(address): 0xd061c1) -> []
+          [6][CALL] from=SNKMiner, to=SNKToken, transfer(recipient(address): 0xd061c1, amount(uint256): 445245003130009361418884) -> True
+          [6][STATICCALL] from=SNKMiner, to=Invite, getInviterSuns(user(address): 0xd061c1) -> []
+          [6][STATICCALL] from=SNKMiner, to=Invite, getInviter(user(address): 0xd061c1) -> 0x8e5890
+          [6][STATICCALL] from=SNKMiner, to=Invite, getInviterSuns(user(address): 0x8E5890) -> ['0xd061c1']
+          [6][STATICCALL] from=SNKMiner, to=Invite, getInviter(user(address): 0x8E5890) -> 0x000000
+          [6][STATICCALL] from=SNKMiner, to=Invite, getInviterSuns(user(address): 0xd061c1) -> []
+      [4][CALL] from=0xc04c49, to=0xd061c1, transferaddress() -> None
+        [5][STATICCALL] from=0xd061c1, to=SNKToken, balanceOf(account(address): 0xd061c1) -> 445245003130009361418884
+        [5][CALL] from=0xd061c1, to=SNKToken, transfer(recipient(address): 0xC04c49, amount(uint256): 445245003130009361418884) -> True
+      [4][STATICCALL] from=0xc04c49, to=SNKToken, balanceOf(account(address): 0xA3f5ea) -> 1769896118818348141151105
+      [4][STATICCALL] from=0xc04c49, to=SNKToken, balanceOf(account(address): 0xC04c49) -> 449987405965752874694505
+      [4][STATICCALL] from=0xc04c49, to=SNKMiner, privateEarned(account(address): 0x28b404) -> 82841381279896498
+      [4][CREATE] from=0xc04c49, to=0x68ac76, atInversebrahint248() -> 0x608060
+      [4][CALL] from=0xc04c49, to=0x68ac76, 0x0e6da604() -> None
+        [5][CALL] from=0x68ac76, to=SNKMiner, bindParent(parent(address): 0x28b404) -> None
+          [6][STATICCALL] from=SNKMiner, to=Invite, getInviter(user(address): 0x68Ac76) -> 0x000000
+          [6][CALL] from=SNKMiner, to=Invite, invite(user(address): 0x68Ac76, parent(address): 0x28b404) -> True
+      [4][CALL] from=0xc04c49, to=SNKToken, transfer(recipient(address): 0x68Ac76, amount(uint256): 449987405965752874694505) -> True
+      [4][CALL] from=0xc04c49, to=0x68ac76, 0xd5584171() -> None
+        [5][CALL] from=0x68ac76, to=SNKToken, approve(spender(address): 0xA3f5ea, amount(uint256): 449987405965752874694505) -> True
+        [5][CALL] from=0x68ac76, to=SNKMiner, stake(amount(uint256): 449987405965752874694505) -> None
+          [6][STATICCALL] from=SNKMiner, to=Invite, getInviterSuns(user(address): 0x68Ac76) -> []
+          [6][CALL] from=SNKMiner, to=SNKToken, transferFrom(sender(address): 0x68Ac76, recipient(address): 0xA3f5ea, amount(uint256): 449987405965752874694505) -> True
+          [6][STATICCALL] from=SNKMiner, to=Invite, getInviterSuns(user(address): 0x68Ac76) -> []
+          [6][STATICCALL] from=SNKMiner, to=Invite, getInviter(user(address): 0x68Ac76) -> 0x28b404
+          [6][STATICCALL] from=SNKMiner, to=Invite, getInviterSuns(user(address): 0x28b404) -> ['0x68ac76']
+          [6][STATICCALL] from=SNKMiner, to=Invite, getInviter(user(address): 0x28b404) -> 0x000000
+      [4][CALL] from=0xc04c49, to=0x28b404, 0x04811f9a() -> None
+        [5][CALL] from=0x28b404, to=SNKMiner, getReward() -> None
+          [6][STATICCALL] from=SNKMiner, to=Invite, getInviterSuns(user(address): 0x28b404) -> ['0x68ac76']
+          [6][STATICCALL] from=SNKMiner, to=Invite, getInviterSuns(user(address): 0x28b404) -> ['0x68ac76']
+          [6][STATICCALL] from=SNKMiner, to=Invite, getInviterSuns(user(address): 0x28b404) -> ['0x68ac76']
+          [6][CALL] from=SNKMiner, to=SNKToken, transfer(recipient(address): 0x28b404, amount(uint256): 4792914333079059228854) -> True
+      [4][CALL] from=0xc04c49, to=0x28b404, transferaddress() -> None
+        [5][STATICCALL] from=0x28b404, to=SNKToken, balanceOf(account(address): 0x28b404) -> 4792914333079059228854
+        [5][CALL] from=0x28b404, to=SNKToken, transfer(recipient(address): 0xC04c49, amount(uint256): 4792914333079059228854) -> True
+      [4][CALL] from=0xc04c49, to=0x68ac76, 0x22a678a3() -> None
+        [5][CALL] from=0x68ac76, to=SNKMiner, exit() -> None
+          [6][STATICCALL] from=SNKMiner, to=Invite, getInviterSuns(user(address): 0x68Ac76) -> []
+          [6][STATICCALL] from=SNKMiner, to=Invite, getInviterSuns(user(address): 0x68Ac76) -> []
+          [6][CALL] from=SNKMiner, to=SNKToken, transfer(recipient(address): 0x68Ac76, amount(uint256): 449987405965752874694505) -> True
+          [6][STATICCALL] from=SNKMiner, to=Invite, getInviterSuns(user(address): 0x68Ac76) -> []
+          [6][STATICCALL] from=SNKMiner, to=Invite, getInviter(user(address): 0x68Ac76) -> 0x28b404
+          [6][STATICCALL] from=SNKMiner, to=Invite, getInviterSuns(user(address): 0x28b404) -> ['0x68ac76']
+          [6][STATICCALL] from=SNKMiner, to=Invite, getInviter(user(address): 0x28b404) -> 0x000000
+          [6][STATICCALL] from=SNKMiner, to=Invite, getInviterSuns(user(address): 0x68Ac76) -> []
+      [4][CALL] from=0xc04c49, to=0x68ac76, transferaddress() -> None
+        [5][STATICCALL] from=0x68ac76, to=SNKToken, balanceOf(account(address): 0x68Ac76) -> 449987405965752874694505
+        [5][CALL] from=0x68ac76, to=SNKToken, transfer(recipient(address): 0xC04c49, amount(uint256): 449987405965752874694505) -> True
+      [4][STATICCALL] from=0xc04c49, to=SNKToken, balanceOf(account(address): 0xA3f5ea) -> 1765103204485269081922251
+      [4][STATICCALL] from=0xc04c49, to=SNKToken, balanceOf(account(address): 0xC04c49) -> 454780320298831933923359
+      [4][STATICCALL] from=0xc04c49, to=SNKMiner, privateEarned(account(address): 0xCbc57e) -> 82841381279896498
+      [4][CREATE] from=0xc04c49, to=0x5b63f5, atInversebrahint248() -> 0x608060
+      [4][CALL] from=0xc04c49, to=0x5b63f5, 0x0e6da604() -> None
+        [5][CALL] from=0x5b63f5, to=SNKMiner, bindParent(parent(address): 0xCbc57e) -> None
+          [6][STATICCALL] from=SNKMiner, to=Invite, getInviter(user(address): 0x5b63f5) -> 0x000000
+          [6][CALL] from=SNKMiner, to=Invite, invite(user(address): 0x5b63f5, parent(address): 0xCbc57e) -> True
+      [4][CALL] from=0xc04c49, to=SNKToken, transfer(recipient(address): 0x5b63f5, amount(uint256): 454780320298831933923359) -> True
+      [4][CALL] from=0xc04c49, to=0x5b63f5, 0xd5584171() -> None
+        [5][CALL] from=0x5b63f5, to=SNKToken, approve(spender(address): 0xA3f5ea, amount(uint256): 454780320298831933923359) -> True
+        [5][CALL] from=0x5b63f5, to=SNKMiner, stake(amount(uint256): 454780320298831933923359) -> None
+          [6][STATICCALL] from=SNKMiner, to=Invite, getInviterSuns(user(address): 0x5b63f5) -> []
+          [6][CALL] from=SNKMiner, to=SNKToken, transferFrom(sender(address): 0x5b63f5, recipient(address): 0xA3f5ea, amount(uint256): 454780320298831933923359) -> True
+          [6][STATICCALL] from=SNKMiner, to=Invite, getInviterSuns(user(address): 0x5b63f5) -> []
+          [6][STATICCALL] from=SNKMiner, to=Invite, getInviter(user(address): 0x5b63f5) -> 0xcbc57e
+          [6][STATICCALL] from=SNKMiner, to=Invite, getInviterSuns(user(address): 0xCbc57e) -> ['0x5b63f5']
+          [6][STATICCALL] from=SNKMiner, to=Invite, getInviter(user(address): 0xCbc57e) -> 0x000000
+      [4][CALL] from=0xc04c49, to=0xcbc57e, 0x04811f9a() -> None
+        [5][CALL] from=0xcbc57e, to=SNKMiner, getReward() -> None
+          [6][STATICCALL] from=SNKMiner, to=Invite, getInviterSuns(user(address): 0xCbc57e) -> ['0x5b63f5']
+          [6][STATICCALL] from=SNKMiner, to=Invite, getInviterSuns(user(address): 0xCbc57e) -> ['0x5b63f5']
+          [6][STATICCALL] from=SNKMiner, to=Invite, getInviterSuns(user(address): 0xCbc57e) -> ['0x5b63f5']
+          [6][CALL] from=SNKMiner, to=SNKToken, transfer(recipient(address): 0xCbc57e, amount(uint256): 4843963830127292781307) -> True
+      [4][CALL] from=0xc04c49, to=0xcbc57e, transferaddress() -> None
+        [5][STATICCALL] from=0xcbc57e, to=SNKToken, balanceOf(account(address): 0xCbc57e) -> 4843963830127292781307
+        [5][CALL] from=0xcbc57e, to=SNKToken, transfer(recipient(address): 0xC04c49, amount(uint256): 4843963830127292781307) -> True
+      [4][CALL] from=0xc04c49, to=0x5b63f5, 0x22a678a3() -> None
+        [5][CALL] from=0x5b63f5, to=SNKMiner, exit() -> None
+          [6][STATICCALL] from=SNKMiner, to=Invite, getInviterSuns(user(address): 0x5b63f5) -> []
+          [6][STATICCALL] from=SNKMiner, to=Invite, getInviterSuns(user(address): 0x5b63f5) -> []
+          [6][CALL] from=SNKMiner, to=SNKToken, transfer(recipient(address): 0x5b63f5, amount(uint256): 454780320298831933923359) -> True
+          [6][STATICCALL] from=SNKMiner, to=Invite, getInviterSuns(user(address): 0x5b63f5) -> []
+          [6][STATICCALL] from=SNKMiner, to=Invite, getInviter(user(address): 0x5b63f5) -> 0xcbc57e
+          [6][STATICCALL] from=SNKMiner, to=Invite, getInviterSuns(user(address): 0xCbc57e) -> ['0x5b63f5']
+          [6][STATICCALL] from=SNKMiner, to=Invite, getInviter(user(address): 0xCbc57e) -> 0x000000
+          [6][STATICCALL] from=SNKMiner, to=Invite, getInviterSuns(user(address): 0x5b63f5) -> []
+      [4][CALL] from=0xc04c49, to=0x5b63f5, transferaddress() -> None
+        [5][STATICCALL] from=0x5b63f5, to=SNKToken, balanceOf(account(address): 0x5b63f5) -> 454780320298831933923359
+        [5][CALL] from=0x5b63f5, to=SNKToken, transfer(recipient(address): 0xC04c49, amount(uint256): 454780320298831933923359) -> True
+      [4][STATICCALL] from=0xc04c49, to=SNKToken, balanceOf(account(address): 0xA3f5ea) -> 1760259240655141789140944
+      [4][STATICCALL] from=0xc04c49, to=SNKToken, balanceOf(account(address): 0xC04c49) -> 459624284128959226704666
+      [4][STATICCALL] from=0xc04c49, to=SNKMiner, privateEarned(account(address): 0x1CBe3d) -> 82841381279896498
+      [4][CREATE] from=0xc04c49, to=0x85f866, atInversebrahint248() -> 0x608060
+      [4][CALL] from=0xc04c49, to=0x85f866, 0x0e6da604() -> None
+        [5][CALL] from=0x85f866, to=SNKMiner, bindParent(parent(address): 0x1CBe3d) -> None
+          [6][STATICCALL] from=SNKMiner, to=Invite, getInviter(user(address): 0x85f866) -> 0x000000
+          [6][CALL] from=SNKMiner, to=Invite, invite(user(address): 0x85f866, parent(address): 0x1CBe3d) -> True
+      [4][CALL] from=0xc04c49, to=SNKToken, transfer(recipient(address): 0x85f866, amount(uint256): 459624284128959226704666) -> True
+      [4][CALL] from=0xc04c49, to=0x85f866, 0xd5584171() -> None
+        [5][CALL] from=0x85f866, to=SNKToken, approve(spender(address): 0xA3f5ea, amount(uint256): 459624284128959226704666) -> True
+        [5][CALL] from=0x85f866, to=SNKMiner, stake(amount(uint256): 459624284128959226704666) -> None
+          [6][STATICCALL] from=SNKMiner, to=Invite, getInviterSuns(user(address): 0x85f866) -> []
+          [6][CALL] from=SNKMiner, to=SNKToken, transferFrom(sender(address): 0x85f866, recipient(address): 0xA3f5ea, amount(uint256): 459624284128959226704666) -> True
+          [6][STATICCALL] from=SNKMiner, to=Invite, getInviterSuns(user(address): 0x85f866) -> []
+          [6][STATICCALL] from=SNKMiner, to=Invite, getInviter(user(address): 0x85f866) -> 0x1cbe3d
+          [6][STATICCALL] from=SNKMiner, to=Invite, getInviterSuns(user(address): 0x1CBe3d) -> ['0x85f866']
+          [6][STATICCALL] from=SNKMiner, to=Invite, getInviter(user(address): 0x1CBe3d) -> 0x000000
+      [4][CALL] from=0xc04c49, to=0x1cbe3d, 0x04811f9a() -> None
+        [5][CALL] from=0x1cbe3d, to=SNKMiner, getReward() -> None
+          [6][STATICCALL] from=SNKMiner, to=Invite, getInviterSuns(user(address): 0x1CBe3d) -> ['0x85f866']
+          [6][STATICCALL] from=SNKMiner, to=Invite, getInviterSuns(user(address): 0x1CBe3d) -> ['0x85f866']
+          [6][STATICCALL] from=SNKMiner, to=Invite, getInviterSuns(user(address): 0x1CBe3d) -> ['0x85f866']
+          [6][CALL] from=SNKMiner, to=SNKToken, transfer(recipient(address): 0x1CBe3d, amount(uint256): 4895557057141841719458) -> True
+      [4][CALL] from=0xc04c49, to=0x1cbe3d, transferaddress() -> None
+        [5][STATICCALL] from=0x1cbe3d, to=SNKToken, balanceOf(account(address): 0x1CBe3d) -> 4895557057141841719458
+        [5][CALL] from=0x1cbe3d, to=SNKToken, transfer(recipient(address): 0xC04c49, amount(uint256): 4895557057141841719458) -> True
+      [4][CALL] from=0xc04c49, to=0x85f866, 0x22a678a3() -> None
+        [5][CALL] from=0x85f866, to=SNKMiner, exit() -> None
+          [6][STATICCALL] from=SNKMiner, to=Invite, getInviterSuns(user(address): 0x85f866) -> []
+          [6][STATICCALL] from=SNKMiner, to=Invite, getInviterSuns(user(address): 0x85f866) -> []
+          [6][CALL] from=SNKMiner, to=SNKToken, transfer(recipient(address): 0x85f866, amount(uint256): 459624284128959226704666) -> True
+          [6][STATICCALL] from=SNKMiner, to=Invite, getInviterSuns(user(address): 0x85f866) -> []
+          [6][STATICCALL] from=SNKMiner, to=Invite, getInviter(user(address): 0x85f866) -> 0x1cbe3d
+          [6][STATICCALL] from=SNKMiner, to=Invite, getInviterSuns(user(address): 0x1CBe3d) -> ['0x85f866']
+          [6][STATICCALL] from=SNKMiner, to=Invite, getInviter(user(address): 0x1CBe3d) -> 0x000000
+          [6][STATICCALL] from=SNKMiner, to=Invite, getInviterSuns(user(address): 0x85f866) -> []
+      [4][CALL] from=0xc04c49, to=0x85f866, transferaddress() -> None
+        [5][STATICCALL] from=0x85f866, to=SNKToken, balanceOf(account(address): 0x85f866) -> 459624284128959226704666
+        [5][CALL] from=0x85f866, to=SNKToken, transfer(recipient(address): 0xC04c49, amount(uint256): 459624284128959226704666) -> True
+      [4][STATICCALL] from=0xc04c49, to=SNKToken, balanceOf(account(address): 0xA3f5ea) -> 1755363683597999947421486
+      [4][STATICCALL] from=0xc04c49, to=SNKToken, balanceOf(account(address): 0xC04c49) -> 464519841186101068424124
+      [4][STATICCALL] from=0xc04c49, to=SNKMiner, privateEarned(account(address): 0x6234Dd) -> 82841381279896498
+      [4][CREATE] from=0xc04c49, to=0x6c5901, atInversebrahint248() -> 0x608060
+      [4][CALL] from=0xc04c49, to=0x6c5901, 0x0e6da604() -> None
+        [5][CALL] from=0x6c5901, to=SNKMiner, bindParent(parent(address): 0x6234Dd) -> None
+          [6][STATICCALL] from=SNKMiner, to=Invite, getInviter(user(address): 0x6C5901) -> 0x000000
+          [6][CALL] from=SNKMiner, to=Invite, invite(user(address): 0x6C5901, parent(address): 0x6234Dd) -> True
+      [4][CALL] from=0xc04c49, to=SNKToken, transfer(recipient(address): 0x6C5901, amount(uint256): 464519841186101068424124) -> True
+      [4][CALL] from=0xc04c49, to=0x6c5901, 0xd5584171() -> None
+        [5][CALL] from=0x6c5901, to=SNKToken, approve(spender(address): 0xA3f5ea, amount(uint256): 464519841186101068424124) -> True
+        [5][CALL] from=0x6c5901, to=SNKMiner, stake(amount(uint256): 464519841186101068424124) -> None
+          [6][STATICCALL] from=SNKMiner, to=Invite, getInviterSuns(user(address): 0x6C5901) -> []
+          [6][CALL] from=SNKMiner, to=SNKToken, transferFrom(sender(address): 0x6C5901, recipient(address): 0xA3f5ea, amount(uint256): 464519841186101068424124) -> True
+          [6][STATICCALL] from=SNKMiner, to=Invite, getInviterSuns(user(address): 0x6C5901) -> []
+          [6][STATICCALL] from=SNKMiner, to=Invite, getInviter(user(address): 0x6C5901) -> 0x6234dd
+          [6][STATICCALL] from=SNKMiner, to=Invite, getInviterSuns(user(address): 0x6234Dd) -> ['0x6c5901']
+          [6][STATICCALL] from=SNKMiner, to=Invite, getInviter(user(address): 0x6234Dd) -> 0x000000
+      [4][CALL] from=0xc04c49, to=0x6234dd, 0x04811f9a() -> None
+        [5][CALL] from=0x6234dd, to=SNKMiner, getReward() -> None
+          [6][STATICCALL] from=SNKMiner, to=Invite, getInviterSuns(user(address): 0x6234Dd) -> ['0x6c5901']
+          [6][STATICCALL] from=SNKMiner, to=Invite, getInviterSuns(user(address): 0x6234Dd) -> ['0x6c5901']
+          [6][STATICCALL] from=SNKMiner, to=Invite, getInviterSuns(user(address): 0x6234Dd) -> ['0x6c5901']
+          [6][CALL] from=SNKMiner, to=SNKToken, transfer(recipient(address): 0x6234Dd, amount(uint256): 4947699805409464265355) -> True
+      [4][CALL] from=0xc04c49, to=0x6234dd, transferaddress() -> None
+        [5][STATICCALL] from=0x6234dd, to=SNKToken, balanceOf(account(address): 0x6234Dd) -> 4947699805409464265355
+        [5][CALL] from=0x6234dd, to=SNKToken, transfer(recipient(address): 0xC04c49, amount(uint256): 4947699805409464265355) -> True
+      [4][CALL] from=0xc04c49, to=0x6c5901, 0x22a678a3() -> None
+        [5][CALL] from=0x6c5901, to=SNKMiner, exit() -> None
+          [6][STATICCALL] from=SNKMiner, to=Invite, getInviterSuns(user(address): 0x6C5901) -> []
+          [6][STATICCALL] from=SNKMiner, to=Invite, getInviterSuns(user(address): 0x6C5901) -> []
+          [6][CALL] from=SNKMiner, to=SNKToken, transfer(recipient(address): 0x6C5901, amount(uint256): 464519841186101068424124) -> True
+          [6][STATICCALL] from=SNKMiner, to=Invite, getInviterSuns(user(address): 0x6C5901) -> []
+          [6][STATICCALL] from=SNKMiner, to=Invite, getInviter(user(address): 0x6C5901) -> 0x6234dd
+          [6][STATICCALL] from=SNKMiner, to=Invite, getInviterSuns(user(address): 0x6234Dd) -> ['0x6c5901']
+          [6][STATICCALL] from=SNKMiner, to=Invite, getInviter(user(address): 0x6234Dd) -> 0x000000
+          [6][STATICCALL] from=SNKMiner, to=Invite, getInviterSuns(user(address): 0x6C5901) -> []
+      [4][CALL] from=0xc04c49, to=0x6c5901, transferaddress() -> None
+        [5][STATICCALL] from=0x6c5901, to=SNKToken, balanceOf(account(address): 0x6C5901) -> 464519841186101068424124
+        [5][CALL] from=0x6c5901, to=SNKToken, transfer(recipient(address): 0xC04c49, amount(uint256): 464519841186101068424124) -> True
+      [4][STATICCALL] from=0xc04c49, to=SNKToken, balanceOf(account(address): 0xA3f5ea) -> 1750415983792590483156131
+      [4][STATICCALL] from=0xc04c49, to=SNKToken, balanceOf(account(address): 0xC04c49) -> 469467540991510532689479
+      [4][STATICCALL] from=0xc04c49, to=SNKMiner, privateEarned(account(address): 0x02414B) -> 82841381279896498
+      [4][CREATE] from=0xc04c49, to=0xfaee5d, atInversebrahint248() -> 0x608060
+      [4][CALL] from=0xc04c49, to=0xfaee5d, 0x0e6da604() -> None
+        [5][CALL] from=0xfaee5d, to=SNKMiner, bindParent(parent(address): 0x02414B) -> None
+          [6][STATICCALL] from=SNKMiner, to=Invite, getInviter(user(address): 0xFAEe5d) -> 0x000000
+          [6][CALL] from=SNKMiner, to=Invite, invite(user(address): 0xFAEe5d, parent(address): 0x02414B) -> True
+      [4][CALL] from=0xc04c49, to=SNKToken, transfer(recipient(address): 0xFAEe5d, amount(uint256): 469467540991510532689479) -> True
+      [4][CALL] from=0xc04c49, to=0xfaee5d, 0xd5584171() -> None
+        [5][CALL] from=0xfaee5d, to=SNKToken, approve(spender(address): 0xA3f5ea, amount(uint256): 469467540991510532689479) -> True
+        [5][CALL] from=0xfaee5d, to=SNKMiner, stake(amount(uint256): 469467540991510532689479) -> None
+          [6][STATICCALL] from=SNKMiner, to=Invite, getInviterSuns(user(address): 0xFAEe5d) -> []
+          [6][CALL] from=SNKMiner, to=SNKToken, transferFrom(sender(address): 0xFAEe5d, recipient(address): 0xA3f5ea, amount(uint256): 469467540991510532689479) -> True
+          [6][STATICCALL] from=SNKMiner, to=Invite, getInviterSuns(user(address): 0xFAEe5d) -> []
+          [6][STATICCALL] from=SNKMiner, to=Invite, getInviter(user(address): 0xFAEe5d) -> 0x02414b
+          [6][STATICCALL] from=SNKMiner, to=Invite, getInviterSuns(user(address): 0x02414B) -> ['0xfaee5d']
+          [6][STATICCALL] from=SNKMiner, to=Invite, getInviter(user(address): 0x02414B) -> 0x000000
+      [4][CALL] from=0xc04c49, to=0x02414b, 0x04811f9a() -> None
+        [5][CALL] from=0x02414b, to=SNKMiner, getReward() -> None
+          [6][STATICCALL] from=SNKMiner, to=Invite, getInviterSuns(user(address): 0x02414B) -> ['0xfaee5d']
+          [6][STATICCALL] from=SNKMiner, to=Invite, getInviterSuns(user(address): 0x02414B) -> ['0xfaee5d']
+          [6][STATICCALL] from=SNKMiner, to=Invite, getInviterSuns(user(address): 0x02414B) -> ['0xfaee5d']
+          [6][CALL] from=SNKMiner, to=SNKToken, transfer(recipient(address): 0x02414B, amount(uint256): 5000397927900115068928) -> True
+      [4][CALL] from=0xc04c49, to=0x02414b, transferaddress() -> None
+        [5][STATICCALL] from=0x02414b, to=SNKToken, balanceOf(account(address): 0x02414B) -> 5000397927900115068928
+        [5][CALL] from=0x02414b, to=SNKToken, transfer(recipient(address): 0xC04c49, amount(uint256): 5000397927900115068928) -> True
+      [4][CALL] from=0xc04c49, to=0xfaee5d, 0x22a678a3() -> None
+        [5][CALL] from=0xfaee5d, to=SNKMiner, exit() -> None
+          [6][STATICCALL] from=SNKMiner, to=Invite, getInviterSuns(user(address): 0xFAEe5d) -> []
+          [6][STATICCALL] from=SNKMiner, to=Invite, getInviterSuns(user(address): 0xFAEe5d) -> []
+          [6][CALL] from=SNKMiner, to=SNKToken, transfer(recipient(address): 0xFAEe5d, amount(uint256): 469467540991510532689479) -> True
+          [6][STATICCALL] from=SNKMiner, to=Invite, getInviterSuns(user(address): 0xFAEe5d) -> []
+          [6][STATICCALL] from=SNKMiner, to=Invite, getInviter(user(address): 0xFAEe5d) -> 0x02414b
+          [6][STATICCALL] from=SNKMiner, to=Invite, getInviterSuns(user(address): 0x02414B) -> ['0xfaee5d']
+          [6][STATICCALL] from=SNKMiner, to=Invite, getInviter(user(address): 0x02414B) -> 0x000000
+          [6][STATICCALL] from=SNKMiner, to=Invite, getInviterSuns(user(address): 0xFAEe5d) -> []
+      [4][CALL] from=0xc04c49, to=0xfaee5d, transferaddress() -> None
+        [5][STATICCALL] from=0xfaee5d, to=SNKToken, balanceOf(account(address): 0xFAEe5d) -> 469467540991510532689479
+        [5][CALL] from=0xfaee5d, to=SNKToken, transfer(recipient(address): 0xC04c49, amount(uint256): 469467540991510532689479) -> True
+      [4][STATICCALL] from=0xc04c49, to=SNKToken, balanceOf(account(address): 0xA3f5ea) -> 1745415585864690368087203
+      [4][STATICCALL] from=0xc04c49, to=SNKToken, balanceOf(account(address): 0xC04c49) -> 474467938919410647758407
+      [4][STATICCALL] from=0xc04c49, to=SNKMiner, privateEarned(account(address): 0x454f1e) -> 82841381279896498
+      [4][CREATE] from=0xc04c49, to=0x3017d8, atInversebrahint248() -> 0x608060
+      [4][CALL] from=0xc04c49, to=0x3017d8, 0x0e6da604() -> None
+        [5][CALL] from=0x3017d8, to=SNKMiner, bindParent(parent(address): 0x454f1e) -> None
+          [6][STATICCALL] from=SNKMiner, to=Invite, getInviter(user(address): 0x3017D8) -> 0x000000
+          [6][CALL] from=SNKMiner, to=Invite, invite(user(address): 0x3017D8, parent(address): 0x454f1e) -> True
+      [4][CALL] from=0xc04c49, to=SNKToken, transfer(recipient(address): 0x3017D8, amount(uint256): 474467938919410647758407) -> True
+      [4][CALL] from=0xc04c49, to=0x3017d8, 0xd5584171() -> None
+        [5][CALL] from=0x3017d8, to=SNKToken, approve(spender(address): 0xA3f5ea, amount(uint256): 474467938919410647758407) -> True
+        [5][CALL] from=0x3017d8, to=SNKMiner, stake(amount(uint256): 474467938919410647758407) -> None
+          [6][STATICCALL] from=SNKMiner, to=Invite, getInviterSuns(user(address): 0x3017D8) -> []
+          [6][CALL] from=SNKMiner, to=SNKToken, transferFrom(sender(address): 0x3017D8, recipient(address): 0xA3f5ea, amount(uint256): 474467938919410647758407) -> True
+          [6][STATICCALL] from=SNKMiner, to=Invite, getInviterSuns(user(address): 0x3017D8) -> []
+          [6][STATICCALL] from=SNKMiner, to=Invite, getInviter(user(address): 0x3017D8) -> 0x454f1e
+          [6][STATICCALL] from=SNKMiner, to=Invite, getInviterSuns(user(address): 0x454f1e) -> ['0x3017d8']
+          [6][STATICCALL] from=SNKMiner, to=Invite, getInviter(user(address): 0x454f1e) -> 0x000000
+      [4][CALL] from=0xc04c49, to=0x454f1e, 0x04811f9a() -> None
+        [5][CALL] from=0x454f1e, to=SNKMiner, getReward() -> None
+          [6][STATICCALL] from=SNKMiner, to=Invite, getInviterSuns(user(address): 0x454f1e) -> ['0x3017d8']
+          [6][STATICCALL] from=SNKMiner, to=Invite, getInviterSuns(user(address): 0x454f1e) -> ['0x3017d8']
+          [6][STATICCALL] from=SNKMiner, to=Invite, getInviterSuns(user(address): 0x454f1e) -> ['0x3017d8']
+          [6][CALL] from=SNKMiner, to=SNKToken, transfer(recipient(address): 0x454f1e, amount(uint256): 5053657339923935075770) -> True
+      [4][CALL] from=0xc04c49, to=0x454f1e, transferaddress() -> None
+        [5][STATICCALL] from=0x454f1e, to=SNKToken, balanceOf(account(address): 0x454f1e) -> 5053657339923935075770
+        [5][CALL] from=0x454f1e, to=SNKToken, transfer(recipient(address): 0xC04c49, amount(uint256): 5053657339923935075770) -> True
+      [4][CALL] from=0xc04c49, to=0x3017d8, 0x22a678a3() -> None
+        [5][CALL] from=0x3017d8, to=SNKMiner, exit() -> None
+          [6][STATICCALL] from=SNKMiner, to=Invite, getInviterSuns(user(address): 0x3017D8) -> []
+          [6][STATICCALL] from=SNKMiner, to=Invite, getInviterSuns(user(address): 0x3017D8) -> []
+          [6][CALL] from=SNKMiner, to=SNKToken, transfer(recipient(address): 0x3017D8, amount(uint256): 474467938919410647758407) -> True
+          [6][STATICCALL] from=SNKMiner, to=Invite, getInviterSuns(user(address): 0x3017D8) -> []
+          [6][STATICCALL] from=SNKMiner, to=Invite, getInviter(user(address): 0x3017D8) -> 0x454f1e
+          [6][STATICCALL] from=SNKMiner, to=Invite, getInviterSuns(user(address): 0x454f1e) -> ['0x3017d8']
+          [6][STATICCALL] from=SNKMiner, to=Invite, getInviter(user(address): 0x454f1e) -> 0x000000
+          [6][STATICCALL] from=SNKMiner, to=Invite, getInviterSuns(user(address): 0x3017D8) -> []
+      [4][CALL] from=0xc04c49, to=0x3017d8, transferaddress() -> None
+        [5][STATICCALL] from=0x3017d8, to=SNKToken, balanceOf(account(address): 0x3017D8) -> 474467938919410647758407
+        [5][CALL] from=0x3017d8, to=SNKToken, transfer(recipient(address): 0xC04c49, amount(uint256): 474467938919410647758407) -> True
+      [4][STATICCALL] from=0xc04c49, to=SNKToken, balanceOf(account(address): 0xA3f5ea) -> 1740361928524766433011433
+      [4][STATICCALL] from=0xc04c49, to=SNKToken, balanceOf(account(address): 0xC04c49) -> 479521596259334582834177
+      [4][STATICCALL] from=0xc04c49, to=SNKMiner, privateEarned(account(address): 0xb1962a) -> 82841381279896498
+      [4][CREATE] from=0xc04c49, to=0xa336d9, atInversebrahint248() -> 0x608060
+      [4][CALL] from=0xc04c49, to=0xa336d9, 0x0e6da604() -> None
+        [5][CALL] from=0xa336d9, to=SNKMiner, bindParent(parent(address): 0xb1962a) -> None
+          [6][STATICCALL] from=SNKMiner, to=Invite, getInviter(user(address): 0xA336d9) -> 0x000000
+          [6][CALL] from=SNKMiner, to=Invite, invite(user(address): 0xA336d9, parent(address): 0xb1962a) -> True
+      [4][CALL] from=0xc04c49, to=SNKToken, transfer(recipient(address): 0xA336d9, amount(uint256): 479521596259334582834177) -> True
+      [4][CALL] from=0xc04c49, to=0xa336d9, 0xd5584171() -> None
+        [5][CALL] from=0xa336d9, to=SNKToken, approve(spender(address): 0xA3f5ea, amount(uint256): 479521596259334582834177) -> True
+        [5][CALL] from=0xa336d9, to=SNKMiner, stake(amount(uint256): 479521596259334582834177) -> None
+          [6][STATICCALL] from=SNKMiner, to=Invite, getInviterSuns(user(address): 0xA336d9) -> []
+          [6][CALL] from=SNKMiner, to=SNKToken, transferFrom(sender(address): 0xA336d9, recipient(address): 0xA3f5ea, amount(uint256): 479521596259334582834177) -> True
+          [6][STATICCALL] from=SNKMiner, to=Invite, getInviterSuns(user(address): 0xA336d9) -> []
+          [6][STATICCALL] from=SNKMiner, to=Invite, getInviter(user(address): 0xA336d9) -> 0xb1962a
+          [6][STATICCALL] from=SNKMiner, to=Invite, getInviterSuns(user(address): 0xb1962a) -> ['0xa336d9']
+          [6][STATICCALL] from=SNKMiner, to=Invite, getInviter(user(address): 0xb1962a) -> 0x000000
+      [4][CALL] from=0xc04c49, to=0xb1962a, 0x04811f9a() -> None
+        [5][CALL] from=0xb1962a, to=SNKMiner, getReward() -> None
+          [6][STATICCALL] from=SNKMiner, to=Invite, getInviterSuns(user(address): 0xb1962a) -> ['0xa336d9']
+          [6][STATICCALL] from=SNKMiner, to=Invite, getInviterSuns(user(address): 0xb1962a) -> ['0xa336d9']
+          [6][STATICCALL] from=SNKMiner, to=Invite, getInviterSuns(user(address): 0xb1962a) -> ['0xa336d9']
+          [6][CALL] from=SNKMiner, to=SNKToken, transfer(recipient(address): 0xb1962a, amount(uint256): 5107484019795239016820) -> True
+      [4][CALL] from=0xc04c49, to=0xb1962a, transferaddress() -> None
+        [5][STATICCALL] from=0xb1962a, to=SNKToken, balanceOf(account(address): 0xb1962a) -> 5107484019795239016820
+        [5][CALL] from=0xb1962a, to=SNKToken, transfer(recipient(address): 0xC04c49, amount(uint256): 5107484019795239016820) -> True
+      [4][CALL] from=0xc04c49, to=0xa336d9, 0x22a678a3() -> None
+        [5][CALL] from=0xa336d9, to=SNKMiner, exit() -> None
+          [6][STATICCALL] from=SNKMiner, to=Invite, getInviterSuns(user(address): 0xA336d9) -> []
+          [6][STATICCALL] from=SNKMiner, to=Invite, getInviterSuns(user(address): 0xA336d9) -> []
+          [6][CALL] from=SNKMiner, to=SNKToken, transfer(recipient(address): 0xA336d9, amount(uint256): 479521596259334582834177) -> True
+          [6][STATICCALL] from=SNKMiner, to=Invite, getInviterSuns(user(address): 0xA336d9) -> []
+          [6][STATICCALL] from=SNKMiner, to=Invite, getInviter(user(address): 0xA336d9) -> 0xb1962a
+          [6][STATICCALL] from=SNKMiner, to=Invite, getInviterSuns(user(address): 0xb1962a) -> ['0xa336d9']
+          [6][STATICCALL] from=SNKMiner, to=Invite, getInviter(user(address): 0xb1962a) -> 0x000000
+          [6][STATICCALL] from=SNKMiner, to=Invite, getInviterSuns(user(address): 0xA336d9) -> []
+      [4][CALL] from=0xc04c49, to=0xa336d9, transferaddress() -> None
+        [5][STATICCALL] from=0xa336d9, to=SNKToken, balanceOf(account(address): 0xA336d9) -> 479521596259334582834177
+        [5][CALL] from=0xa336d9, to=SNKToken, transfer(recipient(address): 0xC04c49, amount(uint256): 479521596259334582834177) -> True
+      [4][STATICCALL] from=0xc04c49, to=SNKToken, balanceOf(account(address): 0xA3f5ea) -> 1735254444504971193994613
+      [4][STATICCALL] from=0xc04c49, to=SNKToken, balanceOf(account(address): 0xC04c49) -> 484629080279129821850997
+      [4][STATICCALL] from=0xc04c49, to=SNKMiner, privateEarned(account(address): 0xC32bF9) -> 82841381279896498
+      [4][CREATE] from=0xc04c49, to=0x7b1ad0, atInversebrahint248() -> 0x608060
+      [4][CALL] from=0xc04c49, to=0x7b1ad0, 0x0e6da604() -> None
+        [5][CALL] from=0x7b1ad0, to=SNKMiner, bindParent(parent(address): 0xC32bF9) -> None
+          [6][STATICCALL] from=SNKMiner, to=Invite, getInviter(user(address): 0x7B1ad0) -> 0x000000
+          [6][CALL] from=SNKMiner, to=Invite, invite(user(address): 0x7B1ad0, parent(address): 0xC32bF9) -> True
+      [4][CALL] from=0xc04c49, to=SNKToken, transfer(recipient(address): 0x7B1ad0, amount(uint256): 484629080279129821850997) -> True
+      [4][CALL] from=0xc04c49, to=0x7b1ad0, 0xd5584171() -> None
+        [5][CALL] from=0x7b1ad0, to=SNKToken, approve(spender(address): 0xA3f5ea, amount(uint256): 484629080279129821850997) -> True
+        [5][CALL] from=0x7b1ad0, to=SNKMiner, stake(amount(uint256): 484629080279129821850997) -> None
+          [6][STATICCALL] from=SNKMiner, to=Invite, getInviterSuns(user(address): 0x7B1ad0) -> []
+          [6][CALL] from=SNKMiner, to=SNKToken, transferFrom(sender(address): 0x7B1ad0, recipient(address): 0xA3f5ea, amount(uint256): 484629080279129821850997) -> True
+          [6][STATICCALL] from=SNKMiner, to=Invite, getInviterSuns(user(address): 0x7B1ad0) -> []
+          [6][STATICCALL] from=SNKMiner, to=Invite, getInviter(user(address): 0x7B1ad0) -> 0xc32bf9
+          [6][STATICCALL] from=SNKMiner, to=Invite, getInviterSuns(user(address): 0xC32bF9) -> ['0x7b1ad0']
+          [6][STATICCALL] from=SNKMiner, to=Invite, getInviter(user(address): 0xC32bF9) -> 0x000000
+      [4][CALL] from=0xc04c49, to=0xc32bf9, 0x04811f9a() -> None
+        [5][CALL] from=0xc32bf9, to=SNKMiner, getReward() -> None
+          [6][STATICCALL] from=SNKMiner, to=Invite, getInviterSuns(user(address): 0xC32bF9) -> ['0x7b1ad0']
+          [6][STATICCALL] from=SNKMiner, to=Invite, getInviterSuns(user(address): 0xC32bF9) -> ['0x7b1ad0']
+          [6][STATICCALL] from=SNKMiner, to=Invite, getInviterSuns(user(address): 0xC32bF9) -> ['0x7b1ad0']
+          [6][CALL] from=SNKMiner, to=SNKToken, transfer(recipient(address): 0xC32bF9, amount(uint256): 5161884009503575051863) -> True
+      [4][CALL] from=0xc04c49, to=0xc32bf9, transferaddress() -> None
+        [5][STATICCALL] from=0xc32bf9, to=SNKToken, balanceOf(account(address): 0xC32bF9) -> 5161884009503575051863
+        [5][CALL] from=0xc32bf9, to=SNKToken, transfer(recipient(address): 0xC04c49, amount(uint256): 5161884009503575051863) -> True
+      [4][CALL] from=0xc04c49, to=0x7b1ad0, 0x22a678a3() -> None
+        [5][CALL] from=0x7b1ad0, to=SNKMiner, exit() -> None
+          [6][STATICCALL] from=SNKMiner, to=Invite, getInviterSuns(user(address): 0x7B1ad0) -> []
+          [6][STATICCALL] from=SNKMiner, to=Invite, getInviterSuns(user(address): 0x7B1ad0) -> []
+          [6][CALL] from=SNKMiner, to=SNKToken, transfer(recipient(address): 0x7B1ad0, amount(uint256): 484629080279129821850997) -> True
+          [6][STATICCALL] from=SNKMiner, to=Invite, getInviterSuns(user(address): 0x7B1ad0) -> []
+          [6][STATICCALL] from=SNKMiner, to=Invite, getInviter(user(address): 0x7B1ad0) -> 0xc32bf9
+          [6][STATICCALL] from=SNKMiner, to=Invite, getInviterSuns(user(address): 0xC32bF9) -> ['0x7b1ad0']
+          [6][STATICCALL] from=SNKMiner, to=Invite, getInviter(user(address): 0xC32bF9) -> 0x000000
+          [6][STATICCALL] from=SNKMiner, to=Invite, getInviterSuns(user(address): 0x7B1ad0) -> []
+      [4][CALL] from=0xc04c49, to=0x7b1ad0, transferaddress() -> None
+        [5][STATICCALL] from=0x7b1ad0, to=SNKToken, balanceOf(account(address): 0x7B1ad0) -> 484629080279129821850997
+        [5][CALL] from=0x7b1ad0, to=SNKToken, transfer(recipient(address): 0xC04c49, amount(uint256): 484629080279129821850997) -> True
+      [4][STATICCALL] from=0xc04c49, to=SNKToken, balanceOf(account(address): 0xA3f5ea) -> 1730092560495467618942750
+      [4][STATICCALL] from=0xc04c49, to=SNKToken, balanceOf(account(address): 0xC04c49) -> 489790964288633396902860
+      [4][STATICCALL] from=0xc04c49, to=SNKMiner, privateEarned(account(address): 0xBD0dFe) -> 82841381279896498
+      [4][CREATE] from=0xc04c49, to=0x102878, atInversebrahint248() -> 0x608060
+      [4][CALL] from=0xc04c49, to=0x102878, 0x0e6da604() -> None
+        [5][CALL] from=0x102878, to=SNKMiner, bindParent(parent(address): 0xBD0dFe) -> None
+          [6][STATICCALL] from=SNKMiner, to=Invite, getInviter(user(address): 0x102878) -> 0x000000
+          [6][CALL] from=SNKMiner, to=Invite, invite(user(address): 0x102878, parent(address): 0xBD0dFe) -> True
+      [4][CALL] from=0xc04c49, to=SNKToken, transfer(recipient(address): 0x102878, amount(uint256): 489790964288633396902860) -> True
+      [4][CALL] from=0xc04c49, to=0x102878, 0xd5584171() -> None
+        [5][CALL] from=0x102878, to=SNKToken, approve(spender(address): 0xA3f5ea, amount(uint256): 489790964288633396902860) -> True
+        [5][CALL] from=0x102878, to=SNKMiner, stake(amount(uint256): 489790964288633396902860) -> None
+          [6][STATICCALL] from=SNKMiner, to=Invite, getInviterSuns(user(address): 0x102878) -> []
+          [6][CALL] from=SNKMiner, to=SNKToken, transferFrom(sender(address): 0x102878, recipient(address): 0xA3f5ea, amount(uint256): 489790964288633396902860) -> True
+          [6][STATICCALL] from=SNKMiner, to=Invite, getInviterSuns(user(address): 0x102878) -> []
+          [6][STATICCALL] from=SNKMiner, to=Invite, getInviter(user(address): 0x102878) -> 0xbd0dfe
+          [6][STATICCALL] from=SNKMiner, to=Invite, getInviterSuns(user(address): 0xBD0dFe) -> ['0x102878']
+          [6][STATICCALL] from=SNKMiner, to=Invite, getInviter(user(address): 0xBD0dFe) -> 0x000000
+      [4][CALL] from=0xc04c49, to=0xbd0dfe, 0x04811f9a() -> None
+        [5][CALL] from=0xbd0dfe, to=SNKMiner, getReward() -> None
+          [6][STATICCALL] from=SNKMiner, to=Invite, getInviterSuns(user(address): 0xBD0dFe) -> ['0x102878']
+          [6][STATICCALL] from=SNKMiner, to=Invite, getInviterSuns(user(address): 0xBD0dFe) -> ['0x102878']
+          [6][STATICCALL] from=SNKMiner, to=Invite, getInviterSuns(user(address): 0xBD0dFe) -> ['0x102878']
+          [6][CALL] from=SNKMiner, to=SNKToken, transfer(recipient(address): 0xBD0dFe, amount(uint256): 5216863415391931892601) -> True
+      [4][CALL] from=0xc04c49, to=0xbd0dfe, transferaddress() -> None
+        [5][STATICCALL] from=0xbd0dfe, to=SNKToken, balanceOf(account(address): 0xBD0dFe) -> 5216863415391931892601
+        [5][CALL] from=0xbd0dfe, to=SNKToken, transfer(recipient(address): 0xC04c49, amount(uint256): 5216863415391931892601) -> True
+      [4][CALL] from=0xc04c49, to=0x102878, 0x22a678a3() -> None
+        [5][CALL] from=0x102878, to=SNKMiner, exit() -> None
+          [6][STATICCALL] from=SNKMiner, to=Invite, getInviterSuns(user(address): 0x102878) -> []
+          [6][STATICCALL] from=SNKMiner, to=Invite, getInviterSuns(user(address): 0x102878) -> []
+          [6][CALL] from=SNKMiner, to=SNKToken, transfer(recipient(address): 0x102878, amount(uint256): 489790964288633396902860) -> True
+          [6][STATICCALL] from=SNKMiner, to=Invite, getInviterSuns(user(address): 0x102878) -> []
+          [6][STATICCALL] from=SNKMiner, to=Invite, getInviter(user(address): 0x102878) -> 0xbd0dfe
+          [6][STATICCALL] from=SNKMiner, to=Invite, getInviterSuns(user(address): 0xBD0dFe) -> ['0x102878']
+          [6][STATICCALL] from=SNKMiner, to=Invite, getInviter(user(address): 0xBD0dFe) -> 0x000000
+          [6][STATICCALL] from=SNKMiner, to=Invite, getInviterSuns(user(address): 0x102878) -> []
+      [4][CALL] from=0xc04c49, to=0x102878, transferaddress() -> None
+        [5][STATICCALL] from=0x102878, to=SNKToken, balanceOf(account(address): 0x102878) -> 489790964288633396902860
+        [5][CALL] from=0x102878, to=SNKToken, transfer(recipient(address): 0xC04c49, amount(uint256): 489790964288633396902860) -> True
+      [4][STATICCALL] from=0xc04c49, to=SNKToken, balanceOf(account(address): 0xA3f5ea) -> 1724875697080075687050149
+      [4][STATICCALL] from=0xc04c49, to=SNKToken, balanceOf(account(address): 0xC04c49) -> 495007827704025328795461
+      [4][STATICCALL] from=0xc04c49, to=SNKMiner, privateEarned(account(address): 0x6eE4b9) -> 82841381279896498
+      [4][CREATE] from=0xc04c49, to=0x5423de, atInversebrahint248() -> 0x608060
+      [4][CALL] from=0xc04c49, to=0x5423de, 0x0e6da604() -> None
+        [5][CALL] from=0x5423de, to=SNKMiner, bindParent(parent(address): 0x6eE4b9) -> None
+          [6][STATICCALL] from=SNKMiner, to=Invite, getInviter(user(address): 0x5423de) -> 0x000000
+          [6][CALL] from=SNKMiner, to=Invite, invite(user(address): 0x5423de, parent(address): 0x6eE4b9) -> True
+      [4][CALL] from=0xc04c49, to=SNKToken, transfer(recipient(address): 0x5423de, amount(uint256): 495007827704025328795461) -> True
+      [4][CALL] from=0xc04c49, to=0x5423de, 0xd5584171() -> None
+        [5][CALL] from=0x5423de, to=SNKToken, approve(spender(address): 0xA3f5ea, amount(uint256): 495007827704025328795461) -> True
+        [5][CALL] from=0x5423de, to=SNKMiner, stake(amount(uint256): 495007827704025328795461) -> None
+          [6][STATICCALL] from=SNKMiner, to=Invite, getInviterSuns(user(address): 0x5423de) -> []
+          [6][CALL] from=SNKMiner, to=SNKToken, transferFrom(sender(address): 0x5423de, recipient(address): 0xA3f5ea, amount(uint256): 495007827704025328795461) -> True
+          [6][STATICCALL] from=SNKMiner, to=Invite, getInviterSuns(user(address): 0x5423de) -> []
+          [6][STATICCALL] from=SNKMiner, to=Invite, getInviter(user(address): 0x5423de) -> 0x6ee4b9
+          [6][STATICCALL] from=SNKMiner, to=Invite, getInviterSuns(user(address): 0x6eE4b9) -> ['0x5423de']
+          [6][STATICCALL] from=SNKMiner, to=Invite, getInviter(user(address): 0x6eE4b9) -> 0x000000
+      [4][CALL] from=0xc04c49, to=0x6ee4b9, 0x04811f9a() -> None
+        [5][CALL] from=0x6ee4b9, to=SNKMiner, getReward() -> None
+          [6][STATICCALL] from=SNKMiner, to=Invite, getInviterSuns(user(address): 0x6eE4b9) -> ['0x5423de']
+          [6][STATICCALL] from=SNKMiner, to=Invite, getInviterSuns(user(address): 0x6eE4b9) -> ['0x5423de']
+          [6][STATICCALL] from=SNKMiner, to=Invite, getInviterSuns(user(address): 0x6eE4b9) -> ['0x5423de']
+          [6][CALL] from=SNKMiner, to=SNKToken, transfer(recipient(address): 0x6eE4b9, amount(uint256): 5272428408842169533355) -> True
+      [4][CALL] from=0xc04c49, to=0x6ee4b9, transferaddress() -> None
+        [5][STATICCALL] from=0x6ee4b9, to=SNKToken, balanceOf(account(address): 0x6eE4b9) -> 5272428408842169533355
+        [5][CALL] from=0x6ee4b9, to=SNKToken, transfer(recipient(address): 0xC04c49, amount(uint256): 5272428408842169533355) -> True
+      [4][CALL] from=0xc04c49, to=0x5423de, 0x22a678a3() -> None
+        [5][CALL] from=0x5423de, to=SNKMiner, exit() -> None
+          [6][STATICCALL] from=SNKMiner, to=Invite, getInviterSuns(user(address): 0x5423de) -> []
+          [6][STATICCALL] from=SNKMiner, to=Invite, getInviterSuns(user(address): 0x5423de) -> []
+          [6][CALL] from=SNKMiner, to=SNKToken, transfer(recipient(address): 0x5423de, amount(uint256): 495007827704025328795461) -> True
+          [6][STATICCALL] from=SNKMiner, to=Invite, getInviterSuns(user(address): 0x5423de) -> []
+          [6][STATICCALL] from=SNKMiner, to=Invite, getInviter(user(address): 0x5423de) -> 0x6ee4b9
+          [6][STATICCALL] from=SNKMiner, to=Invite, getInviterSuns(user(address): 0x6eE4b9) -> ['0x5423de']
+          [6][STATICCALL] from=SNKMiner, to=Invite, getInviter(user(address): 0x6eE4b9) -> 0x000000
+          [6][STATICCALL] from=SNKMiner, to=Invite, getInviterSuns(user(address): 0x5423de) -> []
+      [4][CALL] from=0xc04c49, to=0x5423de, transferaddress() -> None
+        [5][STATICCALL] from=0x5423de, to=SNKToken, balanceOf(account(address): 0x5423de) -> 495007827704025328795461
+        [5][CALL] from=0x5423de, to=SNKToken, transfer(recipient(address): 0xC04c49, amount(uint256): 495007827704025328795461) -> True
+      [4][STATICCALL] from=0xc04c49, to=SNKToken, balanceOf(account(address): 0xA3f5ea) -> 1719603268671233517516794
+      [4][STATICCALL] from=0xc04c49, to=SNKToken, balanceOf(account(address): 0xC04c49) -> 500280256112867498328816
+      [4][STATICCALL] from=0xc04c49, to=SNKMiner, privateEarned(account(address): 0x64a067) -> 82841381279896498
+      [4][CREATE] from=0xc04c49, to=0x927a67, atInversebrahint248() -> 0x608060
+      [4][CALL] from=0xc04c49, to=0x927a67, 0x0e6da604() -> None
+        [5][CALL] from=0x927a67, to=SNKMiner, bindParent(parent(address): 0x64a067) -> None
+          [6][STATICCALL] from=SNKMiner, to=Invite, getInviter(user(address): 0x927A67) -> 0x000000
+          [6][CALL] from=SNKMiner, to=Invite, invite(user(address): 0x927A67, parent(address): 0x64a067) -> True
+      [4][CALL] from=0xc04c49, to=SNKToken, transfer(recipient(address): 0x927A67, amount(uint256): 500280256112867498328816) -> True
+      [4][CALL] from=0xc04c49, to=0x927a67, 0xd5584171() -> None
+        [5][CALL] from=0x927a67, to=SNKToken, approve(spender(address): 0xA3f5ea, amount(uint256): 500280256112867498328816) -> True
+        [5][CALL] from=0x927a67, to=SNKMiner, stake(amount(uint256): 500280256112867498328816) -> None
+          [6][STATICCALL] from=SNKMiner, to=Invite, getInviterSuns(user(address): 0x927A67) -> []
+          [6][CALL] from=SNKMiner, to=SNKToken, transferFrom(sender(address): 0x927A67, recipient(address): 0xA3f5ea, amount(uint256): 500280256112867498328816) -> True
+          [6][STATICCALL] from=SNKMiner, to=Invite, getInviterSuns(user(address): 0x927A67) -> []
+          [6][STATICCALL] from=SNKMiner, to=Invite, getInviter(user(address): 0x927A67) -> 0x64a067
+          [6][STATICCALL] from=SNKMiner, to=Invite, getInviterSuns(user(address): 0x64a067) -> ['0x927a67']
+          [6][STATICCALL] from=SNKMiner, to=Invite, getInviter(user(address): 0x64a067) -> 0x000000
+      [4][CALL] from=0xc04c49, to=0x64a067, 0x04811f9a() -> None
+        [5][CALL] from=0x64a067, to=SNKMiner, getReward() -> None
+          [6][STATICCALL] from=SNKMiner, to=Invite, getInviterSuns(user(address): 0x64a067) -> ['0x927a67']
+          [6][STATICCALL] from=SNKMiner, to=Invite, getInviterSuns(user(address): 0x64a067) -> ['0x927a67']
+          [6][STATICCALL] from=SNKMiner, to=Invite, getInviterSuns(user(address): 0x64a067) -> ['0x927a67']
+          [6][CALL] from=SNKMiner, to=SNKToken, transfer(recipient(address): 0x64a067, amount(uint256): 5328585226967750528283) -> True
+      [4][CALL] from=0xc04c49, to=0x64a067, transferaddress() -> None
+        [5][STATICCALL] from=0x64a067, to=SNKToken, balanceOf(account(address): 0x64a067) -> 5328585226967750528283
+        [5][CALL] from=0x64a067, to=SNKToken, transfer(recipient(address): 0xC04c49, amount(uint256): 5328585226967750528283) -> True
+      [4][CALL] from=0xc04c49, to=0x927a67, 0x22a678a3() -> None
+        [5][CALL] from=0x927a67, to=SNKMiner, exit() -> None
+          [6][STATICCALL] from=SNKMiner, to=Invite, getInviterSuns(user(address): 0x927A67) -> []
+          [6][STATICCALL] from=SNKMiner, to=Invite, getInviterSuns(user(address): 0x927A67) -> []
+          [6][CALL] from=SNKMiner, to=SNKToken, transfer(recipient(address): 0x927A67, amount(uint256): 500280256112867498328816) -> True
+          [6][STATICCALL] from=SNKMiner, to=Invite, getInviterSuns(user(address): 0x927A67) -> []
+          [6][STATICCALL] from=SNKMiner, to=Invite, getInviter(user(address): 0x927A67) -> 0x64a067
+          [6][STATICCALL] from=SNKMiner, to=Invite, getInviterSuns(user(address): 0x64a067) -> ['0x927a67']
+          [6][STATICCALL] from=SNKMiner, to=Invite, getInviter(user(address): 0x64a067) -> 0x000000
+          [6][STATICCALL] from=SNKMiner, to=Invite, getInviterSuns(user(address): 0x927A67) -> []
+      [4][CALL] from=0xc04c49, to=0x927a67, transferaddress() -> None
+        [5][STATICCALL] from=0x927a67, to=SNKToken, balanceOf(account(address): 0x927A67) -> 500280256112867498328816
+        [5][CALL] from=0x927a67, to=SNKToken, transfer(recipient(address): 0xC04c49, amount(uint256): 500280256112867498328816) -> True
+      [4][STATICCALL] from=0xc04c49, to=SNKToken, balanceOf(account(address): 0xA3f5ea) -> 1714274683444265766988511
+      [4][STATICCALL] from=0xc04c49, to=SNKToken, balanceOf(account(address): 0xC04c49) -> 505608841339835248857099
+      [4][STATICCALL] from=0xc04c49, to=SNKMiner, privateEarned(account(address): 0x51248e) -> 82841381279896498
+      [4][CREATE] from=0xc04c49, to=0x5523ad, atInversebrahint248() -> 0x608060
+      [4][CALL] from=0xc04c49, to=0x5523ad, 0x0e6da604() -> None
+        [5][CALL] from=0x5523ad, to=SNKMiner, bindParent(parent(address): 0x51248e) -> None
+          [6][STATICCALL] from=SNKMiner, to=Invite, getInviter(user(address): 0x5523Ad) -> 0x000000
+          [6][CALL] from=SNKMiner, to=Invite, invite(user(address): 0x5523Ad, parent(address): 0x51248e) -> True
+      [4][CALL] from=0xc04c49, to=SNKToken, transfer(recipient(address): 0x5523Ad, amount(uint256): 505608841339835248857099) -> True
+      [4][CALL] from=0xc04c49, to=0x5523ad, 0xd5584171() -> None
+        [5][CALL] from=0x5523ad, to=SNKToken, approve(spender(address): 0xA3f5ea, amount(uint256): 505608841339835248857099) -> True
+        [5][CALL] from=0x5523ad, to=SNKMiner, stake(amount(uint256): 505608841339835248857099) -> None
+          [6][STATICCALL] from=SNKMiner, to=Invite, getInviterSuns(user(address): 0x5523Ad) -> []
+          [6][CALL] from=SNKMiner, to=SNKToken, transferFrom(sender(address): 0x5523Ad, recipient(address): 0xA3f5ea, amount(uint256): 505608841339835248857099) -> True
+          [6][STATICCALL] from=SNKMiner, to=Invite, getInviterSuns(user(address): 0x5523Ad) -> []
+          [6][STATICCALL] from=SNKMiner, to=Invite, getInviter(user(address): 0x5523Ad) -> 0x51248e
+          [6][STATICCALL] from=SNKMiner, to=Invite, getInviterSuns(user(address): 0x51248e) -> ['0x5523ad']
+          [6][STATICCALL] from=SNKMiner, to=Invite, getInviter(user(address): 0x51248e) -> 0x000000
+      [4][CALL] from=0xc04c49, to=0x51248e, 0x04811f9a() -> None
+        [5][CALL] from=0x51248e, to=SNKMiner, getReward() -> None
+          [6][STATICCALL] from=SNKMiner, to=Invite, getInviterSuns(user(address): 0x51248e) -> ['0x5523ad']
+          [6][STATICCALL] from=SNKMiner, to=Invite, getInviterSuns(user(address): 0x51248e) -> ['0x5523ad']
+          [6][STATICCALL] from=SNKMiner, to=Invite, getInviterSuns(user(address): 0x51248e) -> ['0x5523ad']
+          [6][CALL] from=SNKMiner, to=SNKToken, transfer(recipient(address): 0x51248e, amount(uint256): 5385340173313849573496) -> True
+      [4][CALL] from=0xc04c49, to=0x51248e, transferaddress() -> None
+        [5][STATICCALL] from=0x51248e, to=SNKToken, balanceOf(account(address): 0x51248e) -> 5385340173313849573496
+        [5][CALL] from=0x51248e, to=SNKToken, transfer(recipient(address): 0xC04c49, amount(uint256): 5385340173313849573496) -> True
+      [4][CALL] from=0xc04c49, to=0x5523ad, 0x22a678a3() -> None
+        [5][CALL] from=0x5523ad, to=SNKMiner, exit() -> None
+          [6][STATICCALL] from=SNKMiner, to=Invite, getInviterSuns(user(address): 0x5523Ad) -> []
+          [6][STATICCALL] from=SNKMiner, to=Invite, getInviterSuns(user(address): 0x5523Ad) -> []
+          [6][CALL] from=SNKMiner, to=SNKToken, transfer(recipient(address): 0x5523Ad, amount(uint256): 505608841339835248857099) -> True
+          [6][STATICCALL] from=SNKMiner, to=Invite, getInviterSuns(user(address): 0x5523Ad) -> []
+          [6][STATICCALL] from=SNKMiner, to=Invite, getInviter(user(address): 0x5523Ad) -> 0x51248e
+          [6][STATICCALL] from=SNKMiner, to=Invite, getInviterSuns(user(address): 0x51248e) -> ['0x5523ad']
+          [6][STATICCALL] from=SNKMiner, to=Invite, getInviter(user(address): 0x51248e) -> 0x000000
+          [6][STATICCALL] from=SNKMiner, to=Invite, getInviterSuns(user(address): 0x5523Ad) -> []
+      [4][CALL] from=0xc04c49, to=0x5523ad, transferaddress() -> None
+        [5][STATICCALL] from=0x5523ad, to=SNKToken, balanceOf(account(address): 0x5523Ad) -> 505608841339835248857099
+        [5][CALL] from=0x5523ad, to=SNKToken, transfer(recipient(address): 0xC04c49, amount(uint256): 505608841339835248857099) -> True
+      [4][STATICCALL] from=0xc04c49, to=SNKToken, balanceOf(account(address): 0xA3f5ea) -> 1708889343270951917415015
+      [4][STATICCALL] from=0xc04c49, to=SNKToken, balanceOf(account(address): 0xC04c49) -> 510994181513149098430595
+      [4][STATICCALL] from=0xc04c49, to=SNKMiner, privateEarned(account(address): 0x6945fe) -> 82841381279896498
+      [4][CREATE] from=0xc04c49, to=0xeb886d, atInversebrahint248() -> 0x608060
+      [4][CALL] from=0xc04c49, to=0xeb886d, 0x0e6da604() -> None
+        [5][CALL] from=0xeb886d, to=SNKMiner, bindParent(parent(address): 0x6945fe) -> None
+          [6][STATICCALL] from=SNKMiner, to=Invite, getInviter(user(address): 0xeB886D) -> 0x000000
+          [6][CALL] from=SNKMiner, to=Invite, invite(user(address): 0xeB886D, parent(address): 0x6945fe) -> True
+      [4][CALL] from=0xc04c49, to=SNKToken, transfer(recipient(address): 0xeB886D, amount(uint256): 510994181513149098430595) -> True
+      [4][CALL] from=0xc04c49, to=0xeb886d, 0xd5584171() -> None
+        [5][CALL] from=0xeb886d, to=SNKToken, approve(spender(address): 0xA3f5ea, amount(uint256): 510994181513149098430595) -> True
+        [5][CALL] from=0xeb886d, to=SNKMiner, stake(amount(uint256): 510994181513149098430595) -> None
+          [6][STATICCALL] from=SNKMiner, to=Invite, getInviterSuns(user(address): 0xeB886D) -> []
+          [6][CALL] from=SNKMiner, to=SNKToken, transferFrom(sender(address): 0xeB886D, recipient(address): 0xA3f5ea, amount(uint256): 510994181513149098430595) -> True
+          [6][STATICCALL] from=SNKMiner, to=Invite, getInviterSuns(user(address): 0xeB886D) -> []
+          [6][STATICCALL] from=SNKMiner, to=Invite, getInviter(user(address): 0xeB886D) -> 0x6945fe
+          [6][STATICCALL] from=SNKMiner, to=Invite, getInviterSuns(user(address): 0x6945fe) -> ['0xeb886d']
+          [6][STATICCALL] from=SNKMiner, to=Invite, getInviter(user(address): 0x6945fe) -> 0x000000
+      [4][CALL] from=0xc04c49, to=0x6945fe, 0x04811f9a() -> None
+        [5][CALL] from=0x6945fe, to=SNKMiner, getReward() -> None
+          [6][STATICCALL] from=SNKMiner, to=Invite, getInviterSuns(user(address): 0x6945fe) -> ['0xeb886d']
+          [6][STATICCALL] from=SNKMiner, to=Invite, getInviterSuns(user(address): 0x6945fe) -> ['0xeb886d']
+          [6][STATICCALL] from=SNKMiner, to=Invite, getInviterSuns(user(address): 0x6945fe) -> ['0xeb886d']
+          [6][CALL] from=SNKMiner, to=SNKToken, transfer(recipient(address): 0x6945fe, amount(uint256): 5442699618564919980658) -> True
+      [4][CALL] from=0xc04c49, to=0x6945fe, transferaddress() -> None
+        [5][STATICCALL] from=0x6945fe, to=SNKToken, balanceOf(account(address): 0x6945fe) -> 5442699618564919980658
+        [5][CALL] from=0x6945fe, to=SNKToken, transfer(recipient(address): 0xC04c49, amount(uint256): 5442699618564919980658) -> True
+      [4][CALL] from=0xc04c49, to=0xeb886d, 0x22a678a3() -> None
+        [5][CALL] from=0xeb886d, to=SNKMiner, exit() -> None
+          [6][STATICCALL] from=SNKMiner, to=Invite, getInviterSuns(user(address): 0xeB886D) -> []
+          [6][STATICCALL] from=SNKMiner, to=Invite, getInviterSuns(user(address): 0xeB886D) -> []
+          [6][CALL] from=SNKMiner, to=SNKToken, transfer(recipient(address): 0xeB886D, amount(uint256): 510994181513149098430595) -> True
+          [6][STATICCALL] from=SNKMiner, to=Invite, getInviterSuns(user(address): 0xeB886D) -> []
+          [6][STATICCALL] from=SNKMiner, to=Invite, getInviter(user(address): 0xeB886D) -> 0x6945fe
+          [6][STATICCALL] from=SNKMiner, to=Invite, getInviterSuns(user(address): 0x6945fe) -> ['0xeb886d']
+          [6][STATICCALL] from=SNKMiner, to=Invite, getInviter(user(address): 0x6945fe) -> 0x000000
+          [6][STATICCALL] from=SNKMiner, to=Invite, getInviterSuns(user(address): 0xeB886D) -> []
+      [4][CALL] from=0xc04c49, to=0xeb886d, transferaddress() -> None
+        [5][STATICCALL] from=0xeb886d, to=SNKToken, balanceOf(account(address): 0xeB886D) -> 510994181513149098430595
+        [5][CALL] from=0xeb886d, to=SNKToken, transfer(recipient(address): 0xC04c49, amount(uint256): 510994181513149098430595) -> True
+      [4][STATICCALL] from=0xc04c49, to=SNKToken, balanceOf(account(address): 0xA3f5ea) -> 1703446643652386997434357
+      [4][STATICCALL] from=0xc04c49, to=SNKToken, balanceOf(account(address): 0xC04c49) -> 516436881131714018411253
+      [4][STATICCALL] from=0xc04c49, to=SNKMiner, privateEarned(account(address): 0x8B26A7) -> 82841381279896498
+      [4][CREATE] from=0xc04c49, to=0xa8901a, atInversebrahint248() -> 0x608060
+      [4][CALL] from=0xc04c49, to=0xa8901a, 0x0e6da604() -> None
+        [5][CALL] from=0xa8901a, to=SNKMiner, bindParent(parent(address): 0x8B26A7) -> None
+          [6][STATICCALL] from=SNKMiner, to=Invite, getInviter(user(address): 0xA8901A) -> 0x000000
+          [6][CALL] from=SNKMiner, to=Invite, invite(user(address): 0xA8901A, parent(address): 0x8B26A7) -> True
+      [4][CALL] from=0xc04c49, to=SNKToken, transfer(recipient(address): 0xA8901A, amount(uint256): 516436881131714018411253) -> True
+      [4][CALL] from=0xc04c49, to=0xa8901a, 0xd5584171() -> None
+        [5][CALL] from=0xa8901a, to=SNKToken, approve(spender(address): 0xA3f5ea, amount(uint256): 516436881131714018411253) -> True
+        [5][CALL] from=0xa8901a, to=SNKMiner, stake(amount(uint256): 516436881131714018411253) -> None
+          [6][STATICCALL] from=SNKMiner, to=Invite, getInviterSuns(user(address): 0xA8901A) -> []
+          [6][CALL] from=SNKMiner, to=SNKToken, transferFrom(sender(address): 0xA8901A, recipient(address): 0xA3f5ea, amount(uint256): 516436881131714018411253) -> True
+          [6][STATICCALL] from=SNKMiner, to=Invite, getInviterSuns(user(address): 0xA8901A) -> []
+          [6][STATICCALL] from=SNKMiner, to=Invite, getInviter(user(address): 0xA8901A) -> 0x8b26a7
+          [6][STATICCALL] from=SNKMiner, to=Invite, getInviterSuns(user(address): 0x8B26A7) -> ['0xa8901a']
+          [6][STATICCALL] from=SNKMiner, to=Invite, getInviter(user(address): 0x8B26A7) -> 0x000000
+      [4][CALL] from=0xc04c49, to=0x8b26a7, 0x04811f9a() -> None
+        [5][CALL] from=0x8b26a7, to=SNKMiner, getReward() -> None
+          [6][STATICCALL] from=SNKMiner, to=Invite, getInviterSuns(user(address): 0x8B26A7) -> ['0xa8901a']
+          [6][STATICCALL] from=SNKMiner, to=Invite, getInviterSuns(user(address): 0x8B26A7) -> ['0xa8901a']
+          [6][STATICCALL] from=SNKMiner, to=Invite, getInviterSuns(user(address): 0x8B26A7) -> ['0xa8901a']
+          [6][CALL] from=SNKMiner, to=SNKToken, transfer(recipient(address): 0x8B26A7, amount(uint256): 5500670001259796465662) -> True
+      [4][CALL] from=0xc04c49, to=0x8b26a7, transferaddress() -> None
+        [5][STATICCALL] from=0x8b26a7, to=SNKToken, balanceOf(account(address): 0x8B26A7) -> 5500670001259796465662
+        [5][CALL] from=0x8b26a7, to=SNKToken, transfer(recipient(address): 0xC04c49, amount(uint256): 5500670001259796465662) -> True
+      [4][CALL] from=0xc04c49, to=0xa8901a, 0x22a678a3() -> None
+        [5][CALL] from=0xa8901a, to=SNKMiner, exit() -> None
+          [6][STATICCALL] from=SNKMiner, to=Invite, getInviterSuns(user(address): 0xA8901A) -> []
+          [6][STATICCALL] from=SNKMiner, to=Invite, getInviterSuns(user(address): 0xA8901A) -> []
+          [6][CALL] from=SNKMiner, to=SNKToken, transfer(recipient(address): 0xA8901A, amount(uint256): 516436881131714018411253) -> True
+          [6][STATICCALL] from=SNKMiner, to=Invite, getInviterSuns(user(address): 0xA8901A) -> []
+          [6][STATICCALL] from=SNKMiner, to=Invite, getInviter(user(address): 0xA8901A) -> 0x8b26a7
+          [6][STATICCALL] from=SNKMiner, to=Invite, getInviterSuns(user(address): 0x8B26A7) -> ['0xa8901a']
+          [6][STATICCALL] from=SNKMiner, to=Invite, getInviter(user(address): 0x8B26A7) -> 0x000000
+          [6][STATICCALL] from=SNKMiner, to=Invite, getInviterSuns(user(address): 0xA8901A) -> []
+      [4][CALL] from=0xc04c49, to=0xa8901a, transferaddress() -> None
+        [5][STATICCALL] from=0xa8901a, to=SNKToken, balanceOf(account(address): 0xA8901A) -> 516436881131714018411253
+        [5][CALL] from=0xa8901a, to=SNKToken, transfer(recipient(address): 0xC04c49, amount(uint256): 516436881131714018411253) -> True
+      [4][STATICCALL] from=0xc04c49, to=SNKToken, balanceOf(account(address): 0xA3f5ea) -> 1697945973651127200968695
+      [4][STATICCALL] from=0xc04c49, to=SNKToken, balanceOf(account(address): 0xC04c49) -> 521937551132973814876915
+      [4][STATICCALL] from=0xc04c49, to=SNKMiner, privateEarned(account(address): 0x0E49ee) -> 82841381279896498
+      [4][CREATE] from=0xc04c49, to=0x74adc8, atInversebrahint248() -> 0x608060
+      [4][CALL] from=0xc04c49, to=0x74adc8, 0x0e6da604() -> None
+        [5][CALL] from=0x74adc8, to=SNKMiner, bindParent(parent(address): 0x0E49ee) -> None
+          [6][STATICCALL] from=SNKMiner, to=Invite, getInviter(user(address): 0x74adc8) -> 0x000000
+          [6][CALL] from=SNKMiner, to=Invite, invite(user(address): 0x74adc8, parent(address): 0x0E49ee) -> True
+      [4][CALL] from=0xc04c49, to=SNKToken, transfer(recipient(address): 0x74adc8, amount(uint256): 521937551132973814876915) -> True
+      [4][CALL] from=0xc04c49, to=0x74adc8, 0xd5584171() -> None
+        [5][CALL] from=0x74adc8, to=SNKToken, approve(spender(address): 0xA3f5ea, amount(uint256): 521937551132973814876915) -> True
+        [5][CALL] from=0x74adc8, to=SNKMiner, stake(amount(uint256): 521937551132973814876915) -> None
+          [6][STATICCALL] from=SNKMiner, to=Invite, getInviterSuns(user(address): 0x74adc8) -> []
+          [6][CALL] from=SNKMiner, to=SNKToken, transferFrom(sender(address): 0x74adc8, recipient(address): 0xA3f5ea, amount(uint256): 521937551132973814876915) -> True
+          [6][STATICCALL] from=SNKMiner, to=Invite, getInviterSuns(user(address): 0x74adc8) -> []
+          [6][STATICCALL] from=SNKMiner, to=Invite, getInviter(user(address): 0x74adc8) -> 0x0e49ee
+          [6][STATICCALL] from=SNKMiner, to=Invite, getInviterSuns(user(address): 0x0E49ee) -> ['0x74adc8']
+          [6][STATICCALL] from=SNKMiner, to=Invite, getInviter(user(address): 0x0E49ee) -> 0x000000
+      [4][CALL] from=0xc04c49, to=0x0e49ee, 0x04811f9a() -> None
+        [5][CALL] from=0x0e49ee, to=SNKMiner, getReward() -> None
+          [6][STATICCALL] from=SNKMiner, to=Invite, getInviterSuns(user(address): 0x0E49ee) -> ['0x74adc8']
+          [6][STATICCALL] from=SNKMiner, to=Invite, getInviterSuns(user(address): 0x0E49ee) -> ['0x74adc8']
+          [6][STATICCALL] from=SNKMiner, to=Invite, getInviterSuns(user(address): 0x0E49ee) -> ['0x74adc8']
+          [6][CALL] from=SNKMiner, to=SNKToken, transfer(recipient(address): 0x0E49ee, amount(uint256): 5559257828514414521962) -> True
+      [4][CALL] from=0xc04c49, to=0x0e49ee, transferaddress() -> None
+        [5][STATICCALL] from=0x0e49ee, to=SNKToken, balanceOf(account(address): 0x0E49ee) -> 5559257828514414521962
+        [5][CALL] from=0x0e49ee, to=SNKToken, transfer(recipient(address): 0xC04c49, amount(uint256): 5559257828514414521962) -> True
+      [4][CALL] from=0xc04c49, to=0x74adc8, 0x22a678a3() -> None
+        [5][CALL] from=0x74adc8, to=SNKMiner, exit() -> None
+          [6][STATICCALL] from=SNKMiner, to=Invite, getInviterSuns(user(address): 0x74adc8) -> []
+          [6][STATICCALL] from=SNKMiner, to=Invite, getInviterSuns(user(address): 0x74adc8) -> []
+          [6][CALL] from=SNKMiner, to=SNKToken, transfer(recipient(address): 0x74adc8, amount(uint256): 521937551132973814876915) -> True
+          [6][STATICCALL] from=SNKMiner, to=Invite, getInviterSuns(user(address): 0x74adc8) -> []
+          [6][STATICCALL] from=SNKMiner, to=Invite, getInviter(user(address): 0x74adc8) -> 0x0e49ee
+          [6][STATICCALL] from=SNKMiner, to=Invite, getInviterSuns(user(address): 0x0E49ee) -> ['0x74adc8']
+          [6][STATICCALL] from=SNKMiner, to=Invite, getInviter(user(address): 0x0E49ee) -> 0x000000
+          [6][STATICCALL] from=SNKMiner, to=Invite, getInviterSuns(user(address): 0x74adc8) -> []
+      [4][CALL] from=0xc04c49, to=0x74adc8, transferaddress() -> None
+        [5][STATICCALL] from=0x74adc8, to=SNKToken, balanceOf(account(address): 0x74adc8) -> 521937551132973814876915
+        [5][CALL] from=0x74adc8, to=SNKToken, transfer(recipient(address): 0xC04c49, amount(uint256): 521937551132973814876915) -> True
+      [4][STATICCALL] from=0xc04c49, to=SNKToken, balanceOf(account(address): 0xA3f5ea) -> 1692386715822612786446733
+      [4][STATICCALL] from=0xc04c49, to=SNKToken, balanceOf(account(address): 0xC04c49) -> 527496808961488229398877
+      [4][STATICCALL] from=0xc04c49, to=SNKMiner, privateEarned(account(address): 0x2a4164) -> 82841381279896498
+      [4][CREATE] from=0xc04c49, to=0x9ca514, atInversebrahint248() -> 0x608060
+      [4][CALL] from=0xc04c49, to=0x9ca514, 0x0e6da604() -> None
+        [5][CALL] from=0x9ca514, to=SNKMiner, bindParent(parent(address): 0x2a4164) -> None
+          [6][STATICCALL] from=SNKMiner, to=Invite, getInviter(user(address): 0x9ca514) -> 0x000000
+          [6][CALL] from=SNKMiner, to=Invite, invite(user(address): 0x9ca514, parent(address): 0x2a4164) -> True
+      [4][CALL] from=0xc04c49, to=SNKToken, transfer(recipient(address): 0x9ca514, amount(uint256): 527496808961488229398877) -> True
+      [4][CALL] from=0xc04c49, to=0x9ca514, 0xd5584171() -> None
+        [5][CALL] from=0x9ca514, to=SNKToken, approve(spender(address): 0xA3f5ea, amount(uint256): 527496808961488229398877) -> True
+        [5][CALL] from=0x9ca514, to=SNKMiner, stake(amount(uint256): 527496808961488229398877) -> None
+          [6][STATICCALL] from=SNKMiner, to=Invite, getInviterSuns(user(address): 0x9ca514) -> []
+          [6][CALL] from=SNKMiner, to=SNKToken, transferFrom(sender(address): 0x9ca514, recipient(address): 0xA3f5ea, amount(uint256): 527496808961488229398877) -> True
+          [6][STATICCALL] from=SNKMiner, to=Invite, getInviterSuns(user(address): 0x9ca514) -> []
+          [6][STATICCALL] from=SNKMiner, to=Invite, getInviter(user(address): 0x9ca514) -> 0x2a4164
+          [6][STATICCALL] from=SNKMiner, to=Invite, getInviterSuns(user(address): 0x2a4164) -> ['0x9ca514']
+          [6][STATICCALL] from=SNKMiner, to=Invite, getInviter(user(address): 0x2a4164) -> 0x000000
+      [4][CALL] from=0xc04c49, to=0x2a4164, 0x04811f9a() -> None
+        [5][CALL] from=0x2a4164, to=SNKMiner, getReward() -> None
+          [6][STATICCALL] from=SNKMiner, to=Invite, getInviterSuns(user(address): 0x2a4164) -> ['0x9ca514']
+          [6][STATICCALL] from=SNKMiner, to=Invite, getInviterSuns(user(address): 0x2a4164) -> ['0x9ca514']
+          [6][STATICCALL] from=SNKMiner, to=Invite, getInviterSuns(user(address): 0x2a4164) -> ['0x9ca514']
+          [6][CALL] from=SNKMiner, to=SNKToken, transfer(recipient(address): 0x2a4164, amount(uint256): 5618469676752227503045) -> True
+      [4][CALL] from=0xc04c49, to=0x2a4164, transferaddress() -> None
+        [5][STATICCALL] from=0x2a4164, to=SNKToken, balanceOf(account(address): 0x2a4164) -> 5618469676752227503045
+        [5][CALL] from=0x2a4164, to=SNKToken, transfer(recipient(address): 0xC04c49, amount(uint256): 5618469676752227503045) -> True
+      [4][CALL] from=0xc04c49, to=0x9ca514, 0x22a678a3() -> None
+        [5][CALL] from=0x9ca514, to=SNKMiner, exit() -> None
+          [6][STATICCALL] from=SNKMiner, to=Invite, getInviterSuns(user(address): 0x9ca514) -> []
+          [6][STATICCALL] from=SNKMiner, to=Invite, getInviterSuns(user(address): 0x9ca514) -> []
+          [6][CALL] from=SNKMiner, to=SNKToken, transfer(recipient(address): 0x9ca514, amount(uint256): 527496808961488229398877) -> True
+          [6][STATICCALL] from=SNKMiner, to=Invite, getInviterSuns(user(address): 0x9ca514) -> []
+          [6][STATICCALL] from=SNKMiner, to=Invite, getInviter(user(address): 0x9ca514) -> 0x2a4164
+          [6][STATICCALL] from=SNKMiner, to=Invite, getInviterSuns(user(address): 0x2a4164) -> ['0x9ca514']
+          [6][STATICCALL] from=SNKMiner, to=Invite, getInviter(user(address): 0x2a4164) -> 0x000000
+          [6][STATICCALL] from=SNKMiner, to=Invite, getInviterSuns(user(address): 0x9ca514) -> []
+      [4][CALL] from=0xc04c49, to=0x9ca514, transferaddress() -> None
+        [5][STATICCALL] from=0x9ca514, to=SNKToken, balanceOf(account(address): 0x9ca514) -> 527496808961488229398877
+        [5][CALL] from=0x9ca514, to=SNKToken, transfer(recipient(address): 0xC04c49, amount(uint256): 527496808961488229398877) -> True
+      [4][STATICCALL] from=0xc04c49, to=SNKToken, balanceOf(account(address): 0xA3f5ea) -> 1686768246145860558943688
+      [4][STATICCALL] from=0xc04c49, to=SNKToken, balanceOf(account(address): 0xC04c49) -> 533115278638240456901922
+      [4][STATICCALL] from=0xc04c49, to=SNKMiner, privateEarned(account(address): 0x9b08Bf) -> 82841381279896498
+      [4][CREATE] from=0xc04c49, to=0x4c1c3e, atInversebrahint248() -> 0x608060
+      [4][CALL] from=0xc04c49, to=0x4c1c3e, 0x0e6da604() -> None
+        [5][CALL] from=0x4c1c3e, to=SNKMiner, bindParent(parent(address): 0x9b08Bf) -> None
+          [6][STATICCALL] from=SNKMiner, to=Invite, getInviter(user(address): 0x4c1C3E) -> 0x000000
+          [6][CALL] from=SNKMiner, to=Invite, invite(user(address): 0x4c1C3E, parent(address): 0x9b08Bf) -> True
+      [4][CALL] from=0xc04c49, to=SNKToken, transfer(recipient(address): 0x4c1C3E, amount(uint256): 533115278638240456901922) -> True
+      [4][CALL] from=0xc04c49, to=0x4c1c3e, 0xd5584171() -> None
+        [5][CALL] from=0x4c1c3e, to=SNKToken, approve(spender(address): 0xA3f5ea, amount(uint256): 533115278638240456901922) -> True
+        [5][CALL] from=0x4c1c3e, to=SNKMiner, stake(amount(uint256): 533115278638240456901922) -> None
+          [6][STATICCALL] from=SNKMiner, to=Invite, getInviterSuns(user(address): 0x4c1C3E) -> []
+          [6][CALL] from=SNKMiner, to=SNKToken, transferFrom(sender(address): 0x4c1C3E, recipient(address): 0xA3f5ea, amount(uint256): 533115278638240456901922) -> True
+          [6][STATICCALL] from=SNKMiner, to=Invite, getInviterSuns(user(address): 0x4c1C3E) -> []
+          [6][STATICCALL] from=SNKMiner, to=Invite, getInviter(user(address): 0x4c1C3E) -> 0x9b08bf
+          [6][STATICCALL] from=SNKMiner, to=Invite, getInviterSuns(user(address): 0x9b08Bf) -> ['0x4c1c3e']
+          [6][STATICCALL] from=SNKMiner, to=Invite, getInviter(user(address): 0x9b08Bf) -> 0x000000
+      [4][CALL] from=0xc04c49, to=0x9b08bf, 0x04811f9a() -> None
+        [5][CALL] from=0x9b08bf, to=SNKMiner, getReward() -> None
+          [6][STATICCALL] from=SNKMiner, to=Invite, getInviterSuns(user(address): 0x9b08Bf) -> ['0x4c1c3e']
+          [6][STATICCALL] from=SNKMiner, to=Invite, getInviterSuns(user(address): 0x9b08Bf) -> ['0x4c1c3e']
+          [6][STATICCALL] from=SNKMiner, to=Invite, getInviterSuns(user(address): 0x9b08Bf) -> ['0x4c1c3e']
+          [6][CALL] from=SNKMiner, to=SNKToken, transfer(recipient(address): 0x9b08Bf, amount(uint256): 5678312192442403402621) -> True
+      [4][CALL] from=0xc04c49, to=0x9b08bf, transferaddress() -> None
+        [5][STATICCALL] from=0x9b08bf, to=SNKToken, balanceOf(account(address): 0x9b08Bf) -> 5678312192442403402621
+        [5][CALL] from=0x9b08bf, to=SNKToken, transfer(recipient(address): 0xC04c49, amount(uint256): 5678312192442403402621) -> True
+      [4][CALL] from=0xc04c49, to=0x4c1c3e, 0x22a678a3() -> None
+        [5][CALL] from=0x4c1c3e, to=SNKMiner, exit() -> None
+          [6][STATICCALL] from=SNKMiner, to=Invite, getInviterSuns(user(address): 0x4c1C3E) -> []
+          [6][STATICCALL] from=SNKMiner, to=Invite, getInviterSuns(user(address): 0x4c1C3E) -> []
+          [6][CALL] from=SNKMiner, to=SNKToken, transfer(recipient(address): 0x4c1C3E, amount(uint256): 533115278638240456901922) -> True
+          [6][STATICCALL] from=SNKMiner, to=Invite, getInviterSuns(user(address): 0x4c1C3E) -> []
+          [6][STATICCALL] from=SNKMiner, to=Invite, getInviter(user(address): 0x4c1C3E) -> 0x9b08bf
+          [6][STATICCALL] from=SNKMiner, to=Invite, getInviterSuns(user(address): 0x9b08Bf) -> ['0x4c1c3e']
+          [6][STATICCALL] from=SNKMiner, to=Invite, getInviter(user(address): 0x9b08Bf) -> 0x000000
+          [6][STATICCALL] from=SNKMiner, to=Invite, getInviterSuns(user(address): 0x4c1C3E) -> []
+      [4][CALL] from=0xc04c49, to=0x4c1c3e, transferaddress() -> None
+        [5][STATICCALL] from=0x4c1c3e, to=SNKToken, balanceOf(account(address): 0x4c1C3E) -> 533115278638240456901922
+        [5][CALL] from=0x4c1c3e, to=SNKToken, transfer(recipient(address): 0xC04c49, amount(uint256): 533115278638240456901922) -> True
+      [4][STATICCALL] from=0xc04c49, to=SNKToken, balanceOf(account(address): 0xA3f5ea) -> 1681089933953418155541067
+      [4][STATICCALL] from=0xc04c49, to=SNKToken, balanceOf(account(address): 0xC04c49) -> 538793590830682860304543
+      [4][STATICCALL] from=0xc04c49, to=SNKMiner, privateEarned(account(address): 0xcE4488) -> 82841381279896498
+      [4][CREATE] from=0xc04c49, to=0x66e987, atInversebrahint248() -> 0x608060
+      [4][CALL] from=0xc04c49, to=0x66e987, 0x0e6da604() -> None
+        [5][CALL] from=0x66e987, to=SNKMiner, bindParent(parent(address): 0xcE4488) -> None
+          [6][STATICCALL] from=SNKMiner, to=Invite, getInviter(user(address): 0x66e987) -> 0x000000
+          [6][CALL] from=SNKMiner, to=Invite, invite(user(address): 0x66e987, parent(address): 0xcE4488) -> True
+      [4][CALL] from=0xc04c49, to=SNKToken, transfer(recipient(address): 0x66e987, amount(uint256): 538793590830682860304543) -> True
+      [4][CALL] from=0xc04c49, to=0x66e987, 0xd5584171() -> None
+        [5][CALL] from=0x66e987, to=SNKToken, approve(spender(address): 0xA3f5ea, amount(uint256): 538793590830682860304543) -> True
+        [5][CALL] from=0x66e987, to=SNKMiner, stake(amount(uint256): 538793590830682860304543) -> None
+          [6][STATICCALL] from=SNKMiner, to=Invite, getInviterSuns(user(address): 0x66e987) -> []
+          [6][CALL] from=SNKMiner, to=SNKToken, transferFrom(sender(address): 0x66e987, recipient(address): 0xA3f5ea, amount(uint256): 538793590830682860304543) -> True
+          [6][STATICCALL] from=SNKMiner, to=Invite, getInviterSuns(user(address): 0x66e987) -> []
+          [6][STATICCALL] from=SNKMiner, to=Invite, getInviter(user(address): 0x66e987) -> 0xce4488
+          [6][STATICCALL] from=SNKMiner, to=Invite, getInviterSuns(user(address): 0xcE4488) -> ['0x66e987']
+          [6][STATICCALL] from=SNKMiner, to=Invite, getInviter(user(address): 0xcE4488) -> 0x000000
+      [4][CALL] from=0xc04c49, to=0xce4488, 0x04811f9a() -> None
+        [5][CALL] from=0xce4488, to=SNKMiner, getReward() -> None
+          [6][STATICCALL] from=SNKMiner, to=Invite, getInviterSuns(user(address): 0xcE4488) -> ['0x66e987']
+          [6][STATICCALL] from=SNKMiner, to=Invite, getInviterSuns(user(address): 0xcE4488) -> ['0x66e987']
+          [6][STATICCALL] from=SNKMiner, to=Invite, getInviterSuns(user(address): 0xcE4488) -> ['0x66e987']
+          [6][CALL] from=SNKMiner, to=SNKToken, transfer(recipient(address): 0xcE4488, amount(uint256): 5738792092845884194370) -> True
+      [4][CALL] from=0xc04c49, to=0xce4488, transferaddress() -> None
+        [5][STATICCALL] from=0xce4488, to=SNKToken, balanceOf(account(address): 0xcE4488) -> 5738792092845884194370
+        [5][CALL] from=0xce4488, to=SNKToken, transfer(recipient(address): 0xC04c49, amount(uint256): 5738792092845884194370) -> True
+      [4][CALL] from=0xc04c49, to=0x66e987, 0x22a678a3() -> None
+        [5][CALL] from=0x66e987, to=SNKMiner, exit() -> None
+          [6][STATICCALL] from=SNKMiner, to=Invite, getInviterSuns(user(address): 0x66e987) -> []
+          [6][STATICCALL] from=SNKMiner, to=Invite, getInviterSuns(user(address): 0x66e987) -> []
+          [6][CALL] from=SNKMiner, to=SNKToken, transfer(recipient(address): 0x66e987, amount(uint256): 538793590830682860304543) -> True
+          [6][STATICCALL] from=SNKMiner, to=Invite, getInviterSuns(user(address): 0x66e987) -> []
+          [6][STATICCALL] from=SNKMiner, to=Invite, getInviter(user(address): 0x66e987) -> 0xce4488
+          [6][STATICCALL] from=SNKMiner, to=Invite, getInviterSuns(user(address): 0xcE4488) -> ['0x66e987']
+          [6][STATICCALL] from=SNKMiner, to=Invite, getInviter(user(address): 0xcE4488) -> 0x000000
+          [6][STATICCALL] from=SNKMiner, to=Invite, getInviterSuns(user(address): 0x66e987) -> []
+      [4][CALL] from=0xc04c49, to=0x66e987, transferaddress() -> None
+        [5][STATICCALL] from=0x66e987, to=SNKToken, balanceOf(account(address): 0x66e987) -> 538793590830682860304543
+        [5][CALL] from=0x66e987, to=SNKToken, transfer(recipient(address): 0xC04c49, amount(uint256): 538793590830682860304543) -> True
+      [4][STATICCALL] from=0xc04c49, to=SNKToken, balanceOf(account(address): 0xA3f5ea) -> 1675351141860572271346697
+      [4][STATICCALL] from=0xc04c49, to=SNKToken, balanceOf(account(address): 0xC04c49) -> 544532382923528744498913
+      [4][STATICCALL] from=0xc04c49, to=SNKMiner, privateEarned(account(address): 0x8DEE9f) -> 82841381279896498
+      [4][CREATE] from=0xc04c49, to=0x7f43e5, atInversebrahint248() -> 0x608060
+      [4][CALL] from=0xc04c49, to=0x7f43e5, 0x0e6da604() -> None
+        [5][CALL] from=0x7f43e5, to=SNKMiner, bindParent(parent(address): 0x8DEE9f) -> None
+          [6][STATICCALL] from=SNKMiner, to=Invite, getInviter(user(address): 0x7f43e5) -> 0x000000
+          [6][CALL] from=SNKMiner, to=Invite, invite(user(address): 0x7f43e5, parent(address): 0x8DEE9f) -> True
+      [4][CALL] from=0xc04c49, to=SNKToken, transfer(recipient(address): 0x7f43e5, amount(uint256): 544532382923528744498913) -> True
+      [4][CALL] from=0xc04c49, to=0x7f43e5, 0xd5584171() -> None
+        [5][CALL] from=0x7f43e5, to=SNKToken, approve(spender(address): 0xA3f5ea, amount(uint256): 544532382923528744498913) -> True
+        [5][CALL] from=0x7f43e5, to=SNKMiner, stake(amount(uint256): 544532382923528744498913) -> None
+          [6][STATICCALL] from=SNKMiner, to=Invite, getInviterSuns(user(address): 0x7f43e5) -> []
+          [6][CALL] from=SNKMiner, to=SNKToken, transferFrom(sender(address): 0x7f43e5, recipient(address): 0xA3f5ea, amount(uint256): 544532382923528744498913) -> True
+          [6][STATICCALL] from=SNKMiner, to=Invite, getInviterSuns(user(address): 0x7f43e5) -> []
+          [6][STATICCALL] from=SNKMiner, to=Invite, getInviter(user(address): 0x7f43e5) -> 0x8dee9f
+          [6][STATICCALL] from=SNKMiner, to=Invite, getInviterSuns(user(address): 0x8DEE9f) -> ['0x7f43e5']
+          [6][STATICCALL] from=SNKMiner, to=Invite, getInviter(user(address): 0x8DEE9f) -> 0x000000
+      [4][CALL] from=0xc04c49, to=0x8dee9f, 0x04811f9a() -> None
+        [5][CALL] from=0x8dee9f, to=SNKMiner, getReward() -> None
+          [6][STATICCALL] from=SNKMiner, to=Invite, getInviterSuns(user(address): 0x8DEE9f) -> ['0x7f43e5']
+          [6][STATICCALL] from=SNKMiner, to=Invite, getInviterSuns(user(address): 0x8DEE9f) -> ['0x7f43e5']
+          [6][STATICCALL] from=SNKMiner, to=Invite, getInviterSuns(user(address): 0x8DEE9f) -> ['0x7f43e5']
+          [6][CALL] from=SNKMiner, to=SNKToken, transfer(recipient(address): 0x8DEE9f, amount(uint256): 5799916166769391475617) -> True
+      [4][CALL] from=0xc04c49, to=0x8dee9f, transferaddress() -> None
+        [5][STATICCALL] from=0x8dee9f, to=SNKToken, balanceOf(account(address): 0x8DEE9f) -> 5799916166769391475617
+        [5][CALL] from=0x8dee9f, to=SNKToken, transfer(recipient(address): 0xC04c49, amount(uint256): 5799916166769391475617) -> True
+      [4][CALL] from=0xc04c49, to=0x7f43e5, 0x22a678a3() -> None
+        [5][CALL] from=0x7f43e5, to=SNKMiner, exit() -> None
+          [6][STATICCALL] from=SNKMiner, to=Invite, getInviterSuns(user(address): 0x7f43e5) -> []
+          [6][STATICCALL] from=SNKMiner, to=Invite, getInviterSuns(user(address): 0x7f43e5) -> []
+          [6][CALL] from=SNKMiner, to=SNKToken, transfer(recipient(address): 0x7f43e5, amount(uint256): 544532382923528744498913) -> True
+          [6][STATICCALL] from=SNKMiner, to=Invite, getInviterSuns(user(address): 0x7f43e5) -> []
+          [6][STATICCALL] from=SNKMiner, to=Invite, getInviter(user(address): 0x7f43e5) -> 0x8dee9f
+          [6][STATICCALL] from=SNKMiner, to=Invite, getInviterSuns(user(address): 0x8DEE9f) -> ['0x7f43e5']
+          [6][STATICCALL] from=SNKMiner, to=Invite, getInviter(user(address): 0x8DEE9f) -> 0x000000
+          [6][STATICCALL] from=SNKMiner, to=Invite, getInviterSuns(user(address): 0x7f43e5) -> []
+      [4][CALL] from=0xc04c49, to=0x7f43e5, transferaddress() -> None
+        [5][STATICCALL] from=0x7f43e5, to=SNKToken, balanceOf(account(address): 0x7f43e5) -> 544532382923528744498913
+        [5][CALL] from=0x7f43e5, to=SNKToken, transfer(recipient(address): 0xC04c49, amount(uint256): 544532382923528744498913) -> True
+      [4][STATICCALL] from=0xc04c49, to=SNKToken, balanceOf(account(address): 0xA3f5ea) -> 1669551225693802879871080
+      [4][STATICCALL] from=0xc04c49, to=SNKToken, balanceOf(account(address): 0xC04c49) -> 550332299090298135974530
+      [4][STATICCALL] from=0xc04c49, to=SNKMiner, privateEarned(account(address): 0x14C9D5) -> 82841381279896498
+      [4][CREATE] from=0xc04c49, to=0x56a2cc, atInversebrahint248() -> 0x608060
+      [4][CALL] from=0xc04c49, to=0x56a2cc, 0x0e6da604() -> None
+        [5][CALL] from=0x56a2cc, to=SNKMiner, bindParent(parent(address): 0x14C9D5) -> None
+          [6][STATICCALL] from=SNKMiner, to=Invite, getInviter(user(address): 0x56a2cC) -> 0x000000
+          [6][CALL] from=SNKMiner, to=Invite, invite(user(address): 0x56a2cC, parent(address): 0x14C9D5) -> True
+      [4][CALL] from=0xc04c49, to=SNKToken, transfer(recipient(address): 0x56a2cC, amount(uint256): 550332299090298135974530) -> True
+      [4][CALL] from=0xc04c49, to=0x56a2cc, 0xd5584171() -> None
+        [5][CALL] from=0x56a2cc, to=SNKToken, approve(spender(address): 0xA3f5ea, amount(uint256): 550332299090298135974530) -> True
+        [5][CALL] from=0x56a2cc, to=SNKMiner, stake(amount(uint256): 550332299090298135974530) -> None
+          [6][STATICCALL] from=SNKMiner, to=Invite, getInviterSuns(user(address): 0x56a2cC) -> []
+          [6][CALL] from=SNKMiner, to=SNKToken, transferFrom(sender(address): 0x56a2cC, recipient(address): 0xA3f5ea, amount(uint256): 550332299090298135974530) -> True
+          [6][STATICCALL] from=SNKMiner, to=Invite, getInviterSuns(user(address): 0x56a2cC) -> []
+          [6][STATICCALL] from=SNKMiner, to=Invite, getInviter(user(address): 0x56a2cC) -> 0x14c9d5
+          [6][STATICCALL] from=SNKMiner, to=Invite, getInviterSuns(user(address): 0x14C9D5) -> ['0x56a2cc']
+          [6][STATICCALL] from=SNKMiner, to=Invite, getInviter(user(address): 0x14C9D5) -> 0x000000
+      [4][CALL] from=0xc04c49, to=0x14c9d5, 0x04811f9a() -> None
+        [5][CALL] from=0x14c9d5, to=SNKMiner, getReward() -> None
+          [6][STATICCALL] from=SNKMiner, to=Invite, getInviterSuns(user(address): 0x14C9D5) -> ['0x56a2cc']
+          [6][STATICCALL] from=SNKMiner, to=Invite, getInviterSuns(user(address): 0x14C9D5) -> ['0x56a2cc']
+          [6][STATICCALL] from=SNKMiner, to=Invite, getInviterSuns(user(address): 0x14C9D5) -> ['0x56a2cc']
+          [6][CALL] from=SNKMiner, to=SNKToken, transfer(recipient(address): 0x14C9D5, amount(uint256): 5861691275327463051321) -> True
+      [4][CALL] from=0xc04c49, to=0x14c9d5, transferaddress() -> None
+        [5][STATICCALL] from=0x14c9d5, to=SNKToken, balanceOf(account(address): 0x14C9D5) -> 5861691275327463051321
+        [5][CALL] from=0x14c9d5, to=SNKToken, transfer(recipient(address): 0xC04c49, amount(uint256): 5861691275327463051321) -> True
+      [4][CALL] from=0xc04c49, to=0x56a2cc, 0x22a678a3() -> None
+        [5][CALL] from=0x56a2cc, to=SNKMiner, exit() -> None
+          [6][STATICCALL] from=SNKMiner, to=Invite, getInviterSuns(user(address): 0x56a2cC) -> []
+          [6][STATICCALL] from=SNKMiner, to=Invite, getInviterSuns(user(address): 0x56a2cC) -> []
+          [6][CALL] from=SNKMiner, to=SNKToken, transfer(recipient(address): 0x56a2cC, amount(uint256): 550332299090298135974530) -> True
+          [6][STATICCALL] from=SNKMiner, to=Invite, getInviterSuns(user(address): 0x56a2cC) -> []
+          [6][STATICCALL] from=SNKMiner, to=Invite, getInviter(user(address): 0x56a2cC) -> 0x14c9d5
+          [6][STATICCALL] from=SNKMiner, to=Invite, getInviterSuns(user(address): 0x14C9D5) -> ['0x56a2cc']
+          [6][STATICCALL] from=SNKMiner, to=Invite, getInviter(user(address): 0x14C9D5) -> 0x000000
+          [6][STATICCALL] from=SNKMiner, to=Invite, getInviterSuns(user(address): 0x56a2cC) -> []
+      [4][CALL] from=0xc04c49, to=0x56a2cc, transferaddress() -> None
+        [5][STATICCALL] from=0x56a2cc, to=SNKToken, balanceOf(account(address): 0x56a2cC) -> 550332299090298135974530
+        [5][CALL] from=0x56a2cc, to=SNKToken, transfer(recipient(address): 0xC04c49, amount(uint256): 550332299090298135974530) -> True
+      [4][STATICCALL] from=0xc04c49, to=SNKToken, balanceOf(account(address): 0xA3f5ea) -> 1663689534418475416819759
+      [4][STATICCALL] from=0xc04c49, to=SNKToken, balanceOf(account(address): 0xC04c49) -> 556193990365625599025851
+      [4][STATICCALL] from=0xc04c49, to=SNKMiner, privateEarned(account(address): 0x34A4BF) -> 82841381279896498
+      [4][CREATE] from=0xc04c49, to=0x808d58, atInversebrahint248() -> 0x608060
+      [4][CALL] from=0xc04c49, to=0x808d58, 0x0e6da604() -> None
+        [5][CALL] from=0x808d58, to=SNKMiner, bindParent(parent(address): 0x34A4BF) -> None
+          [6][STATICCALL] from=SNKMiner, to=Invite, getInviter(user(address): 0x808D58) -> 0x000000
+          [6][CALL] from=SNKMiner, to=Invite, invite(user(address): 0x808D58, parent(address): 0x34A4BF) -> True
+      [4][CALL] from=0xc04c49, to=SNKToken, transfer(recipient(address): 0x808D58, amount(uint256): 556193990365625599025851) -> True
+      [4][CALL] from=0xc04c49, to=0x808d58, 0xd5584171() -> None
+        [5][CALL] from=0x808d58, to=SNKToken, approve(spender(address): 0xA3f5ea, amount(uint256): 556193990365625599025851) -> True
+        [5][CALL] from=0x808d58, to=SNKMiner, stake(amount(uint256): 556193990365625599025851) -> None
+          [6][STATICCALL] from=SNKMiner, to=Invite, getInviterSuns(user(address): 0x808D58) -> []
+          [6][CALL] from=SNKMiner, to=SNKToken, transferFrom(sender(address): 0x808D58, recipient(address): 0xA3f5ea, amount(uint256): 556193990365625599025851) -> True
+          [6][STATICCALL] from=SNKMiner, to=Invite, getInviterSuns(user(address): 0x808D58) -> []
+          [6][STATICCALL] from=SNKMiner, to=Invite, getInviter(user(address): 0x808D58) -> 0x34a4bf
+          [6][STATICCALL] from=SNKMiner, to=Invite, getInviterSuns(user(address): 0x34A4BF) -> ['0x808d58']
+          [6][STATICCALL] from=SNKMiner, to=Invite, getInviter(user(address): 0x34A4BF) -> 0x000000
+      [4][CALL] from=0xc04c49, to=0x34a4bf, 0x04811f9a() -> None
+        [5][CALL] from=0x34a4bf, to=SNKMiner, getReward() -> None
+          [6][STATICCALL] from=SNKMiner, to=Invite, getInviterSuns(user(address): 0x34A4BF) -> ['0x808d58']
+          [6][STATICCALL] from=SNKMiner, to=Invite, getInviterSuns(user(address): 0x34A4BF) -> ['0x808d58']
+          [6][STATICCALL] from=SNKMiner, to=Invite, getInviterSuns(user(address): 0x34A4BF) -> ['0x808d58']
+          [6][CALL] from=SNKMiner, to=SNKToken, transfer(recipient(address): 0x34A4BF, amount(uint256): 5924124352712605996185) -> True
+      [4][CALL] from=0xc04c49, to=0x34a4bf, transferaddress() -> None
+        [5][STATICCALL] from=0x34a4bf, to=SNKToken, balanceOf(account(address): 0x34A4BF) -> 5924124352712605996185
+        [5][CALL] from=0x34a4bf, to=SNKToken, transfer(recipient(address): 0xC04c49, amount(uint256): 5924124352712605996185) -> True
+      [4][CALL] from=0xc04c49, to=0x808d58, 0x22a678a3() -> None
+        [5][CALL] from=0x808d58, to=SNKMiner, exit() -> None
+          [6][STATICCALL] from=SNKMiner, to=Invite, getInviterSuns(user(address): 0x808D58) -> []
+          [6][STATICCALL] from=SNKMiner, to=Invite, getInviterSuns(user(address): 0x808D58) -> []
+          [6][CALL] from=SNKMiner, to=SNKToken, transfer(recipient(address): 0x808D58, amount(uint256): 556193990365625599025851) -> True
+          [6][STATICCALL] from=SNKMiner, to=Invite, getInviterSuns(user(address): 0x808D58) -> []
+          [6][STATICCALL] from=SNKMiner, to=Invite, getInviter(user(address): 0x808D58) -> 0x34a4bf
+          [6][STATICCALL] from=SNKMiner, to=Invite, getInviterSuns(user(address): 0x34A4BF) -> ['0x808d58']
+          [6][STATICCALL] from=SNKMiner, to=Invite, getInviter(user(address): 0x34A4BF) -> 0x000000
+          [6][STATICCALL] from=SNKMiner, to=Invite, getInviterSuns(user(address): 0x808D58) -> []
+      [4][CALL] from=0xc04c49, to=0x808d58, transferaddress() -> None
+        [5][STATICCALL] from=0x808d58, to=SNKToken, balanceOf(account(address): 0x808D58) -> 556193990365625599025851
+        [5][CALL] from=0x808d58, to=SNKToken, transfer(recipient(address): 0xC04c49, amount(uint256): 556193990365625599025851) -> True
+      [4][STATICCALL] from=0xc04c49, to=SNKToken, balanceOf(account(address): 0xA3f5ea) -> 1657765410065762810823574
+      [4][STATICCALL] from=0xc04c49, to=SNKToken, balanceOf(account(address): 0xC04c49) -> 562118114718338205022036
+      [4][STATICCALL] from=0xc04c49, to=SNKMiner, privateEarned(account(address): 0x9889Db) -> 82841381279896498
+      [4][CREATE] from=0xc04c49, to=0x031916, atInversebrahint248() -> 0x608060
+      [4][CALL] from=0xc04c49, to=0x031916, 0x0e6da604() -> None
+        [5][CALL] from=0x031916, to=SNKMiner, bindParent(parent(address): 0x9889Db) -> None
+          [6][STATICCALL] from=SNKMiner, to=Invite, getInviter(user(address): 0x031916) -> 0x000000
+          [6][CALL] from=SNKMiner, to=Invite, invite(user(address): 0x031916, parent(address): 0x9889Db) -> True
+      [4][CALL] from=0xc04c49, to=SNKToken, transfer(recipient(address): 0x031916, amount(uint256): 562118114718338205022036) -> True
+      [4][CALL] from=0xc04c49, to=0x031916, 0xd5584171() -> None
+        [5][CALL] from=0x031916, to=SNKToken, approve(spender(address): 0xA3f5ea, amount(uint256): 562118114718338205022036) -> True
+        [5][CALL] from=0x031916, to=SNKMiner, stake(amount(uint256): 562118114718338205022036) -> None
+          [6][STATICCALL] from=SNKMiner, to=Invite, getInviterSuns(user(address): 0x031916) -> []
+          [6][CALL] from=SNKMiner, to=SNKToken, transferFrom(sender(address): 0x031916, recipient(address): 0xA3f5ea, amount(uint256): 562118114718338205022036) -> True
+          [6][STATICCALL] from=SNKMiner, to=Invite, getInviterSuns(user(address): 0x031916) -> []
+          [6][STATICCALL] from=SNKMiner, to=Invite, getInviter(user(address): 0x031916) -> 0x9889db
+          [6][STATICCALL] from=SNKMiner, to=Invite, getInviterSuns(user(address): 0x9889Db) -> ['0x031916']
+          [6][STATICCALL] from=SNKMiner, to=Invite, getInviter(user(address): 0x9889Db) -> 0x000000
+      [4][CALL] from=0xc04c49, to=0x9889db, 0x04811f9a() -> None
+        [5][CALL] from=0x9889db, to=SNKMiner, getReward() -> None
+          [6][STATICCALL] from=SNKMiner, to=Invite, getInviterSuns(user(address): 0x9889Db) -> ['0x031916']
+          [6][STATICCALL] from=SNKMiner, to=Invite, getInviterSuns(user(address): 0x9889Db) -> ['0x031916']
+          [6][STATICCALL] from=SNKMiner, to=Invite, getInviterSuns(user(address): 0x9889Db) -> ['0x031916']
+          [6][CALL] from=SNKMiner, to=SNKToken, transfer(recipient(address): 0x9889Db, amount(uint256): 5987222406973652643783) -> True
+      [4][CALL] from=0xc04c49, to=0x9889db, transferaddress() -> None
+        [5][STATICCALL] from=0x9889db, to=SNKToken, balanceOf(account(address): 0x9889Db) -> 5987222406973652643783
+        [5][CALL] from=0x9889db, to=SNKToken, transfer(recipient(address): 0xC04c49, amount(uint256): 5987222406973652643783) -> True
+      [4][CALL] from=0xc04c49, to=0x031916, 0x22a678a3() -> None
+        [5][CALL] from=0x031916, to=SNKMiner, exit() -> None
+          [6][STATICCALL] from=SNKMiner, to=Invite, getInviterSuns(user(address): 0x031916) -> []
+          [6][STATICCALL] from=SNKMiner, to=Invite, getInviterSuns(user(address): 0x031916) -> []
+          [6][CALL] from=SNKMiner, to=SNKToken, transfer(recipient(address): 0x031916, amount(uint256): 562118114718338205022036) -> True
+          [6][STATICCALL] from=SNKMiner, to=Invite, getInviterSuns(user(address): 0x031916) -> []
+          [6][STATICCALL] from=SNKMiner, to=Invite, getInviter(user(address): 0x031916) -> 0x9889db
+          [6][STATICCALL] from=SNKMiner, to=Invite, getInviterSuns(user(address): 0x9889Db) -> ['0x031916']
+          [6][STATICCALL] from=SNKMiner, to=Invite, getInviter(user(address): 0x9889Db) -> 0x000000
+          [6][STATICCALL] from=SNKMiner, to=Invite, getInviterSuns(user(address): 0x031916) -> []
+      [4][CALL] from=0xc04c49, to=0x031916, transferaddress() -> None
+        [5][STATICCALL] from=0x031916, to=SNKToken, balanceOf(account(address): 0x031916) -> 562118114718338205022036
+        [5][CALL] from=0x031916, to=SNKToken, transfer(recipient(address): 0xC04c49, amount(uint256): 562118114718338205022036) -> True
+      [4][STATICCALL] from=0xc04c49, to=SNKToken, balanceOf(account(address): 0xA3f5ea) -> 1651778187658789158179791
+      [4][STATICCALL] from=0xc04c49, to=SNKToken, balanceOf(account(address): 0xC04c49) -> 568105337125311857665819
+      [4][STATICCALL] from=0xc04c49, to=SNKMiner, privateEarned(account(address): 0xD363EF) -> 82841381279896498
+      [4][CREATE] from=0xc04c49, to=0xd4efa1, atInversebrahint248() -> 0x608060
+      [4][CALL] from=0xc04c49, to=0xd4efa1, 0x0e6da604() -> None
+        [5][CALL] from=0xd4efa1, to=SNKMiner, bindParent(parent(address): 0xD363EF) -> None
+          [6][STATICCALL] from=SNKMiner, to=Invite, getInviter(user(address): 0xD4eFa1) -> 0x000000
+          [6][CALL] from=SNKMiner, to=Invite, invite(user(address): 0xD4eFa1, parent(address): 0xD363EF) -> True
+      [4][CALL] from=0xc04c49, to=SNKToken, transfer(recipient(address): 0xD4eFa1, amount(uint256): 568105337125311857665819) -> True
+      [4][CALL] from=0xc04c49, to=0xd4efa1, 0xd5584171() -> None
+        [5][CALL] from=0xd4efa1, to=SNKToken, approve(spender(address): 0xA3f5ea, amount(uint256): 568105337125311857665819) -> True
+        [5][CALL] from=0xd4efa1, to=SNKMiner, stake(amount(uint256): 568105337125311857665819) -> None
+          [6][STATICCALL] from=SNKMiner, to=Invite, getInviterSuns(user(address): 0xD4eFa1) -> []
+          [6][CALL] from=SNKMiner, to=SNKToken, transferFrom(sender(address): 0xD4eFa1, recipient(address): 0xA3f5ea, amount(uint256): 568105337125311857665819) -> True
+          [6][STATICCALL] from=SNKMiner, to=Invite, getInviterSuns(user(address): 0xD4eFa1) -> []
+          [6][STATICCALL] from=SNKMiner, to=Invite, getInviter(user(address): 0xD4eFa1) -> 0xd363ef
+          [6][STATICCALL] from=SNKMiner, to=Invite, getInviterSuns(user(address): 0xD363EF) -> ['0xd4efa1']
+          [6][STATICCALL] from=SNKMiner, to=Invite, getInviter(user(address): 0xD363EF) -> 0x000000
+      [4][CALL] from=0xc04c49, to=0xd363ef, 0x04811f9a() -> None
+        [5][CALL] from=0xd363ef, to=SNKMiner, getReward() -> None
+          [6][STATICCALL] from=SNKMiner, to=Invite, getInviterSuns(user(address): 0xD363EF) -> ['0xd4efa1']
+          [6][STATICCALL] from=SNKMiner, to=Invite, getInviterSuns(user(address): 0xD363EF) -> ['0xd4efa1']
+          [6][STATICCALL] from=SNKMiner, to=Invite, getInviterSuns(user(address): 0xD363EF) -> ['0xd4efa1']
+          [6][CALL] from=SNKMiner, to=SNKToken, transfer(recipient(address): 0xD363EF, amount(uint256): 6050992520802406872366) -> True
+      [4][CALL] from=0xc04c49, to=0xd363ef, transferaddress() -> None
+        [5][STATICCALL] from=0xd363ef, to=SNKToken, balanceOf(account(address): 0xD363EF) -> 6050992520802406872366
+        [5][CALL] from=0xd363ef, to=SNKToken, transfer(recipient(address): 0xC04c49, amount(uint256): 6050992520802406872366) -> True
+      [4][CALL] from=0xc04c49, to=0xd4efa1, 0x22a678a3() -> None
+        [5][CALL] from=0xd4efa1, to=SNKMiner, exit() -> None
+          [6][STATICCALL] from=SNKMiner, to=Invite, getInviterSuns(user(address): 0xD4eFa1) -> []
+          [6][STATICCALL] from=SNKMiner, to=Invite, getInviterSuns(user(address): 0xD4eFa1) -> []
+          [6][CALL] from=SNKMiner, to=SNKToken, transfer(recipient(address): 0xD4eFa1, amount(uint256): 568105337125311857665819) -> True
+          [6][STATICCALL] from=SNKMiner, to=Invite, getInviterSuns(user(address): 0xD4eFa1) -> []
+          [6][STATICCALL] from=SNKMiner, to=Invite, getInviter(user(address): 0xD4eFa1) -> 0xd363ef
+          [6][STATICCALL] from=SNKMiner, to=Invite, getInviterSuns(user(address): 0xD363EF) -> ['0xd4efa1']
+          [6][STATICCALL] from=SNKMiner, to=Invite, getInviter(user(address): 0xD363EF) -> 0x000000
+          [6][STATICCALL] from=SNKMiner, to=Invite, getInviterSuns(user(address): 0xD4eFa1) -> []
+      [4][CALL] from=0xc04c49, to=0xd4efa1, transferaddress() -> None
+        [5][STATICCALL] from=0xd4efa1, to=SNKToken, balanceOf(account(address): 0xD4eFa1) -> 568105337125311857665819
+        [5][CALL] from=0xd4efa1, to=SNKToken, transfer(recipient(address): 0xC04c49, amount(uint256): 568105337125311857665819) -> True
+      [4][STATICCALL] from=0xc04c49, to=SNKToken, balanceOf(account(address): 0xA3f5ea) -> 1645727195137986751307425
+      [4][STATICCALL] from=0xc04c49, to=SNKToken, balanceOf(account(address): 0xC04c49) -> 574156329646114264538185
+      [4][STATICCALL] from=0xc04c49, to=SNKMiner, privateEarned(account(address): 0xe6010d) -> 82841381279896498
+      [4][CREATE] from=0xc04c49, to=0x834bbe, atInversebrahint248() -> 0x608060
+      [4][CALL] from=0xc04c49, to=0x834bbe, 0x0e6da604() -> None
+        [5][CALL] from=0x834bbe, to=SNKMiner, bindParent(parent(address): 0xe6010d) -> None
+          [6][STATICCALL] from=SNKMiner, to=Invite, getInviter(user(address): 0x834Bbe) -> 0x000000
+          [6][CALL] from=SNKMiner, to=Invite, invite(user(address): 0x834Bbe, parent(address): 0xe6010d) -> True
+      [4][CALL] from=0xc04c49, to=SNKToken, transfer(recipient(address): 0x834Bbe, amount(uint256): 574156329646114264538185) -> True
+      [4][CALL] from=0xc04c49, to=0x834bbe, 0xd5584171() -> None
+        [5][CALL] from=0x834bbe, to=SNKToken, approve(spender(address): 0xA3f5ea, amount(uint256): 574156329646114264538185) -> True
+        [5][CALL] from=0x834bbe, to=SNKMiner, stake(amount(uint256): 574156329646114264538185) -> None
+          [6][STATICCALL] from=SNKMiner, to=Invite, getInviterSuns(user(address): 0x834Bbe) -> []
+          [6][CALL] from=SNKMiner, to=SNKToken, transferFrom(sender(address): 0x834Bbe, recipient(address): 0xA3f5ea, amount(uint256): 574156329646114264538185) -> True
+          [6][STATICCALL] from=SNKMiner, to=Invite, getInviterSuns(user(address): 0x834Bbe) -> []
+          [6][STATICCALL] from=SNKMiner, to=Invite, getInviter(user(address): 0x834Bbe) -> 0xe6010d
+          [6][STATICCALL] from=SNKMiner, to=Invite, getInviterSuns(user(address): 0xe6010d) -> ['0x834bbe']
+          [6][STATICCALL] from=SNKMiner, to=Invite, getInviter(user(address): 0xe6010d) -> 0x000000
+      [4][CALL] from=0xc04c49, to=0xe6010d, 0x04811f9a() -> None
+        [5][CALL] from=0xe6010d, to=SNKMiner, getReward() -> None
+          [6][STATICCALL] from=SNKMiner, to=Invite, getInviterSuns(user(address): 0xe6010d) -> ['0x834bbe']
+          [6][STATICCALL] from=SNKMiner, to=Invite, getInviterSuns(user(address): 0xe6010d) -> ['0x834bbe']
+          [6][STATICCALL] from=SNKMiner, to=Invite, getInviterSuns(user(address): 0xe6010d) -> ['0x834bbe']
+          [6][CALL] from=SNKMiner, to=SNKToken, transfer(recipient(address): 0xe6010d, amount(uint256): 6115441852328668987578) -> True
+      [4][CALL] from=0xc04c49, to=0xe6010d, transferaddress() -> None
+        [5][STATICCALL] from=0xe6010d, to=SNKToken, balanceOf(account(address): 0xe6010d) -> 6115441852328668987578
+        [5][CALL] from=0xe6010d, to=SNKToken, transfer(recipient(address): 0xC04c49, amount(uint256): 6115441852328668987578) -> True
+      [4][CALL] from=0xc04c49, to=0x834bbe, 0x22a678a3() -> None
+        [5][CALL] from=0x834bbe, to=SNKMiner, exit() -> None
+          [6][STATICCALL] from=SNKMiner, to=Invite, getInviterSuns(user(address): 0x834Bbe) -> []
+          [6][STATICCALL] from=SNKMiner, to=Invite, getInviterSuns(user(address): 0x834Bbe) -> []
+          [6][CALL] from=SNKMiner, to=SNKToken, transfer(recipient(address): 0x834Bbe, amount(uint256): 574156329646114264538185) -> True
+          [6][STATICCALL] from=SNKMiner, to=Invite, getInviterSuns(user(address): 0x834Bbe) -> []
+          [6][STATICCALL] from=SNKMiner, to=Invite, getInviter(user(address): 0x834Bbe) -> 0xe6010d
+          [6][STATICCALL] from=SNKMiner, to=Invite, getInviterSuns(user(address): 0xe6010d) -> ['0x834bbe']
+          [6][STATICCALL] from=SNKMiner, to=Invite, getInviter(user(address): 0xe6010d) -> 0x000000
+          [6][STATICCALL] from=SNKMiner, to=Invite, getInviterSuns(user(address): 0x834Bbe) -> []
+      [4][CALL] from=0xc04c49, to=0x834bbe, transferaddress() -> None
+        [5][STATICCALL] from=0x834bbe, to=SNKToken, balanceOf(account(address): 0x834Bbe) -> 574156329646114264538185
+        [5][CALL] from=0x834bbe, to=SNKToken, transfer(recipient(address): 0xC04c49, amount(uint256): 574156329646114264538185) -> True
+      [4][STATICCALL] from=0xc04c49, to=SNKToken, balanceOf(account(address): 0xA3f5ea) -> 1639611753285658082319847
+      [4][STATICCALL] from=0xc04c49, to=SNKToken, balanceOf(account(address): 0xC04c49) -> 580271771498442933525763
+      [4][STATICCALL] from=0xc04c49, to=SNKMiner, privateEarned(account(address): 0x413590) -> 82841381279896498
+      [4][CREATE] from=0xc04c49, to=0xba9cf2, atInversebrahint248() -> 0x608060
+      [4][CALL] from=0xc04c49, to=0xba9cf2, 0x0e6da604() -> None
+        [5][CALL] from=0xba9cf2, to=SNKMiner, bindParent(parent(address): 0x413590) -> None
+          [6][STATICCALL] from=SNKMiner, to=Invite, getInviter(user(address): 0xBa9Cf2) -> 0x000000
+          [6][CALL] from=SNKMiner, to=Invite, invite(user(address): 0xBa9Cf2, parent(address): 0x413590) -> True
+      [4][CALL] from=0xc04c49, to=SNKToken, transfer(recipient(address): 0xBa9Cf2, amount(uint256): 580271771498442933525763) -> True
+      [4][CALL] from=0xc04c49, to=0xba9cf2, 0xd5584171() -> None
+        [5][CALL] from=0xba9cf2, to=SNKToken, approve(spender(address): 0xA3f5ea, amount(uint256): 580271771498442933525763) -> True
+        [5][CALL] from=0xba9cf2, to=SNKMiner, stake(amount(uint256): 580271771498442933525763) -> None
+          [6][STATICCALL] from=SNKMiner, to=Invite, getInviterSuns(user(address): 0xBa9Cf2) -> []
+          [6][CALL] from=SNKMiner, to=SNKToken, transferFrom(sender(address): 0xBa9Cf2, recipient(address): 0xA3f5ea, amount(uint256): 580271771498442933525763) -> True
+          [6][STATICCALL] from=SNKMiner, to=Invite, getInviterSuns(user(address): 0xBa9Cf2) -> []
+          [6][STATICCALL] from=SNKMiner, to=Invite, getInviter(user(address): 0xBa9Cf2) -> 0x413590
+          [6][STATICCALL] from=SNKMiner, to=Invite, getInviterSuns(user(address): 0x413590) -> ['0xba9cf2']
+          [6][STATICCALL] from=SNKMiner, to=Invite, getInviter(user(address): 0x413590) -> 0x000000
+      [4][CALL] from=0xc04c49, to=0x413590, 0x04811f9a() -> None
+        [5][CALL] from=0x413590, to=SNKMiner, getReward() -> None
+          [6][STATICCALL] from=SNKMiner, to=Invite, getInviterSuns(user(address): 0x413590) -> ['0xba9cf2']
+          [6][STATICCALL] from=SNKMiner, to=Invite, getInviterSuns(user(address): 0x413590) -> ['0xba9cf2']
+          [6][STATICCALL] from=SNKMiner, to=Invite, getInviterSuns(user(address): 0x413590) -> ['0xba9cf2']
+          [6][CALL] from=SNKMiner, to=SNKToken, transfer(recipient(address): 0x413590, amount(uint256): 6180577635923728442822) -> True
+      [4][CALL] from=0xc04c49, to=0x413590, transferaddress() -> None
+        [5][STATICCALL] from=0x413590, to=SNKToken, balanceOf(account(address): 0x413590) -> 6180577635923728442822
+        [5][CALL] from=0x413590, to=SNKToken, transfer(recipient(address): 0xC04c49, amount(uint256): 6180577635923728442822) -> True
+      [4][CALL] from=0xc04c49, to=0xba9cf2, 0x22a678a3() -> None
+        [5][CALL] from=0xba9cf2, to=SNKMiner, exit() -> None
+          [6][STATICCALL] from=SNKMiner, to=Invite, getInviterSuns(user(address): 0xBa9Cf2) -> []
+          [6][STATICCALL] from=SNKMiner, to=Invite, getInviterSuns(user(address): 0xBa9Cf2) -> []
+          [6][CALL] from=SNKMiner, to=SNKToken, transfer(recipient(address): 0xBa9Cf2, amount(uint256): 580271771498442933525763) -> True
+          [6][STATICCALL] from=SNKMiner, to=Invite, getInviterSuns(user(address): 0xBa9Cf2) -> []
+          [6][STATICCALL] from=SNKMiner, to=Invite, getInviter(user(address): 0xBa9Cf2) -> 0x413590
+          [6][STATICCALL] from=SNKMiner, to=Invite, getInviterSuns(user(address): 0x413590) -> ['0xba9cf2']
+          [6][STATICCALL] from=SNKMiner, to=Invite, getInviter(user(address): 0x413590) -> 0x000000
+          [6][STATICCALL] from=SNKMiner, to=Invite, getInviterSuns(user(address): 0xBa9Cf2) -> []
+      [4][CALL] from=0xc04c49, to=0xba9cf2, transferaddress() -> None
+        [5][STATICCALL] from=0xba9cf2, to=SNKToken, balanceOf(account(address): 0xBa9Cf2) -> 580271771498442933525763
+        [5][CALL] from=0xba9cf2, to=SNKToken, transfer(recipient(address): 0xC04c49, amount(uint256): 580271771498442933525763) -> True
+      [4][STATICCALL] from=0xc04c49, to=SNKToken, balanceOf(account(address): 0xA3f5ea) -> 1633431175649734353877025
+      [4][STATICCALL] from=0xc04c49, to=SNKToken, balanceOf(account(address): 0xC04c49) -> 586452349134366661968585
+      [4][STATICCALL] from=0xc04c49, to=SNKMiner, privateEarned(account(address): 0xB29a37) -> 82841381279896498
+      [4][CREATE] from=0xc04c49, to=0x6ab58b, atInversebrahint248() -> 0x608060
+      [4][CALL] from=0xc04c49, to=0x6ab58b, 0x0e6da604() -> None
+        [5][CALL] from=0x6ab58b, to=SNKMiner, bindParent(parent(address): 0xB29a37) -> None
+          [6][STATICCALL] from=SNKMiner, to=Invite, getInviter(user(address): 0x6ab58B) -> 0x000000
+          [6][CALL] from=SNKMiner, to=Invite, invite(user(address): 0x6ab58B, parent(address): 0xB29a37) -> True
+      [4][CALL] from=0xc04c49, to=SNKToken, transfer(recipient(address): 0x6ab58B, amount(uint256): 586452349134366661968585) -> True
+      [4][CALL] from=0xc04c49, to=0x6ab58b, 0xd5584171() -> None
+        [5][CALL] from=0x6ab58b, to=SNKToken, approve(spender(address): 0xA3f5ea, amount(uint256): 586452349134366661968585) -> True
+        [5][CALL] from=0x6ab58b, to=SNKMiner, stake(amount(uint256): 586452349134366661968585) -> None
+          [6][STATICCALL] from=SNKMiner, to=Invite, getInviterSuns(user(address): 0x6ab58B) -> []
+          [6][CALL] from=SNKMiner, to=SNKToken, transferFrom(sender(address): 0x6ab58B, recipient(address): 0xA3f5ea, amount(uint256): 586452349134366661968585) -> True
+          [6][STATICCALL] from=SNKMiner, to=Invite, getInviterSuns(user(address): 0x6ab58B) -> []
+          [6][STATICCALL] from=SNKMiner, to=Invite, getInviter(user(address): 0x6ab58B) -> 0xb29a37
+          [6][STATICCALL] from=SNKMiner, to=Invite, getInviterSuns(user(address): 0xB29a37) -> ['0x6ab58b']
+          [6][STATICCALL] from=SNKMiner, to=Invite, getInviter(user(address): 0xB29a37) -> 0x000000
+      [4][CALL] from=0xc04c49, to=0xb29a37, 0x04811f9a() -> None
+        [5][CALL] from=0xb29a37, to=SNKMiner, getReward() -> None
+          [6][STATICCALL] from=SNKMiner, to=Invite, getInviterSuns(user(address): 0xB29a37) -> ['0x6ab58b']
+          [6][STATICCALL] from=SNKMiner, to=Invite, getInviterSuns(user(address): 0xB29a37) -> ['0x6ab58b']
+          [6][STATICCALL] from=SNKMiner, to=Invite, getInviterSuns(user(address): 0xB29a37) -> ['0x6ab58b']
+          [6][CALL] from=SNKMiner, to=SNKToken, transfer(recipient(address): 0xB29a37, amount(uint256): 6246407183012414588494) -> True
+      [4][CALL] from=0xc04c49, to=0xb29a37, transferaddress() -> None
+        [5][STATICCALL] from=0xb29a37, to=SNKToken, balanceOf(account(address): 0xB29a37) -> 6246407183012414588494
+        [5][CALL] from=0xb29a37, to=SNKToken, transfer(recipient(address): 0xC04c49, amount(uint256): 6246407183012414588494) -> True
+      [4][CALL] from=0xc04c49, to=0x6ab58b, 0x22a678a3() -> None
+        [5][CALL] from=0x6ab58b, to=SNKMiner, exit() -> None
+          [6][STATICCALL] from=SNKMiner, to=Invite, getInviterSuns(user(address): 0x6ab58B) -> []
+          [6][STATICCALL] from=SNKMiner, to=Invite, getInviterSuns(user(address): 0x6ab58B) -> []
+          [6][CALL] from=SNKMiner, to=SNKToken, transfer(recipient(address): 0x6ab58B, amount(uint256): 586452349134366661968585) -> True
+          [6][STATICCALL] from=SNKMiner, to=Invite, getInviterSuns(user(address): 0x6ab58B) -> []
+          [6][STATICCALL] from=SNKMiner, to=Invite, getInviter(user(address): 0x6ab58B) -> 0xb29a37
+          [6][STATICCALL] from=SNKMiner, to=Invite, getInviterSuns(user(address): 0xB29a37) -> ['0x6ab58b']
+          [6][STATICCALL] from=SNKMiner, to=Invite, getInviter(user(address): 0xB29a37) -> 0x000000
+          [6][STATICCALL] from=SNKMiner, to=Invite, getInviterSuns(user(address): 0x6ab58B) -> []
+      [4][CALL] from=0xc04c49, to=0x6ab58b, transferaddress() -> None
+        [5][STATICCALL] from=0x6ab58b, to=SNKToken, balanceOf(account(address): 0x6ab58B) -> 586452349134366661968585
+        [5][CALL] from=0x6ab58b, to=SNKToken, transfer(recipient(address): 0xC04c49, amount(uint256): 586452349134366661968585) -> True
+      [4][STATICCALL] from=0xc04c49, to=SNKToken, balanceOf(account(address): 0xA3f5ea) -> 1627184768466721939288531
+      [4][STATICCALL] from=0xc04c49, to=SNKToken, balanceOf(account(address): 0xC04c49) -> 592698756317379076557079
+      [4][STATICCALL] from=0xc04c49, to=SNKMiner, privateEarned(account(address): 0x4f32E6) -> 82841381279896498
+      [4][CREATE] from=0xc04c49, to=0xf1ba5a, atInversebrahint248() -> 0x608060
+      [4][CALL] from=0xc04c49, to=0xf1ba5a, 0x0e6da604() -> None
+        [5][CALL] from=0xf1ba5a, to=SNKMiner, bindParent(parent(address): 0x4f32E6) -> None
+          [6][STATICCALL] from=SNKMiner, to=Invite, getInviter(user(address): 0xF1bA5A) -> 0x000000
+          [6][CALL] from=SNKMiner, to=Invite, invite(user(address): 0xF1bA5A, parent(address): 0x4f32E6) -> True
+      [4][CALL] from=0xc04c49, to=SNKToken, transfer(recipient(address): 0xF1bA5A, amount(uint256): 592698756317379076557079) -> True
+      [4][CALL] from=0xc04c49, to=0xf1ba5a, 0xd5584171() -> None
+        [5][CALL] from=0xf1ba5a, to=SNKToken, approve(spender(address): 0xA3f5ea, amount(uint256): 592698756317379076557079) -> True
+        [5][CALL] from=0xf1ba5a, to=SNKMiner, stake(amount(uint256): 592698756317379076557079) -> None
+          [6][STATICCALL] from=SNKMiner, to=Invite, getInviterSuns(user(address): 0xF1bA5A) -> []
+          [6][CALL] from=SNKMiner, to=SNKToken, transferFrom(sender(address): 0xF1bA5A, recipient(address): 0xA3f5ea, amount(uint256): 592698756317379076557079) -> True
+          [6][STATICCALL] from=SNKMiner, to=Invite, getInviterSuns(user(address): 0xF1bA5A) -> []
+          [6][STATICCALL] from=SNKMiner, to=Invite, getInviter(user(address): 0xF1bA5A) -> 0x4f32e6
+          [6][STATICCALL] from=SNKMiner, to=Invite, getInviterSuns(user(address): 0x4f32E6) -> ['0xf1ba5a']
+          [6][STATICCALL] from=SNKMiner, to=Invite, getInviter(user(address): 0x4f32E6) -> 0x000000
+      [4][CALL] from=0xc04c49, to=0x4f32e6, 0x04811f9a() -> None
+        [5][CALL] from=0x4f32e6, to=SNKMiner, getReward() -> None
+          [6][STATICCALL] from=SNKMiner, to=Invite, getInviterSuns(user(address): 0x4f32E6) -> ['0xf1ba5a']
+          [6][STATICCALL] from=SNKMiner, to=Invite, getInviterSuns(user(address): 0x4f32E6) -> ['0xf1ba5a']
+          [6][STATICCALL] from=SNKMiner, to=Invite, getInviterSuns(user(address): 0x4f32E6) -> ['0xf1ba5a']
+          [6][CALL] from=SNKMiner, to=SNKToken, transfer(recipient(address): 0x4f32E6, amount(uint256): 6312937882893796601957) -> True
+      [4][CALL] from=0xc04c49, to=0x4f32e6, transferaddress() -> None
+        [5][STATICCALL] from=0x4f32e6, to=SNKToken, balanceOf(account(address): 0x4f32E6) -> 6312937882893796601957
+        [5][CALL] from=0x4f32e6, to=SNKToken, transfer(recipient(address): 0xC04c49, amount(uint256): 6312937882893796601957) -> True
+      [4][CALL] from=0xc04c49, to=0xf1ba5a, 0x22a678a3() -> None
+        [5][CALL] from=0xf1ba5a, to=SNKMiner, exit() -> None
+          [6][STATICCALL] from=SNKMiner, to=Invite, getInviterSuns(user(address): 0xF1bA5A) -> []
+          [6][STATICCALL] from=SNKMiner, to=Invite, getInviterSuns(user(address): 0xF1bA5A) -> []
+          [6][CALL] from=SNKMiner, to=SNKToken, transfer(recipient(address): 0xF1bA5A, amount(uint256): 592698756317379076557079) -> True
+          [6][STATICCALL] from=SNKMiner, to=Invite, getInviterSuns(user(address): 0xF1bA5A) -> []
+          [6][STATICCALL] from=SNKMiner, to=Invite, getInviter(user(address): 0xF1bA5A) -> 0x4f32e6
+          [6][STATICCALL] from=SNKMiner, to=Invite, getInviterSuns(user(address): 0x4f32E6) -> ['0xf1ba5a']
+          [6][STATICCALL] from=SNKMiner, to=Invite, getInviter(user(address): 0x4f32E6) -> 0x000000
+          [6][STATICCALL] from=SNKMiner, to=Invite, getInviterSuns(user(address): 0xF1bA5A) -> []
+      [4][CALL] from=0xc04c49, to=0xf1ba5a, transferaddress() -> None
+        [5][STATICCALL] from=0xf1ba5a, to=SNKToken, balanceOf(account(address): 0xF1bA5A) -> 592698756317379076557079
+        [5][CALL] from=0xf1ba5a, to=SNKToken, transfer(recipient(address): 0xC04c49, amount(uint256): 592698756317379076557079) -> True
+      [4][STATICCALL] from=0xc04c49, to=SNKToken, balanceOf(account(address): 0xA3f5ea) -> 1620871830583828142686574
+      [4][STATICCALL] from=0xc04c49, to=SNKToken, balanceOf(account(address): 0xC04c49) -> 599011694200272873159036
+      [4][STATICCALL] from=0xc04c49, to=SNKMiner, privateEarned(account(address): 0x1aA93c) -> 82841381279896498
+      [4][CREATE] from=0xc04c49, to=0x909b49, atInversebrahint248() -> 0x608060
+      [4][CALL] from=0xc04c49, to=0x909b49, 0x0e6da604() -> None
+        [5][CALL] from=0x909b49, to=SNKMiner, bindParent(parent(address): 0x1aA93c) -> None
+          [6][STATICCALL] from=SNKMiner, to=Invite, getInviter(user(address): 0x909B49) -> 0x000000
+          [6][CALL] from=SNKMiner, to=Invite, invite(user(address): 0x909B49, parent(address): 0x1aA93c) -> True
+      [4][CALL] from=0xc04c49, to=SNKToken, transfer(recipient(address): 0x909B49, amount(uint256): 599011694200272873159036) -> True
+      [4][CALL] from=0xc04c49, to=0x909b49, 0xd5584171() -> None
+        [5][CALL] from=0x909b49, to=SNKToken, approve(spender(address): 0xA3f5ea, amount(uint256): 599011694200272873159036) -> True
+        [5][CALL] from=0x909b49, to=SNKMiner, stake(amount(uint256): 599011694200272873159036) -> None
+          [6][STATICCALL] from=SNKMiner, to=Invite, getInviterSuns(user(address): 0x909B49) -> []
+          [6][CALL] from=SNKMiner, to=SNKToken, transferFrom(sender(address): 0x909B49, recipient(address): 0xA3f5ea, amount(uint256): 599011694200272873159036) -> True
+          [6][STATICCALL] from=SNKMiner, to=Invite, getInviterSuns(user(address): 0x909B49) -> []
+          [6][STATICCALL] from=SNKMiner, to=Invite, getInviter(user(address): 0x909B49) -> 0x1aa93c
+          [6][STATICCALL] from=SNKMiner, to=Invite, getInviterSuns(user(address): 0x1aA93c) -> ['0x909b49']
+          [6][STATICCALL] from=SNKMiner, to=Invite, getInviter(user(address): 0x1aA93c) -> 0x000000
+      [4][CALL] from=0xc04c49, to=0x1aa93c, 0x04811f9a() -> None
+        [5][CALL] from=0x1aa93c, to=SNKMiner, getReward() -> None
+          [6][STATICCALL] from=SNKMiner, to=Invite, getInviterSuns(user(address): 0x1aA93c) -> ['0x909b49']
+          [6][STATICCALL] from=SNKMiner, to=Invite, getInviterSuns(user(address): 0x1aA93c) -> ['0x909b49']
+          [6][STATICCALL] from=SNKMiner, to=Invite, getInviterSuns(user(address): 0x1aA93c) -> ['0x909b49']
+          [6][CALL] from=SNKMiner, to=SNKToken, transfer(recipient(address): 0x1aA93c, amount(uint256): 6380177203570624720974) -> True
+      [4][CALL] from=0xc04c49, to=0x1aa93c, transferaddress() -> None
+        [5][STATICCALL] from=0x1aa93c, to=SNKToken, balanceOf(account(address): 0x1aA93c) -> 6380177203570624720974
+        [5][CALL] from=0x1aa93c, to=SNKToken, transfer(recipient(address): 0xC04c49, amount(uint256): 6380177203570624720974) -> True
+      [4][CALL] from=0xc04c49, to=0x909b49, 0x22a678a3() -> None
+        [5][CALL] from=0x909b49, to=SNKMiner, exit() -> None
+          [6][STATICCALL] from=SNKMiner, to=Invite, getInviterSuns(user(address): 0x909B49) -> []
+          [6][STATICCALL] from=SNKMiner, to=Invite, getInviterSuns(user(address): 0x909B49) -> []
+          [6][CALL] from=SNKMiner, to=SNKToken, transfer(recipient(address): 0x909B49, amount(uint256): 599011694200272873159036) -> True
+          [6][STATICCALL] from=SNKMiner, to=Invite, getInviterSuns(user(address): 0x909B49) -> []
+          [6][STATICCALL] from=SNKMiner, to=Invite, getInviter(user(address): 0x909B49) -> 0x1aa93c
+          [6][STATICCALL] from=SNKMiner, to=Invite, getInviterSuns(user(address): 0x1aA93c) -> ['0x909b49']
+          [6][STATICCALL] from=SNKMiner, to=Invite, getInviter(user(address): 0x1aA93c) -> 0x000000
+          [6][STATICCALL] from=SNKMiner, to=Invite, getInviterSuns(user(address): 0x909B49) -> []
+      [4][CALL] from=0xc04c49, to=0x909b49, transferaddress() -> None
+        [5][STATICCALL] from=0x909b49, to=SNKToken, balanceOf(account(address): 0x909B49) -> 599011694200272873159036
+        [5][CALL] from=0x909b49, to=SNKToken, transfer(recipient(address): 0xC04c49, amount(uint256): 599011694200272873159036) -> True
+      [4][STATICCALL] from=0xc04c49, to=SNKToken, balanceOf(account(address): 0xA3f5ea) -> 1614491653380257517965600
+      [4][STATICCALL] from=0xc04c49, to=SNKToken, balanceOf(account(address): 0xC04c49) -> 605391871403843497880010
+      [4][STATICCALL] from=0xc04c49, to=SNKMiner, privateEarned(account(address): 0x926251) -> 82841381279896498
+      [4][CREATE] from=0xc04c49, to=0x51a0bc, atInversebrahint248() -> 0x608060
+      [4][CALL] from=0xc04c49, to=0x51a0bc, 0x0e6da604() -> None
+        [5][CALL] from=0x51a0bc, to=SNKMiner, bindParent(parent(address): 0x926251) -> None
+          [6][STATICCALL] from=SNKMiner, to=Invite, getInviter(user(address): 0x51A0bC) -> 0x000000
+          [6][CALL] from=SNKMiner, to=Invite, invite(user(address): 0x51A0bC, parent(address): 0x926251) -> True
+      [4][CALL] from=0xc04c49, to=SNKToken, transfer(recipient(address): 0x51A0bC, amount(uint256): 605391871403843497880010) -> True
+      [4][CALL] from=0xc04c49, to=0x51a0bc, 0xd5584171() -> None
+        [5][CALL] from=0x51a0bc, to=SNKToken, approve(spender(address): 0xA3f5ea, amount(uint256): 605391871403843497880010) -> True
+        [5][CALL] from=0x51a0bc, to=SNKMiner, stake(amount(uint256): 605391871403843497880010) -> None
+          [6][STATICCALL] from=SNKMiner, to=Invite, getInviterSuns(user(address): 0x51A0bC) -> []
+          [6][CALL] from=SNKMiner, to=SNKToken, transferFrom(sender(address): 0x51A0bC, recipient(address): 0xA3f5ea, amount(uint256): 605391871403843497880010) -> True
+          [6][STATICCALL] from=SNKMiner, to=Invite, getInviterSuns(user(address): 0x51A0bC) -> []
+          [6][STATICCALL] from=SNKMiner, to=Invite, getInviter(user(address): 0x51A0bC) -> 0x926251
+          [6][STATICCALL] from=SNKMiner, to=Invite, getInviterSuns(user(address): 0x926251) -> ['0x51a0bc']
+          [6][STATICCALL] from=SNKMiner, to=Invite, getInviter(user(address): 0x926251) -> 0x000000
+      [4][CALL] from=0xc04c49, to=0x926251, 0x04811f9a() -> None
+        [5][CALL] from=0x926251, to=SNKMiner, getReward() -> None
+          [6][STATICCALL] from=SNKMiner, to=Invite, getInviterSuns(user(address): 0x926251) -> ['0x51a0bc']
+          [6][STATICCALL] from=SNKMiner, to=Invite, getInviterSuns(user(address): 0x926251) -> ['0x51a0bc']
+          [6][STATICCALL] from=SNKMiner, to=Invite, getInviterSuns(user(address): 0x926251) -> ['0x51a0bc']
+          [6][CALL] from=SNKMiner, to=SNKToken, transfer(recipient(address): 0x926251, amount(uint256): 6448132692587605884536) -> True
+      [4][CALL] from=0xc04c49, to=0x926251, transferaddress() -> None
+        [5][STATICCALL] from=0x926251, to=SNKToken, balanceOf(account(address): 0x926251) -> 6448132692587605884536
+        [5][CALL] from=0x926251, to=SNKToken, transfer(recipient(address): 0xC04c49, amount(uint256): 6448132692587605884536) -> True
+      [4][CALL] from=0xc04c49, to=0x51a0bc, 0x22a678a3() -> None
+        [5][CALL] from=0x51a0bc, to=SNKMiner, exit() -> None
+          [6][STATICCALL] from=SNKMiner, to=Invite, getInviterSuns(user(address): 0x51A0bC) -> []
+          [6][STATICCALL] from=SNKMiner, to=Invite, getInviterSuns(user(address): 0x51A0bC) -> []
+          [6][CALL] from=SNKMiner, to=SNKToken, transfer(recipient(address): 0x51A0bC, amount(uint256): 605391871403843497880010) -> True
+          [6][STATICCALL] from=SNKMiner, to=Invite, getInviterSuns(user(address): 0x51A0bC) -> []
+          [6][STATICCALL] from=SNKMiner, to=Invite, getInviter(user(address): 0x51A0bC) -> 0x926251
+          [6][STATICCALL] from=SNKMiner, to=Invite, getInviterSuns(user(address): 0x926251) -> ['0x51a0bc']
+          [6][STATICCALL] from=SNKMiner, to=Invite, getInviter(user(address): 0x926251) -> 0x000000
+          [6][STATICCALL] from=SNKMiner, to=Invite, getInviterSuns(user(address): 0x51A0bC) -> []
+      [4][CALL] from=0xc04c49, to=0x51a0bc, transferaddress() -> None
+        [5][STATICCALL] from=0x51a0bc, to=SNKToken, balanceOf(account(address): 0x51A0bC) -> 605391871403843497880010
+        [5][CALL] from=0x51a0bc, to=SNKToken, transfer(recipient(address): 0xC04c49, amount(uint256): 605391871403843497880010) -> True
+      [4][STATICCALL] from=0xc04c49, to=SNKToken, balanceOf(account(address): 0xA3f5ea) -> 1608043520687669912081064
+      [4][STATICCALL] from=0xc04c49, to=SNKToken, balanceOf(account(address): 0xC04c49) -> 611840004096431103764546
+      [4][STATICCALL] from=0xc04c49, to=SNKMiner, privateEarned(account(address): 0x1E268d) -> 82841381279896498
+      [4][CREATE] from=0xc04c49, to=0xa29cd2, atInversebrahint248() -> 0x608060
+      [4][CALL] from=0xc04c49, to=0xa29cd2, 0x0e6da604() -> None
+        [5][CALL] from=0xa29cd2, to=SNKMiner, bindParent(parent(address): 0x1E268d) -> None
+          [6][STATICCALL] from=SNKMiner, to=Invite, getInviter(user(address): 0xa29CD2) -> 0x000000
+          [6][CALL] from=SNKMiner, to=Invite, invite(user(address): 0xa29CD2, parent(address): 0x1E268d) -> True
+      [4][CALL] from=0xc04c49, to=SNKToken, transfer(recipient(address): 0xa29CD2, amount(uint256): 611840004096431103764546) -> True
+      [4][CALL] from=0xc04c49, to=0xa29cd2, 0xd5584171() -> None
+        [5][CALL] from=0xa29cd2, to=SNKToken, approve(spender(address): 0xA3f5ea, amount(uint256): 611840004096431103764546) -> True
+        [5][CALL] from=0xa29cd2, to=SNKMiner, stake(amount(uint256): 611840004096431103764546) -> None
+          [6][STATICCALL] from=SNKMiner, to=Invite, getInviterSuns(user(address): 0xa29CD2) -> []
+          [6][CALL] from=SNKMiner, to=SNKToken, transferFrom(sender(address): 0xa29CD2, recipient(address): 0xA3f5ea, amount(uint256): 611840004096431103764546) -> True
+          [6][STATICCALL] from=SNKMiner, to=Invite, getInviterSuns(user(address): 0xa29CD2) -> []
+          [6][STATICCALL] from=SNKMiner, to=Invite, getInviter(user(address): 0xa29CD2) -> 0x1e268d
+          [6][STATICCALL] from=SNKMiner, to=Invite, getInviterSuns(user(address): 0x1E268d) -> ['0xa29cd2']
+          [6][STATICCALL] from=SNKMiner, to=Invite, getInviter(user(address): 0x1E268d) -> 0x000000
+      [4][CALL] from=0xc04c49, to=0x1e268d, 0x04811f9a() -> None
+        [5][CALL] from=0x1e268d, to=SNKMiner, getReward() -> None
+          [6][STATICCALL] from=SNKMiner, to=Invite, getInviterSuns(user(address): 0x1E268d) -> ['0xa29cd2']
+          [6][STATICCALL] from=SNKMiner, to=Invite, getInviterSuns(user(address): 0x1E268d) -> ['0xa29cd2']
+          [6][STATICCALL] from=SNKMiner, to=Invite, getInviterSuns(user(address): 0x1E268d) -> ['0xa29cd2']
+          [6][CALL] from=SNKMiner, to=SNKToken, transfer(recipient(address): 0x1E268d, amount(uint256): 6516811977878607876654) -> True
+      [4][CALL] from=0xc04c49, to=0x1e268d, transferaddress() -> None
+        [5][STATICCALL] from=0x1e268d, to=SNKToken, balanceOf(account(address): 0x1E268d) -> 6516811977878607876654
+        [5][CALL] from=0x1e268d, to=SNKToken, transfer(recipient(address): 0xC04c49, amount(uint256): 6516811977878607876654) -> True
+      [4][CALL] from=0xc04c49, to=0xa29cd2, 0x22a678a3() -> None
+        [5][CALL] from=0xa29cd2, to=SNKMiner, exit() -> None
+          [6][STATICCALL] from=SNKMiner, to=Invite, getInviterSuns(user(address): 0xa29CD2) -> []
+          [6][STATICCALL] from=SNKMiner, to=Invite, getInviterSuns(user(address): 0xa29CD2) -> []
+          [6][CALL] from=SNKMiner, to=SNKToken, transfer(recipient(address): 0xa29CD2, amount(uint256): 611840004096431103764546) -> True
+          [6][STATICCALL] from=SNKMiner, to=Invite, getInviterSuns(user(address): 0xa29CD2) -> []
+          [6][STATICCALL] from=SNKMiner, to=Invite, getInviter(user(address): 0xa29CD2) -> 0x1e268d
+          [6][STATICCALL] from=SNKMiner, to=Invite, getInviterSuns(user(address): 0x1E268d) -> ['0xa29cd2']
+          [6][STATICCALL] from=SNKMiner, to=Invite, getInviter(user(address): 0x1E268d) -> 0x000000
+          [6][STATICCALL] from=SNKMiner, to=Invite, getInviterSuns(user(address): 0xa29CD2) -> []
+      [4][CALL] from=0xc04c49, to=0xa29cd2, transferaddress() -> None
+        [5][STATICCALL] from=0xa29cd2, to=SNKToken, balanceOf(account(address): 0xa29CD2) -> 611840004096431103764546
+        [5][CALL] from=0xa29cd2, to=SNKToken, transfer(recipient(address): 0xC04c49, amount(uint256): 611840004096431103764546) -> True
+      [4][STATICCALL] from=0xc04c49, to=SNKToken, balanceOf(account(address): 0xA3f5ea) -> 1601526708709791304204410
+      [4][STATICCALL] from=0xc04c49, to=SNKToken, balanceOf(account(address): 0xC04c49) -> 618356816074309711641200
+      [4][STATICCALL] from=0xc04c49, to=SNKMiner, privateEarned(account(address): 0x8B0168) -> 82841381279896498
+      [4][CREATE] from=0xc04c49, to=0x81182f, atInversebrahint248() -> 0x608060
+      [4][CALL] from=0xc04c49, to=0x81182f, 0x0e6da604() -> None
+        [5][CALL] from=0x81182f, to=SNKMiner, bindParent(parent(address): 0x8B0168) -> None
+          [6][STATICCALL] from=SNKMiner, to=Invite, getInviter(user(address): 0x81182f) -> 0x000000
+          [6][CALL] from=SNKMiner, to=Invite, invite(user(address): 0x81182f, parent(address): 0x8B0168) -> True
+      [4][CALL] from=0xc04c49, to=SNKToken, transfer(recipient(address): 0x81182f, amount(uint256): 618356816074309711641200) -> True
+      [4][CALL] from=0xc04c49, to=0x81182f, 0xd5584171() -> None
+        [5][CALL] from=0x81182f, to=SNKToken, approve(spender(address): 0xA3f5ea, amount(uint256): 618356816074309711641200) -> True
+        [5][CALL] from=0x81182f, to=SNKMiner, stake(amount(uint256): 618356816074309711641200) -> None
+          [6][STATICCALL] from=SNKMiner, to=Invite, getInviterSuns(user(address): 0x81182f) -> []
+          [6][CALL] from=SNKMiner, to=SNKToken, transferFrom(sender(address): 0x81182f, recipient(address): 0xA3f5ea, amount(uint256): 618356816074309711641200) -> True
+          [6][STATICCALL] from=SNKMiner, to=Invite, getInviterSuns(user(address): 0x81182f) -> []
+          [6][STATICCALL] from=SNKMiner, to=Invite, getInviter(user(address): 0x81182f) -> 0x8b0168
+          [6][STATICCALL] from=SNKMiner, to=Invite, getInviterSuns(user(address): 0x8B0168) -> ['0x81182f']
+          [6][STATICCALL] from=SNKMiner, to=Invite, getInviter(user(address): 0x8B0168) -> 0x000000
+      [4][CALL] from=0xc04c49, to=0x8b0168, 0x04811f9a() -> None
+        [5][CALL] from=0x8b0168, to=SNKMiner, getReward() -> None
+          [6][STATICCALL] from=SNKMiner, to=Invite, getInviterSuns(user(address): 0x8B0168) -> ['0x81182f']
+          [6][STATICCALL] from=SNKMiner, to=Invite, getInviterSuns(user(address): 0x8B0168) -> ['0x81182f']
+          [6][STATICCALL] from=SNKMiner, to=Invite, getInviterSuns(user(address): 0x8B0168) -> ['0x81182f']
+          [6][CALL] from=SNKMiner, to=SNKToken, transfer(recipient(address): 0x8B0168, amount(uint256): 6586222768622887070916) -> True
+      [4][CALL] from=0xc04c49, to=0x8b0168, transferaddress() -> None
+        [5][STATICCALL] from=0x8b0168, to=SNKToken, balanceOf(account(address): 0x8B0168) -> 6586222768622887070916
+        [5][CALL] from=0x8b0168, to=SNKToken, transfer(recipient(address): 0xC04c49, amount(uint256): 6586222768622887070916) -> True
+      [4][CALL] from=0xc04c49, to=0x81182f, 0x22a678a3() -> None
+        [5][CALL] from=0x81182f, to=SNKMiner, exit() -> None
+          [6][STATICCALL] from=SNKMiner, to=Invite, getInviterSuns(user(address): 0x81182f) -> []
+          [6][STATICCALL] from=SNKMiner, to=Invite, getInviterSuns(user(address): 0x81182f) -> []
+          [6][CALL] from=SNKMiner, to=SNKToken, transfer(recipient(address): 0x81182f, amount(uint256): 618356816074309711641200) -> True
+          [6][STATICCALL] from=SNKMiner, to=Invite, getInviterSuns(user(address): 0x81182f) -> []
+          [6][STATICCALL] from=SNKMiner, to=Invite, getInviter(user(address): 0x81182f) -> 0x8b0168
+          [6][STATICCALL] from=SNKMiner, to=Invite, getInviterSuns(user(address): 0x8B0168) -> ['0x81182f']
+          [6][STATICCALL] from=SNKMiner, to=Invite, getInviter(user(address): 0x8B0168) -> 0x000000
+          [6][STATICCALL] from=SNKMiner, to=Invite, getInviterSuns(user(address): 0x81182f) -> []
+      [4][CALL] from=0xc04c49, to=0x81182f, transferaddress() -> None
+        [5][STATICCALL] from=0x81182f, to=SNKToken, balanceOf(account(address): 0x81182f) -> 618356816074309711641200
+        [5][CALL] from=0x81182f, to=SNKToken, transfer(recipient(address): 0xC04c49, amount(uint256): 618356816074309711641200) -> True
+      [4][STATICCALL] from=0xc04c49, to=SNKToken, balanceOf(account(address): 0xA3f5ea) -> 1594940485941168417133494
+      [4][STATICCALL] from=0xc04c49, to=SNKToken, balanceOf(account(address): 0xC04c49) -> 624943038842932598712116
+      [4][STATICCALL] from=0xc04c49, to=SNKMiner, privateEarned(account(address): 0xaE08e9) -> 82841381279896498
+      [4][CREATE] from=0xc04c49, to=0xb4b9fc, atInversebrahint248() -> 0x608060
+      [4][CALL] from=0xc04c49, to=0xb4b9fc, 0x0e6da604() -> None
+        [5][CALL] from=0xb4b9fc, to=SNKMiner, bindParent(parent(address): 0xaE08e9) -> None
+          [6][STATICCALL] from=SNKMiner, to=Invite, getInviter(user(address): 0xb4B9fc) -> 0x000000
+          [6][CALL] from=SNKMiner, to=Invite, invite(user(address): 0xb4B9fc, parent(address): 0xaE08e9) -> True
+      [4][CALL] from=0xc04c49, to=SNKToken, transfer(recipient(address): 0xb4B9fc, amount(uint256): 624943038842932598712116) -> True
+      [4][CALL] from=0xc04c49, to=0xb4b9fc, 0xd5584171() -> None
+        [5][CALL] from=0xb4b9fc, to=SNKToken, approve(spender(address): 0xA3f5ea, amount(uint256): 624943038842932598712116) -> True
+        [5][CALL] from=0xb4b9fc, to=SNKMiner, stake(amount(uint256): 624943038842932598712116) -> None
+          [6][STATICCALL] from=SNKMiner, to=Invite, getInviterSuns(user(address): 0xb4B9fc) -> []
+          [6][CALL] from=SNKMiner, to=SNKToken, transferFrom(sender(address): 0xb4B9fc, recipient(address): 0xA3f5ea, amount(uint256): 624943038842932598712116) -> True
+          [6][STATICCALL] from=SNKMiner, to=Invite, getInviterSuns(user(address): 0xb4B9fc) -> []
+          [6][STATICCALL] from=SNKMiner, to=Invite, getInviter(user(address): 0xb4B9fc) -> 0xae08e9
+          [6][STATICCALL] from=SNKMiner, to=Invite, getInviterSuns(user(address): 0xaE08e9) -> ['0xb4b9fc']
+          [6][STATICCALL] from=SNKMiner, to=Invite, getInviter(user(address): 0xaE08e9) -> 0x000000
+      [4][CALL] from=0xc04c49, to=0xae08e9, 0x04811f9a() -> None
+        [5][CALL] from=0xae08e9, to=SNKMiner, getReward() -> None
+          [6][STATICCALL] from=SNKMiner, to=Invite, getInviterSuns(user(address): 0xaE08e9) -> ['0xb4b9fc']
+          [6][STATICCALL] from=SNKMiner, to=Invite, getInviterSuns(user(address): 0xaE08e9) -> ['0xb4b9fc']
+          [6][STATICCALL] from=SNKMiner, to=Invite, getInviterSuns(user(address): 0xaE08e9) -> ['0xb4b9fc']
+          [6][CALL] from=SNKMiner, to=SNKToken, transfer(recipient(address): 0xaE08e9, amount(uint256): 6656372856110435886492) -> True
+      [4][CALL] from=0xc04c49, to=0xae08e9, transferaddress() -> None
+        [5][STATICCALL] from=0xae08e9, to=SNKToken, balanceOf(account(address): 0xaE08e9) -> 6656372856110435886492
+        [5][CALL] from=0xae08e9, to=SNKToken, transfer(recipient(address): 0xC04c49, amount(uint256): 6656372856110435886492) -> True
+      [4][CALL] from=0xc04c49, to=0xb4b9fc, 0x22a678a3() -> None
+        [5][CALL] from=0xb4b9fc, to=SNKMiner, exit() -> None
+          [6][STATICCALL] from=SNKMiner, to=Invite, getInviterSuns(user(address): 0xb4B9fc) -> []
+          [6][STATICCALL] from=SNKMiner, to=Invite, getInviterSuns(user(address): 0xb4B9fc) -> []
+          [6][CALL] from=SNKMiner, to=SNKToken, transfer(recipient(address): 0xb4B9fc, amount(uint256): 624943038842932598712116) -> True
+          [6][STATICCALL] from=SNKMiner, to=Invite, getInviterSuns(user(address): 0xb4B9fc) -> []
+          [6][STATICCALL] from=SNKMiner, to=Invite, getInviter(user(address): 0xb4B9fc) -> 0xae08e9
+          [6][STATICCALL] from=SNKMiner, to=Invite, getInviterSuns(user(address): 0xaE08e9) -> ['0xb4b9fc']
+          [6][STATICCALL] from=SNKMiner, to=Invite, getInviter(user(address): 0xaE08e9) -> 0x000000
+          [6][STATICCALL] from=SNKMiner, to=Invite, getInviterSuns(user(address): 0xb4B9fc) -> []
+      [4][CALL] from=0xc04c49, to=0xb4b9fc, transferaddress() -> None
+        [5][STATICCALL] from=0xb4b9fc, to=SNKToken, balanceOf(account(address): 0xb4B9fc) -> 624943038842932598712116
+        [5][CALL] from=0xb4b9fc, to=SNKToken, transfer(recipient(address): 0xC04c49, amount(uint256): 624943038842932598712116) -> True
+      [4][STATICCALL] from=0xc04c49, to=SNKToken, balanceOf(account(address): 0xA3f5ea) -> 1588284113085057981247002
+      [4][STATICCALL] from=0xc04c49, to=SNKToken, balanceOf(account(address): 0xC04c49) -> 631599411699043034598608
+      [4][STATICCALL] from=0xc04c49, to=SNKMiner, privateEarned(account(address): 0x9d5c0b) -> 82841381279896498
+      [4][CREATE] from=0xc04c49, to=0xf37c19, atInversebrahint248() -> 0x608060
+      [4][CALL] from=0xc04c49, to=0xf37c19, 0x0e6da604() -> None
+        [5][CALL] from=0xf37c19, to=SNKMiner, bindParent(parent(address): 0x9d5c0b) -> None
+          [6][STATICCALL] from=SNKMiner, to=Invite, getInviter(user(address): 0xf37c19) -> 0x000000
+          [6][CALL] from=SNKMiner, to=Invite, invite(user(address): 0xf37c19, parent(address): 0x9d5c0b) -> True
+      [4][CALL] from=0xc04c49, to=SNKToken, transfer(recipient(address): 0xf37c19, amount(uint256): 631599411699043034598608) -> True
+      [4][CALL] from=0xc04c49, to=0xf37c19, 0xd5584171() -> None
+        [5][CALL] from=0xf37c19, to=SNKToken, approve(spender(address): 0xA3f5ea, amount(uint256): 631599411699043034598608) -> True
+        [5][CALL] from=0xf37c19, to=SNKMiner, stake(amount(uint256): 631599411699043034598608) -> None
+          [6][STATICCALL] from=SNKMiner, to=Invite, getInviterSuns(user(address): 0xf37c19) -> []
+          [6][CALL] from=SNKMiner, to=SNKToken, transferFrom(sender(address): 0xf37c19, recipient(address): 0xA3f5ea, amount(uint256): 631599411699043034598608) -> True
+          [6][STATICCALL] from=SNKMiner, to=Invite, getInviterSuns(user(address): 0xf37c19) -> []
+          [6][STATICCALL] from=SNKMiner, to=Invite, getInviter(user(address): 0xf37c19) -> 0x9d5c0b
+          [6][STATICCALL] from=SNKMiner, to=Invite, getInviterSuns(user(address): 0x9d5c0b) -> ['0xf37c19']
+          [6][STATICCALL] from=SNKMiner, to=Invite, getInviter(user(address): 0x9d5c0b) -> 0x000000
+      [4][CALL] from=0xc04c49, to=0x9d5c0b, 0x04811f9a() -> None
+        [5][CALL] from=0x9d5c0b, to=SNKMiner, getReward() -> None
+          [6][STATICCALL] from=SNKMiner, to=Invite, getInviterSuns(user(address): 0x9d5c0b) -> ['0xf37c19']
+          [6][STATICCALL] from=SNKMiner, to=Invite, getInviterSuns(user(address): 0x9d5c0b) -> ['0xf37c19']
+          [6][STATICCALL] from=SNKMiner, to=Invite, getInviterSuns(user(address): 0x9d5c0b) -> ['0xf37c19']
+          [6][CALL] from=SNKMiner, to=SNKToken, transfer(recipient(address): 0x9d5c0b, amount(uint256): 6727270114616547089955) -> True
+      [4][CALL] from=0xc04c49, to=0x9d5c0b, transferaddress() -> None
+        [5][STATICCALL] from=0x9d5c0b, to=SNKToken, balanceOf(account(address): 0x9d5c0b) -> 6727270114616547089955
+        [5][CALL] from=0x9d5c0b, to=SNKToken, transfer(recipient(address): 0xC04c49, amount(uint256): 6727270114616547089955) -> True
+      [4][CALL] from=0xc04c49, to=0xf37c19, 0x22a678a3() -> None
+        [5][CALL] from=0xf37c19, to=SNKMiner, exit() -> None
+          [6][STATICCALL] from=SNKMiner, to=Invite, getInviterSuns(user(address): 0xf37c19) -> []
+          [6][STATICCALL] from=SNKMiner, to=Invite, getInviterSuns(user(address): 0xf37c19) -> []
+          [6][CALL] from=SNKMiner, to=SNKToken, transfer(recipient(address): 0xf37c19, amount(uint256): 631599411699043034598608) -> True
+          [6][STATICCALL] from=SNKMiner, to=Invite, getInviterSuns(user(address): 0xf37c19) -> []
+          [6][STATICCALL] from=SNKMiner, to=Invite, getInviter(user(address): 0xf37c19) -> 0x9d5c0b
+          [6][STATICCALL] from=SNKMiner, to=Invite, getInviterSuns(user(address): 0x9d5c0b) -> ['0xf37c19']
+          [6][STATICCALL] from=SNKMiner, to=Invite, getInviter(user(address): 0x9d5c0b) -> 0x000000
+          [6][STATICCALL] from=SNKMiner, to=Invite, getInviterSuns(user(address): 0xf37c19) -> []
+      [4][CALL] from=0xc04c49, to=0xf37c19, transferaddress() -> None
+        [5][STATICCALL] from=0xf37c19, to=SNKToken, balanceOf(account(address): 0xf37c19) -> 631599411699043034598608
+        [5][CALL] from=0xf37c19, to=SNKToken, transfer(recipient(address): 0xC04c49, amount(uint256): 631599411699043034598608) -> True
+      [4][CALL] from=0xc04c49, to=SNKToken, transfer(recipient(address): 0x795709, amount(uint256): 94912307705725910718209) -> True
+    [3][STATICCALL] from=PancakePair, to=SNKToken, balanceOf(account(address): 0x795709) -> 90166692320439615174501
+    [3][STATICCALL] from=PancakePair, to=BEP20USDT, balanceOf(account(address): 0x795709) -> 232346893845206723823110
+  [2][STATICCALL] from=0xc04c49, to=SNKToken, balanceOf(account(address): 0xC04c49) -> 543414374107933670970354
+  [2][CALL] from=0xc04c49, to=SNKToken, approve(spender(address): 0x10ED43, amount(uint256): 543414374107933670970354) -> True
+  [2][CALL] from=0xc04c49, to=PancakeRouter, swapExactTokensForTokensSupportingFeeOnTransferTokens(amountIn(uint256): 543414374107933670970354, amountOutMin(uint256): 0, path(address[]): ['0x05e2899179003d7c328de3C224e9dF28274065..., to(address): 0x7738B2, deadline(uint256): 1683679602) -> None
+    [3][CALL] from=PancakeRouter, to=SNKToken, transferFrom(sender(address): 0xC04c49, recipient(address): 0x795709, amount(uint256): 543414374107933670970354) -> True
+    [3][STATICCALL] from=PancakeRouter, to=BEP20USDT, balanceOf(account(address): 0x7738B2) -> 0
+    [3][STATICCALL] from=PancakeRouter, to=PancakePair, getReserves() -> ['90166692320439615174501', '232346893845206723823110', '1683679602']
+    [3][STATICCALL] from=PancakeRouter, to=SNKToken, balanceOf(account(address): 0x795709) -> 606410347722976602596001
+    [3][CALL] from=PancakeRouter, to=PancakePair, swap(amount0Out(uint256): 0, amount1Out(uint256): 197725727895542134092738, to(address): 0x7738B2, data(bytes): b'') -> None
+      [4][CALL] from=PancakePair, to=BEP20USDT, transfer(recipient(address): 0x7738B2, amount(uint256): 197725727895542134092738) -> True
+      [4][STATICCALL] from=PancakePair, to=SNKToken, balanceOf(account(address): 0x795709) -> 606410347722976602596001
+      [4][STATICCALL] from=PancakePair, to=BEP20USDT, balanceOf(account(address): 0x795709) -> 34621165949664589730372
+    [3][STATICCALL] from=PancakeRouter, to=BEP20USDT, balanceOf(account(address): 0x7738B2) -> 197725727895542134092738

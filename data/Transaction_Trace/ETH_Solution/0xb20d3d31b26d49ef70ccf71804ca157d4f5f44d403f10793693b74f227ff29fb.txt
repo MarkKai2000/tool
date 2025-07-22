@@ -1,0 +1,16 @@
+[1][CALL] from=0x5e4688, to=Banana, transferaddress() -> None
+  [2][CALL] from=Banana, to=UniswapV2Router02, swapExactTokensForETHSupportingFeeOnTransferTokensuint256() -> None
+    [3][CALL] from=UniswapV2Router02, to=Banana, transferFromaddress() -> None
+    [3][STATICCALL] from=UniswapV2Router02, to=UniswapV2Pair, getReserves() -> 0x000000
+    [3][STATICCALL] from=UniswapV2Router02, to=Banana, balanceOfaddress() -> 0x000000
+    [3][CALL] from=UniswapV2Router02, to=UniswapV2Pair, swapuint256() -> None
+      [4][CALL] from=UniswapV2Pair, to=WETH9, transferaddress() -> 0x000000
+      [4][STATICCALL] from=UniswapV2Pair, to=WETH9, balanceOfaddress() -> 0x000000
+      [4][STATICCALL] from=UniswapV2Pair, to=Banana, balanceOfaddress() -> 0x000000
+    [3][STATICCALL] from=UniswapV2Router02, to=WETH9, balanceOfaddress() -> 0x000000
+    [3][CALL] from=UniswapV2Router02, to=WETH9, withdrawuint256() -> None
+      [4][CALL][0.017823466998476742] from=WETH9, to=UniswapV2Router02
+    [3][CALL][0.017823466998476742] from=UniswapV2Router02, to=Banana
+  [2][CALL][0.004455866749619185] from=Banana, to=0x37aab9
+  [2][CALL][0.004455866749619185] from=Banana, to=0x37aab9
+  [2][CALL][0.008911733499238371] from=Banana, to=0x37aab9

@@ -1,0 +1,18 @@
+[1][CREATE] from=0xa3a642, to=0xed4b3d, atInversebrah(int248()) -> 0x608060
+  [2][CALL] from=0xed4b3d, to=0x641249, approve(address()) -> 0x000000
+  [2][CALL] from=0xed4b3d, to=0x641249, mint(address()) -> 0x000000
+  [2][CALL] from=0xed4b3d, to=TransparentUpgradeableProxy, addCollateral(uint256()） -> None
+    [3][DELEGATECALL] from=TransparentUpgradeableProxy, to=ERC20Vault, addCollateral(uint256()） -> None
+      [4][CALL] from=TransparentUpgradeableProxy, to=0x641249, transferFrom(address()) -> 0x000000
+  [2][CALL] from=0xed4b3d, to=TransparentUpgradeableProxy, borrowuint256() -> None
+    [3][DELEGATECALL] from=TransparentUpgradeableProxy, to=ERC20Vault, borrowuint256() -> None
+      [4][STATICCALL] from=TransparentUpgradeableProxy, to=TransparentUpgradeableProxy, 0x175e8eb8() -> 0x000000
+        [5][DELEGATECALL] from=TransparentUpgradeableProxy, to=0x8568f2, 0x175e8eb8() -> 0x000000
+          [6][STATICCALL] from=TransparentUpgradeableProxy, to=EACAggregatorProxy, latestRoundData() -> 0x000000
+            [7][STATICCALL] from=EACAggregatorProxy, to=AccessControlledOffchainAggregator, latestRoundData() -> 0x000000
+          [6][STATICCALL] from=TransparentUpgradeableProxy, to=EACAggregatorProxy, decimals() -> 0x000000
+            [7][STATICCALL] from=EACAggregatorProxy, to=AccessControlledOffchainAggregator, decimals() -> 0x000000
+          [6][STATICCALL] from=TransparentUpgradeableProxy, to=0x641249, decimals() -> 0x000000
+      [4][CALL] from=TransparentUpgradeableProxy, to=ShezmuUSD, mint(address()) -> None
+  [2][STATICCALL] from=0xed4b3d, to=ShezmuUSD, balanceOf(address()) -> 0x000000
+  [2][CALL] from=0xed4b3d, to=ShezmuUSD, transfer(address()) -> 0x000000

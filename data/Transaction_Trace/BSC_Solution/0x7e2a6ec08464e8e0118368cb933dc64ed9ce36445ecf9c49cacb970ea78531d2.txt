@@ -1,0 +1,69 @@
+[1][CALL] from=0x59c686, to=0x1514aa, 0xabd6d2fa() -> None
+  [2][CALL] from=0x1514aa, to=PancakePair, swap(amount0Out(uint256): 0, amount1Out(uint256): 10000000000000000000000, to(address): 0x1514AA, data(bytes): b'not empty') -> None
+    [3][CALL] from=PancakePair, to=WBNB, transfer(dst(address): 0x1514AA, wad(uint256): 10000000000000000000000) -> True
+    [3][CALL] from=PancakePair, to=0x1514aa, pancakeCalladdress() -> None
+      [4][STATICCALL] from=0x1514aa, to=PancakePair, token0() -> 0x0e09fa
+      [4][STATICCALL] from=0x1514aa, to=PancakePair, token1() -> 0xbb4cdb
+      [4][CALL] from=0x1514aa, to=WBNB, withdraw(wad(uint256): 10000000000000000000000) -> None
+        [5][CALL][10000.0] from=WBNB, to=0x1514aa
+      [4][STATICCALL] from=0x1514aa, to=SurgeToken, calculatePrice() -> 46394503
+      [4][CALL][10000.0] from=0x1514aa, to=SurgeToken
+      [4][STATICCALL] from=0x1514aa, to=SurgeToken, balanceOf(account(address): 0x1514AA) -> 202610205836752
+      [4][CALL] from=0x1514aa, to=SurgeToken, sell(tokenAmount(uint256): 202610205836752) -> True
+        [5][CALL][9066.40333453581] from=SurgeToken, to=0x1514aa
+          [6][STATICCALL] from=0x1514aa, to=SurgeToken, balanceOf(account(address): 0x1514AA) -> 202610205836752
+          [6][CALL][9066.40333453581] from=0x1514aa, to=SurgeToken
+      [4][STATICCALL] from=0x1514aa, to=SurgeToken, calculatePrice() -> 40429226
+      [4][CALL][0.0] from=0x1514aa, to=SurgeToken
+      [4][STATICCALL] from=0x1514aa, to=SurgeToken, balanceOf(account(address): 0x1514AA) -> 290629974679289
+      [4][CALL] from=0x1514aa, to=SurgeToken, sell(tokenAmount(uint256): 290629974679289) -> True
+        [5][CALL][11044.948232962231] from=SurgeToken, to=0x1514aa
+          [6][STATICCALL] from=0x1514aa, to=SurgeToken, balanceOf(account(address): 0x1514AA) -> 290629974679289
+          [6][CALL][11044.948232962231] from=0x1514aa, to=SurgeToken
+      [4][STATICCALL] from=0x1514aa, to=SurgeToken, calculatePrice() -> 30429743
+      [4][CALL][0.0] from=0x1514aa, to=SurgeToken
+      [4][STATICCALL] from=0x1514aa, to=SurgeToken, balanceOf(account(address): 0x1514AA) -> 482532660156157
+      [4][CALL] from=0x1514aa, to=SurgeToken, sell(tokenAmount(uint256): 482532660156157) -> True
+        [5][CALL][13802.344147398688] from=SurgeToken, to=0x1514aa
+          [6][STATICCALL] from=0x1514aa, to=SurgeToken, balanceOf(account(address): 0x1514AA) -> 482532660156157
+          [6][CALL][13802.344147398688] from=0x1514aa, to=SurgeToken
+      [4][STATICCALL] from=0x1514aa, to=SurgeToken, calculatePrice() -> 17889900
+      [4][CALL][0.0] from=0x1514aa, to=SurgeToken
+      [4][STATICCALL] from=0x1514aa, to=SurgeToken, balanceOf(account(address): 0x1514AA) -> 1026387665528484
+      [4][CALL] from=0x1514aa, to=SurgeToken, sell(tokenAmount(uint256): 1026387665528484) -> True
+        [5][CALL][17260.254335685728] from=SurgeToken, to=0x1514aa
+          [6][STATICCALL] from=0x1514aa, to=SurgeToken, balanceOf(account(address): 0x1514AA) -> 1026387665528484
+          [6][CALL][17260.254335685728] from=0x1514aa, to=SurgeToken
+      [4][STATICCALL] from=0x1514aa, to=SurgeToken, calculatePrice() -> 6441197
+      [4][CALL][0.0] from=0x1514aa, to=SurgeToken
+      [4][STATICCALL] from=0x1514aa, to=SurgeToken, balanceOf(account(address): 0x1514AA) -> 3372122831057924
+      [4][CALL] from=0x1514aa, to=SurgeToken, sell(tokenAmount(uint256): 3372122831057924) -> True
+        [5][CALL][20417.277015259297] from=SurgeToken, to=0x1514aa
+          [6][STATICCALL] from=0x1514aa, to=SurgeToken, balanceOf(account(address): 0x1514AA) -> 3372122831057924
+          [6][CALL][20417.277015259297] from=0x1514aa, to=SurgeToken
+      [4][STATICCALL] from=0x1514aa, to=SurgeToken, calculatePrice() -> 1057468
+      [4][CALL][0.0] from=0x1514aa, to=SurgeToken
+      [4][STATICCALL] from=0x1514aa, to=SurgeToken, balanceOf(account(address): 0x1514AA) -> 22033618137782256
+      [4][CALL] from=0x1514aa, to=SurgeToken, sell(tokenAmount(uint256): 22033618137782256) -> True
+        [5][CALL][21901.855338628866] from=SurgeToken, to=0x1514aa
+          [6][STATICCALL] from=0x1514aa, to=SurgeToken, balanceOf(account(address): 0x1514AA) -> 22033618137782256
+          [6][CALL][21901.855338628866] from=0x1514aa, to=SurgeToken
+      [4][STATICCALL] from=0x1514aa, to=SurgeToken, calculatePrice() -> 87645
+      [4][CALL][0.0] from=0x1514aa, to=SurgeToken
+      [4][STATICCALL] from=0x1514aa, to=SurgeToken, balanceOf(account(address): 0x1514AA) -> 269089469621295418
+      [4][CALL] from=0x1514aa, to=SurgeToken, sell(tokenAmount(uint256): 269089469621295418) -> True
+        [5][CALL][22169.28577106093] from=SurgeToken, to=0x1514aa
+          [6][STATICCALL] from=0x1514aa, to=SurgeToken, balanceOf(account(address): 0x1514AA) -> 269089469621295418
+          [6][CALL][22169.28577106093] from=0x1514aa, to=SurgeToken
+      [4][STATICCALL] from=0x1514aa, to=SurgeToken, calculatePrice() -> 6059
+      [4][STATICCALL] from=0x1514aa, to=SurgeToken, balanceOf(account(address): 0x1514AA) -> 3896288852239436433
+      [4][CALL] from=0x1514aa, to=SurgeToken, sell(tokenAmount(uint256): 3896288852239436433) -> True
+        [5][CALL][22191.157306375622] from=SurgeToken, to=0x1514aa
+      [4][CALL] from=0x1514aa, to=WBNB, deposit() -> None
+      [4][CALL] from=0x1514aa, to=WBNB, transfer(dst(address): 0x0eD7e5, wad(uint256): 10030000000000000000000) -> True
+      [4][STATICCALL] from=0x1514aa, to=WBNB, balanceOf((address): 0x1514AA) -> 12161157306375620626573
+      [4][CALL] from=0x1514aa, to=WBNB, withdraw(wad(uint256): 12161157306375620626573) -> None
+        [5][CALL][12161.15730637562] from=WBNB, to=0x1514aa
+      [4][CALL][12161.15730637562] from=0x1514aa, to=0x59c686
+    [3][STATICCALL] from=PancakePair, to=CakeToken, balanceOf(account(address): 0x0eD7e5) -> 20540196598074035744007187
+    [3][STATICCALL] from=PancakePair, to=WBNB, balanceOf((address): 0x0eD7e5) -> 1061039110003754237459681

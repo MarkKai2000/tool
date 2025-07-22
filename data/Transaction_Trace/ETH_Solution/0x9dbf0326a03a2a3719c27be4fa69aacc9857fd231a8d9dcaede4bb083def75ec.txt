@@ -1,0 +1,2 @@
+[1][CALL] from=0xb37647, to=Wallet, initWallet(_owners(address[]): ['0xB3764761E297D6f121e79C32A65829Cd1dDb4D..., _required(uint256): 0, _daylimit(uint256): 82189000000000000000000) -> None
+  [2][DELEGATECALL] from=Wallet, to=WalletLibrary, initWallet(_owners(address[]): ['0xB3764761E297D6f121e79C32A65829Cd1dDb4D..., _required(uint256): 0, _daylimit(uint256): 82189000000000000000000) -> None

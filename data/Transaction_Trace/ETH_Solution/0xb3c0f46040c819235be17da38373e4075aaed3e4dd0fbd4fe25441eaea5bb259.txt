@@ -1,0 +1,1 @@
+[1][CALL] from=0x72e28c, to=EduCoin, transferFrom(_from(address): 0xD517cf, _to(address): 0x72E28c, _value(uint256): 99999999999999999900) -> True

@@ -1,0 +1,403 @@
+[1][CALL] from=0x5bb5b6, to=0xd0c8af, 0x6dca46ec() -> None
+  [2][CALL] from=0xd0c8af, to=OpenLevDelegator, markets((uint16): 15) -> ['0x8d398c', '0x360e42', '0x2170ed', '0x8ac76a', '450', '5', '5', '0x577327', '745217043428795414', '31293021864792503243']
+    [3][DELEGATECALL] from=OpenLevDelegator, to=OpenLevV1, markets((uint16): 15) -> ['0x8d398c', '0x360e42', '0x2170ed', '0x8ac76a', '450', '5', '5', '0x577327', '745217043428795414', '31293021864792503243']
+  [2][CALL] from=0xd0c8af, to=OpenLevDelegator, activeTrades((address): False) -> ['831738326168430544', '5670084014759390025', 'False', '37470345']
+    [3][DELEGATECALL] from=OpenLevDelegator, to=OpenLevV1, activeTrades((address): False) -> ['831738326168430544', '5670084014759390025', 'False', '37470345']
+  [2][CALL] from=0xd0c8af, to=OpenLevDelegator, payoffTrade(marketId(uint16): 15, longToken(bool): False) -> None
+    [3][DELEGATECALL] from=OpenLevDelegator, to=OpenLevV1, payoffTrade(marketId(uint16): 15, longToken(bool): False) -> None
+      [4][STATICCALL] from=OpenLevDelegator, to=BEP20Ethereum, balanceOf(account(address): 0x6A75aC) -> 31677690885418968377
+      [4][STATICCALL] from=OpenLevDelegator, to=BEP20UpgradeableProxy, balanceOf(account(address): 0x6A75aC) -> 19707737811752755253177
+        [5][DELEGATECALL] from=BEP20UpgradeableProxy, to=BEP20TokenImplementation, balanceOf(account(address): 0x6A75aC) -> 19707737811752755253177
+      [4][STATICCALL] from=OpenLevDelegator, to=ControllerDelegator, closeTradeAllowed(marketId(uint256): 15) -> True
+        [5][DELEGATECALL] from=ControllerDelegator, to=ControllerV1, closeTradeAllowed(marketId(uint256): 15) -> True
+      [4][STATICCALL] from=OpenLevDelegator, to=LPoolDelegator, borrowBalanceCurrent(account(address): 0xd0C8af) -> 0
+        [5][DELEGATECALL] from=LPoolDelegator, to=LPool, borrowBalanceCurrent(account(address): 0xd0C8af) -> 0
+          [6][STATICCALL] from=LPoolDelegator, to=BEP20UpgradeableProxy, balanceOf(account(address): 0x360e42) -> 4007332469
+            [7][DELEGATECALL] from=BEP20UpgradeableProxy, to=BEP20TokenImplementation, balanceOf(account(address): 0x360e42) -> 4007332469
+      [4][DELEGATECALL] from=OpenLevDelegator, to=OpenLevV1Lib, 0x289e376f() -> 0x000000
+      [4][CALL] from=OpenLevDelegator, to=LPoolDelegator, repayBorrowBehalf(borrower(address): 0xd0C8af, repayAmount(uint256): 0) -> None
+        [5][DELEGATECALL] from=LPoolDelegator, to=LPool, repayBorrowBehalf(borrower(address): 0xd0C8af, repayAmount(uint256): 0) -> None
+          [6][STATICCALL] from=LPoolDelegator, to=BEP20UpgradeableProxy, balanceOf(account(address): 0x360e42) -> 4007332469
+            [7][DELEGATECALL] from=BEP20UpgradeableProxy, to=BEP20TokenImplementation, balanceOf(account(address): 0x360e42) -> 4007332469
+          [6][CALL] from=LPoolDelegator, to=ControllerDelegator, repayBorrowAllowed(payer(address): 0x6A75aC, borrower(address): 0xd0C8af, repayAmount(uint256): 0, isEnd(bool): False) -> None
+            [7][DELEGATECALL] from=ControllerDelegator, to=ControllerV1, repayBorrowAllowed(payer(address): 0x6A75aC, borrower(address): 0xd0C8af, repayAmount(uint256): 0, isEnd(bool): False) -> None
+      [4][STATICCALL] from=OpenLevDelegator, to=LPoolDelegator, borrowBalanceStored(account(address): 0xd0C8af) -> 0
+        [5][DELEGATECALL] from=LPoolDelegator, to=LPool, borrowBalanceStored(account(address): 0xd0C8af) -> 0
+      [4][DELEGATECALL] from=OpenLevDelegator, to=OpenLevV1Lib, 0x19ea053f() -> None
+        [5][STATICCALL] from=OpenLevDelegator, to=BEP20Ethereum, balanceOf(account(address): 0xd0C8af) -> 1133146541074401976
+        [5][CALL] from=OpenLevDelegator, to=BEP20Ethereum, transfer(recipient(address): 0xd0C8af, amount(uint256): 5670084014759390025) -> True
+        [5][STATICCALL] from=OpenLevDelegator, to=BEP20Ethereum, balanceOf(account(address): 0xd0C8af) -> 6803230555833792001
+  [2][CALL] from=0xd0c8af, to=OpenLevDelegator, activeTrades((address): True) -> ['0', '0', 'False', '0']
+    [3][DELEGATECALL] from=OpenLevDelegator, to=OpenLevV1, activeTrades((address): True) -> ['0', '0', 'False', '0']
+  [2][STATICCALL] from=0xd0c8af, to=BEP20Ethereum, balanceOf(account(address): 0xd0C8af) -> 6803230555833792001
+  [2][STATICCALL] from=0xd0c8af, to=BEP20Ethereum, balanceOf(account(address): 0xd0C8af) -> 6803230555833792001
+  [2][CALL] from=0xd0c8af, to=BEP20Ethereum, approve(spender(address): 0x10ED43, amount(uint256): 6803230555833792001) -> True
+  [2][STATICCALL] from=0xd0c8af, to=BEP20Ethereum, balanceOf(account(address): 0xd0C8af) -> 6803230555833792001
+  [2][CALL] from=0xd0c8af, to=PancakeRouter, swapExactTokensForETH(amountIn(uint256): 6803230555833792001, amountOutMin(uint256): 0, path(address[]): ['0x2170Ed0880ac9A755fd29B2688956BD959F933..., to(address): 0xd0C8af, deadline(uint256): 1711948796) -> [6803230555833792001, 40565409713547483156]
+    [3][STATICCALL] from=PancakeRouter, to=PancakePair, getReserves() -> ['646822996565131366495', '3907022772007101140635', '1711948790']
+    [3][CALL] from=PancakeRouter, to=BEP20Ethereum, transferFrom(sender(address): 0xd0C8af, recipient(address): 0x74E471, amount(uint256): 6803230555833792001) -> True
+    [3][CALL] from=PancakeRouter, to=PancakePair, swap(amount0Out(uint256): 0, amount1Out(uint256): 40565409713547483156, to(address): 0x10ED43, data(bytes): b'') -> None
+      [4][CALL] from=PancakePair, to=WBNB, transfer(dst(address): 0x10ED43, wad(uint256): 40565409713547483156) -> True
+      [4][STATICCALL] from=PancakePair, to=BEP20Ethereum, balanceOf(account(address): 0x74E471) -> 653626227120965158496
+      [4][STATICCALL] from=PancakePair, to=WBNB, balanceOf((address): 0x74E471) -> 3866457362293553657479
+    [3][CALL] from=PancakeRouter, to=WBNB, withdraw(wad(uint256): 40565409713547483156) -> None
+      [4][CALL][40.56540971354748] from=WBNB, to=PancakeRouter
+    [3][CALL][40.56540971354748] from=PancakeRouter, to=0xd0c8af
+  [2][STATICCALL] from=0xd0c8af, to=BEP20UpgradeableProxy, balanceOf(account(address): 0xd0C8af) -> 28928164633157104671680
+    [3][DELEGATECALL] from=BEP20UpgradeableProxy, to=BEP20TokenImplementation, balanceOf(account(address): 0xd0C8af) -> 28928164633157104671680
+  [2][STATICCALL] from=0xd0c8af, to=BEP20UpgradeableProxy, balanceOf(account(address): 0xd0C8af) -> 28928164633157104671680
+    [3][DELEGATECALL] from=BEP20UpgradeableProxy, to=BEP20TokenImplementation, balanceOf(account(address): 0xd0C8af) -> 28928164633157104671680
+  [2][CALL] from=0xd0c8af, to=BEP20UpgradeableProxy, approve(spender(address): 0x10ED43, amount(uint256): 28928164633157104671680) -> True
+    [3][DELEGATECALL] from=BEP20UpgradeableProxy, to=BEP20TokenImplementation, approve(spender(address): 0x10ED43, amount(uint256): 28928164633157104671680) -> True
+  [2][STATICCALL] from=0xd0c8af, to=BEP20UpgradeableProxy, balanceOf(account(address): 0xd0C8af) -> 28928164633157104671680
+    [3][DELEGATECALL] from=BEP20UpgradeableProxy, to=BEP20TokenImplementation, balanceOf(account(address): 0xd0C8af) -> 28928164633157104671680
+  [2][CALL] from=0xd0c8af, to=PancakeRouter, swapExactTokensForETH(amountIn(uint256): 28928164633157104671680, amountOutMin(uint256): 0, path(address[]): ['0x8AC76a51cc950d9822D68b83fE1Ad97B32Cd58..., to(address): 0xd0C8af, deadline(uint256): 1711948796) -> [28928164633157104671680, 45817941668472501598]
+    [3][STATICCALL] from=PancakeRouter, to=PancakePair, getReserves() -> ['507555458067932703305653', '851725618210632316596', '1711948784']
+    [3][CALL] from=PancakeRouter, to=BEP20UpgradeableProxy, transferFrom(sender(address): 0xd0C8af, recipient(address): 0xd99c7F, amount(uint256): 28928164633157104671680) -> True
+      [4][DELEGATECALL] from=BEP20UpgradeableProxy, to=BEP20TokenImplementation, transferFrom(sender(address): 0xd0C8af, recipient(address): 0xd99c7F, amount(uint256): 28928164633157104671680) -> True
+    [3][CALL] from=PancakeRouter, to=PancakePair, swap(amount0Out(uint256): 0, amount1Out(uint256): 45817941668472501598, to(address): 0x10ED43, data(bytes): b'') -> None
+      [4][CALL] from=PancakePair, to=WBNB, transfer(dst(address): 0x10ED43, wad(uint256): 45817941668472501598) -> True
+      [4][STATICCALL] from=PancakePair, to=BEP20UpgradeableProxy, balanceOf(account(address): 0xd99c7F) -> 536483622701089807977333
+        [5][DELEGATECALL] from=BEP20UpgradeableProxy, to=BEP20TokenImplementation, balanceOf(account(address): 0xd99c7F) -> 536483622701089807977333
+      [4][STATICCALL] from=PancakePair, to=WBNB, balanceOf((address): 0xd99c7F) -> 805907676542159814998
+    [3][CALL] from=PancakeRouter, to=WBNB, withdraw(wad(uint256): 45817941668472501598) -> None
+      [4][CALL][45.8179416684725] from=WBNB, to=PancakeRouter
+    [3][CALL][45.8179416684725] from=PancakeRouter, to=0xd0c8af
+  [2][CALL] from=0xd0c8af, to=OpenLevDelegator, markets((uint16): 189) -> ['0x721eb1', '0xebc07d', '0x55d398', '0x8ac76a', '860', '5', '5', '0xdd118c', '255903940710409442469', '555953500065125476708']
+    [3][DELEGATECALL] from=OpenLevDelegator, to=OpenLevV1, markets((uint16): 189) -> ['0x721eb1', '0xebc07d', '0x55d398', '0x8ac76a', '860', '5', '5', '0xdd118c', '255903940710409442469', '555953500065125476708']
+  [2][CALL] from=0xd0c8af, to=OpenLevDelegator, activeTrades((address): False) -> ['4851723089285428873209', '21647460319686614189001', 'False', '37470345']
+    [3][DELEGATECALL] from=OpenLevDelegator, to=OpenLevV1, activeTrades((address): False) -> ['4851723089285428873209', '21647460319686614189001', 'False', '37470345']
+  [2][CALL] from=0xd0c8af, to=OpenLevDelegator, payoffTrade(marketId(uint16): 189, longToken(bool): False) -> None
+    [3][DELEGATECALL] from=OpenLevDelegator, to=OpenLevV1, payoffTrade(marketId(uint16): 189, longToken(bool): False) -> None
+      [4][STATICCALL] from=OpenLevDelegator, to=BEP20USDT, balanceOf(account(address): 0x6A75aC) -> 132085592492539751195398
+      [4][STATICCALL] from=OpenLevDelegator, to=BEP20UpgradeableProxy, balanceOf(account(address): 0x6A75aC) -> 19707737811752755253177
+        [5][DELEGATECALL] from=BEP20UpgradeableProxy, to=BEP20TokenImplementation, balanceOf(account(address): 0x6A75aC) -> 19707737811752755253177
+      [4][STATICCALL] from=OpenLevDelegator, to=ControllerDelegator, closeTradeAllowed(marketId(uint256): 189) -> True
+        [5][DELEGATECALL] from=ControllerDelegator, to=ControllerV1, closeTradeAllowed(marketId(uint256): 189) -> True
+      [4][STATICCALL] from=OpenLevDelegator, to=LPoolDelegator, borrowBalanceCurrent(account(address): 0xd0C8af) -> 0
+        [5][DELEGATECALL] from=LPoolDelegator, to=LPool, borrowBalanceCurrent(account(address): 0xd0C8af) -> 0
+          [6][STATICCALL] from=LPoolDelegator, to=BEP20UpgradeableProxy, balanceOf(account(address): 0xEbC07d) -> 993334
+            [7][DELEGATECALL] from=BEP20UpgradeableProxy, to=BEP20TokenImplementation, balanceOf(account(address): 0xEbC07d) -> 993334
+      [4][DELEGATECALL] from=OpenLevDelegator, to=OpenLevV1Lib, 0x289e376f() -> 0x000000
+      [4][CALL] from=OpenLevDelegator, to=LPoolDelegator, repayBorrowBehalf(borrower(address): 0xd0C8af, repayAmount(uint256): 0) -> None
+        [5][DELEGATECALL] from=LPoolDelegator, to=LPool, repayBorrowBehalf(borrower(address): 0xd0C8af, repayAmount(uint256): 0) -> None
+          [6][STATICCALL] from=LPoolDelegator, to=BEP20UpgradeableProxy, balanceOf(account(address): 0xEbC07d) -> 993334
+            [7][DELEGATECALL] from=BEP20UpgradeableProxy, to=BEP20TokenImplementation, balanceOf(account(address): 0xEbC07d) -> 993334
+          [6][CALL] from=LPoolDelegator, to=ControllerDelegator, repayBorrowAllowed(payer(address): 0x6A75aC, borrower(address): 0xd0C8af, repayAmount(uint256): 0, isEnd(bool): False) -> None
+            [7][DELEGATECALL] from=ControllerDelegator, to=ControllerV1, repayBorrowAllowed(payer(address): 0x6A75aC, borrower(address): 0xd0C8af, repayAmount(uint256): 0, isEnd(bool): False) -> None
+      [4][STATICCALL] from=OpenLevDelegator, to=LPoolDelegator, borrowBalanceStored(account(address): 0xd0C8af) -> 0
+        [5][DELEGATECALL] from=LPoolDelegator, to=LPool, borrowBalanceStored(account(address): 0xd0C8af) -> 0
+      [4][DELEGATECALL] from=OpenLevDelegator, to=OpenLevV1Lib, 0x19ea053f() -> None
+        [5][STATICCALL] from=OpenLevDelegator, to=BEP20USDT, balanceOf(account(address): 0xd0C8af) -> 42602503819237053234169
+        [5][CALL] from=OpenLevDelegator, to=BEP20USDT, transfer(recipient(address): 0xd0C8af, amount(uint256): 21646863055912709488635) -> True
+        [5][STATICCALL] from=OpenLevDelegator, to=BEP20USDT, balanceOf(account(address): 0xd0C8af) -> 64249366875149762722804
+  [2][CALL] from=0xd0c8af, to=OpenLevDelegator, activeTrades((address): True) -> ['17650265070720106024', '79670818686386435237', 'True', '37470345']
+    [3][DELEGATECALL] from=OpenLevDelegator, to=OpenLevV1, activeTrades((address): True) -> ['17650265070720106024', '79670818686386435237', 'True', '37470345']
+  [2][CALL] from=0xd0c8af, to=OpenLevDelegator, payoffTrade(marketId(uint16): 189, longToken(bool): True) -> None
+    [3][DELEGATECALL] from=OpenLevDelegator, to=OpenLevV1, payoffTrade(marketId(uint16): 189, longToken(bool): True) -> None
+      [4][STATICCALL] from=OpenLevDelegator, to=BEP20USDT, balanceOf(account(address): 0x6A75aC) -> 110438729436627041706763
+      [4][STATICCALL] from=OpenLevDelegator, to=BEP20UpgradeableProxy, balanceOf(account(address): 0x6A75aC) -> 19707737811752755253177
+        [5][DELEGATECALL] from=BEP20UpgradeableProxy, to=BEP20TokenImplementation, balanceOf(account(address): 0x6A75aC) -> 19707737811752755253177
+      [4][STATICCALL] from=OpenLevDelegator, to=ControllerDelegator, closeTradeAllowed(marketId(uint256): 189) -> True
+        [5][DELEGATECALL] from=ControllerDelegator, to=ControllerV1, closeTradeAllowed(marketId(uint256): 189) -> True
+      [4][STATICCALL] from=OpenLevDelegator, to=LPoolDelegator, borrowBalanceCurrent(account(address): 0xd0C8af) -> 0
+        [5][DELEGATECALL] from=LPoolDelegator, to=LPool, borrowBalanceCurrent(account(address): 0xd0C8af) -> 0
+          [6][STATICCALL] from=LPoolDelegator, to=BEP20USDT, balanceOf(account(address): 0x721eB1) -> 904173
+      [4][DELEGATECALL] from=OpenLevDelegator, to=OpenLevV1Lib, 0x289e376f() -> 0x000000
+      [4][CALL] from=OpenLevDelegator, to=LPoolDelegator, repayBorrowBehalf(borrower(address): 0xd0C8af, repayAmount(uint256): 0) -> None
+        [5][DELEGATECALL] from=LPoolDelegator, to=LPool, repayBorrowBehalf(borrower(address): 0xd0C8af, repayAmount(uint256): 0) -> None
+          [6][STATICCALL] from=LPoolDelegator, to=BEP20USDT, balanceOf(account(address): 0x721eB1) -> 904173
+          [6][CALL] from=LPoolDelegator, to=ControllerDelegator, repayBorrowAllowed(payer(address): 0x6A75aC, borrower(address): 0xd0C8af, repayAmount(uint256): 0, isEnd(bool): False) -> None
+            [7][DELEGATECALL] from=ControllerDelegator, to=ControllerV1, repayBorrowAllowed(payer(address): 0x6A75aC, borrower(address): 0xd0C8af, repayAmount(uint256): 0, isEnd(bool): False) -> None
+      [4][STATICCALL] from=OpenLevDelegator, to=LPoolDelegator, borrowBalanceStored(account(address): 0xd0C8af) -> 0
+        [5][DELEGATECALL] from=LPoolDelegator, to=LPool, borrowBalanceStored(account(address): 0xd0C8af) -> 0
+      [4][DELEGATECALL] from=OpenLevDelegator, to=OpenLevV1Lib, 0x19ea053f() -> None
+        [5][STATICCALL] from=OpenLevDelegator, to=BEP20UpgradeableProxy, balanceOf(account(address): 0xd0C8af) -> 0
+          [6][DELEGATECALL] from=BEP20UpgradeableProxy, to=BEP20TokenImplementation, balanceOf(account(address): 0xd0C8af) -> 0
+        [5][CALL] from=OpenLevDelegator, to=BEP20UpgradeableProxy, transfer(recipient(address): 0xd0C8af, amount(uint256): 79670818686386435237) -> True
+          [6][DELEGATECALL] from=BEP20UpgradeableProxy, to=BEP20TokenImplementation, transfer(recipient(address): 0xd0C8af, amount(uint256): 79670818686386435237) -> True
+        [5][STATICCALL] from=OpenLevDelegator, to=BEP20UpgradeableProxy, balanceOf(account(address): 0xd0C8af) -> 79670818686386435237
+          [6][DELEGATECALL] from=BEP20UpgradeableProxy, to=BEP20TokenImplementation, balanceOf(account(address): 0xd0C8af) -> 79670818686386435237
+  [2][STATICCALL] from=0xd0c8af, to=BEP20USDT, balanceOf(account(address): 0xd0C8af) -> 64249366875149762722804
+  [2][STATICCALL] from=0xd0c8af, to=BEP20USDT, balanceOf(account(address): 0xd0C8af) -> 64249366875149762722804
+  [2][CALL] from=0xd0c8af, to=BEP20USDT, approve(spender(address): 0x10ED43, amount(uint256): 64249366875149762722804) -> True
+  [2][STATICCALL] from=0xd0c8af, to=BEP20USDT, balanceOf(account(address): 0xd0C8af) -> 64249366875149762722804
+  [2][CALL] from=0xd0c8af, to=PancakeRouter, swapExactTokensForETH(amountIn(uint256): 64249366875149762722804, amountOutMin(uint256): 0, path(address[]): ['0x55d398326f99059fF775485246999027B31979..., to(address): 0xd0C8af, deadline(uint256): 1711948796) -> [64249366875149762722804, 106440163195632822329]
+    [3][STATICCALL] from=PancakeRouter, to=PancakePair, getReserves() -> ['5002802961937156604201554', '8415218506672932539858', '1711948796']
+    [3][CALL] from=PancakeRouter, to=BEP20USDT, transferFrom(sender(address): 0xd0C8af, recipient(address): 0x16b9a8, amount(uint256): 64249366875149762722804) -> True
+    [3][CALL] from=PancakeRouter, to=PancakePair, swap(amount0Out(uint256): 0, amount1Out(uint256): 106440163195632822329, to(address): 0x10ED43, data(bytes): b'') -> None
+      [4][CALL] from=PancakePair, to=WBNB, transfer(dst(address): 0x10ED43, wad(uint256): 106440163195632822329) -> True
+      [4][STATICCALL] from=PancakePair, to=BEP20USDT, balanceOf(account(address): 0x16b9a8) -> 5067052328812306366924358
+      [4][STATICCALL] from=PancakePair, to=WBNB, balanceOf((address): 0x16b9a8) -> 8308778343477299717529
+    [3][CALL] from=PancakeRouter, to=WBNB, withdraw(wad(uint256): 106440163195632822329) -> None
+      [4][CALL][106.44016319563282] from=WBNB, to=PancakeRouter
+    [3][CALL][106.44016319563282] from=PancakeRouter, to=0xd0c8af
+  [2][STATICCALL] from=0xd0c8af, to=BEP20UpgradeableProxy, balanceOf(account(address): 0xd0C8af) -> 79670818686386435237
+    [3][DELEGATECALL] from=BEP20UpgradeableProxy, to=BEP20TokenImplementation, balanceOf(account(address): 0xd0C8af) -> 79670818686386435237
+  [2][STATICCALL] from=0xd0c8af, to=BEP20UpgradeableProxy, balanceOf(account(address): 0xd0C8af) -> 79670818686386435237
+    [3][DELEGATECALL] from=BEP20UpgradeableProxy, to=BEP20TokenImplementation, balanceOf(account(address): 0xd0C8af) -> 79670818686386435237
+  [2][CALL] from=0xd0c8af, to=BEP20UpgradeableProxy, approve(spender(address): 0x10ED43, amount(uint256): 79670818686386435237) -> True
+    [3][DELEGATECALL] from=BEP20UpgradeableProxy, to=BEP20TokenImplementation, approve(spender(address): 0x10ED43, amount(uint256): 79670818686386435237) -> True
+  [2][STATICCALL] from=0xd0c8af, to=BEP20UpgradeableProxy, balanceOf(account(address): 0xd0C8af) -> 79670818686386435237
+    [3][DELEGATECALL] from=BEP20UpgradeableProxy, to=BEP20TokenImplementation, balanceOf(account(address): 0xd0C8af) -> 79670818686386435237
+  [2][CALL] from=0xd0c8af, to=PancakeRouter, swapExactTokensForETH(amountIn(uint256): 79670818686386435237, amountOutMin(uint256): 0, path(address[]): ['0x8AC76a51cc950d9822D68b83fE1Ad97B32Cd58..., to(address): 0xd0C8af, deadline(uint256): 1711948796) -> [79670818686386435237, 119364911116879973]
+    [3][STATICCALL] from=PancakeRouter, to=PancakePair, getReserves() -> ['536483622701089807977333', '805907676542159814998', '1711948796']
+    [3][CALL] from=PancakeRouter, to=BEP20UpgradeableProxy, transferFrom(sender(address): 0xd0C8af, recipient(address): 0xd99c7F, amount(uint256): 79670818686386435237) -> True
+      [4][DELEGATECALL] from=BEP20UpgradeableProxy, to=BEP20TokenImplementation, transferFrom(sender(address): 0xd0C8af, recipient(address): 0xd99c7F, amount(uint256): 79670818686386435237) -> True
+    [3][CALL] from=PancakeRouter, to=PancakePair, swap(amount0Out(uint256): 0, amount1Out(uint256): 119364911116879973, to(address): 0x10ED43, data(bytes): b'') -> None
+      [4][CALL] from=PancakePair, to=WBNB, transfer(dst(address): 0x10ED43, wad(uint256): 119364911116879973) -> True
+      [4][STATICCALL] from=PancakePair, to=BEP20UpgradeableProxy, balanceOf(account(address): 0xd99c7F) -> 536563293519776194412570
+        [5][DELEGATECALL] from=BEP20UpgradeableProxy, to=BEP20TokenImplementation, balanceOf(account(address): 0xd99c7F) -> 536563293519776194412570
+      [4][STATICCALL] from=PancakePair, to=WBNB, balanceOf((address): 0xd99c7F) -> 805788311631042935025
+    [3][CALL] from=PancakeRouter, to=WBNB, withdraw(wad(uint256): 119364911116879973) -> None
+      [4][CALL][0.11936491111687997] from=WBNB, to=PancakeRouter
+    [3][CALL][0.11936491111687997] from=PancakeRouter, to=0xd0c8af
+  [2][CALL] from=0xd0c8af, to=OpenLevDelegator, markets((uint16): 194) -> ['0xf2368c', '0x6b1070', '0x7130d2', '0x55d398', '450', '0', '5', '0xadace4', '15861408858116883', '274291345792276721660']
+    [3][DELEGATECALL] from=OpenLevDelegator, to=OpenLevV1, markets((uint16): 194) -> ['0xf2368c', '0x6b1070', '0x7130d2', '0x55d398', '450', '0', '5', '0xadace4', '15861408858116883', '274291345792276721660']
+  [2][CALL] from=0xd0c8af, to=OpenLevDelegator, activeTrades((address): False) -> ['34138112385482454', '248737421045255325', 'False', '37470345']
+    [3][DELEGATECALL] from=OpenLevDelegator, to=OpenLevV1, activeTrades((address): False) -> ['34138112385482454', '248737421045255325', 'False', '37470345']
+  [2][CALL] from=0xd0c8af, to=OpenLevDelegator, payoffTrade(marketId(uint16): 194, longToken(bool): False) -> None
+    [3][DELEGATECALL] from=OpenLevDelegator, to=OpenLevV1, payoffTrade(marketId(uint16): 194, longToken(bool): False) -> None
+      [4][STATICCALL] from=OpenLevDelegator, to=BEP20Token, balanceOf(account(address): 0x6A75aC) -> 1191546555898842793
+      [4][STATICCALL] from=OpenLevDelegator, to=BEP20USDT, balanceOf(account(address): 0x6A75aC) -> 110438729436627041706763
+      [4][STATICCALL] from=OpenLevDelegator, to=ControllerDelegator, closeTradeAllowed(marketId(uint256): 194) -> True
+        [5][DELEGATECALL] from=ControllerDelegator, to=ControllerV1, closeTradeAllowed(marketId(uint256): 194) -> True
+      [4][STATICCALL] from=OpenLevDelegator, to=LPoolDelegator, borrowBalanceCurrent(account(address): 0xd0C8af) -> 0
+        [5][DELEGATECALL] from=LPoolDelegator, to=LPool, borrowBalanceCurrent(account(address): 0xd0C8af) -> 0
+          [6][STATICCALL] from=LPoolDelegator, to=BEP20USDT, balanceOf(account(address): 0x6b1070) -> 68945089517
+      [4][DELEGATECALL] from=OpenLevDelegator, to=OpenLevV1Lib, 0x289e376f() -> 0x000000
+      [4][CALL] from=OpenLevDelegator, to=LPoolDelegator, repayBorrowBehalf(borrower(address): 0xd0C8af, repayAmount(uint256): 0) -> None
+        [5][DELEGATECALL] from=LPoolDelegator, to=LPool, repayBorrowBehalf(borrower(address): 0xd0C8af, repayAmount(uint256): 0) -> None
+          [6][STATICCALL] from=LPoolDelegator, to=BEP20USDT, balanceOf(account(address): 0x6b1070) -> 68945089517
+          [6][CALL] from=LPoolDelegator, to=ControllerDelegator, repayBorrowAllowed(payer(address): 0x6A75aC, borrower(address): 0xd0C8af, repayAmount(uint256): 0, isEnd(bool): False) -> None
+            [7][DELEGATECALL] from=ControllerDelegator, to=ControllerV1, repayBorrowAllowed(payer(address): 0x6A75aC, borrower(address): 0xd0C8af, repayAmount(uint256): 0, isEnd(bool): False) -> None
+      [4][STATICCALL] from=OpenLevDelegator, to=LPoolDelegator, borrowBalanceStored(account(address): 0xd0C8af) -> 0
+        [5][DELEGATECALL] from=LPoolDelegator, to=LPool, borrowBalanceStored(account(address): 0xd0C8af) -> 0
+      [4][DELEGATECALL] from=OpenLevDelegator, to=OpenLevV1Lib, 0x19ea053f() -> None
+        [5][STATICCALL] from=OpenLevDelegator, to=BEP20Token, balanceOf(account(address): 0xd0C8af) -> 144383626505005174
+        [5][CALL] from=OpenLevDelegator, to=BEP20Token, transfer(recipient(address): 0xd0C8af, amount(uint256): 248737421045255325) -> True
+        [5][STATICCALL] from=OpenLevDelegator, to=BEP20Token, balanceOf(account(address): 0xd0C8af) -> 393121047550260499
+  [2][CALL] from=0xd0c8af, to=OpenLevDelegator, activeTrades((address): True) -> ['4184941139786466449792', '29479092619991505511814', 'True', '37470345']
+    [3][DELEGATECALL] from=OpenLevDelegator, to=OpenLevV1, activeTrades((address): True) -> ['4184941139786466449792', '29479092619991505511814', 'True', '37470345']
+  [2][CALL] from=0xd0c8af, to=OpenLevDelegator, payoffTrade(marketId(uint16): 194, longToken(bool): True) -> None
+    [3][DELEGATECALL] from=OpenLevDelegator, to=OpenLevV1, payoffTrade(marketId(uint16): 194, longToken(bool): True) -> None
+      [4][STATICCALL] from=OpenLevDelegator, to=BEP20Token, balanceOf(account(address): 0x6A75aC) -> 942809134853587468
+      [4][STATICCALL] from=OpenLevDelegator, to=BEP20USDT, balanceOf(account(address): 0x6A75aC) -> 110438729436627041706763
+      [4][STATICCALL] from=OpenLevDelegator, to=ControllerDelegator, closeTradeAllowed(marketId(uint256): 194) -> True
+        [5][DELEGATECALL] from=ControllerDelegator, to=ControllerV1, closeTradeAllowed(marketId(uint256): 194) -> True
+      [4][STATICCALL] from=OpenLevDelegator, to=LPoolDelegator, borrowBalanceCurrent(account(address): 0xd0C8af) -> 0
+        [5][DELEGATECALL] from=LPoolDelegator, to=LPool, borrowBalanceCurrent(account(address): 0xd0C8af) -> 0
+          [6][STATICCALL] from=LPoolDelegator, to=BEP20Token, balanceOf(account(address): 0xF2368c) -> 256868338511666
+      [4][DELEGATECALL] from=OpenLevDelegator, to=OpenLevV1Lib, 0x289e376f() -> 0x000000
+      [4][CALL] from=OpenLevDelegator, to=LPoolDelegator, repayBorrowBehalf(borrower(address): 0xd0C8af, repayAmount(uint256): 0) -> None
+        [5][DELEGATECALL] from=LPoolDelegator, to=LPool, repayBorrowBehalf(borrower(address): 0xd0C8af, repayAmount(uint256): 0) -> None
+          [6][STATICCALL] from=LPoolDelegator, to=BEP20Token, balanceOf(account(address): 0xF2368c) -> 256868338511666
+          [6][CALL] from=LPoolDelegator, to=ControllerDelegator, repayBorrowAllowed(payer(address): 0x6A75aC, borrower(address): 0xd0C8af, repayAmount(uint256): 0, isEnd(bool): False) -> None
+            [7][DELEGATECALL] from=ControllerDelegator, to=ControllerV1, repayBorrowAllowed(payer(address): 0x6A75aC, borrower(address): 0xd0C8af, repayAmount(uint256): 0, isEnd(bool): False) -> None
+      [4][STATICCALL] from=OpenLevDelegator, to=LPoolDelegator, borrowBalanceStored(account(address): 0xd0C8af) -> 0
+        [5][DELEGATECALL] from=LPoolDelegator, to=LPool, borrowBalanceStored(account(address): 0xd0C8af) -> 0
+      [4][DELEGATECALL] from=OpenLevDelegator, to=OpenLevV1Lib, 0x19ea053f() -> None
+        [5][STATICCALL] from=OpenLevDelegator, to=BEP20USDT, balanceOf(account(address): 0xd0C8af) -> 0
+        [5][CALL] from=OpenLevDelegator, to=BEP20USDT, transfer(recipient(address): 0xd0C8af, amount(uint256): 29478279277740290464079) -> True
+        [5][STATICCALL] from=OpenLevDelegator, to=BEP20USDT, balanceOf(account(address): 0xd0C8af) -> 29478279277740290464079
+  [2][STATICCALL] from=0xd0c8af, to=BEP20Token, balanceOf(account(address): 0xd0C8af) -> 393121047550260499
+  [2][STATICCALL] from=0xd0c8af, to=BEP20Token, balanceOf(account(address): 0xd0C8af) -> 393121047550260499
+  [2][CALL] from=0xd0c8af, to=BEP20Token, approve(spender(address): 0x10ED43, amount(uint256): 393121047550260499) -> True
+  [2][STATICCALL] from=0xd0c8af, to=BEP20Token, balanceOf(account(address): 0xd0C8af) -> 393121047550260499
+  [2][CALL] from=0xd0c8af, to=PancakeRouter, swapExactTokensForETH(amountIn(uint256): 393121047550260499, amountOutMin(uint256): 0, path(address[]): ['0x7130d2A12B9BCbFAe4f2634d864A1Ee1Ce3Ead..., to(address): 0xd0C8af, deadline(uint256): 1711948796) -> [393121047550260499, 45863603521792431331]
+    [3][STATICCALL] from=PancakeRouter, to=PancakePair, getReserves() -> ['25714815478640315690', '3053410347540024537646', '1711948793']
+    [3][CALL] from=PancakeRouter, to=BEP20Token, transferFrom(sender(address): 0xd0C8af, recipient(address): 0x61EB78, amount(uint256): 393121047550260499) -> True
+    [3][CALL] from=PancakeRouter, to=PancakePair, swap(amount0Out(uint256): 0, amount1Out(uint256): 45863603521792431331, to(address): 0x10ED43, data(bytes): b'') -> None
+      [4][CALL] from=PancakePair, to=WBNB, transfer(dst(address): 0x10ED43, wad(uint256): 45863603521792431331) -> True
+      [4][STATICCALL] from=PancakePair, to=BEP20Token, balanceOf(account(address): 0x61EB78) -> 26107936526190576189
+      [4][STATICCALL] from=PancakePair, to=WBNB, balanceOf((address): 0x61EB78) -> 3007546744018232106315
+    [3][CALL] from=PancakeRouter, to=WBNB, withdraw(wad(uint256): 45863603521792431331) -> None
+      [4][CALL][45.863603521792434] from=WBNB, to=PancakeRouter
+    [3][CALL][45.863603521792434] from=PancakeRouter, to=0xd0c8af
+  [2][STATICCALL] from=0xd0c8af, to=BEP20USDT, balanceOf(account(address): 0xd0C8af) -> 29478279277740290464079
+  [2][STATICCALL] from=0xd0c8af, to=BEP20USDT, balanceOf(account(address): 0xd0C8af) -> 29478279277740290464079
+  [2][CALL] from=0xd0c8af, to=BEP20USDT, approve(spender(address): 0x10ED43, amount(uint256): 29478279277740290464079) -> True
+  [2][STATICCALL] from=0xd0c8af, to=BEP20USDT, balanceOf(account(address): 0xd0C8af) -> 29478279277740290464079
+  [2][CALL] from=0xd0c8af, to=PancakeRouter, swapExactTokensForETH(amountIn(uint256): 29478279277740290464079, amountOutMin(uint256): 0, path(address[]): ['0x55d398326f99059fF775485246999027B31979..., to(address): 0xd0C8af, deadline(uint256): 1711948796) -> [29478279277740290464079, 47938434768408130331]
+    [3][STATICCALL] from=PancakeRouter, to=PancakePair, getReserves() -> ['5067052328812306366924358', '8308778343477299717529', '1711948796']
+    [3][CALL] from=PancakeRouter, to=BEP20USDT, transferFrom(sender(address): 0xd0C8af, recipient(address): 0x16b9a8, amount(uint256): 29478279277740290464079) -> True
+    [3][CALL] from=PancakeRouter, to=PancakePair, swap(amount0Out(uint256): 0, amount1Out(uint256): 47938434768408130331, to(address): 0x10ED43, data(bytes): b'') -> None
+      [4][CALL] from=PancakePair, to=WBNB, transfer(dst(address): 0x10ED43, wad(uint256): 47938434768408130331) -> True
+      [4][STATICCALL] from=PancakePair, to=BEP20USDT, balanceOf(account(address): 0x16b9a8) -> 5096530608090046657388437
+      [4][STATICCALL] from=PancakePair, to=WBNB, balanceOf((address): 0x16b9a8) -> 8260839908708891587198
+    [3][CALL] from=PancakeRouter, to=WBNB, withdraw(wad(uint256): 47938434768408130331) -> None
+      [4][CALL][47.93843476840813] from=WBNB, to=PancakeRouter
+    [3][CALL][47.93843476840813] from=PancakeRouter, to=0xd0c8af
+  [2][CALL] from=0xd0c8af, to=OpenLevDelegator, markets((uint16): 24) -> ['0x7c5e04', '0xa75323', '0xbb4cdb', '0x55d398', '450', '0', '5', '0x74e4fb', '57549311202102038545', '10564809865456566322330']
+    [3][DELEGATECALL] from=OpenLevDelegator, to=OpenLevV1, markets((uint16): 24) -> ['0x7c5e04', '0xa75323', '0xbb4cdb', '0x55d398', '450', '0', '5', '0x74e4fb', '57549311202102038545', '10564809865456566322330']
+  [2][CALL] from=0xd0c8af, to=OpenLevDelegator, activeTrades((address): False) -> ['2697250647747938502', '20619256107369465552', 'False', '37470345']
+    [3][DELEGATECALL] from=OpenLevDelegator, to=OpenLevV1, activeTrades((address): False) -> ['2697250647747938502', '20619256107369465552', 'False', '37470345']
+  [2][CALL] from=0xd0c8af, to=OpenLevDelegator, payoffTrade(marketId(uint16): 24, longToken(bool): False) -> None
+    [3][DELEGATECALL] from=OpenLevDelegator, to=OpenLevV1, payoffTrade(marketId(uint16): 24, longToken(bool): False) -> None
+      [4][STATICCALL] from=OpenLevDelegator, to=WBNB, balanceOf((address): 0x6A75aC) -> 211479415145114077336
+      [4][STATICCALL] from=OpenLevDelegator, to=BEP20USDT, balanceOf(account(address): 0x6A75aC) -> 80960450158886751242684
+      [4][STATICCALL] from=OpenLevDelegator, to=ControllerDelegator, closeTradeAllowed(marketId(uint256): 24) -> True
+        [5][DELEGATECALL] from=ControllerDelegator, to=ControllerV1, closeTradeAllowed(marketId(uint256): 24) -> True
+      [4][STATICCALL] from=OpenLevDelegator, to=LPoolDelegator, borrowBalanceCurrent(account(address): 0xd0C8af) -> 0
+        [5][DELEGATECALL] from=LPoolDelegator, to=LPool, borrowBalanceCurrent(account(address): 0xd0C8af) -> 0
+          [6][STATICCALL] from=LPoolDelegator, to=BEP20USDT, balanceOf(account(address): 0xa75323) -> 575911197
+      [4][DELEGATECALL] from=OpenLevDelegator, to=OpenLevV1Lib, 0x289e376f() -> 0x000000
+      [4][CALL] from=OpenLevDelegator, to=LPoolDelegator, repayBorrowBehalf(borrower(address): 0xd0C8af, repayAmount(uint256): 0) -> None
+        [5][DELEGATECALL] from=LPoolDelegator, to=LPool, repayBorrowBehalf(borrower(address): 0xd0C8af, repayAmount(uint256): 0) -> None
+          [6][STATICCALL] from=LPoolDelegator, to=BEP20USDT, balanceOf(account(address): 0xa75323) -> 575911197
+          [6][CALL] from=LPoolDelegator, to=ControllerDelegator, repayBorrowAllowed(payer(address): 0x6A75aC, borrower(address): 0xd0C8af, repayAmount(uint256): 0, isEnd(bool): False) -> None
+            [7][DELEGATECALL] from=ControllerDelegator, to=ControllerV1, repayBorrowAllowed(payer(address): 0x6A75aC, borrower(address): 0xd0C8af, repayAmount(uint256): 0, isEnd(bool): False) -> None
+      [4][STATICCALL] from=OpenLevDelegator, to=LPoolDelegator, borrowBalanceStored(account(address): 0xd0C8af) -> 0
+        [5][DELEGATECALL] from=LPoolDelegator, to=LPool, borrowBalanceStored(account(address): 0xd0C8af) -> 0
+      [4][DELEGATECALL] from=OpenLevDelegator, to=OpenLevV1Lib, 0x19ea053f() -> None
+        [5][CALL] from=OpenLevDelegator, to=WBNB, withdraw(wad(uint256): 20646602373155149883) -> None
+          [6][CALL][20.64660237315515] from=WBNB, to=OpenLevDelegator
+        [5][CALL][20.64660237315515] from=OpenLevDelegator, to=0xd0c8af
+  [2][CALL] from=0xd0c8af, to=OpenLevDelegator, activeTrades((address): True) -> ['2859748536665521637333', '21958418275158337424792', 'True', '37470345']
+    [3][DELEGATECALL] from=OpenLevDelegator, to=OpenLevV1, activeTrades((address): True) -> ['2859748536665521637333', '21958418275158337424792', 'True', '37470345']
+  [2][CALL] from=0xd0c8af, to=OpenLevDelegator, payoffTrade(marketId(uint16): 24, longToken(bool): True) -> None
+    [3][DELEGATECALL] from=OpenLevDelegator, to=OpenLevV1, payoffTrade(marketId(uint16): 24, longToken(bool): True) -> None
+      [4][STATICCALL] from=OpenLevDelegator, to=WBNB, balanceOf((address): 0x6A75aC) -> 190832812771958927453
+      [4][STATICCALL] from=OpenLevDelegator, to=BEP20USDT, balanceOf(account(address): 0x6A75aC) -> 80960450158886751242684
+      [4][STATICCALL] from=OpenLevDelegator, to=ControllerDelegator, closeTradeAllowed(marketId(uint256): 24) -> True
+        [5][DELEGATECALL] from=ControllerDelegator, to=ControllerV1, closeTradeAllowed(marketId(uint256): 24) -> True
+      [4][STATICCALL] from=OpenLevDelegator, to=LPoolDelegator, borrowBalanceCurrent(account(address): 0xd0C8af) -> 0
+        [5][DELEGATECALL] from=LPoolDelegator, to=LPool, borrowBalanceCurrent(account(address): 0xd0C8af) -> 0
+          [6][STATICCALL] from=LPoolDelegator, to=WBNB, balanceOf((address): 0x7c5e04) -> 1688
+      [4][DELEGATECALL] from=OpenLevDelegator, to=OpenLevV1Lib, 0x289e376f() -> 0x000000
+        [5][CALL] from=OpenLevDelegator, to=WBNB, deposit() -> None
+      [4][CALL] from=OpenLevDelegator, to=LPoolDelegator, repayBorrowBehalf(borrower(address): 0xd0C8af, repayAmount(uint256): 0) -> None
+        [5][DELEGATECALL] from=LPoolDelegator, to=LPool, repayBorrowBehalf(borrower(address): 0xd0C8af, repayAmount(uint256): 0) -> None
+          [6][STATICCALL] from=LPoolDelegator, to=WBNB, balanceOf((address): 0x7c5e04) -> 1688
+          [6][CALL] from=LPoolDelegator, to=ControllerDelegator, repayBorrowAllowed(payer(address): 0x6A75aC, borrower(address): 0xd0C8af, repayAmount(uint256): 0, isEnd(bool): False) -> None
+            [7][DELEGATECALL] from=ControllerDelegator, to=ControllerV1, repayBorrowAllowed(payer(address): 0x6A75aC, borrower(address): 0xd0C8af, repayAmount(uint256): 0, isEnd(bool): False) -> None
+      [4][STATICCALL] from=OpenLevDelegator, to=LPoolDelegator, borrowBalanceStored(account(address): 0xd0C8af) -> 0
+        [5][DELEGATECALL] from=LPoolDelegator, to=LPool, borrowBalanceStored(account(address): 0xd0C8af) -> 0
+      [4][DELEGATECALL] from=OpenLevDelegator, to=OpenLevV1Lib, 0x19ea053f() -> None
+        [5][STATICCALL] from=OpenLevDelegator, to=BEP20USDT, balanceOf(account(address): 0xd0C8af) -> 0
+        [5][CALL] from=OpenLevDelegator, to=BEP20USDT, transfer(recipient(address): 0xd0C8af, amount(uint256): 21957812431905857963843) -> True
+        [5][STATICCALL] from=OpenLevDelegator, to=BEP20USDT, balanceOf(account(address): 0xd0C8af) -> 21957812431905857963843
+  [2][STATICCALL] from=0xd0c8af, to=WBNB, balanceOf((address): 0xd0C8af) -> 12106
+  [2][STATICCALL] from=0xd0c8af, to=WBNB, balanceOf((address): 0xd0C8af) -> 12106
+  [2][CALL] from=0xd0c8af, to=WBNB, withdraw(wad(uint256): 12106) -> None
+    [3][CALL][1.2106e-14] from=WBNB, to=0xd0c8af
+  [2][STATICCALL] from=0xd0c8af, to=BEP20USDT, balanceOf(account(address): 0xd0C8af) -> 21957812431905857963843
+  [2][STATICCALL] from=0xd0c8af, to=BEP20USDT, balanceOf(account(address): 0xd0C8af) -> 21957812431905857963843
+  [2][CALL] from=0xd0c8af, to=BEP20USDT, approve(spender(address): 0x10ED43, amount(uint256): 21957812431905857963843) -> True
+  [2][STATICCALL] from=0xd0c8af, to=BEP20USDT, balanceOf(account(address): 0xd0C8af) -> 21957812431905857963843
+  [2][CALL] from=0xd0c8af, to=PancakeRouter, swapExactTokensForETH(amountIn(uint256): 21957812431905857963843, amountOutMin(uint256): 0, path(address[]): ['0x55d398326f99059fF775485246999027B31979..., to(address): 0xd0C8af, deadline(uint256): 1711948796) -> [21957812431905857963843, 35349975220649416348]
+    [3][STATICCALL] from=PancakeRouter, to=PancakePair, getReserves() -> ['5096530608090046657388437', '8260839908708891587198', '1711948796']
+    [3][CALL] from=PancakeRouter, to=BEP20USDT, transferFrom(sender(address): 0xd0C8af, recipient(address): 0x16b9a8, amount(uint256): 21957812431905857963843) -> True
+    [3][CALL] from=PancakeRouter, to=PancakePair, swap(amount0Out(uint256): 0, amount1Out(uint256): 35349975220649416348, to(address): 0x10ED43, data(bytes): b'') -> None
+      [4][CALL] from=PancakePair, to=WBNB, transfer(dst(address): 0x10ED43, wad(uint256): 35349975220649416348) -> True
+      [4][STATICCALL] from=PancakePair, to=BEP20USDT, balanceOf(account(address): 0x16b9a8) -> 5118488420521952515352280
+      [4][STATICCALL] from=PancakePair, to=WBNB, balanceOf((address): 0x16b9a8) -> 8225489933488242170850
+    [3][CALL] from=PancakeRouter, to=WBNB, withdraw(wad(uint256): 35349975220649416348) -> None
+      [4][CALL][35.34997522064942] from=WBNB, to=PancakeRouter
+    [3][CALL][35.34997522064942] from=PancakeRouter, to=0xd0c8af
+  [2][CALL] from=0xd0c8af, to=OpenLevDelegator, markets((uint16): 62) -> ['0x7457c1', '0xdcf9ae', '0x2170ed', '0xbb4cdb', '450', '5', '5', '0x8c166b', '920093394443308086', '2396174787030001882']
+    [3][DELEGATECALL] from=OpenLevDelegator, to=OpenLevV1, markets((uint16): 62) -> ['0x7457c1', '0xdcf9ae', '0x2170ed', '0xbb4cdb', '450', '5', '5', '0x8c166b', '920093394443308086', '2396174787030001882']
+  [2][CALL] from=0xd0c8af, to=OpenLevDelegator, activeTrades((address): False) -> ['38539729616644833', '297672567575088377', 'False', '37470345']
+    [3][DELEGATECALL] from=OpenLevDelegator, to=OpenLevV1, activeTrades((address): False) -> ['38539729616644833', '297672567575088377', 'False', '37470345']
+  [2][CALL] from=0xd0c8af, to=OpenLevDelegator, payoffTrade(marketId(uint16): 62, longToken(bool): False) -> None
+    [3][DELEGATECALL] from=OpenLevDelegator, to=OpenLevV1, payoffTrade(marketId(uint16): 62, longToken(bool): False) -> None
+      [4][STATICCALL] from=OpenLevDelegator, to=BEP20Ethereum, balanceOf(account(address): 0x6A75aC) -> 26007606870659578352
+      [4][STATICCALL] from=OpenLevDelegator, to=WBNB, balanceOf((address): 0x6A75aC) -> 190832812771958927453
+      [4][STATICCALL] from=OpenLevDelegator, to=ControllerDelegator, closeTradeAllowed(marketId(uint256): 62) -> True
+        [5][DELEGATECALL] from=ControllerDelegator, to=ControllerV1, closeTradeAllowed(marketId(uint256): 62) -> True
+      [4][STATICCALL] from=OpenLevDelegator, to=LPoolDelegator, borrowBalanceCurrent(account(address): 0xd0C8af) -> 0
+        [5][DELEGATECALL] from=LPoolDelegator, to=LPool, borrowBalanceCurrent(account(address): 0xd0C8af) -> 0
+          [6][STATICCALL] from=LPoolDelegator, to=WBNB, balanceOf((address): 0xdCF9ae) -> 5930778
+      [4][DELEGATECALL] from=OpenLevDelegator, to=OpenLevV1Lib, 0x289e376f() -> 0x000000
+        [5][CALL] from=OpenLevDelegator, to=WBNB, deposit() -> None
+      [4][CALL] from=OpenLevDelegator, to=LPoolDelegator, repayBorrowBehalf(borrower(address): 0xd0C8af, repayAmount(uint256): 0) -> None
+        [5][DELEGATECALL] from=LPoolDelegator, to=LPool, repayBorrowBehalf(borrower(address): 0xd0C8af, repayAmount(uint256): 0) -> None
+          [6][STATICCALL] from=LPoolDelegator, to=WBNB, balanceOf((address): 0xdCF9ae) -> 5930778
+          [6][CALL] from=LPoolDelegator, to=ControllerDelegator, repayBorrowAllowed(payer(address): 0x6A75aC, borrower(address): 0xd0C8af, repayAmount(uint256): 0, isEnd(bool): False) -> None
+            [7][DELEGATECALL] from=ControllerDelegator, to=ControllerV1, repayBorrowAllowed(payer(address): 0x6A75aC, borrower(address): 0xd0C8af, repayAmount(uint256): 0, isEnd(bool): False) -> None
+      [4][STATICCALL] from=OpenLevDelegator, to=LPoolDelegator, borrowBalanceStored(account(address): 0xd0C8af) -> 0
+        [5][DELEGATECALL] from=LPoolDelegator, to=LPool, borrowBalanceStored(account(address): 0xd0C8af) -> 0
+      [4][DELEGATECALL] from=OpenLevDelegator, to=OpenLevV1Lib, 0x19ea053f() -> None
+        [5][STATICCALL] from=OpenLevDelegator, to=BEP20Ethereum, balanceOf(account(address): 0xd0C8af) -> 0
+        [5][CALL] from=OpenLevDelegator, to=BEP20Ethereum, transfer(recipient(address): 0xd0C8af, amount(uint256): 297672567575088377) -> True
+        [5][STATICCALL] from=OpenLevDelegator, to=BEP20Ethereum, balanceOf(account(address): 0xd0C8af) -> 297672567575088377
+  [2][CALL] from=0xd0c8af, to=OpenLevDelegator, activeTrades((address): True) -> ['3842016778103514321', '29372897906298524945', 'True', '37470345']
+    [3][DELEGATECALL] from=OpenLevDelegator, to=OpenLevV1, activeTrades((address): True) -> ['3842016778103514321', '29372897906298524945', 'True', '37470345']
+  [2][CALL] from=0xd0c8af, to=OpenLevDelegator, payoffTrade(marketId(uint16): 62, longToken(bool): True) -> None
+    [3][DELEGATECALL] from=OpenLevDelegator, to=OpenLevV1, payoffTrade(marketId(uint16): 62, longToken(bool): True) -> None
+      [4][STATICCALL] from=OpenLevDelegator, to=BEP20Ethereum, balanceOf(account(address): 0x6A75aC) -> 25709934303084489975
+      [4][STATICCALL] from=OpenLevDelegator, to=WBNB, balanceOf((address): 0x6A75aC) -> 190832812771958927453
+      [4][STATICCALL] from=OpenLevDelegator, to=ControllerDelegator, closeTradeAllowed(marketId(uint256): 62) -> True
+        [5][DELEGATECALL] from=ControllerDelegator, to=ControllerV1, closeTradeAllowed(marketId(uint256): 62) -> True
+      [4][STATICCALL] from=OpenLevDelegator, to=LPoolDelegator, borrowBalanceCurrent(account(address): 0xd0C8af) -> 0
+        [5][DELEGATECALL] from=LPoolDelegator, to=LPool, borrowBalanceCurrent(account(address): 0xd0C8af) -> 0
+          [6][STATICCALL] from=LPoolDelegator, to=BEP20Ethereum, balanceOf(account(address): 0x7457c1) -> 7627138937114094
+      [4][DELEGATECALL] from=OpenLevDelegator, to=OpenLevV1Lib, 0x289e376f() -> 0x000000
+      [4][CALL] from=OpenLevDelegator, to=LPoolDelegator, repayBorrowBehalf(borrower(address): 0xd0C8af, repayAmount(uint256): 0) -> None
+        [5][DELEGATECALL] from=LPoolDelegator, to=LPool, repayBorrowBehalf(borrower(address): 0xd0C8af, repayAmount(uint256): 0) -> None
+          [6][STATICCALL] from=LPoolDelegator, to=BEP20Ethereum, balanceOf(account(address): 0x7457c1) -> 7627138937114094
+          [6][CALL] from=LPoolDelegator, to=ControllerDelegator, repayBorrowAllowed(payer(address): 0x6A75aC, borrower(address): 0xd0C8af, repayAmount(uint256): 0, isEnd(bool): False) -> None
+            [7][DELEGATECALL] from=ControllerDelegator, to=ControllerV1, repayBorrowAllowed(payer(address): 0x6A75aC, borrower(address): 0xd0C8af, repayAmount(uint256): 0, isEnd(bool): False) -> None
+      [4][STATICCALL] from=OpenLevDelegator, to=LPoolDelegator, borrowBalanceStored(account(address): 0xd0C8af) -> 0
+        [5][DELEGATECALL] from=LPoolDelegator, to=LPool, borrowBalanceStored(account(address): 0xd0C8af) -> 0
+      [4][DELEGATECALL] from=OpenLevDelegator, to=OpenLevV1Lib, 0x19ea053f() -> None
+        [5][CALL] from=OpenLevDelegator, to=WBNB, withdraw(wad(uint256): 29411853679914156356) -> None
+          [6][CALL][29.411853679914156] from=WBNB, to=OpenLevDelegator
+        [5][CALL][29.411853679914156] from=OpenLevDelegator, to=0xd0c8af
+  [2][STATICCALL] from=0xd0c8af, to=BEP20Ethereum, balanceOf(account(address): 0xd0C8af) -> 297672567575088377
+  [2][STATICCALL] from=0xd0c8af, to=BEP20Ethereum, balanceOf(account(address): 0xd0C8af) -> 297672567575088377
+  [2][CALL] from=0xd0c8af, to=BEP20Ethereum, approve(spender(address): 0x10ED43, amount(uint256): 297672567575088377) -> True
+  [2][STATICCALL] from=0xd0c8af, to=BEP20Ethereum, balanceOf(account(address): 0xd0C8af) -> 297672567575088377
+  [2][CALL] from=0xd0c8af, to=PancakeRouter, swapExactTokensForETH(amountIn(uint256): 297672567575088377, amountOutMin(uint256): 0, path(address[]): ['0x2170Ed0880ac9A755fd29B2688956BD959F933..., to(address): 0xd0C8af, deadline(uint256): 1711948796) -> [297672567575088377, 1755651157263369709]
+    [3][STATICCALL] from=PancakeRouter, to=PancakePair, getReserves() -> ['653626227120965158496', '3866457362293553657479', '1711948796']
+    [3][CALL] from=PancakeRouter, to=BEP20Ethereum, transferFrom(sender(address): 0xd0C8af, recipient(address): 0x74E471, amount(uint256): 297672567575088377) -> True
+    [3][CALL] from=PancakeRouter, to=PancakePair, swap(amount0Out(uint256): 0, amount1Out(uint256): 1755651157263369709, to(address): 0x10ED43, data(bytes): b'') -> None
+      [4][CALL] from=PancakePair, to=WBNB, transfer(dst(address): 0x10ED43, wad(uint256): 1755651157263369709) -> True
+      [4][STATICCALL] from=PancakePair, to=BEP20Ethereum, balanceOf(account(address): 0x74E471) -> 653923899688540246873
+      [4][STATICCALL] from=PancakePair, to=WBNB, balanceOf((address): 0x74E471) -> 3864701711136290287770
+    [3][CALL] from=PancakeRouter, to=WBNB, withdraw(wad(uint256): 1755651157263369709) -> None
+      [4][CALL][1.7556511572633697] from=WBNB, to=PancakeRouter
+    [3][CALL][1.7556511572633697] from=PancakeRouter, to=0xd0c8af
+  [2][STATICCALL] from=0xd0c8af, to=WBNB, balanceOf((address): 0xd0C8af) -> 0
+  [2][CALL] from=0xd0c8af, to=OpenLevDelegator, markets((uint16): 79) -> ['0x867e9d', '0x005d3e', '0x2170ed', '0x55d398', '450', '5', '5', '0x74e4fb', '1494933671601933057', '4459740707276858995775']
+    [3][DELEGATECALL] from=OpenLevDelegator, to=OpenLevV1, markets((uint16): 79) -> ['0x867e9d', '0x005d3e', '0x2170ed', '0x55d398', '450', '5', '5', '0x74e4fb', '1494933671601933057', '4459740707276858995775']
+  [2][CALL] from=0xd0c8af, to=OpenLevDelegator, activeTrades((address): False) -> ['374384492794448442', '2871415992064389287', 'False', '37470345']
+    [3][DELEGATECALL] from=OpenLevDelegator, to=OpenLevV1, activeTrades((address): False) -> ['374384492794448442', '2871415992064389287', 'False', '37470345']
+  [2][CALL] from=0xd0c8af, to=OpenLevDelegator, payoffTrade(marketId(uint16): 79, longToken(bool): False) -> None
+    [3][DELEGATECALL] from=OpenLevDelegator, to=OpenLevV1, payoffTrade(marketId(uint16): 79, longToken(bool): False) -> None
+      [4][STATICCALL] from=OpenLevDelegator, to=BEP20Ethereum, balanceOf(account(address): 0x6A75aC) -> 25709934303084489975
+      [4][STATICCALL] from=OpenLevDelegator, to=BEP20USDT, balanceOf(account(address): 0x6A75aC) -> 59002637726980893278841
+      [4][STATICCALL] from=OpenLevDelegator, to=ControllerDelegator, closeTradeAllowed(marketId(uint256): 79) -> True
+        [5][DELEGATECALL] from=ControllerDelegator, to=ControllerV1, closeTradeAllowed(marketId(uint256): 79) -> True
+      [4][STATICCALL] from=OpenLevDelegator, to=LPoolDelegator, borrowBalanceCurrent(account(address): 0xd0C8af) -> 0
+        [5][DELEGATECALL] from=LPoolDelegator, to=LPool, borrowBalanceCurrent(account(address): 0xd0C8af) -> 0
+          [6][STATICCALL] from=LPoolDelegator, to=BEP20USDT, balanceOf(account(address): 0x005D3E) -> 3532504789
+      [4][DELEGATECALL] from=OpenLevDelegator, to=OpenLevV1Lib, 0x289e376f() -> 0x000000
+      [4][CALL] from=OpenLevDelegator, to=LPoolDelegator, repayBorrowBehalf(borrower(address): 0xd0C8af, repayAmount(uint256): 0) -> None
+        [5][DELEGATECALL] from=LPoolDelegator, to=LPool, repayBorrowBehalf(borrower(address): 0xd0C8af, repayAmount(uint256): 0) -> None
+          [6][STATICCALL] from=LPoolDelegator, to=BEP20USDT, balanceOf(account(address): 0x005D3E) -> 3532504789
+          [6][CALL] from=LPoolDelegator, to=ControllerDelegator, repayBorrowAllowed(payer(address): 0x6A75aC, borrower(address): 0xd0C8af, repayAmount(uint256): 0, isEnd(bool): False) -> None
+            [7][DELEGATECALL] from=ControllerDelegator, to=ControllerV1, repayBorrowAllowed(payer(address): 0x6A75aC, borrower(address): 0xd0C8af, repayAmount(uint256): 0, isEnd(bool): False) -> None
+      [4][STATICCALL] from=OpenLevDelegator, to=LPoolDelegator, borrowBalanceStored(account(address): 0xd0C8af) -> 0
+        [5][DELEGATECALL] from=LPoolDelegator, to=LPool, borrowBalanceStored(account(address): 0xd0C8af) -> 0
+      [4][DELEGATECALL] from=OpenLevDelegator, to=OpenLevV1Lib, 0x19ea053f() -> None
+        [5][STATICCALL] from=OpenLevDelegator, to=BEP20Ethereum, balanceOf(account(address): 0xd0C8af) -> 0
+        [5][CALL] from=OpenLevDelegator, to=BEP20Ethereum, transfer(recipient(address): 0xd0C8af, amount(uint256): 2871415992064389287) -> True
+        [5][STATICCALL] from=OpenLevDelegator, to=BEP20Ethereum, balanceOf(account(address): 0xd0C8af) -> 2871415992064389287
+  [2][CALL] from=0xd0c8af, to=OpenLevDelegator, activeTrades((address): True) -> ['0', '0', 'False', '0']
+    [3][DELEGATECALL] from=OpenLevDelegator, to=OpenLevV1, activeTrades((address): True) -> ['0', '0', 'False', '0']
+  [2][STATICCALL] from=0xd0c8af, to=BEP20Ethereum, balanceOf(account(address): 0xd0C8af) -> 2871415992064389287
+  [2][STATICCALL] from=0xd0c8af, to=BEP20Ethereum, balanceOf(account(address): 0xd0C8af) -> 2871415992064389287
+  [2][CALL] from=0xd0c8af, to=BEP20Ethereum, approve(spender(address): 0x10ED43, amount(uint256): 2871415992064389287) -> True
+  [2][STATICCALL] from=0xd0c8af, to=BEP20Ethereum, balanceOf(account(address): 0xd0C8af) -> 2871415992064389287
+  [2][CALL] from=0xd0c8af, to=PancakeRouter, swapExactTokensForETH(amountIn(uint256): 2871415992064389287, amountOutMin(uint256): 0, path(address[]): ['0x2170Ed0880ac9A755fd29B2688956BD959F933..., to(address): 0xd0C8af, deadline(uint256): 1711948796) -> [2871415992064389287, 16853872285760390465]
+    [3][STATICCALL] from=PancakeRouter, to=PancakePair, getReserves() -> ['653923899688540246873', '3864701711136290287770', '1711948796']
+    [3][CALL] from=PancakeRouter, to=BEP20Ethereum, transferFrom(sender(address): 0xd0C8af, recipient(address): 0x74E471, amount(uint256): 2871415992064389287) -> True
+    [3][CALL] from=PancakeRouter, to=PancakePair, swap(amount0Out(uint256): 0, amount1Out(uint256): 16853872285760390465, to(address): 0x10ED43, data(bytes): b'') -> None
+      [4][CALL] from=PancakePair, to=WBNB, transfer(dst(address): 0x10ED43, wad(uint256): 16853872285760390465) -> True
+      [4][STATICCALL] from=PancakePair, to=BEP20Ethereum, balanceOf(account(address): 0x74E471) -> 656795315680604636160
+      [4][STATICCALL] from=PancakePair, to=WBNB, balanceOf((address): 0x74E471) -> 3847847838850529897305
+    [3][CALL] from=PancakeRouter, to=WBNB, withdraw(wad(uint256): 16853872285760390465) -> None
+      [4][CALL][16.853872285760392] from=WBNB, to=PancakeRouter
+    [3][CALL][16.853872285760392] from=PancakeRouter, to=0xd0c8af
+  [2][STATICCALL] from=0xd0c8af, to=BEP20USDT, balanceOf(account(address): 0xd0C8af) -> 0

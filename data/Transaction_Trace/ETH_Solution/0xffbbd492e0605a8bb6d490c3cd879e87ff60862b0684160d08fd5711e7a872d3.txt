@@ -1,0 +1,205 @@
+[1][CREATE] from=0x6d9f6e, to=0xf90da5, atInversebrahint248() -> 0x608060
+  [2][CREATE] from=0xf90da5, to=0x151aa6, atInversebrahint248() -> 0x608060
+  [2][CALL] from=0xf90da5, to=0x151aa6, 0x83f39e1d() -> None
+    [3][CALL] from=0x151aa6, to=FiatTokenProxy, approveaddress() -> 0x000000
+      [4][DELEGATECALL] from=FiatTokenProxy, to=FiatTokenV2_2, approveaddress() -> 0x000000
+    [3][CALL] from=0x151aa6, to=Morpho, flashLoanaddress() -> None
+      [4][CALL] from=Morpho, to=FiatTokenProxy, transferaddress() -> 0x000000
+        [5][DELEGATECALL] from=FiatTokenProxy, to=FiatTokenV2_2, transferaddress() -> 0x000000
+      [4][CALL] from=Morpho, to=0x151aa6, 0x31f57072() -> None
+        [5][STATICCALL] from=0x151aa6, to=FiatTokenProxy, balanceOfaddress() -> 0x000000
+          [6][DELEGATECALL] from=FiatTokenProxy, to=FiatTokenV2_2, balanceOfaddress() -> 0x000000
+        [5][CALL] from=0x151aa6, to=FiatTokenProxy, approveaddress() -> 0x000000
+          [6][DELEGATECALL] from=FiatTokenProxy, to=FiatTokenV2_2, approveaddress() -> 0x000000
+        [5][CALL] from=0x151aa6, to=Vyper_contract, exchangeint128() -> 0x000000
+          [6][DELEGATECALL] from=Vyper_contract, to=Vyper_contract, exchangeint128() -> 0x000000
+            [7][CALL] from=Vyper_contract, to=FiatTokenProxy, transferFromaddress() -> 0x000000
+              [8][DELEGATECALL] from=FiatTokenProxy, to=FiatTokenV2_2, transferFromaddress() -> 0x000000
+            [7][CALL] from=Vyper_contract, to=crvUSD Stablecoin, transferaddress() -> 0x000000
+        [5][STATICCALL] from=0x151aa6, to=Vault, controller() -> 0x000000
+          [6][DELEGATECALL] from=Vault, to=Vault, controller() -> 0x000000
+        [5][CALL] from=0x151aa6, to=crvUSD Stablecoin, transferaddress() -> 0x000000
+        [5][CALL] from=0x151aa6, to=crvUSD Stablecoin, approveaddress() -> 0x000000
+        [5][CALL] from=0x151aa6, to=Vault, mintuint256() -> 0x000000
+          [6][DELEGATECALL] from=Vault, to=Vault, mintuint256() -> 0x000000
+            [7][STATICCALL] from=Vault, to=crvUSD Controller, 0xd0c581bf() -> 0x000000
+            [7][STATICCALL] from=Vault, to=crvUSD Stablecoin, balanceOfaddress() -> 0x000000
+            [7][STATICCALL] from=Vault, to=crvUSD Controller, 0x31dc3ca8() -> 0x000000
+              [8][STATICCALL] from=crvUSD Controller, to=LLAMMA - crvUSD AMM, 0x095a0fc6() -> 0x000000
+            [7][CALL] from=Vault, to=crvUSD Stablecoin, transferFromaddress() -> 0x000000
+            [7][CALL] from=Vault, to=crvUSD Controller, 0x69c6804e() -> None
+              [8][CALL] from=crvUSD Controller, to=SemiLog monetary policy, 0xe91f2f4c() -> 0x000000
+                [9][STATICCALL] from=SemiLog monetary policy, to=crvUSD Controller, 0x31dc3ca8() -> 0x000000
+                  [10][STATICCALL] from=crvUSD Controller, to=LLAMMA - crvUSD AMM, 0x095a0fc6() -> 0x000000
+                [9][STATICCALL] from=SemiLog monetary policy, to=crvUSD Stablecoin, balanceOfaddress() -> 0x000000
+              [8][CALL] from=crvUSD Controller, to=LLAMMA - crvUSD AMM, set_rateuint256() -> 0x000000
+        [5][CALL] from=0x151aa6, to=Vault, approveaddress() -> 0x000000
+          [6][DELEGATECALL] from=Vault, to=Vault, approveaddress() -> 0x000000
+        [5][CALL] from=0x151aa6, to=ResupplyPair, 0x60c52d05() -> None
+          [6][STATICCALL] from=ResupplyPair, to=InterestRateCalculator, 0x56fb8f2d() -> 0x000000
+            [7][STATICCALL] from=InterestRateCalculator, to=Vault, convertToSharesuint256() -> 0x000000
+              [8][DELEGATECALL] from=Vault, to=Vault, convertToSharesuint256() -> 0x000000
+                [9][STATICCALL] from=Vault, to=crvUSD Controller, 0xd0c581bf() -> 0x000000
+                [9][STATICCALL] from=Vault, to=crvUSD Stablecoin, balanceOfaddress() -> 0x000000
+                [9][STATICCALL] from=Vault, to=crvUSD Controller, 0x31dc3ca8() -> 0x000000
+                  [10][STATICCALL] from=crvUSD Controller, to=LLAMMA - crvUSD AMM, 0x095a0fc6() -> 0x000000
+            [7][STATICCALL] from=InterestRateCalculator, to=Vault, convertToAssetsuint256() -> 0x000000
+              [8][DELEGATECALL] from=Vault, to=Vault, convertToAssetsuint256() -> 0x000000
+                [9][STATICCALL] from=Vault, to=crvUSD Controller, 0xd0c581bf() -> 0x000000
+                [9][STATICCALL] from=Vault, to=crvUSD Stablecoin, balanceOfaddress() -> 0x000000
+                [9][STATICCALL] from=Vault, to=crvUSD Controller, 0x31dc3ca8() -> 0x000000
+                  [10][STATICCALL] from=crvUSD Controller, to=LLAMMA - crvUSD AMM, 0x095a0fc6() -> 0x000000
+            [7][STATICCALL] from=InterestRateCalculator, to=TransparentUpgradeableProxy, 0x5ebae566() -> 0x000000
+              [8][DELEGATECALL] from=TransparentUpgradeableProxy, to=StakedFrxUSD, 0x5ebae566() -> 0x000000
+            [7][STATICCALL] from=InterestRateCalculator, to=TransparentUpgradeableProxy, 0x61c1c5e9() -> 0x000000
+              [8][DELEGATECALL] from=TransparentUpgradeableProxy, to=StakedFrxUSD, 0x61c1c5e9() -> 0x000000
+            [7][STATICCALL] from=InterestRateCalculator, to=TransparentUpgradeableProxy, 0x2af98d6d() -> 0x000000
+              [8][DELEGATECALL] from=TransparentUpgradeableProxy, to=StakedFrxUSD, 0x2af98d6d() -> 0x000000
+          [6][CALL] from=ResupplyPair, to=Vault, transferFromaddress() -> 0x000000
+            [7][DELEGATECALL] from=Vault, to=Vault, transferFromaddress() -> 0x000000
+          [6][CALL] from=ResupplyPair, to=Booster, deposituint256() -> 0x000000
+            [7][CALL] from=Booster, to=Vault, transferFromaddress() -> 0x000000
+              [8][DELEGATECALL] from=Vault, to=Vault, transferFromaddress() -> 0x000000
+            [7][CALL] from=Booster, to=CurveVoterProxy, depositaddress() -> 0x000000
+              [8][STATICCALL] from=CurveVoterProxy, to=Vault, balanceOfaddress() -> 0x000000
+                [9][DELEGATECALL] from=Vault, to=Vault, balanceOfaddress() -> 0x000000
+              [8][CALL] from=CurveVoterProxy, to=Vault, approveaddress() -> 0x000000
+                [9][DELEGATECALL] from=Vault, to=Vault, approveaddress() -> 0x000000
+              [8][STATICCALL] from=CurveVoterProxy, to=Vault, allowanceaddress() -> 0x000000
+                [9][DELEGATECALL] from=Vault, to=Vault, allowanceaddress() -> 0x000000
+              [8][CALL] from=CurveVoterProxy, to=Vault, approveaddress() -> 0x000000
+                [9][DELEGATECALL] from=Vault, to=Vault, approveaddress() -> 0x000000
+              [8][CALL] from=CurveVoterProxy, to=LiquidityGaugeV6, deposituint256() -> None
+                [9][CALL] from=LiquidityGaugeV6, to=Vyper_contract, future_epoch_time_write() -> 0x000000
+                [9][STATICCALL] from=LiquidityGaugeV6, to=Vyper_contract, rate() -> 0x000000
+                [9][CALL] from=LiquidityGaugeV6, to=Vyper_contract, checkpoint_gaugeaddress() -> None
+                [9][STATICCALL] from=LiquidityGaugeV6, to=Vyper_contract, gauge_relative_weightaddress() -> 0x000000
+                [9][STATICCALL] from=LiquidityGaugeV6, to=Vyper_contract, gauge_relative_weightaddress() -> 0x000000
+                [9][STATICCALL] from=LiquidityGaugeV6, to=Vyper_contract, gauge_relative_weightaddress() -> 0x000000
+                [9][STATICCALL] from=LiquidityGaugeV6, to=Vyper_contract, gauge_relative_weightaddress() -> 0x000000
+                [9][STATICCALL] from=LiquidityGaugeV6, to=Vyper_contract, gauge_relative_weightaddress() -> 0x000000
+                [9][STATICCALL] from=LiquidityGaugeV6, to=Vyper_contract, gauge_relative_weightaddress() -> 0x000000
+                [9][STATICCALL] from=LiquidityGaugeV6, to=Vyper_contract, gauge_relative_weightaddress() -> 0x000000
+                [9][STATICCALL] from=LiquidityGaugeV6, to=Vyper_contract, adjusted_balance_ofaddress() -> 0x000000
+                  [10][STATICCALL] from=Vyper_contract, to=Boost Delegation V3, adjusted_balance_ofaddress() -> 0x000000
+                    [11][STATICCALL] from=Boost Delegation V3, to=Vyper_contract, balanceOfaddress() -> 0x000000
+                [9][STATICCALL] from=LiquidityGaugeV6, to=Vyper_contract, totalSupply() -> 0x000000
+                [9][CALL] from=LiquidityGaugeV6, to=Vault, transferFromaddress() -> 0x000000
+                  [10][DELEGATECALL] from=Vault, to=Vault, transferFromaddress() -> 0x000000
+            [7][CALL] from=Booster, to=ExtraRewardStashV3, stashRewards() -> 0x000000
+              [8][DELEGATECALL] from=ExtraRewardStashV3, to=ExtraRewardStashV3, stashRewards() -> 0x000000
+            [7][CALL] from=Booster, to=DepositToken, mintaddress() -> None
+            [7][CALL] from=Booster, to=DepositToken, approveaddress() -> 0x000000
+            [7][STATICCALL] from=Booster, to=DepositToken, allowanceaddress() -> 0x000000
+            [7][CALL] from=Booster, to=DepositToken, approveaddress() -> 0x000000
+            [7][CALL] from=Booster, to=BaseRewardPool, stakeForaddress() -> 0x000000
+              [8][CALL] from=BaseRewardPool, to=VirtualBalanceRewardPool, stakeaddress() -> None
+                [9][STATICCALL] from=VirtualBalanceRewardPool, to=BaseRewardPool, totalSupply() -> 0x000000
+                [9][STATICCALL] from=VirtualBalanceRewardPool, to=BaseRewardPool, totalSupply() -> 0x000000
+                [9][STATICCALL] from=VirtualBalanceRewardPool, to=BaseRewardPool, balanceOfaddress() -> 0x000000
+              [8][CALL] from=BaseRewardPool, to=DepositToken, transferFromaddress() -> 0x000000
+        [5][STATICCALL] from=0x151aa6, to=ResupplyPair, mintFee() -> 0x000000
+        [5][STATICCALL] from=0x151aa6, to=ResupplyPair, 0x93ae0df9() -> 0x000000
+        [5][CALL] from=0x151aa6, to=ResupplyPair, 0xd6bda0c0() -> 0x000000
+          [6][CALL] from=ResupplyPair, to=ResupplyRegistry, claimRewardsaddress() -> None
+            [7][CALL] from=ResupplyRegistry, to=RewardHandler, claimRewardsaddress() -> None
+              [8][STATICCALL] from=RewardHandler, to=ResupplyPair, convexPid() -> 0x000000
+              [8][STATICCALL] from=RewardHandler, to=ResupplyPair, convexBooster() -> 0x000000
+              [8][STATICCALL] from=RewardHandler, to=Booster, poolInfouint256() -> 0x000000
+              [8][CALL] from=RewardHandler, to=BaseRewardPool, getRewardaddress() -> 0x000000
+                [9][CALL] from=BaseRewardPool, to=VirtualBalanceRewardPool, getRewardaddress() -> None
+                  [10][STATICCALL] from=VirtualBalanceRewardPool, to=BaseRewardPool, totalSupply() -> 0x000000
+                  [10][STATICCALL] from=VirtualBalanceRewardPool, to=BaseRewardPool, totalSupply() -> 0x000000
+                  [10][STATICCALL] from=VirtualBalanceRewardPool, to=BaseRewardPool, totalSupply() -> 0x000000
+                  [10][STATICCALL] from=VirtualBalanceRewardPool, to=BaseRewardPool, totalSupply() -> 0x000000
+                  [10][STATICCALL] from=VirtualBalanceRewardPool, to=BaseRewardPool, balanceOfaddress() -> 0x000000
+                  [10][STATICCALL] from=VirtualBalanceRewardPool, to=BaseRewardPool, totalSupply() -> 0x000000
+                  [10][STATICCALL] from=VirtualBalanceRewardPool, to=BaseRewardPool, totalSupply() -> 0x000000
+                  [10][STATICCALL] from=VirtualBalanceRewardPool, to=BaseRewardPool, balanceOfaddress() -> 0x000000
+              [8][CALL] from=RewardHandler, to=SimpleRewardStreamer, getRewardaddress() -> None
+          [6][STATICCALL] from=ResupplyPair, to=WriteOffToken, balanceOfaddress() -> 0x000000
+          [6][STATICCALL] from=ResupplyPair, to=GovToken, balanceOfaddress() -> 0x000000
+          [6][STATICCALL] from=ResupplyPair, to=Vyper_contract, balanceOfaddress() -> 0x000000
+          [6][STATICCALL] from=ResupplyPair, to=ConvexToken, balanceOfaddress() -> 0x000000
+          [6][STATICCALL] from=ResupplyPair, to=BasicVaultOracle, getPricesaddress() -> 0x000000
+            [7][STATICCALL] from=BasicVaultOracle, to=Vault, convertToAssetsuint256() -> 0x000000
+              [8][DELEGATECALL] from=Vault, to=Vault, convertToAssetsuint256() -> 0x000000
+                [9][STATICCALL] from=Vault, to=crvUSD Controller, 0xd0c581bf() -> 0x000000
+                [9][STATICCALL] from=Vault, to=crvUSD Stablecoin, balanceOfaddress() -> 0x000000
+                [9][STATICCALL] from=Vault, to=crvUSD Controller, 0x31dc3ca8() -> 0x000000
+                  [10][STATICCALL] from=crvUSD Controller, to=LLAMMA - crvUSD AMM, 0x095a0fc6() -> 0x000000
+          [6][CALL] from=ResupplyPair, to=ResupplyRegistry, mintaddress() -> None
+            [7][STATICCALL] from=ResupplyRegistry, to=ResupplyPair, name() -> 0x000000
+            [7][CALL] from=ResupplyRegistry, to=Stablecoin, mintaddress() -> None
+        [5][STATICCALL] from=0x151aa6, to=Stablecoin, balanceOfaddress() -> 0x000000
+        [5][CALL] from=0x151aa6, to=Stablecoin, approveaddress() -> 0x000000
+        [5][CALL] from=0x151aa6, to=CurveStableSwapNG, exchangeint128() -> 0x000000
+          [6][STATICCALL] from=CurveStableSwapNG, to=Yearn V3 Vault, convertToAssetsuint256() -> 0x000000
+            [7][DELEGATECALL] from=Yearn V3 Vault, to=Yearn V3 Vault, convertToAssetsuint256() -> 0x000000
+          [6][STATICCALL] from=CurveStableSwapNG, to=0x000000, fallback() -> 0x000000
+          [6][STATICCALL] from=CurveStableSwapNG, to=0x000000, fallback() -> 0x000000
+          [6][STATICCALL] from=CurveStableSwapNG, to=0x000000, fallback() -> 0x000000
+          [6][STATICCALL] from=CurveStableSwapNG, to=0x000000, fallback() -> 0x000000
+          [6][STATICCALL] from=CurveStableSwapNG, to=0x000000, fallback() -> 0x000000
+          [6][STATICCALL] from=CurveStableSwapNG, to=0x000000, fallback() -> 0x000000
+          [6][STATICCALL] from=CurveStableSwapNG, to=0x000000, fallback() -> 0x000000
+          [6][STATICCALL] from=CurveStableSwapNG, to=0x000000, fallback() -> 0x000000
+          [6][STATICCALL] from=CurveStableSwapNG, to=Stablecoin, balanceOfaddress() -> 0x000000
+          [6][CALL] from=CurveStableSwapNG, to=Stablecoin, transferFromaddress() -> 0x000000
+          [6][STATICCALL] from=CurveStableSwapNG, to=Stablecoin, balanceOfaddress() -> 0x000000
+          [6][STATICCALL] from=CurveStableSwapNG, to=0x000000, fallback() -> 0x000000
+          [6][STATICCALL] from=CurveStableSwapNG, to=0x000000, fallback() -> 0x000000
+          [6][STATICCALL] from=CurveStableSwapNG, to=0x000000, fallback() -> 0x000000
+          [6][STATICCALL] from=CurveStableSwapNG, to=0x000000, fallback() -> 0x000000
+          [6][STATICCALL] from=CurveStableSwapNG, to=0x000000, fallback() -> 0x000000
+          [6][STATICCALL] from=CurveStableSwapNG, to=0x000000, fallback() -> 0x000000
+          [6][STATICCALL] from=CurveStableSwapNG, to=0x000000, fallback() -> 0x000000
+          [6][STATICCALL] from=CurveStableSwapNG, to=0x000000, fallback() -> 0x000000
+          [6][STATICCALL] from=CurveStableSwapNG, to=0x000000, fallback() -> 0x000000
+          [6][STATICCALL] from=CurveStableSwapNG, to=0x000000, fallback() -> 0x000000
+          [6][STATICCALL] from=CurveStableSwapNG, to=0x000000, fallback() -> 0x000000
+          [6][STATICCALL] from=CurveStableSwapNG, to=0x000000, fallback() -> 0x000000
+          [6][STATICCALL] from=CurveStableSwapNG, to=0x000000, fallback() -> 0x000000
+          [6][CALL] from=CurveStableSwapNG, to=Yearn V3 Vault, transferaddress() -> 0x000000
+            [7][DELEGATECALL] from=Yearn V3 Vault, to=Yearn V3 Vault, transferaddress() -> 0x000000
+        [5][STATICCALL] from=0x151aa6, to=Yearn V3 Vault, balanceOfaddress() -> 0x000000
+          [6][DELEGATECALL] from=Yearn V3 Vault, to=Yearn V3 Vault, balanceOfaddress() -> 0x000000
+        [5][CALL] from=0x151aa6, to=Yearn V3 Vault, redeemuint256() -> 0x000000
+          [6][DELEGATECALL] from=Yearn V3 Vault, to=Yearn V3 Vault, redeemuint256() -> 0x000000
+            [7][STATICCALL][0] from=Yearn V3 Vault, to=0x000000
+            [7][CALL] from=Yearn V3 Vault, to=crvUSD Stablecoin, transferaddress() -> 0x000000
+        [5][STATICCALL] from=0x151aa6, to=crvUSD Stablecoin, balanceOfaddress() -> 0x000000
+        [5][CALL] from=0x151aa6, to=crvUSD Stablecoin, approveaddress() -> 0x000000
+        [5][CALL] from=0x151aa6, to=Vyper_contract, exchangeint128() -> 0x000000
+          [6][DELEGATECALL] from=Vyper_contract, to=Vyper_contract, exchangeint128() -> 0x000000
+            [7][CALL] from=Vyper_contract, to=crvUSD Stablecoin, transferFromaddress() -> 0x000000
+            [7][CALL] from=Vyper_contract, to=FiatTokenProxy, transferaddress() -> 0x000000
+              [8][DELEGATECALL] from=FiatTokenProxy, to=FiatTokenV2_2, transferaddress() -> 0x000000
+        [5][STATICCALL] from=0x151aa6, to=FiatTokenProxy, balanceOfaddress() -> 0x000000
+          [6][DELEGATECALL] from=FiatTokenProxy, to=FiatTokenV2_2, balanceOfaddress() -> 0x000000
+        [5][CALL] from=0x151aa6, to=0x88e6A0, swapaddress() -> 0x000000
+          [6][CALL] from=0x88e6A0, to=WETH9, transferaddress() -> 0x000000
+          [6][STATICCALL] from=0x88e6A0, to=FiatTokenProxy, balanceOfaddress() -> 0x000000
+            [7][DELEGATECALL] from=FiatTokenProxy, to=FiatTokenV2_2, balanceOfaddress() -> 0x000000
+          [6][CALL] from=0x88e6A0, to=0x151aa6, uniswapV3SwapCallbackint256() -> None
+            [7][STATICCALL] from=0x151aa6, to=0x88e6A0, token0() -> 0x000000
+            [7][CALL] from=0x151aa6, to=FiatTokenProxy, transferaddress() -> 0x000000
+              [8][DELEGATECALL] from=FiatTokenProxy, to=FiatTokenV2_2, transferaddress() -> 0x000000
+          [6][STATICCALL] from=0x88e6A0, to=FiatTokenProxy, balanceOfaddress() -> 0x000000
+            [7][DELEGATECALL] from=FiatTokenProxy, to=FiatTokenV2_2, balanceOfaddress() -> 0x000000
+      [4][CALL] from=Morpho, to=FiatTokenProxy, transferFromaddress() -> 0x000000
+        [5][DELEGATECALL] from=FiatTokenProxy, to=FiatTokenV2_2, transferFromaddress() -> 0x000000
+    [3][STATICCALL] from=0x151aa6, to=Stablecoin, balanceOfaddress() -> 0x000000
+    [3][STATICCALL] from=0x151aa6, to=Yearn V3 Vault, balanceOfaddress() -> 0x000000
+      [4][DELEGATECALL] from=Yearn V3 Vault, to=Yearn V3 Vault, balanceOfaddress() -> 0x000000
+    [3][STATICCALL] from=0x151aa6, to=crvUSD Stablecoin, balanceOfaddress() -> 0x000000
+    [3][STATICCALL] from=0x151aa6, to=FiatTokenProxy, balanceOfaddress() -> 0x000000
+      [4][DELEGATECALL] from=FiatTokenProxy, to=FiatTokenV2_2, balanceOfaddress() -> 0x000000
+    [3][CALL] from=0x151aa6, to=FiatTokenProxy, transferaddress() -> 0x000000
+      [4][DELEGATECALL] from=FiatTokenProxy, to=FiatTokenV2_2, transferaddress() -> 0x000000
+    [3][STATICCALL] from=0x151aa6, to=WETH9, balanceOfaddress() -> 0x000000
+    [3][CALL] from=0x151aa6, to=WETH9, withdrawuint256() -> None
+      [4][CALL][2421.550032848029] from=WETH9, to=0x151aa6
+    [3][CALL][10.0] from=0x151aa6, to=0xdadb0d
+    [3][CALL][1607.7000218986857] from=0x151aa6, to=0x886f78
+    [3][CALL][803.8500109493428] from=0x151aa6, to=0x6d9f6e

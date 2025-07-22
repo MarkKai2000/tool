@@ -1,0 +1,330 @@
+[1][CALL] from=0xb2698c, to=0x036cec, 0x6d21d1e8() -> None
+  [2][CALL] from=0x036cec, to=AppProxyUpgradeable, decimals() -> 18
+    [3][CALL] from=AppProxyUpgradeable, to=KernelProxy, getApp(_namespace(bytes32): b'\xf1\xf3\xeb@\xf5\xbc\x1a\xd14G\x16\xce\..., _appId(bytes32): b'<\xa7\xc3\xe3\x89h\x82<\xcbLx\xeah\x8d\x...) -> 0x47ebab
+      [4][DELEGATECALL] from=KernelProxy, to=Kernel, getApp(_namespace(bytes32): b'\xf1\xf3\xeb@\xf5\xbc\x1a\xd14G\x16\xce\..., _appId(bytes32): b'<\xa7\xc3\xe3\x89h\x82<\xcbLx\xeah\x8d\x...) -> 0x47ebab
+    [3][DELEGATECALL] from=AppProxyUpgradeable, to=Lido, decimals() -> 18
+  [2][CALL] from=0x036cec, to=AppProxyUpgradeable, decimals() -> 18
+    [3][CALL] from=AppProxyUpgradeable, to=KernelProxy, getApp(_namespace(bytes32): b'\xf1\xf3\xeb@\xf5\xbc\x1a\xd14G\x16\xce\..., _appId(bytes32): b'<\xa7\xc3\xe3\x89h\x82<\xcbLx\xeah\x8d\x...) -> 0x47ebab
+      [4][DELEGATECALL] from=KernelProxy, to=Kernel, getApp(_namespace(bytes32): b'\xf1\xf3\xeb@\xf5\xbc\x1a\xd14G\x16\xce\..., _appId(bytes32): b'<\xa7\xc3\xe3\x89h\x82<\xcbLx\xeah\x8d\x...) -> 0x47ebab
+    [3][DELEGATECALL] from=AppProxyUpgradeable, to=Lido, decimals() -> 18
+  [2][STATICCALL] from=0x036cec, to=AppProxyUpgradeable, balanceOf(_account(address): 0x271828) -> 3897504357548022052970
+    [3][CALL] from=AppProxyUpgradeable, to=KernelProxy, getApp(_namespace(bytes32): b'\xf1\xf3\xeb@\xf5\xbc\x1a\xd14G\x16\xce\..., _appId(bytes32): b'<\xa7\xc3\xe3\x89h\x82<\xcbLx\xeah\x8d\x...) -> 0x47ebab
+      [4][DELEGATECALL] from=KernelProxy, to=Kernel, getApp(_namespace(bytes32): b'\xf1\xf3\xeb@\xf5\xbc\x1a\xd14G\x16\xce\..., _appId(bytes32): b'<\xa7\xc3\xe3\x89h\x82<\xcbLx\xeah\x8d\x...) -> 0x47ebab
+    [3][DELEGATECALL] from=AppProxyUpgradeable, to=Lido, balanceOf(_account(address): 0x271828) -> 3897504357548022052970
+  [2][CALL] from=0x036cec, to=InitializableImmutableAdminUpgradeabilityProxy, flashLoan(receiverAddress(address): 0x036cec, assets(address[]): ['0xae7ab96520DE3A18E5e111B5EaAb095312D7fE..., amounts(uint256[]): [20895000000000000000000], modes(uint256[]): [0], onBehalfOf(address): 0x036cec, params(bytes): b'\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00..., referralCode(uint16): 0) -> None
+    [3][DELEGATECALL] from=InitializableImmutableAdminUpgradeabilityProxy, to=LendingPool, flashLoan(receiverAddress(address): 0x036cec, assets(address[]): ['0xae7ab96520DE3A18E5e111B5EaAb095312D7fE..., amounts(uint256[]): [20895000000000000000000], modes(uint256[]): [0], onBehalfOf(address): 0x036cec, params(bytes): b'\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00..., referralCode(uint16): 0) -> None
+      [4][CALL] from=InitializableImmutableAdminUpgradeabilityProxy, to=InitializableImmutableAdminUpgradeabilityProxy, transferUnderlyingTo(target(address): 0x036cec, amount(uint256): 20895000000000000000000) -> 20895000000000000000000
+        [5][DELEGATECALL] from=InitializableImmutableAdminUpgradeabilityProxy, to=AStETH, transferUnderlyingTo(target(address): 0x036cec, amount(uint256): 20895000000000000000000) -> 20895000000000000000000
+          [6][CALL] from=InitializableImmutableAdminUpgradeabilityProxy, to=AppProxyUpgradeable, transfer(_recipient(address): 0x036cec, _amount(uint256): 20895000000000000000000) -> True
+            [7][CALL] from=AppProxyUpgradeable, to=KernelProxy, getApp(_namespace(bytes32): b'\xf1\xf3\xeb@\xf5\xbc\x1a\xd14G\x16\xce\..., _appId(bytes32): b'<\xa7\xc3\xe3\x89h\x82<\xcbLx\xeah\x8d\x...) -> 0x47ebab
+              [8][DELEGATECALL] from=KernelProxy, to=Kernel, getApp(_namespace(bytes32): b'\xf1\xf3\xeb@\xf5\xbc\x1a\xd14G\x16\xce\..., _appId(bytes32): b'<\xa7\xc3\xe3\x89h\x82<\xcbLx\xeah\x8d\x...) -> 0x47ebab
+            [7][DELEGATECALL] from=AppProxyUpgradeable, to=Lido, transfer(_recipient(address): 0x036cec, _amount(uint256): 20895000000000000000000) -> True
+      [4][CALL] from=InitializableImmutableAdminUpgradeabilityProxy, to=0x036cec, executeOperationaddress[]() -> 0x000000
+        [5][CALL] from=0x036cec, to=AppProxyUpgradeable, approve(_spender(address): 0x7d2768, _amount(uint256): 115792089237316195423570985008687907853269...) -> True
+          [6][CALL] from=AppProxyUpgradeable, to=KernelProxy, getApp(_namespace(bytes32): b'\xf1\xf3\xeb@\xf5\xbc\x1a\xd14G\x16\xce\..., _appId(bytes32): b'<\xa7\xc3\xe3\x89h\x82<\xcbLx\xeah\x8d\x...) -> 0x47ebab
+            [7][DELEGATECALL] from=KernelProxy, to=Kernel, getApp(_namespace(bytes32): b'\xf1\xf3\xeb@\xf5\xbc\x1a\xd14G\x16\xce\..., _appId(bytes32): b'<\xa7\xc3\xe3\x89h\x82<\xcbLx\xeah\x8d\x...) -> 0x47ebab
+          [6][DELEGATECALL] from=AppProxyUpgradeable, to=Lido, approve(_spender(address): 0x7d2768, _amount(uint256): 115792089237316195423570985008687907853269...) -> True
+        [5][CREATE] from=0x036cec, to=0xa4c0af, atInversebrahint248() -> 0x608060
+          [6][CREATE] from=0xa4c0af, to=0x12df82, atInversebrahint248() -> 0x608060
+        [5][CALL] from=0x036cec, to=AppProxyUpgradeable, transfer(_recipient(address): 0xa4C0AF, _amount(uint256): 20895000000000000000000) -> True
+          [6][CALL] from=AppProxyUpgradeable, to=KernelProxy, getApp(_namespace(bytes32): b'\xf1\xf3\xeb@\xf5\xbc\x1a\xd14G\x16\xce\..., _appId(bytes32): b'<\xa7\xc3\xe3\x89h\x82<\xcbLx\xeah\x8d\x...) -> 0x47ebab
+            [7][DELEGATECALL] from=KernelProxy, to=Kernel, getApp(_namespace(bytes32): b'\xf1\xf3\xeb@\xf5\xbc\x1a\xd14G\x16\xce\..., _appId(bytes32): b'<\xa7\xc3\xe3\x89h\x82<\xcbLx\xeah\x8d\x...) -> 0x47ebab
+          [6][DELEGATECALL] from=AppProxyUpgradeable, to=Lido, transfer(_recipient(address): 0xa4C0AF, _amount(uint256): 20895000000000000000000) -> True
+        [5][CALL] from=0x036cec, to=0xa4c0af, 0x9f443549() -> 0x000000
+          [6][CALL] from=0xa4c0af, to=AppProxyUpgradeable, decimals() -> 18
+            [7][CALL] from=AppProxyUpgradeable, to=KernelProxy, getApp(_namespace(bytes32): b'\xf1\xf3\xeb@\xf5\xbc\x1a\xd14G\x16\xce\..., _appId(bytes32): b'<\xa7\xc3\xe3\x89h\x82<\xcbLx\xeah\x8d\x...) -> 0x47ebab
+              [8][DELEGATECALL] from=KernelProxy, to=Kernel, getApp(_namespace(bytes32): b'\xf1\xf3\xeb@\xf5\xbc\x1a\xd14G\x16\xce\..., _appId(bytes32): b'<\xa7\xc3\xe3\x89h\x82<\xcbLx\xeah\x8d\x...) -> 0x47ebab
+            [7][DELEGATECALL] from=AppProxyUpgradeable, to=Lido, decimals() -> 18
+          [6][STATICCALL] from=0xa4c0af, to=AppProxyUpgradeable, balanceOf(_account(address): 0xa4C0AF) -> 20894999999999999999999
+            [7][CALL] from=AppProxyUpgradeable, to=KernelProxy, getApp(_namespace(bytes32): b'\xf1\xf3\xeb@\xf5\xbc\x1a\xd14G\x16\xce\..., _appId(bytes32): b'<\xa7\xc3\xe3\x89h\x82<\xcbLx\xeah\x8d\x...) -> 0x47ebab
+              [8][DELEGATECALL] from=KernelProxy, to=Kernel, getApp(_namespace(bytes32): b'\xf1\xf3\xeb@\xf5\xbc\x1a\xd14G\x16\xce\..., _appId(bytes32): b'<\xa7\xc3\xe3\x89h\x82<\xcbLx\xeah\x8d\x...) -> 0x47ebab
+            [7][DELEGATECALL] from=AppProxyUpgradeable, to=Lido, balanceOf(_account(address): 0xa4C0AF) -> 20894999999999999999999
+          [6][CALL] from=0xa4c0af, to=AppProxyUpgradeable, decimals() -> 18
+            [7][CALL] from=AppProxyUpgradeable, to=KernelProxy, getApp(_namespace(bytes32): b'\xf1\xf3\xeb@\xf5\xbc\x1a\xd14G\x16\xce\..., _appId(bytes32): b'<\xa7\xc3\xe3\x89h\x82<\xcbLx\xeah\x8d\x...) -> 0x47ebab
+              [8][DELEGATECALL] from=KernelProxy, to=Kernel, getApp(_namespace(bytes32): b'\xf1\xf3\xeb@\xf5\xbc\x1a\xd14G\x16\xce\..., _appId(bytes32): b'<\xa7\xc3\xe3\x89h\x82<\xcbLx\xeah\x8d\x...) -> 0x47ebab
+            [7][DELEGATECALL] from=AppProxyUpgradeable, to=Lido, decimals() -> 18
+          [6][CALL] from=0xa4c0af, to=AppProxyUpgradeable, approve(_spender(address): 0x271828, _amount(uint256): 115792089237316195423570985008687907853269...) -> True
+            [7][CALL] from=AppProxyUpgradeable, to=KernelProxy, getApp(_namespace(bytes32): b'\xf1\xf3\xeb@\xf5\xbc\x1a\xd14G\x16\xce\..., _appId(bytes32): b'<\xa7\xc3\xe3\x89h\x82<\xcbLx\xeah\x8d\x...) -> 0x47ebab
+              [8][DELEGATECALL] from=KernelProxy, to=Kernel, getApp(_namespace(bytes32): b'\xf1\xf3\xeb@\xf5\xbc\x1a\xd14G\x16\xce\..., _appId(bytes32): b'<\xa7\xc3\xe3\x89h\x82<\xcbLx\xeah\x8d\x...) -> 0x47ebab
+            [7][DELEGATECALL] from=AppProxyUpgradeable, to=Lido, approve(_spender(address): 0x271828, _amount(uint256): 115792089237316195423570985008687907853269...) -> True
+          [6][CALL] from=0xa4c0af, to=AppProxyUpgradeable, decimals() -> 18
+            [7][CALL] from=AppProxyUpgradeable, to=KernelProxy, getApp(_namespace(bytes32): b'\xf1\xf3\xeb@\xf5\xbc\x1a\xd14G\x16\xce\..., _appId(bytes32): b'<\xa7\xc3\xe3\x89h\x82<\xcbLx\xeah\x8d\x...) -> 0x47ebab
+              [8][DELEGATECALL] from=KernelProxy, to=Kernel, getApp(_namespace(bytes32): b'\xf1\xf3\xeb@\xf5\xbc\x1a\xd14G\x16\xce\..., _appId(bytes32): b'<\xa7\xc3\xe3\x89h\x82<\xcbLx\xeah\x8d\x...) -> 0x47ebab
+            [7][DELEGATECALL] from=AppProxyUpgradeable, to=Lido, decimals() -> 18
+          [6][CALL] from=0xa4c0af, to=0x570a7e, deposituint256() -> None
+            [7][CALL] from=0x570a7e, to=Euler, dispatch() -> None
+              [8][DELEGATECALL] from=Euler, to=EToken, deposit(subAccountId(uint256): 0, amount(uint256): 13930000000000000000000) -> None
+                [9][STATICCALL] from=Euler, to=AppProxyUpgradeable, balanceOf(_account(address): 0x271828) -> 3897504357548022052970
+                  [10][CALL] from=AppProxyUpgradeable, to=KernelProxy, getApp(_namespace(bytes32): b'\xf1\xf3\xeb@\xf5\xbc\x1a\xd14G\x16\xce\..., _appId(bytes32): b'<\xa7\xc3\xe3\x89h\x82<\xcbLx\xeah\x8d\x...) -> 0x47ebab
+                    [11][DELEGATECALL] from=KernelProxy, to=Kernel, getApp(_namespace(bytes32): b'\xf1\xf3\xeb@\xf5\xbc\x1a\xd14G\x16\xce\..., _appId(bytes32): b'<\xa7\xc3\xe3\x89h\x82<\xcbLx\xeah\x8d\x...) -> 0x47ebab
+                  [10][DELEGATECALL] from=AppProxyUpgradeable, to=Lido, balanceOf(_account(address): 0x271828) -> 3897504357548022052970
+                [9][CALL] from=Euler, to=AppProxyUpgradeable, transferFrom(_sender(address): 0xa4C0AF, _recipient(address): 0x271828, _amount(uint256): 13930000000000000000000) -> True
+                  [10][CALL] from=AppProxyUpgradeable, to=KernelProxy, getApp(_namespace(bytes32): b'\xf1\xf3\xeb@\xf5\xbc\x1a\xd14G\x16\xce\..., _appId(bytes32): b'<\xa7\xc3\xe3\x89h\x82<\xcbLx\xeah\x8d\x...) -> 0x47ebab
+                    [11][DELEGATECALL] from=KernelProxy, to=Kernel, getApp(_namespace(bytes32): b'\xf1\xf3\xeb@\xf5\xbc\x1a\xd14G\x16\xce\..., _appId(bytes32): b'<\xa7\xc3\xe3\x89h\x82<\xcbLx\xeah\x8d\x...) -> 0x47ebab
+                  [10][DELEGATECALL] from=AppProxyUpgradeable, to=Lido, transferFrom(_sender(address): 0xa4C0AF, _recipient(address): 0x271828, _amount(uint256): 13930000000000000000000) -> True
+                [9][STATICCALL] from=Euler, to=AppProxyUpgradeable, balanceOf(_account(address): 0x271828) -> 17827504357548022052969
+                  [10][CALL] from=AppProxyUpgradeable, to=KernelProxy, getApp(_namespace(bytes32): b'\xf1\xf3\xeb@\xf5\xbc\x1a\xd14G\x16\xce\..., _appId(bytes32): b'<\xa7\xc3\xe3\x89h\x82<\xcbLx\xeah\x8d\x...) -> 0x47ebab
+                    [11][DELEGATECALL] from=KernelProxy, to=Kernel, getApp(_namespace(bytes32): b'\xf1\xf3\xeb@\xf5\xbc\x1a\xd14G\x16\xce\..., _appId(bytes32): b'<\xa7\xc3\xe3\x89h\x82<\xcbLx\xeah\x8d\x...) -> 0x47ebab
+                  [10][DELEGATECALL] from=AppProxyUpgradeable, to=Lido, balanceOf(_account(address): 0x271828) -> 17827504357548022052969
+                [9][DELEGATECALL] from=Euler, to=IRMClassLido, computeInterestRate(underlying(address): 0xae7ab9, utilisation(uint32): 67530177) -> 3191866046859889338
+                  [10][STATICCALL] from=Euler, to=AppProxyUpgradeable, getLastCompletedReportDelta() -> ['5780748359971668967571572', '5779004154311957293112950', '86400']
+                    [11][CALL] from=AppProxyUpgradeable, to=KernelProxy, getApp(_namespace(bytes32): b'\xf1\xf3\xeb@\xf5\xbc\x1a\xd14G\x16\xce\..., _appId(bytes32): b'\x8bG\xba*\x84T\xecy\x9c\xd9\x16F\xe7\xe...) -> 0x143019
+                      [12][DELEGATECALL] from=KernelProxy, to=Kernel, getApp(_namespace(bytes32): b'\xf1\xf3\xeb@\xf5\xbc\x1a\xd14G\x16\xce\..., _appId(bytes32): b'\x8bG\xba*\x84T\xecy\x9c\xd9\x16F\xe7\xe...) -> 0x143019
+                    [11][DELEGATECALL] from=AppProxyUpgradeable, to=LidoOracle, getLastCompletedReportDelta() -> ['5780748359971668967571572', '5779004154311957293112950', '86400']
+                  [10][STATICCALL] from=Euler, to=AppProxyUpgradeable, getFee() -> 1000
+                    [11][CALL] from=AppProxyUpgradeable, to=KernelProxy, getApp(_namespace(bytes32): b'\xf1\xf3\xeb@\xf5\xbc\x1a\xd14G\x16\xce\..., _appId(bytes32): b'<\xa7\xc3\xe3\x89h\x82<\xcbLx\xeah\x8d\x...) -> 0x47ebab
+                      [12][DELEGATECALL] from=KernelProxy, to=Kernel, getApp(_namespace(bytes32): b'\xf1\xf3\xeb@\xf5\xbc\x1a\xd14G\x16\xce\..., _appId(bytes32): b'<\xa7\xc3\xe3\x89h\x82<\xcbLx\xeah\x8d\x...) -> 0x47ebab
+                    [11][DELEGATECALL] from=AppProxyUpgradeable, to=Lido, getFee() -> 1000
+                [9][CALL] from=Euler, to=0x570a7e, 0x03ddf252() -> None
+          [6][CALL] from=0xa4c0af, to=AppProxyUpgradeable, decimals() -> 18
+            [7][CALL] from=AppProxyUpgradeable, to=KernelProxy, getApp(_namespace(bytes32): b'\xf1\xf3\xeb@\xf5\xbc\x1a\xd14G\x16\xce\..., _appId(bytes32): b'<\xa7\xc3\xe3\x89h\x82<\xcbLx\xeah\x8d\x...) -> 0x47ebab
+              [8][DELEGATECALL] from=KernelProxy, to=Kernel, getApp(_namespace(bytes32): b'\xf1\xf3\xeb@\xf5\xbc\x1a\xd14G\x16\xce\..., _appId(bytes32): b'<\xa7\xc3\xe3\x89h\x82<\xcbLx\xeah\x8d\x...) -> 0x47ebab
+            [7][DELEGATECALL] from=AppProxyUpgradeable, to=Lido, decimals() -> 18
+          [6][CALL] from=0xa4c0af, to=0x570a7e, mintuint256() -> None
+            [7][CALL] from=0x570a7e, to=Euler, dispatch() -> None
+              [8][DELEGATECALL] from=Euler, to=EToken, mint(subAccountId(uint256): 0, amount(uint256): 139300000000000000000000) -> None
+                [9][STATICCALL] from=Euler, to=AppProxyUpgradeable, balanceOf(_account(address): 0x271828) -> 17827504357548022052969
+                  [10][CALL] from=AppProxyUpgradeable, to=KernelProxy, getApp(_namespace(bytes32): b'\xf1\xf3\xeb@\xf5\xbc\x1a\xd14G\x16\xce\..., _appId(bytes32): b'<\xa7\xc3\xe3\x89h\x82<\xcbLx\xeah\x8d\x...) -> 0x47ebab
+                    [11][DELEGATECALL] from=KernelProxy, to=Kernel, getApp(_namespace(bytes32): b'\xf1\xf3\xeb@\xf5\xbc\x1a\xd14G\x16\xce\..., _appId(bytes32): b'<\xa7\xc3\xe3\x89h\x82<\xcbLx\xeah\x8d\x...) -> 0x47ebab
+                  [10][DELEGATECALL] from=AppProxyUpgradeable, to=Lido, balanceOf(_account(address): 0x271828) -> 17827504357548022052969
+                [9][DELEGATECALL] from=Euler, to=IRMClassLido, computeInterestRate(underlying(address): 0xae7ab9, utilisation(uint32): 67530177) -> 3191866046859889338
+                [9][CALL] from=Euler, to=0x570a7e, 0x03ddf252() -> None
+                [9][DELEGATECALL] from=Euler, to=IRMClassLido, computeInterestRate(underlying(address): 0xae7ab9, utilisation(uint32): 3808546886) -> 19624740004837091945
+                [9][CALL] from=Euler, to=0x8f222f, 0x03ddf252() -> None
+                [9][DELEGATECALL] from=Euler, to=RiskManager, requireLiquidity(account(address): 0xa4C0AF) -> None
+                  [10][STATICCALL] from=Euler, to=AppProxyUpgradeable, balanceOf(_account(address): 0x271828) -> 17827504357548022052969
+                    [11][CALL] from=AppProxyUpgradeable, to=KernelProxy, getApp(_namespace(bytes32): b'\xf1\xf3\xeb@\xf5\xbc\x1a\xd14G\x16\xce\..., _appId(bytes32): b'<\xa7\xc3\xe3\x89h\x82<\xcbLx\xeah\x8d\x...) -> 0x47ebab
+                      [12][DELEGATECALL] from=KernelProxy, to=Kernel, getApp(_namespace(bytes32): b'\xf1\xf3\xeb@\xf5\xbc\x1a\xd14G\x16\xce\..., _appId(bytes32): b'<\xa7\xc3\xe3\x89h\x82<\xcbLx\xeah\x8d\x...) -> 0x47ebab
+                    [11][DELEGATECALL] from=AppProxyUpgradeable, to=Lido, balanceOf(_account(address): 0x271828) -> 17827504357548022052969
+                  [10][STATICCALL] from=Euler, to=EACAggregatorProxy, latestAnswer() -> 996181716867654100
+                    [11][STATICCALL] from=EACAggregatorProxy, to=AccessControlledOffchainAggregator, latestAnswer() -> 996181716867654100
+          [6][CALL] from=0xa4c0af, to=AppProxyUpgradeable, decimals() -> 18
+            [7][CALL] from=AppProxyUpgradeable, to=KernelProxy, getApp(_namespace(bytes32): b'\xf1\xf3\xeb@\xf5\xbc\x1a\xd14G\x16\xce\..., _appId(bytes32): b'<\xa7\xc3\xe3\x89h\x82<\xcbLx\xeah\x8d\x...) -> 0x47ebab
+              [8][DELEGATECALL] from=KernelProxy, to=Kernel, getApp(_namespace(bytes32): b'\xf1\xf3\xeb@\xf5\xbc\x1a\xd14G\x16\xce\..., _appId(bytes32): b'<\xa7\xc3\xe3\x89h\x82<\xcbLx\xeah\x8d\x...) -> 0x47ebab
+            [7][DELEGATECALL] from=AppProxyUpgradeable, to=Lido, decimals() -> 18
+          [6][CALL] from=0xa4c0af, to=0x8f222f, repayuint256() -> None
+            [7][CALL] from=0x8f222f, to=Euler, dispatch() -> None
+              [8][DELEGATECALL] from=Euler, to=DToken, repay(subAccountId(uint256): 0, amount(uint256): 6965000000000000000000) -> None
+                [9][STATICCALL] from=Euler, to=AppProxyUpgradeable, balanceOf(_account(address): 0x271828) -> 17827504357548022052969
+                  [10][CALL] from=AppProxyUpgradeable, to=KernelProxy, getApp(_namespace(bytes32): b'\xf1\xf3\xeb@\xf5\xbc\x1a\xd14G\x16\xce\..., _appId(bytes32): b'<\xa7\xc3\xe3\x89h\x82<\xcbLx\xeah\x8d\x...) -> 0x47ebab
+                    [11][DELEGATECALL] from=KernelProxy, to=Kernel, getApp(_namespace(bytes32): b'\xf1\xf3\xeb@\xf5\xbc\x1a\xd14G\x16\xce\..., _appId(bytes32): b'<\xa7\xc3\xe3\x89h\x82<\xcbLx\xeah\x8d\x...) -> 0x47ebab
+                  [10][DELEGATECALL] from=AppProxyUpgradeable, to=Lido, balanceOf(_account(address): 0x271828) -> 17827504357548022052969
+                [9][CALL] from=Euler, to=AppProxyUpgradeable, transferFrom(_sender(address): 0xa4C0AF, _recipient(address): 0x271828, _amount(uint256): 6965000000000000000000) -> True
+                  [10][CALL] from=AppProxyUpgradeable, to=KernelProxy, getApp(_namespace(bytes32): b'\xf1\xf3\xeb@\xf5\xbc\x1a\xd14G\x16\xce\..., _appId(bytes32): b'<\xa7\xc3\xe3\x89h\x82<\xcbLx\xeah\x8d\x...) -> 0x47ebab
+                    [11][DELEGATECALL] from=KernelProxy, to=Kernel, getApp(_namespace(bytes32): b'\xf1\xf3\xeb@\xf5\xbc\x1a\xd14G\x16\xce\..., _appId(bytes32): b'<\xa7\xc3\xe3\x89h\x82<\xcbLx\xeah\x8d\x...) -> 0x47ebab
+                  [10][DELEGATECALL] from=AppProxyUpgradeable, to=Lido, transferFrom(_sender(address): 0xa4C0AF, _recipient(address): 0x271828, _amount(uint256): 6965000000000000000000) -> True
+                [9][STATICCALL] from=Euler, to=AppProxyUpgradeable, balanceOf(_account(address): 0x271828) -> 24792504357548022052969
+                  [10][CALL] from=AppProxyUpgradeable, to=KernelProxy, getApp(_namespace(bytes32): b'\xf1\xf3\xeb@\xf5\xbc\x1a\xd14G\x16\xce\..., _appId(bytes32): b'<\xa7\xc3\xe3\x89h\x82<\xcbLx\xeah\x8d\x...) -> 0x47ebab
+                    [11][DELEGATECALL] from=KernelProxy, to=Kernel, getApp(_namespace(bytes32): b'\xf1\xf3\xeb@\xf5\xbc\x1a\xd14G\x16\xce\..., _appId(bytes32): b'<\xa7\xc3\xe3\x89h\x82<\xcbLx\xeah\x8d\x...) -> 0x47ebab
+                  [10][DELEGATECALL] from=AppProxyUpgradeable, to=Lido, balanceOf(_account(address): 0x271828) -> 24792504357548022052969
+                [9][DELEGATECALL] from=Euler, to=IRMClassLido, computeInterestRate(underlying(address): 0xae7ab9, utilisation(uint32): 3618508052) -> 12462314467230749963
+                [9][CALL] from=Euler, to=0x8f222f, 0x03ddf252() -> None
+          [6][CALL] from=0xa4c0af, to=AppProxyUpgradeable, decimals() -> 18
+            [7][CALL] from=AppProxyUpgradeable, to=KernelProxy, getApp(_namespace(bytes32): b'\xf1\xf3\xeb@\xf5\xbc\x1a\xd14G\x16\xce\..., _appId(bytes32): b'<\xa7\xc3\xe3\x89h\x82<\xcbLx\xeah\x8d\x...) -> 0x47ebab
+              [8][DELEGATECALL] from=KernelProxy, to=Kernel, getApp(_namespace(bytes32): b'\xf1\xf3\xeb@\xf5\xbc\x1a\xd14G\x16\xce\..., _appId(bytes32): b'<\xa7\xc3\xe3\x89h\x82<\xcbLx\xeah\x8d\x...) -> 0x47ebab
+            [7][DELEGATECALL] from=AppProxyUpgradeable, to=Lido, decimals() -> 18
+          [6][CALL] from=0xa4c0af, to=0x570a7e, mintuint256() -> None
+            [7][CALL] from=0x570a7e, to=Euler, dispatch() -> None
+              [8][DELEGATECALL] from=Euler, to=EToken, mint(subAccountId(uint256): 0, amount(uint256): 139300000000000000000000) -> None
+                [9][STATICCALL] from=Euler, to=AppProxyUpgradeable, balanceOf(_account(address): 0x271828) -> 24792504357548022052969
+                  [10][CALL] from=AppProxyUpgradeable, to=KernelProxy, getApp(_namespace(bytes32): b'\xf1\xf3\xeb@\xf5\xbc\x1a\xd14G\x16\xce\..., _appId(bytes32): b'<\xa7\xc3\xe3\x89h\x82<\xcbLx\xeah\x8d\x...) -> 0x47ebab
+                    [11][DELEGATECALL] from=KernelProxy, to=Kernel, getApp(_namespace(bytes32): b'\xf1\xf3\xeb@\xf5\xbc\x1a\xd14G\x16\xce\..., _appId(bytes32): b'<\xa7\xc3\xe3\x89h\x82<\xcbLx\xeah\x8d\x...) -> 0x47ebab
+                  [10][DELEGATECALL] from=AppProxyUpgradeable, to=Lido, balanceOf(_account(address): 0x271828) -> 24792504357548022052969
+                [9][DELEGATECALL] from=Euler, to=IRMClassLido, computeInterestRate(underlying(address): 0xae7ab9, utilisation(uint32): 3618508052) -> 12462314467230749963
+                [9][CALL] from=Euler, to=0x570a7e, 0x03ddf252() -> None
+                [9][DELEGATECALL] from=Euler, to=IRMClassLido, computeInterestRate(underlying(address): 0xae7ab9, utilisation(uint32): 3936091034) -> 24431786246803840949
+                [9][CALL] from=Euler, to=0x8f222f, 0x03ddf252() -> None
+                [9][DELEGATECALL] from=Euler, to=RiskManager, requireLiquidity(account(address): 0xa4C0AF) -> None
+                  [10][STATICCALL] from=Euler, to=AppProxyUpgradeable, balanceOf(_account(address): 0x271828) -> 24792504357548022052969
+                    [11][CALL] from=AppProxyUpgradeable, to=KernelProxy, getApp(_namespace(bytes32): b'\xf1\xf3\xeb@\xf5\xbc\x1a\xd14G\x16\xce\..., _appId(bytes32): b'<\xa7\xc3\xe3\x89h\x82<\xcbLx\xeah\x8d\x...) -> 0x47ebab
+                      [12][DELEGATECALL] from=KernelProxy, to=Kernel, getApp(_namespace(bytes32): b'\xf1\xf3\xeb@\xf5\xbc\x1a\xd14G\x16\xce\..., _appId(bytes32): b'<\xa7\xc3\xe3\x89h\x82<\xcbLx\xeah\x8d\x...) -> 0x47ebab
+                    [11][DELEGATECALL] from=AppProxyUpgradeable, to=Lido, balanceOf(_account(address): 0x271828) -> 24792504357548022052969
+                  [10][STATICCALL] from=Euler, to=EACAggregatorProxy, latestAnswer() -> 996181716867654100
+                    [11][STATICCALL] from=EACAggregatorProxy, to=AccessControlledOffchainAggregator, latestAnswer() -> 996181716867654100
+          [6][CALL] from=0xa4c0af, to=0x570a7e, donateToReservesuint256() -> None
+            [7][CALL] from=0x570a7e, to=Euler, dispatch() -> None
+              [8][DELEGATECALL] from=Euler, to=EToken, donateToReserves(subAccountId(uint256): 0, amount(uint256): 69650000000000000000000) -> None
+                [9][STATICCALL] from=Euler, to=AppProxyUpgradeable, balanceOf(_account(address): 0x271828) -> 24792504357548022052969
+                  [10][CALL] from=AppProxyUpgradeable, to=KernelProxy, getApp(_namespace(bytes32): b'\xf1\xf3\xeb@\xf5\xbc\x1a\xd14G\x16\xce\..., _appId(bytes32): b'<\xa7\xc3\xe3\x89h\x82<\xcbLx\xeah\x8d\x...) -> 0x47ebab
+                    [11][DELEGATECALL] from=KernelProxy, to=Kernel, getApp(_namespace(bytes32): b'\xf1\xf3\xeb@\xf5\xbc\x1a\xd14G\x16\xce\..., _appId(bytes32): b'<\xa7\xc3\xe3\x89h\x82<\xcbLx\xeah\x8d\x...) -> 0x47ebab
+                  [10][DELEGATECALL] from=AppProxyUpgradeable, to=Lido, balanceOf(_account(address): 0x271828) -> 24792504357548022052969
+                [9][CALL] from=Euler, to=0x570a7e, 0x03ddf252() -> None
+          [6][CALL] from=0xa4c0af, to=0x12df82, 0xa515d3c6() -> 0x000000
+            [7][CALL] from=0x12df82, to=Proxy, checkLiquidationaddress() -> 0x000000
+              [8][CALL] from=Proxy, to=Euler, dispatch() -> 0x000000
+                [9][DELEGATECALL] from=Euler, to=Liquidation, checkLiquidation(liquidator(address): 0x12DF82, violator(address): 0xa4C0AF, underlying(address): 0xae7ab9, collateral(address): 0xae7ab9) -> None
+                  [10][DELEGATECALL] from=Euler, to=RiskManager, getPrice(underlying(address): 0xae7ab9) -> ['996181716867654100', '0']
+                    [11][STATICCALL] from=Euler, to=AppProxyUpgradeable, balanceOf(_account(address): 0x271828) -> 24792504357548022052969
+                      [12][CALL] from=AppProxyUpgradeable, to=KernelProxy, getApp(_namespace(bytes32): b'\xf1\xf3\xeb@\xf5\xbc\x1a\xd14G\x16\xce\..., _appId(bytes32): b'<\xa7\xc3\xe3\x89h\x82<\xcbLx\xeah\x8d\x...) -> 0x47ebab
+                        [13][DELEGATECALL] from=KernelProxy, to=Kernel, getApp(_namespace(bytes32): b'\xf1\xf3\xeb@\xf5\xbc\x1a\xd14G\x16\xce\..., _appId(bytes32): b'<\xa7\xc3\xe3\x89h\x82<\xcbLx\xeah\x8d\x...) -> 0x47ebab
+                      [12][DELEGATECALL] from=AppProxyUpgradeable, to=Lido, balanceOf(_account(address): 0x271828) -> 24792504357548022052969
+                    [11][STATICCALL] from=Euler, to=EACAggregatorProxy, latestAnswer() -> 996181716867654100
+                      [12][STATICCALL] from=EACAggregatorProxy, to=AccessControlledOffchainAggregator, latestAnswer() -> 996181716867654100
+                  [10][DELEGATECALL] from=Euler, to=RiskManager, getPrice(underlying(address): 0xae7ab9) -> ['996181716867654100', '0']
+                    [11][STATICCALL] from=Euler, to=AppProxyUpgradeable, balanceOf(_account(address): 0x271828) -> 24792504357548022052969
+                      [12][CALL] from=AppProxyUpgradeable, to=KernelProxy, getApp(_namespace(bytes32): b'\xf1\xf3\xeb@\xf5\xbc\x1a\xd14G\x16\xce\..., _appId(bytes32): b'<\xa7\xc3\xe3\x89h\x82<\xcbLx\xeah\x8d\x...) -> 0x47ebab
+                        [13][DELEGATECALL] from=KernelProxy, to=Kernel, getApp(_namespace(bytes32): b'\xf1\xf3\xeb@\xf5\xbc\x1a\xd14G\x16\xce\..., _appId(bytes32): b'<\xa7\xc3\xe3\x89h\x82<\xcbLx\xeah\x8d\x...) -> 0x47ebab
+                      [12][DELEGATECALL] from=AppProxyUpgradeable, to=Lido, balanceOf(_account(address): 0x271828) -> 24792504357548022052969
+                    [11][STATICCALL] from=Euler, to=EACAggregatorProxy, latestAnswer() -> 996181716867654100
+                      [12][STATICCALL] from=EACAggregatorProxy, to=AccessControlledOffchainAggregator, latestAnswer() -> 996181716867654100
+                  [10][STATICCALL] from=Euler, to=AppProxyUpgradeable, balanceOf(_account(address): 0x271828) -> 24792504357548022052969
+                    [11][CALL] from=AppProxyUpgradeable, to=KernelProxy, getApp(_namespace(bytes32): b'\xf1\xf3\xeb@\xf5\xbc\x1a\xd14G\x16\xce\..., _appId(bytes32): b'<\xa7\xc3\xe3\x89h\x82<\xcbLx\xeah\x8d\x...) -> 0x47ebab
+                      [12][DELEGATECALL] from=KernelProxy, to=Kernel, getApp(_namespace(bytes32): b'\xf1\xf3\xeb@\xf5\xbc\x1a\xd14G\x16\xce\..., _appId(bytes32): b'<\xa7\xc3\xe3\x89h\x82<\xcbLx\xeah\x8d\x...) -> 0x47ebab
+                    [11][DELEGATECALL] from=AppProxyUpgradeable, to=Lido, balanceOf(_account(address): 0x271828) -> 24792504357548022052969
+                  [10][STATICCALL] from=Euler, to=AppProxyUpgradeable, balanceOf(_account(address): 0x271828) -> 24792504357548022052969
+                    [11][CALL] from=AppProxyUpgradeable, to=KernelProxy, getApp(_namespace(bytes32): b'\xf1\xf3\xeb@\xf5\xbc\x1a\xd14G\x16\xce\..., _appId(bytes32): b'<\xa7\xc3\xe3\x89h\x82<\xcbLx\xeah\x8d\x...) -> 0x47ebab
+                      [12][DELEGATECALL] from=KernelProxy, to=Kernel, getApp(_namespace(bytes32): b'\xf1\xf3\xeb@\xf5\xbc\x1a\xd14G\x16\xce\..., _appId(bytes32): b'<\xa7\xc3\xe3\x89h\x82<\xcbLx\xeah\x8d\x...) -> 0x47ebab
+                    [11][DELEGATECALL] from=AppProxyUpgradeable, to=Lido, balanceOf(_account(address): 0x271828) -> 24792504357548022052969
+                  [10][DELEGATECALL] from=Euler, to=RiskManager, computeLiquidity(account(address): 0xa4C0AF) -> None
+                    [11][STATICCALL] from=Euler, to=AppProxyUpgradeable, balanceOf(_account(address): 0x271828) -> 24792504357548022052969
+                      [12][CALL] from=AppProxyUpgradeable, to=KernelProxy, getApp(_namespace(bytes32): b'\xf1\xf3\xeb@\xf5\xbc\x1a\xd14G\x16\xce\..., _appId(bytes32): b'<\xa7\xc3\xe3\x89h\x82<\xcbLx\xeah\x8d\x...) -> 0x47ebab
+                        [13][DELEGATECALL] from=KernelProxy, to=Kernel, getApp(_namespace(bytes32): b'\xf1\xf3\xeb@\xf5\xbc\x1a\xd14G\x16\xce\..., _appId(bytes32): b'<\xa7\xc3\xe3\x89h\x82<\xcbLx\xeah\x8d\x...) -> 0x47ebab
+                      [12][DELEGATECALL] from=AppProxyUpgradeable, to=Lido, balanceOf(_account(address): 0x271828) -> 24792504357548022052969
+                    [11][STATICCALL] from=Euler, to=EACAggregatorProxy, latestAnswer() -> 996181716867654100
+                      [12][STATICCALL] from=EACAggregatorProxy, to=AccessControlledOffchainAggregator, latestAnswer() -> 996181716867654100
+            [7][CALL] from=0x12df82, to=Proxy, liquidateaddress() -> None
+              [8][CALL] from=Proxy, to=Euler, dispatch() -> None
+                [9][DELEGATECALL] from=Euler, to=Liquidation, liquidate(violator(address): 0xa4C0AF, underlying(address): 0xae7ab9, collateral(address): 0xae7ab9, repay(uint256): 179789545540861089304025, minYield(uint256): 220230325417721923166698) -> None
+                  [10][DELEGATECALL] from=Euler, to=RiskManager, getPrice(underlying(address): 0xae7ab9) -> ['996181716867654100', '0']
+                    [11][STATICCALL] from=Euler, to=AppProxyUpgradeable, balanceOf(_account(address): 0x271828) -> 24792504357548022052969
+                      [12][CALL] from=AppProxyUpgradeable, to=KernelProxy, getApp(_namespace(bytes32): b'\xf1\xf3\xeb@\xf5\xbc\x1a\xd14G\x16\xce\..., _appId(bytes32): b'<\xa7\xc3\xe3\x89h\x82<\xcbLx\xeah\x8d\x...) -> 0x47ebab
+                        [13][DELEGATECALL] from=KernelProxy, to=Kernel, getApp(_namespace(bytes32): b'\xf1\xf3\xeb@\xf5\xbc\x1a\xd14G\x16\xce\..., _appId(bytes32): b'<\xa7\xc3\xe3\x89h\x82<\xcbLx\xeah\x8d\x...) -> 0x47ebab
+                      [12][DELEGATECALL] from=AppProxyUpgradeable, to=Lido, balanceOf(_account(address): 0x271828) -> 24792504357548022052969
+                    [11][STATICCALL] from=Euler, to=EACAggregatorProxy, latestAnswer() -> 996181716867654100
+                      [12][STATICCALL] from=EACAggregatorProxy, to=AccessControlledOffchainAggregator, latestAnswer() -> 996181716867654100
+                  [10][DELEGATECALL] from=Euler, to=RiskManager, getPrice(underlying(address): 0xae7ab9) -> ['996181716867654100', '0']
+                    [11][STATICCALL] from=Euler, to=AppProxyUpgradeable, balanceOf(_account(address): 0x271828) -> 24792504357548022052969
+                      [12][CALL] from=AppProxyUpgradeable, to=KernelProxy, getApp(_namespace(bytes32): b'\xf1\xf3\xeb@\xf5\xbc\x1a\xd14G\x16\xce\..., _appId(bytes32): b'<\xa7\xc3\xe3\x89h\x82<\xcbLx\xeah\x8d\x...) -> 0x47ebab
+                        [13][DELEGATECALL] from=KernelProxy, to=Kernel, getApp(_namespace(bytes32): b'\xf1\xf3\xeb@\xf5\xbc\x1a\xd14G\x16\xce\..., _appId(bytes32): b'<\xa7\xc3\xe3\x89h\x82<\xcbLx\xeah\x8d\x...) -> 0x47ebab
+                      [12][DELEGATECALL] from=AppProxyUpgradeable, to=Lido, balanceOf(_account(address): 0x271828) -> 24792504357548022052969
+                    [11][STATICCALL] from=Euler, to=EACAggregatorProxy, latestAnswer() -> 996181716867654100
+                      [12][STATICCALL] from=EACAggregatorProxy, to=AccessControlledOffchainAggregator, latestAnswer() -> 996181716867654100
+                  [10][STATICCALL] from=Euler, to=AppProxyUpgradeable, balanceOf(_account(address): 0x271828) -> 24792504357548022052969
+                    [11][CALL] from=AppProxyUpgradeable, to=KernelProxy, getApp(_namespace(bytes32): b'\xf1\xf3\xeb@\xf5\xbc\x1a\xd14G\x16\xce\..., _appId(bytes32): b'<\xa7\xc3\xe3\x89h\x82<\xcbLx\xeah\x8d\x...) -> 0x47ebab
+                      [12][DELEGATECALL] from=KernelProxy, to=Kernel, getApp(_namespace(bytes32): b'\xf1\xf3\xeb@\xf5\xbc\x1a\xd14G\x16\xce\..., _appId(bytes32): b'<\xa7\xc3\xe3\x89h\x82<\xcbLx\xeah\x8d\x...) -> 0x47ebab
+                    [11][DELEGATECALL] from=AppProxyUpgradeable, to=Lido, balanceOf(_account(address): 0x271828) -> 24792504357548022052969
+                  [10][STATICCALL] from=Euler, to=AppProxyUpgradeable, balanceOf(_account(address): 0x271828) -> 24792504357548022052969
+                    [11][CALL] from=AppProxyUpgradeable, to=KernelProxy, getApp(_namespace(bytes32): b'\xf1\xf3\xeb@\xf5\xbc\x1a\xd14G\x16\xce\..., _appId(bytes32): b'<\xa7\xc3\xe3\x89h\x82<\xcbLx\xeah\x8d\x...) -> 0x47ebab
+                      [12][DELEGATECALL] from=KernelProxy, to=Kernel, getApp(_namespace(bytes32): b'\xf1\xf3\xeb@\xf5\xbc\x1a\xd14G\x16\xce\..., _appId(bytes32): b'<\xa7\xc3\xe3\x89h\x82<\xcbLx\xeah\x8d\x...) -> 0x47ebab
+                    [11][DELEGATECALL] from=AppProxyUpgradeable, to=Lido, balanceOf(_account(address): 0x271828) -> 24792504357548022052969
+                  [10][DELEGATECALL] from=Euler, to=RiskManager, computeLiquidity(account(address): 0xa4C0AF) -> None
+                    [11][STATICCALL] from=Euler, to=AppProxyUpgradeable, balanceOf(_account(address): 0x271828) -> 24792504357548022052969
+                      [12][CALL] from=AppProxyUpgradeable, to=KernelProxy, getApp(_namespace(bytes32): b'\xf1\xf3\xeb@\xf5\xbc\x1a\xd14G\x16\xce\..., _appId(bytes32): b'<\xa7\xc3\xe3\x89h\x82<\xcbLx\xeah\x8d\x...) -> 0x47ebab
+                        [13][DELEGATECALL] from=KernelProxy, to=Kernel, getApp(_namespace(bytes32): b'\xf1\xf3\xeb@\xf5\xbc\x1a\xd14G\x16\xce\..., _appId(bytes32): b'<\xa7\xc3\xe3\x89h\x82<\xcbLx\xeah\x8d\x...) -> 0x47ebab
+                      [12][DELEGATECALL] from=AppProxyUpgradeable, to=Lido, balanceOf(_account(address): 0x271828) -> 24792504357548022052969
+                    [11][STATICCALL] from=Euler, to=EACAggregatorProxy, latestAnswer() -> 996181716867654100
+                      [12][STATICCALL] from=EACAggregatorProxy, to=AccessControlledOffchainAggregator, latestAnswer() -> 996181716867654100
+                  [10][STATICCALL] from=Euler, to=AppProxyUpgradeable, balanceOf(_account(address): 0x271828) -> 24792504357548022052969
+                    [11][CALL] from=AppProxyUpgradeable, to=KernelProxy, getApp(_namespace(bytes32): b'\xf1\xf3\xeb@\xf5\xbc\x1a\xd14G\x16\xce\..., _appId(bytes32): b'<\xa7\xc3\xe3\x89h\x82<\xcbLx\xeah\x8d\x...) -> 0x47ebab
+                      [12][DELEGATECALL] from=KernelProxy, to=Kernel, getApp(_namespace(bytes32): b'\xf1\xf3\xeb@\xf5\xbc\x1a\xd14G\x16\xce\..., _appId(bytes32): b'<\xa7\xc3\xe3\x89h\x82<\xcbLx\xeah\x8d\x...) -> 0x47ebab
+                    [11][DELEGATECALL] from=AppProxyUpgradeable, to=Lido, balanceOf(_account(address): 0x271828) -> 24792504357548022052969
+                  [10][CALL] from=Euler, to=0x8f222f, 0x03ddf252() -> None
+                  [10][CALL] from=Euler, to=0x8f222f, 0x03ddf252() -> None
+                  [10][DELEGATECALL] from=Euler, to=IRMClassLido, computeInterestRate(underlying(address): 0xae7ab9, utilisation(uint32): 3940304835) -> 24590601344000191572
+                  [10][CALL] from=Euler, to=0x8f222f, 0x03ddf252() -> None
+                  [10][STATICCALL] from=Euler, to=AppProxyUpgradeable, balanceOf(_account(address): 0x271828) -> 24792504357548022052969
+                    [11][CALL] from=AppProxyUpgradeable, to=KernelProxy, getApp(_namespace(bytes32): b'\xf1\xf3\xeb@\xf5\xbc\x1a\xd14G\x16\xce\..., _appId(bytes32): b'<\xa7\xc3\xe3\x89h\x82<\xcbLx\xeah\x8d\x...) -> 0x47ebab
+                      [12][DELEGATECALL] from=KernelProxy, to=Kernel, getApp(_namespace(bytes32): b'\xf1\xf3\xeb@\xf5\xbc\x1a\xd14G\x16\xce\..., _appId(bytes32): b'<\xa7\xc3\xe3\x89h\x82<\xcbLx\xeah\x8d\x...) -> 0x47ebab
+                    [11][DELEGATECALL] from=AppProxyUpgradeable, to=Lido, balanceOf(_account(address): 0x271828) -> 24792504357548022052969
+                  [10][CALL] from=Euler, to=0x570a7e, 0x03ddf252() -> None
+                  [10][DELEGATECALL] from=Euler, to=RiskManager, requireLiquidity(account(address): 0x12DF82) -> None
+                    [11][STATICCALL] from=Euler, to=AppProxyUpgradeable, balanceOf(_account(address): 0x271828) -> 24792504357548022052969
+                      [12][CALL] from=AppProxyUpgradeable, to=KernelProxy, getApp(_namespace(bytes32): b'\xf1\xf3\xeb@\xf5\xbc\x1a\xd14G\x16\xce\..., _appId(bytes32): b'<\xa7\xc3\xe3\x89h\x82<\xcbLx\xeah\x8d\x...) -> 0x47ebab
+                        [13][DELEGATECALL] from=KernelProxy, to=Kernel, getApp(_namespace(bytes32): b'\xf1\xf3\xeb@\xf5\xbc\x1a\xd14G\x16\xce\..., _appId(bytes32): b'<\xa7\xc3\xe3\x89h\x82<\xcbLx\xeah\x8d\x...) -> 0x47ebab
+                      [12][DELEGATECALL] from=AppProxyUpgradeable, to=Lido, balanceOf(_account(address): 0x271828) -> 24792504357548022052969
+                    [11][STATICCALL] from=Euler, to=EACAggregatorProxy, latestAnswer() -> 996181716867654100
+                      [12][STATICCALL] from=EACAggregatorProxy, to=AccessControlledOffchainAggregator, latestAnswer() -> 996181716867654100
+            [7][CALL] from=0x12df82, to=AppProxyUpgradeable, decimals() -> 18
+              [8][CALL] from=AppProxyUpgradeable, to=KernelProxy, getApp(_namespace(bytes32): b'\xf1\xf3\xeb@\xf5\xbc\x1a\xd14G\x16\xce\..., _appId(bytes32): b'<\xa7\xc3\xe3\x89h\x82<\xcbLx\xeah\x8d\x...) -> 0x47ebab
+                [9][DELEGATECALL] from=KernelProxy, to=Kernel, getApp(_namespace(bytes32): b'\xf1\xf3\xeb@\xf5\xbc\x1a\xd14G\x16\xce\..., _appId(bytes32): b'<\xa7\xc3\xe3\x89h\x82<\xcbLx\xeah\x8d\x...) -> 0x47ebab
+              [8][DELEGATECALL] from=AppProxyUpgradeable, to=Lido, decimals() -> 18
+            [7][STATICCALL] from=0x12df82, to=AppProxyUpgradeable, balanceOf(_account(address): 0x271828) -> 24792504357548022052969
+              [8][CALL] from=AppProxyUpgradeable, to=KernelProxy, getApp(_namespace(bytes32): b'\xf1\xf3\xeb@\xf5\xbc\x1a\xd14G\x16\xce\..., _appId(bytes32): b'<\xa7\xc3\xe3\x89h\x82<\xcbLx\xeah\x8d\x...) -> 0x47ebab
+                [9][DELEGATECALL] from=KernelProxy, to=Kernel, getApp(_namespace(bytes32): b'\xf1\xf3\xeb@\xf5\xbc\x1a\xd14G\x16\xce\..., _appId(bytes32): b'<\xa7\xc3\xe3\x89h\x82<\xcbLx\xeah\x8d\x...) -> 0x47ebab
+              [8][DELEGATECALL] from=AppProxyUpgradeable, to=Lido, balanceOf(_account(address): 0x271828) -> 24792504357548022052969
+            [7][CALL] from=0x12df82, to=0x570a7e, withdrawuint256() -> None
+              [8][CALL] from=0x570a7e, to=Euler, dispatch() -> None
+                [9][DELEGATECALL] from=Euler, to=EToken, withdraw(subAccountId(uint256): 0, amount(uint256): 24792504357548022052969) -> None
+                  [10][STATICCALL] from=Euler, to=AppProxyUpgradeable, balanceOf(_account(address): 0x271828) -> 24792504357548022052969
+                    [11][CALL] from=AppProxyUpgradeable, to=KernelProxy, getApp(_namespace(bytes32): b'\xf1\xf3\xeb@\xf5\xbc\x1a\xd14G\x16\xce\..., _appId(bytes32): b'<\xa7\xc3\xe3\x89h\x82<\xcbLx\xeah\x8d\x...) -> 0x47ebab
+                      [12][DELEGATECALL] from=KernelProxy, to=Kernel, getApp(_namespace(bytes32): b'\xf1\xf3\xeb@\xf5\xbc\x1a\xd14G\x16\xce\..., _appId(bytes32): b'<\xa7\xc3\xe3\x89h\x82<\xcbLx\xeah\x8d\x...) -> 0x47ebab
+                    [11][DELEGATECALL] from=AppProxyUpgradeable, to=Lido, balanceOf(_account(address): 0x271828) -> 24792504357548022052969
+                  [10][CALL] from=Euler, to=AppProxyUpgradeable, transfer(_recipient(address): 0x12DF82, _amount(uint256): 24792504357548022052969) -> True
+                    [11][CALL] from=AppProxyUpgradeable, to=KernelProxy, getApp(_namespace(bytes32): b'\xf1\xf3\xeb@\xf5\xbc\x1a\xd14G\x16\xce\..., _appId(bytes32): b'<\xa7\xc3\xe3\x89h\x82<\xcbLx\xeah\x8d\x...) -> 0x47ebab
+                      [12][DELEGATECALL] from=KernelProxy, to=Kernel, getApp(_namespace(bytes32): b'\xf1\xf3\xeb@\xf5\xbc\x1a\xd14G\x16\xce\..., _appId(bytes32): b'<\xa7\xc3\xe3\x89h\x82<\xcbLx\xeah\x8d\x...) -> 0x47ebab
+                    [11][DELEGATECALL] from=AppProxyUpgradeable, to=Lido, transfer(_recipient(address): 0x12DF82, _amount(uint256): 24792504357548022052969) -> True
+                  [10][STATICCALL] from=Euler, to=AppProxyUpgradeable, balanceOf(_account(address): 0x271828) -> 1
+                    [11][CALL] from=AppProxyUpgradeable, to=KernelProxy, getApp(_namespace(bytes32): b'\xf1\xf3\xeb@\xf5\xbc\x1a\xd14G\x16\xce\..., _appId(bytes32): b'<\xa7\xc3\xe3\x89h\x82<\xcbLx\xeah\x8d\x...) -> 0x47ebab
+                      [12][DELEGATECALL] from=KernelProxy, to=Kernel, getApp(_namespace(bytes32): b'\xf1\xf3\xeb@\xf5\xbc\x1a\xd14G\x16\xce\..., _appId(bytes32): b'<\xa7\xc3\xe3\x89h\x82<\xcbLx\xeah\x8d\x...) -> 0x47ebab
+                    [11][DELEGATECALL] from=AppProxyUpgradeable, to=Lido, balanceOf(_account(address): 0x271828) -> 1
+                  [10][DELEGATECALL] from=Euler, to=IRMClassLido, computeInterestRate(underlying(address): 0xae7ab9, utilisation(uint32): 4294967294) -> 37957571663192226929
+                  [10][CALL] from=Euler, to=0x570a7e, 0x03ddf252() -> None
+                  [10][DELEGATECALL] from=Euler, to=RiskManager, requireLiquidity(account(address): 0x12DF82) -> None
+                    [11][STATICCALL] from=Euler, to=AppProxyUpgradeable, balanceOf(_account(address): 0x271828) -> 1
+                      [12][CALL] from=AppProxyUpgradeable, to=KernelProxy, getApp(_namespace(bytes32): b'\xf1\xf3\xeb@\xf5\xbc\x1a\xd14G\x16\xce\..., _appId(bytes32): b'<\xa7\xc3\xe3\x89h\x82<\xcbLx\xeah\x8d\x...) -> 0x47ebab
+                        [13][DELEGATECALL] from=KernelProxy, to=Kernel, getApp(_namespace(bytes32): b'\xf1\xf3\xeb@\xf5\xbc\x1a\xd14G\x16\xce\..., _appId(bytes32): b'<\xa7\xc3\xe3\x89h\x82<\xcbLx\xeah\x8d\x...) -> 0x47ebab
+                      [12][DELEGATECALL] from=AppProxyUpgradeable, to=Lido, balanceOf(_account(address): 0x271828) -> 1
+                    [11][STATICCALL] from=Euler, to=EACAggregatorProxy, latestAnswer() -> 996181716867654100
+                      [12][STATICCALL] from=EACAggregatorProxy, to=AccessControlledOffchainAggregator, latestAnswer() -> 996181716867654100
+            [7][STATICCALL] from=0x12df82, to=AppProxyUpgradeable, balanceOf(_account(address): 0x12DF82) -> 24792504357548022052968
+              [8][CALL] from=AppProxyUpgradeable, to=KernelProxy, getApp(_namespace(bytes32): b'\xf1\xf3\xeb@\xf5\xbc\x1a\xd14G\x16\xce\..., _appId(bytes32): b'<\xa7\xc3\xe3\x89h\x82<\xcbLx\xeah\x8d\x...) -> 0x47ebab
+                [9][DELEGATECALL] from=KernelProxy, to=Kernel, getApp(_namespace(bytes32): b'\xf1\xf3\xeb@\xf5\xbc\x1a\xd14G\x16\xce\..., _appId(bytes32): b'<\xa7\xc3\xe3\x89h\x82<\xcbLx\xeah\x8d\x...) -> 0x47ebab
+              [8][DELEGATECALL] from=AppProxyUpgradeable, to=Lido, balanceOf(_account(address): 0x12DF82) -> 24792504357548022052968
+            [7][CALL] from=0x12df82, to=AppProxyUpgradeable, transfer(_recipient(address): 0x036cec, _amount(uint256): 24792504357548022052968) -> True
+              [8][CALL] from=AppProxyUpgradeable, to=KernelProxy, getApp(_namespace(bytes32): b'\xf1\xf3\xeb@\xf5\xbc\x1a\xd14G\x16\xce\..., _appId(bytes32): b'<\xa7\xc3\xe3\x89h\x82<\xcbLx\xeah\x8d\x...) -> 0x47ebab
+                [9][DELEGATECALL] from=KernelProxy, to=Kernel, getApp(_namespace(bytes32): b'\xf1\xf3\xeb@\xf5\xbc\x1a\xd14G\x16\xce\..., _appId(bytes32): b'<\xa7\xc3\xe3\x89h\x82<\xcbLx\xeah\x8d\x...) -> 0x47ebab
+              [8][DELEGATECALL] from=AppProxyUpgradeable, to=Lido, transfer(_recipient(address): 0x036cec, _amount(uint256): 24792504357548022052968) -> True
+      [4][STATICCALL] from=InitializableImmutableAdminUpgradeabilityProxy, to=InitializableImmutableAdminUpgradeabilityProxy, scaledTotalSupply() -> 0
+        [5][DELEGATECALL] from=InitializableImmutableAdminUpgradeabilityProxy, to=VariableDebtStETH, scaledTotalSupply() -> 0
+      [4][STATICCALL] from=InitializableImmutableAdminUpgradeabilityProxy, to=InitializableImmutableAdminUpgradeabilityProxy, getSupplyData() -> ['0', '0', '0', '0']
+        [5][DELEGATECALL] from=InitializableImmutableAdminUpgradeabilityProxy, to=StableDebtStETH, getSupplyData() -> ['0', '0', '0', '0']
+      [4][STATICCALL] from=InitializableImmutableAdminUpgradeabilityProxy, to=InitializableImmutableAdminUpgradeabilityProxy, totalSupply() -> 1027025773104198397497323
+        [5][DELEGATECALL] from=InitializableImmutableAdminUpgradeabilityProxy, to=AStETH, totalSupply() -> 1027025773104198397497323
+          [6][STATICCALL] from=InitializableImmutableAdminUpgradeabilityProxy, to=AppProxyUpgradeable, getPooledEthByShares(_sharesAmount(uint256): 1000000000000000000000000000) -> 1113924709377854366182114112
+            [7][CALL] from=AppProxyUpgradeable, to=KernelProxy, getApp(_namespace(bytes32): b'\xf1\xf3\xeb@\xf5\xbc\x1a\xd14G\x16\xce\..., _appId(bytes32): b'<\xa7\xc3\xe3\x89h\x82<\xcbLx\xeah\x8d\x...) -> 0x47ebab
+              [8][DELEGATECALL] from=KernelProxy, to=Kernel, getApp(_namespace(bytes32): b'\xf1\xf3\xeb@\xf5\xbc\x1a\xd14G\x16\xce\..., _appId(bytes32): b'<\xa7\xc3\xe3\x89h\x82<\xcbLx\xeah\x8d\x...) -> 0x47ebab
+            [7][DELEGATECALL] from=AppProxyUpgradeable, to=Lido, getPooledEthByShares(_sharesAmount(uint256): 1000000000000000000000000000) -> 1113924709377854366182114112
+          [6][STATICCALL] from=InitializableImmutableAdminUpgradeabilityProxy, to=InitializableImmutableAdminUpgradeabilityProxy, getReserveNormalizedIncome(asset(address): 0xae7ab9) -> 1000038131251100237279349328
+            [7][DELEGATECALL] from=InitializableImmutableAdminUpgradeabilityProxy, to=LendingPool, getReserveNormalizedIncome(asset(address): 0xae7ab9) -> 1000038131251100237279349328
+      [4][STATICCALL] from=InitializableImmutableAdminUpgradeabilityProxy, to=InitializableImmutableAdminUpgradeabilityProxy, getTotalSupplyAndAvgRate() -> ['0', '0']
+        [5][DELEGATECALL] from=InitializableImmutableAdminUpgradeabilityProxy, to=StableDebtStETH, getTotalSupplyAndAvgRate() -> ['0', '0']
+      [4][STATICCALL] from=InitializableImmutableAdminUpgradeabilityProxy, to=InitializableImmutableAdminUpgradeabilityProxy, scaledTotalSupply() -> 0
+        [5][DELEGATECALL] from=InitializableImmutableAdminUpgradeabilityProxy, to=VariableDebtStETH, scaledTotalSupply() -> 0
+      [4][STATICCALL] from=InitializableImmutableAdminUpgradeabilityProxy, to=AppProxyUpgradeable, balanceOf(_account(address): 0x1982b2) -> 1006130773104198397496923
+        [5][CALL] from=AppProxyUpgradeable, to=KernelProxy, getApp(_namespace(bytes32): b'\xf1\xf3\xeb@\xf5\xbc\x1a\xd14G\x16\xce\..., _appId(bytes32): b'<\xa7\xc3\xe3\x89h\x82<\xcbLx\xeah\x8d\x...) -> 0x47ebab
+          [6][DELEGATECALL] from=KernelProxy, to=Kernel, getApp(_namespace(bytes32): b'\xf1\xf3\xeb@\xf5\xbc\x1a\xd14G\x16\xce\..., _appId(bytes32): b'<\xa7\xc3\xe3\x89h\x82<\xcbLx\xeah\x8d\x...) -> 0x47ebab
+        [5][DELEGATECALL] from=AppProxyUpgradeable, to=Lido, balanceOf(_account(address): 0x1982b2) -> 1006130773104198397496923
+      [4][STATICCALL] from=InitializableImmutableAdminUpgradeabilityProxy, to=DefaultReserveInterestRateStrategy, calculateInterestRates(reserve(address): 0xae7ab9, availableLiquidity(uint256): 1027044578604198397496923, totalStableDebt(uint256): 0, totalVariableDebt(uint256): 0, averageStableBorrowRate(uint256): 0, reserveFactor(uint256): 1000) -> ['0', '0', '0']
+        [5][STATICCALL] from=DefaultReserveInterestRateStrategy, to=LendingPoolAddressesProvider, getLendingRateOracle() -> 0x8a32f4
+        [5][STATICCALL] from=DefaultReserveInterestRateStrategy, to=LendingRateOracle, getMarketBorrowRate(asset(address): 0xae7ab9) -> 0
+      [4][CALL] from=InitializableImmutableAdminUpgradeabilityProxy, to=AppProxyUpgradeable, transferFrom(_sender(address): 0x036cec, _recipient(address): 0x1982b2, _amount(uint256): 20913805500000000000000) -> True
+        [5][CALL] from=AppProxyUpgradeable, to=KernelProxy, getApp(_namespace(bytes32): b'\xf1\xf3\xeb@\xf5\xbc\x1a\xd14G\x16\xce\..., _appId(bytes32): b'<\xa7\xc3\xe3\x89h\x82<\xcbLx\xeah\x8d\x...) -> 0x47ebab
+          [6][DELEGATECALL] from=KernelProxy, to=Kernel, getApp(_namespace(bytes32): b'\xf1\xf3\xeb@\xf5\xbc\x1a\xd14G\x16\xce\..., _appId(bytes32): b'<\xa7\xc3\xe3\x89h\x82<\xcbLx\xeah\x8d\x...) -> 0x47ebab
+        [5][DELEGATECALL] from=AppProxyUpgradeable, to=Lido, transferFrom(_sender(address): 0x036cec, _recipient(address): 0x1982b2, _amount(uint256): 20913805500000000000000) -> True
+  [2][STATICCALL] from=0x036cec, to=AppProxyUpgradeable, balanceOf(_account(address): 0x036cec) -> 3878698857548022052968
+    [3][CALL] from=AppProxyUpgradeable, to=KernelProxy, getApp(_namespace(bytes32): b'\xf1\xf3\xeb@\xf5\xbc\x1a\xd14G\x16\xce\..., _appId(bytes32): b'<\xa7\xc3\xe3\x89h\x82<\xcbLx\xeah\x8d\x...) -> 0x47ebab
+      [4][DELEGATECALL] from=KernelProxy, to=Kernel, getApp(_namespace(bytes32): b'\xf1\xf3\xeb@\xf5\xbc\x1a\xd14G\x16\xce\..., _appId(bytes32): b'<\xa7\xc3\xe3\x89h\x82<\xcbLx\xeah\x8d\x...) -> 0x47ebab
+    [3][DELEGATECALL] from=AppProxyUpgradeable, to=Lido, balanceOf(_account(address): 0x036cec) -> 3878698857548022052968
+  [2][CALL] from=0x036cec, to=AppProxyUpgradeable, approve(_spender(address): 0xDC2431, _amount(uint256): 115792089237316195423570985008687907853269...) -> True
+    [3][CALL] from=AppProxyUpgradeable, to=KernelProxy, getApp(_namespace(bytes32): b'\xf1\xf3\xeb@\xf5\xbc\x1a\xd14G\x16\xce\..., _appId(bytes32): b'<\xa7\xc3\xe3\x89h\x82<\xcbLx\xeah\x8d\x...) -> 0x47ebab
+      [4][DELEGATECALL] from=KernelProxy, to=Kernel, getApp(_namespace(bytes32): b'\xf1\xf3\xeb@\xf5\xbc\x1a\xd14G\x16\xce\..., _appId(bytes32): b'<\xa7\xc3\xe3\x89h\x82<\xcbLx\xeah\x8d\x...) -> 0x47ebab
+    [3][DELEGATECALL] from=AppProxyUpgradeable, to=Lido, approve(_spender(address): 0xDC2431, _amount(uint256): 115792089237316195423570985008687907853269...) -> True
+  [2][STATICCALL] from=0x036cec, to=AppProxyUpgradeable, balanceOf(_account(address): 0x036cec) -> 3878698857548022052968
+    [3][CALL] from=AppProxyUpgradeable, to=KernelProxy, getApp(_namespace(bytes32): b'\xf1\xf3\xeb@\xf5\xbc\x1a\xd14G\x16\xce\..., _appId(bytes32): b'<\xa7\xc3\xe3\x89h\x82<\xcbLx\xeah\x8d\x...) -> 0x47ebab
+      [4][DELEGATECALL] from=KernelProxy, to=Kernel, getApp(_namespace(bytes32): b'\xf1\xf3\xeb@\xf5\xbc\x1a\xd14G\x16\xce\..., _appId(bytes32): b'<\xa7\xc3\xe3\x89h\x82<\xcbLx\xeah\x8d\x...) -> 0x47ebab
+    [3][DELEGATECALL] from=AppProxyUpgradeable, to=Lido, balanceOf(_account(address): 0x036cec) -> 3878698857548022052968
+  [2][STATICCALL] from=0x036cec, to=AppProxyUpgradeable, balanceOf(_account(address): 0x036cec) -> 3878698857548022052968
+    [3][CALL] from=AppProxyUpgradeable, to=KernelProxy, getApp(_namespace(bytes32): b'\xf1\xf3\xeb@\xf5\xbc\x1a\xd14G\x16\xce\..., _appId(bytes32): b'<\xa7\xc3\xe3\x89h\x82<\xcbLx\xeah\x8d\x...) -> 0x47ebab
+      [4][DELEGATECALL] from=KernelProxy, to=Kernel, getApp(_namespace(bytes32): b'\xf1\xf3\xeb@\xf5\xbc\x1a\xd14G\x16\xce\..., _appId(bytes32): b'<\xa7\xc3\xe3\x89h\x82<\xcbLx\xeah\x8d\x...) -> 0x47ebab
+    [3][DELEGATECALL] from=AppProxyUpgradeable, to=Lido, balanceOf(_account(address): 0x036cec) -> 3878698857548022052968
+  [2][CALL] from=0x036cec, to=Vyper_contract, exchange(i(int128): 1, j(int128): 0, dx(uint256): 3878698857548022052968, min_dy(uint256): 0) -> 3845908063537886717891
+    [3][STATICCALL] from=Vyper_contract, to=AppProxyUpgradeable, balanceOf(_account(address): 0xDC2431) -> 466399666144339015634841
+      [4][CALL] from=AppProxyUpgradeable, to=KernelProxy, getApp(_namespace(bytes32): b'\xf1\xf3\xeb@\xf5\xbc\x1a\xd14G\x16\xce\..., _appId(bytes32): b'<\xa7\xc3\xe3\x89h\x82<\xcbLx\xeah\x8d\x...) -> 0x47ebab
+        [5][DELEGATECALL] from=KernelProxy, to=Kernel, getApp(_namespace(bytes32): b'\xf1\xf3\xeb@\xf5\xbc\x1a\xd14G\x16\xce\..., _appId(bytes32): b'<\xa7\xc3\xe3\x89h\x82<\xcbLx\xeah\x8d\x...) -> 0x47ebab
+      [4][DELEGATECALL] from=AppProxyUpgradeable, to=Lido, balanceOf(_account(address): 0xDC2431) -> 466399666144339015634841
+    [3][CALL] from=Vyper_contract, to=AppProxyUpgradeable, transferFrom(_sender(address): 0x036cec, _recipient(address): 0xDC2431, _amount(uint256): 3878698857548022052968) -> True
+      [4][CALL] from=AppProxyUpgradeable, to=KernelProxy, getApp(_namespace(bytes32): b'\xf1\xf3\xeb@\xf5\xbc\x1a\xd14G\x16\xce\..., _appId(bytes32): b'<\xa7\xc3\xe3\x89h\x82<\xcbLx\xeah\x8d\x...) -> 0x47ebab
+        [5][DELEGATECALL] from=KernelProxy, to=Kernel, getApp(_namespace(bytes32): b'\xf1\xf3\xeb@\xf5\xbc\x1a\xd14G\x16\xce\..., _appId(bytes32): b'<\xa7\xc3\xe3\x89h\x82<\xcbLx\xeah\x8d\x...) -> 0x47ebab
+      [4][DELEGATECALL] from=AppProxyUpgradeable, to=Lido, transferFrom(_sender(address): 0x036cec, _recipient(address): 0xDC2431, _amount(uint256): 3878698857548022052968) -> True
+    [3][CALL] from=Vyper_contract, to=0x000000, fallback() -> 0x000000
+    [3][CALL][3845.908063537887] from=Vyper_contract, to=0x036cec

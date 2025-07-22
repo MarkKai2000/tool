@@ -1,0 +1,357 @@
+[1][CALL] from=0xc4c306, to=0xf5d943, 0x09b8790a() -> None
+  [2][STATICCALL] from=0xf5d943, to=PancakeFactory, getPair((address): 0x55d398) -> 0xa2633c
+  [2][CALL] from=0xf5d943, to=PancakeV3Pool, flash(recipient(address): 0xF5D943, amount0(uint256): 3500000000000000000000000, amount1(uint256): 0, data(bytes): b'fuck666') -> None
+    [3][STATICCALL] from=PancakeV3Pool, to=BEP20USDT, balanceOf(account(address): 0x4f31Fa) -> 15924190631187428753720247
+    [3][STATICCALL] from=PancakeV3Pool, to=BEP20UpgradeableProxy, balanceOf(account(address): 0x4f31Fa) -> 17962478695875708981592673
+      [4][DELEGATECALL] from=BEP20UpgradeableProxy, to=BEP20TokenImplementation, balanceOf(account(address): 0x4f31Fa) -> 17962478695875708981592673
+    [3][CALL] from=PancakeV3Pool, to=BEP20USDT, transfer(recipient(address): 0xF5D943, amount(uint256): 3500000000000000000000000) -> True
+    [3][CALL] from=PancakeV3Pool, to=0xf5d943, 0xa1d48336() -> None
+      [4][STATICCALL] from=0xf5d943, to=0x000000, 0x969cdd03() -> None
+      [4][STATICCALL] from=0xf5d943, to=0x000000, 0x4b5c4277() -> None
+      [4][STATICCALL] from=0xf5d943, to=UPS, balanceOf(account(address): 0xA2633c) -> 2370926337655292500467902758
+      [4][STATICCALL] from=0xf5d943, to=0x000000, 0x9710a9d0() -> None
+      [4][STATICCALL] from=0xf5d943, to=UPS, balanceOf(account(address): 0xF5D943) -> 0
+      [4][STATICCALL] from=0xf5d943, to=0x000000, 0x9710a9d0() -> None
+      [4][CALL] from=0xf5d943, to=BEP20USDT, transfer(recipient(address): 0xA2633c, amount(uint256): 2000000000000000000000000) -> True
+      [4][CALL] from=0xf5d943, to=PancakePair, sync() -> None
+        [5][STATICCALL] from=PancakePair, to=UPS, balanceOf(account(address): 0xA2633c) -> 2370926337655292500467902758
+        [5][STATICCALL] from=PancakePair, to=BEP20USDT, balanceOf(account(address): 0xA2633c) -> 2030278801339419793360994
+      [4][STATICCALL] from=0xf5d943, to=UPS, getPrice() -> 854182211956374
+        [5][STATICCALL] from=UPS, to=PancakePair, getReserves() -> ['2370926337655292500467902758', '2030278801339419793360994', '1712581238']
+        [5][STATICCALL] from=UPS, to=PancakeRouter, getAmountsOut(amountIn(uint256): 1000000000000000000, path(address[]): ['0x3dA4828640aD831F3301A4597821Cc3461B066...) -> [1000000000000000000, 854182211956374]
+          [6][STATICCALL] from=PancakeRouter, to=PancakePair, getReserves() -> ['2370926337655292500467902758', '2030278801339419793360994', '1712581238']
+      [4][STATICCALL] from=0xf5d943, to=0x000000, 0x9710a9d0() -> None
+      [4][CALL] from=0xf5d943, to=BEP20USDT, approve(spender(address): 0x10ED43, amount(uint256): 115792089237316195423570985008687907853269...) -> True
+      [4][CALL] from=0xf5d943, to=PancakeRouter, swapExactTokensForTokensSupportingFeeOnTransferTokens(amountIn(uint256): 1000000000000000000000000, amountOutMin(uint256): 0, path(address[]): ['0x55d398326f99059fF775485246999027B31979..., to(address): 0xF5D943, deadline(uint256): 1712581238) -> None
+        [5][CALL] from=PancakeRouter, to=BEP20USDT, transferFrom(sender(address): 0xF5D943, recipient(address): 0xA2633c, amount(uint256): 1000000000000000000000000) -> True
+        [5][STATICCALL] from=PancakeRouter, to=UPS, balanceOf(account(address): 0xF5D943) -> 0
+        [5][STATICCALL] from=PancakeRouter, to=PancakePair, getReserves() -> ['2370926337655292500467902758', '2030278801339419793360994', '1712581238']
+        [5][STATICCALL] from=PancakeRouter, to=BEP20USDT, balanceOf(account(address): 0xA2633c) -> 3030278801339419793360994
+        [5][CALL] from=PancakeRouter, to=PancakePair, swap(amount0Out(uint256): 781100330303169117310636451, amount1Out(uint256): 0, to(address): 0xF5D943, data(bytes): b'') -> None
+          [6][CALL] from=PancakePair, to=UPS, transfer(to(address): 0xF5D943, value(uint256): 781100330303169117310636451) -> True
+            [7][STATICCALL] from=UPS, to=PancakePair, getReserves() -> ['2370926337655292500467902758', '2030278801339419793360994', '1712581238']
+            [7][STATICCALL] from=UPS, to=PancakeRouter, getAmountsOut(amountIn(uint256): 1000000000000000000, path(address[]): ['0x3dA4828640aD831F3301A4597821Cc3461B066...) -> [1000000000000000000, 854182211956374]
+              [8][STATICCALL] from=PancakeRouter, to=PancakePair, getReserves() -> ['2370926337655292500467902758', '2030278801339419793360994', '1712581238']
+          [6][STATICCALL] from=PancakePair, to=UPS, balanceOf(account(address): 0xA2633c) -> 1589826007352123383157266307
+          [6][STATICCALL] from=PancakePair, to=BEP20USDT, balanceOf(account(address): 0xA2633c) -> 3030278801339419793360994
+        [5][STATICCALL] from=PancakeRouter, to=UPS, balanceOf(account(address): 0xF5D943) -> 781100330303169117310636451
+      [4][STATICCALL] from=0xf5d943, to=0x000000, 0x4b5c4277() -> None
+      [4][STATICCALL] from=0xf5d943, to=UPS, balanceOf(account(address): 0xA2633c) -> 1589826007352123383157266307
+      [4][STATICCALL] from=0xf5d943, to=0x000000, 0x9710a9d0() -> None
+      [4][STATICCALL] from=0xf5d943, to=UPS, balanceOf(account(address): 0xF5D943) -> 781100330303169117310636451
+      [4][STATICCALL] from=0xf5d943, to=0x000000, 0x9710a9d0() -> None
+      [4][STATICCALL] from=0xf5d943, to=0x000000, 0x9710a9d0() -> None
+      [4][STATICCALL] from=0xf5d943, to=UPS, balanceOf(account(address): 0xF5D943) -> 781100330303169117310636451
+      [4][STATICCALL] from=0xf5d943, to=UPS, balanceOf(account(address): 0xA2633c) -> 1589826007352123383157266307
+      [4][CALL] from=0xf5d943, to=UPS, transfer(to(address): 0xA2633c, value(uint256): 781100330303169117310636451) -> True
+        [5][CALL] from=UPS, to=PancakePair, sync() -> None
+          [6][STATICCALL] from=PancakePair, to=UPS, balanceOf(account(address): 0xA2633c) -> 847780693564112721712161678
+          [6][STATICCALL] from=PancakePair, to=BEP20USDT, balanceOf(account(address): 0xA2633c) -> 3030278801339419793360994
+      [4][STATICCALL] from=0xf5d943, to=0x000000, 0x4b5c4277() -> None
+      [4][STATICCALL] from=0xf5d943, to=UPS, balanceOf(account(address): 0xA2633c) -> 1589826007352123383157266307
+      [4][STATICCALL] from=0xf5d943, to=0x000000, 0x9710a9d0() -> None
+      [4][STATICCALL] from=0xf5d943, to=UPS, balanceOf(account(address): 0xF5D943) -> 22
+      [4][STATICCALL] from=0xf5d943, to=0x000000, 0x9710a9d0() -> None
+      [4][CALL] from=0xf5d943, to=PancakePair, skim(to(address): 0xF5D943) -> None
+        [5][STATICCALL] from=PancakePair, to=UPS, balanceOf(account(address): 0xA2633c) -> 1589826007352123383157266307
+        [5][CALL] from=PancakePair, to=UPS, transfer(to(address): 0xF5D943, value(uint256): 742045313788010661445104629) -> True
+        [5][STATICCALL] from=PancakePair, to=BEP20USDT, balanceOf(account(address): 0xA2633c) -> 3030278801339419793360994
+        [5][CALL] from=PancakePair, to=BEP20USDT, transfer(recipient(address): 0xF5D943, amount(uint256): 0) -> True
+      [4][STATICCALL] from=0xf5d943, to=0x000000, 0x4b5c4277() -> None
+      [4][STATICCALL] from=0xf5d943, to=UPS, balanceOf(account(address): 0xA2633c) -> 847780693564112721712161678
+      [4][STATICCALL] from=0xf5d943, to=0x000000, 0x9710a9d0() -> None
+      [4][STATICCALL] from=0xf5d943, to=UPS, balanceOf(account(address): 0xF5D943) -> 742045313788010661445104651
+      [4][STATICCALL] from=0xf5d943, to=0x000000, 0x9710a9d0() -> None
+      [4][STATICCALL] from=0xf5d943, to=0x000000, 0x9710a9d0() -> None
+      [4][STATICCALL] from=0xf5d943, to=UPS, balanceOf(account(address): 0xF5D943) -> 742045313788010661445104651
+      [4][STATICCALL] from=0xf5d943, to=UPS, balanceOf(account(address): 0xA2633c) -> 847780693564112721712161678
+      [4][CALL] from=0xf5d943, to=UPS, transfer(to(address): 0xA2633c, value(uint256): 742045313788010661445104651) -> True
+        [5][CALL] from=UPS, to=PancakePair, sync() -> None
+          [6][STATICCALL] from=PancakePair, to=UPS, balanceOf(account(address): 0xA2633c) -> 142837645465502593339312259
+          [6][STATICCALL] from=PancakePair, to=BEP20USDT, balanceOf(account(address): 0xA2633c) -> 3030278801339419793360994
+      [4][STATICCALL] from=0xf5d943, to=0x000000, 0x4b5c4277() -> None
+      [4][STATICCALL] from=0xf5d943, to=UPS, balanceOf(account(address): 0xA2633c) -> 847780693564112721712161678
+      [4][STATICCALL] from=0xf5d943, to=0x000000, 0x9710a9d0() -> None
+      [4][STATICCALL] from=0xf5d943, to=UPS, balanceOf(account(address): 0xF5D943) -> 32
+      [4][STATICCALL] from=0xf5d943, to=0x000000, 0x9710a9d0() -> None
+      [4][CALL] from=0xf5d943, to=PancakePair, skim(to(address): 0xF5D943) -> None
+        [5][STATICCALL] from=PancakePair, to=UPS, balanceOf(account(address): 0xA2633c) -> 847780693564112721712161678
+        [5][CALL] from=PancakePair, to=UPS, transfer(to(address): 0xF5D943, value(uint256): 704943048098610128372849419) -> True
+        [5][STATICCALL] from=PancakePair, to=BEP20USDT, balanceOf(account(address): 0xA2633c) -> 3030278801339419793360994
+        [5][CALL] from=PancakePair, to=BEP20USDT, transfer(recipient(address): 0xF5D943, amount(uint256): 0) -> True
+      [4][STATICCALL] from=0xf5d943, to=0x000000, 0x4b5c4277() -> None
+      [4][STATICCALL] from=0xf5d943, to=UPS, balanceOf(account(address): 0xA2633c) -> 142837645465502593339312259
+      [4][STATICCALL] from=0xf5d943, to=0x000000, 0x9710a9d0() -> None
+      [4][STATICCALL] from=0xf5d943, to=UPS, balanceOf(account(address): 0xF5D943) -> 704943048098610128372849451
+      [4][STATICCALL] from=0xf5d943, to=0x000000, 0x9710a9d0() -> None
+      [4][STATICCALL] from=0xf5d943, to=0x000000, 0x9710a9d0() -> None
+      [4][STATICCALL] from=0xf5d943, to=UPS, balanceOf(account(address): 0xF5D943) -> 704943048098610128372849451
+      [4][STATICCALL] from=0xf5d943, to=UPS, balanceOf(account(address): 0xA2633c) -> 142837645465502593339312259
+      [4][STATICCALL] from=0xf5d943, to=UPS, balanceOf(account(address): 0xA2633c) -> 142837645465502593339312259
+      [4][CALL] from=0xf5d943, to=UPS, transfer(to(address): 0xA2633c, value(uint256): 142837645465502593339312259) -> True
+        [5][CALL] from=UPS, to=PancakePair, sync() -> None
+          [6][STATICCALL] from=PancakePair, to=UPS, balanceOf(account(address): 0xA2633c) -> 7141882273275129666965612
+          [6][STATICCALL] from=PancakePair, to=BEP20USDT, balanceOf(account(address): 0xA2633c) -> 3030278801339419793360994
+      [4][STATICCALL] from=0xf5d943, to=0x000000, 0x4b5c4277() -> None
+      [4][STATICCALL] from=0xf5d943, to=UPS, balanceOf(account(address): 0xA2633c) -> 142837645465502593339312259
+      [4][STATICCALL] from=0xf5d943, to=0x000000, 0x9710a9d0() -> None
+      [4][STATICCALL] from=0xf5d943, to=UPS, balanceOf(account(address): 0xF5D943) -> 562105402633107535033537204
+      [4][STATICCALL] from=0xf5d943, to=0x000000, 0x9710a9d0() -> None
+      [4][CALL] from=0xf5d943, to=PancakePair, skim(to(address): 0xF5D943) -> None
+        [5][STATICCALL] from=PancakePair, to=UPS, balanceOf(account(address): 0xA2633c) -> 142837645465502593339312259
+        [5][CALL] from=PancakePair, to=UPS, transfer(to(address): 0xF5D943, value(uint256): 135695763192227463672346647) -> True
+        [5][STATICCALL] from=PancakePair, to=BEP20USDT, balanceOf(account(address): 0xA2633c) -> 3030278801339419793360994
+        [5][CALL] from=PancakePair, to=BEP20USDT, transfer(recipient(address): 0xF5D943, amount(uint256): 0) -> True
+      [4][STATICCALL] from=0xf5d943, to=0x000000, 0x4b5c4277() -> None
+      [4][STATICCALL] from=0xf5d943, to=UPS, balanceOf(account(address): 0xA2633c) -> 7141882273275129666965612
+      [4][STATICCALL] from=0xf5d943, to=0x000000, 0x9710a9d0() -> None
+      [4][STATICCALL] from=0xf5d943, to=UPS, balanceOf(account(address): 0xF5D943) -> 697801165825334998705883851
+      [4][STATICCALL] from=0xf5d943, to=0x000000, 0x9710a9d0() -> None
+      [4][STATICCALL] from=0xf5d943, to=0x000000, 0x9710a9d0() -> None
+      [4][STATICCALL] from=0xf5d943, to=UPS, balanceOf(account(address): 0xF5D943) -> 697801165825334998705883851
+      [4][STATICCALL] from=0xf5d943, to=UPS, balanceOf(account(address): 0xA2633c) -> 7141882273275129666965612
+      [4][STATICCALL] from=0xf5d943, to=UPS, balanceOf(account(address): 0xA2633c) -> 7141882273275129666965612
+      [4][CALL] from=0xf5d943, to=UPS, transfer(to(address): 0xA2633c, value(uint256): 7141882273275129666965612) -> True
+        [5][CALL] from=UPS, to=PancakePair, sync() -> None
+          [6][STATICCALL] from=PancakePair, to=UPS, balanceOf(account(address): 0xA2633c) -> 357094113663756483348280
+          [6][STATICCALL] from=PancakePair, to=BEP20USDT, balanceOf(account(address): 0xA2633c) -> 3030278801339419793360994
+      [4][STATICCALL] from=0xf5d943, to=0x000000, 0x4b5c4277() -> None
+      [4][STATICCALL] from=0xf5d943, to=UPS, balanceOf(account(address): 0xA2633c) -> 7141882273275129666965612
+      [4][STATICCALL] from=0xf5d943, to=0x000000, 0x9710a9d0() -> None
+      [4][STATICCALL] from=0xf5d943, to=UPS, balanceOf(account(address): 0xF5D943) -> 690659283552059869038918239
+      [4][STATICCALL] from=0xf5d943, to=0x000000, 0x9710a9d0() -> None
+      [4][CALL] from=0xf5d943, to=PancakePair, skim(to(address): 0xF5D943) -> None
+        [5][STATICCALL] from=PancakePair, to=UPS, balanceOf(account(address): 0xA2633c) -> 7141882273275129666965612
+        [5][CALL] from=PancakePair, to=UPS, transfer(to(address): 0xF5D943, value(uint256): 6784788159611373183617332) -> True
+        [5][STATICCALL] from=PancakePair, to=BEP20USDT, balanceOf(account(address): 0xA2633c) -> 3030278801339419793360994
+        [5][CALL] from=PancakePair, to=BEP20USDT, transfer(recipient(address): 0xF5D943, amount(uint256): 0) -> True
+      [4][STATICCALL] from=0xf5d943, to=0x000000, 0x4b5c4277() -> None
+      [4][STATICCALL] from=0xf5d943, to=UPS, balanceOf(account(address): 0xA2633c) -> 357094113663756483348280
+      [4][STATICCALL] from=0xf5d943, to=0x000000, 0x9710a9d0() -> None
+      [4][STATICCALL] from=0xf5d943, to=UPS, balanceOf(account(address): 0xF5D943) -> 697444071711671242222535571
+      [4][STATICCALL] from=0xf5d943, to=0x000000, 0x9710a9d0() -> None
+      [4][STATICCALL] from=0xf5d943, to=0x000000, 0x9710a9d0() -> None
+      [4][STATICCALL] from=0xf5d943, to=UPS, balanceOf(account(address): 0xF5D943) -> 697444071711671242222535571
+      [4][STATICCALL] from=0xf5d943, to=UPS, balanceOf(account(address): 0xA2633c) -> 357094113663756483348280
+      [4][STATICCALL] from=0xf5d943, to=UPS, balanceOf(account(address): 0xA2633c) -> 357094113663756483348280
+      [4][CALL] from=0xf5d943, to=UPS, transfer(to(address): 0xA2633c, value(uint256): 357094113663756483348280) -> True
+        [5][CALL] from=UPS, to=PancakePair, sync() -> None
+          [6][STATICCALL] from=PancakePair, to=UPS, balanceOf(account(address): 0xA2633c) -> 17854705683187824167414
+          [6][STATICCALL] from=PancakePair, to=BEP20USDT, balanceOf(account(address): 0xA2633c) -> 3030278801339419793360994
+      [4][STATICCALL] from=0xf5d943, to=0x000000, 0x4b5c4277() -> None
+      [4][STATICCALL] from=0xf5d943, to=UPS, balanceOf(account(address): 0xA2633c) -> 357094113663756483348280
+      [4][STATICCALL] from=0xf5d943, to=0x000000, 0x9710a9d0() -> None
+      [4][STATICCALL] from=0xf5d943, to=UPS, balanceOf(account(address): 0xF5D943) -> 697086977598007485739187305
+      [4][STATICCALL] from=0xf5d943, to=0x000000, 0x9710a9d0() -> None
+      [4][CALL] from=0xf5d943, to=PancakePair, skim(to(address): 0xF5D943) -> None
+        [5][STATICCALL] from=PancakePair, to=UPS, balanceOf(account(address): 0xA2633c) -> 357094113663756483348280
+        [5][CALL] from=PancakePair, to=UPS, transfer(to(address): 0xF5D943, value(uint256): 339239407980568659180866) -> True
+        [5][STATICCALL] from=PancakePair, to=BEP20USDT, balanceOf(account(address): 0xA2633c) -> 3030278801339419793360994
+        [5][CALL] from=PancakePair, to=BEP20USDT, transfer(recipient(address): 0xF5D943, amount(uint256): 0) -> True
+      [4][STATICCALL] from=0xf5d943, to=0x000000, 0x4b5c4277() -> None
+      [4][STATICCALL] from=0xf5d943, to=UPS, balanceOf(account(address): 0xA2633c) -> 17854705683187824167414
+      [4][STATICCALL] from=0xf5d943, to=0x000000, 0x9710a9d0() -> None
+      [4][STATICCALL] from=0xf5d943, to=UPS, balanceOf(account(address): 0xF5D943) -> 697426217005988054398368171
+      [4][STATICCALL] from=0xf5d943, to=0x000000, 0x9710a9d0() -> None
+      [4][STATICCALL] from=0xf5d943, to=0x000000, 0x9710a9d0() -> None
+      [4][STATICCALL] from=0xf5d943, to=UPS, balanceOf(account(address): 0xF5D943) -> 697426217005988054398368171
+      [4][STATICCALL] from=0xf5d943, to=UPS, balanceOf(account(address): 0xA2633c) -> 17854705683187824167414
+      [4][STATICCALL] from=0xf5d943, to=UPS, balanceOf(account(address): 0xA2633c) -> 17854705683187824167414
+      [4][CALL] from=0xf5d943, to=UPS, transfer(to(address): 0xA2633c, value(uint256): 17854705683187824167414) -> True
+        [5][CALL] from=UPS, to=PancakePair, sync() -> None
+          [6][STATICCALL] from=PancakePair, to=UPS, balanceOf(account(address): 0xA2633c) -> 892735284159391208370
+          [6][STATICCALL] from=PancakePair, to=BEP20USDT, balanceOf(account(address): 0xA2633c) -> 3030278801339419793360994
+      [4][STATICCALL] from=0xf5d943, to=0x000000, 0x4b5c4277() -> None
+      [4][STATICCALL] from=0xf5d943, to=UPS, balanceOf(account(address): 0xA2633c) -> 17854705683187824167414
+      [4][STATICCALL] from=0xf5d943, to=0x000000, 0x9710a9d0() -> None
+      [4][STATICCALL] from=0xf5d943, to=UPS, balanceOf(account(address): 0xF5D943) -> 697408362300304866574200767
+      [4][STATICCALL] from=0xf5d943, to=0x000000, 0x9710a9d0() -> None
+      [4][CALL] from=0xf5d943, to=PancakePair, skim(to(address): 0xF5D943) -> None
+        [5][STATICCALL] from=PancakePair, to=UPS, balanceOf(account(address): 0xA2633c) -> 17854705683187824167414
+        [5][CALL] from=PancakePair, to=UPS, transfer(to(address): 0xF5D943, value(uint256): 16961970399028432959044) -> True
+        [5][STATICCALL] from=PancakePair, to=BEP20USDT, balanceOf(account(address): 0xA2633c) -> 3030278801339419793360994
+        [5][CALL] from=PancakePair, to=BEP20USDT, transfer(recipient(address): 0xF5D943, amount(uint256): 0) -> True
+      [4][STATICCALL] from=0xf5d943, to=0x000000, 0x4b5c4277() -> None
+      [4][STATICCALL] from=0xf5d943, to=UPS, balanceOf(account(address): 0xA2633c) -> 892735284159391208370
+      [4][STATICCALL] from=0xf5d943, to=0x000000, 0x9710a9d0() -> None
+      [4][STATICCALL] from=0xf5d943, to=UPS, balanceOf(account(address): 0xF5D943) -> 697425324270703895007159811
+      [4][STATICCALL] from=0xf5d943, to=0x000000, 0x9710a9d0() -> None
+      [4][STATICCALL] from=0xf5d943, to=0x000000, 0x9710a9d0() -> None
+      [4][STATICCALL] from=0xf5d943, to=UPS, balanceOf(account(address): 0xF5D943) -> 697425324270703895007159811
+      [4][STATICCALL] from=0xf5d943, to=UPS, balanceOf(account(address): 0xA2633c) -> 892735284159391208370
+      [4][STATICCALL] from=0xf5d943, to=UPS, balanceOf(account(address): 0xA2633c) -> 892735284159391208370
+      [4][CALL] from=0xf5d943, to=UPS, transfer(to(address): 0xA2633c, value(uint256): 892735284159391208370) -> True
+        [5][CALL] from=UPS, to=PancakePair, sync() -> None
+          [6][STATICCALL] from=PancakePair, to=UPS, balanceOf(account(address): 0xA2633c) -> 44636764207969560418
+          [6][STATICCALL] from=PancakePair, to=BEP20USDT, balanceOf(account(address): 0xA2633c) -> 3030278801339419793360994
+      [4][STATICCALL] from=0xf5d943, to=0x000000, 0x4b5c4277() -> None
+      [4][STATICCALL] from=0xf5d943, to=UPS, balanceOf(account(address): 0xA2633c) -> 892735284159391208370
+      [4][STATICCALL] from=0xf5d943, to=0x000000, 0x9710a9d0() -> None
+      [4][STATICCALL] from=0xf5d943, to=UPS, balanceOf(account(address): 0xF5D943) -> 697424431535419735615951459
+      [4][STATICCALL] from=0xf5d943, to=0x000000, 0x9710a9d0() -> None
+      [4][CALL] from=0xf5d943, to=PancakePair, skim(to(address): 0xF5D943) -> None
+        [5][STATICCALL] from=PancakePair, to=UPS, balanceOf(account(address): 0xA2633c) -> 892735284159391208370
+        [5][CALL] from=PancakePair, to=UPS, transfer(to(address): 0xF5D943, value(uint256): 848098519951421647952) -> True
+        [5][STATICCALL] from=PancakePair, to=BEP20USDT, balanceOf(account(address): 0xA2633c) -> 3030278801339419793360994
+        [5][CALL] from=PancakePair, to=BEP20USDT, transfer(recipient(address): 0xF5D943, amount(uint256): 0) -> True
+      [4][STATICCALL] from=0xf5d943, to=0x000000, 0x4b5c4277() -> None
+      [4][STATICCALL] from=0xf5d943, to=UPS, balanceOf(account(address): 0xA2633c) -> 44636764207969560418
+      [4][STATICCALL] from=0xf5d943, to=0x000000, 0x9710a9d0() -> None
+      [4][STATICCALL] from=0xf5d943, to=UPS, balanceOf(account(address): 0xF5D943) -> 697425279633939687037599411
+      [4][STATICCALL] from=0xf5d943, to=0x000000, 0x9710a9d0() -> None
+      [4][STATICCALL] from=0xf5d943, to=0x000000, 0x9710a9d0() -> None
+      [4][STATICCALL] from=0xf5d943, to=UPS, balanceOf(account(address): 0xF5D943) -> 697425279633939687037599411
+      [4][STATICCALL] from=0xf5d943, to=UPS, balanceOf(account(address): 0xA2633c) -> 44636764207969560418
+      [4][STATICCALL] from=0xf5d943, to=UPS, balanceOf(account(address): 0xA2633c) -> 44636764207969560418
+      [4][CALL] from=0xf5d943, to=UPS, transfer(to(address): 0xA2633c, value(uint256): 44636764207969560418) -> True
+        [5][CALL] from=UPS, to=PancakePair, sync() -> None
+          [6][STATICCALL] from=PancakePair, to=UPS, balanceOf(account(address): 0xA2633c) -> 2231838210398478020
+          [6][STATICCALL] from=PancakePair, to=BEP20USDT, balanceOf(account(address): 0xA2633c) -> 3030278801339419793360994
+      [4][STATICCALL] from=0xf5d943, to=0x000000, 0x4b5c4277() -> None
+      [4][STATICCALL] from=0xf5d943, to=UPS, balanceOf(account(address): 0xA2633c) -> 44636764207969560418
+      [4][STATICCALL] from=0xf5d943, to=0x000000, 0x9710a9d0() -> None
+      [4][STATICCALL] from=0xf5d943, to=UPS, balanceOf(account(address): 0xF5D943) -> 697425234997175479068039013
+      [4][STATICCALL] from=0xf5d943, to=0x000000, 0x9710a9d0() -> None
+      [4][CALL] from=0xf5d943, to=PancakePair, skim(to(address): 0xF5D943) -> None
+        [5][STATICCALL] from=PancakePair, to=UPS, balanceOf(account(address): 0xA2633c) -> 44636764207969560418
+        [5][CALL] from=PancakePair, to=UPS, transfer(to(address): 0xF5D943, value(uint256): 42404925997571082398) -> True
+        [5][STATICCALL] from=PancakePair, to=BEP20USDT, balanceOf(account(address): 0xA2633c) -> 3030278801339419793360994
+        [5][CALL] from=PancakePair, to=BEP20USDT, transfer(recipient(address): 0xF5D943, amount(uint256): 0) -> True
+      [4][STATICCALL] from=0xf5d943, to=0x000000, 0x4b5c4277() -> None
+      [4][STATICCALL] from=0xf5d943, to=UPS, balanceOf(account(address): 0xA2633c) -> 2231838210398478020
+      [4][STATICCALL] from=0xf5d943, to=0x000000, 0x9710a9d0() -> None
+      [4][STATICCALL] from=0xf5d943, to=UPS, balanceOf(account(address): 0xF5D943) -> 697425277402101476639121411
+      [4][STATICCALL] from=0xf5d943, to=0x000000, 0x9710a9d0() -> None
+      [4][STATICCALL] from=0xf5d943, to=0x000000, 0x9710a9d0() -> None
+      [4][STATICCALL] from=0xf5d943, to=UPS, balanceOf(account(address): 0xF5D943) -> 697425277402101476639121411
+      [4][STATICCALL] from=0xf5d943, to=UPS, balanceOf(account(address): 0xA2633c) -> 2231838210398478020
+      [4][STATICCALL] from=0xf5d943, to=UPS, balanceOf(account(address): 0xA2633c) -> 2231838210398478020
+      [4][CALL] from=0xf5d943, to=UPS, transfer(to(address): 0xA2633c, value(uint256): 2231838210398478020) -> True
+        [5][CALL] from=UPS, to=PancakePair, sync() -> None
+          [6][STATICCALL] from=PancakePair, to=UPS, balanceOf(account(address): 0xA2633c) -> 111591910519923901
+          [6][STATICCALL] from=PancakePair, to=BEP20USDT, balanceOf(account(address): 0xA2633c) -> 3030278801339419793360994
+      [4][STATICCALL] from=0xf5d943, to=0x000000, 0x4b5c4277() -> None
+      [4][STATICCALL] from=0xf5d943, to=UPS, balanceOf(account(address): 0xA2633c) -> 2231838210398478020
+      [4][STATICCALL] from=0xf5d943, to=0x000000, 0x9710a9d0() -> None
+      [4][STATICCALL] from=0xf5d943, to=UPS, balanceOf(account(address): 0xF5D943) -> 697425275170263266240643412
+      [4][STATICCALL] from=0xf5d943, to=0x000000, 0x9710a9d0() -> None
+      [4][CALL] from=0xf5d943, to=PancakePair, skim(to(address): 0xF5D943) -> None
+        [5][STATICCALL] from=PancakePair, to=UPS, balanceOf(account(address): 0xA2633c) -> 2231838210398478020
+        [5][CALL] from=PancakePair, to=UPS, transfer(to(address): 0xF5D943, value(uint256): 2120246299878554119) -> True
+        [5][STATICCALL] from=PancakePair, to=BEP20USDT, balanceOf(account(address): 0xA2633c) -> 3030278801339419793360994
+        [5][CALL] from=PancakePair, to=BEP20USDT, transfer(recipient(address): 0xF5D943, amount(uint256): 0) -> True
+      [4][STATICCALL] from=0xf5d943, to=0x000000, 0x4b5c4277() -> None
+      [4][STATICCALL] from=0xf5d943, to=UPS, balanceOf(account(address): 0xA2633c) -> 111591910519923901
+      [4][STATICCALL] from=0xf5d943, to=0x000000, 0x9710a9d0() -> None
+      [4][STATICCALL] from=0xf5d943, to=UPS, balanceOf(account(address): 0xF5D943) -> 697425277290509566119197531
+      [4][STATICCALL] from=0xf5d943, to=0x000000, 0x9710a9d0() -> None
+      [4][STATICCALL] from=0xf5d943, to=0x000000, 0x9710a9d0() -> None
+      [4][STATICCALL] from=0xf5d943, to=UPS, balanceOf(account(address): 0xF5D943) -> 697425277290509566119197531
+      [4][STATICCALL] from=0xf5d943, to=UPS, balanceOf(account(address): 0xA2633c) -> 111591910519923901
+      [4][STATICCALL] from=0xf5d943, to=UPS, balanceOf(account(address): 0xA2633c) -> 111591910519923901
+      [4][STATICCALL] from=0xf5d943, to=UPS, balanceOf(account(address): 0xA2633c) -> 111591910519923901
+      [4][CALL] from=0xf5d943, to=UPS, transfer(to(address): 0xA2633c, value(uint256): 111591910519923901) -> True
+        [5][CALL] from=UPS, to=PancakePair, sync() -> None
+          [6][STATICCALL] from=PancakePair, to=UPS, balanceOf(account(address): 0xA2633c) -> 5579595525996195
+          [6][STATICCALL] from=PancakePair, to=BEP20USDT, balanceOf(account(address): 0xA2633c) -> 3030278801339419793360994
+      [4][STATICCALL] from=0xf5d943, to=0x000000, 0x4b5c4277() -> None
+      [4][STATICCALL] from=0xf5d943, to=UPS, balanceOf(account(address): 0xA2633c) -> 111591910519923901
+      [4][STATICCALL] from=0xf5d943, to=0x000000, 0x9710a9d0() -> None
+      [4][STATICCALL] from=0xf5d943, to=UPS, balanceOf(account(address): 0xF5D943) -> 697425277178917655599273665
+      [4][STATICCALL] from=0xf5d943, to=0x000000, 0x9710a9d0() -> None
+      [4][STATICCALL] from=0xf5d943, to=PancakePair, getReserves() -> ['5579595525996195', '3030278801339419793360994', '1712581238']
+      [4][STATICCALL] from=0xf5d943, to=0x000000, 0x9710a9d0() -> None
+      [4][STATICCALL] from=0xf5d943, to=PancakeRouter, getAmountOut(amountIn(uint256): 106012314993927706, reserveIn(uint256): 5579595525996195, reserveOut(uint256): 3030278801339419793360994) -> 2878404158996885285594579
+      [4][STATICCALL] from=0xf5d943, to=0x000000, 0x9710a9d0() -> None
+      [4][CALL] from=0xf5d943, to=PancakePair, swap(amount0Out(uint256): 0, amount1Out(uint256): 2878404158996885285594579, to(address): 0xF5D943, data(bytes): b'') -> None
+        [5][CALL] from=PancakePair, to=BEP20USDT, transfer(recipient(address): 0xF5D943, amount(uint256): 2878404158996885285594579) -> True
+        [5][STATICCALL] from=PancakePair, to=UPS, balanceOf(account(address): 0xA2633c) -> 111591910519923901
+        [5][STATICCALL] from=PancakePair, to=BEP20USDT, balanceOf(account(address): 0xA2633c) -> 151874642342534507766415
+      [4][STATICCALL] from=0xf5d943, to=BEP20USDT, balanceOf(account(address): 0xF5D943) -> 3378404158996885285594579
+      [4][STATICCALL] from=0xf5d943, to=0x000000, 0x9710a9d0() -> None
+      [4][STATICCALL] from=0xf5d943, to=UPS, balanceOf(account(address): 0xA2633c) -> 111591910519923901
+      [4][CALL] from=0xf5d943, to=UPS, transfer(to(address): 0xA2633c, value(uint256): 111591910519923901) -> True
+        [5][CALL] from=UPS, to=PancakePair, sync() -> None
+          [6][STATICCALL] from=PancakePair, to=UPS, balanceOf(account(address): 0xA2633c) -> 5579595525996195
+          [6][STATICCALL] from=PancakePair, to=BEP20USDT, balanceOf(account(address): 0xA2633c) -> 151874642342534507766415
+      [4][STATICCALL] from=0xf5d943, to=0x000000, 0x4b5c4277() -> None
+      [4][STATICCALL] from=0xf5d943, to=UPS, balanceOf(account(address): 0xA2633c) -> 111591910519923901
+      [4][STATICCALL] from=0xf5d943, to=0x000000, 0x9710a9d0() -> None
+      [4][STATICCALL] from=0xf5d943, to=UPS, balanceOf(account(address): 0xF5D943) -> 697425277067325745079349799
+      [4][STATICCALL] from=0xf5d943, to=0x000000, 0x9710a9d0() -> None
+      [4][STATICCALL] from=0xf5d943, to=PancakePair, getReserves() -> ['5579595525996195', '151874642342534507766415', '1712581238']
+      [4][STATICCALL] from=0xf5d943, to=0x000000, 0x9710a9d0() -> None
+      [4][STATICCALL] from=0xf5d943, to=PancakeRouter, getAmountOut(amountIn(uint256): 106012314993927706, reserveIn(uint256): 5579595525996195, reserveOut(uint256): 151874642342534507766415) -> 144262832176262887347640
+      [4][STATICCALL] from=0xf5d943, to=0x000000, 0x9710a9d0() -> None
+      [4][CALL] from=0xf5d943, to=PancakePair, swap(amount0Out(uint256): 0, amount1Out(uint256): 144262832176262887347640, to(address): 0xF5D943, data(bytes): b'') -> None
+        [5][CALL] from=PancakePair, to=BEP20USDT, transfer(recipient(address): 0xF5D943, amount(uint256): 144262832176262887347640) -> True
+        [5][STATICCALL] from=PancakePair, to=UPS, balanceOf(account(address): 0xA2633c) -> 111591910519923901
+        [5][STATICCALL] from=PancakePair, to=BEP20USDT, balanceOf(account(address): 0xA2633c) -> 7611810166271620418775
+      [4][STATICCALL] from=0xf5d943, to=BEP20USDT, balanceOf(account(address): 0xF5D943) -> 3522666991173148172942219
+      [4][STATICCALL] from=0xf5d943, to=0x000000, 0x9710a9d0() -> None
+      [4][STATICCALL] from=0xf5d943, to=UPS, balanceOf(account(address): 0xA2633c) -> 111591910519923901
+      [4][CALL] from=0xf5d943, to=UPS, transfer(to(address): 0xA2633c, value(uint256): 111591910519923901) -> True
+        [5][CALL] from=UPS, to=PancakePair, sync() -> None
+          [6][STATICCALL] from=PancakePair, to=UPS, balanceOf(account(address): 0xA2633c) -> 5579595525996195
+          [6][STATICCALL] from=PancakePair, to=BEP20USDT, balanceOf(account(address): 0xA2633c) -> 7611810166271620418775
+      [4][STATICCALL] from=0xf5d943, to=0x000000, 0x4b5c4277() -> None
+      [4][STATICCALL] from=0xf5d943, to=UPS, balanceOf(account(address): 0xA2633c) -> 111591910519923901
+      [4][STATICCALL] from=0xf5d943, to=0x000000, 0x9710a9d0() -> None
+      [4][STATICCALL] from=0xf5d943, to=UPS, balanceOf(account(address): 0xF5D943) -> 697425276955733834559425933
+      [4][STATICCALL] from=0xf5d943, to=0x000000, 0x9710a9d0() -> None
+      [4][STATICCALL] from=0xf5d943, to=PancakePair, getReserves() -> ['5579595525996195', '7611810166271620418775', '1712581238']
+      [4][STATICCALL] from=0xf5d943, to=0x000000, 0x9710a9d0() -> None
+      [4][STATICCALL] from=0xf5d943, to=PancakeRouter, getAmountOut(amountIn(uint256): 106012314993927706, reserveIn(uint256): 5579595525996195, reserveOut(uint256): 7611810166271620418775) -> 7230313603621745949381
+      [4][STATICCALL] from=0xf5d943, to=0x000000, 0x9710a9d0() -> None
+      [4][CALL] from=0xf5d943, to=PancakePair, swap(amount0Out(uint256): 0, amount1Out(uint256): 7230313603621745949381, to(address): 0xF5D943, data(bytes): b'') -> None
+        [5][CALL] from=PancakePair, to=BEP20USDT, transfer(recipient(address): 0xF5D943, amount(uint256): 7230313603621745949381) -> True
+        [5][STATICCALL] from=PancakePair, to=UPS, balanceOf(account(address): 0xA2633c) -> 111591910519923901
+        [5][STATICCALL] from=PancakePair, to=BEP20USDT, balanceOf(account(address): 0xA2633c) -> 381496562649874469394
+      [4][STATICCALL] from=0xf5d943, to=BEP20USDT, balanceOf(account(address): 0xF5D943) -> 3529897304776769918891600
+      [4][STATICCALL] from=0xf5d943, to=0x000000, 0x9710a9d0() -> None
+      [4][STATICCALL] from=0xf5d943, to=UPS, balanceOf(account(address): 0xA2633c) -> 111591910519923901
+      [4][CALL] from=0xf5d943, to=UPS, transfer(to(address): 0xA2633c, value(uint256): 111591910519923901) -> True
+        [5][CALL] from=UPS, to=PancakePair, sync() -> None
+          [6][STATICCALL] from=PancakePair, to=UPS, balanceOf(account(address): 0xA2633c) -> 5579595525996195
+          [6][STATICCALL] from=PancakePair, to=BEP20USDT, balanceOf(account(address): 0xA2633c) -> 381496562649874469394
+      [4][STATICCALL] from=0xf5d943, to=0x000000, 0x4b5c4277() -> None
+      [4][STATICCALL] from=0xf5d943, to=UPS, balanceOf(account(address): 0xA2633c) -> 111591910519923901
+      [4][STATICCALL] from=0xf5d943, to=0x000000, 0x9710a9d0() -> None
+      [4][STATICCALL] from=0xf5d943, to=UPS, balanceOf(account(address): 0xF5D943) -> 697425276844141924039502067
+      [4][STATICCALL] from=0xf5d943, to=0x000000, 0x9710a9d0() -> None
+      [4][STATICCALL] from=0xf5d943, to=PancakePair, getReserves() -> ['5579595525996195', '381496562649874469394', '1712581238']
+      [4][STATICCALL] from=0xf5d943, to=0x000000, 0x9710a9d0() -> None
+      [4][STATICCALL] from=0xf5d943, to=PancakeRouter, getAmountOut(amountIn(uint256): 106012314993927706, reserveIn(uint256): 5579595525996195, reserveOut(uint256): 381496562649874469394) -> 362376323950469659672
+      [4][STATICCALL] from=0xf5d943, to=0x000000, 0x9710a9d0() -> None
+      [4][CALL] from=0xf5d943, to=PancakePair, swap(amount0Out(uint256): 0, amount1Out(uint256): 362376323950469659672, to(address): 0xF5D943, data(bytes): b'') -> None
+        [5][CALL] from=PancakePair, to=BEP20USDT, transfer(recipient(address): 0xF5D943, amount(uint256): 362376323950469659672) -> True
+        [5][STATICCALL] from=PancakePair, to=UPS, balanceOf(account(address): 0xA2633c) -> 111591910519923901
+        [5][STATICCALL] from=PancakePair, to=BEP20USDT, balanceOf(account(address): 0xA2633c) -> 19120238699404809722
+      [4][STATICCALL] from=0xf5d943, to=BEP20USDT, balanceOf(account(address): 0xF5D943) -> 3530259681100720388551272
+      [4][STATICCALL] from=0xf5d943, to=0x000000, 0x9710a9d0() -> None
+      [4][STATICCALL] from=0xf5d943, to=UPS, balanceOf(account(address): 0xA2633c) -> 111591910519923901
+      [4][CALL] from=0xf5d943, to=UPS, transfer(to(address): 0xA2633c, value(uint256): 111591910519923901) -> True
+        [5][CALL] from=UPS, to=PancakePair, sync() -> None
+          [6][STATICCALL] from=PancakePair, to=UPS, balanceOf(account(address): 0xA2633c) -> 5579595525996195
+          [6][STATICCALL] from=PancakePair, to=BEP20USDT, balanceOf(account(address): 0xA2633c) -> 19120238699404809722
+      [4][STATICCALL] from=0xf5d943, to=0x000000, 0x4b5c4277() -> None
+      [4][STATICCALL] from=0xf5d943, to=UPS, balanceOf(account(address): 0xA2633c) -> 111591910519923901
+      [4][STATICCALL] from=0xf5d943, to=0x000000, 0x9710a9d0() -> None
+      [4][STATICCALL] from=0xf5d943, to=UPS, balanceOf(account(address): 0xF5D943) -> 697425276732550013519578201
+      [4][STATICCALL] from=0xf5d943, to=0x000000, 0x9710a9d0() -> None
+      [4][STATICCALL] from=0xf5d943, to=PancakePair, getReserves() -> ['5579595525996195', '19120238699404809722', '1712581238']
+      [4][STATICCALL] from=0xf5d943, to=0x000000, 0x9710a9d0() -> None
+      [4][STATICCALL] from=0xf5d943, to=PancakeRouter, getAmountOut(amountIn(uint256): 106012314993927706, reserveIn(uint256): 5579595525996195, reserveOut(uint256): 19120238699404809722) -> 18161950830746505772
+      [4][STATICCALL] from=0xf5d943, to=0x000000, 0x9710a9d0() -> None
+      [4][CALL] from=0xf5d943, to=PancakePair, swap(amount0Out(uint256): 0, amount1Out(uint256): 18161950830746505772, to(address): 0xF5D943, data(bytes): b'') -> None
+        [5][CALL] from=PancakePair, to=BEP20USDT, transfer(recipient(address): 0xF5D943, amount(uint256): 18161950830746505772) -> True
+        [5][STATICCALL] from=PancakePair, to=UPS, balanceOf(account(address): 0xA2633c) -> 111591910519923901
+        [5][STATICCALL] from=PancakePair, to=BEP20USDT, balanceOf(account(address): 0xA2633c) -> 958287868658303950
+      [4][STATICCALL] from=0xf5d943, to=BEP20USDT, balanceOf(account(address): 0xF5D943) -> 3530277843051551135057044
+      [4][STATICCALL] from=0xf5d943, to=0x000000, 0x9710a9d0() -> None
+      [4][CALL] from=0xf5d943, to=BEP20USDT, transfer(recipient(address): 0x4f31Fa, amount(uint256): 3501750000000000000000000) -> True
+      [4][STATICCALL] from=0xf5d943, to=BEP20USDT, balanceOf(account(address): 0xF5D943) -> 28527843051551135057044
+      [4][STATICCALL] from=0xf5d943, to=0x000000, 0x9710a9d0() -> None
+    [3][STATICCALL] from=PancakeV3Pool, to=BEP20USDT, balanceOf(account(address): 0x4f31Fa) -> 15925940631187428753720247
+    [3][STATICCALL] from=PancakeV3Pool, to=BEP20UpgradeableProxy, balanceOf(account(address): 0x4f31Fa) -> 17962478695875708981592673
+      [4][DELEGATECALL] from=BEP20UpgradeableProxy, to=BEP20TokenImplementation, balanceOf(account(address): 0x4f31Fa) -> 17962478695875708981592673

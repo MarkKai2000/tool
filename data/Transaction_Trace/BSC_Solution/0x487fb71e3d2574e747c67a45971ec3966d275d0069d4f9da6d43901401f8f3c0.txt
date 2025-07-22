@@ -1,0 +1,616 @@
+[1][CALL] from=0x3026C4, to=0xf6cee4, 0x0c96fa62() -> None
+  [2][STATICCALL] from=0xf6cee4, to=DPP, _BASE_TOKEN_() -> 0xbb4cdb
+    [3][DELEGATECALL] from=DPP, to=DPP, _BASE_TOKEN_() -> 0xbb4cdb
+  [2][CALL] from=0xf6cee4, to=DPP, flashLoan(baseAmount(uint256): 0, quoteAmount(uint256): 110000000000000000000000, assetTo(address): 0xF6Cee4, data(bytes): b"\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00...) -> None
+    [3][DELEGATECALL] from=DPP, to=DPP, flashLoan(baseAmount(uint256): 0, quoteAmount(uint256): 110000000000000000000000, assetTo(address): 0xF6Cee4, data(bytes): b"\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00...) -> None
+      [4][CALL] from=DPP, to=BEP20USDT, transfer(recipient(address): 0xF6Cee4, amount(uint256): 110000000000000000000000) -> True
+      [4][CALL] from=DPP, to=0xf6cee4, DPPFlashLoanCalladdress() -> None
+        [5][CALL] from=0xf6cee4, to=BEP20USDT, approve(spender(address): 0x42e277, amount(uint256): 10000000000000000000000000000000) -> True
+        [5][CALL] from=0xf6cee4, to=LifeToken, approve(spender(address): 0x42e277, value(uint256): 10000000000000000000000000000000) -> True
+        [5][CALL] from=0xf6cee4, to=LifeProtocolContract, buy(lifeTokenAmount(uint256): 1000000000000000000000) -> None
+          [6][CALL] from=LifeProtocolContract, to=BEP20USDT, transferFrom(sender(address): 0xF6Cee4, recipient(address): 0x42e277, amount(uint256): 1583488353205082486000) -> True
+          [6][STATICCALL] from=LifeProtocolContract, to=LifeToken, balanceOf(account(address): 0x42e277) -> 14657517155429763011000525
+          [6][STATICCALL] from=LifeProtocolContract, to=LifeToken, balanceOf(account(address): 0x42e277) -> 14657517155429763011000525
+          [6][CALL] from=LifeProtocolContract, to=LifeToken, transfer(to(address): 0xF6Cee4, value(uint256): 1000000000000000000000) -> True
+          [6][STATICCALL] from=LifeProtocolContract, to=LifeToken, balanceOf(account(address): 0x42e277) -> 14656517155429763011000525
+          [6][STATICCALL] from=LifeProtocolContract, to=LifeToken, totalSupply() -> 21000000000000000000000000
+        [5][CALL] from=0xf6cee4, to=LifeProtocolContract, buy(lifeTokenAmount(uint256): 1000000000000000000000) -> None
+          [6][CALL] from=LifeProtocolContract, to=BEP20USDT, transferFrom(sender(address): 0xF6Cee4, recipient(address): 0x42e277, amount(uint256): 1599323236737133310000) -> True
+          [6][STATICCALL] from=LifeProtocolContract, to=LifeToken, balanceOf(account(address): 0x42e277) -> 14656517155429763011000525
+          [6][STATICCALL] from=LifeProtocolContract, to=LifeToken, balanceOf(account(address): 0x42e277) -> 14656517155429763011000525
+          [6][CALL] from=LifeProtocolContract, to=LifeToken, transfer(to(address): 0xF6Cee4, value(uint256): 1000000000000000000000) -> True
+          [6][STATICCALL] from=LifeProtocolContract, to=LifeToken, balanceOf(account(address): 0x42e277) -> 14655517155429763011000525
+          [6][STATICCALL] from=LifeProtocolContract, to=LifeToken, totalSupply() -> 21000000000000000000000000
+        [5][CALL] from=0xf6cee4, to=LifeProtocolContract, buy(lifeTokenAmount(uint256): 1000000000000000000000) -> None
+          [6][CALL] from=LifeProtocolContract, to=BEP20USDT, transferFrom(sender(address): 0xF6Cee4, recipient(address): 0x42e277, amount(uint256): 1615316469104504643000) -> True
+          [6][STATICCALL] from=LifeProtocolContract, to=LifeToken, balanceOf(account(address): 0x42e277) -> 14655517155429763011000525
+          [6][STATICCALL] from=LifeProtocolContract, to=LifeToken, balanceOf(account(address): 0x42e277) -> 14655517155429763011000525
+          [6][CALL] from=LifeProtocolContract, to=LifeToken, transfer(to(address): 0xF6Cee4, value(uint256): 1000000000000000000000) -> True
+          [6][STATICCALL] from=LifeProtocolContract, to=LifeToken, balanceOf(account(address): 0x42e277) -> 14654517155429763011000525
+          [6][STATICCALL] from=LifeProtocolContract, to=LifeToken, totalSupply() -> 21000000000000000000000000
+        [5][CALL] from=0xf6cee4, to=LifeProtocolContract, buy(lifeTokenAmount(uint256): 1000000000000000000000) -> None
+          [6][CALL] from=LifeProtocolContract, to=BEP20USDT, transferFrom(sender(address): 0xF6Cee4, recipient(address): 0x42e277, amount(uint256): 1631469633795549689000) -> True
+          [6][STATICCALL] from=LifeProtocolContract, to=LifeToken, balanceOf(account(address): 0x42e277) -> 14654517155429763011000525
+          [6][STATICCALL] from=LifeProtocolContract, to=LifeToken, balanceOf(account(address): 0x42e277) -> 14654517155429763011000525
+          [6][CALL] from=LifeProtocolContract, to=LifeToken, transfer(to(address): 0xF6Cee4, value(uint256): 1000000000000000000000) -> True
+          [6][STATICCALL] from=LifeProtocolContract, to=LifeToken, balanceOf(account(address): 0x42e277) -> 14653517155429763011000525
+          [6][STATICCALL] from=LifeProtocolContract, to=LifeToken, totalSupply() -> 21000000000000000000000000
+        [5][CALL] from=0xf6cee4, to=LifeProtocolContract, buy(lifeTokenAmount(uint256): 1000000000000000000000) -> None
+          [6][CALL] from=LifeProtocolContract, to=BEP20USDT, transferFrom(sender(address): 0xF6Cee4, recipient(address): 0x42e277, amount(uint256): 1647784330133505185000) -> True
+          [6][STATICCALL] from=LifeProtocolContract, to=LifeToken, balanceOf(account(address): 0x42e277) -> 14653517155429763011000525
+          [6][STATICCALL] from=LifeProtocolContract, to=LifeToken, balanceOf(account(address): 0x42e277) -> 14653517155429763011000525
+          [6][CALL] from=LifeProtocolContract, to=LifeToken, transfer(to(address): 0xF6Cee4, value(uint256): 1000000000000000000000) -> True
+          [6][STATICCALL] from=LifeProtocolContract, to=LifeToken, balanceOf(account(address): 0x42e277) -> 14652517155429763011000525
+          [6][STATICCALL] from=LifeProtocolContract, to=LifeToken, totalSupply() -> 21000000000000000000000000
+        [5][CALL] from=0xf6cee4, to=LifeProtocolContract, buy(lifeTokenAmount(uint256): 1000000000000000000000) -> None
+          [6][CALL] from=LifeProtocolContract, to=BEP20USDT, transferFrom(sender(address): 0xF6Cee4, recipient(address): 0x42e277, amount(uint256): 1664262173434840236000) -> True
+          [6][STATICCALL] from=LifeProtocolContract, to=LifeToken, balanceOf(account(address): 0x42e277) -> 14652517155429763011000525
+          [6][STATICCALL] from=LifeProtocolContract, to=LifeToken, balanceOf(account(address): 0x42e277) -> 14652517155429763011000525
+          [6][CALL] from=LifeProtocolContract, to=LifeToken, transfer(to(address): 0xF6Cee4, value(uint256): 1000000000000000000000) -> True
+          [6][STATICCALL] from=LifeProtocolContract, to=LifeToken, balanceOf(account(address): 0x42e277) -> 14651517155429763011000525
+          [6][STATICCALL] from=LifeProtocolContract, to=LifeToken, totalSupply() -> 21000000000000000000000000
+        [5][CALL] from=0xf6cee4, to=LifeProtocolContract, buy(lifeTokenAmount(uint256): 1000000000000000000000) -> None
+          [6][CALL] from=LifeProtocolContract, to=BEP20USDT, transferFrom(sender(address): 0xF6Cee4, recipient(address): 0x42e277, amount(uint256): 1680904795169188638000) -> True
+          [6][STATICCALL] from=LifeProtocolContract, to=LifeToken, balanceOf(account(address): 0x42e277) -> 14651517155429763011000525
+          [6][STATICCALL] from=LifeProtocolContract, to=LifeToken, balanceOf(account(address): 0x42e277) -> 14651517155429763011000525
+          [6][CALL] from=LifeProtocolContract, to=LifeToken, transfer(to(address): 0xF6Cee4, value(uint256): 1000000000000000000000) -> True
+          [6][STATICCALL] from=LifeProtocolContract, to=LifeToken, balanceOf(account(address): 0x42e277) -> 14650517155429763011000525
+          [6][STATICCALL] from=LifeProtocolContract, to=LifeToken, totalSupply() -> 21000000000000000000000000
+        [5][CALL] from=0xf6cee4, to=LifeProtocolContract, buy(lifeTokenAmount(uint256): 1000000000000000000000) -> None
+          [6][CALL] from=LifeProtocolContract, to=BEP20USDT, transferFrom(sender(address): 0xF6Cee4, recipient(address): 0x42e277, amount(uint256): 1697713843120880524000) -> True
+          [6][STATICCALL] from=LifeProtocolContract, to=LifeToken, balanceOf(account(address): 0x42e277) -> 14650517155429763011000525
+          [6][STATICCALL] from=LifeProtocolContract, to=LifeToken, balanceOf(account(address): 0x42e277) -> 14650517155429763011000525
+          [6][CALL] from=LifeProtocolContract, to=LifeToken, transfer(to(address): 0xF6Cee4, value(uint256): 1000000000000000000000) -> True
+          [6][STATICCALL] from=LifeProtocolContract, to=LifeToken, balanceOf(account(address): 0x42e277) -> 14649517155429763011000525
+          [6][STATICCALL] from=LifeProtocolContract, to=LifeToken, totalSupply() -> 21000000000000000000000000
+        [5][CALL] from=0xf6cee4, to=LifeProtocolContract, buy(lifeTokenAmount(uint256): 1000000000000000000000) -> None
+          [6][CALL] from=LifeProtocolContract, to=BEP20USDT, transferFrom(sender(address): 0xF6Cee4, recipient(address): 0x42e277, amount(uint256): 1714690981552089329000) -> True
+          [6][STATICCALL] from=LifeProtocolContract, to=LifeToken, balanceOf(account(address): 0x42e277) -> 14649517155429763011000525
+          [6][STATICCALL] from=LifeProtocolContract, to=LifeToken, balanceOf(account(address): 0x42e277) -> 14649517155429763011000525
+          [6][CALL] from=LifeProtocolContract, to=LifeToken, transfer(to(address): 0xF6Cee4, value(uint256): 1000000000000000000000) -> True
+          [6][STATICCALL] from=LifeProtocolContract, to=LifeToken, balanceOf(account(address): 0x42e277) -> 14648517155429763011000525
+          [6][STATICCALL] from=LifeProtocolContract, to=LifeToken, totalSupply() -> 21000000000000000000000000
+        [5][CALL] from=0xf6cee4, to=LifeProtocolContract, buy(lifeTokenAmount(uint256): 1000000000000000000000) -> None
+          [6][CALL] from=LifeProtocolContract, to=BEP20USDT, transferFrom(sender(address): 0xF6Cee4, recipient(address): 0x42e277, amount(uint256): 1731837891367610222000) -> True
+          [6][STATICCALL] from=LifeProtocolContract, to=LifeToken, balanceOf(account(address): 0x42e277) -> 14648517155429763011000525
+          [6][STATICCALL] from=LifeProtocolContract, to=LifeToken, balanceOf(account(address): 0x42e277) -> 14648517155429763011000525
+          [6][CALL] from=LifeProtocolContract, to=LifeToken, transfer(to(address): 0xF6Cee4, value(uint256): 1000000000000000000000) -> True
+          [6][STATICCALL] from=LifeProtocolContract, to=LifeToken, balanceOf(account(address): 0x42e277) -> 14647517155429763011000525
+          [6][STATICCALL] from=LifeProtocolContract, to=LifeToken, totalSupply() -> 21000000000000000000000000
+        [5][CALL] from=0xf6cee4, to=LifeProtocolContract, buy(lifeTokenAmount(uint256): 1000000000000000000000) -> None
+          [6][CALL] from=LifeProtocolContract, to=BEP20USDT, transferFrom(sender(address): 0xF6Cee4, recipient(address): 0x42e277, amount(uint256): 1749156270281286324000) -> True
+          [6][STATICCALL] from=LifeProtocolContract, to=LifeToken, balanceOf(account(address): 0x42e277) -> 14647517155429763011000525
+          [6][STATICCALL] from=LifeProtocolContract, to=LifeToken, balanceOf(account(address): 0x42e277) -> 14647517155429763011000525
+          [6][CALL] from=LifeProtocolContract, to=LifeToken, transfer(to(address): 0xF6Cee4, value(uint256): 1000000000000000000000) -> True
+          [6][STATICCALL] from=LifeProtocolContract, to=LifeToken, balanceOf(account(address): 0x42e277) -> 14646517155429763011000525
+          [6][STATICCALL] from=LifeProtocolContract, to=LifeToken, totalSupply() -> 21000000000000000000000000
+        [5][CALL] from=0xf6cee4, to=LifeProtocolContract, buy(lifeTokenAmount(uint256): 1000000000000000000000) -> None
+          [6][CALL] from=LifeProtocolContract, to=BEP20USDT, transferFrom(sender(address): 0xF6Cee4, recipient(address): 0x42e277, amount(uint256): 1766647832984099187000) -> True
+          [6][STATICCALL] from=LifeProtocolContract, to=LifeToken, balanceOf(account(address): 0x42e277) -> 14646517155429763011000525
+          [6][STATICCALL] from=LifeProtocolContract, to=LifeToken, balanceOf(account(address): 0x42e277) -> 14646517155429763011000525
+          [6][CALL] from=LifeProtocolContract, to=LifeToken, transfer(to(address): 0xF6Cee4, value(uint256): 1000000000000000000000) -> True
+          [6][STATICCALL] from=LifeProtocolContract, to=LifeToken, balanceOf(account(address): 0x42e277) -> 14645517155429763011000525
+          [6][STATICCALL] from=LifeProtocolContract, to=LifeToken, totalSupply() -> 21000000000000000000000000
+        [5][CALL] from=0xf6cee4, to=LifeProtocolContract, buy(lifeTokenAmount(uint256): 1000000000000000000000) -> None
+          [6][CALL] from=LifeProtocolContract, to=BEP20USDT, transferFrom(sender(address): 0xF6Cee4, recipient(address): 0x42e277, amount(uint256): 1784314311313940178000) -> True
+          [6][STATICCALL] from=LifeProtocolContract, to=LifeToken, balanceOf(account(address): 0x42e277) -> 14645517155429763011000525
+          [6][STATICCALL] from=LifeProtocolContract, to=LifeToken, balanceOf(account(address): 0x42e277) -> 14645517155429763011000525
+          [6][CALL] from=LifeProtocolContract, to=LifeToken, transfer(to(address): 0xF6Cee4, value(uint256): 1000000000000000000000) -> True
+          [6][STATICCALL] from=LifeProtocolContract, to=LifeToken, balanceOf(account(address): 0x42e277) -> 14644517155429763011000525
+          [6][STATICCALL] from=LifeProtocolContract, to=LifeToken, totalSupply() -> 21000000000000000000000000
+        [5][CALL] from=0xf6cee4, to=LifeProtocolContract, buy(lifeTokenAmount(uint256): 1000000000000000000000) -> None
+          [6][CALL] from=LifeProtocolContract, to=BEP20USDT, transferFrom(sender(address): 0xF6Cee4, recipient(address): 0x42e277, amount(uint256): 1802157454427079579000) -> True
+          [6][STATICCALL] from=LifeProtocolContract, to=LifeToken, balanceOf(account(address): 0x42e277) -> 14644517155429763011000525
+          [6][STATICCALL] from=LifeProtocolContract, to=LifeToken, balanceOf(account(address): 0x42e277) -> 14644517155429763011000525
+          [6][CALL] from=LifeProtocolContract, to=LifeToken, transfer(to(address): 0xF6Cee4, value(uint256): 1000000000000000000000) -> True
+          [6][STATICCALL] from=LifeProtocolContract, to=LifeToken, balanceOf(account(address): 0x42e277) -> 14643517155429763011000525
+          [6][STATICCALL] from=LifeProtocolContract, to=LifeToken, totalSupply() -> 21000000000000000000000000
+        [5][CALL] from=0xf6cee4, to=LifeProtocolContract, buy(lifeTokenAmount(uint256): 1000000000000000000000) -> None
+          [6][CALL] from=LifeProtocolContract, to=BEP20USDT, transferFrom(sender(address): 0xF6Cee4, recipient(address): 0x42e277, amount(uint256): 1820179028971350374000) -> True
+          [6][STATICCALL] from=LifeProtocolContract, to=LifeToken, balanceOf(account(address): 0x42e277) -> 14643517155429763011000525
+          [6][STATICCALL] from=LifeProtocolContract, to=LifeToken, balanceOf(account(address): 0x42e277) -> 14643517155429763011000525
+          [6][CALL] from=LifeProtocolContract, to=LifeToken, transfer(to(address): 0xF6Cee4, value(uint256): 1000000000000000000000) -> True
+          [6][STATICCALL] from=LifeProtocolContract, to=LifeToken, balanceOf(account(address): 0x42e277) -> 14642517155429763011000525
+          [6][STATICCALL] from=LifeProtocolContract, to=LifeToken, totalSupply() -> 21000000000000000000000000
+        [5][CALL] from=0xf6cee4, to=LifeProtocolContract, buy(lifeTokenAmount(uint256): 1000000000000000000000) -> None
+          [6][CALL] from=LifeProtocolContract, to=BEP20USDT, transferFrom(sender(address): 0xF6Cee4, recipient(address): 0x42e277, amount(uint256): 1838380819261063877000) -> True
+          [6][STATICCALL] from=LifeProtocolContract, to=LifeToken, balanceOf(account(address): 0x42e277) -> 14642517155429763011000525
+          [6][STATICCALL] from=LifeProtocolContract, to=LifeToken, balanceOf(account(address): 0x42e277) -> 14642517155429763011000525
+          [6][CALL] from=LifeProtocolContract, to=LifeToken, transfer(to(address): 0xF6Cee4, value(uint256): 1000000000000000000000) -> True
+          [6][STATICCALL] from=LifeProtocolContract, to=LifeToken, balanceOf(account(address): 0x42e277) -> 14641517155429763011000525
+          [6][STATICCALL] from=LifeProtocolContract, to=LifeToken, totalSupply() -> 21000000000000000000000000
+        [5][CALL] from=0xf6cee4, to=LifeProtocolContract, buy(lifeTokenAmount(uint256): 1000000000000000000000) -> None
+          [6][CALL] from=LifeProtocolContract, to=BEP20USDT, transferFrom(sender(address): 0xF6Cee4, recipient(address): 0x42e277, amount(uint256): 1856764627453674515000) -> True
+          [6][STATICCALL] from=LifeProtocolContract, to=LifeToken, balanceOf(account(address): 0x42e277) -> 14641517155429763011000525
+          [6][STATICCALL] from=LifeProtocolContract, to=LifeToken, balanceOf(account(address): 0x42e277) -> 14641517155429763011000525
+          [6][CALL] from=LifeProtocolContract, to=LifeToken, transfer(to(address): 0xF6Cee4, value(uint256): 1000000000000000000000) -> True
+          [6][STATICCALL] from=LifeProtocolContract, to=LifeToken, balanceOf(account(address): 0x42e277) -> 14640517155429763011000525
+          [6][STATICCALL] from=LifeProtocolContract, to=LifeToken, totalSupply() -> 21000000000000000000000000
+        [5][CALL] from=0xf6cee4, to=LifeProtocolContract, buy(lifeTokenAmount(uint256): 1000000000000000000000) -> None
+          [6][CALL] from=LifeProtocolContract, to=BEP20USDT, transferFrom(sender(address): 0xF6Cee4, recipient(address): 0x42e277, amount(uint256): 1875332273728211260000) -> True
+          [6][STATICCALL] from=LifeProtocolContract, to=LifeToken, balanceOf(account(address): 0x42e277) -> 14640517155429763011000525
+          [6][STATICCALL] from=LifeProtocolContract, to=LifeToken, balanceOf(account(address): 0x42e277) -> 14640517155429763011000525
+          [6][CALL] from=LifeProtocolContract, to=LifeToken, transfer(to(address): 0xF6Cee4, value(uint256): 1000000000000000000000) -> True
+          [6][STATICCALL] from=LifeProtocolContract, to=LifeToken, balanceOf(account(address): 0x42e277) -> 14639517155429763011000525
+          [6][STATICCALL] from=LifeProtocolContract, to=LifeToken, totalSupply() -> 21000000000000000000000000
+        [5][CALL] from=0xf6cee4, to=LifeProtocolContract, buy(lifeTokenAmount(uint256): 1000000000000000000000) -> None
+          [6][CALL] from=LifeProtocolContract, to=BEP20USDT, transferFrom(sender(address): 0xF6Cee4, recipient(address): 0x42e277, amount(uint256): 1894085596465493372000) -> True
+          [6][STATICCALL] from=LifeProtocolContract, to=LifeToken, balanceOf(account(address): 0x42e277) -> 14639517155429763011000525
+          [6][STATICCALL] from=LifeProtocolContract, to=LifeToken, balanceOf(account(address): 0x42e277) -> 14639517155429763011000525
+          [6][CALL] from=LifeProtocolContract, to=LifeToken, transfer(to(address): 0xF6Cee4, value(uint256): 1000000000000000000000) -> True
+          [6][STATICCALL] from=LifeProtocolContract, to=LifeToken, balanceOf(account(address): 0x42e277) -> 14638517155429763011000525
+          [6][STATICCALL] from=LifeProtocolContract, to=LifeToken, totalSupply() -> 21000000000000000000000000
+        [5][CALL] from=0xf6cee4, to=LifeProtocolContract, buy(lifeTokenAmount(uint256): 1000000000000000000000) -> None
+          [6][CALL] from=LifeProtocolContract, to=BEP20USDT, transferFrom(sender(address): 0xF6Cee4, recipient(address): 0x42e277, amount(uint256): 1913026452430148305000) -> True
+          [6][STATICCALL] from=LifeProtocolContract, to=LifeToken, balanceOf(account(address): 0x42e277) -> 14638517155429763011000525
+          [6][STATICCALL] from=LifeProtocolContract, to=LifeToken, balanceOf(account(address): 0x42e277) -> 14638517155429763011000525
+          [6][CALL] from=LifeProtocolContract, to=LifeToken, transfer(to(address): 0xF6Cee4, value(uint256): 1000000000000000000000) -> True
+          [6][STATICCALL] from=LifeProtocolContract, to=LifeToken, balanceOf(account(address): 0x42e277) -> 14637517155429763011000525
+          [6][STATICCALL] from=LifeProtocolContract, to=LifeToken, totalSupply() -> 21000000000000000000000000
+        [5][CALL] from=0xf6cee4, to=LifeProtocolContract, buy(lifeTokenAmount(uint256): 1000000000000000000000) -> None
+          [6][CALL] from=LifeProtocolContract, to=BEP20USDT, transferFrom(sender(address): 0xF6Cee4, recipient(address): 0x42e277, amount(uint256): 1932156716954449788000) -> True
+          [6][STATICCALL] from=LifeProtocolContract, to=LifeToken, balanceOf(account(address): 0x42e277) -> 14637517155429763011000525
+          [6][STATICCALL] from=LifeProtocolContract, to=LifeToken, balanceOf(account(address): 0x42e277) -> 14637517155429763011000525
+          [6][CALL] from=LifeProtocolContract, to=LifeToken, transfer(to(address): 0xF6Cee4, value(uint256): 1000000000000000000000) -> True
+          [6][STATICCALL] from=LifeProtocolContract, to=LifeToken, balanceOf(account(address): 0x42e277) -> 14636517155429763011000525
+          [6][STATICCALL] from=LifeProtocolContract, to=LifeToken, totalSupply() -> 21000000000000000000000000
+        [5][CALL] from=0xf6cee4, to=LifeProtocolContract, buy(lifeTokenAmount(uint256): 1000000000000000000000) -> None
+          [6][CALL] from=LifeProtocolContract, to=BEP20USDT, transferFrom(sender(address): 0xF6Cee4, recipient(address): 0x42e277, amount(uint256): 1951478284123994285000) -> True
+          [6][STATICCALL] from=LifeProtocolContract, to=LifeToken, balanceOf(account(address): 0x42e277) -> 14636517155429763011000525
+          [6][STATICCALL] from=LifeProtocolContract, to=LifeToken, balanceOf(account(address): 0x42e277) -> 14636517155429763011000525
+          [6][CALL] from=LifeProtocolContract, to=LifeToken, transfer(to(address): 0xF6Cee4, value(uint256): 1000000000000000000000) -> True
+          [6][STATICCALL] from=LifeProtocolContract, to=LifeToken, balanceOf(account(address): 0x42e277) -> 14635517155429763011000525
+          [6][STATICCALL] from=LifeProtocolContract, to=LifeToken, totalSupply() -> 21000000000000000000000000
+        [5][CALL] from=0xf6cee4, to=LifeProtocolContract, buy(lifeTokenAmount(uint256): 1000000000000000000000) -> None
+          [6][CALL] from=LifeProtocolContract, to=BEP20USDT, transferFrom(sender(address): 0xF6Cee4, recipient(address): 0x42e277, amount(uint256): 1970993066965234227000) -> True
+          [6][STATICCALL] from=LifeProtocolContract, to=LifeToken, balanceOf(account(address): 0x42e277) -> 14635517155429763011000525
+          [6][STATICCALL] from=LifeProtocolContract, to=LifeToken, balanceOf(account(address): 0x42e277) -> 14635517155429763011000525
+          [6][CALL] from=LifeProtocolContract, to=LifeToken, transfer(to(address): 0xF6Cee4, value(uint256): 1000000000000000000000) -> True
+          [6][STATICCALL] from=LifeProtocolContract, to=LifeToken, balanceOf(account(address): 0x42e277) -> 14634517155429763011000525
+          [6][STATICCALL] from=LifeProtocolContract, to=LifeToken, totalSupply() -> 21000000000000000000000000
+        [5][CALL] from=0xf6cee4, to=LifeProtocolContract, buy(lifeTokenAmount(uint256): 1000000000000000000000) -> None
+          [6][CALL] from=LifeProtocolContract, to=BEP20USDT, transferFrom(sender(address): 0xF6Cee4, recipient(address): 0x42e277, amount(uint256): 1990702997634886569000) -> True
+          [6][STATICCALL] from=LifeProtocolContract, to=LifeToken, balanceOf(account(address): 0x42e277) -> 14634517155429763011000525
+          [6][STATICCALL] from=LifeProtocolContract, to=LifeToken, balanceOf(account(address): 0x42e277) -> 14634517155429763011000525
+          [6][CALL] from=LifeProtocolContract, to=LifeToken, transfer(to(address): 0xF6Cee4, value(uint256): 1000000000000000000000) -> True
+          [6][STATICCALL] from=LifeProtocolContract, to=LifeToken, balanceOf(account(address): 0x42e277) -> 14633517155429763011000525
+          [6][STATICCALL] from=LifeProtocolContract, to=LifeToken, totalSupply() -> 21000000000000000000000000
+        [5][CALL] from=0xf6cee4, to=LifeProtocolContract, buy(lifeTokenAmount(uint256): 1000000000000000000000) -> None
+          [6][CALL] from=LifeProtocolContract, to=BEP20USDT, transferFrom(sender(address): 0xF6Cee4, recipient(address): 0x42e277, amount(uint256): 2010610027611235434000) -> True
+          [6][STATICCALL] from=LifeProtocolContract, to=LifeToken, balanceOf(account(address): 0x42e277) -> 14633517155429763011000525
+          [6][STATICCALL] from=LifeProtocolContract, to=LifeToken, balanceOf(account(address): 0x42e277) -> 14633517155429763011000525
+          [6][CALL] from=LifeProtocolContract, to=LifeToken, transfer(to(address): 0xF6Cee4, value(uint256): 1000000000000000000000) -> True
+          [6][STATICCALL] from=LifeProtocolContract, to=LifeToken, balanceOf(account(address): 0x42e277) -> 14632517155429763011000525
+          [6][STATICCALL] from=LifeProtocolContract, to=LifeToken, totalSupply() -> 21000000000000000000000000
+        [5][CALL] from=0xf6cee4, to=LifeProtocolContract, buy(lifeTokenAmount(uint256): 1000000000000000000000) -> None
+          [6][CALL] from=LifeProtocolContract, to=BEP20USDT, transferFrom(sender(address): 0xF6Cee4, recipient(address): 0x42e277, amount(uint256): 2030716127887347788000) -> True
+          [6][STATICCALL] from=LifeProtocolContract, to=LifeToken, balanceOf(account(address): 0x42e277) -> 14632517155429763011000525
+          [6][STATICCALL] from=LifeProtocolContract, to=LifeToken, balanceOf(account(address): 0x42e277) -> 14632517155429763011000525
+          [6][CALL] from=LifeProtocolContract, to=LifeToken, transfer(to(address): 0xF6Cee4, value(uint256): 1000000000000000000000) -> True
+          [6][STATICCALL] from=LifeProtocolContract, to=LifeToken, balanceOf(account(address): 0x42e277) -> 14631517155429763011000525
+          [6][STATICCALL] from=LifeProtocolContract, to=LifeToken, totalSupply() -> 21000000000000000000000000
+        [5][CALL] from=0xf6cee4, to=LifeProtocolContract, buy(lifeTokenAmount(uint256): 1000000000000000000000) -> None
+          [6][CALL] from=LifeProtocolContract, to=BEP20USDT, transferFrom(sender(address): 0xF6Cee4, recipient(address): 0x42e277, amount(uint256): 2051023289166221265000) -> True
+          [6][STATICCALL] from=LifeProtocolContract, to=LifeToken, balanceOf(account(address): 0x42e277) -> 14631517155429763011000525
+          [6][STATICCALL] from=LifeProtocolContract, to=LifeToken, balanceOf(account(address): 0x42e277) -> 14631517155429763011000525
+          [6][CALL] from=LifeProtocolContract, to=LifeToken, transfer(to(address): 0xF6Cee4, value(uint256): 1000000000000000000000) -> True
+          [6][STATICCALL] from=LifeProtocolContract, to=LifeToken, balanceOf(account(address): 0x42e277) -> 14630517155429763011000525
+          [6][STATICCALL] from=LifeProtocolContract, to=LifeToken, totalSupply() -> 21000000000000000000000000
+        [5][CALL] from=0xf6cee4, to=LifeProtocolContract, buy(lifeTokenAmount(uint256): 1000000000000000000000) -> None
+          [6][CALL] from=LifeProtocolContract, to=BEP20USDT, transferFrom(sender(address): 0xF6Cee4, recipient(address): 0x42e277, amount(uint256): 2071533522057883477000) -> True
+          [6][STATICCALL] from=LifeProtocolContract, to=LifeToken, balanceOf(account(address): 0x42e277) -> 14630517155429763011000525
+          [6][STATICCALL] from=LifeProtocolContract, to=LifeToken, balanceOf(account(address): 0x42e277) -> 14630517155429763011000525
+          [6][CALL] from=LifeProtocolContract, to=LifeToken, transfer(to(address): 0xF6Cee4, value(uint256): 1000000000000000000000) -> True
+          [6][STATICCALL] from=LifeProtocolContract, to=LifeToken, balanceOf(account(address): 0x42e277) -> 14629517155429763011000525
+          [6][STATICCALL] from=LifeProtocolContract, to=LifeToken, totalSupply() -> 21000000000000000000000000
+        [5][CALL] from=0xf6cee4, to=LifeProtocolContract, buy(lifeTokenAmount(uint256): 1000000000000000000000) -> None
+          [6][CALL] from=LifeProtocolContract, to=BEP20USDT, transferFrom(sender(address): 0xF6Cee4, recipient(address): 0x42e277, amount(uint256): 2092248857278462311000) -> True
+          [6][STATICCALL] from=LifeProtocolContract, to=LifeToken, balanceOf(account(address): 0x42e277) -> 14629517155429763011000525
+          [6][STATICCALL] from=LifeProtocolContract, to=LifeToken, balanceOf(account(address): 0x42e277) -> 14629517155429763011000525
+          [6][CALL] from=LifeProtocolContract, to=LifeToken, transfer(to(address): 0xF6Cee4, value(uint256): 1000000000000000000000) -> True
+          [6][STATICCALL] from=LifeProtocolContract, to=LifeToken, balanceOf(account(address): 0x42e277) -> 14628517155429763011000525
+          [6][STATICCALL] from=LifeProtocolContract, to=LifeToken, totalSupply() -> 21000000000000000000000000
+        [5][CALL] from=0xf6cee4, to=LifeProtocolContract, buy(lifeTokenAmount(uint256): 1000000000000000000000) -> None
+          [6][CALL] from=LifeProtocolContract, to=BEP20USDT, transferFrom(sender(address): 0xF6Cee4, recipient(address): 0x42e277, amount(uint256): 2113171345851246934000) -> True
+          [6][STATICCALL] from=LifeProtocolContract, to=LifeToken, balanceOf(account(address): 0x42e277) -> 14628517155429763011000525
+          [6][STATICCALL] from=LifeProtocolContract, to=LifeToken, balanceOf(account(address): 0x42e277) -> 14628517155429763011000525
+          [6][CALL] from=LifeProtocolContract, to=LifeToken, transfer(to(address): 0xF6Cee4, value(uint256): 1000000000000000000000) -> True
+          [6][STATICCALL] from=LifeProtocolContract, to=LifeToken, balanceOf(account(address): 0x42e277) -> 14627517155429763011000525
+          [6][STATICCALL] from=LifeProtocolContract, to=LifeToken, totalSupply() -> 21000000000000000000000000
+        [5][CALL] from=0xf6cee4, to=LifeProtocolContract, buy(lifeTokenAmount(uint256): 1000000000000000000000) -> None
+          [6][CALL] from=LifeProtocolContract, to=BEP20USDT, transferFrom(sender(address): 0xF6Cee4, recipient(address): 0x42e277, amount(uint256): 2134303059309759403000) -> True
+          [6][STATICCALL] from=LifeProtocolContract, to=LifeToken, balanceOf(account(address): 0x42e277) -> 14627517155429763011000525
+          [6][STATICCALL] from=LifeProtocolContract, to=LifeToken, balanceOf(account(address): 0x42e277) -> 14627517155429763011000525
+          [6][CALL] from=LifeProtocolContract, to=LifeToken, transfer(to(address): 0xF6Cee4, value(uint256): 1000000000000000000000) -> True
+          [6][STATICCALL] from=LifeProtocolContract, to=LifeToken, balanceOf(account(address): 0x42e277) -> 14626517155429763011000525
+          [6][STATICCALL] from=LifeProtocolContract, to=LifeToken, totalSupply() -> 21000000000000000000000000
+        [5][CALL] from=0xf6cee4, to=LifeProtocolContract, buy(lifeTokenAmount(uint256): 1000000000000000000000) -> None
+          [6][CALL] from=LifeProtocolContract, to=BEP20USDT, transferFrom(sender(address): 0xF6Cee4, recipient(address): 0x42e277, amount(uint256): 2155646089902856997000) -> True
+          [6][STATICCALL] from=LifeProtocolContract, to=LifeToken, balanceOf(account(address): 0x42e277) -> 14626517155429763011000525
+          [6][STATICCALL] from=LifeProtocolContract, to=LifeToken, balanceOf(account(address): 0x42e277) -> 14626517155429763011000525
+          [6][CALL] from=LifeProtocolContract, to=LifeToken, transfer(to(address): 0xF6Cee4, value(uint256): 1000000000000000000000) -> True
+          [6][STATICCALL] from=LifeProtocolContract, to=LifeToken, balanceOf(account(address): 0x42e277) -> 14625517155429763011000525
+          [6][STATICCALL] from=LifeProtocolContract, to=LifeToken, totalSupply() -> 21000000000000000000000000
+        [5][CALL] from=0xf6cee4, to=LifeProtocolContract, buy(lifeTokenAmount(uint256): 1000000000000000000000) -> None
+          [6][CALL] from=LifeProtocolContract, to=BEP20USDT, transferFrom(sender(address): 0xF6Cee4, recipient(address): 0x42e277, amount(uint256): 2177202550801885566000) -> True
+          [6][STATICCALL] from=LifeProtocolContract, to=LifeToken, balanceOf(account(address): 0x42e277) -> 14625517155429763011000525
+          [6][STATICCALL] from=LifeProtocolContract, to=LifeToken, balanceOf(account(address): 0x42e277) -> 14625517155429763011000525
+          [6][CALL] from=LifeProtocolContract, to=LifeToken, transfer(to(address): 0xF6Cee4, value(uint256): 1000000000000000000000) -> True
+          [6][STATICCALL] from=LifeProtocolContract, to=LifeToken, balanceOf(account(address): 0x42e277) -> 14624517155429763011000525
+          [6][STATICCALL] from=LifeProtocolContract, to=LifeToken, totalSupply() -> 21000000000000000000000000
+        [5][CALL] from=0xf6cee4, to=LifeProtocolContract, buy(lifeTokenAmount(uint256): 1000000000000000000000) -> None
+          [6][CALL] from=LifeProtocolContract, to=BEP20USDT, transferFrom(sender(address): 0xF6Cee4, recipient(address): 0x42e277, amount(uint256): 2198974576309904421000) -> True
+          [6][STATICCALL] from=LifeProtocolContract, to=LifeToken, balanceOf(account(address): 0x42e277) -> 14624517155429763011000525
+          [6][STATICCALL] from=LifeProtocolContract, to=LifeToken, balanceOf(account(address): 0x42e277) -> 14624517155429763011000525
+          [6][CALL] from=LifeProtocolContract, to=LifeToken, transfer(to(address): 0xF6Cee4, value(uint256): 1000000000000000000000) -> True
+          [6][STATICCALL] from=LifeProtocolContract, to=LifeToken, balanceOf(account(address): 0x42e277) -> 14623517155429763011000525
+          [6][STATICCALL] from=LifeProtocolContract, to=LifeToken, totalSupply() -> 21000000000000000000000000
+        [5][CALL] from=0xf6cee4, to=LifeProtocolContract, buy(lifeTokenAmount(uint256): 1000000000000000000000) -> None
+          [6][CALL] from=LifeProtocolContract, to=BEP20USDT, transferFrom(sender(address): 0xF6Cee4, recipient(address): 0x42e277, amount(uint256): 2220964322073003465000) -> True
+          [6][STATICCALL] from=LifeProtocolContract, to=LifeToken, balanceOf(account(address): 0x42e277) -> 14623517155429763011000525
+          [6][STATICCALL] from=LifeProtocolContract, to=LifeToken, balanceOf(account(address): 0x42e277) -> 14623517155429763011000525
+          [6][CALL] from=LifeProtocolContract, to=LifeToken, transfer(to(address): 0xF6Cee4, value(uint256): 1000000000000000000000) -> True
+          [6][STATICCALL] from=LifeProtocolContract, to=LifeToken, balanceOf(account(address): 0x42e277) -> 14622517155429763011000525
+          [6][STATICCALL] from=LifeProtocolContract, to=LifeToken, totalSupply() -> 21000000000000000000000000
+        [5][CALL] from=0xf6cee4, to=LifeProtocolContract, buy(lifeTokenAmount(uint256): 1000000000000000000000) -> None
+          [6][CALL] from=LifeProtocolContract, to=BEP20USDT, transferFrom(sender(address): 0xF6Cee4, recipient(address): 0x42e277, amount(uint256): 2243173965293733499000) -> True
+          [6][STATICCALL] from=LifeProtocolContract, to=LifeToken, balanceOf(account(address): 0x42e277) -> 14622517155429763011000525
+          [6][STATICCALL] from=LifeProtocolContract, to=LifeToken, balanceOf(account(address): 0x42e277) -> 14622517155429763011000525
+          [6][CALL] from=LifeProtocolContract, to=LifeToken, transfer(to(address): 0xF6Cee4, value(uint256): 1000000000000000000000) -> True
+          [6][STATICCALL] from=LifeProtocolContract, to=LifeToken, balanceOf(account(address): 0x42e277) -> 14621517155429763011000525
+          [6][STATICCALL] from=LifeProtocolContract, to=LifeToken, totalSupply() -> 21000000000000000000000000
+        [5][CALL] from=0xf6cee4, to=LifeProtocolContract, buy(lifeTokenAmount(uint256): 1000000000000000000000) -> None
+          [6][CALL] from=LifeProtocolContract, to=BEP20USDT, transferFrom(sender(address): 0xF6Cee4, recipient(address): 0x42e277, amount(uint256): 2265605704946670833000) -> True
+          [6][STATICCALL] from=LifeProtocolContract, to=LifeToken, balanceOf(account(address): 0x42e277) -> 14621517155429763011000525
+          [6][STATICCALL] from=LifeProtocolContract, to=LifeToken, balanceOf(account(address): 0x42e277) -> 14621517155429763011000525
+          [6][CALL] from=LifeProtocolContract, to=LifeToken, transfer(to(address): 0xF6Cee4, value(uint256): 1000000000000000000000) -> True
+          [6][STATICCALL] from=LifeProtocolContract, to=LifeToken, balanceOf(account(address): 0x42e277) -> 14620517155429763011000525
+          [6][STATICCALL] from=LifeProtocolContract, to=LifeToken, totalSupply() -> 21000000000000000000000000
+        [5][CALL] from=0xf6cee4, to=LifeProtocolContract, buy(lifeTokenAmount(uint256): 1000000000000000000000) -> None
+          [6][CALL] from=LifeProtocolContract, to=BEP20USDT, transferFrom(sender(address): 0xF6Cee4, recipient(address): 0x42e277, amount(uint256): 2288261761996137541000) -> True
+          [6][STATICCALL] from=LifeProtocolContract, to=LifeToken, balanceOf(account(address): 0x42e277) -> 14620517155429763011000525
+          [6][STATICCALL] from=LifeProtocolContract, to=LifeToken, balanceOf(account(address): 0x42e277) -> 14620517155429763011000525
+          [6][CALL] from=LifeProtocolContract, to=LifeToken, transfer(to(address): 0xF6Cee4, value(uint256): 1000000000000000000000) -> True
+          [6][STATICCALL] from=LifeProtocolContract, to=LifeToken, balanceOf(account(address): 0x42e277) -> 14619517155429763011000525
+          [6][STATICCALL] from=LifeProtocolContract, to=LifeToken, totalSupply() -> 21000000000000000000000000
+        [5][CALL] from=0xf6cee4, to=LifeProtocolContract, buy(lifeTokenAmount(uint256): 1000000000000000000000) -> None
+          [6][CALL] from=LifeProtocolContract, to=BEP20USDT, transferFrom(sender(address): 0xF6Cee4, recipient(address): 0x42e277, amount(uint256): 2311144379616098916000) -> True
+          [6][STATICCALL] from=LifeProtocolContract, to=LifeToken, balanceOf(account(address): 0x42e277) -> 14619517155429763011000525
+          [6][STATICCALL] from=LifeProtocolContract, to=LifeToken, balanceOf(account(address): 0x42e277) -> 14619517155429763011000525
+          [6][CALL] from=LifeProtocolContract, to=LifeToken, transfer(to(address): 0xF6Cee4, value(uint256): 1000000000000000000000) -> True
+          [6][STATICCALL] from=LifeProtocolContract, to=LifeToken, balanceOf(account(address): 0x42e277) -> 14618517155429763011000525
+          [6][STATICCALL] from=LifeProtocolContract, to=LifeToken, totalSupply() -> 21000000000000000000000000
+        [5][CALL] from=0xf6cee4, to=LifeProtocolContract, buy(lifeTokenAmount(uint256): 1000000000000000000000) -> None
+          [6][CALL] from=LifeProtocolContract, to=BEP20USDT, transferFrom(sender(address): 0xF6Cee4, recipient(address): 0x42e277, amount(uint256): 2334255823412259905000) -> True
+          [6][STATICCALL] from=LifeProtocolContract, to=LifeToken, balanceOf(account(address): 0x42e277) -> 14618517155429763011000525
+          [6][STATICCALL] from=LifeProtocolContract, to=LifeToken, balanceOf(account(address): 0x42e277) -> 14618517155429763011000525
+          [6][CALL] from=LifeProtocolContract, to=LifeToken, transfer(to(address): 0xF6Cee4, value(uint256): 1000000000000000000000) -> True
+          [6][STATICCALL] from=LifeProtocolContract, to=LifeToken, balanceOf(account(address): 0x42e277) -> 14617517155429763011000525
+          [6][STATICCALL] from=LifeProtocolContract, to=LifeToken, totalSupply() -> 21000000000000000000000000
+        [5][CALL] from=0xf6cee4, to=LifeProtocolContract, buy(lifeTokenAmount(uint256): 1000000000000000000000) -> None
+          [6][CALL] from=LifeProtocolContract, to=BEP20USDT, transferFrom(sender(address): 0xF6Cee4, recipient(address): 0x42e277, amount(uint256): 2357598381646382504000) -> True
+          [6][STATICCALL] from=LifeProtocolContract, to=LifeToken, balanceOf(account(address): 0x42e277) -> 14617517155429763011000525
+          [6][STATICCALL] from=LifeProtocolContract, to=LifeToken, balanceOf(account(address): 0x42e277) -> 14617517155429763011000525
+          [6][CALL] from=LifeProtocolContract, to=LifeToken, transfer(to(address): 0xF6Cee4, value(uint256): 1000000000000000000000) -> True
+          [6][STATICCALL] from=LifeProtocolContract, to=LifeToken, balanceOf(account(address): 0x42e277) -> 14616517155429763011000525
+          [6][STATICCALL] from=LifeProtocolContract, to=LifeToken, totalSupply() -> 21000000000000000000000000
+        [5][CALL] from=0xf6cee4, to=LifeProtocolContract, buy(lifeTokenAmount(uint256): 1000000000000000000000) -> None
+          [6][CALL] from=LifeProtocolContract, to=BEP20USDT, transferFrom(sender(address): 0xF6Cee4, recipient(address): 0x42e277, amount(uint256): 2381174365462846329000) -> True
+          [6][STATICCALL] from=LifeProtocolContract, to=LifeToken, balanceOf(account(address): 0x42e277) -> 14616517155429763011000525
+          [6][STATICCALL] from=LifeProtocolContract, to=LifeToken, balanceOf(account(address): 0x42e277) -> 14616517155429763011000525
+          [6][CALL] from=LifeProtocolContract, to=LifeToken, transfer(to(address): 0xF6Cee4, value(uint256): 1000000000000000000000) -> True
+          [6][STATICCALL] from=LifeProtocolContract, to=LifeToken, balanceOf(account(address): 0x42e277) -> 14615517155429763011000525
+          [6][STATICCALL] from=LifeProtocolContract, to=LifeToken, totalSupply() -> 21000000000000000000000000
+        [5][CALL] from=0xf6cee4, to=LifeProtocolContract, buy(lifeTokenAmount(uint256): 1000000000000000000000) -> None
+          [6][CALL] from=LifeProtocolContract, to=BEP20USDT, transferFrom(sender(address): 0xF6Cee4, recipient(address): 0x42e277, amount(uint256): 2404986109117474792000) -> True
+          [6][STATICCALL] from=LifeProtocolContract, to=LifeToken, balanceOf(account(address): 0x42e277) -> 14615517155429763011000525
+          [6][STATICCALL] from=LifeProtocolContract, to=LifeToken, balanceOf(account(address): 0x42e277) -> 14615517155429763011000525
+          [6][CALL] from=LifeProtocolContract, to=LifeToken, transfer(to(address): 0xF6Cee4, value(uint256): 1000000000000000000000) -> True
+          [6][STATICCALL] from=LifeProtocolContract, to=LifeToken, balanceOf(account(address): 0x42e277) -> 14614517155429763011000525
+          [6][STATICCALL] from=LifeProtocolContract, to=LifeToken, totalSupply() -> 21000000000000000000000000
+        [5][CALL] from=0xf6cee4, to=LifeProtocolContract, buy(lifeTokenAmount(uint256): 1000000000000000000000) -> None
+          [6][CALL] from=LifeProtocolContract, to=BEP20USDT, transferFrom(sender(address): 0xF6Cee4, recipient(address): 0x42e277, amount(uint256): 2429035970208649539000) -> True
+          [6][STATICCALL] from=LifeProtocolContract, to=LifeToken, balanceOf(account(address): 0x42e277) -> 14614517155429763011000525
+          [6][STATICCALL] from=LifeProtocolContract, to=LifeToken, balanceOf(account(address): 0x42e277) -> 14614517155429763011000525
+          [6][CALL] from=LifeProtocolContract, to=LifeToken, transfer(to(address): 0xF6Cee4, value(uint256): 1000000000000000000000) -> True
+          [6][STATICCALL] from=LifeProtocolContract, to=LifeToken, balanceOf(account(address): 0x42e277) -> 14613517155429763011000525
+          [6][STATICCALL] from=LifeProtocolContract, to=LifeToken, totalSupply() -> 21000000000000000000000000
+        [5][CALL] from=0xf6cee4, to=LifeProtocolContract, buy(lifeTokenAmount(uint256): 1000000000000000000000) -> None
+          [6][CALL] from=LifeProtocolContract, to=BEP20USDT, transferFrom(sender(address): 0xF6Cee4, recipient(address): 0x42e277, amount(uint256): 2453326329910736034000) -> True
+          [6][STATICCALL] from=LifeProtocolContract, to=LifeToken, balanceOf(account(address): 0x42e277) -> 14613517155429763011000525
+          [6][STATICCALL] from=LifeProtocolContract, to=LifeToken, balanceOf(account(address): 0x42e277) -> 14613517155429763011000525
+          [6][CALL] from=LifeProtocolContract, to=LifeToken, transfer(to(address): 0xF6Cee4, value(uint256): 1000000000000000000000) -> True
+          [6][STATICCALL] from=LifeProtocolContract, to=LifeToken, balanceOf(account(address): 0x42e277) -> 14612517155429763011000525
+          [6][STATICCALL] from=LifeProtocolContract, to=LifeToken, totalSupply() -> 21000000000000000000000000
+        [5][CALL] from=0xf6cee4, to=LifeProtocolContract, buy(lifeTokenAmount(uint256): 1000000000000000000000) -> None
+          [6][CALL] from=LifeProtocolContract, to=BEP20USDT, transferFrom(sender(address): 0xF6Cee4, recipient(address): 0x42e277, amount(uint256): 2477859593209843394000) -> True
+          [6][STATICCALL] from=LifeProtocolContract, to=LifeToken, balanceOf(account(address): 0x42e277) -> 14612517155429763011000525
+          [6][STATICCALL] from=LifeProtocolContract, to=LifeToken, balanceOf(account(address): 0x42e277) -> 14612517155429763011000525
+          [6][CALL] from=LifeProtocolContract, to=LifeToken, transfer(to(address): 0xF6Cee4, value(uint256): 1000000000000000000000) -> True
+          [6][STATICCALL] from=LifeProtocolContract, to=LifeToken, balanceOf(account(address): 0x42e277) -> 14611517155429763011000525
+          [6][STATICCALL] from=LifeProtocolContract, to=LifeToken, totalSupply() -> 21000000000000000000000000
+        [5][CALL] from=0xf6cee4, to=LifeProtocolContract, buy(lifeTokenAmount(uint256): 1000000000000000000000) -> None
+          [6][CALL] from=LifeProtocolContract, to=BEP20USDT, transferFrom(sender(address): 0xF6Cee4, recipient(address): 0x42e277, amount(uint256): 2502638189141941827000) -> True
+          [6][STATICCALL] from=LifeProtocolContract, to=LifeToken, balanceOf(account(address): 0x42e277) -> 14611517155429763011000525
+          [6][STATICCALL] from=LifeProtocolContract, to=LifeToken, balanceOf(account(address): 0x42e277) -> 14611517155429763011000525
+          [6][CALL] from=LifeProtocolContract, to=LifeToken, transfer(to(address): 0xF6Cee4, value(uint256): 1000000000000000000000) -> True
+          [6][STATICCALL] from=LifeProtocolContract, to=LifeToken, balanceOf(account(address): 0x42e277) -> 14610517155429763011000525
+          [6][STATICCALL] from=LifeProtocolContract, to=LifeToken, totalSupply() -> 21000000000000000000000000
+        [5][CALL] from=0xf6cee4, to=LifeProtocolContract, buy(lifeTokenAmount(uint256): 1000000000000000000000) -> None
+          [6][CALL] from=LifeProtocolContract, to=BEP20USDT, transferFrom(sender(address): 0xF6Cee4, recipient(address): 0x42e277, amount(uint256): 2527664571033361245000) -> True
+          [6][STATICCALL] from=LifeProtocolContract, to=LifeToken, balanceOf(account(address): 0x42e277) -> 14610517155429763011000525
+          [6][STATICCALL] from=LifeProtocolContract, to=LifeToken, balanceOf(account(address): 0x42e277) -> 14610517155429763011000525
+          [6][CALL] from=LifeProtocolContract, to=LifeToken, transfer(to(address): 0xF6Cee4, value(uint256): 1000000000000000000000) -> True
+          [6][STATICCALL] from=LifeProtocolContract, to=LifeToken, balanceOf(account(address): 0x42e277) -> 14609517155429763011000525
+          [6][STATICCALL] from=LifeProtocolContract, to=LifeToken, totalSupply() -> 21000000000000000000000000
+        [5][CALL] from=0xf6cee4, to=LifeProtocolContract, buy(lifeTokenAmount(uint256): 1000000000000000000000) -> None
+          [6][CALL] from=LifeProtocolContract, to=BEP20USDT, transferFrom(sender(address): 0xF6Cee4, recipient(address): 0x42e277, amount(uint256): 2552941216743694857000) -> True
+          [6][STATICCALL] from=LifeProtocolContract, to=LifeToken, balanceOf(account(address): 0x42e277) -> 14609517155429763011000525
+          [6][STATICCALL] from=LifeProtocolContract, to=LifeToken, balanceOf(account(address): 0x42e277) -> 14609517155429763011000525
+          [6][CALL] from=LifeProtocolContract, to=LifeToken, transfer(to(address): 0xF6Cee4, value(uint256): 1000000000000000000000) -> True
+          [6][STATICCALL] from=LifeProtocolContract, to=LifeToken, balanceOf(account(address): 0x42e277) -> 14608517155429763011000525
+          [6][STATICCALL] from=LifeProtocolContract, to=LifeToken, totalSupply() -> 21000000000000000000000000
+        [5][CALL] from=0xf6cee4, to=LifeProtocolContract, buy(lifeTokenAmount(uint256): 1000000000000000000000) -> None
+          [6][CALL] from=LifeProtocolContract, to=BEP20USDT, transferFrom(sender(address): 0xF6Cee4, recipient(address): 0x42e277, amount(uint256): 2578470628911131805000) -> True
+          [6][STATICCALL] from=LifeProtocolContract, to=LifeToken, balanceOf(account(address): 0x42e277) -> 14608517155429763011000525
+          [6][STATICCALL] from=LifeProtocolContract, to=LifeToken, balanceOf(account(address): 0x42e277) -> 14608517155429763011000525
+          [6][CALL] from=LifeProtocolContract, to=LifeToken, transfer(to(address): 0xF6Cee4, value(uint256): 1000000000000000000000) -> True
+          [6][STATICCALL] from=LifeProtocolContract, to=LifeToken, balanceOf(account(address): 0x42e277) -> 14607517155429763011000525
+          [6][STATICCALL] from=LifeProtocolContract, to=LifeToken, totalSupply() -> 21000000000000000000000000
+        [5][CALL] from=0xf6cee4, to=LifeProtocolContract, sell(amount(uint256): 1000000000000000000000) -> None
+          [6][STATICCALL] from=LifeProtocolContract, to=LifeToken, balanceOf(account(address): 0xF6Cee4) -> 50000000000000000000000
+          [6][STATICCALL] from=LifeProtocolContract, to=BEP20USDT, balanceOf(account(address): 0x42e277) -> 154779374477199358270061
+          [6][CALL] from=LifeProtocolContract, to=LifeToken, transferFrom(from(address): 0xF6Cee4, to(address): 0x42e277, value(uint256): 1000000000000000000000) -> True
+          [6][CALL] from=LifeProtocolContract, to=BEP20USDT, transfer(recipient(address): 0xF6Cee4, amount(uint256): 2343829801680218810000) -> True
+        [5][CALL] from=0xf6cee4, to=LifeProtocolContract, sell(amount(uint256): 1000000000000000000000) -> None
+          [6][STATICCALL] from=LifeProtocolContract, to=LifeToken, balanceOf(account(address): 0xF6Cee4) -> 49000000000000000000000
+          [6][STATICCALL] from=LifeProtocolContract, to=BEP20USDT, balanceOf(account(address): 0x42e277) -> 152435544675519139460061
+          [6][CALL] from=LifeProtocolContract, to=LifeToken, transferFrom(from(address): 0xF6Cee4, to(address): 0x42e277, value(uint256): 1000000000000000000000) -> True
+          [6][CALL] from=LifeProtocolContract, to=BEP20USDT, transfer(recipient(address): 0xF6Cee4, amount(uint256): 2343829801680218810000) -> True
+        [5][CALL] from=0xf6cee4, to=LifeProtocolContract, sell(amount(uint256): 1000000000000000000000) -> None
+          [6][STATICCALL] from=LifeProtocolContract, to=LifeToken, balanceOf(account(address): 0xF6Cee4) -> 48000000000000000000000
+          [6][STATICCALL] from=LifeProtocolContract, to=BEP20USDT, balanceOf(account(address): 0x42e277) -> 150091714873838920650061
+          [6][CALL] from=LifeProtocolContract, to=LifeToken, transferFrom(from(address): 0xF6Cee4, to(address): 0x42e277, value(uint256): 1000000000000000000000) -> True
+          [6][CALL] from=LifeProtocolContract, to=BEP20USDT, transfer(recipient(address): 0xF6Cee4, amount(uint256): 2343829801680218810000) -> True
+        [5][CALL] from=0xf6cee4, to=LifeProtocolContract, sell(amount(uint256): 1000000000000000000000) -> None
+          [6][STATICCALL] from=LifeProtocolContract, to=LifeToken, balanceOf(account(address): 0xF6Cee4) -> 47000000000000000000000
+          [6][STATICCALL] from=LifeProtocolContract, to=BEP20USDT, balanceOf(account(address): 0x42e277) -> 147747885072158701840061
+          [6][CALL] from=LifeProtocolContract, to=LifeToken, transferFrom(from(address): 0xF6Cee4, to(address): 0x42e277, value(uint256): 1000000000000000000000) -> True
+          [6][CALL] from=LifeProtocolContract, to=BEP20USDT, transfer(recipient(address): 0xF6Cee4, amount(uint256): 2343829801680218810000) -> True
+        [5][CALL] from=0xf6cee4, to=LifeProtocolContract, sell(amount(uint256): 1000000000000000000000) -> None
+          [6][STATICCALL] from=LifeProtocolContract, to=LifeToken, balanceOf(account(address): 0xF6Cee4) -> 46000000000000000000000
+          [6][STATICCALL] from=LifeProtocolContract, to=BEP20USDT, balanceOf(account(address): 0x42e277) -> 145404055270478483030061
+          [6][CALL] from=LifeProtocolContract, to=LifeToken, transferFrom(from(address): 0xF6Cee4, to(address): 0x42e277, value(uint256): 1000000000000000000000) -> True
+          [6][CALL] from=LifeProtocolContract, to=BEP20USDT, transfer(recipient(address): 0xF6Cee4, amount(uint256): 2343829801680218810000) -> True
+        [5][CALL] from=0xf6cee4, to=LifeProtocolContract, sell(amount(uint256): 1000000000000000000000) -> None
+          [6][STATICCALL] from=LifeProtocolContract, to=LifeToken, balanceOf(account(address): 0xF6Cee4) -> 45000000000000000000000
+          [6][STATICCALL] from=LifeProtocolContract, to=BEP20USDT, balanceOf(account(address): 0x42e277) -> 143060225468798264220061
+          [6][CALL] from=LifeProtocolContract, to=LifeToken, transferFrom(from(address): 0xF6Cee4, to(address): 0x42e277, value(uint256): 1000000000000000000000) -> True
+          [6][CALL] from=LifeProtocolContract, to=BEP20USDT, transfer(recipient(address): 0xF6Cee4, amount(uint256): 2343829801680218810000) -> True
+        [5][CALL] from=0xf6cee4, to=LifeProtocolContract, sell(amount(uint256): 1000000000000000000000) -> None
+          [6][STATICCALL] from=LifeProtocolContract, to=LifeToken, balanceOf(account(address): 0xF6Cee4) -> 44000000000000000000000
+          [6][STATICCALL] from=LifeProtocolContract, to=BEP20USDT, balanceOf(account(address): 0x42e277) -> 140716395667118045410061
+          [6][CALL] from=LifeProtocolContract, to=LifeToken, transferFrom(from(address): 0xF6Cee4, to(address): 0x42e277, value(uint256): 1000000000000000000000) -> True
+          [6][CALL] from=LifeProtocolContract, to=BEP20USDT, transfer(recipient(address): 0xF6Cee4, amount(uint256): 2343829801680218810000) -> True
+        [5][CALL] from=0xf6cee4, to=LifeProtocolContract, sell(amount(uint256): 1000000000000000000000) -> None
+          [6][STATICCALL] from=LifeProtocolContract, to=LifeToken, balanceOf(account(address): 0xF6Cee4) -> 43000000000000000000000
+          [6][STATICCALL] from=LifeProtocolContract, to=BEP20USDT, balanceOf(account(address): 0x42e277) -> 138372565865437826600061
+          [6][CALL] from=LifeProtocolContract, to=LifeToken, transferFrom(from(address): 0xF6Cee4, to(address): 0x42e277, value(uint256): 1000000000000000000000) -> True
+          [6][CALL] from=LifeProtocolContract, to=BEP20USDT, transfer(recipient(address): 0xF6Cee4, amount(uint256): 2343829801680218810000) -> True
+        [5][CALL] from=0xf6cee4, to=LifeProtocolContract, sell(amount(uint256): 1000000000000000000000) -> None
+          [6][STATICCALL] from=LifeProtocolContract, to=LifeToken, balanceOf(account(address): 0xF6Cee4) -> 42000000000000000000000
+          [6][STATICCALL] from=LifeProtocolContract, to=BEP20USDT, balanceOf(account(address): 0x42e277) -> 136028736063757607790061
+          [6][CALL] from=LifeProtocolContract, to=LifeToken, transferFrom(from(address): 0xF6Cee4, to(address): 0x42e277, value(uint256): 1000000000000000000000) -> True
+          [6][CALL] from=LifeProtocolContract, to=BEP20USDT, transfer(recipient(address): 0xF6Cee4, amount(uint256): 2343829801680218810000) -> True
+        [5][CALL] from=0xf6cee4, to=LifeProtocolContract, sell(amount(uint256): 1000000000000000000000) -> None
+          [6][STATICCALL] from=LifeProtocolContract, to=LifeToken, balanceOf(account(address): 0xF6Cee4) -> 41000000000000000000000
+          [6][STATICCALL] from=LifeProtocolContract, to=BEP20USDT, balanceOf(account(address): 0x42e277) -> 133684906262077388980061
+          [6][CALL] from=LifeProtocolContract, to=LifeToken, transferFrom(from(address): 0xF6Cee4, to(address): 0x42e277, value(uint256): 1000000000000000000000) -> True
+          [6][CALL] from=LifeProtocolContract, to=BEP20USDT, transfer(recipient(address): 0xF6Cee4, amount(uint256): 2343829801680218810000) -> True
+        [5][CALL] from=0xf6cee4, to=LifeProtocolContract, sell(amount(uint256): 1000000000000000000000) -> None
+          [6][STATICCALL] from=LifeProtocolContract, to=LifeToken, balanceOf(account(address): 0xF6Cee4) -> 40000000000000000000000
+          [6][STATICCALL] from=LifeProtocolContract, to=BEP20USDT, balanceOf(account(address): 0x42e277) -> 131341076460397170170061
+          [6][CALL] from=LifeProtocolContract, to=LifeToken, transferFrom(from(address): 0xF6Cee4, to(address): 0x42e277, value(uint256): 1000000000000000000000) -> True
+          [6][CALL] from=LifeProtocolContract, to=BEP20USDT, transfer(recipient(address): 0xF6Cee4, amount(uint256): 2343829801680218810000) -> True
+        [5][CALL] from=0xf6cee4, to=LifeProtocolContract, sell(amount(uint256): 1000000000000000000000) -> None
+          [6][STATICCALL] from=LifeProtocolContract, to=LifeToken, balanceOf(account(address): 0xF6Cee4) -> 39000000000000000000000
+          [6][STATICCALL] from=LifeProtocolContract, to=BEP20USDT, balanceOf(account(address): 0x42e277) -> 128997246658716951360061
+          [6][CALL] from=LifeProtocolContract, to=LifeToken, transferFrom(from(address): 0xF6Cee4, to(address): 0x42e277, value(uint256): 1000000000000000000000) -> True
+          [6][CALL] from=LifeProtocolContract, to=BEP20USDT, transfer(recipient(address): 0xF6Cee4, amount(uint256): 2343829801680218810000) -> True
+        [5][CALL] from=0xf6cee4, to=LifeProtocolContract, sell(amount(uint256): 1000000000000000000000) -> None
+          [6][STATICCALL] from=LifeProtocolContract, to=LifeToken, balanceOf(account(address): 0xF6Cee4) -> 38000000000000000000000
+          [6][STATICCALL] from=LifeProtocolContract, to=BEP20USDT, balanceOf(account(address): 0x42e277) -> 126653416857036732550061
+          [6][CALL] from=LifeProtocolContract, to=LifeToken, transferFrom(from(address): 0xF6Cee4, to(address): 0x42e277, value(uint256): 1000000000000000000000) -> True
+          [6][CALL] from=LifeProtocolContract, to=BEP20USDT, transfer(recipient(address): 0xF6Cee4, amount(uint256): 2343829801680218810000) -> True
+        [5][CALL] from=0xf6cee4, to=LifeProtocolContract, sell(amount(uint256): 1000000000000000000000) -> None
+          [6][STATICCALL] from=LifeProtocolContract, to=LifeToken, balanceOf(account(address): 0xF6Cee4) -> 37000000000000000000000
+          [6][STATICCALL] from=LifeProtocolContract, to=BEP20USDT, balanceOf(account(address): 0x42e277) -> 124309587055356513740061
+          [6][CALL] from=LifeProtocolContract, to=LifeToken, transferFrom(from(address): 0xF6Cee4, to(address): 0x42e277, value(uint256): 1000000000000000000000) -> True
+          [6][CALL] from=LifeProtocolContract, to=BEP20USDT, transfer(recipient(address): 0xF6Cee4, amount(uint256): 2343829801680218810000) -> True
+        [5][CALL] from=0xf6cee4, to=LifeProtocolContract, sell(amount(uint256): 1000000000000000000000) -> None
+          [6][STATICCALL] from=LifeProtocolContract, to=LifeToken, balanceOf(account(address): 0xF6Cee4) -> 36000000000000000000000
+          [6][STATICCALL] from=LifeProtocolContract, to=BEP20USDT, balanceOf(account(address): 0x42e277) -> 121965757253676294930061
+          [6][CALL] from=LifeProtocolContract, to=LifeToken, transferFrom(from(address): 0xF6Cee4, to(address): 0x42e277, value(uint256): 1000000000000000000000) -> True
+          [6][CALL] from=LifeProtocolContract, to=BEP20USDT, transfer(recipient(address): 0xF6Cee4, amount(uint256): 2343829801680218810000) -> True
+        [5][CALL] from=0xf6cee4, to=LifeProtocolContract, sell(amount(uint256): 1000000000000000000000) -> None
+          [6][STATICCALL] from=LifeProtocolContract, to=LifeToken, balanceOf(account(address): 0xF6Cee4) -> 35000000000000000000000
+          [6][STATICCALL] from=LifeProtocolContract, to=BEP20USDT, balanceOf(account(address): 0x42e277) -> 119621927451996076120061
+          [6][CALL] from=LifeProtocolContract, to=LifeToken, transferFrom(from(address): 0xF6Cee4, to(address): 0x42e277, value(uint256): 1000000000000000000000) -> True
+          [6][CALL] from=LifeProtocolContract, to=BEP20USDT, transfer(recipient(address): 0xF6Cee4, amount(uint256): 2343829801680218810000) -> True
+        [5][CALL] from=0xf6cee4, to=LifeProtocolContract, sell(amount(uint256): 1000000000000000000000) -> None
+          [6][STATICCALL] from=LifeProtocolContract, to=LifeToken, balanceOf(account(address): 0xF6Cee4) -> 34000000000000000000000
+          [6][STATICCALL] from=LifeProtocolContract, to=BEP20USDT, balanceOf(account(address): 0x42e277) -> 117278097650315857310061
+          [6][CALL] from=LifeProtocolContract, to=LifeToken, transferFrom(from(address): 0xF6Cee4, to(address): 0x42e277, value(uint256): 1000000000000000000000) -> True
+          [6][CALL] from=LifeProtocolContract, to=BEP20USDT, transfer(recipient(address): 0xF6Cee4, amount(uint256): 2343829801680218810000) -> True
+        [5][CALL] from=0xf6cee4, to=LifeProtocolContract, sell(amount(uint256): 1000000000000000000000) -> None
+          [6][STATICCALL] from=LifeProtocolContract, to=LifeToken, balanceOf(account(address): 0xF6Cee4) -> 33000000000000000000000
+          [6][STATICCALL] from=LifeProtocolContract, to=BEP20USDT, balanceOf(account(address): 0x42e277) -> 114934267848635638500061
+          [6][CALL] from=LifeProtocolContract, to=LifeToken, transferFrom(from(address): 0xF6Cee4, to(address): 0x42e277, value(uint256): 1000000000000000000000) -> True
+          [6][CALL] from=LifeProtocolContract, to=BEP20USDT, transfer(recipient(address): 0xF6Cee4, amount(uint256): 2343829801680218810000) -> True
+        [5][CALL] from=0xf6cee4, to=LifeProtocolContract, sell(amount(uint256): 1000000000000000000000) -> None
+          [6][STATICCALL] from=LifeProtocolContract, to=LifeToken, balanceOf(account(address): 0xF6Cee4) -> 32000000000000000000000
+          [6][STATICCALL] from=LifeProtocolContract, to=BEP20USDT, balanceOf(account(address): 0x42e277) -> 112590438046955419690061
+          [6][CALL] from=LifeProtocolContract, to=LifeToken, transferFrom(from(address): 0xF6Cee4, to(address): 0x42e277, value(uint256): 1000000000000000000000) -> True
+          [6][CALL] from=LifeProtocolContract, to=BEP20USDT, transfer(recipient(address): 0xF6Cee4, amount(uint256): 2343829801680218810000) -> True
+        [5][CALL] from=0xf6cee4, to=LifeProtocolContract, sell(amount(uint256): 1000000000000000000000) -> None
+          [6][STATICCALL] from=LifeProtocolContract, to=LifeToken, balanceOf(account(address): 0xF6Cee4) -> 31000000000000000000000
+          [6][STATICCALL] from=LifeProtocolContract, to=BEP20USDT, balanceOf(account(address): 0x42e277) -> 110246608245275200880061
+          [6][CALL] from=LifeProtocolContract, to=LifeToken, transferFrom(from(address): 0xF6Cee4, to(address): 0x42e277, value(uint256): 1000000000000000000000) -> True
+          [6][CALL] from=LifeProtocolContract, to=BEP20USDT, transfer(recipient(address): 0xF6Cee4, amount(uint256): 2343829801680218810000) -> True
+        [5][CALL] from=0xf6cee4, to=LifeProtocolContract, sell(amount(uint256): 1000000000000000000000) -> None
+          [6][STATICCALL] from=LifeProtocolContract, to=LifeToken, balanceOf(account(address): 0xF6Cee4) -> 30000000000000000000000
+          [6][STATICCALL] from=LifeProtocolContract, to=BEP20USDT, balanceOf(account(address): 0x42e277) -> 107902778443594982070061
+          [6][CALL] from=LifeProtocolContract, to=LifeToken, transferFrom(from(address): 0xF6Cee4, to(address): 0x42e277, value(uint256): 1000000000000000000000) -> True
+          [6][CALL] from=LifeProtocolContract, to=BEP20USDT, transfer(recipient(address): 0xF6Cee4, amount(uint256): 2343829801680218810000) -> True
+        [5][CALL] from=0xf6cee4, to=LifeProtocolContract, sell(amount(uint256): 1000000000000000000000) -> None
+          [6][STATICCALL] from=LifeProtocolContract, to=LifeToken, balanceOf(account(address): 0xF6Cee4) -> 29000000000000000000000
+          [6][STATICCALL] from=LifeProtocolContract, to=BEP20USDT, balanceOf(account(address): 0x42e277) -> 105558948641914763260061
+          [6][CALL] from=LifeProtocolContract, to=LifeToken, transferFrom(from(address): 0xF6Cee4, to(address): 0x42e277, value(uint256): 1000000000000000000000) -> True
+          [6][CALL] from=LifeProtocolContract, to=BEP20USDT, transfer(recipient(address): 0xF6Cee4, amount(uint256): 2343829801680218810000) -> True
+        [5][CALL] from=0xf6cee4, to=LifeProtocolContract, sell(amount(uint256): 1000000000000000000000) -> None
+          [6][STATICCALL] from=LifeProtocolContract, to=LifeToken, balanceOf(account(address): 0xF6Cee4) -> 28000000000000000000000
+          [6][STATICCALL] from=LifeProtocolContract, to=BEP20USDT, balanceOf(account(address): 0x42e277) -> 103215118840234544450061
+          [6][CALL] from=LifeProtocolContract, to=LifeToken, transferFrom(from(address): 0xF6Cee4, to(address): 0x42e277, value(uint256): 1000000000000000000000) -> True
+          [6][CALL] from=LifeProtocolContract, to=BEP20USDT, transfer(recipient(address): 0xF6Cee4, amount(uint256): 2343829801680218810000) -> True
+        [5][CALL] from=0xf6cee4, to=LifeProtocolContract, sell(amount(uint256): 1000000000000000000000) -> None
+          [6][STATICCALL] from=LifeProtocolContract, to=LifeToken, balanceOf(account(address): 0xF6Cee4) -> 27000000000000000000000
+          [6][STATICCALL] from=LifeProtocolContract, to=BEP20USDT, balanceOf(account(address): 0x42e277) -> 100871289038554325640061
+          [6][CALL] from=LifeProtocolContract, to=LifeToken, transferFrom(from(address): 0xF6Cee4, to(address): 0x42e277, value(uint256): 1000000000000000000000) -> True
+          [6][CALL] from=LifeProtocolContract, to=BEP20USDT, transfer(recipient(address): 0xF6Cee4, amount(uint256): 2343829801680218810000) -> True
+        [5][CALL] from=0xf6cee4, to=LifeProtocolContract, sell(amount(uint256): 1000000000000000000000) -> None
+          [6][STATICCALL] from=LifeProtocolContract, to=LifeToken, balanceOf(account(address): 0xF6Cee4) -> 26000000000000000000000
+          [6][STATICCALL] from=LifeProtocolContract, to=BEP20USDT, balanceOf(account(address): 0x42e277) -> 98527459236874106830061
+          [6][CALL] from=LifeProtocolContract, to=LifeToken, transferFrom(from(address): 0xF6Cee4, to(address): 0x42e277, value(uint256): 1000000000000000000000) -> True
+          [6][CALL] from=LifeProtocolContract, to=BEP20USDT, transfer(recipient(address): 0xF6Cee4, amount(uint256): 2343829801680218810000) -> True
+        [5][CALL] from=0xf6cee4, to=LifeProtocolContract, sell(amount(uint256): 1000000000000000000000) -> None
+          [6][STATICCALL] from=LifeProtocolContract, to=LifeToken, balanceOf(account(address): 0xF6Cee4) -> 25000000000000000000000
+          [6][STATICCALL] from=LifeProtocolContract, to=BEP20USDT, balanceOf(account(address): 0x42e277) -> 96183629435193888020061
+          [6][CALL] from=LifeProtocolContract, to=LifeToken, transferFrom(from(address): 0xF6Cee4, to(address): 0x42e277, value(uint256): 1000000000000000000000) -> True
+          [6][CALL] from=LifeProtocolContract, to=BEP20USDT, transfer(recipient(address): 0xF6Cee4, amount(uint256): 2343829801680218810000) -> True
+        [5][CALL] from=0xf6cee4, to=LifeProtocolContract, sell(amount(uint256): 1000000000000000000000) -> None
+          [6][STATICCALL] from=LifeProtocolContract, to=LifeToken, balanceOf(account(address): 0xF6Cee4) -> 24000000000000000000000
+          [6][STATICCALL] from=LifeProtocolContract, to=BEP20USDT, balanceOf(account(address): 0x42e277) -> 93839799633513669210061
+          [6][CALL] from=LifeProtocolContract, to=LifeToken, transferFrom(from(address): 0xF6Cee4, to(address): 0x42e277, value(uint256): 1000000000000000000000) -> True
+          [6][CALL] from=LifeProtocolContract, to=BEP20USDT, transfer(recipient(address): 0xF6Cee4, amount(uint256): 2343829801680218810000) -> True
+        [5][CALL] from=0xf6cee4, to=LifeProtocolContract, sell(amount(uint256): 1000000000000000000000) -> None
+          [6][STATICCALL] from=LifeProtocolContract, to=LifeToken, balanceOf(account(address): 0xF6Cee4) -> 23000000000000000000000
+          [6][STATICCALL] from=LifeProtocolContract, to=BEP20USDT, balanceOf(account(address): 0x42e277) -> 91495969831833450400061
+          [6][CALL] from=LifeProtocolContract, to=LifeToken, transferFrom(from(address): 0xF6Cee4, to(address): 0x42e277, value(uint256): 1000000000000000000000) -> True
+          [6][CALL] from=LifeProtocolContract, to=BEP20USDT, transfer(recipient(address): 0xF6Cee4, amount(uint256): 2343829801680218810000) -> True
+        [5][CALL] from=0xf6cee4, to=LifeProtocolContract, sell(amount(uint256): 1000000000000000000000) -> None
+          [6][STATICCALL] from=LifeProtocolContract, to=LifeToken, balanceOf(account(address): 0xF6Cee4) -> 22000000000000000000000
+          [6][STATICCALL] from=LifeProtocolContract, to=BEP20USDT, balanceOf(account(address): 0x42e277) -> 89152140030153231590061
+          [6][CALL] from=LifeProtocolContract, to=LifeToken, transferFrom(from(address): 0xF6Cee4, to(address): 0x42e277, value(uint256): 1000000000000000000000) -> True
+          [6][CALL] from=LifeProtocolContract, to=BEP20USDT, transfer(recipient(address): 0xF6Cee4, amount(uint256): 2343829801680218810000) -> True
+        [5][CALL] from=0xf6cee4, to=LifeProtocolContract, sell(amount(uint256): 1000000000000000000000) -> None
+          [6][STATICCALL] from=LifeProtocolContract, to=LifeToken, balanceOf(account(address): 0xF6Cee4) -> 21000000000000000000000
+          [6][STATICCALL] from=LifeProtocolContract, to=BEP20USDT, balanceOf(account(address): 0x42e277) -> 86808310228473012780061
+          [6][CALL] from=LifeProtocolContract, to=LifeToken, transferFrom(from(address): 0xF6Cee4, to(address): 0x42e277, value(uint256): 1000000000000000000000) -> True
+          [6][CALL] from=LifeProtocolContract, to=BEP20USDT, transfer(recipient(address): 0xF6Cee4, amount(uint256): 2343829801680218810000) -> True
+        [5][CALL] from=0xf6cee4, to=LifeProtocolContract, sell(amount(uint256): 1000000000000000000000) -> None
+          [6][STATICCALL] from=LifeProtocolContract, to=LifeToken, balanceOf(account(address): 0xF6Cee4) -> 20000000000000000000000
+          [6][STATICCALL] from=LifeProtocolContract, to=BEP20USDT, balanceOf(account(address): 0x42e277) -> 84464480426792793970061
+          [6][CALL] from=LifeProtocolContract, to=LifeToken, transferFrom(from(address): 0xF6Cee4, to(address): 0x42e277, value(uint256): 1000000000000000000000) -> True
+          [6][CALL] from=LifeProtocolContract, to=BEP20USDT, transfer(recipient(address): 0xF6Cee4, amount(uint256): 2343829801680218810000) -> True
+        [5][CALL] from=0xf6cee4, to=LifeProtocolContract, sell(amount(uint256): 1000000000000000000000) -> None
+          [6][STATICCALL] from=LifeProtocolContract, to=LifeToken, balanceOf(account(address): 0xF6Cee4) -> 19000000000000000000000
+          [6][STATICCALL] from=LifeProtocolContract, to=BEP20USDT, balanceOf(account(address): 0x42e277) -> 82120650625112575160061
+          [6][CALL] from=LifeProtocolContract, to=LifeToken, transferFrom(from(address): 0xF6Cee4, to(address): 0x42e277, value(uint256): 1000000000000000000000) -> True
+          [6][CALL] from=LifeProtocolContract, to=BEP20USDT, transfer(recipient(address): 0xF6Cee4, amount(uint256): 2343829801680218810000) -> True
+        [5][CALL] from=0xf6cee4, to=LifeProtocolContract, sell(amount(uint256): 1000000000000000000000) -> None
+          [6][STATICCALL] from=LifeProtocolContract, to=LifeToken, balanceOf(account(address): 0xF6Cee4) -> 18000000000000000000000
+          [6][STATICCALL] from=LifeProtocolContract, to=BEP20USDT, balanceOf(account(address): 0x42e277) -> 79776820823432356350061
+          [6][CALL] from=LifeProtocolContract, to=LifeToken, transferFrom(from(address): 0xF6Cee4, to(address): 0x42e277, value(uint256): 1000000000000000000000) -> True
+          [6][CALL] from=LifeProtocolContract, to=BEP20USDT, transfer(recipient(address): 0xF6Cee4, amount(uint256): 2343829801680218810000) -> True
+        [5][CALL] from=0xf6cee4, to=LifeProtocolContract, sell(amount(uint256): 1000000000000000000000) -> None
+          [6][STATICCALL] from=LifeProtocolContract, to=LifeToken, balanceOf(account(address): 0xF6Cee4) -> 17000000000000000000000
+          [6][STATICCALL] from=LifeProtocolContract, to=BEP20USDT, balanceOf(account(address): 0x42e277) -> 77432991021752137540061
+          [6][CALL] from=LifeProtocolContract, to=LifeToken, transferFrom(from(address): 0xF6Cee4, to(address): 0x42e277, value(uint256): 1000000000000000000000) -> True
+          [6][CALL] from=LifeProtocolContract, to=BEP20USDT, transfer(recipient(address): 0xF6Cee4, amount(uint256): 2343829801680218810000) -> True
+        [5][CALL] from=0xf6cee4, to=LifeProtocolContract, sell(amount(uint256): 1000000000000000000000) -> None
+          [6][STATICCALL] from=LifeProtocolContract, to=LifeToken, balanceOf(account(address): 0xF6Cee4) -> 16000000000000000000000
+          [6][STATICCALL] from=LifeProtocolContract, to=BEP20USDT, balanceOf(account(address): 0x42e277) -> 75089161220071918730061
+          [6][CALL] from=LifeProtocolContract, to=LifeToken, transferFrom(from(address): 0xF6Cee4, to(address): 0x42e277, value(uint256): 1000000000000000000000) -> True
+          [6][CALL] from=LifeProtocolContract, to=BEP20USDT, transfer(recipient(address): 0xF6Cee4, amount(uint256): 2343829801680218810000) -> True
+        [5][CALL] from=0xf6cee4, to=LifeProtocolContract, sell(amount(uint256): 1000000000000000000000) -> None
+          [6][STATICCALL] from=LifeProtocolContract, to=LifeToken, balanceOf(account(address): 0xF6Cee4) -> 15000000000000000000000
+          [6][STATICCALL] from=LifeProtocolContract, to=BEP20USDT, balanceOf(account(address): 0x42e277) -> 72745331418391699920061
+          [6][CALL] from=LifeProtocolContract, to=LifeToken, transferFrom(from(address): 0xF6Cee4, to(address): 0x42e277, value(uint256): 1000000000000000000000) -> True
+          [6][CALL] from=LifeProtocolContract, to=BEP20USDT, transfer(recipient(address): 0xF6Cee4, amount(uint256): 2343829801680218810000) -> True
+        [5][CALL] from=0xf6cee4, to=LifeProtocolContract, sell(amount(uint256): 1000000000000000000000) -> None
+          [6][STATICCALL] from=LifeProtocolContract, to=LifeToken, balanceOf(account(address): 0xF6Cee4) -> 14000000000000000000000
+          [6][STATICCALL] from=LifeProtocolContract, to=BEP20USDT, balanceOf(account(address): 0x42e277) -> 70401501616711481110061
+          [6][CALL] from=LifeProtocolContract, to=LifeToken, transferFrom(from(address): 0xF6Cee4, to(address): 0x42e277, value(uint256): 1000000000000000000000) -> True
+          [6][CALL] from=LifeProtocolContract, to=BEP20USDT, transfer(recipient(address): 0xF6Cee4, amount(uint256): 2343829801680218810000) -> True
+        [5][CALL] from=0xf6cee4, to=LifeProtocolContract, sell(amount(uint256): 1000000000000000000000) -> None
+          [6][STATICCALL] from=LifeProtocolContract, to=LifeToken, balanceOf(account(address): 0xF6Cee4) -> 13000000000000000000000
+          [6][STATICCALL] from=LifeProtocolContract, to=BEP20USDT, balanceOf(account(address): 0x42e277) -> 68057671815031262300061
+          [6][CALL] from=LifeProtocolContract, to=LifeToken, transferFrom(from(address): 0xF6Cee4, to(address): 0x42e277, value(uint256): 1000000000000000000000) -> True
+          [6][CALL] from=LifeProtocolContract, to=BEP20USDT, transfer(recipient(address): 0xF6Cee4, amount(uint256): 2343829801680218810000) -> True
+        [5][CALL] from=0xf6cee4, to=LifeProtocolContract, sell(amount(uint256): 1000000000000000000000) -> None
+          [6][STATICCALL] from=LifeProtocolContract, to=LifeToken, balanceOf(account(address): 0xF6Cee4) -> 12000000000000000000000
+          [6][STATICCALL] from=LifeProtocolContract, to=BEP20USDT, balanceOf(account(address): 0x42e277) -> 65713842013351043490061
+          [6][CALL] from=LifeProtocolContract, to=LifeToken, transferFrom(from(address): 0xF6Cee4, to(address): 0x42e277, value(uint256): 1000000000000000000000) -> True
+          [6][CALL] from=LifeProtocolContract, to=BEP20USDT, transfer(recipient(address): 0xF6Cee4, amount(uint256): 2343829801680218810000) -> True
+        [5][CALL] from=0xf6cee4, to=LifeProtocolContract, sell(amount(uint256): 1000000000000000000000) -> None
+          [6][STATICCALL] from=LifeProtocolContract, to=LifeToken, balanceOf(account(address): 0xF6Cee4) -> 11000000000000000000000
+          [6][STATICCALL] from=LifeProtocolContract, to=BEP20USDT, balanceOf(account(address): 0x42e277) -> 63370012211670824680061
+          [6][CALL] from=LifeProtocolContract, to=LifeToken, transferFrom(from(address): 0xF6Cee4, to(address): 0x42e277, value(uint256): 1000000000000000000000) -> True
+          [6][CALL] from=LifeProtocolContract, to=BEP20USDT, transfer(recipient(address): 0xF6Cee4, amount(uint256): 2343829801680218810000) -> True
+        [5][CALL] from=0xf6cee4, to=LifeProtocolContract, sell(amount(uint256): 1000000000000000000000) -> None
+          [6][STATICCALL] from=LifeProtocolContract, to=LifeToken, balanceOf(account(address): 0xF6Cee4) -> 10000000000000000000000
+          [6][STATICCALL] from=LifeProtocolContract, to=BEP20USDT, balanceOf(account(address): 0x42e277) -> 61026182409990605870061
+          [6][CALL] from=LifeProtocolContract, to=LifeToken, transferFrom(from(address): 0xF6Cee4, to(address): 0x42e277, value(uint256): 1000000000000000000000) -> True
+          [6][CALL] from=LifeProtocolContract, to=BEP20USDT, transfer(recipient(address): 0xF6Cee4, amount(uint256): 2343829801680218810000) -> True
+        [5][CALL] from=0xf6cee4, to=LifeProtocolContract, sell(amount(uint256): 1000000000000000000000) -> None
+          [6][STATICCALL] from=LifeProtocolContract, to=LifeToken, balanceOf(account(address): 0xF6Cee4) -> 9000000000000000000000
+          [6][STATICCALL] from=LifeProtocolContract, to=BEP20USDT, balanceOf(account(address): 0x42e277) -> 58682352608310387060061
+          [6][CALL] from=LifeProtocolContract, to=LifeToken, transferFrom(from(address): 0xF6Cee4, to(address): 0x42e277, value(uint256): 1000000000000000000000) -> True
+          [6][CALL] from=LifeProtocolContract, to=BEP20USDT, transfer(recipient(address): 0xF6Cee4, amount(uint256): 2343829801680218810000) -> True
+        [5][CALL] from=0xf6cee4, to=LifeProtocolContract, sell(amount(uint256): 1000000000000000000000) -> None
+          [6][STATICCALL] from=LifeProtocolContract, to=LifeToken, balanceOf(account(address): 0xF6Cee4) -> 8000000000000000000000
+          [6][STATICCALL] from=LifeProtocolContract, to=BEP20USDT, balanceOf(account(address): 0x42e277) -> 56338522806630168250061
+          [6][CALL] from=LifeProtocolContract, to=LifeToken, transferFrom(from(address): 0xF6Cee4, to(address): 0x42e277, value(uint256): 1000000000000000000000) -> True
+          [6][CALL] from=LifeProtocolContract, to=BEP20USDT, transfer(recipient(address): 0xF6Cee4, amount(uint256): 2343829801680218810000) -> True
+        [5][CALL] from=0xf6cee4, to=LifeProtocolContract, sell(amount(uint256): 1000000000000000000000) -> None
+          [6][STATICCALL] from=LifeProtocolContract, to=LifeToken, balanceOf(account(address): 0xF6Cee4) -> 7000000000000000000000
+          [6][STATICCALL] from=LifeProtocolContract, to=BEP20USDT, balanceOf(account(address): 0x42e277) -> 53994693004949949440061
+          [6][CALL] from=LifeProtocolContract, to=LifeToken, transferFrom(from(address): 0xF6Cee4, to(address): 0x42e277, value(uint256): 1000000000000000000000) -> True
+          [6][CALL] from=LifeProtocolContract, to=BEP20USDT, transfer(recipient(address): 0xF6Cee4, amount(uint256): 2343829801680218810000) -> True
+        [5][CALL] from=0xf6cee4, to=LifeProtocolContract, sell(amount(uint256): 1000000000000000000000) -> None
+          [6][STATICCALL] from=LifeProtocolContract, to=LifeToken, balanceOf(account(address): 0xF6Cee4) -> 6000000000000000000000
+          [6][STATICCALL] from=LifeProtocolContract, to=BEP20USDT, balanceOf(account(address): 0x42e277) -> 51650863203269730630061
+          [6][CALL] from=LifeProtocolContract, to=LifeToken, transferFrom(from(address): 0xF6Cee4, to(address): 0x42e277, value(uint256): 1000000000000000000000) -> True
+          [6][CALL] from=LifeProtocolContract, to=BEP20USDT, transfer(recipient(address): 0xF6Cee4, amount(uint256): 2343829801680218810000) -> True
+        [5][CALL] from=0xf6cee4, to=LifeProtocolContract, sell(amount(uint256): 1000000000000000000000) -> None
+          [6][STATICCALL] from=LifeProtocolContract, to=LifeToken, balanceOf(account(address): 0xF6Cee4) -> 5000000000000000000000
+          [6][STATICCALL] from=LifeProtocolContract, to=BEP20USDT, balanceOf(account(address): 0x42e277) -> 49307033401589511820061
+          [6][CALL] from=LifeProtocolContract, to=LifeToken, transferFrom(from(address): 0xF6Cee4, to(address): 0x42e277, value(uint256): 1000000000000000000000) -> True
+          [6][CALL] from=LifeProtocolContract, to=BEP20USDT, transfer(recipient(address): 0xF6Cee4, amount(uint256): 2343829801680218810000) -> True
+        [5][CALL] from=0xf6cee4, to=LifeProtocolContract, sell(amount(uint256): 1000000000000000000000) -> None
+          [6][STATICCALL] from=LifeProtocolContract, to=LifeToken, balanceOf(account(address): 0xF6Cee4) -> 4000000000000000000000
+          [6][STATICCALL] from=LifeProtocolContract, to=BEP20USDT, balanceOf(account(address): 0x42e277) -> 46963203599909293010061
+          [6][CALL] from=LifeProtocolContract, to=LifeToken, transferFrom(from(address): 0xF6Cee4, to(address): 0x42e277, value(uint256): 1000000000000000000000) -> True
+          [6][CALL] from=LifeProtocolContract, to=BEP20USDT, transfer(recipient(address): 0xF6Cee4, amount(uint256): 2343829801680218810000) -> True
+        [5][CALL] from=0xf6cee4, to=LifeProtocolContract, sell(amount(uint256): 1000000000000000000000) -> None
+          [6][STATICCALL] from=LifeProtocolContract, to=LifeToken, balanceOf(account(address): 0xF6Cee4) -> 3000000000000000000000
+          [6][STATICCALL] from=LifeProtocolContract, to=BEP20USDT, balanceOf(account(address): 0x42e277) -> 44619373798229074200061
+          [6][CALL] from=LifeProtocolContract, to=LifeToken, transferFrom(from(address): 0xF6Cee4, to(address): 0x42e277, value(uint256): 1000000000000000000000) -> True
+          [6][CALL] from=LifeProtocolContract, to=BEP20USDT, transfer(recipient(address): 0xF6Cee4, amount(uint256): 2343829801680218810000) -> True
+        [5][CALL] from=0xf6cee4, to=LifeProtocolContract, sell(amount(uint256): 1000000000000000000000) -> None
+          [6][STATICCALL] from=LifeProtocolContract, to=LifeToken, balanceOf(account(address): 0xF6Cee4) -> 2000000000000000000000
+          [6][STATICCALL] from=LifeProtocolContract, to=BEP20USDT, balanceOf(account(address): 0x42e277) -> 42275543996548855390061
+          [6][CALL] from=LifeProtocolContract, to=LifeToken, transferFrom(from(address): 0xF6Cee4, to(address): 0x42e277, value(uint256): 1000000000000000000000) -> True
+          [6][CALL] from=LifeProtocolContract, to=BEP20USDT, transfer(recipient(address): 0xF6Cee4, amount(uint256): 2343829801680218810000) -> True
+        [5][CALL] from=0xf6cee4, to=LifeProtocolContract, sell(amount(uint256): 1000000000000000000000) -> None
+          [6][STATICCALL] from=LifeProtocolContract, to=LifeToken, balanceOf(account(address): 0xF6Cee4) -> 1000000000000000000000
+          [6][STATICCALL] from=LifeProtocolContract, to=BEP20USDT, balanceOf(account(address): 0x42e277) -> 39931714194868636580061
+          [6][CALL] from=LifeProtocolContract, to=LifeToken, transferFrom(from(address): 0xF6Cee4, to(address): 0x42e277, value(uint256): 1000000000000000000000) -> True
+          [6][CALL] from=LifeProtocolContract, to=BEP20USDT, transfer(recipient(address): 0xF6Cee4, amount(uint256): 2343829801680218810000) -> True
+        [5][CALL] from=0xf6cee4, to=BEP20USDT, transfer(recipient(address): 0x6098A5, amount(uint256): 110000000000000000000000) -> True
+        [5][STATICCALL] from=0xf6cee4, to=BEP20USDT, balanceOf(account(address): 0xF6Cee4) -> 15114791884494874317000
+        [5][CALL] from=0xf6cee4, to=BEP20USDT, transfer(recipient(address): 0x3026C4, amount(uint256): 15114791884494874317000) -> True
+      [4][STATICCALL] from=DPP, to=WBNB, balanceOf((address): 0x6098A5) -> 274716834385494816669
+      [4][STATICCALL] from=DPP, to=BEP20USDT, balanceOf(account(address): 0x6098A5) -> 239159462502201233105045
+      [4][STATICCALL] from=DPP, to=WBNB, balanceOf((address): 0x6098A5) -> 274716834385494816669
+      [4][STATICCALL] from=DPP, to=BEP20USDT, balanceOf(account(address): 0x6098A5) -> 239159462502201233105045

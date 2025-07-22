@@ -1,0 +1,5 @@
+[1][CALL] from=0x8149f7, to=R0ARStaking, 0x99d7f8b7() -> None
+  [2][STATICCALL] from=R0ARStaking, to=ONE_R0AR_Token, balanceOfaddress() -> 0x000000
+  [2][CALL] from=R0ARStaking, to=ONE_R0AR_Token, transferaddress() -> 0x000000
+  [2][STATICCALL] from=R0ARStaking, to=UniswapV2Pair, balanceOfaddress() -> 0x000000
+  [2][CALL] from=R0ARStaking, to=UniswapV2Pair, transferaddress() -> 0x000000

@@ -1,0 +1,7 @@
+[1][CALL] from=0x43ee41, to=0xac08f1, setupaddress() -> None
+  [2][CALL] from=0xac08f1, to=TransparentUpgradeableProxy, postLockUpgrade() -> None
+    [3][DELEGATECALL] from=TransparentUpgradeableProxy, to=Unlock, postLockUpgrade() -> None
+      [4][STATICCALL] from=TransparentUpgradeableProxy, to=0xac08f1, publicLockVersion() -> 0x000000
+      [4][STATICCALL] from=TransparentUpgradeableProxy, to=0xac08f1, unlockProtocol() -> 0x000000
+      [4][STATICCALL] from=TransparentUpgradeableProxy, to=0xac08f1, unlockProtocol() -> 0x000000
+      [4][STATICCALL] from=TransparentUpgradeableProxy, to=0xac08f1, locksaddress() -> 0x000000

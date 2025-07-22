@@ -1,0 +1,95 @@
+[1][CALL] from=0x837962, to=0x5061f7, start() -> None
+  [2][STATICCALL] from=0x5061f7, to=UniswapV2Pair, token0() -> 0xc02aaa
+  [2][STATICCALL] from=0x5061f7, to=UniswapV2Pair, token1() -> 0xdac17f
+  [2][STATICCALL] from=0x5061f7, to=TetherToken, allowance(_owner(address): 0x5061F7, _spender(address): 0xb5599f) -> 0
+  [2][CALL] from=0x5061f7, to=TetherToken, approve(_spender(address): 0xb5599f, _value(uint256): 115792089237316195423570985008687907853269...) -> None
+  [2][STATICCALL] from=0x5061f7, to=FiatTokenProxy, allowance(owner(address): 0x5061F7, spender(address): 0xb5599f) -> 0
+    [3][DELEGATECALL] from=FiatTokenProxy, to=FiatTokenV2_1, allowance(owner(address): 0x5061F7, spender(address): 0xb5599f) -> 0
+  [2][CALL] from=0x5061f7, to=FiatTokenProxy, approve(spender(address): 0xb5599f, value(uint256): 115792089237316195423570985008687907853269...) -> True
+    [3][DELEGATECALL] from=FiatTokenProxy, to=FiatTokenV2_1, approve(spender(address): 0xb5599f, value(uint256): 115792089237316195423570985008687907853269...) -> True
+  [2][STATICCALL] from=0x5061f7, to=FiatTokenProxy, allowance(owner(address): 0x5061F7, spender(address): 0x13e557) -> 0
+    [3][DELEGATECALL] from=FiatTokenProxy, to=FiatTokenV2_1, allowance(owner(address): 0x5061F7, spender(address): 0x13e557) -> 0
+  [2][CALL] from=0x5061f7, to=FiatTokenProxy, approve(spender(address): 0x13e557, value(uint256): 115792089237316195423570985008687907853269...) -> True
+    [3][DELEGATECALL] from=FiatTokenProxy, to=FiatTokenV2_1, approve(spender(address): 0x13e557, value(uint256): 115792089237316195423570985008687907853269...) -> True
+  [2][CALL] from=0x5061f7, to=AdminUpgradeabilityProxy, depositAsset(assetAddress(address): 0xA0b869, amount(uint112): 500000) -> None
+    [3][DELEGATECALL] from=AdminUpgradeabilityProxy, to=ExchangeWithAtomic, depositAsset(assetAddress(address): 0xA0b869, amount(uint112): 500000) -> None
+      [4][STATICCALL] from=AdminUpgradeabilityProxy, to=FiatTokenProxy, balanceOf(account(address): 0xb5599f) -> 542050350213
+        [5][DELEGATECALL] from=FiatTokenProxy, to=FiatTokenV2_1, balanceOf(account(address): 0xb5599f) -> 542050350213
+      [4][CALL] from=AdminUpgradeabilityProxy, to=FiatTokenProxy, transferFrom(from(address): 0x5061F7, to(address): 0xb5599f, value(uint256): 500000) -> True
+        [5][DELEGATECALL] from=FiatTokenProxy, to=FiatTokenV2_1, transferFrom(from(address): 0x5061F7, to(address): 0xb5599f, value(uint256): 500000) -> True
+      [4][STATICCALL] from=AdminUpgradeabilityProxy, to=FiatTokenProxy, balanceOf(account(address): 0xb5599f) -> 542050850213
+        [5][DELEGATECALL] from=FiatTokenProxy, to=FiatTokenV2_1, balanceOf(account(address): 0xb5599f) -> 542050850213
+      [4][STATICCALL] from=AdminUpgradeabilityProxy, to=FiatTokenProxy, decimals() -> 6
+        [5][DELEGATECALL] from=FiatTokenProxy, to=FiatTokenV2_1, decimals() -> 6
+  [2][CALL] from=0x5061f7, to=UniswapV2Pair, swap(amount0Out(uint256): 0, amount1Out(uint256): 2844766426325, to(address): 0x5061F7, data(bytes): b'\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00...) -> None
+    [3][CALL] from=UniswapV2Pair, to=TetherToken, transfer(_to(address): 0x5061F7, _value(uint256): 2844766426325) -> None
+    [3][CALL] from=UniswapV2Pair, to=0x5061f7, uniswapV2Calladdress() -> None
+      [4][STATICCALL] from=0x5061f7, to=FiatTokenProxy, decimals() -> 6
+        [5][DELEGATECALL] from=FiatTokenProxy, to=FiatTokenV2_1, decimals() -> 6
+      [4][CALL] from=0x5061f7, to=AdminUpgradeabilityProxy, swapThroughOrionPool(amount_spend(uint112): 10000, amount_receive(uint112): 0, path(address[]): ['0xA0b86991c6218b36c1d19D4a2e9Eb0cE3606eB..., is_exact_spend(bool): True) -> None
+        [5][DELEGATECALL] from=AdminUpgradeabilityProxy, to=ExchangeWithAtomic, swapThroughOrionPool(amount_spend(uint112): 10000, amount_receive(uint112): 0, path(address[]): ['0xA0b86991c6218b36c1d19D4a2e9Eb0cE3606eB..., is_exact_spend(bool): True) -> None
+          [6][DELEGATECALL] from=AdminUpgradeabilityProxy, to=LibPool, 0x4729ed3c() -> 0x000000
+            [7][STATICCALL] from=AdminUpgradeabilityProxy, to=PoolFunctionality, isFactory(a(address): 0xA0b869) -> False
+            [7][CALL] from=AdminUpgradeabilityProxy, to=PoolFunctionality, doSwapThroughOrionPool(user(address): 0xb5599f, to(address): 0xb5599f, swapData(tuple): {'amount_spend': 10000, 'amount_receive': ...) -> ['10000', '284476642642500']
+              [8][STATICCALL] from=PoolFunctionality, to=FiatTokenProxy, decimals() -> 6
+                [9][DELEGATECALL] from=FiatTokenProxy, to=FiatTokenV2_1, decimals() -> 6
+              [8][STATICCALL] from=PoolFunctionality, to=TetherToken, decimals() -> 6
+              [8][STATICCALL] from=PoolFunctionality, to=OrionPoolV2Factory, getPair((address): 0x64Acd9) -> 0x76fe18
+              [8][STATICCALL] from=PoolFunctionality, to=OrionPoolV2Pair, getReserves() -> ['500000000000000000', '500000', '1675353059']
+              [8][STATICCALL] from=PoolFunctionality, to=OrionPoolV2Factory, getPair((address): 0xdAC17F) -> 0x13e557
+              [8][STATICCALL] from=PoolFunctionality, to=OrionPoolV2Pair, getReserves() -> ['500000000000000000', '500000', '1675353059']
+              [8][STATICCALL] from=PoolFunctionality, to=OrionPoolV2Factory, getPair((address): 0x64Acd9) -> 0x76fe18
+              [8][CALL] from=PoolFunctionality, to=AdminUpgradeabilityProxy, safeAutoTransferFrom(token(address): 0xA0b869, from(address): 0xb5599f, to(address): 0x76fe18, value(uint256): 100) -> None
+                [9][DELEGATECALL] from=AdminUpgradeabilityProxy, to=ExchangeWithAtomic, safeAutoTransferFrom(token(address): 0xA0b869, from(address): 0xb5599f, to(address): 0x76fe18, value(uint256): 100) -> None
+                  [10][CALL] from=AdminUpgradeabilityProxy, to=FiatTokenProxy, transfer(to(address): 0x76fe18, value(uint256): 100) -> True
+                    [11][DELEGATECALL] from=FiatTokenProxy, to=FiatTokenV2_1, transfer(to(address): 0x76fe18, value(uint256): 100) -> True
+              [8][STATICCALL] from=PoolFunctionality, to=TetherToken, balanceOf(who(address): 0xb5599f) -> 2844766426325
+              [8][STATICCALL] from=PoolFunctionality, to=OrionPoolV2Factory, getPair((address): 0x64Acd9) -> 0x76fe18
+              [8][STATICCALL] from=PoolFunctionality, to=OrionPoolV2Factory, getPair((address): 0xdAC17F) -> 0x13e557
+              [8][CALL] from=PoolFunctionality, to=OrionPoolV2Pair, swap(amount0Out(uint256): 99680123783317, amount1Out(uint256): 0, to(address): 0x13e557, data(bytes): b'') -> None
+                [9][CALL] from=OrionPoolV2Pair, to=0x64acd9, transferaddress() -> 0x000000
+                  [10][CALL] from=0x64acd9, to=0x5061f7, deposit() -> None
+                    [11][STATICCALL] from=0x5061f7, to=TetherToken, balanceOf(who(address): 0x5061F7) -> 2844766426326
+                    [11][CALL] from=0x5061f7, to=AdminUpgradeabilityProxy, depositAsset(assetAddress(address): 0xdAC17F, amount(uint112): 2844766426326) -> None
+                      [12][DELEGATECALL] from=AdminUpgradeabilityProxy, to=ExchangeWithAtomic, depositAsset(assetAddress(address): 0xdAC17F, amount(uint112): 2844766426326) -> None
+                        [13][STATICCALL] from=AdminUpgradeabilityProxy, to=TetherToken, balanceOf(who(address): 0xb5599f) -> 2844766426325
+                        [13][CALL] from=AdminUpgradeabilityProxy, to=TetherToken, transferFrom(_from(address): 0x5061F7, _to(address): 0xb5599f, _value(uint256): 2844766426326) -> None
+                        [13][STATICCALL] from=AdminUpgradeabilityProxy, to=TetherToken, balanceOf(who(address): 0xb5599f) -> 5689532852651
+                        [13][STATICCALL] from=AdminUpgradeabilityProxy, to=TetherToken, decimals() -> 6
+                  [10][STATICCALL] from=0x64acd9, to=0x000000, logstring() -> None
+                [9][STATICCALL] from=OrionPoolV2Pair, to=0x64acd9, balanceOfaddress() -> 0x000000
+                [9][STATICCALL] from=OrionPoolV2Pair, to=FiatTokenProxy, balanceOf(account(address): 0x76fe18) -> 500100
+                  [10][DELEGATECALL] from=FiatTokenProxy, to=FiatTokenV2_1, balanceOf(account(address): 0x76fe18) -> 500100
+              [8][STATICCALL] from=PoolFunctionality, to=OrionPoolV2Factory, getPair((address): 0xdAC17F) -> 0x13e557
+              [8][CALL] from=PoolFunctionality, to=OrionPoolV2Pair, swap(amount0Out(uint256): 0, amount1Out(uint256): 99, to(address): 0xb5599f, data(bytes): b'') -> None
+                [9][CALL] from=OrionPoolV2Pair, to=TetherToken, transfer(_to(address): 0xb5599f, _value(uint256): 99) -> None
+                [9][STATICCALL] from=OrionPoolV2Pair, to=0x64acd9, balanceOfaddress() -> 0x000000
+                [9][STATICCALL] from=OrionPoolV2Pair, to=TetherToken, balanceOf(who(address): 0x13e557) -> 499901
+              [8][STATICCALL] from=PoolFunctionality, to=TetherToken, balanceOf(who(address): 0xb5599f) -> 5689532852750
+              [8][STATICCALL] from=PoolFunctionality, to=FiatTokenProxy, decimals() -> 6
+                [9][DELEGATECALL] from=FiatTokenProxy, to=FiatTokenV2_1, decimals() -> 6
+              [8][STATICCALL] from=PoolFunctionality, to=TetherToken, decimals() -> 6
+      [4][STATICCALL] from=0x5061f7, to=TetherToken, decimals() -> 6
+      [4][STATICCALL] from=0x5061f7, to=AdminUpgradeabilityProxy, getBalance(assetAddress(address): 0xdAC17F, user(address): 0x5061F7) -> 568953285275100
+        [5][DELEGATECALL] from=AdminUpgradeabilityProxy, to=ExchangeWithAtomic, getBalance(assetAddress(address): 0xdAC17F, user(address): 0x5061F7) -> 568953285275100
+      [4][STATICCALL] from=0x5061f7, to=TetherToken, balanceOf(who(address): 0xb5599f) -> 5689532852750
+      [4][STATICCALL] from=0x5061f7, to=TetherToken, balanceOf(who(address): 0xb5599f) -> 5689532852750
+      [4][CALL] from=0x5061f7, to=AdminUpgradeabilityProxy, withdraw(assetAddress(address): 0xdAC17F, amount(uint112): 5689532852749) -> None
+        [5][DELEGATECALL] from=AdminUpgradeabilityProxy, to=ExchangeWithAtomic, withdraw(assetAddress(address): 0xdAC17F, amount(uint112): 5689532852749) -> None
+          [6][STATICCALL] from=AdminUpgradeabilityProxy, to=TetherToken, decimals() -> 6
+          [6][CALL] from=AdminUpgradeabilityProxy, to=TetherToken, transfer(_to(address): 0x5061F7, _value(uint256): 5689532852749) -> None
+      [4][CALL] from=0x5061f7, to=TetherToken, transfer(_to(address): 0x0d4a11, _value(uint256): 2853326405542) -> None
+    [3][STATICCALL] from=UniswapV2Pair, to=WETH9, balanceOf((address): 0x0d4a11) -> 10647231623278074419406
+    [3][STATICCALL] from=UniswapV2Pair, to=TetherToken, balanceOf(who(address): 0x0d4a11) -> 17872740141362
+  [2][STATICCALL] from=0x5061f7, to=TetherToken, balanceOf(who(address): 0x5061F7) -> 2836206447207
+  [2][CALL] from=0x5061f7, to=TetherToken, approve(_spender(address): 0xE59242, _value(uint256): 2836206447207) -> None
+  [2][CALL] from=0x5061f7, to=SwapRouter, exactInputSingle(params(tuple): {'tokenIn': '0xdAC17F958D2ee523a2206206994...) -> 1651247397448511042353
+    [3][CALL] from=SwapRouter, to=UniswapV3Pool, swap(recipient(address): 0x3DabF5, zeroForOne(bool): False, amountSpecified(int256): 2836206447207, sqrtPriceLimitX96(uint160): 146144670348521010328727305220398882237872..., data(bytes): b"\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00...) -> ['-1651247397448511042353', '2836206447207']
+      [4][CALL] from=UniswapV3Pool, to=WETH9, transfer(dst(address): 0x3DabF5, wad(uint256): 1651247397448511042353) -> True
+      [4][STATICCALL] from=UniswapV3Pool, to=TetherToken, balanceOf(who(address): 0x4e68Cc) -> 34916726858725
+      [4][CALL] from=UniswapV3Pool, to=SwapRouter, uniswapV3SwapCallback(amount0Delta(int256): -1651247397448511042353, amount1Delta(int256): 2836206447207, _data(bytes): b"\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00...) -> None
+        [5][CALL] from=SwapRouter, to=TetherToken, transferFrom(_from(address): 0x5061F7, _to(address): 0x4e68Cc, _value(uint256): 2836206447207) -> None
+      [4][STATICCALL] from=UniswapV3Pool, to=TetherToken, balanceOf(who(address): 0x4e68Cc) -> 37752933305932
+  [2][STATICCALL] from=0x5061f7, to=WETH9, balanceOf((address): 0x5061F7) -> 0
+  [2][CALL] from=0x5061f7, to=WETH9, transfer(dst(address): 0x3DabF5, wad(uint256): 0) -> True
+  [2][SELFDESTRUCT][0.0] from=0x5061f7, to=0x3dabf5

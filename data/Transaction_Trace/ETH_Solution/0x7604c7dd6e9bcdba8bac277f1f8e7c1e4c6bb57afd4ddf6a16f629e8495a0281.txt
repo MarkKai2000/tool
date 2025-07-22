@@ -1,0 +1,165 @@
+[1][CALL] from=0x1d5a56, to=0x1695ce, 0x19b96697() -> None
+  [2][CALL] from=0x1695ce, to=0x1695ce, 0xa89d5513() -> None
+    [3][CALL] from=0x1695ce, to=CompoundModel, initialize(forge_(address): 0x1695CE, token_(address): 0xA0b869, cToken_(address): 0x39AA39, comp_(address): 0xc00e94, comptroller_(address): 0x3d9819, uRouterV2_(address): 0x7a250d) -> None
+    [3][CALL] from=0x1695ce, to=CompoundModel, invest() -> None
+      [4][STATICCALL] from=CompoundModel, to=FiatTokenProxy, balanceOf(account(address): 0x3BC6aA) -> 0
+        [5][DELEGATECALL] from=FiatTokenProxy, to=FiatTokenV2_1, balanceOf(account(address): 0x3BC6aA) -> 0
+      [4][CALL] from=CompoundModel, to=FiatTokenProxy, approve(spender(address): 0x39AA39, value(uint256): 0) -> True
+        [5][DELEGATECALL] from=FiatTokenProxy, to=FiatTokenV2_1, approve(spender(address): 0x39AA39, value(uint256): 0) -> True
+      [4][STATICCALL] from=CompoundModel, to=FiatTokenProxy, balanceOf(account(address): 0x3BC6aA) -> 0
+        [5][DELEGATECALL] from=FiatTokenProxy, to=FiatTokenV2_1, balanceOf(account(address): 0x3BC6aA) -> 0
+      [4][STATICCALL] from=CompoundModel, to=FiatTokenProxy, balanceOf(account(address): 0x3BC6aA) -> 0
+        [5][DELEGATECALL] from=FiatTokenProxy, to=FiatTokenV2_1, balanceOf(account(address): 0x3BC6aA) -> 0
+      [4][CALL] from=CompoundModel, to=CErc20, mint(mintAmount(uint256): 0) -> 0
+        [5][STATICCALL] from=CErc20, to=FiatTokenProxy, balanceOf(account(address): 0x39AA39) -> 1743620722798851
+          [6][DELEGATECALL] from=FiatTokenProxy, to=FiatTokenV2_1, balanceOf(account(address): 0x39AA39) -> 1743620722798851
+        [5][STATICCALL] from=CErc20, to=LegacyJumpRateModelV2, getBorrowRate(cash(uint256): 1743620722798851, borrows(uint256): 3392881034410836, reserves(uint256): 7175329501648) -> ['0', '15731239765']
+        [5][CALL] from=CErc20, to=Unitroller, mintAllowed(cToken(address): 0x39AA39, minter(address): 0x3BC6aA, mintAmount(uint256): 0) -> 0
+          [6][DELEGATECALL] from=Unitroller, to=Comptroller, mintAllowed(cToken(address): 0x39AA39, minter(address): 0x3BC6aA, mintAmount(uint256): 0) -> 0
+            [7][STATICCALL] from=Unitroller, to=CErc20, balanceOf(owner(address): 0x3BC6aA) -> 130283536
+        [5][STATICCALL] from=CErc20, to=FiatTokenProxy, allowance(owner(address): 0x3BC6aA, spender(address): 0x39AA39) -> 0
+          [6][DELEGATECALL] from=FiatTokenProxy, to=FiatTokenV2_1, allowance(owner(address): 0x3BC6aA, spender(address): 0x39AA39) -> 0
+        [5][STATICCALL] from=CErc20, to=FiatTokenProxy, balanceOf(account(address): 0x3BC6aA) -> 0
+          [6][DELEGATECALL] from=FiatTokenProxy, to=FiatTokenV2_1, balanceOf(account(address): 0x3BC6aA) -> 0
+        [5][STATICCALL] from=CErc20, to=FiatTokenProxy, balanceOf(account(address): 0x39AA39) -> 1743620722798851
+          [6][DELEGATECALL] from=FiatTokenProxy, to=FiatTokenV2_1, balanceOf(account(address): 0x39AA39) -> 1743620722798851
+        [5][CALL] from=CErc20, to=FiatTokenProxy, transferFrom(from(address): 0x3BC6aA, to(address): 0x39AA39, value(uint256): 0) -> True
+          [6][DELEGATECALL] from=FiatTokenProxy, to=FiatTokenV2_1, transferFrom(from(address): 0x3BC6aA, to(address): 0x39AA39, value(uint256): 0) -> True
+        [5][CALL] from=CErc20, to=Unitroller, mintVerify(cToken(address): 0x39AA39, minter(address): 0x3BC6aA, actualMintAmount(uint256): 0, mintTokens(uint256): 0) -> None
+          [6][DELEGATECALL] from=Unitroller, to=Comptroller, mintVerify(cToken(address): 0x39AA39, minter(address): 0x3BC6aA, actualMintAmount(uint256): 0, mintTokens(uint256): 0) -> None
+    [3][STATICCALL] from=0x1695ce, to=CompoundModel, underlyingBalanceInModel() -> 0
+      [4][STATICCALL] from=CompoundModel, to=FiatTokenProxy, balanceOf(account(address): 0x3BC6aA) -> 0
+        [5][DELEGATECALL] from=FiatTokenProxy, to=FiatTokenV2_1, balanceOf(account(address): 0x3BC6aA) -> 0
+    [3][STATICCALL] from=0x1695ce, to=CompoundModel, underlyingBalanceWithInvestment() -> 28802
+      [4][STATICCALL] from=CompoundModel, to=CErc20, balanceOf(owner(address): 0x3BC6aA) -> 130283536
+      [4][STATICCALL] from=CompoundModel, to=CErc20, exchangeRateStored() -> 221077169395846
+        [5][STATICCALL] from=CErc20, to=FiatTokenProxy, balanceOf(account(address): 0x39AA39) -> 1743620722798851
+          [6][DELEGATECALL] from=FiatTokenProxy, to=FiatTokenV2_1, balanceOf(account(address): 0x39AA39) -> 1743620722798851
+      [4][STATICCALL] from=CompoundModel, to=FiatTokenProxy, balanceOf(account(address): 0x3BC6aA) -> 0
+        [5][DELEGATECALL] from=FiatTokenProxy, to=FiatTokenV2_1, balanceOf(account(address): 0x3BC6aA) -> 0
+    [3][CALL] from=0x1695ce, to=CompoundModel, withdrawToForge(amount(uint256): 28802) -> None
+      [4][STATICCALL] from=CompoundModel, to=FiatTokenProxy, balanceOf(account(address): 0x3BC6aA) -> 0
+        [5][DELEGATECALL] from=FiatTokenProxy, to=FiatTokenV2_1, balanceOf(account(address): 0x3BC6aA) -> 0
+      [4][CALL] from=CompoundModel, to=CErc20, redeemUnderlying(redeemAmount(uint256): 28802) -> 0
+        [5][STATICCALL] from=CErc20, to=FiatTokenProxy, balanceOf(account(address): 0x39AA39) -> 1743620722798851
+          [6][DELEGATECALL] from=FiatTokenProxy, to=FiatTokenV2_1, balanceOf(account(address): 0x39AA39) -> 1743620722798851
+        [5][STATICCALL] from=CErc20, to=LegacyJumpRateModelV2, getBorrowRate(cash(uint256): 1743620722798851, borrows(uint256): 3392881034410836, reserves(uint256): 7175329501648) -> ['0', '15731239765']
+        [5][STATICCALL] from=CErc20, to=FiatTokenProxy, balanceOf(account(address): 0x39AA39) -> 1743620722798851
+          [6][DELEGATECALL] from=FiatTokenProxy, to=FiatTokenV2_1, balanceOf(account(address): 0x39AA39) -> 1743620722798851
+        [5][CALL] from=CErc20, to=Unitroller, redeemAllowed(cToken(address): 0x39AA39, redeemer(address): 0x3BC6aA, redeemTokens(uint256): 130280300) -> 0
+          [6][DELEGATECALL] from=Unitroller, to=Comptroller, redeemAllowed(cToken(address): 0x39AA39, redeemer(address): 0x3BC6aA, redeemTokens(uint256): 130280300) -> 0
+            [7][STATICCALL] from=Unitroller, to=CErc20, balanceOf(owner(address): 0x3BC6aA) -> 130283536
+        [5][STATICCALL] from=CErc20, to=FiatTokenProxy, balanceOf(account(address): 0x39AA39) -> 1743620722798851
+          [6][DELEGATECALL] from=FiatTokenProxy, to=FiatTokenV2_1, balanceOf(account(address): 0x39AA39) -> 1743620722798851
+        [5][CALL] from=CErc20, to=FiatTokenProxy, transfer(to(address): 0x3BC6aA, value(uint256): 28802) -> True
+          [6][DELEGATECALL] from=FiatTokenProxy, to=FiatTokenV2_1, transfer(to(address): 0x3BC6aA, value(uint256): 28802) -> True
+        [5][CALL] from=CErc20, to=Unitroller, redeemVerify(cToken(address): 0x39AA39, redeemer(address): 0x3BC6aA, redeemAmount(uint256): 28802, redeemTokens(uint256): 130280300) -> None
+          [6][DELEGATECALL] from=Unitroller, to=Comptroller, redeemVerify(cToken(address): 0x39AA39, redeemer(address): 0x3BC6aA, redeemAmount(uint256): 28802, redeemTokens(uint256): 130280300) -> None
+      [4][STATICCALL] from=CompoundModel, to=FiatTokenProxy, balanceOf(account(address): 0x3BC6aA) -> 28802
+        [5][DELEGATECALL] from=FiatTokenProxy, to=FiatTokenV2_1, balanceOf(account(address): 0x3BC6aA) -> 28802
+      [4][CALL] from=CompoundModel, to=FiatTokenProxy, transfer(to(address): 0x1695CE, value(uint256): 28802) -> True
+        [5][DELEGATECALL] from=FiatTokenProxy, to=FiatTokenV2_1, transfer(to(address): 0x1695CE, value(uint256): 28802) -> True
+    [3][CALL] from=0x1695ce, to=CompoundModel, initialize(forge_(address): 0x0a5485, token_(address): 0xA0b869, cToken_(address): 0x39AA39, comp_(address): 0xc00e94, comptroller_(address): 0x3d9819, uRouterV2_(address): 0x7a250d) -> None
+  [2][CALL] from=0x1695ce, to=0x1695ce, depositaddress() -> None
+    [3][STATICCALL] from=0x1695ce, to=FiatTokenProxy, balanceOf(account(address): 0x1695CE) -> 28802
+      [4][DELEGATECALL] from=FiatTokenProxy, to=FiatTokenV2_1, balanceOf(account(address): 0x1695CE) -> 28802
+    [3][CALL] from=0x1695ce, to=FiatTokenProxy, transfer(to(address): 0x1D5a56, value(uint256): 28802) -> True
+      [4][DELEGATECALL] from=FiatTokenProxy, to=FiatTokenV2_1, transfer(to(address): 0x1D5a56, value(uint256): 28802) -> True
+  [2][CALL] from=0x1695ce, to=0x1695ce, 0xa89d5513() -> None
+    [3][CALL] from=0x1695ce, to=CompoundModel, initialize(forge_(address): 0x1695CE, token_(address): 0xdAC17F, cToken_(address): 0xf650C3, comp_(address): 0xc00e94, comptroller_(address): 0x3d9819, uRouterV2_(address): 0x7a250d) -> None
+    [3][CALL] from=0x1695ce, to=CompoundModel, invest() -> None
+      [4][STATICCALL] from=CompoundModel, to=TetherToken, balanceOf(who(address): 0x1F3b04) -> 0
+      [4][CALL] from=CompoundModel, to=TetherToken, approve(_spender(address): 0xf650C3, _value(uint256): 0) -> None
+      [4][STATICCALL] from=CompoundModel, to=TetherToken, balanceOf(who(address): 0x1F3b04) -> 0
+      [4][STATICCALL] from=CompoundModel, to=TetherToken, balanceOf(who(address): 0x1F3b04) -> 0
+      [4][CALL] from=CompoundModel, to=CErc20Delegator, mint(mintAmount(uint256): 0) -> 0
+        [5][DELEGATECALL] from=CErc20Delegator, to=CErc20Delegate, mint(mintAmount(uint256): 0) -> 0
+          [6][CALL] from=CErc20Delegator, to=Unitroller, mintAllowed(cToken(address): 0xf650C3, minter(address): 0x1F3b04, mintAmount(uint256): 0) -> 0
+            [7][DELEGATECALL] from=Unitroller, to=Comptroller, mintAllowed(cToken(address): 0xf650C3, minter(address): 0x1F3b04, mintAmount(uint256): 0) -> 0
+              [8][STATICCALL] from=Unitroller, to=CErc20Delegator, balanceOf(owner(address): 0x1F3b04) -> 173331842
+                [9][STATICCALL] from=CErc20Delegator, to=CErc20Delegator, delegateToImplementationbytes() -> 0x000000
+                  [10][DELEGATECALL] from=CErc20Delegator, to=CErc20Delegate, balanceOf(owner(address): 0x1F3b04) -> 173331842
+          [6][STATICCALL] from=CErc20Delegator, to=TetherToken, balanceOf(who(address): 0xf650C3) -> 176109038948109
+          [6][STATICCALL] from=CErc20Delegator, to=TetherToken, balanceOf(who(address): 0xf650C3) -> 176109038948109
+          [6][CALL] from=CErc20Delegator, to=TetherToken, transferFrom(_from(address): 0x1F3b04, _to(address): 0xf650C3, _value(uint256): 0) -> None
+          [6][STATICCALL] from=CErc20Delegator, to=TetherToken, balanceOf(who(address): 0xf650C3) -> 176109038948109
+    [3][STATICCALL] from=0x1695ce, to=CompoundModel, underlyingBalanceInModel() -> 0
+      [4][STATICCALL] from=CompoundModel, to=TetherToken, balanceOf(who(address): 0x1F3b04) -> 0
+    [3][STATICCALL] from=0x1695ce, to=CompoundModel, underlyingBalanceWithInvestment() -> 36879
+      [4][STATICCALL] from=CompoundModel, to=CErc20Delegator, balanceOf(owner(address): 0x1F3b04) -> 173331842
+        [5][STATICCALL] from=CErc20Delegator, to=CErc20Delegator, delegateToImplementationbytes() -> 0x000000
+          [6][DELEGATECALL] from=CErc20Delegator, to=CErc20Delegate, balanceOf(owner(address): 0x1F3b04) -> 173331842
+      [4][STATICCALL] from=CompoundModel, to=CErc20Delegator, exchangeRateStored() -> 212765821218907
+        [5][STATICCALL] from=CErc20Delegator, to=CErc20Delegator, delegateToImplementationbytes() -> 0x000000
+          [6][DELEGATECALL] from=CErc20Delegator, to=CErc20Delegate, exchangeRateStored() -> 212765821218907
+            [7][STATICCALL] from=CErc20Delegator, to=TetherToken, balanceOf(who(address): 0xf650C3) -> 176109038948109
+      [4][STATICCALL] from=CompoundModel, to=TetherToken, balanceOf(who(address): 0x1F3b04) -> 0
+    [3][CALL] from=0x1695ce, to=CompoundModel, withdrawToForge(amount(uint256): 36879) -> None
+      [4][STATICCALL] from=CompoundModel, to=TetherToken, balanceOf(who(address): 0x1F3b04) -> 0
+      [4][CALL] from=CompoundModel, to=CErc20Delegator, redeemUnderlying(redeemAmount(uint256): 36879) -> 0
+        [5][DELEGATECALL] from=CErc20Delegator, to=CErc20Delegate, redeemUnderlying(redeemAmount(uint256): 36879) -> 0
+          [6][STATICCALL] from=CErc20Delegator, to=TetherToken, balanceOf(who(address): 0xf650C3) -> 176109038948109
+          [6][CALL] from=CErc20Delegator, to=Unitroller, redeemAllowed(cToken(address): 0xf650C3, redeemer(address): 0x1F3b04, redeemTokens(uint256): 173331410) -> 0
+            [7][DELEGATECALL] from=Unitroller, to=Comptroller, redeemAllowed(cToken(address): 0xf650C3, redeemer(address): 0x1F3b04, redeemTokens(uint256): 173331410) -> 0
+              [8][STATICCALL] from=Unitroller, to=CErc20Delegator, balanceOf(owner(address): 0x1F3b04) -> 173331842
+                [9][STATICCALL] from=CErc20Delegator, to=CErc20Delegator, delegateToImplementationbytes() -> 0x000000
+                  [10][DELEGATECALL] from=CErc20Delegator, to=CErc20Delegate, balanceOf(owner(address): 0x1F3b04) -> 173331842
+          [6][STATICCALL] from=CErc20Delegator, to=TetherToken, balanceOf(who(address): 0xf650C3) -> 176109038948109
+          [6][CALL] from=CErc20Delegator, to=TetherToken, transfer(_to(address): 0x1F3b04, _value(uint256): 36879) -> None
+          [6][CALL] from=CErc20Delegator, to=Unitroller, redeemVerify(cToken(address): 0xf650C3, redeemer(address): 0x1F3b04, redeemAmount(uint256): 36879, redeemTokens(uint256): 173331410) -> None
+            [7][DELEGATECALL] from=Unitroller, to=Comptroller, redeemVerify(cToken(address): 0xf650C3, redeemer(address): 0x1F3b04, redeemAmount(uint256): 36879, redeemTokens(uint256): 173331410) -> None
+      [4][STATICCALL] from=CompoundModel, to=TetherToken, balanceOf(who(address): 0x1F3b04) -> 36879
+      [4][CALL] from=CompoundModel, to=TetherToken, transfer(_to(address): 0x1695CE, _value(uint256): 36879) -> None
+    [3][CALL] from=0x1695ce, to=CompoundModel, initialize(forge_(address): 0x0d73Ad, token_(address): 0xdAC17F, cToken_(address): 0xf650C3, comp_(address): 0xc00e94, comptroller_(address): 0x3d9819, uRouterV2_(address): 0x7a250d) -> None
+  [2][CALL] from=0x1695ce, to=0x1695ce, depositaddress() -> None
+    [3][STATICCALL] from=0x1695ce, to=TetherToken, balanceOf(who(address): 0x1695CE) -> 36879
+    [3][CALL] from=0x1695ce, to=TetherToken, transfer(_to(address): 0x1D5a56, _value(uint256): 36879) -> None
+  [2][CALL] from=0x1695ce, to=0x1695ce, 0xa89d5513() -> None
+    [3][CALL] from=0x1695ce, to=CompoundModel, initialize(forge_(address): 0x1695CE, token_(address): 0x6B1754, cToken_(address): 0x5d3a53, comp_(address): 0xc00e94, comptroller_(address): 0x3d9819, uRouterV2_(address): 0x7a250d) -> None
+    [3][CALL] from=0x1695ce, to=CompoundModel, invest() -> None
+      [4][STATICCALL] from=CompoundModel, to=Dai, balanceOf((address): 0x929cb8) -> 0
+      [4][CALL] from=CompoundModel, to=Dai, approve(usr(address): 0x5d3a53, wad(uint256): 0) -> True
+      [4][STATICCALL] from=CompoundModel, to=Dai, balanceOf((address): 0x929cb8) -> 0
+      [4][STATICCALL] from=CompoundModel, to=Dai, balanceOf((address): 0x929cb8) -> 0
+      [4][CALL] from=CompoundModel, to=CErc20Delegator, mint(mintAmount(uint256): 0) -> 0
+        [5][DELEGATECALL] from=CErc20Delegator, to=CErc20Delegate, mint(mintAmount(uint256): 0) -> 0
+          [6][CALL] from=CErc20Delegator, to=Unitroller, mintAllowed(cToken(address): 0x5d3a53, minter(address): 0x929cb8, mintAmount(uint256): 0) -> 0
+            [7][DELEGATECALL] from=Unitroller, to=Comptroller, mintAllowed(cToken(address): 0x5d3a53, minter(address): 0x929cb8, mintAmount(uint256): 0) -> 0
+              [8][STATICCALL] from=Unitroller, to=CErc20Delegator, balanceOf(owner(address): 0x929cb8) -> 141019898
+                [9][STATICCALL] from=CErc20Delegator, to=CErc20Delegator, delegateToImplementationbytes() -> 0x000000
+                  [10][DELEGATECALL] from=CErc20Delegator, to=CErc20Delegate, balanceOf(owner(address): 0x929cb8) -> 141019898
+          [6][STATICCALL] from=CErc20Delegator, to=Dai, balanceOf((address): 0x5d3a53) -> 1277847356004928651832668104
+          [6][STATICCALL] from=CErc20Delegator, to=Dai, balanceOf((address): 0x5d3a53) -> 1277847356004928651832668104
+          [6][CALL] from=CErc20Delegator, to=Dai, transferFrom(src(address): 0x929cb8, dst(address): 0x5d3a53, wad(uint256): 0) -> True
+          [6][STATICCALL] from=CErc20Delegator, to=Dai, balanceOf((address): 0x5d3a53) -> 1277847356004928651832668104
+    [3][STATICCALL] from=0x1695ce, to=CompoundModel, underlyingBalanceInModel() -> 0
+      [4][STATICCALL] from=CompoundModel, to=Dai, balanceOf((address): 0x929cb8) -> 0
+    [3][STATICCALL] from=0x1695ce, to=CompoundModel, underlyingBalanceWithInvestment() -> 30390567272501362
+      [4][STATICCALL] from=CompoundModel, to=CErc20Delegator, balanceOf(owner(address): 0x929cb8) -> 141019898
+        [5][STATICCALL] from=CErc20Delegator, to=CErc20Delegator, delegateToImplementationbytes() -> 0x000000
+          [6][DELEGATECALL] from=CErc20Delegator, to=CErc20Delegate, balanceOf(owner(address): 0x929cb8) -> 141019898
+      [4][STATICCALL] from=CompoundModel, to=CErc20Delegator, exchangeRateStored() -> 215505525840767256859093143
+        [5][STATICCALL] from=CErc20Delegator, to=CErc20Delegator, delegateToImplementationbytes() -> 0x000000
+          [6][DELEGATECALL] from=CErc20Delegator, to=CErc20Delegate, exchangeRateStored() -> 215505525840767256859093143
+            [7][STATICCALL] from=CErc20Delegator, to=Dai, balanceOf((address): 0x5d3a53) -> 1277847356004928651832668104
+      [4][STATICCALL] from=CompoundModel, to=Dai, balanceOf((address): 0x929cb8) -> 0
+    [3][CALL] from=0x1695ce, to=CompoundModel, withdrawToForge(amount(uint256): 30390567272501362) -> None
+      [4][STATICCALL] from=CompoundModel, to=Dai, balanceOf((address): 0x929cb8) -> 0
+      [4][CALL] from=CompoundModel, to=CErc20Delegator, redeemUnderlying(redeemAmount(uint256): 30390567272501362) -> 0
+        [5][DELEGATECALL] from=CErc20Delegator, to=CErc20Delegate, redeemUnderlying(redeemAmount(uint256): 30390567272501362) -> 0
+          [6][STATICCALL] from=CErc20Delegator, to=Dai, balanceOf((address): 0x5d3a53) -> 1277847356004928651832668104
+          [6][CALL] from=CErc20Delegator, to=Unitroller, redeemAllowed(cToken(address): 0x5d3a53, redeemer(address): 0x929cb8, redeemTokens(uint256): 141019897) -> 0
+            [7][DELEGATECALL] from=Unitroller, to=Comptroller, redeemAllowed(cToken(address): 0x5d3a53, redeemer(address): 0x929cb8, redeemTokens(uint256): 141019897) -> 0
+              [8][STATICCALL] from=Unitroller, to=CErc20Delegator, balanceOf(owner(address): 0x929cb8) -> 141019898
+                [9][STATICCALL] from=CErc20Delegator, to=CErc20Delegator, delegateToImplementationbytes() -> 0x000000
+                  [10][DELEGATECALL] from=CErc20Delegator, to=CErc20Delegate, balanceOf(owner(address): 0x929cb8) -> 141019898
+          [6][STATICCALL] from=CErc20Delegator, to=Dai, balanceOf((address): 0x5d3a53) -> 1277847356004928651832668104
+          [6][CALL] from=CErc20Delegator, to=Dai, transfer(dst(address): 0x929cb8, wad(uint256): 30390567272501362) -> True
+          [6][CALL] from=CErc20Delegator, to=Unitroller, redeemVerify(cToken(address): 0x5d3a53, redeemer(address): 0x929cb8, redeemAmount(uint256): 30390567272501362, redeemTokens(uint256): 141019897) -> None
+            [7][DELEGATECALL] from=Unitroller, to=Comptroller, redeemVerify(cToken(address): 0x5d3a53, redeemer(address): 0x929cb8, redeemAmount(uint256): 30390567272501362, redeemTokens(uint256): 141019897) -> None
+      [4][STATICCALL] from=CompoundModel, to=Dai, balanceOf((address): 0x929cb8) -> 30390567272501362
+      [4][CALL] from=CompoundModel, to=Dai, transfer(dst(address): 0x1695CE, wad(uint256): 30390567272501362) -> True
+    [3][CALL] from=0x1695ce, to=CompoundModel, initialize(forge_(address): 0xc9309a, token_(address): 0x6B1754, cToken_(address): 0x5d3a53, comp_(address): 0xc00e94, comptroller_(address): 0x3d9819, uRouterV2_(address): 0x7a250d) -> None
+  [2][CALL] from=0x1695ce, to=0x1695ce, depositaddress() -> None
+    [3][STATICCALL] from=0x1695ce, to=Dai, balanceOf((address): 0x1695CE) -> 30390567272501362
+    [3][CALL] from=0x1695ce, to=Dai, transfer(dst(address): 0x1D5a56, wad(uint256): 30390567272501362) -> True

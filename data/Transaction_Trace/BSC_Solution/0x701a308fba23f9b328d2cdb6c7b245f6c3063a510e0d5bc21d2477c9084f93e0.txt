@@ -1,0 +1,250 @@
+[1][CALL] from=0x53d07a, to=0x3523b4, arbitrage() -> None
+  [2][STATICCALL] from=0x3523b4, to=BiswapFactory, getPair((address): 0x0E09Fa) -> 0x3d94d0
+  [2][CALL] from=0x3523b4, to=BiswapPair, sync() -> None
+    [3][STATICCALL] from=BiswapPair, to=CakeToken, balanceOf(account(address): 0x3d94d0) -> 355600879692227584859482
+    [3][STATICCALL] from=BiswapPair, to=WBNB, balanceOf((address): 0x3d94d0) -> 16310176234922141610177
+  [2][STATICCALL] from=0x3523b4, to=CakeToken, balanceOf(account(address): 0x3d94d0) -> 355600879692227584859482
+  [2][CALL] from=0x3523b4, to=BiswapPair, swap(amount0Out(uint256): 355600879692227584859481, amount1Out(uint256): 0, to(address): 0x3523B4, data(bytes): b'not empty') -> None
+    [3][CALL] from=BiswapPair, to=CakeToken, transfer(recipient(address): 0x3523B4, amount(uint256): 355600879692227584859481) -> True
+    [3][CALL] from=BiswapPair, to=0x3523b4, BiswapCalladdress() -> None
+      [4][STATICCALL] from=0x3523b4, to=BiswapFactory, getPair((address): 0x0E09Fa) -> 0x3d94d0
+      [4][STATICCALL] from=0x3523b4, to=CakeToken, balanceOf(account(address): 0x3523B4) -> 355600879692227584859481
+      [4][STATICCALL] from=0x3523b4, to=PancakeFactory, getPair((address): 0x0E09Fa) -> 0x804678
+      [4][CALL] from=0x3523b4, to=PancakePair, sync() -> None
+        [5][STATICCALL] from=PancakePair, to=CakeToken, balanceOf(account(address): 0x804678) -> 1259459212464459000252437
+        [5][STATICCALL] from=PancakePair, to=BEP20Token, balanceOf(account(address): 0x804678) -> 17176268729794569054768131
+      [4][STATICCALL] from=0x3523b4, to=CakeToken, balanceOf(account(address): 0x804678) -> 1259459212464459000252437
+      [4][CALL] from=0x3523b4, to=PancakePair, swap(amount0Out(uint256): 1259459212464459000252436, amount1Out(uint256): 0, to(address): 0x3523B4, data(bytes): b'not empty') -> None
+        [5][CALL] from=PancakePair, to=CakeToken, transfer(recipient(address): 0x3523B4, amount(uint256): 1259459212464459000252436) -> True
+        [5][CALL] from=PancakePair, to=0x3523b4, pancakeCalladdress() -> None
+          [6][STATICCALL] from=0x3523b4, to=PancakeFactory, getPair((address): 0x0E09Fa) -> 0x804678
+          [6][STATICCALL] from=0x3523b4, to=CakeToken, balanceOf(account(address): 0x3523B4) -> 1615060092156686585111917
+          [6][STATICCALL] from=0x3523b4, to=SyrupBar, balanceOf(account(address): 0x274B5B) -> 2545716491201262796822
+          [6][CALL] from=0x3523b4, to=CakeToken, approve(spender(address): 0x274B5B, amount(uint256): 509143298240252559364400) -> True
+          [6][CALL] from=0x3523b4, to=AutoCake, deposit(_amount(uint256): 509143298240252559364400) -> None
+            [7][STATICCALL] from=AutoCake, to=MasterChef, userInfo((uint256): 0x274B5B) -> ['2545716491201262796822', '6894183559327924655364516240']
+            [7][STATICCALL] from=AutoCake, to=CakeToken, balanceOf(account(address): 0x274B5B) -> 0
+            [7][CALL] from=AutoCake, to=CakeToken, transferFrom(sender(address): 0x3523B4, recipient(address): 0x274B5B, amount(uint256): 509143298240252559364400) -> True
+            [7][CALL] from=AutoCake, to=MasterChef, enterStaking(_amount(uint256): 509143298240252559364400) -> None
+              [8][STATICCALL] from=MasterChef, to=CakeToken, balanceOf(account(address): 0x73feaa) -> 147870819502666424391852850
+              [8][CALL] from=MasterChef, to=CakeToken, mint(_to(address): 0x8488Cb, _amount(uint256): 1999975324787484732) -> None
+              [8][CALL] from=MasterChef, to=CakeToken, mint(_to(address): 0x009cF7, _amount(uint256): 19999753247874847322) -> None
+              [8][CALL] from=MasterChef, to=SyrupBar, safeCakeTransfer(_to(address): 0x274B5B, _amount(uint256): 25307845911221218) -> None
+                [9][STATICCALL] from=SyrupBar, to=CakeToken, balanceOf(account(address): 0x009cF7) -> 1049905321363867887521304
+                [9][CALL] from=SyrupBar, to=CakeToken, transfer(recipient(address): 0x274B5B, amount(uint256): 25307845911221218) -> True
+              [8][CALL] from=MasterChef, to=CakeToken, transferFrom(sender(address): 0x274B5B, recipient(address): 0x73feaa, amount(uint256): 509143298240252559364400) -> True
+              [8][CALL] from=MasterChef, to=SyrupBar, mint(_to(address): 0x274B5B, _amount(uint256): 509143298240252559364400) -> None
+            [7][STATICCALL] from=AutoCake, to=CakeToken, balanceOf(account(address): 0x274B5B) -> 25307845911221218
+            [7][CALL] from=AutoCake, to=MasterChef, enterStaking(_amount(uint256): 25307845911221218) -> None
+              [8][CALL] from=MasterChef, to=CakeToken, transferFrom(sender(address): 0x274B5B, recipient(address): 0x73feaa, amount(uint256): 25307845911221218) -> True
+              [8][CALL] from=MasterChef, to=SyrupBar, mint(_to(address): 0x274B5B, _amount(uint256): 25307845911221218) -> None
+          [6][STATICCALL] from=0x3523b4, to=AutoCake, balanceOf(account(address): 0x3523B4) -> 509143323422188789435263
+            [7][STATICCALL] from=AutoCake, to=MasterChef, userInfo((uint256): 0x274B5B) -> ['511689040039299733382440', '1385730963967456989614884663327']
+            [7][STATICCALL] from=AutoCake, to=CakeToken, balanceOf(account(address): 0x274B5B) -> 0
+          [6][STATICCALL] from=0x3523b4, to=CakeToken, balanceOf(account(address): 0x3523B4) -> 1105916793916434025747517
+          [6][CALL] from=0x3523b4, to=CakeToken, transfer(recipient(address): 0x274B5B, amount(uint256): 1105916793916434025747517) -> True
+          [6][STATICCALL] from=0x3523b4, to=CakeToken, balanceOf(account(address): 0x3523B4) -> 0
+          [6][STATICCALL] from=0x3523b4, to=AutoCake, earned(account(address): 0x3523B4) -> 1100414745496795957182820
+            [7][STATICCALL] from=AutoCake, to=MasterChef, userInfo((uint256): 0x274B5B) -> ['511689040039299733382440', '1385730963967456989614884663327']
+            [7][STATICCALL] from=AutoCake, to=CakeToken, balanceOf(account(address): 0x274B5B) -> 1105916793916434025747517
+            [7][STATICCALL] from=AutoCake, to=MasterChef, userInfo((uint256): 0x274B5B) -> ['511689040039299733382440', '1385730963967456989614884663327']
+            [7][STATICCALL] from=AutoCake, to=CakeToken, balanceOf(account(address): 0x274B5B) -> 1105916793916434025747517
+          [6][CALL] from=0x3523b4, to=AutoCake, harvest() -> None
+            [7][CALL] from=AutoCake, to=MasterChef, leaveStaking(_amount(uint256): 0) -> None
+              [8][CALL] from=MasterChef, to=SyrupBar, burn(_from(address): 0x274B5B, _amount(uint256): 0) -> None
+            [7][STATICCALL] from=AutoCake, to=CakeToken, balanceOf(account(address): 0x274B5B) -> 1105916793916434025747517
+            [7][CALL] from=AutoCake, to=MasterChef, enterStaking(_amount(uint256): 1105916793916434025747517) -> None
+              [8][CALL] from=MasterChef, to=CakeToken, transferFrom(sender(address): 0x274B5B, recipient(address): 0x73feaa, amount(uint256): 1105916793916434025747517) -> True
+              [8][CALL] from=MasterChef, to=SyrupBar, mint(_to(address): 0x274B5B, _amount(uint256): 1105916793916434025747517) -> None
+          [6][CALL] from=0x3523b4, to=AutoCake, getReward() -> None
+            [7][STATICCALL] from=AutoCake, to=MasterChef, userInfo((uint256): 0x274B5B) -> ['1617605833955733759129957', '4380720156591002960970098740058']
+            [7][STATICCALL] from=AutoCake, to=CakeToken, balanceOf(account(address): 0x274B5B) -> 0
+            [7][STATICCALL] from=AutoCake, to=MasterChef, userInfo((uint256): 0x274B5B) -> ['1617605833955733759129957', '4380720156591002960970098740058']
+            [7][STATICCALL] from=AutoCake, to=CakeToken, balanceOf(account(address): 0x274B5B) -> 0
+            [7][STATICCALL] from=AutoCake, to=MasterChef, userInfo((uint256): 0x274B5B) -> ['1617605833955733759129957', '4380720156591002960970098740058']
+            [7][STATICCALL] from=AutoCake, to=CakeToken, balanceOf(account(address): 0x274B5B) -> 0
+            [7][STATICCALL] from=AutoCake, to=CakeToken, balanceOf(account(address): 0x274B5B) -> 0
+            [7][CALL] from=AutoCake, to=MasterChef, leaveStaking(_amount(uint256): 1100414745496795957182820) -> None
+              [8][CALL] from=MasterChef, to=CakeToken, transfer(recipient(address): 0x274B5B, amount(uint256): 1100414745496795957182820) -> True
+              [8][CALL] from=MasterChef, to=SyrupBar, burn(_from(address): 0x274B5B, _amount(uint256): 1100414745496795957182820) -> None
+            [7][STATICCALL] from=AutoCake, to=0x0dd664, isMinteraddress() -> 0x000000
+              [8][STATICCALL] from=0x0dd664, to=SpaceToken, getOwner() -> 0x0dd664
+            [7][STATICCALL] from=AutoCake, to=0x0dd664, performanceFeeuint256() -> 0x000000
+            [7][STATICCALL] from=AutoCake, to=CakeToken, balanceOf(account(address): 0x274B5B) -> 1100414745496795957182820
+            [7][STATICCALL] from=AutoCake, to=CakeToken, allowance(owner(address): 0x274B5B, spender(address): 0x10ED43) -> 115792089237316195423570985008687907853269984665640564037600269815167235351053
+            [7][CALL] from=AutoCake, to=PancakeRouter, swapExactTokensForTokens(amountIn(uint256): 330124423649038787154846, amountOutMin(uint256): 0, path(address[]): ['0x0E09FaBB73Bd3Ade0a17ECC321fD13a19e81cE..., to(address): 0x274B5B, deadline(uint256): 1626236967) -> [330124423649038787154846, 14853274020981304981602]
+              [8][STATICCALL] from=PancakeRouter, to=PancakePair, getReserves() -> ['21434684409543867712215833', '981680176724150725971206', '1626236967']
+              [8][CALL] from=PancakeRouter, to=CakeToken, transferFrom(sender(address): 0x274B5B, recipient(address): 0x0eD7e5, amount(uint256): 330124423649038787154846) -> True
+              [8][CALL] from=PancakeRouter, to=PancakePair, swap(amount0Out(uint256): 0, amount1Out(uint256): 14853274020981304981602, to(address): 0x274B5B, data(bytes): b'') -> None
+                [9][CALL] from=PancakePair, to=WBNB, transfer(dst(address): 0x274B5B, wad(uint256): 14853274020981304981602) -> True
+                [9][STATICCALL] from=PancakePair, to=CakeToken, balanceOf(account(address): 0x0eD7e5) -> 21764808833192906499370679
+                [9][STATICCALL] from=PancakePair, to=WBNB, balanceOf((address): 0x0eD7e5) -> 966826902703169420989604
+            [7][CALL] from=AutoCake, to=0x0dd664, 0x6d499b01() -> None
+              [8][STATICCALL] from=0x0dd664, to=SpaceToken, getOwner() -> 0x0dd664
+              [8][CALL] from=0x0dd664, to=WBNB, transferFrom(src(address): 0x274B5B, dst(address): 0x0dD664, wad(uint256): 14853274020981304981602) -> True
+              [8][STATICCALL] from=0x0dd664, to=PriceCalculator, valueOfAsset(asset(address): 0xbb4CdB, amount(uint256): 14853274020981304981602) -> ['14853274020981304981601', '4405169078928655021455379']
+                [9][STATICCALL] from=PriceCalculator, to=EACAggregatorProxy, latestRoundData() -> ['36893488147419160168', '29657899482', '1626236892', '1626236892', '36893488147419160168']
+                  [10][STATICCALL] from=EACAggregatorProxy, to=AccessControlledOffchainAggregator, latestRoundData() -> ['56936', '29657899482', '1626236892', '1626236892', '56936']
+                [9][STATICCALL] from=PriceCalculator, to=EACAggregatorProxy, latestRoundData() -> ['36893488147419160168', '29657899482', '1626236892', '1626236892', '36893488147419160168']
+                  [10][STATICCALL] from=EACAggregatorProxy, to=AccessControlledOffchainAggregator, latestRoundData() -> ['56936', '29657899482', '1626236892', '1626236892', '56936']
+              [8][STATICCALL] from=0x0dd664, to=WBNB, allowance((address): 0xa06EA1) -> 115792089237316195423570985008687907853269984665640564039457584007913129639935
+              [8][STATICCALL] from=0x0dd664, to=WBNB, symbol() -> WBNB
+              [8][STATICCALL] from=0x0dd664, to=WBNB, balanceOf((address): 0x0dD664) -> 14853274020981304981602
+              [8][CALL] from=0x0dd664, to=Zap, zapInToken(_from(address): 0xbb4CdB, amount(uint256): 14853274020981304981602, _to(address): 0xd0F824) -> None
+                [9][STATICCALL] from=Zap, to=WBNB, balanceOf((address): 0x0dD664) -> 14853274020981304981602
+                [9][CALL] from=Zap, to=WBNB, transferFrom(src(address): 0x0dD664, dst(address): 0xa06EA1, wad(uint256): 14853274020981304981602) -> True
+                [9][STATICCALL] from=Zap, to=WBNB, allowance((address): 0xC0788A) -> 115792089237316195423570985008687907853269984665640564039457584007913129639935
+                [9][STATICCALL] from=Zap, to=ApePair, token0() -> 0xbb4cdb
+                [9][STATICCALL] from=Zap, to=ApePair, token1() -> 0xe486a6
+                [9][STATICCALL] from=Zap, to=SpaceToken, allowance(owner(address): 0xa06EA1, spender(address): 0xC0788A) -> 115792089237316195423570985008687907853269984665640563789835669964207771721179
+                [9][CALL] from=Zap, to=ApeRouter, swapExactTokensForTokens(amountIn(uint256): 7426637010490652490801, amountOutMin(uint256): 0, path(address[]): ['0xbb4CdB9CBd36B01bD1cBaEBF2De08d9173bc09..., to(address): 0xa06EA1, deadline(uint256): 1626236967) -> [7426637010490652490801, 108368017975327523234273]
+                  [10][STATICCALL] from=ApeRouter, to=ApePair, getReserves() -> ['7231559626213089567911', '214100971259847528247538', '1626236898']
+                  [10][CALL] from=ApeRouter, to=WBNB, transferFrom(src(address): 0xa06EA1, dst(address): 0xd0F824, wad(uint256): 7426637010490652490801) -> True
+                  [10][CALL] from=ApeRouter, to=ApePair, swap(amount0Out(uint256): 0, amount1Out(uint256): 108368017975327523234273, to(address): 0xa06EA1, data(bytes): b'') -> None
+                    [11][CALL] from=ApePair, to=SpaceToken, transfer(recipient(address): 0xa06EA1, amount(uint256): 108368017975327523234273) -> True
+                    [11][STATICCALL] from=ApePair, to=WBNB, balanceOf((address): 0xd0F824) -> 14658196636703742058712
+                    [11][STATICCALL] from=ApePair, to=SpaceToken, balanceOf(account(address): 0xd0F824) -> 105732953284520005013265
+                [9][CALL] from=Zap, to=ApeRouter, addLiquidity(tokenA(address): 0xbb4CdB, tokenB(address): 0xe486a6, amountADesired(uint256): 7426637010490652490801, amountBDesired(uint256): 108368017975327523234273, amountAMin(uint256): 0, amountBMin(uint256): 0, to(address): 0x0dD664, deadline(uint256): 1626236967) -> ['7426637010490652490801', '53570045726162134146790', '19452381905956004549526']
+                  [10][STATICCALL] from=ApeRouter, to=ApeFactory, getPair((address): 0xe486a6) -> 0xd0f824
+                  [10][STATICCALL] from=ApeRouter, to=ApePair, getReserves() -> ['14658196636703742058712', '105732953284520005013265', '1626236967']
+                  [10][CALL] from=ApeRouter, to=WBNB, transferFrom(src(address): 0xa06EA1, dst(address): 0xd0F824, wad(uint256): 7426637010490652490801) -> True
+                  [10][CALL] from=ApeRouter, to=SpaceToken, transferFrom(sender(address): 0xa06EA1, recipient(address): 0xd0F824, amount(uint256): 53570045726162134146790) -> True
+                  [10][CALL] from=ApeRouter, to=ApePair, mint(to(address): 0x0dD664) -> 19452381905956004549526
+                    [11][STATICCALL] from=ApePair, to=WBNB, balanceOf((address): 0xd0F824) -> 22084833647194394549513
+                    [11][STATICCALL] from=ApePair, to=SpaceToken, balanceOf(account(address): 0xd0F824) -> 159302999010682139160055
+                    [11][STATICCALL] from=ApePair, to=ApeFactory, feeTo() -> 0x94bfe2
+              [8][STATICCALL] from=0x0dd664, to=ApePair, balanceOf((address): 0x0dD664) -> 19452381905956004549526
+              [8][CALL] from=0x0dd664, to=ApePair, transfer(to(address): 0xd79dc4, value(uint256): 19452381905956004549526) -> True
+              [8][CALL] from=0x0dd664, to=SpacePool, notifyRewardAmount(reward(uint256): 19452381905956004549526) -> None
+                [9][STATICCALL] from=SpacePool, to=ApePair, balanceOf((address): 0xd79dc4) -> 28184436505540149266276
+              [8][CALL] from=0x0dd664, to=SpaceToken, mint(_to(address): 0x3523B4, _amount(uint256): 505011316713364369374434) -> None
+              [8][CALL] from=0x0dd664, to=SpaceToken, mint(amount(address): 75751697507004655406165) -> []
+              [8][CALL] from=0x0dd664, to=SpacePool, stakeTo(amount(uint256): 75751697507004655406165, _to(address): 0x6b70f0) -> None
+                [9][CALL] from=SpacePool, to=SpaceToken, transferFrom(sender(address): 0x0dD664, recipient(address): 0xd79dc4, amount(uint256): 75751697507004655406165) -> True
+            [7][CALL] from=AutoCake, to=CakeToken, transfer(recipient(address): 0x3523B4, amount(uint256): 770290321847757170027974) -> True
+            [7][STATICCALL] from=AutoCake, to=CakeToken, balanceOf(account(address): 0x274B5B) -> 0
+          [6][CALL] from=0x3523b4, to=AutoCake, withdrawAll() -> None
+            [7][STATICCALL] from=AutoCake, to=MasterChef, userInfo((uint256): 0x274B5B) -> ['517191088458937801947137', '1400631339515377858269926527462']
+            [7][STATICCALL] from=AutoCake, to=CakeToken, balanceOf(account(address): 0x274B5B) -> 0
+            [7][STATICCALL] from=AutoCake, to=CakeToken, balanceOf(account(address): 0x274B5B) -> 0
+            [7][CALL] from=AutoCake, to=MasterChef, leaveStaking(_amount(uint256): 509143298240252559364400) -> None
+              [8][CALL] from=MasterChef, to=CakeToken, transfer(recipient(address): 0x274B5B, amount(uint256): 509143298240252559364400) -> True
+              [8][CALL] from=MasterChef, to=SyrupBar, burn(_from(address): 0x274B5B, _amount(uint256): 509143298240252559364400) -> None
+            [7][STATICCALL] from=AutoCake, to=0x0dd664, isMinteraddress() -> 0x000000
+              [8][STATICCALL] from=0x0dd664, to=SpaceToken, getOwner() -> 0x0dd664
+            [7][STATICCALL] from=AutoCake, to=0x0dd664, 0x4ae2859c() -> 0x000000
+            [7][STATICCALL] from=AutoCake, to=0x0dd664, isMinteraddress() -> 0x000000
+              [8][STATICCALL] from=0x0dd664, to=SpaceToken, getOwner() -> 0x0dd664
+            [7][STATICCALL] from=AutoCake, to=0x0dd664, performanceFeeuint256() -> 0x000000
+            [7][STATICCALL] from=AutoCake, to=CakeToken, balanceOf(account(address): 0x274B5B) -> 509143298240252559364400
+            [7][STATICCALL] from=AutoCake, to=CakeToken, allowance(owner(address): 0x274B5B, spender(address): 0x10ED43) -> 115792089237316195423570985008687907853269984665640563707475846166128448196207
+            [7][CALL] from=AutoCake, to=PancakeRouter, swapExactTokensForTokens(amountIn(uint256): 2545716491201262796822, amountOutMin(uint256): 0, path(address[]): ['0x0E09FaBB73Bd3Ade0a17ECC321fD13a19e81cE..., to(address): 0x274B5B, deadline(uint256): 1626236967) -> [2545716491201262796822, 112788843246424757964]
+              [8][STATICCALL] from=PancakeRouter, to=PancakePair, getReserves() -> ['21764808833192906499370679', '966826902703169420989604', '1626236967']
+              [8][CALL] from=PancakeRouter, to=CakeToken, transferFrom(sender(address): 0x274B5B, recipient(address): 0x0eD7e5, amount(uint256): 2545716491201262796822) -> True
+              [8][CALL] from=PancakeRouter, to=PancakePair, swap(amount0Out(uint256): 0, amount1Out(uint256): 112788843246424757964, to(address): 0x274B5B, data(bytes): b'') -> None
+                [9][CALL] from=PancakePair, to=WBNB, transfer(dst(address): 0x274B5B, wad(uint256): 112788843246424757964) -> True
+                [9][STATICCALL] from=PancakePair, to=CakeToken, balanceOf(account(address): 0x0eD7e5) -> 21767354549684107762167501
+                [9][STATICCALL] from=PancakePair, to=WBNB, balanceOf((address): 0x0eD7e5) -> 966714113859922996231640
+            [7][CALL] from=AutoCake, to=0x0dd664, 0x6d499b01() -> None
+              [8][STATICCALL] from=0x0dd664, to=SpaceToken, getOwner() -> 0x0dd664
+              [8][CALL] from=0x0dd664, to=WBNB, transferFrom(src(address): 0x274B5B, dst(address): 0x0dD664, wad(uint256): 112788843246424757964) -> True
+              [8][STATICCALL] from=0x0dd664, to=PriceCalculator, valueOfAsset(asset(address): 0xbb4CdB, amount(uint256): 112788843246424757964) -> ['112788843246424757963', '33450801756935200275724']
+                [9][STATICCALL] from=PriceCalculator, to=EACAggregatorProxy, latestRoundData() -> ['36893488147419160168', '29657899482', '1626236892', '1626236892', '36893488147419160168']
+                  [10][STATICCALL] from=EACAggregatorProxy, to=AccessControlledOffchainAggregator, latestRoundData() -> ['56936', '29657899482', '1626236892', '1626236892', '56936']
+                [9][STATICCALL] from=PriceCalculator, to=EACAggregatorProxy, latestRoundData() -> ['36893488147419160168', '29657899482', '1626236892', '1626236892', '36893488147419160168']
+                  [10][STATICCALL] from=EACAggregatorProxy, to=AccessControlledOffchainAggregator, latestRoundData() -> ['56936', '29657899482', '1626236892', '1626236892', '56936']
+              [8][STATICCALL] from=0x0dd664, to=WBNB, allowance((address): 0xa06EA1) -> 115792089237316195423570985008687907853269984665640564039457584007913129639935
+              [8][STATICCALL] from=0x0dd664, to=WBNB, symbol() -> WBNB
+              [8][STATICCALL] from=0x0dd664, to=WBNB, balanceOf((address): 0x0dD664) -> 112788843246424757964
+              [8][CALL] from=0x0dd664, to=Zap, zapInToken(_from(address): 0xbb4CdB, amount(uint256): 112788843246424757964, _to(address): 0xd0F824) -> None
+                [9][STATICCALL] from=Zap, to=WBNB, balanceOf((address): 0x0dD664) -> 112788843246424757964
+                [9][CALL] from=Zap, to=WBNB, transferFrom(src(address): 0x0dD664, dst(address): 0xa06EA1, wad(uint256): 112788843246424757964) -> True
+                [9][STATICCALL] from=Zap, to=WBNB, allowance((address): 0xC0788A) -> 115792089237316195423570985008687907853269984665640564039457584007913129639935
+                [9][STATICCALL] from=Zap, to=ApePair, token0() -> 0xbb4cdb
+                [9][STATICCALL] from=Zap, to=ApePair, token1() -> 0xe486a6
+                [9][STATICCALL] from=Zap, to=SpaceToken, allowance(owner(address): 0xa06EA1, spender(address): 0xC0788A) -> 115792089237316195423570985008687907853269984665640563736265624238045637574389
+                [9][CALL] from=Zap, to=ApeRouter, swapExactTokensForTokens(amountIn(uint256): 56394421623212378982, amountOutMin(uint256): 0, path(address[]): ['0xbb4CdB9CBd36B01bD1cBaEBF2De08d9173bc09..., to(address): 0xa06EA1, deadline(uint256): 1626236967) -> [56394421623212378982, 404940436725682154892]
+                  [10][STATICCALL] from=ApeRouter, to=ApePair, getReserves() -> ['22084833647194394549513', '159302999010682139160055', '1626236967']
+                  [10][CALL] from=ApeRouter, to=WBNB, transferFrom(src(address): 0xa06EA1, dst(address): 0xd0F824, wad(uint256): 56394421623212378982) -> True
+                  [10][CALL] from=ApeRouter, to=ApePair, swap(amount0Out(uint256): 0, amount1Out(uint256): 404940436725682154892, to(address): 0xa06EA1, data(bytes): b'') -> None
+                    [11][CALL] from=ApePair, to=SpaceToken, transfer(recipient(address): 0xa06EA1, amount(uint256): 404940436725682154892) -> True
+                    [11][STATICCALL] from=ApePair, to=WBNB, balanceOf((address): 0xd0F824) -> 22141228068817606928495
+                    [11][STATICCALL] from=ApePair, to=SpaceToken, balanceOf(account(address): 0xd0F824) -> 158898058573956457005163
+                [9][CALL] from=Zap, to=ApeRouter, addLiquidity(tokenA(address): 0xbb4CdB, tokenB(address): 0xe486a6, amountADesired(uint256): 56394421623212378982, amountBDesired(uint256): 404940436725682154892, amountAMin(uint256): 0, amountBMin(uint256): 0, to(address): 0x0dD664, deadline(uint256): 1626236967) -> ['56394421623212378982', '404718477334583252636', '147336191708410933833']
+                  [10][STATICCALL] from=ApeRouter, to=ApeFactory, getPair((address): 0xe486a6) -> 0xd0f824
+                  [10][STATICCALL] from=ApeRouter, to=ApePair, getReserves() -> ['22141228068817606928495', '158898058573956457005163', '1626236967']
+                  [10][CALL] from=ApeRouter, to=WBNB, transferFrom(src(address): 0xa06EA1, dst(address): 0xd0F824, wad(uint256): 56394421623212378982) -> True
+                  [10][CALL] from=ApeRouter, to=SpaceToken, transferFrom(sender(address): 0xa06EA1, recipient(address): 0xd0F824, amount(uint256): 404718477334583252636) -> True
+                  [10][CALL] from=ApeRouter, to=ApePair, mint(to(address): 0x0dD664) -> 147336191708410933833
+                    [11][STATICCALL] from=ApePair, to=WBNB, balanceOf((address): 0xd0F824) -> 22197622490440819307477
+                    [11][STATICCALL] from=ApePair, to=SpaceToken, balanceOf(account(address): 0xd0F824) -> 159302777051291040257799
+                    [11][STATICCALL] from=ApePair, to=ApeFactory, feeTo() -> 0x94bfe2
+              [8][STATICCALL] from=0x0dd664, to=ApePair, balanceOf((address): 0x0dD664) -> 147336191708410933833
+              [8][CALL] from=0x0dd664, to=ApePair, transfer(to(address): 0xd79dc4, value(uint256): 147336191708410933833) -> True
+              [8][CALL] from=0x0dd664, to=SpacePool, notifyRewardAmount(reward(uint256): 147336191708410933833) -> None
+                [9][STATICCALL] from=SpacePool, to=ApePair, balanceOf((address): 0xd79dc4) -> 28331772697248560200109
+              [8][CALL] from=0x0dd664, to=SpaceToken, mint(_to(address): 0x3523B4, _amount(uint256): 3834820670378441770742) -> None
+              [8][CALL] from=0x0dd664, to=SpaceToken, mint(amount(address): 575223100556766265611) -> []
+              [8][CALL] from=0x0dd664, to=SpacePool, stakeTo(amount(uint256): 575223100556766265611, _to(address): 0x6b70f0) -> None
+                [9][CALL] from=SpacePool, to=SpaceToken, transferFrom(sender(address): 0x0dD664, recipient(address): 0xd79dc4, amount(uint256): 575223100556766265611) -> True
+            [7][CALL] from=AutoCake, to=CakeToken, transfer(recipient(address): 0x3523B4, amount(uint256): 506597581749051296567578) -> True
+            [7][STATICCALL] from=AutoCake, to=CakeToken, balanceOf(account(address): 0x274B5B) -> 0
+          [6][STATICCALL] from=0x3523b4, to=SpaceToken, balanceOf(account(address): 0x3523B4) -> 508846137383742811145176
+          [6][STATICCALL] from=0x3523b4, to=CakeToken, balanceOf(account(address): 0x3523B4) -> 1276887903596808466595552
+          [6][STATICCALL] from=0x3523b4, to=AutoCake, balanceOf(account(address): 0x3523B4) -> 0
+            [7][STATICCALL] from=AutoCake, to=MasterChef, userInfo((uint256): 0x274B5B) -> ['8047790218685242582737', '21794627644731358014779035856']
+            [7][STATICCALL] from=AutoCake, to=CakeToken, balanceOf(account(address): 0x274B5B) -> 0
+          [6][STATICCALL] from=0x3523b4, to=ApeFactory, getPair((address): 0xe486a6) -> 0xd0f824
+          [6][STATICCALL] from=0x3523b4, to=SpaceToken, balanceOf(account(address): 0x3523B4) -> 508846137383742811145176
+          [6][CALL] from=0x3523b4, to=SpaceToken, approve(spender(address): 0xC0788A, amount(uint256): 508846137383742811145176) -> True
+          [6][STATICCALL] from=0x3523b4, to=SpaceToken, balanceOf(account(address): 0x3523B4) -> 508846137383742811145176
+          [6][CALL] from=0x3523b4, to=SpaceToken, approve(spender(address): 0xd0F824, amount(uint256): 508846137383742811145176) -> True
+          [6][STATICCALL] from=0x3523b4, to=SpaceToken, balanceOf(account(address): 0x3523B4) -> 508846137383742811145176
+          [6][CALL] from=0x3523b4, to=ApeRouter, swapExactTokensForTokens(amountIn(uint256): 508846137383742811145176, amountOutMin(uint256): 1, path(address[]): ['0xe486a69E432Fdc29622bF00315f6b34C99b45e..., to(address): 0x3523B4, deadline(uint256): 1626323367) -> [508846137383742811145176, 16897101709517268983344]
+            [7][STATICCALL] from=ApeRouter, to=ApePair, getReserves() -> ['22197622490440819307477', '159302777051291040257799', '1626236967']
+            [7][CALL] from=ApeRouter, to=SpaceToken, transferFrom(sender(address): 0x3523B4, recipient(address): 0xd0F824, amount(uint256): 508846137383742811145176) -> True
+            [7][CALL] from=ApeRouter, to=ApePair, swap(amount0Out(uint256): 16897101709517268983344, amount1Out(uint256): 0, to(address): 0x3523B4, data(bytes): b'') -> None
+              [8][CALL] from=ApePair, to=WBNB, transfer(dst(address): 0x3523B4, wad(uint256): 16897101709517268983344) -> True
+              [8][STATICCALL] from=ApePair, to=WBNB, balanceOf((address): 0xd0F824) -> 5300520780923550324133
+              [8][STATICCALL] from=ApePair, to=SpaceToken, balanceOf(account(address): 0xd0F824) -> 668148914435033851402975
+          [6][STATICCALL] from=0x3523b4, to=SpaceToken, balanceOf(account(address): 0x3523B4) -> 0
+          [6][STATICCALL] from=0x3523b4, to=CakeToken, balanceOf(account(address): 0x3523B4) -> 1276887903596808466595552
+          [6][STATICCALL] from=0x3523b4, to=PancakeFactory, getPair((address): 0x0E09Fa) -> 0x0ed7e5
+          [6][STATICCALL] from=0x3523b4, to=WBNB, balanceOf((address): 0x3523B4) -> 16897101709517268983344
+          [6][CALL] from=0x3523b4, to=WBNB, approve(guy(address): 0x10ED43, wad(uint256): 16897101709517268983344) -> True
+          [6][CALL] from=0x3523b4, to=WBNB, approve(guy(address): 0x0eD7e5, wad(uint256): 16897101709517268983344) -> True
+          [6][CALL] from=0x3523b4, to=PancakeRouter, swapExactTokensForTokens(amountIn(uint256): 16897101709517268983344, amountOutMin(uint256): 1, path(address[]): ['0xbb4CdB9CBd36B01bD1cBaEBF2De08d9173bc09..., to(address): 0x3523B4, deadline(uint256): 1626323367) -> [16897101709517268983344, 373014705530619279141714]
+            [7][STATICCALL] from=PancakeRouter, to=PancakePair, getReserves() -> ['21767354549684107762167501', '966714113859922996231640', '1626236967']
+            [7][CALL] from=PancakeRouter, to=WBNB, transferFrom(src(address): 0x3523B4, dst(address): 0x0eD7e5, wad(uint256): 16897101709517268983344) -> True
+            [7][CALL] from=PancakeRouter, to=PancakePair, swap(amount0Out(uint256): 373014705530619279141714, amount1Out(uint256): 0, to(address): 0x3523B4, data(bytes): b'') -> None
+              [8][CALL] from=PancakePair, to=CakeToken, transfer(recipient(address): 0x3523B4, amount(uint256): 373014705530619279141714) -> True
+              [8][STATICCALL] from=PancakePair, to=CakeToken, balanceOf(account(address): 0x0eD7e5) -> 21394339844153488483025787
+              [8][STATICCALL] from=PancakePair, to=WBNB, balanceOf((address): 0x0eD7e5) -> 983611215569440265214984
+          [6][STATICCALL] from=0x3523b4, to=WBNB, balanceOf((address): 0x3523B4) -> 0
+          [6][STATICCALL] from=0x3523b4, to=CakeToken, balanceOf(account(address): 0x3523B4) -> 1649902609127427745737266
+          [6][STATICCALL] from=0x3523b4, to=CakeToken, balanceOf(account(address): 0x3523B4) -> 1649902609127427745737266
+          [6][STATICCALL] from=0x3523b4, to=BiswapFactory, getPair((address): 0x0E09Fa) -> 0x3d94d0
+          [6][CALL] from=0x3523b4, to=CakeToken, transfer(recipient(address): 0x3d94d0, amount(uint256): 355957547374558889127095) -> True
+          [6][STATICCALL] from=0x3523b4, to=CakeToken, balanceOf(account(address): 0x3523B4) -> 1293945061752868856610171
+          [6][STATICCALL] from=0x3523b4, to=PancakeFactory, getPair((address): 0x0E09Fa) -> 0x804678
+          [6][CALL] from=0x3523b4, to=CakeToken, transfer(recipient(address): 0x804678, amount(uint256): 1262616676710107398966068) -> True
+          [6][STATICCALL] from=0x3523b4, to=CakeToken, balanceOf(account(address): 0x3523B4) -> 31328385042761457644103
+          [6][STATICCALL] from=0x3523b4, to=PancakeFactory, getPair((address): 0x0E09Fa) -> 0x0ed7e5
+          [6][STATICCALL] from=0x3523b4, to=CakeToken, balanceOf(account(address): 0x3523B4) -> 31328385042761457644103
+          [6][CALL] from=0x3523b4, to=CakeToken, approve(spender(address): 0xC0788A, amount(uint256): 31328385042761457644103) -> True
+          [6][CALL] from=0x3523b4, to=CakeToken, approve(spender(address): 0x0eD7e5, amount(uint256): 31328385042761457644103) -> True
+          [6][CALL] from=0x3523b4, to=ApeRouter, swapExactTokensForTokens(amountIn(uint256): 31328385042761457644103, amountOutMin(uint256): 1, path(address[]): ['0x0E09FaBB73Bd3Ade0a17ECC321fD13a19e81cE..., to(address): 0x3523B4, deadline(uint256): 1626323367) -> [31328385042761457644103, 883500558355470710940]
+            [7][STATICCALL] from=ApeRouter, to=ApePair, getReserves() -> ['50316986218784846306976', '2305347669395311095065', '1626236565']
+            [7][CALL] from=ApeRouter, to=CakeToken, transferFrom(sender(address): 0x3523B4, recipient(address): 0x60593A, amount(uint256): 31328385042761457644103) -> True
+            [7][CALL] from=ApeRouter, to=ApePair, swap(amount0Out(uint256): 0, amount1Out(uint256): 883500558355470710940, to(address): 0x3523B4, data(bytes): b'') -> None
+              [8][CALL] from=ApePair, to=WBNB, transfer(dst(address): 0x3523B4, wad(uint256): 883500558355470710940) -> True
+              [8][STATICCALL] from=ApePair, to=CakeToken, balanceOf(account(address): 0x60593A) -> 81645371261546303951079
+              [8][STATICCALL] from=ApePair, to=WBNB, balanceOf((address): 0x60593A) -> 1421847111039840384125
+          [6][STATICCALL] from=0x3523b4, to=CakeToken, balanceOf(account(address): 0x3523B4) -> 0
+          [6][STATICCALL] from=0x3523b4, to=WBNB, balanceOf((address): 0x3523B4) -> 883500558355470710940
+          [6][CALL] from=0x3523b4, to=WBNB, transfer(dst(address): 0x53d07a, wad(uint256): 883500558355470710940) -> True
+          [6][STATICCALL] from=0x3523b4, to=CakeToken, balanceOf(account(address): 0x3523B4) -> 0
+        [5][STATICCALL] from=PancakePair, to=CakeToken, balanceOf(account(address): 0x804678) -> 1262616676710107398966069
+        [5][STATICCALL] from=PancakePair, to=BEP20Token, balanceOf(account(address): 0x804678) -> 17176268729794569054768131
+    [3][STATICCALL] from=BiswapPair, to=CakeToken, balanceOf(account(address): 0x3d94d0) -> 355957547374558889127096
+    [3][STATICCALL] from=BiswapPair, to=WBNB, balanceOf((address): 0x3d94d0) -> 16310176234922141610177

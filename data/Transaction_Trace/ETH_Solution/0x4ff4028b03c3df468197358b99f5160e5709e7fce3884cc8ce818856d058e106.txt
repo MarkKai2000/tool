@@ -1,0 +1,333 @@
+[1][CALL] from=0xdaAa62, to=Action, cook(_cgt(address): 0xF56b16, amount(uint256): 2000000000000000000, wethMin(uint256): 25058519201526709279, daiMin(uint256): 17669354038893441676322) -> None
+  [2][CALL] from=Action, to=DSToken, transferFrom(src(address): 0xdaAa62, dst(address): 0x1E7915, wad(uint256): 2000000000000000000) -> True
+  [2][CALL] from=Action, to=DSToken, approve(guy(address): 0x579A32, wad(uint256): 2000000000000000000) -> True
+  [2][CALL] from=Action, to=0x579A32, lockuint256() -> None
+    [3][CALL] from=0x579A32, to=DSToken, pull(src(address): 0x1E7915, wad(uint256): 2000000000000000000) -> None
+    [3][CALL] from=0x579A32, to=0xD29CAB, mintaddress() -> None
+  [2][CALL] from=Action, to=0x579A32, voteaddress[]() -> 0xa44b47
+  [2][CALL] from=Action, to=0x579A32, liftaddress() -> None
+  [2][CREATE] from=Action, to=0x94b1D7, atInversebrahint248() -> 0x608060
+  [2][CALL] from=Action, to=0x1e692e, plotaddress() -> None
+    [3][STATICCALL] from=0x1e692e, to=0x579A32, canCalladdress() -> 0x000000
+  [2][CALL] from=Action, to=0x1e692e, execaddress() -> 0x000000
+    [3][CALL] from=0x1e692e, to=0x20ebbd, execaddress() -> 0x000000
+      [4][DELEGATECALL] from=0x20ebbd, to=0x94b1D7, 0xeaf45b51() -> None
+        [5][CALL] from=0x20ebbd, to=0x8b2b0c, suckaddress() -> None
+        [5][CALL] from=0x20ebbd, to=0x8b2b0c, hopeaddress() -> None
+        [5][CALL] from=0x20ebbd, to=0xe35fc6, exitaddress() -> None
+          [6][CALL] from=0xe35fc6, to=0x8b2b0c, moveaddress() -> None
+          [6][CALL] from=0xe35fc6, to=Csc, mint(usr(address): 0x1E7915, wad(uint256): 1000000000000000000000000000) -> None
+        [5][CALL] from=0x20ebbd, to=DSToken, mint(guy(address): 0x1E7915, wad(uint256): 1000000000000000000000000000000) -> None
+          [6][STATICCALL] from=DSToken, to=MkrAuthority, canCall(src(address): 0x20EBbd, (address): 0xF56b16, sig(bytes4): b'@\xc1\x0f\x19') -> True
+    [3][STATICCALL] from=0x1e692e, to=0x20ebbd, owner() -> 0x000000
+  [2][CALL] from=Action, to=DSToken, approve(guy(address): 0xDc6844, wad(uint256): 100000000000000000000000000) -> True
+  [2][CALL] from=Action, to=UniswapV2Router02, swapExactTokensForTokens(amountIn(uint256): 100000000000000000000000000, amountOutMin(uint256): 0, path(address[]): ['0xF56b164efd3CFc02BA739b719B6526A6FA1cA3..., to(address): 0x1E7915, deadline(uint256): 1711216403) -> [100000000000000000000000000, 1823330514248170734]
+    [3][STATICCALL] from=UniswapV2Router02, to=UniswapV2Pair, getReserves() -> ['1826213941438394264', '157666253385675402668774', '1711199975']
+    [3][CALL] from=UniswapV2Router02, to=DSToken, transferFrom(src(address): 0x1E7915, dst(address): 0x9a7c27, wad(uint256): 100000000000000000000000000) -> True
+    [3][STATICCALL] from=UniswapV2Router02, to=UniswapV2Factory, whitelist() -> 0xb2c747
+    [3][STATICCALL] from=UniswapV2Router02, to=AdminUpgradeabilityProxy, isSwapAddressActive(_addr(address): 0x1E7915) -> True
+      [4][DELEGATECALL] from=AdminUpgradeabilityProxy, to=DexWhitelist, isSwapAddressActive(_addr(address): 0x1E7915) -> True
+    [3][STATICCALL] from=UniswapV2Router02, to=UniswapV2Factory, whitelist() -> 0xb2c747
+    [3][STATICCALL] from=UniswapV2Router02, to=AdminUpgradeabilityProxy, isTokenAddressActive(_addr(address): 0xF56b16) -> True
+      [4][DELEGATECALL] from=AdminUpgradeabilityProxy, to=DexWhitelist, isTokenAddressActive(_addr(address): 0xF56b16) -> True
+    [3][STATICCALL] from=UniswapV2Router02, to=AdminUpgradeabilityProxy, isTokenAddressActive(_addr(address): 0xC02aaA) -> True
+      [4][DELEGATECALL] from=AdminUpgradeabilityProxy, to=DexWhitelist, isTokenAddressActive(_addr(address): 0xC02aaA) -> True
+    [3][CALL] from=UniswapV2Router02, to=UniswapV2Pair, swap(amount0Out(uint256): 1823330514248170734, amount1Out(uint256): 0, to(address): 0x1E7915, data(bytes): b'') -> None
+      [4][STATICCALL] from=UniswapV2Pair, to=UniswapV2Factory, isRouter((address): 0xDc6844) -> True
+      [4][CALL] from=UniswapV2Pair, to=WETH9, transfer(dst(address): 0x1E7915, wad(uint256): 1823330514248170734) -> True
+      [4][STATICCALL] from=UniswapV2Pair, to=WETH9, balanceOf((address): 0x9a7c27) -> 2883427190223530
+      [4][STATICCALL] from=UniswapV2Pair, to=DSToken, balanceOf((address): 0x9a7c27) -> 100157666253385675402668774
+  [2][CALL] from=Action, to=DSToken, approve(guy(address): 0xDc6844, wad(uint256): 100000000000000000000000000) -> True
+  [2][CALL] from=Action, to=UniswapV2Router02, swapExactTokensForTokens(amountIn(uint256): 100000000000000000000000000, amountOutMin(uint256): 0, path(address[]): ['0xF56b164efd3CFc02BA739b719B6526A6FA1cA3..., to(address): 0x1E7915, deadline(uint256): 1711216403) -> [100000000000000000000000000, 10956515566217248410259]
+    [3][STATICCALL] from=UniswapV2Router02, to=UniswapV2Pair, getReserves() -> ['10986387255443214423293', '271820671255345240731590', '1711140911']
+    [3][CALL] from=UniswapV2Router02, to=DSToken, transferFrom(src(address): 0x1E7915, dst(address): 0xB9FcE0, wad(uint256): 100000000000000000000000000) -> True
+    [3][STATICCALL] from=UniswapV2Router02, to=UniswapV2Factory, whitelist() -> 0xb2c747
+    [3][STATICCALL] from=UniswapV2Router02, to=AdminUpgradeabilityProxy, isSwapAddressActive(_addr(address): 0x1E7915) -> True
+      [4][DELEGATECALL] from=AdminUpgradeabilityProxy, to=DexWhitelist, isSwapAddressActive(_addr(address): 0x1E7915) -> True
+    [3][STATICCALL] from=UniswapV2Router02, to=UniswapV2Factory, whitelist() -> 0xb2c747
+    [3][STATICCALL] from=UniswapV2Router02, to=AdminUpgradeabilityProxy, isTokenAddressActive(_addr(address): 0xF56b16) -> True
+      [4][DELEGATECALL] from=AdminUpgradeabilityProxy, to=DexWhitelist, isTokenAddressActive(_addr(address): 0xF56b16) -> True
+    [3][STATICCALL] from=UniswapV2Router02, to=AdminUpgradeabilityProxy, isTokenAddressActive(_addr(address): 0x6B1754) -> True
+      [4][DELEGATECALL] from=AdminUpgradeabilityProxy, to=DexWhitelist, isTokenAddressActive(_addr(address): 0x6B1754) -> True
+    [3][CALL] from=UniswapV2Router02, to=UniswapV2Pair, swap(amount0Out(uint256): 10956515566217248410259, amount1Out(uint256): 0, to(address): 0x1E7915, data(bytes): b'') -> None
+      [4][STATICCALL] from=UniswapV2Pair, to=UniswapV2Factory, isRouter((address): 0xDc6844) -> True
+      [4][CALL] from=UniswapV2Pair, to=Dai, transfer(dst(address): 0x1E7915, wad(uint256): 10956515566217248410259) -> True
+      [4][STATICCALL] from=UniswapV2Pair, to=Dai, balanceOf((address): 0xB9FcE0) -> 29871689225966013034
+      [4][STATICCALL] from=UniswapV2Pair, to=DSToken, balanceOf((address): 0xB9FcE0) -> 100271820671255345240731590
+  [2][CALL] from=Action, to=DSToken, approve(guy(address): 0xDc6844, wad(uint256): 100000000000000000000000000) -> True
+  [2][CALL] from=Action, to=UniswapV2Router02, swapExactTokensForTokens(amountIn(uint256): 100000000000000000000000000, amountOutMin(uint256): 0, path(address[]): ['0xF56b164efd3CFc02BA739b719B6526A6FA1cA3..., to(address): 0x1E7915, deadline(uint256): 1711216403) -> [100000000000000000000000000, 2659595194697600068446]
+    [3][STATICCALL] from=UniswapV2Router02, to=UniswapV2Pair, getReserves() -> ['2661651925631191122563', '77100482993744947052444', '1711164167']
+    [3][CALL] from=UniswapV2Router02, to=DSToken, transferFrom(src(address): 0x1E7915, dst(address): 0x886825, wad(uint256): 100000000000000000000000000) -> True
+    [3][STATICCALL] from=UniswapV2Router02, to=UniswapV2Factory, whitelist() -> 0xb2c747
+    [3][STATICCALL] from=UniswapV2Router02, to=AdminUpgradeabilityProxy, isSwapAddressActive(_addr(address): 0x1E7915) -> True
+      [4][DELEGATECALL] from=AdminUpgradeabilityProxy, to=DexWhitelist, isSwapAddressActive(_addr(address): 0x1E7915) -> True
+    [3][STATICCALL] from=UniswapV2Router02, to=UniswapV2Factory, whitelist() -> 0xb2c747
+    [3][STATICCALL] from=UniswapV2Router02, to=AdminUpgradeabilityProxy, isTokenAddressActive(_addr(address): 0xF56b16) -> True
+      [4][DELEGATECALL] from=AdminUpgradeabilityProxy, to=DexWhitelist, isTokenAddressActive(_addr(address): 0xF56b16) -> True
+    [3][STATICCALL] from=UniswapV2Router02, to=AdminUpgradeabilityProxy, isTokenAddressActive(_addr(address): 0xB42720) -> True
+      [4][DELEGATECALL] from=AdminUpgradeabilityProxy, to=DexWhitelist, isTokenAddressActive(_addr(address): 0xB42720) -> True
+    [3][CALL] from=UniswapV2Router02, to=UniswapV2Pair, swap(amount0Out(uint256): 2659595194697600068446, amount1Out(uint256): 0, to(address): 0x1E7915, data(bytes): b'') -> None
+      [4][STATICCALL] from=UniswapV2Pair, to=UniswapV2Factory, isRouter((address): 0xDc6844) -> True
+      [4][CALL] from=UniswapV2Pair, to=CryptoFranc, transfer(_to(address): 0x1E7915, _value(uint256): 2659595194697600068446) -> True
+        [5][CALL] from=CryptoFranc, to=CryptoFranc, getCurrentCompoundingLevel() -> 1000000000000000000
+        [5][CALL] from=CryptoFranc, to=CryptoFranc, getCurrentCompoundingLevel() -> 1000000000000000000
+        [5][CALL] from=CryptoFranc, to=CryptoFranc, getCurrentCompoundingLevel() -> 1000000000000000000
+      [4][STATICCALL] from=UniswapV2Pair, to=CryptoFranc, balanceOf(_owner(address): 0x886825) -> 2056730933591054117
+        [5][CALL] from=CryptoFranc, to=CryptoFranc, getCurrentCompoundingLevel() -> 1000000000000000000
+      [4][STATICCALL] from=UniswapV2Pair, to=DSToken, balanceOf((address): 0x886825) -> 100077100482993744947052444
+  [2][CALL] from=Action, to=DSToken, approve(guy(address): 0xDc6844, wad(uint256): 100000000000000000000000000) -> True
+  [2][CALL] from=Action, to=UniswapV2Router02, swapExactTokensForTokens(amountIn(uint256): 100000000000000000000000000, amountOutMin(uint256): 0, path(address[]): ['0xF56b164efd3CFc02BA739b719B6526A6FA1cA3..., to(address): 0x1E7915, deadline(uint256): 1711216403) -> [100000000000000000000000000, 6887331575318201397148]
+    [3][STATICCALL] from=UniswapV2Router02, to=UniswapV2Pair, getReserves() -> ['6893565568035227886291', '90242362675681941687863', '1711142783']
+    [3][CALL] from=UniswapV2Router02, to=DSToken, transferFrom(src(address): 0x1E7915, dst(address): 0xe2817e, wad(uint256): 100000000000000000000000000) -> True
+    [3][STATICCALL] from=UniswapV2Router02, to=UniswapV2Factory, whitelist() -> 0xb2c747
+    [3][STATICCALL] from=UniswapV2Router02, to=AdminUpgradeabilityProxy, isSwapAddressActive(_addr(address): 0x1E7915) -> True
+      [4][DELEGATECALL] from=AdminUpgradeabilityProxy, to=DexWhitelist, isSwapAddressActive(_addr(address): 0x1E7915) -> True
+    [3][STATICCALL] from=UniswapV2Router02, to=UniswapV2Factory, whitelist() -> 0xb2c747
+    [3][STATICCALL] from=UniswapV2Router02, to=AdminUpgradeabilityProxy, isTokenAddressActive(_addr(address): 0xF56b16) -> True
+      [4][DELEGATECALL] from=AdminUpgradeabilityProxy, to=DexWhitelist, isTokenAddressActive(_addr(address): 0xF56b16) -> True
+    [3][STATICCALL] from=UniswapV2Router02, to=AdminUpgradeabilityProxy, isTokenAddressActive(_addr(address): 0x111111) -> True
+      [4][DELEGATECALL] from=AdminUpgradeabilityProxy, to=DexWhitelist, isTokenAddressActive(_addr(address): 0x111111) -> True
+    [3][CALL] from=UniswapV2Router02, to=UniswapV2Pair, swap(amount0Out(uint256): 6887331575318201397148, amount1Out(uint256): 0, to(address): 0x1E7915, data(bytes): b'') -> None
+      [4][STATICCALL] from=UniswapV2Pair, to=UniswapV2Factory, isRouter((address): 0xDc6844) -> True
+      [4][CALL] from=UniswapV2Pair, to=OneInch, transfer(recipient(address): 0x1E7915, amount(uint256): 6887331575318201397148) -> True
+      [4][STATICCALL] from=UniswapV2Pair, to=OneInch, balanceOf(account(address): 0xe2817e) -> 6233992717026489143
+      [4][STATICCALL] from=UniswapV2Pair, to=DSToken, balanceOf((address): 0xe2817e) -> 100090242362675681941687863
+  [2][CALL] from=Action, to=DSToken, approve(guy(address): 0xDc6844, wad(uint256): 100000000000000000000000000) -> True
+  [2][CALL] from=Action, to=UniswapV2Router02, swapExactTokensForTokens(amountIn(uint256): 100000000000000000000000000, amountOutMin(uint256): 0, path(address[]): ['0xF56b164efd3CFc02BA739b719B6526A6FA1cA3..., to(address): 0x1E7915, deadline(uint256): 1711216403) -> [100000000000000000000000000, 79832777684620008255]
+    [3][STATICCALL] from=UniswapV2Router02, to=UniswapV2Pair, getReserves() -> ['79850912728901787124', '22648139866009966296578', '1711135835']
+    [3][CALL] from=UniswapV2Router02, to=DSToken, transferFrom(src(address): 0x1E7915, dst(address): 0x7e6bAC, wad(uint256): 100000000000000000000000000) -> True
+    [3][STATICCALL] from=UniswapV2Router02, to=UniswapV2Factory, whitelist() -> 0xb2c747
+    [3][STATICCALL] from=UniswapV2Router02, to=AdminUpgradeabilityProxy, isSwapAddressActive(_addr(address): 0x1E7915) -> True
+      [4][DELEGATECALL] from=AdminUpgradeabilityProxy, to=DexWhitelist, isSwapAddressActive(_addr(address): 0x1E7915) -> True
+    [3][STATICCALL] from=UniswapV2Router02, to=UniswapV2Factory, whitelist() -> 0xb2c747
+    [3][STATICCALL] from=UniswapV2Router02, to=AdminUpgradeabilityProxy, isTokenAddressActive(_addr(address): 0xF56b16) -> True
+      [4][DELEGATECALL] from=AdminUpgradeabilityProxy, to=DexWhitelist, isTokenAddressActive(_addr(address): 0xF56b16) -> True
+    [3][STATICCALL] from=UniswapV2Router02, to=AdminUpgradeabilityProxy, isTokenAddressActive(_addr(address): 0x1f9840) -> True
+      [4][DELEGATECALL] from=AdminUpgradeabilityProxy, to=DexWhitelist, isTokenAddressActive(_addr(address): 0x1f9840) -> True
+    [3][CALL] from=UniswapV2Router02, to=UniswapV2Pair, swap(amount0Out(uint256): 79832777684620008255, amount1Out(uint256): 0, to(address): 0x1E7915, data(bytes): b'') -> None
+      [4][STATICCALL] from=UniswapV2Pair, to=UniswapV2Factory, isRouter((address): 0xDc6844) -> True
+      [4][CALL] from=UniswapV2Pair, to=Uni, transfer(dst(address): 0x1E7915, rawAmount(uint256): 79832777684620008255) -> True
+      [4][STATICCALL] from=UniswapV2Pair, to=Uni, balanceOf(account(address): 0x7e6bAC) -> 18135044281778869
+      [4][STATICCALL] from=UniswapV2Pair, to=DSToken, balanceOf((address): 0x7e6bAC) -> 100022648139866009966296578
+  [2][CALL] from=Action, to=DSToken, approve(guy(address): 0xDc6844, wad(uint256): 100000000000000000000000000) -> True
+  [2][CALL] from=Action, to=UniswapV2Router02, swapExactTokensForTokens(amountIn(uint256): 100000000000000000000000000, amountOutMin(uint256): 0, path(address[]): ['0xF56b164efd3CFc02BA739b719B6526A6FA1cA3..., to(address): 0x1E7915, deadline(uint256): 1711216403) -> [100000000000000000000000000, 12444114883097791612]
+    [3][STATICCALL] from=UniswapV2Router02, to=UniswapV2Pair, getReserves() -> ['12444857667793565950', '5951056773775642675410', '1711167251']
+    [3][CALL] from=UniswapV2Router02, to=DSToken, transferFrom(src(address): 0x1E7915, dst(address): 0x6456F0, wad(uint256): 100000000000000000000000000) -> True
+    [3][STATICCALL] from=UniswapV2Router02, to=UniswapV2Factory, whitelist() -> 0xb2c747
+    [3][STATICCALL] from=UniswapV2Router02, to=AdminUpgradeabilityProxy, isSwapAddressActive(_addr(address): 0x1E7915) -> True
+      [4][DELEGATECALL] from=AdminUpgradeabilityProxy, to=DexWhitelist, isSwapAddressActive(_addr(address): 0x1E7915) -> True
+    [3][STATICCALL] from=UniswapV2Router02, to=UniswapV2Factory, whitelist() -> 0xb2c747
+    [3][STATICCALL] from=UniswapV2Router02, to=AdminUpgradeabilityProxy, isTokenAddressActive(_addr(address): 0xF56b16) -> True
+      [4][DELEGATECALL] from=AdminUpgradeabilityProxy, to=DexWhitelist, isTokenAddressActive(_addr(address): 0xF56b16) -> True
+    [3][STATICCALL] from=UniswapV2Router02, to=AdminUpgradeabilityProxy, isTokenAddressActive(_addr(address): 0x514910) -> True
+      [4][DELEGATECALL] from=AdminUpgradeabilityProxy, to=DexWhitelist, isTokenAddressActive(_addr(address): 0x514910) -> True
+    [3][CALL] from=UniswapV2Router02, to=UniswapV2Pair, swap(amount0Out(uint256): 12444114883097791612, amount1Out(uint256): 0, to(address): 0x1E7915, data(bytes): b'') -> None
+      [4][STATICCALL] from=UniswapV2Pair, to=UniswapV2Factory, isRouter((address): 0xDc6844) -> True
+      [4][CALL] from=UniswapV2Pair, to=LinkToken, transfer(_to(address): 0x1E7915, _value(uint256): 12444114883097791612) -> True
+      [4][STATICCALL] from=UniswapV2Pair, to=LinkToken, balanceOf(_owner(address): 0x6456F0) -> 742784695774338
+      [4][STATICCALL] from=UniswapV2Pair, to=DSToken, balanceOf((address): 0x6456F0) -> 100005951056773775642675410
+  [2][CALL] from=Action, to=DSToken, approve(guy(address): 0xDc6844, wad(uint256): 100000000000000000000000000) -> True
+  [2][CALL] from=Action, to=UniswapV2Router02, swapExactTokensForTokens(amountIn(uint256): 100000000000000000000000000, amountOutMin(uint256): 0, path(address[]): ['0xF56b164efd3CFc02BA739b719B6526A6FA1cA3..., to(address): 0x1E7915, deadline(uint256): 1711216403) -> [100000000000000000000000000, 1970583930629151060504]
+    [3][STATICCALL] from=UniswapV2Router02, to=UniswapV2Pair, getReserves() -> ['1970701860212462644439', '5966545892014383568998', '1703712947']
+    [3][CALL] from=UniswapV2Router02, to=DSToken, transferFrom(src(address): 0x1E7915, dst(address): 0x84Cf47, wad(uint256): 100000000000000000000000000) -> True
+    [3][STATICCALL] from=UniswapV2Router02, to=UniswapV2Factory, whitelist() -> 0xb2c747
+    [3][STATICCALL] from=UniswapV2Router02, to=AdminUpgradeabilityProxy, isSwapAddressActive(_addr(address): 0x1E7915) -> True
+      [4][DELEGATECALL] from=AdminUpgradeabilityProxy, to=DexWhitelist, isSwapAddressActive(_addr(address): 0x1E7915) -> True
+    [3][STATICCALL] from=UniswapV2Router02, to=UniswapV2Factory, whitelist() -> 0xb2c747
+    [3][STATICCALL] from=UniswapV2Router02, to=AdminUpgradeabilityProxy, isTokenAddressActive(_addr(address): 0xF56b16) -> True
+      [4][DELEGATECALL] from=AdminUpgradeabilityProxy, to=DexWhitelist, isTokenAddressActive(_addr(address): 0xF56b16) -> True
+    [3][STATICCALL] from=UniswapV2Router02, to=AdminUpgradeabilityProxy, isTokenAddressActive(_addr(address): 0x00c83a) -> True
+      [4][DELEGATECALL] from=AdminUpgradeabilityProxy, to=DexWhitelist, isTokenAddressActive(_addr(address): 0x00c83a) -> True
+    [3][CALL] from=UniswapV2Router02, to=UniswapV2Pair, swap(amount0Out(uint256): 1970583930629151060504, amount1Out(uint256): 0, to(address): 0x1E7915, data(bytes): b'') -> None
+      [4][STATICCALL] from=UniswapV2Pair, to=UniswapV2Factory, isRouter((address): 0xDc6844) -> True
+      [4][CALL] from=UniswapV2Pair, to=SkaleToken, transfer(recipient(address): 0x1E7915, amount(uint256): 1970583930629151060504) -> True
+        [5][STATICCALL] from=SkaleToken, to=ERC1820Registry, getInterfaceImplementer(_addr(address): 0x84Cf47, _interfaceHash(bytes32): b')\xdd\xb5\x89\xb1\xfb_\xc7\xcf9Ia\xc1\xa...) -> 0x000000
+        [5][STATICCALL] from=SkaleToken, to=AdminUpgradeabilityProxy, getContract(name(string): TokenState) -> 0x4ee5f2
+          [6][DELEGATECALL] from=AdminUpgradeabilityProxy, to=ContractManager, getContract(name(string): TokenState) -> 0x4ee5f2
+        [5][CALL] from=SkaleToken, to=AdminUpgradeabilityProxy, getAndUpdateLockedAmount(holder(address): 0x84Cf47) -> 0
+          [6][DELEGATECALL] from=AdminUpgradeabilityProxy, to=TokenState, getAndUpdateLockedAmount(holder(address): 0x84Cf47) -> 0
+            [7][STATICCALL] from=AdminUpgradeabilityProxy, to=AdminUpgradeabilityProxy, getDelegationsByHolderLength(holder(address): 0x84Cf47) -> 0
+              [8][DELEGATECALL] from=AdminUpgradeabilityProxy, to=DelegationController, getDelegationsByHolderLength(holder(address): 0x84Cf47) -> 0
+        [5][STATICCALL] from=SkaleToken, to=ERC1820Registry, getInterfaceImplementer(_addr(address): 0x1E7915, _interfaceHash(bytes32): b'\xb2\x81\xfc\x8c\x12\x95M"TM\xb4]\xe3\x1...) -> 0x000000
+      [4][STATICCALL] from=UniswapV2Pair, to=SkaleToken, balanceOf(tokenHolder(address): 0x84Cf47) -> 117929583311583935
+      [4][STATICCALL] from=UniswapV2Pair, to=DSToken, balanceOf((address): 0x84Cf47) -> 100005966545892014383568998
+  [2][CALL] from=Action, to=Csc, approve(usr(address): 0xDc6844, wad(uint256): 100000000000000000000000000) -> True
+  [2][CALL] from=Action, to=UniswapV2Router02, swapExactTokensForTokens(amountIn(uint256): 100000000000000000000000000, amountOutMin(uint256): 0, path(address[]): ['0xfDcdfA378818AC358739621ddFa8582E6ac1aD..., to(address): 0x1E7915, deadline(uint256): 1711216403) -> [100000000000000000000000000, 190210137879886936]
+    [3][STATICCALL] from=UniswapV2Router02, to=UniswapV2Pair, getReserves() -> ['190212773072954668', '1381255235820777592620', '1709893883']
+    [3][CALL] from=UniswapV2Router02, to=Csc, transferFrom(src(address): 0x1E7915, dst(address): 0xdE61e1, wad(uint256): 100000000000000000000000000) -> True
+    [3][STATICCALL] from=UniswapV2Router02, to=UniswapV2Factory, whitelist() -> 0xb2c747
+    [3][STATICCALL] from=UniswapV2Router02, to=AdminUpgradeabilityProxy, isSwapAddressActive(_addr(address): 0x1E7915) -> True
+      [4][DELEGATECALL] from=AdminUpgradeabilityProxy, to=DexWhitelist, isSwapAddressActive(_addr(address): 0x1E7915) -> True
+    [3][STATICCALL] from=UniswapV2Router02, to=UniswapV2Factory, whitelist() -> 0xb2c747
+    [3][STATICCALL] from=UniswapV2Router02, to=AdminUpgradeabilityProxy, isTokenAddressActive(_addr(address): 0xfDcdfA) -> True
+      [4][DELEGATECALL] from=AdminUpgradeabilityProxy, to=DexWhitelist, isTokenAddressActive(_addr(address): 0xfDcdfA) -> True
+    [3][STATICCALL] from=UniswapV2Router02, to=AdminUpgradeabilityProxy, isTokenAddressActive(_addr(address): 0xC02aaA) -> True
+      [4][DELEGATECALL] from=AdminUpgradeabilityProxy, to=DexWhitelist, isTokenAddressActive(_addr(address): 0xC02aaA) -> True
+    [3][CALL] from=UniswapV2Router02, to=UniswapV2Pair, swap(amount0Out(uint256): 190210137879886936, amount1Out(uint256): 0, to(address): 0x1E7915, data(bytes): b'') -> None
+      [4][STATICCALL] from=UniswapV2Pair, to=UniswapV2Factory, isRouter((address): 0xDc6844) -> True
+      [4][CALL] from=UniswapV2Pair, to=WETH9, transfer(dst(address): 0x1E7915, wad(uint256): 190210137879886936) -> True
+      [4][STATICCALL] from=UniswapV2Pair, to=WETH9, balanceOf((address): 0xdE61e1) -> 2635193067732
+      [4][STATICCALL] from=UniswapV2Pair, to=Csc, balanceOf((address): 0xdE61e1) -> 100001381255235820777592620
+  [2][CALL] from=Action, to=DSToken, approve(guy(address): 0xDc6844, wad(uint256): 100000000000000000000000000) -> True
+  [2][CALL] from=Action, to=UniswapV2Router02, swapExactTokensForTokens(amountIn(uint256): 100000000000000000000000000, amountOutMin(uint256): 0, path(address[]): ['0xF56b164efd3CFc02BA739b719B6526A6FA1cA3..., to(address): 0x1E7915, deadline(uint256): 1711216403) -> [100000000000000000000000000, 87119, 560805639278758903868]
+    [3][STATICCALL] from=UniswapV2Router02, to=UniswapV2Pair, getReserves() -> ['87122', '3203609419324361412196', '1711135175']
+    [3][STATICCALL] from=UniswapV2Router02, to=UniswapV2Pair, getReserves() -> ['7666764', '50062085408283942809877', '1711135175']
+    [3][CALL] from=UniswapV2Router02, to=DSToken, transferFrom(src(address): 0x1E7915, dst(address): 0xF67C99, wad(uint256): 100000000000000000000000000) -> True
+    [3][STATICCALL] from=UniswapV2Router02, to=UniswapV2Factory, whitelist() -> 0xb2c747
+    [3][STATICCALL] from=UniswapV2Router02, to=AdminUpgradeabilityProxy, isSwapAddressActive(_addr(address): 0x1E7915) -> True
+      [4][DELEGATECALL] from=AdminUpgradeabilityProxy, to=DexWhitelist, isSwapAddressActive(_addr(address): 0x1E7915) -> True
+    [3][STATICCALL] from=UniswapV2Router02, to=UniswapV2Factory, whitelist() -> 0xb2c747
+    [3][STATICCALL] from=UniswapV2Router02, to=AdminUpgradeabilityProxy, isTokenAddressActive(_addr(address): 0xF56b16) -> True
+      [4][DELEGATECALL] from=AdminUpgradeabilityProxy, to=DexWhitelist, isTokenAddressActive(_addr(address): 0xF56b16) -> True
+    [3][STATICCALL] from=UniswapV2Router02, to=AdminUpgradeabilityProxy, isTokenAddressActive(_addr(address): 0x466837) -> True
+      [4][DELEGATECALL] from=AdminUpgradeabilityProxy, to=DexWhitelist, isTokenAddressActive(_addr(address): 0x466837) -> True
+    [3][CALL] from=UniswapV2Router02, to=UniswapV2Pair, swap(amount0Out(uint256): 87119, amount1Out(uint256): 0, to(address): 0x5C2BbD, data(bytes): b'') -> None
+      [4][STATICCALL] from=UniswapV2Pair, to=UniswapV2Factory, isRouter((address): 0xDc6844) -> True
+      [4][CALL] from=UniswapV2Pair, to=ERC20Wrapper, transfer(recipient(address): 0x5C2BbD, amount(uint256): 87119) -> True
+      [4][STATICCALL] from=UniswapV2Pair, to=ERC20Wrapper, balanceOf(account(address): 0xF67C99) -> 3
+      [4][STATICCALL] from=UniswapV2Pair, to=DSToken, balanceOf((address): 0xF67C99) -> 100003203609419324361412196
+    [3][STATICCALL] from=UniswapV2Router02, to=UniswapV2Factory, whitelist() -> 0xb2c747
+    [3][STATICCALL] from=UniswapV2Router02, to=AdminUpgradeabilityProxy, isTokenAddressActive(_addr(address): 0x466837) -> True
+      [4][DELEGATECALL] from=AdminUpgradeabilityProxy, to=DexWhitelist, isTokenAddressActive(_addr(address): 0x466837) -> True
+    [3][STATICCALL] from=UniswapV2Router02, to=AdminUpgradeabilityProxy, isTokenAddressActive(_addr(address): 0x73d7c8) -> True
+      [4][DELEGATECALL] from=AdminUpgradeabilityProxy, to=DexWhitelist, isTokenAddressActive(_addr(address): 0x73d7c8) -> True
+    [3][CALL] from=UniswapV2Router02, to=UniswapV2Pair, swap(amount0Out(uint256): 0, amount1Out(uint256): 560805639278758903868, to(address): 0x1E7915, data(bytes): b'') -> None
+      [4][STATICCALL] from=UniswapV2Pair, to=UniswapV2Factory, isRouter((address): 0xDc6844) -> True
+      [4][CALL] from=UniswapV2Pair, to=IxsToken, transfer(to(address): 0x1E7915, value(uint256): 560805639278758903868) -> True
+      [4][STATICCALL] from=UniswapV2Pair, to=ERC20Wrapper, balanceOf(account(address): 0x5C2BbD) -> 7753883
+      [4][STATICCALL] from=UniswapV2Pair, to=IxsToken, balanceOf(account(address): 0x5C2BbD) -> 49501279769005183906009
+  [2][STATICCALL] from=Action, to=DSToken, balanceOf((address): 0x1E7915) -> 999200000000000000000000000000
+  [2][CALL] from=Action, to=DSToken, approve(guy(address): 0xE59242, wad(uint256): 999200000000000000000000000000) -> True
+  [2][CALL] from=Action, to=SwapRouter, exactInput(params(tuple): {'path': b"\xf5k\x16N\xfd<\xfc\x02\xbas\x9...) -> 23944978549398651609
+    [3][CALL] from=SwapRouter, to=UniswapV3Pool, swap(recipient(address): 0x1E7915, zeroForOne(bool): False, amountSpecified(int256): 100000000000000000000000000, sqrtPriceLimitX96(uint160): 146144670348521010328727305220398882237872..., data(bytes): b"\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00...) -> ['-23944978549398651609', '100000000000000000000000000']
+      [4][CALL] from=UniswapV3Pool, to=WETH9, transfer(dst(address): 0x1E7915, wad(uint256): 23944978549398651609) -> True
+      [4][STATICCALL] from=UniswapV3Pool, to=DSToken, balanceOf((address): 0xb643e2) -> 2194113075479651923147844
+      [4][CALL] from=UniswapV3Pool, to=SwapRouter, uniswapV3SwapCallback(amount0Delta(int256): -23944978549398651609, amount1Delta(int256): 100000000000000000000000000, _data(bytes): b"\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00...) -> None
+        [5][CALL] from=SwapRouter, to=DSToken, transferFrom(src(address): 0x1E7915, dst(address): 0xb643e2, wad(uint256): 100000000000000000000000000) -> True
+      [4][STATICCALL] from=UniswapV3Pool, to=DSToken, balanceOf((address): 0xb643e2) -> 102194113075479651923147844
+  [2][STATICCALL] from=Action, to=CryptoFranc, balanceOf(_owner(address): 0x1E7915) -> 2659595194697600068446
+    [3][CALL] from=CryptoFranc, to=CryptoFranc, getCurrentCompoundingLevel() -> 1000000000000000000
+  [2][CALL] from=Action, to=CryptoFranc, approve(_spender(address): 0xE59242, _value(uint256): 2659595194697600068446) -> True
+  [2][STATICCALL] from=Action, to=CryptoFranc, balanceOf(_owner(address): 0x1E7915) -> 2659595194697600068446
+    [3][CALL] from=CryptoFranc, to=CryptoFranc, getCurrentCompoundingLevel() -> 1000000000000000000
+  [2][CALL] from=Action, to=SwapRouter, exactInput(params(tuple): {'path': b"\xb4' q\xec\xad\xd6\x9d\x93:\xd...) -> 2835555036477557118979
+    [3][CALL] from=SwapRouter, to=0x485841, swapaddress() -> 0x000000
+      [4][CALL] from=0x485841, to=WETH9, transfer(dst(address): 0xE59242, wad(uint256): 833722492274904663) -> True
+      [4][STATICCALL] from=0x485841, to=CryptoFranc, balanceOf(_owner(address): 0x485841) -> 129254655573268479291252
+        [5][CALL] from=CryptoFranc, to=CryptoFranc, getCurrentCompoundingLevel() -> 1000000000000000000
+      [4][CALL] from=0x485841, to=SwapRouter, uniswapV3SwapCallback(amount0Delta(int256): 2659595194697600068446, amount1Delta(int256): -833722492274904663, _data(bytes): b"\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00...) -> None
+        [5][CALL] from=SwapRouter, to=CryptoFranc, transferFrom(_from(address): 0x1E7915, _to(address): 0x485841, _value(uint256): 2659595194697600068446) -> True
+          [6][CALL] from=CryptoFranc, to=CryptoFranc, getCurrentCompoundingLevel() -> 1000000000000000000
+          [6][CALL] from=CryptoFranc, to=CryptoFranc, getCurrentCompoundingLevel() -> 1000000000000000000
+          [6][CALL] from=CryptoFranc, to=CryptoFranc, getCurrentCompoundingLevel() -> 1000000000000000000
+      [4][STATICCALL] from=0x485841, to=CryptoFranc, balanceOf(_owner(address): 0x485841) -> 131914250767966079359698
+        [5][CALL] from=CryptoFranc, to=CryptoFranc, getCurrentCompoundingLevel() -> 1000000000000000000
+    [3][CALL] from=SwapRouter, to=UniswapV3Pool, swap(recipient(address): 0x1E7915, zeroForOne(bool): False, amountSpecified(int256): 833722492274904663, sqrtPriceLimitX96(uint160): 146144670348521010328727305220398882237872..., data(bytes): b"\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00...) -> ['-2835555036477557118979', '833722492274904663']
+      [4][CALL] from=UniswapV3Pool, to=Dai, transfer(dst(address): 0x1E7915, wad(uint256): 2835555036477557118979) -> True
+      [4][STATICCALL] from=UniswapV3Pool, to=WETH9, balanceOf((address): 0xC2e9F2) -> 2566700462498675399206
+      [4][CALL] from=UniswapV3Pool, to=SwapRouter, uniswapV3SwapCallback(amount0Delta(int256): -2835555036477557118979, amount1Delta(int256): 833722492274904663, _data(bytes): b"\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00...) -> None
+        [5][CALL] from=SwapRouter, to=WETH9, transfer(dst(address): 0xC2e9F2, wad(uint256): 833722492274904663) -> True
+      [4][STATICCALL] from=UniswapV3Pool, to=WETH9, balanceOf((address): 0xC2e9F2) -> 2567534184990950303869
+  [2][STATICCALL] from=Action, to=OneInch, balanceOf(account(address): 0x1E7915) -> 6887331575318201397148
+  [2][CALL] from=Action, to=OneInch, approve(spender(address): 0xE59242, amount(uint256): 6887331575318201397148) -> True
+  [2][STATICCALL] from=Action, to=OneInch, balanceOf(account(address): 0x1E7915) -> 6887331575318201397148
+  [2][CALL] from=Action, to=SwapRouter, exactInput(params(tuple): {'path': b"\x11\x11\x11\x11\x11\x17\xdc\n\...) -> 3703368408042821251103
+    [3][CALL] from=SwapRouter, to=0xd35EFA, swapaddress() -> 0x000000
+      [4][CALL] from=0xd35EFA, to=WETH9, transfer(dst(address): 0xE59242, wad(uint256): 1088931979885640582) -> True
+      [4][STATICCALL] from=0xd35EFA, to=OneInch, balanceOf(account(address): 0xd35EFA) -> 207841355026293658457061
+      [4][CALL] from=0xd35EFA, to=SwapRouter, uniswapV3SwapCallback(amount0Delta(int256): 6887331575318201397148, amount1Delta(int256): -1088931979885640582, _data(bytes): b"\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00...) -> None
+        [5][CALL] from=SwapRouter, to=OneInch, transferFrom(sender(address): 0x1E7915, recipient(address): 0xd35EFA, amount(uint256): 6887331575318201397148) -> True
+      [4][STATICCALL] from=0xd35EFA, to=OneInch, balanceOf(account(address): 0xd35EFA) -> 214728686601611859854209
+    [3][CALL] from=SwapRouter, to=UniswapV3Pool, swap(recipient(address): 0x1E7915, zeroForOne(bool): False, amountSpecified(int256): 1088931979885640582, sqrtPriceLimitX96(uint160): 146144670348521010328727305220398882237872..., data(bytes): b"\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00...) -> ['-3703368408042821251103', '1088931979885640582']
+      [4][CALL] from=UniswapV3Pool, to=Dai, transfer(dst(address): 0x1E7915, wad(uint256): 3703368408042821251103) -> True
+      [4][STATICCALL] from=UniswapV3Pool, to=WETH9, balanceOf((address): 0xC2e9F2) -> 2567534184990950303869
+      [4][CALL] from=UniswapV3Pool, to=SwapRouter, uniswapV3SwapCallback(amount0Delta(int256): -3703368408042821251103, amount1Delta(int256): 1088931979885640582, _data(bytes): b"\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00...) -> None
+        [5][CALL] from=SwapRouter, to=WETH9, transfer(dst(address): 0xC2e9F2, wad(uint256): 1088931979885640582) -> True
+      [4][STATICCALL] from=UniswapV3Pool, to=WETH9, balanceOf((address): 0xC2e9F2) -> 2568623116970835944451
+  [2][STATICCALL] from=Action, to=Uni, balanceOf(account(address): 0x1E7915) -> 79832777684620008255
+  [2][CALL] from=Action, to=Uni, approve(spender(address): 0xE59242, rawAmount(uint256): 79832777684620008255) -> True
+  [2][STATICCALL] from=Action, to=Uni, balanceOf(account(address): 0x1E7915) -> 79832777684620008255
+  [2][CALL] from=Action, to=SwapRouter, exactInput(params(tuple): {'path': b"\x1f\x98@\xa8]Z\xf5\xbf\x1d\x17...) -> 946531168275932498383
+    [3][CALL] from=SwapRouter, to=UniswapV3Pool, swap(recipient(address): 0xE59242, zeroForOne(bool): True, amountSpecified(int256): 79832777684620008255, sqrtPriceLimitX96(uint160): 4295128740, data(bytes): b"\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00...) -> ['79832777684620008255', '-278325667788537910']
+      [4][CALL] from=UniswapV3Pool, to=WETH9, transfer(dst(address): 0xE59242, wad(uint256): 278325667788537910) -> True
+      [4][STATICCALL] from=UniswapV3Pool, to=Uni, balanceOf(account(address): 0x1d4206) -> 2789380367042389606461326
+      [4][CALL] from=UniswapV3Pool, to=SwapRouter, uniswapV3SwapCallback(amount0Delta(int256): 79832777684620008255, amount1Delta(int256): -278325667788537910, _data(bytes): b"\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00...) -> None
+        [5][CALL] from=SwapRouter, to=Uni, transferFrom(src(address): 0x1E7915, dst(address): 0x1d4206, rawAmount(uint256): 79832777684620008255) -> True
+      [4][STATICCALL] from=UniswapV3Pool, to=Uni, balanceOf(account(address): 0x1d4206) -> 2789460199820074226469581
+    [3][CALL] from=SwapRouter, to=UniswapV3Pool, swap(recipient(address): 0x1E7915, zeroForOne(bool): False, amountSpecified(int256): 278325667788537910, sqrtPriceLimitX96(uint160): 146144670348521010328727305220398882237872..., data(bytes): b"\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00...) -> ['-946531168275932498383', '278325667788537910']
+      [4][CALL] from=UniswapV3Pool, to=Dai, transfer(dst(address): 0x1E7915, wad(uint256): 946531168275932498383) -> True
+      [4][STATICCALL] from=UniswapV3Pool, to=WETH9, balanceOf((address): 0xC2e9F2) -> 2568623116970835944451
+      [4][CALL] from=UniswapV3Pool, to=SwapRouter, uniswapV3SwapCallback(amount0Delta(int256): -946531168275932498383, amount1Delta(int256): 278325667788537910, _data(bytes): b"\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00...) -> None
+        [5][CALL] from=SwapRouter, to=WETH9, transfer(dst(address): 0xC2e9F2, wad(uint256): 278325667788537910) -> True
+      [4][STATICCALL] from=UniswapV3Pool, to=WETH9, balanceOf((address): 0xC2e9F2) -> 2568901442638624482361
+  [2][STATICCALL] from=Action, to=LinkToken, balanceOf(_owner(address): 0x1E7915) -> 12444114883097791612
+  [2][CALL] from=Action, to=LinkToken, approve(_spender(address): 0xE59242, _value(uint256): 12444114883097791612) -> True
+  [2][STATICCALL] from=Action, to=LinkToken, balanceOf(_owner(address): 0x1E7915) -> 12444114883097791612
+  [2][CALL] from=Action, to=SwapRouter, exactInput(params(tuple): {'path': b"QI\x10w\x1a\xf9\xcaej\xf8@\xdf\...) -> 227383859879882397598
+    [3][CALL] from=SwapRouter, to=0xa6Cc3C, swapaddress() -> 0x000000
+      [4][CALL] from=0xa6Cc3C, to=WETH9, transfer(dst(address): 0xE59242, wad(uint256): 66862350041980788) -> True
+      [4][STATICCALL] from=0xa6Cc3C, to=LinkToken, balanceOf(_owner(address): 0xa6Cc3C) -> 1005911194353177749990922
+      [4][CALL] from=0xa6Cc3C, to=SwapRouter, uniswapV3SwapCallback(amount0Delta(int256): 12444114883097791612, amount1Delta(int256): -66862350041980788, _data(bytes): b"\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00...) -> None
+        [5][CALL] from=SwapRouter, to=LinkToken, transferFrom(_from(address): 0x1E7915, _to(address): 0xa6Cc3C, _value(uint256): 12444114883097791612) -> True
+      [4][STATICCALL] from=0xa6Cc3C, to=LinkToken, balanceOf(_owner(address): 0xa6Cc3C) -> 1005923638468060847782534
+    [3][CALL] from=SwapRouter, to=UniswapV3Pool, swap(recipient(address): 0x1E7915, zeroForOne(bool): False, amountSpecified(int256): 66862350041980788, sqrtPriceLimitX96(uint160): 146144670348521010328727305220398882237872..., data(bytes): b"\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00...) -> ['-227383859879882397598', '66862350041980788']
+      [4][CALL] from=UniswapV3Pool, to=Dai, transfer(dst(address): 0x1E7915, wad(uint256): 227383859879882397598) -> True
+      [4][STATICCALL] from=UniswapV3Pool, to=WETH9, balanceOf((address): 0xC2e9F2) -> 2568901442638624482361
+      [4][CALL] from=UniswapV3Pool, to=SwapRouter, uniswapV3SwapCallback(amount0Delta(int256): -227383859879882397598, amount1Delta(int256): 66862350041980788, _data(bytes): b"\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00...) -> None
+        [5][CALL] from=SwapRouter, to=WETH9, transfer(dst(address): 0xC2e9F2, wad(uint256): 66862350041980788) -> True
+      [4][STATICCALL] from=UniswapV3Pool, to=WETH9, balanceOf((address): 0xC2e9F2) -> 2568968304988666463149
+  [2][STATICCALL] from=Action, to=WETH9, balanceOf((address): 0x1E7915) -> 25958519201526709279
+  [2][STATICCALL] from=Action, to=Dai, balanceOf((address): 0x1E7915) -> 18669354038893441676322
+  [2][STATICCALL] from=Action, to=EternalStorageProxy, getCurrentDay() -> 19805
+    [3][DELEGATECALL] from=EternalStorageProxy, to=ForeignOmnibridge, getCurrentDay() -> 19805
+  [2][STATICCALL] from=Action, to=EternalStorageProxy, totalSpentPerDay(_token(address): 0xF56b16, _day(uint256): 19805) -> 145000000000000000000000
+    [3][DELEGATECALL] from=EternalStorageProxy, to=ForeignOmnibridge, totalSpentPerDay(_token(address): 0xF56b16, _day(uint256): 19805) -> 145000000000000000000000
+  [2][STATICCALL] from=Action, to=EternalStorageProxy, dailyLimit(_token(address): 0xF56b16) -> 100000001000000000000000000
+    [3][DELEGATECALL] from=EternalStorageProxy, to=ForeignOmnibridge, dailyLimit(_token(address): 0xF56b16) -> 100000001000000000000000000
+  [2][CALL] from=Action, to=DSToken, approve(guy(address): 0x69c707, wad(uint256): 99855001000000000000000000) -> True
+  [2][CALL] from=Action, to=EternalStorageProxy, relayTokens(token(address): 0xF56b16, _receiver(uint256): 0xdaAa62) -> None
+    [3][DELEGATECALL] from=EternalStorageProxy, to=ForeignOmnibridge, relayTokens(token(address): 0xF56b16, _receiver(uint256): 0xdaAa62) -> None
+      [4][STATICCALL] from=EternalStorageProxy, to=DSToken, balanceOf((address): 0x69c707) -> 21105713800915683763757440
+      [4][CALL] from=EternalStorageProxy, to=DSToken, transferFrom(src(address): 0x1E7915, dst(address): 0x69c707, wad(uint256): 99855001000000000000000000) -> True
+      [4][STATICCALL] from=EternalStorageProxy, to=DSToken, balanceOf((address): 0x69c707) -> 120960714800915683763757440
+      [4][CALL] from=EternalStorageProxy, to=EternalStorageProxy, requireToPassMessage(_contract(address): 0xD83893, _data(bytes): b"\x12^L\xfb\x00\x00\x00\x00\x00\x00\x00\x..., _gas(uint256): 1000000) -> 0x0005005f27dc6d0000000000000711
+        [5][DELEGATECALL] from=EternalStorageProxy, to=ForeignAMB, requireToPassMessage(_contract(address): 0xD83893, _data(bytes): b"\x12^L\xfb\x00\x00\x00\x00\x00\x00\x00\x..., _gas(uint256): 1000000) -> 0x0005005f27dc6d0000000000000711
+  [2][CALL] from=Action, to=DSToken, approve(guy(address): 0x8fB1A3, wad(uint256): 1000000000000000000000000000) -> True
+  [2][CALL] from=Action, to=TransparentUpgradeableProxy, depositERC20Direct(schainName(string): fit-betelgeuse, erc20OnMainnet(address): 0xF56b16, amount(uint256): 1000000000000000000000000000, receiver(address): 0xdaAa62) -> None
+    [3][DELEGATECALL] from=TransparentUpgradeableProxy, to=DepositBoxERC20, depositERC20Direct(schainName(string): fit-betelgeuse, erc20OnMainnet(address): 0xF56b16, amount(uint256): 1000000000000000000000000000, receiver(address): 0xdaAa62) -> None
+      [4][STATICCALL] from=TransparentUpgradeableProxy, to=TransparentUpgradeableProxy, isNotKilled(schainHash(bytes32): b'/\x8dK\r:\xbc\x9b\xc3\xfbZ\xaf\xcc{CzlBu...) -> True
+        [5][DELEGATECALL] from=TransparentUpgradeableProxy, to=Linker, isNotKilled(schainHash(bytes32): b'/\x8dK\r:\xbc\x9b\xc3\xfbZ\xaf\xcc{CzlBu...) -> True
+      [4][STATICCALL] from=TransparentUpgradeableProxy, to=DSToken, allowance((address): 0x8fB1A3) -> 1000000000000000000000000000
+      [4][STATICCALL] from=TransparentUpgradeableProxy, to=DSToken, totalSupply() -> 1000063000000000000000000000000
+      [4][STATICCALL] from=TransparentUpgradeableProxy, to=DSToken, totalSupply() -> 1000063000000000000000000000000
+      [4][CALL] from=TransparentUpgradeableProxy, to=DSToken, transferFrom(src(address): 0x1E7915, dst(address): 0x8fB1A3, wad(uint256): 1000000000000000000000000000) -> True
+      [4][CALL] from=TransparentUpgradeableProxy, to=TransparentUpgradeableProxy, postOutgoingMessage(targetChainHash(bytes32): b'/\x8dK\r:\xbc\x9b\xc3\xfbZ\xaf\xcc{CzlBu..., targetContract(address): 0xD2aAA0, data(bytes): b"\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00...) -> None
+        [5][DELEGATECALL] from=TransparentUpgradeableProxy, to=MessageProxyForMainnet, postOutgoingMessage(targetChainHash(bytes32): b'/\x8dK\r:\xbc\x9b\xc3\xfbZ\xaf\xcc{CzlBu..., targetContract(address): 0xD2aAA0, data(bytes): b"\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00...) -> None
+  [2][CALL] from=Action, to=DSToken, approve(guy(address): 0x9b8A09, wad(uint256): 1000000000000000000000000000) -> True
+  [2][CALL] from=Action, to=Bridge, lock(to(bytes32): b'\xe4@\xae\xcd\t1\xa6\x91\x8f\xaf\\\x17\x..., token(address): 0xF56b16, amount(uint256): 1000000000000000000000000000) -> None
+    [3][CALL] from=Bridge, to=DSToken, transferFrom(src(address): 0x1E7915, dst(address): 0x9b8A09, wad(uint256): 1000000000000000000000000000) -> True
+  [2][CALL] from=Action, to=DSToken, approve(guy(address): 0xdc1664, wad(uint256): 1000000000000000000000000000) -> True
+  [2][CALL] from=Action, to=L1ChugSplashProxy, depositERC20To(_l1Token(address): 0xF56b16, _l2Token(address): 0xF56b16, _to(address): 0xdaAa62, _amount(uint256): 1000000000000000000000000000, _l2Gas(uint32): 1300000, _data(bytes): b'') -> None
+    [3][STATICCALL] from=L1ChugSplashProxy, to=0x1f2414, isUpgrading() -> None
+    [3][DELEGATECALL] from=L1ChugSplashProxy, to=L1StandardBridge, depositERC20To(_l1Token(address): 0xF56b16, _l2Token(address): 0xF56b16, _to(address): 0xdaAa62, _amount(uint256): 1000000000000000000000000000, _l2Gas(uint32): 1300000, _data(bytes): b'') -> None
+      [4][CALL] from=L1ChugSplashProxy, to=DSToken, transferFrom(src(address): 0x1E7915, dst(address): 0xdc1664, wad(uint256): 1000000000000000000000000000) -> True
+      [4][CALL] from=L1ChugSplashProxy, to=Lib_ResolvedDelegateProxy, sendMessage(_target(address): 0x420000, _message(bytes): b"f*c:\x00\x00\x00\x00\x00\x00\x00\x00\x00..., _gasLimit(uint32): 1300000) -> None
+        [5][STATICCALL] from=Lib_ResolvedDelegateProxy, to=Lib_AddressManager, getAddress(_name(string): OVM_L1CrossDomainMessenger) -> 0x12acf6
+        [5][DELEGATECALL] from=Lib_ResolvedDelegateProxy, to=L1CrossDomainMessenger, sendMessage(_target(address): 0x420000, _message(bytes): b"f*c:\x00\x00\x00\x00\x00\x00\x00\x00\x00..., _gasLimit(uint32): 1300000) -> None
+          [6][STATICCALL] from=Lib_ResolvedDelegateProxy, to=Lib_AddressManager, getAddress(_name(string): CanonicalTransactionChain) -> 0xfbd254
+          [6][STATICCALL] from=Lib_ResolvedDelegateProxy, to=CanonicalTransactionChain, getQueueLength() -> 25322
+          [6][CALL] from=Lib_ResolvedDelegateProxy, to=CanonicalTransactionChain, enqueue(_target(address): 0x420000, _gasLimit(uint256): 1300000, _data(bytes): b"\xcb\xd4\xec\xe9\x00\x00\x00\x00\x00\x00...) -> None
+  [2][STATICCALL] from=Action, to=WETH9, balanceOf((address): 0x1E7915) -> 25958519201526709279
+  [2][CALL] from=Action, to=WETH9, transfer(dst(address): 0xdaAa62, wad(uint256): 25958519201526709279) -> True
+  [2][STATICCALL] from=Action, to=Dai, balanceOf((address): 0x1E7915) -> 18669354038893441676322
+  [2][CALL] from=Action, to=Dai, transfer(dst(address): 0xdaAa62, wad(uint256): 18669354038893441676322) -> True
+  [2][STATICCALL] from=Action, to=DSToken, balanceOf((address): 0x1E7915) -> 996000144999000000000000000000
+  [2][CALL] from=Action, to=DSToken, transfer(dst(address): 0xdaAa62, wad(uint256): 996000144999000000000000000000) -> True
+  [2][CALL] from=Action, to=0x1e692e, plotaddress() -> None
+    [3][STATICCALL] from=0x1e692e, to=0x579A32, canCalladdress() -> 0x000000
+  [2][CALL] from=Action, to=0x1e692e, execaddress() -> 0x000000
+    [3][CALL] from=0x1e692e, to=0x20ebbd, execaddress() -> 0x000000
+      [4][DELEGATECALL] from=0x20ebbd, to=0x94b1D7, cleanaddress() -> None
+        [5][CALL] from=0x20ebbd, to=DSToken, stop() -> None
+          [6][STATICCALL] from=DSToken, to=MkrAuthority, canCall(src(address): 0x20EBbd, (address): 0xF56b16, sig(bytes4): b'\x07\xdah\xf5') -> True
+    [3][STATICCALL] from=0x1e692e, to=0x20ebbd, owner() -> 0x000000

@@ -1,0 +1,49 @@
+[1][CALL] from=0x6057a8, to=0xDA2CCf, 0x31eb34a4() -> None
+  [2][CALL] from=0xDA2CCf, to=Vault, flashLoan(recipient(address): 0xDA2CCf, tokens(address[]): ['0xC02aaA39b223FE8D0A0e5C4F27eAD9083C756C..., amounts(uint256[]): [20000000000000000000000], userData(bytes): b'') -> None
+    [3][STATICCALL] from=Vault, to=WETH9, balanceOf((address): 0xBA1222) -> 80001199056730656602389
+    [3][STATICCALL] from=Vault, to=ProtocolFeesCollector, getFlashLoanFeePercentage() -> 0
+    [3][CALL] from=Vault, to=WETH9, transfer(dst(address): 0xDA2CCf, wad(uint256): 20000000000000000000000) -> True
+    [3][CALL] from=Vault, to=0xDA2CCf, receiveFlashLoanaddress[]() -> None
+      [4][CALL] from=0xDA2CCf, to=UniswapV2Pair, sync() -> None
+        [5][STATICCALL] from=UniswapV2Pair, to=Uwerx, balanceOf(account(address): 0xa41529) -> 5097936050192694905259125
+        [5][STATICCALL] from=UniswapV2Pair, to=WETH9, balanceOf((address): 0xa41529) -> 174786100489116297837
+      [4][STATICCALL] from=0xDA2CCf, to=WETH9, balanceOf((address): 0xDA2CCf) -> 20000000000000000000000
+      [4][CALL] from=0xDA2CCf, to=WETH9, approve(guy(address): 0x7a250d, wad(uint256): 20000000000000000000000) -> True
+      [4][CALL] from=0xDA2CCf, to=UniswapV2Router02, swapExactTokensForTokensSupportingFeeOnTransferTokens(amountIn(uint256): 20000000000000000000000, amountOutMin(uint256): 0, path(address[]): ['0xC02aaA39b223FE8D0A0e5C4F27eAD9083C756C..., to(address): 0xDA2CCf, deadline(uint256): 1690965899) -> None
+        [5][CALL] from=UniswapV2Router02, to=WETH9, transferFrom(src(address): 0xDA2CCf, dst(address): 0xa41529, wad(uint256): 20000000000000000000000) -> True
+        [5][STATICCALL] from=UniswapV2Router02, to=Uwerx, balanceOf(account(address): 0xDA2CCf) -> 0
+        [5][STATICCALL] from=UniswapV2Router02, to=UniswapV2Pair, getReserves() -> ['5097936050192694905259125', '174786100489116297837', '1690965899']
+        [5][STATICCALL] from=UniswapV2Router02, to=WETH9, balanceOf((address): 0xa41529) -> 20174786100489116297837
+        [5][CALL] from=UniswapV2Router02, to=UniswapV2Pair, swap(amount0Out(uint256): 5053637872806935777652180, amount1Out(uint256): 0, to(address): 0xDA2CCf, data(bytes): b'') -> None
+          [6][CALL] from=UniswapV2Pair, to=Uwerx, transfer(to(address): 0xDA2CCf, amount(uint256): 5053637872806935777652180) -> True
+          [6][STATICCALL] from=UniswapV2Pair, to=Uwerx, balanceOf(account(address): 0xa41529) -> 44298177385759127606945
+          [6][STATICCALL] from=UniswapV2Pair, to=WETH9, balanceOf((address): 0xa41529) -> 20174786100489116297837
+        [5][STATICCALL] from=UniswapV2Router02, to=Uwerx, balanceOf(account(address): 0xDA2CCf) -> 5053637872806935777652180
+      [4][STATICCALL] from=0xDA2CCf, to=Uwerx, balanceOf(account(address): 0xa41529) -> 44298177385759127606945
+      [4][CALL] from=0xDA2CCf, to=Uwerx, transfer(to(address): 0xa41529, amount(uint256): 4429817738575912760684500) -> True
+      [4][CALL] from=0xDA2CCf, to=UniswapV2Pair, skim(to(address): 0x000000) -> None
+        [5][STATICCALL] from=UniswapV2Pair, to=Uwerx, balanceOf(account(address): 0xa41529) -> 4474115915961671888291445
+        [5][CALL] from=UniswapV2Pair, to=Uwerx, transfer(to(address): 0x000000, amount(uint256): 4429817738575912760684500) -> True
+        [5][STATICCALL] from=UniswapV2Pair, to=WETH9, balanceOf((address): 0xa41529) -> 20174786100489116297837
+        [5][CALL] from=UniswapV2Pair, to=WETH9, transfer(dst(address): 0x000000, wad(uint256): 0) -> True
+      [4][CALL] from=0xDA2CCf, to=UniswapV2Pair, sync() -> None
+        [5][STATICCALL] from=UniswapV2Pair, to=Uwerx, balanceOf(account(address): 0xa41529) -> 100
+        [5][STATICCALL] from=UniswapV2Pair, to=WETH9, balanceOf((address): 0xa41529) -> 20174786100489116297837
+      [4][STATICCALL] from=0xDA2CCf, to=Uwerx, balanceOf(account(address): 0xDA2CCf) -> 623820134231023016967680
+      [4][CALL] from=0xDA2CCf, to=Uwerx, approve(spender(address): 0x7a250d, amount(uint256): 623820134231023016967680) -> True
+      [4][CALL] from=0xDA2CCf, to=UniswapV2Router02, swapExactTokensForTokensSupportingFeeOnTransferTokens(amountIn(uint256): 623820134231023016967680, amountOutMin(uint256): 0, path(address[]): ['0x4306B12F8e824cE1fa9604BbD88f2AD4f0FE3c..., to(address): 0xDA2CCf, deadline(uint256): 1690965899) -> None
+        [5][CALL] from=UniswapV2Router02, to=Uwerx, transferFrom(from(address): 0xDA2CCf, to(address): 0xa41529, amount(uint256): 623820134231023016967680) -> True
+        [5][STATICCALL] from=UniswapV2Router02, to=WETH9, balanceOf((address): 0xDA2CCf) -> 0
+        [5][STATICCALL] from=UniswapV2Router02, to=UniswapV2Pair, getReserves() -> ['100', '20174786100489116297837', '1690965899']
+        [5][STATICCALL] from=UniswapV2Router02, to=Uwerx, balanceOf(account(address): 0xa41529) -> 623820134231023016967780
+        [5][CALL] from=UniswapV2Router02, to=UniswapV2Pair, swap(amount0Out(uint256): 0, amount1Out(uint256): 20174786100489116297833, to(address): 0xDA2CCf, data(bytes): b'') -> None
+          [6][CALL] from=UniswapV2Pair, to=WETH9, transfer(dst(address): 0xDA2CCf, wad(uint256): 20174786100489116297833) -> True
+          [6][STATICCALL] from=UniswapV2Pair, to=Uwerx, balanceOf(account(address): 0xa41529) -> 623820134231023016967780
+          [6][STATICCALL] from=UniswapV2Pair, to=WETH9, balanceOf((address): 0xa41529) -> 4
+        [5][STATICCALL] from=UniswapV2Router02, to=WETH9, balanceOf((address): 0xDA2CCf) -> 20174786100489116297833
+      [4][CALL] from=0xDA2CCf, to=WETH9, transfer(dst(address): 0xBA1222, wad(uint256): 20000000000000000000000) -> True
+    [3][STATICCALL] from=Vault, to=WETH9, balanceOf((address): 0xBA1222) -> 80001199056730656602389
+  [2][STATICCALL] from=0xDA2CCf, to=WETH9, balanceOf((address): 0xDA2CCf) -> 174786100489116297833
+  [2][CALL] from=0xDA2CCf, to=WETH9, withdraw(wad(uint256): 174786100489116297833) -> None
+    [3][CALL][174.7861004891163] from=WETH9, to=0xDA2CCf
+  [2][CALL][174.7861004891163] from=0xDA2CCf, to=0x6057a8

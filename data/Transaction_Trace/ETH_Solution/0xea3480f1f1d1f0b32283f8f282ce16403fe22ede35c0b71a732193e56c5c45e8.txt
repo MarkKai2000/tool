@@ -1,0 +1,11 @@
+[1][CALL] from=0x719cdb, to=0x000000, fallback() -> None
+  [2][CREATE] from=0x000000, to=0x9aca15, 0x600b5981() -> 0x000000
+  [2][CALL] from=0x000000, to=RouteProcessor2, processRoute(tokenIn(address): 0xEeeeeE, amountIn(uint256): 0, tokenOut(address): 0xEeeeeE, amountOutMin(uint256): 0, to(address): 0x000000, route(bytes): b'\x01QI\x10w\x1a\xf9\xcaej\xf8@\xdf\xf8>\...) -> 0
+    [3][STATICCALL] from=RouteProcessor2, to=LinkToken, balanceOf(_owner(address): 0x044b75) -> 0
+    [3][CALL] from=RouteProcessor2, to=0x000000, swapaddress() -> 0x000000
+      [4][CALL] from=0x000000, to=RouteProcessor2, uniswapV3SwapCallback(amount0Delta(int256): 100000000000000000000, amount1Delta(int256): 0, data(bytes): b"\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00...) -> None
+        [5][CALL] from=RouteProcessor2, to=WETH9, transferFrom(src(address): 0x31d324, dst(address): 0x000000, wad(uint256): 100000000000000000000) -> True
+  [2][CALL] from=0x000000, to=WETH9, withdraw(wad(uint256): 100000000000000000000) -> None
+    [3][CALL][100.0] from=WETH9, to=0x000000
+  [2][CALL][8.003804496749405] from=0x000000, to=0x000000
+  [2][CALL][91.99619550325059] from=0x000000, to=LidoExecutionLayerRewardsVault

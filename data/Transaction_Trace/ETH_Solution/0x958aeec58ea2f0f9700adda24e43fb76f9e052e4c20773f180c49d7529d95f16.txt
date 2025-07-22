@@ -1,0 +1,15 @@
+[1][CALL] from=0x9263e7, to=EthVault, withdraw(hubContract(address): 0xB5680a, fromChain(string): ORBIT, fromAddr(bytes): b'\x92c\xe7\x876\x13\xdd\xc5\x98\xa7\x01p\..., toAddr(address): 0x27E2cc, token(address): 0x000000, bytes32s(bytes32[]): [b'P\xf4\x08\xf4\xb0\xfb\x17\xbfOQC\xdeK\x..., uints(uint256[]): [30095000000000000000, 18, 8727], data(bytes): b'', v(uint8[]): [27, 27, 28, 27, 28, 28, 28], r(bytes32[]): [b'\xbd/\xf5\xca\xe9\xa5\nM\xb8\xeb\xee\xa..., s(bytes32[]): [b'\x06\xd3m\xb2\xbf\xd9\x03S/"\xf7\x17\xb...) -> None
+  [2][DELEGATECALL] from=EthVault, to=EthVaultImpl, withdraw(hubContract(address): 0xB5680a, fromChain(string): ORBIT, fromAddr(bytes): b'\x92c\xe7\x876\x13\xdd\xc5\x98\xa7\x01p\..., toAddr(address): 0x27E2cc, token(address): 0x000000, bytes32s(bytes32[]): [b'P\xf4\x08\xf4\xb0\xfb\x17\xbfOQC\xdeK\x..., uints(uint256[]): [30095000000000000000, 18, 8727], data(bytes): b'', v(uint8[]): [27, 27, 28, 27, 28, 28, 28], r(bytes32[]): [b'\xbd/\xf5\xca\xe9\xa5\nM\xb8\xeb\xee\xa..., s(bytes32[]): [b'\x06\xd3m\xb2\xbf\xd9\x03S/"\xf7\x17\xb...) -> None
+    [3][STATICCALL] from=EthVault, to=0x000000, 0x1bf68a9d() -> 0xb18557
+    [3][STATICCALL] from=EthVault, to=0x000000, 0x1bf68a9d() -> 0xb18557
+    [3][STATICCALL] from=EthVault, to=0x000000, 0xb5680a55() -> 0x50f408
+    [3][STATICCALL] from=EthVault, to=0x000000, 0x1bf68a9d() -> 0xb18557
+    [3][STATICCALL] from=EthVault, to=0x000000, 0xb5680a55() -> 0xbe1d9b
+    [3][STATICCALL] from=EthVault, to=0x000000, 0xbe1d9b29() -> 0x000000
+    [3][STATICCALL] from=EthVault, to=0x000000, 0xbe1d9b29() -> 0x000000
+    [3][STATICCALL] from=EthVault, to=0x000000, 0xbe1d9b29() -> 0x000000
+    [3][STATICCALL] from=EthVault, to=0x000000, 0xbe1d9b29() -> 0x000000
+    [3][STATICCALL] from=EthVault, to=0x000000, 0xbe1d9b29() -> 0x000000
+    [3][STATICCALL] from=EthVault, to=0x000000, 0xbe1d9b29() -> 0x000000
+    [3][STATICCALL] from=EthVault, to=0x000000, 0xbe1d9b29() -> 0x000000
+    [3][CALL][30.095] from=EthVault, to=0x27e2cc

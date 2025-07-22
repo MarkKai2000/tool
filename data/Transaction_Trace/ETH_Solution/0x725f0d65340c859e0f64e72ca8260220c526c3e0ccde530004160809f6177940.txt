@@ -1,0 +1,62 @@
+[1][CREATE] from=0x2bfb37, to=0x0c8da4, atInversebrahint248() -> 0x608060
+  [2][CREATE] from=0x0c8da4, to=0x1e1d02, atInversebrahint248() -> 0x608060
+  [2][CALL] from=0x0c8da4, to=0x1e1d02, 0xbad3c794() -> None
+    [3][CALL] from=0x1e1d02, to=TransparentUpgradeableProxy, approve(spender(address): 0xE59242, amount(uint256): 115792089237316195423570985008687907853269...) -> True
+      [4][DELEGATECALL] from=TransparentUpgradeableProxy, to=uniBTC, approve(spender(address): 0xE59242, amount(uint256): 115792089237316195423570985008687907853269...) -> True
+    [3][CALL] from=0x1e1d02, to=WBTC, approve(_spender(address): 0xE59242, _value(uint256): 115792089237316195423570985008687907853269...) -> True
+    [3][CALL] from=0x1e1d02, to=Vault, flashLoan(recipient(address): 0x1E1d02, tokens(address[]): ['0xC02aaA39b223FE8D0A0e5C4F27eAD9083C756C..., amounts(uint256[]): [30800000000000000000], userData(bytes): b'') -> None
+      [4][STATICCALL] from=Vault, to=WETH9, balanceOf((address): 0xBA1222) -> 36989315677736347514445
+      [4][STATICCALL] from=Vault, to=ProtocolFeesCollector, getFlashLoanFeePercentage() -> 0
+      [4][CALL] from=Vault, to=WETH9, transfer(dst(address): 0x1E1d02, wad(uint256): 30800000000000000000) -> True
+      [4][CALL] from=Vault, to=0x1e1d02, receiveFlashLoanaddress[]() -> None
+        [5][STATICCALL] from=0x1e1d02, to=WETH9, balanceOf((address): 0x1E1d02) -> 30800000000000000000
+        [5][CALL] from=0x1e1d02, to=WETH9, withdraw(wad(uint256): 30800000000000000000) -> None
+          [6][CALL][30.8] from=WETH9, to=0x1e1d02
+        [5][CALL] from=0x1e1d02, to=TransparentUpgradeableProxy, mint() -> None
+          [6][DELEGATECALL] from=TransparentUpgradeableProxy, to=Vault, mint() -> None
+            [7][STATICCALL] from=TransparentUpgradeableProxy, to=TransparentUpgradeableProxy, totalSupply(_leadingToken(address): 0xbeDFFf) -> 0
+              [8][DELEGATECALL] from=TransparentUpgradeableProxy, to=Sigma, totalSupply(_leadingToken(address): 0xbeDFFf) -> 0
+            [7][CALL] from=TransparentUpgradeableProxy, to=TransparentUpgradeableProxy, mint(to(address): 0x1E1d02, amount(uint256): 3080000000) -> None
+              [8][DELEGATECALL] from=TransparentUpgradeableProxy, to=uniBTC, mint(to(address): 0x1E1d02, amount(uint256): 3080000000) -> None
+        [5][STATICCALL] from=0x1e1d02, to=TransparentUpgradeableProxy, balanceOf(account(address): 0x1E1d02) -> 3080000000
+          [6][DELEGATECALL] from=TransparentUpgradeableProxy, to=uniBTC, balanceOf(account(address): 0x1E1d02) -> 3080000000
+        [5][CALL] from=0x1e1d02, to=SwapRouter, exactInputSingle(params(tuple): {'tokenIn': '0x004E9C3EF86bc1ca1f0bB5C7662...) -> 2783925883
+          [6][CALL] from=SwapRouter, to=UniswapV3Pool, swap(recipient(address): 0x1E1d02, zeroForOne(bool): True, amountSpecified(int256): 3080000000, sqrtPriceLimitX96(uint160): 4295128740, data(bytes): b'\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00...) -> ['2881420431', '-2783925883']
+            [7][CALL] from=UniswapV3Pool, to=WBTC, transfer(_to(address): 0x1E1d02, _value(uint256): 2783925883) -> True
+            [7][STATICCALL] from=UniswapV3Pool, to=TransparentUpgradeableProxy, balanceOf(account(address): 0x3a32F5) -> 3234724879
+              [8][DELEGATECALL] from=TransparentUpgradeableProxy, to=uniBTC, balanceOf(account(address): 0x3a32F5) -> 3234724879
+            [7][CALL] from=UniswapV3Pool, to=SwapRouter, uniswapV3SwapCallback(amount0Delta(int256): 2881420431, amount1Delta(int256): -2783925883, _data(bytes): b'\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00...) -> None
+              [8][CALL] from=SwapRouter, to=TransparentUpgradeableProxy, transferFrom(from(address): 0x1E1d02, to(address): 0x3a32F5, amount(uint256): 2881420431) -> True
+                [9][DELEGATECALL] from=TransparentUpgradeableProxy, to=uniBTC, transferFrom(from(address): 0x1E1d02, to(address): 0x3a32F5, amount(uint256): 2881420431) -> True
+            [7][STATICCALL] from=UniswapV3Pool, to=TransparentUpgradeableProxy, balanceOf(account(address): 0x3a32F5) -> 6116145310
+              [8][DELEGATECALL] from=TransparentUpgradeableProxy, to=uniBTC, balanceOf(account(address): 0x3a32F5) -> 6116145310
+        [5][STATICCALL] from=0x1e1d02, to=WBTC, balanceOf(_owner(address): 0x1E1d02) -> 2783925883
+        [5][CALL] from=0x1e1d02, to=SwapRouter, exactInputSingle(params(tuple): {'tokenIn': '0x2260FAC5E5542a773Aa44fBCfeD...) -> 680404054576756594919
+          [6][CALL] from=SwapRouter, to=0x4585FE, swapaddress() -> 0x000000
+            [7][CALL] from=0x4585FE, to=WETH9, transfer(dst(address): 0x1E1d02, wad(uint256): 680404054576756594919) -> True
+            [7][STATICCALL] from=0x4585FE, to=WBTC, balanceOf(_owner(address): 0x4585FE) -> 12860097622
+            [7][CALL] from=0x4585FE, to=SwapRouter, uniswapV3SwapCallback(amount0Delta(int256): 2783925883, amount1Delta(int256): -680404054576756594919, _data(bytes): b'\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00...) -> None
+              [8][CALL] from=SwapRouter, to=WBTC, transferFrom(_from(address): 0x1E1d02, _to(address): 0x4585FE, _value(uint256): 2783925883) -> True
+            [7][STATICCALL] from=0x4585FE, to=WBTC, balanceOf(_owner(address): 0x4585FE) -> 15644023505
+        [5][CALL] from=0x1e1d02, to=WETH9, transfer(dst(address): 0xBA1222, wad(uint256): 30800000000000000000) -> True
+      [4][STATICCALL] from=Vault, to=WETH9, balanceOf((address): 0xBA1222) -> 36989315677736347514445
+    [3][STATICCALL] from=0x1e1d02, to=WETH9, balanceOf((address): 0x1E1d02) -> 649604054576756594919
+    [3][CALL] from=0x1e1d02, to=WETH9, withdraw(wad(uint256): 649604054576756594919) -> None
+      [4][CALL][649.6040545767565] from=WETH9, to=0x1e1d02
+    [3][CALL] from=0x1e1d02, to=WrappedTokenGatewayV3, depositETH((address): 0x87870B, onBehalfOf(address): 0xEE800b, referralCode(uint16): 0) -> None
+      [4][CALL] from=WrappedTokenGatewayV3, to=WETH9, deposit() -> None
+      [4][CALL] from=WrappedTokenGatewayV3, to=InitializableImmutableAdminUpgradeabilityProxy, deposit(asset(address): 0xC02aaA, amount(uint256): 649604054576756594919, onBehalfOf(address): 0xEE800b, referralCode(uint16): 0) -> None
+        [5][DELEGATECALL] from=InitializableImmutableAdminUpgradeabilityProxy, to=PoolInstanceWithCustomInitialize, deposit(asset(address): 0xC02aaA, amount(uint256): 649604054576756594919, onBehalfOf(address): 0xEE800b, referralCode(uint16): 0) -> None
+          [6][DELEGATECALL] from=InitializableImmutableAdminUpgradeabilityProxy, to=SupplyLogic, 0x1913f161() -> None
+            [7][STATICCALL] from=InitializableImmutableAdminUpgradeabilityProxy, to=InitializableImmutableAdminUpgradeabilityProxy, scaledTotalSupply() -> 1030021072023671454650154
+              [8][DELEGATECALL] from=InitializableImmutableAdminUpgradeabilityProxy, to=VariableDebtToken, scaledTotalSupply() -> 1030021072023671454650154
+            [7][STATICCALL] from=InitializableImmutableAdminUpgradeabilityProxy, to=InitializableImmutableAdminUpgradeabilityProxy, getSupplyData() -> ['0', '0', '0', '0']
+              [8][DELEGATECALL] from=InitializableImmutableAdminUpgradeabilityProxy, to=StableDebtToken, getSupplyData() -> ['0', '0', '0', '0']
+            [7][STATICCALL] from=InitializableImmutableAdminUpgradeabilityProxy, to=InitializableImmutableAdminUpgradeabilityProxy, scaledTotalSupply() -> 1170236977532748068764426
+              [8][DELEGATECALL] from=InitializableImmutableAdminUpgradeabilityProxy, to=AToken, scaledTotalSupply() -> 1170236977532748068764426
+            [7][STATICCALL] from=InitializableImmutableAdminUpgradeabilityProxy, to=DefaultReserveInterestRateStrategyV2, calculateInterestRates(params(tuple): {'unbacked': 0, 'liquidityAdded': 64960405...) -> ['20534136147452542664074876', '0', '26920888116273453850728183']
+            [7][CALL] from=InitializableImmutableAdminUpgradeabilityProxy, to=WETH9, transferFrom(src(address): 0x893411, dst(address): 0x4d5F47, wad(uint256): 649604054576756594919) -> True
+            [7][CALL] from=InitializableImmutableAdminUpgradeabilityProxy, to=InitializableImmutableAdminUpgradeabilityProxy, mint(caller(address): 0x893411, onBehalfOf(address): 0xEE800b, amount(uint256): 649604054576756594919, index(uint256): 1031713596556828402104234876) -> True
+              [8][DELEGATECALL] from=InitializableImmutableAdminUpgradeabilityProxy, to=AToken, mint(caller(address): 0x893411, onBehalfOf(address): 0xEE800b, amount(uint256): 649604054576756594919, index(uint256): 1031713596556828402104234876) -> True
+                [9][CALL] from=InitializableImmutableAdminUpgradeabilityProxy, to=InitializableImmutableAdminUpgradeabilityProxy, handleAction(user(address): 0xEE800b, totalSupply(uint256): 1170236977532748068764426, userBalance(uint256): 0) -> None
+                  [10][DELEGATECALL] from=InitializableImmutableAdminUpgradeabilityProxy, to=RewardsController, handleAction(user(address): 0xEE800b, totalSupply(uint256): 1170236977532748068764426, userBalance(uint256): 0) -> None

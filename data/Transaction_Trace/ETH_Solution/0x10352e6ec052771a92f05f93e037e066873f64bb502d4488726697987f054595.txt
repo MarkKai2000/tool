@@ -1,0 +1,2 @@
+[1][CALL] from=0x8c1944, to=0x700196, 0xf9f6318f() -> None
+  [2][STATICCALL] from=0x700196, to=THORChain_Router, vaultAllowance((address): 0xA0b869) -> 1858760326885

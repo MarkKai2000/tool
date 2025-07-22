@@ -1,0 +1,167 @@
+[1][CALL] from=0x8e0d33, to=0xc7ca54, startuint256() -> None
+  [2][STATICCALL] from=0xc7ca54, to=WBNB, balanceOf((address): 0xC7CA54) -> 767701376982444484164
+  [2][CALL] from=0xc7ca54, to=PancakePair, swap(amount0Out(uint256): 0, amount1Out(uint256): 233298623017555515836, to(address): 0xC7CA54, data(bytes): b'\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00...) -> None
+    [3][CALL] from=PancakePair, to=WBNB, transfer(dst(address): 0xC7CA54, wad(uint256): 233298623017555515836) -> True
+    [3][CALL] from=PancakePair, to=0xc7ca54, pancakeCalladdress() -> None
+      [4][STATICCALL] from=0xc7ca54, to=ImpossibleFactory, allPairs((uint256): 5) -> 0x8ae4df
+      [4][STATICCALL] from=0xc7ca54, to=ImpossiblePair, getReserves() -> ['115303784657775273282674', '245254309411148399932955']
+      [4][STATICCALL] from=0xc7ca54, to=ImpossiblePair, token0() -> 0xb0e1fc
+      [4][STATICCALL] from=0xc7ca54, to=ImpossiblePair, token1() -> 0xe9e7ce
+      [4][STATICCALL] from=0xc7ca54, to=WBNB, balanceOf((address): 0xC7CA54) -> 1001000000000000000000
+      [4][CALL] from=0xc7ca54, to=PancakeRouter, swapExactTokensForTokens(amountIn(uint256): 1000000000000000000000, amountOutMin(uint256): 0, path(address[]): ['0xbb4CdB9CBd36B01bD1cBaEBF2De08d9173bc09..., to(address): 0xC7CA54, deadline(uint256): 1624250947) -> [1000000000000000000000, 319433979268027320253881]
+        [5][STATICCALL] from=PancakeRouter, to=PancakePair, getReserves() -> ['651039976924733840255618', '208804938231531099502798102', '1624250344']
+        [5][CALL] from=PancakeRouter, to=WBNB, transferFrom(src(address): 0xC7CA54, dst(address): 0x58F876, wad(uint256): 1000000000000000000000) -> True
+        [5][CALL] from=PancakeRouter, to=PancakePair, swap(amount0Out(uint256): 0, amount1Out(uint256): 319433979268027320253881, to(address): 0xC7CA54, data(bytes): b'') -> None
+          [6][CALL] from=PancakePair, to=BEP20Token, transfer(recipient(address): 0xC7CA54, amount(uint256): 319433979268027320253881) -> True
+          [6][STATICCALL] from=PancakePair, to=WBNB, balanceOf((address): 0x58F876) -> 652039976924733840255618
+          [6][STATICCALL] from=PancakePair, to=BEP20Token, balanceOf(account(address): 0x58F876) -> 208485504252263072182544221
+      [4][CALL] from=0xc7ca54, to=BEP20Token, approve(spender(address): 0xCCF488, amount(uint256): 115792089237316195423570985008687907853269...) -> True
+      [4][CALL] from=0xc7ca54, to=ImpossibleFinance, approve(spender(address): 0xCCF488, value(uint256): 115792089237316195423570985008687907853269...) -> True
+      [4][STATICCALL] from=0xc7ca54, to=ImpossibleFactory, getPair((address): 0xe9e7CE) -> 0x8ae4df
+      [4][STATICCALL] from=0xc7ca54, to=ImpossibleFinance, balanceOf((address): 0x8aE4Df) -> 115303784657775273282674
+      [4][STATICCALL] from=0xc7ca54, to=BEP20Token, balanceOf(account(address): 0x8aE4Df) -> 245254309411148399932955
+      [4][STATICCALL] from=0xc7ca54, to=BEP20Token, balanceOf(account(address): 0x8aE4Df) -> 245254309411148399932955
+      [4][STATICCALL] from=0xc7ca54, to=BEP20Token, balanceOf(account(address): 0xC7CA54) -> 319433979268027320253881
+      [4][CALL] from=0xc7ca54, to=ImpossibleRouter02, swapExactTokensForTokens(amountIn(uint256): 319433979268027320253881, amountOutMin(uint256): 0, path(address[]): ['0xe9e7CEA3DedcA5984780Bafc599bD69ADd087D..., to(address): 0xC7CA54, deadline(uint256): 1624250947) -> [319433979268027320253881, 65140141169162730074895]
+        [5][STATICCALL] from=ImpossibleRouter02, to=ImpossiblePair, getReserves() -> ['115303784657775273282674', '245254309411148399932955']
+        [5][STATICCALL] from=ImpossibleRouter02, to=ImpossiblePair, getFeeAndXybk() -> ['30', 'False']
+        [5][CALL] from=ImpossibleRouter02, to=BEP20Token, transferFrom(sender(address): 0xC7CA54, recipient(address): 0x8aE4Df, amount(uint256): 319433979268027320253881) -> True
+        [5][CALL] from=ImpossibleRouter02, to=ImpossiblePair, cheapSwap(amount0Out(uint256): 65140141169162730074895, amount1Out(uint256): 0, to(address): 0xC7CA54, data(bytes): b'') -> None
+          [6][CALL] from=ImpossiblePair, to=ImpossibleFinance, transfer(to(address): 0xC7CA54, value(uint256): 65140141169162730074895) -> True
+          [6][STATICCALL] from=ImpossiblePair, to=ImpossibleFinance, balanceOf((address): 0x8aE4Df) -> 50163643488612543207779
+          [6][STATICCALL] from=ImpossiblePair, to=BEP20Token, balanceOf(account(address): 0x8aE4Df) -> 564688288679175720186836
+      [4][CREATE2] from=0xc7ca54, to=0x856e4f, atInversebrahint248() -> 0x608060
+      [4][CALL] from=0xc7ca54, to=0x856e4f, approveaddress() -> 0x000000
+      [4][STATICCALL] from=0xc7ca54, to=ImpossibleFinance, balanceOf((address): 0xC7CA54) -> 65140141169162730074895
+      [4][CALL] from=0xc7ca54, to=ImpossibleRouter02, addLiquidity(tokenA(address): 0x856E4f, tokenB(address): 0xB0e1fc, amountADesired(uint256): 1000000000000000000, amountBDesired(uint256): 32570070584581365037447, amountAMin(uint256): 0, amountBMin(uint256): 0, to(address): 0xC7CA54, deadline(uint256): 1624250947) -> ['1000000000000000000', '32570070584581365037447', '180471799970470080853']
+        [5][STATICCALL] from=ImpossibleRouter02, to=ImpossibleFactory, getPair((address): 0xB0e1fc) -> 0x000000
+        [5][CALL] from=ImpossibleRouter02, to=ImpossibleFactory, createPair(tokenA(address): 0x856E4f, tokenB(address): 0xB0e1fc) -> 0x1a9feb
+          [6][CREATE2] from=ImpossibleFactory, to=ImpossiblePair, atInversebrahint248() -> 0x608060
+          [6][CALL] from=ImpossibleFactory, to=ImpossiblePair, initialize(_token0(address): 0x856E4f, _token1(address): 0xB0e1fc, _router(address): 0xCCF488) -> None
+        [5][STATICCALL] from=ImpossibleRouter02, to=ImpossiblePair, getReserves() -> ['0', '0']
+        [5][CALL] from=ImpossibleRouter02, to=0x856e4f, transferFromaddress() -> 0x000000
+        [5][CALL] from=ImpossibleRouter02, to=ImpossibleFinance, transferFrom(from(address): 0xC7CA54, to(address): 0x1a9FEB, value(uint256): 32570070584581365037447) -> True
+        [5][CALL] from=ImpossibleRouter02, to=ImpossiblePair, mint(to(address): 0xC7CA54) -> 180471799970470080853
+          [6][STATICCALL] from=ImpossiblePair, to=0x856e4f, balanceOfaddress() -> 0x000000
+          [6][STATICCALL] from=ImpossiblePair, to=ImpossibleFinance, balanceOf((address): 0x1a9FEB) -> 32570070584581365037447
+          [6][STATICCALL] from=ImpossiblePair, to=ImpossibleFactory, feeTo() -> 0x1ef32b
+      [4][STATICCALL] from=0xc7ca54, to=ImpossibleRouter02, getAmountsOut(amountIn(uint256): 1000000000000000000000000, path(address[]): ['0x856E4fF287BdE9FBA28E82ab5DB1210E070390...) -> [1000000000000000000000000, 32570037916539322370122, 221897836133915679838402]
+        [5][STATICCALL] from=ImpossibleRouter02, to=ImpossiblePair, getReserves() -> ['1000000000000000000', '32570070584581365037447']
+        [5][STATICCALL] from=ImpossibleRouter02, to=ImpossiblePair, getFeeAndXybk() -> ['30', 'False']
+        [5][STATICCALL] from=ImpossibleRouter02, to=ImpossiblePair, getReserves() -> ['50163643488612543207779', '564688288679175720186836']
+        [5][STATICCALL] from=ImpossibleRouter02, to=ImpossiblePair, getFeeAndXybk() -> ['30', 'False']
+      [4][STATICCALL] from=0xc7ca54, to=ImpossibleFinance, balanceOf((address): 0x8aE4Df) -> 50163643488612543207779
+      [4][STATICCALL] from=0xc7ca54, to=BEP20Token, balanceOf(account(address): 0x8aE4Df) -> 564688288679175720186836
+      [4][STATICCALL] from=0xc7ca54, to=ImpossibleFinance, balanceOf((address): 0xC7CA54) -> 32570070584581365037448
+      [4][STATICCALL] from=0xc7ca54, to=ImpossibleRouter02, getAmountOut(amountIn(uint256): 32570070584581365037448, tokenIn(address): 0xB0e1fc, tokenOut(address): 0xe9e7CE) -> 221897971240860777851484
+        [5][STATICCALL] from=ImpossibleRouter02, to=ImpossiblePair, getReserves() -> ['50163643488612543207779', '564688288679175720186836']
+        [5][STATICCALL] from=ImpossibleRouter02, to=ImpossiblePair, getFeeAndXybk() -> ['30', 'False']
+      [4][CALL] from=0xc7ca54, to=ImpossibleFinance, approve(spender(address): 0x856E4f, value(uint256): 115792089237316195423570985008687907853269...) -> True
+      [4][STATICCALL] from=0xc7ca54, to=ImpossiblePair, token0() -> 0xb0e1fc
+      [4][CALL] from=0xc7ca54, to=0x856e4f, 0x882d9b01() -> None
+      [4][CALL] from=0xc7ca54, to=ImpossibleRouter02, swapExactTokensForTokens(amountIn(uint256): 1000000000000000000000000, amountOutMin(uint256): 0, path(address[]): ['0x856E4fF287BdE9FBA28E82ab5DB1210E070390..., to(address): 0xC7CA54, deadline(uint256): 1624250947) -> [1000000000000000000000000, 32570037916539322370122, 221897836133915679838402]
+        [5][STATICCALL] from=ImpossibleRouter02, to=ImpossiblePair, getReserves() -> ['1000000000000000000', '32570070584581365037447']
+        [5][STATICCALL] from=ImpossibleRouter02, to=ImpossiblePair, getFeeAndXybk() -> ['30', 'False']
+        [5][STATICCALL] from=ImpossibleRouter02, to=ImpossiblePair, getReserves() -> ['50163643488612543207779', '564688288679175720186836']
+        [5][STATICCALL] from=ImpossibleRouter02, to=ImpossiblePair, getFeeAndXybk() -> ['30', 'False']
+        [5][CALL] from=ImpossibleRouter02, to=0x856e4f, transferFromaddress() -> 0x000000
+          [6][CALL] from=0x856e4f, to=ImpossibleFinance, transferFrom(from(address): 0xC7CA54, to(address): 0x8aE4Df, value(uint256): 32570070584581365037448) -> True
+          [6][CALL] from=0x856e4f, to=ImpossiblePair, swap(amount0Out(uint256): 0, amount1Out(uint256): 221897971240860777851484, to(address): 0xC7CA54, data(bytes): b'') -> None
+            [7][CALL] from=ImpossiblePair, to=BEP20Token, transfer(recipient(address): 0xC7CA54, amount(uint256): 221897971240860777851484) -> True
+            [7][STATICCALL] from=ImpossiblePair, to=ImpossibleFinance, balanceOf((address): 0x8aE4Df) -> 82733714073193908245227
+            [7][STATICCALL] from=ImpossiblePair, to=BEP20Token, balanceOf(account(address): 0x8aE4Df) -> 342790317438314942335352
+        [5][CALL] from=ImpossibleRouter02, to=ImpossiblePair, cheapSwap(amount0Out(uint256): 0, amount1Out(uint256): 32570037916539322370122, to(address): 0x8aE4Df, data(bytes): b'') -> None
+          [6][CALL] from=ImpossiblePair, to=ImpossibleFinance, transfer(to(address): 0x8aE4Df, value(uint256): 32570037916539322370122) -> True
+          [6][STATICCALL] from=ImpossiblePair, to=0x856e4f, balanceOfaddress() -> 0x000000
+          [6][STATICCALL] from=ImpossiblePair, to=ImpossibleFinance, balanceOf((address): 0x1a9FEB) -> 32668042042667325
+        [5][CALL] from=ImpossibleRouter02, to=ImpossiblePair, cheapSwap(amount0Out(uint256): 0, amount1Out(uint256): 221897836133915679838402, to(address): 0xC7CA54, data(bytes): b'') -> None
+          [6][CALL] from=ImpossiblePair, to=BEP20Token, transfer(recipient(address): 0xC7CA54, amount(uint256): 221897836133915679838402) -> True
+          [6][STATICCALL] from=ImpossiblePair, to=ImpossibleFinance, balanceOf((address): 0x8aE4Df) -> 115303751989733230615349
+          [6][STATICCALL] from=ImpossiblePair, to=BEP20Token, balanceOf(account(address): 0x8aE4Df) -> 120892481304399262496950
+      [4][STATICCALL] from=0xc7ca54, to=BEP20Token, balanceOf(account(address): 0x8aE4Df) -> 120892481304399262496950
+      [4][STATICCALL] from=0xc7ca54, to=BEP20Token, balanceOf(account(address): 0xC7CA54) -> 443795807374776457689886
+      [4][CALL] from=0xc7ca54, to=ImpossibleRouter02, swapExactTokensForTokens(amountIn(uint256): 443795807374776457689886, amountOutMin(uint256): 0, path(address[]): ['0xe9e7CEA3DedcA5984780Bafc599bD69ADd087D..., to(address): 0xC7CA54, deadline(uint256): 1624250947) -> [443795807374776457689886, 90560367022508710316492]
+        [5][STATICCALL] from=ImpossibleRouter02, to=ImpossiblePair, getReserves() -> ['115303751989733230615349', '120892481304399262496950']
+        [5][STATICCALL] from=ImpossibleRouter02, to=ImpossiblePair, getFeeAndXybk() -> ['30', 'False']
+        [5][CALL] from=ImpossibleRouter02, to=BEP20Token, transferFrom(sender(address): 0xC7CA54, recipient(address): 0x8aE4Df, amount(uint256): 443795807374776457689886) -> True
+        [5][CALL] from=ImpossibleRouter02, to=ImpossiblePair, cheapSwap(amount0Out(uint256): 90560367022508710316492, amount1Out(uint256): 0, to(address): 0xC7CA54, data(bytes): b'') -> None
+          [6][CALL] from=ImpossiblePair, to=ImpossibleFinance, transfer(to(address): 0xC7CA54, value(uint256): 90560367022508710316492) -> True
+          [6][STATICCALL] from=ImpossiblePair, to=ImpossibleFinance, balanceOf((address): 0x8aE4Df) -> 24743384967224520298857
+          [6][STATICCALL] from=ImpossiblePair, to=BEP20Token, balanceOf(account(address): 0x8aE4Df) -> 564688288679175720186836
+      [4][CREATE2] from=0xc7ca54, to=0x9892dd, atInversebrahint248() -> 0x608060
+      [4][CALL] from=0xc7ca54, to=0x9892dd, approveaddress() -> 0x000000
+      [4][STATICCALL] from=0xc7ca54, to=ImpossibleFinance, balanceOf((address): 0xC7CA54) -> 90560367022508710316492
+      [4][CALL] from=0xc7ca54, to=ImpossibleRouter02, addLiquidity(tokenA(address): 0x9892DD, tokenB(address): 0xB0e1fc, amountADesired(uint256): 1000000000000000000, amountBDesired(uint256): 45280183511254355158246, amountAMin(uint256): 0, amountBMin(uint256): 0, to(address): 0xC7CA54, deadline(uint256): 1624250947) -> ['1000000000000000000', '45280183511254355158246', '212791408452630800130']
+        [5][STATICCALL] from=ImpossibleRouter02, to=ImpossibleFactory, getPair((address): 0xB0e1fc) -> 0x000000
+        [5][CALL] from=ImpossibleRouter02, to=ImpossibleFactory, createPair(tokenA(address): 0x9892DD, tokenB(address): 0xB0e1fc) -> 0xa8730e
+          [6][CREATE2] from=ImpossibleFactory, to=ImpossiblePair, atInversebrahint248() -> 0x608060
+          [6][CALL] from=ImpossibleFactory, to=ImpossiblePair, initialize(_token0(address): 0x9892DD, _token1(address): 0xB0e1fc, _router(address): 0xCCF488) -> None
+        [5][STATICCALL] from=ImpossibleRouter02, to=ImpossiblePair, getReserves() -> ['0', '0']
+        [5][CALL] from=ImpossibleRouter02, to=0x9892dd, transferFromaddress() -> 0x000000
+        [5][CALL] from=ImpossibleRouter02, to=ImpossibleFinance, transferFrom(from(address): 0xC7CA54, to(address): 0xa8730E, value(uint256): 45280183511254355158246) -> True
+        [5][CALL] from=ImpossibleRouter02, to=ImpossiblePair, mint(to(address): 0xC7CA54) -> 212791408452630800130
+          [6][STATICCALL] from=ImpossiblePair, to=0x9892dd, balanceOfaddress() -> 0x000000
+          [6][STATICCALL] from=ImpossiblePair, to=ImpossibleFinance, balanceOf((address): 0xa8730E) -> 45280183511254355158246
+          [6][STATICCALL] from=ImpossiblePair, to=ImpossibleFactory, feeTo() -> 0x1ef32b
+      [4][STATICCALL] from=0xc7ca54, to=ImpossibleRouter02, getAmountsOut(amountIn(uint256): 1000000000000000000000000, path(address[]): ['0x9892DD7A51a09c970E2a925E3BaF2107BC8DaC...) -> [1000000000000000000000000, 45280138094867098521236, 364763220571190758191165]
+        [5][STATICCALL] from=ImpossibleRouter02, to=ImpossiblePair, getReserves() -> ['1000000000000000000', '45280183511254355158246']
+        [5][STATICCALL] from=ImpossibleRouter02, to=ImpossiblePair, getFeeAndXybk() -> ['30', 'False']
+        [5][STATICCALL] from=ImpossibleRouter02, to=ImpossiblePair, getReserves() -> ['24743384967224520298857', '564688288679175720186836']
+        [5][STATICCALL] from=ImpossibleRouter02, to=ImpossiblePair, getFeeAndXybk() -> ['30', 'False']
+      [4][STATICCALL] from=0xc7ca54, to=ImpossibleFinance, balanceOf((address): 0x8aE4Df) -> 24743384967224520298857
+      [4][STATICCALL] from=0xc7ca54, to=BEP20Token, balanceOf(account(address): 0x8aE4Df) -> 564688288679175720186836
+      [4][STATICCALL] from=0xc7ca54, to=ImpossibleFinance, balanceOf((address): 0xC7CA54) -> 45280183511254355158246
+      [4][STATICCALL] from=0xc7ca54, to=ImpossibleRouter02, getAmountOut(amountIn(uint256): 13561737164860301824729, tokenIn(address): 0xB0e1fc, tokenOut(address): 0xe9e7CE) -> 199537228380846637195266
+        [5][STATICCALL] from=ImpossibleRouter02, to=ImpossiblePair, getReserves() -> ['24743384967224520298857', '564688288679175720186836']
+        [5][STATICCALL] from=ImpossibleRouter02, to=ImpossiblePair, getFeeAndXybk() -> ['30', 'False']
+      [4][CALL] from=0xc7ca54, to=ImpossibleFinance, approve(spender(address): 0x9892DD, value(uint256): 115792089237316195423570985008687907853269...) -> True
+      [4][STATICCALL] from=0xc7ca54, to=ImpossiblePair, token0() -> 0xb0e1fc
+      [4][CALL] from=0xc7ca54, to=0x9892dd, 0x882d9b01() -> None
+      [4][CALL] from=0xc7ca54, to=ImpossibleRouter02, swapExactTokensForTokens(amountIn(uint256): 1000000000000000000000000, amountOutMin(uint256): 0, path(address[]): ['0x9892DD7A51a09c970E2a925E3BaF2107BC8DaC..., to(address): 0xC7CA54, deadline(uint256): 1624250947) -> [1000000000000000000000000, 45280138094867098521236, 364763220571190758191165]
+        [5][STATICCALL] from=ImpossibleRouter02, to=ImpossiblePair, getReserves() -> ['1000000000000000000', '45280183511254355158246']
+        [5][STATICCALL] from=ImpossibleRouter02, to=ImpossiblePair, getFeeAndXybk() -> ['30', 'False']
+        [5][STATICCALL] from=ImpossibleRouter02, to=ImpossiblePair, getReserves() -> ['24743384967224520298857', '564688288679175720186836']
+        [5][STATICCALL] from=ImpossibleRouter02, to=ImpossiblePair, getFeeAndXybk() -> ['30', 'False']
+        [5][CALL] from=ImpossibleRouter02, to=0x9892dd, transferFromaddress() -> 0x000000
+          [6][CALL] from=0x9892dd, to=ImpossibleFinance, transferFrom(from(address): 0xC7CA54, to(address): 0x8aE4Df, value(uint256): 13561737164860301824729) -> True
+          [6][CALL] from=0x9892dd, to=ImpossiblePair, swap(amount0Out(uint256): 0, amount1Out(uint256): 199537228380846637195266, to(address): 0xC7CA54, data(bytes): b'') -> None
+            [7][CALL] from=ImpossiblePair, to=BEP20Token, transfer(recipient(address): 0xC7CA54, amount(uint256): 199537228380846637195266) -> True
+            [7][STATICCALL] from=ImpossiblePair, to=ImpossibleFinance, balanceOf((address): 0x8aE4Df) -> 38305122132084822123586
+            [7][STATICCALL] from=ImpossiblePair, to=BEP20Token, balanceOf(account(address): 0x8aE4Df) -> 365151060298329082991570
+        [5][CALL] from=ImpossibleRouter02, to=ImpossiblePair, cheapSwap(amount0Out(uint256): 0, amount1Out(uint256): 45280138094867098521236, to(address): 0x8aE4Df, data(bytes): b'') -> None
+          [6][CALL] from=ImpossiblePair, to=ImpossibleFinance, transfer(to(address): 0x8aE4Df, value(uint256): 45280138094867098521236) -> True
+          [6][STATICCALL] from=ImpossiblePair, to=0x9892dd, balanceOfaddress() -> 0x000000
+          [6][STATICCALL] from=ImpossiblePair, to=ImpossibleFinance, balanceOf((address): 0xa8730E) -> 45416387256637010
+        [5][CALL] from=ImpossibleRouter02, to=ImpossiblePair, cheapSwap(amount0Out(uint256): 0, amount1Out(uint256): 364763220571190758191165, to(address): 0xC7CA54, data(bytes): b'') -> None
+          [6][CALL] from=ImpossiblePair, to=BEP20Token, transfer(recipient(address): 0xC7CA54, amount(uint256): 364763220571190758191165) -> True
+          [6][STATICCALL] from=ImpossiblePair, to=ImpossibleFinance, balanceOf((address): 0x8aE4Df) -> 83585260226951920644822
+          [6][STATICCALL] from=ImpossiblePair, to=BEP20Token, balanceOf(account(address): 0x8aE4Df) -> 387839727138324800405
+      [4][STATICCALL] from=0xc7ca54, to=BEP20Token, balanceOf(account(address): 0x8aE4Df) -> 387839727138324800405
+      [4][STATICCALL] from=0xc7ca54, to=ImpossibleFinance, balanceOf((address): 0x8aE4Df) -> 83585260226951920644822
+      [4][STATICCALL] from=0xc7ca54, to=BEP20Token, balanceOf(account(address): 0x8aE4Df) -> 387839727138324800405
+      [4][CALL] from=0xc7ca54, to=ImpossibleRouter02, swapExactTokensForTokens(amountIn(uint256): 7915972846056494802004, amountOutMin(uint256): 0, path(address[]): ['0xe9e7CEA3DedcA5984780Bafc599bD69ADd087D..., to(address): 0xC7CA54, deadline(uint256): 1624250947) -> [7915972846056494802004, 79670111508762210901172]
+        [5][STATICCALL] from=ImpossibleRouter02, to=ImpossiblePair, getReserves() -> ['83585260226951920644822', '387839727138324800405']
+        [5][STATICCALL] from=ImpossibleRouter02, to=ImpossiblePair, getFeeAndXybk() -> ['30', 'False']
+        [5][CALL] from=ImpossibleRouter02, to=BEP20Token, transferFrom(sender(address): 0xC7CA54, recipient(address): 0x8aE4Df, amount(uint256): 7915972846056494802004) -> True
+        [5][CALL] from=ImpossibleRouter02, to=ImpossiblePair, cheapSwap(amount0Out(uint256): 79670111508762210901172, amount1Out(uint256): 0, to(address): 0xC7CA54, data(bytes): b'') -> None
+          [6][CALL] from=ImpossiblePair, to=ImpossibleFinance, transfer(to(address): 0xC7CA54, value(uint256): 79670111508762210901172) -> True
+          [6][STATICCALL] from=ImpossiblePair, to=ImpossibleFinance, balanceOf((address): 0x8aE4Df) -> 3915148718189709743650
+          [6][STATICCALL] from=ImpossiblePair, to=BEP20Token, balanceOf(account(address): 0x8aE4Df) -> 8303812573194819602409
+      [4][STATICCALL] from=0xc7ca54, to=ImpossibleFactory, allPairs((uint256): 5) -> 0x8ae4df
+      [4][STATICCALL] from=0xc7ca54, to=ImpossiblePair, token0() -> 0xb0e1fc
+      [4][STATICCALL] from=0xc7ca54, to=ImpossibleFinance, balanceOf((address): 0xC7CA54) -> 111388557855156264234689
+      [4][CALL] from=0xc7ca54, to=ImpossibleFinance, transfer(to(address): 0x8e0D33, value(uint256): 111388557855156264234689) -> True
+      [4][STATICCALL] from=0xc7ca54, to=ImpossiblePair, token1() -> 0xe9e7ce
+      [4][STATICCALL] from=0xc7ca54, to=BEP20Token, balanceOf(account(address): 0xC7CA54) -> 556384476105980900584427
+      [4][CALL] from=0xc7ca54, to=BEP20Token, approve(spender(address): 0x10ED43, amount(uint256): 556384476105980900584427) -> True
+      [4][CALL] from=0xc7ca54, to=PancakeRouter, swapExactTokensForTokens(amountIn(uint256): 556384476105980900584427, amountOutMin(uint256): 0, path(address[]): ['0xe9e7CEA3DedcA5984780Bafc599bD69ADd087D..., to(address): 0xC7CA54, deadline(uint256): 1624250947) -> [556384476105980900584427, 1731138045136430984393]
+        [5][STATICCALL] from=PancakeRouter, to=PancakePair, getReserves() -> ['652039976924733840255618', '208485504252263072182544221', '1624250347']
+        [5][CALL] from=PancakeRouter, to=BEP20Token, transferFrom(sender(address): 0xC7CA54, recipient(address): 0x58F876, amount(uint256): 556384476105980900584427) -> True
+        [5][CALL] from=PancakeRouter, to=PancakePair, swap(amount0Out(uint256): 1731138045136430984393, amount1Out(uint256): 0, to(address): 0xC7CA54, data(bytes): b'') -> None
+          [6][CALL] from=PancakePair, to=WBNB, transfer(dst(address): 0xC7CA54, wad(uint256): 1731138045136430984393) -> True
+          [6][STATICCALL] from=PancakePair, to=WBNB, balanceOf((address): 0x58F876) -> 650308838879597409271225
+          [6][STATICCALL] from=PancakePair, to=BEP20Token, balanceOf(account(address): 0x58F876) -> 209041888728369053083128648
+      [4][STATICCALL] from=0xc7ca54, to=WBNB, balanceOf((address): 0xC7CA54) -> 1732138045136430984393
+      [4][CALL] from=0xc7ca54, to=WBNB, transfer(dst(address): 0x0eD7e5, wad(uint256): 233883331345920316628) -> True
+    [3][STATICCALL] from=PancakePair, to=CakeToken, balanceOf(account(address): 0x0eD7e5) -> 20593896934441121504604947
+    [3][STATICCALL] from=PancakePair, to=WBNB, balanceOf((address): 0x0eD7e5) -> 953790723016279417756813

@@ -1,0 +1,513 @@
+[1][CALL] from=0x50275e, to=0xaf2acf, 0x38f39e5c() -> None
+  [2][CALL] from=0xaf2acf, to=0xaf2acf, 0x7b408b03() -> None
+    [3][STATICCALL] from=0xaf2acf, to=Pool, token0() -> 0x5e8422
+    [3][STATICCALL] from=0xaf2acf, to=Pool, token1() -> 0xc02aaa
+    [3][CALL] from=0xaf2acf, to=InitializableImmutableAdminUpgradeabilityProxy, flashLoanSimple(receiverAddress(address): 0xaF2Acf, asset(address): 0xC02aaA, amount(uint256): 2000000000000000000000, params(bytes): b'', referralCode(uint16): 0) -> None
+      [4][DELEGATECALL] from=InitializableImmutableAdminUpgradeabilityProxy, to=Pool, flashLoanSimple(receiverAddress(address): 0xaF2Acf, asset(address): 0xC02aaA, amount(uint256): 2000000000000000000000, params(bytes): b'', referralCode(uint16): 0) -> None
+        [5][DELEGATECALL] from=InitializableImmutableAdminUpgradeabilityProxy, to=FlashLoanLogic, 0xa1fe0e8d() -> None
+          [6][CALL] from=InitializableImmutableAdminUpgradeabilityProxy, to=InitializableImmutableAdminUpgradeabilityProxy, transferUnderlyingTo(target(address): 0xaF2Acf, amount(uint256): 2000000000000000000000) -> None
+            [7][DELEGATECALL] from=InitializableImmutableAdminUpgradeabilityProxy, to=AToken, transferUnderlyingTo(target(address): 0xaF2Acf, amount(uint256): 2000000000000000000000) -> None
+              [8][CALL] from=InitializableImmutableAdminUpgradeabilityProxy, to=WETH9, transfer(dst(address): 0xaF2Acf, wad(uint256): 2000000000000000000000) -> True
+          [6][CALL] from=InitializableImmutableAdminUpgradeabilityProxy, to=0xaf2acf, executeOperationaddress() -> 0x000000
+            [7][CALL] from=0xaf2acf, to=frxETH, approve(spender(address): 0xe222fB, amount(uint256): 115792089237316195423570985008687907853269...) -> True
+            [7][CALL] from=0xaf2acf, to=WETH9, approve(guy(address): 0xe222fB, wad(uint256): 115792089237316195423570985008687907853269...) -> True
+            [7][CALL] from=0xaf2acf, to=Pool, swap(recipient(address): 0xaF2Acf, swapQty(int256): 2000000000000000000000, isToken0(bool): False, limitSqrtP(uint160): 20282409603651670423947251286016, data(bytes): b'') -> ['-6371028957698847497', '6849615814404497512']
+              [8][STATICCALL] from=Pool, to=Factory, feeConfiguration() -> ['0x91c9d4', '16000']
+              [8][CALL] from=Pool, to=ERC1967Proxy, write(blockTimestamp(uint32): 1700693711, tick(int24): -24, liquidity(uint128): 1773086123625839924672) -> ['0', '1']
+                [9][DELEGATECALL] from=ERC1967Proxy, to=PoolOracle, write(blockTimestamp(uint32): 1700693711, tick(int24): -24, liquidity(uint128): 1773086123625839924672) -> ['0', '1']
+              [8][CALL] from=Pool, to=frxETH, transfer(to(address): 0xaF2Acf, amount(uint256): 6371028957698847497) -> True
+              [8][STATICCALL] from=Pool, to=WETH9, balanceOf((address): 0xFd7B11) -> 2134741529491887485
+              [8][CALL] from=Pool, to=0xaf2acf, swapCallbackint256() -> None
+                [9][CALL] from=0xaf2acf, to=WETH9, transfer(dst(address): 0xFd7B11, wad(uint256): 6849615814404497512) -> True
+              [8][STATICCALL] from=Pool, to=WETH9, balanceOf((address): 0xFd7B11) -> 8984357343896384997
+            [7][STATICCALL] from=0xaf2acf, to=frxETH, balanceOf(account(address): 0xFd7B11) -> 7232075403653
+            [7][STATICCALL] from=0xaf2acf, to=WETH9, balanceOf((address): 0xFd7B11) -> 8984357343896384997
+            [7][CALL] from=0xaf2acf, to=Pool, tickDistance() -> 1
+            [7][CALL] from=0xaf2acf, to=Pool, swapFeeUnits() -> 10
+            [7][STATICCALL] from=0xaf2acf, to=Pool, getPoolState() -> ['20282409603651670423947251286016', '110909', '48', 'False']
+            [7][STATICCALL] from=0xaf2acf, to=frxETH, balanceOf(account(address): 0xFd7B11) -> 7232075403653
+            [7][STATICCALL] from=0xaf2acf, to=WETH9, balanceOf((address): 0xFd7B11) -> 8984357343896384997
+            [7][STATICCALL] from=0xaf2acf, to=Pool, getLiquidityState() -> ['0', '1851411303269421', '1850892046372996']
+            [7][STATICCALL] from=0xaf2acf, to=Pool, getPoolState() -> ['20282409603651670423947251286016', '110909', '48', 'False']
+            [7][STATICCALL] from=0xaf2acf, to=Pool, getPoolState() -> ['20282409603651670423947251286016', '110909', '48', 'False']
+            [7][CALL] from=0xaf2acf, to=AntiSnipAttackPositionManager, mint(params(tuple): {'token0': '0x5E8422345238F342758880490218...) -> ['359', '89631297100385708499', '6948087773336076', '107809615846697233']
+              [8][STATICCALL] from=AntiSnipAttackPositionManager, to=Pool, getPoolState() -> ['20282409603651670423947251286016', '110909', '48', 'False']
+              [8][CALL] from=AntiSnipAttackPositionManager, to=Pool, mint(recipient(address): 0xe222fB, tickLower(int24): 110909, tickUpper(int24): 111310, ticksPrevious(int24[2]): [48, 48], qty(uint128): 89631297100385708499, data(bytes): b'\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00...) -> ['6948087773336076', '107809615846697233', '0']
+                [9][STATICCALL] from=Pool, to=Factory, isWhitelistedNFTManager(sender(address): 0xe222fB) -> True
+                [9][CALL] from=Pool, to=ERC1967Proxy, write(blockTimestamp(uint32): 1700693711, tick(int24): 110909, liquidity(uint128): 0) -> ['0', '1']
+                  [10][DELEGATECALL] from=ERC1967Proxy, to=PoolOracle, write(blockTimestamp(uint32): 1700693711, tick(int24): 110909, liquidity(uint128): 0) -> ['0', '1']
+                [9][STATICCALL] from=Pool, to=frxETH, balanceOf(account(address): 0xFd7B11) -> 7232075403653
+                [9][STATICCALL] from=Pool, to=WETH9, balanceOf((address): 0xFd7B11) -> 8984357343896384997
+                [9][CALL] from=Pool, to=AntiSnipAttackPositionManager, mintCallback(deltaQty0(uint256): 6948087773336076, deltaQty1(uint256): 107809615846697233, data(bytes): b'\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00...) -> None
+                  [10][CALL] from=AntiSnipAttackPositionManager, to=frxETH, transferFrom(from(address): 0xaF2Acf, to(address): 0xFd7B11, amount(uint256): 6948087773336076) -> True
+                  [10][CALL] from=AntiSnipAttackPositionManager, to=WETH9, transferFrom(src(address): 0xaF2Acf, dst(address): 0xFd7B11, wad(uint256): 107809615846697233) -> True
+                [9][STATICCALL] from=Pool, to=frxETH, balanceOf(account(address): 0xFd7B11) -> 6955319848739729
+                [9][STATICCALL] from=Pool, to=WETH9, balanceOf((address): 0xFd7B11) -> 9092166959743082230
+            [7][STATICCALL] from=0xaf2acf, to=Pool, getLiquidityState() -> ['89631297100385708499', '1851411303269421', '1851411303269421']
+            [7][CALL] from=0xaf2acf, to=AntiSnipAttackPositionManager, removeLiquidity(params(tuple): {'tokenId': 359, 'liquidity': 149385495167...) -> ['1158014628889345', '17968269307782871', '0']
+              [8][CALL] from=AntiSnipAttackPositionManager, to=Pool, burn(tickLower(int24): 110909, tickUpper(int24): 111310, qty(uint128): 14938549516730950591) -> ['1158014628889345', '17968269307782871', '0']
+                [9][CALL] from=Pool, to=ERC1967Proxy, write(blockTimestamp(uint32): 1700693711, tick(int24): 110909, liquidity(uint128): 89631297100385708499) -> ['0', '1']
+                  [10][DELEGATECALL] from=ERC1967Proxy, to=PoolOracle, write(blockTimestamp(uint32): 1700693711, tick(int24): 110909, liquidity(uint128): 89631297100385708499) -> ['0', '1']
+                [9][CALL] from=Pool, to=frxETH, transfer(to(address): 0xe222fB, amount(uint256): 1158014628889345) -> True
+                [9][CALL] from=Pool, to=WETH9, transfer(dst(address): 0xe222fB, wad(uint256): 17968269307782871) -> True
+              [8][STATICCALL] from=AntiSnipAttackPositionManager, to=Factory, vestingPeriod() -> 300
+            [7][STATICCALL] from=0xaf2acf, to=Pool, getLiquidityState() -> ['74692747583654757908', '1851411303269421', '1851411303269421']
+            [7][CALL] from=0xaf2acf, to=Pool, swap(recipient(address): 0xaF2Acf, swapQty(int256): 387170294533119999999, isToken0(bool): False, limitSqrtP(uint160): 146144670348521010328727305220398882237872..., data(bytes): b'') -> ['-5789927137555359', '387170294533119999999']
+              [8][CALL] from=Pool, to=ERC1967Proxy, write(blockTimestamp(uint32): 1700693711, tick(int24): 110909, liquidity(uint128): 74692747583654757908) -> ['0', '1']
+                [9][DELEGATECALL] from=ERC1967Proxy, to=PoolOracle, write(blockTimestamp(uint32): 1700693711, tick(int24): 110909, liquidity(uint128): 74692747583654757908) -> ['0', '1']
+              [8][CALL] from=Pool, to=frxETH, transfer(to(address): 0xaF2Acf, amount(uint256): 5789927137555359) -> True
+              [8][STATICCALL] from=Pool, to=WETH9, balanceOf((address): 0xFd7B11) -> 9074198690435299359
+              [8][CALL] from=Pool, to=0xaf2acf, swapCallbackint256() -> None
+                [9][CALL] from=0xaf2acf, to=WETH9, transfer(dst(address): 0xFd7B11, wad(uint256): 387170294533119999999) -> True
+              [8][STATICCALL] from=Pool, to=WETH9, balanceOf((address): 0xFd7B11) -> 396244493223555299358
+            [7][STATICCALL] from=0xaf2acf, to=WETH9, balanceOf((address): 0xFd7B11) -> 396244493223555299358
+            [7][CALL] from=0xaf2acf, to=Pool, swap(recipient(address): 0xaF2Acf, swapQty(int256): -396244493223555299358, isToken0(bool): False, limitSqrtP(uint160): 4295128740, data(bytes): b'') -> ['5868809110205016', '-396244493223555299358']
+              [8][STATICCALL] from=Pool, to=Factory, feeConfiguration() -> ['0x91c9d4', '16000']
+              [8][CALL] from=Pool, to=ERC1967Proxy, write(blockTimestamp(uint32): 1700693711, tick(int24): 111310, liquidity(uint128): 74692747583654757908) -> ['0', '1']
+                [9][DELEGATECALL] from=ERC1967Proxy, to=PoolOracle, write(blockTimestamp(uint32): 1700693711, tick(int24): 111310, liquidity(uint128): 74692747583654757908) -> ['0', '1']
+              [8][CALL] from=Pool, to=WETH9, transfer(dst(address): 0xaF2Acf, wad(uint256): 396244493223555299358) -> True
+              [8][STATICCALL] from=Pool, to=frxETH, balanceOf(account(address): 0xFd7B11) -> 7378082295025
+              [8][CALL] from=Pool, to=0xaf2acf, swapCallbackint256() -> None
+                [9][CALL] from=0xaf2acf, to=frxETH, transfer(to(address): 0xFd7B11, amount(uint256): 5868809110205016) -> True
+              [8][STATICCALL] from=Pool, to=frxETH, balanceOf(account(address): 0xFd7B11) -> 5876187192500041
+            [7][CALL] from=0xaf2acf, to=WETH9, approve(guy(address): 0x87870B, wad(uint256): 2001000000000000000000) -> True
+            [7][STATICCALL] from=0xaf2acf, to=Pool, getPoolState() -> ['20482897903346086648868989510468', '111105', '110909', 'False']
+            [7][STATICCALL] from=0xaf2acf, to=Pool, getLiquidityState() -> ['149385495167309515816', '2003672193058920', '1927030501420420']
+            [7][STATICCALL] from=0xaf2acf, to=frxETH, balanceOf(account(address): 0xFd7B11) -> 5876187192500041
+            [7][STATICCALL] from=0xaf2acf, to=frxETH, balanceOf(account(address): 0xC9B826) -> 0
+            [7][STATICCALL] from=0xaf2acf, to=WETH9, balanceOf((address): 0xFd7B11) -> 0
+            [7][STATICCALL] from=0xaf2acf, to=WETH9, balanceOf((address): 0xC9B826) -> 0
+          [6][STATICCALL] from=InitializableImmutableAdminUpgradeabilityProxy, to=InitializableImmutableAdminUpgradeabilityProxy, scaledTotalSupply() -> 311830609214326307204640
+            [7][DELEGATECALL] from=InitializableImmutableAdminUpgradeabilityProxy, to=VariableDebtToken, scaledTotalSupply() -> 311830609214326307204640
+          [6][STATICCALL] from=InitializableImmutableAdminUpgradeabilityProxy, to=InitializableImmutableAdminUpgradeabilityProxy, getSupplyData() -> ['0', '0', '0', '0']
+            [7][DELEGATECALL] from=InitializableImmutableAdminUpgradeabilityProxy, to=StableDebtToken, getSupplyData() -> ['0', '0', '0', '0']
+          [6][STATICCALL] from=InitializableImmutableAdminUpgradeabilityProxy, to=InitializableImmutableAdminUpgradeabilityProxy, totalSupply() -> 410883377407728850963387
+            [7][DELEGATECALL] from=InitializableImmutableAdminUpgradeabilityProxy, to=AToken, totalSupply() -> 410883377407728850963387
+              [8][STATICCALL] from=InitializableImmutableAdminUpgradeabilityProxy, to=InitializableImmutableAdminUpgradeabilityProxy, getReserveNormalizedIncome(asset(address): 0xC02aaA) -> 1016011944643378589722812415
+                [9][DELEGATECALL] from=InitializableImmutableAdminUpgradeabilityProxy, to=Pool, getReserveNormalizedIncome(asset(address): 0xC02aaA) -> 1016011944643378589722812415
+          [6][STATICCALL] from=InitializableImmutableAdminUpgradeabilityProxy, to=DefaultReserveInterestRateStrategy, calculateInterestRates(params(tuple): {'unbacked': 0, 'liquidityAdded': 20010000...) -> ['18169451858909584420846786', '97074860128041603746699256', '27352402089629122622689479']
+            [7][STATICCALL] from=DefaultReserveInterestRateStrategy, to=WETH9, balanceOf((address): 0x4d5F47) -> 87781202350445988509445
+          [6][CALL] from=InitializableImmutableAdminUpgradeabilityProxy, to=WETH9, transferFrom(src(address): 0xaF2Acf, dst(address): 0x4d5F47, wad(uint256): 2001000000000000000000) -> True
+          [6][CALL] from=InitializableImmutableAdminUpgradeabilityProxy, to=InitializableImmutableAdminUpgradeabilityProxy, handleRepayment(user(address): 0xaF2Acf, onBehalfOf(address): 0xaF2Acf, amount(uint256): 2001000000000000000000) -> None
+            [7][DELEGATECALL] from=InitializableImmutableAdminUpgradeabilityProxy, to=AToken, handleRepayment(user(address): 0xaF2Acf, onBehalfOf(address): 0xaF2Acf, amount(uint256): 2001000000000000000000) -> None
+    [3][STATICCALL] from=0xaf2acf, to=frxETH, balanceOf(account(address): 0xaF2Acf) -> 6364001987952861764
+    [3][STATICCALL] from=0xaf2acf, to=WETH9, balanceOf((address): 0xaF2Acf) -> 1116773260184104614
+    [3][CALL] from=0xaf2acf, to=frxETH, transfer(to(address): 0xC9B826, amount(uint256): 6364001987952861764) -> True
+    [3][CALL] from=0xaf2acf, to=WETH9, transfer(dst(address): 0xC9B826, wad(uint256): 1116773260184104614) -> True
+    [3][STATICCALL] from=0xaf2acf, to=Pool, getPoolState() -> ['20482897903346086648868989510468', '111105', '110909', 'False']
+    [3][STATICCALL] from=0xaf2acf, to=Pool, getLiquidityState() -> ['149385495167309515816', '2003672193058920', '1927030501420420']
+    [3][STATICCALL] from=0xaf2acf, to=frxETH, balanceOf(account(address): 0xFd7B11) -> 5876187192500041
+    [3][STATICCALL] from=0xaf2acf, to=frxETH, balanceOf(account(address): 0xC9B826) -> 6364001987952861764
+    [3][STATICCALL] from=0xaf2acf, to=WETH9, balanceOf((address): 0xFd7B11) -> 0
+    [3][STATICCALL] from=0xaf2acf, to=WETH9, balanceOf((address): 0xC9B826) -> 1116773260184104614
+  [2][CALL] from=0xaf2acf, to=0xaf2acf, 0x7b408b03() -> None
+    [3][STATICCALL] from=0xaf2acf, to=Pool, token0() -> 0x5e8422
+    [3][STATICCALL] from=0xaf2acf, to=Pool, token1() -> 0xc02aaa
+    [3][CALL] from=0xaf2acf, to=InitializableImmutableAdminUpgradeabilityProxy, flashLoanSimple(receiverAddress(address): 0xaF2Acf, asset(address): 0xC02aaA, amount(uint256): 2000000000000000000000, params(bytes): b'', referralCode(uint16): 0) -> None
+      [4][DELEGATECALL] from=InitializableImmutableAdminUpgradeabilityProxy, to=Pool, flashLoanSimple(receiverAddress(address): 0xaF2Acf, asset(address): 0xC02aaA, amount(uint256): 2000000000000000000000, params(bytes): b'', referralCode(uint16): 0) -> None
+        [5][DELEGATECALL] from=InitializableImmutableAdminUpgradeabilityProxy, to=FlashLoanLogic, 0xa1fe0e8d() -> None
+          [6][CALL] from=InitializableImmutableAdminUpgradeabilityProxy, to=InitializableImmutableAdminUpgradeabilityProxy, transferUnderlyingTo(target(address): 0xaF2Acf, amount(uint256): 2000000000000000000000) -> None
+            [7][DELEGATECALL] from=InitializableImmutableAdminUpgradeabilityProxy, to=AToken, transferUnderlyingTo(target(address): 0xaF2Acf, amount(uint256): 2000000000000000000000) -> None
+              [8][CALL] from=InitializableImmutableAdminUpgradeabilityProxy, to=WETH9, transfer(dst(address): 0xaF2Acf, wad(uint256): 2000000000000000000000) -> True
+          [6][CALL] from=InitializableImmutableAdminUpgradeabilityProxy, to=0xaf2acf, executeOperationaddress() -> 0x000000
+            [7][CALL] from=0xaf2acf, to=frxETH, approve(spender(address): 0xe222fB, amount(uint256): 115792089237316195423570985008687907853269...) -> True
+            [7][CALL] from=0xaf2acf, to=WETH9, approve(guy(address): 0xe222fB, wad(uint256): 115792089237316195423570985008687907853269...) -> True
+            [7][CALL] from=0xaf2acf, to=Pool, swap(recipient(address): 0xaF2Acf, swapQty(int256): 2000000000000000000000, isToken0(bool): False, limitSqrtP(uint160): 20282409603651670423947251286016, data(bytes): b'') -> ['-5543798102669141291', '6371752871009987204']
+              [8][STATICCALL] from=Pool, to=Factory, feeConfiguration() -> ['0x91c9d4', '16000']
+              [8][CALL] from=Pool, to=ERC1967Proxy, write(blockTimestamp(uint32): 1700693711, tick(int24): -14, liquidity(uint128): 1879836036114222712728) -> ['0', '1']
+                [9][DELEGATECALL] from=ERC1967Proxy, to=PoolOracle, write(blockTimestamp(uint32): 1700693711, tick(int24): -14, liquidity(uint128): 1879836036114222712728) -> ['0', '1']
+              [8][CALL] from=Pool, to=frxETH, transfer(to(address): 0xaF2Acf, amount(uint256): 5543798102669141291) -> True
+              [8][STATICCALL] from=Pool, to=WETH9, balanceOf((address): 0xFBC887) -> 3033621098970966819
+              [8][CALL] from=Pool, to=0xaf2acf, swapCallbackint256() -> None
+                [9][CALL] from=0xaf2acf, to=WETH9, transfer(dst(address): 0xFBC887, wad(uint256): 6371752871009987204) -> True
+              [8][STATICCALL] from=Pool, to=WETH9, balanceOf((address): 0xFBC887) -> 9405373969980954023
+            [7][STATICCALL] from=0xaf2acf, to=frxETH, balanceOf(account(address): 0xFBC887) -> 12555650994454
+            [7][STATICCALL] from=0xaf2acf, to=WETH9, balanceOf((address): 0xFBC887) -> 9405373969980954023
+            [7][CALL] from=0xaf2acf, to=Pool, tickDistance() -> 8
+            [7][CALL] from=0xaf2acf, to=Pool, swapFeeUnits() -> 40
+            [7][STATICCALL] from=0xaf2acf, to=Pool, getPoolState() -> ['20282409603651670423947251286016', '110909', '48', 'False']
+            [7][STATICCALL] from=0xaf2acf, to=frxETH, balanceOf(account(address): 0xFBC887) -> 12555650994454
+            [7][STATICCALL] from=0xaf2acf, to=WETH9, balanceOf((address): 0xFBC887) -> 9405373969980954023
+            [7][STATICCALL] from=0xaf2acf, to=Pool, getLiquidityState() -> ['0', '3214246654515726', '3210641683728006']
+            [7][STATICCALL] from=0xaf2acf, to=Pool, getPoolState() -> ['20282409603651670423947251286016', '110909', '48', 'False']
+            [7][STATICCALL] from=0xaf2acf, to=Pool, getPoolState() -> ['20282409603651670423947251286016', '110909', '48', 'False']
+            [7][CALL] from=0xaf2acf, to=AntiSnipAttackPositionManager, mint(params(tuple): {'token0': '0x5E8422345238F342758880490218...) -> ['360', '1727423991702493040', '134568713247398', '112613038488118096']
+              [8][STATICCALL] from=AntiSnipAttackPositionManager, to=Pool, getPoolState() -> ['20282409603651670423947251286016', '110909', '48', 'False']
+              [8][CALL] from=AntiSnipAttackPositionManager, to=Pool, mint(recipient(address): 0xe222fB, tickLower(int24): 110904, tickUpper(int24): 111312, ticksPrevious(int24[2]): [48, 48], qty(uint128): 1727423991702493040, data(bytes): b'\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00...) -> ['134568713247398', '112613038488118096', '0']
+                [9][STATICCALL] from=Pool, to=Factory, isWhitelistedNFTManager(sender(address): 0xe222fB) -> True
+                [9][CALL] from=Pool, to=ERC1967Proxy, write(blockTimestamp(uint32): 1700693711, tick(int24): 110909, liquidity(uint128): 0) -> ['0', '1']
+                  [10][DELEGATECALL] from=ERC1967Proxy, to=PoolOracle, write(blockTimestamp(uint32): 1700693711, tick(int24): 110909, liquidity(uint128): 0) -> ['0', '1']
+                [9][STATICCALL] from=Pool, to=frxETH, balanceOf(account(address): 0xFBC887) -> 12555650994454
+                [9][STATICCALL] from=Pool, to=WETH9, balanceOf((address): 0xFBC887) -> 9405373969980954023
+                [9][CALL] from=Pool, to=AntiSnipAttackPositionManager, mintCallback(deltaQty0(uint256): 134568713247398, deltaQty1(uint256): 112613038488118096, data(bytes): b'\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00...) -> None
+                  [10][CALL] from=AntiSnipAttackPositionManager, to=frxETH, transferFrom(from(address): 0xaF2Acf, to(address): 0xFBC887, amount(uint256): 134568713247398) -> True
+                  [10][CALL] from=AntiSnipAttackPositionManager, to=WETH9, transferFrom(src(address): 0xaF2Acf, dst(address): 0xFBC887, wad(uint256): 112613038488118096) -> True
+                [9][STATICCALL] from=Pool, to=frxETH, balanceOf(account(address): 0xFBC887) -> 147124364241852
+                [9][STATICCALL] from=Pool, to=WETH9, balanceOf((address): 0xFBC887) -> 9517987008469072119
+            [7][STATICCALL] from=0xaf2acf, to=Pool, getLiquidityState() -> ['1727423991702493040', '3214246654515726', '3214246654515726']
+            [7][CALL] from=0xaf2acf, to=AntiSnipAttackPositionManager, removeLiquidity(params(tuple): {'tokenId': 360, 'liquidity': 287903998617...) -> ['22428118874565', '18768839748019061', '0']
+              [8][CALL] from=AntiSnipAttackPositionManager, to=Pool, burn(tickLower(int24): 110904, tickUpper(int24): 111312, qty(uint128): 287903998617072642) -> ['22428118874565', '18768839748019061', '0']
+                [9][CALL] from=Pool, to=ERC1967Proxy, write(blockTimestamp(uint32): 1700693711, tick(int24): 110909, liquidity(uint128): 1727423991702493040) -> ['0', '1']
+                  [10][DELEGATECALL] from=ERC1967Proxy, to=PoolOracle, write(blockTimestamp(uint32): 1700693711, tick(int24): 110909, liquidity(uint128): 1727423991702493040) -> ['0', '1']
+                [9][CALL] from=Pool, to=frxETH, transfer(to(address): 0xe222fB, amount(uint256): 22428118874565) -> True
+                [9][CALL] from=Pool, to=WETH9, transfer(dst(address): 0xe222fB, wad(uint256): 18768839748019061) -> True
+              [8][STATICCALL] from=AntiSnipAttackPositionManager, to=Factory, vestingPeriod() -> 300
+            [7][STATICCALL] from=0xaf2acf, to=Pool, getLiquidityState() -> ['1439519993085420398', '3214246654515726', '3214246654515726']
+            [7][CALL] from=0xaf2acf, to=Pool, swap(recipient(address): 0xaF2Acf, swapQty(int256): 7517070323865599999, isToken0(bool): False, limitSqrtP(uint160): 146144670348521010328727305220398882237872..., data(bytes): b'') -> ['-112368505837933', '7517070323865599999']
+              [8][CALL] from=Pool, to=ERC1967Proxy, write(blockTimestamp(uint32): 1700693711, tick(int24): 110909, liquidity(uint128): 1439519993085420398) -> ['0', '1']
+                [9][DELEGATECALL] from=ERC1967Proxy, to=PoolOracle, write(blockTimestamp(uint32): 1700693711, tick(int24): 110909, liquidity(uint128): 1439519993085420398) -> ['0', '1']
+              [8][CALL] from=Pool, to=frxETH, transfer(to(address): 0xaF2Acf, amount(uint256): 112368505837933) -> True
+              [8][STATICCALL] from=Pool, to=WETH9, balanceOf((address): 0xFBC887) -> 9499218168721053058
+              [8][CALL] from=Pool, to=0xaf2acf, swapCallbackint256() -> None
+                [9][CALL] from=0xaf2acf, to=WETH9, transfer(dst(address): 0xFBC887, wad(uint256): 7517070323865599999) -> True
+              [8][STATICCALL] from=Pool, to=WETH9, balanceOf((address): 0xFBC887) -> 17016288492586653057
+            [7][STATICCALL] from=0xaf2acf, to=WETH9, balanceOf((address): 0xFBC887) -> 17016288492586653057
+            [7][CALL] from=0xaf2acf, to=Pool, swap(recipient(address): 0xaF2Acf, swapQty(int256): -17016288492586653057, isToken0(bool): False, limitSqrtP(uint160): 4295128740, data(bytes): b'') -> ['255335135602826', '-17016288492586653057']
+              [8][STATICCALL] from=Pool, to=Factory, feeConfiguration() -> ['0x91c9d4', '16000']
+              [8][CALL] from=Pool, to=ERC1967Proxy, write(blockTimestamp(uint32): 1700693711, tick(int24): 111312, liquidity(uint128): 1439519993085420398) -> ['0', '1']
+                [9][DELEGATECALL] from=ERC1967Proxy, to=PoolOracle, write(blockTimestamp(uint32): 1700693711, tick(int24): 111312, liquidity(uint128): 1439519993085420398) -> ['0', '1']
+              [8][CALL] from=Pool, to=WETH9, transfer(dst(address): 0xaF2Acf, wad(uint256): 17016288492586653057) -> True
+              [8][STATICCALL] from=Pool, to=frxETH, balanceOf(account(address): 0xFBC887) -> 12327739529354
+              [8][CALL] from=Pool, to=0xaf2acf, swapCallbackint256() -> None
+                [9][CALL] from=0xaf2acf, to=frxETH, transfer(to(address): 0xFBC887, amount(uint256): 255335135602826) -> True
+              [8][STATICCALL] from=Pool, to=frxETH, balanceOf(account(address): 0xFBC887) -> 267662875132180
+            [7][CALL] from=0xaf2acf, to=WETH9, approve(guy(address): 0x87870B, wad(uint256): 2001000000000000000000) -> True
+            [7][STATICCALL] from=0xaf2acf, to=Pool, getPoolState() -> ['20177440864067306977579240378377', '110805', '48', 'False']
+            [7][STATICCALL] from=0xaf2acf, to=Pool, getLiquidityState() -> ['1439519993085420398', '3233429125101110', '3232001580256538']
+            [7][STATICCALL] from=0xaf2acf, to=frxETH, balanceOf(account(address): 0xFBC887) -> 267662875132180
+            [7][STATICCALL] from=0xaf2acf, to=frxETH, balanceOf(account(address): 0xC9B826) -> 6364001987952861764
+            [7][STATICCALL] from=0xaf2acf, to=WETH9, balanceOf((address): 0xFBC887) -> 0
+            [7][STATICCALL] from=0xaf2acf, to=WETH9, balanceOf((address): 0xC9B826) -> 1116773260184104614
+          [6][STATICCALL] from=InitializableImmutableAdminUpgradeabilityProxy, to=InitializableImmutableAdminUpgradeabilityProxy, scaledTotalSupply() -> 311830609214326307204640
+            [7][DELEGATECALL] from=InitializableImmutableAdminUpgradeabilityProxy, to=VariableDebtToken, scaledTotalSupply() -> 311830609214326307204640
+          [6][STATICCALL] from=InitializableImmutableAdminUpgradeabilityProxy, to=InitializableImmutableAdminUpgradeabilityProxy, getSupplyData() -> ['0', '0', '0', '0']
+            [7][DELEGATECALL] from=InitializableImmutableAdminUpgradeabilityProxy, to=StableDebtToken, getSupplyData() -> ['0', '0', '0', '0']
+          [6][STATICCALL] from=InitializableImmutableAdminUpgradeabilityProxy, to=InitializableImmutableAdminUpgradeabilityProxy, totalSupply() -> 410884376976381211630214
+            [7][DELEGATECALL] from=InitializableImmutableAdminUpgradeabilityProxy, to=AToken, totalSupply() -> 410884376976381211630214
+              [8][STATICCALL] from=InitializableImmutableAdminUpgradeabilityProxy, to=InitializableImmutableAdminUpgradeabilityProxy, getReserveNormalizedIncome(asset(address): 0xC02aaA) -> 1016014416326941689297081625
+                [9][DELEGATECALL] from=InitializableImmutableAdminUpgradeabilityProxy, to=Pool, getReserveNormalizedIncome(asset(address): 0xC02aaA) -> 1016014416326941689297081625
+          [6][STATICCALL] from=InitializableImmutableAdminUpgradeabilityProxy, to=DefaultReserveInterestRateStrategy, calculateInterestRates(params(tuple): {'unbacked': 0, 'liquidityAdded': 20010000...) -> ['18169363421302524895904955', '97074765031850541163469996', '27352335522295378814428998']
+            [7][STATICCALL] from=DefaultReserveInterestRateStrategy, to=WETH9, balanceOf((address): 0x4d5F47) -> 87782202350445988509445
+          [6][CALL] from=InitializableImmutableAdminUpgradeabilityProxy, to=WETH9, transferFrom(src(address): 0xaF2Acf, dst(address): 0x4d5F47, wad(uint256): 2001000000000000000000) -> True
+          [6][CALL] from=InitializableImmutableAdminUpgradeabilityProxy, to=InitializableImmutableAdminUpgradeabilityProxy, handleRepayment(user(address): 0xaF2Acf, onBehalfOf(address): 0xaF2Acf, amount(uint256): 2001000000000000000000) -> None
+            [7][DELEGATECALL] from=InitializableImmutableAdminUpgradeabilityProxy, to=AToken, handleRepayment(user(address): 0xaF2Acf, onBehalfOf(address): 0xaF2Acf, amount(uint256): 2001000000000000000000) -> None
+    [3][STATICCALL] from=0xaf2acf, to=frxETH, balanceOf(account(address): 0xaF2Acf) -> 5543520567326129000
+    [3][STATICCALL] from=0xaf2acf, to=WETH9, balanceOf((address): 0xaF2Acf) -> 2014852259222947758
+    [3][CALL] from=0xaf2acf, to=frxETH, transfer(to(address): 0xC9B826, amount(uint256): 5543520567326129000) -> True
+    [3][CALL] from=0xaf2acf, to=WETH9, transfer(dst(address): 0xC9B826, wad(uint256): 2014852259222947758) -> True
+    [3][STATICCALL] from=0xaf2acf, to=Pool, getPoolState() -> ['20177440864067306977579240378377', '110805', '48', 'False']
+    [3][STATICCALL] from=0xaf2acf, to=Pool, getLiquidityState() -> ['1439519993085420398', '3233429125101110', '3232001580256538']
+    [3][STATICCALL] from=0xaf2acf, to=frxETH, balanceOf(account(address): 0xFBC887) -> 267662875132180
+    [3][STATICCALL] from=0xaf2acf, to=frxETH, balanceOf(account(address): 0xC9B826) -> 11907522555278990764
+    [3][STATICCALL] from=0xaf2acf, to=WETH9, balanceOf((address): 0xFBC887) -> 0
+    [3][STATICCALL] from=0xaf2acf, to=WETH9, balanceOf((address): 0xC9B826) -> 3131625519407052372
+  [2][CALL] from=0xaf2acf, to=0xaf2acf, 0x7b408b03() -> None
+    [3][STATICCALL] from=0xaf2acf, to=Pool, token0() -> 0x275f5a
+    [3][STATICCALL] from=0xaf2acf, to=Pool, token1() -> 0xc02aaa
+    [3][CALL] from=0xaf2acf, to=InitializableImmutableAdminUpgradeabilityProxy, flashLoanSimple(receiverAddress(address): 0xaF2Acf, asset(address): 0xC02aaA, amount(uint256): 2000000000000000000000, params(bytes): b'', referralCode(uint16): 0) -> None
+      [4][DELEGATECALL] from=InitializableImmutableAdminUpgradeabilityProxy, to=Pool, flashLoanSimple(receiverAddress(address): 0xaF2Acf, asset(address): 0xC02aaA, amount(uint256): 2000000000000000000000, params(bytes): b'', referralCode(uint16): 0) -> None
+        [5][DELEGATECALL] from=InitializableImmutableAdminUpgradeabilityProxy, to=FlashLoanLogic, 0xa1fe0e8d() -> None
+          [6][CALL] from=InitializableImmutableAdminUpgradeabilityProxy, to=InitializableImmutableAdminUpgradeabilityProxy, transferUnderlyingTo(target(address): 0xaF2Acf, amount(uint256): 2000000000000000000000) -> None
+            [7][DELEGATECALL] from=InitializableImmutableAdminUpgradeabilityProxy, to=AToken, transferUnderlyingTo(target(address): 0xaF2Acf, amount(uint256): 2000000000000000000000) -> None
+              [8][CALL] from=InitializableImmutableAdminUpgradeabilityProxy, to=WETH9, transfer(dst(address): 0xaF2Acf, wad(uint256): 2000000000000000000000) -> True
+          [6][CALL] from=InitializableImmutableAdminUpgradeabilityProxy, to=0xaf2acf, executeOperationaddress() -> 0x000000
+            [7][CALL] from=0xaf2acf, to=MONA, approve(spender(address): 0xe222fB, tokens(uint256): 115792089237316195423570985008687907853269...) -> True
+            [7][CALL] from=0xaf2acf, to=WETH9, approve(guy(address): 0xe222fB, wad(uint256): 115792089237316195423570985008687907853269...) -> True
+            [7][CALL] from=0xaf2acf, to=Pool, swap(recipient(address): 0xaF2Acf, swapQty(int256): 2000000000000000000000, isToken0(bool): False, limitSqrtP(uint160): 5070602400912917605986812821504, data(bytes): b'') -> ['-17432953918068859665', '569214270481896715439']
+              [8][CALL] from=Pool, to=ERC1967Proxy, write(blockTimestamp(uint32): 1700693711, tick(int24): -16074, liquidity(uint128): 7121196543435892416) -> ['0', '1']
+                [9][DELEGATECALL] from=ERC1967Proxy, to=PoolOracle, write(blockTimestamp(uint32): 1700693711, tick(int24): -16074, liquidity(uint128): 7121196543435892416) -> ['0', '1']
+              [8][CALL] from=Pool, to=MONA, transfer(to(address): 0xaF2Acf, tokens(uint256): 17432953918068859665) -> True
+              [8][STATICCALL] from=Pool, to=WETH9, balanceOf((address): 0x93fC0a) -> 3522215834806532264
+              [8][CALL] from=Pool, to=0xaf2acf, swapCallbackint256() -> None
+                [9][CALL] from=0xaf2acf, to=WETH9, transfer(dst(address): 0x93fC0a, wad(uint256): 569214270481896715439) -> True
+              [8][STATICCALL] from=Pool, to=WETH9, balanceOf((address): 0x93fC0a) -> 572736486316703247703
+            [7][STATICCALL] from=0xaf2acf, to=MONA, balanceOf(tokenOwner(address): 0x93fC0a) -> 139828252610562913
+            [7][STATICCALL] from=0xaf2acf, to=WETH9, balanceOf((address): 0x93fC0a) -> 572736486316703247703
+            [7][CALL] from=0xaf2acf, to=Pool, tickDistance() -> 100
+            [7][CALL] from=0xaf2acf, to=Pool, swapFeeUnits() -> 5000
+            [7][STATICCALL] from=0xaf2acf, to=Pool, getPoolState() -> ['5070602400912917605986812821504', '83181', '-887200', 'False']
+            [7][STATICCALL] from=0xaf2acf, to=MONA, balanceOf(tokenOwner(address): 0x93fC0a) -> 139828252610562913
+            [7][STATICCALL] from=0xaf2acf, to=WETH9, balanceOf((address): 0x93fC0a) -> 572736486316703247703
+            [7][STATICCALL] from=0xaf2acf, to=Pool, getLiquidityState() -> ['7121196543435892416', '1827811055262595805', '494635137282001987']
+            [7][STATICCALL] from=0xaf2acf, to=Pool, getPoolState() -> ['5070602400912917605986812821504', '83181', '-887200', 'False']
+            [7][STATICCALL] from=0xaf2acf, to=Pool, getPoolState() -> ['5070602400912917605986812821504', '83181', '-887200', 'False']
+            [7][CALL] from=0xaf2acf, to=AntiSnipAttackPositionManager, mint(params(tuple): {'token0': '0x275f5Ad03be0Fa221B4C6649B8Ae...) -> ['361', '15565918653553687720', '5032382491678406', '4067026870549494580']
+              [8][STATICCALL] from=AntiSnipAttackPositionManager, to=Pool, getPoolState() -> ['5070602400912917605986812821504', '83181', '-887200', 'False']
+              [8][CALL] from=AntiSnipAttackPositionManager, to=Pool, mint(recipient(address): 0xe222fB, tickLower(int24): 83100, tickUpper(int24): 83600, ticksPrevious(int24[2]): [-887200, -887200], qty(uint128): 15565918653553687720, data(bytes): b'\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00...) -> ['5032382491678406', '4067026870549494580', '0']
+                [9][STATICCALL] from=Pool, to=Factory, isWhitelistedNFTManager(sender(address): 0xe222fB) -> True
+                [9][STATICCALL] from=Pool, to=Factory, feeConfiguration() -> ['0x91c9d4', '16000']
+                [9][CALL] from=Pool, to=ERC1967Proxy, write(blockTimestamp(uint32): 1700693711, tick(int24): 83181, liquidity(uint128): 7121196543435892416) -> ['0', '1']
+                  [10][DELEGATECALL] from=ERC1967Proxy, to=PoolOracle, write(blockTimestamp(uint32): 1700693711, tick(int24): 83181, liquidity(uint128): 7121196543435892416) -> ['0', '1']
+                [9][STATICCALL] from=Pool, to=MONA, balanceOf(tokenOwner(address): 0x93fC0a) -> 139828252610562913
+                [9][STATICCALL] from=Pool, to=WETH9, balanceOf((address): 0x93fC0a) -> 572736486316703247703
+                [9][CALL] from=Pool, to=AntiSnipAttackPositionManager, mintCallback(deltaQty0(uint256): 5032382491678406, deltaQty1(uint256): 4067026870549494580, data(bytes): b'\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00...) -> None
+                  [10][CALL] from=AntiSnipAttackPositionManager, to=MONA, transferFrom(from(address): 0xaF2Acf, to(address): 0x93fC0a, tokens(uint256): 5032382491678406) -> True
+                  [10][CALL] from=AntiSnipAttackPositionManager, to=WETH9, transferFrom(src(address): 0xaF2Acf, dst(address): 0x93fC0a, wad(uint256): 4067026870549494580) -> True
+                [9][STATICCALL] from=Pool, to=MONA, balanceOf(tokenOwner(address): 0x93fC0a) -> 144860635102241319
+                [9][STATICCALL] from=Pool, to=WETH9, balanceOf((address): 0x93fC0a) -> 576803513187252742283
+            [7][STATICCALL] from=0xaf2acf, to=Pool, getLiquidityState() -> ['22687115196989580136', '1827811055262595805', '1827811055262595805']
+            [7][CALL] from=0xaf2acf, to=AntiSnipAttackPositionManager, removeLiquidity(params(tuple): {'tokenId': 361, 'liquidity': 259431977559...) -> ['838730415279733', '677837811758248562', '0']
+              [8][CALL] from=AntiSnipAttackPositionManager, to=Pool, burn(tickLower(int24): 83100, tickUpper(int24): 83600, qty(uint128): 2594319775592279243) -> ['838730415279733', '677837811758248562', '0']
+                [9][CALL] from=Pool, to=ERC1967Proxy, write(blockTimestamp(uint32): 1700693711, tick(int24): 83181, liquidity(uint128): 22687115196989580136) -> ['0', '1']
+                  [10][DELEGATECALL] from=ERC1967Proxy, to=PoolOracle, write(blockTimestamp(uint32): 1700693711, tick(int24): 83181, liquidity(uint128): 22687115196989580136) -> ['0', '1']
+                [9][CALL] from=Pool, to=MONA, transfer(to(address): 0xe222fB, tokens(uint256): 838730415279733) -> True
+                [9][CALL] from=Pool, to=WETH9, transfer(dst(address): 0xe222fB, wad(uint256): 677837811758248562) -> True
+              [8][STATICCALL] from=AntiSnipAttackPositionManager, to=Factory, vestingPeriod() -> 300
+            [7][STATICCALL] from=0xaf2acf, to=Pool, getLiquidityState() -> ['20092795421397300893', '1827811055262595805', '1827811055262595805']
+            [7][CALL] from=0xaf2acf, to=Pool, swap(recipient(address): 0xaF2Acf, swapQty(int256): 30417416413337599999, isToken0(bool): False, limitSqrtP(uint160): 146144670348521010328727305220398882237872..., data(bytes): b'') -> ['-6905008960300140', '30417416413337599999']
+              [8][CALL] from=Pool, to=ERC1967Proxy, write(blockTimestamp(uint32): 1700693711, tick(int24): 83181, liquidity(uint128): 20092795421397300893) -> ['0', '1']
+                [9][DELEGATECALL] from=ERC1967Proxy, to=PoolOracle, write(blockTimestamp(uint32): 1700693711, tick(int24): 83181, liquidity(uint128): 20092795421397300893) -> ['0', '1']
+              [8][CALL] from=Pool, to=MONA, transfer(to(address): 0xaF2Acf, tokens(uint256): 6905008960300140) -> True
+              [8][STATICCALL] from=Pool, to=WETH9, balanceOf((address): 0x93fC0a) -> 576125675375494493721
+              [8][CALL] from=Pool, to=0xaf2acf, swapCallbackint256() -> None
+                [9][CALL] from=0xaf2acf, to=WETH9, transfer(dst(address): 0x93fC0a, wad(uint256): 30417416413337599999) -> True
+              [8][STATICCALL] from=Pool, to=WETH9, balanceOf((address): 0x93fC0a) -> 606543091788832093720
+            [7][STATICCALL] from=0xaf2acf, to=WETH9, balanceOf((address): 0x93fC0a) -> 606543091788832093720
+            [7][CALL] from=0xaf2acf, to=Pool, swap(recipient(address): 0xaF2Acf, swapQty(int256): -606543091788832093720, isToken0(bool): False, limitSqrtP(uint160): 4295128740, data(bytes): b'') -> ['253430197762996612', '-606543091788832093720']
+              [8][STATICCALL] from=Pool, to=Factory, feeConfiguration() -> ['0x91c9d4', '16000']
+              [8][CALL] from=Pool, to=ERC1967Proxy, write(blockTimestamp(uint32): 1700693711, tick(int24): 83600, liquidity(uint128): 20092795421397300893) -> ['0', '1']
+                [9][DELEGATECALL] from=ERC1967Proxy, to=PoolOracle, write(blockTimestamp(uint32): 1700693711, tick(int24): 83600, liquidity(uint128): 20092795421397300893) -> ['0', '1']
+              [8][CALL] from=Pool, to=WETH9, transfer(dst(address): 0xaF2Acf, wad(uint256): 606543091788832093720) -> True
+              [8][STATICCALL] from=Pool, to=MONA, balanceOf(tokenOwner(address): 0x93fC0a) -> 137116895726661446
+              [8][CALL] from=Pool, to=0xaf2acf, swapCallbackint256() -> None
+                [9][CALL] from=0xaf2acf, to=MONA, transfer(to(address): 0x93fC0a, tokens(uint256): 253430197762996612) -> True
+              [8][STATICCALL] from=Pool, to=MONA, balanceOf(tokenOwner(address): 0x93fC0a) -> 390547093489658058
+            [7][CALL] from=0xaf2acf, to=WETH9, approve(guy(address): 0x87870B, wad(uint256): 2001000000000000000000) -> True
+            [7][STATICCALL] from=0xaf2acf, to=Pool, getPoolState() -> ['3018534999534337550018407964283', '72807', '-887200', 'False']
+            [7][STATICCALL] from=0xaf2acf, to=Pool, getLiquidityState() -> ['20092795421397300893', '2157565051134017921', '1862341604369824240']
+            [7][STATICCALL] from=0xaf2acf, to=MONA, balanceOf(tokenOwner(address): 0x93fC0a) -> 390547093489658058
+            [7][STATICCALL] from=0xaf2acf, to=MONA, balanceOf(tokenOwner(address): 0xC9B826) -> 0
+            [7][STATICCALL] from=0xaf2acf, to=WETH9, balanceOf((address): 0x93fC0a) -> 0
+            [7][STATICCALL] from=0xaf2acf, to=WETH9, balanceOf((address): 0xC9B826) -> 3131625519407052372
+          [6][STATICCALL] from=InitializableImmutableAdminUpgradeabilityProxy, to=InitializableImmutableAdminUpgradeabilityProxy, scaledTotalSupply() -> 311830609214326307204640
+            [7][DELEGATECALL] from=InitializableImmutableAdminUpgradeabilityProxy, to=VariableDebtToken, scaledTotalSupply() -> 311830609214326307204640
+          [6][STATICCALL] from=InitializableImmutableAdminUpgradeabilityProxy, to=InitializableImmutableAdminUpgradeabilityProxy, getSupplyData() -> ['0', '0', '0', '0']
+            [7][DELEGATECALL] from=InitializableImmutableAdminUpgradeabilityProxy, to=StableDebtToken, getSupplyData() -> ['0', '0', '0', '0']
+          [6][STATICCALL] from=InitializableImmutableAdminUpgradeabilityProxy, to=InitializableImmutableAdminUpgradeabilityProxy, totalSupply() -> 410885376545032599237601
+            [7][DELEGATECALL] from=InitializableImmutableAdminUpgradeabilityProxy, to=AToken, totalSupply() -> 410885376545032599237601
+              [8][STATICCALL] from=InitializableImmutableAdminUpgradeabilityProxy, to=InitializableImmutableAdminUpgradeabilityProxy, getReserveNormalizedIncome(asset(address): 0xC02aaA) -> 1016016888010502382738446554
+                [9][DELEGATECALL] from=InitializableImmutableAdminUpgradeabilityProxy, to=Pool, getReserveNormalizedIncome(asset(address): 0xC02aaA) -> 1016016888010502382738446554
+          [6][STATICCALL] from=InitializableImmutableAdminUpgradeabilityProxy, to=DefaultReserveInterestRateStrategy, calculateInterestRates(params(tuple): {'unbacked': 0, 'liquidityAdded': 20010000...) -> ['18169274984341152816747984', '97074669936122347213241910', '27352268955285643049269338']
+            [7][STATICCALL] from=DefaultReserveInterestRateStrategy, to=WETH9, balanceOf((address): 0x4d5F47) -> 87783202350445988509445
+          [6][CALL] from=InitializableImmutableAdminUpgradeabilityProxy, to=WETH9, transferFrom(src(address): 0xaF2Acf, dst(address): 0x4d5F47, wad(uint256): 2001000000000000000000) -> True
+          [6][CALL] from=InitializableImmutableAdminUpgradeabilityProxy, to=InitializableImmutableAdminUpgradeabilityProxy, handleRepayment(user(address): 0xaF2Acf, onBehalfOf(address): 0xaF2Acf, amount(uint256): 2001000000000000000000) -> None
+            [7][DELEGATECALL] from=InitializableImmutableAdminUpgradeabilityProxy, to=AToken, handleRepayment(user(address): 0xaF2Acf, onBehalfOf(address): 0xaF2Acf, amount(uint256): 2001000000000000000000) -> None
+    [3][STATICCALL] from=0xaf2acf, to=MONA, balanceOf(tokenOwner(address): 0xaF2Acf) -> 17181396346774484787
+    [3][STATICCALL] from=0xaf2acf, to=WETH9, balanceOf((address): 0xaF2Acf) -> 1844378023048283702
+    [3][CALL] from=0xaf2acf, to=MONA, transfer(to(address): 0xC9B826, tokens(uint256): 17181396346774484787) -> True
+    [3][CALL] from=0xaf2acf, to=WETH9, transfer(dst(address): 0xC9B826, wad(uint256): 1844378023048283702) -> True
+    [3][STATICCALL] from=0xaf2acf, to=Pool, getPoolState() -> ['3018534999534337550018407964283', '72807', '-887200', 'False']
+    [3][STATICCALL] from=0xaf2acf, to=Pool, getLiquidityState() -> ['20092795421397300893', '2157565051134017921', '1862341604369824240']
+    [3][STATICCALL] from=0xaf2acf, to=MONA, balanceOf(tokenOwner(address): 0x93fC0a) -> 390547093489658058
+    [3][STATICCALL] from=0xaf2acf, to=MONA, balanceOf(tokenOwner(address): 0xC9B826) -> 17181396346774484787
+    [3][STATICCALL] from=0xaf2acf, to=WETH9, balanceOf((address): 0x93fC0a) -> 0
+    [3][STATICCALL] from=0xaf2acf, to=WETH9, balanceOf((address): 0xC9B826) -> 4976003542455336074
+  [2][CALL] from=0xaf2acf, to=0xaf2acf, 0x7b408b03() -> None
+    [3][STATICCALL] from=0xaf2acf, to=Pool, token0() -> 0xb131f4
+    [3][STATICCALL] from=0xaf2acf, to=Pool, token1() -> 0xc02aaa
+    [3][CALL] from=0xaf2acf, to=InitializableImmutableAdminUpgradeabilityProxy, flashLoanSimple(receiverAddress(address): 0xaF2Acf, asset(address): 0xC02aaA, amount(uint256): 2000000000000000000000, params(bytes): b'', referralCode(uint16): 0) -> None
+      [4][DELEGATECALL] from=InitializableImmutableAdminUpgradeabilityProxy, to=Pool, flashLoanSimple(receiverAddress(address): 0xaF2Acf, asset(address): 0xC02aaA, amount(uint256): 2000000000000000000000, params(bytes): b'', referralCode(uint16): 0) -> None
+        [5][DELEGATECALL] from=InitializableImmutableAdminUpgradeabilityProxy, to=FlashLoanLogic, 0xa1fe0e8d() -> None
+          [6][CALL] from=InitializableImmutableAdminUpgradeabilityProxy, to=InitializableImmutableAdminUpgradeabilityProxy, transferUnderlyingTo(target(address): 0xaF2Acf, amount(uint256): 2000000000000000000000) -> None
+            [7][DELEGATECALL] from=InitializableImmutableAdminUpgradeabilityProxy, to=AToken, transferUnderlyingTo(target(address): 0xaF2Acf, amount(uint256): 2000000000000000000000) -> None
+              [8][CALL] from=InitializableImmutableAdminUpgradeabilityProxy, to=WETH9, transfer(dst(address): 0xaF2Acf, wad(uint256): 2000000000000000000000) -> True
+          [6][CALL] from=InitializableImmutableAdminUpgradeabilityProxy, to=0xaf2acf, executeOperationaddress() -> 0x000000
+            [7][CALL] from=0xaf2acf, to=Memecoin, approve(spender(address): 0xe222fB, amount(uint256): 115792089237316195423570985008687907853269...) -> True
+            [7][CALL] from=0xaf2acf, to=WETH9, approve(guy(address): 0xe222fB, wad(uint256): 115792089237316195423570985008687907853269...) -> True
+            [7][CALL] from=0xaf2acf, to=Pool, swap(recipient(address): 0xaF2Acf, swapQty(int256): 2000000000000000000000, isToken0(bool): False, limitSqrtP(uint160): 158456325028528675187087900672, data(bytes): b'') -> ['-262011196130379570504851', '86154842701847875440']
+              [8][STATICCALL] from=Pool, to=Factory, feeConfiguration() -> ['0x91c9d4', '16000']
+              [8][CALL] from=Pool, to=ERC1967Proxy, write(blockTimestamp(uint32): 1700693711, tick(int24): -112896, liquidity(uint128): 3657216561480687333965) -> ['0', '1']
+                [9][DELEGATECALL] from=ERC1967Proxy, to=PoolOracle, write(blockTimestamp(uint32): 1700693711, tick(int24): -112896, liquidity(uint128): 3657216561480687333965) -> ['0', '1']
+              [8][CALL] from=Pool, to=Memecoin, transfer(to(address): 0xaF2Acf, amount(uint256): 262011196130379570504851) -> True
+              [8][STATICCALL] from=Pool, to=WETH9, balanceOf((address): 0x35E6f4) -> 3325309700790066465
+              [8][CALL] from=Pool, to=0xaf2acf, swapCallbackint256() -> None
+                [9][CALL] from=0xaf2acf, to=WETH9, transfer(dst(address): 0x35E6f4, wad(uint256): 86154842701847875440) -> True
+              [8][STATICCALL] from=Pool, to=WETH9, balanceOf((address): 0x35E6f4) -> 89480152402637941905
+            [7][STATICCALL] from=0xaf2acf, to=Memecoin, balanceOf(account(address): 0x35E6f4) -> 54892466798242858434
+            [7][STATICCALL] from=0xaf2acf, to=WETH9, balanceOf((address): 0x35E6f4) -> 89480152402637941905
+            [7][CALL] from=0xaf2acf, to=Pool, tickDistance() -> 100
+            [7][CALL] from=0xaf2acf, to=Pool, swapFeeUnits() -> 2000
+            [7][STATICCALL] from=0xaf2acf, to=Pool, getPoolState() -> ['158456325028528675187087900672', '13863', '-100500', 'False']
+            [7][STATICCALL] from=0xaf2acf, to=Memecoin, balanceOf(account(address): 0x35E6f4) -> 54892466798242858434
+            [7][STATICCALL] from=0xaf2acf, to=WETH9, balanceOf((address): 0x35E6f4) -> 89480152402637941905
+            [7][STATICCALL] from=0xaf2acf, to=Pool, getLiquidityState() -> ['0', '40850769051690552516', '38531030250049749964']
+            [7][STATICCALL] from=0xaf2acf, to=Pool, getPoolState() -> ['158456325028528675187087900672', '13863', '-100500', 'False']
+            [7][STATICCALL] from=0xaf2acf, to=Pool, getPoolState() -> ['158456325028528675187087900672', '13863', '-100500', 'False']
+            [7][CALL] from=0xaf2acf, to=AntiSnipAttackPositionManager, mint(params(tuple): {'token0': '0xb131f4A55907B10d1F0A50d8ab8F...) -> ['362', '119989082087354660304', '1294730244021129636', '762319936388074177']
+              [8][STATICCALL] from=AntiSnipAttackPositionManager, to=Pool, getPoolState() -> ['158456325028528675187087900672', '13863', '-100500', 'False']
+              [8][CALL] from=AntiSnipAttackPositionManager, to=Pool, mint(recipient(address): 0xe222fB, tickLower(int24): 13800, tickUpper(int24): 14300, ticksPrevious(int24[2]): [-100500, -100500], qty(uint128): 119989082087354660304, data(bytes): b'\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00...) -> ['1294730244021129636', '762319936388074177', '0']
+                [9][STATICCALL] from=Pool, to=Factory, isWhitelistedNFTManager(sender(address): 0xe222fB) -> True
+                [9][CALL] from=Pool, to=ERC1967Proxy, write(blockTimestamp(uint32): 1700693711, tick(int24): 13863, liquidity(uint128): 0) -> ['0', '1']
+                  [10][DELEGATECALL] from=ERC1967Proxy, to=PoolOracle, write(blockTimestamp(uint32): 1700693711, tick(int24): 13863, liquidity(uint128): 0) -> ['0', '1']
+                [9][STATICCALL] from=Pool, to=Memecoin, balanceOf(account(address): 0x35E6f4) -> 54892466798242858434
+                [9][STATICCALL] from=Pool, to=WETH9, balanceOf((address): 0x35E6f4) -> 89480152402637941905
+                [9][CALL] from=Pool, to=AntiSnipAttackPositionManager, mintCallback(deltaQty0(uint256): 1294730244021129636, deltaQty1(uint256): 762319936388074177, data(bytes): b'\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00...) -> None
+                  [10][CALL] from=AntiSnipAttackPositionManager, to=Memecoin, transferFrom(from(address): 0xaF2Acf, to(address): 0x35E6f4, amount(uint256): 1294730244021129636) -> True
+                  [10][CALL] from=AntiSnipAttackPositionManager, to=WETH9, transferFrom(src(address): 0xaF2Acf, dst(address): 0x35E6f4, wad(uint256): 762319936388074177) -> True
+                [9][STATICCALL] from=Pool, to=Memecoin, balanceOf(account(address): 0x35E6f4) -> 56187197042263988070
+                [9][STATICCALL] from=Pool, to=WETH9, balanceOf((address): 0x35E6f4) -> 90242472339026016082
+            [7][STATICCALL] from=0xaf2acf, to=Pool, getLiquidityState() -> ['119989082087354660304', '40850769051690552516', '40850769051690552516']
+            [7][CALL] from=0xaf2acf, to=AntiSnipAttackPositionManager, removeLiquidity(params(tuple): {'tokenId': 362, 'liquidity': 199981803478...) -> ['215788374003521605', '127053322731345695', '0']
+              [8][CALL] from=AntiSnipAttackPositionManager, to=Pool, burn(tickLower(int24): 13800, tickUpper(int24): 14300, qty(uint128): 19998180347892443343) -> ['215788374003521605', '127053322731345695', '0']
+                [9][CALL] from=Pool, to=ERC1967Proxy, write(blockTimestamp(uint32): 1700693711, tick(int24): 13863, liquidity(uint128): 119989082087354660304) -> ['0', '1']
+                  [10][DELEGATECALL] from=ERC1967Proxy, to=PoolOracle, write(blockTimestamp(uint32): 1700693711, tick(int24): 13863, liquidity(uint128): 119989082087354660304) -> ['0', '1']
+                [9][CALL] from=Pool, to=Memecoin, transfer(to(address): 0xe222fB, amount(uint256): 215788374003521605) -> True
+                [9][CALL] from=Pool, to=WETH9, transfer(dst(address): 0xe222fB, wad(uint256): 127053322731345695) -> True
+              [8][STATICCALL] from=AntiSnipAttackPositionManager, to=Factory, vestingPeriod() -> 300
+            [7][STATICCALL] from=0xaf2acf, to=Pool, getLiquidityState() -> ['99990901739462216961', '40850769051690552516', '40850769051690552516']
+            [7][CALL] from=0xaf2acf, to=Pool, swap(recipient(address): 0xaF2Acf, swapQty(int256): 6277190818607599999, isToken0(bool): False, limitSqrtP(uint160): 146144670348521010328727305220398882237872..., data(bytes): b'') -> ['-1504383716289536053', '6277190818607599999']
+              [8][CALL] from=Pool, to=ERC1967Proxy, write(blockTimestamp(uint32): 1700693711, tick(int24): 13863, liquidity(uint128): 99990901739462216961) -> ['0', '1']
+                [9][DELEGATECALL] from=ERC1967Proxy, to=PoolOracle, write(blockTimestamp(uint32): 1700693711, tick(int24): 13863, liquidity(uint128): 99990901739462216961) -> ['0', '1']
+              [8][CALL] from=Pool, to=Memecoin, transfer(to(address): 0xaF2Acf, amount(uint256): 1504383716289536053) -> True
+              [8][STATICCALL] from=Pool, to=WETH9, balanceOf((address): 0x35E6f4) -> 90115419016294670387
+              [8][CALL] from=Pool, to=0xaf2acf, swapCallbackint256() -> None
+                [9][CALL] from=0xaf2acf, to=WETH9, transfer(dst(address): 0x35E6f4, wad(uint256): 6277190818607599999) -> True
+              [8][STATICCALL] from=Pool, to=WETH9, balanceOf((address): 0x35E6f4) -> 96392609834902270386
+            [7][STATICCALL] from=0xaf2acf, to=WETH9, balanceOf((address): 0x35E6f4) -> 96392609834902270386
+            [7][CALL] from=0xaf2acf, to=Pool, swap(recipient(address): 0xaF2Acf, swapQty(int256): -96392609834902270386, isToken0(bool): False, limitSqrtP(uint160): 4295128740, data(bytes): b'') -> ['34092794464415355617', '-96392609834902270386']
+              [8][STATICCALL] from=Pool, to=Factory, feeConfiguration() -> ['0x91c9d4', '16000']
+              [8][CALL] from=Pool, to=ERC1967Proxy, write(blockTimestamp(uint32): 1700693711, tick(int24): 14300, liquidity(uint128): 99990901739462216961) -> ['0', '1']
+                [9][DELEGATECALL] from=ERC1967Proxy, to=PoolOracle, write(blockTimestamp(uint32): 1700693711, tick(int24): 14300, liquidity(uint128): 99990901739462216961) -> ['0', '1']
+              [8][CALL] from=Pool, to=WETH9, transfer(dst(address): 0xaF2Acf, wad(uint256): 96392609834902270386) -> True
+              [8][STATICCALL] from=Pool, to=Memecoin, balanceOf(account(address): 0x35E6f4) -> 54467024951970930412
+              [8][CALL] from=Pool, to=0xaf2acf, swapCallbackint256() -> None
+                [9][CALL] from=0xaf2acf, to=Memecoin, transfer(to(address): 0x35E6f4, amount(uint256): 34092794464415355617) -> True
+              [8][STATICCALL] from=Pool, to=Memecoin, balanceOf(account(address): 0x35E6f4) -> 88559819416386286029
+            [7][CALL] from=0xaf2acf, to=WETH9, approve(guy(address): 0x87870B, wad(uint256): 2001000000000000000000) -> True
+            [7][STATICCALL] from=0xaf2acf, to=Pool, getPoolState() -> ['110122227076503164543027847840', '6585', '-100500', 'False']
+            [7][STATICCALL] from=0xaf2acf, to=Pool, getLiquidityState() -> ['99990901739462216961', '41464444190751593664', '40943701670288141376']
+            [7][STATICCALL] from=0xaf2acf, to=Memecoin, balanceOf(account(address): 0x35E6f4) -> 88559819416386286029
+            [7][STATICCALL] from=0xaf2acf, to=Memecoin, balanceOf(account(address): 0xC9B826) -> 0
+            [7][STATICCALL] from=0xaf2acf, to=WETH9, balanceOf((address): 0x35E6f4) -> 0
+            [7][STATICCALL] from=0xaf2acf, to=WETH9, balanceOf((address): 0xC9B826) -> 4976003542455336074
+          [6][STATICCALL] from=InitializableImmutableAdminUpgradeabilityProxy, to=InitializableImmutableAdminUpgradeabilityProxy, scaledTotalSupply() -> 311830609214326307204640
+            [7][DELEGATECALL] from=InitializableImmutableAdminUpgradeabilityProxy, to=VariableDebtToken, scaledTotalSupply() -> 311830609214326307204640
+          [6][STATICCALL] from=InitializableImmutableAdminUpgradeabilityProxy, to=InitializableImmutableAdminUpgradeabilityProxy, getSupplyData() -> ['0', '0', '0', '0']
+            [7][DELEGATECALL] from=InitializableImmutableAdminUpgradeabilityProxy, to=StableDebtToken, getSupplyData() -> ['0', '0', '0', '0']
+          [6][STATICCALL] from=InitializableImmutableAdminUpgradeabilityProxy, to=InitializableImmutableAdminUpgradeabilityProxy, totalSupply() -> 410886376113683013787917
+            [7][DELEGATECALL] from=InitializableImmutableAdminUpgradeabilityProxy, to=AToken, totalSupply() -> 410886376113683013787917
+              [8][STATICCALL] from=InitializableImmutableAdminUpgradeabilityProxy, to=InitializableImmutableAdminUpgradeabilityProxy, getReserveNormalizedIncome(asset(address): 0xC02aaA) -> 1016019359694060670052765333
+                [9][DELEGATECALL] from=InitializableImmutableAdminUpgradeabilityProxy, to=Pool, getReserveNormalizedIncome(asset(address): 0xC02aaA) -> 1016019359694060670052765333
+          [6][STATICCALL] from=InitializableImmutableAdminUpgradeabilityProxy, to=DefaultReserveInterestRateStrategy, calculateInterestRates(params(tuple): {'unbacked': 0, 'liquidityAdded': 20010000...) -> ['18169186548025461897795535', '97074574840857018516591791', '27352202388599912961614254']
+            [7][STATICCALL] from=DefaultReserveInterestRateStrategy, to=WETH9, balanceOf((address): 0x4d5F47) -> 87784202350445988509445
+          [6][CALL] from=InitializableImmutableAdminUpgradeabilityProxy, to=WETH9, transferFrom(src(address): 0xaF2Acf, dst(address): 0x4d5F47, wad(uint256): 2001000000000000000000) -> True
+          [6][CALL] from=InitializableImmutableAdminUpgradeabilityProxy, to=InitializableImmutableAdminUpgradeabilityProxy, handleRepayment(user(address): 0xaF2Acf, onBehalfOf(address): 0xaF2Acf, amount(uint256): 2001000000000000000000) -> None
+            [7][DELEGATECALL] from=InitializableImmutableAdminUpgradeabilityProxy, to=AToken, handleRepayment(user(address): 0xaF2Acf, onBehalfOf(address): 0xaF2Acf, amount(uint256): 2001000000000000000000) -> None
+    [3][STATICCALL] from=0xaf2acf, to=Memecoin, balanceOf(account(address): 0xaF2Acf) -> 261977312989387423555651
+    [3][STATICCALL] from=0xaf2acf, to=WETH9, balanceOf((address): 0xaF2Acf) -> 2198256378058720770
+    [3][CALL] from=0xaf2acf, to=Memecoin, transfer(to(address): 0xC9B826, amount(uint256): 261977312989387423555651) -> True
+    [3][CALL] from=0xaf2acf, to=WETH9, transfer(dst(address): 0xC9B826, wad(uint256): 2198256378058720770) -> True
+    [3][STATICCALL] from=0xaf2acf, to=Pool, getPoolState() -> ['110122227076503164543027847840', '6585', '-100500', 'False']
+    [3][STATICCALL] from=0xaf2acf, to=Pool, getLiquidityState() -> ['99990901739462216961', '41464444190751593664', '40943701670288141376']
+    [3][STATICCALL] from=0xaf2acf, to=Memecoin, balanceOf(account(address): 0x35E6f4) -> 88559819416386286029
+    [3][STATICCALL] from=0xaf2acf, to=Memecoin, balanceOf(account(address): 0xC9B826) -> 261977312989387423555651
+    [3][STATICCALL] from=0xaf2acf, to=WETH9, balanceOf((address): 0x35E6f4) -> 0
+    [3][STATICCALL] from=0xaf2acf, to=WETH9, balanceOf((address): 0xC9B826) -> 7174259920514056844
+  [2][CALL] from=0xaf2acf, to=0xaf2acf, 0x7b408b03() -> None
+    [3][STATICCALL] from=0xaf2acf, to=Pool, token0() -> 0x853d95
+    [3][STATICCALL] from=0xaf2acf, to=Pool, token1() -> 0xa0b869
+    [3][CALL] from=0xaf2acf, to=UniswapV3Pool, flash(recipient(address): 0xaF2Acf, amount0(uint256): 1000000000000000000000000, amount1(uint256): 0, data(bytes): b'') -> None
+      [4][STATICCALL] from=UniswapV3Pool, to=FRAXStablecoin, balanceOf(account(address): 0xc63B07) -> 48161605826411024012864390
+      [4][STATICCALL] from=UniswapV3Pool, to=FiatTokenProxy, balanceOf(account(address): 0xc63B07) -> 41109321056142
+        [5][DELEGATECALL] from=FiatTokenProxy, to=FiatTokenV2_1, balanceOf(account(address): 0xc63B07) -> 41109321056142
+      [4][CALL] from=UniswapV3Pool, to=FRAXStablecoin, transfer(recipient(address): 0xaF2Acf, amount(uint256): 1000000000000000000000000) -> True
+      [4][CALL] from=UniswapV3Pool, to=0xaf2acf, uniswapV3FlashCallbackuint256() -> None
+        [5][CALL] from=0xaf2acf, to=FRAXStablecoin, approve(spender(address): 0xe222fB, amount(uint256): 115792089237316195423570985008687907853269...) -> True
+        [5][CALL] from=0xaf2acf, to=FiatTokenProxy, approve(spender(address): 0xe222fB, value(uint256): 115792089237316195423570985008687907853269...) -> True
+          [6][DELEGATECALL] from=FiatTokenProxy, to=FiatTokenV2_1, approve(spender(address): 0xe222fB, value(uint256): 115792089237316195423570985008687907853269...) -> True
+        [5][CALL] from=0xaf2acf, to=Pool, swap(recipient(address): 0xaF2Acf, swapQty(int256): 1000000000000000000000000, isToken0(bool): True, limitSqrtP(uint160): 295147905179352825856, data(bytes): b'') -> ['5767742213478846776600', '-4807432959']
+          [6][STATICCALL] from=Pool, to=Factory, feeConfiguration() -> ['0x91c9d4', '16000']
+          [6][CALL] from=Pool, to=ERC1967Proxy, write(blockTimestamp(uint32): 1700693711, tick(int24): -276333, liquidity(uint128): 2230196230806129998) -> ['0', '1']
+            [7][DELEGATECALL] from=ERC1967Proxy, to=PoolOracle, write(blockTimestamp(uint32): 1700693711, tick(int24): -276333, liquidity(uint128): 2230196230806129998) -> ['0', '1']
+          [6][CALL] from=Pool, to=FiatTokenProxy, transfer(to(address): 0xaF2Acf, value(uint256): 4807432959) -> True
+            [7][DELEGATECALL] from=FiatTokenProxy, to=FiatTokenV2_1, transfer(to(address): 0xaF2Acf, value(uint256): 4807432959) -> True
+          [6][STATICCALL] from=Pool, to=FRAXStablecoin, balanceOf(account(address): 0x362400) -> 6781075430101436721311
+          [6][CALL] from=Pool, to=0xaf2acf, swapCallbackint256() -> None
+            [7][CALL] from=0xaf2acf, to=FRAXStablecoin, transfer(recipient(address): 0x362400, amount(uint256): 5767742213478846776600) -> True
+          [6][STATICCALL] from=Pool, to=FRAXStablecoin, balanceOf(account(address): 0x362400) -> 12548817643580283497911
+        [5][STATICCALL] from=0xaf2acf, to=FRAXStablecoin, balanceOf(account(address): 0x362400) -> 12548817643580283497911
+        [5][STATICCALL] from=0xaf2acf, to=FiatTokenProxy, balanceOf(account(address): 0x362400) -> 13572
+          [6][DELEGATECALL] from=FiatTokenProxy, to=FiatTokenV2_1, balanceOf(account(address): 0x362400) -> 13572
+        [5][CALL] from=0xaf2acf, to=Pool, tickDistance() -> 1
+        [5][CALL] from=0xaf2acf, to=Pool, swapFeeUnits() -> 8
+        [5][STATICCALL] from=0xaf2acf, to=Pool, getPoolState() -> ['295147905179352825856', '-388182', '-887272', 'False']
+        [5][STATICCALL] from=0xaf2acf, to=FRAXStablecoin, balanceOf(account(address): 0x362400) -> 12548817643580283497911
+        [5][STATICCALL] from=0xaf2acf, to=FiatTokenProxy, balanceOf(account(address): 0x362400) -> 13572
+          [6][DELEGATECALL] from=FiatTokenProxy, to=FiatTokenV2_1, balanceOf(account(address): 0x362400) -> 13572
+        [5][STATICCALL] from=0xaf2acf, to=Pool, getLiquidityState() -> ['0', '3547889445829', '3547086588886']
+        [5][STATICCALL] from=0xaf2acf, to=Pool, getPoolState() -> ['295147905179352825856', '-388182', '-887272', 'False']
+        [5][STATICCALL] from=0xaf2acf, to=Pool, getPoolState() -> ['295147905179352825856', '-388182', '-887272', 'False']
+        [5][CALL] from=0xaf2acf, to=AntiSnipAttackPositionManager, mint(params(tuple): {'token0': '0x853d955aCEf822Db058eb8505911...) -> ['363', '6130843304189434', '150480817665596601916', '452415']
+          [6][STATICCALL] from=AntiSnipAttackPositionManager, to=Pool, getPoolState() -> ['295147905179352825856', '-388182', '-887272', 'False']
+          [6][CALL] from=AntiSnipAttackPositionManager, to=Pool, mint(recipient(address): 0xe222fB, tickLower(int24): -388582, tickUpper(int24): -388180, ticksPrevious(int24[2]): [-887272, -887272], qty(uint128): 6130843304189434, data(bytes): b'\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00...) -> ['150480817665596601916', '452415', '0']
+            [7][STATICCALL] from=Pool, to=Factory, isWhitelistedNFTManager(sender(address): 0xe222fB) -> True
+            [7][CALL] from=Pool, to=ERC1967Proxy, write(blockTimestamp(uint32): 1700693711, tick(int24): -388182, liquidity(uint128): 0) -> ['0', '1']
+              [8][DELEGATECALL] from=ERC1967Proxy, to=PoolOracle, write(blockTimestamp(uint32): 1700693711, tick(int24): -388182, liquidity(uint128): 0) -> ['0', '1']
+            [7][STATICCALL] from=Pool, to=FRAXStablecoin, balanceOf(account(address): 0x362400) -> 12548817643580283497911
+            [7][STATICCALL] from=Pool, to=FiatTokenProxy, balanceOf(account(address): 0x362400) -> 13572
+              [8][DELEGATECALL] from=FiatTokenProxy, to=FiatTokenV2_1, balanceOf(account(address): 0x362400) -> 13572
+            [7][CALL] from=Pool, to=AntiSnipAttackPositionManager, mintCallback(deltaQty0(uint256): 150480817665596601916, deltaQty1(uint256): 452415, data(bytes): b'\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00...) -> None
+              [8][CALL] from=AntiSnipAttackPositionManager, to=FRAXStablecoin, transferFrom(sender(address): 0xaF2Acf, recipient(address): 0x362400, amount(uint256): 150480817665596601916) -> True
+              [8][CALL] from=AntiSnipAttackPositionManager, to=FiatTokenProxy, transferFrom(from(address): 0xaF2Acf, to(address): 0x362400, value(uint256): 452415) -> True
+                [9][DELEGATECALL] from=FiatTokenProxy, to=FiatTokenV2_1, transferFrom(from(address): 0xaF2Acf, to(address): 0x362400, value(uint256): 452415) -> True
+            [7][STATICCALL] from=Pool, to=FRAXStablecoin, balanceOf(account(address): 0x362400) -> 12699298461245880099827
+            [7][STATICCALL] from=Pool, to=FiatTokenProxy, balanceOf(account(address): 0x362400) -> 465987
+              [8][DELEGATECALL] from=FiatTokenProxy, to=FiatTokenV2_1, balanceOf(account(address): 0x362400) -> 465987
+        [5][STATICCALL] from=0xaf2acf, to=Pool, getLiquidityState() -> ['6130843304189434', '3547889445829', '3547889445829']
+        [5][CALL] from=0xaf2acf, to=AntiSnipAttackPositionManager, removeLiquidity(params(tuple): {'tokenId': 363, 'liquidity': 102179016839...) -> ['25079717812725759910', '75401', '0']
+          [6][CALL] from=AntiSnipAttackPositionManager, to=Pool, burn(tickLower(int24): -388582, tickUpper(int24): -388180, qty(uint128): 1021790168397412) -> ['25079717812725759910', '75401', '0']
+            [7][CALL] from=Pool, to=ERC1967Proxy, write(blockTimestamp(uint32): 1700693711, tick(int24): -388182, liquidity(uint128): 6130843304189434) -> ['0', '1']
+              [8][DELEGATECALL] from=ERC1967Proxy, to=PoolOracle, write(blockTimestamp(uint32): 1700693711, tick(int24): -388182, liquidity(uint128): 6130843304189434) -> ['0', '1']
+            [7][CALL] from=Pool, to=FRAXStablecoin, transfer(recipient(address): 0xe222fB, amount(uint256): 25079717812725759910) -> True
+            [7][CALL] from=Pool, to=FiatTokenProxy, transfer(to(address): 0xe222fB, value(uint256): 75401) -> True
+              [8][DELEGATECALL] from=FiatTokenProxy, to=FiatTokenV2_1, transfer(to(address): 0xe222fB, value(uint256): 75401) -> True
+          [6][STATICCALL] from=AntiSnipAttackPositionManager, to=Factory, vestingPeriod() -> 300
+        [5][STATICCALL] from=0xaf2acf, to=Pool, getLiquidityState() -> ['5109053135792022', '3547889445829', '3547889445829']
+        [5][CALL] from=0xaf2acf, to=Pool, swap(recipient(address): 0xaF2Acf, swapQty(int256): 27736096068180377599999, isToken0(bool): True, limitSqrtP(uint160): 4295128740, data(bytes): b'') -> ['27736096068180377599999', '-377259']
+          [6][CALL] from=Pool, to=ERC1967Proxy, write(blockTimestamp(uint32): 1700693711, tick(int24): -388182, liquidity(uint128): 5109053135792022) -> ['0', '1']
+            [7][DELEGATECALL] from=ERC1967Proxy, to=PoolOracle, write(blockTimestamp(uint32): 1700693711, tick(int24): -388182, liquidity(uint128): 5109053135792022) -> ['0', '1']
+          [6][CALL] from=Pool, to=FiatTokenProxy, transfer(to(address): 0xaF2Acf, value(uint256): 377259) -> True
+            [7][DELEGATECALL] from=FiatTokenProxy, to=FiatTokenV2_1, transfer(to(address): 0xaF2Acf, value(uint256): 377259) -> True
+          [6][STATICCALL] from=Pool, to=FRAXStablecoin, balanceOf(account(address): 0x362400) -> 12674218743433154339917
+          [6][CALL] from=Pool, to=0xaf2acf, swapCallbackint256() -> None
+            [7][CALL] from=0xaf2acf, to=FRAXStablecoin, transfer(recipient(address): 0x362400, amount(uint256): 27736096068180377599999) -> True
+          [6][STATICCALL] from=Pool, to=FRAXStablecoin, balanceOf(account(address): 0x362400) -> 40410314811613531939916
+        [5][STATICCALL] from=0xaf2acf, to=FRAXStablecoin, balanceOf(account(address): 0x362400) -> 40410314811613531939916
+        [5][CALL] from=0xaf2acf, to=Pool, swap(recipient(address): 0xaF2Acf, swapQty(int256): -40410314811613531939916, isToken0(bool): True, limitSqrtP(uint160): 146144670348521010328727305220398882237872..., data(bytes): b'') -> ['-40410314811613531939916', '546747']
+          [6][STATICCALL] from=Pool, to=Factory, feeConfiguration() -> ['0x91c9d4', '16000']
+          [6][CALL] from=Pool, to=ERC1967Proxy, write(blockTimestamp(uint32): 1700693711, tick(int24): -388583, liquidity(uint128): 5109053135792022) -> ['0', '1']
+            [7][DELEGATECALL] from=ERC1967Proxy, to=PoolOracle, write(blockTimestamp(uint32): 1700693711, tick(int24): -388583, liquidity(uint128): 5109053135792022) -> ['0', '1']
+          [6][CALL] from=Pool, to=FRAXStablecoin, transfer(recipient(address): 0xaF2Acf, amount(uint256): 40410314811613531939916) -> True
+          [6][STATICCALL] from=Pool, to=FiatTokenProxy, balanceOf(account(address): 0x362400) -> 13327
+            [7][DELEGATECALL] from=FiatTokenProxy, to=FiatTokenV2_1, balanceOf(account(address): 0x362400) -> 13327
+          [6][CALL] from=Pool, to=0xaf2acf, swapCallbackint256() -> None
+            [7][CALL] from=0xaf2acf, to=FiatTokenProxy, transfer(to(address): 0x362400, value(uint256): 546747) -> True
+              [8][DELEGATECALL] from=FiatTokenProxy, to=FiatTokenV2_1, transfer(to(address): 0x362400, value(uint256): 546747) -> True
+          [6][STATICCALL] from=Pool, to=FiatTokenProxy, balanceOf(account(address): 0x362400) -> 560074
+            [7][DELEGATECALL] from=FiatTokenProxy, to=FiatTokenV2_1, balanceOf(account(address): 0x362400) -> 560074
+        [5][CALL] from=0xaf2acf, to=FRAXStablecoin, transfer(recipient(address): 0xc63B07, amount(uint256): 1000500000000000000000000) -> True
+        [5][STATICCALL] from=0xaf2acf, to=Pool, getPoolState() -> ['293539049659837832076', '-388292', '-388582', 'False']
+        [5][STATICCALL] from=0xaf2acf, to=Pool, getLiquidityState() -> ['10218106271584044', '3558011711148', '3552022446212']
+        [5][STATICCALL] from=0xaf2acf, to=FRAXStablecoin, balanceOf(account(address): 0x362400) -> 0
+        [5][STATICCALL] from=0xaf2acf, to=FRAXStablecoin, balanceOf(account(address): 0xC9B826) -> 0
+        [5][STATICCALL] from=0xaf2acf, to=FiatTokenProxy, balanceOf(account(address): 0x362400) -> 560074
+          [6][DELEGATECALL] from=FiatTokenProxy, to=FiatTokenV2_1, balanceOf(account(address): 0x362400) -> 560074
+        [5][STATICCALL] from=0xaf2acf, to=FiatTokenProxy, balanceOf(account(address): 0xC9B826) -> 0
+          [6][DELEGATECALL] from=FiatTokenProxy, to=FiatTokenV2_1, balanceOf(account(address): 0xC9B826) -> 0
+      [4][STATICCALL] from=UniswapV3Pool, to=FRAXStablecoin, balanceOf(account(address): 0xc63B07) -> 48162105826411024012864390
+      [4][STATICCALL] from=UniswapV3Pool, to=FiatTokenProxy, balanceOf(account(address): 0xc63B07) -> 41109321056142
+        [5][DELEGATECALL] from=FiatTokenProxy, to=FiatTokenV2_1, balanceOf(account(address): 0xc63B07) -> 41109321056142
+    [3][STATICCALL] from=0xaf2acf, to=FRAXStablecoin, balanceOf(account(address): 0xaF2Acf) -> 6255995712288710961401
+    [3][STATICCALL] from=0xaf2acf, to=FiatTokenProxy, balanceOf(account(address): 0xaF2Acf) -> 4806811056
+      [4][DELEGATECALL] from=FiatTokenProxy, to=FiatTokenV2_1, balanceOf(account(address): 0xaF2Acf) -> 4806811056
+    [3][CALL] from=0xaf2acf, to=FRAXStablecoin, transfer(recipient(address): 0xC9B826, amount(uint256): 6255995712288710961401) -> True
+    [3][CALL] from=0xaf2acf, to=FiatTokenProxy, transfer(to(address): 0xC9B826, value(uint256): 4806811056) -> True
+      [4][DELEGATECALL] from=FiatTokenProxy, to=FiatTokenV2_1, transfer(to(address): 0xC9B826, value(uint256): 4806811056) -> True
+    [3][STATICCALL] from=0xaf2acf, to=Pool, getPoolState() -> ['293539049659837832076', '-388292', '-388582', 'False']
+    [3][STATICCALL] from=0xaf2acf, to=Pool, getLiquidityState() -> ['10218106271584044', '3558011711148', '3552022446212']
+    [3][STATICCALL] from=0xaf2acf, to=FRAXStablecoin, balanceOf(account(address): 0x362400) -> 0
+    [3][STATICCALL] from=0xaf2acf, to=FRAXStablecoin, balanceOf(account(address): 0xC9B826) -> 6255995712288710961401
+    [3][STATICCALL] from=0xaf2acf, to=FiatTokenProxy, balanceOf(account(address): 0x362400) -> 560074
+      [4][DELEGATECALL] from=FiatTokenProxy, to=FiatTokenV2_1, balanceOf(account(address): 0x362400) -> 560074
+    [3][STATICCALL] from=0xaf2acf, to=FiatTokenProxy, balanceOf(account(address): 0xC9B826) -> 4806811056
+      [4][DELEGATECALL] from=FiatTokenProxy, to=FiatTokenV2_1, balanceOf(account(address): 0xC9B826) -> 4806811056

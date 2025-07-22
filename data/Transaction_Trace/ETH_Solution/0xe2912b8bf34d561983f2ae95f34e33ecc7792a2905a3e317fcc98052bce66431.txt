@@ -1,0 +1,8 @@
+[1][CALL] from=0x19066f, to=0x1da4bc, 0xf2afdff3() -> None
+  [2][CALL] from=0x1da4bc, to=0xfc7599, 0xfb5e556c() -> None
+    [3][DELEGATECALL] from=0xfc7599, to=0xb30c12, 0xfb5e556c() -> None
+  [2][CALL] from=0x1da4bc, to=0xfc7599, upgradeToAndCalladdress() -> None
+    [3][DELEGATECALL] from=0xfc7599, to=0xb30c12, upgradeToAndCalladdress() -> None
+      [4][STATICCALL] from=0xfc7599, to=0x1da4bc, proxiableUUID() -> 0x360894
+      [4][DELEGATECALL] from=0xfc7599, to=0x1da4bc, 0xfbd28ffb() -> None
+        [5][CALL][479.393838338751] from=0xfc7599, to=0x19066f

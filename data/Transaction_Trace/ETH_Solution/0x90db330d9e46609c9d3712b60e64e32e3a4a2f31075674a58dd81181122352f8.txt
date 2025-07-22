@@ -1,0 +1,58 @@
+[1][CALL] from=0x713d2b, to=0x351D38, 0x305e0d11() -> None
+  [2][STATICCALL] from=0x351D38, to=WETH9, balanceOf((address): 0xBA1222) -> 32560203560896180352774
+  [2][CALL] from=0x351D38, to=Vault, flashLoan(recipient(address): 0x351D38, tokens(address[]): ['0xC02aaA39b223FE8D0A0e5C4F27eAD9083C756C..., amounts(uint256[]): [5426700593482696725462], userData(bytes): b'\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00...) -> None
+    [3][STATICCALL] from=Vault, to=WETH9, balanceOf((address): 0xBA1222) -> 32560203560896180352774
+    [3][STATICCALL] from=Vault, to=ProtocolFeesCollector, getFlashLoanFeePercentage() -> 0
+    [3][CALL] from=Vault, to=WETH9, transfer(dst(address): 0x351D38, wad(uint256): 5426700593482696725462) -> True
+    [3][CALL] from=Vault, to=0x351D38, receiveFlashLoanaddress[]() -> None
+      [4][STATICCALL] from=0x351D38, to=WETH9, balanceOf((address): 0x351D38) -> 5426700593482696725462
+      [4][CALL] from=0x351D38, to=WETH9, withdraw(wad(uint256): 5426700593482696725462) -> None
+        [5][CALL][5426.700593482697] from=WETH9, to=0x351D38
+      [4][CALL] from=0x351D38, to=0x19C553, 0xa7591849() -> 0x000000
+        [5][STATICCALL] from=0x19C553, to=UniswapV2Pair, getReserves() -> ['23852171628908871705', '84763434126023197775089495', '1731324275']
+        [5][CALL] from=0x19C553, to=VirtualToken, cashIn() -> None
+        [5][CALL] from=0x19C553, to=VirtualToken, transfer(to(address): 0xDa173E, value(uint256): 5426700593482696725462) -> True
+        [5][CALL] from=0x19C553, to=UniswapV2Pair, swap(amount0Out(uint256): 0, amount1Out(uint256): 84391389493027127734467689, to(address): 0x351D38, data(bytes): b'') -> None
+          [6][CALL] from=UniswapV2Pair, to=LamboToken, transfer(to(address): 0x351D38, value(uint256): 84391389493027127734467689) -> True
+            [7][DELEGATECALL] from=LamboToken, to=LamboToken, transfer(to(address): 0x351D38, value(uint256): 84391389493027127734467689) -> True
+          [6][STATICCALL] from=UniswapV2Pair, to=VirtualToken, balanceOf(account(address): 0xDa173E) -> 5450552765111605597167
+          [6][STATICCALL] from=UniswapV2Pair, to=LamboToken, balanceOf(account(address): 0xDa173E) -> 372044632996070040621806
+            [7][DELEGATECALL] from=LamboToken, to=LamboToken, balanceOf(account(address): 0xDa173E) -> 372044632996070040621806
+      [4][STATICCALL] from=0x351D38, to=LamboToken, balanceOf(account(address): 0x351D38) -> 84391389493027127734467689
+        [5][DELEGATECALL] from=LamboToken, to=LamboToken, balanceOf(account(address): 0x351D38) -> 84391389493027127734467689
+      [4][CALL] from=0x351D38, to=LamboToken, approve(spender(address): 0x62f250, value(uint256): 84391389493027127734467689) -> True
+        [5][DELEGATECALL] from=LamboToken, to=LamboToken, approve(spender(address): 0x62f250, value(uint256): 84391389493027127734467689) -> True
+      [4][CALL] from=0x351D38, to=0x62f250, 0x6c0472da() -> 0x000000
+        [5][STATICCALL] from=0x62f250, to=UniswapV2Pair, getReserves() -> ['5450552765111605597167', '372044632996070040621806', '1731573563']
+        [5][CALL] from=0x62f250, to=VirtualToken, takeLoan(to(address): 0xDa173E, amount(uint256): 300000000000000000000) -> None
+        [5][CALL] from=0x62f250, to=LamboToken, transferFrom(from(address): 0x351D38, to(address): 0xDa173E, value(uint256): 20477444161855685622814) -> True
+          [6][DELEGATECALL] from=LamboToken, to=LamboToken, transferFrom(from(address): 0x351D38, to(address): 0xDa173E, value(uint256): 20477444161855685622814) -> True
+        [5][CALL] from=0x62f250, to=UniswapV2Pair, mint(to(address): 0x000000) -> 2461476559015390729305
+          [6][STATICCALL] from=UniswapV2Pair, to=VirtualToken, balanceOf(account(address): 0xDa173E) -> 5750552765111605597167
+          [6][STATICCALL] from=UniswapV2Pair, to=LamboToken, balanceOf(account(address): 0xDa173E) -> 392522077157925726244620
+            [7][DELEGATECALL] from=LamboToken, to=LamboToken, balanceOf(account(address): 0xDa173E) -> 392522077157925726244620
+          [6][STATICCALL] from=UniswapV2Pair, to=UniswapV2Factory, feeTo() -> 0x000000
+      [4][STATICCALL] from=0x351D38, to=LamboToken, balanceOf(account(address): 0x351D38) -> 84370912048865272048844875
+        [5][DELEGATECALL] from=LamboToken, to=LamboToken, balanceOf(account(address): 0x351D38) -> 84370912048865272048844875
+      [4][CALL] from=0x351D38, to=LamboToken, approve(spender(address): 0x19C553, value(uint256): 84370912048865272048844875) -> True
+        [5][DELEGATECALL] from=LamboToken, to=LamboToken, approve(spender(address): 0x19C553, value(uint256): 84370912048865272048844875) -> True
+      [4][STATICCALL] from=0x351D38, to=LamboToken, balanceOf(account(address): 0x351D38) -> 84370912048865272048844875
+        [5][DELEGATECALL] from=LamboToken, to=LamboToken, balanceOf(account(address): 0x351D38) -> 84370912048865272048844875
+      [4][CALL] from=0x351D38, to=0x19C553, 0xe784a059() -> 0x000000
+        [5][CALL] from=0x19C553, to=LamboToken, transferFrom(from(address): 0x351D38, to(address): 0x19C553, value(uint256): 6665302051860356491858360) -> True
+          [6][DELEGATECALL] from=LamboToken, to=LamboToken, transferFrom(from(address): 0x351D38, to(address): 0x19C553, value(uint256): 6665302051860356491858360) -> True
+        [5][STATICCALL] from=0x19C553, to=UniswapV2Pair, getReserves() -> ['5750552765111605597167', '392522077157925726244620', '1731573563']
+        [5][CALL] from=0x19C553, to=LamboToken, transfer(to(address): 0xDa173E, value(uint256): 6665302051860356491858360) -> True
+          [6][DELEGATECALL] from=LamboToken, to=LamboToken, transfer(to(address): 0xDa173E, value(uint256): 6665302051860356491858360) -> True
+        [5][CALL] from=0x19C553, to=UniswapV2Pair, swap(amount0Out(uint256): 5429826136855010226551, amount1Out(uint256): 0, to(address): 0x19C553, data(bytes): b'') -> None
+          [6][CALL] from=UniswapV2Pair, to=VirtualToken, transfer(to(address): 0x19C553, value(uint256): 5429826136855010226551) -> True
+          [6][STATICCALL] from=UniswapV2Pair, to=VirtualToken, balanceOf(account(address): 0xDa173E) -> 320726628256595370616
+          [6][STATICCALL] from=UniswapV2Pair, to=LamboToken, balanceOf(account(address): 0xDa173E) -> 7057824129018282218102980
+            [7][DELEGATECALL] from=LamboToken, to=LamboToken, balanceOf(account(address): 0xDa173E) -> 7057824129018282218102980
+        [5][CALL] from=0x19C553, to=VirtualToken, cashOut(amount(uint256): 5429826136855010226551) -> 5429826136855010226551
+          [6][CALL][5429.82613685501] from=VirtualToken, to=0x19C553
+        [5][CALL][5429.82613685501] from=0x19C553, to=0x351D38
+      [4][CALL] from=0x351D38, to=WETH9, deposit() -> None
+      [4][CALL] from=0x351D38, to=WETH9, transfer(dst(address): 0xBA1222, wad(uint256): 5426700593482696725462) -> True
+      [4][CALL][3.125543372313501] from=0x351D38, to=0x713d2b
+    [3][STATICCALL] from=Vault, to=WETH9, balanceOf((address): 0xBA1222) -> 32560203560896180352774

@@ -1,0 +1,620 @@
+[1][CALL] from=0x9f26ae, to=0xe23078, 0x02908e5f() -> None
+  [2][STATICCALL] from=0xe23078, to=AdminUpgradeabilityProxy, poolTokenByProtocol(_protocol(address): 0x91d7b9) -> 0x520d25
+    [3][DELEGATECALL] from=AdminUpgradeabilityProxy, to=SavingsModule, poolTokenByProtocol(_protocol(address): 0x91d7b9) -> 0x520d25
+  [2][CALL] from=0xe23078, to=Dai, approve(usr(address): 0x73fC30, wad(uint256): 115792089237316195423570985008687907853269...) -> True
+  [2][STATICCALL] from=0xe23078, to=Dai, balanceOf((address): 0xe23078) -> 43512808615158688440
+  [2][CALL] from=0xe23078, to=Dai, approve(usr(address): 0x1E0447, wad(uint256): 115792089237316195423570985008687907853269...) -> True
+  [2][CALL] from=0xe23078, to=SoloMargin, 0xa67a6a45() -> None
+    [3][DELEGATECALL] from=SoloMargin, to=OperationImpl, 0xbd76ecfd() -> None
+      [4][STATICCALL] from=SoloMargin, to=DaiPriceOracle, getPrice((address): 0x6B1754) -> None
+      [4][STATICCALL] from=SoloMargin, to=DoubleExponentInterestSetter, getInterestRate((address): 0x6B1754, borrowWei(uint256): 7766225000106569026213688, supplyWei(uint256): 8831803111151239110497606) -> None
+      [4][CALL] from=SoloMargin, to=Dai, transfer(dst(address): 0xe23078, wad(uint256): 800000000000000000000000) -> True
+      [4][CALL] from=SoloMargin, to=0xe23078, callFunctionaddress() -> None
+        [5][CALL] from=0xe23078, to=AdminUpgradeabilityProxy, deposit(_protocol(address): 0x91d7b9, _tokens(address[]): ['0xe2307837524Db8961C4541f943598654240bd6..., _dnAmounts(uint256[]): [5000000]) -> 795972249980147574012740
+          [6][DELEGATECALL] from=AdminUpgradeabilityProxy, to=SavingsModule, deposit(_protocol(address): 0x91d7b9, _tokens(address[]): ['0xe2307837524Db8961C4541f943598654240bd6..., _dnAmounts(uint256[]): [5000000]) -> 795972249980147574012740
+            [7][STATICCALL] from=AdminUpgradeabilityProxy, to=AdminUpgradeabilityProxy, get(_name(string): access) -> 0x5ffcf7
+              [8][DELEGATECALL] from=AdminUpgradeabilityProxy, to=Pool, get(_name(string): access) -> 0x5ffcf7
+            [7][STATICCALL] from=AdminUpgradeabilityProxy, to=AdminUpgradeabilityProxy, isOperationAllowed(operation(uint8): 0, sender(address): 0xe23078) -> True
+              [8][DELEGATECALL] from=AdminUpgradeabilityProxy, to=AccessModule, isOperationAllowed(operation(uint8): 0, sender(address): 0xe23078) -> True
+            [7][CALL] from=AdminUpgradeabilityProxy, to=AdminUpgradeabilityProxy, normalizedBalance() -> 1290403478670672725472810
+              [8][DELEGATECALL] from=AdminUpgradeabilityProxy, to=CurveFiProtocol_SUSD, normalizedBalance() -> 1290403478670672725472810
+                [9][STATICCALL] from=AdminUpgradeabilityProxy, to=Vyper_contract, balanceOf(arg0(address): 0x91d7b9) -> 0
+                [9][STATICCALL] from=AdminUpgradeabilityProxy, to=Vyper_contract, balanceOf(arg0(address): 0x91d7b9) -> 1255193908064253849918753
+                [9][STATICCALL] from=AdminUpgradeabilityProxy, to=Vyper_contract, totalSupply() -> 53685387055233800460225972
+                [9][STATICCALL] from=AdminUpgradeabilityProxy, to=Vyper_contract, balances(arg0(int128): 0) -> 8899481065039734439555140
+                [9][STATICCALL] from=AdminUpgradeabilityProxy, to=Vyper_contract, balances(arg0(int128): 1) -> 17009949920125
+                [9][STATICCALL] from=AdminUpgradeabilityProxy, to=Vyper_contract, balances(arg0(int128): 2) -> 15008354596071
+                [9][STATICCALL] from=AdminUpgradeabilityProxy, to=Vyper_contract, balances(arg0(int128): 3) -> 14273535667883488217977597
+            [7][CALL] from=AdminUpgradeabilityProxy, to=0xe23078, transferFromaddress() -> 0x000000
+              [8][CALL] from=0xe23078, to=AdminUpgradeabilityProxy, deposit(_protocol(address): 0x91d7b9, _tokens(address[]): ['0x6B175474E89094C44Da98b954EedeAC495271d..., _dnAmounts(uint256[]): [792000000000000000000000]) -> 795971245604746064466941
+                [9][DELEGATECALL] from=AdminUpgradeabilityProxy, to=SavingsModule, deposit(_protocol(address): 0x91d7b9, _tokens(address[]): ['0x6B175474E89094C44Da98b954EedeAC495271d..., _dnAmounts(uint256[]): [792000000000000000000000]) -> 795971245604746064466941
+                  [10][STATICCALL] from=AdminUpgradeabilityProxy, to=AdminUpgradeabilityProxy, get(_name(string): access) -> 0x5ffcf7
+                    [11][DELEGATECALL] from=AdminUpgradeabilityProxy, to=Pool, get(_name(string): access) -> 0x5ffcf7
+                  [10][STATICCALL] from=AdminUpgradeabilityProxy, to=AdminUpgradeabilityProxy, isOperationAllowed(operation(uint8): 0, sender(address): 0xe23078) -> True
+                    [11][DELEGATECALL] from=AdminUpgradeabilityProxy, to=AccessModule, isOperationAllowed(operation(uint8): 0, sender(address): 0xe23078) -> True
+                  [10][CALL] from=AdminUpgradeabilityProxy, to=AdminUpgradeabilityProxy, normalizedBalance() -> 1290403478670672725472810
+                    [11][DELEGATECALL] from=AdminUpgradeabilityProxy, to=CurveFiProtocol_SUSD, normalizedBalance() -> 1290403478670672725472810
+                      [12][STATICCALL] from=AdminUpgradeabilityProxy, to=Vyper_contract, balanceOf(arg0(address): 0x91d7b9) -> 0
+                      [12][STATICCALL] from=AdminUpgradeabilityProxy, to=Vyper_contract, balanceOf(arg0(address): 0x91d7b9) -> 1255193908064253849918753
+                      [12][STATICCALL] from=AdminUpgradeabilityProxy, to=Vyper_contract, totalSupply() -> 53685387055233800460225972
+                      [12][STATICCALL] from=AdminUpgradeabilityProxy, to=Vyper_contract, balances(arg0(int128): 0) -> 8899481065039734439555140
+                      [12][STATICCALL] from=AdminUpgradeabilityProxy, to=Vyper_contract, balances(arg0(int128): 1) -> 17009949920125
+                      [12][STATICCALL] from=AdminUpgradeabilityProxy, to=Vyper_contract, balances(arg0(int128): 2) -> 15008354596071
+                      [12][STATICCALL] from=AdminUpgradeabilityProxy, to=Vyper_contract, balances(arg0(int128): 3) -> 14273535667883488217977597
+                  [10][CALL] from=AdminUpgradeabilityProxy, to=Dai, transferFrom(src(address): 0xe23078, dst(address): 0x91d7b9, wad(uint256): 792000000000000000000000) -> True
+                  [10][CALL] from=AdminUpgradeabilityProxy, to=AdminUpgradeabilityProxy, handleDeposit(token(address): 0x6B1754, amount(uint256): 792000000000000000000000) -> None
+                    [11][DELEGATECALL] from=AdminUpgradeabilityProxy, to=CurveFiProtocol_SUSD, handleDeposit(token(address): 0x6B1754, amount(uint256): 792000000000000000000000) -> None
+                      [12][STATICCALL] from=AdminUpgradeabilityProxy, to=Dai, balanceOf((address): 0x91d7b9) -> 792000003619965727906901
+                      [12][STATICCALL] from=AdminUpgradeabilityProxy, to=FiatTokenProxy, balanceOf(account(address): 0x91d7b9) -> 0
+                        [13][DELEGATECALL] from=FiatTokenProxy, to=FiatTokenV2, balanceOf(account(address): 0x91d7b9) -> 0
+                      [12][STATICCALL] from=AdminUpgradeabilityProxy, to=TetherToken, balanceOf(who(address): 0x91d7b9) -> 0
+                      [12][STATICCALL] from=AdminUpgradeabilityProxy, to=ProxyERC20, balanceOf(owner(address): 0x91d7b9) -> 0
+                        [13][CALL] from=ProxyERC20, to=MultiCollateralSynth, balanceOf(account(address): 0x91d7b9) -> 0
+                          [14][STATICCALL] from=MultiCollateralSynth, to=TokenState, balanceOf((address): 0x91d7b9) -> 0
+                      [12][CALL] from=AdminUpgradeabilityProxy, to=Vyper_contract, add_liquidity(uamounts(uint256[4]): [792000003619965727906901, 0, 0, 0], min_mint_amount(uint256): 0) -> None
+                        [13][CALL] from=Vyper_contract, to=Dai, transferFrom(src(address): 0x91d7b9, dst(address): 0xFCBa3E, wad(uint256): 792000003619965727906901) -> True
+                        [13][CALL] from=Vyper_contract, to=Dai, approve(usr(address): 0xA5407e, wad(uint256): 792000003619965727906901) -> True
+                        [13][CALL] from=Vyper_contract, to=Vyper_contract, add_liquidity(amounts(uint256[4]): [792000003619965727906901, 0, 0, 0], min_mint_amount(uint256): 0) -> None
+                          [14][STATICCALL] from=Vyper_contract, to=Vyper_contract, totalSupply() -> 53685387055233800460225972
+                          [14][CALL] from=Vyper_contract, to=Dai, transferFrom(src(address): 0xFCBa3E, dst(address): 0xA5407e, wad(uint256): 792000003619965727906901) -> True
+                          [14][CALL] from=Vyper_contract, to=FiatTokenProxy, transferFrom(from(address): 0xFCBa3E, to(address): 0xA5407e, value(uint256): 0) -> True
+                            [15][DELEGATECALL] from=FiatTokenProxy, to=FiatTokenV2, transferFrom(from(address): 0xFCBa3E, to(address): 0xA5407e, value(uint256): 0) -> True
+                          [14][CALL] from=Vyper_contract, to=TetherToken, transferFrom(_from(address): 0xFCBa3E, _to(address): 0xA5407e, _value(uint256): 0) -> None
+                          [14][CALL] from=Vyper_contract, to=ProxyERC20, transferFrom(from(address): 0xFCBa3E, to(address): 0xA5407e, value(uint256): 0) -> True
+                            [15][CALL] from=ProxyERC20, to=MultiCollateralSynth, setMessageSender(sender(address): 0xA5407e) -> None
+                            [15][CALL] from=ProxyERC20, to=MultiCollateralSynth, transferFrom(from(address): 0xFCBa3E, to(address): 0xA5407e, value(uint256): 0) -> True
+                              [16][STATICCALL] from=MultiCollateralSynth, to=ExchangerWithVirtualSynth, maxSecsLeftInWaitingPeriod(account(address): 0xFCBa3E, currencyKey(bytes32): b'sUSD\x00\x00\x00\x00\x00\x00\x00\x00\x00...) -> 0
+                                [17][STATICCALL] from=ExchangerWithVirtualSynth, to=ExchangeState, getMaxTimestamp(account(address): 0xFCBa3E, currencyKey(bytes32): b'sUSD\x00\x00\x00\x00\x00\x00\x00\x00\x00...) -> 0
+                                [17][STATICCALL] from=ExchangerWithVirtualSynth, to=FlexibleStorage, getUIntValue(contractName(bytes32): b'SystemSettings\x00\x00\x00\x00\x00\x00\x..., record(bytes32): b'waitingPeriodSecs\x00\x00\x00\x00\x00\x0...) -> 180
+                              [16][STATICCALL] from=MultiCollateralSynth, to=ExchangerWithVirtualSynth, settlementOwing(account(address): 0xFCBa3E, currencyKey(bytes32): b'sUSD\x00\x00\x00\x00\x00\x00\x00\x00\x00...) -> ['0', '0', '0']
+                                [17][STATICCALL] from=ExchangerWithVirtualSynth, to=ExchangeState, getLengthOfEntries(account(address): 0xFCBa3E, currencyKey(bytes32): b'sUSD\x00\x00\x00\x00\x00\x00\x00\x00\x00...) -> 0
+                              [16][STATICCALL] from=MultiCollateralSynth, to=TokenState, balanceOf((address): 0xFCBa3E) -> 0
+                              [16][STATICCALL] from=MultiCollateralSynth, to=SystemStatus, requireSynthActive(currencyKey(bytes32): b'sUSD\x00\x00\x00\x00\x00\x00\x00\x00\x00...) -> None
+                              [16][STATICCALL] from=MultiCollateralSynth, to=TokenState, allowance((address): 0xA5407e) -> 0
+                              [16][STATICCALL] from=MultiCollateralSynth, to=TokenState, allowance((address): 0xA5407e) -> 0
+                              [16][CALL] from=MultiCollateralSynth, to=TokenState, setAllowance(tokenOwner(address): 0xFCBa3E, spender(address): 0xA5407e, value(uint256): 0) -> None
+                              [16][STATICCALL] from=MultiCollateralSynth, to=TokenState, balanceOf((address): 0xFCBa3E) -> 0
+                              [16][CALL] from=MultiCollateralSynth, to=TokenState, setBalanceOf(account(address): 0xFCBa3E, value(uint256): 0) -> None
+                              [16][STATICCALL] from=MultiCollateralSynth, to=TokenState, balanceOf((address): 0xA5407e) -> 14306351627055350785259751
+                              [16][CALL] from=MultiCollateralSynth, to=TokenState, setBalanceOf(account(address): 0xA5407e, value(uint256): 14306351627055350785259751) -> None
+                              [16][CALL] from=MultiCollateralSynth, to=ProxyERC20, _emit(callData(bytes): b'\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00..., numTopics(uint256): 3, topic1(bytes32): b'\xdd\xf2R\xad\x1b\xe2\xc8\x9bi\xc2\xb0h\..., topic2(bytes32): b'\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00..., topic3(bytes32): b'\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00..., topic4(bytes32): b'\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00...) -> None
+                          [14][CALL] from=Vyper_contract, to=Vyper_contract, mint(_to(address): 0xFCBa3E, _value(uint256): 774405484381513166003439) -> None
+                        [13][STATICCALL] from=Vyper_contract, to=Vyper_contract, balanceOf(arg0(address): 0xFCBa3E) -> 774405484438511216425651
+                        [13][CALL] from=Vyper_contract, to=Vyper_contract, transfer(_to(address): 0x91d7b9, _value(uint256): 774405484438511216425651) -> True
+                      [12][STATICCALL] from=AdminUpgradeabilityProxy, to=Vyper_contract, balanceOf(arg0(address): 0x91d7b9) -> 774405484438511216425651
+                      [12][CALL] from=AdminUpgradeabilityProxy, to=Vyper_contract, deposit(_value(uint256): 774405484438511216425651) -> None
+                        [13][CALL] from=Vyper_contract, to=Vyper_contract, future_epoch_time_write() -> 1628893048
+                        [13][STATICCALL] from=Vyper_contract, to=Vyper_contract, rate() -> 8714335457889396245
+                        [13][CALL] from=Vyper_contract, to=Vyper_contract, checkpoint_gauge(addr(address): 0xA90996) -> None
+                        [13][STATICCALL] from=Vyper_contract, to=Vyper_contract, gauge_relative_weight(addr(address): 0xA90996) -> 60548135958686321
+                        [13][STATICCALL] from=Vyper_contract, to=ProxyERC20, balanceOf(owner(address): 0xA90996) -> 44550871851128887152393
+                          [14][CALL] from=ProxyERC20, to=Synthetix, balanceOf(account(address): 0xA90996) -> 44550871851128887152393
+                            [15][STATICCALL] from=Synthetix, to=TokenState, balanceOf((address): 0xA90996) -> 44550871851128887152393
+                        [13][CALL] from=Vyper_contract, to=CurveRewards, getReward() -> None
+                          [14][CALL] from=CurveRewards, to=ProxyERC20, transfer(to(address): 0xA90996, value(uint256): 1631015570059673257) -> True
+                            [15][CALL] from=ProxyERC20, to=Synthetix, setMessageSender(sender(address): 0xDCB6A5) -> None
+                            [15][CALL] from=ProxyERC20, to=Synthetix, transfer(to(address): 0xA90996, value(uint256): 1631015570059673257) -> True
+                              [16][STATICCALL] from=Synthetix, to=SystemStatus, requireSystemActive() -> None
+                              [16][STATICCALL] from=Synthetix, to=SynthetixState, issuanceData((address): 0xDCB6A5) -> ['0', '0']
+                              [16][STATICCALL] from=Synthetix, to=TokenState, balanceOf((address): 0xDCB6A5) -> 13078083398622105932480
+                              [16][CALL] from=Synthetix, to=TokenState, setBalanceOf(account(address): 0xDCB6A5, value(uint256): 13076452383052046259223) -> None
+                              [16][STATICCALL] from=Synthetix, to=TokenState, balanceOf((address): 0xA90996) -> 44550871851128887152393
+                              [16][CALL] from=Synthetix, to=TokenState, setBalanceOf(account(address): 0xA90996, value(uint256): 44552502866698946825650) -> None
+                              [16][CALL] from=Synthetix, to=ProxyERC20, _emit(callData(bytes): b'\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00..., numTopics(uint256): 3, topic1(bytes32): b'\xdd\xf2R\xad\x1b\xe2\xc8\x9bi\xc2\xb0h\..., topic2(bytes32): b'\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00..., topic3(bytes32): b'\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00..., topic4(bytes32): b'\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00...) -> None
+                        [13][STATICCALL] from=Vyper_contract, to=ProxyERC20, balanceOf(owner(address): 0xA90996) -> 44552502866698946825650
+                          [14][CALL] from=ProxyERC20, to=Synthetix, balanceOf(account(address): 0xA90996) -> 44552502866698946825650
+                            [15][STATICCALL] from=Synthetix, to=TokenState, balanceOf((address): 0xA90996) -> 44552502866698946825650
+                        [13][STATICCALL] from=Vyper_contract, to=Vyper_contract, balanceOf(addr(address): 0x91d7b9) -> 0
+                        [13][STATICCALL] from=Vyper_contract, to=Vyper_contract, totalSupply() -> 41884685415013597399299124
+                        [13][CALL] from=Vyper_contract, to=Vyper_contract, transferFrom(_from(address): 0x91d7b9, _to(address): 0xA90996, _value(uint256): 774405484438511216425651) -> True
+                        [13][CALL] from=Vyper_contract, to=CurveRewards, stake(amount(uint256): 774405484438511216425651) -> None
+                          [14][CALL] from=CurveRewards, to=Vyper_contract, transferFrom(_from(address): 0xA90996, _to(address): 0xDCB6A5, _value(uint256): 774405484438511216425651) -> True
+                  [10][CALL] from=AdminUpgradeabilityProxy, to=AdminUpgradeabilityProxy, normalizedBalance() -> 2086374724275418789939751
+                    [11][DELEGATECALL] from=AdminUpgradeabilityProxy, to=CurveFiProtocol_SUSD, normalizedBalance() -> 2086374724275418789939751
+                      [12][STATICCALL] from=AdminUpgradeabilityProxy, to=Vyper_contract, balanceOf(arg0(address): 0x91d7b9) -> 0
+                      [12][STATICCALL] from=AdminUpgradeabilityProxy, to=Vyper_contract, balanceOf(arg0(address): 0x91d7b9) -> 2029599392502765066344404
+                      [12][STATICCALL] from=AdminUpgradeabilityProxy, to=Vyper_contract, totalSupply() -> 54459792539615313626229411
+                      [12][STATICCALL] from=AdminUpgradeabilityProxy, to=Vyper_contract, balances(arg0(int128): 0) -> 9691436828848212663424431
+                      [12][STATICCALL] from=AdminUpgradeabilityProxy, to=Vyper_contract, balances(arg0(int128): 1) -> 17009933558704
+                      [12][STATICCALL] from=AdminUpgradeabilityProxy, to=Vyper_contract, balances(arg0(int128): 2) -> 15008340159932
+                      [12][STATICCALL] from=AdminUpgradeabilityProxy, to=Vyper_contract, balances(arg0(int128): 3) -> 14273521938546890056706691
+                  [10][STATICCALL] from=AdminUpgradeabilityProxy, to=AdminUpgradeabilityProxy, balanceOf(account(address): 0xe23078) -> 990144687954959818
+                    [11][DELEGATECALL] from=AdminUpgradeabilityProxy, to=PoolToken_CurveFi_SUSD, balanceOf(account(address): 0xe23078) -> 990144687954959818
+                  [10][CALL] from=AdminUpgradeabilityProxy, to=AdminUpgradeabilityProxy, mint(account(address): 0xe23078, amount(uint256): 792000000000000000000000) -> True
+                    [11][DELEGATECALL] from=AdminUpgradeabilityProxy, to=PoolToken_CurveFi_SUSD, mint(account(address): 0xe23078, amount(uint256): 792000000000000000000000) -> True
+                      [12][STATICCALL] from=AdminUpgradeabilityProxy, to=AdminUpgradeabilityProxy, get(_name(string): rewardDistributions) -> 0x840566
+                        [13][DELEGATECALL] from=AdminUpgradeabilityProxy, to=Pool, get(_name(string): rewardDistributions) -> 0x840566
+                      [12][CALL] from=AdminUpgradeabilityProxy, to=AdminUpgradeabilityProxy, poolTokenBalanceChanged(user(address): 0xe23078) -> None
+                        [13][DELEGATECALL] from=AdminUpgradeabilityProxy, to=RewardDistributionModule, poolTokenBalanceChanged(user(address): 0xe23078) -> None
+                          [14][STATICCALL] from=AdminUpgradeabilityProxy, to=AdminUpgradeabilityProxy, distributionBalanceOf(account(address): 0xe23078) -> 792000990144687954959818
+                            [15][DELEGATECALL] from=AdminUpgradeabilityProxy, to=PoolToken_CurveFi_SUSD, distributionBalanceOf(account(address): 0xe23078) -> 792000990144687954959818
+                  [10][CALL] from=AdminUpgradeabilityProxy, to=AdminUpgradeabilityProxy, distribute(amount(uint256): 3971245604746064466941) -> None
+                    [11][DELEGATECALL] from=AdminUpgradeabilityProxy, to=PoolToken_CurveFi_SUSD, distribute(amount(uint256): 3971245604746064466941) -> None
+                  [10][STATICCALL] from=AdminUpgradeabilityProxy, to=AdminUpgradeabilityProxy, totalSupply() -> 2098049789675941042581438
+                    [11][DELEGATECALL] from=AdminUpgradeabilityProxy, to=PoolToken_CurveFi_SUSD, totalSupply() -> 2098049789675941042581438
+              [8][CALL] from=0xe23078, to=Dai, transfer(dst(address): 0x91d7b9, wad(uint256): 1000000000000000000) -> True
+            [7][CALL] from=AdminUpgradeabilityProxy, to=AdminUpgradeabilityProxy, handleDeposit(token(address): 0xe23078, amount(uint256): 5000000) -> None
+              [8][DELEGATECALL] from=AdminUpgradeabilityProxy, to=CurveFiProtocol_SUSD, handleDeposit(token(address): 0xe23078, amount(uint256): 5000000) -> None
+                [9][STATICCALL] from=AdminUpgradeabilityProxy, to=Dai, balanceOf((address): 0x91d7b9) -> 1000000000000000000
+                [9][STATICCALL] from=AdminUpgradeabilityProxy, to=FiatTokenProxy, balanceOf(account(address): 0x91d7b9) -> 0
+                  [10][DELEGATECALL] from=FiatTokenProxy, to=FiatTokenV2, balanceOf(account(address): 0x91d7b9) -> 0
+                [9][STATICCALL] from=AdminUpgradeabilityProxy, to=TetherToken, balanceOf(who(address): 0x91d7b9) -> 0
+                [9][STATICCALL] from=AdminUpgradeabilityProxy, to=ProxyERC20, balanceOf(owner(address): 0x91d7b9) -> 0
+                  [10][CALL] from=ProxyERC20, to=MultiCollateralSynth, balanceOf(account(address): 0x91d7b9) -> 0
+                    [11][STATICCALL] from=MultiCollateralSynth, to=TokenState, balanceOf((address): 0x91d7b9) -> 0
+                [9][CALL] from=AdminUpgradeabilityProxy, to=Vyper_contract, add_liquidity(uamounts(uint256[4]): [1000000000000000000, 0, 0, 0], min_mint_amount(uint256): 0) -> None
+                  [10][CALL] from=Vyper_contract, to=Dai, transferFrom(src(address): 0x91d7b9, dst(address): 0xFCBa3E, wad(uint256): 1000000000000000000) -> True
+                  [10][CALL] from=Vyper_contract, to=Dai, approve(usr(address): 0xA5407e, wad(uint256): 1000000000000000000) -> True
+                  [10][CALL] from=Vyper_contract, to=Vyper_contract, add_liquidity(amounts(uint256[4]): [1000000000000000000, 0, 0, 0], min_mint_amount(uint256): 0) -> None
+                    [11][STATICCALL] from=Vyper_contract, to=Vyper_contract, totalSupply() -> 54459792539615313626229411
+                    [11][CALL] from=Vyper_contract, to=Dai, transferFrom(src(address): 0xFCBa3E, dst(address): 0xA5407e, wad(uint256): 1000000000000000000) -> True
+                    [11][CALL] from=Vyper_contract, to=FiatTokenProxy, transferFrom(from(address): 0xFCBa3E, to(address): 0xA5407e, value(uint256): 0) -> True
+                      [12][DELEGATECALL] from=FiatTokenProxy, to=FiatTokenV2, transferFrom(from(address): 0xFCBa3E, to(address): 0xA5407e, value(uint256): 0) -> True
+                    [11][CALL] from=Vyper_contract, to=TetherToken, transferFrom(_from(address): 0xFCBa3E, _to(address): 0xA5407e, _value(uint256): 0) -> None
+                    [11][CALL] from=Vyper_contract, to=ProxyERC20, transferFrom(from(address): 0xFCBa3E, to(address): 0xA5407e, value(uint256): 0) -> True
+                      [12][CALL] from=ProxyERC20, to=MultiCollateralSynth, setMessageSender(sender(address): 0xA5407e) -> None
+                      [12][CALL] from=ProxyERC20, to=MultiCollateralSynth, transferFrom(from(address): 0xFCBa3E, to(address): 0xA5407e, value(uint256): 0) -> True
+                        [13][STATICCALL] from=MultiCollateralSynth, to=ExchangerWithVirtualSynth, maxSecsLeftInWaitingPeriod(account(address): 0xFCBa3E, currencyKey(bytes32): b'sUSD\x00\x00\x00\x00\x00\x00\x00\x00\x00...) -> 0
+                          [14][STATICCALL] from=ExchangerWithVirtualSynth, to=ExchangeState, getMaxTimestamp(account(address): 0xFCBa3E, currencyKey(bytes32): b'sUSD\x00\x00\x00\x00\x00\x00\x00\x00\x00...) -> 0
+                          [14][STATICCALL] from=ExchangerWithVirtualSynth, to=FlexibleStorage, getUIntValue(contractName(bytes32): b'SystemSettings\x00\x00\x00\x00\x00\x00\x..., record(bytes32): b'waitingPeriodSecs\x00\x00\x00\x00\x00\x0...) -> 180
+                        [13][STATICCALL] from=MultiCollateralSynth, to=ExchangerWithVirtualSynth, settlementOwing(account(address): 0xFCBa3E, currencyKey(bytes32): b'sUSD\x00\x00\x00\x00\x00\x00\x00\x00\x00...) -> ['0', '0', '0']
+                          [14][STATICCALL] from=ExchangerWithVirtualSynth, to=ExchangeState, getLengthOfEntries(account(address): 0xFCBa3E, currencyKey(bytes32): b'sUSD\x00\x00\x00\x00\x00\x00\x00\x00\x00...) -> 0
+                        [13][STATICCALL] from=MultiCollateralSynth, to=TokenState, balanceOf((address): 0xFCBa3E) -> 0
+                        [13][STATICCALL] from=MultiCollateralSynth, to=SystemStatus, requireSynthActive(currencyKey(bytes32): b'sUSD\x00\x00\x00\x00\x00\x00\x00\x00\x00...) -> None
+                        [13][STATICCALL] from=MultiCollateralSynth, to=TokenState, allowance((address): 0xA5407e) -> 0
+                        [13][STATICCALL] from=MultiCollateralSynth, to=TokenState, allowance((address): 0xA5407e) -> 0
+                        [13][CALL] from=MultiCollateralSynth, to=TokenState, setAllowance(tokenOwner(address): 0xFCBa3E, spender(address): 0xA5407e, value(uint256): 0) -> None
+                        [13][STATICCALL] from=MultiCollateralSynth, to=TokenState, balanceOf((address): 0xFCBa3E) -> 0
+                        [13][CALL] from=MultiCollateralSynth, to=TokenState, setBalanceOf(account(address): 0xFCBa3E, value(uint256): 0) -> None
+                        [13][STATICCALL] from=MultiCollateralSynth, to=TokenState, balanceOf((address): 0xA5407e) -> 14306351627055350785259751
+                        [13][CALL] from=MultiCollateralSynth, to=TokenState, setBalanceOf(account(address): 0xA5407e, value(uint256): 14306351627055350785259751) -> None
+                        [13][CALL] from=MultiCollateralSynth, to=ProxyERC20, _emit(callData(bytes): b'\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00..., numTopics(uint256): 3, topic1(bytes32): b'\xdd\xf2R\xad\x1b\xe2\xc8\x9bi\xc2\xb0h\..., topic2(bytes32): b'\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00..., topic3(bytes32): b'\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00..., topic4(bytes32): b'\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00...) -> None
+                    [11][CALL] from=Vyper_contract, to=Vyper_contract, mint(_to(address): 0xFCBa3E, _value(uint256): 977212827188217272) -> None
+                  [10][STATICCALL] from=Vyper_contract, to=Vyper_contract, balanceOf(arg0(address): 0xFCBa3E) -> 977212827188217272
+                  [10][CALL] from=Vyper_contract, to=Vyper_contract, transfer(_to(address): 0x91d7b9, _value(uint256): 977212827188217272) -> True
+                [9][STATICCALL] from=AdminUpgradeabilityProxy, to=Vyper_contract, balanceOf(arg0(address): 0x91d7b9) -> 977212827188217272
+                [9][CALL] from=AdminUpgradeabilityProxy, to=Vyper_contract, deposit(_value(uint256): 977212827188217272) -> None
+                  [10][CALL] from=Vyper_contract, to=Vyper_contract, future_epoch_time_write() -> 1628893048
+                  [10][STATICCALL] from=Vyper_contract, to=Vyper_contract, rate() -> 8714335457889396245
+                  [10][CALL] from=Vyper_contract, to=Vyper_contract, checkpoint_gauge(addr(address): 0xA90996) -> None
+                  [10][STATICCALL] from=Vyper_contract, to=ProxyERC20, balanceOf(owner(address): 0xA90996) -> 44552502866698946825650
+                    [11][CALL] from=ProxyERC20, to=Synthetix, balanceOf(account(address): 0xA90996) -> 44552502866698946825650
+                      [12][STATICCALL] from=Synthetix, to=TokenState, balanceOf((address): 0xA90996) -> 44552502866698946825650
+                  [10][CALL] from=Vyper_contract, to=CurveRewards, getReward() -> None
+                  [10][STATICCALL] from=Vyper_contract, to=ProxyERC20, balanceOf(owner(address): 0xA90996) -> 44552502866698946825650
+                    [11][CALL] from=ProxyERC20, to=Synthetix, balanceOf(account(address): 0xA90996) -> 44552502866698946825650
+                      [12][STATICCALL] from=Synthetix, to=TokenState, balanceOf((address): 0xA90996) -> 44552502866698946825650
+                  [10][STATICCALL] from=Vyper_contract, to=Vyper_contract, balanceOf(addr(address): 0x91d7b9) -> 0
+                  [10][STATICCALL] from=Vyper_contract, to=Vyper_contract, totalSupply() -> 41884685415013597399299124
+                  [10][CALL] from=Vyper_contract, to=Vyper_contract, transferFrom(_from(address): 0x91d7b9, _to(address): 0xA90996, _value(uint256): 977212827188217272) -> True
+                  [10][CALL] from=Vyper_contract, to=CurveRewards, stake(amount(uint256): 977212827188217272) -> None
+                    [11][CALL] from=CurveRewards, to=Vyper_contract, transferFrom(_from(address): 0xA90996, _to(address): 0xDCB6A5, _value(uint256): 977212827188217272) -> True
+            [7][CALL] from=AdminUpgradeabilityProxy, to=AdminUpgradeabilityProxy, normalizedBalance() -> 2086375728650820299485550
+              [8][DELEGATECALL] from=AdminUpgradeabilityProxy, to=CurveFiProtocol_SUSD, normalizedBalance() -> 2086375728650820299485550
+                [9][STATICCALL] from=AdminUpgradeabilityProxy, to=Vyper_contract, balanceOf(arg0(address): 0x91d7b9) -> 0
+                [9][STATICCALL] from=AdminUpgradeabilityProxy, to=Vyper_contract, balanceOf(arg0(address): 0x91d7b9) -> 2029600369715592254561676
+                [9][STATICCALL] from=AdminUpgradeabilityProxy, to=Vyper_contract, totalSupply() -> 54459793516828140814446683
+                [9][STATICCALL] from=AdminUpgradeabilityProxy, to=Vyper_contract, balances(arg0(int128): 0) -> 9691437828793141926644172
+                [9][STATICCALL] from=AdminUpgradeabilityProxy, to=Vyper_contract, balances(arg0(int128): 1) -> 17009933558684
+                [9][STATICCALL] from=AdminUpgradeabilityProxy, to=Vyper_contract, balances(arg0(int128): 2) -> 15008340159915
+                [9][STATICCALL] from=AdminUpgradeabilityProxy, to=Vyper_contract, balances(arg0(int128): 3) -> 14273521938529811627092749
+            [7][STATICCALL] from=AdminUpgradeabilityProxy, to=AdminUpgradeabilityProxy, balanceOf(account(address): 0xe23078) -> 792000990144687954959818
+              [8][DELEGATECALL] from=AdminUpgradeabilityProxy, to=PoolToken_CurveFi_SUSD, balanceOf(account(address): 0xe23078) -> 792000990144687954959818
+            [7][CALL] from=AdminUpgradeabilityProxy, to=AdminUpgradeabilityProxy, mint(account(address): 0xe23078, amount(uint256): 795972249980147574012740) -> True
+              [8][DELEGATECALL] from=AdminUpgradeabilityProxy, to=PoolToken_CurveFi_SUSD, mint(account(address): 0xe23078, amount(uint256): 795972249980147574012740) -> True
+                [9][STATICCALL] from=AdminUpgradeabilityProxy, to=AdminUpgradeabilityProxy, get(_name(string): rewardDistributions) -> 0x840566
+                  [10][DELEGATECALL] from=AdminUpgradeabilityProxy, to=Pool, get(_name(string): rewardDistributions) -> 0x840566
+                [9][CALL] from=AdminUpgradeabilityProxy, to=AdminUpgradeabilityProxy, poolTokenBalanceChanged(user(address): 0xe23078) -> None
+                  [10][DELEGATECALL] from=AdminUpgradeabilityProxy, to=RewardDistributionModule, poolTokenBalanceChanged(user(address): 0xe23078) -> None
+                    [11][STATICCALL] from=AdminUpgradeabilityProxy, to=AdminUpgradeabilityProxy, distributionBalanceOf(account(address): 0xe23078) -> 1587973240124835528972558
+                      [12][DELEGATECALL] from=AdminUpgradeabilityProxy, to=PoolToken_CurveFi_SUSD, distributionBalanceOf(account(address): 0xe23078) -> 1587973240124835528972558
+            [7][STATICCALL] from=AdminUpgradeabilityProxy, to=AdminUpgradeabilityProxy, totalSupply() -> 2894022039656088616594178
+              [8][DELEGATECALL] from=AdminUpgradeabilityProxy, to=PoolToken_CurveFi_SUSD, totalSupply() -> 2894022039656088616594178
+        [5][CALL] from=0xe23078, to=AdminUpgradeabilityProxy, normalizedBalance() -> 2086375728650820299485550
+          [6][DELEGATECALL] from=AdminUpgradeabilityProxy, to=CurveFiProtocol_SUSD, normalizedBalance() -> 2086375728650820299485550
+            [7][STATICCALL] from=AdminUpgradeabilityProxy, to=Vyper_contract, balanceOf(arg0(address): 0x91d7b9) -> 0
+            [7][STATICCALL] from=AdminUpgradeabilityProxy, to=Vyper_contract, balanceOf(arg0(address): 0x91d7b9) -> 2029600369715592254561676
+            [7][STATICCALL] from=AdminUpgradeabilityProxy, to=Vyper_contract, totalSupply() -> 54459793516828140814446683
+            [7][STATICCALL] from=AdminUpgradeabilityProxy, to=Vyper_contract, balances(arg0(int128): 0) -> 9691437828793141926644172
+            [7][STATICCALL] from=AdminUpgradeabilityProxy, to=Vyper_contract, balances(arg0(int128): 1) -> 17009933558684
+            [7][STATICCALL] from=AdminUpgradeabilityProxy, to=Vyper_contract, balances(arg0(int128): 2) -> 15008340159915
+            [7][STATICCALL] from=AdminUpgradeabilityProxy, to=Vyper_contract, balances(arg0(int128): 3) -> 14273521938529811627092749
+        [5][STATICCALL] from=0xe23078, to=AdminUpgradeabilityProxy, balanceOf(account(address): 0xe23078) -> 1587973240124835528972558
+          [6][DELEGATECALL] from=AdminUpgradeabilityProxy, to=PoolToken_CurveFi_SUSD, balanceOf(account(address): 0xe23078) -> 1587973240124835528972558
+        [5][CALL] from=0xe23078, to=AdminUpgradeabilityProxy, withdraw(_protocol(address): 0x91d7b9, token(address): 0x6B1754, dnAmount(uint256): 1572093507723587173682832, maxNAmount(uint256): 0) -> 1587725379869565712209252
+          [6][DELEGATECALL] from=AdminUpgradeabilityProxy, to=SavingsModule, withdraw(_protocol(address): 0x91d7b9, token(address): 0x6B1754, dnAmount(uint256): 1572093507723587173682832, maxNAmount(uint256): 0) -> 1587725379869565712209252
+            [7][STATICCALL] from=AdminUpgradeabilityProxy, to=AdminUpgradeabilityProxy, get(_name(string): access) -> 0x5ffcf7
+              [8][DELEGATECALL] from=AdminUpgradeabilityProxy, to=Pool, get(_name(string): access) -> 0x5ffcf7
+            [7][STATICCALL] from=AdminUpgradeabilityProxy, to=AdminUpgradeabilityProxy, isOperationAllowed(operation(uint8): 1, sender(address): 0xe23078) -> True
+              [8][DELEGATECALL] from=AdminUpgradeabilityProxy, to=AccessModule, isOperationAllowed(operation(uint8): 1, sender(address): 0xe23078) -> True
+            [7][CALL] from=AdminUpgradeabilityProxy, to=AdminUpgradeabilityProxy, normalizedBalance() -> 2086375728650820299485550
+              [8][DELEGATECALL] from=AdminUpgradeabilityProxy, to=CurveFiProtocol_SUSD, normalizedBalance() -> 2086375728650820299485550
+                [9][STATICCALL] from=AdminUpgradeabilityProxy, to=Vyper_contract, balanceOf(arg0(address): 0x91d7b9) -> 0
+                [9][STATICCALL] from=AdminUpgradeabilityProxy, to=Vyper_contract, balanceOf(arg0(address): 0x91d7b9) -> 2029600369715592254561676
+                [9][STATICCALL] from=AdminUpgradeabilityProxy, to=Vyper_contract, totalSupply() -> 54459793516828140814446683
+                [9][STATICCALL] from=AdminUpgradeabilityProxy, to=Vyper_contract, balances(arg0(int128): 0) -> 9691437828793141926644172
+                [9][STATICCALL] from=AdminUpgradeabilityProxy, to=Vyper_contract, balances(arg0(int128): 1) -> 17009933558684
+                [9][STATICCALL] from=AdminUpgradeabilityProxy, to=Vyper_contract, balances(arg0(int128): 2) -> 15008340159915
+                [9][STATICCALL] from=AdminUpgradeabilityProxy, to=Vyper_contract, balances(arg0(int128): 3) -> 14273521938529811627092749
+            [7][CALL] from=AdminUpgradeabilityProxy, to=AdminUpgradeabilityProxy, withdraw(beneficiary(address): 0xe23078, token(uint256[]): 0x6B1754) -> None
+              [8][DELEGATECALL] from=AdminUpgradeabilityProxy, to=CurveFiProtocol_SUSD, withdraw(beneficiary(address): 0xe23078, token(uint256[]): 0x6B1754) -> None
+                [9][STATICCALL] from=AdminUpgradeabilityProxy, to=Dai, balanceOf((address): 0x91d7b9) -> 0
+                [9][STATICCALL] from=AdminUpgradeabilityProxy, to=Vyper_contract, balanceOf(arg0(address): 0x91d7b9) -> 0
+                [9][STATICCALL] from=AdminUpgradeabilityProxy, to=Vyper_contract, balanceOf(arg0(address): 0x91d7b9) -> 2029600369715592254561676
+                [9][STATICCALL] from=AdminUpgradeabilityProxy, to=Vyper_contract, totalSupply() -> 54459793516828140814446683
+                [9][STATICCALL] from=AdminUpgradeabilityProxy, to=Vyper_contract, balances(arg0(int128): 0) -> 9691437828793141926644172
+                [9][STATICCALL] from=AdminUpgradeabilityProxy, to=Vyper_contract, balances(arg0(int128): 1) -> 17009933558684
+                [9][STATICCALL] from=AdminUpgradeabilityProxy, to=Vyper_contract, balances(arg0(int128): 2) -> 15008340159915
+                [9][STATICCALL] from=AdminUpgradeabilityProxy, to=Vyper_contract, balances(arg0(int128): 3) -> 14273521938529811627092749
+                [9][STATICCALL] from=AdminUpgradeabilityProxy, to=Vyper_contract, balanceOf(arg0(address): 0x91d7b9) -> 0
+                [9][STATICCALL] from=AdminUpgradeabilityProxy, to=Vyper_contract, balanceOf(arg0(address): 0x91d7b9) -> 2029600369715592254561676
+                [9][CALL] from=AdminUpgradeabilityProxy, to=Vyper_contract, withdraw(_value(uint256): 1544606149263564729691843) -> None
+                  [10][CALL] from=Vyper_contract, to=Vyper_contract, future_epoch_time_write() -> 1628893048
+                  [10][STATICCALL] from=Vyper_contract, to=Vyper_contract, rate() -> 8714335457889396245
+                  [10][CALL] from=Vyper_contract, to=Vyper_contract, checkpoint_gauge(addr(address): 0xA90996) -> None
+                  [10][STATICCALL] from=Vyper_contract, to=ProxyERC20, balanceOf(owner(address): 0xA90996) -> 44552502866698946825650
+                    [11][CALL] from=ProxyERC20, to=Synthetix, balanceOf(account(address): 0xA90996) -> 44552502866698946825650
+                      [12][STATICCALL] from=Synthetix, to=TokenState, balanceOf((address): 0xA90996) -> 44552502866698946825650
+                  [10][CALL] from=Vyper_contract, to=CurveRewards, getReward() -> None
+                  [10][STATICCALL] from=Vyper_contract, to=ProxyERC20, balanceOf(owner(address): 0xA90996) -> 44552502866698946825650
+                    [11][CALL] from=ProxyERC20, to=Synthetix, balanceOf(account(address): 0xA90996) -> 44552502866698946825650
+                      [12][STATICCALL] from=Synthetix, to=TokenState, balanceOf((address): 0xA90996) -> 44552502866698946825650
+                  [10][STATICCALL] from=Vyper_contract, to=Vyper_contract, balanceOf(addr(address): 0x91d7b9) -> 0
+                  [10][STATICCALL] from=Vyper_contract, to=Vyper_contract, totalSupply() -> 41884685415013597399299124
+                  [10][CALL] from=Vyper_contract, to=CurveRewards, withdraw(amount(uint256): 1544606149263564729691843) -> None
+                    [11][CALL] from=CurveRewards, to=Vyper_contract, transfer(_to(address): 0xA90996, _value(uint256): 1544606149263564729691843) -> True
+                  [10][CALL] from=Vyper_contract, to=Vyper_contract, transfer(_to(address): 0x91d7b9, _value(uint256): 1544606149263564729691843) -> True
+                [9][CALL] from=AdminUpgradeabilityProxy, to=Vyper_contract, remove_liquidity_one_coin(_token_amount(uint256): 1544606149263564729691843, i(int128): 0, min_uamount(uint256): 1572093507723587173682832) -> None
+                  [10][STATICCALL] from=Vyper_contract, to=Vyper_contract, A() -> 100
+                  [10][STATICCALL] from=Vyper_contract, to=Vyper_contract, fee() -> 4000000
+                  [10][STATICCALL] from=Vyper_contract, to=Vyper_contract, totalSupply() -> 54459793516828140814446683
+                  [10][STATICCALL] from=Vyper_contract, to=Vyper_contract, balances(arg0(int128): 0) -> 9691437828793141926644172
+                  [10][STATICCALL] from=Vyper_contract, to=Vyper_contract, balances(arg0(int128): 1) -> 17009933558684
+                  [10][STATICCALL] from=Vyper_contract, to=Vyper_contract, balances(arg0(int128): 2) -> 15008340159915
+                  [10][STATICCALL] from=Vyper_contract, to=Vyper_contract, balances(arg0(int128): 3) -> 14273521938529811627092749
+                  [10][CALL] from=Vyper_contract, to=Vyper_contract, transferFrom(_from(address): 0x91d7b9, _to(address): 0xFCBa3E, _value(uint256): 1544606149263564729691843) -> True
+                  [10][STATICCALL] from=Vyper_contract, to=Vyper_contract, balanceOf(arg0(address): 0xFCBa3E) -> 1544606149263564729691843
+                  [10][CALL] from=Vyper_contract, to=Vyper_contract, remove_liquidity_imbalance(amounts(uint256[4]): [1577833689088588926010049, 0, 0, 0], max_burn_amount(uint256): 1544606149263564729691843) -> None
+                    [11][STATICCALL] from=Vyper_contract, to=Vyper_contract, totalSupply() -> 54459793516828140814446683
+                    [11][CALL] from=Vyper_contract, to=Dai, transfer(dst(address): 0xFCBa3E, wad(uint256): 1577833689088588926010049) -> True
+                    [11][CALL] from=Vyper_contract, to=FiatTokenProxy, transfer(to(address): 0xFCBa3E, value(uint256): 0) -> True
+                      [12][DELEGATECALL] from=FiatTokenProxy, to=FiatTokenV2, transfer(to(address): 0xFCBa3E, value(uint256): 0) -> True
+                    [11][CALL] from=Vyper_contract, to=TetherToken, transfer(_to(address): 0xFCBa3E, _value(uint256): 0) -> None
+                    [11][CALL] from=Vyper_contract, to=ProxyERC20, transfer(to(address): 0xFCBa3E, value(uint256): 0) -> True
+                      [12][CALL] from=ProxyERC20, to=MultiCollateralSynth, setMessageSender(sender(address): 0xA5407e) -> None
+                      [12][CALL] from=ProxyERC20, to=MultiCollateralSynth, transfer(to(address): 0xFCBa3E, value(uint256): 0) -> True
+                        [13][STATICCALL] from=MultiCollateralSynth, to=ExchangerWithVirtualSynth, maxSecsLeftInWaitingPeriod(account(address): 0xA5407e, currencyKey(bytes32): b'sUSD\x00\x00\x00\x00\x00\x00\x00\x00\x00...) -> 0
+                          [14][STATICCALL] from=ExchangerWithVirtualSynth, to=ExchangeState, getMaxTimestamp(account(address): 0xA5407e, currencyKey(bytes32): b'sUSD\x00\x00\x00\x00\x00\x00\x00\x00\x00...) -> 0
+                          [14][STATICCALL] from=ExchangerWithVirtualSynth, to=FlexibleStorage, getUIntValue(contractName(bytes32): b'SystemSettings\x00\x00\x00\x00\x00\x00\x..., record(bytes32): b'waitingPeriodSecs\x00\x00\x00\x00\x00\x0...) -> 180
+                        [13][STATICCALL] from=MultiCollateralSynth, to=ExchangerWithVirtualSynth, settlementOwing(account(address): 0xA5407e, currencyKey(bytes32): b'sUSD\x00\x00\x00\x00\x00\x00\x00\x00\x00...) -> ['0', '0', '0']
+                          [14][STATICCALL] from=ExchangerWithVirtualSynth, to=ExchangeState, getLengthOfEntries(account(address): 0xA5407e, currencyKey(bytes32): b'sUSD\x00\x00\x00\x00\x00\x00\x00\x00\x00...) -> 0
+                        [13][STATICCALL] from=MultiCollateralSynth, to=TokenState, balanceOf((address): 0xA5407e) -> 14306351627055350785259751
+                        [13][STATICCALL] from=MultiCollateralSynth, to=SystemStatus, requireSynthActive(currencyKey(bytes32): b'sUSD\x00\x00\x00\x00\x00\x00\x00\x00\x00...) -> None
+                        [13][STATICCALL] from=MultiCollateralSynth, to=TokenState, balanceOf((address): 0xA5407e) -> 14306351627055350785259751
+                        [13][CALL] from=MultiCollateralSynth, to=TokenState, setBalanceOf(account(address): 0xA5407e, value(uint256): 14306351627055350785259751) -> None
+                        [13][STATICCALL] from=MultiCollateralSynth, to=TokenState, balanceOf((address): 0xFCBa3E) -> 0
+                        [13][CALL] from=MultiCollateralSynth, to=TokenState, setBalanceOf(account(address): 0xFCBa3E, value(uint256): 0) -> None
+                        [13][CALL] from=MultiCollateralSynth, to=ProxyERC20, _emit(callData(bytes): b'\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00..., numTopics(uint256): 3, topic1(bytes32): b'\xdd\xf2R\xad\x1b\xe2\xc8\x9bi\xc2\xb0h\..., topic2(bytes32): b'\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00..., topic3(bytes32): b'\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00..., topic4(bytes32): b'\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00...) -> None
+                    [11][CALL] from=Vyper_contract, to=Vyper_contract, burnFrom(_to(address): 0xFCBa3E, _value(uint256): 1544519404050634622126585) -> None
+                  [10][STATICCALL] from=Vyper_contract, to=Dai, balanceOf((address): 0xFCBa3E) -> 1577833689088588926010049
+                  [10][CALL] from=Vyper_contract, to=Dai, transfer(dst(address): 0x91d7b9, wad(uint256): 1577833689088588926010049) -> True
+                  [10][STATICCALL] from=Vyper_contract, to=Vyper_contract, balanceOf(arg0(address): 0xFCBa3E) -> 86745212930107565258
+                [9][STATICCALL] from=AdminUpgradeabilityProxy, to=Dai, balanceOf((address): 0x91d7b9) -> 1577833689088588926010049
+                [9][CALL] from=AdminUpgradeabilityProxy, to=Dai, transfer(dst(address): 0xe23078, wad(uint256): 1572093507723587173682832) -> True
+            [7][CALL] from=AdminUpgradeabilityProxy, to=AdminUpgradeabilityProxy, normalizedBalance() -> 498650348781254587276298
+              [8][DELEGATECALL] from=AdminUpgradeabilityProxy, to=CurveFiProtocol_SUSD, normalizedBalance() -> 498650348781254587276298
+                [9][STATICCALL] from=AdminUpgradeabilityProxy, to=Vyper_contract, balanceOf(arg0(address): 0x91d7b9) -> 0
+                [9][STATICCALL] from=AdminUpgradeabilityProxy, to=Vyper_contract, balanceOf(arg0(address): 0x91d7b9) -> 484994220452027524869833
+                [9][STATICCALL] from=AdminUpgradeabilityProxy, to=Vyper_contract, totalSupply() -> 52915274112777506192320098
+                [9][STATICCALL] from=AdminUpgradeabilityProxy, to=Vyper_contract, balances(arg0(int128): 0) -> 8113517270525716644673950
+                [9][STATICCALL] from=AdminUpgradeabilityProxy, to=Vyper_contract, balances(arg0(int128): 1) -> 17009901404838
+                [9][STATICCALL] from=AdminUpgradeabilityProxy, to=Vyper_contract, balances(arg0(int128): 2) -> 15008311789677
+                [9][STATICCALL] from=AdminUpgradeabilityProxy, to=Vyper_contract, balances(arg0(int128): 3) -> 14273494957316999554968285
+            [7][CALL] from=AdminUpgradeabilityProxy, to=AdminUpgradeabilityProxy, burnFrom(from(address): 0xe23078, value(uint256): 1587725379869565712209252) -> None
+              [8][DELEGATECALL] from=AdminUpgradeabilityProxy, to=PoolToken_CurveFi_SUSD, burnFrom(from(address): 0xe23078, value(uint256): 1587725379869565712209252) -> None
+                [9][STATICCALL] from=AdminUpgradeabilityProxy, to=AdminUpgradeabilityProxy, get(_name(string): rewardDistributions) -> 0x840566
+                  [10][DELEGATECALL] from=AdminUpgradeabilityProxy, to=Pool, get(_name(string): rewardDistributions) -> 0x840566
+                [9][CALL] from=AdminUpgradeabilityProxy, to=AdminUpgradeabilityProxy, poolTokenBalanceChanged(user(address): 0xe23078) -> None
+                  [10][DELEGATECALL] from=AdminUpgradeabilityProxy, to=RewardDistributionModule, poolTokenBalanceChanged(user(address): 0xe23078) -> None
+                    [11][STATICCALL] from=AdminUpgradeabilityProxy, to=AdminUpgradeabilityProxy, distributionBalanceOf(account(address): 0xe23078) -> 247860255269816763306
+                      [12][DELEGATECALL] from=AdminUpgradeabilityProxy, to=PoolToken_CurveFi_SUSD, distributionBalanceOf(account(address): 0xe23078) -> 247860255269816763306
+        [5][CALL] from=0xe23078, to=AdminUpgradeabilityProxy, deposit(_protocol(address): 0x91d7b9, _tokens(address[]): ['0xe2307837524Db8961C4541f943598654240bd6..., _dnAmounts(uint256[]): [5000000]) -> 803029633005586495670503
+          [6][DELEGATECALL] from=AdminUpgradeabilityProxy, to=SavingsModule, deposit(_protocol(address): 0x91d7b9, _tokens(address[]): ['0xe2307837524Db8961C4541f943598654240bd6..., _dnAmounts(uint256[]): [5000000]) -> 803029633005586495670503
+            [7][STATICCALL] from=AdminUpgradeabilityProxy, to=AdminUpgradeabilityProxy, get(_name(string): access) -> 0x5ffcf7
+              [8][DELEGATECALL] from=AdminUpgradeabilityProxy, to=Pool, get(_name(string): access) -> 0x5ffcf7
+            [7][STATICCALL] from=AdminUpgradeabilityProxy, to=AdminUpgradeabilityProxy, isOperationAllowed(operation(uint8): 0, sender(address): 0xe23078) -> True
+              [8][DELEGATECALL] from=AdminUpgradeabilityProxy, to=AccessModule, isOperationAllowed(operation(uint8): 0, sender(address): 0xe23078) -> True
+            [7][CALL] from=AdminUpgradeabilityProxy, to=AdminUpgradeabilityProxy, normalizedBalance() -> 498650348781254587276298
+              [8][DELEGATECALL] from=AdminUpgradeabilityProxy, to=CurveFiProtocol_SUSD, normalizedBalance() -> 498650348781254587276298
+                [9][STATICCALL] from=AdminUpgradeabilityProxy, to=Vyper_contract, balanceOf(arg0(address): 0x91d7b9) -> 0
+                [9][STATICCALL] from=AdminUpgradeabilityProxy, to=Vyper_contract, balanceOf(arg0(address): 0x91d7b9) -> 484994220452027524869833
+                [9][STATICCALL] from=AdminUpgradeabilityProxy, to=Vyper_contract, totalSupply() -> 52915274112777506192320098
+                [9][STATICCALL] from=AdminUpgradeabilityProxy, to=Vyper_contract, balances(arg0(int128): 0) -> 8113517270525716644673950
+                [9][STATICCALL] from=AdminUpgradeabilityProxy, to=Vyper_contract, balances(arg0(int128): 1) -> 17009901404838
+                [9][STATICCALL] from=AdminUpgradeabilityProxy, to=Vyper_contract, balances(arg0(int128): 2) -> 15008311789677
+                [9][STATICCALL] from=AdminUpgradeabilityProxy, to=Vyper_contract, balances(arg0(int128): 3) -> 14273494957316999554968285
+            [7][CALL] from=AdminUpgradeabilityProxy, to=0xe23078, transferFromaddress() -> 0x000000
+              [8][CALL] from=0xe23078, to=AdminUpgradeabilityProxy, deposit(_protocol(address): 0x91d7b9, _tokens(address[]): ['0x6B175474E89094C44Da98b954EedeAC495271d..., _dnAmounts(uint256[]): [792000000000000000000000]) -> 803028627316508403573537
+                [9][DELEGATECALL] from=AdminUpgradeabilityProxy, to=SavingsModule, deposit(_protocol(address): 0x91d7b9, _tokens(address[]): ['0x6B175474E89094C44Da98b954EedeAC495271d..., _dnAmounts(uint256[]): [792000000000000000000000]) -> 803028627316508403573537
+                  [10][STATICCALL] from=AdminUpgradeabilityProxy, to=AdminUpgradeabilityProxy, get(_name(string): access) -> 0x5ffcf7
+                    [11][DELEGATECALL] from=AdminUpgradeabilityProxy, to=Pool, get(_name(string): access) -> 0x5ffcf7
+                  [10][STATICCALL] from=AdminUpgradeabilityProxy, to=AdminUpgradeabilityProxy, isOperationAllowed(operation(uint8): 0, sender(address): 0xe23078) -> True
+                    [11][DELEGATECALL] from=AdminUpgradeabilityProxy, to=AccessModule, isOperationAllowed(operation(uint8): 0, sender(address): 0xe23078) -> True
+                  [10][CALL] from=AdminUpgradeabilityProxy, to=AdminUpgradeabilityProxy, normalizedBalance() -> 498650348781254587276298
+                    [11][DELEGATECALL] from=AdminUpgradeabilityProxy, to=CurveFiProtocol_SUSD, normalizedBalance() -> 498650348781254587276298
+                      [12][STATICCALL] from=AdminUpgradeabilityProxy, to=Vyper_contract, balanceOf(arg0(address): 0x91d7b9) -> 0
+                      [12][STATICCALL] from=AdminUpgradeabilityProxy, to=Vyper_contract, balanceOf(arg0(address): 0x91d7b9) -> 484994220452027524869833
+                      [12][STATICCALL] from=AdminUpgradeabilityProxy, to=Vyper_contract, totalSupply() -> 52915274112777506192320098
+                      [12][STATICCALL] from=AdminUpgradeabilityProxy, to=Vyper_contract, balances(arg0(int128): 0) -> 8113517270525716644673950
+                      [12][STATICCALL] from=AdminUpgradeabilityProxy, to=Vyper_contract, balances(arg0(int128): 1) -> 17009901404838
+                      [12][STATICCALL] from=AdminUpgradeabilityProxy, to=Vyper_contract, balances(arg0(int128): 2) -> 15008311789677
+                      [12][STATICCALL] from=AdminUpgradeabilityProxy, to=Vyper_contract, balances(arg0(int128): 3) -> 14273494957316999554968285
+                  [10][CALL] from=AdminUpgradeabilityProxy, to=Dai, transferFrom(src(address): 0xe23078, dst(address): 0x91d7b9, wad(uint256): 792000000000000000000000) -> True
+                  [10][CALL] from=AdminUpgradeabilityProxy, to=AdminUpgradeabilityProxy, handleDeposit(token(address): 0x6B1754, amount(uint256): 792000000000000000000000) -> None
+                    [11][DELEGATECALL] from=AdminUpgradeabilityProxy, to=CurveFiProtocol_SUSD, handleDeposit(token(address): 0x6B1754, amount(uint256): 792000000000000000000000) -> None
+                      [12][STATICCALL] from=AdminUpgradeabilityProxy, to=Dai, balanceOf((address): 0x91d7b9) -> 797740181365001752327217
+                      [12][STATICCALL] from=AdminUpgradeabilityProxy, to=FiatTokenProxy, balanceOf(account(address): 0x91d7b9) -> 0
+                        [13][DELEGATECALL] from=FiatTokenProxy, to=FiatTokenV2, balanceOf(account(address): 0x91d7b9) -> 0
+                      [12][STATICCALL] from=AdminUpgradeabilityProxy, to=TetherToken, balanceOf(who(address): 0x91d7b9) -> 0
+                      [12][STATICCALL] from=AdminUpgradeabilityProxy, to=ProxyERC20, balanceOf(owner(address): 0x91d7b9) -> 0
+                        [13][CALL] from=ProxyERC20, to=MultiCollateralSynth, balanceOf(account(address): 0x91d7b9) -> 0
+                          [14][STATICCALL] from=MultiCollateralSynth, to=TokenState, balanceOf((address): 0x91d7b9) -> 0
+                      [12][CALL] from=AdminUpgradeabilityProxy, to=Vyper_contract, add_liquidity(uamounts(uint256[4]): [797740181365001752327217, 0, 0, 0], min_mint_amount(uint256): 0) -> None
+                        [13][CALL] from=Vyper_contract, to=Dai, transferFrom(src(address): 0x91d7b9, dst(address): 0xFCBa3E, wad(uint256): 797740181365001752327217) -> True
+                        [13][CALL] from=Vyper_contract, to=Dai, approve(usr(address): 0xA5407e, wad(uint256): 797740181365001752327217) -> True
+                        [13][CALL] from=Vyper_contract, to=Vyper_contract, add_liquidity(amounts(uint256[4]): [797740181365001752327217, 0, 0, 0], min_mint_amount(uint256): 0) -> None
+                          [14][STATICCALL] from=Vyper_contract, to=Vyper_contract, totalSupply() -> 52915274112777506192320098
+                          [14][CALL] from=Vyper_contract, to=Dai, transferFrom(src(address): 0xFCBa3E, dst(address): 0xA5407e, wad(uint256): 797740181365001752327217) -> True
+                          [14][CALL] from=Vyper_contract, to=FiatTokenProxy, transferFrom(from(address): 0xFCBa3E, to(address): 0xA5407e, value(uint256): 0) -> True
+                            [15][DELEGATECALL] from=FiatTokenProxy, to=FiatTokenV2, transferFrom(from(address): 0xFCBa3E, to(address): 0xA5407e, value(uint256): 0) -> True
+                          [14][CALL] from=Vyper_contract, to=TetherToken, transferFrom(_from(address): 0xFCBa3E, _to(address): 0xA5407e, _value(uint256): 0) -> None
+                          [14][CALL] from=Vyper_contract, to=ProxyERC20, transferFrom(from(address): 0xFCBa3E, to(address): 0xA5407e, value(uint256): 0) -> True
+                            [15][CALL] from=ProxyERC20, to=MultiCollateralSynth, setMessageSender(sender(address): 0xA5407e) -> None
+                            [15][CALL] from=ProxyERC20, to=MultiCollateralSynth, transferFrom(from(address): 0xFCBa3E, to(address): 0xA5407e, value(uint256): 0) -> True
+                              [16][STATICCALL] from=MultiCollateralSynth, to=ExchangerWithVirtualSynth, maxSecsLeftInWaitingPeriod(account(address): 0xFCBa3E, currencyKey(bytes32): b'sUSD\x00\x00\x00\x00\x00\x00\x00\x00\x00...) -> 0
+                                [17][STATICCALL] from=ExchangerWithVirtualSynth, to=ExchangeState, getMaxTimestamp(account(address): 0xFCBa3E, currencyKey(bytes32): b'sUSD\x00\x00\x00\x00\x00\x00\x00\x00\x00...) -> 0
+                                [17][STATICCALL] from=ExchangerWithVirtualSynth, to=FlexibleStorage, getUIntValue(contractName(bytes32): b'SystemSettings\x00\x00\x00\x00\x00\x00\x..., record(bytes32): b'waitingPeriodSecs\x00\x00\x00\x00\x00\x0...) -> 180
+                              [16][STATICCALL] from=MultiCollateralSynth, to=ExchangerWithVirtualSynth, settlementOwing(account(address): 0xFCBa3E, currencyKey(bytes32): b'sUSD\x00\x00\x00\x00\x00\x00\x00\x00\x00...) -> ['0', '0', '0']
+                                [17][STATICCALL] from=ExchangerWithVirtualSynth, to=ExchangeState, getLengthOfEntries(account(address): 0xFCBa3E, currencyKey(bytes32): b'sUSD\x00\x00\x00\x00\x00\x00\x00\x00\x00...) -> 0
+                              [16][STATICCALL] from=MultiCollateralSynth, to=TokenState, balanceOf((address): 0xFCBa3E) -> 0
+                              [16][STATICCALL] from=MultiCollateralSynth, to=SystemStatus, requireSynthActive(currencyKey(bytes32): b'sUSD\x00\x00\x00\x00\x00\x00\x00\x00\x00...) -> None
+                              [16][STATICCALL] from=MultiCollateralSynth, to=TokenState, allowance((address): 0xA5407e) -> 0
+                              [16][STATICCALL] from=MultiCollateralSynth, to=TokenState, allowance((address): 0xA5407e) -> 0
+                              [16][CALL] from=MultiCollateralSynth, to=TokenState, setAllowance(tokenOwner(address): 0xFCBa3E, spender(address): 0xA5407e, value(uint256): 0) -> None
+                              [16][STATICCALL] from=MultiCollateralSynth, to=TokenState, balanceOf((address): 0xFCBa3E) -> 0
+                              [16][CALL] from=MultiCollateralSynth, to=TokenState, setBalanceOf(account(address): 0xFCBa3E, value(uint256): 0) -> None
+                              [16][STATICCALL] from=MultiCollateralSynth, to=TokenState, balanceOf((address): 0xA5407e) -> 14306351627055350785259751
+                              [16][CALL] from=MultiCollateralSynth, to=TokenState, setBalanceOf(account(address): 0xA5407e, value(uint256): 14306351627055350785259751) -> None
+                              [16][CALL] from=MultiCollateralSynth, to=ProxyERC20, _emit(callData(bytes): b'\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00..., numTopics(uint256): 3, topic1(bytes32): b'\xdd\xf2R\xad\x1b\xe2\xc8\x9bi\xc2\xb0h\..., topic2(bytes32): b'\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00..., topic3(bytes32): b'\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00..., topic4(bytes32): b'\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00...) -> None
+                          [14][CALL] from=Vyper_contract, to=Vyper_contract, mint(_to(address): 0xFCBa3E, _value(uint256): 781074247307579058328101) -> None
+                        [13][STATICCALL] from=Vyper_contract, to=Vyper_contract, balanceOf(arg0(address): 0xFCBa3E) -> 781160992520509165893359
+                        [13][CALL] from=Vyper_contract, to=Vyper_contract, transfer(_to(address): 0x91d7b9, _value(uint256): 781160992520509165893359) -> True
+                      [12][STATICCALL] from=AdminUpgradeabilityProxy, to=Vyper_contract, balanceOf(arg0(address): 0x91d7b9) -> 781160992520509165893359
+                      [12][CALL] from=AdminUpgradeabilityProxy, to=Vyper_contract, deposit(_value(uint256): 781160992520509165893359) -> None
+                        [13][CALL] from=Vyper_contract, to=Vyper_contract, future_epoch_time_write() -> 1628893048
+                        [13][STATICCALL] from=Vyper_contract, to=Vyper_contract, rate() -> 8714335457889396245
+                        [13][CALL] from=Vyper_contract, to=Vyper_contract, checkpoint_gauge(addr(address): 0xA90996) -> None
+                        [13][STATICCALL] from=Vyper_contract, to=ProxyERC20, balanceOf(owner(address): 0xA90996) -> 44552502866698946825650
+                          [14][CALL] from=ProxyERC20, to=Synthetix, balanceOf(account(address): 0xA90996) -> 44552502866698946825650
+                            [15][STATICCALL] from=Synthetix, to=TokenState, balanceOf((address): 0xA90996) -> 44552502866698946825650
+                        [13][CALL] from=Vyper_contract, to=CurveRewards, getReward() -> None
+                        [13][STATICCALL] from=Vyper_contract, to=ProxyERC20, balanceOf(owner(address): 0xA90996) -> 44552502866698946825650
+                          [14][CALL] from=ProxyERC20, to=Synthetix, balanceOf(account(address): 0xA90996) -> 44552502866698946825650
+                            [15][STATICCALL] from=Synthetix, to=TokenState, balanceOf((address): 0xA90996) -> 44552502866698946825650
+                        [13][STATICCALL] from=Vyper_contract, to=Vyper_contract, balanceOf(addr(address): 0x91d7b9) -> 0
+                        [13][STATICCALL] from=Vyper_contract, to=Vyper_contract, totalSupply() -> 41884685415013597399299124
+                        [13][CALL] from=Vyper_contract, to=Vyper_contract, transferFrom(_from(address): 0x91d7b9, _to(address): 0xA90996, _value(uint256): 781160992520509165893359) -> True
+                        [13][CALL] from=Vyper_contract, to=CurveRewards, stake(amount(uint256): 781160992520509165893359) -> None
+                          [14][CALL] from=CurveRewards, to=Vyper_contract, transferFrom(_from(address): 0xA90996, _to(address): 0xDCB6A5, _value(uint256): 781160992520509165893359) -> True
+                  [10][CALL] from=AdminUpgradeabilityProxy, to=AdminUpgradeabilityProxy, normalizedBalance() -> 1301678976097762990849835
+                    [11][DELEGATECALL] from=AdminUpgradeabilityProxy, to=CurveFiProtocol_SUSD, normalizedBalance() -> 1301678976097762990849835
+                      [12][STATICCALL] from=AdminUpgradeabilityProxy, to=Vyper_contract, balanceOf(arg0(address): 0x91d7b9) -> 0
+                      [12][STATICCALL] from=AdminUpgradeabilityProxy, to=Vyper_contract, balanceOf(arg0(address): 0x91d7b9) -> 1266155212972536690763192
+                      [12][STATICCALL] from=AdminUpgradeabilityProxy, to=Vyper_contract, totalSupply() -> 53696348360085085250648199
+                      [12][STATICCALL] from=AdminUpgradeabilityProxy, to=Vyper_contract, balances(arg0(int128): 0) -> 8911212255191479663535671
+                      [12][STATICCALL] from=AdminUpgradeabilityProxy, to=Vyper_contract, balances(arg0(int128): 1) -> 17009884662346
+                      [12][STATICCALL] from=AdminUpgradeabilityProxy, to=Vyper_contract, balances(arg0(int128): 2) -> 15008297017308
+                      [12][STATICCALL] from=AdminUpgradeabilityProxy, to=Vyper_contract, balances(arg0(int128): 3) -> 14273480908212916034426468
+                  [10][STATICCALL] from=AdminUpgradeabilityProxy, to=AdminUpgradeabilityProxy, balanceOf(account(address): 0xe23078) -> 247860255269816763306
+                    [11][DELEGATECALL] from=AdminUpgradeabilityProxy, to=PoolToken_CurveFi_SUSD, balanceOf(account(address): 0xe23078) -> 247860255269816763306
+                  [10][CALL] from=AdminUpgradeabilityProxy, to=AdminUpgradeabilityProxy, mint(account(address): 0xe23078, amount(uint256): 792000000000000000000000) -> True
+                    [11][DELEGATECALL] from=AdminUpgradeabilityProxy, to=PoolToken_CurveFi_SUSD, mint(account(address): 0xe23078, amount(uint256): 792000000000000000000000) -> True
+                      [12][STATICCALL] from=AdminUpgradeabilityProxy, to=AdminUpgradeabilityProxy, get(_name(string): rewardDistributions) -> 0x840566
+                        [13][DELEGATECALL] from=AdminUpgradeabilityProxy, to=Pool, get(_name(string): rewardDistributions) -> 0x840566
+                      [12][CALL] from=AdminUpgradeabilityProxy, to=AdminUpgradeabilityProxy, poolTokenBalanceChanged(user(address): 0xe23078) -> None
+                        [13][DELEGATECALL] from=AdminUpgradeabilityProxy, to=RewardDistributionModule, poolTokenBalanceChanged(user(address): 0xe23078) -> None
+                          [14][STATICCALL] from=AdminUpgradeabilityProxy, to=AdminUpgradeabilityProxy, distributionBalanceOf(account(address): 0xe23078) -> 792247860255269816763306
+                            [15][DELEGATECALL] from=AdminUpgradeabilityProxy, to=PoolToken_CurveFi_SUSD, distributionBalanceOf(account(address): 0xe23078) -> 792247860255269816763306
+                  [10][CALL] from=AdminUpgradeabilityProxy, to=AdminUpgradeabilityProxy, distribute(amount(uint256): 11028627316508403573537) -> None
+                    [11][DELEGATECALL] from=AdminUpgradeabilityProxy, to=PoolToken_CurveFi_SUSD, distribute(amount(uint256): 11028627316508403573537) -> None
+                  [10][STATICCALL] from=AdminUpgradeabilityProxy, to=AdminUpgradeabilityProxy, totalSupply() -> 2098296659786522904384926
+                    [11][DELEGATECALL] from=AdminUpgradeabilityProxy, to=PoolToken_CurveFi_SUSD, totalSupply() -> 2098296659786522904384926
+              [8][CALL] from=0xe23078, to=Dai, transfer(dst(address): 0x91d7b9, wad(uint256): 1000000000000000000) -> True
+            [7][CALL] from=AdminUpgradeabilityProxy, to=AdminUpgradeabilityProxy, handleDeposit(token(address): 0xe23078, amount(uint256): 5000000) -> None
+              [8][DELEGATECALL] from=AdminUpgradeabilityProxy, to=CurveFiProtocol_SUSD, handleDeposit(token(address): 0xe23078, amount(uint256): 5000000) -> None
+                [9][STATICCALL] from=AdminUpgradeabilityProxy, to=Dai, balanceOf((address): 0x91d7b9) -> 1000000000000000000
+                [9][STATICCALL] from=AdminUpgradeabilityProxy, to=FiatTokenProxy, balanceOf(account(address): 0x91d7b9) -> 0
+                  [10][DELEGATECALL] from=FiatTokenProxy, to=FiatTokenV2, balanceOf(account(address): 0x91d7b9) -> 0
+                [9][STATICCALL] from=AdminUpgradeabilityProxy, to=TetherToken, balanceOf(who(address): 0x91d7b9) -> 0
+                [9][STATICCALL] from=AdminUpgradeabilityProxy, to=ProxyERC20, balanceOf(owner(address): 0x91d7b9) -> 0
+                  [10][CALL] from=ProxyERC20, to=MultiCollateralSynth, balanceOf(account(address): 0x91d7b9) -> 0
+                    [11][STATICCALL] from=MultiCollateralSynth, to=TokenState, balanceOf((address): 0x91d7b9) -> 0
+                [9][CALL] from=AdminUpgradeabilityProxy, to=Vyper_contract, add_liquidity(uamounts(uint256[4]): [1000000000000000000, 0, 0, 0], min_mint_amount(uint256): 0) -> None
+                  [10][CALL] from=Vyper_contract, to=Dai, transferFrom(src(address): 0x91d7b9, dst(address): 0xFCBa3E, wad(uint256): 1000000000000000000) -> True
+                  [10][CALL] from=Vyper_contract, to=Dai, approve(usr(address): 0xA5407e, wad(uint256): 1000000000000000000) -> True
+                  [10][CALL] from=Vyper_contract, to=Vyper_contract, add_liquidity(amounts(uint256[4]): [1000000000000000000, 0, 0, 0], min_mint_amount(uint256): 0) -> None
+                    [11][STATICCALL] from=Vyper_contract, to=Vyper_contract, totalSupply() -> 53696348360085085250648199
+                    [11][CALL] from=Vyper_contract, to=Dai, transferFrom(src(address): 0xFCBa3E, dst(address): 0xA5407e, wad(uint256): 1000000000000000000) -> True
+                    [11][CALL] from=Vyper_contract, to=FiatTokenProxy, transferFrom(from(address): 0xFCBa3E, to(address): 0xA5407e, value(uint256): 0) -> True
+                      [12][DELEGATECALL] from=FiatTokenProxy, to=FiatTokenV2, transferFrom(from(address): 0xFCBa3E, to(address): 0xA5407e, value(uint256): 0) -> True
+                    [11][CALL] from=Vyper_contract, to=TetherToken, transferFrom(_from(address): 0xFCBa3E, _to(address): 0xA5407e, _value(uint256): 0) -> None
+                    [11][CALL] from=Vyper_contract, to=ProxyERC20, transferFrom(from(address): 0xFCBa3E, to(address): 0xA5407e, value(uint256): 0) -> True
+                      [12][CALL] from=ProxyERC20, to=MultiCollateralSynth, setMessageSender(sender(address): 0xA5407e) -> None
+                      [12][CALL] from=ProxyERC20, to=MultiCollateralSynth, transferFrom(from(address): 0xFCBa3E, to(address): 0xA5407e, value(uint256): 0) -> True
+                        [13][STATICCALL] from=MultiCollateralSynth, to=ExchangerWithVirtualSynth, maxSecsLeftInWaitingPeriod(account(address): 0xFCBa3E, currencyKey(bytes32): b'sUSD\x00\x00\x00\x00\x00\x00\x00\x00\x00...) -> 0
+                          [14][STATICCALL] from=ExchangerWithVirtualSynth, to=ExchangeState, getMaxTimestamp(account(address): 0xFCBa3E, currencyKey(bytes32): b'sUSD\x00\x00\x00\x00\x00\x00\x00\x00\x00...) -> 0
+                          [14][STATICCALL] from=ExchangerWithVirtualSynth, to=FlexibleStorage, getUIntValue(contractName(bytes32): b'SystemSettings\x00\x00\x00\x00\x00\x00\x..., record(bytes32): b'waitingPeriodSecs\x00\x00\x00\x00\x00\x0...) -> 180
+                        [13][STATICCALL] from=MultiCollateralSynth, to=ExchangerWithVirtualSynth, settlementOwing(account(address): 0xFCBa3E, currencyKey(bytes32): b'sUSD\x00\x00\x00\x00\x00\x00\x00\x00\x00...) -> ['0', '0', '0']
+                          [14][STATICCALL] from=ExchangerWithVirtualSynth, to=ExchangeState, getLengthOfEntries(account(address): 0xFCBa3E, currencyKey(bytes32): b'sUSD\x00\x00\x00\x00\x00\x00\x00\x00\x00...) -> 0
+                        [13][STATICCALL] from=MultiCollateralSynth, to=TokenState, balanceOf((address): 0xFCBa3E) -> 0
+                        [13][STATICCALL] from=MultiCollateralSynth, to=SystemStatus, requireSynthActive(currencyKey(bytes32): b'sUSD\x00\x00\x00\x00\x00\x00\x00\x00\x00...) -> None
+                        [13][STATICCALL] from=MultiCollateralSynth, to=TokenState, allowance((address): 0xA5407e) -> 0
+                        [13][STATICCALL] from=MultiCollateralSynth, to=TokenState, allowance((address): 0xA5407e) -> 0
+                        [13][CALL] from=MultiCollateralSynth, to=TokenState, setAllowance(tokenOwner(address): 0xFCBa3E, spender(address): 0xA5407e, value(uint256): 0) -> None
+                        [13][STATICCALL] from=MultiCollateralSynth, to=TokenState, balanceOf((address): 0xFCBa3E) -> 0
+                        [13][CALL] from=MultiCollateralSynth, to=TokenState, setBalanceOf(account(address): 0xFCBa3E, value(uint256): 0) -> None
+                        [13][STATICCALL] from=MultiCollateralSynth, to=TokenState, balanceOf((address): 0xA5407e) -> 14306351627055350785259751
+                        [13][CALL] from=MultiCollateralSynth, to=TokenState, setBalanceOf(account(address): 0xA5407e, value(uint256): 14306351627055350785259751) -> None
+                        [13][CALL] from=MultiCollateralSynth, to=ProxyERC20, _emit(callData(bytes): b'\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00..., numTopics(uint256): 3, topic1(bytes32): b'\xdd\xf2R\xad\x1b\xe2\xc8\x9bi\xc2\xb0h\..., topic2(bytes32): b'\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00..., topic3(bytes32): b'\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00..., topic4(bytes32): b'\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00...) -> None
+                    [11][CALL] from=Vyper_contract, to=Vyper_contract, mint(_to(address): 0xFCBa3E, _value(uint256): 978379532254259946) -> None
+                  [10][STATICCALL] from=Vyper_contract, to=Vyper_contract, balanceOf(arg0(address): 0xFCBa3E) -> 978379532254259946
+                  [10][CALL] from=Vyper_contract, to=Vyper_contract, transfer(_to(address): 0x91d7b9, _value(uint256): 978379532254259946) -> True
+                [9][STATICCALL] from=AdminUpgradeabilityProxy, to=Vyper_contract, balanceOf(arg0(address): 0x91d7b9) -> 978379532254259946
+                [9][CALL] from=AdminUpgradeabilityProxy, to=Vyper_contract, deposit(_value(uint256): 978379532254259946) -> None
+                  [10][CALL] from=Vyper_contract, to=Vyper_contract, future_epoch_time_write() -> 1628893048
+                  [10][STATICCALL] from=Vyper_contract, to=Vyper_contract, rate() -> 8714335457889396245
+                  [10][CALL] from=Vyper_contract, to=Vyper_contract, checkpoint_gauge(addr(address): 0xA90996) -> None
+                  [10][STATICCALL] from=Vyper_contract, to=ProxyERC20, balanceOf(owner(address): 0xA90996) -> 44552502866698946825650
+                    [11][CALL] from=ProxyERC20, to=Synthetix, balanceOf(account(address): 0xA90996) -> 44552502866698946825650
+                      [12][STATICCALL] from=Synthetix, to=TokenState, balanceOf((address): 0xA90996) -> 44552502866698946825650
+                  [10][CALL] from=Vyper_contract, to=CurveRewards, getReward() -> None
+                  [10][STATICCALL] from=Vyper_contract, to=ProxyERC20, balanceOf(owner(address): 0xA90996) -> 44552502866698946825650
+                    [11][CALL] from=ProxyERC20, to=Synthetix, balanceOf(account(address): 0xA90996) -> 44552502866698946825650
+                      [12][STATICCALL] from=Synthetix, to=TokenState, balanceOf((address): 0xA90996) -> 44552502866698946825650
+                  [10][STATICCALL] from=Vyper_contract, to=Vyper_contract, balanceOf(addr(address): 0x91d7b9) -> 0
+                  [10][STATICCALL] from=Vyper_contract, to=Vyper_contract, totalSupply() -> 41884685415013597399299124
+                  [10][CALL] from=Vyper_contract, to=Vyper_contract, transferFrom(_from(address): 0x91d7b9, _to(address): 0xA90996, _value(uint256): 978379532254259946) -> True
+                  [10][CALL] from=Vyper_contract, to=CurveRewards, stake(amount(uint256): 978379532254259946) -> None
+                    [11][CALL] from=CurveRewards, to=Vyper_contract, transferFrom(_from(address): 0xA90996, _to(address): 0xDCB6A5, _value(uint256): 978379532254259946) -> True
+            [7][CALL] from=AdminUpgradeabilityProxy, to=AdminUpgradeabilityProxy, normalizedBalance() -> 1301679981786841082946801
+              [8][DELEGATECALL] from=AdminUpgradeabilityProxy, to=CurveFiProtocol_SUSD, normalizedBalance() -> 1301679981786841082946801
+                [9][STATICCALL] from=AdminUpgradeabilityProxy, to=Vyper_contract, balanceOf(arg0(address): 0x91d7b9) -> 0
+                [9][STATICCALL] from=AdminUpgradeabilityProxy, to=Vyper_contract, balanceOf(arg0(address): 0x91d7b9) -> 1266156191352068945023138
+                [9][STATICCALL] from=AdminUpgradeabilityProxy, to=Vyper_contract, totalSupply() -> 53696349338464617504908145
+                [9][STATICCALL] from=AdminUpgradeabilityProxy, to=Vyper_contract, balances(arg0(int128): 0) -> 8911213255135639927736634
+                [9][STATICCALL] from=AdminUpgradeabilityProxy, to=Vyper_contract, balances(arg0(int128): 1) -> 17009884662326
+                [9][STATICCALL] from=AdminUpgradeabilityProxy, to=Vyper_contract, balances(arg0(int128): 2) -> 15008297017290
+                [9][STATICCALL] from=AdminUpgradeabilityProxy, to=Vyper_contract, balances(arg0(int128): 3) -> 14273480908195574089389499
+            [7][STATICCALL] from=AdminUpgradeabilityProxy, to=AdminUpgradeabilityProxy, balanceOf(account(address): 0xe23078) -> 792247860255269816763306
+              [8][DELEGATECALL] from=AdminUpgradeabilityProxy, to=PoolToken_CurveFi_SUSD, balanceOf(account(address): 0xe23078) -> 792247860255269816763306
+            [7][CALL] from=AdminUpgradeabilityProxy, to=AdminUpgradeabilityProxy, mint(account(address): 0xe23078, amount(uint256): 803029633005586495670503) -> True
+              [8][DELEGATECALL] from=AdminUpgradeabilityProxy, to=PoolToken_CurveFi_SUSD, mint(account(address): 0xe23078, amount(uint256): 803029633005586495670503) -> True
+                [9][STATICCALL] from=AdminUpgradeabilityProxy, to=AdminUpgradeabilityProxy, get(_name(string): rewardDistributions) -> 0x840566
+                  [10][DELEGATECALL] from=AdminUpgradeabilityProxy, to=Pool, get(_name(string): rewardDistributions) -> 0x840566
+                [9][CALL] from=AdminUpgradeabilityProxy, to=AdminUpgradeabilityProxy, poolTokenBalanceChanged(user(address): 0xe23078) -> None
+                  [10][DELEGATECALL] from=AdminUpgradeabilityProxy, to=RewardDistributionModule, poolTokenBalanceChanged(user(address): 0xe23078) -> None
+                    [11][STATICCALL] from=AdminUpgradeabilityProxy, to=AdminUpgradeabilityProxy, distributionBalanceOf(account(address): 0xe23078) -> 1595277493260856312433809
+                      [12][DELEGATECALL] from=AdminUpgradeabilityProxy, to=PoolToken_CurveFi_SUSD, distributionBalanceOf(account(address): 0xe23078) -> 1595277493260856312433809
+            [7][STATICCALL] from=AdminUpgradeabilityProxy, to=AdminUpgradeabilityProxy, totalSupply() -> 2901326292792109400055429
+              [8][DELEGATECALL] from=AdminUpgradeabilityProxy, to=PoolToken_CurveFi_SUSD, totalSupply() -> 2901326292792109400055429
+        [5][CALL] from=0xe23078, to=AdminUpgradeabilityProxy, normalizedBalance() -> 1301679981786841082946801
+          [6][DELEGATECALL] from=AdminUpgradeabilityProxy, to=CurveFiProtocol_SUSD, normalizedBalance() -> 1301679981786841082946801
+            [7][STATICCALL] from=AdminUpgradeabilityProxy, to=Vyper_contract, balanceOf(arg0(address): 0x91d7b9) -> 0
+            [7][STATICCALL] from=AdminUpgradeabilityProxy, to=Vyper_contract, balanceOf(arg0(address): 0x91d7b9) -> 1266156191352068945023138
+            [7][STATICCALL] from=AdminUpgradeabilityProxy, to=Vyper_contract, totalSupply() -> 53696349338464617504908145
+            [7][STATICCALL] from=AdminUpgradeabilityProxy, to=Vyper_contract, balances(arg0(int128): 0) -> 8911213255135639927736634
+            [7][STATICCALL] from=AdminUpgradeabilityProxy, to=Vyper_contract, balances(arg0(int128): 1) -> 17009884662326
+            [7][STATICCALL] from=AdminUpgradeabilityProxy, to=Vyper_contract, balances(arg0(int128): 2) -> 15008297017290
+            [7][STATICCALL] from=AdminUpgradeabilityProxy, to=Vyper_contract, balances(arg0(int128): 3) -> 14273480908195574089389499
+        [5][STATICCALL] from=0xe23078, to=AdminUpgradeabilityProxy, balanceOf(account(address): 0xe23078) -> 1595277493260856312433809
+          [6][DELEGATECALL] from=AdminUpgradeabilityProxy, to=PoolToken_CurveFi_SUSD, balanceOf(account(address): 0xe23078) -> 1595277493260856312433809
+        [5][CALL] from=0xe23078, to=AdminUpgradeabilityProxy, withdraw(_protocol(address): 0x91d7b9, token(address): 0x6B1754, dnAmount(uint256): 1288663181968972672117332, maxNAmount(uint256): 0) -> 1301549790532858846001523
+          [6][DELEGATECALL] from=AdminUpgradeabilityProxy, to=SavingsModule, withdraw(_protocol(address): 0x91d7b9, token(address): 0x6B1754, dnAmount(uint256): 1288663181968972672117332, maxNAmount(uint256): 0) -> 1301549790532858846001523
+            [7][STATICCALL] from=AdminUpgradeabilityProxy, to=AdminUpgradeabilityProxy, get(_name(string): access) -> 0x5ffcf7
+              [8][DELEGATECALL] from=AdminUpgradeabilityProxy, to=Pool, get(_name(string): access) -> 0x5ffcf7
+            [7][STATICCALL] from=AdminUpgradeabilityProxy, to=AdminUpgradeabilityProxy, isOperationAllowed(operation(uint8): 1, sender(address): 0xe23078) -> True
+              [8][DELEGATECALL] from=AdminUpgradeabilityProxy, to=AccessModule, isOperationAllowed(operation(uint8): 1, sender(address): 0xe23078) -> True
+            [7][CALL] from=AdminUpgradeabilityProxy, to=AdminUpgradeabilityProxy, normalizedBalance() -> 1301679981786841082946801
+              [8][DELEGATECALL] from=AdminUpgradeabilityProxy, to=CurveFiProtocol_SUSD, normalizedBalance() -> 1301679981786841082946801
+                [9][STATICCALL] from=AdminUpgradeabilityProxy, to=Vyper_contract, balanceOf(arg0(address): 0x91d7b9) -> 0
+                [9][STATICCALL] from=AdminUpgradeabilityProxy, to=Vyper_contract, balanceOf(arg0(address): 0x91d7b9) -> 1266156191352068945023138
+                [9][STATICCALL] from=AdminUpgradeabilityProxy, to=Vyper_contract, totalSupply() -> 53696349338464617504908145
+                [9][STATICCALL] from=AdminUpgradeabilityProxy, to=Vyper_contract, balances(arg0(int128): 0) -> 8911213255135639927736634
+                [9][STATICCALL] from=AdminUpgradeabilityProxy, to=Vyper_contract, balances(arg0(int128): 1) -> 17009884662326
+                [9][STATICCALL] from=AdminUpgradeabilityProxy, to=Vyper_contract, balances(arg0(int128): 2) -> 15008297017290
+                [9][STATICCALL] from=AdminUpgradeabilityProxy, to=Vyper_contract, balances(arg0(int128): 3) -> 14273480908195574089389499
+            [7][CALL] from=AdminUpgradeabilityProxy, to=AdminUpgradeabilityProxy, withdraw(beneficiary(address): 0xe23078, token(uint256[]): 0x6B1754) -> None
+              [8][DELEGATECALL] from=AdminUpgradeabilityProxy, to=CurveFiProtocol_SUSD, withdraw(beneficiary(address): 0xe23078, token(uint256[]): 0x6B1754) -> None
+                [9][STATICCALL] from=AdminUpgradeabilityProxy, to=Dai, balanceOf((address): 0x91d7b9) -> 0
+                [9][STATICCALL] from=AdminUpgradeabilityProxy, to=Vyper_contract, balanceOf(arg0(address): 0x91d7b9) -> 0
+                [9][STATICCALL] from=AdminUpgradeabilityProxy, to=Vyper_contract, balanceOf(arg0(address): 0x91d7b9) -> 1266156191352068945023138
+                [9][STATICCALL] from=AdminUpgradeabilityProxy, to=Vyper_contract, totalSupply() -> 53696349338464617504908145
+                [9][STATICCALL] from=AdminUpgradeabilityProxy, to=Vyper_contract, balances(arg0(int128): 0) -> 8911213255135639927736634
+                [9][STATICCALL] from=AdminUpgradeabilityProxy, to=Vyper_contract, balances(arg0(int128): 1) -> 17009884662326
+                [9][STATICCALL] from=AdminUpgradeabilityProxy, to=Vyper_contract, balances(arg0(int128): 2) -> 15008297017290
+                [9][STATICCALL] from=AdminUpgradeabilityProxy, to=Vyper_contract, balances(arg0(int128): 3) -> 14273480908195574089389499
+                [9][STATICCALL] from=AdminUpgradeabilityProxy, to=Vyper_contract, balanceOf(arg0(address): 0x91d7b9) -> 0
+                [9][STATICCALL] from=AdminUpgradeabilityProxy, to=Vyper_contract, balanceOf(arg0(address): 0x91d7b9) -> 1266156191352068945023138
+                [9][CALL] from=AdminUpgradeabilityProxy, to=Vyper_contract, withdraw(_value(uint256): 1266029575732933738128634) -> None
+                  [10][CALL] from=Vyper_contract, to=Vyper_contract, future_epoch_time_write() -> 1628893048
+                  [10][STATICCALL] from=Vyper_contract, to=Vyper_contract, rate() -> 8714335457889396245
+                  [10][CALL] from=Vyper_contract, to=Vyper_contract, checkpoint_gauge(addr(address): 0xA90996) -> None
+                  [10][STATICCALL] from=Vyper_contract, to=ProxyERC20, balanceOf(owner(address): 0xA90996) -> 44552502866698946825650
+                    [11][CALL] from=ProxyERC20, to=Synthetix, balanceOf(account(address): 0xA90996) -> 44552502866698946825650
+                      [12][STATICCALL] from=Synthetix, to=TokenState, balanceOf((address): 0xA90996) -> 44552502866698946825650
+                  [10][CALL] from=Vyper_contract, to=CurveRewards, getReward() -> None
+                  [10][STATICCALL] from=Vyper_contract, to=ProxyERC20, balanceOf(owner(address): 0xA90996) -> 44552502866698946825650
+                    [11][CALL] from=ProxyERC20, to=Synthetix, balanceOf(account(address): 0xA90996) -> 44552502866698946825650
+                      [12][STATICCALL] from=Synthetix, to=TokenState, balanceOf((address): 0xA90996) -> 44552502866698946825650
+                  [10][STATICCALL] from=Vyper_contract, to=Vyper_contract, balanceOf(addr(address): 0x91d7b9) -> 0
+                  [10][STATICCALL] from=Vyper_contract, to=Vyper_contract, totalSupply() -> 41884685415013597399299124
+                  [10][CALL] from=Vyper_contract, to=CurveRewards, withdraw(amount(uint256): 1266029575732933738128634) -> None
+                    [11][CALL] from=CurveRewards, to=Vyper_contract, transfer(_to(address): 0xA90996, _value(uint256): 1266029575732933738128634) -> True
+                  [10][CALL] from=Vyper_contract, to=Vyper_contract, transfer(_to(address): 0x91d7b9, _value(uint256): 1266029575732933738128634) -> True
+                [9][CALL] from=AdminUpgradeabilityProxy, to=Vyper_contract, remove_liquidity_one_coin(_token_amount(uint256): 1266029575732933738128634, i(int128): 0, min_uamount(uint256): 1288663181968972672117332) -> None
+                  [10][STATICCALL] from=Vyper_contract, to=Vyper_contract, A() -> 100
+                  [10][STATICCALL] from=Vyper_contract, to=Vyper_contract, fee() -> 4000000
+                  [10][STATICCALL] from=Vyper_contract, to=Vyper_contract, totalSupply() -> 53696349338464617504908145
+                  [10][STATICCALL] from=Vyper_contract, to=Vyper_contract, balances(arg0(int128): 0) -> 8911213255135639927736634
+                  [10][STATICCALL] from=Vyper_contract, to=Vyper_contract, balances(arg0(int128): 1) -> 17009884662326
+                  [10][STATICCALL] from=Vyper_contract, to=Vyper_contract, balances(arg0(int128): 2) -> 15008297017290
+                  [10][STATICCALL] from=Vyper_contract, to=Vyper_contract, balances(arg0(int128): 3) -> 14273480908195574089389499
+                  [10][CALL] from=Vyper_contract, to=Vyper_contract, transferFrom(_from(address): 0x91d7b9, _to(address): 0xFCBa3E, _value(uint256): 1266029575732933738128634) -> True
+                  [10][STATICCALL] from=Vyper_contract, to=Vyper_contract, balanceOf(arg0(address): 0xFCBa3E) -> 1266029575732933738128634
+                  [10][CALL] from=Vyper_contract, to=Vyper_contract, remove_liquidity_imbalance(amounts(uint256[4]): [1291700056916875885601341, 0, 0, 0], max_burn_amount(uint256): 1266029575732933738128634) -> None
+                    [11][STATICCALL] from=Vyper_contract, to=Vyper_contract, totalSupply() -> 53696349338464617504908145
+                    [11][CALL] from=Vyper_contract, to=Dai, transfer(dst(address): 0xFCBa3E, wad(uint256): 1291700056916875885601341) -> True
+                    [11][CALL] from=Vyper_contract, to=FiatTokenProxy, transfer(to(address): 0xFCBa3E, value(uint256): 0) -> True
+                      [12][DELEGATECALL] from=FiatTokenProxy, to=FiatTokenV2, transfer(to(address): 0xFCBa3E, value(uint256): 0) -> True
+                    [11][CALL] from=Vyper_contract, to=TetherToken, transfer(_to(address): 0xFCBa3E, _value(uint256): 0) -> None
+                    [11][CALL] from=Vyper_contract, to=ProxyERC20, transfer(to(address): 0xFCBa3E, value(uint256): 0) -> True
+                      [12][CALL] from=ProxyERC20, to=MultiCollateralSynth, setMessageSender(sender(address): 0xA5407e) -> None
+                      [12][CALL] from=ProxyERC20, to=MultiCollateralSynth, transfer(to(address): 0xFCBa3E, value(uint256): 0) -> True
+                        [13][STATICCALL] from=MultiCollateralSynth, to=ExchangerWithVirtualSynth, maxSecsLeftInWaitingPeriod(account(address): 0xA5407e, currencyKey(bytes32): b'sUSD\x00\x00\x00\x00\x00\x00\x00\x00\x00...) -> 0
+                          [14][STATICCALL] from=ExchangerWithVirtualSynth, to=ExchangeState, getMaxTimestamp(account(address): 0xA5407e, currencyKey(bytes32): b'sUSD\x00\x00\x00\x00\x00\x00\x00\x00\x00...) -> 0
+                          [14][STATICCALL] from=ExchangerWithVirtualSynth, to=FlexibleStorage, getUIntValue(contractName(bytes32): b'SystemSettings\x00\x00\x00\x00\x00\x00\x..., record(bytes32): b'waitingPeriodSecs\x00\x00\x00\x00\x00\x0...) -> 180
+                        [13][STATICCALL] from=MultiCollateralSynth, to=ExchangerWithVirtualSynth, settlementOwing(account(address): 0xA5407e, currencyKey(bytes32): b'sUSD\x00\x00\x00\x00\x00\x00\x00\x00\x00...) -> ['0', '0', '0']
+                          [14][STATICCALL] from=ExchangerWithVirtualSynth, to=ExchangeState, getLengthOfEntries(account(address): 0xA5407e, currencyKey(bytes32): b'sUSD\x00\x00\x00\x00\x00\x00\x00\x00\x00...) -> 0
+                        [13][STATICCALL] from=MultiCollateralSynth, to=TokenState, balanceOf((address): 0xA5407e) -> 14306351627055350785259751
+                        [13][STATICCALL] from=MultiCollateralSynth, to=SystemStatus, requireSynthActive(currencyKey(bytes32): b'sUSD\x00\x00\x00\x00\x00\x00\x00\x00\x00...) -> None
+                        [13][STATICCALL] from=MultiCollateralSynth, to=TokenState, balanceOf((address): 0xA5407e) -> 14306351627055350785259751
+                        [13][CALL] from=MultiCollateralSynth, to=TokenState, setBalanceOf(account(address): 0xA5407e, value(uint256): 14306351627055350785259751) -> None
+                        [13][STATICCALL] from=MultiCollateralSynth, to=TokenState, balanceOf((address): 0xFCBa3E) -> 0
+                        [13][CALL] from=MultiCollateralSynth, to=TokenState, setBalanceOf(account(address): 0xFCBa3E, value(uint256): 0) -> None
+                        [13][CALL] from=MultiCollateralSynth, to=ProxyERC20, _emit(callData(bytes): b'\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00..., numTopics(uint256): 3, topic1(bytes32): b'\xdd\xf2R\xad\x1b\xe2\xc8\x9bi\xc2\xb0h\..., topic2(bytes32): b'\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00..., topic3(bytes32): b'\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00..., topic4(bytes32): b'\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00...) -> None
+                    [11][CALL] from=Vyper_contract, to=Vyper_contract, burnFrom(_to(address): 0xFCBa3E, _value(uint256): 1265957224015021485663895) -> None
+                  [10][STATICCALL] from=Vyper_contract, to=Dai, balanceOf((address): 0xFCBa3E) -> 1291700056916875885601341
+                  [10][CALL] from=Vyper_contract, to=Dai, transfer(dst(address): 0x91d7b9, wad(uint256): 1291700056916875885601341) -> True
+                  [10][STATICCALL] from=Vyper_contract, to=Vyper_contract, balanceOf(arg0(address): 0xFCBa3E) -> 72351717912252464739
+                [9][STATICCALL] from=AdminUpgradeabilityProxy, to=Dai, balanceOf((address): 0x91d7b9) -> 1291700056916875885601341
+                [9][CALL] from=AdminUpgradeabilityProxy, to=Dai, transfer(dst(address): 0xe23078, wad(uint256): 1288663181968972672117332) -> True
+            [7][CALL] from=AdminUpgradeabilityProxy, to=AdminUpgradeabilityProxy, normalizedBalance() -> 130191253982236945278
+              [8][DELEGATECALL] from=AdminUpgradeabilityProxy, to=CurveFiProtocol_SUSD, normalizedBalance() -> 130191253982236945278
+                [9][STATICCALL] from=AdminUpgradeabilityProxy, to=Vyper_contract, balanceOf(arg0(address): 0x91d7b9) -> 0
+                [9][STATICCALL] from=AdminUpgradeabilityProxy, to=Vyper_contract, balanceOf(arg0(address): 0x91d7b9) -> 126615619135206894504
+                [9][STATICCALL] from=AdminUpgradeabilityProxy, to=Vyper_contract, totalSupply() -> 52430392114449596019244250
+                [9][STATICCALL] from=AdminUpgradeabilityProxy, to=Vyper_contract, balances(arg0(int128): 0) -> 7619441087955501756877539
+                [9][STATICCALL] from=AdminUpgradeabilityProxy, to=Vyper_contract, balances(arg0(int128): 1) -> 17009857933048
+                [9][STATICCALL] from=AdminUpgradeabilityProxy, to=Vyper_contract, balances(arg0(int128): 2) -> 15008273433300
+                [9][STATICCALL] from=AdminUpgradeabilityProxy, to=Vyper_contract, balances(arg0(int128): 3) -> 14273458478892799194872530
+            [7][CALL] from=AdminUpgradeabilityProxy, to=AdminUpgradeabilityProxy, burnFrom(from(address): 0xe23078, value(uint256): 1301549790532858846001523) -> None
+              [8][DELEGATECALL] from=AdminUpgradeabilityProxy, to=PoolToken_CurveFi_SUSD, burnFrom(from(address): 0xe23078, value(uint256): 1301549790532858846001523) -> None
+                [9][STATICCALL] from=AdminUpgradeabilityProxy, to=AdminUpgradeabilityProxy, get(_name(string): rewardDistributions) -> 0x840566
+                  [10][DELEGATECALL] from=AdminUpgradeabilityProxy, to=Pool, get(_name(string): rewardDistributions) -> 0x840566
+                [9][CALL] from=AdminUpgradeabilityProxy, to=AdminUpgradeabilityProxy, poolTokenBalanceChanged(user(address): 0xe23078) -> None
+                  [10][DELEGATECALL] from=AdminUpgradeabilityProxy, to=RewardDistributionModule, poolTokenBalanceChanged(user(address): 0xe23078) -> None
+                    [11][STATICCALL] from=AdminUpgradeabilityProxy, to=AdminUpgradeabilityProxy, distributionBalanceOf(account(address): 0xe23078) -> 293727702727997466432286
+                      [12][DELEGATECALL] from=AdminUpgradeabilityProxy, to=PoolToken_CurveFi_SUSD, distributionBalanceOf(account(address): 0xe23078) -> 293727702727997466432286
+      [4][CALL] from=SoloMargin, to=Dai, transferFrom(src(address): 0xe23078, dst(address): 0x1E0447, wad(uint256): 800000000000000000000002) -> True
+  [2][CALL] from=0xe23078, to=Dai, approve(usr(address): 0x1E0447, wad(uint256): 0) -> True
+  [2][CALL] from=0xe23078, to=Dai, approve(usr(address): 0x73fC30, wad(uint256): 0) -> True

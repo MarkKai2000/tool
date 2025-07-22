@@ -1,0 +1,15 @@
+[1][CALL] from=0xfc6682, to=TransparentUpgradeableProxy, deposituint256() -> None
+  [2][DELEGATECALL] from=TransparentUpgradeableProxy, to=0xdcafae, deposituint256() -> None
+    [3][STATICCALL] from=TransparentUpgradeableProxy, to=TransparentUpgradeableProxy, sharesTotal() -> 0x000000
+      [4][DELEGATECALL] from=TransparentUpgradeableProxy, to=0xda209a, sharesTotal() -> 0x000000
+    [3][STATICCALL] from=TransparentUpgradeableProxy, to=PineconeToken, mintAvailable() -> True
+    [3][STATICCALL] from=TransparentUpgradeableProxy, to=PineconeToken, mintAvailable() -> True
+    [3][CALL] from=TransparentUpgradeableProxy, to=PineconeToken, mint(to(address): 0x6D61bF, amount(uint256): 4000000000000000000) -> None
+    [3][STATICCALL] from=TransparentUpgradeableProxy, to=PineconeToken, mintAvailable() -> True
+    [3][CALL] from=TransparentUpgradeableProxy, to=PineconeToken, mint(to(address): 0x2F568D, amount(uint256): 1000000000000000000) -> None
+    [3][CALL] from=TransparentUpgradeableProxy, to=PineconeToken, transferFrom(sender(address): 0xFC6682, recipient(address): 0x6D61bF, amount(uint256): 81167568481089810228762) -> True
+    [3][STATICCALL] from=TransparentUpgradeableProxy, to=PineconeToken, allowance(from(address): 0x6D61bF, spender(address): 0x4EcEae) -> 0
+    [3][CALL] from=TransparentUpgradeableProxy, to=PineconeToken, approve(spender(address): 0x4EcEae, amount(uint256): 81167568481089810228762) -> True
+    [3][CALL] from=TransparentUpgradeableProxy, to=TransparentUpgradeableProxy, deposituint256() -> 0x000000
+      [4][DELEGATECALL] from=TransparentUpgradeableProxy, to=0xda209a, deposituint256() -> 0x000000
+        [5][CALL] from=TransparentUpgradeableProxy, to=PineconeToken, transferFrom(sender(address): 0x6D61bF, recipient(address): 0x4EcEae, amount(uint256): 81167568481089810228762) -> True

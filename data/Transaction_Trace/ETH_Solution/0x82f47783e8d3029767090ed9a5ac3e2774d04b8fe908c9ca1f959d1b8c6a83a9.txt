@@ -1,0 +1,21 @@
+[1][CALL] from=0x5ff864, to=0x16C001, 0x85b4a4fc() -> None
+  [2][STATICCALL] from=0x16C001, to=TetherToken, balanceOf(who(address): 0x8dd06F) -> 1105193075
+  [2][STATICCALL] from=0x16C001, to=TetherToken, allowance(_owner(address): 0x8dd06F, _spender(address): 0x1231DE) -> 115792089237316195423570985008687907853269984665640564039457584007913129639935
+  [2][CALL] from=0x16C001, to=LiFiDiamond, depositToGasZipERC20(_swapData(tuple): {'callTo': '0xdAC17F958D2ee523a22062069945..., _destinationChains(uint256): 0, _recipient(address): 0x16C001) -> None
+    [3][DELEGATECALL] from=LiFiDiamond, to=GasZipFacet, depositToGasZipERC20(_swapData(tuple): {'callTo': '0xdAC17F958D2ee523a22062069945..., _destinationChains(uint256): 0, _recipient(address): 0x16C001) -> None
+      [4][STATICCALL] from=LiFiDiamond, to=0x89F024, balanceOfaddress() -> 0x000000
+      [4][STATICCALL] from=LiFiDiamond, to=0x89F024, balanceOfaddress() -> 0x000000
+      [4][STATICCALL] from=LiFiDiamond, to=0x89F024, allowanceaddress() -> 0x000000
+      [4][CALL] from=LiFiDiamond, to=0x89F024, approveaddress() -> 0x000000
+        [5][CREATE] from=0x89F024, to=0x648d11, 0x60808060() -> 0x600436
+        [5][CALL] from=0x89F024, to=0x648d11, sendToaddress() -> None
+          [6][SELFDESTRUCT][1e-18] from=0x648d11, to=LiFiDiamond
+      [4][STATICCALL] from=LiFiDiamond, to=0x89F024, allowanceaddress() -> 0x000000
+      [4][CALL] from=LiFiDiamond, to=0x89F024, approveaddress() -> 0x000000
+        [5][CREATE] from=0x89F024, to=0xec53b3, 0x60808060() -> 0x600436
+        [5][CALL] from=0x89F024, to=0xec53b3, sendToaddress() -> None
+          [6][SELFDESTRUCT][1e-18] from=0xec53b3, to=LiFiDiamond
+      [4][CALL] from=LiFiDiamond, to=TetherToken, transferFrom(_from(address): 0x8dd06F, _to(address): 0x5FF864, _value(uint256): 1105193075) -> None
+      [4][STATICCALL] from=LiFiDiamond, to=0x89F024, balanceOfaddress() -> 0x000000
+      [4][CALL] from=LiFiDiamond, to=GasZip, deposit(chains(uint256): 0, to(address): 0x16C001) -> None
+  [2][CALL][0.0] from=0x16C001, to=0x5ff864

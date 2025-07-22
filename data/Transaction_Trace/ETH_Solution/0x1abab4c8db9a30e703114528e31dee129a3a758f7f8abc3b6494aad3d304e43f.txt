@@ -1,0 +1,2 @@
+[1][CALL] from=0xd6a09b, to=SMT, transferProxy(_from(address): 0xDF31A4, _to(address): 0xDF31A4, _value(uint256): 651330501959903599257586790673869481674643..., _feeSmt(uint256): 506590390413258354978123059413009596858056..., _v(uint8): 27, _r(bytes32): b'\x87y\x05\x87\xc2V\x04X`\xb8\xfebNX\x07\..., _s(bytes32): b'l\x87\x9b\x1e\x8a\nb\xf2;G\xaaW\xa36\x9d...) -> True
+  [2][CALL] from=SMT, to=0x000000, 0xd6d57172() -> 0x000000

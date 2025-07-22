@@ -1,0 +1,20 @@
+[1][CALL] from=0xfde0d1, to=0x6980a4, yoink() -> None
+  [2][CALL] from=0x6980a4, to=TransparentUpgradeableProxyV2, submitWithdrawal(_receipt(tuple): {'id': 166633, 'kind': 1, 'mainchain': {'a..., _signatures(tuple[]): [{'v': 27, 'r': b'3\x12\xce\xfbc\xba\x7f"f...) -> False
+    [3][DELEGATECALL] from=TransparentUpgradeableProxyV2, to=MainchainGatewayV3, submitWithdrawal(_receipt(tuple): {'id': 166633, 'kind': 1, 'mainchain': {'a..., _signatures(tuple[]): [{'v': 27, 'r': b'3\x12\xce\xfbc\xba\x7f"f...) -> False
+      [4][STATICCALL] from=TransparentUpgradeableProxyV2, to=0x000000, 0x7ef3f466() -> 0x000000
+      [4][STATICCALL] from=TransparentUpgradeableProxyV2, to=FiatTokenProxy, balanceOf(account(address): 0x641928) -> 34300930022259
+        [5][DELEGATECALL] from=FiatTokenProxy, to=FiatTokenV2_2, balanceOf(account(address): 0x641928) -> 34300930022259
+      [4][CALL] from=TransparentUpgradeableProxyV2, to=FiatTokenProxy, transfer(to(address): 0x6980a4, value(uint256): 1998046875000) -> True
+        [5][DELEGATECALL] from=FiatTokenProxy, to=FiatTokenV2_2, transfer(to(address): 0x6980a4, value(uint256): 1998046875000) -> True
+  [2][CALL] from=0x6980a4, to=0x88e6A0, swapaddress() -> 0x000000
+    [3][CALL] from=0x88e6A0, to=WETH9, transfer(dst(address): 0x6980a4, wad(uint256): 796411452386858829530) -> True
+    [3][STATICCALL] from=0x88e6A0, to=FiatTokenProxy, balanceOf(account(address): 0x88e6A0) -> 60542480312779
+      [4][DELEGATECALL] from=FiatTokenProxy, to=FiatTokenV2_2, balanceOf(account(address): 0x88e6A0) -> 60542480312779
+    [3][CALL] from=0x88e6A0, to=0x6980a4, uniswapV3SwapCallbackint256() -> None
+      [4][CALL] from=0x6980a4, to=FiatTokenProxy, transfer(to(address): 0x88e6A0, value(uint256): 1998046875000) -> True
+        [5][DELEGATECALL] from=FiatTokenProxy, to=FiatTokenV2_2, transfer(to(address): 0x88e6A0, value(uint256): 1998046875000) -> True
+    [3][STATICCALL] from=0x88e6A0, to=FiatTokenProxy, balanceOf(account(address): 0x88e6A0) -> 62540527187779
+      [4][DELEGATECALL] from=FiatTokenProxy, to=FiatTokenV2_2, balanceOf(account(address): 0x88e6A0) -> 62540527187779
+  [2][CALL] from=0x6980a4, to=WETH9, withdraw(wad(uint256): 796411452386858829530) -> None
+    [3][CALL][796.4114523868589] from=WETH9, to=0x6980a4
+  [2][CALL][795.615040934472] from=0x6980a4, to=0x229b83

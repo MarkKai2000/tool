@@ -1,0 +1,5 @@
+[1][CALL] from=0x9bbd94, to=0xdd87d8, invest() -> None
+  [2][CALL] from=0xdd87d8, to=TransparentUpgradeableProxy, invest(end_date(uint256): 0, qty_ort(uint256): 1) -> None
+    [3][DELEGATECALL] from=TransparentUpgradeableProxy, to=StakingPool, invest(end_date(uint256): 0, qty_ort(uint256): 1) -> None
+      [4][CALL] from=TransparentUpgradeableProxy, to=ORT, approve(spender(address): 0x6f40A3, amount(uint256): 1) -> True
+      [4][CALL] from=TransparentUpgradeableProxy, to=ORT, transferFrom(sender(address): 0xdD87D8, recipient(address): 0x6f40A3, amount(uint256): 1) -> True

@@ -1,0 +1,12 @@
+[1][CALL] from=0xfa2731, to=0xb5c827, 0x455a3191() -> None
+  [2][STATICCALL] from=0xb5c827, to=WETH9, balanceOf((address): 0x3Ee505) -> 308636644758370382903
+  [2][CALL] from=0xb5c827, to=AnyswapV4Router, anySwapOutUnderlyingWithPermit(from(address): 0x3Ee505, token(address): 0xB5C827, to(address): 0xB5C827, amount(uint256): 308636644758370382903, deadline(uint256): 100000000000000000000, v(uint8): 0, r(bytes32): b'0\x00\x00\x00\x00\x00\x00\x00\x00\x00\x0..., s(bytes32): b'0\x00\x00\x00\x00\x00\x00\x00\x00\x00\x0..., toChainID(uint256): 56) -> None
+    [3][STATICCALL] from=AnyswapV4Router, to=0xb5c827, underlying() -> 0x000000
+    [3][CALL] from=AnyswapV4Router, to=WETH9, permitaddress() -> None
+    [3][CALL] from=AnyswapV4Router, to=WETH9, transferFrom(src(address): 0x3Ee505, dst(address): 0xB5C827, wad(uint256): 308636644758370382903) -> True
+    [3][CALL] from=AnyswapV4Router, to=0xb5c827, depositVaultuint256() -> 0x000000
+    [3][CALL] from=AnyswapV4Router, to=0xb5c827, burnaddress() -> 0x000000
+  [2][CALL] from=0xb5c827, to=WETH9, withdraw(wad(uint256): 308636644758370382903) -> None
+    [3][CALL][308.6366447583704] from=WETH9, to=0xb5c827
+  [2][CALL][33.95003092342074] from=0xb5c827, to=0xea674f
+  [2][CALL][274.68661383494964] from=0xb5c827, to=0xfa2731

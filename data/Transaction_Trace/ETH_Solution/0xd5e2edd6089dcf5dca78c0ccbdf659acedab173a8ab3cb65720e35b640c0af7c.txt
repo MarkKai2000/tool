@@ -1,0 +1,2 @@
+[1][CALL] from=0x2708ca, to=0x2FD602, 0x84304ad7() -> None
+  [2][DELEGATECALL] from=0x2FD602, to=0xf17ca0, 0x84304ad7() -> None

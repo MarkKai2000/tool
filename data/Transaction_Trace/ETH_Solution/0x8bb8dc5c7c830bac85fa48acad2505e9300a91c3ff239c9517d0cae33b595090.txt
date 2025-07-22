@@ -1,0 +1,319 @@
+[1][CALL] from=0xebc6bd, to=0xdF8BEE, 0xb8e7c2fa() -> None
+  [2][STATICCALL] from=0xdF8BEE, to=UniswapV2Pair, token1() -> 0xc02aaa
+  [2][STATICCALL] from=0xdF8BEE, to=WETH9, balanceOf((address): 0xA478c2) -> 90409013949210977199604
+  [2][CALL] from=0xdF8BEE, to=UniswapV2Pair, swap(amount0Out(uint256): 0, amount1Out(uint256): 90409013949210977199603, to(address): 0xdF8BEE, data(bytes): b'0x01') -> None
+    [3][CALL] from=UniswapV2Pair, to=WETH9, transfer(dst(address): 0xdF8BEE, wad(uint256): 90409013949210977199603) -> True
+    [3][CALL] from=UniswapV2Pair, to=0xdF8BEE, uniswapV2Calladdress() -> None
+      [4][STATICCALL] from=0xdF8BEE, to=UniswapV2Pair, token1() -> 0xc02aaa
+      [4][STATICCALL] from=0xdF8BEE, to=WETH9, balanceOf((address): 0xB4e16d) -> 82798403238691593953289
+      [4][CALL] from=0xdF8BEE, to=UniswapV2Pair, swap(amount0Out(uint256): 0, amount1Out(uint256): 82798403238691593953288, to(address): 0xdF8BEE, data(bytes): b'0x02') -> None
+        [5][CALL] from=UniswapV2Pair, to=WETH9, transfer(dst(address): 0xdF8BEE, wad(uint256): 82798403238691593953288) -> True
+        [5][CALL] from=UniswapV2Pair, to=0xdF8BEE, uniswapV2Calladdress() -> None
+          [6][STATICCALL] from=0xdF8BEE, to=UniswapV2Pair, token0() -> 0xc02aaa
+          [6][STATICCALL] from=0xdF8BEE, to=WETH9, balanceOf((address): 0x0d4a11) -> 96092504596377425124747
+          [6][CALL] from=0xdF8BEE, to=UniswapV2Pair, swap(amount0Out(uint256): 96092504596377425124746, amount1Out(uint256): 0, to(address): 0xdF8BEE, data(bytes): b'0x03') -> None
+            [7][CALL] from=UniswapV2Pair, to=WETH9, transfer(dst(address): 0xdF8BEE, wad(uint256): 96092504596377425124746) -> True
+            [7][CALL] from=UniswapV2Pair, to=0xdF8BEE, uniswapV2Calladdress() -> None
+              [8][STATICCALL] from=0xdF8BEE, to=UniswapV2Pair, token0() -> 0x6b1754
+              [8][STATICCALL] from=0xdF8BEE, to=UniswapV2Pair, token1() -> 0xc02aaa
+              [8][STATICCALL] from=0xdF8BEE, to=Dai, balanceOf((address): 0x1E0447) -> 4833383302318125281586057
+              [8][STATICCALL] from=0xdF8BEE, to=WETH9, balanceOf((address): 0x1E0447) -> 76436763597706555986903
+              [8][STATICCALL] from=0xdF8BEE, to=SoloMargin, getNumMarkets() -> 4
+              [8][STATICCALL] from=0xdF8BEE, to=SoloMargin, getMarketTokenAddress(marketId(uint256): 0) -> 0xc02aaa
+              [8][STATICCALL] from=0xdF8BEE, to=SoloMargin, getMarketTokenAddress(marketId(uint256): 1) -> 0x89d24a
+              [8][STATICCALL] from=0xdF8BEE, to=SoloMargin, getMarketTokenAddress(marketId(uint256): 2) -> 0xa0b869
+              [8][STATICCALL] from=0xdF8BEE, to=SoloMargin, getMarketTokenAddress(marketId(uint256): 3) -> 0x6b1754
+              [8][STATICCALL] from=0xdF8BEE, to=SoloMargin, getNumMarkets() -> 4
+              [8][STATICCALL] from=0xdF8BEE, to=SoloMargin, getMarketTokenAddress(marketId(uint256): 0) -> 0xc02aaa
+              [8][CALL] from=0xdF8BEE, to=Dai, approve(usr(address): 0x1E0447, wad(uint256): 2900029981390875168951635) -> True
+              [8][CALL] from=0xdF8BEE, to=WETH9, approve(guy(address): 0x1E0447, wad(uint256): 76436763597706555986904) -> True
+              [8][CALL] from=0xdF8BEE, to=SoloMargin, 0xa67a6a45() -> None
+                [9][DELEGATECALL] from=SoloMargin, to=OperationImpl, 0xbd76ecfd() -> None
+                  [10][STATICCALL] from=SoloMargin, to=DaiPriceOracle, getPrice((address): 0x6B1754) -> None
+                  [10][STATICCALL] from=SoloMargin, to=DoubleExponentInterestSetter, getInterestRate((address): 0x6B1754, borrowWei(uint256): 8591023327033244788587297, supplyWei(uint256): 13367315510168146053417227) -> None
+                  [10][STATICCALL] from=SoloMargin, to=WethPriceOracle, getPrice((address): 0xC02aaA) -> None
+                    [11][STATICCALL] from=WethPriceOracle, to=P1MirrorOracleETHUSD, peek() -> ['0x00000000000022b6a43447c1630000', 'True']
+                  [10][STATICCALL] from=SoloMargin, to=DoubleExponentInterestSetter, getInterestRate((address): 0xC02aaA, borrowWei(uint256): 2836298426292538147278, supplyWei(uint256): 79263995452665602389326) -> None
+                  [10][CALL] from=SoloMargin, to=Dai, transfer(dst(address): 0xdF8BEE, wad(uint256): 2900029981390875168951633) -> True
+                  [10][CALL] from=SoloMargin, to=WETH9, transfer(dst(address): 0xdF8BEE, wad(uint256): 76436763597706555986902) -> True
+                  [10][CALL] from=SoloMargin, to=0xdF8BEE, callFunctionaddress() -> None
+                    [11][STATICCALL] from=0xdF8BEE, to=UniswapV2Pair, getReserves() -> ['58010988362646327044546669', '90409013949210977199604', '1608243856']
+                    [11][STATICCALL] from=0xdF8BEE, to=UniswapV2Pair, token0() -> 0x6b1754
+                    [11][STATICCALL] from=0xdF8BEE, to=Dai, balanceOf((address): 0xdF8BEE) -> 2900029981390875168951633
+                    [11][STATICCALL] from=0xdF8BEE, to=UniswapV2Pair, totalSupply() -> 1887324796583158883886975
+                    [11][STATICCALL] from=0xdF8BEE, to=UniswapV2Pair, totalSupply() -> 1887324796583158883886975
+                    [11][STATICCALL] from=0xdF8BEE, to=UniswapV2Pair, token0() -> 0x6b1754
+                    [11][CALL] from=0xdF8BEE, to=Dai, transfer(dst(address): 0xA478c2, wad(uint256): 2900029981390875168951633) -> True
+                    [11][STATICCALL] from=0xdF8BEE, to=UniswapV2Pair, token1() -> 0xc02aaa
+                    [11][CALL] from=0xdF8BEE, to=WETH9, transfer(dst(address): 0xA478c2, wad(uint256): 4519641165250735182062) -> True
+                    [11][CALL] from=0xdF8BEE, to=UniswapV2Pair, mint(to(address): 0xdF8BEE) -> 94349340516285530671934
+                      [12][STATICCALL] from=UniswapV2Pair, to=Dai, balanceOf((address): 0xA478c2) -> 60911018344037202213498302
+                      [12][STATICCALL] from=UniswapV2Pair, to=WETH9, balanceOf((address): 0xA478c2) -> 94928655114461712381666
+                      [12][STATICCALL] from=UniswapV2Pair, to=UniswapV2Factory, feeTo() -> 0x000000
+                    [11][STATICCALL] from=0xdF8BEE, to=UniswapV2Pair, balanceOf((address): 0xdF8BEE) -> 94349340516285530671934
+                    [11][CALL] from=0xdF8BEE, to=UniswapLPOracleFactory, getUnderlyingPrice(_lpToken(address): 0xA478c2) -> 58815427
+                      [12][STATICCALL] from=UniswapLPOracleFactory, to=UniswapV2Pair, getReserves() -> ['60911018344037202213498302', '94928655114461712381666', '1608243881']
+                      [12][CALL] from=UniswapLPOracleFactory, to=UniswapLPOracleInstance, consult(token(address): 0x6B1754, amount(uint256): 60911018344037202213498302) -> 61019626696396
+                        [13][STATICCALL] from=UniswapLPOracleInstance, to=UniswapV2Pair, price0CumulativeLast() -> 98716031378338117671937135995
+                        [13][STATICCALL] from=UniswapLPOracleInstance, to=UniswapV2Pair, price1CumulativeLast() -> 96848017799134159798962636313373032840441219121072098
+                        [13][STATICCALL] from=UniswapLPOracleInstance, to=UniswapV2Pair, getReserves() -> ['3318600755343996900755052', '3327831611629', '1608243836']
+                      [12][CALL] from=UniswapLPOracleFactory, to=UniswapLPOracleInstance, consult(token(address): 0xC02aaA, amount(uint256): 94928655114461712381666) -> 55533384218085
+                      [12][STATICCALL] from=UniswapLPOracleFactory, to=UniswapV2Pair, totalSupply() -> 1981674137099444414558909
+                      [12][STATICCALL] from=UniswapLPOracleFactory, to=UniswapV2Pair, decimals() -> 18
+                    [11][STATICCALL] from=0xdF8BEE, to=UniswapV2Pair, balanceOf((address): 0xdF8BEE) -> 94349340516285530671934
+                    [11][CALL] from=0xdF8BEE, to=UniswapV2Pair, approve(spender(address): 0x13db1C, value(uint256): 94349340516285530671934) -> True
+                    [11][CALL] from=0xdF8BEE, to=WarpVaultLP, provideCollateral(_amount(uint256): 94349340516285530671934) -> None
+                      [12][STATICCALL] from=WarpVaultLP, to=UniswapV2Pair, allowance((address): 0x13db1C) -> 94349340516285530671934
+                      [12][STATICCALL] from=WarpVaultLP, to=UniswapV2Pair, balanceOf((address): 0xdF8BEE) -> 94349340516285530671934
+                      [12][CALL] from=WarpVaultLP, to=UniswapV2Pair, transferFrom(from(address): 0xdF8BEE, to(address): 0x13db1C, value(uint256): 94349340516285530671934) -> True
+                    [11][STATICCALL] from=0xdF8BEE, to=UniswapV2Pair, getReserves() -> ['60911018344037202213498302', '94928655114461712381666', '1608243881']
+                    [11][STATICCALL] from=0xdF8BEE, to=UniswapV2Pair, token1() -> 0xc02aaa
+                    [11][STATICCALL] from=0xdF8BEE, to=WETH9, balanceOf((address): 0xdF8BEE) -> 341217044216735817082477
+                    [11][STATICCALL] from=0xdF8BEE, to=UniswapV2Pair, token1() -> 0xc02aaa
+                    [11][STATICCALL] from=0xdF8BEE, to=UniswapV2Pair, token1() -> 0xc02aaa
+                    [11][STATICCALL] from=0xdF8BEE, to=WETH9, balanceOf((address): 0xdF8BEE) -> 341217044216735817082477
+                    [11][CALL] from=0xdF8BEE, to=WETH9, transfer(dst(address): 0xA478c2, wad(uint256): 341217044216735817082477) -> True
+                    [11][CALL] from=0xdF8BEE, to=UniswapV2Pair, swap(amount0Out(uint256): 47622330544853730446361677, amount1Out(uint256): 0, to(address): 0xdF8BEE, data(bytes): b'') -> None
+                      [12][CALL] from=UniswapV2Pair, to=Dai, transfer(dst(address): 0xdF8BEE, wad(uint256): 47622330544853730446361677) -> True
+                      [12][STATICCALL] from=UniswapV2Pair, to=Dai, balanceOf((address): 0xA478c2) -> 13288687799183471767136625
+                      [12][STATICCALL] from=UniswapV2Pair, to=WETH9, balanceOf((address): 0xA478c2) -> 436145699331197529464143
+                    [11][CALL] from=0xdF8BEE, to=WarpControl, getBorrowLimit(_account(address): 0xdF8BEE) -> 8521028096454
+                      [12][STATICCALL] from=WarpControl, to=WarpVaultLP, getAssetAdd() -> 0xa478c2
+                      [12][CALL] from=WarpControl, to=UniswapLPOracleFactory, getUnderlyingPrice(_lpToken(address): 0xA478c2) -> 135470392
+                        [13][STATICCALL] from=UniswapLPOracleFactory, to=UniswapV2Pair, getReserves() -> ['13288687799183471767136625', '436145699331197529464143', '1608243881']
+                        [13][CALL] from=UniswapLPOracleFactory, to=UniswapLPOracleInstance, consult(token(address): 0x6B1754, amount(uint256): 13288687799183471767136625) -> 13312382403642
+                          [14][STATICCALL] from=UniswapLPOracleInstance, to=UniswapV2Pair, price0CumulativeLast() -> 98716031378338117671937135995
+                          [14][STATICCALL] from=UniswapLPOracleInstance, to=UniswapV2Pair, price1CumulativeLast() -> 96848017799134159798962636313373032840441219121072098
+                          [14][STATICCALL] from=UniswapLPOracleInstance, to=UniswapV2Pair, getReserves() -> ['3318600755343996900755052', '3327831611629', '1608243836']
+                        [13][CALL] from=UniswapLPOracleFactory, to=UniswapLPOracleInstance, consult(token(address): 0xC02aaA, amount(uint256): 436145699331197529464143) -> 255145789928450
+                        [13][STATICCALL] from=UniswapLPOracleFactory, to=UniswapV2Pair, totalSupply() -> 1981674137099444414558909
+                        [13][STATICCALL] from=UniswapLPOracleFactory, to=UniswapV2Pair, decimals() -> 18
+                      [12][STATICCALL] from=WarpControl, to=WarpVaultLP, collateralOfAccount(_account(address): 0xdF8BEE) -> 94349340516285530671934
+                      [12][STATICCALL] from=WarpControl, to=WarpVaultLP, getAssetAdd() -> 0xbb2b80
+                      [12][CALL] from=WarpControl, to=UniswapLPOracleFactory, getUnderlyingPrice(_lpToken(address): 0xBb2b80) -> 800627248859658
+                        [13][STATICCALL] from=UniswapLPOracleFactory, to=UniswapV2Pair, getReserves() -> ['333416269583', '118670352285311829256834', '1608243836']
+                        [13][CALL] from=UniswapLPOracleFactory, to=UniswapLPOracleInstance, consult(token(address): 0x2260FA, amount(uint256): 333416269583) -> 75637472315369
+                          [14][STATICCALL] from=UniswapLPOracleInstance, to=UniswapV2Pair, price0CumulativeLast() -> 11579414826448035857614616709241733395629799
+                          [14][STATICCALL] from=UniswapLPOracleInstance, to=UniswapV2Pair, price1CumulativeLast() -> 833919022697066557066305606691059229065
+                          [14][STATICCALL] from=UniswapLPOracleInstance, to=UniswapV2Pair, getReserves() -> ['9292384098', '2119261698035', '1608243389']
+                        [13][CALL] from=UniswapLPOracleFactory, to=UniswapLPOracleInstance, consult(token(address): 0xC02aaA, amount(uint256): 118670352285311829256834) -> 69422307319212
+                        [13][STATICCALL] from=UniswapLPOracleFactory, to=UniswapV2Pair, totalSupply() -> 181182666267218862
+                        [13][STATICCALL] from=UniswapLPOracleFactory, to=UniswapV2Pair, decimals() -> 18
+                      [12][STATICCALL] from=WarpControl, to=WarpVaultLP, collateralOfAccount(_account(address): 0xdF8BEE) -> 0
+                      [12][STATICCALL] from=WarpControl, to=WarpVaultLP, getAssetAdd() -> 0x0d4a11
+                      [12][CALL] from=WarpControl, to=UniswapLPOracleFactory, getUnderlyingPrice(_lpToken(address): 0x0d4a11) -> 62617141560454
+                        [13][STATICCALL] from=UniswapLPOracleFactory, to=UniswapV2Pair, getReserves() -> ['96092504596377425124747', '61806875042754', '1608243842']
+                        [13][CALL] from=UniswapLPOracleFactory, to=UniswapLPOracleInstance, consult(token(address): 0xC02aaA, amount(uint256): 96092504596377425124747) -> 56214237648203
+                        [13][CALL] from=UniswapLPOracleFactory, to=UniswapLPOracleInstance, consult(token(address): 0xdAC17F, amount(uint256): 61806875042754) -> 61907686148287
+                        [13][STATICCALL] from=UniswapLPOracleFactory, to=UniswapV2Pair, totalSupply() -> 1886415138935192150
+                        [13][STATICCALL] from=UniswapLPOracleFactory, to=UniswapV2Pair, decimals() -> 18
+                      [12][STATICCALL] from=WarpControl, to=WarpVaultLP, collateralOfAccount(_account(address): 0xdF8BEE) -> 0
+                      [12][STATICCALL] from=WarpControl, to=WarpVaultLP, getAssetAdd() -> 0xb4e16d
+                      [12][CALL] from=WarpControl, to=UniswapLPOracleFactory, getUnderlyingPrice(_lpToken(address): 0xB4e16d) -> 62598825973283
+                        [13][STATICCALL] from=UniswapLPOracleFactory, to=UniswapV2Pair, getReserves() -> ['53360073924463', '82798403238691593953289', '1608243856']
+                        [13][CALL] from=UniswapLPOracleFactory, to=UniswapLPOracleInstance, consult(token(address): 0xA0b869, amount(uint256): 53360073924463) -> 53360073924463
+                        [13][CALL] from=UniswapLPOracleFactory, to=UniswapLPOracleInstance, consult(token(address): 0xC02aaA, amount(uint256): 82798403238691593953289) -> 48437171412088
+                        [13][STATICCALL] from=UniswapLPOracleFactory, to=UniswapV2Pair, totalSupply() -> 1626184577007839094
+                        [13][STATICCALL] from=UniswapLPOracleFactory, to=UniswapV2Pair, decimals() -> 18
+                      [12][STATICCALL] from=WarpControl, to=WarpVaultLP, collateralOfAccount(_account(address): 0xdF8BEE) -> 0
+                    [11][STATICCALL] from=0xdF8BEE, to=UniswapV2Pair, token0() -> 0xa0b869
+                    [11][STATICCALL] from=0xdF8BEE, to=FiatTokenProxy, balanceOf(account(address): 0xae465F) -> 3917983816718
+                      [12][DELEGATECALL] from=FiatTokenProxy, to=FiatTokenV2, balanceOf(account(address): 0xae465F) -> 3917983816718
+                    [11][STATICCALL] from=0xdF8BEE, to=UniswapV2Pair, token0() -> 0xa0b869
+                    [11][CALL] from=0xdF8BEE, to=WarpControl, borrowSC(_StableCoin(address): 0xA0b869, _amount(uint256): 3917983816717) -> None
+                      [12][CALL] from=WarpControl, to=WarpVaultSC, borrowBalanceCurrent(account(address): 0xdF8BEE) -> 0
+                        [13][STATICCALL] from=WarpVaultSC, to=Dai, balanceOf((address): 0x6046c3) -> 3862646608579660094744529
+                        [13][STATICCALL] from=WarpVaultSC, to=0x1b0284, getBorrowRateuint256() -> 0x000000
+                      [12][CALL] from=WarpControl, to=WarpVaultSC, borrowBalanceCurrent(account(address): 0xdF8BEE) -> 0
+                        [13][STATICCALL] from=WarpVaultSC, to=FiatTokenProxy, balanceOf(account(address): 0xae465F) -> 3917983816718
+                          [14][DELEGATECALL] from=FiatTokenProxy, to=FiatTokenV2, balanceOf(account(address): 0xae465F) -> 3917983816718
+                        [13][STATICCALL] from=WarpVaultSC, to=0xf289b4, getBorrowRateuint256() -> 0x000000
+                      [12][CALL] from=WarpControl, to=WarpVaultSC, borrowBalanceCurrent(account(address): 0xdF8BEE) -> 0
+                        [13][STATICCALL] from=WarpVaultSC, to=TetherToken, balanceOf(who(address): 0xDadd9b) -> 2569000000
+                        [13][STATICCALL] from=WarpVaultSC, to=0x4E9a87, getBorrowRateuint256() -> 0x000000
+                      [12][STATICCALL] from=WarpControl, to=WarpVaultLP, getAssetAdd() -> 0xa478c2
+                      [12][CALL] from=WarpControl, to=UniswapLPOracleFactory, getUnderlyingPrice(_lpToken(address): 0xA478c2) -> 135470392
+                        [13][STATICCALL] from=UniswapLPOracleFactory, to=UniswapV2Pair, getReserves() -> ['13288687799183471767136625', '436145699331197529464143', '1608243881']
+                        [13][CALL] from=UniswapLPOracleFactory, to=UniswapLPOracleInstance, consult(token(address): 0x6B1754, amount(uint256): 13288687799183471767136625) -> 13312382403642
+                          [14][STATICCALL] from=UniswapLPOracleInstance, to=UniswapV2Pair, price0CumulativeLast() -> 98716031378338117671937135995
+                          [14][STATICCALL] from=UniswapLPOracleInstance, to=UniswapV2Pair, price1CumulativeLast() -> 96848017799134159798962636313373032840441219121072098
+                          [14][STATICCALL] from=UniswapLPOracleInstance, to=UniswapV2Pair, getReserves() -> ['3318600755343996900755052', '3327831611629', '1608243836']
+                        [13][CALL] from=UniswapLPOracleFactory, to=UniswapLPOracleInstance, consult(token(address): 0xC02aaA, amount(uint256): 436145699331197529464143) -> 255145789928450
+                        [13][STATICCALL] from=UniswapLPOracleFactory, to=UniswapV2Pair, totalSupply() -> 1981674137099444414558909
+                        [13][STATICCALL] from=UniswapLPOracleFactory, to=UniswapV2Pair, decimals() -> 18
+                      [12][STATICCALL] from=WarpControl, to=WarpVaultLP, collateralOfAccount(_account(address): 0xdF8BEE) -> 94349340516285530671934
+                      [12][STATICCALL] from=WarpControl, to=WarpVaultLP, getAssetAdd() -> 0xbb2b80
+                      [12][CALL] from=WarpControl, to=UniswapLPOracleFactory, getUnderlyingPrice(_lpToken(address): 0xBb2b80) -> 800627248859658
+                        [13][STATICCALL] from=UniswapLPOracleFactory, to=UniswapV2Pair, getReserves() -> ['333416269583', '118670352285311829256834', '1608243836']
+                        [13][CALL] from=UniswapLPOracleFactory, to=UniswapLPOracleInstance, consult(token(address): 0x2260FA, amount(uint256): 333416269583) -> 75637472315369
+                          [14][STATICCALL] from=UniswapLPOracleInstance, to=UniswapV2Pair, price0CumulativeLast() -> 11579414826448035857614616709241733395629799
+                          [14][STATICCALL] from=UniswapLPOracleInstance, to=UniswapV2Pair, price1CumulativeLast() -> 833919022697066557066305606691059229065
+                          [14][STATICCALL] from=UniswapLPOracleInstance, to=UniswapV2Pair, getReserves() -> ['9292384098', '2119261698035', '1608243389']
+                        [13][CALL] from=UniswapLPOracleFactory, to=UniswapLPOracleInstance, consult(token(address): 0xC02aaA, amount(uint256): 118670352285311829256834) -> 69422307319212
+                        [13][STATICCALL] from=UniswapLPOracleFactory, to=UniswapV2Pair, totalSupply() -> 181182666267218862
+                        [13][STATICCALL] from=UniswapLPOracleFactory, to=UniswapV2Pair, decimals() -> 18
+                      [12][STATICCALL] from=WarpControl, to=WarpVaultLP, collateralOfAccount(_account(address): 0xdF8BEE) -> 0
+                      [12][STATICCALL] from=WarpControl, to=WarpVaultLP, getAssetAdd() -> 0x0d4a11
+                      [12][CALL] from=WarpControl, to=UniswapLPOracleFactory, getUnderlyingPrice(_lpToken(address): 0x0d4a11) -> 62617141560454
+                        [13][STATICCALL] from=UniswapLPOracleFactory, to=UniswapV2Pair, getReserves() -> ['96092504596377425124747', '61806875042754', '1608243842']
+                        [13][CALL] from=UniswapLPOracleFactory, to=UniswapLPOracleInstance, consult(token(address): 0xC02aaA, amount(uint256): 96092504596377425124747) -> 56214237648203
+                        [13][CALL] from=UniswapLPOracleFactory, to=UniswapLPOracleInstance, consult(token(address): 0xdAC17F, amount(uint256): 61806875042754) -> 61907686148287
+                        [13][STATICCALL] from=UniswapLPOracleFactory, to=UniswapV2Pair, totalSupply() -> 1886415138935192150
+                        [13][STATICCALL] from=UniswapLPOracleFactory, to=UniswapV2Pair, decimals() -> 18
+                      [12][STATICCALL] from=WarpControl, to=WarpVaultLP, collateralOfAccount(_account(address): 0xdF8BEE) -> 0
+                      [12][STATICCALL] from=WarpControl, to=WarpVaultLP, getAssetAdd() -> 0xb4e16d
+                      [12][CALL] from=WarpControl, to=UniswapLPOracleFactory, getUnderlyingPrice(_lpToken(address): 0xB4e16d) -> 62598825973283
+                        [13][STATICCALL] from=UniswapLPOracleFactory, to=UniswapV2Pair, getReserves() -> ['53360073924463', '82798403238691593953289', '1608243856']
+                        [13][CALL] from=UniswapLPOracleFactory, to=UniswapLPOracleInstance, consult(token(address): 0xA0b869, amount(uint256): 53360073924463) -> 53360073924463
+                        [13][CALL] from=UniswapLPOracleFactory, to=UniswapLPOracleInstance, consult(token(address): 0xC02aaA, amount(uint256): 82798403238691593953289) -> 48437171412088
+                        [13][STATICCALL] from=UniswapLPOracleFactory, to=UniswapV2Pair, totalSupply() -> 1626184577007839094
+                        [13][STATICCALL] from=UniswapLPOracleFactory, to=UniswapV2Pair, decimals() -> 18
+                      [12][STATICCALL] from=WarpControl, to=WarpVaultLP, collateralOfAccount(_account(address): 0xdF8BEE) -> 0
+                      [12][CALL] from=WarpControl, to=UniswapLPOracleFactory, getPriceOfToken(_token(address): 0xA0b869, _amount(uint256): 3917983816717) -> 3917983816717
+                        [13][CALL] from=UniswapLPOracleFactory, to=UniswapLPOracleInstance, consult(token(address): 0xA0b869, amount(uint256): 3917983816717) -> 3917983816717
+                      [12][CALL] from=WarpControl, to=WarpVaultSC, _borrow(_borrowAmount(uint256): 3917983816717, _borrower(address): 0xdF8BEE) -> None
+                        [13][STATICCALL] from=WarpVaultSC, to=FiatTokenProxy, balanceOf(account(address): 0xae465F) -> 3917983816718
+                          [14][DELEGATECALL] from=FiatTokenProxy, to=FiatTokenV2, balanceOf(account(address): 0xae465F) -> 3917983816718
+                        [13][CALL] from=WarpVaultSC, to=FiatTokenProxy, transfer(to(address): 0xdF8BEE, value(uint256): 3917983816717) -> True
+                          [14][DELEGATECALL] from=FiatTokenProxy, to=FiatTokenV2, transfer(to(address): 0xdF8BEE, value(uint256): 3917983816717) -> True
+                    [11][STATICCALL] from=0xdF8BEE, to=UniswapV2Pair, token0() -> 0x6b1754
+                    [11][STATICCALL] from=0xdF8BEE, to=Dai, balanceOf((address): 0x6046c3) -> 3862646608579660094744529
+                    [11][STATICCALL] from=0xdF8BEE, to=UniswapV2Pair, token0() -> 0x6b1754
+                    [11][CALL] from=0xdF8BEE, to=WarpControl, borrowSC(_StableCoin(address): 0x6B1754, _amount(uint256): 3862646608579660094744528) -> None
+                      [12][CALL] from=WarpControl, to=WarpVaultSC, borrowBalanceCurrent(account(address): 0xdF8BEE) -> 0
+                      [12][CALL] from=WarpControl, to=WarpVaultSC, borrowBalanceCurrent(account(address): 0xdF8BEE) -> 3917983816717
+                      [12][STATICCALL] from=WarpControl, to=WarpVaultSC, getSCAddress() -> 0xa0b869
+                      [12][CALL] from=WarpControl, to=UniswapLPOracleFactory, getPriceOfToken(_token(address): 0xA0b869, _amount(uint256): 3917983816717) -> 3917983816717
+                        [13][CALL] from=UniswapLPOracleFactory, to=UniswapLPOracleInstance, consult(token(address): 0xA0b869, amount(uint256): 3917983816717) -> 3917983816717
+                      [12][CALL] from=WarpControl, to=WarpVaultSC, borrowBalanceCurrent(account(address): 0xdF8BEE) -> 0
+                      [12][STATICCALL] from=WarpControl, to=WarpVaultLP, getAssetAdd() -> 0xa478c2
+                      [12][CALL] from=WarpControl, to=UniswapLPOracleFactory, getUnderlyingPrice(_lpToken(address): 0xA478c2) -> 135470392
+                        [13][STATICCALL] from=UniswapLPOracleFactory, to=UniswapV2Pair, getReserves() -> ['13288687799183471767136625', '436145699331197529464143', '1608243881']
+                        [13][CALL] from=UniswapLPOracleFactory, to=UniswapLPOracleInstance, consult(token(address): 0x6B1754, amount(uint256): 13288687799183471767136625) -> 13312382403642
+                          [14][STATICCALL] from=UniswapLPOracleInstance, to=UniswapV2Pair, price0CumulativeLast() -> 98716031378338117671937135995
+                          [14][STATICCALL] from=UniswapLPOracleInstance, to=UniswapV2Pair, price1CumulativeLast() -> 96848017799134159798962636313373032840441219121072098
+                          [14][STATICCALL] from=UniswapLPOracleInstance, to=UniswapV2Pair, getReserves() -> ['3318600755343996900755052', '3327831611629', '1608243836']
+                        [13][CALL] from=UniswapLPOracleFactory, to=UniswapLPOracleInstance, consult(token(address): 0xC02aaA, amount(uint256): 436145699331197529464143) -> 255145789928450
+                        [13][STATICCALL] from=UniswapLPOracleFactory, to=UniswapV2Pair, totalSupply() -> 1981674137099444414558909
+                        [13][STATICCALL] from=UniswapLPOracleFactory, to=UniswapV2Pair, decimals() -> 18
+                      [12][STATICCALL] from=WarpControl, to=WarpVaultLP, collateralOfAccount(_account(address): 0xdF8BEE) -> 94349340516285530671934
+                      [12][STATICCALL] from=WarpControl, to=WarpVaultLP, getAssetAdd() -> 0xbb2b80
+                      [12][CALL] from=WarpControl, to=UniswapLPOracleFactory, getUnderlyingPrice(_lpToken(address): 0xBb2b80) -> 800627248859658
+                        [13][STATICCALL] from=UniswapLPOracleFactory, to=UniswapV2Pair, getReserves() -> ['333416269583', '118670352285311829256834', '1608243836']
+                        [13][CALL] from=UniswapLPOracleFactory, to=UniswapLPOracleInstance, consult(token(address): 0x2260FA, amount(uint256): 333416269583) -> 75637472315369
+                          [14][STATICCALL] from=UniswapLPOracleInstance, to=UniswapV2Pair, price0CumulativeLast() -> 11579414826448035857614616709241733395629799
+                          [14][STATICCALL] from=UniswapLPOracleInstance, to=UniswapV2Pair, price1CumulativeLast() -> 833919022697066557066305606691059229065
+                          [14][STATICCALL] from=UniswapLPOracleInstance, to=UniswapV2Pair, getReserves() -> ['9292384098', '2119261698035', '1608243389']
+                        [13][CALL] from=UniswapLPOracleFactory, to=UniswapLPOracleInstance, consult(token(address): 0xC02aaA, amount(uint256): 118670352285311829256834) -> 69422307319212
+                        [13][STATICCALL] from=UniswapLPOracleFactory, to=UniswapV2Pair, totalSupply() -> 181182666267218862
+                        [13][STATICCALL] from=UniswapLPOracleFactory, to=UniswapV2Pair, decimals() -> 18
+                      [12][STATICCALL] from=WarpControl, to=WarpVaultLP, collateralOfAccount(_account(address): 0xdF8BEE) -> 0
+                      [12][STATICCALL] from=WarpControl, to=WarpVaultLP, getAssetAdd() -> 0x0d4a11
+                      [12][CALL] from=WarpControl, to=UniswapLPOracleFactory, getUnderlyingPrice(_lpToken(address): 0x0d4a11) -> 62617141560454
+                        [13][STATICCALL] from=UniswapLPOracleFactory, to=UniswapV2Pair, getReserves() -> ['96092504596377425124747', '61806875042754', '1608243842']
+                        [13][CALL] from=UniswapLPOracleFactory, to=UniswapLPOracleInstance, consult(token(address): 0xC02aaA, amount(uint256): 96092504596377425124747) -> 56214237648203
+                        [13][CALL] from=UniswapLPOracleFactory, to=UniswapLPOracleInstance, consult(token(address): 0xdAC17F, amount(uint256): 61806875042754) -> 61907686148287
+                        [13][STATICCALL] from=UniswapLPOracleFactory, to=UniswapV2Pair, totalSupply() -> 1886415138935192150
+                        [13][STATICCALL] from=UniswapLPOracleFactory, to=UniswapV2Pair, decimals() -> 18
+                      [12][STATICCALL] from=WarpControl, to=WarpVaultLP, collateralOfAccount(_account(address): 0xdF8BEE) -> 0
+                      [12][STATICCALL] from=WarpControl, to=WarpVaultLP, getAssetAdd() -> 0xb4e16d
+                      [12][CALL] from=WarpControl, to=UniswapLPOracleFactory, getUnderlyingPrice(_lpToken(address): 0xB4e16d) -> 62598825973283
+                        [13][STATICCALL] from=UniswapLPOracleFactory, to=UniswapV2Pair, getReserves() -> ['53360073924463', '82798403238691593953289', '1608243856']
+                        [13][CALL] from=UniswapLPOracleFactory, to=UniswapLPOracleInstance, consult(token(address): 0xA0b869, amount(uint256): 53360073924463) -> 53360073924463
+                        [13][CALL] from=UniswapLPOracleFactory, to=UniswapLPOracleInstance, consult(token(address): 0xC02aaA, amount(uint256): 82798403238691593953289) -> 48437171412088
+                        [13][STATICCALL] from=UniswapLPOracleFactory, to=UniswapV2Pair, totalSupply() -> 1626184577007839094
+                        [13][STATICCALL] from=UniswapLPOracleFactory, to=UniswapV2Pair, decimals() -> 18
+                      [12][STATICCALL] from=WarpControl, to=WarpVaultLP, collateralOfAccount(_account(address): 0xdF8BEE) -> 0
+                      [12][CALL] from=WarpControl, to=UniswapLPOracleFactory, getPriceOfToken(_token(address): 0x6B1754, _amount(uint256): 3862646608579660094744528) -> 3869533961562
+                        [13][CALL] from=UniswapLPOracleFactory, to=UniswapLPOracleInstance, consult(token(address): 0x6B1754, amount(uint256): 3862646608579660094744528) -> 3869533961562
+                          [14][STATICCALL] from=UniswapLPOracleInstance, to=UniswapV2Pair, price0CumulativeLast() -> 98716031378338117671937135995
+                          [14][STATICCALL] from=UniswapLPOracleInstance, to=UniswapV2Pair, price1CumulativeLast() -> 96848017799134159798962636313373032840441219121072098
+                          [14][STATICCALL] from=UniswapLPOracleInstance, to=UniswapV2Pair, getReserves() -> ['3318600755343996900755052', '3327831611629', '1608243836']
+                      [12][CALL] from=WarpControl, to=WarpVaultSC, _borrow(_borrowAmount(uint256): 3862646608579660094744528, _borrower(address): 0xdF8BEE) -> None
+                        [13][STATICCALL] from=WarpVaultSC, to=Dai, balanceOf((address): 0x6046c3) -> 3862646608579660094744529
+                        [13][CALL] from=WarpVaultSC, to=Dai, transfer(dst(address): 0xdF8BEE, wad(uint256): 3862646608579660094744528) -> True
+                    [11][CALL] from=0xdF8BEE, to=WarpControl, getBorrowLimit(_account(address): 0xdF8BEE) -> 8521028096454
+                      [12][STATICCALL] from=WarpControl, to=WarpVaultLP, getAssetAdd() -> 0xa478c2
+                      [12][CALL] from=WarpControl, to=UniswapLPOracleFactory, getUnderlyingPrice(_lpToken(address): 0xA478c2) -> 135470392
+                        [13][STATICCALL] from=UniswapLPOracleFactory, to=UniswapV2Pair, getReserves() -> ['13288687799183471767136625', '436145699331197529464143', '1608243881']
+                        [13][CALL] from=UniswapLPOracleFactory, to=UniswapLPOracleInstance, consult(token(address): 0x6B1754, amount(uint256): 13288687799183471767136625) -> 13312382403642
+                          [14][STATICCALL] from=UniswapLPOracleInstance, to=UniswapV2Pair, price0CumulativeLast() -> 98716031378338117671937135995
+                          [14][STATICCALL] from=UniswapLPOracleInstance, to=UniswapV2Pair, price1CumulativeLast() -> 96848017799134159798962636313373032840441219121072098
+                          [14][STATICCALL] from=UniswapLPOracleInstance, to=UniswapV2Pair, getReserves() -> ['3318600755343996900755052', '3327831611629', '1608243836']
+                        [13][CALL] from=UniswapLPOracleFactory, to=UniswapLPOracleInstance, consult(token(address): 0xC02aaA, amount(uint256): 436145699331197529464143) -> 255145789928450
+                        [13][STATICCALL] from=UniswapLPOracleFactory, to=UniswapV2Pair, totalSupply() -> 1981674137099444414558909
+                        [13][STATICCALL] from=UniswapLPOracleFactory, to=UniswapV2Pair, decimals() -> 18
+                      [12][STATICCALL] from=WarpControl, to=WarpVaultLP, collateralOfAccount(_account(address): 0xdF8BEE) -> 94349340516285530671934
+                      [12][STATICCALL] from=WarpControl, to=WarpVaultLP, getAssetAdd() -> 0xbb2b80
+                      [12][CALL] from=WarpControl, to=UniswapLPOracleFactory, getUnderlyingPrice(_lpToken(address): 0xBb2b80) -> 800627248859658
+                        [13][STATICCALL] from=UniswapLPOracleFactory, to=UniswapV2Pair, getReserves() -> ['333416269583', '118670352285311829256834', '1608243836']
+                        [13][CALL] from=UniswapLPOracleFactory, to=UniswapLPOracleInstance, consult(token(address): 0x2260FA, amount(uint256): 333416269583) -> 75637472315369
+                          [14][STATICCALL] from=UniswapLPOracleInstance, to=UniswapV2Pair, price0CumulativeLast() -> 11579414826448035857614616709241733395629799
+                          [14][STATICCALL] from=UniswapLPOracleInstance, to=UniswapV2Pair, price1CumulativeLast() -> 833919022697066557066305606691059229065
+                          [14][STATICCALL] from=UniswapLPOracleInstance, to=UniswapV2Pair, getReserves() -> ['9292384098', '2119261698035', '1608243389']
+                        [13][CALL] from=UniswapLPOracleFactory, to=UniswapLPOracleInstance, consult(token(address): 0xC02aaA, amount(uint256): 118670352285311829256834) -> 69422307319212
+                        [13][STATICCALL] from=UniswapLPOracleFactory, to=UniswapV2Pair, totalSupply() -> 181182666267218862
+                        [13][STATICCALL] from=UniswapLPOracleFactory, to=UniswapV2Pair, decimals() -> 18
+                      [12][STATICCALL] from=WarpControl, to=WarpVaultLP, collateralOfAccount(_account(address): 0xdF8BEE) -> 0
+                      [12][STATICCALL] from=WarpControl, to=WarpVaultLP, getAssetAdd() -> 0x0d4a11
+                      [12][CALL] from=WarpControl, to=UniswapLPOracleFactory, getUnderlyingPrice(_lpToken(address): 0x0d4a11) -> 62617141560454
+                        [13][STATICCALL] from=UniswapLPOracleFactory, to=UniswapV2Pair, getReserves() -> ['96092504596377425124747', '61806875042754', '1608243842']
+                        [13][CALL] from=UniswapLPOracleFactory, to=UniswapLPOracleInstance, consult(token(address): 0xC02aaA, amount(uint256): 96092504596377425124747) -> 56214237648203
+                        [13][CALL] from=UniswapLPOracleFactory, to=UniswapLPOracleInstance, consult(token(address): 0xdAC17F, amount(uint256): 61806875042754) -> 61907686148287
+                        [13][STATICCALL] from=UniswapLPOracleFactory, to=UniswapV2Pair, totalSupply() -> 1886415138935192150
+                        [13][STATICCALL] from=UniswapLPOracleFactory, to=UniswapV2Pair, decimals() -> 18
+                      [12][STATICCALL] from=WarpControl, to=WarpVaultLP, collateralOfAccount(_account(address): 0xdF8BEE) -> 0
+                      [12][STATICCALL] from=WarpControl, to=WarpVaultLP, getAssetAdd() -> 0xb4e16d
+                      [12][CALL] from=WarpControl, to=UniswapLPOracleFactory, getUnderlyingPrice(_lpToken(address): 0xB4e16d) -> 62598825973283
+                        [13][STATICCALL] from=UniswapLPOracleFactory, to=UniswapV2Pair, getReserves() -> ['53360073924463', '82798403238691593953289', '1608243856']
+                        [13][CALL] from=UniswapLPOracleFactory, to=UniswapLPOracleInstance, consult(token(address): 0xA0b869, amount(uint256): 53360073924463) -> 53360073924463
+                        [13][CALL] from=UniswapLPOracleFactory, to=UniswapLPOracleInstance, consult(token(address): 0xC02aaA, amount(uint256): 82798403238691593953289) -> 48437171412088
+                        [13][STATICCALL] from=UniswapLPOracleFactory, to=UniswapV2Pair, totalSupply() -> 1626184577007839094
+                        [13][STATICCALL] from=UniswapLPOracleFactory, to=UniswapV2Pair, decimals() -> 18
+                      [12][STATICCALL] from=WarpControl, to=WarpVaultLP, collateralOfAccount(_account(address): 0xdF8BEE) -> 0
+                    [11][STATICCALL] from=0xdF8BEE, to=UniswapV2Pair, token0() -> 0x6b1754
+                    [11][STATICCALL] from=0xdF8BEE, to=Dai, balanceOf((address): 0xdF8BEE) -> 51484977153433390541106205
+                    [11][STATICCALL] from=0xdF8BEE, to=UniswapV2Pair, getReserves() -> ['13288687799183471767136625', '436145699331197529464143', '1608243881']
+                    [11][STATICCALL] from=0xdF8BEE, to=UniswapV2Pair, token0() -> 0x6b1754
+                    [11][CALL] from=0xdF8BEE, to=Dai, transfer(dst(address): 0xA478c2, wad(uint256): 48584947172042515372154570) -> True
+                    [11][CALL] from=0xdF8BEE, to=UniswapV2Pair, swap(amount0Out(uint256): 0, amount1Out(uint256): 342252890746324624810982, to(address): 0xdF8BEE, data(bytes): b'') -> None
+                      [12][CALL] from=UniswapV2Pair, to=WETH9, transfer(dst(address): 0xdF8BEE, wad(uint256): 342252890746324624810982) -> True
+                      [12][STATICCALL] from=UniswapV2Pair, to=Dai, balanceOf((address): 0xA478c2) -> 61873634971225987139291195
+                      [12][STATICCALL] from=UniswapV2Pair, to=WETH9, balanceOf((address): 0xA478c2) -> 93892808584872904653161
+                    [11][STATICCALL] from=0xdF8BEE, to=UniswapV2Pair, token0() -> 0x6b1754
+                    [11][STATICCALL] from=0xdF8BEE, to=Dai, balanceOf((address): 0xdF8BEE) -> 2900029981390875168951635
+                  [10][CALL] from=SoloMargin, to=Dai, transferFrom(src(address): 0xdF8BEE, dst(address): 0x1E0447, wad(uint256): 2900029981390875168951635) -> True
+                  [10][CALL] from=SoloMargin, to=WETH9, transferFrom(src(address): 0xdF8BEE, dst(address): 0x1E0447, wad(uint256): 76436763597706555986904) -> True
+              [8][STATICCALL] from=0xdF8BEE, to=UniswapV2Pair, getReserves() -> ['70837678781592', '110167374111420695655184', '1608243795']
+              [8][STATICCALL] from=0xdF8BEE, to=UniswapV2Pair, token0() -> 0xa0b869
+              [8][STATICCALL] from=0xdF8BEE, to=FiatTokenProxy, balanceOf(account(address): 0xdF8BEE) -> 3917983816717
+                [9][DELEGATECALL] from=FiatTokenProxy, to=FiatTokenV2, balanceOf(account(address): 0xdF8BEE) -> 3917983816717
+              [8][STATICCALL] from=0xdF8BEE, to=UniswapV2Pair, token0() -> 0xa0b869
+              [8][STATICCALL] from=0xdF8BEE, to=UniswapV2Pair, token0() -> 0xa0b869
+              [8][STATICCALL] from=0xdF8BEE, to=FiatTokenProxy, balanceOf(account(address): 0xdF8BEE) -> 3917983816717
+                [9][DELEGATECALL] from=FiatTokenProxy, to=FiatTokenV2, balanceOf(account(address): 0xdF8BEE) -> 3917983816717
+              [8][CALL] from=0xdF8BEE, to=FiatTokenProxy, transfer(to(address): 0x397FF1, value(uint256): 3917983816717) -> True
+                [9][DELEGATECALL] from=FiatTokenProxy, to=FiatTokenV2, transfer(to(address): 0x397FF1, value(uint256): 3917983816717) -> True
+              [8][CALL] from=0xdF8BEE, to=UniswapV2Pair, swap(amount0Out(uint256): 0, amount1Out(uint256): 5757513819156454200929, to(address): 0xdF8BEE, data(bytes): b'') -> None
+                [9][CALL] from=UniswapV2Pair, to=WETH9, transfer(dst(address): 0xdF8BEE, wad(uint256): 5757513819156454200929) -> True
+                [9][STATICCALL] from=UniswapV2Pair, to=FiatTokenProxy, balanceOf(account(address): 0x397FF1) -> 74755662598309
+                  [10][DELEGATECALL] from=FiatTokenProxy, to=FiatTokenV2, balanceOf(account(address): 0x397FF1) -> 74755662598309
+                [9][STATICCALL] from=UniswapV2Pair, to=WETH9, balanceOf((address): 0x397FF1) -> 104409860292264241454255
+              [8][STATICCALL] from=0xdF8BEE, to=UniswapV2Pair, token1() -> 0xc02aaa
+              [8][CALL] from=0xdF8BEE, to=WETH9, transfer(dst(address): 0xBb2b80, wad(uint256): 90681240991058610131201) -> True
+              [8][STATICCALL] from=0xdF8BEE, to=UniswapV2Pair, token1() -> 0xc02aaa
+              [8][CALL] from=0xdF8BEE, to=WETH9, transfer(dst(address): 0xB4e16d, wad(uint256): 83047798448407668735147) -> True
+              [8][STATICCALL] from=0xdF8BEE, to=UniswapV2Pair, token1() -> 0xc02aaa
+              [8][CALL] from=0xdF8BEE, to=WETH9, transfer(dst(address): 0x0d4a11, wad(uint256): 96381782110166557400120) -> True
+              [8][STATICCALL] from=0xdF8BEE, to=UniswapV2Pair, token1() -> 0xc02aaa
+              [8][STATICCALL] from=0xdF8BEE, to=UniswapV2Pair, token1() -> 0xc02aaa
+              [8][STATICCALL] from=0xdF8BEE, to=WETH9, balanceOf((address): 0xdF8BEE) -> 1462819418141686758539
+              [8][CALL] from=0xdF8BEE, to=WETH9, withdraw(wad(uint256): 1462819418141686758539) -> None
+                [9][CALL][1462.8194181416868] from=WETH9, to=0xdF8BEE
+            [7][STATICCALL] from=UniswapV2Pair, to=WETH9, balanceOf((address): 0x0d4a11) -> 96381782110166557400121
+            [7][STATICCALL] from=UniswapV2Pair, to=TetherToken, balanceOf(who(address): 0x0d4a11) -> 61806875042754
+        [5][STATICCALL] from=UniswapV2Pair, to=FiatTokenProxy, balanceOf(account(address): 0xB4e16d) -> 53360073924463
+          [6][DELEGATECALL] from=FiatTokenProxy, to=FiatTokenV2, balanceOf(account(address): 0xB4e16d) -> 53360073924463
+        [5][STATICCALL] from=UniswapV2Pair, to=WETH9, balanceOf((address): 0xB4e16d) -> 83047798448407668735148
+    [3][STATICCALL] from=UniswapV2Pair, to=WBTC, balanceOf(_owner(address): 0xBb2b80) -> 333416269583
+    [3][STATICCALL] from=UniswapV2Pair, to=WETH9, balanceOf((address): 0xBb2b80) -> 118942579327159462188432

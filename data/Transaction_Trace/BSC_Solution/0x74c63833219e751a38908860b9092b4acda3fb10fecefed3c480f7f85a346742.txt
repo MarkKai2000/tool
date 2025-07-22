@@ -1,0 +1,802 @@
+[1][CALL] from=0x57c112, to=0x450595, 0x320bd352() -> None
+  [2][CALL] from=0x450595, to=VTF, updateUserBalance(_user(address): 0x450595) -> None
+  [2][CREATE] from=0x450595, to=0x1dd557, atInversebrahint248() -> 0x608060
+  [2][CALL] from=0x450595, to=VTF, updateUserBalance(_user(address): 0x1dD557) -> None
+  [2][CREATE] from=0x450595, to=0x26af2a, atInversebrahint248() -> 0x608060
+  [2][CALL] from=0x450595, to=VTF, updateUserBalance(_user(address): 0x26aF2A) -> None
+  [2][CREATE] from=0x450595, to=0xa0a6e0, atInversebrahint248() -> 0x608060
+  [2][CALL] from=0x450595, to=VTF, updateUserBalance(_user(address): 0xa0A6e0) -> None
+  [2][CREATE] from=0x450595, to=0xd86b97, atInversebrahint248() -> 0x608060
+  [2][CALL] from=0x450595, to=VTF, updateUserBalance(_user(address): 0xD86b97) -> None
+  [2][CREATE] from=0x450595, to=0xf1a2f4, atInversebrahint248() -> 0x608060
+  [2][CALL] from=0x450595, to=VTF, updateUserBalance(_user(address): 0xf1A2F4) -> None
+  [2][CREATE] from=0x450595, to=0x5acace, atInversebrahint248() -> 0x608060
+  [2][CALL] from=0x450595, to=VTF, updateUserBalance(_user(address): 0x5AcaCe) -> None
+  [2][CREATE] from=0x450595, to=0x11a0fe, atInversebrahint248() -> 0x608060
+  [2][CALL] from=0x450595, to=VTF, updateUserBalance(_user(address): 0x11A0fE) -> None
+  [2][CREATE] from=0x450595, to=0x1b190c, atInversebrahint248() -> 0x608060
+  [2][CALL] from=0x450595, to=VTF, updateUserBalance(_user(address): 0x1b190c) -> None
+  [2][CREATE] from=0x450595, to=0x5bd2d1, atInversebrahint248() -> 0x608060
+  [2][CALL] from=0x450595, to=VTF, updateUserBalance(_user(address): 0x5BD2D1) -> None
+  [2][CREATE] from=0x450595, to=0xf41874, atInversebrahint248() -> 0x608060
+  [2][CALL] from=0x450595, to=VTF, updateUserBalance(_user(address): 0xf41874) -> None
+  [2][CREATE] from=0x450595, to=0x455db1, atInversebrahint248() -> 0x608060
+  [2][CALL] from=0x450595, to=VTF, updateUserBalance(_user(address): 0x455dB1) -> None
+  [2][CREATE] from=0x450595, to=0xc9ddb4, atInversebrahint248() -> 0x608060
+  [2][CALL] from=0x450595, to=VTF, updateUserBalance(_user(address): 0xC9ddb4) -> None
+  [2][CREATE] from=0x450595, to=0x81758b, atInversebrahint248() -> 0x608060
+  [2][CALL] from=0x450595, to=VTF, updateUserBalance(_user(address): 0x81758b) -> None
+  [2][CREATE] from=0x450595, to=0xaa9c87, atInversebrahint248() -> 0x608060
+  [2][CALL] from=0x450595, to=VTF, updateUserBalance(_user(address): 0xaA9c87) -> None
+  [2][CREATE] from=0x450595, to=0x7c3c0b, atInversebrahint248() -> 0x608060
+  [2][CALL] from=0x450595, to=VTF, updateUserBalance(_user(address): 0x7c3c0B) -> None
+  [2][CREATE] from=0x450595, to=0x562efe, atInversebrahint248() -> 0x608060
+  [2][CALL] from=0x450595, to=VTF, updateUserBalance(_user(address): 0x562EFe) -> None
+  [2][CREATE] from=0x450595, to=0x81a74e, atInversebrahint248() -> 0x608060
+  [2][CALL] from=0x450595, to=VTF, updateUserBalance(_user(address): 0x81a74E) -> None
+  [2][CREATE] from=0x450595, to=0x8b3e49, atInversebrahint248() -> 0x608060
+  [2][CALL] from=0x450595, to=VTF, updateUserBalance(_user(address): 0x8B3E49) -> None
+  [2][CREATE] from=0x450595, to=0x0057da, atInversebrahint248() -> 0x608060
+  [2][CALL] from=0x450595, to=VTF, updateUserBalance(_user(address): 0x0057dA) -> None
+  [2][CREATE] from=0x450595, to=0xf04293, atInversebrahint248() -> 0x608060
+  [2][CALL] from=0x450595, to=VTF, updateUserBalance(_user(address): 0xf04293) -> None
+  [2][CREATE] from=0x450595, to=0xe536df, atInversebrahint248() -> 0x608060
+  [2][CALL] from=0x450595, to=VTF, updateUserBalance(_user(address): 0xE536DF) -> None
+  [2][CREATE] from=0x450595, to=0x8d7ea8, atInversebrahint248() -> 0x608060
+  [2][CALL] from=0x450595, to=VTF, updateUserBalance(_user(address): 0x8d7EA8) -> None
+  [2][CREATE] from=0x450595, to=0xd7737c, atInversebrahint248() -> 0x608060
+  [2][CALL] from=0x450595, to=VTF, updateUserBalance(_user(address): 0xd7737C) -> None
+  [2][CREATE] from=0x450595, to=0x4e398c, atInversebrahint248() -> 0x608060
+  [2][CALL] from=0x450595, to=VTF, updateUserBalance(_user(address): 0x4E398C) -> None
+  [2][CREATE] from=0x450595, to=0xa57d8b, atInversebrahint248() -> 0x608060
+  [2][CALL] from=0x450595, to=VTF, updateUserBalance(_user(address): 0xA57D8b) -> None
+  [2][CREATE] from=0x450595, to=0x831183, atInversebrahint248() -> 0x608060
+  [2][CALL] from=0x450595, to=VTF, updateUserBalance(_user(address): 0x831183) -> None
+  [2][CREATE] from=0x450595, to=0x6e29d6, atInversebrahint248() -> 0x608060
+  [2][CALL] from=0x450595, to=VTF, updateUserBalance(_user(address): 0x6e29D6) -> None
+  [2][CREATE] from=0x450595, to=0xaf218a, atInversebrahint248() -> 0x608060
+  [2][CALL] from=0x450595, to=VTF, updateUserBalance(_user(address): 0xaf218A) -> None
+  [2][CREATE] from=0x450595, to=0xc0e9c8, atInversebrahint248() -> 0x608060
+  [2][CALL] from=0x450595, to=VTF, updateUserBalance(_user(address): 0xc0E9c8) -> None
+  [2][CREATE] from=0x450595, to=0x8fb889, atInversebrahint248() -> 0x608060
+  [2][CALL] from=0x450595, to=VTF, updateUserBalance(_user(address): 0x8Fb889) -> None
+  [2][CREATE] from=0x450595, to=0x031678, atInversebrahint248() -> 0x608060
+  [2][CALL] from=0x450595, to=VTF, updateUserBalance(_user(address): 0x031678) -> None
+  [2][CREATE] from=0x450595, to=0x99cc71, atInversebrahint248() -> 0x608060
+  [2][CALL] from=0x450595, to=VTF, updateUserBalance(_user(address): 0x99CC71) -> None
+  [2][CREATE] from=0x450595, to=0x489e39, atInversebrahint248() -> 0x608060
+  [2][CALL] from=0x450595, to=VTF, updateUserBalance(_user(address): 0x489e39) -> None
+  [2][CREATE] from=0x450595, to=0x6c898b, atInversebrahint248() -> 0x608060
+  [2][CALL] from=0x450595, to=VTF, updateUserBalance(_user(address): 0x6c898B) -> None
+  [2][CREATE] from=0x450595, to=0xa2d848, atInversebrahint248() -> 0x608060
+  [2][CALL] from=0x450595, to=VTF, updateUserBalance(_user(address): 0xa2d848) -> None
+  [2][CREATE] from=0x450595, to=0x246d37, atInversebrahint248() -> 0x608060
+  [2][CALL] from=0x450595, to=VTF, updateUserBalance(_user(address): 0x246D37) -> None
+  [2][CREATE] from=0x450595, to=0x03c2e5, atInversebrahint248() -> 0x608060
+  [2][CALL] from=0x450595, to=VTF, updateUserBalance(_user(address): 0x03c2E5) -> None
+  [2][CREATE] from=0x450595, to=0x9bd4f3, atInversebrahint248() -> 0x608060
+  [2][CALL] from=0x450595, to=VTF, updateUserBalance(_user(address): 0x9bd4F3) -> None
+  [2][CREATE] from=0x450595, to=0xe4614f, atInversebrahint248() -> 0x608060
+  [2][CALL] from=0x450595, to=VTF, updateUserBalance(_user(address): 0xe4614F) -> None
+  [2][CREATE] from=0x450595, to=0xce5224, atInversebrahint248() -> 0x608060
+  [2][CALL] from=0x450595, to=VTF, updateUserBalance(_user(address): 0xce5224) -> None
+  [2][CREATE] from=0x450595, to=0x926a9c, atInversebrahint248() -> 0x608060
+  [2][CALL] from=0x450595, to=VTF, updateUserBalance(_user(address): 0x926a9c) -> None
+  [2][CREATE] from=0x450595, to=0xbdc8ec, atInversebrahint248() -> 0x608060
+  [2][CALL] from=0x450595, to=VTF, updateUserBalance(_user(address): 0xbDc8Ec) -> None
+  [2][CREATE] from=0x450595, to=0x9fe772, atInversebrahint248() -> 0x608060
+  [2][CALL] from=0x450595, to=VTF, updateUserBalance(_user(address): 0x9FE772) -> None
+  [2][CREATE] from=0x450595, to=0x3c7033, atInversebrahint248() -> 0x608060
+  [2][CALL] from=0x450595, to=VTF, updateUserBalance(_user(address): 0x3c7033) -> None
+  [2][CREATE] from=0x450595, to=0x2151fe, atInversebrahint248() -> 0x608060
+  [2][CALL] from=0x450595, to=VTF, updateUserBalance(_user(address): 0x2151Fe) -> None
+  [2][CREATE] from=0x450595, to=0xc68f8a, atInversebrahint248() -> 0x608060
+  [2][CALL] from=0x450595, to=VTF, updateUserBalance(_user(address): 0xc68F8A) -> None
+  [2][CREATE] from=0x450595, to=0x0a073e, atInversebrahint248() -> 0x608060
+  [2][CALL] from=0x450595, to=VTF, updateUserBalance(_user(address): 0x0A073e) -> None
+  [2][CREATE] from=0x450595, to=0xf11ced, atInversebrahint248() -> 0x608060
+  [2][CALL] from=0x450595, to=VTF, updateUserBalance(_user(address): 0xf11ced) -> None
+  [2][CREATE] from=0x450595, to=0x90b034, atInversebrahint248() -> 0x608060
+  [2][CALL] from=0x450595, to=VTF, updateUserBalance(_user(address): 0x90B034) -> None
+  [2][CREATE] from=0x450595, to=0xcdffdd, atInversebrahint248() -> 0x608060
+  [2][CALL] from=0x450595, to=VTF, updateUserBalance(_user(address): 0xCdFFDD) -> None
+  [2][CREATE] from=0x450595, to=0x66141c, atInversebrahint248() -> 0x608060
+  [2][CALL] from=0x450595, to=VTF, updateUserBalance(_user(address): 0x66141c) -> None
+  [2][CREATE] from=0x450595, to=0x013b44, atInversebrahint248() -> 0x608060
+  [2][CALL] from=0x450595, to=VTF, updateUserBalance(_user(address): 0x013b44) -> None
+  [2][CREATE] from=0x450595, to=0x12447e, atInversebrahint248() -> 0x608060
+  [2][CALL] from=0x450595, to=VTF, updateUserBalance(_user(address): 0x12447e) -> None
+  [2][CREATE] from=0x450595, to=0x5cdbdb, atInversebrahint248() -> 0x608060
+  [2][CALL] from=0x450595, to=VTF, updateUserBalance(_user(address): 0x5CDbdb) -> None
+  [2][CREATE] from=0x450595, to=0x372690, atInversebrahint248() -> 0x608060
+  [2][CALL] from=0x450595, to=VTF, updateUserBalance(_user(address): 0x372690) -> None
+  [2][CREATE] from=0x450595, to=0xf5c845, atInversebrahint248() -> 0x608060
+  [2][CALL] from=0x450595, to=VTF, updateUserBalance(_user(address): 0xF5c845) -> None
+  [2][CREATE] from=0x450595, to=0x060557, atInversebrahint248() -> 0x608060
+  [2][CALL] from=0x450595, to=VTF, updateUserBalance(_user(address): 0x060557) -> None
+  [2][CREATE] from=0x450595, to=0x7795b2, atInversebrahint248() -> 0x608060
+  [2][CALL] from=0x450595, to=VTF, updateUserBalance(_user(address): 0x7795b2) -> None
+  [2][CREATE] from=0x450595, to=0x7b25c1, atInversebrahint248() -> 0x608060
+  [2][CALL] from=0x450595, to=VTF, updateUserBalance(_user(address): 0x7b25c1) -> None
+  [2][CREATE] from=0x450595, to=0x8affe6, atInversebrahint248() -> 0x608060
+  [2][CALL] from=0x450595, to=VTF, updateUserBalance(_user(address): 0x8AfFE6) -> None
+  [2][CREATE] from=0x450595, to=0x3c8fb3, atInversebrahint248() -> 0x608060
+  [2][CALL] from=0x450595, to=VTF, updateUserBalance(_user(address): 0x3c8fb3) -> None
+  [2][CREATE] from=0x450595, to=0x50e327, atInversebrahint248() -> 0x608060
+  [2][CALL] from=0x450595, to=VTF, updateUserBalance(_user(address): 0x50E327) -> None
+  [2][CREATE] from=0x450595, to=0x84174d, atInversebrahint248() -> 0x608060
+  [2][CALL] from=0x450595, to=VTF, updateUserBalance(_user(address): 0x84174d) -> None
+  [2][CREATE] from=0x450595, to=0xe57786, atInversebrahint248() -> 0x608060
+  [2][CALL] from=0x450595, to=VTF, updateUserBalance(_user(address): 0xE57786) -> None
+  [2][CREATE] from=0x450595, to=0x092d10, atInversebrahint248() -> 0x608060
+  [2][CALL] from=0x450595, to=VTF, updateUserBalance(_user(address): 0x092D10) -> None
+  [2][CREATE] from=0x450595, to=0xe7e1dc, atInversebrahint248() -> 0x608060
+  [2][CALL] from=0x450595, to=VTF, updateUserBalance(_user(address): 0xE7E1dc) -> None
+  [2][CREATE] from=0x450595, to=0x4b91b8, atInversebrahint248() -> 0x608060
+  [2][CALL] from=0x450595, to=VTF, updateUserBalance(_user(address): 0x4b91b8) -> None
+  [2][CREATE] from=0x450595, to=0xa94635, atInversebrahint248() -> 0x608060
+  [2][CALL] from=0x450595, to=VTF, updateUserBalance(_user(address): 0xa94635) -> None
+  [2][CREATE] from=0x450595, to=0x2f5520, atInversebrahint248() -> 0x608060
+  [2][CALL] from=0x450595, to=VTF, updateUserBalance(_user(address): 0x2f5520) -> None
+  [2][CREATE] from=0x450595, to=0xa22b1d, atInversebrahint248() -> 0x608060
+  [2][CALL] from=0x450595, to=VTF, updateUserBalance(_user(address): 0xA22B1D) -> None
+  [2][CREATE] from=0x450595, to=0x7c5aca, atInversebrahint248() -> 0x608060
+  [2][CALL] from=0x450595, to=VTF, updateUserBalance(_user(address): 0x7C5ACA) -> None
+  [2][CREATE] from=0x450595, to=0xbb5a21, atInversebrahint248() -> 0x608060
+  [2][CALL] from=0x450595, to=VTF, updateUserBalance(_user(address): 0xbB5A21) -> None
+  [2][CREATE] from=0x450595, to=0xc6509f, atInversebrahint248() -> 0x608060
+  [2][CALL] from=0x450595, to=VTF, updateUserBalance(_user(address): 0xc6509F) -> None
+  [2][CREATE] from=0x450595, to=0x2cdeec, atInversebrahint248() -> 0x608060
+  [2][CALL] from=0x450595, to=VTF, updateUserBalance(_user(address): 0x2CDeec) -> None
+  [2][CREATE] from=0x450595, to=0x61050d, atInversebrahint248() -> 0x608060
+  [2][CALL] from=0x450595, to=VTF, updateUserBalance(_user(address): 0x61050d) -> None
+  [2][CREATE] from=0x450595, to=0x6af18b, atInversebrahint248() -> 0x608060
+  [2][CALL] from=0x450595, to=VTF, updateUserBalance(_user(address): 0x6Af18B) -> None
+  [2][CREATE] from=0x450595, to=0x69d313, atInversebrahint248() -> 0x608060
+  [2][CALL] from=0x450595, to=VTF, updateUserBalance(_user(address): 0x69D313) -> None
+  [2][CREATE] from=0x450595, to=0xe38dc5, atInversebrahint248() -> 0x608060
+  [2][CALL] from=0x450595, to=VTF, updateUserBalance(_user(address): 0xE38DC5) -> None
+  [2][CREATE] from=0x450595, to=0x8128fb, atInversebrahint248() -> 0x608060
+  [2][CALL] from=0x450595, to=VTF, updateUserBalance(_user(address): 0x8128fB) -> None
+  [2][CREATE] from=0x450595, to=0xbf56be, atInversebrahint248() -> 0x608060
+  [2][CALL] from=0x450595, to=VTF, updateUserBalance(_user(address): 0xBf56BE) -> None
+  [2][CREATE] from=0x450595, to=0x08ed81, atInversebrahint248() -> 0x608060
+  [2][CALL] from=0x450595, to=VTF, updateUserBalance(_user(address): 0x08eD81) -> None
+  [2][CREATE] from=0x450595, to=0xe66935, atInversebrahint248() -> 0x608060
+  [2][CALL] from=0x450595, to=VTF, updateUserBalance(_user(address): 0xe66935) -> None
+  [2][CREATE] from=0x450595, to=0x356b7d, atInversebrahint248() -> 0x608060
+  [2][CALL] from=0x450595, to=VTF, updateUserBalance(_user(address): 0x356b7D) -> None
+  [2][CREATE] from=0x450595, to=0x846d13, atInversebrahint248() -> 0x608060
+  [2][CALL] from=0x450595, to=VTF, updateUserBalance(_user(address): 0x846d13) -> None
+  [2][CREATE] from=0x450595, to=0x54cb57, atInversebrahint248() -> 0x608060
+  [2][CALL] from=0x450595, to=VTF, updateUserBalance(_user(address): 0x54cb57) -> None
+  [2][CREATE] from=0x450595, to=0x827fcb, atInversebrahint248() -> 0x608060
+  [2][CALL] from=0x450595, to=VTF, updateUserBalance(_user(address): 0x827FCb) -> None
+  [2][CREATE] from=0x450595, to=0x8d53b3, atInversebrahint248() -> 0x608060
+  [2][CALL] from=0x450595, to=VTF, updateUserBalance(_user(address): 0x8D53B3) -> None
+  [2][CREATE] from=0x450595, to=0x4ea493, atInversebrahint248() -> 0x608060
+  [2][CALL] from=0x450595, to=VTF, updateUserBalance(_user(address): 0x4EA493) -> None
+  [2][CREATE] from=0x450595, to=0xc77d19, atInversebrahint248() -> 0x608060
+  [2][CALL] from=0x450595, to=VTF, updateUserBalance(_user(address): 0xc77D19) -> None
+  [2][CREATE] from=0x450595, to=0xc845c0, atInversebrahint248() -> 0x608060
+  [2][CALL] from=0x450595, to=VTF, updateUserBalance(_user(address): 0xC845C0) -> None
+  [2][CREATE] from=0x450595, to=0xdd1868, atInversebrahint248() -> 0x608060
+  [2][CALL] from=0x450595, to=VTF, updateUserBalance(_user(address): 0xDD1868) -> None
+  [2][CREATE] from=0x450595, to=0xbd3044, atInversebrahint248() -> 0x608060
+  [2][CALL] from=0x450595, to=VTF, updateUserBalance(_user(address): 0xBd3044) -> None
+  [2][CREATE] from=0x450595, to=0x699a9e, atInversebrahint248() -> 0x608060
+  [2][CALL] from=0x450595, to=VTF, updateUserBalance(_user(address): 0x699a9e) -> None
+  [2][CREATE] from=0x450595, to=0x26cc97, atInversebrahint248() -> 0x608060
+  [2][CALL] from=0x450595, to=VTF, updateUserBalance(_user(address): 0x26cc97) -> None
+  [2][CREATE] from=0x450595, to=0x78eec8, atInversebrahint248() -> 0x608060
+  [2][CALL] from=0x450595, to=VTF, updateUserBalance(_user(address): 0x78eEc8) -> None
+  [2][CREATE] from=0x450595, to=0x945ce4, atInversebrahint248() -> 0x608060
+  [2][CALL] from=0x450595, to=VTF, updateUserBalance(_user(address): 0x945ce4) -> None
+  [2][CREATE] from=0x450595, to=0x00989b, atInversebrahint248() -> 0x608060
+  [2][CALL] from=0x450595, to=VTF, updateUserBalance(_user(address): 0x00989B) -> None
+  [2][CREATE] from=0x450595, to=0xe2a662, atInversebrahint248() -> 0x608060
+  [2][CALL] from=0x450595, to=VTF, updateUserBalance(_user(address): 0xe2a662) -> None
+  [2][CREATE] from=0x450595, to=0x863389, atInversebrahint248() -> 0x608060
+  [2][CALL] from=0x450595, to=VTF, updateUserBalance(_user(address): 0x863389) -> None
+  [2][CREATE] from=0x450595, to=0x31497c, atInversebrahint248() -> 0x608060
+  [2][CALL] from=0x450595, to=VTF, updateUserBalance(_user(address): 0x31497c) -> None
+  [2][CREATE] from=0x450595, to=0x20aa99, atInversebrahint248() -> 0x608060
+  [2][CALL] from=0x450595, to=VTF, updateUserBalance(_user(address): 0x20aa99) -> None
+  [2][CREATE] from=0x450595, to=0x10e80c, atInversebrahint248() -> 0x608060
+  [2][CALL] from=0x450595, to=VTF, updateUserBalance(_user(address): 0x10E80C) -> None
+  [2][CREATE] from=0x450595, to=0x186291, atInversebrahint248() -> 0x608060
+  [2][CALL] from=0x450595, to=VTF, updateUserBalance(_user(address): 0x186291) -> None
+  [2][CREATE] from=0x450595, to=0x4c5cb9, atInversebrahint248() -> 0x608060
+  [2][CALL] from=0x450595, to=VTF, updateUserBalance(_user(address): 0x4c5cB9) -> None
+  [2][CREATE] from=0x450595, to=0x15528c, atInversebrahint248() -> 0x608060
+  [2][CALL] from=0x450595, to=VTF, updateUserBalance(_user(address): 0x15528c) -> None
+  [2][CREATE] from=0x450595, to=0xf3d24b, atInversebrahint248() -> 0x608060
+  [2][CALL] from=0x450595, to=VTF, updateUserBalance(_user(address): 0xF3D24b) -> None
+  [2][CREATE] from=0x450595, to=0xaf0bb4, atInversebrahint248() -> 0x608060
+  [2][CALL] from=0x450595, to=VTF, updateUserBalance(_user(address): 0xAf0Bb4) -> None
+  [2][CREATE] from=0x450595, to=0x191ef0, atInversebrahint248() -> 0x608060
+  [2][CALL] from=0x450595, to=VTF, updateUserBalance(_user(address): 0x191EF0) -> None
+  [2][CREATE] from=0x450595, to=0x499505, atInversebrahint248() -> 0x608060
+  [2][CALL] from=0x450595, to=VTF, updateUserBalance(_user(address): 0x499505) -> None
+  [2][CREATE] from=0x450595, to=0xec0bf0, atInversebrahint248() -> 0x608060
+  [2][CALL] from=0x450595, to=VTF, updateUserBalance(_user(address): 0xEc0bF0) -> None
+  [2][CREATE] from=0x450595, to=0x1e6717, atInversebrahint248() -> 0x608060
+  [2][CALL] from=0x450595, to=VTF, updateUserBalance(_user(address): 0x1e6717) -> None
+  [2][CREATE] from=0x450595, to=0xf53514, atInversebrahint248() -> 0x608060
+  [2][CALL] from=0x450595, to=VTF, updateUserBalance(_user(address): 0xf53514) -> None
+  [2][CREATE] from=0x450595, to=0xea9703, atInversebrahint248() -> 0x608060
+  [2][CALL] from=0x450595, to=VTF, updateUserBalance(_user(address): 0xEa9703) -> None
+  [2][CREATE] from=0x450595, to=0x5d13b3, atInversebrahint248() -> 0x608060
+  [2][CALL] from=0x450595, to=VTF, updateUserBalance(_user(address): 0x5d13b3) -> None
+  [2][CREATE] from=0x450595, to=0x37d332, atInversebrahint248() -> 0x608060
+  [2][CALL] from=0x450595, to=VTF, updateUserBalance(_user(address): 0x37d332) -> None
+  [2][CREATE] from=0x450595, to=0x2ac126, atInversebrahint248() -> 0x608060
+  [2][CALL] from=0x450595, to=VTF, updateUserBalance(_user(address): 0x2AC126) -> None
+  [2][CREATE] from=0x450595, to=0xafb01f, atInversebrahint248() -> 0x608060
+  [2][CALL] from=0x450595, to=VTF, updateUserBalance(_user(address): 0xafb01f) -> None
+  [2][CREATE] from=0x450595, to=0xb5e21c, atInversebrahint248() -> 0x608060
+  [2][CALL] from=0x450595, to=VTF, updateUserBalance(_user(address): 0xB5e21c) -> None
+  [2][CREATE] from=0x450595, to=0x1c5603, atInversebrahint248() -> 0x608060
+  [2][CALL] from=0x450595, to=VTF, updateUserBalance(_user(address): 0x1C5603) -> None
+  [2][CREATE] from=0x450595, to=0xd114a7, atInversebrahint248() -> 0x608060
+  [2][CALL] from=0x450595, to=VTF, updateUserBalance(_user(address): 0xD114a7) -> None
+  [2][CREATE] from=0x450595, to=0x67ab58, atInversebrahint248() -> 0x608060
+  [2][CALL] from=0x450595, to=VTF, updateUserBalance(_user(address): 0x67AB58) -> None
+  [2][CREATE] from=0x450595, to=0x41d7e8, atInversebrahint248() -> 0x608060
+  [2][CALL] from=0x450595, to=VTF, updateUserBalance(_user(address): 0x41D7E8) -> None
+  [2][CREATE] from=0x450595, to=0x134b5e, atInversebrahint248() -> 0x608060
+  [2][CALL] from=0x450595, to=VTF, updateUserBalance(_user(address): 0x134b5E) -> None
+  [2][CREATE] from=0x450595, to=0xf04c22, atInversebrahint248() -> 0x608060
+  [2][CALL] from=0x450595, to=VTF, updateUserBalance(_user(address): 0xf04c22) -> None
+  [2][CREATE] from=0x450595, to=0x6e797a, atInversebrahint248() -> 0x608060
+  [2][CALL] from=0x450595, to=VTF, updateUserBalance(_user(address): 0x6E797A) -> None
+  [2][CREATE] from=0x450595, to=0x896b73, atInversebrahint248() -> 0x608060
+  [2][CALL] from=0x450595, to=VTF, updateUserBalance(_user(address): 0x896B73) -> None
+  [2][CREATE] from=0x450595, to=0xa54cdb, atInversebrahint248() -> 0x608060
+  [2][CALL] from=0x450595, to=VTF, updateUserBalance(_user(address): 0xa54Cdb) -> None
+  [2][CREATE] from=0x450595, to=0x03eb35, atInversebrahint248() -> 0x608060
+  [2][CALL] from=0x450595, to=VTF, updateUserBalance(_user(address): 0x03EB35) -> None
+  [2][CREATE] from=0x450595, to=0x4138d1, atInversebrahint248() -> 0x608060
+  [2][CALL] from=0x450595, to=VTF, updateUserBalance(_user(address): 0x4138d1) -> None
+  [2][CREATE] from=0x450595, to=0x35cd3c, atInversebrahint248() -> 0x608060
+  [2][CALL] from=0x450595, to=VTF, updateUserBalance(_user(address): 0x35Cd3C) -> None
+  [2][CREATE] from=0x450595, to=0x8508a0, atInversebrahint248() -> 0x608060
+  [2][CALL] from=0x450595, to=VTF, updateUserBalance(_user(address): 0x8508a0) -> None
+  [2][CREATE] from=0x450595, to=0x925205, atInversebrahint248() -> 0x608060
+  [2][CALL] from=0x450595, to=VTF, updateUserBalance(_user(address): 0x925205) -> None
+  [2][CREATE] from=0x450595, to=0xef5080, atInversebrahint248() -> 0x608060
+  [2][CALL] from=0x450595, to=VTF, updateUserBalance(_user(address): 0xef5080) -> None
+  [2][CREATE] from=0x450595, to=0x8a7454, atInversebrahint248() -> 0x608060
+  [2][CALL] from=0x450595, to=VTF, updateUserBalance(_user(address): 0x8A7454) -> None
+  [2][CREATE] from=0x450595, to=0x57f31d, atInversebrahint248() -> 0x608060
+  [2][CALL] from=0x450595, to=VTF, updateUserBalance(_user(address): 0x57f31D) -> None
+  [2][CREATE] from=0x450595, to=0xd8f289, atInversebrahint248() -> 0x608060
+  [2][CALL] from=0x450595, to=VTF, updateUserBalance(_user(address): 0xd8f289) -> None
+  [2][CREATE] from=0x450595, to=0xaaa2aa, atInversebrahint248() -> 0x608060
+  [2][CALL] from=0x450595, to=VTF, updateUserBalance(_user(address): 0xaaa2aA) -> None
+  [2][CREATE] from=0x450595, to=0xf50328, atInversebrahint248() -> 0x608060
+  [2][CALL] from=0x450595, to=VTF, updateUserBalance(_user(address): 0xf50328) -> None
+  [2][CREATE] from=0x450595, to=0xb9c17a, atInversebrahint248() -> 0x608060
+  [2][CALL] from=0x450595, to=VTF, updateUserBalance(_user(address): 0xb9C17A) -> None
+  [2][CREATE] from=0x450595, to=0xc8b054, atInversebrahint248() -> 0x608060
+  [2][CALL] from=0x450595, to=VTF, updateUserBalance(_user(address): 0xc8B054) -> None
+  [2][CREATE] from=0x450595, to=0xda0dec, atInversebrahint248() -> 0x608060
+  [2][CALL] from=0x450595, to=VTF, updateUserBalance(_user(address): 0xda0dEc) -> None
+  [2][CREATE] from=0x450595, to=0x66378c, atInversebrahint248() -> 0x608060
+  [2][CALL] from=0x450595, to=VTF, updateUserBalance(_user(address): 0x66378c) -> None
+  [2][CREATE] from=0x450595, to=0xe9432e, atInversebrahint248() -> 0x608060
+  [2][CALL] from=0x450595, to=VTF, updateUserBalance(_user(address): 0xE9432E) -> None
+  [2][CREATE] from=0x450595, to=0xf44216, atInversebrahint248() -> 0x608060
+  [2][CALL] from=0x450595, to=VTF, updateUserBalance(_user(address): 0xf44216) -> None
+  [2][CREATE] from=0x450595, to=0xf2e96e, atInversebrahint248() -> 0x608060
+  [2][CALL] from=0x450595, to=VTF, updateUserBalance(_user(address): 0xf2e96e) -> None
+  [2][CREATE] from=0x450595, to=0xdde459, atInversebrahint248() -> 0x608060
+  [2][CALL] from=0x450595, to=VTF, updateUserBalance(_user(address): 0xddE459) -> None
+  [2][CREATE] from=0x450595, to=0x157429, atInversebrahint248() -> 0x608060
+  [2][CALL] from=0x450595, to=VTF, updateUserBalance(_user(address): 0x157429) -> None
+  [2][CREATE] from=0x450595, to=0xfb6f88, atInversebrahint248() -> 0x608060
+  [2][CALL] from=0x450595, to=VTF, updateUserBalance(_user(address): 0xFB6F88) -> None
+  [2][CREATE] from=0x450595, to=0xf1a51b, atInversebrahint248() -> 0x608060
+  [2][CALL] from=0x450595, to=VTF, updateUserBalance(_user(address): 0xF1A51b) -> None
+  [2][CREATE] from=0x450595, to=0xdcbb5c, atInversebrahint248() -> 0x608060
+  [2][CALL] from=0x450595, to=VTF, updateUserBalance(_user(address): 0xdcBB5C) -> None
+  [2][CREATE] from=0x450595, to=0xbfdb3c, atInversebrahint248() -> 0x608060
+  [2][CALL] from=0x450595, to=VTF, updateUserBalance(_user(address): 0xBfDB3c) -> None
+  [2][CREATE] from=0x450595, to=0x2a9738, atInversebrahint248() -> 0x608060
+  [2][CALL] from=0x450595, to=VTF, updateUserBalance(_user(address): 0x2a9738) -> None
+  [2][CREATE] from=0x450595, to=0x118a69, atInversebrahint248() -> 0x608060
+  [2][CALL] from=0x450595, to=VTF, updateUserBalance(_user(address): 0x118A69) -> None
+  [2][CREATE] from=0x450595, to=0x235514, atInversebrahint248() -> 0x608060
+  [2][CALL] from=0x450595, to=VTF, updateUserBalance(_user(address): 0x235514) -> None
+  [2][CREATE] from=0x450595, to=0x36eefe, atInversebrahint248() -> 0x608060
+  [2][CALL] from=0x450595, to=VTF, updateUserBalance(_user(address): 0x36eEfe) -> None
+  [2][CREATE] from=0x450595, to=0x152333, atInversebrahint248() -> 0x608060
+  [2][CALL] from=0x450595, to=VTF, updateUserBalance(_user(address): 0x152333) -> None
+  [2][CREATE] from=0x450595, to=0x6e7b13, atInversebrahint248() -> 0x608060
+  [2][CALL] from=0x450595, to=VTF, updateUserBalance(_user(address): 0x6E7B13) -> None
+  [2][CREATE] from=0x450595, to=0xe0e726, atInversebrahint248() -> 0x608060
+  [2][CALL] from=0x450595, to=VTF, updateUserBalance(_user(address): 0xE0E726) -> None
+  [2][CREATE] from=0x450595, to=0x0a4795, atInversebrahint248() -> 0x608060
+  [2][CALL] from=0x450595, to=VTF, updateUserBalance(_user(address): 0x0A4795) -> None
+  [2][CREATE] from=0x450595, to=0xf8e81c, atInversebrahint248() -> 0x608060
+  [2][CALL] from=0x450595, to=VTF, updateUserBalance(_user(address): 0xf8e81c) -> None
+  [2][CREATE] from=0x450595, to=0xc8a41d, atInversebrahint248() -> 0x608060
+  [2][CALL] from=0x450595, to=VTF, updateUserBalance(_user(address): 0xC8a41D) -> None
+  [2][CREATE] from=0x450595, to=0x767436, atInversebrahint248() -> 0x608060
+  [2][CALL] from=0x450595, to=VTF, updateUserBalance(_user(address): 0x767436) -> None
+  [2][CREATE] from=0x450595, to=0x62f266, atInversebrahint248() -> 0x608060
+  [2][CALL] from=0x450595, to=VTF, updateUserBalance(_user(address): 0x62f266) -> None
+  [2][CREATE] from=0x450595, to=0x37243d, atInversebrahint248() -> 0x608060
+  [2][CALL] from=0x450595, to=VTF, updateUserBalance(_user(address): 0x37243D) -> None
+  [2][CREATE] from=0x450595, to=0xc36154, atInversebrahint248() -> 0x608060
+  [2][CALL] from=0x450595, to=VTF, updateUserBalance(_user(address): 0xC36154) -> None
+  [2][CREATE] from=0x450595, to=0x05221a, atInversebrahint248() -> 0x608060
+  [2][CALL] from=0x450595, to=VTF, updateUserBalance(_user(address): 0x05221a) -> None
+  [2][CREATE] from=0x450595, to=0x525644, atInversebrahint248() -> 0x608060
+  [2][CALL] from=0x450595, to=VTF, updateUserBalance(_user(address): 0x525644) -> None
+  [2][CREATE] from=0x450595, to=0x1d7162, atInversebrahint248() -> 0x608060
+  [2][CALL] from=0x450595, to=VTF, updateUserBalance(_user(address): 0x1d7162) -> None
+  [2][CREATE] from=0x450595, to=0xee92ac, atInversebrahint248() -> 0x608060
+  [2][CALL] from=0x450595, to=VTF, updateUserBalance(_user(address): 0xEE92AC) -> None
+  [2][CREATE] from=0x450595, to=0x9fcdfd, atInversebrahint248() -> 0x608060
+  [2][CALL] from=0x450595, to=VTF, updateUserBalance(_user(address): 0x9fcDFD) -> None
+  [2][CREATE] from=0x450595, to=0x81bee1, atInversebrahint248() -> 0x608060
+  [2][CALL] from=0x450595, to=VTF, updateUserBalance(_user(address): 0x81beE1) -> None
+  [2][CREATE] from=0x450595, to=0x5dc673, atInversebrahint248() -> 0x608060
+  [2][CALL] from=0x450595, to=VTF, updateUserBalance(_user(address): 0x5dC673) -> None
+  [2][CREATE] from=0x450595, to=0xcb951e, atInversebrahint248() -> 0x608060
+  [2][CALL] from=0x450595, to=VTF, updateUserBalance(_user(address): 0xCb951E) -> None
+  [2][CREATE] from=0x450595, to=0x78a3f9, atInversebrahint248() -> 0x608060
+  [2][CALL] from=0x450595, to=VTF, updateUserBalance(_user(address): 0x78a3F9) -> None
+  [2][CREATE] from=0x450595, to=0xb87554, atInversebrahint248() -> 0x608060
+  [2][CALL] from=0x450595, to=VTF, updateUserBalance(_user(address): 0xB87554) -> None
+  [2][CREATE] from=0x450595, to=0xa0b2e9, atInversebrahint248() -> 0x608060
+  [2][CALL] from=0x450595, to=VTF, updateUserBalance(_user(address): 0xA0B2e9) -> None
+  [2][CREATE] from=0x450595, to=0x276cee, atInversebrahint248() -> 0x608060
+  [2][CALL] from=0x450595, to=VTF, updateUserBalance(_user(address): 0x276CEe) -> None
+  [2][CREATE] from=0x450595, to=0xcbd553, atInversebrahint248() -> 0x608060
+  [2][CALL] from=0x450595, to=VTF, updateUserBalance(_user(address): 0xcbD553) -> None
+  [2][CREATE] from=0x450595, to=0xc2cf2d, atInversebrahint248() -> 0x608060
+  [2][CALL] from=0x450595, to=VTF, updateUserBalance(_user(address): 0xC2cF2D) -> None
+  [2][CREATE] from=0x450595, to=0xe9f2de, atInversebrahint248() -> 0x608060
+  [2][CALL] from=0x450595, to=VTF, updateUserBalance(_user(address): 0xE9F2DE) -> None
+  [2][CREATE] from=0x450595, to=0x6c1774, atInversebrahint248() -> 0x608060
+  [2][CALL] from=0x450595, to=VTF, updateUserBalance(_user(address): 0x6C1774) -> None
+  [2][CREATE] from=0x450595, to=0x51f60f, atInversebrahint248() -> 0x608060
+  [2][CALL] from=0x450595, to=VTF, updateUserBalance(_user(address): 0x51F60F) -> None
+  [2][CREATE] from=0x450595, to=0x9f914f, atInversebrahint248() -> 0x608060
+  [2][CALL] from=0x450595, to=VTF, updateUserBalance(_user(address): 0x9f914F) -> None
+  [2][CREATE] from=0x450595, to=0x55c601, atInversebrahint248() -> 0x608060
+  [2][CALL] from=0x450595, to=VTF, updateUserBalance(_user(address): 0x55C601) -> None
+  [2][CREATE] from=0x450595, to=0x1f496a, atInversebrahint248() -> 0x608060
+  [2][CALL] from=0x450595, to=VTF, updateUserBalance(_user(address): 0x1f496a) -> None
+  [2][CREATE] from=0x450595, to=0xbabb6f, atInversebrahint248() -> 0x608060
+  [2][CALL] from=0x450595, to=VTF, updateUserBalance(_user(address): 0xbAbB6F) -> None
+  [2][CREATE] from=0x450595, to=0x031f57, atInversebrahint248() -> 0x608060
+  [2][CALL] from=0x450595, to=VTF, updateUserBalance(_user(address): 0x031F57) -> None
+  [2][CREATE] from=0x450595, to=0x9b93ea, atInversebrahint248() -> 0x608060
+  [2][CALL] from=0x450595, to=VTF, updateUserBalance(_user(address): 0x9B93Ea) -> None
+  [2][CREATE] from=0x450595, to=0x2b81ff, atInversebrahint248() -> 0x608060
+  [2][CALL] from=0x450595, to=VTF, updateUserBalance(_user(address): 0x2b81FF) -> None
+  [2][CREATE] from=0x450595, to=0xdd7b20, atInversebrahint248() -> 0x608060
+  [2][CALL] from=0x450595, to=VTF, updateUserBalance(_user(address): 0xDD7b20) -> None
+  [2][CREATE] from=0x450595, to=0x8dec41, atInversebrahint248() -> 0x608060
+  [2][CALL] from=0x450595, to=VTF, updateUserBalance(_user(address): 0x8dEC41) -> None
+  [2][CREATE] from=0x450595, to=0x48deed, atInversebrahint248() -> 0x608060
+  [2][CALL] from=0x450595, to=VTF, updateUserBalance(_user(address): 0x48DeEd) -> None
+  [2][CREATE] from=0x450595, to=0x99c6df, atInversebrahint248() -> 0x608060
+  [2][CALL] from=0x450595, to=VTF, updateUserBalance(_user(address): 0x99c6df) -> None
+  [2][CREATE] from=0x450595, to=0x53bd6a, atInversebrahint248() -> 0x608060
+  [2][CALL] from=0x450595, to=VTF, updateUserBalance(_user(address): 0x53bd6A) -> None
+  [2][CREATE] from=0x450595, to=0x8b09a6, atInversebrahint248() -> 0x608060
+  [2][CALL] from=0x450595, to=VTF, updateUserBalance(_user(address): 0x8b09A6) -> None
+  [2][CREATE] from=0x450595, to=0xc108be, atInversebrahint248() -> 0x608060
+  [2][CALL] from=0x450595, to=VTF, updateUserBalance(_user(address): 0xc108be) -> None
+  [2][CREATE] from=0x450595, to=0x0e04f0, atInversebrahint248() -> 0x608060
+  [2][CALL] from=0x450595, to=VTF, updateUserBalance(_user(address): 0x0e04f0) -> None
+  [2][CREATE] from=0x450595, to=0x0577af, atInversebrahint248() -> 0x608060
+  [2][CALL] from=0x450595, to=VTF, updateUserBalance(_user(address): 0x0577Af) -> None
+  [2][CREATE] from=0x450595, to=0xc8f919, atInversebrahint248() -> 0x608060
+  [2][CALL] from=0x450595, to=VTF, updateUserBalance(_user(address): 0xc8F919) -> None
+  [2][CREATE] from=0x450595, to=0x3e4edb, atInversebrahint248() -> 0x608060
+  [2][CALL] from=0x450595, to=VTF, updateUserBalance(_user(address): 0x3E4Edb) -> None
+  [2][CREATE] from=0x450595, to=0x30a402, atInversebrahint248() -> 0x608060
+  [2][CALL] from=0x450595, to=VTF, updateUserBalance(_user(address): 0x30a402) -> None
+  [2][CREATE] from=0x450595, to=0xa27df1, atInversebrahint248() -> 0x608060
+  [2][CALL] from=0x450595, to=VTF, updateUserBalance(_user(address): 0xa27DF1) -> None
+  [2][CREATE] from=0x450595, to=0x047cac, atInversebrahint248() -> 0x608060
+  [2][CALL] from=0x450595, to=VTF, updateUserBalance(_user(address): 0x047CAc) -> None
+  [2][CREATE] from=0x450595, to=0xf520e9, atInversebrahint248() -> 0x608060
+  [2][CALL] from=0x450595, to=VTF, updateUserBalance(_user(address): 0xf520E9) -> None
+  [2][CREATE] from=0x450595, to=0xab587c, atInversebrahint248() -> 0x608060
+  [2][CALL] from=0x450595, to=VTF, updateUserBalance(_user(address): 0xab587c) -> None
+  [2][CREATE] from=0x450595, to=0xf47c90, atInversebrahint248() -> 0x608060
+  [2][CALL] from=0x450595, to=VTF, updateUserBalance(_user(address): 0xF47C90) -> None
+  [2][CREATE] from=0x450595, to=0xc930de, atInversebrahint248() -> 0x608060
+  [2][CALL] from=0x450595, to=VTF, updateUserBalance(_user(address): 0xC930dE) -> None
+  [2][CREATE] from=0x450595, to=0x8000f5, atInversebrahint248() -> 0x608060
+  [2][CALL] from=0x450595, to=VTF, updateUserBalance(_user(address): 0x8000f5) -> None
+  [2][CREATE] from=0x450595, to=0x30c254, atInversebrahint248() -> 0x608060
+  [2][CALL] from=0x450595, to=VTF, updateUserBalance(_user(address): 0x30c254) -> None
+  [2][CREATE] from=0x450595, to=0x076414, atInversebrahint248() -> 0x608060
+  [2][CALL] from=0x450595, to=VTF, updateUserBalance(_user(address): 0x076414) -> None
+  [2][CREATE] from=0x450595, to=0xb5aa0e, atInversebrahint248() -> 0x608060
+  [2][CALL] from=0x450595, to=VTF, updateUserBalance(_user(address): 0xb5aa0e) -> None
+  [2][CREATE] from=0x450595, to=0x7b45b4, atInversebrahint248() -> 0x608060
+  [2][CALL] from=0x450595, to=VTF, updateUserBalance(_user(address): 0x7B45b4) -> None
+  [2][CREATE] from=0x450595, to=0x6cdcde, atInversebrahint248() -> 0x608060
+  [2][CALL] from=0x450595, to=VTF, updateUserBalance(_user(address): 0x6cdCDe) -> None
+  [2][CREATE] from=0x450595, to=0xd96aa5, atInversebrahint248() -> 0x608060
+  [2][CALL] from=0x450595, to=VTF, updateUserBalance(_user(address): 0xd96aA5) -> None
+  [2][CREATE] from=0x450595, to=0xb82bff, atInversebrahint248() -> 0x608060
+  [2][CALL] from=0x450595, to=VTF, updateUserBalance(_user(address): 0xB82BFf) -> None
+  [2][CREATE] from=0x450595, to=0x5fb9ae, atInversebrahint248() -> 0x608060
+  [2][CALL] from=0x450595, to=VTF, updateUserBalance(_user(address): 0x5FB9Ae) -> None
+  [2][CREATE] from=0x450595, to=0x45c5a0, atInversebrahint248() -> 0x608060
+  [2][CALL] from=0x450595, to=VTF, updateUserBalance(_user(address): 0x45C5A0) -> None
+  [2][CREATE] from=0x450595, to=0x3738e1, atInversebrahint248() -> 0x608060
+  [2][CALL] from=0x450595, to=VTF, updateUserBalance(_user(address): 0x3738E1) -> None
+  [2][CREATE] from=0x450595, to=0x0ad738, atInversebrahint248() -> 0x608060
+  [2][CALL] from=0x450595, to=VTF, updateUserBalance(_user(address): 0x0AD738) -> None
+  [2][CREATE] from=0x450595, to=0x86c19e, atInversebrahint248() -> 0x608060
+  [2][CALL] from=0x450595, to=VTF, updateUserBalance(_user(address): 0x86c19e) -> None
+  [2][CREATE] from=0x450595, to=0xc3bd72, atInversebrahint248() -> 0x608060
+  [2][CALL] from=0x450595, to=VTF, updateUserBalance(_user(address): 0xC3bD72) -> None
+  [2][CREATE] from=0x450595, to=0xfd8193, atInversebrahint248() -> 0x608060
+  [2][CALL] from=0x450595, to=VTF, updateUserBalance(_user(address): 0xfd8193) -> None
+  [2][CREATE] from=0x450595, to=0x4bc506, atInversebrahint248() -> 0x608060
+  [2][CALL] from=0x450595, to=VTF, updateUserBalance(_user(address): 0x4bC506) -> None
+  [2][CREATE] from=0x450595, to=0xd6b9db, atInversebrahint248() -> 0x608060
+  [2][CALL] from=0x450595, to=VTF, updateUserBalance(_user(address): 0xd6B9db) -> None
+  [2][CREATE] from=0x450595, to=0xc30733, atInversebrahint248() -> 0x608060
+  [2][CALL] from=0x450595, to=VTF, updateUserBalance(_user(address): 0xC30733) -> None
+  [2][CREATE] from=0x450595, to=0x8b2eec, atInversebrahint248() -> 0x608060
+  [2][CALL] from=0x450595, to=VTF, updateUserBalance(_user(address): 0x8B2eeC) -> None
+  [2][CREATE] from=0x450595, to=0x307f51, atInversebrahint248() -> 0x608060
+  [2][CALL] from=0x450595, to=VTF, updateUserBalance(_user(address): 0x307F51) -> None
+  [2][CREATE] from=0x450595, to=0x9d79db, atInversebrahint248() -> 0x608060
+  [2][CALL] from=0x450595, to=VTF, updateUserBalance(_user(address): 0x9D79dB) -> None
+  [2][CREATE] from=0x450595, to=0xc0cc17, atInversebrahint248() -> 0x608060
+  [2][CALL] from=0x450595, to=VTF, updateUserBalance(_user(address): 0xC0cC17) -> None
+  [2][CREATE] from=0x450595, to=0x911fb2, atInversebrahint248() -> 0x608060
+  [2][CALL] from=0x450595, to=VTF, updateUserBalance(_user(address): 0x911Fb2) -> None
+  [2][CREATE] from=0x450595, to=0xad3dbc, atInversebrahint248() -> 0x608060
+  [2][CALL] from=0x450595, to=VTF, updateUserBalance(_user(address): 0xad3DbC) -> None
+  [2][CREATE] from=0x450595, to=0x0f7eac, atInversebrahint248() -> 0x608060
+  [2][CALL] from=0x450595, to=VTF, updateUserBalance(_user(address): 0x0F7eAC) -> None
+  [2][CREATE] from=0x450595, to=0xfe0cef, atInversebrahint248() -> 0x608060
+  [2][CALL] from=0x450595, to=VTF, updateUserBalance(_user(address): 0xfe0CeF) -> None
+  [2][CREATE] from=0x450595, to=0xbc2427, atInversebrahint248() -> 0x608060
+  [2][CALL] from=0x450595, to=VTF, updateUserBalance(_user(address): 0xbc2427) -> None
+  [2][CREATE] from=0x450595, to=0xc71f57, atInversebrahint248() -> 0x608060
+  [2][CALL] from=0x450595, to=VTF, updateUserBalance(_user(address): 0xC71F57) -> None
+  [2][CREATE] from=0x450595, to=0x27880a, atInversebrahint248() -> 0x608060
+  [2][CALL] from=0x450595, to=VTF, updateUserBalance(_user(address): 0x27880a) -> None
+  [2][CREATE] from=0x450595, to=0xf68e0c, atInversebrahint248() -> 0x608060
+  [2][CALL] from=0x450595, to=VTF, updateUserBalance(_user(address): 0xf68e0C) -> None
+  [2][CREATE] from=0x450595, to=0x1f91a5, atInversebrahint248() -> 0x608060
+  [2][CALL] from=0x450595, to=VTF, updateUserBalance(_user(address): 0x1f91A5) -> None
+  [2][CREATE] from=0x450595, to=0xb2911a, atInversebrahint248() -> 0x608060
+  [2][CALL] from=0x450595, to=VTF, updateUserBalance(_user(address): 0xB2911A) -> None
+  [2][CREATE] from=0x450595, to=0xe86ee1, atInversebrahint248() -> 0x608060
+  [2][CALL] from=0x450595, to=VTF, updateUserBalance(_user(address): 0xE86eE1) -> None
+  [2][CREATE] from=0x450595, to=0xc6dda3, atInversebrahint248() -> 0x608060
+  [2][CALL] from=0x450595, to=VTF, updateUserBalance(_user(address): 0xC6DDA3) -> None
+  [2][CREATE] from=0x450595, to=0x33ec93, atInversebrahint248() -> 0x608060
+  [2][CALL] from=0x450595, to=VTF, updateUserBalance(_user(address): 0x33ec93) -> None
+  [2][CREATE] from=0x450595, to=0xc3c9a7, atInversebrahint248() -> 0x608060
+  [2][CALL] from=0x450595, to=VTF, updateUserBalance(_user(address): 0xc3C9a7) -> None
+  [2][CREATE] from=0x450595, to=0xa864b1, atInversebrahint248() -> 0x608060
+  [2][CALL] from=0x450595, to=VTF, updateUserBalance(_user(address): 0xa864B1) -> None
+  [2][CREATE] from=0x450595, to=0xe4e8b4, atInversebrahint248() -> 0x608060
+  [2][CALL] from=0x450595, to=VTF, updateUserBalance(_user(address): 0xe4e8B4) -> None
+  [2][CREATE] from=0x450595, to=0xf99bd0, atInversebrahint248() -> 0x608060
+  [2][CALL] from=0x450595, to=VTF, updateUserBalance(_user(address): 0xF99Bd0) -> None
+  [2][CREATE] from=0x450595, to=0x34ca95, atInversebrahint248() -> 0x608060
+  [2][CALL] from=0x450595, to=VTF, updateUserBalance(_user(address): 0x34CA95) -> None
+  [2][CREATE] from=0x450595, to=0xc9de4c, atInversebrahint248() -> 0x608060
+  [2][CALL] from=0x450595, to=VTF, updateUserBalance(_user(address): 0xc9De4C) -> None
+  [2][CREATE] from=0x450595, to=0xde1962, atInversebrahint248() -> 0x608060
+  [2][CALL] from=0x450595, to=VTF, updateUserBalance(_user(address): 0xDe1962) -> None
+  [2][CREATE] from=0x450595, to=0x9b4ac0, atInversebrahint248() -> 0x608060
+  [2][CALL] from=0x450595, to=VTF, updateUserBalance(_user(address): 0x9B4ac0) -> None
+  [2][CREATE] from=0x450595, to=0x6c0ea4, atInversebrahint248() -> 0x608060
+  [2][CALL] from=0x450595, to=VTF, updateUserBalance(_user(address): 0x6C0ea4) -> None
+  [2][CREATE] from=0x450595, to=0x2ddeeb, atInversebrahint248() -> 0x608060
+  [2][CALL] from=0x450595, to=VTF, updateUserBalance(_user(address): 0x2ddeEB) -> None
+  [2][CREATE] from=0x450595, to=0x341c6e, atInversebrahint248() -> 0x608060
+  [2][CALL] from=0x450595, to=VTF, updateUserBalance(_user(address): 0x341c6e) -> None
+  [2][CREATE] from=0x450595, to=0xeefb2d, atInversebrahint248() -> 0x608060
+  [2][CALL] from=0x450595, to=VTF, updateUserBalance(_user(address): 0xEefB2D) -> None
+  [2][CREATE] from=0x450595, to=0xe23272, atInversebrahint248() -> 0x608060
+  [2][CALL] from=0x450595, to=VTF, updateUserBalance(_user(address): 0xE23272) -> None
+  [2][CREATE] from=0x450595, to=0xf197fb, atInversebrahint248() -> 0x608060
+  [2][CALL] from=0x450595, to=VTF, updateUserBalance(_user(address): 0xf197fB) -> None
+  [2][CREATE] from=0x450595, to=0x58e8d5, atInversebrahint248() -> 0x608060
+  [2][CALL] from=0x450595, to=VTF, updateUserBalance(_user(address): 0x58E8d5) -> None
+  [2][CREATE] from=0x450595, to=0xaec6f1, atInversebrahint248() -> 0x608060
+  [2][CALL] from=0x450595, to=VTF, updateUserBalance(_user(address): 0xaeC6F1) -> None
+  [2][CREATE] from=0x450595, to=0x6975d2, atInversebrahint248() -> 0x608060
+  [2][CALL] from=0x450595, to=VTF, updateUserBalance(_user(address): 0x6975D2) -> None
+  [2][CREATE] from=0x450595, to=0x1a6365, atInversebrahint248() -> 0x608060
+  [2][CALL] from=0x450595, to=VTF, updateUserBalance(_user(address): 0x1a6365) -> None
+  [2][CREATE] from=0x450595, to=0x4c3965, atInversebrahint248() -> 0x608060
+  [2][CALL] from=0x450595, to=VTF, updateUserBalance(_user(address): 0x4c3965) -> None
+  [2][CREATE] from=0x450595, to=0x021add, atInversebrahint248() -> 0x608060
+  [2][CALL] from=0x450595, to=VTF, updateUserBalance(_user(address): 0x021ADD) -> None
+  [2][CREATE] from=0x450595, to=0x877877, atInversebrahint248() -> 0x608060
+  [2][CALL] from=0x450595, to=VTF, updateUserBalance(_user(address): 0x877877) -> None
+  [2][CREATE] from=0x450595, to=0xa978b8, atInversebrahint248() -> 0x608060
+  [2][CALL] from=0x450595, to=VTF, updateUserBalance(_user(address): 0xa978B8) -> None
+  [2][CREATE] from=0x450595, to=0x7072bc, atInversebrahint248() -> 0x608060
+  [2][CALL] from=0x450595, to=VTF, updateUserBalance(_user(address): 0x7072BC) -> None
+  [2][CREATE] from=0x450595, to=0x9d8b10, atInversebrahint248() -> 0x608060
+  [2][CALL] from=0x450595, to=VTF, updateUserBalance(_user(address): 0x9d8b10) -> None
+  [2][CREATE] from=0x450595, to=0xca8751, atInversebrahint248() -> 0x608060
+  [2][CALL] from=0x450595, to=VTF, updateUserBalance(_user(address): 0xca8751) -> None
+  [2][CREATE] from=0x450595, to=0xf53f7b, atInversebrahint248() -> 0x608060
+  [2][CALL] from=0x450595, to=VTF, updateUserBalance(_user(address): 0xF53F7b) -> None
+  [2][CREATE] from=0x450595, to=0x298330, atInversebrahint248() -> 0x608060
+  [2][CALL] from=0x450595, to=VTF, updateUserBalance(_user(address): 0x298330) -> None
+  [2][CREATE] from=0x450595, to=0xee0de1, atInversebrahint248() -> 0x608060
+  [2][CALL] from=0x450595, to=VTF, updateUserBalance(_user(address): 0xEe0dE1) -> None
+  [2][CREATE] from=0x450595, to=0xb04d2f, atInversebrahint248() -> 0x608060
+  [2][CALL] from=0x450595, to=VTF, updateUserBalance(_user(address): 0xb04d2f) -> None
+  [2][CREATE] from=0x450595, to=0x86bec2, atInversebrahint248() -> 0x608060
+  [2][CALL] from=0x450595, to=VTF, updateUserBalance(_user(address): 0x86bEc2) -> None
+  [2][CREATE] from=0x450595, to=0x68fde9, atInversebrahint248() -> 0x608060
+  [2][CALL] from=0x450595, to=VTF, updateUserBalance(_user(address): 0x68FDe9) -> None
+  [2][CREATE] from=0x450595, to=0x54b25e, atInversebrahint248() -> 0x608060
+  [2][CALL] from=0x450595, to=VTF, updateUserBalance(_user(address): 0x54b25e) -> None
+  [2][CREATE] from=0x450595, to=0x18fd77, atInversebrahint248() -> 0x608060
+  [2][CALL] from=0x450595, to=VTF, updateUserBalance(_user(address): 0x18FD77) -> None
+  [2][CREATE] from=0x450595, to=0x3584aa, atInversebrahint248() -> 0x608060
+  [2][CALL] from=0x450595, to=VTF, updateUserBalance(_user(address): 0x3584AA) -> None
+  [2][CREATE] from=0x450595, to=0xb5e3f6, atInversebrahint248() -> 0x608060
+  [2][CALL] from=0x450595, to=VTF, updateUserBalance(_user(address): 0xb5E3f6) -> None
+  [2][CREATE] from=0x450595, to=0x780eaa, atInversebrahint248() -> 0x608060
+  [2][CALL] from=0x450595, to=VTF, updateUserBalance(_user(address): 0x780EaA) -> None
+  [2][CREATE] from=0x450595, to=0x3ae203, atInversebrahint248() -> 0x608060
+  [2][CALL] from=0x450595, to=VTF, updateUserBalance(_user(address): 0x3aE203) -> None
+  [2][CREATE] from=0x450595, to=0x177a72, atInversebrahint248() -> 0x608060
+  [2][CALL] from=0x450595, to=VTF, updateUserBalance(_user(address): 0x177A72) -> None
+  [2][CREATE] from=0x450595, to=0x31f1cf, atInversebrahint248() -> 0x608060
+  [2][CALL] from=0x450595, to=VTF, updateUserBalance(_user(address): 0x31f1cF) -> None
+  [2][CREATE] from=0x450595, to=0x540af9, atInversebrahint248() -> 0x608060
+  [2][CALL] from=0x450595, to=VTF, updateUserBalance(_user(address): 0x540aF9) -> None
+  [2][CREATE] from=0x450595, to=0x322308, atInversebrahint248() -> 0x608060
+  [2][CALL] from=0x450595, to=VTF, updateUserBalance(_user(address): 0x322308) -> None
+  [2][CREATE] from=0x450595, to=0x28bc0c, atInversebrahint248() -> 0x608060
+  [2][CALL] from=0x450595, to=VTF, updateUserBalance(_user(address): 0x28BC0c) -> None
+  [2][CREATE] from=0x450595, to=0x65ac5a, atInversebrahint248() -> 0x608060
+  [2][CALL] from=0x450595, to=VTF, updateUserBalance(_user(address): 0x65ac5A) -> None
+  [2][CREATE] from=0x450595, to=0x7f1e5d, atInversebrahint248() -> 0x608060
+  [2][CALL] from=0x450595, to=VTF, updateUserBalance(_user(address): 0x7f1E5D) -> None
+  [2][CREATE] from=0x450595, to=0xc2ba56, atInversebrahint248() -> 0x608060
+  [2][CALL] from=0x450595, to=VTF, updateUserBalance(_user(address): 0xc2BA56) -> None
+  [2][CREATE] from=0x450595, to=0x57de73, atInversebrahint248() -> 0x608060
+  [2][CALL] from=0x450595, to=VTF, updateUserBalance(_user(address): 0x57De73) -> None
+  [2][CREATE] from=0x450595, to=0x8c5f40, atInversebrahint248() -> 0x608060
+  [2][CALL] from=0x450595, to=VTF, updateUserBalance(_user(address): 0x8C5f40) -> None
+  [2][CREATE] from=0x450595, to=0x1a49e8, atInversebrahint248() -> 0x608060
+  [2][CALL] from=0x450595, to=VTF, updateUserBalance(_user(address): 0x1a49e8) -> None
+  [2][CREATE] from=0x450595, to=0xcc65b3, atInversebrahint248() -> 0x608060
+  [2][CALL] from=0x450595, to=VTF, updateUserBalance(_user(address): 0xCC65B3) -> None
+  [2][CREATE] from=0x450595, to=0xfdffcb, atInversebrahint248() -> 0x608060
+  [2][CALL] from=0x450595, to=VTF, updateUserBalance(_user(address): 0xfdFFcb) -> None
+  [2][CREATE] from=0x450595, to=0x3b7f0f, atInversebrahint248() -> 0x608060
+  [2][CALL] from=0x450595, to=VTF, updateUserBalance(_user(address): 0x3b7F0F) -> None
+  [2][CREATE] from=0x450595, to=0x9b8236, atInversebrahint248() -> 0x608060
+  [2][CALL] from=0x450595, to=VTF, updateUserBalance(_user(address): 0x9B8236) -> None
+  [2][CREATE] from=0x450595, to=0xc6cad5, atInversebrahint248() -> 0x608060
+  [2][CALL] from=0x450595, to=VTF, updateUserBalance(_user(address): 0xC6CaD5) -> None
+  [2][CREATE] from=0x450595, to=0xc5718a, atInversebrahint248() -> 0x608060
+  [2][CALL] from=0x450595, to=VTF, updateUserBalance(_user(address): 0xC5718A) -> None
+  [2][CREATE] from=0x450595, to=0x241029, atInversebrahint248() -> 0x608060
+  [2][CALL] from=0x450595, to=VTF, updateUserBalance(_user(address): 0x241029) -> None
+  [2][CREATE] from=0x450595, to=0xe7b482, atInversebrahint248() -> 0x608060
+  [2][CALL] from=0x450595, to=VTF, updateUserBalance(_user(address): 0xe7b482) -> None
+  [2][CREATE] from=0x450595, to=0xd99bf0, atInversebrahint248() -> 0x608060
+  [2][CALL] from=0x450595, to=VTF, updateUserBalance(_user(address): 0xD99bf0) -> None
+  [2][CREATE] from=0x450595, to=0xfd3aa0, atInversebrahint248() -> 0x608060
+  [2][CALL] from=0x450595, to=VTF, updateUserBalance(_user(address): 0xFD3Aa0) -> None
+  [2][CREATE] from=0x450595, to=0xc7042e, atInversebrahint248() -> 0x608060
+  [2][CALL] from=0x450595, to=VTF, updateUserBalance(_user(address): 0xc7042e) -> None
+  [2][CREATE] from=0x450595, to=0x616a2e, atInversebrahint248() -> 0x608060
+  [2][CALL] from=0x450595, to=VTF, updateUserBalance(_user(address): 0x616A2E) -> None
+  [2][CREATE] from=0x450595, to=0xd7b8b5, atInversebrahint248() -> 0x608060
+  [2][CALL] from=0x450595, to=VTF, updateUserBalance(_user(address): 0xd7b8b5) -> None
+  [2][CREATE] from=0x450595, to=0xf2f73f, atInversebrahint248() -> 0x608060
+  [2][CALL] from=0x450595, to=VTF, updateUserBalance(_user(address): 0xF2F73F) -> None
+  [2][CREATE] from=0x450595, to=0xd64b3b, atInversebrahint248() -> 0x608060
+  [2][CALL] from=0x450595, to=VTF, updateUserBalance(_user(address): 0xd64b3B) -> None
+  [2][CREATE] from=0x450595, to=0x6af30c, atInversebrahint248() -> 0x608060
+  [2][CALL] from=0x450595, to=VTF, updateUserBalance(_user(address): 0x6af30C) -> None
+  [2][CREATE] from=0x450595, to=0xcefbd7, atInversebrahint248() -> 0x608060
+  [2][CALL] from=0x450595, to=VTF, updateUserBalance(_user(address): 0xcEFBd7) -> None
+  [2][CREATE] from=0x450595, to=0x1662a1, atInversebrahint248() -> 0x608060
+  [2][CALL] from=0x450595, to=VTF, updateUserBalance(_user(address): 0x1662a1) -> None
+  [2][CREATE] from=0x450595, to=0xcc25a6, atInversebrahint248() -> 0x608060
+  [2][CALL] from=0x450595, to=VTF, updateUserBalance(_user(address): 0xCc25a6) -> None
+  [2][CREATE] from=0x450595, to=0xce6e25, atInversebrahint248() -> 0x608060
+  [2][CALL] from=0x450595, to=VTF, updateUserBalance(_user(address): 0xCE6e25) -> None
+  [2][CREATE] from=0x450595, to=0xa7fde2, atInversebrahint248() -> 0x608060
+  [2][CALL] from=0x450595, to=VTF, updateUserBalance(_user(address): 0xA7fDE2) -> None
+  [2][CREATE] from=0x450595, to=0xce31ce, atInversebrahint248() -> 0x608060
+  [2][CALL] from=0x450595, to=VTF, updateUserBalance(_user(address): 0xCE31cE) -> None
+  [2][CREATE] from=0x450595, to=0x208c29, atInversebrahint248() -> 0x608060
+  [2][CALL] from=0x450595, to=VTF, updateUserBalance(_user(address): 0x208C29) -> None
+  [2][CREATE] from=0x450595, to=0xedfda7, atInversebrahint248() -> 0x608060
+  [2][CALL] from=0x450595, to=VTF, updateUserBalance(_user(address): 0xEdfdA7) -> None
+  [2][CREATE] from=0x450595, to=0x5dbc8c, atInversebrahint248() -> 0x608060
+  [2][CALL] from=0x450595, to=VTF, updateUserBalance(_user(address): 0x5dBC8C) -> None
+  [2][CREATE] from=0x450595, to=0x9e107c, atInversebrahint248() -> 0x608060
+  [2][CALL] from=0x450595, to=VTF, updateUserBalance(_user(address): 0x9E107c) -> None
+  [2][CREATE] from=0x450595, to=0x82b287, atInversebrahint248() -> 0x608060
+  [2][CALL] from=0x450595, to=VTF, updateUserBalance(_user(address): 0x82b287) -> None
+  [2][CREATE] from=0x450595, to=0x544bd8, atInversebrahint248() -> 0x608060
+  [2][CALL] from=0x450595, to=VTF, updateUserBalance(_user(address): 0x544bd8) -> None
+  [2][CREATE] from=0x450595, to=0x409bdb, atInversebrahint248() -> 0x608060
+  [2][CALL] from=0x450595, to=VTF, updateUserBalance(_user(address): 0x409bDB) -> None
+  [2][CREATE] from=0x450595, to=0x620425, atInversebrahint248() -> 0x608060
+  [2][CALL] from=0x450595, to=VTF, updateUserBalance(_user(address): 0x620425) -> None
+  [2][CREATE] from=0x450595, to=0x1632f2, atInversebrahint248() -> 0x608060
+  [2][CALL] from=0x450595, to=VTF, updateUserBalance(_user(address): 0x1632f2) -> None
+  [2][CREATE] from=0x450595, to=0x2ad636, atInversebrahint248() -> 0x608060
+  [2][CALL] from=0x450595, to=VTF, updateUserBalance(_user(address): 0x2aD636) -> None
+  [2][CREATE] from=0x450595, to=0x577fd4, atInversebrahint248() -> 0x608060
+  [2][CALL] from=0x450595, to=VTF, updateUserBalance(_user(address): 0x577Fd4) -> None
+  [2][CREATE] from=0x450595, to=0x615009, atInversebrahint248() -> 0x608060
+  [2][CALL] from=0x450595, to=VTF, updateUserBalance(_user(address): 0x615009) -> None
+  [2][CREATE] from=0x450595, to=0x32f7ac, atInversebrahint248() -> 0x608060
+  [2][CALL] from=0x450595, to=VTF, updateUserBalance(_user(address): 0x32F7Ac) -> None
+  [2][CREATE] from=0x450595, to=0x86c66e, atInversebrahint248() -> 0x608060
+  [2][CALL] from=0x450595, to=VTF, updateUserBalance(_user(address): 0x86c66e) -> None
+  [2][CREATE] from=0x450595, to=0xafc3b2, atInversebrahint248() -> 0x608060
+  [2][CALL] from=0x450595, to=VTF, updateUserBalance(_user(address): 0xAfC3B2) -> None
+  [2][CREATE] from=0x450595, to=0x77f307, atInversebrahint248() -> 0x608060
+  [2][CALL] from=0x450595, to=VTF, updateUserBalance(_user(address): 0x77F307) -> None
+  [2][CREATE] from=0x450595, to=0x2be546, atInversebrahint248() -> 0x608060
+  [2][CALL] from=0x450595, to=VTF, updateUserBalance(_user(address): 0x2bE546) -> None
+  [2][CREATE] from=0x450595, to=0x5c0826, atInversebrahint248() -> 0x608060
+  [2][CALL] from=0x450595, to=VTF, updateUserBalance(_user(address): 0x5C0826) -> None
+  [2][CREATE] from=0x450595, to=0x1114d7, atInversebrahint248() -> 0x608060
+  [2][CALL] from=0x450595, to=VTF, updateUserBalance(_user(address): 0x1114d7) -> None
+  [2][CREATE] from=0x450595, to=0x688d7d, atInversebrahint248() -> 0x608060
+  [2][CALL] from=0x450595, to=VTF, updateUserBalance(_user(address): 0x688d7d) -> None
+  [2][CREATE] from=0x450595, to=0xaa2b8e, atInversebrahint248() -> 0x608060
+  [2][CALL] from=0x450595, to=VTF, updateUserBalance(_user(address): 0xAa2b8E) -> None
+  [2][CREATE] from=0x450595, to=0xaa62f4, atInversebrahint248() -> 0x608060
+  [2][CALL] from=0x450595, to=VTF, updateUserBalance(_user(address): 0xaA62f4) -> None
+  [2][CREATE] from=0x450595, to=0x4b0395, atInversebrahint248() -> 0x608060
+  [2][CALL] from=0x450595, to=VTF, updateUserBalance(_user(address): 0x4b0395) -> None
+  [2][CREATE] from=0x450595, to=0xc2ad2d, atInversebrahint248() -> 0x608060
+  [2][CALL] from=0x450595, to=VTF, updateUserBalance(_user(address): 0xc2Ad2D) -> None
+  [2][CREATE] from=0x450595, to=0x3555d9, atInversebrahint248() -> 0x608060
+  [2][CALL] from=0x450595, to=VTF, updateUserBalance(_user(address): 0x3555d9) -> None
+  [2][CREATE] from=0x450595, to=0xb72fd2, atInversebrahint248() -> 0x608060
+  [2][CALL] from=0x450595, to=VTF, updateUserBalance(_user(address): 0xb72fD2) -> None
+  [2][CREATE] from=0x450595, to=0xe60079, atInversebrahint248() -> 0x608060
+  [2][CALL] from=0x450595, to=VTF, updateUserBalance(_user(address): 0xe60079) -> None
+  [2][CREATE] from=0x450595, to=0xe0b859, atInversebrahint248() -> 0x608060
+  [2][CALL] from=0x450595, to=VTF, updateUserBalance(_user(address): 0xe0b859) -> None
+  [2][CREATE] from=0x450595, to=0xae814b, atInversebrahint248() -> 0x608060
+  [2][CALL] from=0x450595, to=VTF, updateUserBalance(_user(address): 0xAe814B) -> None
+  [2][CREATE] from=0x450595, to=0x07bd8f, atInversebrahint248() -> 0x608060
+  [2][CALL] from=0x450595, to=VTF, updateUserBalance(_user(address): 0x07bD8f) -> None
+  [2][CREATE] from=0x450595, to=0x8d7bc8, atInversebrahint248() -> 0x608060
+  [2][CALL] from=0x450595, to=VTF, updateUserBalance(_user(address): 0x8d7bc8) -> None
+  [2][CREATE] from=0x450595, to=0xf04d42, atInversebrahint248() -> 0x608060
+  [2][CALL] from=0x450595, to=VTF, updateUserBalance(_user(address): 0xF04D42) -> None
+  [2][CREATE] from=0x450595, to=0x9c7467, atInversebrahint248() -> 0x608060
+  [2][CALL] from=0x450595, to=VTF, updateUserBalance(_user(address): 0x9c7467) -> None
+  [2][CREATE] from=0x450595, to=0x9869d7, atInversebrahint248() -> 0x608060
+  [2][CALL] from=0x450595, to=VTF, updateUserBalance(_user(address): 0x9869D7) -> None
+  [2][CREATE] from=0x450595, to=0xb373e9, atInversebrahint248() -> 0x608060
+  [2][CALL] from=0x450595, to=VTF, updateUserBalance(_user(address): 0xB373E9) -> None
+  [2][CREATE] from=0x450595, to=0xde5223, atInversebrahint248() -> 0x608060
+  [2][CALL] from=0x450595, to=VTF, updateUserBalance(_user(address): 0xDE5223) -> None
+  [2][CREATE] from=0x450595, to=0xda2291, atInversebrahint248() -> 0x608060
+  [2][CALL] from=0x450595, to=VTF, updateUserBalance(_user(address): 0xDA2291) -> None
+  [2][CREATE] from=0x450595, to=0x9bc0fa, atInversebrahint248() -> 0x608060
+  [2][CALL] from=0x450595, to=VTF, updateUserBalance(_user(address): 0x9bc0Fa) -> None
+  [2][CREATE] from=0x450595, to=0xc03f80, atInversebrahint248() -> 0x608060
+  [2][CALL] from=0x450595, to=VTF, updateUserBalance(_user(address): 0xc03f80) -> None
+  [2][CREATE] from=0x450595, to=0xe9ba60, atInversebrahint248() -> 0x608060
+  [2][CALL] from=0x450595, to=VTF, updateUserBalance(_user(address): 0xe9bA60) -> None
+  [2][CREATE] from=0x450595, to=0xfef9fd, atInversebrahint248() -> 0x608060
+  [2][CALL] from=0x450595, to=VTF, updateUserBalance(_user(address): 0xfEf9Fd) -> None
+  [2][CREATE] from=0x450595, to=0x3ec183, atInversebrahint248() -> 0x608060
+  [2][CALL] from=0x450595, to=VTF, updateUserBalance(_user(address): 0x3Ec183) -> None
+  [2][CREATE] from=0x450595, to=0x00ff31, atInversebrahint248() -> 0x608060
+  [2][CALL] from=0x450595, to=VTF, updateUserBalance(_user(address): 0x00ff31) -> None
+  [2][CREATE] from=0x450595, to=0x52e03c, atInversebrahint248() -> 0x608060
+  [2][CALL] from=0x450595, to=VTF, updateUserBalance(_user(address): 0x52e03c) -> None
+  [2][CREATE] from=0x450595, to=0x83854d, atInversebrahint248() -> 0x608060
+  [2][CALL] from=0x450595, to=VTF, updateUserBalance(_user(address): 0x83854D) -> None
+  [2][CREATE] from=0x450595, to=0x8e0e28, atInversebrahint248() -> 0x608060
+  [2][CALL] from=0x450595, to=VTF, updateUserBalance(_user(address): 0x8e0e28) -> None
+  [2][CREATE] from=0x450595, to=0x3eb8fc, atInversebrahint248() -> 0x608060
+  [2][CALL] from=0x450595, to=VTF, updateUserBalance(_user(address): 0x3eb8fc) -> None
+  [2][CREATE] from=0x450595, to=0x156d8e, atInversebrahint248() -> 0x608060
+  [2][CALL] from=0x450595, to=VTF, updateUserBalance(_user(address): 0x156D8E) -> None
+  [2][CREATE] from=0x450595, to=0xc7a4f9, atInversebrahint248() -> 0x608060
+  [2][CALL] from=0x450595, to=VTF, updateUserBalance(_user(address): 0xc7a4F9) -> None
+  [2][CREATE] from=0x450595, to=0x66a666, atInversebrahint248() -> 0x608060
+  [2][CALL] from=0x450595, to=VTF, updateUserBalance(_user(address): 0x66a666) -> None
+  [2][CREATE] from=0x450595, to=0xebd8e0, atInversebrahint248() -> 0x608060
+  [2][CALL] from=0x450595, to=VTF, updateUserBalance(_user(address): 0xEBD8e0) -> None
+  [2][CREATE] from=0x450595, to=0xa71dcf, atInversebrahint248() -> 0x608060
+  [2][CALL] from=0x450595, to=VTF, updateUserBalance(_user(address): 0xa71dCf) -> None
+  [2][CREATE] from=0x450595, to=0x99301b, atInversebrahint248() -> 0x608060
+  [2][CALL] from=0x450595, to=VTF, updateUserBalance(_user(address): 0x99301B) -> None
+  [2][CREATE] from=0x450595, to=0xf7e60c, atInversebrahint248() -> 0x608060
+  [2][CALL] from=0x450595, to=VTF, updateUserBalance(_user(address): 0xf7e60C) -> None
+  [2][CREATE] from=0x450595, to=0xfc2c22, atInversebrahint248() -> 0x608060
+  [2][CALL] from=0x450595, to=VTF, updateUserBalance(_user(address): 0xFc2C22) -> None
+  [2][CREATE] from=0x450595, to=0xaa2ab3, atInversebrahint248() -> 0x608060
+  [2][CALL] from=0x450595, to=VTF, updateUserBalance(_user(address): 0xaA2aB3) -> None
+  [2][CREATE] from=0x450595, to=0x2bdbdd, atInversebrahint248() -> 0x608060
+  [2][CALL] from=0x450595, to=VTF, updateUserBalance(_user(address): 0x2BdbdD) -> None
+  [2][CREATE] from=0x450595, to=0xcf689a, atInversebrahint248() -> 0x608060
+  [2][CALL] from=0x450595, to=VTF, updateUserBalance(_user(address): 0xCf689A) -> None
+  [2][CREATE] from=0x450595, to=0x16f8a2, atInversebrahint248() -> 0x608060
+  [2][CALL] from=0x450595, to=VTF, updateUserBalance(_user(address): 0x16f8A2) -> None
+  [2][CREATE] from=0x450595, to=0x87cb13, atInversebrahint248() -> 0x608060
+  [2][CALL] from=0x450595, to=VTF, updateUserBalance(_user(address): 0x87cB13) -> None
+  [2][CREATE] from=0x450595, to=0xc24411, atInversebrahint248() -> 0x608060
+  [2][CALL] from=0x450595, to=VTF, updateUserBalance(_user(address): 0xc24411) -> None
+  [2][CREATE] from=0x450595, to=0x442e46, atInversebrahint248() -> 0x608060
+  [2][CALL] from=0x450595, to=VTF, updateUserBalance(_user(address): 0x442e46) -> None
+  [2][CREATE] from=0x450595, to=0x675742, atInversebrahint248() -> 0x608060
+  [2][CALL] from=0x450595, to=VTF, updateUserBalance(_user(address): 0x675742) -> None
+  [2][CREATE] from=0x450595, to=0x35f0b2, atInversebrahint248() -> 0x608060
+  [2][CALL] from=0x450595, to=VTF, updateUserBalance(_user(address): 0x35f0B2) -> None
+  [2][CREATE] from=0x450595, to=0x4e7399, atInversebrahint248() -> 0x608060
+  [2][CALL] from=0x450595, to=VTF, updateUserBalance(_user(address): 0x4E7399) -> None
+  [2][CREATE] from=0x450595, to=0x4d352c, atInversebrahint248() -> 0x608060
+  [2][CALL] from=0x450595, to=VTF, updateUserBalance(_user(address): 0x4D352c) -> None
+  [2][CREATE] from=0x450595, to=0xe99734, atInversebrahint248() -> 0x608060
+  [2][CALL] from=0x450595, to=VTF, updateUserBalance(_user(address): 0xE99734) -> None
+  [2][CREATE] from=0x450595, to=0x96d26b, atInversebrahint248() -> 0x608060
+  [2][CALL] from=0x450595, to=VTF, updateUserBalance(_user(address): 0x96D26b) -> None
+  [2][CREATE] from=0x450595, to=0x551684, atInversebrahint248() -> 0x608060
+  [2][CALL] from=0x450595, to=VTF, updateUserBalance(_user(address): 0x551684) -> None
+  [2][CREATE] from=0x450595, to=0x1544ce, atInversebrahint248() -> 0x608060
+  [2][CALL] from=0x450595, to=VTF, updateUserBalance(_user(address): 0x1544cE) -> None
+  [2][CREATE] from=0x450595, to=0xfabd0f, atInversebrahint248() -> 0x608060
+  [2][CALL] from=0x450595, to=VTF, updateUserBalance(_user(address): 0xFabd0f) -> None
+  [2][CREATE] from=0x450595, to=0xc63dcc, atInversebrahint248() -> 0x608060
+  [2][CALL] from=0x450595, to=VTF, updateUserBalance(_user(address): 0xC63dcc) -> None
+  [2][CREATE] from=0x450595, to=0x065034, atInversebrahint248() -> 0x608060
+  [2][CALL] from=0x450595, to=VTF, updateUserBalance(_user(address): 0x065034) -> None
+  [2][CREATE] from=0x450595, to=0x41a4fe, atInversebrahint248() -> 0x608060
+  [2][CALL] from=0x450595, to=VTF, updateUserBalance(_user(address): 0x41a4fe) -> None
+  [2][CREATE] from=0x450595, to=0x742bd8, atInversebrahint248() -> 0x608060
+  [2][CALL] from=0x450595, to=VTF, updateUserBalance(_user(address): 0x742Bd8) -> None
+  [2][CREATE] from=0x450595, to=0xfa78e4, atInversebrahint248() -> 0x608060
+  [2][CALL] from=0x450595, to=VTF, updateUserBalance(_user(address): 0xFa78E4) -> None
+  [2][CREATE] from=0x450595, to=0x543239, atInversebrahint248() -> 0x608060
+  [2][CALL] from=0x450595, to=VTF, updateUserBalance(_user(address): 0x543239) -> None
+  [2][CREATE] from=0x450595, to=0x65102d, atInversebrahint248() -> 0x608060
+  [2][CALL] from=0x450595, to=VTF, updateUserBalance(_user(address): 0x65102D) -> None
+  [2][CREATE] from=0x450595, to=0x4d4d91, atInversebrahint248() -> 0x608060
+  [2][CALL] from=0x450595, to=VTF, updateUserBalance(_user(address): 0x4d4D91) -> None
+  [2][CREATE] from=0x450595, to=0x7d8a1f, atInversebrahint248() -> 0x608060
+  [2][CALL] from=0x450595, to=VTF, updateUserBalance(_user(address): 0x7D8a1F) -> None
+  [2][CREATE] from=0x450595, to=0x8bf526, atInversebrahint248() -> 0x608060
+  [2][CALL] from=0x450595, to=VTF, updateUserBalance(_user(address): 0x8BF526) -> None
+  [2][CREATE] from=0x450595, to=0x705878, atInversebrahint248() -> 0x608060
+  [2][CALL] from=0x450595, to=VTF, updateUserBalance(_user(address): 0x705878) -> None
+  [2][CREATE] from=0x450595, to=0x6d9490, atInversebrahint248() -> 0x608060
+  [2][CALL] from=0x450595, to=VTF, updateUserBalance(_user(address): 0x6d9490) -> None
+  [2][CREATE] from=0x450595, to=0x5dd225, atInversebrahint248() -> 0x608060
+  [2][CALL] from=0x450595, to=VTF, updateUserBalance(_user(address): 0x5dD225) -> None
+  [2][CREATE] from=0x450595, to=0xa02ed0, atInversebrahint248() -> 0x608060
+  [2][CALL] from=0x450595, to=VTF, updateUserBalance(_user(address): 0xA02Ed0) -> None
+  [2][CREATE] from=0x450595, to=0xba3126, atInversebrahint248() -> 0x608060
+  [2][CALL] from=0x450595, to=VTF, updateUserBalance(_user(address): 0xbA3126) -> None
+  [2][CREATE] from=0x450595, to=0x62bff5, atInversebrahint248() -> 0x608060
+  [2][CALL] from=0x450595, to=VTF, updateUserBalance(_user(address): 0x62Bff5) -> None
+  [2][CREATE] from=0x450595, to=0x3c33eb, atInversebrahint248() -> 0x608060
+  [2][CALL] from=0x450595, to=VTF, updateUserBalance(_user(address): 0x3c33Eb) -> None

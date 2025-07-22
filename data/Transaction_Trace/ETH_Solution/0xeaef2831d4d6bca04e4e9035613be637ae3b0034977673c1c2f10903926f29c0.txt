@@ -1,0 +1,65 @@
+[1][CALL] from=0x6fa00a, to=0x60032a, 0xdde1ee37() -> None
+  [2][STATICCALL] from=0x60032a, to=FiatTokenProxy, balanceOf(account(address): 0x392472) -> 5364965317
+    [3][DELEGATECALL] from=FiatTokenProxy, to=FiatTokenV2_1, balanceOf(account(address): 0x392472) -> 5364965317
+  [2][CALL] from=0x60032a, to=Zapper, zapIn(zapCall(tuple): {'requiredToken': '0x60032a41726241499B0c6...) -> None
+    [3][STATICCALL] from=Zapper, to=Vault, zapper() -> 0xd248b3
+    [3][CALL] from=Zapper, to=0x60032a, transferFromaddress() -> 0x000000
+    [3][STATICCALL] from=Zapper, to=Vault, wantToken() -> 0x853d95
+    [3][STATICCALL] from=Zapper, to=Vault, wantToken() -> 0x853d95
+    [3][STATICCALL] from=Zapper, to=FRAXStablecoin, balanceOf(account(address): 0xD248B3) -> 0
+    [3][STATICCALL] from=Zapper, to=0x60032a, balanceOfaddress() -> 0x000000
+    [3][CALL] from=Zapper, to=0x60032a, approveaddress() -> 0x000000
+      [4][CALL] from=0x60032a, to=FRAXStablecoin, transfer(recipient(address): 0xD248B3, amount(uint256): 10) -> True
+    [3][CALL] from=Zapper, to=FiatTokenProxy, transferFrom(from(address): 0x392472, to(address): 0x60032a, value(uint256): 5364965317) -> True
+      [4][DELEGATECALL] from=FiatTokenProxy, to=FiatTokenV2_1, transferFrom(from(address): 0x392472, to(address): 0x60032a, value(uint256): 5364965317) -> True
+    [3][STATICCALL] from=Zapper, to=FRAXStablecoin, balanceOf(account(address): 0xD248B3) -> 10
+    [3][STATICCALL] from=Zapper, to=Vault, wantToken() -> 0x853d95
+    [3][CALL] from=Zapper, to=FRAXStablecoin, approve(spender(address): 0xB3dA8d, amount(uint256): 10) -> True
+    [3][CALL] from=Zapper, to=Vault, deposit(amountIn(uint256): 10, receiver(address): 0x60032a) -> 9
+      [4][CALL] from=Vault, to=SlippageAccounter, getSlippageAccountedAmount(amountIn(uint256): 10) -> 10
+      [4][STATICCALL] from=Vault, to=FRAXStablecoin, balanceOf(account(address): 0xB3dA8d) -> 72428494116542870975961
+      [4][CALL] from=Vault, to=FRAXStablecoin, transferFrom(sender(address): 0xD248B3, recipient(address): 0xB3dA8d, amount(uint256): 10) -> True
+  [2][STATICCALL] from=0x60032a, to=FiatTokenProxy, balanceOf(account(address): 0x140713) -> 4299130227
+    [3][DELEGATECALL] from=FiatTokenProxy, to=FiatTokenV2_1, balanceOf(account(address): 0x140713) -> 4299130227
+  [2][CALL] from=0x60032a, to=Zapper, zapIn(zapCall(tuple): {'requiredToken': '0x60032a41726241499B0c6...) -> None
+    [3][STATICCALL] from=Zapper, to=Vault, zapper() -> 0xd248b3
+    [3][CALL] from=Zapper, to=0x60032a, transferFromaddress() -> 0x000000
+    [3][STATICCALL] from=Zapper, to=Vault, wantToken() -> 0x853d95
+    [3][STATICCALL] from=Zapper, to=Vault, wantToken() -> 0x853d95
+    [3][STATICCALL] from=Zapper, to=FRAXStablecoin, balanceOf(account(address): 0xD248B3) -> 0
+    [3][STATICCALL] from=Zapper, to=0x60032a, balanceOfaddress() -> 0x000000
+    [3][CALL] from=Zapper, to=0x60032a, approveaddress() -> 0x000000
+      [4][CALL] from=0x60032a, to=FRAXStablecoin, transfer(recipient(address): 0xD248B3, amount(uint256): 10) -> True
+    [3][CALL] from=Zapper, to=FiatTokenProxy, transferFrom(from(address): 0x140713, to(address): 0x60032a, value(uint256): 4299130227) -> True
+      [4][DELEGATECALL] from=FiatTokenProxy, to=FiatTokenV2_1, transferFrom(from(address): 0x140713, to(address): 0x60032a, value(uint256): 4299130227) -> True
+    [3][STATICCALL] from=Zapper, to=FRAXStablecoin, balanceOf(account(address): 0xD248B3) -> 10
+    [3][STATICCALL] from=Zapper, to=Vault, wantToken() -> 0x853d95
+    [3][CALL] from=Zapper, to=FRAXStablecoin, approve(spender(address): 0xB3dA8d, amount(uint256): 10) -> True
+    [3][CALL] from=Zapper, to=Vault, deposit(amountIn(uint256): 10, receiver(address): 0x60032a) -> 9
+      [4][CALL] from=Vault, to=SlippageAccounter, getSlippageAccountedAmount(amountIn(uint256): 10) -> 10
+      [4][STATICCALL] from=Vault, to=FRAXStablecoin, balanceOf(account(address): 0xB3dA8d) -> 72428494116542870975971
+      [4][CALL] from=Vault, to=FRAXStablecoin, transferFrom(sender(address): 0xD248B3, recipient(address): 0xB3dA8d, amount(uint256): 10) -> True
+  [2][STATICCALL] from=0x60032a, to=FiatTokenProxy, balanceOf(account(address): 0xA19789) -> 79679661825
+    [3][DELEGATECALL] from=FiatTokenProxy, to=FiatTokenV2_1, balanceOf(account(address): 0xA19789) -> 79679661825
+  [2][CALL] from=0x60032a, to=Zapper, zapIn(zapCall(tuple): {'requiredToken': '0x60032a41726241499B0c6...) -> None
+    [3][STATICCALL] from=Zapper, to=Vault, zapper() -> 0xd248b3
+    [3][CALL] from=Zapper, to=0x60032a, transferFromaddress() -> 0x000000
+    [3][STATICCALL] from=Zapper, to=Vault, wantToken() -> 0x853d95
+    [3][STATICCALL] from=Zapper, to=Vault, wantToken() -> 0x853d95
+    [3][STATICCALL] from=Zapper, to=FRAXStablecoin, balanceOf(account(address): 0xD248B3) -> 0
+    [3][STATICCALL] from=Zapper, to=0x60032a, balanceOfaddress() -> 0x000000
+    [3][CALL] from=Zapper, to=0x60032a, approveaddress() -> 0x000000
+      [4][CALL] from=0x60032a, to=FRAXStablecoin, transfer(recipient(address): 0xD248B3, amount(uint256): 10) -> True
+    [3][CALL] from=Zapper, to=FiatTokenProxy, transferFrom(from(address): 0xA19789, to(address): 0x60032a, value(uint256): 79679661825) -> True
+      [4][DELEGATECALL] from=FiatTokenProxy, to=FiatTokenV2_1, transferFrom(from(address): 0xA19789, to(address): 0x60032a, value(uint256): 79679661825) -> True
+    [3][STATICCALL] from=Zapper, to=FRAXStablecoin, balanceOf(account(address): 0xD248B3) -> 10
+    [3][STATICCALL] from=Zapper, to=Vault, wantToken() -> 0x853d95
+    [3][CALL] from=Zapper, to=FRAXStablecoin, approve(spender(address): 0xB3dA8d, amount(uint256): 10) -> True
+    [3][CALL] from=Zapper, to=Vault, deposit(amountIn(uint256): 10, receiver(address): 0x60032a) -> 9
+      [4][CALL] from=Vault, to=SlippageAccounter, getSlippageAccountedAmount(amountIn(uint256): 10) -> 10
+      [4][STATICCALL] from=Vault, to=FRAXStablecoin, balanceOf(account(address): 0xB3dA8d) -> 72428494116542870975981
+      [4][CALL] from=Vault, to=FRAXStablecoin, transferFrom(sender(address): 0xD248B3, recipient(address): 0xB3dA8d, amount(uint256): 10) -> True
+  [2][STATICCALL] from=0x60032a, to=FiatTokenProxy, balanceOf(account(address): 0x60032a) -> 89343757369
+    [3][DELEGATECALL] from=FiatTokenProxy, to=FiatTokenV2_1, balanceOf(account(address): 0x60032a) -> 89343757369
+  [2][CALL] from=0x60032a, to=FiatTokenProxy, transfer(to(address): 0x6FA00a, value(uint256): 89343757369) -> True
+    [3][DELEGATECALL] from=FiatTokenProxy, to=FiatTokenV2_1, transfer(to(address): 0x6FA00a, value(uint256): 89343757369) -> True

@@ -1,0 +1,12 @@
+[1][CALL] from=0xfde0d1, to=0x6980a4, yoink() -> None
+  [2][CALL] from=0x6980a4, to=AugustusV6, uniswapV3SwapCallback(amount0Delta(int256): -33000000000, amount1Delta(int256): 6463332789527457985, data(bytes): b"\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00...) -> None
+    [3][CALL] from=AugustusV6, to=UniswapV3Pool, swap(recipient(address): 0x6980a4, zeroForOne(bool): True, amountSpecified(int256): -6463332789527457985, sqrtPriceLimitX96(uint160): 4295128740, data(bytes): b"\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00...) -> ['12479437103825582622058', '-6463332789527457985']
+      [4][CALL] from=UniswapV3Pool, to=WETH9, transfer(dst(address): 0x6980a4, wad(uint256): 6463332789527457985) -> True
+      [4][STATICCALL] from=UniswapV3Pool, to=OpSec, balanceOf(account(address): 0x45f4d6) -> 81005468826967388681839
+      [4][CALL] from=UniswapV3Pool, to=AugustusV6, uniswapV3SwapCallback(amount0Delta(int256): 12479437103825582622058, amount1Delta(int256): -6463332789527457985, data(bytes): b"\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00...) -> None
+        [5][CALL] from=AugustusV6, to=OpSec, transferFrom(sender(address): 0x0cc396, recipient(address): 0x45f4d6, amount(uint256): 12479437103825582622058) -> True
+      [4][STATICCALL] from=UniswapV3Pool, to=OpSec, balanceOf(account(address): 0x45f4d6) -> 93484905930792971303897
+  [2][STATICCALL] from=0x6980a4, to=WETH9, balanceOf((address): 0x6980a4) -> 6463332789527457986
+  [2][CALL] from=0x6980a4, to=WETH9, withdraw(wad(uint256): 6463332789527457985) -> None
+    [3][CALL][6.463332789527458] from=WETH9, to=0x6980a4
+  [2][CALL][6.450406123948403] from=0x6980a4, to=0x229b83

@@ -1,0 +1,245 @@
+[1][CALL] from=0x2f6184, to=0xcd8206, startuint256() -> None
+  [2][CALL] from=0xcd8206, to=PancakePair, swap(amount0Out(uint256): 0, amount1Out(uint256): 1000400000000000000000000, to(address): 0xCD8206, data(bytes): b'\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00...) -> None
+    [3][CALL] from=PancakePair, to=BEP20Token, transfer(recipient(address): 0xCD8206, amount(uint256): 1000400000000000000000000) -> True
+    [3][CALL] from=PancakePair, to=0xcd8206, pancakeCalladdress() -> None
+      [4][CALL] from=0xcd8206, to=BEP20Token, approve(spender(address): 0x6B011d, amount(uint256): 115792089237316195423570985008687907853269...) -> True
+      [4][CALL] from=0xcd8206, to=DoppleToken, approve(spender(address): 0x6B011d, amount(uint256): 115792089237316195423570985008687907853269...) -> True
+      [4][CALL] from=0xcd8206, to=BEP20Token, approve(spender(address): 0x10ED43, amount(uint256): 115792089237316195423570985008687907853269...) -> True
+      [4][CALL] from=0xcd8206, to=TwindexSwapRouter, swapExactTokensForTokens(amountIn(uint256): 1000000000000000000000000, amountOutMin(uint256): 0, path(address[]): ['0xe9e7CEA3DedcA5984780Bafc599bD69ADd087D..., to(address): 0xCD8206, deadline(uint256): 1637659447) -> [1000000000000000000000000, 570234507313087106351409]
+        [5][STATICCALL] from=TwindexSwapRouter, to=TwindexPair, getReserves() -> ['584267772559703112832721', '24535809866719119382771', '1637659325']
+        [5][CALL] from=TwindexSwapRouter, to=BEP20Token, transferFrom(sender(address): 0xCD8206, recipient(address): 0xC789F6, amount(uint256): 1000000000000000000000000) -> True
+        [5][CALL] from=TwindexSwapRouter, to=TwindexPair, swap(amount0Out(uint256): 570234507313087106351409, amount1Out(uint256): 0, to(address): 0xCD8206, data(bytes): b'') -> None
+          [6][CALL] from=TwindexPair, to=DoppleToken, transfer(recipient(address): 0xCD8206, amount(uint256): 570234507313087106351409) -> True
+          [6][STATICCALL] from=TwindexPair, to=DoppleToken, balanceOf(account(address): 0xC789F6) -> 14033265246616006481312
+          [6][STATICCALL] from=TwindexPair, to=BEP20Token, balanceOf(account(address): 0xC789F6) -> 1024535809866719119382771
+      [4][CALL] from=0xcd8206, to=PancakeRouter, swapExactTokensForTokens(amountIn(uint256): 400000000000000000000, amountOutMin(uint256): 0, path(address[]): ['0xe9e7CEA3DedcA5984780Bafc599bD69ADd087D..., to(address): 0xCD8206, deadline(uint256): 1637659447) -> [400000000000000000000, 8841131306506726194396]
+        [5][STATICCALL] from=PancakeRouter, to=PancakePair, getReserves() -> ['126348407350277896921241', '5303099967190723392151', '1637650508']
+        [5][CALL] from=PancakeRouter, to=BEP20Token, transferFrom(sender(address): 0xCD8206, recipient(address): 0xb694ec, amount(uint256): 400000000000000000000) -> True
+        [5][CALL] from=PancakeRouter, to=PancakePair, swap(amount0Out(uint256): 8841131306506726194396, amount1Out(uint256): 0, to(address): 0xCD8206, data(bytes): b'') -> None
+          [6][CALL] from=PancakePair, to=DoppleToken, transfer(recipient(address): 0xCD8206, amount(uint256): 8841131306506726194396) -> True
+          [6][STATICCALL] from=PancakePair, to=DoppleToken, balanceOf(account(address): 0xb694ec) -> 117507276043771170726845
+          [6][STATICCALL] from=PancakePair, to=BEP20Token, balanceOf(account(address): 0xb694ec) -> 5703099967190723392151
+      [4][CALL] from=0xcd8206, to=DoppleToken, approve(spender(address): 0xc9eaC7, amount(uint256): 115792089237316195423570985008687907853269...) -> True
+      [4][CALL] from=0xcd8206, to=DoppleToken, approve(spender(address): 0x27b603, amount(uint256): 115792089237316195423570985008687907853269...) -> True
+      [4][CALL] from=0xcd8206, to=DoppleToken, approve(spender(address): 0x1a66C6, amount(uint256): 115792089237316195423570985008687907853269...) -> True
+      [4][CALL] from=0xcd8206, to=DoppleToken, approve(spender(address): 0x1EF256, amount(uint256): 115792089237316195423570985008687907853269...) -> True
+      [4][CALL] from=0xcd8206, to=DoppleToken, approve(spender(address): 0xBfA0eD, amount(uint256): 115792089237316195423570985008687907853269...) -> True
+      [4][CALL] from=0xcd8206, to=DoppleToken, approve(spender(address): 0xD90EFa, amount(uint256): 115792089237316195423570985008687907853269...) -> True
+      [4][CALL] from=0xcd8206, to=DoppleToken, approve(spender(address): 0x539Ff5, amount(uint256): 115792089237316195423570985008687907853269...) -> True
+      [4][CALL] from=0xcd8206, to=LoanToken, borrow(loanId(bytes32): b'\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00..., withdrawAmount(uint256): 85000000000000000000, initialLoanDuration(uint256): 7200, collateralTokenSent(uint256): 50000000000000000000, collateralTokenAddress(address): 0x844FA8, borrower(address): 0xCD8206, receiver(address): 0xCD8206, (bytes): b'no') -> ['85019287705282065987', '49955000000000000000']
+        [5][DELEGATECALL] from=LoanToken, to=LoanTokenLogicStandard, borrow(loanId(bytes32): b'\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00..., withdrawAmount(uint256): 85000000000000000000, initialLoanDuration(uint256): 7200, collateralTokenSent(uint256): 50000000000000000000, collateralTokenAddress(address): 0x844FA8, borrower(address): 0xCD8206, receiver(address): 0xCD8206, (bytes): b'no') -> ['85019287705282065987', '49955000000000000000']
+          [6][CALL] from=LoanToken, to=pfiProtocol, withdrawAccruedInterest(loanToken(address): 0x0E09Fa) -> None
+            [7][DELEGATECALL] from=pfiProtocol, to=LoanMaintenance, withdrawAccruedInterest(loanToken(address): 0x0E09Fa) -> None
+          [6][STATICCALL] from=LoanToken, to=pfiProtocol, getTotalPrincipaladdress() -> 0x000000
+            [7][DELEGATECALL] from=pfiProtocol, to=0x628035, getTotalPrincipaladdress() -> 0x000000
+          [6][STATICCALL] from=LoanToken, to=CakeToken, balanceOf(account(address): 0x539Ff5) -> 85172964952637866430
+          [6][STATICCALL] from=LoanToken, to=pfiProtocol, getTotalPrincipaladdress() -> 0x000000
+            [7][DELEGATECALL] from=pfiProtocol, to=0x628035, getTotalPrincipaladdress() -> 0x000000
+          [6][STATICCALL] from=LoanToken, to=CakeToken, balanceOf(account(address): 0x539Ff5) -> 85172964952637866430
+          [6][CALL] from=LoanToken, to=CakeToken, transfer(recipient(address): 0xCD8206, amount(uint256): 85000000000000000000) -> True
+          [6][CALL] from=LoanToken, to=CakeToken, transfer(recipient(address): 0xAd2d8F, amount(uint256): 19287705282065987) -> True
+          [6][CALL] from=LoanToken, to=DoppleToken, transferFrom(sender(address): 0xCD8206, recipient(address): 0xAd2d8F, amount(uint256): 50000000000000000000) -> True
+          [6][CALL] from=LoanToken, to=pfiProtocol, borrowOrTradeFromPoolbytes32() -> 0x000000
+            [7][DELEGATECALL] from=pfiProtocol, to=0x067d0a, borrowOrTradeFromPoolbytes32() -> 0x000000
+              [8][STATICCALL] from=pfiProtocol, to=PriceFeeds, queryRate(sourceToken(address): 0x844FA8, destToken(address): 0x0E09Fa) -> ['4936030096948294358', '1000000000000000000']
+                [9][STATICCALL] from=PriceFeeds, to=PancakeOracle, latestAnswer() -> 73007656583258593795
+                  [10][STATICCALL] from=PancakeOracle, to=TwindexPair, getReserves() -> ['14033265246616006481312', '1024535809866719119382771', '1637659447']
+                [9][STATICCALL] from=PriceFeeds, to=PancakeOracle, latestAnswer() -> 14790764065315495531
+                  [10][STATICCALL] from=PancakeOracle, to=PancakePair, getReserves() -> ['1596652562252473757149170', '23615711342557801053422323', '1637659426']
+                [9][STATICCALL] from=PriceFeeds, to=DoppleToken, decimals() -> 18
+                [9][STATICCALL] from=PriceFeeds, to=CakeToken, decimals() -> 18
+              [8][STATICCALL] from=pfiProtocol, to=PriceFeeds, queryReturn(sourceToken(address): 0x844FA8, destToken(address): 0xAd2d8F, sourceAmount(uint256): 22500000000000000) -> 3963877391197344453575983046348115674221700746820753546331534351508065746944
+                [9][STATICCALL] from=PriceFeeds, to=PancakeOracle, latestAnswer() -> 73007656583258593795
+                  [10][STATICCALL] from=PancakeOracle, to=TwindexPair, getReserves() -> ['14033265246616006481312', '1024535809866719119382771', '1637659447']
+                [9][STATICCALL] from=PriceFeeds, to=DoppleToken, decimals() -> 18
+                [9][STATICCALL] from=PriceFeeds, to=pfiProtocol, decimals() -> 0x08c379
+              [8][STATICCALL] from=pfiProtocol, to=PriceFeeds, getCurrentMargin(loanToken(address): 0x0E09Fa, collateralToken(address): 0x844FA8, loanAmount(uint256): 85019287705282065987, collateralAmount(uint256): 49955000000000000000) -> ['190027580974114179088', '4936030096948294358']
+                [9][STATICCALL] from=PriceFeeds, to=PancakeOracle, latestAnswer() -> 73007656583258593795
+                  [10][STATICCALL] from=PancakeOracle, to=TwindexPair, getReserves() -> ['14033265246616006481312', '1024535809866719119382771', '1637659447']
+                [9][STATICCALL] from=PriceFeeds, to=PancakeOracle, latestAnswer() -> 14790764065315495531
+                  [10][STATICCALL] from=PancakeOracle, to=PancakePair, getReserves() -> ['1596652562252473757149170', '23615711342557801053422323', '1637659426']
+                [9][STATICCALL] from=PriceFeeds, to=DoppleToken, decimals() -> 18
+                [9][STATICCALL] from=PriceFeeds, to=CakeToken, decimals() -> 18
+      [4][CALL] from=0xcd8206, to=LoanToken, borrow(loanId(bytes32): b'\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00..., withdrawAmount(uint256): 18000000000000000000000, initialLoanDuration(uint256): 7200, collateralTokenSent(uint256): 500000000000000000000, collateralTokenAddress(address): 0x844FA8, borrower(address): 0xCD8206, receiver(address): 0xCD8206, (bytes): b'no') -> ['18004008679347594905139', '499550000000000000000']
+        [5][DELEGATECALL] from=LoanToken, to=LoanTokenLogicStandard, borrow(loanId(bytes32): b'\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00..., withdrawAmount(uint256): 18000000000000000000000, initialLoanDuration(uint256): 7200, collateralTokenSent(uint256): 500000000000000000000, collateralTokenAddress(address): 0x844FA8, borrower(address): 0xCD8206, receiver(address): 0xCD8206, (bytes): b'no') -> ['18004008679347594905139', '499550000000000000000']
+          [6][CALL] from=LoanToken, to=pfiProtocol, withdrawAccruedInterest(loanToken(address): 0xfF54da) -> None
+            [7][DELEGATECALL] from=pfiProtocol, to=LoanMaintenance, withdrawAccruedInterest(loanToken(address): 0xfF54da) -> None
+          [6][STATICCALL] from=LoanToken, to=pfiProtocol, getTotalPrincipaladdress() -> 0x000000
+            [7][DELEGATECALL] from=pfiProtocol, to=0x628035, getTotalPrincipaladdress() -> 0x000000
+          [6][STATICCALL] from=LoanToken, to=Dolly, balanceOf(account(address): 0xD90EFa) -> 18106370863458280253865
+          [6][STATICCALL] from=LoanToken, to=pfiProtocol, getTotalPrincipaladdress() -> 0x000000
+            [7][DELEGATECALL] from=pfiProtocol, to=0x628035, getTotalPrincipaladdress() -> 0x000000
+          [6][STATICCALL] from=LoanToken, to=Dolly, balanceOf(account(address): 0xD90EFa) -> 18106370863458280253865
+          [6][CALL] from=LoanToken, to=Dolly, transfer(recipient(address): 0xCD8206, amount(uint256): 18000000000000000000000) -> True
+            [7][CALL] from=Dolly, to=Swap, updateUserWithdrawFeeaddress() -> None
+              [8][DELEGATECALL] from=Swap, to=SwapUtils, 0xe9252d46() -> None
+          [6][CALL] from=LoanToken, to=Dolly, transfer(recipient(address): 0xAd2d8F, amount(uint256): 4008679347594905139) -> True
+            [7][CALL] from=Dolly, to=Swap, updateUserWithdrawFeeaddress() -> None
+              [8][DELEGATECALL] from=Swap, to=SwapUtils, 0xe9252d46() -> None
+          [6][CALL] from=LoanToken, to=DoppleToken, transferFrom(sender(address): 0xCD8206, recipient(address): 0xAd2d8F, amount(uint256): 500000000000000000000) -> True
+          [6][CALL] from=LoanToken, to=pfiProtocol, borrowOrTradeFromPoolbytes32() -> 0x000000
+            [7][DELEGATECALL] from=pfiProtocol, to=0x067d0a, borrowOrTradeFromPoolbytes32() -> 0x000000
+              [8][STATICCALL] from=pfiProtocol, to=PriceFeeds, queryRate(sourceToken(address): 0x844FA8, destToken(address): 0xfF54da) -> ['75167139013716735717', '1000000000000000000']
+                [9][STATICCALL] from=PriceFeeds, to=PancakeOracle, latestAnswer() -> 73007656583258593795
+                  [10][STATICCALL] from=PancakeOracle, to=TwindexPair, getReserves() -> ['14033265246616006481312', '1024535809866719119382771', '1637659447']
+                [9][STATICCALL] from=PriceFeeds, to=PancakeOracle, latestAnswer() -> 971270924252364151
+                  [10][STATICCALL] from=PancakeOracle, to=TwindexPair, getReserves() -> ['642962604837324215886', '661980698467057188000', '1637500354']
+                [9][STATICCALL] from=PriceFeeds, to=DoppleToken, decimals() -> 18
+                [9][STATICCALL] from=PriceFeeds, to=Dolly, decimals() -> 18
+              [8][STATICCALL] from=pfiProtocol, to=PriceFeeds, queryReturn(sourceToken(address): 0x844FA8, destToken(address): 0xAd2d8F, sourceAmount(uint256): 225000000000000000) -> 3963877391197344453575983046348115674221700746820753546331534351508065746944
+                [9][STATICCALL] from=PriceFeeds, to=PancakeOracle, latestAnswer() -> 73007656583258593795
+                  [10][STATICCALL] from=PancakeOracle, to=TwindexPair, getReserves() -> ['14033265246616006481312', '1024535809866719119382771', '1637659447']
+                [9][STATICCALL] from=PriceFeeds, to=DoppleToken, decimals() -> 18
+                [9][STATICCALL] from=PriceFeeds, to=pfiProtocol, decimals() -> 0x08c379
+              [8][STATICCALL] from=pfiProtocol, to=PriceFeeds, getCurrentMargin(loanToken(address): 0xfF54da, collateralToken(address): 0x844FA8, loanAmount(uint256): 18004008679347594905139, collateralAmount(uint256): 499550000000000000000) -> ['108563242570392231936', '75167139013716735717']
+                [9][STATICCALL] from=PriceFeeds, to=PancakeOracle, latestAnswer() -> 73007656583258593795
+                  [10][STATICCALL] from=PancakeOracle, to=TwindexPair, getReserves() -> ['14033265246616006481312', '1024535809866719119382771', '1637659447']
+                [9][STATICCALL] from=PriceFeeds, to=PancakeOracle, latestAnswer() -> 971270924252364151
+                  [10][STATICCALL] from=PancakeOracle, to=TwindexPair, getReserves() -> ['642962604837324215886', '661980698467057188000', '1637500354']
+                [9][STATICCALL] from=PriceFeeds, to=DoppleToken, decimals() -> 18
+                [9][STATICCALL] from=PriceFeeds, to=Dolly, decimals() -> 18
+      [4][CALL] from=0xcd8206, to=LoanToken, borrow(loanId(bytes32): b'\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00..., withdrawAmount(uint256): 18000000000000000000, initialLoanDuration(uint256): 7200, collateralTokenSent(uint256): 1900000000000000000000, collateralTokenAddress(address): 0x844FA8, borrower(address): 0xCD8206, receiver(address): 0xCD8206, (bytes): b'no') -> ['18003949206565767597', '1898290000000000000000']
+        [5][DELEGATECALL] from=LoanToken, to=LoanTokenLogicStandard, borrow(loanId(bytes32): b'\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00..., withdrawAmount(uint256): 18000000000000000000, initialLoanDuration(uint256): 7200, collateralTokenSent(uint256): 1900000000000000000000, collateralTokenAddress(address): 0x844FA8, borrower(address): 0xCD8206, receiver(address): 0xCD8206, (bytes): b'no') -> ['18003949206565767597', '1898290000000000000000']
+          [6][CALL] from=LoanToken, to=pfiProtocol, withdrawAccruedInterest(loanToken(address): 0x2170Ed) -> None
+            [7][DELEGATECALL] from=pfiProtocol, to=LoanMaintenance, withdrawAccruedInterest(loanToken(address): 0x2170Ed) -> None
+          [6][STATICCALL] from=LoanToken, to=pfiProtocol, getTotalPrincipaladdress() -> 0x000000
+            [7][DELEGATECALL] from=pfiProtocol, to=0x628035, getTotalPrincipaladdress() -> 0x000000
+          [6][STATICCALL] from=LoanToken, to=BEP20Ethereum, balanceOf(account(address): 0xBfA0eD) -> 18168539638785200497
+          [6][STATICCALL] from=LoanToken, to=pfiProtocol, getTotalPrincipaladdress() -> 0x000000
+            [7][DELEGATECALL] from=pfiProtocol, to=0x628035, getTotalPrincipaladdress() -> 0x000000
+          [6][STATICCALL] from=LoanToken, to=BEP20Ethereum, balanceOf(account(address): 0xBfA0eD) -> 18168539638785200497
+          [6][CALL] from=LoanToken, to=BEP20Ethereum, transfer(recipient(address): 0xCD8206, amount(uint256): 18000000000000000000) -> True
+          [6][CALL] from=LoanToken, to=BEP20Ethereum, transfer(recipient(address): 0xAd2d8F, amount(uint256): 3949206565767597) -> True
+          [6][CALL] from=LoanToken, to=DoppleToken, transferFrom(sender(address): 0xCD8206, recipient(address): 0xAd2d8F, amount(uint256): 1900000000000000000000) -> True
+          [6][CALL] from=LoanToken, to=pfiProtocol, borrowOrTradeFromPoolbytes32() -> 0x000000
+            [7][DELEGATECALL] from=pfiProtocol, to=0x067d0a, borrowOrTradeFromPoolbytes32() -> 0x000000
+              [8][STATICCALL] from=pfiProtocol, to=PriceFeeds, queryRate(sourceToken(address): 0x844FA8, destToken(address): 0x2170Ed) -> ['17670406839777899', '1000000000000000000']
+                [9][STATICCALL] from=PriceFeeds, to=PancakeOracle, latestAnswer() -> 73007656583258593795
+                  [10][STATICCALL] from=PancakeOracle, to=TwindexPair, getReserves() -> ['14033265246616006481312', '1024535809866719119382771', '1637659447']
+                [9][STATICCALL] from=PriceFeeds, to=PancakeOracle, latestAnswer() -> 4131634163561580534839
+                  [10][STATICCALL] from=PancakeOracle, to=PancakePair, getReserves() -> ['112730410706132869514', '465760816145786721638343', '1637659429']
+                [9][STATICCALL] from=PriceFeeds, to=DoppleToken, decimals() -> 18
+                [9][STATICCALL] from=PriceFeeds, to=BEP20Ethereum, decimals() -> 18
+              [8][STATICCALL] from=pfiProtocol, to=PriceFeeds, queryReturn(sourceToken(address): 0x844FA8, destToken(address): 0xAd2d8F, sourceAmount(uint256): 855000000000000000) -> 3963877391197344453575983046348115674221700746820753546331534351508065746944
+                [9][STATICCALL] from=PriceFeeds, to=PancakeOracle, latestAnswer() -> 73007656583258593795
+                  [10][STATICCALL] from=PancakeOracle, to=TwindexPair, getReserves() -> ['14033265246616006481312', '1024535809866719119382771', '1637659447']
+                [9][STATICCALL] from=PriceFeeds, to=DoppleToken, decimals() -> 18
+                [9][STATICCALL] from=PriceFeeds, to=pfiProtocol, decimals() -> 0x08c379
+              [8][STATICCALL] from=pfiProtocol, to=PriceFeeds, getCurrentMargin(loanToken(address): 0x2170Ed, collateralToken(address): 0x844FA8, loanAmount(uint256): 18003949206565767597, collateralAmount(uint256): 1898290000000000000000) -> ['86312215253579813664', '17670406839777899']
+                [9][STATICCALL] from=PriceFeeds, to=PancakeOracle, latestAnswer() -> 73007656583258593795
+                  [10][STATICCALL] from=PancakeOracle, to=TwindexPair, getReserves() -> ['14033265246616006481312', '1024535809866719119382771', '1637659447']
+                [9][STATICCALL] from=PriceFeeds, to=PancakeOracle, latestAnswer() -> 4131634163561580534839
+                  [10][STATICCALL] from=PancakeOracle, to=PancakePair, getReserves() -> ['112730410706132869514', '465760816145786721638343', '1637659429']
+                [9][STATICCALL] from=PriceFeeds, to=DoppleToken, decimals() -> 18
+                [9][STATICCALL] from=PriceFeeds, to=BEP20Ethereum, decimals() -> 18
+      [4][CALL] from=0xcd8206, to=LoanToken, borrow(loanId(bytes32): b'\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00..., withdrawAmount(uint256): 1600000000000000000, initialLoanDuration(uint256): 7200, collateralTokenSent(uint256): 2000000000000000000000, collateralTokenAddress(address): 0x844FA8, borrower(address): 0xCD8206, receiver(address): 0xCD8206, (bytes): b'no') -> ['1600274620781858497', '1998200000000000000000']
+        [5][DELEGATECALL] from=LoanToken, to=LoanTokenLogicStandard, borrow(loanId(bytes32): b'\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00..., withdrawAmount(uint256): 1600000000000000000, initialLoanDuration(uint256): 7200, collateralTokenSent(uint256): 2000000000000000000000, collateralTokenAddress(address): 0x844FA8, borrower(address): 0xCD8206, receiver(address): 0xCD8206, (bytes): b'no') -> ['1600274620781858497', '1998200000000000000000']
+          [6][CALL] from=LoanToken, to=pfiProtocol, withdrawAccruedInterest(loanToken(address): 0x7130d2) -> None
+            [7][DELEGATECALL] from=pfiProtocol, to=LoanMaintenance, withdrawAccruedInterest(loanToken(address): 0x7130d2) -> None
+          [6][STATICCALL] from=LoanToken, to=pfiProtocol, getTotalPrincipaladdress() -> 0x000000
+            [7][DELEGATECALL] from=pfiProtocol, to=0x628035, getTotalPrincipaladdress() -> 0x000000
+          [6][STATICCALL] from=LoanToken, to=BEP20Token, balanceOf(account(address): 0x1EF256) -> 1699802896776334641
+          [6][STATICCALL] from=LoanToken, to=pfiProtocol, getTotalPrincipaladdress() -> 0x000000
+            [7][DELEGATECALL] from=pfiProtocol, to=0x628035, getTotalPrincipaladdress() -> 0x000000
+          [6][STATICCALL] from=LoanToken, to=BEP20Token, balanceOf(account(address): 0x1EF256) -> 1699802896776334641
+          [6][CALL] from=LoanToken, to=BEP20Token, transfer(recipient(address): 0xCD8206, amount(uint256): 1600000000000000000) -> True
+          [6][CALL] from=LoanToken, to=BEP20Token, transfer(recipient(address): 0xAd2d8F, amount(uint256): 274620781858497) -> True
+          [6][CALL] from=LoanToken, to=DoppleToken, transferFrom(sender(address): 0xCD8206, recipient(address): 0xAd2d8F, amount(uint256): 2000000000000000000000) -> True
+          [6][CALL] from=LoanToken, to=pfiProtocol, borrowOrTradeFromPoolbytes32() -> 0x000000
+            [7][DELEGATECALL] from=pfiProtocol, to=0x067d0a, borrowOrTradeFromPoolbytes32() -> 0x000000
+              [8][STATICCALL] from=pfiProtocol, to=PriceFeeds, queryRate(sourceToken(address): 0x844FA8, destToken(address): 0x7130d2) -> ['1295206718057593', '1000000000000000000']
+                [9][STATICCALL] from=PriceFeeds, to=PancakeOracle, latestAnswer() -> 73007656583258593795
+                  [10][STATICCALL] from=PancakeOracle, to=TwindexPair, getReserves() -> ['14033265246616006481312', '1024535809866719119382771', '1637659447']
+                [9][STATICCALL] from=PriceFeeds, to=PancakeOracle, latestAnswer() -> 56367570956354619495684
+                  [10][STATICCALL] from=PancakeOracle, to=PancakePair, getReserves() -> ['1079234714420436564070', '60833839343655072111865173', '1637659384']
+                [9][STATICCALL] from=PriceFeeds, to=DoppleToken, decimals() -> 18
+                [9][STATICCALL] from=PriceFeeds, to=BEP20Token, decimals() -> 18
+              [8][STATICCALL] from=pfiProtocol, to=PriceFeeds, queryReturn(sourceToken(address): 0x844FA8, destToken(address): 0xAd2d8F, sourceAmount(uint256): 900000000000000000) -> 3963877391197344453575983046348115674221700746820753546331534351508065746944
+                [9][STATICCALL] from=PriceFeeds, to=PancakeOracle, latestAnswer() -> 73007656583258593795
+                  [10][STATICCALL] from=PancakeOracle, to=TwindexPair, getReserves() -> ['14033265246616006481312', '1024535809866719119382771', '1637659447']
+                [9][STATICCALL] from=PriceFeeds, to=DoppleToken, decimals() -> 18
+                [9][STATICCALL] from=PriceFeeds, to=pfiProtocol, decimals() -> 0x08c379
+              [8][STATICCALL] from=pfiProtocol, to=PriceFeeds, getCurrentMargin(loanToken(address): 0x7130d2, collateralToken(address): 0x844FA8, loanAmount(uint256): 1600274620781858497, collateralAmount(uint256): 1998200000000000000000) -> ['61727370440843656211', '1295206718057593']
+                [9][STATICCALL] from=PriceFeeds, to=PancakeOracle, latestAnswer() -> 73007656583258593795
+                  [10][STATICCALL] from=PancakeOracle, to=TwindexPair, getReserves() -> ['14033265246616006481312', '1024535809866719119382771', '1637659447']
+                [9][STATICCALL] from=PriceFeeds, to=PancakeOracle, latestAnswer() -> 56367570956354619495684
+                  [10][STATICCALL] from=PancakeOracle, to=PancakePair, getReserves() -> ['1079234714420436564070', '60833839343655072111865173', '1637659384']
+                [9][STATICCALL] from=PriceFeeds, to=DoppleToken, decimals() -> 18
+                [9][STATICCALL] from=PriceFeeds, to=BEP20Token, decimals() -> 18
+      [4][CALL] from=0xcd8206, to=LoanToken, borrow(loanId(bytes32): b'\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00..., withdrawAmount(uint256): 89000000000000000000000, initialLoanDuration(uint256): 7200, collateralTokenSent(uint256): 2000000000000000000000, collateralTokenAddress(address): 0x844FA8, borrower(address): 0xCD8206, receiver(address): 0xCD8206, (bytes): b'no') -> ['89019517202160146941255', '1998200000000000000000']
+        [5][DELEGATECALL] from=LoanToken, to=LoanTokenLogicStandard, borrow(loanId(bytes32): b'\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00..., withdrawAmount(uint256): 89000000000000000000000, initialLoanDuration(uint256): 7200, collateralTokenSent(uint256): 2000000000000000000000, collateralTokenAddress(address): 0x844FA8, borrower(address): 0xCD8206, receiver(address): 0xCD8206, (bytes): b'no') -> ['89019517202160146941255', '1998200000000000000000']
+          [6][CALL] from=LoanToken, to=pfiProtocol, withdrawAccruedInterest(loanToken(address): 0x55d398) -> None
+            [7][DELEGATECALL] from=pfiProtocol, to=LoanMaintenance, withdrawAccruedInterest(loanToken(address): 0x55d398) -> None
+              [8][CALL] from=pfiProtocol, to=BEP20USDT, transfer(recipient(address): 0x1a66C6, amount(uint256): 2567426075753238) -> True
+          [6][STATICCALL] from=LoanToken, to=pfiProtocol, getTotalPrincipaladdress() -> 0x000000
+            [7][DELEGATECALL] from=pfiProtocol, to=0x628035, getTotalPrincipaladdress() -> 0x000000
+          [6][STATICCALL] from=LoanToken, to=BEP20USDT, balanceOf(account(address): 0x1a66C6) -> 89858575939545527124086
+          [6][STATICCALL] from=LoanToken, to=pfiProtocol, getTotalPrincipaladdress() -> 0x000000
+            [7][DELEGATECALL] from=pfiProtocol, to=0x628035, getTotalPrincipaladdress() -> 0x000000
+          [6][STATICCALL] from=LoanToken, to=BEP20USDT, balanceOf(account(address): 0x1a66C6) -> 89858575939545527124086
+          [6][CALL] from=LoanToken, to=BEP20USDT, transfer(recipient(address): 0xCD8206, amount(uint256): 89000000000000000000000) -> True
+          [6][CALL] from=LoanToken, to=BEP20USDT, transfer(recipient(address): 0xAd2d8F, amount(uint256): 19517202160146941255) -> True
+          [6][CALL] from=LoanToken, to=DoppleToken, transferFrom(sender(address): 0xCD8206, recipient(address): 0xAd2d8F, amount(uint256): 2000000000000000000000) -> True
+          [6][CALL] from=LoanToken, to=pfiProtocol, borrowOrTradeFromPoolbytes32() -> 0x000000
+            [7][DELEGATECALL] from=pfiProtocol, to=0x067d0a, borrowOrTradeFromPoolbytes32() -> 0x000000
+              [8][STATICCALL] from=pfiProtocol, to=PriceFeeds, queryRate(sourceToken(address): 0x844FA8, destToken(address): 0x55d398) -> ['73014946841046234946', '1000000000000000000']
+                [9][STATICCALL] from=PriceFeeds, to=PancakeOracle, latestAnswer() -> 73007656583258593795
+                  [10][STATICCALL] from=PancakeOracle, to=TwindexPair, getReserves() -> ['14033265246616006481312', '1024535809866719119382771', '1637659447']
+                [9][STATICCALL] from=PriceFeeds, to=PancakeOracle, latestAnswer() -> 999900153898577615
+                  [10][STATICCALL] from=PancakeOracle, to=PancakePair, getReserves() -> ['146161937701371381326484098', '146147344001715558011806838', '1637659444']
+                [9][STATICCALL] from=PriceFeeds, to=DoppleToken, decimals() -> 18
+                [9][STATICCALL] from=PriceFeeds, to=BEP20USDT, decimals() -> 18
+              [8][STATICCALL] from=pfiProtocol, to=PriceFeeds, queryReturn(sourceToken(address): 0x844FA8, destToken(address): 0xAd2d8F, sourceAmount(uint256): 900000000000000000) -> 3963877391197344453575983046348115674221700746820753546331534351508065746944
+                [9][STATICCALL] from=PriceFeeds, to=PancakeOracle, latestAnswer() -> 73007656583258593795
+                  [10][STATICCALL] from=PancakeOracle, to=TwindexPair, getReserves() -> ['14033265246616006481312', '1024535809866719119382771', '1637659447']
+                [9][STATICCALL] from=PriceFeeds, to=DoppleToken, decimals() -> 18
+                [9][STATICCALL] from=PriceFeeds, to=pfiProtocol, decimals() -> 0x08c379
+              [8][STATICCALL] from=pfiProtocol, to=PriceFeeds, getCurrentMargin(loanToken(address): 0x55d398, collateralToken(address): 0x844FA8, loanAmount(uint256): 89019517202160146941255, collateralAmount(uint256): 1998200000000000000000) -> ['63894920308822137221', '73014946841046234946']
+                [9][STATICCALL] from=PriceFeeds, to=PancakeOracle, latestAnswer() -> 73007656583258593795
+                  [10][STATICCALL] from=PancakeOracle, to=TwindexPair, getReserves() -> ['14033265246616006481312', '1024535809866719119382771', '1637659447']
+                [9][STATICCALL] from=PriceFeeds, to=PancakeOracle, latestAnswer() -> 999900153898577615
+                  [10][STATICCALL] from=PancakeOracle, to=PancakePair, getReserves() -> ['146161937701371381326484098', '146147344001715558011806838', '1637659444']
+                [9][STATICCALL] from=PriceFeeds, to=DoppleToken, decimals() -> 18
+                [9][STATICCALL] from=PriceFeeds, to=BEP20USDT, decimals() -> 18
+      [4][CALL] from=0xcd8206, to=LoanToken, borrow(loanId(bytes32): b'\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00..., withdrawAmount(uint256): 90000000000000000000000, initialLoanDuration(uint256): 7200, collateralTokenSent(uint256): 2000000000000000000000, collateralTokenAddress(address): 0x844FA8, borrower(address): 0xCD8206, receiver(address): 0xCD8206, (bytes): b'no') -> ['90019374766490038850884', '1998200000000000000000']
+        [5][DELEGATECALL] from=LoanToken, to=LoanTokenLogicStandard, borrow(loanId(bytes32): b'\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00..., withdrawAmount(uint256): 90000000000000000000000, initialLoanDuration(uint256): 7200, collateralTokenSent(uint256): 2000000000000000000000, collateralTokenAddress(address): 0x844FA8, borrower(address): 0xCD8206, receiver(address): 0xCD8206, (bytes): b'no') -> ['90019374766490038850884', '1998200000000000000000']
+          [6][CALL] from=LoanToken, to=pfiProtocol, withdrawAccruedInterest(loanToken(address): 0xe9e7CE) -> None
+            [7][DELEGATECALL] from=pfiProtocol, to=LoanMaintenance, withdrawAccruedInterest(loanToken(address): 0xe9e7CE) -> None
+              [8][CALL] from=pfiProtocol, to=BEP20Token, transfer(recipient(address): 0x27b603, amount(uint256): 83033551464498808) -> True
+          [6][STATICCALL] from=LoanToken, to=pfiProtocol, getTotalPrincipaladdress() -> 0x000000
+            [7][DELEGATECALL] from=pfiProtocol, to=0x628035, getTotalPrincipaladdress() -> 0x000000
+          [6][STATICCALL] from=LoanToken, to=BEP20Token, balanceOf(account(address): 0x27b603) -> 91269990314357790242533
+          [6][STATICCALL] from=LoanToken, to=pfiProtocol, getTotalPrincipaladdress() -> 0x000000
+            [7][DELEGATECALL] from=pfiProtocol, to=0x628035, getTotalPrincipaladdress() -> 0x000000
+          [6][STATICCALL] from=LoanToken, to=BEP20Token, balanceOf(account(address): 0x27b603) -> 91269990314357790242533
+          [6][CALL] from=LoanToken, to=BEP20Token, transfer(recipient(address): 0xCD8206, amount(uint256): 90000000000000000000000) -> True
+          [6][CALL] from=LoanToken, to=BEP20Token, transfer(recipient(address): 0xAd2d8F, amount(uint256): 19374766490038850884) -> True
+          [6][CALL] from=LoanToken, to=DoppleToken, transferFrom(sender(address): 0xCD8206, recipient(address): 0xAd2d8F, amount(uint256): 2000000000000000000000) -> True
+          [6][CALL] from=LoanToken, to=pfiProtocol, borrowOrTradeFromPoolbytes32() -> 0x000000
+            [7][DELEGATECALL] from=pfiProtocol, to=0x067d0a, borrowOrTradeFromPoolbytes32() -> 0x000000
+              [8][STATICCALL] from=pfiProtocol, to=PriceFeeds, queryRate(sourceToken(address): 0x844FA8, destToken(address): 0xe9e7CE) -> ['73007656583258593795', '1000000000000000000']
+                [9][STATICCALL] from=PriceFeeds, to=PancakeOracle, latestAnswer() -> 73007656583258593795
+                  [10][STATICCALL] from=PancakeOracle, to=TwindexPair, getReserves() -> ['14033265246616006481312', '1024535809866719119382771', '1637659447']
+                [9][STATICCALL] from=PriceFeeds, to=DoppleToken, decimals() -> 18
+                [9][STATICCALL] from=PriceFeeds, to=BEP20Token, decimals() -> 18
+              [8][STATICCALL] from=pfiProtocol, to=PriceFeeds, queryReturn(sourceToken(address): 0x844FA8, destToken(address): 0xAd2d8F, sourceAmount(uint256): 900000000000000000) -> 3963877391197344453575983046348115674221700746820753546331534351508065746944
+                [9][STATICCALL] from=PriceFeeds, to=PancakeOracle, latestAnswer() -> 73007656583258593795
+                  [10][STATICCALL] from=PancakeOracle, to=TwindexPair, getReserves() -> ['14033265246616006481312', '1024535809866719119382771', '1637659447']
+                [9][STATICCALL] from=PriceFeeds, to=DoppleToken, decimals() -> 18
+                [9][STATICCALL] from=PriceFeeds, to=pfiProtocol, decimals() -> 0x08c379
+              [8][STATICCALL] from=pfiProtocol, to=PriceFeeds, getCurrentMargin(loanToken(address): 0xe9e7CE, collateralToken(address): 0x844FA8, loanAmount(uint256): 90019374766490038850884, collateralAmount(uint256): 1998200000000000000000) -> ['62058334400888337449', '73007656583258593795']
+                [9][STATICCALL] from=PriceFeeds, to=PancakeOracle, latestAnswer() -> 73007656583258593795
+                  [10][STATICCALL] from=PancakeOracle, to=TwindexPair, getReserves() -> ['14033265246616006481312', '1024535809866719119382771', '1637659447']
+                [9][STATICCALL] from=PriceFeeds, to=DoppleToken, decimals() -> 18
+                [9][STATICCALL] from=PriceFeeds, to=BEP20Token, decimals() -> 18
+      [4][STATICCALL] from=0xcd8206, to=DoppleToken, balanceOf(account(address): 0xCD8206) -> 570625638619593832545805
+      [4][CALL] from=0xcd8206, to=TwindexSwapRouter, swapExactTokensForTokens(amountIn(uint256): 570625638619593832545805, amountOutMin(uint256): 0, path(address[]): ['0x844FA82f1E54824655470970F7004Dd90546bB..., to(address): 0xCD8206, deadline(uint256): 1637659447) -> [570625638619593832545805, 999872191888029716855925]
+        [5][STATICCALL] from=TwindexSwapRouter, to=TwindexPair, getReserves() -> ['14033265246616006481312', '1024535809866719119382771', '1637659447']
+        [5][CALL] from=TwindexSwapRouter, to=DoppleToken, transferFrom(sender(address): 0xCD8206, recipient(address): 0xC789F6, amount(uint256): 570625638619593832545805) -> True
+        [5][CALL] from=TwindexSwapRouter, to=TwindexPair, swap(amount0Out(uint256): 0, amount1Out(uint256): 999872191888029716855925, to(address): 0xCD8206, data(bytes): b'') -> None
+          [6][CALL] from=TwindexPair, to=BEP20Token, transfer(recipient(address): 0xCD8206, amount(uint256): 999872191888029716855925) -> True
+          [6][STATICCALL] from=TwindexPair, to=DoppleToken, balanceOf(account(address): 0xC789F6) -> 584658903866209839027117
+          [6][STATICCALL] from=TwindexPair, to=BEP20Token, balanceOf(account(address): 0xC789F6) -> 24663617978689402526846
+      [4][CALL] from=0xcd8206, to=BEP20Token, transfer(recipient(address): 0x58F876, amount(uint256): 1002951020000000000000000) -> True
+    [3][STATICCALL] from=PancakePair, to=WBNB, balanceOf((address): 0x58F876) -> 391471899937476832394243
+    [3][STATICCALL] from=PancakePair, to=BEP20Token, balanceOf(account(address): 0x58F876) -> 222144291475590381847919515

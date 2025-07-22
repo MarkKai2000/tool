@@ -1,0 +1,1685 @@
+[1][CALL] from=0x7d192f, to=0xc4bea6, 0xa558c55d() -> None
+  [2][STATICCALL] from=0xc4bea6, to=BEP20Token, balanceOf(account(address): 0x0b70e2) -> 19479138045270000000000
+  [2][STATICCALL] from=0xc4bea6, to=BEP20Token, allowance(owner(address): 0x0b70e2, spender(address): 0x6D8981) -> 999999999814197824818335294
+  [2][CALL] from=0xc4bea6, to=0x6d8981, 0x4f1f05bc() -> 0x000000
+    [3][STATICCALL] from=0x6d8981, to=Diamond, balanceOf(account(address): 0x0b70e2) -> 0
+    [3][STATICCALL] from=0x6d8981, to=WBNB, balanceOf((address): 0x6D8981) -> 0
+    [3][DELEGATECALL] from=0x6d8981, to=0x6d1879, 0x7855da66() -> 0x000000
+    [3][CALL] from=0x6d8981, to=BEP20Token, transferFrom(sender(address): 0x0b70e2, recipient(address): 0xaCAac9, amount(uint256): 19479138045270000000000) -> True
+    [3][STATICCALL] from=0x6d8981, to=BiswapPair, getReserves() -> ['46548517525195980434375', '14238524926090039238486674', '1677479117']
+    [3][STATICCALL] from=0x6d8981, to=BiswapPair, swapFee() -> 2
+    [3][STATICCALL] from=0x6d8981, to=BEP20Token, balanceOf(account(address): 0xaCAac9) -> 14258004064135309238486674
+    [3][CALL] from=0x6d8981, to=BiswapPair, swap(amount0Out(uint256): 63467089585367471934, amount1Out(uint256): 0, to(address): 0x6D8981, data(bytes): b'') -> None
+      [4][CALL] from=BiswapPair, to=WBNB, transfer(dst(address): 0x6D8981, wad(uint256): 63467089585367471934) -> True
+      [4][STATICCALL] from=BiswapPair, to=WBNB, balanceOf((address): 0xaCAac9) -> 46485050435610612962441
+      [4][STATICCALL] from=BiswapPair, to=BEP20Token, balanceOf(account(address): 0xaCAac9) -> 14258004064135309238486674
+    [3][STATICCALL] from=0x6d8981, to=WBNB, balanceOf((address): 0x6D8981) -> 63467089585367471934
+    [3][STATICCALL] from=0x6d8981, to=WBNB, balanceOf((address): 0x6D8981) -> 63467089585367471934
+    [3][STATICCALL] from=0x6d8981, to=Diamond, balanceOf(account(address): 0x0b70e2) -> 0
+    [3][DELEGATECALL] from=0x6d8981, to=0x6d1879, 0x7855da66() -> 0x000000
+    [3][CALL] from=0x6d8981, to=WBNB, transfer(dst(address): 0xA6C26b, wad(uint256): 63467089585367471934) -> True
+    [3][STATICCALL] from=0x6d8981, to=BiswapPair, getReserves() -> ['743829576378774191792569', '40728631451747453', '1677443820']
+    [3][STATICCALL] from=0x6d8981, to=BiswapPair, swapFee() -> 1
+    [3][STATICCALL] from=0x6d8981, to=WBNB, balanceOf((address): 0xA6C26b) -> 63507818216819219387
+    [3][CALL] from=0x6d8981, to=BiswapPair, swap(amount0Out(uint256): 743352068765551299908374, amount1Out(uint256): 0, to(address): 0x0b70e2, data(bytes): b'') -> None
+      [4][CALL] from=BiswapPair, to=Diamond, transfer(recipient(address): 0x0b70e2, amount(uint256): 743352068765551299908374) -> True
+      [4][STATICCALL] from=BiswapPair, to=Diamond, balanceOf(account(address): 0xA6C26b) -> 477507613222891884195
+      [4][STATICCALL] from=BiswapPair, to=WBNB, balanceOf((address): 0xA6C26b) -> 63507818216819219387
+    [3][STATICCALL] from=0x6d8981, to=Diamond, balanceOf(account(address): 0x0b70e2) -> 743352068765551299908374
+    [3][STATICCALL] from=0x6d8981, to=Diamond, balanceOf(account(address): 0x0b70e2) -> 743352068765551299908374
+  [2][STATICCALL] from=0xc4bea6, to=BEP20Token, balanceOf(account(address): 0x210C9E) -> 15000800000000000000000
+  [2][STATICCALL] from=0xc4bea6, to=BEP20Token, allowance(owner(address): 0x210C9E, spender(address): 0x6D8981) -> 999999930000000000000000000
+  [2][CALL] from=0xc4bea6, to=0x6d8981, 0x4f1f05bc() -> 0x000000
+    [3][STATICCALL] from=0x6d8981, to=Diamond, balanceOf(account(address): 0x210C9E) -> 0
+    [3][STATICCALL] from=0x6d8981, to=WBNB, balanceOf((address): 0x6D8981) -> 0
+    [3][DELEGATECALL] from=0x6d8981, to=0x6d1879, 0x7855da66() -> 0x000000
+    [3][CALL] from=0x6d8981, to=BEP20Token, transferFrom(sender(address): 0x210C9E, recipient(address): 0xaCAac9, amount(uint256): 15000800000000000000000) -> True
+    [3][STATICCALL] from=0x6d8981, to=BiswapPair, getReserves() -> ['46485050435610612962441', '14258004064135309238486674', '1677479141']
+    [3][STATICCALL] from=0x6d8981, to=BiswapPair, swapFee() -> 2
+    [3][STATICCALL] from=0x6d8981, to=BEP20Token, balanceOf(account(address): 0xaCAac9) -> 14273004864135309238486674
+    [3][CALL] from=0x6d8981, to=BiswapPair, swap(amount0Out(uint256): 48757762511868017247, amount1Out(uint256): 0, to(address): 0x6D8981, data(bytes): b'') -> None
+      [4][CALL] from=BiswapPair, to=WBNB, transfer(dst(address): 0x6D8981, wad(uint256): 48757762511868017247) -> True
+      [4][STATICCALL] from=BiswapPair, to=WBNB, balanceOf((address): 0xaCAac9) -> 46436292673098744945194
+      [4][STATICCALL] from=BiswapPair, to=BEP20Token, balanceOf(account(address): 0xaCAac9) -> 14273004864135309238486674
+    [3][STATICCALL] from=0x6d8981, to=WBNB, balanceOf((address): 0x6D8981) -> 48757762511868017247
+    [3][STATICCALL] from=0x6d8981, to=WBNB, balanceOf((address): 0x6D8981) -> 48757762511868017247
+    [3][STATICCALL] from=0x6d8981, to=Diamond, balanceOf(account(address): 0x210C9E) -> 0
+    [3][DELEGATECALL] from=0x6d8981, to=0x6d1879, 0x7855da66() -> 0x000000
+    [3][CALL] from=0x6d8981, to=WBNB, transfer(dst(address): 0xA6C26b, wad(uint256): 48757762511868017247) -> True
+    [3][STATICCALL] from=0x6d8981, to=BiswapPair, getReserves() -> ['477507613222891884195', '63507818216819219387', '1677479141']
+    [3][STATICCALL] from=0x6d8981, to=BiswapPair, swapFee() -> 1
+    [3][STATICCALL] from=0x6d8981, to=WBNB, balanceOf((address): 0xA6C26b) -> 112265580728687236634
+    [3][CALL] from=0x6d8981, to=BiswapPair, swap(amount0Out(uint256): 207267680420237105084, amount1Out(uint256): 0, to(address): 0x210C9E, data(bytes): b'') -> None
+      [4][CALL] from=BiswapPair, to=Diamond, transfer(recipient(address): 0x210C9E, amount(uint256): 207267680420237105084) -> True
+      [4][STATICCALL] from=BiswapPair, to=Diamond, balanceOf(account(address): 0xA6C26b) -> 270239932802654779111
+      [4][STATICCALL] from=BiswapPair, to=WBNB, balanceOf((address): 0xA6C26b) -> 112265580728687236634
+    [3][STATICCALL] from=0x6d8981, to=Diamond, balanceOf(account(address): 0x210C9E) -> 207267680420237105084
+    [3][STATICCALL] from=0x6d8981, to=Diamond, balanceOf(account(address): 0x210C9E) -> 207267680420237105084
+  [2][STATICCALL] from=0xc4bea6, to=BEP20Token, balanceOf(account(address): 0x6906f7) -> 13228919344644678230470
+  [2][STATICCALL] from=0xc4bea6, to=BEP20Token, allowance(owner(address): 0x6906f7, spender(address): 0x6D8981) -> 57896044618658097711785492504343953926634992332820282018728792003956564819968
+  [2][CALL] from=0xc4bea6, to=0x6d8981, 0x4f1f05bc() -> 0x000000
+    [3][STATICCALL] from=0x6d8981, to=Diamond, balanceOf(account(address): 0x6906f7) -> 0
+    [3][STATICCALL] from=0x6d8981, to=WBNB, balanceOf((address): 0x6D8981) -> 0
+    [3][DELEGATECALL] from=0x6d8981, to=0x6d1879, 0x7855da66() -> 0x000000
+    [3][CALL] from=0x6d8981, to=BEP20Token, transferFrom(sender(address): 0x6906f7, recipient(address): 0xaCAac9, amount(uint256): 13228919344644678230470) -> True
+    [3][STATICCALL] from=0x6d8981, to=BiswapPair, getReserves() -> ['46436292673098744945194', '14273004864135309238486674', '1677479141']
+    [3][STATICCALL] from=0x6d8981, to=BiswapPair, swapFee() -> 2
+    [3][STATICCALL] from=0x6d8981, to=BEP20Token, balanceOf(account(address): 0xaCAac9) -> 14286233783479953916717144
+    [3][CALL] from=0x6d8981, to=BiswapPair, swap(amount0Out(uint256): 42913654584551917655, amount1Out(uint256): 0, to(address): 0x6D8981, data(bytes): b'') -> None
+      [4][CALL] from=BiswapPair, to=WBNB, transfer(dst(address): 0x6D8981, wad(uint256): 42913654584551917655) -> True
+      [4][STATICCALL] from=BiswapPair, to=WBNB, balanceOf((address): 0xaCAac9) -> 46393379018514193027539
+      [4][STATICCALL] from=BiswapPair, to=BEP20Token, balanceOf(account(address): 0xaCAac9) -> 14286233783479953916717144
+    [3][STATICCALL] from=0x6d8981, to=WBNB, balanceOf((address): 0x6D8981) -> 42913654584551917655
+    [3][STATICCALL] from=0x6d8981, to=WBNB, balanceOf((address): 0x6D8981) -> 42913654584551917655
+    [3][STATICCALL] from=0x6d8981, to=Diamond, balanceOf(account(address): 0x6906f7) -> 0
+    [3][DELEGATECALL] from=0x6d8981, to=0x6d1879, 0x7855da66() -> 0x000000
+    [3][CALL] from=0x6d8981, to=WBNB, transfer(dst(address): 0xA6C26b, wad(uint256): 42913654584551917655) -> True
+    [3][STATICCALL] from=0x6d8981, to=BiswapPair, getReserves() -> ['270239932802654779111', '112265580728687236634', '1677479141']
+    [3][STATICCALL] from=0x6d8981, to=BiswapPair, swapFee() -> 1
+    [3][STATICCALL] from=0x6d8981, to=WBNB, balanceOf((address): 0xA6C26b) -> 155179235313239154289
+    [3][CALL] from=0x6d8981, to=BiswapPair, swap(amount0Out(uint256): 74678747209216739269, amount1Out(uint256): 0, to(address): 0x6906f7, data(bytes): b'') -> None
+      [4][CALL] from=BiswapPair, to=Diamond, transfer(recipient(address): 0x6906f7, amount(uint256): 74678747209216739269) -> True
+      [4][STATICCALL] from=BiswapPair, to=Diamond, balanceOf(account(address): 0xA6C26b) -> 195561185593438039842
+      [4][STATICCALL] from=BiswapPair, to=WBNB, balanceOf((address): 0xA6C26b) -> 155179235313239154289
+    [3][STATICCALL] from=0x6d8981, to=Diamond, balanceOf(account(address): 0x6906f7) -> 74678747209216739269
+    [3][STATICCALL] from=0x6d8981, to=Diamond, balanceOf(account(address): 0x6906f7) -> 74678747209216739269
+  [2][STATICCALL] from=0xc4bea6, to=BEP20Token, balanceOf(account(address): 0x708a34) -> 12891372125822275190238
+  [2][STATICCALL] from=0xc4bea6, to=BEP20Token, allowance(owner(address): 0x708a34, spender(address): 0x6D8981) -> 999999790000000000000000000
+  [2][CALL] from=0xc4bea6, to=0x6d8981, 0x4f1f05bc() -> 0x000000
+    [3][STATICCALL] from=0x6d8981, to=Diamond, balanceOf(account(address): 0x708a34) -> 0
+    [3][STATICCALL] from=0x6d8981, to=WBNB, balanceOf((address): 0x6D8981) -> 0
+    [3][DELEGATECALL] from=0x6d8981, to=0x6d1879, 0x7855da66() -> 0x000000
+    [3][CALL] from=0x6d8981, to=BEP20Token, transferFrom(sender(address): 0x708a34, recipient(address): 0xaCAac9, amount(uint256): 12891372125822275190238) -> True
+    [3][STATICCALL] from=0x6d8981, to=BiswapPair, getReserves() -> ['46393379018514193027539', '14286233783479953916717144', '1677479141']
+    [3][STATICCALL] from=0x6d8981, to=BiswapPair, swapFee() -> 2
+    [3][STATICCALL] from=0x6d8981, to=BEP20Token, balanceOf(account(address): 0xaCAac9) -> 14299125155605776191907382
+    [3][CALL] from=0x6d8981, to=BiswapPair, swap(amount0Out(uint256): 41742360753755017635, amount1Out(uint256): 0, to(address): 0x6D8981, data(bytes): b'') -> None
+      [4][CALL] from=BiswapPair, to=WBNB, transfer(dst(address): 0x6D8981, wad(uint256): 41742360753755017635) -> True
+      [4][STATICCALL] from=BiswapPair, to=WBNB, balanceOf((address): 0xaCAac9) -> 46351636657760438009904
+      [4][STATICCALL] from=BiswapPair, to=BEP20Token, balanceOf(account(address): 0xaCAac9) -> 14299125155605776191907382
+    [3][STATICCALL] from=0x6d8981, to=WBNB, balanceOf((address): 0x6D8981) -> 41742360753755017635
+    [3][STATICCALL] from=0x6d8981, to=WBNB, balanceOf((address): 0x6D8981) -> 41742360753755017635
+    [3][STATICCALL] from=0x6d8981, to=Diamond, balanceOf(account(address): 0x708a34) -> 0
+    [3][DELEGATECALL] from=0x6d8981, to=0x6d1879, 0x7855da66() -> 0x000000
+    [3][CALL] from=0x6d8981, to=WBNB, transfer(dst(address): 0xA6C26b, wad(uint256): 41742360753755017635) -> True
+    [3][STATICCALL] from=0x6d8981, to=BiswapPair, getReserves() -> ['195561185593438039842', '155179235313239154289', '1677479141']
+    [3][STATICCALL] from=0x6d8981, to=BiswapPair, swapFee() -> 1
+    [3][STATICCALL] from=0x6d8981, to=WBNB, balanceOf((address): 0xA6C26b) -> 196921596066994171924
+    [3][CALL] from=0x6d8981, to=BiswapPair, swap(amount0Out(uint256): 41421314671854459992, amount1Out(uint256): 0, to(address): 0x708a34, data(bytes): b'') -> None
+      [4][CALL] from=BiswapPair, to=Diamond, transfer(recipient(address): 0x708a34, amount(uint256): 41421314671854459992) -> True
+      [4][STATICCALL] from=BiswapPair, to=Diamond, balanceOf(account(address): 0xA6C26b) -> 154139870921583579850
+      [4][STATICCALL] from=BiswapPair, to=WBNB, balanceOf((address): 0xA6C26b) -> 196921596066994171924
+    [3][STATICCALL] from=0x6d8981, to=Diamond, balanceOf(account(address): 0x708a34) -> 41421314671854459992
+    [3][STATICCALL] from=0x6d8981, to=Diamond, balanceOf(account(address): 0x708a34) -> 41421314671854459992
+  [2][STATICCALL] from=0xc4bea6, to=BEP20Token, balanceOf(account(address): 0x48ba64) -> 12798775955038171857442
+  [2][STATICCALL] from=0xc4bea6, to=BEP20Token, allowance(owner(address): 0x48ba64, spender(address): 0x6D8981) -> 39614066257132168796771975168
+  [2][CALL] from=0xc4bea6, to=0x6d8981, 0x4f1f05bc() -> 0x000000
+    [3][STATICCALL] from=0x6d8981, to=Diamond, balanceOf(account(address): 0x48ba64) -> 0
+    [3][STATICCALL] from=0x6d8981, to=WBNB, balanceOf((address): 0x6D8981) -> 0
+    [3][DELEGATECALL] from=0x6d8981, to=0x6d1879, 0x7855da66() -> 0x000000
+    [3][CALL] from=0x6d8981, to=BEP20Token, transferFrom(sender(address): 0x48ba64, recipient(address): 0xaCAac9, amount(uint256): 12798775955038171857442) -> True
+    [3][STATICCALL] from=0x6d8981, to=BiswapPair, getReserves() -> ['46351636657760438009904', '14299125155605776191907382', '1677479141']
+    [3][STATICCALL] from=0x6d8981, to=BiswapPair, swapFee() -> 2
+    [3][STATICCALL] from=0x6d8981, to=BEP20Token, balanceOf(account(address): 0xaCAac9) -> 14311923931560814363764824
+    [3][CALL] from=0x6d8981, to=BiswapPair, swap(amount0Out(uint256): 41368217582964407560, amount1Out(uint256): 0, to(address): 0x6D8981, data(bytes): b'') -> None
+      [4][CALL] from=BiswapPair, to=WBNB, transfer(dst(address): 0x6D8981, wad(uint256): 41368217582964407560) -> True
+      [4][STATICCALL] from=BiswapPair, to=WBNB, balanceOf((address): 0xaCAac9) -> 46310268440177473602344
+      [4][STATICCALL] from=BiswapPair, to=BEP20Token, balanceOf(account(address): 0xaCAac9) -> 14311923931560814363764824
+    [3][STATICCALL] from=0x6d8981, to=WBNB, balanceOf((address): 0x6D8981) -> 41368217582964407560
+    [3][STATICCALL] from=0x6d8981, to=WBNB, balanceOf((address): 0x6D8981) -> 41368217582964407560
+    [3][STATICCALL] from=0x6d8981, to=Diamond, balanceOf(account(address): 0x48ba64) -> 0
+    [3][DELEGATECALL] from=0x6d8981, to=0x6d1879, 0x7855da66() -> 0x000000
+    [3][CALL] from=0x6d8981, to=WBNB, transfer(dst(address): 0xA6C26b, wad(uint256): 41368217582964407560) -> True
+    [3][STATICCALL] from=0x6d8981, to=BiswapPair, getReserves() -> ['154139870921583579850', '196921596066994171924', '1677479141']
+    [3][STATICCALL] from=0x6d8981, to=BiswapPair, swapFee() -> 1
+    [3][STATICCALL] from=0x6d8981, to=WBNB, balanceOf((address): 0xA6C26b) -> 238289813649958579484
+    [3][CALL] from=0x6d8981, to=BiswapPair, swap(amount0Out(uint256): 26737279293533589904, amount1Out(uint256): 0, to(address): 0x48ba64, data(bytes): b'') -> None
+      [4][CALL] from=BiswapPair, to=Diamond, transfer(recipient(address): 0x48ba64, amount(uint256): 26737279293533589904) -> True
+      [4][STATICCALL] from=BiswapPair, to=Diamond, balanceOf(account(address): 0xA6C26b) -> 127402591628049989946
+      [4][STATICCALL] from=BiswapPair, to=WBNB, balanceOf((address): 0xA6C26b) -> 238289813649958579484
+    [3][STATICCALL] from=0x6d8981, to=Diamond, balanceOf(account(address): 0x48ba64) -> 26737279293533589904
+    [3][STATICCALL] from=0x6d8981, to=Diamond, balanceOf(account(address): 0x48ba64) -> 26737279293533589904
+  [2][STATICCALL] from=0xc4bea6, to=BEP20Token, balanceOf(account(address): 0xBF57de) -> 10494734579794701902315
+  [2][STATICCALL] from=0xc4bea6, to=BEP20Token, allowance(owner(address): 0xBF57de, spender(address): 0x6D8981) -> 0
+  [2][STATICCALL] from=0xc4bea6, to=BEP20Token, balanceOf(account(address): 0x29cB2E) -> 8483359544353034083625
+  [2][STATICCALL] from=0xc4bea6, to=BEP20Token, allowance(owner(address): 0x29cB2E, spender(address): 0x6D8981) -> 57896044618658097711785492504343953926634992332820282019593792003956564819968
+  [2][CALL] from=0xc4bea6, to=0x6d8981, 0x4f1f05bc() -> 0x000000
+    [3][STATICCALL] from=0x6d8981, to=Diamond, balanceOf(account(address): 0x29cB2E) -> 0
+    [3][STATICCALL] from=0x6d8981, to=WBNB, balanceOf((address): 0x6D8981) -> 0
+    [3][DELEGATECALL] from=0x6d8981, to=0x6d1879, 0x7855da66() -> 0x000000
+    [3][CALL] from=0x6d8981, to=BEP20Token, transferFrom(sender(address): 0x29cB2E, recipient(address): 0xaCAac9, amount(uint256): 8483359544353034083625) -> True
+    [3][STATICCALL] from=0x6d8981, to=BiswapPair, getReserves() -> ['46310268440177473602344', '14311923931560814363764824', '1677479141']
+    [3][STATICCALL] from=0x6d8981, to=BiswapPair, swapFee() -> 2
+    [3][STATICCALL] from=0x6d8981, to=BEP20Token, balanceOf(account(address): 0xaCAac9) -> 14320407291105167397848449
+    [3][CALL] from=0x6d8981, to=BiswapPair, swap(amount0Out(uint256): 27379206542318341723, amount1Out(uint256): 0, to(address): 0x6D8981, data(bytes): b'') -> None
+      [4][CALL] from=BiswapPair, to=WBNB, transfer(dst(address): 0x6D8981, wad(uint256): 27379206542318341723) -> True
+      [4][STATICCALL] from=BiswapPair, to=WBNB, balanceOf((address): 0xaCAac9) -> 46282889233635155260621
+      [4][STATICCALL] from=BiswapPair, to=BEP20Token, balanceOf(account(address): 0xaCAac9) -> 14320407291105167397848449
+    [3][STATICCALL] from=0x6d8981, to=WBNB, balanceOf((address): 0x6D8981) -> 27379206542318341723
+    [3][STATICCALL] from=0x6d8981, to=WBNB, balanceOf((address): 0x6D8981) -> 27379206542318341723
+    [3][STATICCALL] from=0x6d8981, to=Diamond, balanceOf(account(address): 0x29cB2E) -> 0
+    [3][DELEGATECALL] from=0x6d8981, to=0x6d1879, 0x7855da66() -> 0x000000
+    [3][CALL] from=0x6d8981, to=WBNB, transfer(dst(address): 0xA6C26b, wad(uint256): 27379206542318341723) -> True
+    [3][STATICCALL] from=0x6d8981, to=BiswapPair, getReserves() -> ['127402591628049989946', '238289813649958579484', '1677479141']
+    [3][STATICCALL] from=0x6d8981, to=BiswapPair, swapFee() -> 1
+    [3][STATICCALL] from=0x6d8981, to=WBNB, balanceOf((address): 0xA6C26b) -> 265669020192276921207
+    [3][CALL] from=0x6d8981, to=BiswapPair, swap(amount0Out(uint256): 13118025003195719205, amount1Out(uint256): 0, to(address): 0x29cB2E, data(bytes): b'') -> None
+      [4][CALL] from=BiswapPair, to=Diamond, transfer(recipient(address): 0x29cB2E, amount(uint256): 13118025003195719205) -> True
+      [4][STATICCALL] from=BiswapPair, to=Diamond, balanceOf(account(address): 0xA6C26b) -> 114284566624854270741
+      [4][STATICCALL] from=BiswapPair, to=WBNB, balanceOf((address): 0xA6C26b) -> 265669020192276921207
+    [3][STATICCALL] from=0x6d8981, to=Diamond, balanceOf(account(address): 0x29cB2E) -> 13118025003195719205
+    [3][STATICCALL] from=0x6d8981, to=Diamond, balanceOf(account(address): 0x29cB2E) -> 13118025003195719205
+  [2][STATICCALL] from=0xc4bea6, to=BEP20Token, balanceOf(account(address): 0x4148b0) -> 8293250422172876992812
+  [2][STATICCALL] from=0xc4bea6, to=BEP20Token, allowance(owner(address): 0x4148b0, spender(address): 0x6D8981) -> 999999799000000000000000000
+  [2][CALL] from=0xc4bea6, to=0x6d8981, 0x4f1f05bc() -> 0x000000
+    [3][STATICCALL] from=0x6d8981, to=Diamond, balanceOf(account(address): 0x4148b0) -> 0
+    [3][STATICCALL] from=0x6d8981, to=WBNB, balanceOf((address): 0x6D8981) -> 0
+    [3][DELEGATECALL] from=0x6d8981, to=0x6d1879, 0x7855da66() -> 0x000000
+    [3][CALL] from=0x6d8981, to=BEP20Token, transferFrom(sender(address): 0x4148b0, recipient(address): 0xaCAac9, amount(uint256): 8293250422172876992812) -> True
+    [3][STATICCALL] from=0x6d8981, to=BiswapPair, getReserves() -> ['46282889233635155260621', '14320407291105167397848449', '1677479141']
+    [3][STATICCALL] from=0x6d8981, to=BiswapPair, swapFee() -> 2
+    [3][STATICCALL] from=0x6d8981, to=BEP20Token, balanceOf(account(address): 0xaCAac9) -> 14328700541527340274841261
+    [3][CALL] from=0x6d8981, to=BiswapPair, swap(amount0Out(uint256): 26734340759919737720, amount1Out(uint256): 0, to(address): 0x6D8981, data(bytes): b'') -> None
+      [4][CALL] from=BiswapPair, to=WBNB, transfer(dst(address): 0x6D8981, wad(uint256): 26734340759919737720) -> True
+      [4][STATICCALL] from=BiswapPair, to=WBNB, balanceOf((address): 0xaCAac9) -> 46256154892875235522901
+      [4][STATICCALL] from=BiswapPair, to=BEP20Token, balanceOf(account(address): 0xaCAac9) -> 14328700541527340274841261
+    [3][STATICCALL] from=0x6d8981, to=WBNB, balanceOf((address): 0x6D8981) -> 26734340759919737720
+    [3][STATICCALL] from=0x6d8981, to=WBNB, balanceOf((address): 0x6D8981) -> 26734340759919737720
+    [3][STATICCALL] from=0x6d8981, to=Diamond, balanceOf(account(address): 0x4148b0) -> 0
+    [3][DELEGATECALL] from=0x6d8981, to=0x6d1879, 0x7855da66() -> 0x000000
+    [3][CALL] from=0x6d8981, to=WBNB, transfer(dst(address): 0xA6C26b, wad(uint256): 26734340759919737720) -> True
+    [3][STATICCALL] from=0x6d8981, to=BiswapPair, getReserves() -> ['114284566624854270741', '265669020192276921207', '1677479141']
+    [3][STATICCALL] from=0x6d8981, to=BiswapPair, swapFee() -> 1
+    [3][STATICCALL] from=0x6d8981, to=WBNB, balanceOf((address): 0xA6C26b) -> 292403360952196658927
+    [3][CALL] from=0x6d8981, to=BiswapPair, swap(amount0Out(uint256): 10439504896734662305, amount1Out(uint256): 0, to(address): 0x4148b0, data(bytes): b'') -> None
+      [4][CALL] from=BiswapPair, to=Diamond, transfer(recipient(address): 0x4148b0, amount(uint256): 10439504896734662305) -> True
+      [4][STATICCALL] from=BiswapPair, to=Diamond, balanceOf(account(address): 0xA6C26b) -> 103845061728119608436
+      [4][STATICCALL] from=BiswapPair, to=WBNB, balanceOf((address): 0xA6C26b) -> 292403360952196658927
+    [3][STATICCALL] from=0x6d8981, to=Diamond, balanceOf(account(address): 0x4148b0) -> 10439504896734662305
+    [3][STATICCALL] from=0x6d8981, to=Diamond, balanceOf(account(address): 0x4148b0) -> 10439504896734662305
+  [2][STATICCALL] from=0xc4bea6, to=BEP20Token, balanceOf(account(address): 0x570701) -> 6710748689871209103560
+  [2][STATICCALL] from=0xc4bea6, to=BEP20Token, allowance(owner(address): 0x570701, spender(address): 0x6D8981) -> 0
+  [2][STATICCALL] from=0xc4bea6, to=BEP20Token, balanceOf(account(address): 0x047252) -> 6320718382819311579570
+  [2][STATICCALL] from=0xc4bea6, to=BEP20Token, allowance(owner(address): 0x047252, spender(address): 0x6D8981) -> 57896044618658097711785492504343953926634992332820282019698792003956564819968
+  [2][CALL] from=0xc4bea6, to=0x6d8981, 0x4f1f05bc() -> 0x000000
+    [3][STATICCALL] from=0x6d8981, to=Diamond, balanceOf(account(address): 0x047252) -> 0
+    [3][STATICCALL] from=0x6d8981, to=WBNB, balanceOf((address): 0x6D8981) -> 0
+    [3][DELEGATECALL] from=0x6d8981, to=0x6d1879, 0x7855da66() -> 0x000000
+    [3][CALL] from=0x6d8981, to=BEP20Token, transferFrom(sender(address): 0x047252, recipient(address): 0xaCAac9, amount(uint256): 6320718382819311579570) -> True
+    [3][STATICCALL] from=0x6d8981, to=BiswapPair, getReserves() -> ['46256154892875235522901', '14328700541527340274841261', '1677479141']
+    [3][STATICCALL] from=0x6d8981, to=BiswapPair, swapFee() -> 2
+    [3][STATICCALL] from=0x6d8981, to=BEP20Token, balanceOf(account(address): 0xaCAac9) -> 14335021259910159586420831
+    [3][CALL] from=0x6d8981, to=BiswapPair, swap(amount0Out(uint256): 20354880283560510399, amount1Out(uint256): 0, to(address): 0x6D8981, data(bytes): b'') -> None
+      [4][CALL] from=BiswapPair, to=WBNB, transfer(dst(address): 0x6D8981, wad(uint256): 20354880283560510399) -> True
+      [4][STATICCALL] from=BiswapPair, to=WBNB, balanceOf((address): 0xaCAac9) -> 46235800012591675012502
+      [4][STATICCALL] from=BiswapPair, to=BEP20Token, balanceOf(account(address): 0xaCAac9) -> 14335021259910159586420831
+    [3][STATICCALL] from=0x6d8981, to=WBNB, balanceOf((address): 0x6D8981) -> 20354880283560510399
+    [3][STATICCALL] from=0x6d8981, to=WBNB, balanceOf((address): 0x6D8981) -> 20354880283560510399
+    [3][STATICCALL] from=0x6d8981, to=Diamond, balanceOf(account(address): 0x047252) -> 0
+    [3][DELEGATECALL] from=0x6d8981, to=0x6d1879, 0x7855da66() -> 0x000000
+    [3][CALL] from=0x6d8981, to=WBNB, transfer(dst(address): 0xA6C26b, wad(uint256): 20354880283560510399) -> True
+    [3][STATICCALL] from=0x6d8981, to=BiswapPair, getReserves() -> ['103845061728119608436', '292403360952196658927', '1677479141']
+    [3][STATICCALL] from=0x6d8981, to=BiswapPair, swapFee() -> 1
+    [3][STATICCALL] from=0x6d8981, to=WBNB, balanceOf((address): 0xA6C26b) -> 312758241235757169326
+    [3][CALL] from=0x6d8981, to=BiswapPair, swap(amount0Out(uint256): 6752108196175230486, amount1Out(uint256): 0, to(address): 0x047252, data(bytes): b'') -> None
+      [4][CALL] from=BiswapPair, to=Diamond, transfer(recipient(address): 0x047252, amount(uint256): 6752108196175230486) -> True
+      [4][STATICCALL] from=BiswapPair, to=Diamond, balanceOf(account(address): 0xA6C26b) -> 97092953531944377950
+      [4][STATICCALL] from=BiswapPair, to=WBNB, balanceOf((address): 0xA6C26b) -> 312758241235757169326
+    [3][STATICCALL] from=0x6d8981, to=Diamond, balanceOf(account(address): 0x047252) -> 6752108196175230486
+    [3][STATICCALL] from=0x6d8981, to=Diamond, balanceOf(account(address): 0x047252) -> 6752108196175230486
+  [2][STATICCALL] from=0xc4bea6, to=BEP20Token, balanceOf(account(address): 0x089438) -> 5430934750063418003920
+  [2][STATICCALL] from=0xc4bea6, to=BEP20Token, allowance(owner(address): 0x089438, spender(address): 0x6D8981) -> 999999890000000000000000000
+  [2][CALL] from=0xc4bea6, to=0x6d8981, 0x4f1f05bc() -> 0x000000
+    [3][STATICCALL] from=0x6d8981, to=Diamond, balanceOf(account(address): 0x089438) -> 0
+    [3][STATICCALL] from=0x6d8981, to=WBNB, balanceOf((address): 0x6D8981) -> 0
+    [3][DELEGATECALL] from=0x6d8981, to=0x6d1879, 0x7855da66() -> 0x000000
+    [3][CALL] from=0x6d8981, to=BEP20Token, transferFrom(sender(address): 0x089438, recipient(address): 0xaCAac9, amount(uint256): 5430934750063418003920) -> True
+    [3][STATICCALL] from=0x6d8981, to=BiswapPair, getReserves() -> ['46235800012591675012502', '14335021259910159586420831', '1677479141']
+    [3][STATICCALL] from=0x6d8981, to=BiswapPair, swapFee() -> 2
+    [3][STATICCALL] from=0x6d8981, to=BEP20Token, balanceOf(account(address): 0xaCAac9) -> 14340452194660223004424751
+    [3][CALL] from=0x6d8981, to=BiswapPair, swap(amount0Out(uint256): 17475152956860059542, amount1Out(uint256): 0, to(address): 0x6D8981, data(bytes): b'') -> None
+      [4][CALL] from=BiswapPair, to=WBNB, transfer(dst(address): 0x6D8981, wad(uint256): 17475152956860059542) -> True
+      [4][STATICCALL] from=BiswapPair, to=WBNB, balanceOf((address): 0xaCAac9) -> 46218324859634814952960
+      [4][STATICCALL] from=BiswapPair, to=BEP20Token, balanceOf(account(address): 0xaCAac9) -> 14340452194660223004424751
+    [3][STATICCALL] from=0x6d8981, to=WBNB, balanceOf((address): 0x6D8981) -> 17475152956860059542
+    [3][STATICCALL] from=0x6d8981, to=WBNB, balanceOf((address): 0x6D8981) -> 17475152956860059542
+    [3][STATICCALL] from=0x6d8981, to=Diamond, balanceOf(account(address): 0x089438) -> 0
+    [3][DELEGATECALL] from=0x6d8981, to=0x6d1879, 0x7855da66() -> 0x000000
+    [3][CALL] from=0x6d8981, to=WBNB, transfer(dst(address): 0xA6C26b, wad(uint256): 17475152956860059542) -> True
+    [3][STATICCALL] from=0x6d8981, to=BiswapPair, getReserves() -> ['97092953531944377950', '312758241235757169326', '1677479141']
+    [3][STATICCALL] from=0x6d8981, to=BiswapPair, swapFee() -> 1
+    [3][STATICCALL] from=0x6d8981, to=WBNB, balanceOf((address): 0xA6C26b) -> 330233394192617228868
+    [3][CALL] from=0x6d8981, to=BiswapPair, swap(amount0Out(uint256): 5133058105495062902, amount1Out(uint256): 0, to(address): 0x089438, data(bytes): b'') -> None
+      [4][CALL] from=BiswapPair, to=Diamond, transfer(recipient(address): 0x089438, amount(uint256): 5133058105495062902) -> True
+      [4][STATICCALL] from=BiswapPair, to=Diamond, balanceOf(account(address): 0xA6C26b) -> 91959895426449315048
+      [4][STATICCALL] from=BiswapPair, to=WBNB, balanceOf((address): 0xA6C26b) -> 330233394192617228868
+    [3][STATICCALL] from=0x6d8981, to=Diamond, balanceOf(account(address): 0x089438) -> 5133058105495062902
+    [3][STATICCALL] from=0x6d8981, to=Diamond, balanceOf(account(address): 0x089438) -> 5133058105495062902
+  [2][STATICCALL] from=0xc4bea6, to=BEP20Token, balanceOf(account(address): 0x7B142F) -> 5375849068627446438032
+  [2][STATICCALL] from=0xc4bea6, to=BEP20Token, allowance(owner(address): 0x7B142F, spender(address): 0x6D8981) -> 0
+  [2][STATICCALL] from=0xc4bea6, to=BEP20Token, balanceOf(account(address): 0x8C51b7) -> 5001711098374564197054
+  [2][STATICCALL] from=0xc4bea6, to=BEP20Token, allowance(owner(address): 0x8C51b7, spender(address): 0x6D8981) -> 39614053968909681088593469257
+  [2][CALL] from=0xc4bea6, to=0x6d8981, 0x4f1f05bc() -> 0x000000
+    [3][STATICCALL] from=0x6d8981, to=Diamond, balanceOf(account(address): 0x8C51b7) -> 0
+    [3][STATICCALL] from=0x6d8981, to=WBNB, balanceOf((address): 0x6D8981) -> 0
+    [3][DELEGATECALL] from=0x6d8981, to=0x6d1879, 0x7855da66() -> 0x000000
+    [3][CALL] from=0x6d8981, to=BEP20Token, transferFrom(sender(address): 0x8C51b7, recipient(address): 0xaCAac9, amount(uint256): 5001711098374564197054) -> True
+    [3][STATICCALL] from=0x6d8981, to=BiswapPair, getReserves() -> ['46218324859634814952960', '14340452194660223004424751', '1677479141']
+    [3][STATICCALL] from=0x6d8981, to=BiswapPair, swapFee() -> 2
+    [3][STATICCALL] from=0x6d8981, to=BEP20Token, balanceOf(account(address): 0xaCAac9) -> 14345453905758597568621805
+    [3][CALL] from=0x6d8981, to=BiswapPair, swap(amount0Out(uint256): 16082344230863726756, amount1Out(uint256): 0, to(address): 0x6D8981, data(bytes): b'') -> None
+      [4][CALL] from=BiswapPair, to=WBNB, transfer(dst(address): 0x6D8981, wad(uint256): 16082344230863726756) -> True
+      [4][STATICCALL] from=BiswapPair, to=WBNB, balanceOf((address): 0xaCAac9) -> 46202242515403951226204
+      [4][STATICCALL] from=BiswapPair, to=BEP20Token, balanceOf(account(address): 0xaCAac9) -> 14345453905758597568621805
+    [3][STATICCALL] from=0x6d8981, to=WBNB, balanceOf((address): 0x6D8981) -> 16082344230863726756
+    [3][STATICCALL] from=0x6d8981, to=WBNB, balanceOf((address): 0x6D8981) -> 16082344230863726756
+    [3][STATICCALL] from=0x6d8981, to=Diamond, balanceOf(account(address): 0x8C51b7) -> 0
+    [3][DELEGATECALL] from=0x6d8981, to=0x6d1879, 0x7855da66() -> 0x000000
+    [3][CALL] from=0x6d8981, to=WBNB, transfer(dst(address): 0xA6C26b, wad(uint256): 16082344230863726756) -> True
+    [3][STATICCALL] from=0x6d8981, to=BiswapPair, getReserves() -> ['91959895426449315048', '330233394192617228868', '1677479141']
+    [3][STATICCALL] from=0x6d8981, to=BiswapPair, swapFee() -> 1
+    [3][STATICCALL] from=0x6d8981, to=WBNB, balanceOf((address): 0xA6C26b) -> 346315738423480955624
+    [3][CALL] from=0x6d8981, to=BiswapPair, swap(amount0Out(uint256): 4266396853280714844, amount1Out(uint256): 0, to(address): 0x8C51b7, data(bytes): b'') -> None
+      [4][CALL] from=BiswapPair, to=Diamond, transfer(recipient(address): 0x8C51b7, amount(uint256): 4266396853280714844) -> True
+      [4][STATICCALL] from=BiswapPair, to=Diamond, balanceOf(account(address): 0xA6C26b) -> 87693498573168600204
+      [4][STATICCALL] from=BiswapPair, to=WBNB, balanceOf((address): 0xA6C26b) -> 346315738423480955624
+    [3][STATICCALL] from=0x6d8981, to=Diamond, balanceOf(account(address): 0x8C51b7) -> 4266396853280714844
+    [3][STATICCALL] from=0x6d8981, to=Diamond, balanceOf(account(address): 0x8C51b7) -> 4266396853280714844
+  [2][STATICCALL] from=0xc4bea6, to=BEP20Token, balanceOf(account(address): 0x91243b) -> 4809832248215936108134
+  [2][STATICCALL] from=0xc4bea6, to=BEP20Token, allowance(owner(address): 0x91243b, spender(address): 0x6D8981) -> 39614077896780168796771975168
+  [2][CALL] from=0xc4bea6, to=0x6d8981, 0x4f1f05bc() -> 0x000000
+    [3][STATICCALL] from=0x6d8981, to=Diamond, balanceOf(account(address): 0x91243b) -> 0
+    [3][STATICCALL] from=0x6d8981, to=WBNB, balanceOf((address): 0x6D8981) -> 0
+    [3][DELEGATECALL] from=0x6d8981, to=0x6d1879, 0x7855da66() -> 0x000000
+    [3][CALL] from=0x6d8981, to=BEP20Token, transferFrom(sender(address): 0x91243b, recipient(address): 0xaCAac9, amount(uint256): 4809832248215936108134) -> True
+    [3][STATICCALL] from=0x6d8981, to=BiswapPair, getReserves() -> ['46202242515403951226204', '14345453905758597568621805', '1677479141']
+    [3][STATICCALL] from=0x6d8981, to=BiswapPair, swapFee() -> 2
+    [3][STATICCALL] from=0x6d8981, to=BEP20Token, balanceOf(account(address): 0xaCAac9) -> 14350263738006813504729939
+    [3][CALL] from=0x6d8981, to=BiswapPair, swap(amount0Out(uint256): 15454819412223866421, amount1Out(uint256): 0, to(address): 0x6D8981, data(bytes): b'') -> None
+      [4][CALL] from=BiswapPair, to=WBNB, transfer(dst(address): 0x6D8981, wad(uint256): 15454819412223866421) -> True
+      [4][STATICCALL] from=BiswapPair, to=WBNB, balanceOf((address): 0xaCAac9) -> 46186787695991727359783
+      [4][STATICCALL] from=BiswapPair, to=BEP20Token, balanceOf(account(address): 0xaCAac9) -> 14350263738006813504729939
+    [3][STATICCALL] from=0x6d8981, to=WBNB, balanceOf((address): 0x6D8981) -> 15454819412223866421
+    [3][STATICCALL] from=0x6d8981, to=WBNB, balanceOf((address): 0x6D8981) -> 15454819412223866421
+    [3][STATICCALL] from=0x6d8981, to=Diamond, balanceOf(account(address): 0x91243b) -> 0
+    [3][DELEGATECALL] from=0x6d8981, to=0x6d1879, 0x7855da66() -> 0x000000
+    [3][CALL] from=0x6d8981, to=WBNB, transfer(dst(address): 0xA6C26b, wad(uint256): 15454819412223866421) -> True
+    [3][STATICCALL] from=0x6d8981, to=BiswapPair, getReserves() -> ['87693498573168600204', '346315738423480955624', '1677479141']
+    [3][STATICCALL] from=0x6d8981, to=BiswapPair, swapFee() -> 1
+    [3][STATICCALL] from=0x6d8981, to=WBNB, balanceOf((address): 0xA6C26b) -> 361770557835704822045
+    [3][CALL] from=0x6d8981, to=BiswapPair, swap(amount0Out(uint256): 3742675322618405958, amount1Out(uint256): 0, to(address): 0x91243b, data(bytes): b'') -> None
+      [4][CALL] from=BiswapPair, to=Diamond, transfer(recipient(address): 0x91243b, amount(uint256): 3742675322618405958) -> True
+      [4][STATICCALL] from=BiswapPair, to=Diamond, balanceOf(account(address): 0xA6C26b) -> 83950823250550194246
+      [4][STATICCALL] from=BiswapPair, to=WBNB, balanceOf((address): 0xA6C26b) -> 361770557835704822045
+    [3][STATICCALL] from=0x6d8981, to=Diamond, balanceOf(account(address): 0x91243b) -> 3742675322618405958
+    [3][STATICCALL] from=0x6d8981, to=Diamond, balanceOf(account(address): 0x91243b) -> 3742675322618405958
+  [2][STATICCALL] from=0xc4bea6, to=BEP20Token, balanceOf(account(address): 0xfe23ea) -> 4240141371968911157723
+  [2][STATICCALL] from=0xc4bea6, to=BEP20Token, allowance(owner(address): 0xfe23ea, spender(address): 0x6D8981) -> 999999997000000000000000000
+  [2][CALL] from=0xc4bea6, to=0x6d8981, 0x4f1f05bc() -> 0x000000
+    [3][STATICCALL] from=0x6d8981, to=Diamond, balanceOf(account(address): 0xfe23ea) -> 0
+    [3][STATICCALL] from=0x6d8981, to=WBNB, balanceOf((address): 0x6D8981) -> 0
+    [3][DELEGATECALL] from=0x6d8981, to=0x6d1879, 0x7855da66() -> 0x000000
+    [3][CALL] from=0x6d8981, to=BEP20Token, transferFrom(sender(address): 0xfe23ea, recipient(address): 0xaCAac9, amount(uint256): 4240141371968911157723) -> True
+    [3][STATICCALL] from=0x6d8981, to=BiswapPair, getReserves() -> ['46186787695991727359783', '14350263738006813504729939', '1677479141']
+    [3][STATICCALL] from=0x6d8981, to=BiswapPair, swapFee() -> 2
+    [3][STATICCALL] from=0x6d8981, to=BEP20Token, balanceOf(account(address): 0xaCAac9) -> 14354503879378782415887662
+    [3][CALL] from=0x6d8981, to=BiswapPair, swap(amount0Out(uint256): 13615722942217184398, amount1Out(uint256): 0, to(address): 0x6D8981, data(bytes): b'') -> None
+      [4][CALL] from=BiswapPair, to=WBNB, transfer(dst(address): 0x6D8981, wad(uint256): 13615722942217184398) -> True
+      [4][STATICCALL] from=BiswapPair, to=WBNB, balanceOf((address): 0xaCAac9) -> 46173171973049510175385
+      [4][STATICCALL] from=BiswapPair, to=BEP20Token, balanceOf(account(address): 0xaCAac9) -> 14354503879378782415887662
+    [3][STATICCALL] from=0x6d8981, to=WBNB, balanceOf((address): 0x6D8981) -> 13615722942217184398
+    [3][STATICCALL] from=0x6d8981, to=WBNB, balanceOf((address): 0x6D8981) -> 13615722942217184398
+    [3][STATICCALL] from=0x6d8981, to=Diamond, balanceOf(account(address): 0xfe23ea) -> 0
+    [3][DELEGATECALL] from=0x6d8981, to=0x6d1879, 0x7855da66() -> 0x000000
+    [3][CALL] from=0x6d8981, to=WBNB, transfer(dst(address): 0xA6C26b, wad(uint256): 13615722942217184398) -> True
+    [3][STATICCALL] from=0x6d8981, to=BiswapPair, getReserves() -> ['83950823250550194246', '361770557835704822045', '1677479141']
+    [3][STATICCALL] from=0x6d8981, to=BiswapPair, swapFee() -> 1
+    [3][STATICCALL] from=0x6d8981, to=WBNB, balanceOf((address): 0xA6C26b) -> 375386280777922006443
+    [3][CALL] from=0x6d8981, to=BiswapPair, swap(amount0Out(uint256): 3042065140340289473, amount1Out(uint256): 0, to(address): 0xfe23ea, data(bytes): b'') -> None
+      [4][CALL] from=BiswapPair, to=Diamond, transfer(recipient(address): 0xfe23ea, amount(uint256): 3042065140340289473) -> True
+      [4][STATICCALL] from=BiswapPair, to=Diamond, balanceOf(account(address): 0xA6C26b) -> 80908758110209904773
+      [4][STATICCALL] from=BiswapPair, to=WBNB, balanceOf((address): 0xA6C26b) -> 375386280777922006443
+    [3][STATICCALL] from=0x6d8981, to=Diamond, balanceOf(account(address): 0xfe23ea) -> 3042065140340289473
+    [3][STATICCALL] from=0x6d8981, to=Diamond, balanceOf(account(address): 0xfe23ea) -> 3042065140340289473
+  [2][STATICCALL] from=0xc4bea6, to=BEP20Token, balanceOf(account(address): 0x54D7AF) -> 4155238020664144799176
+  [2][STATICCALL] from=0xc4bea6, to=BEP20Token, allowance(owner(address): 0x54D7AF, spender(address): 0x6D8981) -> 999999359804154337063851380
+  [2][CALL] from=0xc4bea6, to=0x6d8981, 0x4f1f05bc() -> 0x000000
+    [3][STATICCALL] from=0x6d8981, to=Diamond, balanceOf(account(address): 0x54D7AF) -> 0
+    [3][STATICCALL] from=0x6d8981, to=WBNB, balanceOf((address): 0x6D8981) -> 0
+    [3][DELEGATECALL] from=0x6d8981, to=0x6d1879, 0x7855da66() -> 0x000000
+    [3][CALL] from=0x6d8981, to=BEP20Token, transferFrom(sender(address): 0x54D7AF, recipient(address): 0xaCAac9, amount(uint256): 4155238020664144799176) -> True
+    [3][STATICCALL] from=0x6d8981, to=BiswapPair, getReserves() -> ['46173171973049510175385', '14354503879378782415887662', '1677479141']
+    [3][STATICCALL] from=0x6d8981, to=BiswapPair, swapFee() -> 2
+    [3][STATICCALL] from=0x6d8981, to=BEP20Token, balanceOf(account(address): 0xaCAac9) -> 14358659117399446560686838
+    [3][CALL] from=0x6d8981, to=BiswapPair, swap(amount0Out(uint256): 13335291821799832617, amount1Out(uint256): 0, to(address): 0x6D8981, data(bytes): b'') -> None
+      [4][CALL] from=BiswapPair, to=WBNB, transfer(dst(address): 0x6D8981, wad(uint256): 13335291821799832617) -> True
+      [4][STATICCALL] from=BiswapPair, to=WBNB, balanceOf((address): 0xaCAac9) -> 46159836681227710342768
+      [4][STATICCALL] from=BiswapPair, to=BEP20Token, balanceOf(account(address): 0xaCAac9) -> 14358659117399446560686838
+    [3][STATICCALL] from=0x6d8981, to=WBNB, balanceOf((address): 0x6D8981) -> 13335291821799832617
+    [3][STATICCALL] from=0x6d8981, to=WBNB, balanceOf((address): 0x6D8981) -> 13335291821799832617
+    [3][STATICCALL] from=0x6d8981, to=Diamond, balanceOf(account(address): 0x54D7AF) -> 0
+    [3][DELEGATECALL] from=0x6d8981, to=0x6d1879, 0x7855da66() -> 0x000000
+    [3][CALL] from=0x6d8981, to=WBNB, transfer(dst(address): 0xA6C26b, wad(uint256): 13335291821799832617) -> True
+    [3][STATICCALL] from=0x6d8981, to=BiswapPair, getReserves() -> ['80908758110209904773', '375386280777922006443', '1677479141']
+    [3][STATICCALL] from=0x6d8981, to=BiswapPair, swapFee() -> 1
+    [3][STATICCALL] from=0x6d8981, to=WBNB, balanceOf((address): 0xA6C26b) -> 388721572599721839060
+    [3][CALL] from=0x6d8981, to=BiswapPair, swap(amount0Out(uint256): 2772935726558675785, amount1Out(uint256): 0, to(address): 0x54D7AF, data(bytes): b'') -> None
+      [4][CALL] from=BiswapPair, to=Diamond, transfer(recipient(address): 0x54D7AF, amount(uint256): 2772935726558675785) -> True
+      [4][STATICCALL] from=BiswapPair, to=Diamond, balanceOf(account(address): 0xA6C26b) -> 78135822383651228988
+      [4][STATICCALL] from=BiswapPair, to=WBNB, balanceOf((address): 0xA6C26b) -> 388721572599721839060
+    [3][STATICCALL] from=0x6d8981, to=Diamond, balanceOf(account(address): 0x54D7AF) -> 2772935726558675785
+    [3][STATICCALL] from=0x6d8981, to=Diamond, balanceOf(account(address): 0x54D7AF) -> 2772935726558675785
+  [2][STATICCALL] from=0xc4bea6, to=BEP20Token, balanceOf(account(address): 0x76bf18) -> 4130907101195771472058
+  [2][STATICCALL] from=0xc4bea6, to=BEP20Token, allowance(owner(address): 0x76bf18, spender(address): 0x6D8981) -> 999999982707500000000000000
+  [2][CALL] from=0xc4bea6, to=0x6d8981, 0x4f1f05bc() -> 0x000000
+    [3][STATICCALL] from=0x6d8981, to=Diamond, balanceOf(account(address): 0x76bf18) -> 0
+    [3][STATICCALL] from=0x6d8981, to=WBNB, balanceOf((address): 0x6D8981) -> 0
+    [3][DELEGATECALL] from=0x6d8981, to=0x6d1879, 0x7855da66() -> 0x000000
+    [3][CALL] from=0x6d8981, to=BEP20Token, transferFrom(sender(address): 0x76bf18, recipient(address): 0xaCAac9, amount(uint256): 4130907101195771472058) -> True
+    [3][STATICCALL] from=0x6d8981, to=BiswapPair, getReserves() -> ['46159836681227710342768', '14358659117399446560686838', '1677479141']
+    [3][STATICCALL] from=0x6d8981, to=BiswapPair, swapFee() -> 2
+    [3][STATICCALL] from=0x6d8981, to=BEP20Token, balanceOf(account(address): 0xaCAac9) -> 14362790024500642332158896
+    [3][CALL] from=0x6d8981, to=BiswapPair, swap(amount0Out(uint256): 13249566573282903881, amount1Out(uint256): 0, to(address): 0x6D8981, data(bytes): b'') -> None
+      [4][CALL] from=BiswapPair, to=WBNB, transfer(dst(address): 0x6D8981, wad(uint256): 13249566573282903881) -> True
+      [4][STATICCALL] from=BiswapPair, to=WBNB, balanceOf((address): 0xaCAac9) -> 46146587114654427438887
+      [4][STATICCALL] from=BiswapPair, to=BEP20Token, balanceOf(account(address): 0xaCAac9) -> 14362790024500642332158896
+    [3][STATICCALL] from=0x6d8981, to=WBNB, balanceOf((address): 0x6D8981) -> 13249566573282903881
+    [3][STATICCALL] from=0x6d8981, to=WBNB, balanceOf((address): 0x6D8981) -> 13249566573282903881
+    [3][STATICCALL] from=0x6d8981, to=Diamond, balanceOf(account(address): 0x76bf18) -> 0
+    [3][DELEGATECALL] from=0x6d8981, to=0x6d1879, 0x7855da66() -> 0x000000
+    [3][CALL] from=0x6d8981, to=WBNB, transfer(dst(address): 0xA6C26b, wad(uint256): 13249566573282903881) -> True
+    [3][STATICCALL] from=0x6d8981, to=BiswapPair, getReserves() -> ['78135822383651228988', '388721572599721839060', '1677479141']
+    [3][STATICCALL] from=0x6d8981, to=BiswapPair, swapFee() -> 1
+    [3][STATICCALL] from=0x6d8981, to=WBNB, balanceOf((address): 0xA6C26b) -> 401971139173004742941
+    [3][CALL] from=0x6d8981, to=BiswapPair, swap(amount0Out(uint256): 2572982248619649944, amount1Out(uint256): 0, to(address): 0x76bf18, data(bytes): b'') -> None
+      [4][CALL] from=BiswapPair, to=Diamond, transfer(recipient(address): 0x76bf18, amount(uint256): 2572982248619649944) -> True
+      [4][STATICCALL] from=BiswapPair, to=Diamond, balanceOf(account(address): 0xA6C26b) -> 75562840135031579044
+      [4][STATICCALL] from=BiswapPair, to=WBNB, balanceOf((address): 0xA6C26b) -> 401971139173004742941
+    [3][STATICCALL] from=0x6d8981, to=Diamond, balanceOf(account(address): 0x76bf18) -> 2572982248619649944
+    [3][STATICCALL] from=0x6d8981, to=Diamond, balanceOf(account(address): 0x76bf18) -> 2572982248619649944
+  [2][STATICCALL] from=0xc4bea6, to=BEP20Token, balanceOf(account(address): 0xe5d985) -> 3699659172920442665712
+  [2][STATICCALL] from=0xc4bea6, to=BEP20Token, allowance(owner(address): 0xe5d985, spender(address): 0x6D8981) -> 999999471000000000000000000
+  [2][CALL] from=0xc4bea6, to=0x6d8981, 0x4f1f05bc() -> 0x000000
+    [3][STATICCALL] from=0x6d8981, to=Diamond, balanceOf(account(address): 0xe5d985) -> 0
+    [3][STATICCALL] from=0x6d8981, to=WBNB, balanceOf((address): 0x6D8981) -> 0
+    [3][DELEGATECALL] from=0x6d8981, to=0x6d1879, 0x7855da66() -> 0x000000
+    [3][CALL] from=0x6d8981, to=BEP20Token, transferFrom(sender(address): 0xe5d985, recipient(address): 0xaCAac9, amount(uint256): 3699659172920442665712) -> True
+    [3][STATICCALL] from=0x6d8981, to=BiswapPair, getReserves() -> ['46146587114654427438887', '14362790024500642332158896', '1677479141']
+    [3][STATICCALL] from=0x6d8981, to=BiswapPair, swapFee() -> 2
+    [3][STATICCALL] from=0x6d8981, to=BEP20Token, balanceOf(account(address): 0xaCAac9) -> 14366489683673562774824608
+    [3][CALL] from=0x6d8981, to=BiswapPair, swap(amount0Out(uint256): 11859910286780075053, amount1Out(uint256): 0, to(address): 0x6D8981, data(bytes): b'') -> None
+      [4][CALL] from=BiswapPair, to=WBNB, transfer(dst(address): 0x6D8981, wad(uint256): 11859910286780075053) -> True
+      [4][STATICCALL] from=BiswapPair, to=WBNB, balanceOf((address): 0xaCAac9) -> 46134727204367647363834
+      [4][STATICCALL] from=BiswapPair, to=BEP20Token, balanceOf(account(address): 0xaCAac9) -> 14366489683673562774824608
+    [3][STATICCALL] from=0x6d8981, to=WBNB, balanceOf((address): 0x6D8981) -> 11859910286780075053
+    [3][STATICCALL] from=0x6d8981, to=WBNB, balanceOf((address): 0x6D8981) -> 11859910286780075053
+    [3][STATICCALL] from=0x6d8981, to=Diamond, balanceOf(account(address): 0xe5d985) -> 0
+    [3][DELEGATECALL] from=0x6d8981, to=0x6d1879, 0x7855da66() -> 0x000000
+    [3][CALL] from=0x6d8981, to=WBNB, transfer(dst(address): 0xA6C26b, wad(uint256): 11859910286780075053) -> True
+    [3][STATICCALL] from=0x6d8981, to=BiswapPair, getReserves() -> ['75562840135031579044', '401971139173004742941', '1677479141']
+    [3][STATICCALL] from=0x6d8981, to=BiswapPair, swapFee() -> 1
+    [3][STATICCALL] from=0x6d8981, to=WBNB, balanceOf((address): 0xA6C26b) -> 413831049459784817994
+    [3][CALL] from=0x6d8981, to=BiswapPair, swap(amount0Out(uint256): 2163438427022673396, amount1Out(uint256): 0, to(address): 0xe5d985, data(bytes): b'') -> None
+      [4][CALL] from=BiswapPair, to=Diamond, transfer(recipient(address): 0xe5d985, amount(uint256): 2163438427022673396) -> True
+      [4][STATICCALL] from=BiswapPair, to=Diamond, balanceOf(account(address): 0xA6C26b) -> 73399401708008905648
+      [4][STATICCALL] from=BiswapPair, to=WBNB, balanceOf((address): 0xA6C26b) -> 413831049459784817994
+    [3][STATICCALL] from=0x6d8981, to=Diamond, balanceOf(account(address): 0xe5d985) -> 2163438427022673396
+    [3][STATICCALL] from=0x6d8981, to=Diamond, balanceOf(account(address): 0xe5d985) -> 2163438427022673396
+  [2][STATICCALL] from=0xc4bea6, to=BEP20Token, balanceOf(account(address): 0xcbC33E) -> 3405022453554792949324
+  [2][STATICCALL] from=0xc4bea6, to=BEP20Token, allowance(owner(address): 0xcbC33E, spender(address): 0x6D8981) -> 9999999994334837313191557163357
+  [2][CALL] from=0xc4bea6, to=0x6d8981, 0x4f1f05bc() -> 0x000000
+    [3][STATICCALL] from=0x6d8981, to=Diamond, balanceOf(account(address): 0xcbC33E) -> 0
+    [3][STATICCALL] from=0x6d8981, to=WBNB, balanceOf((address): 0x6D8981) -> 0
+    [3][DELEGATECALL] from=0x6d8981, to=0x6d1879, 0x7855da66() -> 0x000000
+    [3][CALL] from=0x6d8981, to=BEP20Token, transferFrom(sender(address): 0xcbC33E, recipient(address): 0xaCAac9, amount(uint256): 3405022453554792949324) -> True
+    [3][STATICCALL] from=0x6d8981, to=BiswapPair, getReserves() -> ['46134727204367647363834', '14366489683673562774824608', '1677479141']
+    [3][STATICCALL] from=0x6d8981, to=BiswapPair, swapFee() -> 2
+    [3][STATICCALL] from=0x6d8981, to=BEP20Token, balanceOf(account(address): 0xaCAac9) -> 14369894706127117567773932
+    [3][CALL] from=0x6d8981, to=BiswapPair, swap(amount0Out(uint256): 10910008734180946844, amount1Out(uint256): 0, to(address): 0x6D8981, data(bytes): b'') -> None
+      [4][CALL] from=BiswapPair, to=WBNB, transfer(dst(address): 0x6D8981, wad(uint256): 10910008734180946844) -> True
+      [4][STATICCALL] from=BiswapPair, to=WBNB, balanceOf((address): 0xaCAac9) -> 46123817195633466416990
+      [4][STATICCALL] from=BiswapPair, to=BEP20Token, balanceOf(account(address): 0xaCAac9) -> 14369894706127117567773932
+    [3][STATICCALL] from=0x6d8981, to=WBNB, balanceOf((address): 0x6D8981) -> 10910008734180946844
+    [3][STATICCALL] from=0x6d8981, to=WBNB, balanceOf((address): 0x6D8981) -> 10910008734180946844
+    [3][STATICCALL] from=0x6d8981, to=Diamond, balanceOf(account(address): 0xcbC33E) -> 0
+    [3][DELEGATECALL] from=0x6d8981, to=0x6d1879, 0x7855da66() -> 0x000000
+    [3][CALL] from=0x6d8981, to=WBNB, transfer(dst(address): 0xA6C26b, wad(uint256): 10910008734180946844) -> True
+    [3][STATICCALL] from=0x6d8981, to=BiswapPair, getReserves() -> ['73399401708008905648', '413831049459784817994', '1677479141']
+    [3][STATICCALL] from=0x6d8981, to=BiswapPair, swapFee() -> 1
+    [3][STATICCALL] from=0x6d8981, to=WBNB, balanceOf((address): 0xA6C26b) -> 424741058193965764838
+    [3][CALL] from=0x6d8981, to=BiswapPair, swap(amount0Out(uint256): 1883519050913776476, amount1Out(uint256): 0, to(address): 0xcbC33E, data(bytes): b'') -> None
+      [4][CALL] from=BiswapPair, to=Diamond, transfer(recipient(address): 0xcbC33E, amount(uint256): 1883519050913776476) -> True
+      [4][STATICCALL] from=BiswapPair, to=Diamond, balanceOf(account(address): 0xA6C26b) -> 71515882657095129172
+      [4][STATICCALL] from=BiswapPair, to=WBNB, balanceOf((address): 0xA6C26b) -> 424741058193965764838
+    [3][STATICCALL] from=0x6d8981, to=Diamond, balanceOf(account(address): 0xcbC33E) -> 1883519050913776476
+    [3][STATICCALL] from=0x6d8981, to=Diamond, balanceOf(account(address): 0xcbC33E) -> 1883519050913776476
+  [2][STATICCALL] from=0xc4bea6, to=BEP20Token, balanceOf(account(address): 0xB75696) -> 3309168536922071561215
+  [2][STATICCALL] from=0xc4bea6, to=BEP20Token, allowance(owner(address): 0xB75696, spender(address): 0x6D8981) -> 57896044618658097711785492504343953926634992332820282019663792003956564819968
+  [2][CALL] from=0xc4bea6, to=0x6d8981, 0x4f1f05bc() -> 0x000000
+    [3][STATICCALL] from=0x6d8981, to=Diamond, balanceOf(account(address): 0xB75696) -> 0
+    [3][STATICCALL] from=0x6d8981, to=WBNB, balanceOf((address): 0x6D8981) -> 0
+    [3][DELEGATECALL] from=0x6d8981, to=0x6d1879, 0x7855da66() -> 0x000000
+    [3][CALL] from=0x6d8981, to=BEP20Token, transferFrom(sender(address): 0xB75696, recipient(address): 0xaCAac9, amount(uint256): 3309168536922071561215) -> True
+    [3][STATICCALL] from=0x6d8981, to=BiswapPair, getReserves() -> ['46123817195633466416990', '14369894706127117567773932', '1677479141']
+    [3][STATICCALL] from=0x6d8981, to=BiswapPair, swapFee() -> 2
+    [3][STATICCALL] from=0x6d8981, to=BEP20Token, balanceOf(account(address): 0xaCAac9) -> 14373203874664039639335147
+    [3][CALL] from=0x6d8981, to=BiswapPair, swap(amount0Out(uint256): 10597935795402072808, amount1Out(uint256): 0, to(address): 0x6D8981, data(bytes): b'') -> None
+      [4][CALL] from=BiswapPair, to=WBNB, transfer(dst(address): 0x6D8981, wad(uint256): 10597935795402072808) -> True
+      [4][STATICCALL] from=BiswapPair, to=WBNB, balanceOf((address): 0xaCAac9) -> 46113219259838064344182
+      [4][STATICCALL] from=BiswapPair, to=BEP20Token, balanceOf(account(address): 0xaCAac9) -> 14373203874664039639335147
+    [3][STATICCALL] from=0x6d8981, to=WBNB, balanceOf((address): 0x6D8981) -> 10597935795402072808
+    [3][STATICCALL] from=0x6d8981, to=WBNB, balanceOf((address): 0x6D8981) -> 10597935795402072808
+    [3][STATICCALL] from=0x6d8981, to=Diamond, balanceOf(account(address): 0xB75696) -> 0
+    [3][DELEGATECALL] from=0x6d8981, to=0x6d1879, 0x7855da66() -> 0x000000
+    [3][CALL] from=0x6d8981, to=WBNB, transfer(dst(address): 0xA6C26b, wad(uint256): 10597935795402072808) -> True
+    [3][STATICCALL] from=0x6d8981, to=BiswapPair, getReserves() -> ['71515882657095129172', '424741058193965764838', '1677479141']
+    [3][STATICCALL] from=0x6d8981, to=BiswapPair, swapFee() -> 1
+    [3][STATICCALL] from=0x6d8981, to=WBNB, balanceOf((address): 0xA6C26b) -> 435338993989367837646
+    [3][CALL] from=0x6d8981, to=BiswapPair, swap(amount0Out(uint256): 1739291116505694950, amount1Out(uint256): 0, to(address): 0xB75696, data(bytes): b'') -> None
+      [4][CALL] from=BiswapPair, to=Diamond, transfer(recipient(address): 0xB75696, amount(uint256): 1739291116505694950) -> True
+      [4][STATICCALL] from=BiswapPair, to=Diamond, balanceOf(account(address): 0xA6C26b) -> 69776591540589434222
+      [4][STATICCALL] from=BiswapPair, to=WBNB, balanceOf((address): 0xA6C26b) -> 435338993989367837646
+    [3][STATICCALL] from=0x6d8981, to=Diamond, balanceOf(account(address): 0xB75696) -> 1739291116505694950
+    [3][STATICCALL] from=0x6d8981, to=Diamond, balanceOf(account(address): 0xB75696) -> 1739291116505694950
+  [2][STATICCALL] from=0xc4bea6, to=BEP20Token, balanceOf(account(address): 0xC78d55) -> 3300317964333725358292
+  [2][STATICCALL] from=0xc4bea6, to=BEP20Token, allowance(owner(address): 0xC78d55, spender(address): 0x6D8981) -> 0
+  [2][STATICCALL] from=0xc4bea6, to=BEP20Token, balanceOf(account(address): 0x578BC4) -> 3297717768644868233220
+  [2][STATICCALL] from=0xc4bea6, to=BEP20Token, allowance(owner(address): 0x578BC4, spender(address): 0x6D8981) -> 999998206613015582396689350
+  [2][CALL] from=0xc4bea6, to=0x6d8981, 0x4f1f05bc() -> 0x000000
+    [3][STATICCALL] from=0x6d8981, to=Diamond, balanceOf(account(address): 0x578BC4) -> 0
+    [3][STATICCALL] from=0x6d8981, to=WBNB, balanceOf((address): 0x6D8981) -> 0
+    [3][DELEGATECALL] from=0x6d8981, to=0x6d1879, 0x7855da66() -> 0x000000
+    [3][CALL] from=0x6d8981, to=BEP20Token, transferFrom(sender(address): 0x578BC4, recipient(address): 0xaCAac9, amount(uint256): 3297717768644868233220) -> True
+    [3][STATICCALL] from=0x6d8981, to=BiswapPair, getReserves() -> ['46113219259838064344182', '14373203874664039639335147', '1677479141']
+    [3][STATICCALL] from=0x6d8981, to=BiswapPair, swapFee() -> 2
+    [3][STATICCALL] from=0x6d8981, to=BEP20Token, balanceOf(account(address): 0xaCAac9) -> 14376501592432684507568367
+    [3][CALL] from=0x6d8981, to=BiswapPair, swap(amount0Out(uint256): 10556414883407877520, amount1Out(uint256): 0, to(address): 0x6D8981, data(bytes): b'') -> None
+      [4][CALL] from=BiswapPair, to=WBNB, transfer(dst(address): 0x6D8981, wad(uint256): 10556414883407877520) -> True
+      [4][STATICCALL] from=BiswapPair, to=WBNB, balanceOf((address): 0xaCAac9) -> 46102662844954656466662
+      [4][STATICCALL] from=BiswapPair, to=BEP20Token, balanceOf(account(address): 0xaCAac9) -> 14376501592432684507568367
+    [3][STATICCALL] from=0x6d8981, to=WBNB, balanceOf((address): 0x6D8981) -> 10556414883407877520
+    [3][STATICCALL] from=0x6d8981, to=WBNB, balanceOf((address): 0x6D8981) -> 10556414883407877520
+    [3][STATICCALL] from=0x6d8981, to=Diamond, balanceOf(account(address): 0x578BC4) -> 0
+    [3][DELEGATECALL] from=0x6d8981, to=0x6d1879, 0x7855da66() -> 0x000000
+    [3][CALL] from=0x6d8981, to=WBNB, transfer(dst(address): 0xA6C26b, wad(uint256): 10556414883407877520) -> True
+    [3][STATICCALL] from=0x6d8981, to=BiswapPair, getReserves() -> ['69776591540589434222', '435338993989367837646', '1677479141']
+    [3][STATICCALL] from=0x6d8981, to=BiswapPair, swapFee() -> 1
+    [3][STATICCALL] from=0x6d8981, to=WBNB, balanceOf((address): 0xA6C26b) -> 445895408872775715166
+    [3][CALL] from=0x6d8981, to=BiswapPair, swap(amount0Out(uint256): 1650323070511997828, amount1Out(uint256): 0, to(address): 0x578BC4, data(bytes): b'') -> None
+      [4][CALL] from=BiswapPair, to=Diamond, transfer(recipient(address): 0x578BC4, amount(uint256): 1650323070511997828) -> True
+      [4][STATICCALL] from=BiswapPair, to=Diamond, balanceOf(account(address): 0xA6C26b) -> 68126268470077436394
+      [4][STATICCALL] from=BiswapPair, to=WBNB, balanceOf((address): 0xA6C26b) -> 445895408872775715166
+    [3][STATICCALL] from=0x6d8981, to=Diamond, balanceOf(account(address): 0x578BC4) -> 1650323070511997828
+    [3][STATICCALL] from=0x6d8981, to=Diamond, balanceOf(account(address): 0x578BC4) -> 1650323070511997828
+  [2][STATICCALL] from=0xc4bea6, to=BEP20Token, balanceOf(account(address): 0x3e8734) -> 3154984893130954484596
+  [2][STATICCALL] from=0xc4bea6, to=BEP20Token, allowance(owner(address): 0x3e8734, spender(address): 0x6D8981) -> 0
+  [2][STATICCALL] from=0xc4bea6, to=BEP20Token, balanceOf(account(address): 0xb98c81) -> 3060141271228301909124
+  [2][STATICCALL] from=0xc4bea6, to=BEP20Token, allowance(owner(address): 0xb98c81, spender(address): 0x6D8981) -> 9999999994939580723331924332615
+  [2][CALL] from=0xc4bea6, to=0x6d8981, 0x4f1f05bc() -> 0x000000
+    [3][STATICCALL] from=0x6d8981, to=Diamond, balanceOf(account(address): 0xb98c81) -> 0
+    [3][STATICCALL] from=0x6d8981, to=WBNB, balanceOf((address): 0x6D8981) -> 0
+    [3][DELEGATECALL] from=0x6d8981, to=0x6d1879, 0x7855da66() -> 0x000000
+    [3][CALL] from=0x6d8981, to=BEP20Token, transferFrom(sender(address): 0xb98c81, recipient(address): 0xaCAac9, amount(uint256): 3060141271228301909124) -> True
+    [3][STATICCALL] from=0x6d8981, to=BiswapPair, getReserves() -> ['46102662844954656466662', '14376501592432684507568367', '1677479141']
+    [3][STATICCALL] from=0x6d8981, to=BiswapPair, swapFee() -> 2
+    [3][STATICCALL] from=0x6d8981, to=BEP20Token, balanceOf(account(address): 0xaCAac9) -> 14379561733703912809477491
+    [3][CALL] from=0x6d8981, to=BiswapPair, swap(amount0Out(uint256): 9791575188275098619, amount1Out(uint256): 0, to(address): 0x6D8981, data(bytes): b'') -> None
+      [4][CALL] from=BiswapPair, to=WBNB, transfer(dst(address): 0x6D8981, wad(uint256): 9791575188275098619) -> True
+      [4][STATICCALL] from=BiswapPair, to=WBNB, balanceOf((address): 0xaCAac9) -> 46092871269766381368043
+      [4][STATICCALL] from=BiswapPair, to=BEP20Token, balanceOf(account(address): 0xaCAac9) -> 14379561733703912809477491
+    [3][STATICCALL] from=0x6d8981, to=WBNB, balanceOf((address): 0x6D8981) -> 9791575188275098619
+    [3][STATICCALL] from=0x6d8981, to=WBNB, balanceOf((address): 0x6D8981) -> 9791575188275098619
+    [3][STATICCALL] from=0x6d8981, to=Diamond, balanceOf(account(address): 0xb98c81) -> 0
+    [3][DELEGATECALL] from=0x6d8981, to=0x6d1879, 0x7855da66() -> 0x000000
+    [3][CALL] from=0x6d8981, to=WBNB, transfer(dst(address): 0xA6C26b, wad(uint256): 9791575188275098619) -> True
+    [3][STATICCALL] from=0x6d8981, to=BiswapPair, getReserves() -> ['68126268470077436394', '445895408872775715166', '1677479141']
+    [3][STATICCALL] from=0x6d8981, to=BiswapPair, swapFee() -> 1
+    [3][STATICCALL] from=0x6d8981, to=WBNB, balanceOf((address): 0xA6C26b) -> 455686984061050813785
+    [3][CALL] from=0x6d8981, to=BiswapPair, swap(amount0Out(uint256): 1462430921560841716, amount1Out(uint256): 0, to(address): 0xb98c81, data(bytes): b'') -> None
+      [4][CALL] from=BiswapPair, to=Diamond, transfer(recipient(address): 0xb98c81, amount(uint256): 1462430921560841716) -> True
+      [4][STATICCALL] from=BiswapPair, to=Diamond, balanceOf(account(address): 0xA6C26b) -> 66663837548516594678
+      [4][STATICCALL] from=BiswapPair, to=WBNB, balanceOf((address): 0xA6C26b) -> 455686984061050813785
+    [3][STATICCALL] from=0x6d8981, to=Diamond, balanceOf(account(address): 0xb98c81) -> 1462430921560841716
+    [3][STATICCALL] from=0x6d8981, to=Diamond, balanceOf(account(address): 0xb98c81) -> 1462430921560841716
+  [2][STATICCALL] from=0xc4bea6, to=BEP20Token, balanceOf(account(address): 0x976ECc) -> 3054677544149126704556
+  [2][STATICCALL] from=0xc4bea6, to=BEP20Token, allowance(owner(address): 0x976ECc, spender(address): 0x6D8981) -> 9999999993404675581522047519251
+  [2][CALL] from=0xc4bea6, to=0x6d8981, 0x4f1f05bc() -> 0x000000
+    [3][STATICCALL] from=0x6d8981, to=Diamond, balanceOf(account(address): 0x976ECc) -> 0
+    [3][STATICCALL] from=0x6d8981, to=WBNB, balanceOf((address): 0x6D8981) -> 0
+    [3][DELEGATECALL] from=0x6d8981, to=0x6d1879, 0x7855da66() -> 0x000000
+    [3][CALL] from=0x6d8981, to=BEP20Token, transferFrom(sender(address): 0x976ECc, recipient(address): 0xaCAac9, amount(uint256): 3054677544149126704556) -> True
+    [3][STATICCALL] from=0x6d8981, to=BiswapPair, getReserves() -> ['46092871269766381368043', '14379561733703912809477491', '1677479141']
+    [3][STATICCALL] from=0x6d8981, to=BiswapPair, swapFee() -> 2
+    [3][STATICCALL] from=0x6d8981, to=BEP20Token, balanceOf(account(address): 0xaCAac9) -> 14382616411248061936182047
+    [3][CALL] from=0x6d8981, to=BiswapPair, swap(amount0Out(uint256): 9769941488089359133, amount1Out(uint256): 0, to(address): 0x6D8981, data(bytes): b'') -> None
+      [4][CALL] from=BiswapPair, to=WBNB, transfer(dst(address): 0x6D8981, wad(uint256): 9769941488089359133) -> True
+      [4][STATICCALL] from=BiswapPair, to=WBNB, balanceOf((address): 0xaCAac9) -> 46083101328278292008910
+      [4][STATICCALL] from=BiswapPair, to=BEP20Token, balanceOf(account(address): 0xaCAac9) -> 14382616411248061936182047
+    [3][STATICCALL] from=0x6d8981, to=WBNB, balanceOf((address): 0x6D8981) -> 9769941488089359133
+    [3][STATICCALL] from=0x6d8981, to=WBNB, balanceOf((address): 0x6D8981) -> 9769941488089359133
+    [3][STATICCALL] from=0x6d8981, to=Diamond, balanceOf(account(address): 0x976ECc) -> 0
+    [3][DELEGATECALL] from=0x6d8981, to=0x6d1879, 0x7855da66() -> 0x000000
+    [3][CALL] from=0x6d8981, to=WBNB, transfer(dst(address): 0xA6C26b, wad(uint256): 9769941488089359133) -> True
+    [3][STATICCALL] from=0x6d8981, to=BiswapPair, getReserves() -> ['66663837548516594678', '455686984061050813785', '1677479141']
+    [3][STATICCALL] from=0x6d8981, to=BiswapPair, swapFee() -> 1
+    [3][STATICCALL] from=0x6d8981, to=WBNB, balanceOf((address): 0xA6C26b) -> 465456925549140172918
+    [3][CALL] from=0x6d8981, to=BiswapPair, swap(amount0Out(uint256): 1397904107027663901, amount1Out(uint256): 0, to(address): 0x976ECc, data(bytes): b'') -> None
+      [4][CALL] from=BiswapPair, to=Diamond, transfer(recipient(address): 0x976ECc, amount(uint256): 1397904107027663901) -> True
+      [4][STATICCALL] from=BiswapPair, to=Diamond, balanceOf(account(address): 0xA6C26b) -> 65265933441488930777
+      [4][STATICCALL] from=BiswapPair, to=WBNB, balanceOf((address): 0xA6C26b) -> 465456925549140172918
+    [3][STATICCALL] from=0x6d8981, to=Diamond, balanceOf(account(address): 0x976ECc) -> 1397904107027663901
+    [3][STATICCALL] from=0x6d8981, to=Diamond, balanceOf(account(address): 0x976ECc) -> 1397904107027663901
+  [2][STATICCALL] from=0xc4bea6, to=BEP20Token, balanceOf(account(address): 0x1B5708) -> 3000011866372559251804
+  [2][STATICCALL] from=0xc4bea6, to=BEP20Token, allowance(owner(address): 0x1B5708, spender(address): 0x6D8981) -> 999999870809844582610018994
+  [2][CALL] from=0xc4bea6, to=0x6d8981, 0x4f1f05bc() -> 0x000000
+    [3][STATICCALL] from=0x6d8981, to=Diamond, balanceOf(account(address): 0x1B5708) -> 0
+    [3][STATICCALL] from=0x6d8981, to=WBNB, balanceOf((address): 0x6D8981) -> 0
+    [3][DELEGATECALL] from=0x6d8981, to=0x6d1879, 0x7855da66() -> 0x000000
+    [3][CALL] from=0x6d8981, to=BEP20Token, transferFrom(sender(address): 0x1B5708, recipient(address): 0xaCAac9, amount(uint256): 3000011866372559251804) -> True
+    [3][STATICCALL] from=0x6d8981, to=BiswapPair, getReserves() -> ['46083101328278292008910', '14382616411248061936182047', '1677479141']
+    [3][STATICCALL] from=0x6d8981, to=BiswapPair, swapFee() -> 2
+    [3][STATICCALL] from=0x6d8981, to=BEP20Token, balanceOf(account(address): 0xaCAac9) -> 14385616423114434495433851
+    [3][CALL] from=0x6d8981, to=BiswapPair, swap(amount0Out(uint256): 9591066841416148137, amount1Out(uint256): 0, to(address): 0x6D8981, data(bytes): b'') -> None
+      [4][CALL] from=BiswapPair, to=WBNB, transfer(dst(address): 0x6D8981, wad(uint256): 9591066841416148137) -> True
+      [4][STATICCALL] from=BiswapPair, to=WBNB, balanceOf((address): 0xaCAac9) -> 46073510261436875860773
+      [4][STATICCALL] from=BiswapPair, to=BEP20Token, balanceOf(account(address): 0xaCAac9) -> 14385616423114434495433851
+    [3][STATICCALL] from=0x6d8981, to=WBNB, balanceOf((address): 0x6D8981) -> 9591066841416148137
+    [3][STATICCALL] from=0x6d8981, to=WBNB, balanceOf((address): 0x6D8981) -> 9591066841416148137
+    [3][STATICCALL] from=0x6d8981, to=Diamond, balanceOf(account(address): 0x1B5708) -> 0
+    [3][DELEGATECALL] from=0x6d8981, to=0x6d1879, 0x7855da66() -> 0x000000
+    [3][CALL] from=0x6d8981, to=WBNB, transfer(dst(address): 0xA6C26b, wad(uint256): 9591066841416148137) -> True
+    [3][STATICCALL] from=0x6d8981, to=BiswapPair, getReserves() -> ['65265933441488930777', '465456925549140172918', '1677479141']
+    [3][STATICCALL] from=0x6d8981, to=BiswapPair, swapFee() -> 1
+    [3][STATICCALL] from=0x6d8981, to=WBNB, balanceOf((address): 0xA6C26b) -> 475047992390556321055
+    [3][CALL] from=0x6d8981, to=BiswapPair, swap(amount0Out(uint256): 1316407175571670115, amount1Out(uint256): 0, to(address): 0x1B5708, data(bytes): b'') -> None
+      [4][CALL] from=BiswapPair, to=Diamond, transfer(recipient(address): 0x1B5708, amount(uint256): 1316407175571670115) -> True
+      [4][STATICCALL] from=BiswapPair, to=Diamond, balanceOf(account(address): 0xA6C26b) -> 63949526265917260662
+      [4][STATICCALL] from=BiswapPair, to=WBNB, balanceOf((address): 0xA6C26b) -> 475047992390556321055
+    [3][STATICCALL] from=0x6d8981, to=Diamond, balanceOf(account(address): 0x1B5708) -> 1316407175571670115
+    [3][STATICCALL] from=0x6d8981, to=Diamond, balanceOf(account(address): 0x1B5708) -> 1316407175571670115
+  [2][STATICCALL] from=0xc4bea6, to=BEP20Token, balanceOf(account(address): 0xffC1b7) -> 2932780726821059981383
+  [2][STATICCALL] from=0xc4bea6, to=BEP20Token, allowance(owner(address): 0xffC1b7, spender(address): 0x6D8981) -> 9999999991741950511164186968790
+  [2][CALL] from=0xc4bea6, to=0x6d8981, 0x4f1f05bc() -> 0x000000
+    [3][STATICCALL] from=0x6d8981, to=Diamond, balanceOf(account(address): 0xffC1b7) -> 0
+    [3][STATICCALL] from=0x6d8981, to=WBNB, balanceOf((address): 0x6D8981) -> 0
+    [3][DELEGATECALL] from=0x6d8981, to=0x6d1879, 0x7855da66() -> 0x000000
+    [3][CALL] from=0x6d8981, to=BEP20Token, transferFrom(sender(address): 0xffC1b7, recipient(address): 0xaCAac9, amount(uint256): 2932780726821059981383) -> True
+    [3][STATICCALL] from=0x6d8981, to=BiswapPair, getReserves() -> ['46073510261436875860773', '14385616423114434495433851', '1677479141']
+    [3][STATICCALL] from=0x6d8981, to=BiswapPair, swapFee() -> 2
+    [3][STATICCALL] from=0x6d8981, to=BEP20Token, balanceOf(account(address): 0xaCAac9) -> 14388549203841255555415234
+    [3][CALL] from=0x6d8981, to=BiswapPair, swap(amount0Out(uint256): 9372266026898112074, amount1Out(uint256): 0, to(address): 0x6D8981, data(bytes): b'') -> None
+      [4][CALL] from=BiswapPair, to=WBNB, transfer(dst(address): 0x6D8981, wad(uint256): 9372266026898112074) -> True
+      [4][STATICCALL] from=BiswapPair, to=WBNB, balanceOf((address): 0xaCAac9) -> 46064137995409977748699
+      [4][STATICCALL] from=BiswapPair, to=BEP20Token, balanceOf(account(address): 0xaCAac9) -> 14388549203841255555415234
+    [3][STATICCALL] from=0x6d8981, to=WBNB, balanceOf((address): 0x6D8981) -> 9372266026898112074
+    [3][STATICCALL] from=0x6d8981, to=WBNB, balanceOf((address): 0x6D8981) -> 9372266026898112074
+    [3][STATICCALL] from=0x6d8981, to=Diamond, balanceOf(account(address): 0xffC1b7) -> 0
+    [3][DELEGATECALL] from=0x6d8981, to=0x6d1879, 0x7855da66() -> 0x000000
+    [3][CALL] from=0x6d8981, to=WBNB, transfer(dst(address): 0xA6C26b, wad(uint256): 9372266026898112074) -> True
+    [3][STATICCALL] from=0x6d8981, to=BiswapPair, getReserves() -> ['63949526265917260662', '475047992390556321055', '1677479141']
+    [3][STATICCALL] from=0x6d8981, to=BiswapPair, swapFee() -> 1
+    [3][STATICCALL] from=0x6d8981, to=WBNB, balanceOf((address): 0xA6C26b) -> 484420258417454433129
+    [3][CALL] from=0x6d8981, to=BiswapPair, swap(amount0Out(uint256): 1236042866919913967, amount1Out(uint256): 0, to(address): 0xffC1b7, data(bytes): b'') -> None
+      [4][CALL] from=BiswapPair, to=Diamond, transfer(recipient(address): 0xffC1b7, amount(uint256): 1236042866919913967) -> True
+      [4][STATICCALL] from=BiswapPair, to=Diamond, balanceOf(account(address): 0xA6C26b) -> 62713483398997346695
+      [4][STATICCALL] from=BiswapPair, to=WBNB, balanceOf((address): 0xA6C26b) -> 484420258417454433129
+    [3][STATICCALL] from=0x6d8981, to=Diamond, balanceOf(account(address): 0xffC1b7) -> 1236042866919913967
+    [3][STATICCALL] from=0x6d8981, to=Diamond, balanceOf(account(address): 0xffC1b7) -> 1236042866919913967
+  [2][STATICCALL] from=0xc4bea6, to=BEP20Token, balanceOf(account(address): 0x2dBC97) -> 2931651495797924456650
+  [2][STATICCALL] from=0xc4bea6, to=BEP20Token, allowance(owner(address): 0x2dBC97, spender(address): 0x6D8981) -> 57896044618658097711785492504343953926634992332820282019708792003956564819968
+  [2][CALL] from=0xc4bea6, to=0x6d8981, 0x4f1f05bc() -> 0x000000
+    [3][STATICCALL] from=0x6d8981, to=Diamond, balanceOf(account(address): 0x2dBC97) -> 0
+    [3][STATICCALL] from=0x6d8981, to=WBNB, balanceOf((address): 0x6D8981) -> 0
+    [3][DELEGATECALL] from=0x6d8981, to=0x6d1879, 0x7855da66() -> 0x000000
+    [3][CALL] from=0x6d8981, to=BEP20Token, transferFrom(sender(address): 0x2dBC97, recipient(address): 0xaCAac9, amount(uint256): 2931651495797924456650) -> True
+    [3][STATICCALL] from=0x6d8981, to=BiswapPair, getReserves() -> ['46064137995409977748699', '14388549203841255555415234', '1677479141']
+    [3][STATICCALL] from=0x6d8981, to=BiswapPair, swapFee() -> 2
+    [3][STATICCALL] from=0x6d8981, to=BEP20Token, balanceOf(account(address): 0xaCAac9) -> 14391480855337053479871884
+    [3][CALL] from=0x6d8981, to=BiswapPair, swap(amount0Out(uint256): 9364843501682187486, amount1Out(uint256): 0, to(address): 0x6D8981, data(bytes): b'') -> None
+      [4][CALL] from=BiswapPair, to=WBNB, transfer(dst(address): 0x6D8981, wad(uint256): 9364843501682187486) -> True
+      [4][STATICCALL] from=BiswapPair, to=WBNB, balanceOf((address): 0xaCAac9) -> 46054773151908295561213
+      [4][STATICCALL] from=BiswapPair, to=BEP20Token, balanceOf(account(address): 0xaCAac9) -> 14391480855337053479871884
+    [3][STATICCALL] from=0x6d8981, to=WBNB, balanceOf((address): 0x6D8981) -> 9364843501682187486
+    [3][STATICCALL] from=0x6d8981, to=WBNB, balanceOf((address): 0x6D8981) -> 9364843501682187486
+    [3][STATICCALL] from=0x6d8981, to=Diamond, balanceOf(account(address): 0x2dBC97) -> 0
+    [3][DELEGATECALL] from=0x6d8981, to=0x6d1879, 0x7855da66() -> 0x000000
+    [3][CALL] from=0x6d8981, to=WBNB, transfer(dst(address): 0xA6C26b, wad(uint256): 9364843501682187486) -> True
+    [3][STATICCALL] from=0x6d8981, to=BiswapPair, getReserves() -> ['62713483398997346695', '484420258417454433129', '1677479141']
+    [3][STATICCALL] from=0x6d8981, to=BiswapPair, swapFee() -> 1
+    [3][STATICCALL] from=0x6d8981, to=WBNB, balanceOf((address): 0xA6C26b) -> 493785101919136620615
+    [3][CALL] from=0x6d8981, to=BiswapPair, swap(amount0Out(uint256): 1188220909747953201, amount1Out(uint256): 0, to(address): 0x2dBC97, data(bytes): b'') -> None
+      [4][CALL] from=BiswapPair, to=Diamond, transfer(recipient(address): 0x2dBC97, amount(uint256): 1188220909747953201) -> True
+      [4][STATICCALL] from=BiswapPair, to=Diamond, balanceOf(account(address): 0xA6C26b) -> 61525262489249393494
+      [4][STATICCALL] from=BiswapPair, to=WBNB, balanceOf((address): 0xA6C26b) -> 493785101919136620615
+    [3][STATICCALL] from=0x6d8981, to=Diamond, balanceOf(account(address): 0x2dBC97) -> 1188220909747953201
+    [3][STATICCALL] from=0x6d8981, to=Diamond, balanceOf(account(address): 0x2dBC97) -> 1188220909747953201
+  [2][STATICCALL] from=0xc4bea6, to=BEP20Token, balanceOf(account(address): 0xBA67d4) -> 2825971214970650530144
+  [2][STATICCALL] from=0xc4bea6, to=BEP20Token, allowance(owner(address): 0xBA67d4, spender(address): 0x6D8981) -> 999999890000000000000000000
+  [2][CALL] from=0xc4bea6, to=0x6d8981, 0x4f1f05bc() -> 0x000000
+    [3][STATICCALL] from=0x6d8981, to=Diamond, balanceOf(account(address): 0xBA67d4) -> 0
+    [3][STATICCALL] from=0x6d8981, to=WBNB, balanceOf((address): 0x6D8981) -> 0
+    [3][DELEGATECALL] from=0x6d8981, to=0x6d1879, 0x7855da66() -> 0x000000
+    [3][CALL] from=0x6d8981, to=BEP20Token, transferFrom(sender(address): 0xBA67d4, recipient(address): 0xaCAac9, amount(uint256): 2825971214970650530144) -> True
+    [3][STATICCALL] from=0x6d8981, to=BiswapPair, getReserves() -> ['46054773151908295561213', '14391480855337053479871884', '1677479141']
+    [3][STATICCALL] from=0x6d8981, to=BiswapPair, swapFee() -> 2
+    [3][STATICCALL] from=0x6d8981, to=BEP20Token, balanceOf(account(address): 0xaCAac9) -> 14394306826552024130402028
+    [3][CALL] from=0x6d8981, to=BiswapPair, swap(amount0Out(uint256): 9023651981239045917, amount1Out(uint256): 0, to(address): 0x6D8981, data(bytes): b'') -> None
+      [4][CALL] from=BiswapPair, to=WBNB, transfer(dst(address): 0x6D8981, wad(uint256): 9023651981239045917) -> True
+      [4][STATICCALL] from=BiswapPair, to=WBNB, balanceOf((address): 0xaCAac9) -> 46045749499927056515296
+      [4][STATICCALL] from=BiswapPair, to=BEP20Token, balanceOf(account(address): 0xaCAac9) -> 14394306826552024130402028
+    [3][STATICCALL] from=0x6d8981, to=WBNB, balanceOf((address): 0x6D8981) -> 9023651981239045917
+    [3][STATICCALL] from=0x6d8981, to=WBNB, balanceOf((address): 0x6D8981) -> 9023651981239045917
+    [3][STATICCALL] from=0x6d8981, to=Diamond, balanceOf(account(address): 0xBA67d4) -> 0
+    [3][DELEGATECALL] from=0x6d8981, to=0x6d1879, 0x7855da66() -> 0x000000
+    [3][CALL] from=0x6d8981, to=WBNB, transfer(dst(address): 0xA6C26b, wad(uint256): 9023651981239045917) -> True
+    [3][STATICCALL] from=0x6d8981, to=BiswapPair, getReserves() -> ['61525262489249393494', '493785101919136620615', '1677479141']
+    [3][STATICCALL] from=0x6d8981, to=BiswapPair, swapFee() -> 1
+    [3][STATICCALL] from=0x6d8981, to=WBNB, balanceOf((address): 0xA6C26b) -> 502808753900375666532
+    [3][CALL] from=0x6d8981, to=BiswapPair, swap(amount0Out(uint256): 1103078106121122661, amount1Out(uint256): 0, to(address): 0xBA67d4, data(bytes): b'') -> None
+      [4][CALL] from=BiswapPair, to=Diamond, transfer(recipient(address): 0xBA67d4, amount(uint256): 1103078106121122661) -> True
+      [4][STATICCALL] from=BiswapPair, to=Diamond, balanceOf(account(address): 0xA6C26b) -> 60422184383128270833
+      [4][STATICCALL] from=BiswapPair, to=WBNB, balanceOf((address): 0xA6C26b) -> 502808753900375666532
+    [3][STATICCALL] from=0x6d8981, to=Diamond, balanceOf(account(address): 0xBA67d4) -> 1103078106121122661
+    [3][STATICCALL] from=0x6d8981, to=Diamond, balanceOf(account(address): 0xBA67d4) -> 1103078106121122661
+  [2][STATICCALL] from=0xc4bea6, to=BEP20Token, balanceOf(account(address): 0x63f12a) -> 2721400671993661882042
+  [2][STATICCALL] from=0xc4bea6, to=BEP20Token, allowance(owner(address): 0x63f12a, spender(address): 0x6D8981) -> 9999999994202699315025461097606
+  [2][CALL] from=0xc4bea6, to=0x6d8981, 0x4f1f05bc() -> 0x000000
+    [3][STATICCALL] from=0x6d8981, to=Diamond, balanceOf(account(address): 0x63f12a) -> 0
+    [3][STATICCALL] from=0x6d8981, to=WBNB, balanceOf((address): 0x6D8981) -> 0
+    [3][DELEGATECALL] from=0x6d8981, to=0x6d1879, 0x7855da66() -> 0x000000
+    [3][CALL] from=0x6d8981, to=BEP20Token, transferFrom(sender(address): 0x63f12a, recipient(address): 0xaCAac9, amount(uint256): 2721400671993661882042) -> True
+    [3][STATICCALL] from=0x6d8981, to=BiswapPair, getReserves() -> ['46045749499927056515296', '14394306826552024130402028', '1677479141']
+    [3][STATICCALL] from=0x6d8981, to=BiswapPair, swapFee() -> 2
+    [3][STATICCALL] from=0x6d8981, to=BEP20Token, balanceOf(account(address): 0xaCAac9) -> 14397028227224017792284070
+    [3][CALL] from=0x6d8981, to=BiswapPair, swap(amount0Out(uint256): 8686401184250476441, amount1Out(uint256): 0, to(address): 0x6D8981, data(bytes): b'') -> None
+      [4][CALL] from=BiswapPair, to=WBNB, transfer(dst(address): 0x6D8981, wad(uint256): 8686401184250476441) -> True
+      [4][STATICCALL] from=BiswapPair, to=WBNB, balanceOf((address): 0xaCAac9) -> 46037063098742806038855
+      [4][STATICCALL] from=BiswapPair, to=BEP20Token, balanceOf(account(address): 0xaCAac9) -> 14397028227224017792284070
+    [3][STATICCALL] from=0x6d8981, to=WBNB, balanceOf((address): 0x6D8981) -> 8686401184250476441
+    [3][STATICCALL] from=0x6d8981, to=WBNB, balanceOf((address): 0x6D8981) -> 8686401184250476441
+    [3][STATICCALL] from=0x6d8981, to=Diamond, balanceOf(account(address): 0x63f12a) -> 0
+    [3][DELEGATECALL] from=0x6d8981, to=0x6d1879, 0x7855da66() -> 0x000000
+    [3][CALL] from=0x6d8981, to=WBNB, transfer(dst(address): 0xA6C26b, wad(uint256): 8686401184250476441) -> True
+    [3][STATICCALL] from=0x6d8981, to=BiswapPair, getReserves() -> ['60422184383128270833', '502808753900375666532', '1677479141']
+    [3][STATICCALL] from=0x6d8981, to=BiswapPair, swapFee() -> 1
+    [3][STATICCALL] from=0x6d8981, to=WBNB, balanceOf((address): 0xA6C26b) -> 511495155084626142973
+    [3][CALL] from=0x6d8981, to=BiswapPair, swap(amount0Out(uint256): 1025103330682888933, amount1Out(uint256): 0, to(address): 0x63f12a, data(bytes): b'') -> None
+      [4][CALL] from=BiswapPair, to=Diamond, transfer(recipient(address): 0x63f12a, amount(uint256): 1025103330682888933) -> True
+      [4][STATICCALL] from=BiswapPair, to=Diamond, balanceOf(account(address): 0xA6C26b) -> 59397081052445381900
+      [4][STATICCALL] from=BiswapPair, to=WBNB, balanceOf((address): 0xA6C26b) -> 511495155084626142973
+    [3][STATICCALL] from=0x6d8981, to=Diamond, balanceOf(account(address): 0x63f12a) -> 1025103330682888933
+    [3][STATICCALL] from=0x6d8981, to=Diamond, balanceOf(account(address): 0x63f12a) -> 1025103330682888933
+  [2][STATICCALL] from=0xc4bea6, to=BEP20Token, balanceOf(account(address): 0x524b98) -> 2710317500883846372118
+  [2][STATICCALL] from=0xc4bea6, to=BEP20Token, allowance(owner(address): 0x524b98, spender(address): 0x6D8981) -> 9999999994300442225938122323729
+  [2][CALL] from=0xc4bea6, to=0x6d8981, 0x4f1f05bc() -> 0x000000
+    [3][STATICCALL] from=0x6d8981, to=Diamond, balanceOf(account(address): 0x524b98) -> 0
+    [3][STATICCALL] from=0x6d8981, to=WBNB, balanceOf((address): 0x6D8981) -> 0
+    [3][DELEGATECALL] from=0x6d8981, to=0x6d1879, 0x7855da66() -> 0x000000
+    [3][CALL] from=0x6d8981, to=BEP20Token, transferFrom(sender(address): 0x524b98, recipient(address): 0xaCAac9, amount(uint256): 2710317500883846372118) -> True
+    [3][STATICCALL] from=0x6d8981, to=BiswapPair, getReserves() -> ['46037063098742806038855', '14397028227224017792284070', '1677479141']
+    [3][STATICCALL] from=0x6d8981, to=BiswapPair, swapFee() -> 2
+    [3][STATICCALL] from=0x6d8981, to=BEP20Token, balanceOf(account(address): 0xaCAac9) -> 14399738544724901638656188
+    [3][CALL] from=0x6d8981, to=BiswapPair, swap(amount0Out(uint256): 8647764970163309560, amount1Out(uint256): 0, to(address): 0x6D8981, data(bytes): b'') -> None
+      [4][CALL] from=BiswapPair, to=WBNB, transfer(dst(address): 0x6D8981, wad(uint256): 8647764970163309560) -> True
+      [4][STATICCALL] from=BiswapPair, to=WBNB, balanceOf((address): 0xaCAac9) -> 46028415333772642729295
+      [4][STATICCALL] from=BiswapPair, to=BEP20Token, balanceOf(account(address): 0xaCAac9) -> 14399738544724901638656188
+    [3][STATICCALL] from=0x6d8981, to=WBNB, balanceOf((address): 0x6D8981) -> 8647764970163309560
+    [3][STATICCALL] from=0x6d8981, to=WBNB, balanceOf((address): 0x6D8981) -> 8647764970163309560
+    [3][STATICCALL] from=0x6d8981, to=Diamond, balanceOf(account(address): 0x524b98) -> 0
+    [3][DELEGATECALL] from=0x6d8981, to=0x6d1879, 0x7855da66() -> 0x000000
+    [3][CALL] from=0x6d8981, to=WBNB, transfer(dst(address): 0xA6C26b, wad(uint256): 8647764970163309560) -> True
+    [3][STATICCALL] from=0x6d8981, to=BiswapPair, getReserves() -> ['59397081052445381900', '511495155084626142973', '1677479141']
+    [3][STATICCALL] from=0x6d8981, to=BiswapPair, swapFee() -> 1
+    [3][STATICCALL] from=0x6d8981, to=WBNB, balanceOf((address): 0xA6C26b) -> 520142920054789452533
+    [3][CALL] from=0x6d8981, to=BiswapPair, swap(amount0Out(uint256): 986549766465901284, amount1Out(uint256): 0, to(address): 0x524b98, data(bytes): b'') -> None
+      [4][CALL] from=BiswapPair, to=Diamond, transfer(recipient(address): 0x524b98, amount(uint256): 986549766465901284) -> True
+      [4][STATICCALL] from=BiswapPair, to=Diamond, balanceOf(account(address): 0xA6C26b) -> 58410531285979480616
+      [4][STATICCALL] from=BiswapPair, to=WBNB, balanceOf((address): 0xA6C26b) -> 520142920054789452533
+    [3][STATICCALL] from=0x6d8981, to=Diamond, balanceOf(account(address): 0x524b98) -> 986549766465901284
+    [3][STATICCALL] from=0x6d8981, to=Diamond, balanceOf(account(address): 0x524b98) -> 986549766465901284
+  [2][STATICCALL] from=0xc4bea6, to=BEP20Token, balanceOf(account(address): 0xBa55b0) -> 2675423455001879909126
+  [2][STATICCALL] from=0xc4bea6, to=BEP20Token, allowance(owner(address): 0xBa55b0, spender(address): 0x6D8981) -> 9999999992211994288718720896121
+  [2][CALL] from=0xc4bea6, to=0x6d8981, 0x4f1f05bc() -> 0x000000
+    [3][STATICCALL] from=0x6d8981, to=Diamond, balanceOf(account(address): 0xBa55b0) -> 0
+    [3][STATICCALL] from=0x6d8981, to=WBNB, balanceOf((address): 0x6D8981) -> 0
+    [3][DELEGATECALL] from=0x6d8981, to=0x6d1879, 0x7855da66() -> 0x000000
+    [3][CALL] from=0x6d8981, to=BEP20Token, transferFrom(sender(address): 0xBa55b0, recipient(address): 0xaCAac9, amount(uint256): 2675423455001879909126) -> True
+    [3][STATICCALL] from=0x6d8981, to=BiswapPair, getReserves() -> ['46028415333772642729295', '14399738544724901638656188', '1677479141']
+    [3][STATICCALL] from=0x6d8981, to=BiswapPair, swapFee() -> 2
+    [3][STATICCALL] from=0x6d8981, to=BEP20Token, balanceOf(account(address): 0xaCAac9) -> 14402413968179903518565314
+    [3][CALL] from=0x6d8981, to=BiswapPair, swap(amount0Out(uint256): 8533240115731463737, amount1Out(uint256): 0, to(address): 0x6D8981, data(bytes): b'') -> None
+      [4][CALL] from=BiswapPair, to=WBNB, transfer(dst(address): 0x6D8981, wad(uint256): 8533240115731463737) -> True
+      [4][STATICCALL] from=BiswapPair, to=WBNB, balanceOf((address): 0xaCAac9) -> 46019882093656911265558
+      [4][STATICCALL] from=BiswapPair, to=BEP20Token, balanceOf(account(address): 0xaCAac9) -> 14402413968179903518565314
+    [3][STATICCALL] from=0x6d8981, to=WBNB, balanceOf((address): 0x6D8981) -> 8533240115731463737
+    [3][STATICCALL] from=0x6d8981, to=WBNB, balanceOf((address): 0x6D8981) -> 8533240115731463737
+    [3][STATICCALL] from=0x6d8981, to=Diamond, balanceOf(account(address): 0xBa55b0) -> 0
+    [3][DELEGATECALL] from=0x6d8981, to=0x6d1879, 0x7855da66() -> 0x000000
+    [3][CALL] from=0x6d8981, to=WBNB, transfer(dst(address): 0xA6C26b, wad(uint256): 8533240115731463737) -> True
+    [3][STATICCALL] from=0x6d8981, to=BiswapPair, getReserves() -> ['58410531285979480616', '520142920054789452533', '1677479141']
+    [3][STATICCALL] from=0x6d8981, to=BiswapPair, swapFee() -> 1
+    [3][STATICCALL] from=0x6d8981, to=WBNB, balanceOf((address): 0xA6C26b) -> 528676160170520916270
+    [3][CALL] from=0x6d8981, to=BiswapPair, swap(amount0Out(uint256): 941863341534823965, amount1Out(uint256): 0, to(address): 0xBa55b0, data(bytes): b'') -> None
+      [4][CALL] from=BiswapPair, to=Diamond, transfer(recipient(address): 0xBa55b0, amount(uint256): 941863341534823965) -> True
+      [4][STATICCALL] from=BiswapPair, to=Diamond, balanceOf(account(address): 0xA6C26b) -> 57468667944444656651
+      [4][STATICCALL] from=BiswapPair, to=WBNB, balanceOf((address): 0xA6C26b) -> 528676160170520916270
+    [3][STATICCALL] from=0x6d8981, to=Diamond, balanceOf(account(address): 0xBa55b0) -> 941863341534823965
+    [3][STATICCALL] from=0x6d8981, to=Diamond, balanceOf(account(address): 0xBa55b0) -> 941863341534823965
+  [2][STATICCALL] from=0xc4bea6, to=BEP20Token, balanceOf(account(address): 0x1e803F) -> 2674030462363992657344
+  [2][STATICCALL] from=0xc4bea6, to=BEP20Token, allowance(owner(address): 0x1e803F, spender(address): 0x6D8981) -> 9999999995379148091377916993728
+  [2][CALL] from=0xc4bea6, to=0x6d8981, 0x4f1f05bc() -> 0x000000
+    [3][STATICCALL] from=0x6d8981, to=Diamond, balanceOf(account(address): 0x1e803F) -> 0
+    [3][STATICCALL] from=0x6d8981, to=WBNB, balanceOf((address): 0x6D8981) -> 0
+    [3][DELEGATECALL] from=0x6d8981, to=0x6d1879, 0x7855da66() -> 0x000000
+    [3][CALL] from=0x6d8981, to=BEP20Token, transferFrom(sender(address): 0x1e803F, recipient(address): 0xaCAac9, amount(uint256): 2674030462363992657344) -> True
+    [3][STATICCALL] from=0x6d8981, to=BiswapPair, getReserves() -> ['46019882093656911265558', '14402413968179903518565314', '1677479141']
+    [3][STATICCALL] from=0x6d8981, to=BiswapPair, swapFee() -> 2
+    [3][STATICCALL] from=0x6d8981, to=BEP20Token, balanceOf(account(address): 0xaCAac9) -> 14405087998642267511222658
+    [3][CALL] from=0x6d8981, to=BiswapPair, swap(amount0Out(uint256): 8525633100390147776, amount1Out(uint256): 0, to(address): 0x6D8981, data(bytes): b'') -> None
+      [4][CALL] from=BiswapPair, to=WBNB, transfer(dst(address): 0x6D8981, wad(uint256): 8525633100390147776) -> True
+      [4][STATICCALL] from=BiswapPair, to=WBNB, balanceOf((address): 0xaCAac9) -> 46011356460556521117782
+      [4][STATICCALL] from=BiswapPair, to=BEP20Token, balanceOf(account(address): 0xaCAac9) -> 14405087998642267511222658
+    [3][STATICCALL] from=0x6d8981, to=WBNB, balanceOf((address): 0x6D8981) -> 8525633100390147776
+    [3][STATICCALL] from=0x6d8981, to=WBNB, balanceOf((address): 0x6D8981) -> 8525633100390147776
+    [3][STATICCALL] from=0x6d8981, to=Diamond, balanceOf(account(address): 0x1e803F) -> 0
+    [3][DELEGATECALL] from=0x6d8981, to=0x6d1879, 0x7855da66() -> 0x000000
+    [3][CALL] from=0x6d8981, to=WBNB, transfer(dst(address): 0xA6C26b, wad(uint256): 8525633100390147776) -> True
+    [3][STATICCALL] from=0x6d8981, to=BiswapPair, getReserves() -> ['57468667944444656651', '528676160170520916270', '1677479141']
+    [3][STATICCALL] from=0x6d8981, to=BiswapPair, swapFee() -> 1
+    [3][STATICCALL] from=0x6d8981, to=WBNB, balanceOf((address): 0xA6C26b) -> 537201793270911064046
+    [3][CALL] from=0x6d8981, to=BiswapPair, swap(amount0Out(uint256): 911155910492229132, amount1Out(uint256): 0, to(address): 0x1e803F, data(bytes): b'') -> None
+      [4][CALL] from=BiswapPair, to=Diamond, transfer(recipient(address): 0x1e803F, amount(uint256): 911155910492229132) -> True
+      [4][STATICCALL] from=BiswapPair, to=Diamond, balanceOf(account(address): 0xA6C26b) -> 56557512033952427519
+      [4][STATICCALL] from=BiswapPair, to=WBNB, balanceOf((address): 0xA6C26b) -> 537201793270911064046
+    [3][STATICCALL] from=0x6d8981, to=Diamond, balanceOf(account(address): 0x1e803F) -> 911155910492229132
+    [3][STATICCALL] from=0x6d8981, to=Diamond, balanceOf(account(address): 0x1e803F) -> 911155910492229132
+  [2][STATICCALL] from=0xc4bea6, to=BEP20Token, balanceOf(account(address): 0xca7e7C) -> 2629224012108196091750
+  [2][STATICCALL] from=0xc4bea6, to=BEP20Token, allowance(owner(address): 0xca7e7C, spender(address): 0x6D8981) -> 9999999991720098034637969928878
+  [2][CALL] from=0xc4bea6, to=0x6d8981, 0x4f1f05bc() -> 0x000000
+    [3][STATICCALL] from=0x6d8981, to=Diamond, balanceOf(account(address): 0xca7e7C) -> 0
+    [3][STATICCALL] from=0x6d8981, to=WBNB, balanceOf((address): 0x6D8981) -> 0
+    [3][DELEGATECALL] from=0x6d8981, to=0x6d1879, 0x7855da66() -> 0x000000
+    [3][CALL] from=0x6d8981, to=BEP20Token, transferFrom(sender(address): 0xca7e7C, recipient(address): 0xaCAac9, amount(uint256): 2629224012108196091750) -> True
+    [3][STATICCALL] from=0x6d8981, to=BiswapPair, getReserves() -> ['46011356460556521117782', '14405087998642267511222658', '1677479141']
+    [3][STATICCALL] from=0x6d8981, to=BiswapPair, swapFee() -> 2
+    [3][STATICCALL] from=0x6d8981, to=BEP20Token, balanceOf(account(address): 0xaCAac9) -> 14407717222654375707314408
+    [3][CALL] from=0x6d8981, to=BiswapPair, swap(amount0Out(uint256): 8379693820173048350, amount1Out(uint256): 0, to(address): 0x6D8981, data(bytes): b'') -> None
+      [4][CALL] from=BiswapPair, to=WBNB, transfer(dst(address): 0x6D8981, wad(uint256): 8379693820173048350) -> True
+      [4][STATICCALL] from=BiswapPair, to=WBNB, balanceOf((address): 0xaCAac9) -> 46002976766736348069432
+      [4][STATICCALL] from=BiswapPair, to=BEP20Token, balanceOf(account(address): 0xaCAac9) -> 14407717222654375707314408
+    [3][STATICCALL] from=0x6d8981, to=WBNB, balanceOf((address): 0x6D8981) -> 8379693820173048350
+    [3][STATICCALL] from=0x6d8981, to=WBNB, balanceOf((address): 0x6D8981) -> 8379693820173048350
+    [3][STATICCALL] from=0x6d8981, to=Diamond, balanceOf(account(address): 0xca7e7C) -> 0
+    [3][DELEGATECALL] from=0x6d8981, to=0x6d1879, 0x7855da66() -> 0x000000
+    [3][CALL] from=0x6d8981, to=WBNB, transfer(dst(address): 0xA6C26b, wad(uint256): 8379693820173048350) -> True
+    [3][STATICCALL] from=0x6d8981, to=BiswapPair, getReserves() -> ['56557512033952427519', '537201793270911064046', '1677479141']
+    [3][STATICCALL] from=0x6d8981, to=BiswapPair, swapFee() -> 1
+    [3][STATICCALL] from=0x6d8981, to=WBNB, balanceOf((address): 0xA6C26b) -> 545581487091084112396
+    [3][CALL] from=0x6d8981, to=BiswapPair, swap(amount0Out(uint256): 867822649286934249, amount1Out(uint256): 0, to(address): 0xca7e7C, data(bytes): b'') -> None
+      [4][CALL] from=BiswapPair, to=Diamond, transfer(recipient(address): 0xca7e7C, amount(uint256): 867822649286934249) -> True
+      [4][STATICCALL] from=BiswapPair, to=Diamond, balanceOf(account(address): 0xA6C26b) -> 55689689384665493270
+      [4][STATICCALL] from=BiswapPair, to=WBNB, balanceOf((address): 0xA6C26b) -> 545581487091084112396
+    [3][STATICCALL] from=0x6d8981, to=Diamond, balanceOf(account(address): 0xca7e7C) -> 867822649286934249
+    [3][STATICCALL] from=0x6d8981, to=Diamond, balanceOf(account(address): 0xca7e7C) -> 867822649286934249
+  [2][STATICCALL] from=0xc4bea6, to=BEP20Token, balanceOf(account(address): 0xF86823) -> 2606552084402958676400
+  [2][STATICCALL] from=0xc4bea6, to=BEP20Token, allowance(owner(address): 0xF86823, spender(address): 0x6D8981) -> 9999999995327634808919929934450
+  [2][CALL] from=0xc4bea6, to=0x6d8981, 0x4f1f05bc() -> 0x000000
+    [3][STATICCALL] from=0x6d8981, to=Diamond, balanceOf(account(address): 0xF86823) -> 0
+    [3][STATICCALL] from=0x6d8981, to=WBNB, balanceOf((address): 0x6D8981) -> 0
+    [3][DELEGATECALL] from=0x6d8981, to=0x6d1879, 0x7855da66() -> 0x000000
+    [3][CALL] from=0x6d8981, to=BEP20Token, transferFrom(sender(address): 0xF86823, recipient(address): 0xaCAac9, amount(uint256): 2606552084402958676400) -> True
+    [3][STATICCALL] from=0x6d8981, to=BiswapPair, getReserves() -> ['46002976766736348069432', '14407717222654375707314408', '1677479141']
+    [3][STATICCALL] from=0x6d8981, to=BiswapPair, swapFee() -> 2
+    [3][STATICCALL] from=0x6d8981, to=BEP20Token, balanceOf(account(address): 0xaCAac9) -> 14410323774738778665990808
+    [3][CALL] from=0x6d8981, to=BiswapPair, swap(amount0Out(uint256): 8304419930640510895, amount1Out(uint256): 0, to(address): 0x6D8981, data(bytes): b'') -> None
+      [4][CALL] from=BiswapPair, to=WBNB, transfer(dst(address): 0x6D8981, wad(uint256): 8304419930640510895) -> True
+      [4][STATICCALL] from=BiswapPair, to=WBNB, balanceOf((address): 0xaCAac9) -> 45994672346805707558537
+      [4][STATICCALL] from=BiswapPair, to=BEP20Token, balanceOf(account(address): 0xaCAac9) -> 14410323774738778665990808
+    [3][STATICCALL] from=0x6d8981, to=WBNB, balanceOf((address): 0x6D8981) -> 8304419930640510895
+    [3][STATICCALL] from=0x6d8981, to=WBNB, balanceOf((address): 0x6D8981) -> 8304419930640510895
+    [3][STATICCALL] from=0x6d8981, to=Diamond, balanceOf(account(address): 0xF86823) -> 0
+    [3][DELEGATECALL] from=0x6d8981, to=0x6d1879, 0x7855da66() -> 0x000000
+    [3][CALL] from=0x6d8981, to=WBNB, transfer(dst(address): 0xA6C26b, wad(uint256): 8304419930640510895) -> True
+    [3][STATICCALL] from=0x6d8981, to=BiswapPair, getReserves() -> ['55689689384665493270', '545581487091084112396', '1677479141']
+    [3][STATICCALL] from=0x6d8981, to=BiswapPair, swapFee() -> 1
+    [3][STATICCALL] from=0x6d8981, to=WBNB, balanceOf((address): 0xA6C26b) -> 553885907021724623291
+    [3][CALL] from=0x6d8981, to=BiswapPair, swap(amount0Out(uint256): 834133920058319025, amount1Out(uint256): 0, to(address): 0xF86823, data(bytes): b'') -> None
+      [4][CALL] from=BiswapPair, to=Diamond, transfer(recipient(address): 0xF86823, amount(uint256): 834133920058319025) -> True
+      [4][STATICCALL] from=BiswapPair, to=Diamond, balanceOf(account(address): 0xA6C26b) -> 54855555464607174245
+      [4][STATICCALL] from=BiswapPair, to=WBNB, balanceOf((address): 0xA6C26b) -> 553885907021724623291
+    [3][STATICCALL] from=0x6d8981, to=Diamond, balanceOf(account(address): 0xF86823) -> 834133920058319025
+    [3][STATICCALL] from=0x6d8981, to=Diamond, balanceOf(account(address): 0xF86823) -> 834133920058319025
+  [2][STATICCALL] from=0xc4bea6, to=BEP20Token, balanceOf(account(address): 0x95e0cC) -> 2539174665113454325399
+  [2][STATICCALL] from=0xc4bea6, to=BEP20Token, allowance(owner(address): 0x95e0cC, spender(address): 0x6D8981) -> 0
+  [2][STATICCALL] from=0xc4bea6, to=BEP20Token, balanceOf(account(address): 0xf8cFA0) -> 2500886677685985807134
+  [2][STATICCALL] from=0xc4bea6, to=BEP20Token, allowance(owner(address): 0xf8cFA0, spender(address): 0x6D8981) -> 999986938091392411487825988
+  [2][CALL] from=0xc4bea6, to=0x6d8981, 0x4f1f05bc() -> 0x000000
+    [3][STATICCALL] from=0x6d8981, to=Diamond, balanceOf(account(address): 0xf8cFA0) -> 0
+    [3][STATICCALL] from=0x6d8981, to=WBNB, balanceOf((address): 0x6D8981) -> 0
+    [3][DELEGATECALL] from=0x6d8981, to=0x6d1879, 0x7855da66() -> 0x000000
+    [3][CALL] from=0x6d8981, to=BEP20Token, transferFrom(sender(address): 0xf8cFA0, recipient(address): 0xaCAac9, amount(uint256): 2500886677685985807134) -> True
+    [3][STATICCALL] from=0x6d8981, to=BiswapPair, getReserves() -> ['45994672346805707558537', '14410323774738778665990808', '1677479141']
+    [3][STATICCALL] from=0x6d8981, to=BiswapPair, swapFee() -> 2
+    [3][STATICCALL] from=0x6d8981, to=BEP20Token, balanceOf(account(address): 0xaCAac9) -> 14412824661416464651797942
+    [3][CALL] from=0x6d8981, to=BiswapPair, swap(amount0Out(uint256): 7964951418317247605, amount1Out(uint256): 0, to(address): 0x6D8981, data(bytes): b'') -> None
+      [4][CALL] from=BiswapPair, to=WBNB, transfer(dst(address): 0x6D8981, wad(uint256): 7964951418317247605) -> True
+      [4][STATICCALL] from=BiswapPair, to=WBNB, balanceOf((address): 0xaCAac9) -> 45986707395387390310932
+      [4][STATICCALL] from=BiswapPair, to=BEP20Token, balanceOf(account(address): 0xaCAac9) -> 14412824661416464651797942
+    [3][STATICCALL] from=0x6d8981, to=WBNB, balanceOf((address): 0x6D8981) -> 7964951418317247605
+    [3][STATICCALL] from=0x6d8981, to=WBNB, balanceOf((address): 0x6D8981) -> 7964951418317247605
+    [3][STATICCALL] from=0x6d8981, to=Diamond, balanceOf(account(address): 0xf8cFA0) -> 0
+    [3][DELEGATECALL] from=0x6d8981, to=0x6d1879, 0x7855da66() -> 0x000000
+    [3][CALL] from=0x6d8981, to=WBNB, transfer(dst(address): 0xA6C26b, wad(uint256): 7964951418317247605) -> True
+    [3][STATICCALL] from=0x6d8981, to=BiswapPair, getReserves() -> ['54855555464607174245', '553885907021724623291', '1677479141']
+    [3][STATICCALL] from=0x6d8981, to=BiswapPair, swapFee() -> 1
+    [3][STATICCALL] from=0x6d8981, to=WBNB, balanceOf((address): 0xA6C26b) -> 561850858440041870896
+    [3][CALL] from=0x6d8981, to=BiswapPair, swap(amount0Out(uint256): 776880721505363480, amount1Out(uint256): 0, to(address): 0xf8cFA0, data(bytes): b'') -> None
+      [4][CALL] from=BiswapPair, to=Diamond, transfer(recipient(address): 0xf8cFA0, amount(uint256): 776880721505363480) -> True
+      [4][STATICCALL] from=BiswapPair, to=Diamond, balanceOf(account(address): 0xA6C26b) -> 54078674743101810765
+      [4][STATICCALL] from=BiswapPair, to=WBNB, balanceOf((address): 0xA6C26b) -> 561850858440041870896
+    [3][STATICCALL] from=0x6d8981, to=Diamond, balanceOf(account(address): 0xf8cFA0) -> 776880721505363480
+    [3][STATICCALL] from=0x6d8981, to=Diamond, balanceOf(account(address): 0xf8cFA0) -> 776880721505363480
+  [2][STATICCALL] from=0xc4bea6, to=BEP20Token, balanceOf(account(address): 0xc76910) -> 2386899944309571316979
+  [2][STATICCALL] from=0xc4bea6, to=BEP20Token, allowance(owner(address): 0xc76910, spender(address): 0x6D8981) -> 9999999993424402505498016529793
+  [2][CALL] from=0xc4bea6, to=0x6d8981, 0x4f1f05bc() -> 0x000000
+    [3][STATICCALL] from=0x6d8981, to=Diamond, balanceOf(account(address): 0xc76910) -> 0
+    [3][STATICCALL] from=0x6d8981, to=WBNB, balanceOf((address): 0x6D8981) -> 0
+    [3][DELEGATECALL] from=0x6d8981, to=0x6d1879, 0x7855da66() -> 0x000000
+    [3][CALL] from=0x6d8981, to=BEP20Token, transferFrom(sender(address): 0xc76910, recipient(address): 0xaCAac9, amount(uint256): 2386899944309571316979) -> True
+    [3][STATICCALL] from=0x6d8981, to=BiswapPair, getReserves() -> ['45986707395387390310932', '14412824661416464651797942', '1677479141']
+    [3][STATICCALL] from=0x6d8981, to=BiswapPair, swapFee() -> 2
+    [3][STATICCALL] from=0x6d8981, to=BEP20Token, balanceOf(account(address): 0xaCAac9) -> 14415211561360774223114921
+    [3][CALL] from=0x6d8981, to=BiswapPair, swap(amount0Out(uint256): 7599345579760796837, amount1Out(uint256): 0, to(address): 0x6D8981, data(bytes): b'') -> None
+      [4][CALL] from=BiswapPair, to=WBNB, transfer(dst(address): 0x6D8981, wad(uint256): 7599345579760796837) -> True
+      [4][STATICCALL] from=BiswapPair, to=WBNB, balanceOf((address): 0xaCAac9) -> 45979108049807629514095
+      [4][STATICCALL] from=BiswapPair, to=BEP20Token, balanceOf(account(address): 0xaCAac9) -> 14415211561360774223114921
+    [3][STATICCALL] from=0x6d8981, to=WBNB, balanceOf((address): 0x6D8981) -> 7599345579760796837
+    [3][STATICCALL] from=0x6d8981, to=WBNB, balanceOf((address): 0x6D8981) -> 7599345579760796837
+    [3][STATICCALL] from=0x6d8981, to=Diamond, balanceOf(account(address): 0xc76910) -> 0
+    [3][DELEGATECALL] from=0x6d8981, to=0x6d1879, 0x7855da66() -> 0x000000
+    [3][CALL] from=0x6d8981, to=WBNB, transfer(dst(address): 0xA6C26b, wad(uint256): 7599345579760796837) -> True
+    [3][STATICCALL] from=0x6d8981, to=BiswapPair, getReserves() -> ['54078674743101810765', '561850858440041870896', '1677479141']
+    [3][STATICCALL] from=0x6d8981, to=BiswapPair, swapFee() -> 1
+    [3][STATICCALL] from=0x6d8981, to=WBNB, balanceOf((address): 0xA6C26b) -> 569450204019802667733
+    [3][CALL] from=0x6d8981, to=BiswapPair, swap(amount0Out(uint256): 720970949416965558, amount1Out(uint256): 0, to(address): 0xc76910, data(bytes): b'') -> None
+      [4][CALL] from=BiswapPair, to=Diamond, transfer(recipient(address): 0xc76910, amount(uint256): 720970949416965558) -> True
+      [4][STATICCALL] from=BiswapPair, to=Diamond, balanceOf(account(address): 0xA6C26b) -> 53357703793684845207
+      [4][STATICCALL] from=BiswapPair, to=WBNB, balanceOf((address): 0xA6C26b) -> 569450204019802667733
+    [3][STATICCALL] from=0x6d8981, to=Diamond, balanceOf(account(address): 0xc76910) -> 720970949416965558
+    [3][STATICCALL] from=0x6d8981, to=Diamond, balanceOf(account(address): 0xc76910) -> 720970949416965558
+  [2][STATICCALL] from=0xc4bea6, to=BEP20Token, balanceOf(account(address): 0xe63CdC) -> 2316471403642218038938
+  [2][STATICCALL] from=0xc4bea6, to=BEP20Token, allowance(owner(address): 0xe63CdC, spender(address): 0x6D8981) -> 57896044618658097711785492504343953926634992332820282019671792003956564819968
+  [2][CALL] from=0xc4bea6, to=0x6d8981, 0x4f1f05bc() -> 0x000000
+    [3][STATICCALL] from=0x6d8981, to=Diamond, balanceOf(account(address): 0xe63CdC) -> 0
+    [3][STATICCALL] from=0x6d8981, to=WBNB, balanceOf((address): 0x6D8981) -> 0
+    [3][DELEGATECALL] from=0x6d8981, to=0x6d1879, 0x7855da66() -> 0x000000
+    [3][CALL] from=0x6d8981, to=BEP20Token, transferFrom(sender(address): 0xe63CdC, recipient(address): 0xaCAac9, amount(uint256): 2316471403642218038938) -> True
+    [3][STATICCALL] from=0x6d8981, to=BiswapPair, getReserves() -> ['45979108049807629514095', '14415211561360774223114921', '1677479141']
+    [3][STATICCALL] from=0x6d8981, to=BiswapPair, swapFee() -> 2
+    [3][STATICCALL] from=0x6d8981, to=BEP20Token, balanceOf(account(address): 0xaCAac9) -> 14417528032764416441153859
+    [3][CALL] from=0x6d8981, to=BiswapPair, swap(amount0Out(uint256): 7372713567834098361, amount1Out(uint256): 0, to(address): 0x6D8981, data(bytes): b'') -> None
+      [4][CALL] from=BiswapPair, to=WBNB, transfer(dst(address): 0x6D8981, wad(uint256): 7372713567834098361) -> True
+      [4][STATICCALL] from=BiswapPair, to=WBNB, balanceOf((address): 0xaCAac9) -> 45971735336239795415734
+      [4][STATICCALL] from=BiswapPair, to=BEP20Token, balanceOf(account(address): 0xaCAac9) -> 14417528032764416441153859
+    [3][STATICCALL] from=0x6d8981, to=WBNB, balanceOf((address): 0x6D8981) -> 7372713567834098361
+    [3][STATICCALL] from=0x6d8981, to=WBNB, balanceOf((address): 0x6D8981) -> 7372713567834098361
+    [3][STATICCALL] from=0x6d8981, to=Diamond, balanceOf(account(address): 0xe63CdC) -> 0
+    [3][DELEGATECALL] from=0x6d8981, to=0x6d1879, 0x7855da66() -> 0x000000
+    [3][CALL] from=0x6d8981, to=WBNB, transfer(dst(address): 0xA6C26b, wad(uint256): 7372713567834098361) -> True
+    [3][STATICCALL] from=0x6d8981, to=BiswapPair, getReserves() -> ['53357703793684845207', '569450204019802667733', '1677479141']
+    [3][STATICCALL] from=0x6d8981, to=BiswapPair, swapFee() -> 1
+    [3][STATICCALL] from=0x6d8981, to=WBNB, balanceOf((address): 0xA6C26b) -> 576822917587636766094
+    [3][CALL] from=0x6d8981, to=BiswapPair, swap(amount0Out(uint256): 681322962139074728, amount1Out(uint256): 0, to(address): 0xe63CdC, data(bytes): b'') -> None
+      [4][CALL] from=BiswapPair, to=Diamond, transfer(recipient(address): 0xe63CdC, amount(uint256): 681322962139074728) -> True
+      [4][STATICCALL] from=BiswapPair, to=Diamond, balanceOf(account(address): 0xA6C26b) -> 52676380831545770479
+      [4][STATICCALL] from=BiswapPair, to=WBNB, balanceOf((address): 0xA6C26b) -> 576822917587636766094
+    [3][STATICCALL] from=0x6d8981, to=Diamond, balanceOf(account(address): 0xe63CdC) -> 681322962139074728
+    [3][STATICCALL] from=0x6d8981, to=Diamond, balanceOf(account(address): 0xe63CdC) -> 681322962139074728
+  [2][STATICCALL] from=0xc4bea6, to=BEP20Token, balanceOf(account(address): 0xe212c1) -> 2261079673560361891089
+  [2][STATICCALL] from=0xc4bea6, to=BEP20Token, allowance(owner(address): 0xe212c1, spender(address): 0x6D8981) -> 999998915000000000000000000
+  [2][CALL] from=0xc4bea6, to=0x6d8981, 0x4f1f05bc() -> 0x000000
+    [3][STATICCALL] from=0x6d8981, to=Diamond, balanceOf(account(address): 0xe212c1) -> 0
+    [3][STATICCALL] from=0x6d8981, to=WBNB, balanceOf((address): 0x6D8981) -> 0
+    [3][DELEGATECALL] from=0x6d8981, to=0x6d1879, 0x7855da66() -> 0x000000
+    [3][CALL] from=0x6d8981, to=BEP20Token, transferFrom(sender(address): 0xe212c1, recipient(address): 0xaCAac9, amount(uint256): 2261079673560361891089) -> True
+    [3][STATICCALL] from=0x6d8981, to=BiswapPair, getReserves() -> ['45971735336239795415734', '14417528032764416441153859', '1677479141']
+    [3][STATICCALL] from=0x6d8981, to=BiswapPair, swapFee() -> 2
+    [3][STATICCALL] from=0x6d8981, to=BEP20Token, balanceOf(account(address): 0xaCAac9) -> 14419789112437976803044948
+    [3][CALL] from=0x6d8981, to=BiswapPair, swap(amount0Out(uint256): 7194134154011644222, amount1Out(uint256): 0, to(address): 0x6D8981, data(bytes): b'') -> None
+      [4][CALL] from=BiswapPair, to=WBNB, transfer(dst(address): 0x6D8981, wad(uint256): 7194134154011644222) -> True
+      [4][STATICCALL] from=BiswapPair, to=WBNB, balanceOf((address): 0xaCAac9) -> 45964541202085783771512
+      [4][STATICCALL] from=BiswapPair, to=BEP20Token, balanceOf(account(address): 0xaCAac9) -> 14419789112437976803044948
+    [3][STATICCALL] from=0x6d8981, to=WBNB, balanceOf((address): 0x6D8981) -> 7194134154011644222
+    [3][STATICCALL] from=0x6d8981, to=WBNB, balanceOf((address): 0x6D8981) -> 7194134154011644222
+    [3][STATICCALL] from=0x6d8981, to=Diamond, balanceOf(account(address): 0xe212c1) -> 0
+    [3][DELEGATECALL] from=0x6d8981, to=0x6d1879, 0x7855da66() -> 0x000000
+    [3][CALL] from=0x6d8981, to=WBNB, transfer(dst(address): 0xA6C26b, wad(uint256): 7194134154011644222) -> True
+    [3][STATICCALL] from=0x6d8981, to=BiswapPair, getReserves() -> ['52676380831545770479', '576822917587636766094', '1677479141']
+    [3][STATICCALL] from=0x6d8981, to=BiswapPair, swapFee() -> 1
+    [3][STATICCALL] from=0x6d8981, to=WBNB, balanceOf((address): 0xA6C26b) -> 584017051741648410316
+    [3][CALL] from=0x6d8981, to=BiswapPair, swap(amount0Out(uint256): 648245889291029601, amount1Out(uint256): 0, to(address): 0xe212c1, data(bytes): b'') -> None
+      [4][CALL] from=BiswapPair, to=Diamond, transfer(recipient(address): 0xe212c1, amount(uint256): 648245889291029601) -> True
+      [4][STATICCALL] from=BiswapPair, to=Diamond, balanceOf(account(address): 0xA6C26b) -> 52028134942254740878
+      [4][STATICCALL] from=BiswapPair, to=WBNB, balanceOf((address): 0xA6C26b) -> 584017051741648410316
+    [3][STATICCALL] from=0x6d8981, to=Diamond, balanceOf(account(address): 0xe212c1) -> 648245889291029601
+    [3][STATICCALL] from=0x6d8981, to=Diamond, balanceOf(account(address): 0xe212c1) -> 648245889291029601
+  [2][STATICCALL] from=0xc4bea6, to=BEP20Token, balanceOf(account(address): 0x13B18D) -> 2247246100595389692329
+  [2][STATICCALL] from=0xc4bea6, to=BEP20Token, allowance(owner(address): 0x13B18D, spender(address): 0x6D8981) -> 9999999994707259909302879828348
+  [2][CALL] from=0xc4bea6, to=0x6d8981, 0x4f1f05bc() -> 0x000000
+    [3][STATICCALL] from=0x6d8981, to=Diamond, balanceOf(account(address): 0x13B18D) -> 0
+    [3][STATICCALL] from=0x6d8981, to=WBNB, balanceOf((address): 0x6D8981) -> 0
+    [3][DELEGATECALL] from=0x6d8981, to=0x6d1879, 0x7855da66() -> 0x000000
+    [3][CALL] from=0x6d8981, to=BEP20Token, transferFrom(sender(address): 0x13B18D, recipient(address): 0xaCAac9, amount(uint256): 2247246100595389692329) -> True
+    [3][STATICCALL] from=0x6d8981, to=BiswapPair, getReserves() -> ['45964541202085783771512', '14419789112437976803044948', '1677479141']
+    [3][STATICCALL] from=0x6d8981, to=BiswapPair, swapFee() -> 2
+    [3][STATICCALL] from=0x6d8981, to=BEP20Token, balanceOf(account(address): 0xaCAac9) -> 14422036358538572192737277
+    [3][CALL] from=0x6d8981, to=BiswapPair, swap(amount0Out(uint256): 7147886628032751794, amount1Out(uint256): 0, to(address): 0x6D8981, data(bytes): b'') -> None
+      [4][CALL] from=BiswapPair, to=WBNB, transfer(dst(address): 0x6D8981, wad(uint256): 7147886628032751794) -> True
+      [4][STATICCALL] from=BiswapPair, to=WBNB, balanceOf((address): 0xaCAac9) -> 45957393315457751019718
+      [4][STATICCALL] from=BiswapPair, to=BEP20Token, balanceOf(account(address): 0xaCAac9) -> 14422036358538572192737277
+    [3][STATICCALL] from=0x6d8981, to=WBNB, balanceOf((address): 0x6D8981) -> 7147886628032751794
+    [3][STATICCALL] from=0x6d8981, to=WBNB, balanceOf((address): 0x6D8981) -> 7147886628032751794
+    [3][STATICCALL] from=0x6d8981, to=Diamond, balanceOf(account(address): 0x13B18D) -> 0
+    [3][DELEGATECALL] from=0x6d8981, to=0x6d1879, 0x7855da66() -> 0x000000
+    [3][CALL] from=0x6d8981, to=WBNB, transfer(dst(address): 0xA6C26b, wad(uint256): 7147886628032751794) -> True
+    [3][STATICCALL] from=0x6d8981, to=BiswapPair, getReserves() -> ['52028134942254740878', '584017051741648410316', '1677479141']
+    [3][STATICCALL] from=0x6d8981, to=BiswapPair, swapFee() -> 1
+    [3][STATICCALL] from=0x6d8981, to=WBNB, balanceOf((address): 0xA6C26b) -> 591164938369681162110
+    [3][CALL] from=0x6d8981, to=BiswapPair, swap(amount0Out(uint256): 628460497021634770, amount1Out(uint256): 0, to(address): 0x13B18D, data(bytes): b'') -> None
+      [4][CALL] from=BiswapPair, to=Diamond, transfer(recipient(address): 0x13B18D, amount(uint256): 628460497021634770) -> True
+      [4][STATICCALL] from=BiswapPair, to=Diamond, balanceOf(account(address): 0xA6C26b) -> 51399674445233106108
+      [4][STATICCALL] from=BiswapPair, to=WBNB, balanceOf((address): 0xA6C26b) -> 591164938369681162110
+    [3][STATICCALL] from=0x6d8981, to=Diamond, balanceOf(account(address): 0x13B18D) -> 628460497021634770
+    [3][STATICCALL] from=0x6d8981, to=Diamond, balanceOf(account(address): 0x13B18D) -> 628460497021634770
+  [2][STATICCALL] from=0xc4bea6, to=BEP20Token, balanceOf(account(address): 0x1eEf8A) -> 2231963640912453687598
+  [2][STATICCALL] from=0xc4bea6, to=BEP20Token, allowance(owner(address): 0x1eEf8A, spender(address): 0x6D8981) -> 999999998000000000000000000
+  [2][CALL] from=0xc4bea6, to=0x6d8981, 0x4f1f05bc() -> 0x000000
+    [3][STATICCALL] from=0x6d8981, to=Diamond, balanceOf(account(address): 0x1eEf8A) -> 0
+    [3][STATICCALL] from=0x6d8981, to=WBNB, balanceOf((address): 0x6D8981) -> 0
+    [3][DELEGATECALL] from=0x6d8981, to=0x6d1879, 0x7855da66() -> 0x000000
+    [3][CALL] from=0x6d8981, to=BEP20Token, transferFrom(sender(address): 0x1eEf8A, recipient(address): 0xaCAac9, amount(uint256): 2231963640912453687598) -> True
+    [3][STATICCALL] from=0x6d8981, to=BiswapPair, getReserves() -> ['45957393315457751019718', '14422036358538572192737277', '1677479141']
+    [3][STATICCALL] from=0x6d8981, to=BiswapPair, swapFee() -> 2
+    [3][STATICCALL] from=0x6d8981, to=BEP20Token, balanceOf(account(address): 0xaCAac9) -> 14424268322179484646424875
+    [3][CALL] from=0x6d8981, to=BiswapPair, swap(amount0Out(uint256): 7097074863257289385, amount1Out(uint256): 0, to(address): 0x6D8981, data(bytes): b'') -> None
+      [4][CALL] from=BiswapPair, to=WBNB, transfer(dst(address): 0x6D8981, wad(uint256): 7097074863257289385) -> True
+      [4][STATICCALL] from=BiswapPair, to=WBNB, balanceOf((address): 0xaCAac9) -> 45950296240594493730333
+      [4][STATICCALL] from=BiswapPair, to=BEP20Token, balanceOf(account(address): 0xaCAac9) -> 14424268322179484646424875
+    [3][STATICCALL] from=0x6d8981, to=WBNB, balanceOf((address): 0x6D8981) -> 7097074863257289385
+    [3][STATICCALL] from=0x6d8981, to=WBNB, balanceOf((address): 0x6D8981) -> 7097074863257289385
+    [3][STATICCALL] from=0x6d8981, to=Diamond, balanceOf(account(address): 0x1eEf8A) -> 0
+    [3][DELEGATECALL] from=0x6d8981, to=0x6d1879, 0x7855da66() -> 0x000000
+    [3][CALL] from=0x6d8981, to=WBNB, transfer(dst(address): 0xA6C26b, wad(uint256): 7097074863257289385) -> True
+    [3][STATICCALL] from=0x6d8981, to=BiswapPair, getReserves() -> ['51399674445233106108', '591164938369681162110', '1677479141']
+    [3][STATICCALL] from=0x6d8981, to=BiswapPair, swapFee() -> 1
+    [3][STATICCALL] from=0x6d8981, to=WBNB, balanceOf((address): 0xA6C26b) -> 598262013232938451495
+    [3][CALL] from=0x6d8981, to=BiswapPair, swap(amount0Out(uint256): 609142591736089858, amount1Out(uint256): 0, to(address): 0x1eEf8A, data(bytes): b'') -> None
+      [4][CALL] from=BiswapPair, to=Diamond, transfer(recipient(address): 0x1eEf8A, amount(uint256): 609142591736089858) -> True
+      [4][STATICCALL] from=BiswapPair, to=Diamond, balanceOf(account(address): 0xA6C26b) -> 50790531853497016250
+      [4][STATICCALL] from=BiswapPair, to=WBNB, balanceOf((address): 0xA6C26b) -> 598262013232938451495
+    [3][STATICCALL] from=0x6d8981, to=Diamond, balanceOf(account(address): 0x1eEf8A) -> 609142591736089858
+    [3][STATICCALL] from=0x6d8981, to=Diamond, balanceOf(account(address): 0x1eEf8A) -> 609142591736089858
+  [2][STATICCALL] from=0xc4bea6, to=BEP20Token, balanceOf(account(address): 0x42238F) -> 2176263177308079827714
+  [2][STATICCALL] from=0xc4bea6, to=BEP20Token, allowance(owner(address): 0x42238F, spender(address): 0x6D8981) -> 999975166000000000000000000
+  [2][CALL] from=0xc4bea6, to=0x6d8981, 0x4f1f05bc() -> 0x000000
+    [3][STATICCALL] from=0x6d8981, to=Diamond, balanceOf(account(address): 0x42238F) -> 0
+    [3][STATICCALL] from=0x6d8981, to=WBNB, balanceOf((address): 0x6D8981) -> 0
+    [3][DELEGATECALL] from=0x6d8981, to=0x6d1879, 0x7855da66() -> 0x000000
+    [3][CALL] from=0x6d8981, to=BEP20Token, transferFrom(sender(address): 0x42238F, recipient(address): 0xaCAac9, amount(uint256): 2176263177308079827714) -> True
+    [3][STATICCALL] from=0x6d8981, to=BiswapPair, getReserves() -> ['45950296240594493730333', '14424268322179484646424875', '1677479141']
+    [3][STATICCALL] from=0x6d8981, to=BiswapPair, swapFee() -> 2
+    [3][STATICCALL] from=0x6d8981, to=BEP20Token, balanceOf(account(address): 0xaCAac9) -> 14426444585356792726252589
+    [3][CALL] from=0x6d8981, to=BiswapPair, swap(amount0Out(uint256): 6917849185850994739, amount1Out(uint256): 0, to(address): 0x6D8981, data(bytes): b'') -> None
+      [4][CALL] from=BiswapPair, to=WBNB, transfer(dst(address): 0x6D8981, wad(uint256): 6917849185850994739) -> True
+      [4][STATICCALL] from=BiswapPair, to=WBNB, balanceOf((address): 0xaCAac9) -> 45943378391408642735594
+      [4][STATICCALL] from=BiswapPair, to=BEP20Token, balanceOf(account(address): 0xaCAac9) -> 14426444585356792726252589
+    [3][STATICCALL] from=0x6d8981, to=WBNB, balanceOf((address): 0x6D8981) -> 6917849185850994739
+    [3][STATICCALL] from=0x6d8981, to=WBNB, balanceOf((address): 0x6D8981) -> 6917849185850994739
+    [3][STATICCALL] from=0x6d8981, to=Diamond, balanceOf(account(address): 0x42238F) -> 0
+    [3][DELEGATECALL] from=0x6d8981, to=0x6d1879, 0x7855da66() -> 0x000000
+    [3][CALL] from=0x6d8981, to=WBNB, transfer(dst(address): 0xA6C26b, wad(uint256): 6917849185850994739) -> True
+    [3][STATICCALL] from=0x6d8981, to=BiswapPair, getReserves() -> ['50790531853497016250', '598262013232938451495', '1677479141']
+    [3][STATICCALL] from=0x6d8981, to=BiswapPair, swapFee() -> 1
+    [3][STATICCALL] from=0x6d8981, to=WBNB, balanceOf((address): 0xA6C26b) -> 605179862418789446234
+    [3][CALL] from=0x6d8981, to=BiswapPair, swap(amount0Out(uint256): 580015814226226548, amount1Out(uint256): 0, to(address): 0x42238F, data(bytes): b'') -> None
+      [4][CALL] from=BiswapPair, to=Diamond, transfer(recipient(address): 0x42238F, amount(uint256): 580015814226226548) -> True
+      [4][STATICCALL] from=BiswapPair, to=Diamond, balanceOf(account(address): 0xA6C26b) -> 50210516039270789702
+      [4][STATICCALL] from=BiswapPair, to=WBNB, balanceOf((address): 0xA6C26b) -> 605179862418789446234
+    [3][STATICCALL] from=0x6d8981, to=Diamond, balanceOf(account(address): 0x42238F) -> 580015814226226548
+    [3][STATICCALL] from=0x6d8981, to=Diamond, balanceOf(account(address): 0x42238F) -> 580015814226226548
+  [2][STATICCALL] from=0xc4bea6, to=BEP20Token, balanceOf(account(address): 0x6E720C) -> 2151169229904617610938
+  [2][STATICCALL] from=0xc4bea6, to=BEP20Token, allowance(owner(address): 0x6E720C, spender(address): 0x6D8981) -> 999999845000000000000000000
+  [2][CALL] from=0xc4bea6, to=0x6d8981, 0x4f1f05bc() -> 0x000000
+    [3][STATICCALL] from=0x6d8981, to=Diamond, balanceOf(account(address): 0x6E720C) -> 0
+    [3][STATICCALL] from=0x6d8981, to=WBNB, balanceOf((address): 0x6D8981) -> 0
+    [3][DELEGATECALL] from=0x6d8981, to=0x6d1879, 0x7855da66() -> 0x000000
+    [3][CALL] from=0x6d8981, to=BEP20Token, transferFrom(sender(address): 0x6E720C, recipient(address): 0xaCAac9, amount(uint256): 2151169229904617610938) -> True
+    [3][STATICCALL] from=0x6d8981, to=BiswapPair, getReserves() -> ['45943378391408642735594', '14426444585356792726252589', '1677479141']
+    [3][STATICCALL] from=0x6d8981, to=BiswapPair, swapFee() -> 2
+    [3][STATICCALL] from=0x6d8981, to=BEP20Token, balanceOf(account(address): 0xaCAac9) -> 14428595754586697343863527
+    [3][CALL] from=0x6d8981, to=BiswapPair, swap(amount0Out(uint256): 6836032351187477065, amount1Out(uint256): 0, to(address): 0x6D8981, data(bytes): b'') -> None
+      [4][CALL] from=BiswapPair, to=WBNB, transfer(dst(address): 0x6D8981, wad(uint256): 6836032351187477065) -> True
+      [4][STATICCALL] from=BiswapPair, to=WBNB, balanceOf((address): 0xaCAac9) -> 45936542359057455258529
+      [4][STATICCALL] from=BiswapPair, to=BEP20Token, balanceOf(account(address): 0xaCAac9) -> 14428595754586697343863527
+    [3][STATICCALL] from=0x6d8981, to=WBNB, balanceOf((address): 0x6D8981) -> 6836032351187477065
+    [3][STATICCALL] from=0x6d8981, to=WBNB, balanceOf((address): 0x6D8981) -> 6836032351187477065
+    [3][STATICCALL] from=0x6d8981, to=Diamond, balanceOf(account(address): 0x6E720C) -> 0
+    [3][DELEGATECALL] from=0x6d8981, to=0x6d1879, 0x7855da66() -> 0x000000
+    [3][CALL] from=0x6d8981, to=WBNB, transfer(dst(address): 0xA6C26b, wad(uint256): 6836032351187477065) -> True
+    [3][STATICCALL] from=0x6d8981, to=BiswapPair, getReserves() -> ['50210516039270789702', '605179862418789446234', '1677479141']
+    [3][STATICCALL] from=0x6d8981, to=BiswapPair, swapFee() -> 1
+    [3][STATICCALL] from=0x6d8981, to=WBNB, balanceOf((address): 0xA6C26b) -> 612015894769976923299
+    [3][CALL] from=0x6d8981, to=BiswapPair, swap(amount0Out(uint256): 560281692577465669, amount1Out(uint256): 0, to(address): 0x6E720C, data(bytes): b'') -> None
+      [4][CALL] from=BiswapPair, to=Diamond, transfer(recipient(address): 0x6E720C, amount(uint256): 560281692577465669) -> True
+      [4][STATICCALL] from=BiswapPair, to=Diamond, balanceOf(account(address): 0xA6C26b) -> 49650234346693324033
+      [4][STATICCALL] from=BiswapPair, to=WBNB, balanceOf((address): 0xA6C26b) -> 612015894769976923299
+    [3][STATICCALL] from=0x6d8981, to=Diamond, balanceOf(account(address): 0x6E720C) -> 560281692577465669
+    [3][STATICCALL] from=0x6d8981, to=Diamond, balanceOf(account(address): 0x6E720C) -> 560281692577465669
+  [2][STATICCALL] from=0xc4bea6, to=BEP20Token, balanceOf(account(address): 0xD34E06) -> 2149391795879372421620
+  [2][STATICCALL] from=0xc4bea6, to=BEP20Token, allowance(owner(address): 0xD34E06, spender(address): 0x6D8981) -> 9999999995074323111236662094489
+  [2][CALL] from=0xc4bea6, to=0x6d8981, 0x4f1f05bc() -> 0x000000
+    [3][STATICCALL] from=0x6d8981, to=Diamond, balanceOf(account(address): 0xD34E06) -> 0
+    [3][STATICCALL] from=0x6d8981, to=WBNB, balanceOf((address): 0x6D8981) -> 0
+    [3][DELEGATECALL] from=0x6d8981, to=0x6d1879, 0x7855da66() -> 0x000000
+    [3][CALL] from=0x6d8981, to=BEP20Token, transferFrom(sender(address): 0xD34E06, recipient(address): 0xaCAac9, amount(uint256): 2149391795879372421620) -> True
+    [3][STATICCALL] from=0x6d8981, to=BiswapPair, getReserves() -> ['45936542359057455258529', '14428595754586697343863527', '1677479141']
+    [3][STATICCALL] from=0x6d8981, to=BiswapPair, swapFee() -> 2
+    [3][STATICCALL] from=0x6d8981, to=BEP20Token, balanceOf(account(address): 0xaCAac9) -> 14430745146382576716285147
+    [3][CALL] from=0x6d8981, to=BiswapPair, swap(amount0Out(uint256): 6828350468192566303, amount1Out(uint256): 0, to(address): 0x6D8981, data(bytes): b'') -> None
+      [4][CALL] from=BiswapPair, to=WBNB, transfer(dst(address): 0x6D8981, wad(uint256): 6828350468192566303) -> True
+      [4][STATICCALL] from=BiswapPair, to=WBNB, balanceOf((address): 0xaCAac9) -> 45929714008589262692226
+      [4][STATICCALL] from=BiswapPair, to=BEP20Token, balanceOf(account(address): 0xaCAac9) -> 14430745146382576716285147
+    [3][STATICCALL] from=0x6d8981, to=WBNB, balanceOf((address): 0x6D8981) -> 6828350468192566303
+    [3][STATICCALL] from=0x6d8981, to=WBNB, balanceOf((address): 0x6D8981) -> 6828350468192566303
+    [3][STATICCALL] from=0x6d8981, to=Diamond, balanceOf(account(address): 0xD34E06) -> 0
+    [3][DELEGATECALL] from=0x6d8981, to=0x6d1879, 0x7855da66() -> 0x000000
+    [3][CALL] from=0x6d8981, to=WBNB, transfer(dst(address): 0xA6C26b, wad(uint256): 6828350468192566303) -> True
+    [3][STATICCALL] from=0x6d8981, to=BiswapPair, getReserves() -> ['49650234346693324033', '612015894769976923299', '1677479141']
+    [3][STATICCALL] from=0x6d8981, to=BiswapPair, swapFee() -> 1
+    [3][STATICCALL] from=0x6d8981, to=WBNB, balanceOf((address): 0xA6C26b) -> 618844245238169489602
+    [3][CALL] from=0x6d8981, to=BiswapPair, swap(amount0Out(uint256): 547300732799141723, amount1Out(uint256): 0, to(address): 0xD34E06, data(bytes): b'') -> None
+      [4][CALL] from=BiswapPair, to=Diamond, transfer(recipient(address): 0xD34E06, amount(uint256): 547300732799141723) -> True
+      [4][STATICCALL] from=BiswapPair, to=Diamond, balanceOf(account(address): 0xA6C26b) -> 49102933613894182310
+      [4][STATICCALL] from=BiswapPair, to=WBNB, balanceOf((address): 0xA6C26b) -> 618844245238169489602
+    [3][STATICCALL] from=0x6d8981, to=Diamond, balanceOf(account(address): 0xD34E06) -> 547300732799141723
+    [3][STATICCALL] from=0x6d8981, to=Diamond, balanceOf(account(address): 0xD34E06) -> 547300732799141723
+  [2][STATICCALL] from=0xc4bea6, to=BEP20Token, balanceOf(account(address): 0x115134) -> 2122053959048604557452
+  [2][STATICCALL] from=0xc4bea6, to=BEP20Token, allowance(owner(address): 0x115134, spender(address): 0x6D8981) -> 9999999999913160000000000000000
+  [2][CALL] from=0xc4bea6, to=0x6d8981, 0x4f1f05bc() -> 0x000000
+    [3][STATICCALL] from=0x6d8981, to=Diamond, balanceOf(account(address): 0x115134) -> 0
+    [3][STATICCALL] from=0x6d8981, to=WBNB, balanceOf((address): 0x6D8981) -> 0
+    [3][DELEGATECALL] from=0x6d8981, to=0x6d1879, 0x7855da66() -> 0x000000
+    [3][CALL] from=0x6d8981, to=BEP20Token, transferFrom(sender(address): 0x115134, recipient(address): 0xaCAac9, amount(uint256): 2122053959048604557452) -> True
+    [3][STATICCALL] from=0x6d8981, to=BiswapPair, getReserves() -> ['45929714008589262692226', '14430745146382576716285147', '1677479141']
+    [3][STATICCALL] from=0x6d8981, to=BiswapPair, swapFee() -> 2
+    [3][STATICCALL] from=0x6d8981, to=BEP20Token, balanceOf(account(address): 0xaCAac9) -> 14432867200341625320842599
+    [3][CALL] from=0x6d8981, to=BiswapPair, swap(amount0Out(uint256): 6739508376263288932, amount1Out(uint256): 0, to(address): 0x6D8981, data(bytes): b'') -> None
+      [4][CALL] from=BiswapPair, to=WBNB, transfer(dst(address): 0x6D8981, wad(uint256): 6739508376263288932) -> True
+      [4][STATICCALL] from=BiswapPair, to=WBNB, balanceOf((address): 0xaCAac9) -> 45922974500212999403294
+      [4][STATICCALL] from=BiswapPair, to=BEP20Token, balanceOf(account(address): 0xaCAac9) -> 14432867200341625320842599
+    [3][STATICCALL] from=0x6d8981, to=WBNB, balanceOf((address): 0x6D8981) -> 6739508376263288932
+    [3][STATICCALL] from=0x6d8981, to=WBNB, balanceOf((address): 0x6D8981) -> 6739508376263288932
+    [3][STATICCALL] from=0x6d8981, to=Diamond, balanceOf(account(address): 0x115134) -> 0
+    [3][DELEGATECALL] from=0x6d8981, to=0x6d1879, 0x7855da66() -> 0x000000
+    [3][CALL] from=0x6d8981, to=WBNB, transfer(dst(address): 0xA6C26b, wad(uint256): 6739508376263288932) -> True
+    [3][STATICCALL] from=0x6d8981, to=BiswapPair, getReserves() -> ['49102933613894182310', '618844245238169489602', '1677479141']
+    [3][STATICCALL] from=0x6d8981, to=BiswapPair, swapFee() -> 1
+    [3][STATICCALL] from=0x6d8981, to=WBNB, balanceOf((address): 0xA6C26b) -> 625583753614432778534
+    [3][CALL] from=0x6d8981, to=BiswapPair, swap(amount0Out(uint256): 528470028953944942, amount1Out(uint256): 0, to(address): 0x115134, data(bytes): b'') -> None
+      [4][CALL] from=BiswapPair, to=Diamond, transfer(recipient(address): 0x115134, amount(uint256): 528470028953944942) -> True
+      [4][STATICCALL] from=BiswapPair, to=Diamond, balanceOf(account(address): 0xA6C26b) -> 48574463584940237368
+      [4][STATICCALL] from=BiswapPair, to=WBNB, balanceOf((address): 0xA6C26b) -> 625583753614432778534
+    [3][STATICCALL] from=0x6d8981, to=Diamond, balanceOf(account(address): 0x115134) -> 528470028953944942
+    [3][STATICCALL] from=0x6d8981, to=Diamond, balanceOf(account(address): 0x115134) -> 528470028953944942
+  [2][STATICCALL] from=0xc4bea6, to=BEP20Token, balanceOf(account(address): 0xa29406) -> 2108000436195101104333
+  [2][STATICCALL] from=0xc4bea6, to=BEP20Token, allowance(owner(address): 0xa29406, spender(address): 0x6D8981) -> 9999999999946000000000000000000
+  [2][CALL] from=0xc4bea6, to=0x6d8981, 0x4f1f05bc() -> 0x000000
+    [3][STATICCALL] from=0x6d8981, to=Diamond, balanceOf(account(address): 0xa29406) -> 0
+    [3][STATICCALL] from=0x6d8981, to=WBNB, balanceOf((address): 0x6D8981) -> 0
+    [3][DELEGATECALL] from=0x6d8981, to=0x6d1879, 0x7855da66() -> 0x000000
+    [3][CALL] from=0x6d8981, to=BEP20Token, transferFrom(sender(address): 0xa29406, recipient(address): 0xaCAac9, amount(uint256): 2108000436195101104333) -> True
+    [3][STATICCALL] from=0x6d8981, to=BiswapPair, getReserves() -> ['45922974500212999403294', '14432867200341625320842599', '1677479141']
+    [3][STATICCALL] from=0x6d8981, to=BiswapPair, swapFee() -> 2
+    [3][STATICCALL] from=0x6d8981, to=BEP20Token, balanceOf(account(address): 0xaCAac9) -> 14434975200777820421946932
+    [3][CALL] from=0x6d8981, to=BiswapPair, swap(amount0Out(uint256): 6692915356681801103, amount1Out(uint256): 0, to(address): 0x6D8981, data(bytes): b'') -> None
+      [4][CALL] from=BiswapPair, to=WBNB, transfer(dst(address): 0x6D8981, wad(uint256): 6692915356681801103) -> True
+      [4][STATICCALL] from=BiswapPair, to=WBNB, balanceOf((address): 0xaCAac9) -> 45916281584856317602191
+      [4][STATICCALL] from=BiswapPair, to=BEP20Token, balanceOf(account(address): 0xaCAac9) -> 14434975200777820421946932
+    [3][STATICCALL] from=0x6d8981, to=WBNB, balanceOf((address): 0x6D8981) -> 6692915356681801103
+    [3][STATICCALL] from=0x6d8981, to=WBNB, balanceOf((address): 0x6D8981) -> 6692915356681801103
+    [3][STATICCALL] from=0x6d8981, to=Diamond, balanceOf(account(address): 0xa29406) -> 0
+    [3][DELEGATECALL] from=0x6d8981, to=0x6d1879, 0x7855da66() -> 0x000000
+    [3][CALL] from=0x6d8981, to=WBNB, transfer(dst(address): 0xA6C26b, wad(uint256): 6692915356681801103) -> True
+    [3][STATICCALL] from=0x6d8981, to=BiswapPair, getReserves() -> ['48574463584940237368', '625583753614432778534', '1677479141']
+    [3][STATICCALL] from=0x6d8981, to=BiswapPair, swapFee() -> 1
+    [3][STATICCALL] from=0x6d8981, to=WBNB, balanceOf((address): 0xA6C26b) -> 632276668971114579637
+    [3][CALL] from=0x6d8981, to=BiswapPair, swap(amount0Out(uint256): 513672451320566776, amount1Out(uint256): 0, to(address): 0xa29406, data(bytes): b'') -> None
+      [4][CALL] from=BiswapPair, to=Diamond, transfer(recipient(address): 0xa29406, amount(uint256): 513672451320566776) -> True
+      [4][STATICCALL] from=BiswapPair, to=Diamond, balanceOf(account(address): 0xA6C26b) -> 48060791133619670592
+      [4][STATICCALL] from=BiswapPair, to=WBNB, balanceOf((address): 0xA6C26b) -> 632276668971114579637
+    [3][STATICCALL] from=0x6d8981, to=Diamond, balanceOf(account(address): 0xa29406) -> 513672451320566776
+    [3][STATICCALL] from=0x6d8981, to=Diamond, balanceOf(account(address): 0xa29406) -> 513672451320566776
+  [2][STATICCALL] from=0xc4bea6, to=BEP20Token, balanceOf(account(address): 0xCfe07c) -> 2099131625000005711844
+  [2][STATICCALL] from=0xc4bea6, to=BEP20Token, allowance(owner(address): 0xCfe07c, spender(address): 0x6D8981) -> 9999999999955510000000000000000
+  [2][CALL] from=0xc4bea6, to=0x6d8981, 0x4f1f05bc() -> 0x000000
+    [3][STATICCALL] from=0x6d8981, to=Diamond, balanceOf(account(address): 0xCfe07c) -> 0
+    [3][STATICCALL] from=0x6d8981, to=WBNB, balanceOf((address): 0x6D8981) -> 0
+    [3][DELEGATECALL] from=0x6d8981, to=0x6d1879, 0x7855da66() -> 0x000000
+    [3][CALL] from=0x6d8981, to=BEP20Token, transferFrom(sender(address): 0xCfe07c, recipient(address): 0xaCAac9, amount(uint256): 2099131625000005711844) -> True
+    [3][STATICCALL] from=0x6d8981, to=BiswapPair, getReserves() -> ['45916281584856317602191', '14434975200777820421946932', '1677479141']
+    [3][STATICCALL] from=0x6d8981, to=BiswapPair, swapFee() -> 2
+    [3][STATICCALL] from=0x6d8981, to=BEP20Token, balanceOf(account(address): 0xaCAac9) -> 14437074332402820427658776
+    [3][CALL] from=0x6d8981, to=BiswapPair, swap(amount0Out(uint256): 6662816571913523469, amount1Out(uint256): 0, to(address): 0x6D8981, data(bytes): b'') -> None
+      [4][CALL] from=BiswapPair, to=WBNB, transfer(dst(address): 0x6D8981, wad(uint256): 6662816571913523469) -> True
+      [4][STATICCALL] from=BiswapPair, to=WBNB, balanceOf((address): 0xaCAac9) -> 45909618768284404078722
+      [4][STATICCALL] from=BiswapPair, to=BEP20Token, balanceOf(account(address): 0xaCAac9) -> 14437074332402820427658776
+    [3][STATICCALL] from=0x6d8981, to=WBNB, balanceOf((address): 0x6D8981) -> 6662816571913523469
+    [3][STATICCALL] from=0x6d8981, to=WBNB, balanceOf((address): 0x6D8981) -> 6662816571913523469
+    [3][STATICCALL] from=0x6d8981, to=Diamond, balanceOf(account(address): 0xCfe07c) -> 0
+    [3][DELEGATECALL] from=0x6d8981, to=0x6d1879, 0x7855da66() -> 0x000000
+    [3][CALL] from=0x6d8981, to=WBNB, transfer(dst(address): 0xA6C26b, wad(uint256): 6662816571913523469) -> True
+    [3][STATICCALL] from=0x6d8981, to=BiswapPair, getReserves() -> ['48060791133619670592', '632276668971114579637', '1677479141']
+    [3][STATICCALL] from=0x6d8981, to=BiswapPair, swapFee() -> 1
+    [3][STATICCALL] from=0x6d8981, to=WBNB, balanceOf((address): 0xA6C26b) -> 638939485543028103106
+    [3][CALL] from=0x6d8981, to=BiswapPair, swap(amount0Out(uint256): 500678637894439277, amount1Out(uint256): 0, to(address): 0xCfe07c, data(bytes): b'') -> None
+      [4][CALL] from=BiswapPair, to=Diamond, transfer(recipient(address): 0xCfe07c, amount(uint256): 500678637894439277) -> True
+      [4][STATICCALL] from=BiswapPair, to=Diamond, balanceOf(account(address): 0xA6C26b) -> 47560112495725231315
+      [4][STATICCALL] from=BiswapPair, to=WBNB, balanceOf((address): 0xA6C26b) -> 638939485543028103106
+    [3][STATICCALL] from=0x6d8981, to=Diamond, balanceOf(account(address): 0xCfe07c) -> 500678637894439277
+    [3][STATICCALL] from=0x6d8981, to=Diamond, balanceOf(account(address): 0xCfe07c) -> 500678637894439277
+  [2][STATICCALL] from=0xc4bea6, to=BEP20Token, balanceOf(account(address): 0x7E5a4D) -> 2095474597947705343101
+  [2][STATICCALL] from=0xc4bea6, to=BEP20Token, allowance(owner(address): 0x7E5a4D, spender(address): 0x6D8981) -> 9999999999996000000000000000000
+  [2][CALL] from=0xc4bea6, to=0x6d8981, 0x4f1f05bc() -> 0x000000
+    [3][STATICCALL] from=0x6d8981, to=Diamond, balanceOf(account(address): 0x7E5a4D) -> 0
+    [3][STATICCALL] from=0x6d8981, to=WBNB, balanceOf((address): 0x6D8981) -> 0
+    [3][DELEGATECALL] from=0x6d8981, to=0x6d1879, 0x7855da66() -> 0x000000
+    [3][CALL] from=0x6d8981, to=BEP20Token, transferFrom(sender(address): 0x7E5a4D, recipient(address): 0xaCAac9, amount(uint256): 2095474597947705343101) -> True
+    [3][STATICCALL] from=0x6d8981, to=BiswapPair, getReserves() -> ['45909618768284404078722', '14437074332402820427658776', '1677479141']
+    [3][STATICCALL] from=0x6d8981, to=BiswapPair, swapFee() -> 2
+    [3][STATICCALL] from=0x6d8981, to=BEP20Token, balanceOf(account(address): 0xaCAac9) -> 14439169807000768133001877
+    [3][CALL] from=0x6d8981, to=BiswapPair, swap(amount0Out(uint256): 6649278608163549751, amount1Out(uint256): 0, to(address): 0x6D8981, data(bytes): b'') -> None
+      [4][CALL] from=BiswapPair, to=WBNB, transfer(dst(address): 0x6D8981, wad(uint256): 6649278608163549751) -> True
+      [4][STATICCALL] from=BiswapPair, to=WBNB, balanceOf((address): 0xaCAac9) -> 45902969489676240528971
+      [4][STATICCALL] from=BiswapPair, to=BEP20Token, balanceOf(account(address): 0xaCAac9) -> 14439169807000768133001877
+    [3][STATICCALL] from=0x6d8981, to=WBNB, balanceOf((address): 0x6D8981) -> 6649278608163549751
+    [3][STATICCALL] from=0x6d8981, to=WBNB, balanceOf((address): 0x6D8981) -> 6649278608163549751
+    [3][STATICCALL] from=0x6d8981, to=Diamond, balanceOf(account(address): 0x7E5a4D) -> 0
+    [3][DELEGATECALL] from=0x6d8981, to=0x6d1879, 0x7855da66() -> 0x000000
+    [3][CALL] from=0x6d8981, to=WBNB, transfer(dst(address): 0xA6C26b, wad(uint256): 6649278608163549751) -> True
+    [3][STATICCALL] from=0x6d8981, to=BiswapPair, getReserves() -> ['47560112495725231315', '638939485543028103106', '1677479141']
+    [3][STATICCALL] from=0x6d8981, to=BiswapPair, swapFee() -> 1
+    [3][STATICCALL] from=0x6d8981, to=WBNB, balanceOf((address): 0xA6C26b) -> 645588764151191652857
+    [3][CALL] from=0x6d8981, to=BiswapPair, swap(amount0Out(uint256): 489363306236281040, amount1Out(uint256): 0, to(address): 0x7E5a4D, data(bytes): b'') -> None
+      [4][CALL] from=BiswapPair, to=Diamond, transfer(recipient(address): 0x7E5a4D, amount(uint256): 489363306236281040) -> True
+      [4][STATICCALL] from=BiswapPair, to=Diamond, balanceOf(account(address): 0xA6C26b) -> 47070749189488950275
+      [4][STATICCALL] from=BiswapPair, to=WBNB, balanceOf((address): 0xA6C26b) -> 645588764151191652857
+    [3][STATICCALL] from=0x6d8981, to=Diamond, balanceOf(account(address): 0x7E5a4D) -> 489363306236281040
+    [3][STATICCALL] from=0x6d8981, to=Diamond, balanceOf(account(address): 0x7E5a4D) -> 489363306236281040
+  [2][STATICCALL] from=0xc4bea6, to=BEP20Token, balanceOf(account(address): 0x93F27E) -> 2082239937151773018638
+  [2][STATICCALL] from=0xc4bea6, to=BEP20Token, allowance(owner(address): 0x93F27E, spender(address): 0x6D8981) -> 999999852115739171350049886
+  [2][CALL] from=0xc4bea6, to=0x6d8981, 0x4f1f05bc() -> 0x000000
+    [3][STATICCALL] from=0x6d8981, to=Diamond, balanceOf(account(address): 0x93F27E) -> 0
+    [3][STATICCALL] from=0x6d8981, to=WBNB, balanceOf((address): 0x6D8981) -> 0
+    [3][DELEGATECALL] from=0x6d8981, to=0x6d1879, 0x7855da66() -> 0x000000
+    [3][CALL] from=0x6d8981, to=BEP20Token, transferFrom(sender(address): 0x93F27E, recipient(address): 0xaCAac9, amount(uint256): 2082239937151773018638) -> True
+    [3][STATICCALL] from=0x6d8981, to=BiswapPair, getReserves() -> ['45902969489676240528971', '14439169807000768133001877', '1677479141']
+    [3][STATICCALL] from=0x6d8981, to=BiswapPair, swapFee() -> 2
+    [3][STATICCALL] from=0x6d8981, to=BEP20Token, balanceOf(account(address): 0xaCAac9) -> 14441252046937919906020515
+    [3][CALL] from=0x6d8981, to=BiswapPair, swap(amount0Out(uint256): 6605373378329987786, amount1Out(uint256): 0, to(address): 0x6D8981, data(bytes): b'') -> None
+      [4][CALL] from=BiswapPair, to=WBNB, transfer(dst(address): 0x6D8981, wad(uint256): 6605373378329987786) -> True
+      [4][STATICCALL] from=BiswapPair, to=WBNB, balanceOf((address): 0xaCAac9) -> 45896364116297910541185
+      [4][STATICCALL] from=BiswapPair, to=BEP20Token, balanceOf(account(address): 0xaCAac9) -> 14441252046937919906020515
+    [3][STATICCALL] from=0x6d8981, to=WBNB, balanceOf((address): 0x6D8981) -> 6605373378329987786
+    [3][STATICCALL] from=0x6d8981, to=WBNB, balanceOf((address): 0x6D8981) -> 6605373378329987786
+    [3][STATICCALL] from=0x6d8981, to=Diamond, balanceOf(account(address): 0x93F27E) -> 0
+    [3][DELEGATECALL] from=0x6d8981, to=0x6d1879, 0x7855da66() -> 0x000000
+    [3][CALL] from=0x6d8981, to=WBNB, transfer(dst(address): 0xA6C26b, wad(uint256): 6605373378329987786) -> True
+    [3][STATICCALL] from=0x6d8981, to=BiswapPair, getReserves() -> ['47070749189488950275', '645588764151191652857', '1677479141']
+    [3][STATICCALL] from=0x6d8981, to=BiswapPair, swapFee() -> 1
+    [3][STATICCALL] from=0x6d8981, to=WBNB, balanceOf((address): 0xA6C26b) -> 652194137529521640643
+    [3][CALL] from=0x6d8981, to=BiswapPair, swap(amount0Out(uint256): 476257116866103323, amount1Out(uint256): 0, to(address): 0x93F27E, data(bytes): b'') -> None
+      [4][CALL] from=BiswapPair, to=Diamond, transfer(recipient(address): 0x93F27E, amount(uint256): 476257116866103323) -> True
+      [4][STATICCALL] from=BiswapPair, to=Diamond, balanceOf(account(address): 0xA6C26b) -> 46594492072622846952
+      [4][STATICCALL] from=BiswapPair, to=WBNB, balanceOf((address): 0xA6C26b) -> 652194137529521640643
+    [3][STATICCALL] from=0x6d8981, to=Diamond, balanceOf(account(address): 0x93F27E) -> 476257116866103323
+    [3][STATICCALL] from=0x6d8981, to=Diamond, balanceOf(account(address): 0x93F27E) -> 476257116866103323
+  [2][STATICCALL] from=0xc4bea6, to=BEP20Token, balanceOf(account(address): 0x1Ac037) -> 2051931731739843088417
+  [2][STATICCALL] from=0xc4bea6, to=BEP20Token, allowance(owner(address): 0x1Ac037, spender(address): 0x6D8981) -> 999998683000000000000000000
+  [2][CALL] from=0xc4bea6, to=0x6d8981, 0x4f1f05bc() -> 0x000000
+    [3][STATICCALL] from=0x6d8981, to=Diamond, balanceOf(account(address): 0x1Ac037) -> 0
+    [3][STATICCALL] from=0x6d8981, to=WBNB, balanceOf((address): 0x6D8981) -> 0
+    [3][DELEGATECALL] from=0x6d8981, to=0x6d1879, 0x7855da66() -> 0x000000
+    [3][CALL] from=0x6d8981, to=BEP20Token, transferFrom(sender(address): 0x1Ac037, recipient(address): 0xaCAac9, amount(uint256): 2051931731739843088417) -> True
+    [3][STATICCALL] from=0x6d8981, to=BiswapPair, getReserves() -> ['45896364116297910541185', '14441252046937919906020515', '1677479141']
+    [3][STATICCALL] from=0x6d8981, to=BiswapPair, swapFee() -> 2
+    [3][STATICCALL] from=0x6d8981, to=BEP20Token, balanceOf(account(address): 0xaCAac9) -> 14443303978669659749108932
+    [3][CALL] from=0x6d8981, to=BiswapPair, swap(amount0Out(uint256): 6507367035552551078, amount1Out(uint256): 0, to(address): 0x6D8981, data(bytes): b'') -> None
+      [4][CALL] from=BiswapPair, to=WBNB, transfer(dst(address): 0x6D8981, wad(uint256): 6507367035552551078) -> True
+      [4][STATICCALL] from=BiswapPair, to=WBNB, balanceOf((address): 0xaCAac9) -> 45889856749262357990107
+      [4][STATICCALL] from=BiswapPair, to=BEP20Token, balanceOf(account(address): 0xaCAac9) -> 14443303978669659749108932
+    [3][STATICCALL] from=0x6d8981, to=WBNB, balanceOf((address): 0x6D8981) -> 6507367035552551078
+    [3][STATICCALL] from=0x6d8981, to=WBNB, balanceOf((address): 0x6D8981) -> 6507367035552551078
+    [3][STATICCALL] from=0x6d8981, to=Diamond, balanceOf(account(address): 0x1Ac037) -> 0
+    [3][DELEGATECALL] from=0x6d8981, to=0x6d1879, 0x7855da66() -> 0x000000
+    [3][CALL] from=0x6d8981, to=WBNB, transfer(dst(address): 0xA6C26b, wad(uint256): 6507367035552551078) -> True
+    [3][STATICCALL] from=0x6d8981, to=BiswapPair, getReserves() -> ['46594492072622846952', '652194137529521640643', '1677479141']
+    [3][STATICCALL] from=0x6d8981, to=BiswapPair, swapFee() -> 1
+    [3][STATICCALL] from=0x6d8981, to=WBNB, balanceOf((address): 0xA6C26b) -> 658701504565074191721
+    [3][CALL] from=0x6d8981, to=BiswapPair, swap(amount0Out(uint256): 459855100734702859, amount1Out(uint256): 0, to(address): 0x1Ac037, data(bytes): b'') -> None
+      [4][CALL] from=BiswapPair, to=Diamond, transfer(recipient(address): 0x1Ac037, amount(uint256): 459855100734702859) -> True
+      [4][STATICCALL] from=BiswapPair, to=Diamond, balanceOf(account(address): 0xA6C26b) -> 46134636971888144093
+      [4][STATICCALL] from=BiswapPair, to=WBNB, balanceOf((address): 0xA6C26b) -> 658701504565074191721
+    [3][STATICCALL] from=0x6d8981, to=Diamond, balanceOf(account(address): 0x1Ac037) -> 459855100734702859
+    [3][STATICCALL] from=0x6d8981, to=Diamond, balanceOf(account(address): 0x1Ac037) -> 459855100734702859
+  [2][STATICCALL] from=0xc4bea6, to=BEP20Token, balanceOf(account(address): 0x057D0f) -> 2030102173509553537593
+  [2][STATICCALL] from=0xc4bea6, to=BEP20Token, allowance(owner(address): 0x057D0f, spender(address): 0x6D8981) -> 999999899556420373728781175
+  [2][CALL] from=0xc4bea6, to=0x6d8981, 0x4f1f05bc() -> 0x000000
+    [3][STATICCALL] from=0x6d8981, to=Diamond, balanceOf(account(address): 0x057D0f) -> 0
+    [3][STATICCALL] from=0x6d8981, to=WBNB, balanceOf((address): 0x6D8981) -> 0
+    [3][DELEGATECALL] from=0x6d8981, to=0x6d1879, 0x7855da66() -> 0x000000
+    [3][CALL] from=0x6d8981, to=BEP20Token, transferFrom(sender(address): 0x057D0f, recipient(address): 0xaCAac9, amount(uint256): 2030102173509553537593) -> True
+    [3][STATICCALL] from=0x6d8981, to=BiswapPair, getReserves() -> ['45889856749262357990107', '14443303978669659749108932', '1677479141']
+    [3][STATICCALL] from=0x6d8981, to=BiswapPair, swapFee() -> 2
+    [3][STATICCALL] from=0x6d8981, to=BEP20Token, balanceOf(account(address): 0xaCAac9) -> 14445334080843169302646525
+    [3][CALL] from=0x6d8981, to=BiswapPair, swap(amount0Out(uint256): 6436320637882557962, amount1Out(uint256): 0, to(address): 0x6D8981, data(bytes): b'') -> None
+      [4][CALL] from=BiswapPair, to=WBNB, transfer(dst(address): 0x6D8981, wad(uint256): 6436320637882557962) -> True
+      [4][STATICCALL] from=BiswapPair, to=WBNB, balanceOf((address): 0xaCAac9) -> 45883420428624475432145
+      [4][STATICCALL] from=BiswapPair, to=BEP20Token, balanceOf(account(address): 0xaCAac9) -> 14445334080843169302646525
+    [3][STATICCALL] from=0x6d8981, to=WBNB, balanceOf((address): 0x6D8981) -> 6436320637882557962
+    [3][STATICCALL] from=0x6d8981, to=WBNB, balanceOf((address): 0x6D8981) -> 6436320637882557962
+    [3][STATICCALL] from=0x6d8981, to=Diamond, balanceOf(account(address): 0x057D0f) -> 0
+    [3][DELEGATECALL] from=0x6d8981, to=0x6d1879, 0x7855da66() -> 0x000000
+    [3][CALL] from=0x6d8981, to=WBNB, transfer(dst(address): 0xA6C26b, wad(uint256): 6436320637882557962) -> True
+    [3][STATICCALL] from=0x6d8981, to=BiswapPair, getReserves() -> ['46134636971888144093', '658701504565074191721', '1677479141']
+    [3][STATICCALL] from=0x6d8981, to=BiswapPair, swapFee() -> 1
+    [3][STATICCALL] from=0x6d8981, to=WBNB, balanceOf((address): 0xA6C26b) -> 665137825202956749683
+    [3][CALL] from=0x6d8981, to=BiswapPair, swap(amount0Out(uint256): 445987640495800280, amount1Out(uint256): 0, to(address): 0x057D0f, data(bytes): b'') -> None
+      [4][CALL] from=BiswapPair, to=Diamond, transfer(recipient(address): 0x057D0f, amount(uint256): 445987640495800280) -> True
+      [4][STATICCALL] from=BiswapPair, to=Diamond, balanceOf(account(address): 0xA6C26b) -> 45688649331392343813
+      [4][STATICCALL] from=BiswapPair, to=WBNB, balanceOf((address): 0xA6C26b) -> 665137825202956749683
+    [3][STATICCALL] from=0x6d8981, to=Diamond, balanceOf(account(address): 0x057D0f) -> 445987640495800280
+    [3][STATICCALL] from=0x6d8981, to=Diamond, balanceOf(account(address): 0x057D0f) -> 445987640495800280
+  [2][STATICCALL] from=0xc4bea6, to=BEP20Token, balanceOf(account(address): 0x6066b4) -> 2010971096233098562713
+  [2][STATICCALL] from=0xc4bea6, to=BEP20Token, allowance(owner(address): 0x6066b4, spender(address): 0x6D8981) -> 57896044618658097711785492504343953926634992332820282019708792003956564819968
+  [2][CALL] from=0xc4bea6, to=0x6d8981, 0x4f1f05bc() -> 0x000000
+    [3][STATICCALL] from=0x6d8981, to=Diamond, balanceOf(account(address): 0x6066b4) -> 0
+    [3][STATICCALL] from=0x6d8981, to=WBNB, balanceOf((address): 0x6D8981) -> 0
+    [3][DELEGATECALL] from=0x6d8981, to=0x6d1879, 0x7855da66() -> 0x000000
+    [3][CALL] from=0x6d8981, to=BEP20Token, transferFrom(sender(address): 0x6066b4, recipient(address): 0xaCAac9, amount(uint256): 2010971096233098562713) -> True
+    [3][STATICCALL] from=0x6d8981, to=BiswapPair, getReserves() -> ['45883420428624475432145', '14445334080843169302646525', '1677479141']
+    [3][STATICCALL] from=0x6d8981, to=BiswapPair, swapFee() -> 2
+    [3][STATICCALL] from=0x6d8981, to=BEP20Token, balanceOf(account(address): 0xaCAac9) -> 14447345051939402401209238
+    [3][CALL] from=0x6d8981, to=BiswapPair, swap(amount0Out(uint256): 6373885106091134045, amount1Out(uint256): 0, to(address): 0x6D8981, data(bytes): b'') -> None
+      [4][CALL] from=BiswapPair, to=WBNB, transfer(dst(address): 0x6D8981, wad(uint256): 6373885106091134045) -> True
+      [4][STATICCALL] from=BiswapPair, to=WBNB, balanceOf((address): 0xaCAac9) -> 45877046543518384298100
+      [4][STATICCALL] from=BiswapPair, to=BEP20Token, balanceOf(account(address): 0xaCAac9) -> 14447345051939402401209238
+    [3][STATICCALL] from=0x6d8981, to=WBNB, balanceOf((address): 0x6D8981) -> 6373885106091134045
+    [3][STATICCALL] from=0x6d8981, to=WBNB, balanceOf((address): 0x6D8981) -> 6373885106091134045
+    [3][STATICCALL] from=0x6d8981, to=Diamond, balanceOf(account(address): 0x6066b4) -> 0
+    [3][DELEGATECALL] from=0x6d8981, to=0x6d1879, 0x7855da66() -> 0x000000
+    [3][CALL] from=0x6d8981, to=WBNB, transfer(dst(address): 0xA6C26b, wad(uint256): 6373885106091134045) -> True
+    [3][STATICCALL] from=0x6d8981, to=BiswapPair, getReserves() -> ['45688649331392343813', '665137825202956749683', '1677479141']
+    [3][STATICCALL] from=0x6d8981, to=BiswapPair, swapFee() -> 1
+    [3][STATICCALL] from=0x6d8981, to=WBNB, balanceOf((address): 0xA6C26b) -> 671511710309047883728
+    [3][CALL] from=0x6d8981, to=BiswapPair, swap(amount0Out(uint256): 433240022839703801, amount1Out(uint256): 0, to(address): 0x6066b4, data(bytes): b'') -> None
+      [4][CALL] from=BiswapPair, to=Diamond, transfer(recipient(address): 0x6066b4, amount(uint256): 433240022839703801) -> True
+      [4][STATICCALL] from=BiswapPair, to=Diamond, balanceOf(account(address): 0xA6C26b) -> 45255409308552640012
+      [4][STATICCALL] from=BiswapPair, to=WBNB, balanceOf((address): 0xA6C26b) -> 671511710309047883728
+    [3][STATICCALL] from=0x6d8981, to=Diamond, balanceOf(account(address): 0x6066b4) -> 433240022839703801
+    [3][STATICCALL] from=0x6d8981, to=Diamond, balanceOf(account(address): 0x6066b4) -> 433240022839703801
+  [2][STATICCALL] from=0xc4bea6, to=BEP20Token, balanceOf(account(address): 0x846D72) -> 1975678970448648465617
+  [2][STATICCALL] from=0xc4bea6, to=BEP20Token, allowance(owner(address): 0x846D72, spender(address): 0x6D8981) -> 9999999999988000000000000000000
+  [2][CALL] from=0xc4bea6, to=0x6d8981, 0x4f1f05bc() -> 0x000000
+    [3][STATICCALL] from=0x6d8981, to=Diamond, balanceOf(account(address): 0x846D72) -> 0
+    [3][STATICCALL] from=0x6d8981, to=WBNB, balanceOf((address): 0x6D8981) -> 0
+    [3][DELEGATECALL] from=0x6d8981, to=0x6d1879, 0x7855da66() -> 0x000000
+    [3][CALL] from=0x6d8981, to=BEP20Token, transferFrom(sender(address): 0x846D72, recipient(address): 0xaCAac9, amount(uint256): 1975678970448648465617) -> True
+    [3][STATICCALL] from=0x6d8981, to=BiswapPair, getReserves() -> ['45877046543518384298100', '14447345051939402401209238', '1677479141']
+    [3][STATICCALL] from=0x6d8981, to=BiswapPair, swapFee() -> 2
+    [3][STATICCALL] from=0x6d8981, to=BEP20Token, balanceOf(account(address): 0xaCAac9) -> 14449320730909851049674855
+    [3][CALL] from=0x6d8981, to=BiswapPair, swap(amount0Out(uint256): 6260298727630474044, amount1Out(uint256): 0, to(address): 0x6D8981, data(bytes): b'') -> None
+      [4][CALL] from=BiswapPair, to=WBNB, transfer(dst(address): 0x6D8981, wad(uint256): 6260298727630474044) -> True
+      [4][STATICCALL] from=BiswapPair, to=WBNB, balanceOf((address): 0xaCAac9) -> 45870786244790753824056
+      [4][STATICCALL] from=BiswapPair, to=BEP20Token, balanceOf(account(address): 0xaCAac9) -> 14449320730909851049674855
+    [3][STATICCALL] from=0x6d8981, to=WBNB, balanceOf((address): 0x6D8981) -> 6260298727630474044
+    [3][STATICCALL] from=0x6d8981, to=WBNB, balanceOf((address): 0x6D8981) -> 6260298727630474044
+    [3][STATICCALL] from=0x6d8981, to=Diamond, balanceOf(account(address): 0x846D72) -> 0
+    [3][DELEGATECALL] from=0x6d8981, to=0x6d1879, 0x7855da66() -> 0x000000
+    [3][CALL] from=0x6d8981, to=WBNB, transfer(dst(address): 0xA6C26b, wad(uint256): 6260298727630474044) -> True
+    [3][STATICCALL] from=0x6d8981, to=BiswapPair, getReserves() -> ['45255409308552640012', '671511710309047883728', '1677479141']
+    [3][STATICCALL] from=0x6d8981, to=BiswapPair, swapFee() -> 1
+    [3][STATICCALL] from=0x6d8981, to=WBNB, balanceOf((address): 0xA6C26b) -> 677772009036678357772
+    [3][CALL] from=0x6d8981, to=BiswapPair, swap(amount0Out(uint256): 417591283505306148, amount1Out(uint256): 0, to(address): 0x846D72, data(bytes): b'') -> None
+      [4][CALL] from=BiswapPair, to=Diamond, transfer(recipient(address): 0x846D72, amount(uint256): 417591283505306148) -> True
+      [4][STATICCALL] from=BiswapPair, to=Diamond, balanceOf(account(address): 0xA6C26b) -> 44837818025047333864
+      [4][STATICCALL] from=BiswapPair, to=WBNB, balanceOf((address): 0xA6C26b) -> 677772009036678357772
+    [3][STATICCALL] from=0x6d8981, to=Diamond, balanceOf(account(address): 0x846D72) -> 417591283505306148
+    [3][STATICCALL] from=0x6d8981, to=Diamond, balanceOf(account(address): 0x846D72) -> 417591283505306148
+  [2][STATICCALL] from=0xc4bea6, to=BEP20Token, balanceOf(account(address): 0xF7a6AB) -> 1902123531854006290902
+  [2][STATICCALL] from=0xc4bea6, to=BEP20Token, allowance(owner(address): 0xF7a6AB, spender(address): 0x6D8981) -> 0
+  [2][STATICCALL] from=0xc4bea6, to=BEP20Token, balanceOf(account(address): 0xD36AC0) -> 1881663547193424815874
+  [2][STATICCALL] from=0xc4bea6, to=BEP20Token, allowance(owner(address): 0xD36AC0, spender(address): 0x6D8981) -> 9999999992902483321121416216445
+  [2][CALL] from=0xc4bea6, to=0x6d8981, 0x4f1f05bc() -> 0x000000
+    [3][STATICCALL] from=0x6d8981, to=Diamond, balanceOf(account(address): 0xD36AC0) -> 0
+    [3][STATICCALL] from=0x6d8981, to=WBNB, balanceOf((address): 0x6D8981) -> 0
+    [3][DELEGATECALL] from=0x6d8981, to=0x6d1879, 0x7855da66() -> 0x000000
+    [3][CALL] from=0x6d8981, to=BEP20Token, transferFrom(sender(address): 0xD36AC0, recipient(address): 0xaCAac9, amount(uint256): 1881663547193424815874) -> True
+    [3][STATICCALL] from=0x6d8981, to=BiswapPair, getReserves() -> ['45870786244790753824056', '14449320730909851049674855', '1677479141']
+    [3][STATICCALL] from=0x6d8981, to=BiswapPair, swapFee() -> 2
+    [3][STATICCALL] from=0x6d8981, to=BEP20Token, balanceOf(account(address): 0xaCAac9) -> 14451202394457044474490729
+    [3][CALL] from=0x6d8981, to=BiswapPair, swap(amount0Out(uint256): 5960803791019033905, amount1Out(uint256): 0, to(address): 0x6D8981, data(bytes): b'') -> None
+      [4][CALL] from=BiswapPair, to=WBNB, transfer(dst(address): 0x6D8981, wad(uint256): 5960803791019033905) -> True
+      [4][STATICCALL] from=BiswapPair, to=WBNB, balanceOf((address): 0xaCAac9) -> 45864825440999734790151
+      [4][STATICCALL] from=BiswapPair, to=BEP20Token, balanceOf(account(address): 0xaCAac9) -> 14451202394457044474490729
+    [3][STATICCALL] from=0x6d8981, to=WBNB, balanceOf((address): 0x6D8981) -> 5960803791019033905
+    [3][STATICCALL] from=0x6d8981, to=WBNB, balanceOf((address): 0x6D8981) -> 5960803791019033905
+    [3][STATICCALL] from=0x6d8981, to=Diamond, balanceOf(account(address): 0xD36AC0) -> 0
+    [3][DELEGATECALL] from=0x6d8981, to=0x6d1879, 0x7855da66() -> 0x000000
+    [3][CALL] from=0x6d8981, to=WBNB, transfer(dst(address): 0xA6C26b, wad(uint256): 5960803791019033905) -> True
+    [3][STATICCALL] from=0x6d8981, to=BiswapPair, getReserves() -> ['44837818025047333864', '677772009036678357772', '1677479141']
+    [3][STATICCALL] from=0x6d8981, to=BiswapPair, swapFee() -> 1
+    [3][STATICCALL] from=0x6d8981, to=WBNB, balanceOf((address): 0xA6C26b) -> 683732812827697391677
+    [3][CALL] from=0x6d8981, to=BiswapPair, swap(amount0Out(uint256): 390509990120621031, amount1Out(uint256): 0, to(address): 0xD36AC0, data(bytes): b'') -> None
+      [4][CALL] from=BiswapPair, to=Diamond, transfer(recipient(address): 0xD36AC0, amount(uint256): 390509990120621031) -> True
+      [4][STATICCALL] from=BiswapPair, to=Diamond, balanceOf(account(address): 0xA6C26b) -> 44447308034926712833
+      [4][STATICCALL] from=BiswapPair, to=WBNB, balanceOf((address): 0xA6C26b) -> 683732812827697391677
+    [3][STATICCALL] from=0x6d8981, to=Diamond, balanceOf(account(address): 0xD36AC0) -> 390509990120621031
+    [3][STATICCALL] from=0x6d8981, to=Diamond, balanceOf(account(address): 0xD36AC0) -> 390509990120621031
+  [2][STATICCALL] from=0xc4bea6, to=BEP20Token, balanceOf(account(address): 0xfBdC6d) -> 1863553422410959755157
+  [2][STATICCALL] from=0xc4bea6, to=BEP20Token, allowance(owner(address): 0xfBdC6d, spender(address): 0x6D8981) -> 9999999992027718701230813390035
+  [2][CALL] from=0xc4bea6, to=0x6d8981, 0x4f1f05bc() -> 0x000000
+    [3][STATICCALL] from=0x6d8981, to=Diamond, balanceOf(account(address): 0xfBdC6d) -> 0
+    [3][STATICCALL] from=0x6d8981, to=WBNB, balanceOf((address): 0x6D8981) -> 0
+    [3][DELEGATECALL] from=0x6d8981, to=0x6d1879, 0x7855da66() -> 0x000000
+    [3][CALL] from=0x6d8981, to=BEP20Token, transferFrom(sender(address): 0xfBdC6d, recipient(address): 0xaCAac9, amount(uint256): 1863553422410959755157) -> True
+    [3][STATICCALL] from=0x6d8981, to=BiswapPair, getReserves() -> ['45864825440999734790151', '14451202394457044474490729', '1677479141']
+    [3][STATICCALL] from=0x6d8981, to=BiswapPair, swapFee() -> 2
+    [3][STATICCALL] from=0x6d8981, to=BEP20Token, balanceOf(account(address): 0xaCAac9) -> 14453065947879455434245886
+    [3][CALL] from=0x6d8981, to=BiswapPair, swap(amount0Out(uint256): 5901905631556793004, amount1Out(uint256): 0, to(address): 0x6D8981, data(bytes): b'') -> None
+      [4][CALL] from=BiswapPair, to=WBNB, transfer(dst(address): 0x6D8981, wad(uint256): 5901905631556793004) -> True
+      [4][STATICCALL] from=BiswapPair, to=WBNB, balanceOf((address): 0xaCAac9) -> 45858923535368177997147
+      [4][STATICCALL] from=BiswapPair, to=BEP20Token, balanceOf(account(address): 0xaCAac9) -> 14453065947879455434245886
+    [3][STATICCALL] from=0x6d8981, to=WBNB, balanceOf((address): 0x6D8981) -> 5901905631556793004
+    [3][STATICCALL] from=0x6d8981, to=WBNB, balanceOf((address): 0x6D8981) -> 5901905631556793004
+    [3][STATICCALL] from=0x6d8981, to=Diamond, balanceOf(account(address): 0xfBdC6d) -> 0
+    [3][DELEGATECALL] from=0x6d8981, to=0x6d1879, 0x7855da66() -> 0x000000
+    [3][CALL] from=0x6d8981, to=WBNB, transfer(dst(address): 0xA6C26b, wad(uint256): 5901905631556793004) -> True
+    [3][STATICCALL] from=0x6d8981, to=BiswapPair, getReserves() -> ['44447308034926712833', '683732812827697391677', '1677479141']
+    [3][STATICCALL] from=0x6d8981, to=BiswapPair, swapFee() -> 1
+    [3][STATICCALL] from=0x6d8981, to=WBNB, balanceOf((address): 0xA6C26b) -> 689634718459254184681
+    [3][CALL] from=0x6d8981, to=BiswapPair, swap(amount0Out(uint256): 380003688202750430, amount1Out(uint256): 0, to(address): 0xfBdC6d, data(bytes): b'') -> None
+      [4][CALL] from=BiswapPair, to=Diamond, transfer(recipient(address): 0xfBdC6d, amount(uint256): 380003688202750430) -> True
+      [4][STATICCALL] from=BiswapPair, to=Diamond, balanceOf(account(address): 0xA6C26b) -> 44067304346723962403
+      [4][STATICCALL] from=BiswapPair, to=WBNB, balanceOf((address): 0xA6C26b) -> 689634718459254184681
+    [3][STATICCALL] from=0x6d8981, to=Diamond, balanceOf(account(address): 0xfBdC6d) -> 380003688202750430
+    [3][STATICCALL] from=0x6d8981, to=Diamond, balanceOf(account(address): 0xfBdC6d) -> 380003688202750430
+  [2][STATICCALL] from=0xc4bea6, to=BEP20Token, balanceOf(account(address): 0xaA1C48) -> 1847595940560621940994
+  [2][STATICCALL] from=0xc4bea6, to=BEP20Token, allowance(owner(address): 0xaA1C48, spender(address): 0x6D8981) -> 39614081256132168796771975168
+  [2][CALL] from=0xc4bea6, to=0x6d8981, 0x4f1f05bc() -> 0x000000
+    [3][STATICCALL] from=0x6d8981, to=Diamond, balanceOf(account(address): 0xaA1C48) -> 0
+    [3][STATICCALL] from=0x6d8981, to=WBNB, balanceOf((address): 0x6D8981) -> 0
+    [3][DELEGATECALL] from=0x6d8981, to=0x6d1879, 0x7855da66() -> 0x000000
+    [3][CALL] from=0x6d8981, to=BEP20Token, transferFrom(sender(address): 0xaA1C48, recipient(address): 0xaCAac9, amount(uint256): 1847595940560621940994) -> True
+    [3][STATICCALL] from=0x6d8981, to=BiswapPair, getReserves() -> ['45858923535368177997147', '14453065947879455434245886', '1677479141']
+    [3][STATICCALL] from=0x6d8981, to=BiswapPair, swapFee() -> 2
+    [3][STATICCALL] from=0x6d8981, to=BEP20Token, balanceOf(account(address): 0xaCAac9) -> 14454913543820016056186880
+    [3][CALL] from=0x6d8981, to=BiswapPair, swap(amount0Out(uint256): 5849867230304904797, amount1Out(uint256): 0, to(address): 0x6D8981, data(bytes): b'') -> None
+      [4][CALL] from=BiswapPair, to=WBNB, transfer(dst(address): 0x6D8981, wad(uint256): 5849867230304904797) -> True
+      [4][STATICCALL] from=BiswapPair, to=WBNB, balanceOf((address): 0xaCAac9) -> 45853073668137873092350
+      [4][STATICCALL] from=BiswapPair, to=BEP20Token, balanceOf(account(address): 0xaCAac9) -> 14454913543820016056186880
+    [3][STATICCALL] from=0x6d8981, to=WBNB, balanceOf((address): 0x6D8981) -> 5849867230304904797
+    [3][STATICCALL] from=0x6d8981, to=WBNB, balanceOf((address): 0x6D8981) -> 5849867230304904797
+    [3][STATICCALL] from=0x6d8981, to=Diamond, balanceOf(account(address): 0xaA1C48) -> 0
+    [3][DELEGATECALL] from=0x6d8981, to=0x6d1879, 0x7855da66() -> 0x000000
+    [3][CALL] from=0x6d8981, to=WBNB, transfer(dst(address): 0xA6C26b, wad(uint256): 5849867230304904797) -> True
+    [3][STATICCALL] from=0x6d8981, to=BiswapPair, getReserves() -> ['44067304346723962403', '689634718459254184681', '1677479141']
+    [3][STATICCALL] from=0x6d8981, to=BiswapPair, swapFee() -> 1
+    [3][STATICCALL] from=0x6d8981, to=WBNB, balanceOf((address): 0xA6C26b) -> 695484585689559089478
+    [3][CALL] from=0x6d8981, to=BiswapPair, swap(amount0Out(uint256): 370291827027099536, amount1Out(uint256): 0, to(address): 0xaA1C48, data(bytes): b'') -> None
+      [4][CALL] from=BiswapPair, to=Diamond, transfer(recipient(address): 0xaA1C48, amount(uint256): 370291827027099536) -> True
+      [4][STATICCALL] from=BiswapPair, to=Diamond, balanceOf(account(address): 0xA6C26b) -> 43697012519696862867
+      [4][STATICCALL] from=BiswapPair, to=WBNB, balanceOf((address): 0xA6C26b) -> 695484585689559089478
+    [3][STATICCALL] from=0x6d8981, to=Diamond, balanceOf(account(address): 0xaA1C48) -> 370291827027099536
+    [3][STATICCALL] from=0x6d8981, to=Diamond, balanceOf(account(address): 0xaA1C48) -> 370291827027099536
+  [2][STATICCALL] from=0xc4bea6, to=BEP20Token, balanceOf(account(address): 0x4741f7) -> 1844054995956188306206
+  [2][STATICCALL] from=0xc4bea6, to=BEP20Token, allowance(owner(address): 0x4741f7, spender(address): 0x6D8981) -> 9999999993979345034911030018807
+  [2][CALL] from=0xc4bea6, to=0x6d8981, 0x4f1f05bc() -> 0x000000
+    [3][STATICCALL] from=0x6d8981, to=Diamond, balanceOf(account(address): 0x4741f7) -> 0
+    [3][STATICCALL] from=0x6d8981, to=WBNB, balanceOf((address): 0x6D8981) -> 0
+    [3][DELEGATECALL] from=0x6d8981, to=0x6d1879, 0x7855da66() -> 0x000000
+    [3][CALL] from=0x6d8981, to=BEP20Token, transferFrom(sender(address): 0x4741f7, recipient(address): 0xaCAac9, amount(uint256): 1844054995956188306206) -> True
+    [3][STATICCALL] from=0x6d8981, to=BiswapPair, getReserves() -> ['45853073668137873092350', '14454913543820016056186880', '1677479141']
+    [3][STATICCALL] from=0x6d8981, to=BiswapPair, swapFee() -> 2
+    [3][STATICCALL] from=0x6d8981, to=BEP20Token, balanceOf(account(address): 0xaCAac9) -> 14456757598815972244493086
+    [3][CALL] from=0x6d8981, to=BiswapPair, swap(amount0Out(uint256): 5837166415071148693, amount1Out(uint256): 0, to(address): 0x6D8981, data(bytes): b'') -> None
+      [4][CALL] from=BiswapPair, to=WBNB, transfer(dst(address): 0x6D8981, wad(uint256): 5837166415071148693) -> True
+      [4][STATICCALL] from=BiswapPair, to=WBNB, balanceOf((address): 0xaCAac9) -> 45847236501722801943657
+      [4][STATICCALL] from=BiswapPair, to=BEP20Token, balanceOf(account(address): 0xaCAac9) -> 14456757598815972244493086
+    [3][STATICCALL] from=0x6d8981, to=WBNB, balanceOf((address): 0x6D8981) -> 5837166415071148693
+    [3][STATICCALL] from=0x6d8981, to=WBNB, balanceOf((address): 0x6D8981) -> 5837166415071148693
+    [3][STATICCALL] from=0x6d8981, to=Diamond, balanceOf(account(address): 0x4741f7) -> 0
+    [3][DELEGATECALL] from=0x6d8981, to=0x6d1879, 0x7855da66() -> 0x000000
+    [3][CALL] from=0x6d8981, to=WBNB, transfer(dst(address): 0xA6C26b, wad(uint256): 5837166415071148693) -> True
+    [3][STATICCALL] from=0x6d8981, to=BiswapPair, getReserves() -> ['43697012519696862867', '695484585689559089478', '1677479141']
+    [3][STATICCALL] from=0x6d8981, to=BiswapPair, swapFee() -> 1
+    [3][STATICCALL] from=0x6d8981, to=WBNB, balanceOf((address): 0xA6C26b) -> 701321752104630238171
+    [3][CALL] from=0x6d8981, to=BiswapPair, swap(amount0Out(uint256): 363333644306999121, amount1Out(uint256): 0, to(address): 0x4741f7, data(bytes): b'') -> None
+      [4][CALL] from=BiswapPair, to=Diamond, transfer(recipient(address): 0x4741f7, amount(uint256): 363333644306999121) -> True
+      [4][STATICCALL] from=BiswapPair, to=Diamond, balanceOf(account(address): 0xA6C26b) -> 43333678875389863746
+      [4][STATICCALL] from=BiswapPair, to=WBNB, balanceOf((address): 0xA6C26b) -> 701321752104630238171
+    [3][STATICCALL] from=0x6d8981, to=Diamond, balanceOf(account(address): 0x4741f7) -> 363333644306999121
+    [3][STATICCALL] from=0x6d8981, to=Diamond, balanceOf(account(address): 0x4741f7) -> 363333644306999121
+  [2][STATICCALL] from=0xc4bea6, to=BEP20Token, balanceOf(account(address): 0xcce314) -> 1794245662453017146630
+  [2][STATICCALL] from=0xc4bea6, to=BEP20Token, allowance(owner(address): 0xcce314, spender(address): 0x6D8981) -> 57896044618658097711785492504343953926634992332820282019588792003956564819968
+  [2][CALL] from=0xc4bea6, to=0x6d8981, 0x4f1f05bc() -> 0x000000
+    [3][STATICCALL] from=0x6d8981, to=Diamond, balanceOf(account(address): 0xcce314) -> 0
+    [3][STATICCALL] from=0x6d8981, to=WBNB, balanceOf((address): 0x6D8981) -> 0
+    [3][DELEGATECALL] from=0x6d8981, to=0x6d1879, 0x7855da66() -> 0x000000
+    [3][CALL] from=0x6d8981, to=BEP20Token, transferFrom(sender(address): 0xcce314, recipient(address): 0xaCAac9, amount(uint256): 1794245662453017146630) -> True
+    [3][STATICCALL] from=0x6d8981, to=BiswapPair, getReserves() -> ['45847236501722801943657', '14456757598815972244493086', '1677479141']
+    [3][STATICCALL] from=0x6d8981, to=BiswapPair, swapFee() -> 2
+    [3][STATICCALL] from=0x6d8981, to=BEP20Token, balanceOf(account(address): 0xaCAac9) -> 14458551844478425261639716
+    [3][CALL] from=0x6d8981, to=BiswapPair, swap(amount0Out(uint256): 5678072332346453990, amount1Out(uint256): 0, to(address): 0x6D8981, data(bytes): b'') -> None
+      [4][CALL] from=BiswapPair, to=WBNB, transfer(dst(address): 0x6D8981, wad(uint256): 5678072332346453990) -> True
+      [4][STATICCALL] from=BiswapPair, to=WBNB, balanceOf((address): 0xaCAac9) -> 45841558429390455489667
+      [4][STATICCALL] from=BiswapPair, to=BEP20Token, balanceOf(account(address): 0xaCAac9) -> 14458551844478425261639716
+    [3][STATICCALL] from=0x6d8981, to=WBNB, balanceOf((address): 0x6D8981) -> 5678072332346453990
+    [3][STATICCALL] from=0x6d8981, to=WBNB, balanceOf((address): 0x6D8981) -> 5678072332346453990
+    [3][STATICCALL] from=0x6d8981, to=Diamond, balanceOf(account(address): 0xcce314) -> 0
+    [3][DELEGATECALL] from=0x6d8981, to=0x6d1879, 0x7855da66() -> 0x000000
+    [3][CALL] from=0x6d8981, to=WBNB, transfer(dst(address): 0xA6C26b, wad(uint256): 5678072332346453990) -> True
+    [3][STATICCALL] from=0x6d8981, to=BiswapPair, getReserves() -> ['43333678875389863746', '701321752104630238171', '1677479141']
+    [3][STATICCALL] from=0x6d8981, to=BiswapPair, swapFee() -> 1
+    [3][STATICCALL] from=0x6d8981, to=WBNB, balanceOf((address): 0xA6C26b) -> 706999824436976692161
+    [3][CALL] from=0x6d8981, to=BiswapPair, swap(amount0Out(uint256): 347677152041478915, amount1Out(uint256): 0, to(address): 0xcce314, data(bytes): b'') -> None
+      [4][CALL] from=BiswapPair, to=Diamond, transfer(recipient(address): 0xcce314, amount(uint256): 347677152041478915) -> True
+      [4][STATICCALL] from=BiswapPair, to=Diamond, balanceOf(account(address): 0xA6C26b) -> 42986001723348384831
+      [4][STATICCALL] from=BiswapPair, to=WBNB, balanceOf((address): 0xA6C26b) -> 706999824436976692161
+    [3][STATICCALL] from=0x6d8981, to=Diamond, balanceOf(account(address): 0xcce314) -> 347677152041478915
+    [3][STATICCALL] from=0x6d8981, to=Diamond, balanceOf(account(address): 0xcce314) -> 347677152041478915
+  [2][STATICCALL] from=0xc4bea6, to=BEP20Token, balanceOf(account(address): 0x58D0b5) -> 1789655199621578625010
+  [2][STATICCALL] from=0xc4bea6, to=BEP20Token, allowance(owner(address): 0x58D0b5, spender(address): 0x6D8981) -> 9999999993907943943008272201866
+  [2][CALL] from=0xc4bea6, to=0x6d8981, 0x4f1f05bc() -> 0x000000
+    [3][STATICCALL] from=0x6d8981, to=Diamond, balanceOf(account(address): 0x58D0b5) -> 0
+    [3][STATICCALL] from=0x6d8981, to=WBNB, balanceOf((address): 0x6D8981) -> 0
+    [3][DELEGATECALL] from=0x6d8981, to=0x6d1879, 0x7855da66() -> 0x000000
+    [3][CALL] from=0x6d8981, to=BEP20Token, transferFrom(sender(address): 0x58D0b5, recipient(address): 0xaCAac9, amount(uint256): 1789655199621578625010) -> True
+    [3][STATICCALL] from=0x6d8981, to=BiswapPair, getReserves() -> ['45841558429390455489667', '14458551844478425261639716', '1677479141']
+    [3][STATICCALL] from=0x6d8981, to=BiswapPair, swapFee() -> 2
+    [3][STATICCALL] from=0x6d8981, to=BEP20Token, balanceOf(account(address): 0xaCAac9) -> 14460341499678046840264726
+    [3][CALL] from=0x6d8981, to=BiswapPair, swap(amount0Out(uint256): 5662143076185423788, amount1Out(uint256): 0, to(address): 0x6D8981, data(bytes): b'') -> None
+      [4][CALL] from=BiswapPair, to=WBNB, transfer(dst(address): 0x6D8981, wad(uint256): 5662143076185423788) -> True
+      [4][STATICCALL] from=BiswapPair, to=WBNB, balanceOf((address): 0xaCAac9) -> 45835896286314270065879
+      [4][STATICCALL] from=BiswapPair, to=BEP20Token, balanceOf(account(address): 0xaCAac9) -> 14460341499678046840264726
+    [3][STATICCALL] from=0x6d8981, to=WBNB, balanceOf((address): 0x6D8981) -> 5662143076185423788
+    [3][STATICCALL] from=0x6d8981, to=WBNB, balanceOf((address): 0x6D8981) -> 5662143076185423788
+    [3][STATICCALL] from=0x6d8981, to=Diamond, balanceOf(account(address): 0x58D0b5) -> 0
+    [3][DELEGATECALL] from=0x6d8981, to=0x6d1879, 0x7855da66() -> 0x000000
+    [3][CALL] from=0x6d8981, to=WBNB, transfer(dst(address): 0xA6C26b, wad(uint256): 5662143076185423788) -> True
+    [3][STATICCALL] from=0x6d8981, to=BiswapPair, getReserves() -> ['42986001723348384831', '706999824436976692161', '1677479141']
+    [3][STATICCALL] from=0x6d8981, to=BiswapPair, swapFee() -> 1
+    [3][STATICCALL] from=0x6d8981, to=WBNB, balanceOf((address): 0xA6C26b) -> 712661967513162115949
+    [3][CALL] from=0x6d8981, to=BiswapPair, swap(amount0Out(uint256): 341187606573483226, amount1Out(uint256): 0, to(address): 0x58D0b5, data(bytes): b'') -> None
+      [4][CALL] from=BiswapPair, to=Diamond, transfer(recipient(address): 0x58D0b5, amount(uint256): 341187606573483226) -> True
+      [4][STATICCALL] from=BiswapPair, to=Diamond, balanceOf(account(address): 0xA6C26b) -> 42644814116774901605
+      [4][STATICCALL] from=BiswapPair, to=WBNB, balanceOf((address): 0xA6C26b) -> 712661967513162115949
+    [3][STATICCALL] from=0x6d8981, to=Diamond, balanceOf(account(address): 0x58D0b5) -> 341187606573483226
+    [3][STATICCALL] from=0x6d8981, to=Diamond, balanceOf(account(address): 0x58D0b5) -> 341187606573483226
+  [2][STATICCALL] from=0xc4bea6, to=BEP20Token, balanceOf(account(address): 0xbFF7D0) -> 1750347499116007417921
+  [2][STATICCALL] from=0xc4bea6, to=BEP20Token, allowance(owner(address): 0xbFF7D0, spender(address): 0x6D8981) -> 9999999995044828847377444145797
+  [2][CALL] from=0xc4bea6, to=0x6d8981, 0x4f1f05bc() -> 0x000000
+    [3][STATICCALL] from=0x6d8981, to=Diamond, balanceOf(account(address): 0xbFF7D0) -> 0
+    [3][STATICCALL] from=0x6d8981, to=WBNB, balanceOf((address): 0x6D8981) -> 0
+    [3][DELEGATECALL] from=0x6d8981, to=0x6d1879, 0x7855da66() -> 0x000000
+    [3][CALL] from=0x6d8981, to=BEP20Token, transferFrom(sender(address): 0xbFF7D0, recipient(address): 0xaCAac9, amount(uint256): 1750347499116007417921) -> True
+    [3][STATICCALL] from=0x6d8981, to=BiswapPair, getReserves() -> ['45835896286314270065879', '14460341499678046840264726', '1677479141']
+    [3][STATICCALL] from=0x6d8981, to=BiswapPair, swapFee() -> 2
+    [3][STATICCALL] from=0x6d8981, to=BEP20Token, balanceOf(account(address): 0xaCAac9) -> 14462091847177162847682647
+    [3][CALL] from=0x6d8981, to=BiswapPair, swap(amount0Out(uint256): 5536426484429417121, amount1Out(uint256): 0, to(address): 0x6D8981, data(bytes): b'') -> None
+      [4][CALL] from=BiswapPair, to=WBNB, transfer(dst(address): 0x6D8981, wad(uint256): 5536426484429417121) -> True
+      [4][STATICCALL] from=BiswapPair, to=WBNB, balanceOf((address): 0xaCAac9) -> 45830359859829840648758
+      [4][STATICCALL] from=BiswapPair, to=BEP20Token, balanceOf(account(address): 0xaCAac9) -> 14462091847177162847682647
+    [3][STATICCALL] from=0x6d8981, to=WBNB, balanceOf((address): 0x6D8981) -> 5536426484429417121
+    [3][STATICCALL] from=0x6d8981, to=WBNB, balanceOf((address): 0x6D8981) -> 5536426484429417121
+    [3][STATICCALL] from=0x6d8981, to=Diamond, balanceOf(account(address): 0xbFF7D0) -> 0
+    [3][DELEGATECALL] from=0x6d8981, to=0x6d1879, 0x7855da66() -> 0x000000
+    [3][CALL] from=0x6d8981, to=WBNB, transfer(dst(address): 0xA6C26b, wad(uint256): 5536426484429417121) -> True
+    [3][STATICCALL] from=0x6d8981, to=BiswapPair, getReserves() -> ['42644814116774901605', '712661967513162115949', '1677479141']
+    [3][STATICCALL] from=0x6d8981, to=BiswapPair, swapFee() -> 1
+    [3][STATICCALL] from=0x6d8981, to=WBNB, balanceOf((address): 0xA6C26b) -> 718198393997591533070
+    [3][CALL] from=0x6d8981, to=BiswapPair, swap(amount0Out(uint256): 328412871187639006, amount1Out(uint256): 0, to(address): 0xbFF7D0, data(bytes): b'') -> None
+      [4][CALL] from=BiswapPair, to=Diamond, transfer(recipient(address): 0xbFF7D0, amount(uint256): 328412871187639006) -> True
+      [4][STATICCALL] from=BiswapPair, to=Diamond, balanceOf(account(address): 0xA6C26b) -> 42316401245587262599
+      [4][STATICCALL] from=BiswapPair, to=WBNB, balanceOf((address): 0xA6C26b) -> 718198393997591533070
+    [3][STATICCALL] from=0x6d8981, to=Diamond, balanceOf(account(address): 0xbFF7D0) -> 328412871187639006
+    [3][STATICCALL] from=0x6d8981, to=Diamond, balanceOf(account(address): 0xbFF7D0) -> 328412871187639006
+  [2][STATICCALL] from=0xc4bea6, to=BEP20Token, balanceOf(account(address): 0xC2A441) -> 1733425374413187964134
+  [2][STATICCALL] from=0xc4bea6, to=BEP20Token, allowance(owner(address): 0xC2A441, spender(address): 0x6D8981) -> 9999999995260529152491468922532
+  [2][CALL] from=0xc4bea6, to=0x6d8981, 0x4f1f05bc() -> 0x000000
+    [3][STATICCALL] from=0x6d8981, to=Diamond, balanceOf(account(address): 0xC2A441) -> 0
+    [3][STATICCALL] from=0x6d8981, to=WBNB, balanceOf((address): 0x6D8981) -> 0
+    [3][DELEGATECALL] from=0x6d8981, to=0x6d1879, 0x7855da66() -> 0x000000
+    [3][CALL] from=0x6d8981, to=BEP20Token, transferFrom(sender(address): 0xC2A441, recipient(address): 0xaCAac9, amount(uint256): 1733425374413187964134) -> True
+    [3][STATICCALL] from=0x6d8981, to=BiswapPair, getReserves() -> ['45830359859829840648758', '14462091847177162847682647', '1677479141']
+    [3][STATICCALL] from=0x6d8981, to=BiswapPair, swapFee() -> 2
+    [3][STATICCALL] from=0x6d8981, to=BEP20Token, balanceOf(account(address): 0xaCAac9) -> 14463825272551576035646781
+    [3][CALL] from=0x6d8981, to=BiswapPair, swap(amount0Out(uint256): 5481581752539850734, amount1Out(uint256): 0, to(address): 0x6D8981, data(bytes): b'') -> None
+      [4][CALL] from=BiswapPair, to=WBNB, transfer(dst(address): 0x6D8981, wad(uint256): 5481581752539850734) -> True
+      [4][STATICCALL] from=BiswapPair, to=WBNB, balanceOf((address): 0xaCAac9) -> 45824878278077300798024
+      [4][STATICCALL] from=BiswapPair, to=BEP20Token, balanceOf(account(address): 0xaCAac9) -> 14463825272551576035646781
+    [3][STATICCALL] from=0x6d8981, to=WBNB, balanceOf((address): 0x6D8981) -> 5481581752539850734
+    [3][STATICCALL] from=0x6d8981, to=WBNB, balanceOf((address): 0x6D8981) -> 5481581752539850734
+    [3][STATICCALL] from=0x6d8981, to=Diamond, balanceOf(account(address): 0xC2A441) -> 0
+    [3][DELEGATECALL] from=0x6d8981, to=0x6d1879, 0x7855da66() -> 0x000000
+    [3][CALL] from=0x6d8981, to=WBNB, transfer(dst(address): 0xA6C26b, wad(uint256): 5481581752539850734) -> True
+    [3][STATICCALL] from=0x6d8981, to=BiswapPair, getReserves() -> ['42316401245587262599', '718198393997591533070', '1677479141']
+    [3][STATICCALL] from=0x6d8981, to=BiswapPair, swapFee() -> 1
+    [3][STATICCALL] from=0x6d8981, to=WBNB, balanceOf((address): 0xA6C26b) -> 723679975750131383804
+    [3][CALL] from=0x6d8981, to=BiswapPair, swap(amount0Out(uint256): 320211440302810992, amount1Out(uint256): 0, to(address): 0xC2A441, data(bytes): b'') -> None
+      [4][CALL] from=BiswapPair, to=Diamond, transfer(recipient(address): 0xC2A441, amount(uint256): 320211440302810992) -> True
+      [4][STATICCALL] from=BiswapPair, to=Diamond, balanceOf(account(address): 0xA6C26b) -> 41996189805284451607
+      [4][STATICCALL] from=BiswapPair, to=WBNB, balanceOf((address): 0xA6C26b) -> 723679975750131383804
+    [3][STATICCALL] from=0x6d8981, to=Diamond, balanceOf(account(address): 0xC2A441) -> 320211440302810992
+    [3][STATICCALL] from=0x6d8981, to=Diamond, balanceOf(account(address): 0xC2A441) -> 320211440302810992
+  [2][STATICCALL] from=0xc4bea6, to=BEP20Token, balanceOf(account(address): 0xf45711) -> 1732886199628133459281
+  [2][STATICCALL] from=0xc4bea6, to=BEP20Token, allowance(owner(address): 0xf45711, spender(address): 0x6D8981) -> 0
+  [2][STATICCALL] from=0xc4bea6, to=BEP20Token, balanceOf(account(address): 0xD34b6d) -> 1731445573908110164519
+  [2][STATICCALL] from=0xc4bea6, to=BEP20Token, allowance(owner(address): 0xD34b6d, spender(address): 0x6D8981) -> 9999999999937000000000000000000
+  [2][CALL] from=0xc4bea6, to=0x6d8981, 0x4f1f05bc() -> 0x000000
+    [3][STATICCALL] from=0x6d8981, to=Diamond, balanceOf(account(address): 0xD34b6d) -> 0
+    [3][STATICCALL] from=0x6d8981, to=WBNB, balanceOf((address): 0x6D8981) -> 0
+    [3][DELEGATECALL] from=0x6d8981, to=0x6d1879, 0x7855da66() -> 0x000000
+    [3][CALL] from=0x6d8981, to=BEP20Token, transferFrom(sender(address): 0xD34b6d, recipient(address): 0xaCAac9, amount(uint256): 1731445573908110164519) -> True
+    [3][STATICCALL] from=0x6d8981, to=BiswapPair, getReserves() -> ['45824878278077300798024', '14463825272551576035646781', '1677479141']
+    [3][STATICCALL] from=0x6d8981, to=BiswapPair, swapFee() -> 2
+    [3][STATICCALL] from=0x6d8981, to=BEP20Token, balanceOf(account(address): 0xaCAac9) -> 14465556718125484145811300
+    [3][CALL] from=0x6d8981, to=BiswapPair, swap(amount0Out(uint256): 5474010893808235049, amount1Out(uint256): 0, to(address): 0x6D8981, data(bytes): b'') -> None
+      [4][CALL] from=BiswapPair, to=WBNB, transfer(dst(address): 0x6D8981, wad(uint256): 5474010893808235049) -> True
+      [4][STATICCALL] from=BiswapPair, to=WBNB, balanceOf((address): 0xaCAac9) -> 45819404267183492562975
+      [4][STATICCALL] from=BiswapPair, to=BEP20Token, balanceOf(account(address): 0xaCAac9) -> 14465556718125484145811300
+    [3][STATICCALL] from=0x6d8981, to=WBNB, balanceOf((address): 0x6D8981) -> 5474010893808235049
+    [3][STATICCALL] from=0x6d8981, to=WBNB, balanceOf((address): 0x6D8981) -> 5474010893808235049
+    [3][STATICCALL] from=0x6d8981, to=Diamond, balanceOf(account(address): 0xD34b6d) -> 0
+    [3][DELEGATECALL] from=0x6d8981, to=0x6d1879, 0x7855da66() -> 0x000000
+    [3][CALL] from=0x6d8981, to=WBNB, transfer(dst(address): 0xA6C26b, wad(uint256): 5474010893808235049) -> True
+    [3][STATICCALL] from=0x6d8981, to=BiswapPair, getReserves() -> ['41996189805284451607', '723679975750131383804', '1677479141']
+    [3][STATICCALL] from=0x6d8981, to=BiswapPair, swapFee() -> 1
+    [3][STATICCALL] from=0x6d8981, to=WBNB, balanceOf((address): 0xA6C26b) -> 729153986643939618853
+    [3][CALL] from=0x6d8981, to=BiswapPair, swap(amount0Out(uint256): 314966990829824706, amount1Out(uint256): 0, to(address): 0xD34b6d, data(bytes): b'') -> None
+      [4][CALL] from=BiswapPair, to=Diamond, transfer(recipient(address): 0xD34b6d, amount(uint256): 314966990829824706) -> True
+      [4][STATICCALL] from=BiswapPair, to=Diamond, balanceOf(account(address): 0xA6C26b) -> 41681222814454626901
+      [4][STATICCALL] from=BiswapPair, to=WBNB, balanceOf((address): 0xA6C26b) -> 729153986643939618853
+    [3][STATICCALL] from=0x6d8981, to=Diamond, balanceOf(account(address): 0xD34b6d) -> 314966990829824706
+    [3][STATICCALL] from=0x6d8981, to=Diamond, balanceOf(account(address): 0xD34b6d) -> 314966990829824706
+  [2][STATICCALL] from=0xc4bea6, to=BEP20Token, balanceOf(account(address): 0x3a3421) -> 1686729408193700795365
+  [2][STATICCALL] from=0xc4bea6, to=BEP20Token, allowance(owner(address): 0x3a3421, spender(address): 0x6D8981) -> 999999999000000000000000000
+  [2][CALL] from=0xc4bea6, to=0x6d8981, 0x4f1f05bc() -> 0x000000
+    [3][STATICCALL] from=0x6d8981, to=Diamond, balanceOf(account(address): 0x3a3421) -> 0
+    [3][STATICCALL] from=0x6d8981, to=WBNB, balanceOf((address): 0x6D8981) -> 0
+    [3][DELEGATECALL] from=0x6d8981, to=0x6d1879, 0x7855da66() -> 0x000000
+    [3][CALL] from=0x6d8981, to=BEP20Token, transferFrom(sender(address): 0x3a3421, recipient(address): 0xaCAac9, amount(uint256): 1686729408193700795365) -> True
+    [3][STATICCALL] from=0x6d8981, to=BiswapPair, getReserves() -> ['45819404267183492562975', '14465556718125484145811300', '1677479141']
+    [3][STATICCALL] from=0x6d8981, to=BiswapPair, swapFee() -> 2
+    [3][STATICCALL] from=0x6d8981, to=BEP20Token, balanceOf(account(address): 0xaCAac9) -> 14467243447533677846606665
+    [3][CALL] from=0x6d8981, to=BiswapPair, swap(amount0Out(uint256): 5331380856000612024, amount1Out(uint256): 0, to(address): 0x6D8981, data(bytes): b'') -> None
+      [4][CALL] from=BiswapPair, to=WBNB, transfer(dst(address): 0x6D8981, wad(uint256): 5331380856000612024) -> True
+      [4][STATICCALL] from=BiswapPair, to=WBNB, balanceOf((address): 0xaCAac9) -> 45814072886327491950951
+      [4][STATICCALL] from=BiswapPair, to=BEP20Token, balanceOf(account(address): 0xaCAac9) -> 14467243447533677846606665
+    [3][STATICCALL] from=0x6d8981, to=WBNB, balanceOf((address): 0x6D8981) -> 5331380856000612024
+    [3][STATICCALL] from=0x6d8981, to=WBNB, balanceOf((address): 0x6D8981) -> 5331380856000612024
+    [3][STATICCALL] from=0x6d8981, to=Diamond, balanceOf(account(address): 0x3a3421) -> 0
+    [3][DELEGATECALL] from=0x6d8981, to=0x6d1879, 0x7855da66() -> 0x000000
+    [3][CALL] from=0x6d8981, to=WBNB, transfer(dst(address): 0xA6C26b, wad(uint256): 5331380856000612024) -> True
+    [3][STATICCALL] from=0x6d8981, to=BiswapPair, getReserves() -> ['41681222814454626901', '729153986643939618853', '1677479141']
+    [3][STATICCALL] from=0x6d8981, to=BiswapPair, swapFee() -> 1
+    [3][STATICCALL] from=0x6d8981, to=WBNB, balanceOf((address): 0xA6C26b) -> 734485367499940230877
+    [3][CALL] from=0x6d8981, to=BiswapPair, swap(amount0Out(uint256): 302249542502634495, amount1Out(uint256): 0, to(address): 0x3a3421, data(bytes): b'') -> None
+      [4][CALL] from=BiswapPair, to=Diamond, transfer(recipient(address): 0x3a3421, amount(uint256): 302249542502634495) -> True
+      [4][STATICCALL] from=BiswapPair, to=Diamond, balanceOf(account(address): 0xA6C26b) -> 41378973271951992406
+      [4][STATICCALL] from=BiswapPair, to=WBNB, balanceOf((address): 0xA6C26b) -> 734485367499940230877
+    [3][STATICCALL] from=0x6d8981, to=Diamond, balanceOf(account(address): 0x3a3421) -> 302249542502634495
+    [3][STATICCALL] from=0x6d8981, to=Diamond, balanceOf(account(address): 0x3a3421) -> 302249542502634495
+  [2][STATICCALL] from=0xc4bea6, to=BEP20Token, balanceOf(account(address): 0x5795F4) -> 1641279101696729675183
+  [2][STATICCALL] from=0xc4bea6, to=BEP20Token, allowance(owner(address): 0x5795F4, spender(address): 0x6D8981) -> 9999999999941617000000000000000
+  [2][CALL] from=0xc4bea6, to=0x6d8981, 0x4f1f05bc() -> 0x000000
+    [3][STATICCALL] from=0x6d8981, to=Diamond, balanceOf(account(address): 0x5795F4) -> 0
+    [3][STATICCALL] from=0x6d8981, to=WBNB, balanceOf((address): 0x6D8981) -> 0
+    [3][DELEGATECALL] from=0x6d8981, to=0x6d1879, 0x7855da66() -> 0x000000
+    [3][CALL] from=0x6d8981, to=BEP20Token, transferFrom(sender(address): 0x5795F4, recipient(address): 0xaCAac9, amount(uint256): 1641279101696729675183) -> True
+    [3][STATICCALL] from=0x6d8981, to=BiswapPair, getReserves() -> ['45814072886327491950951', '14467243447533677846606665', '1677479141']
+    [3][STATICCALL] from=0x6d8981, to=BiswapPair, swapFee() -> 2
+    [3][STATICCALL] from=0x6d8981, to=BEP20Token, balanceOf(account(address): 0xaCAac9) -> 14468884726635374576281848
+    [3][CALL] from=0x6d8981, to=BiswapPair, swap(amount0Out(uint256): 5186530370105087609, amount1Out(uint256): 0, to(address): 0x6D8981, data(bytes): b'') -> None
+      [4][CALL] from=BiswapPair, to=WBNB, transfer(dst(address): 0x6D8981, wad(uint256): 5186530370105087609) -> True
+      [4][STATICCALL] from=BiswapPair, to=WBNB, balanceOf((address): 0xaCAac9) -> 45808886355957386863342
+      [4][STATICCALL] from=BiswapPair, to=BEP20Token, balanceOf(account(address): 0xaCAac9) -> 14468884726635374576281848
+    [3][STATICCALL] from=0x6d8981, to=WBNB, balanceOf((address): 0x6D8981) -> 5186530370105087609
+    [3][STATICCALL] from=0x6d8981, to=WBNB, balanceOf((address): 0x6D8981) -> 5186530370105087609
+    [3][STATICCALL] from=0x6d8981, to=Diamond, balanceOf(account(address): 0x5795F4) -> 0
+    [3][DELEGATECALL] from=0x6d8981, to=0x6d1879, 0x7855da66() -> 0x000000
+    [3][CALL] from=0x6d8981, to=WBNB, transfer(dst(address): 0xA6C26b, wad(uint256): 5186530370105087609) -> True
+    [3][STATICCALL] from=0x6d8981, to=BiswapPair, getReserves() -> ['41378973271951992406', '734485367499940230877', '1677479141']
+    [3][STATICCALL] from=0x6d8981, to=BiswapPair, swapFee() -> 1
+    [3][STATICCALL] from=0x6d8981, to=WBNB, balanceOf((address): 0xA6C26b) -> 739671897870045318486
+    [3][CALL] from=0x6d8981, to=BiswapPair, swap(amount0Out(uint256): 289858506500678789, amount1Out(uint256): 0, to(address): 0x5795F4, data(bytes): b'') -> None
+      [4][CALL] from=BiswapPair, to=Diamond, transfer(recipient(address): 0x5795F4, amount(uint256): 289858506500678789) -> True
+      [4][STATICCALL] from=BiswapPair, to=Diamond, balanceOf(account(address): 0xA6C26b) -> 41089114765451313617
+      [4][STATICCALL] from=BiswapPair, to=WBNB, balanceOf((address): 0xA6C26b) -> 739671897870045318486
+    [3][STATICCALL] from=0x6d8981, to=Diamond, balanceOf(account(address): 0x5795F4) -> 289858506500678789
+    [3][STATICCALL] from=0x6d8981, to=Diamond, balanceOf(account(address): 0x5795F4) -> 289858506500678789
+  [2][STATICCALL] from=0xc4bea6, to=Diamond, balanceOf(account(address): 0xc4beA6) -> 1000000000000000000000000
+  [2][CALL] from=0xc4bea6, to=Diamond, approve(spender(address): 0x3a6d8c, amount(uint256): 1000000000000000000000000) -> True
+  [2][STATICCALL] from=0xc4bea6, to=BiswapRouter02, getAmountsOut(amountIn(uint256): 1000000000000000000000000, path(address[]): ['0x34EA3F7162E6f6Ed16bD171267eC180fD5c848...) -> [1000000000000000000000000, 739641476234907877084]
+    [3][STATICCALL] from=BiswapRouter02, to=BiswapPair, getReserves() -> ['41089114765451313617', '739671897870045318486', '1677479141']
+    [3][STATICCALL] from=BiswapRouter02, to=BiswapPair, swapFee() -> 1
+  [2][CALL] from=0xc4bea6, to=BiswapRouter02, swapExactTokensForTokens(amountIn(uint256): 1000000000000000000000000, amountOutMin(uint256): 739641476234907877084, path(address[]): ['0x34EA3F7162E6f6Ed16bD171267eC180fD5c848..., to(address): 0xc4beA6, deadline(uint256): 1677479141) -> [1000000000000000000000000, 739641476234907877084]
+    [3][STATICCALL] from=BiswapRouter02, to=BiswapPair, getReserves() -> ['41089114765451313617', '739671897870045318486', '1677479141']
+    [3][STATICCALL] from=BiswapRouter02, to=BiswapPair, swapFee() -> 1
+    [3][CALL] from=BiswapRouter02, to=Diamond, transferFrom(sender(address): 0xc4beA6, recipient(address): 0xA6C26b, amount(uint256): 1000000000000000000000000) -> True
+    [3][CALL] from=BiswapRouter02, to=TransparentUpgradeableProxy, swap(account(address): 0xc4beA6, input(address): 0x34EA3F, output(address): 0xbb4CdB, amountOut(uint256): 739641476234907877084) -> False
+      [4][DELEGATECALL] from=TransparentUpgradeableProxy, to=SwapFeeRewardUpgradeable, swap(account(address): 0xc4beA6, input(address): 0x34EA3F, output(address): 0xbb4CdB, amountOut(uint256): 739641476234907877084) -> False
+        [5][STATICCALL] from=TransparentUpgradeableProxy, to=SwapFeeRewardWithRB, feeDistribution((address): 0xc4beA6) -> 0
+    [3][CALL] from=BiswapRouter02, to=BiswapPair, swap(amount0Out(uint256): 0, amount1Out(uint256): 739641476234907877084, to(address): 0xc4beA6, data(bytes): b'') -> None
+      [4][CALL] from=BiswapPair, to=WBNB, transfer(dst(address): 0xc4beA6, wad(uint256): 739641476234907877084) -> True
+      [4][STATICCALL] from=BiswapPair, to=Diamond, balanceOf(account(address): 0xA6C26b) -> 1000041089114765451313617
+      [4][STATICCALL] from=BiswapPair, to=WBNB, balanceOf((address): 0xA6C26b) -> 30421635137441402

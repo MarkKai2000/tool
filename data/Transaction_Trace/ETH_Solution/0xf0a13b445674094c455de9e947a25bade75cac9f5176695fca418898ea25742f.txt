@@ -1,0 +1,7 @@
+[1][CALL] from=0x7021c1, to=0xca813e, 0x3232a1fd() -> None
+  [2][CALL] from=0xca813e, to=TransparentUpgradeableProxy, approveToken(token(address): 0xdAC17F, spender(address): 0xca813e, _amount(uint256): 115792089237316195423570985008687907853269...) -> True
+    [3][DELEGATECALL] from=TransparentUpgradeableProxy, to=DepErc20, approveToken(token(address): 0xdAC17F, spender(address): 0xca813e, _amount(uint256): 115792089237316195423570985008687907853269...) -> True
+      [4][STATICCALL] from=TransparentUpgradeableProxy, to=TetherToken, allowance(_owner(address): 0x7b190a, _spender(address): 0xca813e) -> 0
+      [4][CALL] from=TransparentUpgradeableProxy, to=TetherToken, approve(_spender(address): 0xca813e, _value(uint256): 115792089237316195423570985008687907853269...) -> None
+  [2][STATICCALL] from=0xca813e, to=TetherToken, balanceOf(who(address): 0x7b190a) -> 69961509697
+  [2][CALL] from=0xca813e, to=TetherToken, transferFrom(_from(address): 0x7b190a, _to(address): 0x7021C1, _value(uint256): 69961509697) -> None

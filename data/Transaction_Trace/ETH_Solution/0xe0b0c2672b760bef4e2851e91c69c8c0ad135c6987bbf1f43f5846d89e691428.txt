@@ -1,0 +1,105 @@
+[1][CALL] from=0xef967e, to=0xb480Ac, 0xdd869c35() -> None
+  [2][CALL] from=0xb480Ac, to=ERC1820Registry, setInterfaceImplementer(_addr(address): 0xb480Ac, _interfaceHash(bytes32): b')\xdd\xb5\x89\xb1\xfb_\xc7\xcf9Ia\xc1\xa..., _implementer(address): 0xb480Ac) -> None
+  [2][CALL] from=0xb480Ac, to=Rena, approve(spender(address): 0x2320A2, amount(uint256): 115792089237316195423570985008687907853269...) -> True
+  [2][CALL] from=0xb480Ac, to=UniswapV2Pair, swap(amount0Out(uint256): 2000000000000000000, amount1Out(uint256): 0, to(address): 0xb480Ac, data(bytes): b'x') -> None
+    [3][CALL] from=UniswapV2Pair, to=Rena, transfer(recipient(address): 0xb480Ac, amount(uint256): 2000000000000000000) -> True
+    [3][CALL] from=UniswapV2Pair, to=0xb480Ac, uniswapV2Calladdress() -> None
+      [4][CALL] from=0xb480Ac, to=Revest, mintAddressLock(trigger(address): 0xb480Ac, arguments(bytes): b'', recipients(address[]): ['0xb480Ac726528D1c195cD3bb32F19C92E8d9285..., quantities(uint256[]): [2], fnftConfig(tuple): {'asset': '0x56de8BC61346321D4F2211e3aC3c0...) -> 1027
+        [5][STATICCALL] from=Revest, to=RevestAddressRegistry, getRevestFNFT() -> 0xe952bd
+        [5][STATICCALL] from=Revest, to=FNFTHandler, getNextId() -> 1027
+        [5][STATICCALL] from=Revest, to=RevestAddressRegistry, getLockManager() -> 0x226124
+        [5][CALL] from=Revest, to=LockManager, createLock(fnftId(uint256): 1027, lock(tuple): {'addressLock': '0xb480Ac726528D1c195cD3bb...) -> 1065
+          [6][STATICCALL] from=LockManager, to=RevestAddressRegistry, getLockManager() -> 0x226124
+          [6][STATICCALL] from=LockManager, to=RevestAddressRegistry, getRewardsHandler() -> 0xa4e7f2
+          [6][STATICCALL] from=LockManager, to=RevestAddressRegistry, getTokenVault() -> 0xa81bd1
+          [6][STATICCALL] from=LockManager, to=RevestAddressRegistry, getRevest() -> 0x2320a2
+        [5][STATICCALL] from=Revest, to=0xb480Ac, supportsInterfacebytes4() -> None
+        [5][STATICCALL] from=Revest, to=RevestAddressRegistry, getTokenVault() -> 0xa81bd1
+        [5][CALL] from=Revest, to=TokenVault, createFNFT(fnftId(uint256): 1027, fnftConfig(tuple): {'asset': '0x56de8BC61346321D4F2211e3aC3c0..., quantity(uint256): 2, from(address): 0xb480Ac) -> None
+          [6][STATICCALL] from=TokenVault, to=RevestAddressRegistry, getRevest() -> 0x2320a2
+          [6][STATICCALL] from=TokenVault, to=RevestAddressRegistry, getRevest() -> 0x2320a2
+          [6][STATICCALL] from=TokenVault, to=Rena, balanceOf(account(address): 0xA81bd1) -> 364710000000000000000000
+        [5][CALL] from=Revest, to=Rena, transferFrom(sender(address): 0xb480Ac, recipient(address): 0xA81bd1, amount(uint256): 0) -> True
+        [5][STATICCALL] from=Revest, to=RevestAddressRegistry, getRevestFNFT() -> 0xe952bd
+        [5][CALL] from=Revest, to=FNFTHandler, mint(account(address): 0xb480Ac, id(uint256): 1027, amount(uint256): 2, data(bytes): b'') -> None
+          [6][STATICCALL] from=FNFTHandler, to=RevestAddressRegistry, getRevest() -> 0x2320a2
+          [6][CALL] from=FNFTHandler, to=0xb480Ac, onERC1155Receivedaddress() -> 0xf23a6e
+      [4][CALL] from=0xb480Ac, to=Revest, mintAddressLock(trigger(address): 0xb480Ac, arguments(bytes): b'', recipients(address[]): ['0xb480Ac726528D1c195cD3bb32F19C92E8d9285..., quantities(uint256[]): [360000], fnftConfig(tuple): {'asset': '0x56de8BC61346321D4F2211e3aC3c0...) -> 1028
+        [5][STATICCALL] from=Revest, to=RevestAddressRegistry, getRevestFNFT() -> 0xe952bd
+        [5][STATICCALL] from=Revest, to=FNFTHandler, getNextId() -> 1028
+        [5][STATICCALL] from=Revest, to=RevestAddressRegistry, getLockManager() -> 0x226124
+        [5][CALL] from=Revest, to=LockManager, createLock(fnftId(uint256): 1028, lock(tuple): {'addressLock': '0xb480Ac726528D1c195cD3bb...) -> 1066
+          [6][STATICCALL] from=LockManager, to=RevestAddressRegistry, getLockManager() -> 0x226124
+          [6][STATICCALL] from=LockManager, to=RevestAddressRegistry, getRewardsHandler() -> 0xa4e7f2
+          [6][STATICCALL] from=LockManager, to=RevestAddressRegistry, getTokenVault() -> 0xa81bd1
+          [6][STATICCALL] from=LockManager, to=RevestAddressRegistry, getRevest() -> 0x2320a2
+        [5][STATICCALL] from=Revest, to=0xb480Ac, supportsInterfacebytes4() -> None
+        [5][STATICCALL] from=Revest, to=RevestAddressRegistry, getTokenVault() -> 0xa81bd1
+        [5][CALL] from=Revest, to=TokenVault, createFNFT(fnftId(uint256): 1028, fnftConfig(tuple): {'asset': '0x56de8BC61346321D4F2211e3aC3c0..., quantity(uint256): 360000, from(address): 0xb480Ac) -> None
+          [6][STATICCALL] from=TokenVault, to=RevestAddressRegistry, getRevest() -> 0x2320a2
+          [6][STATICCALL] from=TokenVault, to=RevestAddressRegistry, getRevest() -> 0x2320a2
+          [6][STATICCALL] from=TokenVault, to=Rena, balanceOf(account(address): 0xA81bd1) -> 364710000000000000000000
+        [5][CALL] from=Revest, to=Rena, transferFrom(sender(address): 0xb480Ac, recipient(address): 0xA81bd1, amount(uint256): 0) -> True
+        [5][STATICCALL] from=Revest, to=RevestAddressRegistry, getRevestFNFT() -> 0xe952bd
+        [5][CALL] from=Revest, to=FNFTHandler, mint(account(address): 0xb480Ac, id(uint256): 1028, amount(uint256): 360000, data(bytes): b'') -> None
+          [6][STATICCALL] from=FNFTHandler, to=RevestAddressRegistry, getRevest() -> 0x2320a2
+          [6][CALL] from=FNFTHandler, to=0xb480Ac, onERC1155Receivedaddress() -> 0xf23a6e
+            [7][STATICCALL] from=0xb480Ac, to=FNFTHandler, getNextId() -> 1028
+            [7][CALL] from=0xb480Ac, to=Revest, depositAdditionalToFNFT(fnftId(uint256): 1027, amount(uint256): 1000000000000000000, quantity(uint256): 1) -> 1028
+              [8][STATICCALL] from=Revest, to=RevestAddressRegistry, getTokenVault() -> 0xa81bd1
+              [8][STATICCALL] from=Revest, to=TokenVault, getFNFT(fnftId(uint256): 1027) -> None
+              [8][STATICCALL] from=Revest, to=RevestAddressRegistry, getRevestFNFT() -> 0xe952bd
+              [8][STATICCALL] from=Revest, to=FNFTHandler, getNextId() -> 1028
+              [8][STATICCALL] from=Revest, to=RevestAddressRegistry, getTokenVault() -> 0xa81bd1
+              [8][STATICCALL] from=Revest, to=RevestAddressRegistry, getRevestFNFT() -> 0xe952bd
+              [8][STATICCALL] from=Revest, to=RevestAddressRegistry, getLockManager() -> 0x226124
+              [8][STATICCALL] from=Revest, to=FNFTHandler, getSupply(fnftId(uint256): 1027) -> 2
+              [8][STATICCALL] from=Revest, to=FNFTHandler, getBalance(account(address): 0xb480Ac, id(uint256): 1027) -> 2
+              [8][STATICCALL] from=Revest, to=LockManager, fnftIdToLockId((uint256): 1027) -> 1065
+              [8][STATICCALL] from=Revest, to=FNFTHandler, getNextId() -> 1028
+              [8][CALL] from=Revest, to=LockManager, pointFNFTToLock(fnftId(uint256): 1028, lockId(uint256): 1065) -> None
+                [9][STATICCALL] from=LockManager, to=RevestAddressRegistry, getLockManager() -> 0x226124
+                [9][STATICCALL] from=LockManager, to=RevestAddressRegistry, getRewardsHandler() -> 0xa4e7f2
+                [9][STATICCALL] from=LockManager, to=RevestAddressRegistry, getTokenVault() -> 0xa81bd1
+                [9][STATICCALL] from=LockManager, to=RevestAddressRegistry, getRevest() -> 0x2320a2
+              [8][STATICCALL] from=Revest, to=RevestAddressRegistry, getRevestFNFT() -> 0xe952bd
+              [8][STATICCALL] from=Revest, to=FNFTHandler, getSupply(fnftId(uint256): 1027) -> 2
+              [8][CALL] from=Revest, to=FNFTHandler, burn(account(address): 0xb480Ac, id(uint256): 1027, amount(uint256): 1) -> None
+                [9][STATICCALL] from=FNFTHandler, to=RevestAddressRegistry, getRevest() -> 0x2320a2
+              [8][CALL] from=Revest, to=FNFTHandler, mint(account(address): 0xb480Ac, id(uint256): 1028, amount(uint256): 1, data(bytes): b'') -> None
+                [9][STATICCALL] from=FNFTHandler, to=RevestAddressRegistry, getRevest() -> 0x2320a2
+                [9][CALL] from=FNFTHandler, to=0xb480Ac, onERC1155Receivedaddress() -> 0xf23a6e
+              [8][CALL] from=Revest, to=TokenVault, depositToken(fnftId(uint256): 1027, transferAmount(uint256): 1000000000000000000, quantity(uint256): 1) -> None
+                [9][STATICCALL] from=TokenVault, to=RevestAddressRegistry, getRevest() -> 0x2320a2
+                [9][STATICCALL] from=TokenVault, to=Rena, balanceOf(account(address): 0xA81bd1) -> 364710000000000000000000
+              [8][CALL] from=Revest, to=Rena, transferFrom(sender(address): 0xb480Ac, recipient(address): 0xA81bd1, amount(uint256): 1000000000000000000) -> True
+              [8][CALL] from=Revest, to=TokenVault, handleMultipleDeposits(fnftId(uint256): 1027, newFNFTId(uint256): 1028, amount(uint256): 1000000000000000000) -> None
+                [9][STATICCALL] from=TokenVault, to=RevestAddressRegistry, getRevest() -> 0x2320a2
+                [9][STATICCALL] from=TokenVault, to=RevestAddressRegistry, getRevest() -> 0x2320a2
+                [9][STATICCALL] from=TokenVault, to=RevestAddressRegistry, getRevest() -> 0x2320a2
+      [4][CALL] from=0xb480Ac, to=Revest, withdrawFNFT(fnftId(uint256): 1028, quantity(uint256): 360001) -> None
+        [5][STATICCALL] from=Revest, to=RevestAddressRegistry, getRevestFNFT() -> 0xe952bd
+        [5][STATICCALL] from=Revest, to=FNFTHandler, getSupply(fnftId(uint256): 1028) -> 360001
+        [5][STATICCALL] from=Revest, to=FNFTHandler, getBalance(account(address): 0xb480Ac, id(uint256): 1028) -> 360001
+        [5][STATICCALL] from=Revest, to=FNFTHandler, getBalance(account(address): 0xb480Ac, id(uint256): 1028) -> 360001
+        [5][STATICCALL] from=Revest, to=RevestAddressRegistry, getLockManager() -> 0x226124
+        [5][STATICCALL] from=Revest, to=LockManager, lockTypes(tokenId(uint256): 1028) -> 3
+        [5][STATICCALL] from=Revest, to=RevestAddressRegistry, getLockManager() -> 0x226124
+        [5][CALL] from=Revest, to=LockManager, unlockFNFT(fnftId(uint256): 1028, sender(address): 0xb480Ac) -> True
+          [6][STATICCALL] from=LockManager, to=RevestAddressRegistry, getRevest() -> 0x2320a2
+        [5][STATICCALL] from=Revest, to=RevestAddressRegistry, getRevestFNFT() -> 0xe952bd
+        [5][STATICCALL] from=Revest, to=FNFTHandler, getSupply(fnftId(uint256): 1028) -> 360001
+        [5][CALL] from=Revest, to=FNFTHandler, burn(account(address): 0xb480Ac, id(uint256): 1028, amount(uint256): 360001) -> None
+          [6][STATICCALL] from=FNFTHandler, to=RevestAddressRegistry, getRevest() -> 0x2320a2
+        [5][STATICCALL] from=Revest, to=RevestAddressRegistry, getTokenVault() -> 0xa81bd1
+        [5][CALL] from=Revest, to=TokenVault, withdrawToken(fnftId(uint256): 1028, quantity(uint256): 360001, user(address): 0xb480Ac) -> None
+          [6][STATICCALL] from=TokenVault, to=RevestAddressRegistry, getRevest() -> 0x2320a2
+          [6][STATICCALL] from=TokenVault, to=Rena, balanceOf(account(address): 0xA81bd1) -> 364710990000000000000000
+          [6][CALL] from=TokenVault, to=Rena, transfer(recipient(address): 0xb480Ac, amount(uint256): 360000990129143348989911) -> True
+          [6][STATICCALL] from=TokenVault, to=RevestAddressRegistry, getRevestFNFT() -> 0xe952bd
+          [6][STATICCALL] from=TokenVault, to=FNFTHandler, getSupply(fnftId(uint256): 1028) -> 0
+      [4][CALL] from=0xb480Ac, to=Rena, transfer(recipient(address): 0xbC2C53, amount(uint256): 2200000000000000000) -> True
+    [3][STATICCALL] from=UniswapV2Pair, to=Rena, balanceOf(account(address): 0xbC2C53) -> 3385348607549980760575057
+    [3][STATICCALL] from=UniswapV2Pair, to=WETH9, balanceOf((address): 0xbC2C53) -> 363806433227016002339
+  [2][STATICCALL] from=0xb480Ac, to=Rena, balanceOf(account(address): 0xb480Ac) -> 356399760227851915500012
+  [2][CALL] from=0xb480Ac, to=Rena, transfer(recipient(address): 0xef967E, amount(uint256): 356399760227851915500012) -> True

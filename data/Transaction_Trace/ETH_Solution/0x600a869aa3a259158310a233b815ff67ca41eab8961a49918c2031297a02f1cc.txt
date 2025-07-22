@@ -1,0 +1,185 @@
+[1][CALL] from=0x882d72, to=0x9e0259, run() -> None
+  [2][STATICCALL] from=0x9e0259, to=SoloMargin, getNumMarkets() -> 4
+  [2][STATICCALL] from=0x9e0259, to=SoloMargin, getMarketTokenAddress(marketId(uint256): 0) -> 0xc02aaa
+  [2][CALL] from=0x9e0259, to=WETH9, approve(guy(address): 0x1E0447, wad(uint256): 21000000000000000000002) -> True
+  [2][CALL] from=0x9e0259, to=SoloMargin, 0xa67a6a45() -> None
+    [3][DELEGATECALL] from=SoloMargin, to=OperationImpl, 0xbd76ecfd() -> None
+      [4][STATICCALL] from=SoloMargin, to=WethPriceOracle, getPrice((address): 0xC02aaA) -> None
+        [5][STATICCALL] from=WethPriceOracle, to=P1MirrorOracleETHUSD, peek() -> ['0x00000000000017f61ef92172690000', 'True']
+      [4][STATICCALL] from=SoloMargin, to=DoubleExponentInterestSetter, getInterestRate((address): 0xC02aaA, borrowWei(uint256): 2883344424753170926018, supplyWei(uint256): 70183106436130133646619) -> None
+      [4][CALL] from=SoloMargin, to=WETH9, transfer(dst(address): 0x9e0259, wad(uint256): 21000000000000000000000) -> True
+      [4][CALL] from=SoloMargin, to=0x9e0259, callFunctionaddress() -> None
+        [5][STATICCALL] from=0x9e0259, to=WETH9, balanceOf((address): 0x9e0259) -> 21000000000000000000000
+        [5][CALL] from=0x9e0259, to=WETH9, withdraw(wad(uint256): 21000000000000000000000) -> None
+          [6][CALL][21000.0] from=WETH9, to=0x9e0259
+        [5][CALL] from=0x9e0259, to=UniswapV2Router02, swapExactETHForTokens(amountOutMin(uint256): 0, path(address[]): ['0xC02aaA39b223FE8D0A0e5C4F27eAD9083C756C..., to(address): 0x9e0259, deadline(uint256): 2000000000) -> [50000000000000000000, 107232626338567318600951]
+          [6][STATICCALL] from=UniswapV2Router02, to=UniswapV2Pair, getReserves() -> ['291933012368587463562043', '85862992989895639809', '1604491681']
+          [6][CALL] from=UniswapV2Router02, to=WETH9, deposit() -> None
+          [6][CALL] from=UniswapV2Router02, to=WETH9, transfer(dst(address): 0x534f26, wad(uint256): 50000000000000000000) -> True
+          [6][CALL] from=UniswapV2Router02, to=UniswapV2Pair, swap(amount0Out(uint256): 107232626338567318600951, amount1Out(uint256): 0, to(address): 0x9e0259, data(bytes): b'') -> None
+            [7][CALL] from=UniswapV2Pair, to=Cheese, transfer(dst(address): 0x9e0259, rawAmount(uint256): 107232626338567318600951) -> True
+            [7][STATICCALL] from=UniswapV2Pair, to=Cheese, balanceOf(account(address): 0x534f26) -> 184700386030020144961092
+            [7][STATICCALL] from=UniswapV2Pair, to=WETH9, balanceOf((address): 0x534f26) -> 135862992989895639809
+        [5][CALL] from=0x9e0259, to=Cheese, approve(spender(address): 0x7a250d, rawAmount(uint256): 115792089237316195423570985008687907853269...) -> True
+        [5][STATICCALL] from=0x9e0259, to=Cheese, balanceOf(account(address): 0x9e0259) -> 107232626338567318600951
+        [5][CALL] from=0x9e0259, to=UniswapV2Router02, addLiquidityETH(token(address): 0xA04bDB, amountTokenDesired(uint256): 107232626338567318600951, amountTokenMin(uint256): 0, amountETHMin(uint256): 0, to(address): 0x9e0259, deadline(uint256): 2000000000) -> ['107232626338567318600951', '78878804065720344644', '2833226849227664833574']
+          [6][STATICCALL] from=UniswapV2Router02, to=UniswapV2Factory, getPair((address): 0xC02aaA) -> 0x534f26
+          [6][STATICCALL] from=UniswapV2Router02, to=UniswapV2Pair, getReserves() -> ['184700386030020144961092', '135862992989895639809', '1604690541']
+          [6][CALL] from=UniswapV2Router02, to=Cheese, transferFrom(src(address): 0x9e0259, dst(address): 0x534f26, rawAmount(uint256): 107232626338567318600951) -> True
+          [6][CALL] from=UniswapV2Router02, to=WETH9, deposit() -> None
+          [6][CALL] from=UniswapV2Router02, to=WETH9, transfer(dst(address): 0x534f26, wad(uint256): 78878804065720344644) -> True
+          [6][CALL] from=UniswapV2Router02, to=UniswapV2Pair, mint(to(address): 0x9e0259) -> 2833226849227664833574
+            [7][STATICCALL] from=UniswapV2Pair, to=Cheese, balanceOf(account(address): 0x534f26) -> 291933012368587463562043
+            [7][STATICCALL] from=UniswapV2Pair, to=WETH9, balanceOf((address): 0x534f26) -> 214741797055615984453
+            [7][STATICCALL] from=UniswapV2Pair, to=UniswapV2Factory, feeTo() -> 0x000000
+          [6][CALL][20871.12119593428] from=UniswapV2Router02, to=0x9e0259
+        [5][STATICCALL] from=0x9e0259, to=UniswapV2Pair, balanceOf((address): 0x9e0259) -> 2833226849227664833574
+        [5][CALL] from=0x9e0259, to=Unitroller, enterMarkets(cTokens(address[]): ['0x7e4956688367fB28de3C0A62193f59b1526a00...) -> [0]
+          [6][DELEGATECALL] from=Unitroller, to=Comptroller, enterMarkets(cTokens(address[]): ['0x7e4956688367fB28de3C0A62193f59b1526a00...) -> [0]
+        [5][CALL] from=0x9e0259, to=UniswapV2Pair, approve(spender(address): 0x7e4956, value(uint256): 115792089237316195423570985008687907853269...) -> True
+        [5][STATICCALL] from=0x9e0259, to=UniswapV2Pair, balanceOf((address): 0x9e0259) -> 2833226849227664833574
+        [5][CALL] from=0x9e0259, to=CErc20, mint(mintAmount(uint256): 2833226849227664833574) -> 0
+          [6][STATICCALL] from=CErc20, to=UniswapV2Pair, balanceOf((address): 0x7e4956) -> 4859142340248388792616
+          [6][STATICCALL] from=CErc20, to=WhitePaperInterestRateModel, getBorrowRate(cash(uint256): 4859142340248388792616, borrows(uint256): 0, reserves(uint256): 0) -> 475646879756
+          [6][CALL] from=CErc20, to=Unitroller, mintAllowed(cToken(address): 0x7e4956, minter(address): 0x9e0259, mintAmount(uint256): 2833226849227664833574) -> 0
+            [7][DELEGATECALL] from=Unitroller, to=Comptroller, mintAllowed(cToken(address): 0x7e4956, minter(address): 0x9e0259, mintAmount(uint256): 2833226849227664833574) -> 0
+              [8][STATICCALL] from=Unitroller, to=CErc20, totalSupply() -> 24295711699851
+              [8][STATICCALL] from=Unitroller, to=CErc20, balanceOf(owner(address): 0x9e0259) -> 0
+          [6][STATICCALL] from=CErc20, to=UniswapV2Pair, balanceOf((address): 0x7e4956) -> 4859142340248388792616
+          [6][STATICCALL] from=CErc20, to=UniswapV2Pair, balanceOf((address): 0x7e4956) -> 4859142340248388792616
+          [6][CALL] from=CErc20, to=UniswapV2Pair, transferFrom(from(address): 0x9e0259, to(address): 0x7e4956, value(uint256): 2833226849227664833574) -> True
+          [6][STATICCALL] from=CErc20, to=UniswapV2Pair, balanceOf((address): 0x7e4956) -> 7692369189476053626190
+          [6][CALL] from=CErc20, to=Unitroller, mintVerify(cToken(address): 0x7e4956, minter(address): 0x9e0259, actualMintAmount(uint256): 2833226849227664833574, mintTokens(uint256): 14166134245327) -> None
+            [7][DELEGATECALL] from=Unitroller, to=Comptroller, mintVerify(cToken(address): 0x7e4956, minter(address): 0x9e0259, actualMintAmount(uint256): 2833226849227664833574, mintTokens(uint256): 14166134245327) -> None
+        [5][CALL] from=0x9e0259, to=UniswapV2Router02, swapExactETHForTokens(amountOutMin(uint256): 0, path(address[]): ['0xC02aaA39b223FE8D0A0e5C4F27eAD9083C756C..., to(address): 0x9e0259, deadline(uint256): 2000000000) -> [20000000000000000000000, 288822567177716887127497]
+          [6][STATICCALL] from=UniswapV2Router02, to=UniswapV2Pair, getReserves() -> ['291933012368587463562043', '214741797055615984453', '1604690541']
+          [6][CALL] from=UniswapV2Router02, to=WETH9, deposit() -> None
+          [6][CALL] from=UniswapV2Router02, to=WETH9, transfer(dst(address): 0x534f26, wad(uint256): 20000000000000000000000) -> True
+          [6][CALL] from=UniswapV2Router02, to=UniswapV2Pair, swap(amount0Out(uint256): 288822567177716887127497, amount1Out(uint256): 0, to(address): 0x9e0259, data(bytes): b'') -> None
+            [7][CALL] from=UniswapV2Pair, to=Cheese, transfer(dst(address): 0x9e0259, rawAmount(uint256): 288822567177716887127497) -> True
+            [7][STATICCALL] from=UniswapV2Pair, to=Cheese, balanceOf(account(address): 0x534f26) -> 3110445190870576434546
+            [7][STATICCALL] from=UniswapV2Pair, to=WETH9, balanceOf((address): 0x534f26) -> 20214741797055615984453
+        [5][STATICCALL] from=0x9e0259, to=Cheese, balanceOf(account(address): 0x9e0259) -> 288822567177716887127497
+        [5][CALL] from=0x9e0259, to=CheesePriceOracle, refresh(symbols(string[]): ['UNI_V2-CHEESE-ETH']) -> None
+          [6][STATICCALL] from=CheesePriceOracle, to=UniswapV2Pair, price0CumulativeLast() -> 24759002328484884488875976355298
+          [6][STATICCALL] from=CheesePriceOracle, to=UniswapV2Pair, price1CumulativeLast() -> 254893813778105185954158917957956885298470932660418
+          [6][STATICCALL] from=CheesePriceOracle, to=UniswapV2Pair, getReserves() -> ['604604160729851404459979', '267965429723203', '1604690541']
+          [6][STATICCALL] from=CheesePriceOracle, to=WETH9, balanceOf((address): 0x534f26) -> 20214741797055615984453
+          [6][STATICCALL] from=CheesePriceOracle, to=UniswapV2Pair, totalSupply() -> 7713253671575089034709
+        [5][STATICCALL] from=0x9e0259, to=FiatTokenProxy, balanceOf(account(address): 0x5E181b) -> 2068252649482
+          [6][DELEGATECALL] from=FiatTokenProxy, to=FiatTokenV2, balanceOf(account(address): 0x5E181b) -> 2068252649482
+        [5][CALL] from=0x9e0259, to=CErc20, borrow(borrowAmount(uint256): 2068252649482) -> 0
+          [6][STATICCALL] from=CErc20, to=FiatTokenProxy, balanceOf(account(address): 0x5E181b) -> 2068252649482
+            [7][DELEGATECALL] from=FiatTokenProxy, to=FiatTokenV2, balanceOf(account(address): 0x5E181b) -> 2068252649482
+          [6][STATICCALL] from=CErc20, to=WhitePaperInterestRateModel, getBorrowRate(cash(uint256): 2068252649482, borrows(uint256): 529249650468, reserves(uint256): 162840629) -> 43345614811
+          [6][CALL] from=CErc20, to=Unitroller, borrowAllowed(cToken(address): 0x5E181b, borrower(address): 0x9e0259, borrowAmount(uint256): 2068252649482) -> 0
+            [7][DELEGATECALL] from=Unitroller, to=Comptroller, borrowAllowed(cToken(address): 0x5E181b, borrower(address): 0x9e0259, borrowAmount(uint256): 2068252649482) -> 0
+              [8][STATICCALL] from=Unitroller, to=CheesePriceOracle, getUnderlyingPrice(sToken(address): 0x5E181b) -> 1000000000000000000000000000000
+              [8][STATICCALL] from=Unitroller, to=CErc20, getAccountSnapshot(account(address): 0x9e0259) -> ['0', '14166134245327', '0', '200000000011451702729447911']
+                [9][STATICCALL] from=CErc20, to=UniswapV2Pair, balanceOf((address): 0x7e4956) -> 7692369189476053626190
+              [8][STATICCALL] from=Unitroller, to=CheesePriceOracle, getUnderlyingPrice(sToken(address): 0x7e4956) -> 2063673820000000000000
+              [8][STATICCALL] from=Unitroller, to=CErc20, getAccountSnapshot(account(address): 0x9e0259) -> ['0', '0', '0', '200238504522692']
+                [9][STATICCALL] from=CErc20, to=FiatTokenProxy, balanceOf(account(address): 0x5E181b) -> 2068252649482
+                  [10][DELEGATECALL] from=FiatTokenProxy, to=FiatTokenV2, balanceOf(account(address): 0x5E181b) -> 2068252649482
+              [8][STATICCALL] from=Unitroller, to=CheesePriceOracle, getUnderlyingPrice(sToken(address): 0x5E181b) -> 1000000000000000000000000000000
+              [8][STATICCALL] from=Unitroller, to=CErc20, borrowIndex() -> 1007841568811840462
+              [8][STATICCALL] from=Unitroller, to=CErc20, totalBorrows() -> 529297711132
+          [6][STATICCALL] from=CErc20, to=FiatTokenProxy, balanceOf(account(address): 0x5E181b) -> 2068252649482
+            [7][DELEGATECALL] from=FiatTokenProxy, to=FiatTokenV2, balanceOf(account(address): 0x5E181b) -> 2068252649482
+          [6][CALL] from=CErc20, to=FiatTokenProxy, transfer(to(address): 0x9e0259, value(uint256): 2068252649482) -> True
+            [7][DELEGATECALL] from=FiatTokenProxy, to=FiatTokenV2, transfer(to(address): 0x9e0259, value(uint256): 2068252649482) -> True
+          [6][CALL] from=CErc20, to=Unitroller, borrowVerify(cToken(address): 0x5E181b, borrower(address): 0x9e0259, borrowAmount(uint256): 2068252649482) -> None
+            [7][DELEGATECALL] from=Unitroller, to=Comptroller, borrowVerify(cToken(address): 0x5E181b, borrower(address): 0x9e0259, borrowAmount(uint256): 2068252649482) -> None
+        [5][STATICCALL] from=0x9e0259, to=TetherToken, balanceOf(who(address): 0x4c2a8A) -> 1237995403809
+        [5][CALL] from=0x9e0259, to=CErc20, borrow(borrowAmount(uint256): 1237995403809) -> 0
+          [6][STATICCALL] from=CErc20, to=TetherToken, balanceOf(who(address): 0x4c2a8A) -> 1237995403809
+          [6][STATICCALL] from=CErc20, to=WhitePaperInterestRateModel, getBorrowRate(cash(uint256): 1237995403809, borrows(uint256): 145932862176, reserves(uint256): 22379941) -> 29316494040
+          [6][CALL] from=CErc20, to=Unitroller, borrowAllowed(cToken(address): 0x4c2a8A, borrower(address): 0x9e0259, borrowAmount(uint256): 1237995403809) -> 0
+            [7][DELEGATECALL] from=Unitroller, to=Comptroller, borrowAllowed(cToken(address): 0x4c2a8A, borrower(address): 0x9e0259, borrowAmount(uint256): 1237995403809) -> 0
+              [8][STATICCALL] from=Unitroller, to=CheesePriceOracle, getUnderlyingPrice(sToken(address): 0x4c2a8A) -> 1000000000000000000000000000000
+              [8][STATICCALL] from=Unitroller, to=CErc20, getAccountSnapshot(account(address): 0x9e0259) -> ['0', '14166134245327', '0', '200000000011451702729447911']
+                [9][STATICCALL] from=CErc20, to=UniswapV2Pair, balanceOf((address): 0x7e4956) -> 7692369189476053626190
+              [8][STATICCALL] from=Unitroller, to=CheesePriceOracle, getUnderlyingPrice(sToken(address): 0x7e4956) -> 2063673820000000000000
+              [8][STATICCALL] from=Unitroller, to=CErc20, getAccountSnapshot(account(address): 0x9e0259) -> ['0', '0', '2068252649482', '200238504522692']
+                [9][STATICCALL] from=CErc20, to=FiatTokenProxy, balanceOf(account(address): 0x5E181b) -> 0
+                  [10][DELEGATECALL] from=FiatTokenProxy, to=FiatTokenV2, balanceOf(account(address): 0x5E181b) -> 0
+              [8][STATICCALL] from=Unitroller, to=CheesePriceOracle, getUnderlyingPrice(sToken(address): 0x5E181b) -> 1000000000000000000000000000000
+              [8][STATICCALL] from=Unitroller, to=CErc20, getAccountSnapshot(account(address): 0x9e0259) -> ['0', '0', '0', '200063515261361']
+                [9][STATICCALL] from=CErc20, to=TetherToken, balanceOf(who(address): 0x4c2a8A) -> 1237995403809
+              [8][STATICCALL] from=Unitroller, to=CheesePriceOracle, getUnderlyingPrice(sToken(address): 0x4c2a8A) -> 1000000000000000000000000000000
+              [8][STATICCALL] from=Unitroller, to=CErc20, borrowIndex() -> 1005493973867928712
+              [8][STATICCALL] from=Unitroller, to=CErc20, totalBorrows() -> 145990425893
+          [6][STATICCALL] from=CErc20, to=TetherToken, balanceOf(who(address): 0x4c2a8A) -> 1237995403809
+          [6][CALL] from=CErc20, to=TetherToken, transfer(_to(address): 0x9e0259, _value(uint256): 1237995403809) -> None
+          [6][CALL] from=CErc20, to=Unitroller, borrowVerify(cToken(address): 0x4c2a8A, borrower(address): 0x9e0259, borrowAmount(uint256): 1237995403809) -> None
+            [7][DELEGATECALL] from=Unitroller, to=Comptroller, borrowVerify(cToken(address): 0x4c2a8A, borrower(address): 0x9e0259, borrowAmount(uint256): 1237995403809) -> None
+        [5][STATICCALL] from=0x9e0259, to=Dai, balanceOf((address): 0xA80e73) -> 87586864453785145669360
+        [5][CALL] from=0x9e0259, to=CErc20, borrow(borrowAmount(uint256): 87586864453785145669360) -> 0
+          [6][STATICCALL] from=CErc20, to=Dai, balanceOf((address): 0xA80e73) -> 87586864453785145669360
+          [6][STATICCALL] from=CErc20, to=WhitePaperInterestRateModel, getBorrowRate(cash(uint256): 87586864453785145669360, borrows(uint256): 192178004020544781105928, reserves(uint256): 186173366537327526025) -> 112355064815
+          [6][CALL] from=CErc20, to=Unitroller, borrowAllowed(cToken(address): 0xA80e73, borrower(address): 0x9e0259, borrowAmount(uint256): 87586864453785145669360) -> 0
+            [7][DELEGATECALL] from=Unitroller, to=Comptroller, borrowAllowed(cToken(address): 0xA80e73, borrower(address): 0x9e0259, borrowAmount(uint256): 87586864453785145669360) -> 0
+              [8][STATICCALL] from=Unitroller, to=CheesePriceOracle, getUnderlyingPrice(sToken(address): 0xA80e73) -> 1008855000000000000
+              [8][STATICCALL] from=Unitroller, to=CErc20, getAccountSnapshot(account(address): 0x9e0259) -> ['0', '14166134245327', '0', '200000000011451702729447911']
+                [9][STATICCALL] from=CErc20, to=UniswapV2Pair, balanceOf((address): 0x7e4956) -> 7692369189476053626190
+              [8][STATICCALL] from=Unitroller, to=CheesePriceOracle, getUnderlyingPrice(sToken(address): 0x7e4956) -> 2063673820000000000000
+              [8][STATICCALL] from=Unitroller, to=CErc20, getAccountSnapshot(account(address): 0x9e0259) -> ['0', '0', '2068252649482', '200238504522692']
+                [9][STATICCALL] from=CErc20, to=FiatTokenProxy, balanceOf(account(address): 0x5E181b) -> 0
+                  [10][DELEGATECALL] from=FiatTokenProxy, to=FiatTokenV2, balanceOf(account(address): 0x5E181b) -> 0
+              [8][STATICCALL] from=Unitroller, to=CheesePriceOracle, getUnderlyingPrice(sToken(address): 0x5E181b) -> 1000000000000000000000000000000
+              [8][STATICCALL] from=Unitroller, to=CErc20, getAccountSnapshot(account(address): 0x9e0259) -> ['0', '0', '1237995403809', '200063515261361']
+                [9][STATICCALL] from=CErc20, to=TetherToken, balanceOf(who(address): 0x4c2a8A) -> 0
+              [8][STATICCALL] from=Unitroller, to=CheesePriceOracle, getUnderlyingPrice(sToken(address): 0x4c2a8A) -> 1000000000000000000000000000000
+              [8][STATICCALL] from=Unitroller, to=CErc20, getAccountSnapshot(account(address): 0x9e0259) -> ['0', '0', '0', '201924234938019348476998671']
+                [9][STATICCALL] from=CErc20, to=Dai, balanceOf((address): 0xA80e73) -> 87586864453785145669360
+              [8][STATICCALL] from=Unitroller, to=CheesePriceOracle, getUnderlyingPrice(sToken(address): 0xA80e73) -> 1008855000000000000
+              [8][STATICCALL] from=Unitroller, to=CErc20, borrowIndex() -> 1016850774523218737
+              [8][STATICCALL] from=Unitroller, to=CErc20, totalBorrows() -> 192400338616635267955579
+          [6][STATICCALL] from=CErc20, to=Dai, balanceOf((address): 0xA80e73) -> 87586864453785145669360
+          [6][CALL] from=CErc20, to=Dai, transfer(dst(address): 0x9e0259, wad(uint256): 87586864453785145669360) -> True
+          [6][CALL] from=CErc20, to=Unitroller, borrowVerify(cToken(address): 0xA80e73, borrower(address): 0x9e0259, borrowAmount(uint256): 87586864453785145669360) -> None
+            [7][DELEGATECALL] from=Unitroller, to=Comptroller, borrowVerify(cToken(address): 0xA80e73, borrower(address): 0x9e0259, borrowAmount(uint256): 87586864453785145669360) -> None
+        [5][STATICCALL] from=0x9e0259, to=Cheese, balanceOf(account(address): 0x9e0259) -> 288822567177716887127497
+        [5][CALL] from=0x9e0259, to=UniswapV2Router02, swapExactTokensForETH(amountIn(uint256): 288822567177716887127497, amountOutMin(uint256): 0, path(address[]): ['0xA04bDB1f11413a84D1F6C1d4d4FeD0208F2e68..., to(address): 0x9e0259, deadline(uint256): 2000000000) -> [288822567177716887127497, 19998719558981962596275]
+          [6][STATICCALL] from=UniswapV2Router02, to=UniswapV2Pair, getReserves() -> ['3110445190870576434546', '20214741797055615984453', '1604690541']
+          [6][CALL] from=UniswapV2Router02, to=Cheese, transferFrom(src(address): 0x9e0259, dst(address): 0x534f26, rawAmount(uint256): 288822567177716887127497) -> True
+          [6][CALL] from=UniswapV2Router02, to=UniswapV2Pair, swap(amount0Out(uint256): 0, amount1Out(uint256): 19998719558981962596275, to(address): 0x7a250d, data(bytes): b'') -> None
+            [7][CALL] from=UniswapV2Pair, to=WETH9, transfer(dst(address): 0x7a250d, wad(uint256): 19998719558981962596275) -> True
+            [7][STATICCALL] from=UniswapV2Pair, to=Cheese, balanceOf(account(address): 0x534f26) -> 291933012368587463562043
+            [7][STATICCALL] from=UniswapV2Pair, to=WETH9, balanceOf((address): 0x534f26) -> 216022238073653388178
+          [6][CALL] from=UniswapV2Router02, to=WETH9, withdraw(wad(uint256): 19998719558981962596275) -> None
+            [7][CALL][19998.719558981964] from=WETH9, to=UniswapV2Router02
+          [6][CALL][19998.719558981964] from=UniswapV2Router02, to=0x9e0259
+        [5][CALL] from=0x9e0259, to=FiatTokenProxy, approve(spender(address): 0x7a250d, value(uint256): 0) -> True
+          [6][DELEGATECALL] from=FiatTokenProxy, to=FiatTokenV2, approve(spender(address): 0x7a250d, value(uint256): 0) -> True
+        [5][CALL] from=0x9e0259, to=FiatTokenProxy, approve(spender(address): 0x7a250d, value(uint256): 115792089237316195423570985008687907853269...) -> True
+          [6][DELEGATECALL] from=FiatTokenProxy, to=FiatTokenV2, approve(spender(address): 0x7a250d, value(uint256): 115792089237316195423570985008687907853269...) -> True
+        [5][STATICCALL] from=0x9e0259, to=FiatTokenProxy, balanceOf(account(address): 0x9e0259) -> 2068252649482
+          [6][DELEGATECALL] from=FiatTokenProxy, to=FiatTokenV2, balanceOf(account(address): 0x9e0259) -> 2068252649482
+        [5][CALL] from=0x9e0259, to=UniswapV2Router02, swapTokensForExactETH(amountOut(uint256): 132159245083757748371, amountInMax(uint256): 2068252649482, path(address[]): ['0xA0b86991c6218b36c1d19D4a2e9Eb0cE3606eB..., to(address): 0x9e0259, deadline(uint256): 2000000000) -> [58812518433, 132159245083757748371]
+          [6][STATICCALL] from=UniswapV2Router02, to=UniswapV2Pair, getReserves() -> ['268901491640614', '606206398951486415268624', '1604690522']
+          [6][CALL] from=UniswapV2Router02, to=FiatTokenProxy, transferFrom(from(address): 0x9e0259, to(address): 0xB4e16d, value(uint256): 58812518433) -> True
+            [7][DELEGATECALL] from=FiatTokenProxy, to=FiatTokenV2, transferFrom(from(address): 0x9e0259, to(address): 0xB4e16d, value(uint256): 58812518433) -> True
+          [6][CALL] from=UniswapV2Router02, to=UniswapV2Pair, swap(amount0Out(uint256): 0, amount1Out(uint256): 132159245083757748371, to(address): 0x7a250d, data(bytes): b'') -> None
+            [7][CALL] from=UniswapV2Pair, to=WETH9, transfer(dst(address): 0x7a250d, wad(uint256): 132159245083757748371) -> True
+            [7][STATICCALL] from=UniswapV2Pair, to=FiatTokenProxy, balanceOf(account(address): 0xB4e16d) -> 268960304159047
+              [8][DELEGATECALL] from=FiatTokenProxy, to=FiatTokenV2, balanceOf(account(address): 0xB4e16d) -> 268960304159047
+            [7][STATICCALL] from=UniswapV2Pair, to=WETH9, balanceOf((address): 0xB4e16d) -> 606074239706402657520253
+          [6][CALL] from=UniswapV2Router02, to=WETH9, withdraw(wad(uint256): 132159245083757748371) -> None
+            [7][CALL][132.15924508375775] from=WETH9, to=UniswapV2Router02
+          [6][CALL][132.15924508375775] from=UniswapV2Router02, to=0x9e0259
+        [5][CALL] from=0x9e0259, to=WETH9, deposit() -> None
+        [5][STATICCALL] from=0x9e0259, to=FiatTokenProxy, balanceOf(account(address): 0x9e0259) -> 2009440131049
+          [6][DELEGATECALL] from=FiatTokenProxy, to=FiatTokenV2, balanceOf(account(address): 0x9e0259) -> 2009440131049
+        [5][CALL] from=0x9e0259, to=FiatTokenProxy, transfer(to(address): 0x02b716, value(uint256): 2009440131049) -> True
+          [6][DELEGATECALL] from=FiatTokenProxy, to=FiatTokenV2, transfer(to(address): 0x02b716, value(uint256): 2009440131049) -> True
+        [5][STATICCALL] from=0x9e0259, to=TetherToken, balanceOf(who(address): 0x9e0259) -> 1237995403809
+        [5][CALL] from=0x9e0259, to=TetherToken, transfer(_to(address): 0x02b716, _value(uint256): 1237995403809) -> None
+        [5][STATICCALL] from=0x9e0259, to=Dai, balanceOf((address): 0x9e0259) -> 87586864453785145669360
+        [5][CALL] from=0x9e0259, to=Dai, transfer(dst(address): 0x02b716, wad(uint256): 87586864453785145669360) -> True
+        [5][CALL][2.0] from=0x9e0259, to=0x02b716
+        [5][STATICCALL] from=0x9e0259, to=FiatTokenProxy, balanceOf(account(address): 0x02b716) -> 2009440131049
+          [6][DELEGATECALL] from=FiatTokenProxy, to=FiatTokenV2, balanceOf(account(address): 0x02b716) -> 2009440131049
+        [5][STATICCALL] from=0x9e0259, to=TetherToken, balanceOf(who(address): 0x02b716) -> 1237995403809
+        [5][STATICCALL] from=0x9e0259, to=Dai, balanceOf((address): 0x02b716) -> 87586864453785145669360
+      [4][CALL] from=SoloMargin, to=WETH9, transferFrom(src(address): 0x9e0259, dst(address): 0x1E0447, wad(uint256): 21000000000000000000002) -> True

@@ -1,0 +1,653 @@
+[1][CALL] from=0xbf675c, to=0x81d73c, 0x92d7c940() -> None
+  [2][CALL] from=0x81d73c, to=WETH9, approve(guy(address): 0x0e511A, wad(uint256): 115792089237316195423570985008687907853269...) -> True
+  [2][CALL] from=0x81d73c, to=Statera, approve(spender(address): 0x0e511A, value(uint256): 115792089237316195423570985008687907853269...) -> True
+  [2][STATICCALL] from=0x81d73c, to=WETH9, balanceOf((address): 0x1E0447) -> 104331302777663079074413
+  [2][CALL] from=0x81d73c, to=WETH9, approve(guy(address): 0x1E0447, wad(uint256): 115792089237316195423570985008687907853269...) -> True
+  [2][CALL] from=0x81d73c, to=SoloMargin, 0xa67a6a45() -> None
+    [3][DELEGATECALL] from=SoloMargin, to=OperationImpl, 0xbd76ecfd() -> None
+      [4][STATICCALL] from=SoloMargin, to=WethPriceOracle, getPrice((address): 0xC02aaA) -> None
+        [5][STATICCALL] from=WethPriceOracle, to=Medianizer, peek() -> ['0x0000000000000c32f40a7a0a174000', 'True']
+      [4][STATICCALL] from=SoloMargin, to=DoubleExponentInterestSetter, getInterestRate((address): 0xC02aaA, borrowWei(uint256): 11595451180057987258418, supplyWei(uint256): 115919622087813270216840) -> None
+      [4][CALL] from=SoloMargin, to=WETH9, transfer(dst(address): 0x81D73c, wad(uint256): 104331302777663079074403) -> True
+      [4][CALL] from=SoloMargin, to=0x81d73c, callFunctionaddress() -> None
+        [5][CALL] from=0x81d73c, to=BPool, gulp(token(address): 0xC02aaA) -> None
+          [6][STATICCALL] from=BPool, to=WETH9, balanceOf((address): 0x0e511A) -> 455924126729217697715
+        [5][STATICCALL] from=0x81d73c, to=BPool, getBalance(token(address): 0xC02aaA) -> 455924126729217697715
+        [5][STATICCALL] from=0x81d73c, to=BPool, getBalance(token(address): 0xa7DE08) -> 2400464534964658006485778
+        [5][STATICCALL] from=0x81d73c, to=Statera, balanceOf(owner(address): 0x0e511A) -> 2396522196928941001682053
+        [5][CALL] from=0x81d73c, to=BPool, swapExactAmountIn(tokenIn(address): 0xC02aaA, tokenAmountIn(uint256): 227962063364608848857, tokenOut(address): 0xa7DE08, minAmountOut(uint256): 1, maxPrice(uint256): 115792089237316195423570985008687907853269...) -> ['794802638667227901122582', '430223905170098']
+          [6][CALL] from=BPool, to=WETH9, transferFrom(src(address): 0x81D73c, dst(address): 0x0e511A, wad(uint256): 227962063364608848857) -> True
+          [6][CALL] from=BPool, to=Statera, transfer(to(address): 0x81D73c, value(uint256): 794802638667227901122582) -> True
+        [5][CALL] from=0x81d73c, to=BPool, swapExactAmountIn(tokenIn(address): 0xa7DE08, tokenAmountIn(uint256): 786854612280555622111356, tokenOut(address): 0xC02aaA, minAmountOut(uint256): 0, maxPrice(uint256): 115792089237316195423570985008687907853269...) -> ['223403127551081491792', '5248148169996226517545']
+          [6][CALL] from=BPool, to=Statera, transferFrom(from(address): 0x81D73c, to(address): 0x0e511A, value(uint256): 786854612280555622111356) -> True
+          [6][CALL] from=BPool, to=WETH9, transfer(dst(address): 0x81D73c, wad(uint256): 223403127551081491792) -> True
+        [5][CALL] from=0x81d73c, to=BPool, swapExactAmountIn(tokenIn(address): 0xC02aaA, tokenAmountIn(uint256): 113981031682304424429, tokenOut(address): 0xa7DE08, minAmountOut(uint256): 1, maxPrice(uint256): 115792089237316195423570985008687907853269...) -> ['470893162111780813956950', '301966960856597']
+          [6][CALL] from=BPool, to=WETH9, transferFrom(src(address): 0x81D73c, dst(address): 0x0e511A, wad(uint256): 113981031682304424429) -> True
+          [6][CALL] from=BPool, to=Statera, transfer(to(address): 0x81D73c, value(uint256): 470893162111780813956950) -> True
+        [5][CALL] from=0x81d73c, to=BPool, swapExactAmountIn(tokenIn(address): 0xa7DE08, tokenAmountIn(uint256): 466184230490663005817380, tokenOut(address): 0xC02aaA, minAmountOut(uint256): 0, maxPrice(uint256): 115792089237316195423570985008687907853269...) -> ['111251291450051403857', '5206952033626220658240']
+          [6][CALL] from=BPool, to=Statera, transferFrom(from(address): 0x81D73c, to(address): 0x0e511A, value(uint256): 466184230490663005817380) -> True
+          [6][CALL] from=BPool, to=WETH9, transfer(dst(address): 0x81D73c, wad(uint256): 111251291450051403857) -> True
+        [5][CALL] from=0x81d73c, to=BPool, swapExactAmountIn(tokenIn(address): 0xC02aaA, tokenAmountIn(uint256): 56990515841152212214, tokenOut(address): 0xa7DE08, minAmountOut(uint256): 1, maxPrice(uint256): 115792089237316195423570985008687907853269...) -> ['259262699810466646517586', '246862494295407']
+          [6][CALL] from=BPool, to=WETH9, transferFrom(src(address): 0x81D73c, dst(address): 0x0e511A, wad(uint256): 56990515841152212214) -> True
+          [6][CALL] from=BPool, to=Statera, transfer(to(address): 0x81D73c, value(uint256): 259262699810466646517586) -> True
+        [5][CALL] from=0x81d73c, to=BPool, swapExactAmountIn(tokenIn(address): 0xa7DE08, tokenAmountIn(uint256): 256670072812361980052410, tokenOut(address): 0xC02aaA, minAmountOut(uint256): 0, maxPrice(uint256): 115792089237316195423570985008687907853269...) -> ['55478360044315432605', '5184374081533127433420']
+          [6][CALL] from=BPool, to=Statera, transferFrom(from(address): 0x81D73c, to(address): 0x0e511A, value(uint256): 256670072812361980052410) -> True
+          [6][CALL] from=BPool, to=WETH9, transfer(dst(address): 0x81D73c, wad(uint256): 55478360044315432605) -> True
+        [5][CALL] from=0x81d73c, to=BPool, swapExactAmountIn(tokenIn(address): 0xC02aaA, tokenAmountIn(uint256): 28495257920576106107, tokenOut(address): 0xa7DE08, minAmountOut(uint256): 0, maxPrice(uint256): 115792089237316195423570985008687907853269...) -> ['136504013750142124874021', '221550147179523']
+          [6][CALL] from=BPool, to=WETH9, transferFrom(src(address): 0x81D73c, dst(address): 0x0e511A, wad(uint256): 28495257920576106107) -> True
+          [6][CALL] from=BPool, to=Statera, transfer(to(address): 0x81D73c, value(uint256): 136504013750142124874021) -> True
+        [5][CALL] from=0x81d73c, to=BPool, swapExactAmountIn(tokenIn(address): 0xC02aaA, tokenAmountIn(uint256): 42742886880864159161, tokenOut(address): 0xa7DE08, minAmountOut(uint256): 0, maxPrice(uint256): 115792089237316195423570985008687907853269...) -> ['177682342619720931635011', '261404827422523']
+          [6][CALL] from=BPool, to=WETH9, transferFrom(src(address): 0x81D73c, dst(address): 0x0e511A, wad(uint256): 42742886880864159161) -> True
+          [6][CALL] from=BPool, to=Statera, transfer(to(address): 0x81D73c, value(uint256): 177682342619720931635011) -> True
+        [5][CALL] from=0x81d73c, to=BPool, swapExactAmountIn(tokenIn(address): 0xC02aaA, tokenAmountIn(uint256): 64114330321296238741, tokenOut(address): 0xa7DE08, minAmountOut(uint256): 0, maxPrice(uint256): 115792089237316195423570985008687907853269...) -> ['219297342099261941542186', '327336281345414']
+          [6][CALL] from=BPool, to=WETH9, transferFrom(src(address): 0x81D73c, dst(address): 0x0e511A, wad(uint256): 64114330321296238741) -> True
+          [6][CALL] from=BPool, to=Statera, transfer(to(address): 0x81D73c, value(uint256): 219297342099261941542186) -> True
+        [5][CALL] from=0x81d73c, to=BPool, swapExactAmountIn(tokenIn(address): 0xC02aaA, tokenAmountIn(uint256): 96171495481944358112, tokenOut(address): 0xa7DE08, minAmountOut(uint256): 0, maxPrice(uint256): 115792089237316195423570985008687907853269...) -> ['253568485718380576491919', '440056395822455']
+          [6][CALL] from=BPool, to=WETH9, transferFrom(src(address): 0x81D73c, dst(address): 0x0e511A, wad(uint256): 96171495481944358112) -> True
+          [6][CALL] from=BPool, to=Statera, transfer(to(address): 0x81D73c, value(uint256): 253568485718380576491919) -> True
+        [5][CALL] from=0x81d73c, to=BPool, swapExactAmountIn(tokenIn(address): 0xC02aaA, tokenAmountIn(uint256): 144257243222916537168, tokenOut(address): 0xa7DE08, minAmountOut(uint256): 0, maxPrice(uint256): 115792089237316195423570985008687907853269...) -> ['272018818683682566203944', '640199079143205']
+          [6][CALL] from=BPool, to=WETH9, transferFrom(src(address): 0x81D73c, dst(address): 0x0e511A, wad(uint256): 144257243222916537168) -> True
+          [6][CALL] from=BPool, to=Statera, transfer(to(address): 0x81D73c, value(uint256): 272018818683682566203944) -> True
+        [5][CALL] from=0x81d73c, to=BPool, swapExactAmountIn(tokenIn(address): 0xC02aaA, tokenAmountIn(uint256): 216385864834374805752, tokenOut(address): 0xa7DE08, minAmountOut(uint256): 0, maxPrice(uint256): 115792089237316195423570985008687907853269...) -> ['269348276271110134353401', '1010193118555071']
+          [6][CALL] from=BPool, to=WETH9, transferFrom(src(address): 0x81D73c, dst(address): 0x0e511A, wad(uint256): 216385864834374805752) -> True
+          [6][CALL] from=BPool, to=Statera, transfer(to(address): 0x81D73c, value(uint256): 269348276271110134353401) -> True
+        [5][CALL] from=0x81d73c, to=BPool, swapExactAmountIn(tokenIn(address): 0xC02aaA, tokenAmountIn(uint256): 324578797251562208628, tokenOut(address): 0xa7DE08, minAmountOut(uint256): 0, maxPrice(uint256): 115792089237316195423570985008687907853269...) -> ['246391787724165676874227', '1721888449021446']
+          [6][CALL] from=BPool, to=WETH9, transferFrom(src(address): 0x81D73c, dst(address): 0x0e511A, wad(uint256): 324578797251562208628) -> True
+          [6][CALL] from=BPool, to=Statera, transfer(to(address): 0x81D73c, value(uint256): 246391787724165676874227) -> True
+        [5][CALL] from=0x81d73c, to=BPool, swapExactAmountIn(tokenIn(address): 0xC02aaA, tokenAmountIn(uint256): 486868195877343312942, tokenOut(address): 0xa7DE08, minAmountOut(uint256): 0, maxPrice(uint256): 115792089237316195423570985008687907853269...) -> ['209616578048999066922053', '3141230059187921']
+          [6][CALL] from=BPool, to=WETH9, transferFrom(src(address): 0x81D73c, dst(address): 0x0e511A, wad(uint256): 486868195877343312942) -> True
+          [6][CALL] from=BPool, to=Statera, transfer(to(address): 0x81D73c, value(uint256): 209616578048999066922053) -> True
+        [5][CALL] from=0x81d73c, to=BPool, swapExactAmountIn(tokenIn(address): 0xC02aaA, tokenAmountIn(uint256): 730302293816014969413, tokenOut(address): 0xa7DE08, minAmountOut(uint256): 0, maxPrice(uint256): 115792089237316195423570985008687907853269...) -> ['167623340916556269721241', '6059807472061815']
+          [6][CALL] from=BPool, to=WETH9, transferFrom(src(address): 0x81D73c, dst(address): 0x0e511A, wad(uint256): 730302293816014969413) -> True
+          [6][CALL] from=BPool, to=Statera, transfer(to(address): 0x81D73c, value(uint256): 167623340916556269721241) -> True
+        [5][CALL] from=0x81d73c, to=BPool, swapExactAmountIn(tokenIn(address): 0xC02aaA, tokenAmountIn(uint256): 1095453440724022454119, tokenOut(address): 0xa7DE08, minAmountOut(uint256): 0, maxPrice(uint256): 115792089237316195423570985008687907853269...) -> ['127544925241170076855366', '12209346862170420']
+          [6][CALL] from=BPool, to=WETH9, transferFrom(src(address): 0x81D73c, dst(address): 0x0e511A, wad(uint256): 1095453440724022454119) -> True
+          [6][CALL] from=BPool, to=Statera, transfer(to(address): 0x81D73c, value(uint256): 127544925241170076855366) -> True
+        [5][CALL] from=0x81d73c, to=BPool, swapExactAmountIn(tokenIn(address): 0xC02aaA, tokenAmountIn(uint256): 1643180161086033681179, tokenOut(address): 0xa7DE08, minAmountOut(uint256): 0, maxPrice(uint256): 115792089237316195423570985008687907853269...) -> ['93437310311532949076349', '25408346091623090']
+          [6][CALL] from=BPool, to=WETH9, transferFrom(src(address): 0x81D73c, dst(address): 0x0e511A, wad(uint256): 1643180161086033681179) -> True
+          [6][CALL] from=BPool, to=Statera, transfer(to(address): 0x81D73c, value(uint256): 93437310311532949076349) -> True
+        [5][CALL] from=0x81d73c, to=BPool, swapExactAmountIn(tokenIn(address): 0xC02aaA, tokenAmountIn(uint256): 2464770241629050521768, tokenOut(address): 0xa7DE08, minAmountOut(uint256): 0, maxPrice(uint256): 115792089237316195423570985008687907853269...) -> ['66571037499267685836445', '54122768366077897']
+          [6][CALL] from=BPool, to=WETH9, transferFrom(src(address): 0x81D73c, dst(address): 0x0e511A, wad(uint256): 2464770241629050521768) -> True
+          [6][CALL] from=BPool, to=Statera, transfer(to(address): 0x81D73c, value(uint256): 66571037499267685836445) -> True
+        [5][CALL] from=0x81d73c, to=BPool, swapExactAmountIn(tokenIn(address): 0xC02aaA, tokenAmountIn(uint256): 3697155362443575782652, tokenOut(address): 0xa7DE08, minAmountOut(uint256): 0, maxPrice(uint256): 115792089237316195423570985008687907853269...) -> ['46497229723683425264997', '117192497491576924']
+          [6][CALL] from=BPool, to=WETH9, transferFrom(src(address): 0x81D73c, dst(address): 0x0e511A, wad(uint256): 3697155362443575782652) -> True
+          [6][CALL] from=BPool, to=Statera, transfer(to(address): 0x81D73c, value(uint256): 46497229723683425264997) -> True
+        [5][CALL] from=0x81d73c, to=BPool, swapExactAmountIn(tokenIn(address): 0xC02aaA, tokenAmountIn(uint256): 5545733043665363673978, tokenOut(address): 0xa7DE08, minAmountOut(uint256): 0, maxPrice(uint256): 115792089237316195423570985008687907853269...) -> ['32029252810240888412879', '256649142837277254']
+          [6][CALL] from=BPool, to=WETH9, transferFrom(src(address): 0x81D73c, dst(address): 0x0e511A, wad(uint256): 5545733043665363673978) -> True
+          [6][CALL] from=BPool, to=Statera, transfer(to(address): 0x81D73c, value(uint256): 32029252810240888412879) -> True
+        [5][CALL] from=0x81d73c, to=BPool, swapExactAmountIn(tokenIn(address): 0xC02aaA, tokenAmountIn(uint256): 8318599565498045510967, tokenOut(address): 0xa7DE08, minAmountOut(uint256): 0, maxPrice(uint256): 115792089237316195423570985008687907853269...) -> ['21853584454437029611266', '566424429490860377']
+          [6][CALL] from=BPool, to=WETH9, transferFrom(src(address): 0x81D73c, dst(address): 0x0e511A, wad(uint256): 8318599565498045510967) -> True
+          [6][CALL] from=BPool, to=Statera, transfer(to(address): 0x81D73c, value(uint256): 21853584454437029611266) -> True
+        [5][CALL] from=0x81d73c, to=BPool, swapExactAmountIn(tokenIn(address): 0xC02aaA, tokenAmountIn(uint256): 12477899348247068266451, tokenOut(address): 0xa7DE08, minAmountOut(uint256): 0, maxPrice(uint256): 115792089237316195423570985008687907853269...) -> ['14814128277568485427982', '1256675634809688288']
+          [6][CALL] from=BPool, to=WETH9, transferFrom(src(address): 0x81D73c, dst(address): 0x0e511A, wad(uint256): 12477899348247068266451) -> True
+          [6][CALL] from=BPool, to=Statera, transfer(to(address): 0x81D73c, value(uint256): 14814128277568485427982) -> True
+        [5][CALL] from=0x81d73c, to=BPool, swapExactAmountIn(tokenIn(address): 0xC02aaA, tokenAmountIn(uint256): 18716849022370602399676, tokenOut(address): 0xa7DE08, minAmountOut(uint256): 0, maxPrice(uint256): 115792089237316195423570985008687907853269...) -> ['9998169630766412711852', '2797955953118661563']
+          [6][CALL] from=BPool, to=WETH9, transferFrom(src(address): 0x81D73c, dst(address): 0x0e511A, wad(uint256): 18716849022370602399676) -> True
+          [6][CALL] from=BPool, to=Statera, transfer(to(address): 0x81D73c, value(uint256): 9998169630766412711852) -> True
+        [5][CALL] from=0x81d73c, to=BPool, swapExactAmountOut(tokenIn(address): 0xC02aaA, maxAmountIn(uint256): 115792089237316195423570985008687907853269..., tokenOut(address): 0xa7DE08, tokenAmountOut(uint256): 1378898986524200171128, maxPrice(uint256): 115792089237316195423570985008687907853269...) -> ['4137515032520457126003', '3220101360167338134']
+          [6][CALL] from=BPool, to=WETH9, transferFrom(src(address): 0x81D73c, dst(address): 0x0e511A, wad(uint256): 4137515032520457126003) -> True
+          [6][CALL] from=BPool, to=Statera, transfer(to(address): 0x81D73c, value(uint256): 1378898986524200171128) -> True
+        [5][CALL] from=0x81d73c, to=BPool, gulp(token(address): 0xa7DE08) -> None
+          [6][STATICCALL] from=BPool, to=Statera, balanceOf(owner(address): 0x0e511A) -> 1
+        [5][STATICCALL] from=0x81d73c, to=WETH9, balanceOf((address): 0x0e511A) -> 60695796542362946967778
+        [5][CALL] from=0x81d73c, to=BPool, swapExactAmountIn(tokenIn(address): 0xa7DE08, tokenAmountIn(uint256): 1, tokenOut(address): 0xC02aaA, minAmountOut(uint256): 0, maxPrice(uint256): 115792089237316195423570985008687907853269...) -> ['30347898271181473483889', '0']
+          [6][CALL] from=BPool, to=Statera, transferFrom(from(address): 0x81D73c, to(address): 0x0e511A, value(uint256): 1) -> True
+          [6][CALL] from=BPool, to=WETH9, transfer(dst(address): 0x81D73c, wad(uint256): 30347898271181473483889) -> True
+        [5][CALL] from=0x81d73c, to=BPool, gulp(token(address): 0xa7DE08) -> None
+          [6][STATICCALL] from=BPool, to=Statera, balanceOf(owner(address): 0x0e511A) -> 1
+        [5][CALL] from=0x81d73c, to=BPool, swapExactAmountIn(tokenIn(address): 0xa7DE08, tokenAmountIn(uint256): 1, tokenOut(address): 0xC02aaA, minAmountOut(uint256): 0, maxPrice(uint256): 115792089237316195423570985008687907853269...) -> ['15173949135590736741945', '0']
+          [6][CALL] from=BPool, to=Statera, transferFrom(from(address): 0x81D73c, to(address): 0x0e511A, value(uint256): 1) -> True
+          [6][CALL] from=BPool, to=WETH9, transfer(dst(address): 0x81D73c, wad(uint256): 15173949135590736741945) -> True
+        [5][CALL] from=0x81d73c, to=BPool, gulp(token(address): 0xa7DE08) -> None
+          [6][STATICCALL] from=BPool, to=Statera, balanceOf(owner(address): 0x0e511A) -> 1
+        [5][CALL] from=0x81d73c, to=BPool, swapExactAmountIn(tokenIn(address): 0xa7DE08, tokenAmountIn(uint256): 1, tokenOut(address): 0xC02aaA, minAmountOut(uint256): 0, maxPrice(uint256): 115792089237316195423570985008687907853269...) -> ['7586974567795368370972', '0']
+          [6][CALL] from=BPool, to=Statera, transferFrom(from(address): 0x81D73c, to(address): 0x0e511A, value(uint256): 1) -> True
+          [6][CALL] from=BPool, to=WETH9, transfer(dst(address): 0x81D73c, wad(uint256): 7586974567795368370972) -> True
+        [5][CALL] from=0x81d73c, to=BPool, gulp(token(address): 0xa7DE08) -> None
+          [6][STATICCALL] from=BPool, to=Statera, balanceOf(owner(address): 0x0e511A) -> 1
+        [5][CALL] from=0x81d73c, to=BPool, swapExactAmountIn(tokenIn(address): 0xa7DE08, tokenAmountIn(uint256): 1, tokenOut(address): 0xC02aaA, minAmountOut(uint256): 0, maxPrice(uint256): 115792089237316195423570985008687907853269...) -> ['3793487283897684185486', '0']
+          [6][CALL] from=BPool, to=Statera, transferFrom(from(address): 0x81D73c, to(address): 0x0e511A, value(uint256): 1) -> True
+          [6][CALL] from=BPool, to=WETH9, transfer(dst(address): 0x81D73c, wad(uint256): 3793487283897684185486) -> True
+        [5][CALL] from=0x81d73c, to=BPool, gulp(token(address): 0xa7DE08) -> None
+          [6][STATICCALL] from=BPool, to=Statera, balanceOf(owner(address): 0x0e511A) -> 1
+        [5][CALL] from=0x81d73c, to=BPool, swapExactAmountIn(tokenIn(address): 0xa7DE08, tokenAmountIn(uint256): 1, tokenOut(address): 0xC02aaA, minAmountOut(uint256): 0, maxPrice(uint256): 115792089237316195423570985008687907853269...) -> ['1896743641948842092743', '0']
+          [6][CALL] from=BPool, to=Statera, transferFrom(from(address): 0x81D73c, to(address): 0x0e511A, value(uint256): 1) -> True
+          [6][CALL] from=BPool, to=WETH9, transfer(dst(address): 0x81D73c, wad(uint256): 1896743641948842092743) -> True
+        [5][CALL] from=0x81d73c, to=BPool, gulp(token(address): 0xa7DE08) -> None
+          [6][STATICCALL] from=BPool, to=Statera, balanceOf(owner(address): 0x0e511A) -> 1
+        [5][CALL] from=0x81d73c, to=BPool, swapExactAmountIn(tokenIn(address): 0xa7DE08, tokenAmountIn(uint256): 1, tokenOut(address): 0xC02aaA, minAmountOut(uint256): 0, maxPrice(uint256): 115792089237316195423570985008687907853269...) -> ['948371820974421046372', '0']
+          [6][CALL] from=BPool, to=Statera, transferFrom(from(address): 0x81D73c, to(address): 0x0e511A, value(uint256): 1) -> True
+          [6][CALL] from=BPool, to=WETH9, transfer(dst(address): 0x81D73c, wad(uint256): 948371820974421046372) -> True
+        [5][CALL] from=0x81d73c, to=BPool, gulp(token(address): 0xa7DE08) -> None
+          [6][STATICCALL] from=BPool, to=Statera, balanceOf(owner(address): 0x0e511A) -> 1
+        [5][CALL] from=0x81d73c, to=BPool, swapExactAmountIn(tokenIn(address): 0xa7DE08, tokenAmountIn(uint256): 1, tokenOut(address): 0xC02aaA, minAmountOut(uint256): 0, maxPrice(uint256): 115792089237316195423570985008687907853269...) -> ['474185910487210523186', '0']
+          [6][CALL] from=BPool, to=Statera, transferFrom(from(address): 0x81D73c, to(address): 0x0e511A, value(uint256): 1) -> True
+          [6][CALL] from=BPool, to=WETH9, transfer(dst(address): 0x81D73c, wad(uint256): 474185910487210523186) -> True
+        [5][CALL] from=0x81d73c, to=BPool, gulp(token(address): 0xa7DE08) -> None
+          [6][STATICCALL] from=BPool, to=Statera, balanceOf(owner(address): 0x0e511A) -> 1
+        [5][CALL] from=0x81d73c, to=BPool, swapExactAmountIn(tokenIn(address): 0xa7DE08, tokenAmountIn(uint256): 1, tokenOut(address): 0xC02aaA, minAmountOut(uint256): 0, maxPrice(uint256): 115792089237316195423570985008687907853269...) -> ['237092955243605261593', '0']
+          [6][CALL] from=BPool, to=Statera, transferFrom(from(address): 0x81D73c, to(address): 0x0e511A, value(uint256): 1) -> True
+          [6][CALL] from=BPool, to=WETH9, transfer(dst(address): 0x81D73c, wad(uint256): 237092955243605261593) -> True
+        [5][CALL] from=0x81d73c, to=BPool, gulp(token(address): 0xa7DE08) -> None
+          [6][STATICCALL] from=BPool, to=Statera, balanceOf(owner(address): 0x0e511A) -> 1
+        [5][CALL] from=0x81d73c, to=BPool, swapExactAmountIn(tokenIn(address): 0xa7DE08, tokenAmountIn(uint256): 1, tokenOut(address): 0xC02aaA, minAmountOut(uint256): 0, maxPrice(uint256): 115792089237316195423570985008687907853269...) -> ['118546477621802630796', '0']
+          [6][CALL] from=BPool, to=Statera, transferFrom(from(address): 0x81D73c, to(address): 0x0e511A, value(uint256): 1) -> True
+          [6][CALL] from=BPool, to=WETH9, transfer(dst(address): 0x81D73c, wad(uint256): 118546477621802630796) -> True
+        [5][CALL] from=0x81d73c, to=BPool, gulp(token(address): 0xa7DE08) -> None
+          [6][STATICCALL] from=BPool, to=Statera, balanceOf(owner(address): 0x0e511A) -> 1
+        [5][CALL] from=0x81d73c, to=BPool, swapExactAmountIn(tokenIn(address): 0xa7DE08, tokenAmountIn(uint256): 1, tokenOut(address): 0xC02aaA, minAmountOut(uint256): 0, maxPrice(uint256): 115792089237316195423570985008687907853269...) -> ['59273238810901315398', '0']
+          [6][CALL] from=BPool, to=Statera, transferFrom(from(address): 0x81D73c, to(address): 0x0e511A, value(uint256): 1) -> True
+          [6][CALL] from=BPool, to=WETH9, transfer(dst(address): 0x81D73c, wad(uint256): 59273238810901315398) -> True
+        [5][CALL] from=0x81d73c, to=BPool, gulp(token(address): 0xa7DE08) -> None
+          [6][STATICCALL] from=BPool, to=Statera, balanceOf(owner(address): 0x0e511A) -> 1
+        [5][CALL] from=0x81d73c, to=BPool, swapExactAmountIn(tokenIn(address): 0xa7DE08, tokenAmountIn(uint256): 1, tokenOut(address): 0xC02aaA, minAmountOut(uint256): 0, maxPrice(uint256): 115792089237316195423570985008687907853269...) -> ['29636619405450657699', '0']
+          [6][CALL] from=BPool, to=Statera, transferFrom(from(address): 0x81D73c, to(address): 0x0e511A, value(uint256): 1) -> True
+          [6][CALL] from=BPool, to=WETH9, transfer(dst(address): 0x81D73c, wad(uint256): 29636619405450657699) -> True
+        [5][CALL] from=0x81d73c, to=BPool, gulp(token(address): 0xa7DE08) -> None
+          [6][STATICCALL] from=BPool, to=Statera, balanceOf(owner(address): 0x0e511A) -> 1
+        [5][CALL] from=0x81d73c, to=BPool, swapExactAmountIn(tokenIn(address): 0xa7DE08, tokenAmountIn(uint256): 1, tokenOut(address): 0xC02aaA, minAmountOut(uint256): 0, maxPrice(uint256): 115792089237316195423570985008687907853269...) -> ['14818309702725328850', '0']
+          [6][CALL] from=BPool, to=Statera, transferFrom(from(address): 0x81D73c, to(address): 0x0e511A, value(uint256): 1) -> True
+          [6][CALL] from=BPool, to=WETH9, transfer(dst(address): 0x81D73c, wad(uint256): 14818309702725328850) -> True
+        [5][CALL] from=0x81d73c, to=BPool, gulp(token(address): 0xa7DE08) -> None
+          [6][STATICCALL] from=BPool, to=Statera, balanceOf(owner(address): 0x0e511A) -> 1
+        [5][CALL] from=0x81d73c, to=BPool, swapExactAmountIn(tokenIn(address): 0xa7DE08, tokenAmountIn(uint256): 1, tokenOut(address): 0xC02aaA, minAmountOut(uint256): 0, maxPrice(uint256): 115792089237316195423570985008687907853269...) -> ['7409154851362664425', '0']
+          [6][CALL] from=BPool, to=Statera, transferFrom(from(address): 0x81D73c, to(address): 0x0e511A, value(uint256): 1) -> True
+          [6][CALL] from=BPool, to=WETH9, transfer(dst(address): 0x81D73c, wad(uint256): 7409154851362664425) -> True
+        [5][CALL] from=0x81d73c, to=BPool, gulp(token(address): 0xa7DE08) -> None
+          [6][STATICCALL] from=BPool, to=Statera, balanceOf(owner(address): 0x0e511A) -> 1
+        [5][CALL] from=0x81d73c, to=BPool, swapExactAmountIn(tokenIn(address): 0xa7DE08, tokenAmountIn(uint256): 1, tokenOut(address): 0xC02aaA, minAmountOut(uint256): 0, maxPrice(uint256): 115792089237316195423570985008687907853269...) -> ['3704577425681332212', '0']
+          [6][CALL] from=BPool, to=Statera, transferFrom(from(address): 0x81D73c, to(address): 0x0e511A, value(uint256): 1) -> True
+          [6][CALL] from=BPool, to=WETH9, transfer(dst(address): 0x81D73c, wad(uint256): 3704577425681332212) -> True
+        [5][CALL] from=0x81d73c, to=BPool, gulp(token(address): 0xa7DE08) -> None
+          [6][STATICCALL] from=BPool, to=Statera, balanceOf(owner(address): 0x0e511A) -> 1
+        [5][CALL] from=0x81d73c, to=BPool, swapExactAmountIn(tokenIn(address): 0xa7DE08, tokenAmountIn(uint256): 1, tokenOut(address): 0xC02aaA, minAmountOut(uint256): 0, maxPrice(uint256): 115792089237316195423570985008687907853269...) -> ['1852288712840666106', '0']
+          [6][CALL] from=BPool, to=Statera, transferFrom(from(address): 0x81D73c, to(address): 0x0e511A, value(uint256): 1) -> True
+          [6][CALL] from=BPool, to=WETH9, transfer(dst(address): 0x81D73c, wad(uint256): 1852288712840666106) -> True
+        [5][CALL] from=0x81d73c, to=BPool, gulp(token(address): 0xa7DE08) -> None
+          [6][STATICCALL] from=BPool, to=Statera, balanceOf(owner(address): 0x0e511A) -> 1
+        [5][CALL] from=0x81d73c, to=BPool, swapExactAmountIn(tokenIn(address): 0xa7DE08, tokenAmountIn(uint256): 1, tokenOut(address): 0xC02aaA, minAmountOut(uint256): 0, maxPrice(uint256): 115792089237316195423570985008687907853269...) -> ['926144356420333053', '0']
+          [6][CALL] from=BPool, to=Statera, transferFrom(from(address): 0x81D73c, to(address): 0x0e511A, value(uint256): 1) -> True
+          [6][CALL] from=BPool, to=WETH9, transfer(dst(address): 0x81D73c, wad(uint256): 926144356420333053) -> True
+        [5][CALL] from=0x81d73c, to=BPool, gulp(token(address): 0xa7DE08) -> None
+          [6][STATICCALL] from=BPool, to=Statera, balanceOf(owner(address): 0x0e511A) -> 1
+        [5][CALL] from=0x81d73c, to=BPool, swapExactAmountIn(tokenIn(address): 0xa7DE08, tokenAmountIn(uint256): 1, tokenOut(address): 0xC02aaA, minAmountOut(uint256): 0, maxPrice(uint256): 115792089237316195423570985008687907853269...) -> ['463072178210166527', '0']
+          [6][CALL] from=BPool, to=Statera, transferFrom(from(address): 0x81D73c, to(address): 0x0e511A, value(uint256): 1) -> True
+          [6][CALL] from=BPool, to=WETH9, transfer(dst(address): 0x81D73c, wad(uint256): 463072178210166527) -> True
+        [5][CALL] from=0x81d73c, to=BPool, gulp(token(address): 0xa7DE08) -> None
+          [6][STATICCALL] from=BPool, to=Statera, balanceOf(owner(address): 0x0e511A) -> 1
+        [5][CALL] from=0x81d73c, to=BPool, swapExactAmountIn(tokenIn(address): 0xa7DE08, tokenAmountIn(uint256): 1, tokenOut(address): 0xC02aaA, minAmountOut(uint256): 0, maxPrice(uint256): 115792089237316195423570985008687907853269...) -> ['231536089105083263', '0']
+          [6][CALL] from=BPool, to=Statera, transferFrom(from(address): 0x81D73c, to(address): 0x0e511A, value(uint256): 1) -> True
+          [6][CALL] from=BPool, to=WETH9, transfer(dst(address): 0x81D73c, wad(uint256): 231536089105083263) -> True
+        [5][CALL] from=0x81d73c, to=BPool, gulp(token(address): 0xa7DE08) -> None
+          [6][STATICCALL] from=BPool, to=Statera, balanceOf(owner(address): 0x0e511A) -> 1
+        [5][CALL] from=0x81d73c, to=BPool, gulp(token(address): 0x2260FA) -> None
+          [6][STATICCALL] from=BPool, to=WBTC, balanceOf(_owner(address): 0x0e511A) -> 1135701693
+        [5][STATICCALL] from=0x81d73c, to=WBTC, balanceOf(_owner(address): 0x0e511A) -> 1135701693
+        [5][CALL] from=0x81d73c, to=BPool, swapExactAmountIn(tokenIn(address): 0xa7DE08, tokenAmountIn(uint256): 1, tokenOut(address): 0x2260FA, minAmountOut(uint256): 0, maxPrice(uint256): 115792089237316195423570985008687907853269...) -> ['567850847', '0']
+          [6][CALL] from=BPool, to=Statera, transferFrom(from(address): 0x81D73c, to(address): 0x0e511A, value(uint256): 1) -> True
+          [6][CALL] from=BPool, to=WBTC, transfer(_to(address): 0x81D73c, _value(uint256): 567850847) -> True
+        [5][CALL] from=0x81d73c, to=BPool, gulp(token(address): 0xa7DE08) -> None
+          [6][STATICCALL] from=BPool, to=Statera, balanceOf(owner(address): 0x0e511A) -> 1
+        [5][CALL] from=0x81d73c, to=BPool, swapExactAmountIn(tokenIn(address): 0xa7DE08, tokenAmountIn(uint256): 1, tokenOut(address): 0x2260FA, minAmountOut(uint256): 0, maxPrice(uint256): 115792089237316195423570985008687907853269...) -> ['283925423', '0']
+          [6][CALL] from=BPool, to=Statera, transferFrom(from(address): 0x81D73c, to(address): 0x0e511A, value(uint256): 1) -> True
+          [6][CALL] from=BPool, to=WBTC, transfer(_to(address): 0x81D73c, _value(uint256): 283925423) -> True
+        [5][CALL] from=0x81d73c, to=BPool, gulp(token(address): 0xa7DE08) -> None
+          [6][STATICCALL] from=BPool, to=Statera, balanceOf(owner(address): 0x0e511A) -> 1
+        [5][CALL] from=0x81d73c, to=BPool, swapExactAmountIn(tokenIn(address): 0xa7DE08, tokenAmountIn(uint256): 1, tokenOut(address): 0x2260FA, minAmountOut(uint256): 0, maxPrice(uint256): 115792089237316195423570985008687907853269...) -> ['141962712', '0']
+          [6][CALL] from=BPool, to=Statera, transferFrom(from(address): 0x81D73c, to(address): 0x0e511A, value(uint256): 1) -> True
+          [6][CALL] from=BPool, to=WBTC, transfer(_to(address): 0x81D73c, _value(uint256): 141962712) -> True
+        [5][CALL] from=0x81d73c, to=BPool, gulp(token(address): 0xa7DE08) -> None
+          [6][STATICCALL] from=BPool, to=Statera, balanceOf(owner(address): 0x0e511A) -> 1
+        [5][CALL] from=0x81d73c, to=BPool, swapExactAmountIn(tokenIn(address): 0xa7DE08, tokenAmountIn(uint256): 1, tokenOut(address): 0x2260FA, minAmountOut(uint256): 0, maxPrice(uint256): 115792089237316195423570985008687907853269...) -> ['70981356', '0']
+          [6][CALL] from=BPool, to=Statera, transferFrom(from(address): 0x81D73c, to(address): 0x0e511A, value(uint256): 1) -> True
+          [6][CALL] from=BPool, to=WBTC, transfer(_to(address): 0x81D73c, _value(uint256): 70981356) -> True
+        [5][CALL] from=0x81d73c, to=BPool, gulp(token(address): 0xa7DE08) -> None
+          [6][STATICCALL] from=BPool, to=Statera, balanceOf(owner(address): 0x0e511A) -> 1
+        [5][CALL] from=0x81d73c, to=BPool, swapExactAmountIn(tokenIn(address): 0xa7DE08, tokenAmountIn(uint256): 1, tokenOut(address): 0x2260FA, minAmountOut(uint256): 0, maxPrice(uint256): 115792089237316195423570985008687907853269...) -> ['35490678', '0']
+          [6][CALL] from=BPool, to=Statera, transferFrom(from(address): 0x81D73c, to(address): 0x0e511A, value(uint256): 1) -> True
+          [6][CALL] from=BPool, to=WBTC, transfer(_to(address): 0x81D73c, _value(uint256): 35490678) -> True
+        [5][CALL] from=0x81d73c, to=BPool, gulp(token(address): 0xa7DE08) -> None
+          [6][STATICCALL] from=BPool, to=Statera, balanceOf(owner(address): 0x0e511A) -> 1
+        [5][CALL] from=0x81d73c, to=BPool, swapExactAmountIn(tokenIn(address): 0xa7DE08, tokenAmountIn(uint256): 1, tokenOut(address): 0x2260FA, minAmountOut(uint256): 0, maxPrice(uint256): 115792089237316195423570985008687907853269...) -> ['17745339', '0']
+          [6][CALL] from=BPool, to=Statera, transferFrom(from(address): 0x81D73c, to(address): 0x0e511A, value(uint256): 1) -> True
+          [6][CALL] from=BPool, to=WBTC, transfer(_to(address): 0x81D73c, _value(uint256): 17745339) -> True
+        [5][CALL] from=0x81d73c, to=BPool, gulp(token(address): 0xa7DE08) -> None
+          [6][STATICCALL] from=BPool, to=Statera, balanceOf(owner(address): 0x0e511A) -> 1
+        [5][CALL] from=0x81d73c, to=BPool, swapExactAmountIn(tokenIn(address): 0xa7DE08, tokenAmountIn(uint256): 1, tokenOut(address): 0x2260FA, minAmountOut(uint256): 0, maxPrice(uint256): 115792089237316195423570985008687907853269...) -> ['8872669', '0']
+          [6][CALL] from=BPool, to=Statera, transferFrom(from(address): 0x81D73c, to(address): 0x0e511A, value(uint256): 1) -> True
+          [6][CALL] from=BPool, to=WBTC, transfer(_to(address): 0x81D73c, _value(uint256): 8872669) -> True
+        [5][CALL] from=0x81d73c, to=BPool, gulp(token(address): 0xa7DE08) -> None
+          [6][STATICCALL] from=BPool, to=Statera, balanceOf(owner(address): 0x0e511A) -> 1
+        [5][CALL] from=0x81d73c, to=BPool, swapExactAmountIn(tokenIn(address): 0xa7DE08, tokenAmountIn(uint256): 1, tokenOut(address): 0x2260FA, minAmountOut(uint256): 0, maxPrice(uint256): 115792089237316195423570985008687907853269...) -> ['4436335', '0']
+          [6][CALL] from=BPool, to=Statera, transferFrom(from(address): 0x81D73c, to(address): 0x0e511A, value(uint256): 1) -> True
+          [6][CALL] from=BPool, to=WBTC, transfer(_to(address): 0x81D73c, _value(uint256): 4436335) -> True
+        [5][CALL] from=0x81d73c, to=BPool, gulp(token(address): 0xa7DE08) -> None
+          [6][STATICCALL] from=BPool, to=Statera, balanceOf(owner(address): 0x0e511A) -> 1
+        [5][CALL] from=0x81d73c, to=BPool, swapExactAmountIn(tokenIn(address): 0xa7DE08, tokenAmountIn(uint256): 1, tokenOut(address): 0x2260FA, minAmountOut(uint256): 0, maxPrice(uint256): 115792089237316195423570985008687907853269...) -> ['2218167', '0']
+          [6][CALL] from=BPool, to=Statera, transferFrom(from(address): 0x81D73c, to(address): 0x0e511A, value(uint256): 1) -> True
+          [6][CALL] from=BPool, to=WBTC, transfer(_to(address): 0x81D73c, _value(uint256): 2218167) -> True
+        [5][CALL] from=0x81d73c, to=BPool, gulp(token(address): 0xa7DE08) -> None
+          [6][STATICCALL] from=BPool, to=Statera, balanceOf(owner(address): 0x0e511A) -> 1
+        [5][CALL] from=0x81d73c, to=BPool, swapExactAmountIn(tokenIn(address): 0xa7DE08, tokenAmountIn(uint256): 1, tokenOut(address): 0x2260FA, minAmountOut(uint256): 0, maxPrice(uint256): 115792089237316195423570985008687907853269...) -> ['1109084', '0']
+          [6][CALL] from=BPool, to=Statera, transferFrom(from(address): 0x81D73c, to(address): 0x0e511A, value(uint256): 1) -> True
+          [6][CALL] from=BPool, to=WBTC, transfer(_to(address): 0x81D73c, _value(uint256): 1109084) -> True
+        [5][CALL] from=0x81d73c, to=BPool, gulp(token(address): 0xa7DE08) -> None
+          [6][STATICCALL] from=BPool, to=Statera, balanceOf(owner(address): 0x0e511A) -> 1
+        [5][CALL] from=0x81d73c, to=BPool, swapExactAmountIn(tokenIn(address): 0xa7DE08, tokenAmountIn(uint256): 1, tokenOut(address): 0x2260FA, minAmountOut(uint256): 0, maxPrice(uint256): 115792089237316195423570985008687907853269...) -> ['554542', '0']
+          [6][CALL] from=BPool, to=Statera, transferFrom(from(address): 0x81D73c, to(address): 0x0e511A, value(uint256): 1) -> True
+          [6][CALL] from=BPool, to=WBTC, transfer(_to(address): 0x81D73c, _value(uint256): 554542) -> True
+        [5][CALL] from=0x81d73c, to=BPool, gulp(token(address): 0xa7DE08) -> None
+          [6][STATICCALL] from=BPool, to=Statera, balanceOf(owner(address): 0x0e511A) -> 1
+        [5][CALL] from=0x81d73c, to=BPool, swapExactAmountIn(tokenIn(address): 0xa7DE08, tokenAmountIn(uint256): 1, tokenOut(address): 0x2260FA, minAmountOut(uint256): 0, maxPrice(uint256): 115792089237316195423570985008687907853269...) -> ['277271', '0']
+          [6][CALL] from=BPool, to=Statera, transferFrom(from(address): 0x81D73c, to(address): 0x0e511A, value(uint256): 1) -> True
+          [6][CALL] from=BPool, to=WBTC, transfer(_to(address): 0x81D73c, _value(uint256): 277271) -> True
+        [5][CALL] from=0x81d73c, to=BPool, gulp(token(address): 0xa7DE08) -> None
+          [6][STATICCALL] from=BPool, to=Statera, balanceOf(owner(address): 0x0e511A) -> 1
+        [5][CALL] from=0x81d73c, to=BPool, swapExactAmountIn(tokenIn(address): 0xa7DE08, tokenAmountIn(uint256): 1, tokenOut(address): 0x2260FA, minAmountOut(uint256): 0, maxPrice(uint256): 115792089237316195423570985008687907853269...) -> ['138635', '0']
+          [6][CALL] from=BPool, to=Statera, transferFrom(from(address): 0x81D73c, to(address): 0x0e511A, value(uint256): 1) -> True
+          [6][CALL] from=BPool, to=WBTC, transfer(_to(address): 0x81D73c, _value(uint256): 138635) -> True
+        [5][CALL] from=0x81d73c, to=BPool, gulp(token(address): 0xa7DE08) -> None
+          [6][STATICCALL] from=BPool, to=Statera, balanceOf(owner(address): 0x0e511A) -> 1
+        [5][CALL] from=0x81d73c, to=BPool, swapExactAmountIn(tokenIn(address): 0xa7DE08, tokenAmountIn(uint256): 1, tokenOut(address): 0x2260FA, minAmountOut(uint256): 0, maxPrice(uint256): 115792089237316195423570985008687907853269...) -> ['69318', '0']
+          [6][CALL] from=BPool, to=Statera, transferFrom(from(address): 0x81D73c, to(address): 0x0e511A, value(uint256): 1) -> True
+          [6][CALL] from=BPool, to=WBTC, transfer(_to(address): 0x81D73c, _value(uint256): 69318) -> True
+        [5][CALL] from=0x81d73c, to=BPool, gulp(token(address): 0xa7DE08) -> None
+          [6][STATICCALL] from=BPool, to=Statera, balanceOf(owner(address): 0x0e511A) -> 1
+        [5][CALL] from=0x81d73c, to=BPool, swapExactAmountIn(tokenIn(address): 0xa7DE08, tokenAmountIn(uint256): 1, tokenOut(address): 0x2260FA, minAmountOut(uint256): 0, maxPrice(uint256): 115792089237316195423570985008687907853269...) -> ['34659', '0']
+          [6][CALL] from=BPool, to=Statera, transferFrom(from(address): 0x81D73c, to(address): 0x0e511A, value(uint256): 1) -> True
+          [6][CALL] from=BPool, to=WBTC, transfer(_to(address): 0x81D73c, _value(uint256): 34659) -> True
+        [5][CALL] from=0x81d73c, to=BPool, gulp(token(address): 0xa7DE08) -> None
+          [6][STATICCALL] from=BPool, to=Statera, balanceOf(owner(address): 0x0e511A) -> 1
+        [5][CALL] from=0x81d73c, to=BPool, swapExactAmountIn(tokenIn(address): 0xa7DE08, tokenAmountIn(uint256): 1, tokenOut(address): 0x2260FA, minAmountOut(uint256): 0, maxPrice(uint256): 115792089237316195423570985008687907853269...) -> ['17329', '0']
+          [6][CALL] from=BPool, to=Statera, transferFrom(from(address): 0x81D73c, to(address): 0x0e511A, value(uint256): 1) -> True
+          [6][CALL] from=BPool, to=WBTC, transfer(_to(address): 0x81D73c, _value(uint256): 17329) -> True
+        [5][CALL] from=0x81d73c, to=BPool, gulp(token(address): 0xa7DE08) -> None
+          [6][STATICCALL] from=BPool, to=Statera, balanceOf(owner(address): 0x0e511A) -> 1
+        [5][CALL] from=0x81d73c, to=BPool, gulp(token(address): 0xC011a7) -> None
+          [6][STATICCALL] from=BPool, to=ProxyERC20, balanceOf(owner(address): 0x0e511A) -> 60919024066850667343885
+            [7][CALL] from=ProxyERC20, to=Synthetix, balanceOf(account(address): 0x0e511A) -> 60919024066850667343885
+              [8][STATICCALL] from=Synthetix, to=TokenState, balanceOf((address): 0x0e511A) -> 60919024066850667343885
+        [5][STATICCALL] from=0x81d73c, to=ProxyERC20, balanceOf(owner(address): 0x0e511A) -> 60919024066850667343885
+          [6][CALL] from=ProxyERC20, to=Synthetix, balanceOf(account(address): 0x0e511A) -> 60919024066850667343885
+            [7][STATICCALL] from=Synthetix, to=TokenState, balanceOf((address): 0x0e511A) -> 60919024066850667343885
+        [5][CALL] from=0x81d73c, to=BPool, swapExactAmountIn(tokenIn(address): 0xa7DE08, tokenAmountIn(uint256): 1, tokenOut(address): 0xC011a7, minAmountOut(uint256): 0, maxPrice(uint256): 115792089237316195423570985008687907853269...) -> ['30459512033425333671943', '0']
+          [6][CALL] from=BPool, to=Statera, transferFrom(from(address): 0x81D73c, to(address): 0x0e511A, value(uint256): 1) -> True
+          [6][CALL] from=BPool, to=ProxyERC20, transfer(to(address): 0x81D73c, value(uint256): 30459512033425333671943) -> True
+            [7][CALL] from=ProxyERC20, to=Synthetix, setMessageSender(sender(address): 0x0e511A) -> None
+            [7][CALL] from=ProxyERC20, to=Synthetix, transfer(to(address): 0x81D73c, value(uint256): 30459512033425333671943) -> True
+              [8][STATICCALL] from=Synthetix, to=SystemStatus, requireSystemActive() -> None
+              [8][STATICCALL] from=Synthetix, to=ExchangeRates, rateIsStale(currencyKey(bytes32): b'SNX\x00\x00\x00\x00\x00\x00\x00\x00\x00\...) -> False
+              [8][STATICCALL] from=Synthetix, to=TokenState, balanceOf((address): 0x0e511A) -> 60919024066850667343885
+              [8][STATICCALL] from=Synthetix, to=SynthetixState, issuanceRatio() -> 133333333333333333
+              [8][STATICCALL] from=Synthetix, to=SynthetixState, issuanceData((address): 0x0e511A) -> ['0', '0']
+              [8][STATICCALL] from=Synthetix, to=TokenState, balanceOf((address): 0x0e511A) -> 60919024066850667343885
+              [8][CALL] from=Synthetix, to=TokenState, setBalanceOf(account(address): 0x0e511A, value(uint256): 30459512033425333671942) -> None
+              [8][STATICCALL] from=Synthetix, to=TokenState, balanceOf((address): 0x81D73c) -> 0
+              [8][CALL] from=Synthetix, to=TokenState, setBalanceOf(account(address): 0x81D73c, value(uint256): 30459512033425333671943) -> None
+              [8][CALL] from=Synthetix, to=ProxyERC20, _emit(callData(bytes): b'\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00..., numTopics(uint256): 3, topic1(bytes32): b'\xdd\xf2R\xad\x1b\xe2\xc8\x9bi\xc2\xb0h\..., topic2(bytes32): b'\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00..., topic3(bytes32): b'\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00..., topic4(bytes32): b'\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00...) -> None
+        [5][CALL] from=0x81d73c, to=BPool, gulp(token(address): 0xa7DE08) -> None
+          [6][STATICCALL] from=BPool, to=Statera, balanceOf(owner(address): 0x0e511A) -> 1
+        [5][CALL] from=0x81d73c, to=BPool, swapExactAmountIn(tokenIn(address): 0xa7DE08, tokenAmountIn(uint256): 1, tokenOut(address): 0xC011a7, minAmountOut(uint256): 0, maxPrice(uint256): 115792089237316195423570985008687907853269...) -> ['15229756016712666835971', '0']
+          [6][CALL] from=BPool, to=Statera, transferFrom(from(address): 0x81D73c, to(address): 0x0e511A, value(uint256): 1) -> True
+          [6][CALL] from=BPool, to=ProxyERC20, transfer(to(address): 0x81D73c, value(uint256): 15229756016712666835971) -> True
+            [7][CALL] from=ProxyERC20, to=Synthetix, setMessageSender(sender(address): 0x0e511A) -> None
+            [7][CALL] from=ProxyERC20, to=Synthetix, transfer(to(address): 0x81D73c, value(uint256): 15229756016712666835971) -> True
+              [8][STATICCALL] from=Synthetix, to=SystemStatus, requireSystemActive() -> None
+              [8][STATICCALL] from=Synthetix, to=ExchangeRates, rateIsStale(currencyKey(bytes32): b'SNX\x00\x00\x00\x00\x00\x00\x00\x00\x00\...) -> False
+              [8][STATICCALL] from=Synthetix, to=TokenState, balanceOf((address): 0x0e511A) -> 30459512033425333671942
+              [8][STATICCALL] from=Synthetix, to=SynthetixState, issuanceRatio() -> 133333333333333333
+              [8][STATICCALL] from=Synthetix, to=SynthetixState, issuanceData((address): 0x0e511A) -> ['0', '0']
+              [8][STATICCALL] from=Synthetix, to=TokenState, balanceOf((address): 0x0e511A) -> 30459512033425333671942
+              [8][CALL] from=Synthetix, to=TokenState, setBalanceOf(account(address): 0x0e511A, value(uint256): 15229756016712666835971) -> None
+              [8][STATICCALL] from=Synthetix, to=TokenState, balanceOf((address): 0x81D73c) -> 30459512033425333671943
+              [8][CALL] from=Synthetix, to=TokenState, setBalanceOf(account(address): 0x81D73c, value(uint256): 45689268050138000507914) -> None
+              [8][CALL] from=Synthetix, to=ProxyERC20, _emit(callData(bytes): b'\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00..., numTopics(uint256): 3, topic1(bytes32): b'\xdd\xf2R\xad\x1b\xe2\xc8\x9bi\xc2\xb0h\..., topic2(bytes32): b'\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00..., topic3(bytes32): b'\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00..., topic4(bytes32): b'\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00...) -> None
+        [5][CALL] from=0x81d73c, to=BPool, gulp(token(address): 0xa7DE08) -> None
+          [6][STATICCALL] from=BPool, to=Statera, balanceOf(owner(address): 0x0e511A) -> 1
+        [5][CALL] from=0x81d73c, to=BPool, swapExactAmountIn(tokenIn(address): 0xa7DE08, tokenAmountIn(uint256): 1, tokenOut(address): 0xC011a7, minAmountOut(uint256): 0, maxPrice(uint256): 115792089237316195423570985008687907853269...) -> ['7614878008356333417986', '0']
+          [6][CALL] from=BPool, to=Statera, transferFrom(from(address): 0x81D73c, to(address): 0x0e511A, value(uint256): 1) -> True
+          [6][CALL] from=BPool, to=ProxyERC20, transfer(to(address): 0x81D73c, value(uint256): 7614878008356333417986) -> True
+            [7][CALL] from=ProxyERC20, to=Synthetix, setMessageSender(sender(address): 0x0e511A) -> None
+            [7][CALL] from=ProxyERC20, to=Synthetix, transfer(to(address): 0x81D73c, value(uint256): 7614878008356333417986) -> True
+              [8][STATICCALL] from=Synthetix, to=SystemStatus, requireSystemActive() -> None
+              [8][STATICCALL] from=Synthetix, to=ExchangeRates, rateIsStale(currencyKey(bytes32): b'SNX\x00\x00\x00\x00\x00\x00\x00\x00\x00\...) -> False
+              [8][STATICCALL] from=Synthetix, to=TokenState, balanceOf((address): 0x0e511A) -> 15229756016712666835971
+              [8][STATICCALL] from=Synthetix, to=SynthetixState, issuanceRatio() -> 133333333333333333
+              [8][STATICCALL] from=Synthetix, to=SynthetixState, issuanceData((address): 0x0e511A) -> ['0', '0']
+              [8][STATICCALL] from=Synthetix, to=TokenState, balanceOf((address): 0x0e511A) -> 15229756016712666835971
+              [8][CALL] from=Synthetix, to=TokenState, setBalanceOf(account(address): 0x0e511A, value(uint256): 7614878008356333417985) -> None
+              [8][STATICCALL] from=Synthetix, to=TokenState, balanceOf((address): 0x81D73c) -> 45689268050138000507914
+              [8][CALL] from=Synthetix, to=TokenState, setBalanceOf(account(address): 0x81D73c, value(uint256): 53304146058494333925900) -> None
+              [8][CALL] from=Synthetix, to=ProxyERC20, _emit(callData(bytes): b'\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00..., numTopics(uint256): 3, topic1(bytes32): b'\xdd\xf2R\xad\x1b\xe2\xc8\x9bi\xc2\xb0h\..., topic2(bytes32): b'\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00..., topic3(bytes32): b'\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00..., topic4(bytes32): b'\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00...) -> None
+        [5][CALL] from=0x81d73c, to=BPool, gulp(token(address): 0xa7DE08) -> None
+          [6][STATICCALL] from=BPool, to=Statera, balanceOf(owner(address): 0x0e511A) -> 1
+        [5][CALL] from=0x81d73c, to=BPool, swapExactAmountIn(tokenIn(address): 0xa7DE08, tokenAmountIn(uint256): 1, tokenOut(address): 0xC011a7, minAmountOut(uint256): 0, maxPrice(uint256): 115792089237316195423570985008687907853269...) -> ['3807439004178166708993', '0']
+          [6][CALL] from=BPool, to=Statera, transferFrom(from(address): 0x81D73c, to(address): 0x0e511A, value(uint256): 1) -> True
+          [6][CALL] from=BPool, to=ProxyERC20, transfer(to(address): 0x81D73c, value(uint256): 3807439004178166708993) -> True
+            [7][CALL] from=ProxyERC20, to=Synthetix, setMessageSender(sender(address): 0x0e511A) -> None
+            [7][CALL] from=ProxyERC20, to=Synthetix, transfer(to(address): 0x81D73c, value(uint256): 3807439004178166708993) -> True
+              [8][STATICCALL] from=Synthetix, to=SystemStatus, requireSystemActive() -> None
+              [8][STATICCALL] from=Synthetix, to=ExchangeRates, rateIsStale(currencyKey(bytes32): b'SNX\x00\x00\x00\x00\x00\x00\x00\x00\x00\...) -> False
+              [8][STATICCALL] from=Synthetix, to=TokenState, balanceOf((address): 0x0e511A) -> 7614878008356333417985
+              [8][STATICCALL] from=Synthetix, to=SynthetixState, issuanceRatio() -> 133333333333333333
+              [8][STATICCALL] from=Synthetix, to=SynthetixState, issuanceData((address): 0x0e511A) -> ['0', '0']
+              [8][STATICCALL] from=Synthetix, to=TokenState, balanceOf((address): 0x0e511A) -> 7614878008356333417985
+              [8][CALL] from=Synthetix, to=TokenState, setBalanceOf(account(address): 0x0e511A, value(uint256): 3807439004178166708992) -> None
+              [8][STATICCALL] from=Synthetix, to=TokenState, balanceOf((address): 0x81D73c) -> 53304146058494333925900
+              [8][CALL] from=Synthetix, to=TokenState, setBalanceOf(account(address): 0x81D73c, value(uint256): 57111585062672500634893) -> None
+              [8][CALL] from=Synthetix, to=ProxyERC20, _emit(callData(bytes): b'\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00..., numTopics(uint256): 3, topic1(bytes32): b'\xdd\xf2R\xad\x1b\xe2\xc8\x9bi\xc2\xb0h\..., topic2(bytes32): b'\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00..., topic3(bytes32): b'\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00..., topic4(bytes32): b'\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00...) -> None
+        [5][CALL] from=0x81d73c, to=BPool, gulp(token(address): 0xa7DE08) -> None
+          [6][STATICCALL] from=BPool, to=Statera, balanceOf(owner(address): 0x0e511A) -> 1
+        [5][CALL] from=0x81d73c, to=BPool, swapExactAmountIn(tokenIn(address): 0xa7DE08, tokenAmountIn(uint256): 1, tokenOut(address): 0xC011a7, minAmountOut(uint256): 0, maxPrice(uint256): 115792089237316195423570985008687907853269...) -> ['1903719502089083354496', '0']
+          [6][CALL] from=BPool, to=Statera, transferFrom(from(address): 0x81D73c, to(address): 0x0e511A, value(uint256): 1) -> True
+          [6][CALL] from=BPool, to=ProxyERC20, transfer(to(address): 0x81D73c, value(uint256): 1903719502089083354496) -> True
+            [7][CALL] from=ProxyERC20, to=Synthetix, setMessageSender(sender(address): 0x0e511A) -> None
+            [7][CALL] from=ProxyERC20, to=Synthetix, transfer(to(address): 0x81D73c, value(uint256): 1903719502089083354496) -> True
+              [8][STATICCALL] from=Synthetix, to=SystemStatus, requireSystemActive() -> None
+              [8][STATICCALL] from=Synthetix, to=ExchangeRates, rateIsStale(currencyKey(bytes32): b'SNX\x00\x00\x00\x00\x00\x00\x00\x00\x00\...) -> False
+              [8][STATICCALL] from=Synthetix, to=TokenState, balanceOf((address): 0x0e511A) -> 3807439004178166708992
+              [8][STATICCALL] from=Synthetix, to=SynthetixState, issuanceRatio() -> 133333333333333333
+              [8][STATICCALL] from=Synthetix, to=SynthetixState, issuanceData((address): 0x0e511A) -> ['0', '0']
+              [8][STATICCALL] from=Synthetix, to=TokenState, balanceOf((address): 0x0e511A) -> 3807439004178166708992
+              [8][CALL] from=Synthetix, to=TokenState, setBalanceOf(account(address): 0x0e511A, value(uint256): 1903719502089083354496) -> None
+              [8][STATICCALL] from=Synthetix, to=TokenState, balanceOf((address): 0x81D73c) -> 57111585062672500634893
+              [8][CALL] from=Synthetix, to=TokenState, setBalanceOf(account(address): 0x81D73c, value(uint256): 59015304564761583989389) -> None
+              [8][CALL] from=Synthetix, to=ProxyERC20, _emit(callData(bytes): b'\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00..., numTopics(uint256): 3, topic1(bytes32): b'\xdd\xf2R\xad\x1b\xe2\xc8\x9bi\xc2\xb0h\..., topic2(bytes32): b'\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00..., topic3(bytes32): b'\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00..., topic4(bytes32): b'\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00...) -> None
+        [5][CALL] from=0x81d73c, to=BPool, gulp(token(address): 0xa7DE08) -> None
+          [6][STATICCALL] from=BPool, to=Statera, balanceOf(owner(address): 0x0e511A) -> 1
+        [5][CALL] from=0x81d73c, to=BPool, swapExactAmountIn(tokenIn(address): 0xa7DE08, tokenAmountIn(uint256): 1, tokenOut(address): 0xC011a7, minAmountOut(uint256): 0, maxPrice(uint256): 115792089237316195423570985008687907853269...) -> ['951859751044541677248', '0']
+          [6][CALL] from=BPool, to=Statera, transferFrom(from(address): 0x81D73c, to(address): 0x0e511A, value(uint256): 1) -> True
+          [6][CALL] from=BPool, to=ProxyERC20, transfer(to(address): 0x81D73c, value(uint256): 951859751044541677248) -> True
+            [7][CALL] from=ProxyERC20, to=Synthetix, setMessageSender(sender(address): 0x0e511A) -> None
+            [7][CALL] from=ProxyERC20, to=Synthetix, transfer(to(address): 0x81D73c, value(uint256): 951859751044541677248) -> True
+              [8][STATICCALL] from=Synthetix, to=SystemStatus, requireSystemActive() -> None
+              [8][STATICCALL] from=Synthetix, to=ExchangeRates, rateIsStale(currencyKey(bytes32): b'SNX\x00\x00\x00\x00\x00\x00\x00\x00\x00\...) -> False
+              [8][STATICCALL] from=Synthetix, to=TokenState, balanceOf((address): 0x0e511A) -> 1903719502089083354496
+              [8][STATICCALL] from=Synthetix, to=SynthetixState, issuanceRatio() -> 133333333333333333
+              [8][STATICCALL] from=Synthetix, to=SynthetixState, issuanceData((address): 0x0e511A) -> ['0', '0']
+              [8][STATICCALL] from=Synthetix, to=TokenState, balanceOf((address): 0x0e511A) -> 1903719502089083354496
+              [8][CALL] from=Synthetix, to=TokenState, setBalanceOf(account(address): 0x0e511A, value(uint256): 951859751044541677248) -> None
+              [8][STATICCALL] from=Synthetix, to=TokenState, balanceOf((address): 0x81D73c) -> 59015304564761583989389
+              [8][CALL] from=Synthetix, to=TokenState, setBalanceOf(account(address): 0x81D73c, value(uint256): 59967164315806125666637) -> None
+              [8][CALL] from=Synthetix, to=ProxyERC20, _emit(callData(bytes): b'\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00..., numTopics(uint256): 3, topic1(bytes32): b'\xdd\xf2R\xad\x1b\xe2\xc8\x9bi\xc2\xb0h\..., topic2(bytes32): b'\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00..., topic3(bytes32): b'\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00..., topic4(bytes32): b'\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00...) -> None
+        [5][CALL] from=0x81d73c, to=BPool, gulp(token(address): 0xa7DE08) -> None
+          [6][STATICCALL] from=BPool, to=Statera, balanceOf(owner(address): 0x0e511A) -> 1
+        [5][CALL] from=0x81d73c, to=BPool, swapExactAmountIn(tokenIn(address): 0xa7DE08, tokenAmountIn(uint256): 1, tokenOut(address): 0xC011a7, minAmountOut(uint256): 0, maxPrice(uint256): 115792089237316195423570985008687907853269...) -> ['475929875522270838624', '0']
+          [6][CALL] from=BPool, to=Statera, transferFrom(from(address): 0x81D73c, to(address): 0x0e511A, value(uint256): 1) -> True
+          [6][CALL] from=BPool, to=ProxyERC20, transfer(to(address): 0x81D73c, value(uint256): 475929875522270838624) -> True
+            [7][CALL] from=ProxyERC20, to=Synthetix, setMessageSender(sender(address): 0x0e511A) -> None
+            [7][CALL] from=ProxyERC20, to=Synthetix, transfer(to(address): 0x81D73c, value(uint256): 475929875522270838624) -> True
+              [8][STATICCALL] from=Synthetix, to=SystemStatus, requireSystemActive() -> None
+              [8][STATICCALL] from=Synthetix, to=ExchangeRates, rateIsStale(currencyKey(bytes32): b'SNX\x00\x00\x00\x00\x00\x00\x00\x00\x00\...) -> False
+              [8][STATICCALL] from=Synthetix, to=TokenState, balanceOf((address): 0x0e511A) -> 951859751044541677248
+              [8][STATICCALL] from=Synthetix, to=SynthetixState, issuanceRatio() -> 133333333333333333
+              [8][STATICCALL] from=Synthetix, to=SynthetixState, issuanceData((address): 0x0e511A) -> ['0', '0']
+              [8][STATICCALL] from=Synthetix, to=TokenState, balanceOf((address): 0x0e511A) -> 951859751044541677248
+              [8][CALL] from=Synthetix, to=TokenState, setBalanceOf(account(address): 0x0e511A, value(uint256): 475929875522270838624) -> None
+              [8][STATICCALL] from=Synthetix, to=TokenState, balanceOf((address): 0x81D73c) -> 59967164315806125666637
+              [8][CALL] from=Synthetix, to=TokenState, setBalanceOf(account(address): 0x81D73c, value(uint256): 60443094191328396505261) -> None
+              [8][CALL] from=Synthetix, to=ProxyERC20, _emit(callData(bytes): b'\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00..., numTopics(uint256): 3, topic1(bytes32): b'\xdd\xf2R\xad\x1b\xe2\xc8\x9bi\xc2\xb0h\..., topic2(bytes32): b'\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00..., topic3(bytes32): b'\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00..., topic4(bytes32): b'\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00...) -> None
+        [5][CALL] from=0x81d73c, to=BPool, gulp(token(address): 0xa7DE08) -> None
+          [6][STATICCALL] from=BPool, to=Statera, balanceOf(owner(address): 0x0e511A) -> 1
+        [5][CALL] from=0x81d73c, to=BPool, swapExactAmountIn(tokenIn(address): 0xa7DE08, tokenAmountIn(uint256): 1, tokenOut(address): 0xC011a7, minAmountOut(uint256): 0, maxPrice(uint256): 115792089237316195423570985008687907853269...) -> ['237964937761135419312', '0']
+          [6][CALL] from=BPool, to=Statera, transferFrom(from(address): 0x81D73c, to(address): 0x0e511A, value(uint256): 1) -> True
+          [6][CALL] from=BPool, to=ProxyERC20, transfer(to(address): 0x81D73c, value(uint256): 237964937761135419312) -> True
+            [7][CALL] from=ProxyERC20, to=Synthetix, setMessageSender(sender(address): 0x0e511A) -> None
+            [7][CALL] from=ProxyERC20, to=Synthetix, transfer(to(address): 0x81D73c, value(uint256): 237964937761135419312) -> True
+              [8][STATICCALL] from=Synthetix, to=SystemStatus, requireSystemActive() -> None
+              [8][STATICCALL] from=Synthetix, to=ExchangeRates, rateIsStale(currencyKey(bytes32): b'SNX\x00\x00\x00\x00\x00\x00\x00\x00\x00\...) -> False
+              [8][STATICCALL] from=Synthetix, to=TokenState, balanceOf((address): 0x0e511A) -> 475929875522270838624
+              [8][STATICCALL] from=Synthetix, to=SynthetixState, issuanceRatio() -> 133333333333333333
+              [8][STATICCALL] from=Synthetix, to=SynthetixState, issuanceData((address): 0x0e511A) -> ['0', '0']
+              [8][STATICCALL] from=Synthetix, to=TokenState, balanceOf((address): 0x0e511A) -> 475929875522270838624
+              [8][CALL] from=Synthetix, to=TokenState, setBalanceOf(account(address): 0x0e511A, value(uint256): 237964937761135419312) -> None
+              [8][STATICCALL] from=Synthetix, to=TokenState, balanceOf((address): 0x81D73c) -> 60443094191328396505261
+              [8][CALL] from=Synthetix, to=TokenState, setBalanceOf(account(address): 0x81D73c, value(uint256): 60681059129089531924573) -> None
+              [8][CALL] from=Synthetix, to=ProxyERC20, _emit(callData(bytes): b'\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00..., numTopics(uint256): 3, topic1(bytes32): b'\xdd\xf2R\xad\x1b\xe2\xc8\x9bi\xc2\xb0h\..., topic2(bytes32): b'\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00..., topic3(bytes32): b'\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00..., topic4(bytes32): b'\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00...) -> None
+        [5][CALL] from=0x81d73c, to=BPool, gulp(token(address): 0xa7DE08) -> None
+          [6][STATICCALL] from=BPool, to=Statera, balanceOf(owner(address): 0x0e511A) -> 1
+        [5][CALL] from=0x81d73c, to=BPool, swapExactAmountIn(tokenIn(address): 0xa7DE08, tokenAmountIn(uint256): 1, tokenOut(address): 0xC011a7, minAmountOut(uint256): 0, maxPrice(uint256): 115792089237316195423570985008687907853269...) -> ['118982468880567709656', '0']
+          [6][CALL] from=BPool, to=Statera, transferFrom(from(address): 0x81D73c, to(address): 0x0e511A, value(uint256): 1) -> True
+          [6][CALL] from=BPool, to=ProxyERC20, transfer(to(address): 0x81D73c, value(uint256): 118982468880567709656) -> True
+            [7][CALL] from=ProxyERC20, to=Synthetix, setMessageSender(sender(address): 0x0e511A) -> None
+            [7][CALL] from=ProxyERC20, to=Synthetix, transfer(to(address): 0x81D73c, value(uint256): 118982468880567709656) -> True
+              [8][STATICCALL] from=Synthetix, to=SystemStatus, requireSystemActive() -> None
+              [8][STATICCALL] from=Synthetix, to=ExchangeRates, rateIsStale(currencyKey(bytes32): b'SNX\x00\x00\x00\x00\x00\x00\x00\x00\x00\...) -> False
+              [8][STATICCALL] from=Synthetix, to=TokenState, balanceOf((address): 0x0e511A) -> 237964937761135419312
+              [8][STATICCALL] from=Synthetix, to=SynthetixState, issuanceRatio() -> 133333333333333333
+              [8][STATICCALL] from=Synthetix, to=SynthetixState, issuanceData((address): 0x0e511A) -> ['0', '0']
+              [8][STATICCALL] from=Synthetix, to=TokenState, balanceOf((address): 0x0e511A) -> 237964937761135419312
+              [8][CALL] from=Synthetix, to=TokenState, setBalanceOf(account(address): 0x0e511A, value(uint256): 118982468880567709656) -> None
+              [8][STATICCALL] from=Synthetix, to=TokenState, balanceOf((address): 0x81D73c) -> 60681059129089531924573
+              [8][CALL] from=Synthetix, to=TokenState, setBalanceOf(account(address): 0x81D73c, value(uint256): 60800041597970099634229) -> None
+              [8][CALL] from=Synthetix, to=ProxyERC20, _emit(callData(bytes): b'\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00..., numTopics(uint256): 3, topic1(bytes32): b'\xdd\xf2R\xad\x1b\xe2\xc8\x9bi\xc2\xb0h\..., topic2(bytes32): b'\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00..., topic3(bytes32): b'\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00..., topic4(bytes32): b'\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00...) -> None
+        [5][CALL] from=0x81d73c, to=BPool, gulp(token(address): 0xa7DE08) -> None
+          [6][STATICCALL] from=BPool, to=Statera, balanceOf(owner(address): 0x0e511A) -> 1
+        [5][CALL] from=0x81d73c, to=BPool, swapExactAmountIn(tokenIn(address): 0xa7DE08, tokenAmountIn(uint256): 1, tokenOut(address): 0xC011a7, minAmountOut(uint256): 0, maxPrice(uint256): 115792089237316195423570985008687907853269...) -> ['59491234440283854828', '0']
+          [6][CALL] from=BPool, to=Statera, transferFrom(from(address): 0x81D73c, to(address): 0x0e511A, value(uint256): 1) -> True
+          [6][CALL] from=BPool, to=ProxyERC20, transfer(to(address): 0x81D73c, value(uint256): 59491234440283854828) -> True
+            [7][CALL] from=ProxyERC20, to=Synthetix, setMessageSender(sender(address): 0x0e511A) -> None
+            [7][CALL] from=ProxyERC20, to=Synthetix, transfer(to(address): 0x81D73c, value(uint256): 59491234440283854828) -> True
+              [8][STATICCALL] from=Synthetix, to=SystemStatus, requireSystemActive() -> None
+              [8][STATICCALL] from=Synthetix, to=ExchangeRates, rateIsStale(currencyKey(bytes32): b'SNX\x00\x00\x00\x00\x00\x00\x00\x00\x00\...) -> False
+              [8][STATICCALL] from=Synthetix, to=TokenState, balanceOf((address): 0x0e511A) -> 118982468880567709656
+              [8][STATICCALL] from=Synthetix, to=SynthetixState, issuanceRatio() -> 133333333333333333
+              [8][STATICCALL] from=Synthetix, to=SynthetixState, issuanceData((address): 0x0e511A) -> ['0', '0']
+              [8][STATICCALL] from=Synthetix, to=TokenState, balanceOf((address): 0x0e511A) -> 118982468880567709656
+              [8][CALL] from=Synthetix, to=TokenState, setBalanceOf(account(address): 0x0e511A, value(uint256): 59491234440283854828) -> None
+              [8][STATICCALL] from=Synthetix, to=TokenState, balanceOf((address): 0x81D73c) -> 60800041597970099634229
+              [8][CALL] from=Synthetix, to=TokenState, setBalanceOf(account(address): 0x81D73c, value(uint256): 60859532832410383489057) -> None
+              [8][CALL] from=Synthetix, to=ProxyERC20, _emit(callData(bytes): b'\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00..., numTopics(uint256): 3, topic1(bytes32): b'\xdd\xf2R\xad\x1b\xe2\xc8\x9bi\xc2\xb0h\..., topic2(bytes32): b'\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00..., topic3(bytes32): b'\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00..., topic4(bytes32): b'\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00...) -> None
+        [5][CALL] from=0x81d73c, to=BPool, gulp(token(address): 0xa7DE08) -> None
+          [6][STATICCALL] from=BPool, to=Statera, balanceOf(owner(address): 0x0e511A) -> 1
+        [5][CALL] from=0x81d73c, to=BPool, swapExactAmountIn(tokenIn(address): 0xa7DE08, tokenAmountIn(uint256): 1, tokenOut(address): 0xC011a7, minAmountOut(uint256): 0, maxPrice(uint256): 115792089237316195423570985008687907853269...) -> ['29745617220141927414', '0']
+          [6][CALL] from=BPool, to=Statera, transferFrom(from(address): 0x81D73c, to(address): 0x0e511A, value(uint256): 1) -> True
+          [6][CALL] from=BPool, to=ProxyERC20, transfer(to(address): 0x81D73c, value(uint256): 29745617220141927414) -> True
+            [7][CALL] from=ProxyERC20, to=Synthetix, setMessageSender(sender(address): 0x0e511A) -> None
+            [7][CALL] from=ProxyERC20, to=Synthetix, transfer(to(address): 0x81D73c, value(uint256): 29745617220141927414) -> True
+              [8][STATICCALL] from=Synthetix, to=SystemStatus, requireSystemActive() -> None
+              [8][STATICCALL] from=Synthetix, to=ExchangeRates, rateIsStale(currencyKey(bytes32): b'SNX\x00\x00\x00\x00\x00\x00\x00\x00\x00\...) -> False
+              [8][STATICCALL] from=Synthetix, to=TokenState, balanceOf((address): 0x0e511A) -> 59491234440283854828
+              [8][STATICCALL] from=Synthetix, to=SynthetixState, issuanceRatio() -> 133333333333333333
+              [8][STATICCALL] from=Synthetix, to=SynthetixState, issuanceData((address): 0x0e511A) -> ['0', '0']
+              [8][STATICCALL] from=Synthetix, to=TokenState, balanceOf((address): 0x0e511A) -> 59491234440283854828
+              [8][CALL] from=Synthetix, to=TokenState, setBalanceOf(account(address): 0x0e511A, value(uint256): 29745617220141927414) -> None
+              [8][STATICCALL] from=Synthetix, to=TokenState, balanceOf((address): 0x81D73c) -> 60859532832410383489057
+              [8][CALL] from=Synthetix, to=TokenState, setBalanceOf(account(address): 0x81D73c, value(uint256): 60889278449630525416471) -> None
+              [8][CALL] from=Synthetix, to=ProxyERC20, _emit(callData(bytes): b'\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00..., numTopics(uint256): 3, topic1(bytes32): b'\xdd\xf2R\xad\x1b\xe2\xc8\x9bi\xc2\xb0h\..., topic2(bytes32): b'\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00..., topic3(bytes32): b'\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00..., topic4(bytes32): b'\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00...) -> None
+        [5][CALL] from=0x81d73c, to=BPool, gulp(token(address): 0xa7DE08) -> None
+          [6][STATICCALL] from=BPool, to=Statera, balanceOf(owner(address): 0x0e511A) -> 1
+        [5][CALL] from=0x81d73c, to=BPool, swapExactAmountIn(tokenIn(address): 0xa7DE08, tokenAmountIn(uint256): 1, tokenOut(address): 0xC011a7, minAmountOut(uint256): 0, maxPrice(uint256): 115792089237316195423570985008687907853269...) -> ['14872808610070963707', '0']
+          [6][CALL] from=BPool, to=Statera, transferFrom(from(address): 0x81D73c, to(address): 0x0e511A, value(uint256): 1) -> True
+          [6][CALL] from=BPool, to=ProxyERC20, transfer(to(address): 0x81D73c, value(uint256): 14872808610070963707) -> True
+            [7][CALL] from=ProxyERC20, to=Synthetix, setMessageSender(sender(address): 0x0e511A) -> None
+            [7][CALL] from=ProxyERC20, to=Synthetix, transfer(to(address): 0x81D73c, value(uint256): 14872808610070963707) -> True
+              [8][STATICCALL] from=Synthetix, to=SystemStatus, requireSystemActive() -> None
+              [8][STATICCALL] from=Synthetix, to=ExchangeRates, rateIsStale(currencyKey(bytes32): b'SNX\x00\x00\x00\x00\x00\x00\x00\x00\x00\...) -> False
+              [8][STATICCALL] from=Synthetix, to=TokenState, balanceOf((address): 0x0e511A) -> 29745617220141927414
+              [8][STATICCALL] from=Synthetix, to=SynthetixState, issuanceRatio() -> 133333333333333333
+              [8][STATICCALL] from=Synthetix, to=SynthetixState, issuanceData((address): 0x0e511A) -> ['0', '0']
+              [8][STATICCALL] from=Synthetix, to=TokenState, balanceOf((address): 0x0e511A) -> 29745617220141927414
+              [8][CALL] from=Synthetix, to=TokenState, setBalanceOf(account(address): 0x0e511A, value(uint256): 14872808610070963707) -> None
+              [8][STATICCALL] from=Synthetix, to=TokenState, balanceOf((address): 0x81D73c) -> 60889278449630525416471
+              [8][CALL] from=Synthetix, to=TokenState, setBalanceOf(account(address): 0x81D73c, value(uint256): 60904151258240596380178) -> None
+              [8][CALL] from=Synthetix, to=ProxyERC20, _emit(callData(bytes): b'\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00..., numTopics(uint256): 3, topic1(bytes32): b'\xdd\xf2R\xad\x1b\xe2\xc8\x9bi\xc2\xb0h\..., topic2(bytes32): b'\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00..., topic3(bytes32): b'\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00..., topic4(bytes32): b'\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00...) -> None
+        [5][CALL] from=0x81d73c, to=BPool, gulp(token(address): 0xa7DE08) -> None
+          [6][STATICCALL] from=BPool, to=Statera, balanceOf(owner(address): 0x0e511A) -> 1
+        [5][CALL] from=0x81d73c, to=BPool, swapExactAmountIn(tokenIn(address): 0xa7DE08, tokenAmountIn(uint256): 1, tokenOut(address): 0xC011a7, minAmountOut(uint256): 0, maxPrice(uint256): 115792089237316195423570985008687907853269...) -> ['7436404305035481854', '0']
+          [6][CALL] from=BPool, to=Statera, transferFrom(from(address): 0x81D73c, to(address): 0x0e511A, value(uint256): 1) -> True
+          [6][CALL] from=BPool, to=ProxyERC20, transfer(to(address): 0x81D73c, value(uint256): 7436404305035481854) -> True
+            [7][CALL] from=ProxyERC20, to=Synthetix, setMessageSender(sender(address): 0x0e511A) -> None
+            [7][CALL] from=ProxyERC20, to=Synthetix, transfer(to(address): 0x81D73c, value(uint256): 7436404305035481854) -> True
+              [8][STATICCALL] from=Synthetix, to=SystemStatus, requireSystemActive() -> None
+              [8][STATICCALL] from=Synthetix, to=ExchangeRates, rateIsStale(currencyKey(bytes32): b'SNX\x00\x00\x00\x00\x00\x00\x00\x00\x00\...) -> False
+              [8][STATICCALL] from=Synthetix, to=TokenState, balanceOf((address): 0x0e511A) -> 14872808610070963707
+              [8][STATICCALL] from=Synthetix, to=SynthetixState, issuanceRatio() -> 133333333333333333
+              [8][STATICCALL] from=Synthetix, to=SynthetixState, issuanceData((address): 0x0e511A) -> ['0', '0']
+              [8][STATICCALL] from=Synthetix, to=TokenState, balanceOf((address): 0x0e511A) -> 14872808610070963707
+              [8][CALL] from=Synthetix, to=TokenState, setBalanceOf(account(address): 0x0e511A, value(uint256): 7436404305035481853) -> None
+              [8][STATICCALL] from=Synthetix, to=TokenState, balanceOf((address): 0x81D73c) -> 60904151258240596380178
+              [8][CALL] from=Synthetix, to=TokenState, setBalanceOf(account(address): 0x81D73c, value(uint256): 60911587662545631862032) -> None
+              [8][CALL] from=Synthetix, to=ProxyERC20, _emit(callData(bytes): b'\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00..., numTopics(uint256): 3, topic1(bytes32): b'\xdd\xf2R\xad\x1b\xe2\xc8\x9bi\xc2\xb0h\..., topic2(bytes32): b'\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00..., topic3(bytes32): b'\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00..., topic4(bytes32): b'\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00...) -> None
+        [5][CALL] from=0x81d73c, to=BPool, gulp(token(address): 0xa7DE08) -> None
+          [6][STATICCALL] from=BPool, to=Statera, balanceOf(owner(address): 0x0e511A) -> 1
+        [5][CALL] from=0x81d73c, to=BPool, swapExactAmountIn(tokenIn(address): 0xa7DE08, tokenAmountIn(uint256): 1, tokenOut(address): 0xC011a7, minAmountOut(uint256): 0, maxPrice(uint256): 115792089237316195423570985008687907853269...) -> ['3718202152517740927', '0']
+          [6][CALL] from=BPool, to=Statera, transferFrom(from(address): 0x81D73c, to(address): 0x0e511A, value(uint256): 1) -> True
+          [6][CALL] from=BPool, to=ProxyERC20, transfer(to(address): 0x81D73c, value(uint256): 3718202152517740927) -> True
+            [7][CALL] from=ProxyERC20, to=Synthetix, setMessageSender(sender(address): 0x0e511A) -> None
+            [7][CALL] from=ProxyERC20, to=Synthetix, transfer(to(address): 0x81D73c, value(uint256): 3718202152517740927) -> True
+              [8][STATICCALL] from=Synthetix, to=SystemStatus, requireSystemActive() -> None
+              [8][STATICCALL] from=Synthetix, to=ExchangeRates, rateIsStale(currencyKey(bytes32): b'SNX\x00\x00\x00\x00\x00\x00\x00\x00\x00\...) -> False
+              [8][STATICCALL] from=Synthetix, to=TokenState, balanceOf((address): 0x0e511A) -> 7436404305035481853
+              [8][STATICCALL] from=Synthetix, to=SynthetixState, issuanceRatio() -> 133333333333333333
+              [8][STATICCALL] from=Synthetix, to=SynthetixState, issuanceData((address): 0x0e511A) -> ['0', '0']
+              [8][STATICCALL] from=Synthetix, to=TokenState, balanceOf((address): 0x0e511A) -> 7436404305035481853
+              [8][CALL] from=Synthetix, to=TokenState, setBalanceOf(account(address): 0x0e511A, value(uint256): 3718202152517740926) -> None
+              [8][STATICCALL] from=Synthetix, to=TokenState, balanceOf((address): 0x81D73c) -> 60911587662545631862032
+              [8][CALL] from=Synthetix, to=TokenState, setBalanceOf(account(address): 0x81D73c, value(uint256): 60915305864698149602959) -> None
+              [8][CALL] from=Synthetix, to=ProxyERC20, _emit(callData(bytes): b'\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00..., numTopics(uint256): 3, topic1(bytes32): b'\xdd\xf2R\xad\x1b\xe2\xc8\x9bi\xc2\xb0h\..., topic2(bytes32): b'\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00..., topic3(bytes32): b'\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00..., topic4(bytes32): b'\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00...) -> None
+        [5][CALL] from=0x81d73c, to=BPool, gulp(token(address): 0xa7DE08) -> None
+          [6][STATICCALL] from=BPool, to=Statera, balanceOf(owner(address): 0x0e511A) -> 1
+        [5][CALL] from=0x81d73c, to=BPool, gulp(token(address): 0x514910) -> None
+          [6][STATICCALL] from=BPool, to=LinkToken, balanceOf(_owner(address): 0x0e511A) -> 22594470058352585849857
+        [5][STATICCALL] from=0x81d73c, to=LinkToken, balanceOf(_owner(address): 0x0e511A) -> 22594470058352585849857
+        [5][CALL] from=0x81d73c, to=BPool, swapExactAmountIn(tokenIn(address): 0xa7DE08, tokenAmountIn(uint256): 1, tokenOut(address): 0x514910, minAmountOut(uint256): 0, maxPrice(uint256): 115792089237316195423570985008687907853269...) -> ['11297235029176292924929', '0']
+          [6][CALL] from=BPool, to=Statera, transferFrom(from(address): 0x81D73c, to(address): 0x0e511A, value(uint256): 1) -> True
+          [6][CALL] from=BPool, to=LinkToken, transfer(_to(address): 0x81D73c, _value(uint256): 11297235029176292924929) -> True
+        [5][CALL] from=0x81d73c, to=BPool, gulp(token(address): 0xa7DE08) -> None
+          [6][STATICCALL] from=BPool, to=Statera, balanceOf(owner(address): 0x0e511A) -> 1
+        [5][CALL] from=0x81d73c, to=BPool, swapExactAmountIn(tokenIn(address): 0xa7DE08, tokenAmountIn(uint256): 1, tokenOut(address): 0x514910, minAmountOut(uint256): 0, maxPrice(uint256): 115792089237316195423570985008687907853269...) -> ['5648617514588146462464', '0']
+          [6][CALL] from=BPool, to=Statera, transferFrom(from(address): 0x81D73c, to(address): 0x0e511A, value(uint256): 1) -> True
+          [6][CALL] from=BPool, to=LinkToken, transfer(_to(address): 0x81D73c, _value(uint256): 5648617514588146462464) -> True
+        [5][CALL] from=0x81d73c, to=BPool, gulp(token(address): 0xa7DE08) -> None
+          [6][STATICCALL] from=BPool, to=Statera, balanceOf(owner(address): 0x0e511A) -> 1
+        [5][CALL] from=0x81d73c, to=BPool, swapExactAmountIn(tokenIn(address): 0xa7DE08, tokenAmountIn(uint256): 1, tokenOut(address): 0x514910, minAmountOut(uint256): 0, maxPrice(uint256): 115792089237316195423570985008687907853269...) -> ['2824308757294073231232', '0']
+          [6][CALL] from=BPool, to=Statera, transferFrom(from(address): 0x81D73c, to(address): 0x0e511A, value(uint256): 1) -> True
+          [6][CALL] from=BPool, to=LinkToken, transfer(_to(address): 0x81D73c, _value(uint256): 2824308757294073231232) -> True
+        [5][CALL] from=0x81d73c, to=BPool, gulp(token(address): 0xa7DE08) -> None
+          [6][STATICCALL] from=BPool, to=Statera, balanceOf(owner(address): 0x0e511A) -> 1
+        [5][CALL] from=0x81d73c, to=BPool, swapExactAmountIn(tokenIn(address): 0xa7DE08, tokenAmountIn(uint256): 1, tokenOut(address): 0x514910, minAmountOut(uint256): 0, maxPrice(uint256): 115792089237316195423570985008687907853269...) -> ['1412154378647036615616', '0']
+          [6][CALL] from=BPool, to=Statera, transferFrom(from(address): 0x81D73c, to(address): 0x0e511A, value(uint256): 1) -> True
+          [6][CALL] from=BPool, to=LinkToken, transfer(_to(address): 0x81D73c, _value(uint256): 1412154378647036615616) -> True
+        [5][CALL] from=0x81d73c, to=BPool, gulp(token(address): 0xa7DE08) -> None
+          [6][STATICCALL] from=BPool, to=Statera, balanceOf(owner(address): 0x0e511A) -> 1
+        [5][CALL] from=0x81d73c, to=BPool, swapExactAmountIn(tokenIn(address): 0xa7DE08, tokenAmountIn(uint256): 1, tokenOut(address): 0x514910, minAmountOut(uint256): 0, maxPrice(uint256): 115792089237316195423570985008687907853269...) -> ['706077189323518307808', '0']
+          [6][CALL] from=BPool, to=Statera, transferFrom(from(address): 0x81D73c, to(address): 0x0e511A, value(uint256): 1) -> True
+          [6][CALL] from=BPool, to=LinkToken, transfer(_to(address): 0x81D73c, _value(uint256): 706077189323518307808) -> True
+        [5][CALL] from=0x81d73c, to=BPool, gulp(token(address): 0xa7DE08) -> None
+          [6][STATICCALL] from=BPool, to=Statera, balanceOf(owner(address): 0x0e511A) -> 1
+        [5][CALL] from=0x81d73c, to=BPool, swapExactAmountIn(tokenIn(address): 0xa7DE08, tokenAmountIn(uint256): 1, tokenOut(address): 0x514910, minAmountOut(uint256): 0, maxPrice(uint256): 115792089237316195423570985008687907853269...) -> ['353038594661759153904', '0']
+          [6][CALL] from=BPool, to=Statera, transferFrom(from(address): 0x81D73c, to(address): 0x0e511A, value(uint256): 1) -> True
+          [6][CALL] from=BPool, to=LinkToken, transfer(_to(address): 0x81D73c, _value(uint256): 353038594661759153904) -> True
+        [5][CALL] from=0x81d73c, to=BPool, gulp(token(address): 0xa7DE08) -> None
+          [6][STATICCALL] from=BPool, to=Statera, balanceOf(owner(address): 0x0e511A) -> 1
+        [5][CALL] from=0x81d73c, to=BPool, swapExactAmountIn(tokenIn(address): 0xa7DE08, tokenAmountIn(uint256): 1, tokenOut(address): 0x514910, minAmountOut(uint256): 0, maxPrice(uint256): 115792089237316195423570985008687907853269...) -> ['176519297330879576952', '0']
+          [6][CALL] from=BPool, to=Statera, transferFrom(from(address): 0x81D73c, to(address): 0x0e511A, value(uint256): 1) -> True
+          [6][CALL] from=BPool, to=LinkToken, transfer(_to(address): 0x81D73c, _value(uint256): 176519297330879576952) -> True
+        [5][CALL] from=0x81d73c, to=BPool, gulp(token(address): 0xa7DE08) -> None
+          [6][STATICCALL] from=BPool, to=Statera, balanceOf(owner(address): 0x0e511A) -> 1
+        [5][CALL] from=0x81d73c, to=BPool, swapExactAmountIn(tokenIn(address): 0xa7DE08, tokenAmountIn(uint256): 1, tokenOut(address): 0x514910, minAmountOut(uint256): 0, maxPrice(uint256): 115792089237316195423570985008687907853269...) -> ['88259648665439788476', '0']
+          [6][CALL] from=BPool, to=Statera, transferFrom(from(address): 0x81D73c, to(address): 0x0e511A, value(uint256): 1) -> True
+          [6][CALL] from=BPool, to=LinkToken, transfer(_to(address): 0x81D73c, _value(uint256): 88259648665439788476) -> True
+        [5][CALL] from=0x81d73c, to=BPool, gulp(token(address): 0xa7DE08) -> None
+          [6][STATICCALL] from=BPool, to=Statera, balanceOf(owner(address): 0x0e511A) -> 1
+        [5][CALL] from=0x81d73c, to=BPool, swapExactAmountIn(tokenIn(address): 0xa7DE08, tokenAmountIn(uint256): 1, tokenOut(address): 0x514910, minAmountOut(uint256): 0, maxPrice(uint256): 115792089237316195423570985008687907853269...) -> ['44129824332719894238', '0']
+          [6][CALL] from=BPool, to=Statera, transferFrom(from(address): 0x81D73c, to(address): 0x0e511A, value(uint256): 1) -> True
+          [6][CALL] from=BPool, to=LinkToken, transfer(_to(address): 0x81D73c, _value(uint256): 44129824332719894238) -> True
+        [5][CALL] from=0x81d73c, to=BPool, gulp(token(address): 0xa7DE08) -> None
+          [6][STATICCALL] from=BPool, to=Statera, balanceOf(owner(address): 0x0e511A) -> 1
+        [5][CALL] from=0x81d73c, to=BPool, swapExactAmountIn(tokenIn(address): 0xa7DE08, tokenAmountIn(uint256): 1, tokenOut(address): 0x514910, minAmountOut(uint256): 0, maxPrice(uint256): 115792089237316195423570985008687907853269...) -> ['22064912166359947119', '0']
+          [6][CALL] from=BPool, to=Statera, transferFrom(from(address): 0x81D73c, to(address): 0x0e511A, value(uint256): 1) -> True
+          [6][CALL] from=BPool, to=LinkToken, transfer(_to(address): 0x81D73c, _value(uint256): 22064912166359947119) -> True
+        [5][CALL] from=0x81d73c, to=BPool, gulp(token(address): 0xa7DE08) -> None
+          [6][STATICCALL] from=BPool, to=Statera, balanceOf(owner(address): 0x0e511A) -> 1
+        [5][CALL] from=0x81d73c, to=BPool, swapExactAmountIn(tokenIn(address): 0xa7DE08, tokenAmountIn(uint256): 1, tokenOut(address): 0x514910, minAmountOut(uint256): 0, maxPrice(uint256): 115792089237316195423570985008687907853269...) -> ['11032456083179973560', '0']
+          [6][CALL] from=BPool, to=Statera, transferFrom(from(address): 0x81D73c, to(address): 0x0e511A, value(uint256): 1) -> True
+          [6][CALL] from=BPool, to=LinkToken, transfer(_to(address): 0x81D73c, _value(uint256): 11032456083179973560) -> True
+        [5][CALL] from=0x81d73c, to=BPool, gulp(token(address): 0xa7DE08) -> None
+          [6][STATICCALL] from=BPool, to=Statera, balanceOf(owner(address): 0x0e511A) -> 1
+        [5][CALL] from=0x81d73c, to=BPool, swapExactAmountIn(tokenIn(address): 0xa7DE08, tokenAmountIn(uint256): 1, tokenOut(address): 0x514910, minAmountOut(uint256): 0, maxPrice(uint256): 115792089237316195423570985008687907853269...) -> ['5516228041589986780', '0']
+          [6][CALL] from=BPool, to=Statera, transferFrom(from(address): 0x81D73c, to(address): 0x0e511A, value(uint256): 1) -> True
+          [6][CALL] from=BPool, to=LinkToken, transfer(_to(address): 0x81D73c, _value(uint256): 5516228041589986780) -> True
+        [5][CALL] from=0x81d73c, to=BPool, gulp(token(address): 0xa7DE08) -> None
+          [6][STATICCALL] from=BPool, to=Statera, balanceOf(owner(address): 0x0e511A) -> 1
+        [5][CALL] from=0x81d73c, to=BPool, swapExactAmountIn(tokenIn(address): 0xa7DE08, tokenAmountIn(uint256): 1, tokenOut(address): 0x514910, minAmountOut(uint256): 0, maxPrice(uint256): 115792089237316195423570985008687907853269...) -> ['2758114020794993390', '0']
+          [6][CALL] from=BPool, to=Statera, transferFrom(from(address): 0x81D73c, to(address): 0x0e511A, value(uint256): 1) -> True
+          [6][CALL] from=BPool, to=LinkToken, transfer(_to(address): 0x81D73c, _value(uint256): 2758114020794993390) -> True
+        [5][CALL] from=0x81d73c, to=BPool, gulp(token(address): 0xa7DE08) -> None
+          [6][STATICCALL] from=BPool, to=Statera, balanceOf(owner(address): 0x0e511A) -> 1
+        [5][CALL] from=0x81d73c, to=BPool, swapExactAmountIn(tokenIn(address): 0xa7DE08, tokenAmountIn(uint256): 1, tokenOut(address): 0x514910, minAmountOut(uint256): 0, maxPrice(uint256): 115792089237316195423570985008687907853269...) -> ['1379057010397496695', '0']
+          [6][CALL] from=BPool, to=Statera, transferFrom(from(address): 0x81D73c, to(address): 0x0e511A, value(uint256): 1) -> True
+          [6][CALL] from=BPool, to=LinkToken, transfer(_to(address): 0x81D73c, _value(uint256): 1379057010397496695) -> True
+        [5][CALL] from=0x81d73c, to=BPool, gulp(token(address): 0xa7DE08) -> None
+          [6][STATICCALL] from=BPool, to=Statera, balanceOf(owner(address): 0x0e511A) -> 1
+      [4][CALL] from=SoloMargin, to=WETH9, transferFrom(src(address): 0x81D73c, dst(address): 0x1E0447, wad(uint256): 104331302777663079074414) -> True
+  [2][STATICCALL] from=0x81d73c, to=Statera, balanceOf(owner(address): 0x59F96b) -> 1515423557789395349534322
+  [2][STATICCALL] from=0x81d73c, to=BPool, balanceOf(whom(address): 0x81D73c) -> 0
+  [2][STATICCALL] from=0x81d73c, to=BPool, totalSupply() -> 416107886023326330139
+  [2][CALL] from=0x81d73c, to=BPool, swapExactAmountIn(tokenIn(address): 0xa7DE08, tokenAmountIn(uint256): 1, tokenOut(address): 0xC02aaA, minAmountOut(uint256): 0, maxPrice(uint256): 115792089237316195423570985008687907853269...) -> ['115768044552541632', '0']
+    [3][CALL] from=BPool, to=Statera, transferFrom(from(address): 0x81D73c, to(address): 0x0e511A, value(uint256): 1) -> True
+    [3][CALL] from=BPool, to=WETH9, transfer(dst(address): 0x81D73c, wad(uint256): 115768044552541632) -> True
+  [2][CALL] from=0x81d73c, to=BPool, swapExactAmountIn(tokenIn(address): 0xa7DE08, tokenAmountIn(uint256): 1, tokenOut(address): 0xC02aaA, minAmountOut(uint256): 0, maxPrice(uint256): 115792089237316195423570985008687907853269...) -> ['38589348184180544', '0']
+    [3][CALL] from=BPool, to=Statera, transferFrom(from(address): 0x81D73c, to(address): 0x0e511A, value(uint256): 1) -> True
+    [3][CALL] from=BPool, to=WETH9, transfer(dst(address): 0x81D73c, wad(uint256): 38589348184180544) -> True
+  [2][CALL] from=0x81d73c, to=BPool, joinswapExternAmountIn(tokenIn(address): 0xa7DE08, tokenAmountIn(uint256): 2, minPoolAmountOut(uint256): 0) -> 44759203683532603299
+    [3][CALL] from=BPool, to=Statera, transferFrom(from(address): 0x81D73c, to(address): 0x0e511A, value(uint256): 2) -> True
+  [2][CALL] from=0x81d73c, to=BPool, joinswapExternAmountIn(tokenIn(address): 0xa7DE08, tokenAmountIn(uint256): 3, minPoolAmountOut(uint256): 0) -> 45423310741286883125
+    [3][CALL] from=BPool, to=Statera, transferFrom(from(address): 0x81D73c, to(address): 0x0e511A, value(uint256): 3) -> True
+  [2][CALL] from=0x81d73c, to=BPool, joinswapExternAmountIn(tokenIn(address): 0xa7DE08, tokenAmountIn(uint256): 4, minPoolAmountOut(uint256): 0) -> 42767246857811282479
+    [3][CALL] from=BPool, to=Statera, transferFrom(from(address): 0x81D73c, to(address): 0x0e511A, value(uint256): 4) -> True
+  [2][CALL] from=0x81d73c, to=BPool, joinswapExternAmountIn(tokenIn(address): 0xa7DE08, tokenAmountIn(uint256): 6, minPoolAmountOut(uint256): 0) -> 46379871948427233707
+    [3][CALL] from=BPool, to=Statera, transferFrom(from(address): 0x81D73c, to(address): 0x0e511A, value(uint256): 6) -> True
+  [2][CALL] from=0x81d73c, to=BPool, joinswapExternAmountIn(tokenIn(address): 0xa7DE08, tokenAmountIn(uint256): 9, minPoolAmountOut(uint256): 0) -> 50297661879060568028
+    [3][CALL] from=BPool, to=Statera, transferFrom(from(address): 0x81D73c, to(address): 0x0e511A, value(uint256): 9) -> True
+  [2][CALL] from=0x81d73c, to=BPool, joinswapExternAmountIn(tokenIn(address): 0xa7DE08, tokenAmountIn(uint256): 14, minPoolAmountOut(uint256): 0) -> 56267008789886387935
+    [3][CALL] from=BPool, to=Statera, transferFrom(from(address): 0x81D73c, to(address): 0x0e511A, value(uint256): 14) -> True
+  [2][CALL] from=0x81d73c, to=BPool, joinswapExternAmountIn(tokenIn(address): 0xa7DE08, tokenAmountIn(uint256): 21, minPoolAmountOut(uint256): 0) -> 60533250929827967556
+    [3][CALL] from=BPool, to=Statera, transferFrom(from(address): 0x81D73c, to(address): 0x0e511A, value(uint256): 21) -> True
+  [2][CALL] from=0x81d73c, to=BPool, joinswapExternAmountIn(tokenIn(address): 0xa7DE08, tokenAmountIn(uint256): 31, minPoolAmountOut(uint256): 0) -> 64412719277179116109
+    [3][CALL] from=BPool, to=Statera, transferFrom(from(address): 0x81D73c, to(address): 0x0e511A, value(uint256): 31) -> True
+  [2][CALL] from=0x81d73c, to=BPool, joinswapExternAmountIn(tokenIn(address): 0xa7DE08, tokenAmountIn(uint256): 47, minPoolAmountOut(uint256): 0) -> 70495724829299431536
+    [3][CALL] from=BPool, to=Statera, transferFrom(from(address): 0x81D73c, to(address): 0x0e511A, value(uint256): 47) -> True
+  [2][CALL] from=0x81d73c, to=BPool, joinswapExternAmountIn(tokenIn(address): 0xa7DE08, tokenAmountIn(uint256): 70, minPoolAmountOut(uint256): 0) -> 74879996736435956098
+    [3][CALL] from=BPool, to=Statera, transferFrom(from(address): 0x81D73c, to(address): 0x0e511A, value(uint256): 70) -> True
+  [2][STATICCALL] from=0x81d73c, to=BPool, balanceOf(whom(address): 0x5c6843) -> 4689796370114979001
+  [2][STATICCALL] from=0x81d73c, to=Statera, balanceOf(owner(address): 0x5c6843) -> 137770225797255776828534
+  [2][CALL] from=0x81d73c, to=BPool, transfer(dst(address): 0x5c6843, amt(uint256): 556215995672747429872) -> True
+  [2][CALL] from=0x81d73c, to=UniswapV2Pair, swap(amount0Out(uint256): 0, amount1Out(uint256): 136614876386506744650324, to(address): 0x59F96b, data(bytes): b'') -> None
+    [3][CALL] from=UniswapV2Pair, to=Statera, transfer(to(address): 0x59F96b, value(uint256): 136614876386506744650324) -> True
+    [3][STATICCALL] from=UniswapV2Pair, to=BPool, balanceOf(whom(address): 0x5c6843) -> 560905792042862408873
+    [3][STATICCALL] from=UniswapV2Pair, to=Statera, balanceOf(owner(address): 0x5c6843) -> 1155349410749032178210
+  [2][STATICCALL] from=0x81d73c, to=Statera, balanceOf(owner(address): 0x81D73c) -> 2342513767539538337566124
+  [2][CALL] from=0x81d73c, to=Statera, transfer(to(address): 0x59F96b, value(uint256): 2342513767539538337566124) -> True
+  [2][STATICCALL] from=0x81d73c, to=Statera, balanceOf(owner(address): 0x59F96b) -> 3969760915276179980928604
+  [2][STATICCALL] from=0x81d73c, to=Statera, balanceOf(owner(address): 0x59F96b) -> 3969760915276179980928604
+  [2][STATICCALL] from=0x81d73c, to=WETH9, balanceOf((address): 0x59F96b) -> 287630291844771198015
+  [2][CALL] from=0x81d73c, to=UniswapV2Pair, swap(amount0Out(uint256): 0, amount1Out(uint256): 109685676050853877738, to(address): 0x81D73c, data(bytes): b'') -> None
+    [3][CALL] from=UniswapV2Pair, to=WETH9, transfer(dst(address): 0x81D73c, wad(uint256): 109685676050853877738) -> True
+    [3][STATICCALL] from=UniswapV2Pair, to=Statera, balanceOf(owner(address): 0x59F96b) -> 3969760915276179980928604
+    [3][STATICCALL] from=UniswapV2Pair, to=WETH9, balanceOf((address): 0x59F96b) -> 177944615793917320277
+  [2][STATICCALL] from=0x81d73c, to=WBTC, balanceOf(_owner(address): 0x81D73c) -> 1135684364
+  [2][CALL] from=0x81d73c, to=WBTC, transfer(_to(address): 0xBF675C, _value(uint256): 1135684364) -> True
+  [2][STATICCALL] from=0x81d73c, to=LinkToken, balanceOf(_owner(address): 0x81D73c) -> 22593091001342188353163
+  [2][CALL] from=0x81d73c, to=LinkToken, transfer(_to(address): 0xBF675C, _value(uint256): 22593091001342188353163) -> True
+  [2][STATICCALL] from=0x81d73c, to=ProxyERC20, balanceOf(owner(address): 0x81D73c) -> 60915305864698149602959
+    [3][CALL] from=ProxyERC20, to=Synthetix, balanceOf(account(address): 0x81D73c) -> 60915305864698149602959
+      [4][STATICCALL] from=Synthetix, to=TokenState, balanceOf((address): 0x81D73c) -> 60915305864698149602959
+  [2][CALL] from=0x81d73c, to=ProxyERC20, transfer(to(address): 0xBF675C, value(uint256): 60915305864698149602959) -> True
+    [3][CALL] from=ProxyERC20, to=Synthetix, setMessageSender(sender(address): 0x81D73c) -> None
+    [3][CALL] from=ProxyERC20, to=Synthetix, transfer(to(address): 0xBF675C, value(uint256): 60915305864698149602959) -> True
+      [4][STATICCALL] from=Synthetix, to=SystemStatus, requireSystemActive() -> None
+      [4][STATICCALL] from=Synthetix, to=ExchangeRates, rateIsStale(currencyKey(bytes32): b'SNX\x00\x00\x00\x00\x00\x00\x00\x00\x00\...) -> False
+      [4][STATICCALL] from=Synthetix, to=TokenState, balanceOf((address): 0x81D73c) -> 60915305864698149602959
+      [4][STATICCALL] from=Synthetix, to=SynthetixState, issuanceRatio() -> 133333333333333333
+      [4][STATICCALL] from=Synthetix, to=SynthetixState, issuanceData((address): 0x81D73c) -> ['0', '0']
+      [4][STATICCALL] from=Synthetix, to=TokenState, balanceOf((address): 0x81D73c) -> 60915305864698149602959
+      [4][CALL] from=Synthetix, to=TokenState, setBalanceOf(account(address): 0x81D73c, value(uint256): 0) -> None
+      [4][STATICCALL] from=Synthetix, to=TokenState, balanceOf((address): 0xBF675C) -> 0
+      [4][CALL] from=Synthetix, to=TokenState, setBalanceOf(account(address): 0xBF675C, value(uint256): 60915305864698149602959) -> None
+      [4][CALL] from=Synthetix, to=ProxyERC20, _emit(callData(bytes): b'\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00..., numTopics(uint256): 3, topic1(bytes32): b'\xdd\xf2R\xad\x1b\xe2\xc8\x9bi\xc2\xb0h\..., topic2(bytes32): b'\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00..., topic3(bytes32): b'\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00..., topic4(bytes32): b'\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00...) -> None
+  [2][STATICCALL] from=0x81d73c, to=WETH9, balanceOf((address): 0x81D73c) -> 565532624083703214355
+  [2][CALL] from=0x81d73c, to=WETH9, withdraw(wad(uint256): 565532624083703214355) -> None
+    [3][CALL][565.5326240837032] from=WETH9, to=0x81d73c
+  [2][CALL][565.5326240837032] from=0x81d73c, to=0xbf675c

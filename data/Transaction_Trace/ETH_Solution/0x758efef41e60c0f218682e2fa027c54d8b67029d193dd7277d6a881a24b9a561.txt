@@ -1,0 +1,95 @@
+[1][CALL] from=0x48de6b, to=0xb7f221, fallback() -> None
+  [2][STATICCALL] from=0xb7f221, to=VOWToken, balanceOf(_holder(address): 0x7FdEB4) -> 1486625296150499360431665
+  [2][CALL] from=0xb7f221, to=UniswapV2Pair, swap(amount0Out(uint256): 1486625296150499360431664, amount1Out(uint256): 0, to(address): 0xB7F221, data(bytes): b'\x00') -> None
+    [3][CALL] from=UniswapV2Pair, to=VOWToken, transferaddress() -> 0x000000
+      [4][DELEGATECALL] from=VOWToken, to=LToken, 0xb750dc46() -> None
+        [5][STATICCALL] from=VOWToken, to=ERC1820Registry, getInterfaceImplementer(_addr(address): 0x7FdEB4, _interfaceHash(bytes32): b')\xdd\xb5\x89\xb1\xfb_\xc7\xcf9Ia\xc1\xa...) -> 0x000000
+        [5][STATICCALL] from=VOWToken, to=ERC1820Registry, getInterfaceImplementer(_addr(address): 0xB7F221, _interfaceHash(bytes32): b'\xb2\x81\xfc\x8c\x12\x95M"TM\xb4]\xe3\x1...) -> 0x000000
+    [3][CALL] from=UniswapV2Pair, to=0xb7f221, uniswapV2Calladdress() -> None
+      [4][STATICCALL] from=0xb7f221, to=VOWToken, balanceOf(_holder(address): 0xB7F221) -> 1486625296150499360431664
+      [4][CALL] from=0xb7f221, to=VOWToken, transferaddress() -> 0x000000
+        [5][DELEGATECALL] from=VOWToken, to=LToken, 0xb750dc46() -> None
+          [6][STATICCALL] from=VOWToken, to=ERC1820Registry, getInterfaceImplementer(_addr(address): 0xB7F221, _interfaceHash(bytes32): b')\xdd\xb5\x89\xb1\xfb_\xc7\xcf9Ia\xc1\xa...) -> 0x000000
+          [6][STATICCALL] from=VOWToken, to=ERC1820Registry, getInterfaceImplementer(_addr(address): 0x48de6b, _interfaceHash(bytes32): b'\xb2\x81\xfc\x8c\x12\x95M"TM\xb4]\xe3\x1...) -> 0x000000
+      [4][CALL] from=0xb7f221, to=VOWToken, transferFromaddress() -> 0x000000
+        [5][DELEGATECALL] from=VOWToken, to=LToken, 0x2e6a5609() -> None
+          [6][STATICCALL] from=VOWToken, to=ERC1820Registry, getInterfaceImplementer(_addr(address): 0x48de6b, _interfaceHash(bytes32): b')\xdd\xb5\x89\xb1\xfb_\xc7\xcf9Ia\xc1\xa...) -> 0x000000
+          [6][STATICCALL] from=VOWToken, to=ERC1820Registry, getInterfaceImplementer(_addr(address): 0x184497, _interfaceHash(bytes32): b'\xb2\x81\xfc\x8c\x12\x95M"TM\xb4]\xe3\x1...) -> 0x184497
+          [6][CALL] from=VOWToken, to=VSCTokenManager, tokensReceived((address): b'', _from(address): 0x48de6b, _amount(address): 1486625296150499360431664, _data(uint256): b'') -> None
+            [7][CALL] from=VSCTokenManager, to=VOWToken, burnuint256() -> None
+              [8][DELEGATECALL] from=VOWToken, to=LToken, 0x24394467() -> None
+                [9][STATICCALL] from=VOWToken, to=ERC1820Registry, getInterfaceImplementer(_addr(address): 0x184497, _interfaceHash(bytes32): b')\xdd\xb5\x89\xb1\xfb_\xc7\xcf9Ia\xc1\xa...) -> 0x000000
+            [7][STATICCALL] from=VSCTokenManager, to=VSCToken, usdRate((uint256): 1) -> 1
+            [7][STATICCALL] from=VSCTokenManager, to=VOWToken, usdRate((uint256): 0) -> 1
+            [7][STATICCALL] from=VSCTokenManager, to=VSCToken, usdRate((uint256): 0) -> 1
+            [7][STATICCALL] from=VSCTokenManager, to=VOWToken, usdRate((uint256): 1) -> 100
+            [7][CALL] from=VSCTokenManager, to=VSCToken, mintaddress() -> None
+              [8][DELEGATECALL] from=VSCToken, to=LToken, 0x6eeb9e0f() -> None
+                [9][STATICCALL] from=VSCToken, to=ERC1820Registry, getInterfaceImplementer(_addr(address): 0x48de6b, _interfaceHash(bytes32): b'\xb2\x81\xfc\x8c\x12\x95M"TM\xb4]\xe3\x1...) -> 0x000000
+      [4][STATICCALL] from=0xb7f221, to=VSCToken, balanceOf(_holder(address): 0x48de6b) -> 148662529615049936043166400
+      [4][CALL] from=0xb7f221, to=VSCToken, transferFromaddress() -> 0x000000
+        [5][DELEGATECALL] from=VSCToken, to=LToken, 0x2e6a5609() -> None
+          [6][STATICCALL] from=VSCToken, to=ERC1820Registry, getInterfaceImplementer(_addr(address): 0x48de6b, _interfaceHash(bytes32): b')\xdd\xb5\x89\xb1\xfb_\xc7\xcf9Ia\xc1\xa...) -> 0x000000
+          [6][STATICCALL] from=VSCToken, to=ERC1820Registry, getInterfaceImplementer(_addr(address): 0xB7F221, _interfaceHash(bytes32): b'\xb2\x81\xfc\x8c\x12\x95M"TM\xb4]\xe3\x1...) -> 0x000000
+      [4][STATICCALL] from=0xb7f221, to=0x000000, 0x9710a9d0() -> None
+      [4][STATICCALL] from=0xb7f221, to=UniswapV2Pair, getReserves() -> ['74044071314129525824759011', '89718744180081960362788879', '1723546487']
+      [4][STATICCALL] from=0xb7f221, to=VSCToken, balanceOf(_holder(address): 0x97BE09) -> 74044071314129525824759011
+      [4][CALL] from=0xb7f221, to=VSCToken, transferaddress() -> 0x000000
+        [5][DELEGATECALL] from=VSCToken, to=LToken, 0x24394467() -> None
+          [6][STATICCALL] from=VSCToken, to=ERC1820Registry, getInterfaceImplementer(_addr(address): 0xB7F221, _interfaceHash(bytes32): b')\xdd\xb5\x89\xb1\xfb_\xc7\xcf9Ia\xc1\xa...) -> 0x000000
+        [5][DELEGATECALL] from=VSCToken, to=LToken, 0xb750dc46() -> None
+          [6][STATICCALL] from=VSCToken, to=ERC1820Registry, getInterfaceImplementer(_addr(address): 0xB7F221, _interfaceHash(bytes32): b')\xdd\xb5\x89\xb1\xfb_\xc7\xcf9Ia\xc1\xa...) -> 0x000000
+          [6][STATICCALL] from=VSCToken, to=ERC1820Registry, getInterfaceImplementer(_addr(address): 0x97BE09, _interfaceHash(bytes32): b'\xb2\x81\xfc\x8c\x12\x95M"TM\xb4]\xe3\x1...) -> 0x000000
+      [4][STATICCALL] from=0xb7f221, to=VSCToken, balanceOf(_holder(address): 0x97BE09) -> 220328000455338662891234749
+      [4][CALL] from=0xb7f221, to=UniswapV2Pair, swap(amount0Out(uint256): 0, amount1Out(uint256): 59507425738366327370721501, to(address): 0xB7F221, data(bytes): b'') -> None
+        [5][CALL] from=UniswapV2Pair, to=VOWToken, transferaddress() -> 0x000000
+          [6][DELEGATECALL] from=VOWToken, to=LToken, 0xb750dc46() -> None
+            [7][STATICCALL] from=VOWToken, to=ERC1820Registry, getInterfaceImplementer(_addr(address): 0x97BE09, _interfaceHash(bytes32): b')\xdd\xb5\x89\xb1\xfb_\xc7\xcf9Ia\xc1\xa...) -> 0x000000
+            [7][STATICCALL] from=VOWToken, to=ERC1820Registry, getInterfaceImplementer(_addr(address): 0xB7F221, _interfaceHash(bytes32): b'\xb2\x81\xfc\x8c\x12\x95M"TM\xb4]\xe3\x1...) -> 0x000000
+        [5][STATICCALL] from=UniswapV2Pair, to=VSCToken, balanceOf(_holder(address): 0x97BE09) -> 220328000455338662891234749
+        [5][STATICCALL] from=UniswapV2Pair, to=VOWToken, balanceOf(_holder(address): 0x97BE09) -> 30211318441715632992067378
+      [4][STATICCALL] from=0xb7f221, to=VOWToken, balanceOf(_holder(address): 0xB7F221) -> 59507425738366327370721501
+      [4][STATICCALL] from=0xb7f221, to=0x000000, 0x9710a9d0() -> None
+      [4][CALL] from=0xb7f221, to=VOWToken, transferaddress() -> 0x000000
+        [5][DELEGATECALL] from=VOWToken, to=LToken, 0xb750dc46() -> None
+          [6][STATICCALL] from=VOWToken, to=ERC1820Registry, getInterfaceImplementer(_addr(address): 0xB7F221, _interfaceHash(bytes32): b')\xdd\xb5\x89\xb1\xfb_\xc7\xcf9Ia\xc1\xa...) -> 0x000000
+          [6][STATICCALL] from=VOWToken, to=ERC1820Registry, getInterfaceImplementer(_addr(address): 0x7FdEB4, _interfaceHash(bytes32): b'\xb2\x81\xfc\x8c\x12\x95M"TM\xb4]\xe3\x1...) -> 0x000000
+      [4][STATICCALL] from=0xb7f221, to=VOWToken, balanceOf(_holder(address): 0xB7F221) -> 58016327146440049175703787
+      [4][STATICCALL] from=0xb7f221, to=0x000000, 0x9710a9d0() -> None
+    [3][STATICCALL] from=UniswapV2Pair, to=VOWToken, balanceOf(_holder(address): 0x7FdEB4) -> 1491098591926278195017715
+    [3][STATICCALL] from=UniswapV2Pair, to=WETH9, balanceOf((address): 0x7FdEB4) -> 185530201197745898879
+  [2][STATICCALL] from=0xb7f221, to=VOWToken, balanceOf(_holder(address): 0xB7F221) -> 58016327146440049175703787
+  [2][CALL] from=0xb7f221, to=VOWToken, transferaddress() -> 0x000000
+    [3][DELEGATECALL] from=VOWToken, to=LToken, 0xb750dc46() -> None
+      [4][STATICCALL] from=VOWToken, to=ERC1820Registry, getInterfaceImplementer(_addr(address): 0xB7F221, _interfaceHash(bytes32): b')\xdd\xb5\x89\xb1\xfb_\xc7\xcf9Ia\xc1\xa...) -> 0x000000
+      [4][STATICCALL] from=VOWToken, to=ERC1820Registry, getInterfaceImplementer(_addr(address): 0x48de6b, _interfaceHash(bytes32): b'\xb2\x81\xfc\x8c\x12\x95M"TM\xb4]\xe3\x1...) -> 0x000000
+  [2][STATICCALL] from=0xb7f221, to=UniswapV2Pair, getReserves() -> ['1491098591926278195017715', '185530201197745898879', '1723547363']
+  [2][STATICCALL] from=0xb7f221, to=VOWToken, balanceOf(_holder(address): 0xB7F221) -> 52214694431796044258133409
+  [2][CALL] from=0xb7f221, to=VOWToken, transferaddress() -> 0x000000
+    [3][DELEGATECALL] from=VOWToken, to=LToken, 0xb750dc46() -> None
+      [4][STATICCALL] from=VOWToken, to=ERC1820Registry, getInterfaceImplementer(_addr(address): 0xB7F221, _interfaceHash(bytes32): b')\xdd\xb5\x89\xb1\xfb_\xc7\xcf9Ia\xc1\xa...) -> 0x000000
+      [4][STATICCALL] from=VOWToken, to=ERC1820Registry, getInterfaceImplementer(_addr(address): 0x7FdEB4, _interfaceHash(bytes32): b'\xb2\x81\xfc\x8c\x12\x95M"TM\xb4]\xe3\x1...) -> 0x000000
+  [2][CALL] from=0xb7f221, to=UniswapV2Pair, swap(amount0Out(uint256): 0, amount1Out(uint256): 175477781952968920940, to(address): 0xB7F221, data(bytes): b'') -> None
+    [3][CALL] from=UniswapV2Pair, to=WETH9, transfer(dst(address): 0xB7F221, wad(uint256): 175477781952968920940) -> True
+    [3][STATICCALL] from=UniswapV2Pair, to=VOWToken, balanceOf(_holder(address): 0x7FdEB4) -> 27598445807824300324084419
+    [3][STATICCALL] from=UniswapV2Pair, to=WETH9, balanceOf((address): 0x7FdEB4) -> 10052419244776977939
+  [2][STATICCALL] from=0xb7f221, to=WETH9, balanceOf((address): 0xB7F221) -> 175477781952968920940
+  [2][STATICCALL] from=0xb7f221, to=0x000000, 0x9710a9d0() -> None
+  [2][STATICCALL] from=0xb7f221, to=WETH9, balanceOf((address): 0xB7F221) -> 175477781952968920940
+  [2][CALL] from=0xb7f221, to=WETH9, withdraw(wad(uint256): 175477781952968920940) -> None
+    [3][CALL][175.4777819529689] from=WETH9, to=0xb7f221
+  [2][CALL][175.4777819529689] from=0xb7f221, to=0x48de6b
+  [2][STATICCALL] from=0xb7f221, to=UniswapV2Pair, getReserves() -> ['1953847941886086314203726', '640706567594', '1723546451']
+  [2][STATICCALL] from=0xb7f221, to=VOWToken, balanceOf(_holder(address): 0xB7F221) -> 26107347215898022129066705
+  [2][CALL] from=0xb7f221, to=VOWToken, transferaddress() -> 0x000000
+    [3][DELEGATECALL] from=VOWToken, to=LToken, 0xb750dc46() -> None
+      [4][STATICCALL] from=VOWToken, to=ERC1820Registry, getInterfaceImplementer(_addr(address): 0xB7F221, _interfaceHash(bytes32): b')\xdd\xb5\x89\xb1\xfb_\xc7\xcf9Ia\xc1\xa...) -> 0x000000
+      [4][STATICCALL] from=VOWToken, to=ERC1820Registry, getInterfaceImplementer(_addr(address): 0x1E4976, _interfaceHash(bytes32): b'\xb2\x81\xfc\x8c\x12\x95M"TM\xb4]\xe3\x1...) -> 0x000000
+  [2][CALL] from=0xb7f221, to=UniswapV2Pair, swap(amount0Out(uint256): 0, amount1Out(uint256): 595970517680, to(address): 0xB7F221, data(bytes): b'') -> None
+    [3][CALL] from=UniswapV2Pair, to=TetherToken, transfer(_to(address): 0xB7F221, _value(uint256): 595970517680) -> None
+    [3][STATICCALL] from=UniswapV2Pair, to=VOWToken, balanceOf(_holder(address): 0x1E4976) -> 28061195157784108443270431
+    [3][STATICCALL] from=UniswapV2Pair, to=TetherToken, balanceOf(who(address): 0x1E4976) -> 44736049914
+  [2][STATICCALL] from=0xb7f221, to=TetherToken, balanceOf(who(address): 0xB7F221) -> 595970517680
+  [2][STATICCALL] from=0xb7f221, to=0x000000, 0x9710a9d0() -> None
+  [2][STATICCALL] from=0xb7f221, to=TetherToken, balanceOf(who(address): 0xB7F221) -> 595970517680
+  [2][CALL] from=0xb7f221, to=TetherToken, transfer(_to(address): 0x48de6b, _value(uint256): 595970517680) -> None

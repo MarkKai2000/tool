@@ -1,0 +1,880 @@
+[1][CALL] from=0xba5ed1, to=0x277e85, 0x807a994a() -> None
+  [2][CALL] from=0x277e85, to=DelegateCallProxyOneToOne, reindexPool(poolAddress(address): 0xfa6de2) -> None
+    [3][DELEGATECALL] from=DelegateCallProxyOneToOne, to=MarketCapSqrtController, reindexPool(poolAddress(address): 0xfa6de2) -> None
+      [4][STATICCALL] from=DelegateCallProxyOneToOne, to=IndexedUniswapV2Oracle, computeTwoWayAveragePrices(tokens(address[]): ['0x1f9840a85d5aF5bf1D1762F925BDADdC4201F9..., minTimeElapsed(uint256): 86400, maxTimeElapsed(uint256): 907200) -> None
+        [5][STATICCALL] from=IndexedUniswapV2Oracle, to=UniswapV2Pair, price0CumulativeLast() -> 1731265044109487620999019184527130599366
+        [5][STATICCALL] from=IndexedUniswapV2Oracle, to=UniswapV2Pair, price1CumulativeLast() -> 20165100468455916013919468871047803618543586
+        [5][STATICCALL] from=IndexedUniswapV2Oracle, to=UniswapV2Pair, getReserves() -> ['2040380055722398017005820', '14205874295200401167659', '1634236601']
+        [5][STATICCALL] from=IndexedUniswapV2Oracle, to=UniswapV2Pair, price0CumulativeLast() -> 24553429577087844211714968766919734100170
+        [5][STATICCALL] from=IndexedUniswapV2Oracle, to=UniswapV2Pair, price1CumulativeLast() -> 1277805082440112729956751759185779793523824
+        [5][STATICCALL] from=IndexedUniswapV2Oracle, to=UniswapV2Pair, getReserves() -> ['57088644054093591625532', '4599167273162086205143', '1634232250']
+        [5][STATICCALL] from=IndexedUniswapV2Oracle, to=UniswapV2Pair, price0CumulativeLast() -> 183119567719968845501564002671079569452817224
+        [5][STATICCALL] from=IndexedUniswapV2Oracle, to=UniswapV2Pair, price1CumulativeLast() -> 491684840151623079851640185920958541398
+        [5][STATICCALL] from=IndexedUniswapV2Oracle, to=UniswapV2Pair, getReserves() -> ['794176807132809694761', '1018951930517436173970790', '1634230584']
+        [5][STATICCALL] from=IndexedUniswapV2Oracle, to=UniswapV2Pair, price0CumulativeLast() -> 61479138028128889882818916790694526158128
+        [5][STATICCALL] from=IndexedUniswapV2Oracle, to=UniswapV2Pair, price1CumulativeLast() -> 1034689396300697144312791852907083443946024
+        [5][STATICCALL] from=IndexedUniswapV2Oracle, to=UniswapV2Pair, getReserves() -> ['9253718832122991078462', '770239993658481994653', '1634236562']
+        [5][STATICCALL] from=IndexedUniswapV2Oracle, to=UniswapV2Pair, price0CumulativeLast() -> 905066889758907351694166022952303125761
+        [5][STATICCALL] from=IndexedUniswapV2Oracle, to=UniswapV2Pair, price1CumulativeLast() -> 48852837624812179453961271972745221854621595
+        [5][STATICCALL] from=IndexedUniswapV2Oracle, to=UniswapV2Pair, getReserves() -> ['109592395833510447593915', '304923903190724411699', '1634215816']
+      [4][STATICCALL] from=DelegateCallProxyOneToOne, to=Uni, totalSupply() -> 1000000000000000000000000000
+      [4][STATICCALL] from=DelegateCallProxyOneToOne, to=InitializableAdminUpgradeabilityProxy, totalSupply() -> 16000000000000000000000000
+        [5][DELEGATECALL] from=InitializableAdminUpgradeabilityProxy, to=AaveTokenV2, totalSupply() -> 16000000000000000000000000
+      [4][STATICCALL] from=DelegateCallProxyOneToOne, to=Vyper_contract, totalSupply() -> 1609590955911651292578693913
+      [4][STATICCALL] from=DelegateCallProxyOneToOne, to=Comp, totalSupply() -> 10000000000000000000000000
+      [4][STATICCALL] from=DelegateCallProxyOneToOne, to=SushiToken, totalSupply() -> 235818729240611679453904495
+      [4][STATICCALL] from=DelegateCallProxyOneToOne, to=DelegateCallProxyManyToOne, extrapolatePoolValueFromToken() -> ['0x1f9840', '520611369902867091497262']
+        [5][STATICCALL][0] from=DelegateCallProxyManyToOne, to=ManyToOneImplementationHolder
+        [5][DELEGATECALL] from=DelegateCallProxyManyToOne, to=IndexPool, extrapolatePoolValueFromToken() -> ['0x1f9840', '520611369902867091497262']
+      [4][STATICCALL] from=DelegateCallProxyOneToOne, to=IndexedUniswapV2Oracle, computeAverageEthForTokens(token(address[]): 0x1f9840, tokenAmount(uint256[]): 520611369902867091497262, minTimeElapsed(uint256): 1200, maxTimeElapsed(uint256): 172800) -> None
+        [5][STATICCALL] from=IndexedUniswapV2Oracle, to=UniswapV2Pair, price0CumulativeLast() -> 1731265044109487620999019184527130599366
+        [5][STATICCALL] from=IndexedUniswapV2Oracle, to=UniswapV2Pair, getReserves() -> ['2040380055722398017005820', '14205874295200401167659', '1634236601']
+      [4][CALL] from=DelegateCallProxyOneToOne, to=DelegateCallProxyManyToOne, reindexTokens(tokens(address[]): ['0x1f9840a85d5aF5bf1D1762F925BDADdC4201F9..., desiredDenorms(uint96[]): [9852906128394286614, 4335141279986954175,..., minimumBalances(uint256[]): [5054045648396098944337, 41774688783941048...) -> None
+        [5][STATICCALL][0] from=DelegateCallProxyManyToOne, to=ManyToOneImplementationHolder
+        [5][DELEGATECALL] from=DelegateCallProxyManyToOne, to=IndexPool, reindexTokens(tokens(address[]): ['0x1f9840a85d5aF5bf1D1762F925BDADdC4201F9..., desiredDenorms(uint96[]): [9852906128394286614, 4335141279986954175,..., minimumBalances(uint256[]): [5054045648396098944337, 41774688783941048...) -> None
+  [2][STATICCALL] from=0x277e85, to=DelegateCallProxyManyToOne, getTotalDenormalizedWeight() -> 25362470741059980162
+    [3][STATICCALL][0] from=DelegateCallProxyManyToOne, to=ManyToOneImplementationHolder
+    [3][DELEGATECALL] from=DelegateCallProxyManyToOne, to=IndexPool, getTotalDenormalizedWeight() -> 25362470741059980162
+  [2][STATICCALL] from=0x277e85, to=UniswapV2Pair, getReserves() -> ['2040380055722398017005820', '14205874295200401167659', '1634236601']
+  [2][STATICCALL] from=0x277e85, to=UniswapV2Pair, getReserves() -> ['245797074201685785851780', '19839761765715204123756', '1634231387']
+  [2][STATICCALL] from=0x277e85, to=UniswapV2Pair, getReserves() -> ['45967943613408222842691', '3828897259563068853353', '1634234040']
+  [2][STATICCALL] from=0x277e85, to=UniswapV2Pair, getReserves() -> ['2774758398770038031362', '3567674324434551217279980', '1634235722']
+  [2][STATICCALL] from=0x277e85, to=UniswapV2Pair, getReserves() -> ['6417586688442225624158', '4358981223283552588812', '1634231612']
+  [2][STATICCALL] from=0x277e85, to=UniswapV2Pair, getReserves() -> ['504050324955865278344090', '1300507828109584991422', '1634236217']
+  [2][CALL] from=0x277e85, to=0x277e85, uniswapV2Calladdress() -> None
+    [3][CALL] from=0x277e85, to=Uni, approve(spender(address): 0xfa6de2, rawAmount(uint256): 115792089237316195423570985008687907853269...) -> True
+    [3][CALL] from=0x277e85, to=UniswapV2Pair, swap(amount0Out(uint256): 1836342050150158215305238, amount1Out(uint256): 0, to(address): 0x277e85, data(bytes): b'nigger') -> None
+      [4][CALL] from=UniswapV2Pair, to=Uni, transfer(dst(address): 0x277e85, rawAmount(uint256): 1836342050150158215305238) -> True
+      [4][CALL] from=UniswapV2Pair, to=0x277e85, uniswapV2Calladdress() -> None
+        [5][CALL] from=0x277e85, to=InitializableAdminUpgradeabilityProxy, approve(spender(address): 0xfa6de2, amount(uint256): 115792089237316195423570985008687907853269...) -> True
+          [6][DELEGATECALL] from=InitializableAdminUpgradeabilityProxy, to=AaveTokenV2, approve(spender(address): 0xfa6de2, amount(uint256): 115792089237316195423570985008687907853269...) -> True
+        [5][CALL] from=0x277e85, to=UniswapV2Pair, swap(amount0Out(uint256): 221217366781517207266602, amount1Out(uint256): 0, to(address): 0x277e85, data(bytes): b'nigger') -> None
+          [6][CALL] from=UniswapV2Pair, to=InitializableAdminUpgradeabilityProxy, transfer(recipient(address): 0x277e85, amount(uint256): 221217366781517207266602) -> True
+            [7][DELEGATECALL] from=InitializableAdminUpgradeabilityProxy, to=AaveTokenV2, transfer(recipient(address): 0x277e85, amount(uint256): 221217366781517207266602) -> True
+          [6][CALL] from=UniswapV2Pair, to=0x277e85, uniswapV2Calladdress() -> None
+            [7][CALL] from=0x277e85, to=Comp, approve(spender(address): 0xfa6de2, rawAmount(uint256): 115792089237316195423570985008687907853269...) -> True
+            [7][CALL] from=0x277e85, to=UniswapV2Pair, swap(amount0Out(uint256): 41371149252067400558421, amount1Out(uint256): 0, to(address): 0x277e85, data(bytes): b'nigger') -> None
+              [8][CALL] from=UniswapV2Pair, to=Comp, transfer(dst(address): 0x277e85, rawAmount(uint256): 41371149252067400558421) -> True
+              [8][CALL] from=UniswapV2Pair, to=0x277e85, uniswapV2Calladdress() -> None
+                [9][CALL] from=0x277e85, to=Vyper_contract, approve(_spender(address): 0xfa6de2, _value(uint256): 115792089237316195423570985008687907853269...) -> True
+                [9][CALL] from=0x277e85, to=UniswapV2Pair, swap(amount0Out(uint256): 0, amount1Out(uint256): 3210906891991096095551982, to(address): 0x277e85, data(bytes): b'nigger') -> None
+                  [10][CALL] from=UniswapV2Pair, to=Vyper_contract, transfer(_to(address): 0x277e85, _value(uint256): 3210906891991096095551982) -> True
+                  [10][CALL] from=UniswapV2Pair, to=0x277e85, uniswapV2Calladdress() -> None
+                    [11][CALL] from=0x277e85, to=DSToken, approve(guy(address): 0xfa6de2, wad(uint256): 115792089237316195423570985008687907853269...) -> True
+                    [11][CALL] from=0x277e85, to=UniswapV2Pair, swap(amount0Out(uint256): 5775828019598003061742, amount1Out(uint256): 0, to(address): 0x277e85, data(bytes): b'nigger') -> None
+                      [12][CALL] from=UniswapV2Pair, to=DSToken, transfer(dst(address): 0x277e85, wad(uint256): 5775828019598003061742) -> True
+                      [12][CALL] from=UniswapV2Pair, to=0x277e85, uniswapV2Calladdress() -> None
+                        [13][CALL] from=0x277e85, to=ProxyERC20, approve(spender(address): 0xfa6de2, value(uint256): 115792089237316195423570985008687907853269...) -> True
+                          [14][CALL] from=ProxyERC20, to=Synthetix, setMessageSender(sender(address): 0x277e85) -> None
+                          [14][CALL] from=ProxyERC20, to=Synthetix, approve(spender(address): 0xfa6de2, value(uint256): 115792089237316195423570985008687907853269...) -> True
+                            [15][CALL] from=Synthetix, to=TokenState, setAllowance(tokenOwner(address): 0x277e85, spender(address): 0xfa6de2, value(uint256): 115792089237316195423570985008687907853269...) -> None
+                            [15][CALL] from=Synthetix, to=ProxyERC20, _emit(callData(bytes): b'\xff\xff\xff\xff\xff\xff\xff\xff\xff\xff..., numTopics(uint256): 3, topic1(bytes32): b'\x8c[\xe1\xe5\xeb\xec}[\xd1OqB}\x1e\x84\..., topic2(bytes32): b"\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00..., topic3(bytes32): b'\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00..., topic4(bytes32): b'\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00...) -> None
+                        [13][CALL] from=0x277e85, to=UniswapV2Pair, swap(amount0Out(uint256): 453645292460278750509681, amount1Out(uint256): 0, to(address): 0x277e85, data(bytes): b'nigger') -> None
+                          [14][CALL] from=UniswapV2Pair, to=ProxyERC20, transfer(to(address): 0x277e85, value(uint256): 453645292460278750509681) -> True
+                            [15][CALL] from=ProxyERC20, to=Synthetix, setMessageSender(sender(address): 0xA1d7b2) -> None
+                            [15][CALL] from=ProxyERC20, to=Synthetix, transfer(to(address): 0x277e85, value(uint256): 453645292460278750509681) -> True
+                              [16][STATICCALL] from=Synthetix, to=SystemStatus, requireSystemActive() -> None
+                              [16][STATICCALL] from=Synthetix, to=SynthetixState, issuanceData((address): 0xA1d7b2) -> ['0', '0']
+                              [16][STATICCALL] from=Synthetix, to=TokenState, balanceOf((address): 0xA1d7b2) -> 504050324955865278344090
+                              [16][CALL] from=Synthetix, to=TokenState, setBalanceOf(account(address): 0xA1d7b2, value(uint256): 50405032495586527834409) -> None
+                              [16][STATICCALL] from=Synthetix, to=TokenState, balanceOf((address): 0x277e85) -> 0
+                              [16][CALL] from=Synthetix, to=TokenState, setBalanceOf(account(address): 0x277e85, value(uint256): 453645292460278750509681) -> None
+                              [16][CALL] from=Synthetix, to=ProxyERC20, _emit(callData(bytes): b'\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00..., numTopics(uint256): 3, topic1(bytes32): b'\xdd\xf2R\xad\x1b\xe2\xc8\x9bi\xc2\xb0h\..., topic2(bytes32): b'\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00..., topic3(bytes32): b"\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00..., topic4(bytes32): b'\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00...) -> None
+                          [14][CALL] from=UniswapV2Pair, to=0x277e85, uniswapV2Calladdress() -> None
+                            [15][CALL] from=0x277e85, to=0x277e85, uniswapV2Calladdress() -> None
+                              [16][STATICCALL] from=0x277e85, to=DelegateCallProxyManyToOne, extrapolatePoolValueFromToken() -> ['0x1f9840', '520611369902867091497262']
+                                [17][STATICCALL][0] from=DelegateCallProxyManyToOne, to=ManyToOneImplementationHolder
+                                [17][DELEGATECALL] from=DelegateCallProxyManyToOne, to=IndexPool, extrapolatePoolValueFromToken() -> ['0x1f9840', '520611369902867091497262']
+                              [16][STATICCALL] from=0x277e85, to=InitializableAdminUpgradeabilityProxy, balanceOf(account(address): 0x277e85) -> 221217366781517207266602
+                                [17][DELEGATECALL] from=InitializableAdminUpgradeabilityProxy, to=AaveTokenV2, balanceOf(account(address): 0x277e85) -> 221217366781517207266602
+                              [16][STATICCALL] from=0x277e85, to=DelegateCallProxyManyToOne, getBalance(token(address): 0x7Fc665) -> 7503272940322868468600
+                                [17][STATICCALL][0] from=DelegateCallProxyManyToOne, to=ManyToOneImplementationHolder
+                                [17][DELEGATECALL] from=DelegateCallProxyManyToOne, to=IndexPool, getBalance(token(address): 0x7Fc665) -> 7503272940322868468600
+                              [16][CALL] from=0x277e85, to=DelegateCallProxyManyToOne, swapExactAmountIn(tokenIn(address): 0x7Fc665, tokenAmountIn(uint256): 3751636470161434234300, tokenOut(address): 0x1f9840, minAmountOut(uint256): 0, maxPrice(uint256): 100000000000000000000000000000000000000000...) -> ['32696629931711715741255', '152292301039286382']
+                                [17][STATICCALL][0] from=DelegateCallProxyManyToOne, to=ManyToOneImplementationHolder
+                                [17][DELEGATECALL] from=DelegateCallProxyManyToOne, to=IndexPool, swapExactAmountIn(tokenIn(address): 0x7Fc665, tokenAmountIn(uint256): 3751636470161434234300, tokenOut(address): 0x1f9840, minAmountOut(uint256): 0, maxPrice(uint256): 100000000000000000000000000000000000000000...) -> ['32696629931711715741255', '152292301039286382']
+                                  [18][CALL] from=DelegateCallProxyManyToOne, to=InitializableAdminUpgradeabilityProxy, transferFrom(sender(address): 0x277e85, recipient(address): 0xfa6de2, amount(uint256): 3751636470161434234300) -> True
+                                    [19][DELEGATECALL] from=InitializableAdminUpgradeabilityProxy, to=AaveTokenV2, transferFrom(sender(address): 0x277e85, recipient(address): 0xfa6de2, amount(uint256): 3751636470161434234300) -> True
+                                  [18][CALL] from=DelegateCallProxyManyToOne, to=Uni, transfer(dst(address): 0x277e85, rawAmount(uint256): 32696629931711715741255) -> True
+                              [16][STATICCALL] from=0x277e85, to=DelegateCallProxyManyToOne, getBalance(token(address): 0x7Fc665) -> 11254909410484302702900
+                                [17][STATICCALL][0] from=DelegateCallProxyManyToOne, to=ManyToOneImplementationHolder
+                                [17][DELEGATECALL] from=DelegateCallProxyManyToOne, to=IndexPool, getBalance(token(address): 0x7Fc665) -> 11254909410484302702900
+                              [16][CALL] from=0x277e85, to=DelegateCallProxyManyToOne, swapExactAmountIn(tokenIn(address): 0x7Fc665, tokenAmountIn(uint256): 5627454705242151351450, tokenOut(address): 0x1f9840, minAmountOut(uint256): 0, maxPrice(uint256): 100000000000000000000000000000000000000000...) -> ['27571265243720731915976', '272467073933486412']
+                                [17][STATICCALL][0] from=DelegateCallProxyManyToOne, to=ManyToOneImplementationHolder
+                                [17][DELEGATECALL] from=DelegateCallProxyManyToOne, to=IndexPool, swapExactAmountIn(tokenIn(address): 0x7Fc665, tokenAmountIn(uint256): 5627454705242151351450, tokenOut(address): 0x1f9840, minAmountOut(uint256): 0, maxPrice(uint256): 100000000000000000000000000000000000000000...) -> ['27571265243720731915976', '272467073933486412']
+                                  [18][CALL] from=DelegateCallProxyManyToOne, to=InitializableAdminUpgradeabilityProxy, transferFrom(sender(address): 0x277e85, recipient(address): 0xfa6de2, amount(uint256): 5627454705242151351450) -> True
+                                    [19][DELEGATECALL] from=InitializableAdminUpgradeabilityProxy, to=AaveTokenV2, transferFrom(sender(address): 0x277e85, recipient(address): 0xfa6de2, amount(uint256): 5627454705242151351450) -> True
+                                  [18][CALL] from=DelegateCallProxyManyToOne, to=Uni, transfer(dst(address): 0x277e85, rawAmount(uint256): 27571265243720731915976) -> True
+                              [16][STATICCALL] from=0x277e85, to=DelegateCallProxyManyToOne, getBalance(token(address): 0x7Fc665) -> 16882364115726454054350
+                                [17][STATICCALL][0] from=DelegateCallProxyManyToOne, to=ManyToOneImplementationHolder
+                                [17][DELEGATECALL] from=DelegateCallProxyManyToOne, to=IndexPool, getBalance(token(address): 0x7Fc665) -> 16882364115726454054350
+                              [16][CALL] from=0x277e85, to=DelegateCallProxyManyToOne, swapExactAmountIn(tokenIn(address): 0x7Fc665, tokenAmountIn(uint256): 8441182057863227027175, tokenOut(address): 0x1f9840, minAmountOut(uint256): 0, maxPrice(uint256): 100000000000000000000000000000000000000000...) -> ['23115956907635827594263', '487472484631543657']
+                                [17][STATICCALL][0] from=DelegateCallProxyManyToOne, to=ManyToOneImplementationHolder
+                                [17][DELEGATECALL] from=DelegateCallProxyManyToOne, to=IndexPool, swapExactAmountIn(tokenIn(address): 0x7Fc665, tokenAmountIn(uint256): 8441182057863227027175, tokenOut(address): 0x1f9840, minAmountOut(uint256): 0, maxPrice(uint256): 100000000000000000000000000000000000000000...) -> ['23115956907635827594263', '487472484631543657']
+                                  [18][CALL] from=DelegateCallProxyManyToOne, to=InitializableAdminUpgradeabilityProxy, transferFrom(sender(address): 0x277e85, recipient(address): 0xfa6de2, amount(uint256): 8441182057863227027175) -> True
+                                    [19][DELEGATECALL] from=InitializableAdminUpgradeabilityProxy, to=AaveTokenV2, transferFrom(sender(address): 0x277e85, recipient(address): 0xfa6de2, amount(uint256): 8441182057863227027175) -> True
+                                  [18][CALL] from=DelegateCallProxyManyToOne, to=Uni, transfer(dst(address): 0x277e85, rawAmount(uint256): 23115956907635827594263) -> True
+                              [16][STATICCALL] from=0x277e85, to=DelegateCallProxyManyToOne, getBalance(token(address): 0x7Fc665) -> 25323546173589681081525
+                                [17][STATICCALL][0] from=DelegateCallProxyManyToOne, to=ManyToOneImplementationHolder
+                                [17][DELEGATECALL] from=DelegateCallProxyManyToOne, to=IndexPool, getBalance(token(address): 0x7Fc665) -> 25323546173589681081525
+                              [16][CALL] from=0x277e85, to=DelegateCallProxyManyToOne, swapExactAmountIn(tokenIn(address): 0x7Fc665, tokenAmountIn(uint256): 12661773086794840540762, tokenOut(address): 0x1f9840, minAmountOut(uint256): 0, maxPrice(uint256): 100000000000000000000000000000000000000000...) -> ['19380592766861595907295', '872139961142092804']
+                                [17][STATICCALL][0] from=DelegateCallProxyManyToOne, to=ManyToOneImplementationHolder
+                                [17][DELEGATECALL] from=DelegateCallProxyManyToOne, to=IndexPool, swapExactAmountIn(tokenIn(address): 0x7Fc665, tokenAmountIn(uint256): 12661773086794840540762, tokenOut(address): 0x1f9840, minAmountOut(uint256): 0, maxPrice(uint256): 100000000000000000000000000000000000000000...) -> ['19380592766861595907295', '872139961142092804']
+                                  [18][CALL] from=DelegateCallProxyManyToOne, to=InitializableAdminUpgradeabilityProxy, transferFrom(sender(address): 0x277e85, recipient(address): 0xfa6de2, amount(uint256): 12661773086794840540762) -> True
+                                    [19][DELEGATECALL] from=InitializableAdminUpgradeabilityProxy, to=AaveTokenV2, transferFrom(sender(address): 0x277e85, recipient(address): 0xfa6de2, amount(uint256): 12661773086794840540762) -> True
+                                  [18][CALL] from=DelegateCallProxyManyToOne, to=Uni, transfer(dst(address): 0x277e85, rawAmount(uint256): 19380592766861595907295) -> True
+                              [16][STATICCALL] from=0x277e85, to=DelegateCallProxyManyToOne, getBalance(token(address): 0x7Fc665) -> 37985319260384521622287
+                                [17][STATICCALL][0] from=DelegateCallProxyManyToOne, to=ManyToOneImplementationHolder
+                                [17][DELEGATECALL] from=DelegateCallProxyManyToOne, to=IndexPool, getBalance(token(address): 0x7Fc665) -> 37985319260384521622287
+                              [16][CALL] from=0x277e85, to=DelegateCallProxyManyToOne, swapExactAmountIn(tokenIn(address): 0x7Fc665, tokenAmountIn(uint256): 18992659630192260811143, tokenOut(address): 0x1f9840, minAmountOut(uint256): 0, maxPrice(uint256): 100000000000000000000000000000000000000000...) -> ['16248835274080940374680', '1560350862461195770']
+                                [17][STATICCALL][0] from=DelegateCallProxyManyToOne, to=ManyToOneImplementationHolder
+                                [17][DELEGATECALL] from=DelegateCallProxyManyToOne, to=IndexPool, swapExactAmountIn(tokenIn(address): 0x7Fc665, tokenAmountIn(uint256): 18992659630192260811143, tokenOut(address): 0x1f9840, minAmountOut(uint256): 0, maxPrice(uint256): 100000000000000000000000000000000000000000...) -> ['16248835274080940374680', '1560350862461195770']
+                                  [18][CALL] from=DelegateCallProxyManyToOne, to=InitializableAdminUpgradeabilityProxy, transferFrom(sender(address): 0x277e85, recipient(address): 0xfa6de2, amount(uint256): 18992659630192260811143) -> True
+                                    [19][DELEGATECALL] from=InitializableAdminUpgradeabilityProxy, to=AaveTokenV2, transferFrom(sender(address): 0x277e85, recipient(address): 0xfa6de2, amount(uint256): 18992659630192260811143) -> True
+                                  [18][CALL] from=DelegateCallProxyManyToOne, to=Uni, transfer(dst(address): 0x277e85, rawAmount(uint256): 16248835274080940374680) -> True
+                              [16][STATICCALL] from=0x277e85, to=DelegateCallProxyManyToOne, getBalance(token(address): 0x7Fc665) -> 56977978890576782433430
+                                [17][STATICCALL][0] from=DelegateCallProxyManyToOne, to=ManyToOneImplementationHolder
+                                [17][DELEGATECALL] from=DelegateCallProxyManyToOne, to=IndexPool, getBalance(token(address): 0x7Fc665) -> 56977978890576782433430
+                              [16][CALL] from=0x277e85, to=DelegateCallProxyManyToOne, swapExactAmountIn(tokenIn(address): 0x7Fc665, tokenAmountIn(uint256): 28488989445288391216715, tokenOut(address): 0x1f9840, minAmountOut(uint256): 0, maxPrice(uint256): 100000000000000000000000000000000000000000...) -> ['13623146151425582342677', '2791633135116401918']
+                                [17][STATICCALL][0] from=DelegateCallProxyManyToOne, to=ManyToOneImplementationHolder
+                                [17][DELEGATECALL] from=DelegateCallProxyManyToOne, to=IndexPool, swapExactAmountIn(tokenIn(address): 0x7Fc665, tokenAmountIn(uint256): 28488989445288391216715, tokenOut(address): 0x1f9840, minAmountOut(uint256): 0, maxPrice(uint256): 100000000000000000000000000000000000000000...) -> ['13623146151425582342677', '2791633135116401918']
+                                  [18][CALL] from=DelegateCallProxyManyToOne, to=InitializableAdminUpgradeabilityProxy, transferFrom(sender(address): 0x277e85, recipient(address): 0xfa6de2, amount(uint256): 28488989445288391216715) -> True
+                                    [19][DELEGATECALL] from=InitializableAdminUpgradeabilityProxy, to=AaveTokenV2, transferFrom(sender(address): 0x277e85, recipient(address): 0xfa6de2, amount(uint256): 28488989445288391216715) -> True
+                                  [18][CALL] from=DelegateCallProxyManyToOne, to=Uni, transfer(dst(address): 0x277e85, rawAmount(uint256): 13623146151425582342677) -> True
+                              [16][STATICCALL] from=0x277e85, to=DelegateCallProxyManyToOne, getBalance(token(address): 0x7Fc665) -> 85466968335865173650145
+                                [17][STATICCALL][0] from=DelegateCallProxyManyToOne, to=ManyToOneImplementationHolder
+                                [17][DELEGATECALL] from=DelegateCallProxyManyToOne, to=IndexPool, getBalance(token(address): 0x7Fc665) -> 85466968335865173650145
+                              [16][CALL] from=0x277e85, to=DelegateCallProxyManyToOne, swapExactAmountIn(tokenIn(address): 0x7Fc665, tokenAmountIn(uint256): 42733484167932586825072, tokenOut(address): 0x1f9840, minAmountOut(uint256): 0, maxPrice(uint256): 100000000000000000000000000000000000000000...) -> ['11421748570443238964399', '4994527672312957066']
+                                [17][STATICCALL][0] from=DelegateCallProxyManyToOne, to=ManyToOneImplementationHolder
+                                [17][DELEGATECALL] from=DelegateCallProxyManyToOne, to=IndexPool, swapExactAmountIn(tokenIn(address): 0x7Fc665, tokenAmountIn(uint256): 42733484167932586825072, tokenOut(address): 0x1f9840, minAmountOut(uint256): 0, maxPrice(uint256): 100000000000000000000000000000000000000000...) -> ['11421748570443238964399', '4994527672312957066']
+                                  [18][CALL] from=DelegateCallProxyManyToOne, to=InitializableAdminUpgradeabilityProxy, transferFrom(sender(address): 0x277e85, recipient(address): 0xfa6de2, amount(uint256): 42733484167932586825072) -> True
+                                    [19][DELEGATECALL] from=InitializableAdminUpgradeabilityProxy, to=AaveTokenV2, transferFrom(sender(address): 0x277e85, recipient(address): 0xfa6de2, amount(uint256): 42733484167932586825072) -> True
+                                  [18][CALL] from=DelegateCallProxyManyToOne, to=Uni, transfer(dst(address): 0x277e85, rawAmount(uint256): 11421748570443238964399) -> True
+                              [16][STATICCALL] from=0x277e85, to=DelegateCallProxyManyToOne, getBalance(token(address): 0x7Fc665) -> 128200452503797760475217
+                                [17][STATICCALL][0] from=DelegateCallProxyManyToOne, to=ManyToOneImplementationHolder
+                                [17][DELEGATECALL] from=DelegateCallProxyManyToOne, to=IndexPool, getBalance(token(address): 0x7Fc665) -> 128200452503797760475217
+                              [16][CALL] from=0x277e85, to=DelegateCallProxyManyToOne, swapExactAmountIn(tokenIn(address): 0x7Fc665, tokenAmountIn(uint256): 64100226251898880237608, tokenOut(address): 0x1f9840, minAmountOut(uint256): 0, maxPrice(uint256): 100000000000000000000000000000000000000000...) -> ['9576080220850503174033', '8935739569683732035']
+                                [17][STATICCALL][0] from=DelegateCallProxyManyToOne, to=ManyToOneImplementationHolder
+                                [17][DELEGATECALL] from=DelegateCallProxyManyToOne, to=IndexPool, swapExactAmountIn(tokenIn(address): 0x7Fc665, tokenAmountIn(uint256): 64100226251898880237608, tokenOut(address): 0x1f9840, minAmountOut(uint256): 0, maxPrice(uint256): 100000000000000000000000000000000000000000...) -> ['9576080220850503174033', '8935739569683732035']
+                                  [18][CALL] from=DelegateCallProxyManyToOne, to=InitializableAdminUpgradeabilityProxy, transferFrom(sender(address): 0x277e85, recipient(address): 0xfa6de2, amount(uint256): 64100226251898880237608) -> True
+                                    [19][DELEGATECALL] from=InitializableAdminUpgradeabilityProxy, to=AaveTokenV2, transferFrom(sender(address): 0x277e85, recipient(address): 0xfa6de2, amount(uint256): 64100226251898880237608) -> True
+                                  [18][CALL] from=DelegateCallProxyManyToOne, to=Uni, transfer(dst(address): 0x277e85, rawAmount(uint256): 9576080220850503174033) -> True
+                              [16][STATICCALL] from=0x277e85, to=DelegateCallProxyManyToOne, getBalance(token(address): 0x7Fc665) -> 192300678755696640712825
+                                [17][STATICCALL][0] from=DelegateCallProxyManyToOne, to=ManyToOneImplementationHolder
+                                [17][DELEGATECALL] from=DelegateCallProxyManyToOne, to=IndexPool, getBalance(token(address): 0x7Fc665) -> 192300678755696640712825
+                              [16][CALL] from=0x277e85, to=DelegateCallProxyManyToOne, swapExactAmountIn(tokenIn(address): 0x7Fc665, tokenAmountIn(uint256): 36419960966143435022377, tokenOut(address): 0x1f9840, minAmountOut(uint256): 0, maxPrice(uint256): 100000000000000000000000000000000000000000...) -> ['3601451708302527343644', '11458682662199975149']
+                                [17][STATICCALL][0] from=DelegateCallProxyManyToOne, to=ManyToOneImplementationHolder
+                                [17][DELEGATECALL] from=DelegateCallProxyManyToOne, to=IndexPool, swapExactAmountIn(tokenIn(address): 0x7Fc665, tokenAmountIn(uint256): 36419960966143435022377, tokenOut(address): 0x1f9840, minAmountOut(uint256): 0, maxPrice(uint256): 100000000000000000000000000000000000000000...) -> ['3601451708302527343644', '11458682662199975149']
+                                  [18][CALL] from=DelegateCallProxyManyToOne, to=InitializableAdminUpgradeabilityProxy, transferFrom(sender(address): 0x277e85, recipient(address): 0xfa6de2, amount(uint256): 36419960966143435022377) -> True
+                                    [19][DELEGATECALL] from=InitializableAdminUpgradeabilityProxy, to=AaveTokenV2, transferFrom(sender(address): 0x277e85, recipient(address): 0xfa6de2, amount(uint256): 36419960966143435022377) -> True
+                                  [18][CALL] from=DelegateCallProxyManyToOne, to=Uni, transfer(dst(address): 0x277e85, rawAmount(uint256): 3601451708302527343644) -> True
+                              [16][STATICCALL] from=0x277e85, to=Comp, balanceOf(account(address): 0x277e85) -> 41371149252067400558421
+                              [16][STATICCALL] from=0x277e85, to=DelegateCallProxyManyToOne, getBalance(token(address): 0xc00e94) -> 5709373302659784538790
+                                [17][STATICCALL][0] from=DelegateCallProxyManyToOne, to=ManyToOneImplementationHolder
+                                [17][DELEGATECALL] from=DelegateCallProxyManyToOne, to=IndexPool, getBalance(token(address): 0xc00e94) -> 5709373302659784538790
+                              [16][CALL] from=0x277e85, to=DelegateCallProxyManyToOne, swapExactAmountIn(tokenIn(address): 0xc00e94, tokenAmountIn(uint256): 2854686651329892269395, tokenOut(address): 0x1f9840, minAmountOut(uint256): 0, maxPrice(uint256): 100000000000000000000000000000000000000000...) -> ['6010719889753406306970', '616079178371396858']
+                                [17][STATICCALL][0] from=DelegateCallProxyManyToOne, to=ManyToOneImplementationHolder
+                                [17][DELEGATECALL] from=DelegateCallProxyManyToOne, to=IndexPool, swapExactAmountIn(tokenIn(address): 0xc00e94, tokenAmountIn(uint256): 2854686651329892269395, tokenOut(address): 0x1f9840, minAmountOut(uint256): 0, maxPrice(uint256): 100000000000000000000000000000000000000000...) -> ['6010719889753406306970', '616079178371396858']
+                                  [18][CALL] from=DelegateCallProxyManyToOne, to=Comp, transferFrom(src(address): 0x277e85, dst(address): 0xfa6de2, rawAmount(uint256): 2854686651329892269395) -> True
+                                  [18][CALL] from=DelegateCallProxyManyToOne, to=Uni, transfer(dst(address): 0x277e85, rawAmount(uint256): 6010719889753406306970) -> True
+                              [16][STATICCALL] from=0x277e85, to=DelegateCallProxyManyToOne, getBalance(token(address): 0xc00e94) -> 8564059953989676808185
+                                [17][STATICCALL][0] from=DelegateCallProxyManyToOne, to=ManyToOneImplementationHolder
+                                [17][DELEGATECALL] from=DelegateCallProxyManyToOne, to=IndexPool, getBalance(token(address): 0xc00e94) -> 8564059953989676808185
+                              [16][CALL] from=0x277e85, to=DelegateCallProxyManyToOne, swapExactAmountIn(tokenIn(address): 0xc00e94, tokenAmountIn(uint256): 4282029976994838404092, tokenOut(address): 0x1f9840, minAmountOut(uint256): 0, maxPrice(uint256): 100000000000000000000000000000000000000000...) -> ['5275395415779560298243', '1064219519578277359']
+                                [17][STATICCALL][0] from=DelegateCallProxyManyToOne, to=ManyToOneImplementationHolder
+                                [17][DELEGATECALL] from=DelegateCallProxyManyToOne, to=IndexPool, swapExactAmountIn(tokenIn(address): 0xc00e94, tokenAmountIn(uint256): 4282029976994838404092, tokenOut(address): 0x1f9840, minAmountOut(uint256): 0, maxPrice(uint256): 100000000000000000000000000000000000000000...) -> ['5275395415779560298243', '1064219519578277359']
+                                  [18][CALL] from=DelegateCallProxyManyToOne, to=Comp, transferFrom(src(address): 0x277e85, dst(address): 0xfa6de2, rawAmount(uint256): 4282029976994838404092) -> True
+                                  [18][CALL] from=DelegateCallProxyManyToOne, to=Uni, transfer(dst(address): 0x277e85, rawAmount(uint256): 5275395415779560298243) -> True
+                              [16][STATICCALL] from=0x277e85, to=DelegateCallProxyManyToOne, getBalance(token(address): 0xc00e94) -> 12846089930984515212277
+                                [17][STATICCALL][0] from=DelegateCallProxyManyToOne, to=ManyToOneImplementationHolder
+                                [17][DELEGATECALL] from=DelegateCallProxyManyToOne, to=IndexPool, getBalance(token(address): 0xc00e94) -> 12846089930984515212277
+                              [16][CALL] from=0x277e85, to=DelegateCallProxyManyToOne, swapExactAmountIn(tokenIn(address): 0xc00e94, tokenAmountIn(uint256): 6423044965492257606138, tokenOut(address): 0x1f9840, minAmountOut(uint256): 0, maxPrice(uint256): 100000000000000000000000000000000000000000...) -> ['4580908187004904990847', '1838340306915332323']
+                                [17][STATICCALL][0] from=DelegateCallProxyManyToOne, to=ManyToOneImplementationHolder
+                                [17][DELEGATECALL] from=DelegateCallProxyManyToOne, to=IndexPool, swapExactAmountIn(tokenIn(address): 0xc00e94, tokenAmountIn(uint256): 6423044965492257606138, tokenOut(address): 0x1f9840, minAmountOut(uint256): 0, maxPrice(uint256): 100000000000000000000000000000000000000000...) -> ['4580908187004904990847', '1838340306915332323']
+                                  [18][CALL] from=DelegateCallProxyManyToOne, to=Comp, transferFrom(src(address): 0x277e85, dst(address): 0xfa6de2, rawAmount(uint256): 6423044965492257606138) -> True
+                                  [18][CALL] from=DelegateCallProxyManyToOne, to=Uni, transfer(dst(address): 0x277e85, rawAmount(uint256): 4580908187004904990847) -> True
+                              [16][STATICCALL] from=0x277e85, to=DelegateCallProxyManyToOne, getBalance(token(address): 0xc00e94) -> 19269134896476772818415
+                                [17][STATICCALL][0] from=DelegateCallProxyManyToOne, to=ManyToOneImplementationHolder
+                                [17][DELEGATECALL] from=DelegateCallProxyManyToOne, to=IndexPool, getBalance(token(address): 0xc00e94) -> 19269134896476772818415
+                              [16][CALL] from=0x277e85, to=DelegateCallProxyManyToOne, swapExactAmountIn(tokenIn(address): 0xc00e94, tokenAmountIn(uint256): 9634567448238386409207, tokenOut(address): 0x1f9840, minAmountOut(uint256): 0, maxPrice(uint256): 100000000000000000000000000000000000000000...) -> ['3977847756207975816968', '3175562016912417321']
+                                [17][STATICCALL][0] from=DelegateCallProxyManyToOne, to=ManyToOneImplementationHolder
+                                [17][DELEGATECALL] from=DelegateCallProxyManyToOne, to=IndexPool, swapExactAmountIn(tokenIn(address): 0xc00e94, tokenAmountIn(uint256): 9634567448238386409207, tokenOut(address): 0x1f9840, minAmountOut(uint256): 0, maxPrice(uint256): 100000000000000000000000000000000000000000...) -> ['3977847756207975816968', '3175562016912417321']
+                                  [18][CALL] from=DelegateCallProxyManyToOne, to=Comp, transferFrom(src(address): 0x277e85, dst(address): 0xfa6de2, rawAmount(uint256): 9634567448238386409207) -> True
+                                  [18][CALL] from=DelegateCallProxyManyToOne, to=Uni, transfer(dst(address): 0x277e85, rawAmount(uint256): 3977847756207975816968) -> True
+                              [16][STATICCALL] from=0x277e85, to=DelegateCallProxyManyToOne, getBalance(token(address): 0xc00e94) -> 28903702344715159227622
+                                [17][STATICCALL][0] from=DelegateCallProxyManyToOne, to=ManyToOneImplementationHolder
+                                [17][DELEGATECALL] from=DelegateCallProxyManyToOne, to=IndexPool, getBalance(token(address): 0xc00e94) -> 28903702344715159227622
+                              [16][CALL] from=0x277e85, to=DelegateCallProxyManyToOne, swapExactAmountIn(tokenIn(address): 0xc00e94, tokenAmountIn(uint256): 14451851172357579613811, tokenOut(address): 0x1f9840, minAmountOut(uint256): 0, maxPrice(uint256): 100000000000000000000000000000000000000000...) -> ['3454178107401541138484', '5485488233774174315']
+                                [17][STATICCALL][0] from=DelegateCallProxyManyToOne, to=ManyToOneImplementationHolder
+                                [17][DELEGATECALL] from=DelegateCallProxyManyToOne, to=IndexPool, swapExactAmountIn(tokenIn(address): 0xc00e94, tokenAmountIn(uint256): 14451851172357579613811, tokenOut(address): 0x1f9840, minAmountOut(uint256): 0, maxPrice(uint256): 100000000000000000000000000000000000000000...) -> ['3454178107401541138484', '5485488233774174315']
+                                  [18][CALL] from=DelegateCallProxyManyToOne, to=Comp, transferFrom(src(address): 0x277e85, dst(address): 0xfa6de2, rawAmount(uint256): 14451851172357579613811) -> True
+                                  [18][CALL] from=DelegateCallProxyManyToOne, to=Uni, transfer(dst(address): 0x277e85, rawAmount(uint256): 3454178107401541138484) -> True
+                              [16][STATICCALL] from=0x277e85, to=DelegateCallProxyManyToOne, getBalance(token(address): 0xc00e94) -> 43355553517072738841433
+                                [17][STATICCALL][0] from=DelegateCallProxyManyToOne, to=ManyToOneImplementationHolder
+                                [17][DELEGATECALL] from=DelegateCallProxyManyToOne, to=IndexPool, getBalance(token(address): 0xc00e94) -> 43355553517072738841433
+                              [16][CALL] from=0x277e85, to=DelegateCallProxyManyToOne, swapExactAmountIn(tokenIn(address): 0xc00e94, tokenAmountIn(uint256): 3724969037654446255778, tokenOut(address): 0x1f9840, minAmountOut(uint256): 0, maxPrice(uint256): 100000000000000000000000000000000000000000...) -> ['642740638836461342021', '6129702818829577064']
+                                [17][STATICCALL][0] from=DelegateCallProxyManyToOne, to=ManyToOneImplementationHolder
+                                [17][DELEGATECALL] from=DelegateCallProxyManyToOne, to=IndexPool, swapExactAmountIn(tokenIn(address): 0xc00e94, tokenAmountIn(uint256): 3724969037654446255778, tokenOut(address): 0x1f9840, minAmountOut(uint256): 0, maxPrice(uint256): 100000000000000000000000000000000000000000...) -> ['642740638836461342021', '6129702818829577064']
+                                  [18][CALL] from=DelegateCallProxyManyToOne, to=Comp, transferFrom(src(address): 0x277e85, dst(address): 0xfa6de2, rawAmount(uint256): 3724969037654446255778) -> True
+                                  [18][CALL] from=DelegateCallProxyManyToOne, to=Uni, transfer(dst(address): 0x277e85, rawAmount(uint256): 642740638836461342021) -> True
+                              [16][STATICCALL] from=0x277e85, to=Vyper_contract, balanceOf(arg0(address): 0x277e85) -> 3210906891991096095551982
+                              [16][STATICCALL] from=0x277e85, to=DelegateCallProxyManyToOne, getBalance(token(address): 0xD533a9) -> 741773281460556601215969
+                                [17][STATICCALL][0] from=DelegateCallProxyManyToOne, to=ManyToOneImplementationHolder
+                                [17][DELEGATECALL] from=DelegateCallProxyManyToOne, to=IndexPool, getBalance(token(address): 0xD533a9) -> 741773281460556601215969
+                              [16][CALL] from=0x277e85, to=DelegateCallProxyManyToOne, swapExactAmountIn(tokenIn(address): 0xD533a9, tokenAmountIn(uint256): 370886640730278300607984, tokenOut(address): 0x1f9840, minAmountOut(uint256): 0, maxPrice(uint256): 100000000000000000000000000000000000000000...) -> ['3444060172756063995477', '142155076425610844946']
+                                [17][STATICCALL][0] from=DelegateCallProxyManyToOne, to=ManyToOneImplementationHolder
+                                [17][DELEGATECALL] from=DelegateCallProxyManyToOne, to=IndexPool, swapExactAmountIn(tokenIn(address): 0xD533a9, tokenAmountIn(uint256): 370886640730278300607984, tokenOut(address): 0x1f9840, minAmountOut(uint256): 0, maxPrice(uint256): 100000000000000000000000000000000000000000...) -> ['3444060172756063995477', '142155076425610844946']
+                                  [18][CALL] from=DelegateCallProxyManyToOne, to=Vyper_contract, transferFrom(_from(address): 0x277e85, _to(address): 0xfa6de2, _value(uint256): 370886640730278300607984) -> True
+                                  [18][CALL] from=DelegateCallProxyManyToOne, to=Uni, transfer(dst(address): 0x277e85, rawAmount(uint256): 3444060172756063995477) -> True
+                              [16][STATICCALL] from=0x277e85, to=DelegateCallProxyManyToOne, getBalance(token(address): 0xD533a9) -> 1112659922190834901823953
+                                [17][STATICCALL][0] from=DelegateCallProxyManyToOne, to=ManyToOneImplementationHolder
+                                [17][DELEGATECALL] from=DelegateCallProxyManyToOne, to=IndexPool, getBalance(token(address): 0xD533a9) -> 1112659922190834901823953
+                              [16][CALL] from=0x277e85, to=DelegateCallProxyManyToOne, swapExactAmountIn(tokenIn(address): 0xD533a9, tokenAmountIn(uint256): 556329961095417450911976, tokenOut(address): 0x1f9840, minAmountOut(uint256): 0, maxPrice(uint256): 100000000000000000000000000000000000000000...) -> ['2928455274313878382929', '252832335393442747043']
+                                [17][STATICCALL][0] from=DelegateCallProxyManyToOne, to=ManyToOneImplementationHolder
+                                [17][DELEGATECALL] from=DelegateCallProxyManyToOne, to=IndexPool, swapExactAmountIn(tokenIn(address): 0xD533a9, tokenAmountIn(uint256): 556329961095417450911976, tokenOut(address): 0x1f9840, minAmountOut(uint256): 0, maxPrice(uint256): 100000000000000000000000000000000000000000...) -> ['2928455274313878382929', '252832335393442747043']
+                                  [18][CALL] from=DelegateCallProxyManyToOne, to=Vyper_contract, transferFrom(_from(address): 0x277e85, _to(address): 0xfa6de2, _value(uint256): 556329961095417450911976) -> True
+                                  [18][CALL] from=DelegateCallProxyManyToOne, to=Uni, transfer(dst(address): 0x277e85, rawAmount(uint256): 2928455274313878382929) -> True
+                              [16][STATICCALL] from=0x277e85, to=DelegateCallProxyManyToOne, getBalance(token(address): 0xD533a9) -> 1668989883286252352735929
+                                [17][STATICCALL][0] from=DelegateCallProxyManyToOne, to=ManyToOneImplementationHolder
+                                [17][DELEGATECALL] from=DelegateCallProxyManyToOne, to=IndexPool, getBalance(token(address): 0xD533a9) -> 1668989883286252352735929
+                              [16][CALL] from=0x277e85, to=DelegateCallProxyManyToOne, swapExactAmountIn(tokenIn(address): 0xD533a9, tokenAmountIn(uint256): 834494941643126176367964, tokenOut(address): 0x1f9840, minAmountOut(uint256): 0, maxPrice(uint256): 100000000000000000000000000000000000000000...) -> ['2469787632273731122833', '449679261745911566714']
+                                [17][STATICCALL][0] from=DelegateCallProxyManyToOne, to=ManyToOneImplementationHolder
+                                [17][DELEGATECALL] from=DelegateCallProxyManyToOne, to=IndexPool, swapExactAmountIn(tokenIn(address): 0xD533a9, tokenAmountIn(uint256): 834494941643126176367964, tokenOut(address): 0x1f9840, minAmountOut(uint256): 0, maxPrice(uint256): 100000000000000000000000000000000000000000...) -> ['2469787632273731122833', '449679261745911566714']
+                                  [18][CALL] from=DelegateCallProxyManyToOne, to=Vyper_contract, transferFrom(_from(address): 0x277e85, _to(address): 0xfa6de2, _value(uint256): 834494941643126176367964) -> True
+                                  [18][CALL] from=DelegateCallProxyManyToOne, to=Uni, transfer(dst(address): 0x277e85, rawAmount(uint256): 2469787632273731122833) -> True
+                              [16][STATICCALL] from=0x277e85, to=DelegateCallProxyManyToOne, getBalance(token(address): 0xD533a9) -> 2503484824929378529103893
+                                [17][STATICCALL][0] from=DelegateCallProxyManyToOne, to=ManyToOneImplementationHolder
+                                [17][DELEGATECALL] from=DelegateCallProxyManyToOne, to=IndexPool, getBalance(token(address): 0xD533a9) -> 2503484824929378529103893
+                              [16][CALL] from=0x277e85, to=DelegateCallProxyManyToOne, swapExactAmountIn(tokenIn(address): 0xD533a9, tokenAmountIn(uint256): 1251742412464689264551946, tokenOut(address): 0x1f9840, minAmountOut(uint256): 0, maxPrice(uint256): 100000000000000000000000000000000000000000...) -> ['2082958548841571703782', '799784719504641479716']
+                                [17][STATICCALL][0] from=DelegateCallProxyManyToOne, to=ManyToOneImplementationHolder
+                                [17][DELEGATECALL] from=DelegateCallProxyManyToOne, to=IndexPool, swapExactAmountIn(tokenIn(address): 0xD533a9, tokenAmountIn(uint256): 1251742412464689264551946, tokenOut(address): 0x1f9840, minAmountOut(uint256): 0, maxPrice(uint256): 100000000000000000000000000000000000000000...) -> ['2082958548841571703782', '799784719504641479716']
+                                  [18][CALL] from=DelegateCallProxyManyToOne, to=Vyper_contract, transferFrom(_from(address): 0x277e85, _to(address): 0xfa6de2, _value(uint256): 1251742412464689264551946) -> True
+                                  [18][CALL] from=DelegateCallProxyManyToOne, to=Uni, transfer(dst(address): 0x277e85, rawAmount(uint256): 2082958548841571703782) -> True
+                              [16][STATICCALL] from=0x277e85, to=DelegateCallProxyManyToOne, getBalance(token(address): 0xD533a9) -> 3755227237394067793655839
+                                [17][STATICCALL][0] from=DelegateCallProxyManyToOne, to=ManyToOneImplementationHolder
+                                [17][DELEGATECALL] from=DelegateCallProxyManyToOne, to=IndexPool, getBalance(token(address): 0xD533a9) -> 3755227237394067793655839
+                              [16][CALL] from=0x277e85, to=DelegateCallProxyManyToOne, swapExactAmountIn(tokenIn(address): 0xD533a9, tokenAmountIn(uint256): 197452936057584903112112, tokenOut(address): 0x1f9840, minAmountOut(uint256): 0, maxPrice(uint256): 100000000000000000000000000000000000000000...) -> ['238167132693340940398', '860101790469699031318']
+                                [17][STATICCALL][0] from=DelegateCallProxyManyToOne, to=ManyToOneImplementationHolder
+                                [17][DELEGATECALL] from=DelegateCallProxyManyToOne, to=IndexPool, swapExactAmountIn(tokenIn(address): 0xD533a9, tokenAmountIn(uint256): 197452936057584903112112, tokenOut(address): 0x1f9840, minAmountOut(uint256): 0, maxPrice(uint256): 100000000000000000000000000000000000000000...) -> ['238167132693340940398', '860101790469699031318']
+                                  [18][CALL] from=DelegateCallProxyManyToOne, to=Vyper_contract, transferFrom(_from(address): 0x277e85, _to(address): 0xfa6de2, _value(uint256): 197452936057584903112112) -> True
+                                  [18][CALL] from=DelegateCallProxyManyToOne, to=Uni, transfer(dst(address): 0x277e85, rawAmount(uint256): 238167132693340940398) -> True
+                              [16][STATICCALL] from=0x277e85, to=DSToken, balanceOf(src(address): 0x277e85) -> 5775828019598003061742
+                              [16][STATICCALL] from=0x277e85, to=DelegateCallProxyManyToOne, getBalance(token(address): 0x9f8F72) -> 638743506158176865112
+                                [17][STATICCALL][0] from=DelegateCallProxyManyToOne, to=ManyToOneImplementationHolder
+                                [17][DELEGATECALL] from=DelegateCallProxyManyToOne, to=IndexPool, getBalance(token(address): 0x9f8F72) -> 638743506158176865112
+                              [16][CALL] from=0x277e85, to=DelegateCallProxyManyToOne, swapExactAmountIn(tokenIn(address): 0x9f8F72, tokenAmountIn(uint256): 319371753079088432556, tokenOut(address): 0x1f9840, minAmountOut(uint256): 0, maxPrice(uint256): 100000000000000000000000000000000000000000...) -> ['1298271643737551360635', '320016264974200976']
+                                [17][STATICCALL][0] from=DelegateCallProxyManyToOne, to=ManyToOneImplementationHolder
+                                [17][DELEGATECALL] from=DelegateCallProxyManyToOne, to=IndexPool, swapExactAmountIn(tokenIn(address): 0x9f8F72, tokenAmountIn(uint256): 319371753079088432556, tokenOut(address): 0x1f9840, minAmountOut(uint256): 0, maxPrice(uint256): 100000000000000000000000000000000000000000...) -> ['1298271643737551360635', '320016264974200976']
+                                  [18][CALL] from=DelegateCallProxyManyToOne, to=DSToken, transferFrom(src(address): 0x277e85, dst(address): 0xfa6de2, wad(uint256): 319371753079088432556) -> True
+                                  [18][CALL] from=DelegateCallProxyManyToOne, to=Uni, transfer(dst(address): 0x277e85, rawAmount(uint256): 1298271643737551360635) -> True
+                              [16][STATICCALL] from=0x277e85, to=DelegateCallProxyManyToOne, getBalance(token(address): 0x9f8F72) -> 958115259237265297668
+                                [17][STATICCALL][0] from=DelegateCallProxyManyToOne, to=ManyToOneImplementationHolder
+                                [17][DELEGATECALL] from=DelegateCallProxyManyToOne, to=IndexPool, getBalance(token(address): 0x9f8F72) -> 958115259237265297668
+                              [16][CALL] from=0x277e85, to=DelegateCallProxyManyToOne, swapExactAmountIn(tokenIn(address): 0x9f8F72, tokenAmountIn(uint256): 479057629618632648834, tokenOut(address): 0x1f9840, minAmountOut(uint256): 0, maxPrice(uint256): 100000000000000000000000000000000000000000...) -> ['1144735615047786315494', '544406983878278589']
+                                [17][STATICCALL][0] from=DelegateCallProxyManyToOne, to=ManyToOneImplementationHolder
+                                [17][DELEGATECALL] from=DelegateCallProxyManyToOne, to=IndexPool, swapExactAmountIn(tokenIn(address): 0x9f8F72, tokenAmountIn(uint256): 479057629618632648834, tokenOut(address): 0x1f9840, minAmountOut(uint256): 0, maxPrice(uint256): 100000000000000000000000000000000000000000...) -> ['1144735615047786315494', '544406983878278589']
+                                  [18][CALL] from=DelegateCallProxyManyToOne, to=DSToken, transferFrom(src(address): 0x277e85, dst(address): 0xfa6de2, wad(uint256): 479057629618632648834) -> True
+                                  [18][CALL] from=DelegateCallProxyManyToOne, to=Uni, transfer(dst(address): 0x277e85, rawAmount(uint256): 1144735615047786315494) -> True
+                              [16][STATICCALL] from=0x277e85, to=DelegateCallProxyManyToOne, getBalance(token(address): 0x9f8F72) -> 1437172888855897946502
+                                [17][STATICCALL][0] from=DelegateCallProxyManyToOne, to=ManyToOneImplementationHolder
+                                [17][DELEGATECALL] from=DelegateCallProxyManyToOne, to=IndexPool, getBalance(token(address): 0x9f8F72) -> 1437172888855897946502
+                              [16][CALL] from=0x277e85, to=DelegateCallProxyManyToOne, swapExactAmountIn(tokenIn(address): 0x9f8F72, tokenAmountIn(uint256): 718586444427948973251, tokenOut(address): 0x1f9840, minAmountOut(uint256): 0, maxPrice(uint256): 100000000000000000000000000000000000000000...) -> ['1009357043789626204214', '926137189056117877']
+                                [17][STATICCALL][0] from=DelegateCallProxyManyToOne, to=ManyToOneImplementationHolder
+                                [17][DELEGATECALL] from=DelegateCallProxyManyToOne, to=IndexPool, swapExactAmountIn(tokenIn(address): 0x9f8F72, tokenAmountIn(uint256): 718586444427948973251, tokenOut(address): 0x1f9840, minAmountOut(uint256): 0, maxPrice(uint256): 100000000000000000000000000000000000000000...) -> ['1009357043789626204214', '926137189056117877']
+                                  [18][CALL] from=DelegateCallProxyManyToOne, to=DSToken, transferFrom(src(address): 0x277e85, dst(address): 0xfa6de2, wad(uint256): 718586444427948973251) -> True
+                                  [18][CALL] from=DelegateCallProxyManyToOne, to=Uni, transfer(dst(address): 0x277e85, rawAmount(uint256): 1009357043789626204214) -> True
+                              [16][STATICCALL] from=0x277e85, to=DelegateCallProxyManyToOne, getBalance(token(address): 0x9f8F72) -> 2155759333283846919753
+                                [17][STATICCALL][0] from=DelegateCallProxyManyToOne, to=ManyToOneImplementationHolder
+                                [17][DELEGATECALL] from=DelegateCallProxyManyToOne, to=IndexPool, getBalance(token(address): 0x9f8F72) -> 2155759333283846919753
+                              [16][CALL] from=0x277e85, to=DelegateCallProxyManyToOne, swapExactAmountIn(tokenIn(address): 0x9f8F72, tokenAmountIn(uint256): 1077879666641923459876, tokenOut(address): 0x1f9840, minAmountOut(uint256): 0, maxPrice(uint256): 100000000000000000000000000000000000000000...) -> ['889988595144044780113', '1575531024312765403']
+                                [17][STATICCALL][0] from=DelegateCallProxyManyToOne, to=ManyToOneImplementationHolder
+                                [17][DELEGATECALL] from=DelegateCallProxyManyToOne, to=IndexPool, swapExactAmountIn(tokenIn(address): 0x9f8F72, tokenAmountIn(uint256): 1077879666641923459876, tokenOut(address): 0x1f9840, minAmountOut(uint256): 0, maxPrice(uint256): 100000000000000000000000000000000000000000...) -> ['889988595144044780113', '1575531024312765403']
+                                  [18][CALL] from=DelegateCallProxyManyToOne, to=DSToken, transferFrom(src(address): 0x277e85, dst(address): 0xfa6de2, wad(uint256): 1077879666641923459876) -> True
+                                  [18][CALL] from=DelegateCallProxyManyToOne, to=Uni, transfer(dst(address): 0x277e85, rawAmount(uint256): 889988595144044780113) -> True
+                              [16][STATICCALL] from=0x277e85, to=DelegateCallProxyManyToOne, getBalance(token(address): 0x9f8F72) -> 3233638999925770379629
+                                [17][STATICCALL][0] from=DelegateCallProxyManyToOne, to=ManyToOneImplementationHolder
+                                [17][DELEGATECALL] from=DelegateCallProxyManyToOne, to=IndexPool, getBalance(token(address): 0x9f8F72) -> 3233638999925770379629
+                              [16][CALL] from=0x277e85, to=DelegateCallProxyManyToOne, swapExactAmountIn(tokenIn(address): 0x9f8F72, tokenAmountIn(uint256): 1616819499962885189814, tokenOut(address): 0x1f9840, minAmountOut(uint256): 0, maxPrice(uint256): 100000000000000000000000000000000000000000...) -> ['784736882117165394791', '2680270307579259393']
+                                [17][STATICCALL][0] from=DelegateCallProxyManyToOne, to=ManyToOneImplementationHolder
+                                [17][DELEGATECALL] from=DelegateCallProxyManyToOne, to=IndexPool, swapExactAmountIn(tokenIn(address): 0x9f8F72, tokenAmountIn(uint256): 1616819499962885189814, tokenOut(address): 0x1f9840, minAmountOut(uint256): 0, maxPrice(uint256): 100000000000000000000000000000000000000000...) -> ['784736882117165394791', '2680270307579259393']
+                                  [18][CALL] from=DelegateCallProxyManyToOne, to=DSToken, transferFrom(src(address): 0x277e85, dst(address): 0xfa6de2, wad(uint256): 1616819499962885189814) -> True
+                                  [18][CALL] from=DelegateCallProxyManyToOne, to=Uni, transfer(dst(address): 0x277e85, rawAmount(uint256): 784736882117165394791) -> True
+                              [16][STATICCALL] from=0x277e85, to=DelegateCallProxyManyToOne, getBalance(token(address): 0x9f8F72) -> 4850458499888655569443
+                                [17][STATICCALL][0] from=DelegateCallProxyManyToOne, to=ManyToOneImplementationHolder
+                                [17][DELEGATECALL] from=DelegateCallProxyManyToOne, to=IndexPool, getBalance(token(address): 0x9f8F72) -> 4850458499888655569443
+                              [16][CALL] from=0x277e85, to=DelegateCallProxyManyToOne, swapExactAmountIn(tokenIn(address): 0x9f8F72, tokenAmountIn(uint256): 1564113025867524357411, tokenOut(address): 0x1f9840, minAmountOut(uint256): 0, maxPrice(uint256): 100000000000000000000000000000000000000000...) -> ['485747289860493407714', '3865488436406456657']
+                                [17][STATICCALL][0] from=DelegateCallProxyManyToOne, to=ManyToOneImplementationHolder
+                                [17][DELEGATECALL] from=DelegateCallProxyManyToOne, to=IndexPool, swapExactAmountIn(tokenIn(address): 0x9f8F72, tokenAmountIn(uint256): 1564113025867524357411, tokenOut(address): 0x1f9840, minAmountOut(uint256): 0, maxPrice(uint256): 100000000000000000000000000000000000000000...) -> ['485747289860493407714', '3865488436406456657']
+                                  [18][CALL] from=DelegateCallProxyManyToOne, to=DSToken, transferFrom(src(address): 0x277e85, dst(address): 0xfa6de2, wad(uint256): 1564113025867524357411) -> True
+                                  [18][CALL] from=DelegateCallProxyManyToOne, to=Uni, transfer(dst(address): 0x277e85, rawAmount(uint256): 485747289860493407714) -> True
+                              [16][STATICCALL] from=0x277e85, to=ProxyERC20, balanceOf(owner(address): 0x277e85) -> 453645292460278750509681
+                                [17][CALL] from=ProxyERC20, to=Synthetix, balanceOf(account(address): 0x277e85) -> 453645292460278750509681
+                                  [18][STATICCALL] from=Synthetix, to=TokenState, balanceOf((address): 0x277e85) -> 453645292460278750509681
+                              [16][STATICCALL] from=0x277e85, to=DelegateCallProxyManyToOne, getBalance(token(address): 0xC011a7) -> 19308368073168197328834
+                                [17][STATICCALL][0] from=DelegateCallProxyManyToOne, to=ManyToOneImplementationHolder
+                                [17][DELEGATECALL] from=DelegateCallProxyManyToOne, to=IndexPool, getBalance(token(address): 0xC011a7) -> 19308368073168197328834
+                              [16][CALL] from=0x277e85, to=DelegateCallProxyManyToOne, swapExactAmountIn(tokenIn(address): 0xC011a7, tokenAmountIn(uint256): 9654184036584098664417, tokenOut(address): 0x1f9840, minAmountOut(uint256): 0, maxPrice(uint256): 100000000000000000000000000000000000000000...) -> ['78132923383001748001', '151948116811378895496']
+                                [17][STATICCALL][0] from=DelegateCallProxyManyToOne, to=ManyToOneImplementationHolder
+                                [17][DELEGATECALL] from=DelegateCallProxyManyToOne, to=IndexPool, swapExactAmountIn(tokenIn(address): 0xC011a7, tokenAmountIn(uint256): 9654184036584098664417, tokenOut(address): 0x1f9840, minAmountOut(uint256): 0, maxPrice(uint256): 100000000000000000000000000000000000000000...) -> ['78132923383001748001', '151948116811378895496']
+                                  [18][CALL] from=DelegateCallProxyManyToOne, to=ProxyERC20, transferFrom(from(address): 0x277e85, to(address): 0xfa6de2, value(uint256): 9654184036584098664417) -> True
+                                    [19][CALL] from=ProxyERC20, to=Synthetix, setMessageSender(sender(address): 0xfa6de2) -> None
+                                    [19][CALL] from=ProxyERC20, to=Synthetix, transferFrom(from(address): 0x277e85, to(address): 0xfa6de2, value(uint256): 9654184036584098664417) -> True
+                                      [20][STATICCALL] from=Synthetix, to=SystemStatus, requireSystemActive() -> None
+                                      [20][STATICCALL] from=Synthetix, to=SynthetixState, issuanceData((address): 0x277e85) -> ['0', '0']
+                                      [20][STATICCALL] from=Synthetix, to=TokenState, allowance((address): 0xfa6de2) -> 115792089237316195423570985008687907853269984665640564039457584007913129639935
+                                      [20][CALL] from=Synthetix, to=TokenState, setAllowance(tokenOwner(address): 0x277e85, spender(address): 0xfa6de2, value(uint256): 115792089237316195423570985008687907853269...) -> None
+                                      [20][STATICCALL] from=Synthetix, to=TokenState, balanceOf((address): 0x277e85) -> 453645292460278750509681
+                                      [20][CALL] from=Synthetix, to=TokenState, setBalanceOf(account(address): 0x277e85, value(uint256): 443991108423694651845264) -> None
+                                      [20][STATICCALL] from=Synthetix, to=TokenState, balanceOf((address): 0xfa6de2) -> 19308368073168197328834
+                                      [20][CALL] from=Synthetix, to=TokenState, setBalanceOf(account(address): 0xfa6de2, value(uint256): 28962552109752295993251) -> None
+                                      [20][CALL] from=Synthetix, to=ProxyERC20, _emit(callData(bytes): b'\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00..., numTopics(uint256): 3, topic1(bytes32): b'\xdd\xf2R\xad\x1b\xe2\xc8\x9bi\xc2\xb0h\..., topic2(bytes32): b"\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00..., topic3(bytes32): b'\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00..., topic4(bytes32): b'\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00...) -> None
+                                  [18][CALL] from=DelegateCallProxyManyToOne, to=Uni, transfer(dst(address): 0x277e85, rawAmount(uint256): 78132923383001748001) -> True
+                              [16][STATICCALL] from=0x277e85, to=DelegateCallProxyManyToOne, getBalance(token(address): 0xC011a7) -> 28962552109752295993251
+                                [17][STATICCALL][0] from=DelegateCallProxyManyToOne, to=ManyToOneImplementationHolder
+                                [17][DELEGATECALL] from=DelegateCallProxyManyToOne, to=IndexPool, getBalance(token(address): 0xC011a7) -> 28962552109752295993251
+                              [16][CALL] from=0x277e85, to=DelegateCallProxyManyToOne, swapExactAmountIn(tokenIn(address): 0xC011a7, tokenAmountIn(uint256): 14481276054876147996625, tokenOut(address): 0x1f9840, minAmountOut(uint256): 0, maxPrice(uint256): 100000000000000000000000000000000000000000...) -> ['76995060015755014484', '231290499025240262204']
+                                [17][STATICCALL][0] from=DelegateCallProxyManyToOne, to=ManyToOneImplementationHolder
+                                [17][DELEGATECALL] from=DelegateCallProxyManyToOne, to=IndexPool, swapExactAmountIn(tokenIn(address): 0xC011a7, tokenAmountIn(uint256): 14481276054876147996625, tokenOut(address): 0x1f9840, minAmountOut(uint256): 0, maxPrice(uint256): 100000000000000000000000000000000000000000...) -> ['76995060015755014484', '231290499025240262204']
+                                  [18][CALL] from=DelegateCallProxyManyToOne, to=ProxyERC20, transferFrom(from(address): 0x277e85, to(address): 0xfa6de2, value(uint256): 14481276054876147996625) -> True
+                                    [19][CALL] from=ProxyERC20, to=Synthetix, setMessageSender(sender(address): 0xfa6de2) -> None
+                                    [19][CALL] from=ProxyERC20, to=Synthetix, transferFrom(from(address): 0x277e85, to(address): 0xfa6de2, value(uint256): 14481276054876147996625) -> True
+                                      [20][STATICCALL] from=Synthetix, to=SystemStatus, requireSystemActive() -> None
+                                      [20][STATICCALL] from=Synthetix, to=SynthetixState, issuanceData((address): 0x277e85) -> ['0', '0']
+                                      [20][STATICCALL] from=Synthetix, to=TokenState, allowance((address): 0xfa6de2) -> 115792089237316195423570985008687907853269984665640564029803399971329030975518
+                                      [20][CALL] from=Synthetix, to=TokenState, setAllowance(tokenOwner(address): 0x277e85, spender(address): 0xfa6de2, value(uint256): 115792089237316195423570985008687907853269...) -> None
+                                      [20][STATICCALL] from=Synthetix, to=TokenState, balanceOf((address): 0x277e85) -> 443991108423694651845264
+                                      [20][CALL] from=Synthetix, to=TokenState, setBalanceOf(account(address): 0x277e85, value(uint256): 429509832368818503848639) -> None
+                                      [20][STATICCALL] from=Synthetix, to=TokenState, balanceOf((address): 0xfa6de2) -> 28962552109752295993251
+                                      [20][CALL] from=Synthetix, to=TokenState, setBalanceOf(account(address): 0xfa6de2, value(uint256): 43443828164628443989876) -> None
+                                      [20][CALL] from=Synthetix, to=ProxyERC20, _emit(callData(bytes): b'\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00..., numTopics(uint256): 3, topic1(bytes32): b'\xdd\xf2R\xad\x1b\xe2\xc8\x9bi\xc2\xb0h\..., topic2(bytes32): b"\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00..., topic3(bytes32): b'\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00..., topic4(bytes32): b'\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00...) -> None
+                                  [18][CALL] from=DelegateCallProxyManyToOne, to=Uni, transfer(dst(address): 0x277e85, rawAmount(uint256): 76995060015755014484) -> True
+                              [16][STATICCALL] from=0x277e85, to=DelegateCallProxyManyToOne, getBalance(token(address): 0xC011a7) -> 43443828164628443989876
+                                [17][STATICCALL][0] from=DelegateCallProxyManyToOne, to=ManyToOneImplementationHolder
+                                [17][DELEGATECALL] from=DelegateCallProxyManyToOne, to=IndexPool, getBalance(token(address): 0xC011a7) -> 43443828164628443989876
+                              [16][CALL] from=0x277e85, to=DelegateCallProxyManyToOne, swapExactAmountIn(tokenIn(address): 0xC011a7, tokenAmountIn(uint256): 21721914082314221994938, tokenOut(address): 0x1f9840, minAmountOut(uint256): 0, maxPrice(uint256): 100000000000000000000000000000000000000000...) -> ['75873767550843208205', '352062901876902891054']
+                                [17][STATICCALL][0] from=DelegateCallProxyManyToOne, to=ManyToOneImplementationHolder
+                                [17][DELEGATECALL] from=DelegateCallProxyManyToOne, to=IndexPool, swapExactAmountIn(tokenIn(address): 0xC011a7, tokenAmountIn(uint256): 21721914082314221994938, tokenOut(address): 0x1f9840, minAmountOut(uint256): 0, maxPrice(uint256): 100000000000000000000000000000000000000000...) -> ['75873767550843208205', '352062901876902891054']
+                                  [18][CALL] from=DelegateCallProxyManyToOne, to=ProxyERC20, transferFrom(from(address): 0x277e85, to(address): 0xfa6de2, value(uint256): 21721914082314221994938) -> True
+                                    [19][CALL] from=ProxyERC20, to=Synthetix, setMessageSender(sender(address): 0xfa6de2) -> None
+                                    [19][CALL] from=ProxyERC20, to=Synthetix, transferFrom(from(address): 0x277e85, to(address): 0xfa6de2, value(uint256): 21721914082314221994938) -> True
+                                      [20][STATICCALL] from=Synthetix, to=SystemStatus, requireSystemActive() -> None
+                                      [20][STATICCALL] from=Synthetix, to=SynthetixState, issuanceData((address): 0x277e85) -> ['0', '0']
+                                      [20][STATICCALL] from=Synthetix, to=TokenState, allowance((address): 0xfa6de2) -> 115792089237316195423570985008687907853269984665640564015322123916452882978893
+                                      [20][CALL] from=Synthetix, to=TokenState, setAllowance(tokenOwner(address): 0x277e85, spender(address): 0xfa6de2, value(uint256): 115792089237316195423570985008687907853269...) -> None
+                                      [20][STATICCALL] from=Synthetix, to=TokenState, balanceOf((address): 0x277e85) -> 429509832368818503848639
+                                      [20][CALL] from=Synthetix, to=TokenState, setBalanceOf(account(address): 0x277e85, value(uint256): 407787918286504281853701) -> None
+                                      [20][STATICCALL] from=Synthetix, to=TokenState, balanceOf((address): 0xfa6de2) -> 43443828164628443989876
+                                      [20][CALL] from=Synthetix, to=TokenState, setBalanceOf(account(address): 0xfa6de2, value(uint256): 65165742246942665984814) -> None
+                                      [20][CALL] from=Synthetix, to=ProxyERC20, _emit(callData(bytes): b'\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00..., numTopics(uint256): 3, topic1(bytes32): b'\xdd\xf2R\xad\x1b\xe2\xc8\x9bi\xc2\xb0h\..., topic2(bytes32): b"\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00..., topic3(bytes32): b'\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00..., topic4(bytes32): b'\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00...) -> None
+                                  [18][CALL] from=DelegateCallProxyManyToOne, to=Uni, transfer(dst(address): 0x277e85, rawAmount(uint256): 75873767550843208205) -> True
+                              [16][STATICCALL] from=0x277e85, to=DelegateCallProxyManyToOne, getBalance(token(address): 0xC011a7) -> 65165742246942665984814
+                                [17][STATICCALL][0] from=DelegateCallProxyManyToOne, to=ManyToOneImplementationHolder
+                                [17][DELEGATECALL] from=DelegateCallProxyManyToOne, to=IndexPool, getBalance(token(address): 0xC011a7) -> 65165742246942665984814
+                              [16][CALL] from=0x277e85, to=DelegateCallProxyManyToOne, swapExactAmountIn(tokenIn(address): 0xC011a7, tokenAmountIn(uint256): 32582871123471332992407, tokenOut(address): 0x1f9840, minAmountOut(uint256): 0, maxPrice(uint256): 100000000000000000000000000000000000000000...) -> ['74768804663330402870', '535898739465556380287']
+                                [17][STATICCALL][0] from=DelegateCallProxyManyToOne, to=ManyToOneImplementationHolder
+                                [17][DELEGATECALL] from=DelegateCallProxyManyToOne, to=IndexPool, swapExactAmountIn(tokenIn(address): 0xC011a7, tokenAmountIn(uint256): 32582871123471332992407, tokenOut(address): 0x1f9840, minAmountOut(uint256): 0, maxPrice(uint256): 100000000000000000000000000000000000000000...) -> ['74768804663330402870', '535898739465556380287']
+                                  [18][CALL] from=DelegateCallProxyManyToOne, to=ProxyERC20, transferFrom(from(address): 0x277e85, to(address): 0xfa6de2, value(uint256): 32582871123471332992407) -> True
+                                    [19][CALL] from=ProxyERC20, to=Synthetix, setMessageSender(sender(address): 0xfa6de2) -> None
+                                    [19][CALL] from=ProxyERC20, to=Synthetix, transferFrom(from(address): 0x277e85, to(address): 0xfa6de2, value(uint256): 32582871123471332992407) -> True
+                                      [20][STATICCALL] from=Synthetix, to=SystemStatus, requireSystemActive() -> None
+                                      [20][STATICCALL] from=Synthetix, to=SynthetixState, issuanceData((address): 0x277e85) -> ['0', '0']
+                                      [20][STATICCALL] from=Synthetix, to=TokenState, allowance((address): 0xfa6de2) -> 115792089237316195423570985008687907853269984665640563993600209834138660983955
+                                      [20][CALL] from=Synthetix, to=TokenState, setAllowance(tokenOwner(address): 0x277e85, spender(address): 0xfa6de2, value(uint256): 115792089237316195423570985008687907853269...) -> None
+                                      [20][STATICCALL] from=Synthetix, to=TokenState, balanceOf((address): 0x277e85) -> 407787918286504281853701
+                                      [20][CALL] from=Synthetix, to=TokenState, setBalanceOf(account(address): 0x277e85, value(uint256): 375205047163032948861294) -> None
+                                      [20][STATICCALL] from=Synthetix, to=TokenState, balanceOf((address): 0xfa6de2) -> 65165742246942665984814
+                                      [20][CALL] from=Synthetix, to=TokenState, setBalanceOf(account(address): 0xfa6de2, value(uint256): 97748613370413998977221) -> None
+                                      [20][CALL] from=Synthetix, to=ProxyERC20, _emit(callData(bytes): b'\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00..., numTopics(uint256): 3, topic1(bytes32): b'\xdd\xf2R\xad\x1b\xe2\xc8\x9bi\xc2\xb0h\..., topic2(bytes32): b"\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00..., topic3(bytes32): b'\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00..., topic4(bytes32): b'\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00...) -> None
+                                  [18][CALL] from=DelegateCallProxyManyToOne, to=Uni, transfer(dst(address): 0x277e85, rawAmount(uint256): 74768804663330402870) -> True
+                              [16][STATICCALL] from=0x277e85, to=DelegateCallProxyManyToOne, getBalance(token(address): 0xC011a7) -> 97748613370413998977221
+                                [17][STATICCALL][0] from=DelegateCallProxyManyToOne, to=ManyToOneImplementationHolder
+                                [17][DELEGATECALL] from=DelegateCallProxyManyToOne, to=IndexPool, getBalance(token(address): 0xC011a7) -> 97748613370413998977221
+                              [16][CALL] from=0x277e85, to=DelegateCallProxyManyToOne, swapExactAmountIn(tokenIn(address): 0xC011a7, tokenAmountIn(uint256): 48874306685206999488610, tokenOut(address): 0x1f9840, minAmountOut(uint256): 0, maxPrice(uint256): 100000000000000000000000000000000000000000...) -> ['73679933542737732079', '815727693630117257423']
+                                [17][STATICCALL][0] from=DelegateCallProxyManyToOne, to=ManyToOneImplementationHolder
+                                [17][DELEGATECALL] from=DelegateCallProxyManyToOne, to=IndexPool, swapExactAmountIn(tokenIn(address): 0xC011a7, tokenAmountIn(uint256): 48874306685206999488610, tokenOut(address): 0x1f9840, minAmountOut(uint256): 0, maxPrice(uint256): 100000000000000000000000000000000000000000...) -> ['73679933542737732079', '815727693630117257423']
+                                  [18][CALL] from=DelegateCallProxyManyToOne, to=ProxyERC20, transferFrom(from(address): 0x277e85, to(address): 0xfa6de2, value(uint256): 48874306685206999488610) -> True
+                                    [19][CALL] from=ProxyERC20, to=Synthetix, setMessageSender(sender(address): 0xfa6de2) -> None
+                                    [19][CALL] from=ProxyERC20, to=Synthetix, transferFrom(from(address): 0x277e85, to(address): 0xfa6de2, value(uint256): 48874306685206999488610) -> True
+                                      [20][STATICCALL] from=Synthetix, to=SystemStatus, requireSystemActive() -> None
+                                      [20][STATICCALL] from=Synthetix, to=SynthetixState, issuanceData((address): 0x277e85) -> ['0', '0']
+                                      [20][STATICCALL] from=Synthetix, to=TokenState, allowance((address): 0xfa6de2) -> 115792089237316195423570985008687907853269984665640563961017338710667327991548
+                                      [20][CALL] from=Synthetix, to=TokenState, setAllowance(tokenOwner(address): 0x277e85, spender(address): 0xfa6de2, value(uint256): 115792089237316195423570985008687907853269...) -> None
+                                      [20][STATICCALL] from=Synthetix, to=TokenState, balanceOf((address): 0x277e85) -> 375205047163032948861294
+                                      [20][CALL] from=Synthetix, to=TokenState, setBalanceOf(account(address): 0x277e85, value(uint256): 326330740477825949372684) -> None
+                                      [20][STATICCALL] from=Synthetix, to=TokenState, balanceOf((address): 0xfa6de2) -> 97748613370413998977221
+                                      [20][CALL] from=Synthetix, to=TokenState, setBalanceOf(account(address): 0xfa6de2, value(uint256): 146622920055620998465831) -> None
+                                      [20][CALL] from=Synthetix, to=ProxyERC20, _emit(callData(bytes): b'\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00..., numTopics(uint256): 3, topic1(bytes32): b'\xdd\xf2R\xad\x1b\xe2\xc8\x9bi\xc2\xb0h\..., topic2(bytes32): b"\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00..., topic3(bytes32): b'\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00..., topic4(bytes32): b'\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00...) -> None
+                                  [18][CALL] from=DelegateCallProxyManyToOne, to=Uni, transfer(dst(address): 0x277e85, rawAmount(uint256): 73679933542737732079) -> True
+                              [16][STATICCALL] from=0x277e85, to=DelegateCallProxyManyToOne, getBalance(token(address): 0xC011a7) -> 146622920055620998465831
+                                [17][STATICCALL][0] from=DelegateCallProxyManyToOne, to=ManyToOneImplementationHolder
+                                [17][DELEGATECALL] from=DelegateCallProxyManyToOne, to=IndexPool, getBalance(token(address): 0xC011a7) -> 146622920055620998465831
+                              [16][CALL] from=0x277e85, to=DelegateCallProxyManyToOne, swapExactAmountIn(tokenIn(address): 0xC011a7, tokenAmountIn(uint256): 73311460027810499232915, tokenOut(address): 0x1f9840, minAmountOut(uint256): 0, maxPrice(uint256): 100000000000000000000000000000000000000000...) -> ['72606919841861739249', '1241674258869717305635']
+                                [17][STATICCALL][0] from=DelegateCallProxyManyToOne, to=ManyToOneImplementationHolder
+                                [17][DELEGATECALL] from=DelegateCallProxyManyToOne, to=IndexPool, swapExactAmountIn(tokenIn(address): 0xC011a7, tokenAmountIn(uint256): 73311460027810499232915, tokenOut(address): 0x1f9840, minAmountOut(uint256): 0, maxPrice(uint256): 100000000000000000000000000000000000000000...) -> ['72606919841861739249', '1241674258869717305635']
+                                  [18][CALL] from=DelegateCallProxyManyToOne, to=ProxyERC20, transferFrom(from(address): 0x277e85, to(address): 0xfa6de2, value(uint256): 73311460027810499232915) -> True
+                                    [19][CALL] from=ProxyERC20, to=Synthetix, setMessageSender(sender(address): 0xfa6de2) -> None
+                                    [19][CALL] from=ProxyERC20, to=Synthetix, transferFrom(from(address): 0x277e85, to(address): 0xfa6de2, value(uint256): 73311460027810499232915) -> True
+                                      [20][STATICCALL] from=Synthetix, to=SystemStatus, requireSystemActive() -> None
+                                      [20][STATICCALL] from=Synthetix, to=SynthetixState, issuanceData((address): 0x277e85) -> ['0', '0']
+                                      [20][STATICCALL] from=Synthetix, to=TokenState, allowance((address): 0xfa6de2) -> 115792089237316195423570985008687907853269984665640563912143032025460328502938
+                                      [20][CALL] from=Synthetix, to=TokenState, setAllowance(tokenOwner(address): 0x277e85, spender(address): 0xfa6de2, value(uint256): 115792089237316195423570985008687907853269...) -> None
+                                      [20][STATICCALL] from=Synthetix, to=TokenState, balanceOf((address): 0x277e85) -> 326330740477825949372684
+                                      [20][CALL] from=Synthetix, to=TokenState, setBalanceOf(account(address): 0x277e85, value(uint256): 253019280450015450139769) -> None
+                                      [20][STATICCALL] from=Synthetix, to=TokenState, balanceOf((address): 0xfa6de2) -> 146622920055620998465831
+                                      [20][CALL] from=Synthetix, to=TokenState, setBalanceOf(account(address): 0xfa6de2, value(uint256): 219934380083431497698746) -> None
+                                      [20][CALL] from=Synthetix, to=ProxyERC20, _emit(callData(bytes): b'\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00..., numTopics(uint256): 3, topic1(bytes32): b'\xdd\xf2R\xad\x1b\xe2\xc8\x9bi\xc2\xb0h\..., topic2(bytes32): b"\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00..., topic3(bytes32): b'\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00..., topic4(bytes32): b'\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00...) -> None
+                                  [18][CALL] from=DelegateCallProxyManyToOne, to=Uni, transfer(dst(address): 0x277e85, rawAmount(uint256): 72606919841861739249) -> True
+                              [16][STATICCALL] from=0x277e85, to=DelegateCallProxyManyToOne, getBalance(token(address): 0xC011a7) -> 219934380083431497698746
+                                [17][STATICCALL][0] from=DelegateCallProxyManyToOne, to=ManyToOneImplementationHolder
+                                [17][DELEGATECALL] from=DelegateCallProxyManyToOne, to=IndexPool, getBalance(token(address): 0xC011a7) -> 219934380083431497698746
+                              [16][CALL] from=0x277e85, to=DelegateCallProxyManyToOne, swapExactAmountIn(tokenIn(address): 0xC011a7, tokenAmountIn(uint256): 109967190041715748849373, tokenOut(address): 0x1f9840, minAmountOut(uint256): 0, maxPrice(uint256): 100000000000000000000000000000000000000000...) -> ['71549532626338094818', '1890036316259667850967']
+                                [17][STATICCALL][0] from=DelegateCallProxyManyToOne, to=ManyToOneImplementationHolder
+                                [17][DELEGATECALL] from=DelegateCallProxyManyToOne, to=IndexPool, swapExactAmountIn(tokenIn(address): 0xC011a7, tokenAmountIn(uint256): 109967190041715748849373, tokenOut(address): 0x1f9840, minAmountOut(uint256): 0, maxPrice(uint256): 100000000000000000000000000000000000000000...) -> ['71549532626338094818', '1890036316259667850967']
+                                  [18][CALL] from=DelegateCallProxyManyToOne, to=ProxyERC20, transferFrom(from(address): 0x277e85, to(address): 0xfa6de2, value(uint256): 109967190041715748849373) -> True
+                                    [19][CALL] from=ProxyERC20, to=Synthetix, setMessageSender(sender(address): 0xfa6de2) -> None
+                                    [19][CALL] from=ProxyERC20, to=Synthetix, transferFrom(from(address): 0x277e85, to(address): 0xfa6de2, value(uint256): 109967190041715748849373) -> True
+                                      [20][STATICCALL] from=Synthetix, to=SystemStatus, requireSystemActive() -> None
+                                      [20][STATICCALL] from=Synthetix, to=SynthetixState, issuanceData((address): 0x277e85) -> ['0', '0']
+                                      [20][STATICCALL] from=Synthetix, to=TokenState, allowance((address): 0xfa6de2) -> 115792089237316195423570985008687907853269984665640563838831571997649829270023
+                                      [20][CALL] from=Synthetix, to=TokenState, setAllowance(tokenOwner(address): 0x277e85, spender(address): 0xfa6de2, value(uint256): 115792089237316195423570985008687907853269...) -> None
+                                      [20][STATICCALL] from=Synthetix, to=TokenState, balanceOf((address): 0x277e85) -> 253019280450015450139769
+                                      [20][CALL] from=Synthetix, to=TokenState, setBalanceOf(account(address): 0x277e85, value(uint256): 143052090408299701290396) -> None
+                                      [20][STATICCALL] from=Synthetix, to=TokenState, balanceOf((address): 0xfa6de2) -> 219934380083431497698746
+                                      [20][CALL] from=Synthetix, to=TokenState, setBalanceOf(account(address): 0xfa6de2, value(uint256): 329901570125147246548119) -> None
+                                      [20][CALL] from=Synthetix, to=ProxyERC20, _emit(callData(bytes): b'\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00..., numTopics(uint256): 3, topic1(bytes32): b'\xdd\xf2R\xad\x1b\xe2\xc8\x9bi\xc2\xb0h\..., topic2(bytes32): b"\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00..., topic3(bytes32): b'\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00..., topic4(bytes32): b'\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00...) -> None
+                                  [18][CALL] from=DelegateCallProxyManyToOne, to=Uni, transfer(dst(address): 0x277e85, rawAmount(uint256): 71549532626338094818) -> True
+                              [16][STATICCALL] from=0x277e85, to=DelegateCallProxyManyToOne, getBalance(token(address): 0xC011a7) -> 329901570125147246548119
+                                [17][STATICCALL][0] from=DelegateCallProxyManyToOne, to=ManyToOneImplementationHolder
+                                [17][DELEGATECALL] from=DelegateCallProxyManyToOne, to=IndexPool, getBalance(token(address): 0xC011a7) -> 329901570125147246548119
+                              [16][CALL] from=0x277e85, to=DelegateCallProxyManyToOne, swapExactAmountIn(tokenIn(address): 0xC011a7, tokenAmountIn(uint256): 143052090408299701290396, tokenOut(address): 0x1f9840, minAmountOut(uint256): 0, maxPrice(uint256): 100000000000000000000000000000000000000000...) -> ['62665942154689739654', '2745126414807364911552']
+                                [17][STATICCALL][0] from=DelegateCallProxyManyToOne, to=ManyToOneImplementationHolder
+                                [17][DELEGATECALL] from=DelegateCallProxyManyToOne, to=IndexPool, swapExactAmountIn(tokenIn(address): 0xC011a7, tokenAmountIn(uint256): 143052090408299701290396, tokenOut(address): 0x1f9840, minAmountOut(uint256): 0, maxPrice(uint256): 100000000000000000000000000000000000000000...) -> ['62665942154689739654', '2745126414807364911552']
+                                  [18][CALL] from=DelegateCallProxyManyToOne, to=ProxyERC20, transferFrom(from(address): 0x277e85, to(address): 0xfa6de2, value(uint256): 143052090408299701290396) -> True
+                                    [19][CALL] from=ProxyERC20, to=Synthetix, setMessageSender(sender(address): 0xfa6de2) -> None
+                                    [19][CALL] from=ProxyERC20, to=Synthetix, transferFrom(from(address): 0x277e85, to(address): 0xfa6de2, value(uint256): 143052090408299701290396) -> True
+                                      [20][STATICCALL] from=Synthetix, to=SystemStatus, requireSystemActive() -> None
+                                      [20][STATICCALL] from=Synthetix, to=SynthetixState, issuanceData((address): 0x277e85) -> ['0', '0']
+                                      [20][STATICCALL] from=Synthetix, to=TokenState, allowance((address): 0xfa6de2) -> 115792089237316195423570985008687907853269984665640563728864381955934080420650
+                                      [20][CALL] from=Synthetix, to=TokenState, setAllowance(tokenOwner(address): 0x277e85, spender(address): 0xfa6de2, value(uint256): 115792089237316195423570985008687907853269...) -> None
+                                      [20][STATICCALL] from=Synthetix, to=TokenState, balanceOf((address): 0x277e85) -> 143052090408299701290396
+                                      [20][CALL] from=Synthetix, to=TokenState, setBalanceOf(account(address): 0x277e85, value(uint256): 0) -> None
+                                      [20][STATICCALL] from=Synthetix, to=TokenState, balanceOf((address): 0xfa6de2) -> 329901570125147246548119
+                                      [20][CALL] from=Synthetix, to=TokenState, setBalanceOf(account(address): 0xfa6de2, value(uint256): 472953660533446947838515) -> None
+                                      [20][CALL] from=Synthetix, to=ProxyERC20, _emit(callData(bytes): b'\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00..., numTopics(uint256): 3, topic1(bytes32): b'\xdd\xf2R\xad\x1b\xe2\xc8\x9bi\xc2\xb0h\..., topic2(bytes32): b"\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00..., topic3(bytes32): b'\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00..., topic4(bytes32): b'\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00...) -> None
+                                  [18][CALL] from=DelegateCallProxyManyToOne, to=Uni, transfer(dst(address): 0x277e85, rawAmount(uint256): 62665942154689739654) -> True
+                              [16][STATICCALL] from=0x277e85, to=DelegateCallProxyManyToOne, extrapolatePoolValueFromToken() -> ['0x1f9840', '12307982383705425434115']
+                                [17][STATICCALL][0] from=DelegateCallProxyManyToOne, to=ManyToOneImplementationHolder
+                                [17][DELEGATECALL] from=DelegateCallProxyManyToOne, to=IndexPool, extrapolatePoolValueFromToken() -> ['0x1f9840', '12307982383705425434115']
+                              [16][CALL] from=0x277e85, to=DelegateCallProxyOneToOne, updateMinimumBalance(pool(address): 0xfa6de2, tokenAddress(address): 0x6B3595) -> None
+                                [17][DELEGATECALL] from=DelegateCallProxyOneToOne, to=MarketCapSqrtController, updateMinimumBalance(pool(address): 0xfa6de2, tokenAddress(address): 0x6B3595) -> None
+                                  [18][STATICCALL] from=DelegateCallProxyOneToOne, to=DelegateCallProxyManyToOne, getTokenRecord(token(address): 0x6B3595) -> None
+                                    [19][STATICCALL][0] from=DelegateCallProxyManyToOne, to=ManyToOneImplementationHolder
+                                    [19][DELEGATECALL] from=DelegateCallProxyManyToOne, to=IndexPool, getTokenRecord(token(address): 0x6B3595) -> None
+                                  [18][STATICCALL] from=DelegateCallProxyOneToOne, to=DelegateCallProxyManyToOne, extrapolatePoolValueFromToken() -> ['0x1f9840', '12307982383705425434115']
+                                    [19][STATICCALL][0] from=DelegateCallProxyManyToOne, to=ManyToOneImplementationHolder
+                                    [19][DELEGATECALL] from=DelegateCallProxyManyToOne, to=IndexPool, extrapolatePoolValueFromToken() -> ['0x1f9840', '12307982383705425434115']
+                                  [18][STATICCALL] from=DelegateCallProxyOneToOne, to=IndexedUniswapV2Oracle, computeAverageEthForTokens(token(address[]): 0x1f9840, tokenAmount(uint256[]): 12307982383705425434115, minTimeElapsed(uint256): 1200, maxTimeElapsed(uint256): 172800) -> None
+                                    [19][STATICCALL] from=IndexedUniswapV2Oracle, to=UniswapV2Pair, price0CumulativeLast() -> 1731265044109487620999019184527130599366
+                                    [19][STATICCALL] from=IndexedUniswapV2Oracle, to=UniswapV2Pair, getReserves() -> ['2040380055722398017005820', '14205874295200401167659', '1634236601']
+                                  [18][STATICCALL] from=DelegateCallProxyOneToOne, to=IndexedUniswapV2Oracle, computeTwoWayAveragePrice(token(address): 0x6B3595, minTimeElapsed(uint256): 1200, maxTimeElapsed(uint256): 172800) -> None
+                                    [19][STATICCALL] from=IndexedUniswapV2Oracle, to=UniswapV2Pair, price0CumulativeLast() -> 905066889758907351694166022952303125761
+                                    [19][STATICCALL] from=IndexedUniswapV2Oracle, to=UniswapV2Pair, price1CumulativeLast() -> 48852837624812179453961271972745221854621595
+                                    [19][STATICCALL] from=IndexedUniswapV2Oracle, to=UniswapV2Pair, getReserves() -> ['109592395833510447593915', '304923903190724411699', '1634215816']
+                                  [18][CALL] from=DelegateCallProxyOneToOne, to=DelegateCallProxyManyToOne, setMinimumBalance(token(address): 0x6B3595, minimumBalance(uint256): 298513598481648920878) -> None
+                                    [19][STATICCALL][0] from=DelegateCallProxyManyToOne, to=ManyToOneImplementationHolder
+                                    [19][DELEGATECALL] from=DelegateCallProxyManyToOne, to=IndexPool, setMinimumBalance(token(address): 0x6B3595, minimumBalance(uint256): 298513598481648920878) -> None
+                              [16][STATICCALL] from=0x277e85, to=Uni, balanceOf(account(address): 0x277e85) -> 2034882085634528539844733
+                              [16][STATICCALL] from=0x277e85, to=Uni, balanceOf(account(address): 0x277e85) -> 2034882085634528539844733
+                              [16][STATICCALL] from=0x277e85, to=DelegateCallProxyManyToOne, getBalance(token(address): 0x1f9840) -> 4778829721770277674976
+                                [17][STATICCALL][0] from=DelegateCallProxyManyToOne, to=ManyToOneImplementationHolder
+                                [17][DELEGATECALL] from=DelegateCallProxyManyToOne, to=IndexPool, getBalance(token(address): 0x1f9840) -> 4778829721770277674976
+                              [16][CALL] from=0x277e85, to=DelegateCallProxyManyToOne, joinswapExternAmountIn(tokenIn(address): 0x1f9840, tokenAmountIn(uint256): 2389414860885138837488, minPoolAmountOut(uint256): 0) -> 25471633387232158076309
+                                [17][STATICCALL][0] from=DelegateCallProxyManyToOne, to=ManyToOneImplementationHolder
+                                [17][DELEGATECALL] from=DelegateCallProxyManyToOne, to=IndexPool, joinswapExternAmountIn(tokenIn(address): 0x1f9840, tokenAmountIn(uint256): 2389414860885138837488, minPoolAmountOut(uint256): 0) -> 25471633387232158076309
+                                  [18][CALL] from=DelegateCallProxyManyToOne, to=Uni, transferFrom(src(address): 0x277e85, dst(address): 0xfa6de2, rawAmount(uint256): 2389414860885138837488) -> True
+                              [16][STATICCALL] from=0x277e85, to=Uni, balanceOf(account(address): 0x277e85) -> 2032492670773643401007245
+                              [16][STATICCALL] from=0x277e85, to=Uni, balanceOf(account(address): 0x277e85) -> 2032492670773643401007245
+                              [16][STATICCALL] from=0x277e85, to=DelegateCallProxyManyToOne, getBalance(token(address): 0x1f9840) -> 7168244582655416512464
+                                [17][STATICCALL][0] from=DelegateCallProxyManyToOne, to=ManyToOneImplementationHolder
+                                [17][DELEGATECALL] from=DelegateCallProxyManyToOne, to=IndexPool, getBalance(token(address): 0x1f9840) -> 7168244582655416512464
+                              [16][CALL] from=0x277e85, to=DelegateCallProxyManyToOne, joinswapExternAmountIn(tokenIn(address): 0x1f9840, tokenAmountIn(uint256): 3584122291327708256232, minPoolAmountOut(uint256): 0) -> 29767255557763571422998
+                                [17][STATICCALL][0] from=DelegateCallProxyManyToOne, to=ManyToOneImplementationHolder
+                                [17][DELEGATECALL] from=DelegateCallProxyManyToOne, to=IndexPool, joinswapExternAmountIn(tokenIn(address): 0x1f9840, tokenAmountIn(uint256): 3584122291327708256232, minPoolAmountOut(uint256): 0) -> 29767255557763571422998
+                                  [18][CALL] from=DelegateCallProxyManyToOne, to=Uni, transferFrom(src(address): 0x277e85, dst(address): 0xfa6de2, rawAmount(uint256): 3584122291327708256232) -> True
+                              [16][STATICCALL] from=0x277e85, to=Uni, balanceOf(account(address): 0x277e85) -> 2028908548482315692751013
+                              [16][STATICCALL] from=0x277e85, to=Uni, balanceOf(account(address): 0x277e85) -> 2028908548482315692751013
+                              [16][STATICCALL] from=0x277e85, to=DelegateCallProxyManyToOne, getBalance(token(address): 0x1f9840) -> 10752366873983124768696
+                                [17][STATICCALL][0] from=DelegateCallProxyManyToOne, to=ManyToOneImplementationHolder
+                                [17][DELEGATECALL] from=DelegateCallProxyManyToOne, to=IndexPool, getBalance(token(address): 0x1f9840) -> 10752366873983124768696
+                              [16][CALL] from=0x277e85, to=DelegateCallProxyManyToOne, joinswapExternAmountIn(tokenIn(address): 0x1f9840, tokenAmountIn(uint256): 5376183436991562384348, minPoolAmountOut(uint256): 0) -> 34787305940315749629760
+                                [17][STATICCALL][0] from=DelegateCallProxyManyToOne, to=ManyToOneImplementationHolder
+                                [17][DELEGATECALL] from=DelegateCallProxyManyToOne, to=IndexPool, joinswapExternAmountIn(tokenIn(address): 0x1f9840, tokenAmountIn(uint256): 5376183436991562384348, minPoolAmountOut(uint256): 0) -> 34787305940315749629760
+                                  [18][CALL] from=DelegateCallProxyManyToOne, to=Uni, transferFrom(src(address): 0x277e85, dst(address): 0xfa6de2, rawAmount(uint256): 5376183436991562384348) -> True
+                              [16][STATICCALL] from=0x277e85, to=Uni, balanceOf(account(address): 0x277e85) -> 2023532365045324130366665
+                              [16][STATICCALL] from=0x277e85, to=Uni, balanceOf(account(address): 0x277e85) -> 2023532365045324130366665
+                              [16][STATICCALL] from=0x277e85, to=DelegateCallProxyManyToOne, getBalance(token(address): 0x1f9840) -> 16128550310974687153044
+                                [17][STATICCALL][0] from=DelegateCallProxyManyToOne, to=ManyToOneImplementationHolder
+                                [17][DELEGATECALL] from=DelegateCallProxyManyToOne, to=IndexPool, getBalance(token(address): 0x1f9840) -> 16128550310974687153044
+                              [16][CALL] from=0x277e85, to=DelegateCallProxyManyToOne, joinswapExternAmountIn(tokenIn(address): 0x1f9840, tokenAmountIn(uint256): 8064275155487343576522, minPoolAmountOut(uint256): 0) -> 40653954552068457710056
+                                [17][STATICCALL][0] from=DelegateCallProxyManyToOne, to=ManyToOneImplementationHolder
+                                [17][DELEGATECALL] from=DelegateCallProxyManyToOne, to=IndexPool, joinswapExternAmountIn(tokenIn(address): 0x1f9840, tokenAmountIn(uint256): 8064275155487343576522, minPoolAmountOut(uint256): 0) -> 40653954552068457710056
+                                  [18][CALL] from=DelegateCallProxyManyToOne, to=Uni, transferFrom(src(address): 0x277e85, dst(address): 0xfa6de2, rawAmount(uint256): 8064275155487343576522) -> True
+                              [16][STATICCALL] from=0x277e85, to=Uni, balanceOf(account(address): 0x277e85) -> 2015468089889836786790143
+                              [16][STATICCALL] from=0x277e85, to=Uni, balanceOf(account(address): 0x277e85) -> 2015468089889836786790143
+                              [16][STATICCALL] from=0x277e85, to=DelegateCallProxyManyToOne, getBalance(token(address): 0x1f9840) -> 24192825466462030729566
+                                [17][STATICCALL][0] from=DelegateCallProxyManyToOne, to=ManyToOneImplementationHolder
+                                [17][DELEGATECALL] from=DelegateCallProxyManyToOne, to=IndexPool, getBalance(token(address): 0x1f9840) -> 24192825466462030729566
+                              [16][CALL] from=0x277e85, to=DelegateCallProxyManyToOne, joinswapExternAmountIn(tokenIn(address): 0x1f9840, tokenAmountIn(uint256): 12096412733231015364783, minPoolAmountOut(uint256): 0) -> 47509974573979511133395
+                                [17][STATICCALL][0] from=DelegateCallProxyManyToOne, to=ManyToOneImplementationHolder
+                                [17][DELEGATECALL] from=DelegateCallProxyManyToOne, to=IndexPool, joinswapExternAmountIn(tokenIn(address): 0x1f9840, tokenAmountIn(uint256): 12096412733231015364783, minPoolAmountOut(uint256): 0) -> 47509974573979511133395
+                                  [18][CALL] from=DelegateCallProxyManyToOne, to=Uni, transferFrom(src(address): 0x277e85, dst(address): 0xfa6de2, rawAmount(uint256): 12096412733231015364783) -> True
+                              [16][STATICCALL] from=0x277e85, to=Uni, balanceOf(account(address): 0x277e85) -> 2003371677156605771425360
+                              [16][STATICCALL] from=0x277e85, to=Uni, balanceOf(account(address): 0x277e85) -> 2003371677156605771425360
+                              [16][STATICCALL] from=0x277e85, to=DelegateCallProxyManyToOne, getBalance(token(address): 0x1f9840) -> 36289238199693046094349
+                                [17][STATICCALL][0] from=DelegateCallProxyManyToOne, to=ManyToOneImplementationHolder
+                                [17][DELEGATECALL] from=DelegateCallProxyManyToOne, to=IndexPool, getBalance(token(address): 0x1f9840) -> 36289238199693046094349
+                              [16][CALL] from=0x277e85, to=DelegateCallProxyManyToOne, joinswapExternAmountIn(tokenIn(address): 0x1f9840, tokenAmountIn(uint256): 18144619099846523047174, minPoolAmountOut(uint256): 0) -> 55522216937819011575313
+                                [17][STATICCALL][0] from=DelegateCallProxyManyToOne, to=ManyToOneImplementationHolder
+                                [17][DELEGATECALL] from=DelegateCallProxyManyToOne, to=IndexPool, joinswapExternAmountIn(tokenIn(address): 0x1f9840, tokenAmountIn(uint256): 18144619099846523047174, minPoolAmountOut(uint256): 0) -> 55522216937819011575313
+                                  [18][CALL] from=DelegateCallProxyManyToOne, to=Uni, transferFrom(src(address): 0x277e85, dst(address): 0xfa6de2, rawAmount(uint256): 18144619099846523047174) -> True
+                              [16][STATICCALL] from=0x277e85, to=Uni, balanceOf(account(address): 0x277e85) -> 1985227058056759248378186
+                              [16][STATICCALL] from=0x277e85, to=Uni, balanceOf(account(address): 0x277e85) -> 1985227058056759248378186
+                              [16][STATICCALL] from=0x277e85, to=DelegateCallProxyManyToOne, getBalance(token(address): 0x1f9840) -> 54433857299539569141523
+                                [17][STATICCALL][0] from=DelegateCallProxyManyToOne, to=ManyToOneImplementationHolder
+                                [17][DELEGATECALL] from=DelegateCallProxyManyToOne, to=IndexPool, getBalance(token(address): 0x1f9840) -> 54433857299539569141523
+                              [16][CALL] from=0x277e85, to=DelegateCallProxyManyToOne, joinswapExternAmountIn(tokenIn(address): 0x1f9840, tokenAmountIn(uint256): 27216928649769784570761, minPoolAmountOut(uint256): 0) -> 64885670879280857695997
+                                [17][STATICCALL][0] from=DelegateCallProxyManyToOne, to=ManyToOneImplementationHolder
+                                [17][DELEGATECALL] from=DelegateCallProxyManyToOne, to=IndexPool, joinswapExternAmountIn(tokenIn(address): 0x1f9840, tokenAmountIn(uint256): 27216928649769784570761, minPoolAmountOut(uint256): 0) -> 64885670879280857695997
+                                  [18][CALL] from=DelegateCallProxyManyToOne, to=Uni, transferFrom(src(address): 0x277e85, dst(address): 0xfa6de2, rawAmount(uint256): 27216928649769784570761) -> True
+                              [16][STATICCALL] from=0x277e85, to=Uni, balanceOf(account(address): 0x277e85) -> 1958010129406989463807425
+                              [16][STATICCALL] from=0x277e85, to=Uni, balanceOf(account(address): 0x277e85) -> 1958010129406989463807425
+                              [16][STATICCALL] from=0x277e85, to=DelegateCallProxyManyToOne, getBalance(token(address): 0x1f9840) -> 81650785949309353712284
+                                [17][STATICCALL][0] from=DelegateCallProxyManyToOne, to=ManyToOneImplementationHolder
+                                [17][DELEGATECALL] from=DelegateCallProxyManyToOne, to=IndexPool, getBalance(token(address): 0x1f9840) -> 81650785949309353712284
+                              [16][CALL] from=0x277e85, to=DelegateCallProxyManyToOne, joinswapExternAmountIn(tokenIn(address): 0x1f9840, tokenAmountIn(uint256): 40825392974654676856142, minPoolAmountOut(uint256): 0) -> 75828209276467272839240
+                                [17][STATICCALL][0] from=DelegateCallProxyManyToOne, to=ManyToOneImplementationHolder
+                                [17][DELEGATECALL] from=DelegateCallProxyManyToOne, to=IndexPool, joinswapExternAmountIn(tokenIn(address): 0x1f9840, tokenAmountIn(uint256): 40825392974654676856142, minPoolAmountOut(uint256): 0) -> 75828209276467272839240
+                                  [18][CALL] from=DelegateCallProxyManyToOne, to=Uni, transferFrom(src(address): 0x277e85, dst(address): 0xfa6de2, rawAmount(uint256): 40825392974654676856142) -> True
+                              [16][STATICCALL] from=0x277e85, to=Uni, balanceOf(account(address): 0x277e85) -> 1917184736432334786951283
+                              [16][STATICCALL] from=0x277e85, to=Uni, balanceOf(account(address): 0x277e85) -> 1917184736432334786951283
+                              [16][STATICCALL] from=0x277e85, to=DelegateCallProxyManyToOne, getBalance(token(address): 0x1f9840) -> 122476178923964030568426
+                                [17][STATICCALL][0] from=DelegateCallProxyManyToOne, to=ManyToOneImplementationHolder
+                                [17][DELEGATECALL] from=DelegateCallProxyManyToOne, to=IndexPool, getBalance(token(address): 0x1f9840) -> 122476178923964030568426
+                              [16][CALL] from=0x277e85, to=DelegateCallProxyManyToOne, joinswapExternAmountIn(tokenIn(address): 0x1f9840, tokenAmountIn(uint256): 61238089461982015284213, minPoolAmountOut(uint256): 0) -> 88616134258261444062367
+                                [17][STATICCALL][0] from=DelegateCallProxyManyToOne, to=ManyToOneImplementationHolder
+                                [17][DELEGATECALL] from=DelegateCallProxyManyToOne, to=IndexPool, joinswapExternAmountIn(tokenIn(address): 0x1f9840, tokenAmountIn(uint256): 61238089461982015284213, minPoolAmountOut(uint256): 0) -> 88616134258261444062367
+                                  [18][CALL] from=DelegateCallProxyManyToOne, to=Uni, transferFrom(src(address): 0x277e85, dst(address): 0xfa6de2, rawAmount(uint256): 61238089461982015284213) -> True
+                              [16][STATICCALL] from=0x277e85, to=Uni, balanceOf(account(address): 0x277e85) -> 1855946646970352771667070
+                              [16][STATICCALL] from=0x277e85, to=Uni, balanceOf(account(address): 0x277e85) -> 1855946646970352771667070
+                              [16][STATICCALL] from=0x277e85, to=DelegateCallProxyManyToOne, getBalance(token(address): 0x1f9840) -> 183714268385946045852639
+                                [17][STATICCALL][0] from=DelegateCallProxyManyToOne, to=ManyToOneImplementationHolder
+                                [17][DELEGATECALL] from=DelegateCallProxyManyToOne, to=IndexPool, getBalance(token(address): 0x1f9840) -> 183714268385946045852639
+                              [16][CALL] from=0x277e85, to=DelegateCallProxyManyToOne, joinswapExternAmountIn(tokenIn(address): 0x1f9840, tokenAmountIn(uint256): 91857134192973022926319, minPoolAmountOut(uint256): 0) -> 103560658042801523009688
+                                [17][STATICCALL][0] from=DelegateCallProxyManyToOne, to=ManyToOneImplementationHolder
+                                [17][DELEGATECALL] from=DelegateCallProxyManyToOne, to=IndexPool, joinswapExternAmountIn(tokenIn(address): 0x1f9840, tokenAmountIn(uint256): 91857134192973022926319, minPoolAmountOut(uint256): 0) -> 103560658042801523009688
+                                  [18][CALL] from=DelegateCallProxyManyToOne, to=Uni, transferFrom(src(address): 0x277e85, dst(address): 0xfa6de2, rawAmount(uint256): 91857134192973022926319) -> True
+                              [16][STATICCALL] from=0x277e85, to=Uni, balanceOf(account(address): 0x277e85) -> 1764089512777379748740751
+                              [16][STATICCALL] from=0x277e85, to=Uni, balanceOf(account(address): 0x277e85) -> 1764089512777379748740751
+                              [16][STATICCALL] from=0x277e85, to=DelegateCallProxyManyToOne, getBalance(token(address): 0x1f9840) -> 275571402578919068778958
+                                [17][STATICCALL][0] from=DelegateCallProxyManyToOne, to=ManyToOneImplementationHolder
+                                [17][DELEGATECALL] from=DelegateCallProxyManyToOne, to=IndexPool, getBalance(token(address): 0x1f9840) -> 275571402578919068778958
+                              [16][CALL] from=0x277e85, to=DelegateCallProxyManyToOne, joinswapExternAmountIn(tokenIn(address): 0x1f9840, tokenAmountIn(uint256): 137785701289459534389479, minPoolAmountOut(uint256): 0) -> 121025476726414824039859
+                                [17][STATICCALL][0] from=DelegateCallProxyManyToOne, to=ManyToOneImplementationHolder
+                                [17][DELEGATECALL] from=DelegateCallProxyManyToOne, to=IndexPool, joinswapExternAmountIn(tokenIn(address): 0x1f9840, tokenAmountIn(uint256): 137785701289459534389479, minPoolAmountOut(uint256): 0) -> 121025476726414824039859
+                                  [18][CALL] from=DelegateCallProxyManyToOne, to=Uni, transferFrom(src(address): 0x277e85, dst(address): 0xfa6de2, rawAmount(uint256): 137785701289459534389479) -> True
+                              [16][STATICCALL] from=0x277e85, to=Uni, balanceOf(account(address): 0x277e85) -> 1626303811487920214351272
+                              [16][STATICCALL] from=0x277e85, to=Uni, balanceOf(account(address): 0x277e85) -> 1626303811487920214351272
+                              [16][STATICCALL] from=0x277e85, to=DelegateCallProxyManyToOne, getBalance(token(address): 0x1f9840) -> 413357103868378603168437
+                                [17][STATICCALL][0] from=DelegateCallProxyManyToOne, to=ManyToOneImplementationHolder
+                                [17][DELEGATECALL] from=DelegateCallProxyManyToOne, to=IndexPool, getBalance(token(address): 0x1f9840) -> 413357103868378603168437
+                              [16][CALL] from=0x277e85, to=DelegateCallProxyManyToOne, joinswapExternAmountIn(tokenIn(address): 0x1f9840, tokenAmountIn(uint256): 206678551934189301584218, minPoolAmountOut(uint256): 0) -> 141435621341864361582035
+                                [17][STATICCALL][0] from=DelegateCallProxyManyToOne, to=ManyToOneImplementationHolder
+                                [17][DELEGATECALL] from=DelegateCallProxyManyToOne, to=IndexPool, joinswapExternAmountIn(tokenIn(address): 0x1f9840, tokenAmountIn(uint256): 206678551934189301584218, minPoolAmountOut(uint256): 0) -> 141435621341864361582035
+                                  [18][CALL] from=DelegateCallProxyManyToOne, to=Uni, transferFrom(src(address): 0x277e85, dst(address): 0xfa6de2, rawAmount(uint256): 206678551934189301584218) -> True
+                              [16][STATICCALL] from=0x277e85, to=Uni, balanceOf(account(address): 0x277e85) -> 1419625259553730912767054
+                              [16][STATICCALL] from=0x277e85, to=Uni, balanceOf(account(address): 0x277e85) -> 1419625259553730912767054
+                              [16][STATICCALL] from=0x277e85, to=DelegateCallProxyManyToOne, getBalance(token(address): 0x1f9840) -> 620035655802567904752655
+                                [17][STATICCALL][0] from=DelegateCallProxyManyToOne, to=ManyToOneImplementationHolder
+                                [17][DELEGATECALL] from=DelegateCallProxyManyToOne, to=IndexPool, getBalance(token(address): 0x1f9840) -> 620035655802567904752655
+                              [16][CALL] from=0x277e85, to=DelegateCallProxyManyToOne, joinswapExternAmountIn(tokenIn(address): 0x1f9840, tokenAmountIn(uint256): 310017827901283952376327, minPoolAmountOut(uint256): 0) -> 165287801588912803499104
+                                [17][STATICCALL][0] from=DelegateCallProxyManyToOne, to=ManyToOneImplementationHolder
+                                [17][DELEGATECALL] from=DelegateCallProxyManyToOne, to=IndexPool, joinswapExternAmountIn(tokenIn(address): 0x1f9840, tokenAmountIn(uint256): 310017827901283952376327, minPoolAmountOut(uint256): 0) -> 165287801588912803499104
+                                  [18][CALL] from=DelegateCallProxyManyToOne, to=Uni, transferFrom(src(address): 0x277e85, dst(address): 0xfa6de2, rawAmount(uint256): 310017827901283952376327) -> True
+                              [16][STATICCALL] from=0x277e85, to=Uni, balanceOf(account(address): 0x277e85) -> 1109607431652446960390727
+                              [16][STATICCALL] from=0x277e85, to=Uni, balanceOf(account(address): 0x277e85) -> 1109607431652446960390727
+                              [16][STATICCALL] from=0x277e85, to=DelegateCallProxyManyToOne, getBalance(token(address): 0x1f9840) -> 930053483703851857128982
+                                [17][STATICCALL][0] from=DelegateCallProxyManyToOne, to=ManyToOneImplementationHolder
+                                [17][DELEGATECALL] from=DelegateCallProxyManyToOne, to=IndexPool, getBalance(token(address): 0x1f9840) -> 930053483703851857128982
+                              [16][CALL] from=0x277e85, to=DelegateCallProxyManyToOne, joinswapExternAmountIn(tokenIn(address): 0x1f9840, tokenAmountIn(uint256): 465026741851925928564491, minPoolAmountOut(uint256): 0) -> 193162493966498250165646
+                                [17][STATICCALL][0] from=DelegateCallProxyManyToOne, to=ManyToOneImplementationHolder
+                                [17][DELEGATECALL] from=DelegateCallProxyManyToOne, to=IndexPool, joinswapExternAmountIn(tokenIn(address): 0x1f9840, tokenAmountIn(uint256): 465026741851925928564491, minPoolAmountOut(uint256): 0) -> 193162493966498250165646
+                                  [18][CALL] from=DelegateCallProxyManyToOne, to=Uni, transferFrom(src(address): 0x277e85, dst(address): 0xfa6de2, rawAmount(uint256): 465026741851925928564491) -> True
+                              [16][STATICCALL] from=0x277e85, to=Uni, balanceOf(account(address): 0x277e85) -> 644580689800521031826236
+                              [16][STATICCALL] from=0x277e85, to=Uni, balanceOf(account(address): 0x277e85) -> 644580689800521031826236
+                              [16][STATICCALL] from=0x277e85, to=DelegateCallProxyManyToOne, getBalance(token(address): 0x1f9840) -> 1395080225555777785693473
+                                [17][STATICCALL][0] from=DelegateCallProxyManyToOne, to=ManyToOneImplementationHolder
+                                [17][DELEGATECALL] from=DelegateCallProxyManyToOne, to=IndexPool, getBalance(token(address): 0x1f9840) -> 1395080225555777785693473
+                              [16][CALL] from=0x277e85, to=DelegateCallProxyManyToOne, joinswapExternAmountIn(tokenIn(address): 0x1f9840, tokenAmountIn(uint256): 644580689800521031826236, minPoolAmountOut(uint256): 0) -> 210374204745766242860969
+                                [17][STATICCALL][0] from=DelegateCallProxyManyToOne, to=ManyToOneImplementationHolder
+                                [17][DELEGATECALL] from=DelegateCallProxyManyToOne, to=IndexPool, joinswapExternAmountIn(tokenIn(address): 0x1f9840, tokenAmountIn(uint256): 644580689800521031826236, minPoolAmountOut(uint256): 0) -> 210374204745766242860969
+                                  [18][CALL] from=DelegateCallProxyManyToOne, to=Uni, transferFrom(src(address): 0x277e85, dst(address): 0xfa6de2, rawAmount(uint256): 644580689800521031826236) -> True
+                              [16][STATICCALL] from=0x277e85, to=Uni, balanceOf(account(address): 0x277e85) -> 0
+                              [16][CALL] from=0x277e85, to=UniswapV2Pair, swap(amount0Out(uint256): 220000000000000000000000, amount1Out(uint256): 0, to(address): 0x277e85, data(bytes): b'nigger') -> None
+                                [17][CALL] from=UniswapV2Pair, to=SushiToken, transfer(recipient(address): 0x277e85, amount(uint256): 220000000000000000000000) -> True
+                                [17][CALL] from=UniswapV2Pair, to=0x277e85, uniswapV2Calladdress() -> None
+                                  [18][CALL] from=0x277e85, to=SushiToken, transfer(recipient(address): 0xfa6de2, amount(uint256): 220000000000000000000000) -> True
+                                  [18][CALL] from=0x277e85, to=DelegateCallProxyManyToOne, gulp(token(address): 0x6B3595) -> None
+                                    [19][STATICCALL][0] from=DelegateCallProxyManyToOne, to=ManyToOneImplementationHolder
+                                    [19][DELEGATECALL] from=DelegateCallProxyManyToOne, to=IndexPool, gulp(token(address): 0x6B3595) -> None
+                                      [20][STATICCALL] from=DelegateCallProxyManyToOne, to=SushiToken, balanceOf(account(address): 0xfa6de2) -> 220000000000000000000000
+                                  [18][STATICCALL] from=0x277e85, to=DelegateCallProxyManyToOne, balanceOf(whom(address): 0x277e85) -> 1397888611775446039302736
+                                    [19][STATICCALL][0] from=DelegateCallProxyManyToOne, to=ManyToOneImplementationHolder
+                                    [19][DELEGATECALL] from=DelegateCallProxyManyToOne, to=IndexPool, balanceOf(whom(address): 0x277e85) -> 1397888611775446039302736
+                                  [18][CALL] from=0x277e85, to=DelegateCallProxyManyToOne, exitPool(poolAmountIn(uint256): 1397888611775446039302736, minAmountsOut(uint256[]): [0, 0, 0, 0, 0, 0, 0]) -> None
+                                    [19][STATICCALL][0] from=DelegateCallProxyManyToOne, to=ManyToOneImplementationHolder
+                                    [19][DELEGATECALL] from=DelegateCallProxyManyToOne, to=IndexPool, exitPool(poolAmountIn(uint256): 1397888611775446039302736, minAmountsOut(uint256[]): [0, 0, 0, 0, 0, 0, 0]) -> None
+                                      [20][CALL] from=DelegateCallProxyManyToOne, to=Uni, transfer(dst(address): 0x277e85, rawAmount(uint256): 1831566343330240617728547) -> True
+                                      [20][CALL] from=DelegateCallProxyManyToOne, to=InitializableAdminUpgradeabilityProxy, transfer(recipient(address): 0x277e85, amount(uint256): 205385621985262857206477) -> True
+                                        [21][DELEGATECALL] from=InitializableAdminUpgradeabilityProxy, to=AaveTokenV2, transfer(recipient(address): 0x277e85, amount(uint256): 205385621985262857206477) -> True
+                                      [20][CALL] from=DelegateCallProxyManyToOne, to=Comp, transfer(dst(address): 0x277e85, rawAmount(uint256): 42277174548189683442085) -> True
+                                      [20][CALL] from=DelegateCallProxyManyToOne, to=ProxyERC20, transfer(to(address): 0x277e85, value(uint256): 424700988319216238210387) -> True
+                                        [21][CALL] from=ProxyERC20, to=Synthetix, setMessageSender(sender(address): 0xfa6de2) -> None
+                                        [21][CALL] from=ProxyERC20, to=Synthetix, transfer(to(address): 0x277e85, value(uint256): 424700988319216238210387) -> True
+                                          [22][STATICCALL] from=Synthetix, to=SystemStatus, requireSystemActive() -> None
+                                          [22][STATICCALL] from=Synthetix, to=SynthetixState, issuanceData((address): 0xfa6de2) -> ['0', '0']
+                                          [22][STATICCALL] from=Synthetix, to=TokenState, balanceOf((address): 0xfa6de2) -> 472953660533446947838515
+                                          [22][CALL] from=Synthetix, to=TokenState, setBalanceOf(account(address): 0xfa6de2, value(uint256): 48252672214230709628128) -> None
+                                          [22][STATICCALL] from=Synthetix, to=TokenState, balanceOf((address): 0x277e85) -> 0
+                                          [22][CALL] from=Synthetix, to=TokenState, setBalanceOf(account(address): 0x277e85, value(uint256): 424700988319216238210387) -> None
+                                          [22][CALL] from=Synthetix, to=ProxyERC20, _emit(callData(bytes): b'\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00..., numTopics(uint256): 3, topic1(bytes32): b'\xdd\xf2R\xad\x1b\xe2\xc8\x9bi\xc2\xb0h\..., topic2(bytes32): b'\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00..., topic3(bytes32): b"\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00..., topic4(bytes32): b'\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00...) -> None
+                                      [20][CALL] from=DelegateCallProxyManyToOne, to=Vyper_contract, transfer(_to(address): 0x277e85, _value(uint256): 3549411530679908933793216) -> True
+                                      [20][CALL] from=DelegateCallProxyManyToOne, to=DSToken, transfer(dst(address): 0x277e85, wad(uint256): 5760130630049946860487) -> True
+                                      [20][CALL] from=DelegateCallProxyManyToOne, to=SushiToken, transfer(recipient(address): 0x277e85, amount(uint256): 197554697694574605660000) -> True
+                                  [18][CALL] from=0x277e85, to=SushiToken, approve(spender(address): 0xfa6de2, amount(uint256): 115792089237316195423570985008687907853269...) -> True
+                                  [18][STATICCALL] from=0x277e85, to=SushiToken, balanceOf(account(address): 0x277e85) -> 197554697694574605660000
+                                  [18][STATICCALL] from=0x277e85, to=SushiToken, balanceOf(account(address): 0x277e85) -> 197554697694574605660000
+                                  [18][STATICCALL] from=0x277e85, to=DelegateCallProxyManyToOne, getBalance(token(address): 0x6B3595) -> 22445302305425394340000
+                                    [19][STATICCALL][0] from=DelegateCallProxyManyToOne, to=ManyToOneImplementationHolder
+                                    [19][DELEGATECALL] from=DelegateCallProxyManyToOne, to=IndexPool, getBalance(token(address): 0x6B3595) -> 22445302305425394340000
+                                  [18][CALL] from=0x277e85, to=DelegateCallProxyManyToOne, joinswapExternAmountIn(tokenIn(address): 0x6B3595, tokenAmountIn(uint256): 11222651152712697170000, minPoolAmountOut(uint256): 0) -> 67499684519332941363234
+                                    [19][STATICCALL][0] from=DelegateCallProxyManyToOne, to=ManyToOneImplementationHolder
+                                    [19][DELEGATECALL] from=DelegateCallProxyManyToOne, to=IndexPool, joinswapExternAmountIn(tokenIn(address): 0x6B3595, tokenAmountIn(uint256): 11222651152712697170000, minPoolAmountOut(uint256): 0) -> 67499684519332941363234
+                                      [20][CALL] from=DelegateCallProxyManyToOne, to=SushiToken, transferFrom(sender(address): 0x277e85, recipient(address): 0xfa6de2, amount(uint256): 11222651152712697170000) -> True
+                                  [18][STATICCALL] from=0x277e85, to=SushiToken, balanceOf(account(address): 0x277e85) -> 186332046541861908490000
+                                  [18][STATICCALL] from=0x277e85, to=SushiToken, balanceOf(account(address): 0x277e85) -> 186332046541861908490000
+                                  [18][STATICCALL] from=0x277e85, to=DelegateCallProxyManyToOne, getBalance(token(address): 0x6B3595) -> 33667953458138091510000
+                                    [19][STATICCALL][0] from=DelegateCallProxyManyToOne, to=ManyToOneImplementationHolder
+                                    [19][DELEGATECALL] from=DelegateCallProxyManyToOne, to=IndexPool, getBalance(token(address): 0x6B3595) -> 33667953458138091510000
+                                  [18][CALL] from=0x277e85, to=DelegateCallProxyManyToOne, joinswapExternAmountIn(tokenIn(address): 0x6B3595, tokenAmountIn(uint256): 16833976729069045755000, minPoolAmountOut(uint256): 0) -> 96331350683206931920918
+                                    [19][STATICCALL][0] from=DelegateCallProxyManyToOne, to=ManyToOneImplementationHolder
+                                    [19][DELEGATECALL] from=DelegateCallProxyManyToOne, to=IndexPool, joinswapExternAmountIn(tokenIn(address): 0x6B3595, tokenAmountIn(uint256): 16833976729069045755000, minPoolAmountOut(uint256): 0) -> 96331350683206931920918
+                                      [20][CALL] from=DelegateCallProxyManyToOne, to=SushiToken, transferFrom(sender(address): 0x277e85, recipient(address): 0xfa6de2, amount(uint256): 16833976729069045755000) -> True
+                                  [18][STATICCALL] from=0x277e85, to=SushiToken, balanceOf(account(address): 0x277e85) -> 169498069812792862735000
+                                  [18][STATICCALL] from=0x277e85, to=SushiToken, balanceOf(account(address): 0x277e85) -> 169498069812792862735000
+                                  [18][STATICCALL] from=0x277e85, to=DelegateCallProxyManyToOne, getBalance(token(address): 0x6B3595) -> 50501930187207137265000
+                                    [19][STATICCALL][0] from=DelegateCallProxyManyToOne, to=ManyToOneImplementationHolder
+                                    [19][DELEGATECALL] from=DelegateCallProxyManyToOne, to=IndexPool, getBalance(token(address): 0x6B3595) -> 50501930187207137265000
+                                  [18][CALL] from=0x277e85, to=DelegateCallProxyManyToOne, joinswapExternAmountIn(tokenIn(address): 0x6B3595, tokenAmountIn(uint256): 25250965093603568632500, minPoolAmountOut(uint256): 0) -> 137478111053884057334209
+                                    [19][STATICCALL][0] from=DelegateCallProxyManyToOne, to=ManyToOneImplementationHolder
+                                    [19][DELEGATECALL] from=DelegateCallProxyManyToOne, to=IndexPool, joinswapExternAmountIn(tokenIn(address): 0x6B3595, tokenAmountIn(uint256): 25250965093603568632500, minPoolAmountOut(uint256): 0) -> 137478111053884057334209
+                                      [20][CALL] from=DelegateCallProxyManyToOne, to=SushiToken, transferFrom(sender(address): 0x277e85, recipient(address): 0xfa6de2, amount(uint256): 25250965093603568632500) -> True
+                                  [18][STATICCALL] from=0x277e85, to=SushiToken, balanceOf(account(address): 0x277e85) -> 144247104719189294102500
+                                  [18][STATICCALL] from=0x277e85, to=SushiToken, balanceOf(account(address): 0x277e85) -> 144247104719189294102500
+                                  [18][STATICCALL] from=0x277e85, to=DelegateCallProxyManyToOne, getBalance(token(address): 0x6B3595) -> 75752895280810705897500
+                                    [19][STATICCALL][0] from=DelegateCallProxyManyToOne, to=ManyToOneImplementationHolder
+                                    [19][DELEGATECALL] from=DelegateCallProxyManyToOne, to=IndexPool, getBalance(token(address): 0x6B3595) -> 75752895280810705897500
+                                  [18][CALL] from=0x277e85, to=DelegateCallProxyManyToOne, joinswapExternAmountIn(tokenIn(address): 0x6B3595, tokenAmountIn(uint256): 37876447640405352948750, minPoolAmountOut(uint256): 0) -> 196200207771392551228746
+                                    [19][STATICCALL][0] from=DelegateCallProxyManyToOne, to=ManyToOneImplementationHolder
+                                    [19][DELEGATECALL] from=DelegateCallProxyManyToOne, to=IndexPool, joinswapExternAmountIn(tokenIn(address): 0x6B3595, tokenAmountIn(uint256): 37876447640405352948750, minPoolAmountOut(uint256): 0) -> 196200207771392551228746
+                                      [20][CALL] from=DelegateCallProxyManyToOne, to=SushiToken, transferFrom(sender(address): 0x277e85, recipient(address): 0xfa6de2, amount(uint256): 37876447640405352948750) -> True
+                                  [18][STATICCALL] from=0x277e85, to=SushiToken, balanceOf(account(address): 0x277e85) -> 106370657078783941153750
+                                  [18][STATICCALL] from=0x277e85, to=SushiToken, balanceOf(account(address): 0x277e85) -> 106370657078783941153750
+                                  [18][STATICCALL] from=0x277e85, to=DelegateCallProxyManyToOne, getBalance(token(address): 0x6B3595) -> 113629342921216058846250
+                                    [19][STATICCALL][0] from=DelegateCallProxyManyToOne, to=ManyToOneImplementationHolder
+                                    [19][DELEGATECALL] from=DelegateCallProxyManyToOne, to=IndexPool, getBalance(token(address): 0x6B3595) -> 113629342921216058846250
+                                  [18][CALL] from=0x277e85, to=DelegateCallProxyManyToOne, joinswapExternAmountIn(tokenIn(address): 0x6B3595, tokenAmountIn(uint256): 56814671460608029423125, minPoolAmountOut(uint256): 0) -> 280004731185532619550406
+                                    [19][STATICCALL][0] from=DelegateCallProxyManyToOne, to=ManyToOneImplementationHolder
+                                    [19][DELEGATECALL] from=DelegateCallProxyManyToOne, to=IndexPool, joinswapExternAmountIn(tokenIn(address): 0x6B3595, tokenAmountIn(uint256): 56814671460608029423125, minPoolAmountOut(uint256): 0) -> 280004731185532619550406
+                                      [20][CALL] from=DelegateCallProxyManyToOne, to=SushiToken, transferFrom(sender(address): 0x277e85, recipient(address): 0xfa6de2, amount(uint256): 56814671460608029423125) -> True
+                                  [18][STATICCALL] from=0x277e85, to=SushiToken, balanceOf(account(address): 0x277e85) -> 49555985618175911730625
+                                  [18][STATICCALL] from=0x277e85, to=SushiToken, balanceOf(account(address): 0x277e85) -> 49555985618175911730625
+                                  [18][STATICCALL] from=0x277e85, to=DelegateCallProxyManyToOne, getBalance(token(address): 0x6B3595) -> 170444014381824088269375
+                                    [19][STATICCALL][0] from=DelegateCallProxyManyToOne, to=ManyToOneImplementationHolder
+                                    [19][DELEGATECALL] from=DelegateCallProxyManyToOne, to=IndexPool, getBalance(token(address): 0x6B3595) -> 170444014381824088269375
+                                  [18][CALL] from=0x277e85, to=DelegateCallProxyManyToOne, joinswapExternAmountIn(tokenIn(address): 0x6B3595, tokenAmountIn(uint256): 49555985618175911730625, minPoolAmountOut(uint256): 0) -> 234705858740895078765984
+                                    [19][STATICCALL][0] from=DelegateCallProxyManyToOne, to=ManyToOneImplementationHolder
+                                    [19][DELEGATECALL] from=DelegateCallProxyManyToOne, to=IndexPool, joinswapExternAmountIn(tokenIn(address): 0x6B3595, tokenAmountIn(uint256): 49555985618175911730625, minPoolAmountOut(uint256): 0) -> 234705858740895078765984
+                                      [20][CALL] from=DelegateCallProxyManyToOne, to=SushiToken, transferFrom(sender(address): 0x277e85, recipient(address): 0xfa6de2, amount(uint256): 49555985618175911730625) -> True
+                                  [18][STATICCALL] from=0x277e85, to=SushiToken, balanceOf(account(address): 0x277e85) -> 0
+                                  [18][STATICCALL] from=0x277e85, to=DelegateCallProxyManyToOne, balanceOf(whom(address): 0x277e85) -> 1012219943954244180163497
+                                    [19][STATICCALL][0] from=DelegateCallProxyManyToOne, to=ManyToOneImplementationHolder
+                                    [19][DELEGATECALL] from=DelegateCallProxyManyToOne, to=IndexPool, balanceOf(whom(address): 0x277e85) -> 1012219943954244180163497
+                                  [18][CALL] from=0x277e85, to=DelegateCallProxyManyToOne, exitPool(poolAmountIn(uint256): 1012219943954244180163497, minAmountsOut(uint256[]): [0, 0, 0, 0, 0, 0, 0]) -> None
+                                    [19][STATICCALL][0] from=DelegateCallProxyManyToOne, to=ManyToOneImplementationHolder
+                                    [19][DELEGATECALL] from=DelegateCallProxyManyToOne, to=IndexPool, exitPool(poolAmountIn(uint256): 1012219943954244180163497, minAmountsOut(uint256[]): [0, 0, 0, 0, 0, 0, 0]) -> None
+                                      [20][CALL] from=DelegateCallProxyManyToOne, to=Uni, transfer(dst(address): 0x277e85, rawAmount(uint256): 179093934051089875196853) -> True
+                                      [20][CALL] from=DelegateCallProxyManyToOne, to=InitializableAdminUpgradeabilityProxy, transfer(recipient(address): 0x277e85, amount(uint256): 20082984803045446445208) -> True
+                                        [21][DELEGATECALL] from=InitializableAdminUpgradeabilityProxy, to=AaveTokenV2, transfer(recipient(address): 0x277e85, amount(uint256): 20082984803045446445208) -> True
+                                      [20][CALL] from=DelegateCallProxyManyToOne, to=Comp, transfer(dst(address): 0x277e85, rawAmount(uint256): 4133940077012380234875) -> True
+                                      [20][CALL] from=DelegateCallProxyManyToOne, to=ProxyERC20, transfer(to(address): 0x277e85, value(uint256): 41528045691850844916215) -> True
+                                        [21][CALL] from=ProxyERC20, to=Synthetix, setMessageSender(sender(address): 0xfa6de2) -> None
+                                        [21][CALL] from=ProxyERC20, to=Synthetix, transfer(to(address): 0x277e85, value(uint256): 41528045691850844916215) -> True
+                                          [22][STATICCALL] from=Synthetix, to=SystemStatus, requireSystemActive() -> None
+                                          [22][STATICCALL] from=Synthetix, to=SynthetixState, issuanceData((address): 0xfa6de2) -> ['0', '0']
+                                          [22][STATICCALL] from=Synthetix, to=TokenState, balanceOf((address): 0xfa6de2) -> 48252672214230709628128
+                                          [22][CALL] from=Synthetix, to=TokenState, setBalanceOf(account(address): 0xfa6de2, value(uint256): 6724626522379864711913) -> None
+                                          [22][STATICCALL] from=Synthetix, to=TokenState, balanceOf((address): 0x277e85) -> 424700988319216238210387
+                                          [22][CALL] from=Synthetix, to=TokenState, setBalanceOf(account(address): 0x277e85, value(uint256): 466229034011067083126602) -> None
+                                          [22][CALL] from=Synthetix, to=ProxyERC20, _emit(callData(bytes): b'\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00..., numTopics(uint256): 3, topic1(bytes32): b'\xdd\xf2R\xad\x1b\xe2\xc8\x9bi\xc2\xb0h\..., topic2(bytes32): b'\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00..., topic3(bytes32): b"\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00..., topic4(bytes32): b'\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00...) -> None
+                                      [20][CALL] from=DelegateCallProxyManyToOne, to=Vyper_contract, transfer(_to(address): 0x277e85, _value(uint256): 347068003793925157246003) -> True
+                                      [20][CALL] from=DelegateCallProxyManyToOne, to=DSToken, transfer(dst(address): 0x277e85, wad(uint256): 563236193403792245982) -> True
+                                      [20][CALL] from=DelegateCallProxyManyToOne, to=SushiToken, transfer(recipient(address): 0x277e85, amount(uint256): 189340188490384593420000) -> True
+                                  [18][STATICCALL] from=0x277e85, to=SushiToken, balanceOf(account(address): 0x277e85) -> 189340188490384593420000
+                                  [18][STATICCALL] from=0x277e85, to=SushiToken, balanceOf(account(address): 0x277e85) -> 189340188490384593420000
+                                  [18][STATICCALL] from=0x277e85, to=DelegateCallProxyManyToOne, getBalance(token(address): 0x6B3595) -> 30659811509615406580000
+                                    [19][STATICCALL][0] from=DelegateCallProxyManyToOne, to=ManyToOneImplementationHolder
+                                    [19][DELEGATECALL] from=DelegateCallProxyManyToOne, to=IndexPool, getBalance(token(address): 0x6B3595) -> 30659811509615406580000
+                                  [18][CALL] from=0x277e85, to=DelegateCallProxyManyToOne, joinswapExternAmountIn(tokenIn(address): 0x6B3595, tokenAmountIn(uint256): 15329905754807703290000, minPoolAmountOut(uint256): 0) -> 69661471475547919592496
+                                    [19][STATICCALL][0] from=DelegateCallProxyManyToOne, to=ManyToOneImplementationHolder
+                                    [19][DELEGATECALL] from=DelegateCallProxyManyToOne, to=IndexPool, joinswapExternAmountIn(tokenIn(address): 0x6B3595, tokenAmountIn(uint256): 15329905754807703290000, minPoolAmountOut(uint256): 0) -> 69661471475547919592496
+                                      [20][CALL] from=DelegateCallProxyManyToOne, to=SushiToken, transferFrom(sender(address): 0x277e85, recipient(address): 0xfa6de2, amount(uint256): 15329905754807703290000) -> True
+                                  [18][STATICCALL] from=0x277e85, to=SushiToken, balanceOf(account(address): 0x277e85) -> 174010282735576890130000
+                                  [18][STATICCALL] from=0x277e85, to=SushiToken, balanceOf(account(address): 0x277e85) -> 174010282735576890130000
+                                  [18][STATICCALL] from=0x277e85, to=DelegateCallProxyManyToOne, getBalance(token(address): 0x6B3595) -> 45989717264423109870000
+                                    [19][STATICCALL][0] from=DelegateCallProxyManyToOne, to=ManyToOneImplementationHolder
+                                    [19][DELEGATECALL] from=DelegateCallProxyManyToOne, to=IndexPool, getBalance(token(address): 0x6B3595) -> 45989717264423109870000
+                                  [18][CALL] from=0x277e85, to=DelegateCallProxyManyToOne, joinswapExternAmountIn(tokenIn(address): 0x6B3595, tokenAmountIn(uint256): 22994858632211554935000, minPoolAmountOut(uint256): 0) -> 99416518545315712703350
+                                    [19][STATICCALL][0] from=DelegateCallProxyManyToOne, to=ManyToOneImplementationHolder
+                                    [19][DELEGATECALL] from=DelegateCallProxyManyToOne, to=IndexPool, joinswapExternAmountIn(tokenIn(address): 0x6B3595, tokenAmountIn(uint256): 22994858632211554935000, minPoolAmountOut(uint256): 0) -> 99416518545315712703350
+                                      [20][CALL] from=DelegateCallProxyManyToOne, to=SushiToken, transferFrom(sender(address): 0x277e85, recipient(address): 0xfa6de2, amount(uint256): 22994858632211554935000) -> True
+                                  [18][STATICCALL] from=0x277e85, to=SushiToken, balanceOf(account(address): 0x277e85) -> 151015424103365335195000
+                                  [18][STATICCALL] from=0x277e85, to=SushiToken, balanceOf(account(address): 0x277e85) -> 151015424103365335195000
+                                  [18][STATICCALL] from=0x277e85, to=DelegateCallProxyManyToOne, getBalance(token(address): 0x6B3595) -> 68984575896634664805000
+                                    [19][STATICCALL][0] from=DelegateCallProxyManyToOne, to=ManyToOneImplementationHolder
+                                    [19][DELEGATECALL] from=DelegateCallProxyManyToOne, to=IndexPool, getBalance(token(address): 0x6B3595) -> 68984575896634664805000
+                                  [18][CALL] from=0x277e85, to=DelegateCallProxyManyToOne, joinswapExternAmountIn(tokenIn(address): 0x6B3595, tokenAmountIn(uint256): 34492287948317332402500, minPoolAmountOut(uint256): 0) -> 141881070702624913425829
+                                    [19][STATICCALL][0] from=DelegateCallProxyManyToOne, to=ManyToOneImplementationHolder
+                                    [19][DELEGATECALL] from=DelegateCallProxyManyToOne, to=IndexPool, joinswapExternAmountIn(tokenIn(address): 0x6B3595, tokenAmountIn(uint256): 34492287948317332402500, minPoolAmountOut(uint256): 0) -> 141881070702624913425829
+                                      [20][CALL] from=DelegateCallProxyManyToOne, to=SushiToken, transferFrom(sender(address): 0x277e85, recipient(address): 0xfa6de2, amount(uint256): 34492287948317332402500) -> True
+                                  [18][STATICCALL] from=0x277e85, to=SushiToken, balanceOf(account(address): 0x277e85) -> 116523136155048002792500
+                                  [18][STATICCALL] from=0x277e85, to=SushiToken, balanceOf(account(address): 0x277e85) -> 116523136155048002792500
+                                  [18][STATICCALL] from=0x277e85, to=DelegateCallProxyManyToOne, getBalance(token(address): 0x6B3595) -> 103476863844951997207500
+                                    [19][STATICCALL][0] from=DelegateCallProxyManyToOne, to=ManyToOneImplementationHolder
+                                    [19][DELEGATECALL] from=DelegateCallProxyManyToOne, to=IndexPool, getBalance(token(address): 0x6B3595) -> 103476863844951997207500
+                                  [18][CALL] from=0x277e85, to=DelegateCallProxyManyToOne, joinswapExternAmountIn(tokenIn(address): 0x6B3595, tokenAmountIn(uint256): 51738431922475998603750, minPoolAmountOut(uint256): 0) -> 202483837879995265779382
+                                    [19][STATICCALL][0] from=DelegateCallProxyManyToOne, to=ManyToOneImplementationHolder
+                                    [19][DELEGATECALL] from=DelegateCallProxyManyToOne, to=IndexPool, joinswapExternAmountIn(tokenIn(address): 0x6B3595, tokenAmountIn(uint256): 51738431922475998603750, minPoolAmountOut(uint256): 0) -> 202483837879995265779382
+                                      [20][CALL] from=DelegateCallProxyManyToOne, to=SushiToken, transferFrom(sender(address): 0x277e85, recipient(address): 0xfa6de2, amount(uint256): 51738431922475998603750) -> True
+                                  [18][STATICCALL] from=0x277e85, to=SushiToken, balanceOf(account(address): 0x277e85) -> 64784704232572004188750
+                                  [18][STATICCALL] from=0x277e85, to=SushiToken, balanceOf(account(address): 0x277e85) -> 64784704232572004188750
+                                  [18][STATICCALL] from=0x277e85, to=DelegateCallProxyManyToOne, getBalance(token(address): 0x6B3595) -> 155215295767427995811250
+                                    [19][STATICCALL][0] from=DelegateCallProxyManyToOne, to=ManyToOneImplementationHolder
+                                    [19][DELEGATECALL] from=DelegateCallProxyManyToOne, to=IndexPool, getBalance(token(address): 0x6B3595) -> 155215295767427995811250
+                                  [18][CALL] from=0x277e85, to=DelegateCallProxyManyToOne, joinswapExternAmountIn(tokenIn(address): 0x6B3595, tokenAmountIn(uint256): 64784704232572004188750, minPoolAmountOut(uint256): 0) -> 242150543553564643779848
+                                    [19][STATICCALL][0] from=DelegateCallProxyManyToOne, to=ManyToOneImplementationHolder
+                                    [19][DELEGATECALL] from=DelegateCallProxyManyToOne, to=IndexPool, joinswapExternAmountIn(tokenIn(address): 0x6B3595, tokenAmountIn(uint256): 64784704232572004188750, minPoolAmountOut(uint256): 0) -> 242150543553564643779848
+                                      [20][CALL] from=DelegateCallProxyManyToOne, to=SushiToken, transferFrom(sender(address): 0x277e85, recipient(address): 0xfa6de2, amount(uint256): 64784704232572004188750) -> True
+                                  [18][STATICCALL] from=0x277e85, to=SushiToken, balanceOf(account(address): 0x277e85) -> 0
+                                  [18][STATICCALL] from=0x277e85, to=DelegateCallProxyManyToOne, balanceOf(whom(address): 0x277e85) -> 755593442157048455280905
+                                    [19][STATICCALL][0] from=DelegateCallProxyManyToOne, to=ManyToOneImplementationHolder
+                                    [19][DELEGATECALL] from=DelegateCallProxyManyToOne, to=IndexPool, balanceOf(whom(address): 0x277e85) -> 755593442157048455280905
+                                  [18][CALL] from=0x277e85, to=DelegateCallProxyManyToOne, exitPool(poolAmountIn(uint256): 755593442157048455280905, minAmountsOut(uint256[]): [0, 0, 0, 0, 0, 0, 0]) -> None
+                                    [19][STATICCALL][0] from=DelegateCallProxyManyToOne, to=ManyToOneImplementationHolder
+                                    [19][DELEGATECALL] from=DelegateCallProxyManyToOne, to=IndexPool, exitPool(poolAmountIn(uint256): 755593442157048455280905, minAmountsOut(uint256[]): [0, 0, 0, 0, 0, 0, 0]) -> None
+                                      [20][CALL] from=DelegateCallProxyManyToOne, to=Uni, transfer(dst(address): 0x277e85, rawAmount(uint256): 23733041606642467780005) -> True
+                                      [20][CALL] from=DelegateCallProxyManyToOne, to=InitializableAdminUpgradeabilityProxy, transfer(recipient(address): 0x277e85, amount(uint256): 2661342587852686880985) -> True
+                                        [21][DELEGATECALL] from=InitializableAdminUpgradeabilityProxy, to=AaveTokenV2, transfer(recipient(address): 0x277e85, amount(uint256): 2661342587852686880985) -> True
+                                      [20][CALL] from=DelegateCallProxyManyToOne, to=Comp, transfer(dst(address): 0x277e85, rawAmount(uint256): 547818508577256493576) -> True
+                                      [20][CALL] from=DelegateCallProxyManyToOne, to=ProxyERC20, transfer(to(address): 0x277e85, value(uint256): 5503183798319426136593) -> True
+                                        [21][CALL] from=ProxyERC20, to=Synthetix, setMessageSender(sender(address): 0xfa6de2) -> None
+                                        [21][CALL] from=ProxyERC20, to=Synthetix, transfer(to(address): 0x277e85, value(uint256): 5503183798319426136593) -> True
+                                          [22][STATICCALL] from=Synthetix, to=SystemStatus, requireSystemActive() -> None
+                                          [22][STATICCALL] from=Synthetix, to=SynthetixState, issuanceData((address): 0xfa6de2) -> ['0', '0']
+                                          [22][STATICCALL] from=Synthetix, to=TokenState, balanceOf((address): 0xfa6de2) -> 6724626522379864711913
+                                          [22][CALL] from=Synthetix, to=TokenState, setBalanceOf(account(address): 0xfa6de2, value(uint256): 1221442724060438575320) -> None
+                                          [22][STATICCALL] from=Synthetix, to=TokenState, balanceOf((address): 0x277e85) -> 466229034011067083126602
+                                          [22][CALL] from=Synthetix, to=TokenState, setBalanceOf(account(address): 0x277e85, value(uint256): 471732217809386509263195) -> None
+                                          [22][CALL] from=Synthetix, to=ProxyERC20, _emit(callData(bytes): b'\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00..., numTopics(uint256): 3, topic1(bytes32): b'\xdd\xf2R\xad\x1b\xe2\xc8\x9bi\xc2\xb0h\..., topic2(bytes32): b'\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00..., topic3(bytes32): b"\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00..., topic4(bytes32): b'\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00...) -> None
+                                      [20][CALL] from=DelegateCallProxyManyToOne, to=Vyper_contract, transfer(_to(address): 0x277e85, _value(uint256): 45992509003827120531519) -> True
+                                      [20][CALL] from=DelegateCallProxyManyToOne, to=DSToken, transfer(dst(address): 0x277e85, wad(uint256): 74638530239700089697) -> True
+                                      [20][CALL] from=DelegateCallProxyManyToOne, to=SushiToken, transfer(recipient(address): 0x277e85, amount(uint256): 180039803192193248480000) -> True
+                                  [18][CALL] from=0x277e85, to=Uni, transfer(dst(address): 0xd3d2E2, rawAmount(uint256): 1842034710505623705772684) -> True
+                                  [18][CALL] from=0x277e85, to=InitializableAdminUpgradeabilityProxy, transfer(recipient(address): 0xD75EA1, amount(uint256): 221903140618539910609128) -> True
+                                    [19][DELEGATECALL] from=InitializableAdminUpgradeabilityProxy, to=AaveTokenV2, transfer(recipient(address): 0xD75EA1, amount(uint256): 221903140618539910609128) -> True
+                                  [18][CALL] from=0x277e85, to=Comp, transfer(dst(address): 0x31503d, rawAmount(uint256): 41499399814748809500152) -> True
+                                  [18][CALL] from=0x277e85, to=Vyper_contract, transfer(_to(address): 0x58Dc5a, _value(uint256): 3220860703356268493448193) -> True
+                                  [18][CALL] from=0x277e85, to=DSToken, transfer(dst(address): 0xBa13af, wad(uint256): 5793733086458756871233) -> True
+                                  [18][CALL] from=0x277e85, to=ProxyERC20, transfer(to(address): 0xA1d7b2, value(uint256): 455051592866905614636261) -> True
+                                    [19][CALL] from=ProxyERC20, to=Synthetix, setMessageSender(sender(address): 0x277e85) -> None
+                                    [19][CALL] from=ProxyERC20, to=Synthetix, transfer(to(address): 0xA1d7b2, value(uint256): 455051592866905614636261) -> True
+                                      [20][STATICCALL] from=Synthetix, to=SystemStatus, requireSystemActive() -> None
+                                      [20][STATICCALL] from=Synthetix, to=SynthetixState, issuanceData((address): 0x277e85) -> ['0', '0']
+                                      [20][STATICCALL] from=Synthetix, to=TokenState, balanceOf((address): 0x277e85) -> 471732217809386509263195
+                                      [20][CALL] from=Synthetix, to=TokenState, setBalanceOf(account(address): 0x277e85, value(uint256): 16680624942480894626934) -> None
+                                      [20][STATICCALL] from=Synthetix, to=TokenState, balanceOf((address): 0xA1d7b2) -> 50405032495586527834409
+                                      [20][CALL] from=Synthetix, to=TokenState, setBalanceOf(account(address): 0xA1d7b2, value(uint256): 505456625362492142470670) -> None
+                                      [20][CALL] from=Synthetix, to=ProxyERC20, _emit(callData(bytes): b'\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00..., numTopics(uint256): 3, topic1(bytes32): b'\xdd\xf2R\xad\x1b\xe2\xc8\x9bi\xc2\xb0h\..., topic2(bytes32): b"\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00..., topic3(bytes32): b'\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00..., topic4(bytes32): b'\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00...) -> None
+                                  [18][STATICCALL] from=0x277e85, to=SushiToken, balanceOf(account(address): 0x277e85) -> 180039803192193248480000
+                                  [18][STATICCALL] from=0x277e85, to=UniswapV2Pair, getReserves() -> ['19362311354909807202718219', '53858567990721294314124', '1634236521']
+                                  [18][CALL] from=0x277e85, to=DSToken, approve(guy(address): 0x7a250d, wad(uint256): 115792089237316195423570985008687907853269...) -> True
+                                  [18][CALL] from=0x277e85, to=UniswapV2Router02, swapTokensForExactTokens(amountOut(uint256): 113534707956799958568, amountInMax(uint256): 10000000000000000000000000, path(address[]): ['0x9f8F72aA9304c8B593d555F12eF6589cC3A579..., to(address): 0x795065, deadline(uint256): 1634236663) -> [173791345113228309462, 113534707956799958568]
+                                    [19][STATICCALL] from=UniswapV2Router02, to=UniswapV2Pair, getReserves() -> ['4769264428525861949145', '3238583097432391578973', '1634232820']
+                                    [19][CALL] from=UniswapV2Router02, to=DSToken, transferFrom(src(address): 0x277e85, dst(address): 0xC2aDdA, wad(uint256): 173791345113228309462) -> True
+                                    [19][CALL] from=UniswapV2Router02, to=UniswapV2Pair, swap(amount0Out(uint256): 0, amount1Out(uint256): 113534707956799958568, to(address): 0x795065, data(bytes): b'') -> None
+                                      [20][CALL] from=UniswapV2Pair, to=WETH9, transfer(dst(address): 0x795065, wad(uint256): 113534707956799958568) -> True
+                                      [20][STATICCALL] from=UniswapV2Pair, to=DSToken, balanceOf(src(address): 0xC2aDdA) -> 4943055773639090258607
+                                      [20][STATICCALL] from=UniswapV2Pair, to=WETH9, balanceOf((address): 0xC2aDdA) -> 3125048389475591620405
+                                  [18][STATICCALL] from=0x277e85, to=SushiToken, balanceOf(account(address): 0x277e85) -> 180039803192193248480000
+                                  [18][CALL] from=0x277e85, to=SushiToken, transfer(recipient(address): 0x795065, amount(uint256): 180039803192193248480000) -> True
+                                  [18][CALL] from=0x277e85, to=UniswapV2Router02, swapTokensForExactETH(amountOut(uint256): 15000000000000000000, amountInMax(uint256): 10000000000000000000000000, path(address[]): ['0x9f8F72aA9304c8B593d555F12eF6589cC3A579..., to(address): 0xBA5Ed1, deadline(uint256): 1634236663) -> [23912471486474500606, 15000000000000000000]
+                                    [19][STATICCALL] from=UniswapV2Router02, to=UniswapV2Pair, getReserves() -> ['4943055773639090258607', '3125048389475591620405', '1634236663']
+                                    [19][CALL] from=UniswapV2Router02, to=DSToken, transferFrom(src(address): 0x277e85, dst(address): 0xC2aDdA, wad(uint256): 23912471486474500606) -> True
+                                    [19][CALL] from=UniswapV2Router02, to=UniswapV2Pair, swap(amount0Out(uint256): 0, amount1Out(uint256): 15000000000000000000, to(address): 0x7a250d, data(bytes): b'') -> None
+                                      [20][CALL] from=UniswapV2Pair, to=WETH9, transfer(dst(address): 0x7a250d, wad(uint256): 15000000000000000000) -> True
+                                      [20][STATICCALL] from=UniswapV2Pair, to=DSToken, balanceOf(src(address): 0xC2aDdA) -> 4966968245125564759213
+                                      [20][STATICCALL] from=UniswapV2Pair, to=WETH9, balanceOf((address): 0xC2aDdA) -> 3110048389475591620405
+                                    [19][CALL] from=UniswapV2Router02, to=WETH9, withdraw(wad(uint256): 15000000000000000000) -> None
+                                      [20][CALL][15.0] from=WETH9, to=UniswapV2Router02
+                                    [19][CALL][15.0] from=UniswapV2Router02, to=0xba5ed1
+                                [17][STATICCALL] from=UniswapV2Pair, to=SushiToken, balanceOf(account(address): 0x795065) -> 19322351158102000451198219
+                                [17][STATICCALL] from=UniswapV2Pair, to=WETH9, balanceOf((address): 0x795065) -> 53972102698678094272692
+                          [14][STATICCALL] from=UniswapV2Pair, to=ProxyERC20, balanceOf(owner(address): 0xA1d7b2) -> 505456625362492142470670
+                            [15][CALL] from=ProxyERC20, to=Synthetix, balanceOf(account(address): 0xA1d7b2) -> 505456625362492142470670
+                              [16][STATICCALL] from=Synthetix, to=TokenState, balanceOf((address): 0xA1d7b2) -> 505456625362492142470670
+                          [14][STATICCALL] from=UniswapV2Pair, to=WETH9, balanceOf((address): 0xA1d7b2) -> 1300507828109584991422
+                      [12][STATICCALL] from=UniswapV2Pair, to=DSToken, balanceOf(src(address): 0xBa13af) -> 6435491755302979433649
+                      [12][STATICCALL] from=UniswapV2Pair, to=WETH9, balanceOf((address): 0xBa13af) -> 4358981223283552588812
+                  [10][STATICCALL] from=UniswapV2Pair, to=WETH9, balanceOf((address): 0x58Dc5a) -> 2774758398770038031362
+                  [10][STATICCALL] from=UniswapV2Pair, to=Vyper_contract, balanceOf(arg0(address): 0x58Dc5a) -> 3577628135799723615176191
+              [8][STATICCALL] from=UniswapV2Pair, to=Comp, balanceOf(account(address): 0x31503d) -> 46096194176089631784422
+              [8][STATICCALL] from=UniswapV2Pair, to=WETH9, balanceOf((address): 0x31503d) -> 3828897259563068853353
+          [6][STATICCALL] from=UniswapV2Pair, to=InitializableAdminUpgradeabilityProxy, balanceOf(account(address): 0xD75EA1) -> 246482848038708489194306
+            [7][DELEGATECALL] from=InitializableAdminUpgradeabilityProxy, to=AaveTokenV2, balanceOf(account(address): 0xD75EA1) -> 246482848038708489194306
+          [6][STATICCALL] from=UniswapV2Pair, to=WETH9, balanceOf((address): 0xD75EA1) -> 19839761765715204123756
+      [4][STATICCALL] from=UniswapV2Pair, to=Uni, balanceOf(account(address): 0xd3d2E2) -> 2046072716077863507473266
+      [4][STATICCALL] from=UniswapV2Pair, to=WETH9, balanceOf((address): 0xd3d2E2) -> 14205874295200401167659
+  [2][STATICCALL] from=0x277e85, to=Uni, balanceOf(account(address): 0x277e85) -> 192358608482349254932721
+  [2][CALL] from=0x277e85, to=Uni, transfer(dst(address): 0xBA5Ed1, rawAmount(uint256): 192358608482349254932721) -> True
+  [2][STATICCALL] from=0x277e85, to=InitializableAdminUpgradeabilityProxy, balanceOf(account(address): 0x277e85) -> 6226808757621079923542
+    [3][DELEGATECALL] from=InitializableAdminUpgradeabilityProxy, to=AaveTokenV2, balanceOf(account(address): 0x277e85) -> 6226808757621079923542
+  [2][CALL] from=0x277e85, to=InitializableAdminUpgradeabilityProxy, transfer(recipient(address): 0xBA5Ed1, amount(uint256): 6226808757621079923542) -> True
+    [3][DELEGATECALL] from=InitializableAdminUpgradeabilityProxy, to=AaveTokenV2, transfer(recipient(address): 0xBA5Ed1, amount(uint256): 6226808757621079923542) -> True
+  [2][STATICCALL] from=0x277e85, to=Comp, balanceOf(account(address): 0x277e85) -> 5459533319030510670384
+  [2][CALL] from=0x277e85, to=Comp, transfer(dst(address): 0xBA5Ed1, rawAmount(uint256): 5459533319030510670384) -> True
+  [2][STATICCALL] from=0x277e85, to=Vyper_contract, balanceOf(arg0(address): 0x277e85) -> 721611340121392718122545
+  [2][CALL] from=0x277e85, to=Vyper_contract, transfer(_to(address): 0xBA5Ed1, _value(uint256): 721611340121392718122545) -> True
+  [2][STATICCALL] from=0x277e85, to=DSToken, balanceOf(src(address): 0x277e85) -> 406568450634979514865
+  [2][CALL] from=0x277e85, to=DSToken, transfer(dst(address): 0xBA5Ed1, wad(uint256): 406568450634979514865) -> True
+  [2][STATICCALL] from=0x277e85, to=ProxyERC20, balanceOf(owner(address): 0x277e85) -> 16680624942480894626934
+    [3][CALL] from=ProxyERC20, to=Synthetix, balanceOf(account(address): 0x277e85) -> 16680624942480894626934
+      [4][STATICCALL] from=Synthetix, to=TokenState, balanceOf((address): 0x277e85) -> 16680624942480894626934
+  [2][CALL] from=0x277e85, to=ProxyERC20, transfer(to(address): 0xBA5Ed1, value(uint256): 16680624942480894626934) -> True
+    [3][CALL] from=ProxyERC20, to=Synthetix, setMessageSender(sender(address): 0x277e85) -> None
+    [3][CALL] from=ProxyERC20, to=Synthetix, transfer(to(address): 0xBA5Ed1, value(uint256): 16680624942480894626934) -> True
+      [4][STATICCALL] from=Synthetix, to=SystemStatus, requireSystemActive() -> None
+      [4][STATICCALL] from=Synthetix, to=SynthetixState, issuanceData((address): 0x277e85) -> ['0', '0']
+      [4][STATICCALL] from=Synthetix, to=TokenState, balanceOf((address): 0x277e85) -> 16680624942480894626934
+      [4][CALL] from=Synthetix, to=TokenState, setBalanceOf(account(address): 0x277e85, value(uint256): 0) -> None
+      [4][STATICCALL] from=Synthetix, to=TokenState, balanceOf((address): 0xBA5Ed1) -> 0
+      [4][CALL] from=Synthetix, to=TokenState, setBalanceOf(account(address): 0xBA5Ed1, value(uint256): 16680624942480894626934) -> None
+      [4][CALL] from=Synthetix, to=ProxyERC20, _emit(callData(bytes): b'\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00..., numTopics(uint256): 3, topic1(bytes32): b'\xdd\xf2R\xad\x1b\xe2\xc8\x9bi\xc2\xb0h\..., topic2(bytes32): b"\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00..., topic3(bytes32): b'\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00..., topic4(bytes32): b'\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00...) -> None

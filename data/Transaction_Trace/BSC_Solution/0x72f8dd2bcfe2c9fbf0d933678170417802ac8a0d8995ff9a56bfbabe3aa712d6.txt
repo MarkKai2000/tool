@@ -1,0 +1,98 @@
+[1][CALL] from=0x698109, to=DODOFlashloan, shiD0eXp(flashLoanPool(address): 0x81917e, loanAmount(uint256): 40000000000000000000, loanToken(address): 0xbb4CdB, _timep(address): 0x733Af3, _num(uint256): 0, _todex(address): 0x986967, _newt(address): 0xa963eE, _mig(address): 0xaF0CA2) -> None
+  [2][STATICCALL] from=DODOFlashloan, to=DPPAdvanced, _BASE_TOKEN_() -> 0xbb4cdb
+    [3][DELEGATECALL] from=DPPAdvanced, to=DPPAdvanced, _BASE_TOKEN_() -> 0xbb4cdb
+  [2][CALL] from=DODOFlashloan, to=DPPAdvanced, flashLoan(baseAmount(uint256): 40000000000000000000, quoteAmount(uint256): 0, assetTo(address): 0xcDb3D0, data(bytes): b"\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00...) -> None
+    [3][DELEGATECALL] from=DPPAdvanced, to=DPPAdvanced, flashLoan(baseAmount(uint256): 40000000000000000000, quoteAmount(uint256): 0, assetTo(address): 0xcDb3D0, data(bytes): b"\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00...) -> None
+      [4][CALL] from=DPPAdvanced, to=WBNB, transfer(dst(address): 0xcDb3D0, wad(uint256): 40000000000000000000) -> True
+      [4][CALL] from=DPPAdvanced, to=DODOFlashloan, DPPFlashLoanCall(sender(address): 0xcDb3D0, baseAmount(uint256): 40000000000000000000, quoteAmount(uint256): 0, data(bytes): b"\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00...) -> None
+        [5][CALL] from=DODOFlashloan, to=WBNB, approve(guy(address): 0x10ED43, wad(uint256): 100000000000000000000000) -> True
+        [5][CALL] from=DODOFlashloan, to=PancakeRouter, swapExactTokensForTokensSupportingFeeOnTransferTokens(amountIn(uint256): 39000000000000000000, amountOutMin(uint256): 20, path(address[]): ['0xbb4CdB9CBd36B01bD1cBaEBF2De08d9173bc09..., to(address): 0x986967, deadline(uint256): 89184981298491) -> None
+          [6][CALL] from=PancakeRouter, to=WBNB, transferFrom(src(address): 0xcDb3D0, dst(address): 0xd0A167, wad(uint256): 39000000000000000000) -> True
+          [6][STATICCALL] from=PancakeRouter, to=AntiBotLiquidityGeneratorToken, balanceOf(account(address): 0x986967) -> 0
+          [6][STATICCALL] from=PancakeRouter, to=PancakePair, getReserves() -> ['21978525030516602360', '43019681436106797846', '1687561189']
+          [6][STATICCALL] from=PancakeRouter, to=WBNB, balanceOf((address): 0xd0A167) -> 82019681436106797846
+          [6][CALL] from=PancakeRouter, to=PancakePair, swap(amount0Out(uint256): 10436972685676390697, amount1Out(uint256): 0, to(address): 0x986967, data(bytes): b'') -> None
+            [7][CALL] from=PancakePair, to=AntiBotLiquidityGeneratorToken, transfer(recipient(address): 0x986967, amount(uint256): 10436972685676390697) -> True
+            [7][STATICCALL] from=PancakePair, to=AntiBotLiquidityGeneratorToken, balanceOf(account(address): 0xd0A167) -> 11541552344840211663
+            [7][STATICCALL] from=PancakePair, to=WBNB, balanceOf((address): 0xd0A167) -> 82019681436106797846
+          [6][STATICCALL] from=PancakeRouter, to=AntiBotLiquidityGeneratorToken, balanceOf(account(address): 0x986967) -> 10436972685676390697
+        [5][CALL] from=DODOFlashloan, to=WBNB, withdraw(wad(uint256): 10000000000000000) -> None
+          [6][CALL][0.01] from=WBNB, to=DODOFlashloan
+        [5][CALL] from=DODOFlashloan, to=PancakeRouter, swapExactTokensForTokensSupportingFeeOnTransferTokens(amountIn(uint256): 100000000000000000, amountOutMin(uint256): 20, path(address[]): ['0xbb4CdB9CBd36B01bD1cBaEBF2De08d9173bc09..., to(address): 0xcDb3D0, deadline(uint256): 89184981298491) -> None
+          [6][CALL] from=PancakeRouter, to=WBNB, transferFrom(src(address): 0xcDb3D0, dst(address): 0xd0A167, wad(uint256): 100000000000000000) -> True
+          [6][STATICCALL] from=PancakeRouter, to=AntiBotLiquidityGeneratorToken, balanceOf(account(address): 0xcDb3D0) -> 0
+          [6][STATICCALL] from=PancakeRouter, to=PancakePair, getReserves() -> ['11541552344840211663', '82019681436106797846', '1687561240']
+          [6][STATICCALL] from=PancakeRouter, to=WBNB, balanceOf((address): 0xd0A167) -> 82119681436106797846
+          [6][CALL] from=PancakeRouter, to=PancakePair, swap(amount0Out(uint256): 14019457103688779, amount1Out(uint256): 0, to(address): 0xcDb3D0, data(bytes): b'') -> None
+            [7][CALL] from=PancakePair, to=AntiBotLiquidityGeneratorToken, transfer(recipient(address): 0xcDb3D0, amount(uint256): 14019457103688779) -> True
+            [7][STATICCALL] from=PancakePair, to=AntiBotLiquidityGeneratorToken, balanceOf(account(address): 0xd0A167) -> 11527532887736522884
+            [7][STATICCALL] from=PancakePair, to=WBNB, balanceOf((address): 0xd0A167) -> 82119681436106797846
+          [6][STATICCALL] from=PancakeRouter, to=AntiBotLiquidityGeneratorToken, balanceOf(account(address): 0xcDb3D0) -> 14019457103690
+        [5][CALL] from=DODOFlashloan, to=AntiBotLiquidityGeneratorToken, approve(spender(address): 0x986967, amount(uint256): 1000000000000000000000000000) -> True
+        [5][CALL] from=DODOFlashloan, to=AddRemoveLiquidityForFeeOnTransferTokens, addLiquidityETH(token(address): 0x733Af3, amountTokenDesired(uint256): 1000000000, amountTokenMin(uint256): 1, amountETHMin(uint256): 1, to(address): 0xcDb3D0, deadline(uint256): 41241241241246) -> ['1000000000', '629029616485', '24435333142']
+          [6][CALL] from=AddRemoveLiquidityForFeeOnTransferTokens, to=AntiBotLiquidityGeneratorToken, transferFrom(sender(address): 0xcDb3D0, recipient(address): 0x986967, amount(uint256): 1000000000) -> True
+            [7][STATICCALL] from=AntiBotLiquidityGeneratorToken, to=PancakeRouter, WETH() -> 0xbb4cdb
+            [7][CALL] from=AntiBotLiquidityGeneratorToken, to=PancakeRouter, swapExactTokensForETHSupportingFeeOnTransferTokens(amountIn(uint256): 25000000000000000, amountOutMin(uint256): 0, path(address[]): ['0x733Af324146DCfe743515D8D77DC25140a07F9..., to(address): 0x733Af3, deadline(uint256): 1687561240) -> None
+              [8][CALL] from=PancakeRouter, to=AntiBotLiquidityGeneratorToken, transferFrom(sender(address): 0x733Af3, recipient(address): 0xd0A167, amount(uint256): 25000000000000000) -> True
+              [8][STATICCALL] from=PancakeRouter, to=PancakePair, getReserves() -> ['11527532887736522884', '82119681436106797846', '1687561240']
+              [8][STATICCALL] from=PancakeRouter, to=AntiBotLiquidityGeneratorToken, balanceOf(account(address): 0xd0A167) -> 11552532887736522884
+              [8][CALL] from=PancakeRouter, to=PancakePair, swap(amount0Out(uint256): 0, amount1Out(uint256): 177265942874591576, to(address): 0x10ED43, data(bytes): b'') -> None
+                [9][CALL] from=PancakePair, to=WBNB, transfer(dst(address): 0x10ED43, wad(uint256): 177265942874591576) -> True
+                [9][STATICCALL] from=PancakePair, to=AntiBotLiquidityGeneratorToken, balanceOf(account(address): 0xd0A167) -> 11552532887736522884
+                [9][STATICCALL] from=PancakePair, to=WBNB, balanceOf((address): 0xd0A167) -> 81942415493232206270
+              [8][STATICCALL] from=PancakeRouter, to=WBNB, balanceOf((address): 0x10ED43) -> 177265942874591576
+              [8][CALL] from=PancakeRouter, to=WBNB, withdraw(wad(uint256): 177265942874591576) -> None
+                [9][CALL][0.17726594287459158] from=WBNB, to=PancakeRouter
+              [8][CALL][0.17726594287459158] from=PancakeRouter, to=AntiBotLiquidityGeneratorToken
+            [7][CALL] from=AntiBotLiquidityGeneratorToken, to=PancakeRouter, addLiquidityETH(token(address): 0x733Af3, amountTokenDesired(uint256): 25000000000000000, amountTokenMin(uint256): 0, amountETHMin(uint256): 0, to(address): 0x7ef6E5, deadline(uint256): 1687561240) -> ['24991582474200809', '177265942874591576', '52377957875220932']
+              [8][STATICCALL] from=PancakeRouter, to=PancakeFactory, getPair((address): 0xbb4CdB) -> 0xd0a167
+              [8][STATICCALL] from=PancakeRouter, to=PancakePair, getReserves() -> ['11552532887736522884', '81942415493232206270', '1687561240']
+              [8][CALL] from=PancakeRouter, to=AntiBotLiquidityGeneratorToken, transferFrom(sender(address): 0x733Af3, recipient(address): 0xd0A167, amount(uint256): 24991582474200809) -> True
+              [8][CALL] from=PancakeRouter, to=WBNB, deposit() -> None
+              [8][CALL] from=PancakeRouter, to=WBNB, transfer(dst(address): 0xd0A167, wad(uint256): 177265942874591576) -> True
+              [8][CALL] from=PancakeRouter, to=PancakePair, mint(to(address): 0x7ef6E5) -> 52377957875220932
+                [9][STATICCALL] from=PancakePair, to=AntiBotLiquidityGeneratorToken, balanceOf(account(address): 0xd0A167) -> 11577524470210723693
+                [9][STATICCALL] from=PancakePair, to=WBNB, balanceOf((address): 0xd0A167) -> 82119681436106797846
+                [9][STATICCALL] from=PancakePair, to=PancakeFactory, feeTo() -> 0x0ed943
+          [6][STATICCALL] from=AddRemoveLiquidityForFeeOnTransferTokens, to=AntiBotLiquidityGeneratorToken, allowance(owner(address): 0x986967, spender(address): 0xC9a0F6) -> 115792089237316195423570985008687907853269984665640564039457235799758663681750
+          [6][CALL] from=AddRemoveLiquidityForFeeOnTransferTokens, to=BabyDogeRouter, addLiquidityETH(token(address): 0x733Af3, amountTokenDesired(uint256): 1000000000, amountTokenMin(uint256): 1, amountETHMin(uint256): 1, to(address): 0xcDb3D0, deadline(uint256): 41241241241246) -> ['1000000000', '629029616485', '24435333142']
+            [7][STATICCALL] from=BabyDogeRouter, to=BabyDogeFactory, getPair((address): 0xbb4CdB) -> 0xa8aeea
+            [7][STATICCALL] from=BabyDogeRouter, to=BabyDogePair, getReserves() -> ['77600061351417972', '48812736831150400422', '1687543480']
+            [7][CALL] from=BabyDogeRouter, to=AntiBotLiquidityGeneratorToken, transferFrom(sender(address): 0x986967, recipient(address): 0xa8aeeA, amount(uint256): 1000000000) -> True
+            [7][CALL] from=BabyDogeRouter, to=WBNB, deposit() -> None
+            [7][CALL] from=BabyDogeRouter, to=WBNB, transfer(dst(address): 0xa8aeeA, wad(uint256): 629029616485) -> True
+            [7][CALL] from=BabyDogeRouter, to=BabyDogePair, mint(to(address): 0xcDb3D0) -> 24435333142
+              [8][STATICCALL] from=BabyDogePair, to=AntiBotLiquidityGeneratorToken, balanceOf(account(address): 0xa8aeeA) -> 77600062351417972
+              [8][STATICCALL] from=BabyDogePair, to=WBNB, balanceOf((address): 0xa8aeeA) -> 48812737460180016907
+              [8][STATICCALL] from=BabyDogePair, to=BabyDogeFactory, feeTo() -> 0x1551ea
+              [8][STATICCALL] from=BabyDogePair, to=BabyDogeFactory, feeToTreasury() -> 0x1551ea
+            [7][CALL][0.009999370970383515] from=BabyDogeRouter, to=AddRemoveLiquidityForFeeOnTransferTokens
+          [6][STATICCALL] from=AddRemoveLiquidityForFeeOnTransferTokens, to=BabyDogeFactory, getPair((address): 0xbb4CdB) -> 0xa8aeea
+          [6][STATICCALL] from=AddRemoveLiquidityForFeeOnTransferTokens, to=AntiBotLiquidityGeneratorToken, balanceOf(account(address): 0x986967) -> 10436972685676390697
+          [6][CALL] from=AddRemoveLiquidityForFeeOnTransferTokens, to=AntiBotLiquidityGeneratorToken, transfer(recipient(address): 0xcDb3D0, amount(uint256): 10436972685676390697) -> True
+          [6][CALL][0.009999370970383515] from=AddRemoveLiquidityForFeeOnTransferTokens, to=DODOFlashloan
+        [5][CALL] from=DODOFlashloan, to=AntiBotLiquidityGeneratorToken, approve(spender(address): 0xaF0CA2, amount(uint256): 1000000000000000000000000000) -> True
+        [5][CALL] from=DODOFlashloan, to=ShidoLock, lockTokens() -> None
+          [6][STATICCALL] from=ShidoLock, to=AntiBotLiquidityGeneratorToken, balanceOf(account(address): 0xcDb3D0) -> 10436986704133494387
+          [6][CALL] from=ShidoLock, to=AntiBotLiquidityGeneratorToken, transferFrom(sender(address): 0xcDb3D0, recipient(address): 0x7ef6E5, amount(uint256): 10436986704133494387) -> True
+        [5][CALL] from=DODOFlashloan, to=ShidoLock, claimTokens() -> None
+          [6][CALL] from=ShidoLock, to=StandardToken, transferFrom(from(address): 0x7ef6E5, to(address): 0xcDb3D0, amount(uint256): 10436986704133494387000000000) -> True
+        [5][CALL] from=DODOFlashloan, to=StandardToken, approve(spender(address): 0x10ED43, amount(uint256): 10000000000402402023000000000000000000) -> True
+        [5][STATICCALL] from=DODOFlashloan, to=StandardToken, balanceOf(account(address): 0xcDb3D0) -> 10436986704133494387000000000
+        [5][CALL] from=DODOFlashloan, to=PancakeRouter, swapExactTokensForTokensSupportingFeeOnTransferTokens(amountIn(uint256): 10436986704133494387000000000, amountOutMin(uint256): 500000000000000000000, path(address[]): ['0xa963eE460Cf4b474c35ded8fFF91c4eC011FB6..., to(address): 0xcDb3D0, deadline(uint256): 38490249029845) -> None
+          [6][CALL] from=PancakeRouter, to=StandardToken, transferFrom(from(address): 0xcDb3D0, to(address): 0x0fb0dA, amount(uint256): 10436986704133494387000000000) -> True
+          [6][STATICCALL] from=PancakeRouter, to=WBNB, balanceOf((address): 0xcDb3D0) -> 890000000000000000
+          [6][STATICCALL] from=PancakeRouter, to=PancakePair, getReserves() -> ['1638814202042634346612419124', '1193802448178091070023', '1687560670']
+          [6][STATICCALL] from=PancakeRouter, to=StandardToken, balanceOf(account(address): 0x0fb0dA) -> 11032102235762779294912419124
+          [6][CALL] from=PancakeRouter, to=PancakePair, swap(amount0Out(uint256): 0, amount1Out(uint256): 1016085297305562276696, to(address): 0xcDb3D0, data(bytes): b'') -> None
+            [7][CALL] from=PancakePair, to=WBNB, transfer(dst(address): 0xcDb3D0, wad(uint256): 1016085297305562276696) -> True
+            [7][STATICCALL] from=PancakePair, to=StandardToken, balanceOf(account(address): 0x0fb0dA) -> 11032102235762779294912419124
+            [7][STATICCALL] from=PancakePair, to=WBNB, balanceOf((address): 0x0fb0dA) -> 177717150872528793327
+          [6][STATICCALL] from=PancakeRouter, to=WBNB, balanceOf((address): 0xcDb3D0) -> 1016975297305562276696
+        [5][CALL] from=DODOFlashloan, to=WBNB, transfer(dst(address): 0x81917e, wad(uint256): 40000000000000000000) -> True
+        [5][STATICCALL] from=DODOFlashloan, to=WBNB, balanceOf((address): 0xcDb3D0) -> 976975297305562276696
+        [5][CALL] from=DODOFlashloan, to=WBNB, transfer(dst(address): 0x698109, wad(uint256): 976975297305562276696) -> True
+      [4][STATICCALL] from=DPPAdvanced, to=WBNB, balanceOf((address): 0x81917e) -> 951818229414455731762
+      [4][STATICCALL] from=DPPAdvanced, to=BEP20USDT, balanceOf(account(address): 0x81917e) -> 223537322073875815650524
+      [4][STATICCALL] from=DPPAdvanced, to=WBNB, balanceOf((address): 0x81917e) -> 951818229414455731762
+      [4][STATICCALL] from=DPPAdvanced, to=BEP20USDT, balanceOf(account(address): 0x81917e) -> 223537322073875815650524

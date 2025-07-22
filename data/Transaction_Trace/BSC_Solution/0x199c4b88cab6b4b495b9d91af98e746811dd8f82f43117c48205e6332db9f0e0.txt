@@ -1,0 +1,62 @@
+[1][CREATE] from=0xcc8617, to=0xb31c7b, 0x60a06040() -> None
+  [2][CALL] from=0xb31c7b, to=WBNB, deposit() -> None
+  [2][CALL] from=0xb31c7b, to=WBNB, approve(guy(address): 0x10ED43, wad(uint256): 115792089237316195423570985008687907853269...) -> True
+  [2][CALL] from=0xb31c7b, to=GoldCoin, approve(spender(address): 0x10ED43, amount(uint256): 115792089237316195423570985008687907853269...) -> True
+  [2][STATICCALL] from=0xb31c7b, to=PancakeRouter, getAmountsOut(amountIn(uint256): 10000000000000000, path(address[]): ['0xbb4CdB9CBd36B01bD1cBaEBF2De08d9173bc09...) -> [10000000000000000, 2408372926510967280, 246930847358672782]
+    [3][STATICCALL] from=PancakeRouter, to=PancakePair, getReserves() -> ['18563034786420195585706749', '76884375311124930356713', '1689811623']
+    [3][STATICCALL] from=PancakeRouter, to=PancakePair, getReserves() -> ['55420690999928645538098', '5696780254392656566076', '1689648777']
+  [2][CALL] from=0xb31c7b, to=PancakeRouter, swapExactTokensForTokensSupportingFeeOnTransferTokens(amountIn(uint256): 10000000000000000, amountOutMin(uint256): 0, path(address[]): ['0xbb4CdB9CBd36B01bD1cBaEBF2De08d9173bc09..., to(address): 0xB31c7b, deadline(uint256): 1689811626) -> None
+    [3][CALL] from=PancakeRouter, to=WBNB, transferFrom(src(address): 0xB31c7b, dst(address): 0x16b9a8, wad(uint256): 10000000000000000) -> True
+    [3][STATICCALL] from=PancakeRouter, to=GoldCoin, balanceOf(account(address): 0xB31c7b) -> 0
+    [3][STATICCALL] from=PancakeRouter, to=PancakePair, getReserves() -> ['18563034786420195585706749', '76884375311124930356713', '1689811623']
+    [3][STATICCALL] from=PancakeRouter, to=WBNB, balanceOf((address): 0x16b9a8) -> 76884385311124930356713
+    [3][CALL] from=PancakeRouter, to=PancakePair, swap(amount0Out(uint256): 2408372926510967280, amount1Out(uint256): 0, to(address): 0x7a3Adf, data(bytes): b'') -> None
+      [4][CALL] from=PancakePair, to=BEP20USDT, transfer(recipient(address): 0x7a3Adf, amount(uint256): 2408372926510967280) -> True
+      [4][STATICCALL] from=PancakePair, to=BEP20USDT, balanceOf(account(address): 0x16b9a8) -> 18563032378047269074739469
+      [4][STATICCALL] from=PancakePair, to=WBNB, balanceOf((address): 0x16b9a8) -> 76884385311124930356713
+    [3][STATICCALL] from=PancakeRouter, to=PancakePair, getReserves() -> ['55420690999928645538098', '5696780254392656566076', '1689648777']
+    [3][STATICCALL] from=PancakeRouter, to=BEP20USDT, balanceOf(account(address): 0x7a3Adf) -> 55423099372855156505378
+    [3][CALL] from=PancakeRouter, to=PancakePair, swap(amount0Out(uint256): 0, amount1Out(uint256): 246930847358672782, to(address): 0xB31c7b, data(bytes): b'') -> None
+      [4][CALL] from=PancakePair, to=GoldCoin, transfer(recipient(address): 0xB31c7b, amount(uint256): 246930847358672782) -> True
+        [5][STATICCALL] from=GoldCoin, to=PancakePair, getReserves() -> ['55420690999928645538098', '5696780254392656566076', '1689648777']
+        [5][STATICCALL] from=GoldCoin, to=GoldCoin, decimals() -> 18
+        [5][STATICCALL] from=GoldCoin, to=PancakePair, getReserves() -> ['55420690999928645538098', '5696780254392656566076', '1689648777']
+        [5][STATICCALL] from=GoldCoin, to=BEP20USDT, balanceOf(account(address): 0x7a3Adf) -> 55423099372855156505378
+        [5][STATICCALL] from=GoldCoin, to=PancakePair, totalSupply() -> 17710680294501979468004
+        [5][STATICCALL] from=GoldCoin, to=BEP20USDT, balanceOf(account(address): 0x80121D) -> 63535092129126198137
+      [4][STATICCALL] from=PancakePair, to=BEP20USDT, balanceOf(account(address): 0x7a3Adf) -> 55423099372855156505378
+      [4][STATICCALL] from=PancakePair, to=GoldCoin, balanceOf(account(address): 0x7a3Adf) -> 5696533323545297893294
+    [3][STATICCALL] from=PancakeRouter, to=GoldCoin, balanceOf(account(address): 0xB31c7b) -> 237053613464325871
+  [2][CALL] from=0xb31c7b, to=GoldCoin, transfer(recipient(address): 0xd3c0e4, amount(uint256): 0) -> True
+    [3][STATICCALL] from=GoldCoin, to=PancakePair, getReserves() -> ['55423099372855156505378', '5696533323545297893294', '1689811626']
+    [3][STATICCALL] from=GoldCoin, to=GoldCoin, decimals() -> 18
+    [3][STATICCALL] from=GoldCoin, to=PancakePair, totalSupply() -> 17710680294501979468004
+    [3][STATICCALL] from=GoldCoin, to=BEP20USDT, balanceOf(account(address): 0x80121D) -> 63535092129126198137
+  [2][CALL] from=0xb31c7b, to=PancakePair, sync() -> None
+    [3][STATICCALL] from=PancakePair, to=BEP20USDT, balanceOf(account(address): 0x7a3Adf) -> 55423099372855156505378
+    [3][STATICCALL] from=PancakePair, to=GoldCoin, balanceOf(account(address): 0x7a3Adf) -> 1
+  [2][CALL] from=0xb31c7b, to=PancakeRouter, swapExactTokensForTokensSupportingFeeOnTransferTokens(amountIn(uint256): 24, amountOutMin(uint256): 0, path(address[]): ['0x80121DA952A74c06adc1d7f85A237089b57AF3..., to(address): 0xB31c7b, deadline(uint256): 1689811626) -> None
+    [3][CALL] from=PancakeRouter, to=GoldCoin, transferFrom(sender(address): 0xB31c7b, recipient(address): 0x7a3Adf, amount(uint256): 24) -> True
+      [4][STATICCALL] from=GoldCoin, to=PancakePair, getReserves() -> ['55423099372855156505378', '1', '1689811626']
+      [4][STATICCALL] from=GoldCoin, to=GoldCoin, decimals() -> 18
+      [4][STATICCALL] from=GoldCoin, to=PancakePair, getReserves() -> ['55423099372855156505378', '1', '1689811626']
+      [4][STATICCALL] from=GoldCoin, to=BEP20USDT, balanceOf(account(address): 0x7a3Adf) -> 55423099372855156505378
+      [4][STATICCALL] from=GoldCoin, to=PancakePair, totalSupply() -> 17710680294501979468004
+      [4][STATICCALL] from=GoldCoin, to=BEP20USDT, balanceOf(account(address): 0x80121D) -> 63535092129126198137
+    [3][STATICCALL] from=PancakeRouter, to=WBNB, balanceOf((address): 0xB31c7b) -> 0
+    [3][STATICCALL] from=PancakeRouter, to=PancakePair, getReserves() -> ['55423099372855156505378', '1', '1689811626']
+    [3][STATICCALL] from=PancakeRouter, to=GoldCoin, balanceOf(account(address): 0x7a3Adf) -> 25
+    [3][CALL] from=PancakeRouter, to=PancakePair, swap(amount0Out(uint256): 53200841980198574448225, amount1Out(uint256): 0, to(address): 0x16b9a8, data(bytes): b'') -> None
+      [4][CALL] from=PancakePair, to=BEP20USDT, transfer(recipient(address): 0x16b9a8, amount(uint256): 53200841980198574448225) -> True
+      [4][STATICCALL] from=PancakePair, to=BEP20USDT, balanceOf(account(address): 0x7a3Adf) -> 2222257392656582057153
+      [4][STATICCALL] from=PancakePair, to=GoldCoin, balanceOf(account(address): 0x7a3Adf) -> 25
+    [3][STATICCALL] from=PancakeRouter, to=PancakePair, getReserves() -> ['18563032378047269074739469', '76884385311124930356713', '1689811626']
+    [3][STATICCALL] from=PancakeRouter, to=BEP20USDT, balanceOf(account(address): 0x16b9a8) -> 18616233220027467649187694
+    [3][CALL] from=PancakeRouter, to=PancakePair, swap(amount0Out(uint256): 0, amount1Out(uint256): 219169869136693701658, to(address): 0xB31c7b, data(bytes): b'') -> None
+      [4][CALL] from=PancakePair, to=WBNB, transfer(dst(address): 0xB31c7b, wad(uint256): 219169869136693701658) -> True
+      [4][STATICCALL] from=PancakePair, to=BEP20USDT, balanceOf(account(address): 0x16b9a8) -> 18616233220027467649187694
+      [4][STATICCALL] from=PancakePair, to=WBNB, balanceOf((address): 0x16b9a8) -> 76665215441988236655055
+    [3][STATICCALL] from=PancakeRouter, to=WBNB, balanceOf((address): 0xB31c7b) -> 219169869136693701658
+  [2][STATICCALL] from=0xb31c7b, to=WBNB, balanceOf((address): 0xB31c7b) -> 219169869136693701658
+  [2][CALL] from=0xb31c7b, to=WBNB, transfer(dst(address): 0xCc8617, wad(uint256): 219169869136693701658) -> True
+  [2][SELFDESTRUCT][0.0] from=0xb31c7b, to=0xcc8617

@@ -1,0 +1,1 @@
+[1][CALL] from=0x09a34e, to=BecToken, batchTransfer(_receivers(address[]): ['0xb4D30Cac5124b46C2Df0CF3e3e1Be05f421190..., _value(uint256): 578960446186580977117854925043439539266349...) -> True

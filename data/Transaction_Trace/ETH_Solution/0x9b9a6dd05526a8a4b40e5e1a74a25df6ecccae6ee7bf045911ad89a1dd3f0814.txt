@@ -1,0 +1,36 @@
+[1][CALL] from=0xfde0d1, to=0x80bf7d, yoink() -> None
+  [2][CALL] from=0x80bf7d, to=WBTC, approveaddress() -> 0x000000
+  [2][CALL] from=0x80bf7d, to=WBTC, approveaddress() -> 0x000000
+  [2][CALL] from=0x80bf7d, to=Morpho, flashLoanaddress() -> None
+    [3][CALL] from=Morpho, to=WBTC, transferaddress() -> 0x000000
+    [3][CALL] from=Morpho, to=0x80bf7d, 0x31f57072() -> None
+      [4][CALL] from=0x80bf7d, to=WBTC, transferaddress() -> 0x000000
+      [4][CALL] from=0x80bf7d, to=SilicaPools, 0x71e109d4() -> None
+        [5][STATICCALL] from=SilicaPools, to=0x918873, decimals() -> 0x000000
+        [5][CALL] from=SilicaPools, to=WBTC, transferFromaddress() -> 0x000000
+        [5][CALL] from=SilicaPools, to=0x80bf7d, onERC1155Receivedaddress() -> 0xf23a6e
+        [5][CALL] from=SilicaPools, to=0x80bf7d, onERC1155Receivedaddress() -> 0xf23a6e
+      [4][CALL] from=0x80bf7d, to=SilicaPools, safeTransferFromaddress() -> None
+      [4][CALL] from=0x80bf7d, to=SilicaPools, safeTransferFromaddress() -> None
+      [4][CALL] from=0x80bf7d, to=0x918873, change() -> None
+      [4][CALL] from=0x80bf7d, to=SilicaPools, 0x19b87556() -> None
+        [5][STATICCALL] from=SilicaPools, to=0x918873, shares() -> 0x000000
+        [5][STATICCALL] from=SilicaPools, to=0x918873, balance() -> 0x000000
+        [5][CALL] from=SilicaPools, to=WBTC, transferaddress() -> 0x000000
+      [4][CALL] from=0x80bf7d, to=SilicaPools, 0x312f14ba() -> None
+        [5][STATICCALL] from=SilicaPools, to=0x918873, balance() -> 0x000000
+        [5][STATICCALL] from=SilicaPools, to=0x918873, decimals() -> 0x000000
+        [5][CALL] from=SilicaPools, to=WBTC, transferaddress() -> 0x000000
+      [4][CALL] from=0x80bf7d, to=SilicaPools, 0x3305d6b1() -> None
+        [5][CALL] from=SilicaPools, to=WBTC, transferaddress() -> 0x000000
+    [3][CALL] from=Morpho, to=WBTC, transferFromaddress() -> 0x000000
+  [2][STATICCALL] from=0x80bf7d, to=WBTC, balanceOfaddress() -> 0x000000
+  [2][CALL] from=0x80bf7d, to=0x4585FE, swapaddress() -> 0x000000
+    [3][CALL] from=0x4585FE, to=WETH9, transferaddress() -> 0x000000
+    [3][STATICCALL] from=0x4585FE, to=WBTC, balanceOfaddress() -> 0x000000
+    [3][CALL] from=0x4585FE, to=0x80bf7d, uniswapV3SwapCallbackint256() -> None
+      [4][CALL] from=0x80bf7d, to=WBTC, transferaddress() -> 0x000000
+    [3][STATICCALL] from=0x4585FE, to=WBTC, balanceOfaddress() -> 0x000000
+  [2][CALL] from=0x80bf7d, to=WETH9, withdrawuint256() -> None
+    [3][CALL][50.8849379823923] from=WETH9, to=0x80bf7d
+  [2][CALL][50.834053044409906] from=0x80bf7d, to=0x229b83

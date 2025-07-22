@@ -1,0 +1,268 @@
+[1][CALL] from=0x161ceb, to=0xcff07c, 0x866a09d9() -> None
+  [2][STATICCALL] from=0xcff07c, to=UniswapV2Pair, balanceOf((address): 0xE2fE53) -> 15000000000000000000000
+  [2][CALL] from=0xcff07c, to=AdminUpgradeabilityProxy, migrate(_id(uint256): 15324, params(tuple): {'pair': '0x854373387E41371Ac6E307A1F29603..., noLiquidity(bool): True, sqrtPriceX96(uint160): 79210883607084793911461085816, _mintNFT(bool): False) -> None
+    [3][DELEGATECALL] from=AdminUpgradeabilityProxy, to=LockToken, migrate(_id(uint256): 15324, params(tuple): {'pair': '0x854373387E41371Ac6E307A1F29603..., noLiquidity(bool): True, sqrtPriceX96(uint160): 79210883607084793911461085816, _mintNFT(bool): False) -> None
+      [4][STATICCALL] from=AdminUpgradeabilityProxy, to=NonfungiblePositionManager, totalSupply() -> 328093
+      [4][STATICCALL] from=AdminUpgradeabilityProxy, to=0x2d4abf, balanceOfaddress() -> 0x000000
+      [4][STATICCALL] from=AdminUpgradeabilityProxy, to=WETH9, balanceOf((address): 0xE2fE53) -> 1000000000000000
+      [4][CALL] from=AdminUpgradeabilityProxy, to=V3Migrator, createAndInitializePoolIfNecessary(token0(address): 0x2d4ABf, token1(address): 0xC02aaA, fee(uint24): 500, sqrtPriceX96(uint160): 79210883607084793911461085816) -> 0xeb2423
+        [5][STATICCALL] from=V3Migrator, to=UniswapV3Factory, getPool((address): 500) -> 0x000000
+        [5][CALL] from=V3Migrator, to=UniswapV3Factory, createPool(tokenA(address): 0x2d4ABf, tokenB(address): 0xC02aaA, fee(uint24): 500) -> 0xeb2423
+          [6][CREATE2] from=UniswapV3Factory, to=UniswapV3Pool, 0x61016060() -> 0x608060
+            [7][STATICCALL] from=UniswapV3Pool, to=UniswapV3Factory, parameters() -> ['0x1f9843', '0x2d4abf', '0xc02aaa', '500', '10']
+        [5][CALL] from=V3Migrator, to=UniswapV3Pool, initialize(sqrtPriceX96(uint160): 79210883607084793911461085816) -> None
+      [4][CALL] from=AdminUpgradeabilityProxy, to=UniswapV2Pair, approve(spender(address): 0xA5644E, value(uint256): 15000000000000000000000) -> True
+      [4][CALL] from=AdminUpgradeabilityProxy, to=V3Migrator, migrate(params(tuple): {'pair': '0x854373387E41371Ac6E307A1F29603...) -> None
+        [5][CALL] from=V3Migrator, to=UniswapV2Pair, transferFrom(from(address): 0xE2fE53, to(address): 0x854373, value(uint256): 15000000000000000000000) -> True
+        [5][CALL] from=V3Migrator, to=UniswapV2Pair, burn(to(address): 0xA5644E) -> ['1231295822958902101852705', '608062138500464909927']
+          [6][STATICCALL] from=UniswapV2Pair, to=FEG, balanceOf(account(address): 0x854373) -> 1253755245546884711502284
+          [6][STATICCALL] from=UniswapV2Pair, to=WETH9, balanceOf((address): 0x854373) -> 619153481680299754966
+          [6][STATICCALL] from=UniswapV2Pair, to=UniswapV2Factory, feeTo() -> 0x000000
+          [6][CALL] from=UniswapV2Pair, to=FEG, transfer(recipient(address): 0xA5644E, amount(uint256): 1231295822958902101852705) -> True
+          [6][CALL] from=UniswapV2Pair, to=WETH9, transfer(dst(address): 0xA5644E, wad(uint256): 608062138500464909927) -> True
+          [6][STATICCALL] from=UniswapV2Pair, to=FEG, balanceOf(account(address): 0x854373) -> 22464955149929690777798
+          [6][STATICCALL] from=UniswapV2Pair, to=WETH9, balanceOf((address): 0x854373) -> 11091343179834845039
+        [5][CALL] from=V3Migrator, to=0x2d4abf, approveaddress() -> 0x000000
+        [5][CALL] from=V3Migrator, to=WETH9, approve(guy(address): 0xC36442, wad(uint256): 6080621385004649099) -> True
+        [5][CALL] from=V3Migrator, to=NonfungiblePositionManager, mint(params(tuple): {'token0': '0x2d4ABfDcD1385951DF4317f9F346...) -> ['345934', '1274982144467054212401', '6636804950385750690', '6080621385004649099']
+          [6][STATICCALL] from=NonfungiblePositionManager, to=UniswapV3Pool, slot0() -> ['79210883607084793911461085816', '-5', '0', '1', '1', '0', 'True']
+          [6][CALL] from=NonfungiblePositionManager, to=UniswapV3Pool, mint(recipient(address): 0xC36442, tickLower(int24): -100, tickUpper(int24): 100, amount(uint128): 1274982144467054212401, data(bytes): b"\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00...) -> ['6636804950385750690', '6080621385004649099']
+            [7][STATICCALL] from=UniswapV3Pool, to=0x2d4abf, balanceOfaddress() -> 0x000000
+            [7][STATICCALL] from=UniswapV3Pool, to=WETH9, balanceOf((address): 0xEB2423) -> 0
+            [7][CALL] from=UniswapV3Pool, to=NonfungiblePositionManager, uniswapV3MintCallback(amount0Owed(uint256): 6636804950385750690, amount1Owed(uint256): 6080621385004649099, data(bytes): b"\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00...) -> None
+              [8][CALL] from=NonfungiblePositionManager, to=0x2d4abf, transferFromaddress() -> 0x000000
+              [8][CALL] from=NonfungiblePositionManager, to=WETH9, transferFrom(src(address): 0xA5644E, dst(address): 0xEB2423, wad(uint256): 6080621385004649099) -> True
+            [7][STATICCALL] from=UniswapV3Pool, to=0x2d4abf, balanceOfaddress() -> 0x000000
+            [7][STATICCALL] from=UniswapV3Pool, to=WETH9, balanceOf((address): 0xEB2423) -> 6080621385004649099
+          [6][STATICCALL] from=NonfungiblePositionManager, to=UniswapV3Pool, positions((bytes32): b'S \x0b\x15G\x08\xb2\x0cE\xb7l\xdf\x08\xf...) -> ['1274982144467054212401', '0', '0', '0', '0']
+        [5][CALL] from=V3Migrator, to=0x2d4abf, approveaddress() -> 0x000000
+        [5][CALL] from=V3Migrator, to=0x2d4abf, transferaddress() -> 0x000000
+        [5][CALL] from=V3Migrator, to=WETH9, withdraw(wad(uint256): 601981517115460260828) -> None
+          [6][CALL][601.9815171154603] from=WETH9, to=V3Migrator
+        [5][CALL][601.9815171154603] from=V3Migrator, to=AdminUpgradeabilityProxy
+          [6][DELEGATECALL][601.9815171154603] from=AdminUpgradeabilityProxy, to=LockToken
+      [4][CALL][601.9815171154603] from=AdminUpgradeabilityProxy, to=0xcff07c
+      [4][STATICCALL] from=AdminUpgradeabilityProxy, to=0x2d4abf, balanceOfaddress() -> 0x000000
+      [4][CALL] from=AdminUpgradeabilityProxy, to=0x2d4abf, transferaddress() -> 0x000000
+      [4][STATICCALL] from=AdminUpgradeabilityProxy, to=WETH9, balanceOf((address): 0xE2fE53) -> 1000000000000000
+      [4][STATICCALL] from=AdminUpgradeabilityProxy, to=NonfungiblePositionManager, totalSupply() -> 328094
+      [4][STATICCALL] from=AdminUpgradeabilityProxy, to=NonfungiblePositionManager, tokenByIndex(index(uint256): 328093) -> 345934
+  [2][CALL] from=0xcff07c, to=0xcff07c, 0xf9b65204() -> None
+  [2][CALL] from=0xcff07c, to=WETH9, approve(guy(address): 0xBa399a, wad(uint256): 115792089237316195423570985008687907853269...) -> True
+  [2][STATICCALL] from=0xcff07c, to=WETH9, balanceOf((address): 0xCFF07C) -> 0
+  [2][CALL] from=0xcff07c, to=WETH9, transfer(dst(address): 0xBa399a, wad(uint256): 0) -> True
+  [2][STATICCALL] from=0xcff07c, to=UniswapV2Pair, balanceOf((address): 0xE2fE53) -> 17000042522005059438879
+  [2][CALL] from=0xcff07c, to=AdminUpgradeabilityProxy, migrate(_id(uint256): 15325, params(tuple): {'pair': '0x7a809081f991eCfe0aB2727C7E90D2..., noLiquidity(bool): True, sqrtPriceX96(uint160): 79210883607084793911461085816, _mintNFT(bool): False) -> None
+    [3][DELEGATECALL] from=AdminUpgradeabilityProxy, to=LockToken, migrate(_id(uint256): 15325, params(tuple): {'pair': '0x7a809081f991eCfe0aB2727C7E90D2..., noLiquidity(bool): True, sqrtPriceX96(uint160): 79210883607084793911461085816, _mintNFT(bool): False) -> None
+      [4][STATICCALL] from=AdminUpgradeabilityProxy, to=NonfungiblePositionManager, totalSupply() -> 328094
+      [4][STATICCALL] from=AdminUpgradeabilityProxy, to=FiatTokenProxy, balanceOf(account(address): 0xE2fE53) -> 0
+        [5][DELEGATECALL] from=FiatTokenProxy, to=FiatTokenV2_1, balanceOf(account(address): 0xE2fE53) -> 0
+      [4][STATICCALL] from=AdminUpgradeabilityProxy, to=StandardERC20, balanceOf(account(address): 0xE2fE53) -> 29999999999999000000000000000000
+      [4][CALL] from=AdminUpgradeabilityProxy, to=V3Migrator, createAndInitializePoolIfNecessary(token0(address): 0xA0b869, token1(address): 0xf3b956, fee(uint24): 500, sqrtPriceX96(uint160): 79210883607084793911461085816) -> 0x18e05c
+        [5][STATICCALL] from=V3Migrator, to=UniswapV3Factory, getPool((address): 500) -> 0x000000
+        [5][CALL] from=V3Migrator, to=UniswapV3Factory, createPool(tokenA(address): 0xA0b869, tokenB(address): 0xf3b956, fee(uint24): 500) -> 0x18e05c
+          [6][CREATE2] from=UniswapV3Factory, to=UniswapV3Pool, 0x61016060() -> 0x608060
+            [7][STATICCALL] from=UniswapV3Pool, to=UniswapV3Factory, parameters() -> ['0x1f9843', '0xa0b869', '0xf3b956', '500', '10']
+        [5][CALL] from=V3Migrator, to=UniswapV3Pool, initialize(sqrtPriceX96(uint160): 79210883607084793911461085816) -> None
+      [4][CALL] from=AdminUpgradeabilityProxy, to=UniswapV2Pair, approve(spender(address): 0xA5644E, value(uint256): 17000042522005059438879) -> True
+      [4][CALL] from=AdminUpgradeabilityProxy, to=V3Migrator, migrate(params(tuple): {'pair': '0x7a809081f991eCfe0aB2727C7E90D2...) -> None
+        [5][CALL] from=V3Migrator, to=UniswapV2Pair, transferFrom(from(address): 0xE2fE53, to(address): 0x7a8090, value(uint256): 17000042522005059438879) -> True
+        [5][CALL] from=V3Migrator, to=UniswapV2Pair, burn(to(address): 0xA5644E) -> ['5638111353901', '74613657577043894100265734907803']
+          [6][STATICCALL] from=UniswapV2Pair, to=FiatTokenProxy, balanceOf(account(address): 0x7a8090) -> 5638120095723
+            [7][DELEGATECALL] from=FiatTokenProxy, to=FiatTokenV2_1, balanceOf(account(address): 0x7a8090) -> 5638120095723
+          [6][STATICCALL] from=UniswapV2Pair, to=StandardERC20, balanceOf(account(address): 0x7a8090) -> 74613773264595257281459752082604
+          [6][STATICCALL] from=UniswapV2Pair, to=UniswapV2Factory, feeTo() -> 0x000000
+          [6][CALL] from=UniswapV2Pair, to=FiatTokenProxy, transfer(to(address): 0xA5644E, value(uint256): 5638111353901) -> True
+            [7][DELEGATECALL] from=FiatTokenProxy, to=FiatTokenV2_1, transfer(to(address): 0xA5644E, value(uint256): 5638111353901) -> True
+          [6][CALL] from=UniswapV2Pair, to=StandardERC20, transfer(recipient(address): 0xA5644E, amount(uint256): 74613657577043894100265734907803) -> True
+          [6][STATICCALL] from=UniswapV2Pair, to=FiatTokenProxy, balanceOf(account(address): 0x7a8090) -> 8741822
+            [7][DELEGATECALL] from=FiatTokenProxy, to=FiatTokenV2_1, balanceOf(account(address): 0x7a8090) -> 8741822
+          [6][STATICCALL] from=UniswapV2Pair, to=StandardERC20, balanceOf(account(address): 0x7a8090) -> 115687551363181194017174801
+        [5][CALL] from=V3Migrator, to=FiatTokenProxy, approve(spender(address): 0xC36442, value(uint256): 56381113539) -> True
+          [6][DELEGATECALL] from=FiatTokenProxy, to=FiatTokenV2_1, approve(spender(address): 0xC36442, value(uint256): 56381113539) -> True
+        [5][CALL] from=V3Migrator, to=StandardERC20, approve(spender(address): 0xC36442, amount(uint256): 746136575770438941002657349078) -> True
+        [5][CALL] from=V3Migrator, to=NonfungiblePositionManager, mint(params(tuple): {'token0': '0xA0b86991c6218b36c1d19D4a2e9E...) -> ['345935', '10831252927391', '56381113539', '51656212178']
+          [6][STATICCALL] from=NonfungiblePositionManager, to=UniswapV3Pool, slot0() -> ['79210883607084793911461085816', '-5', '0', '1', '1', '0', 'True']
+          [6][CALL] from=NonfungiblePositionManager, to=UniswapV3Pool, mint(recipient(address): 0xC36442, tickLower(int24): -100, tickUpper(int24): 100, amount(uint128): 10831252927391, data(bytes): b"\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00...) -> ['56381113539', '51656212178']
+            [7][STATICCALL] from=UniswapV3Pool, to=FiatTokenProxy, balanceOf(account(address): 0x18E05c) -> 0
+              [8][DELEGATECALL] from=FiatTokenProxy, to=FiatTokenV2_1, balanceOf(account(address): 0x18E05c) -> 0
+            [7][STATICCALL] from=UniswapV3Pool, to=StandardERC20, balanceOf(account(address): 0x18E05c) -> 0
+            [7][CALL] from=UniswapV3Pool, to=NonfungiblePositionManager, uniswapV3MintCallback(amount0Owed(uint256): 56381113539, amount1Owed(uint256): 51656212178, data(bytes): b"\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00...) -> None
+              [8][CALL] from=NonfungiblePositionManager, to=FiatTokenProxy, transferFrom(from(address): 0xA5644E, to(address): 0x18E05c, value(uint256): 56381113539) -> True
+                [9][DELEGATECALL] from=FiatTokenProxy, to=FiatTokenV2_1, transferFrom(from(address): 0xA5644E, to(address): 0x18E05c, value(uint256): 56381113539) -> True
+              [8][CALL] from=NonfungiblePositionManager, to=StandardERC20, transferFrom(sender(address): 0xA5644E, recipient(address): 0x18E05c, amount(uint256): 51656212178) -> True
+            [7][STATICCALL] from=UniswapV3Pool, to=FiatTokenProxy, balanceOf(account(address): 0x18E05c) -> 56381113539
+              [8][DELEGATECALL] from=FiatTokenProxy, to=FiatTokenV2_1, balanceOf(account(address): 0x18E05c) -> 56381113539
+            [7][STATICCALL] from=UniswapV3Pool, to=StandardERC20, balanceOf(account(address): 0x18E05c) -> 51656212178
+          [6][STATICCALL] from=NonfungiblePositionManager, to=UniswapV3Pool, positions((bytes32): b'S \x0b\x15G\x08\xb2\x0cE\xb7l\xdf\x08\xf...) -> ['10831252927391', '0', '0', '0', '0']
+        [5][CALL] from=V3Migrator, to=FiatTokenProxy, transfer(to(address): 0xE2fE53, value(uint256): 5581730240362) -> True
+          [6][DELEGATECALL] from=FiatTokenProxy, to=FiatTokenV2_1, transfer(to(address): 0xE2fE53, value(uint256): 5581730240362) -> True
+        [5][CALL] from=V3Migrator, to=StandardERC20, approve(spender(address): 0xC36442, amount(uint256): 0) -> True
+        [5][CALL] from=V3Migrator, to=StandardERC20, transfer(recipient(address): 0xE2fE53, amount(uint256): 74613657577043894100214078695625) -> True
+      [4][CALL][0.0] from=AdminUpgradeabilityProxy, to=0xcff07c
+      [4][STATICCALL] from=AdminUpgradeabilityProxy, to=FiatTokenProxy, balanceOf(account(address): 0xE2fE53) -> 5581730240362
+        [5][DELEGATECALL] from=FiatTokenProxy, to=FiatTokenV2_1, balanceOf(account(address): 0xE2fE53) -> 5581730240362
+      [4][CALL] from=AdminUpgradeabilityProxy, to=FiatTokenProxy, transfer(to(address): 0xCFF07C, value(uint256): 5581730240362) -> True
+        [5][DELEGATECALL] from=FiatTokenProxy, to=FiatTokenV2_1, transfer(to(address): 0xCFF07C, value(uint256): 5581730240362) -> True
+      [4][STATICCALL] from=AdminUpgradeabilityProxy, to=StandardERC20, balanceOf(account(address): 0xE2fE53) -> 104613657577042894100214078695625
+      [4][CALL] from=AdminUpgradeabilityProxy, to=StandardERC20, transfer(recipient(address): 0xCFF07C, amount(uint256): 74613657577043894100214078695625) -> True
+      [4][STATICCALL] from=AdminUpgradeabilityProxy, to=NonfungiblePositionManager, totalSupply() -> 328095
+      [4][STATICCALL] from=AdminUpgradeabilityProxy, to=NonfungiblePositionManager, tokenByIndex(index(uint256): 328094) -> 345935
+  [2][STATICCALL] from=0xcff07c, to=FiatTokenProxy, balanceOf(account(address): 0xCFF07C) -> 5581730240362
+    [3][DELEGATECALL] from=FiatTokenProxy, to=FiatTokenV2_1, balanceOf(account(address): 0xCFF07C) -> 5581730240362
+  [2][CALL] from=0xcff07c, to=0xcff07c, 0xf9b65204() -> None
+    [3][CALL] from=0xcff07c, to=FiatTokenProxy, approve(spender(address): 0xbEbc44, value(uint256): 115792089237316195423570985008687907853269...) -> True
+      [4][DELEGATECALL] from=FiatTokenProxy, to=FiatTokenV2_1, approve(spender(address): 0xbEbc44, value(uint256): 115792089237316195423570985008687907853269...) -> True
+    [3][STATICCALL] from=0xcff07c, to=FiatTokenProxy, balanceOf(account(address): 0xCFF07C) -> 5581730240362
+      [4][DELEGATECALL] from=FiatTokenProxy, to=FiatTokenV2_1, balanceOf(account(address): 0xCFF07C) -> 5581730240362
+    [3][STATICCALL] from=0xcff07c, to=FiatTokenProxy, balanceOf(account(address): 0xCFF07C) -> 5581730240362
+      [4][DELEGATECALL] from=FiatTokenProxy, to=FiatTokenV2_1, balanceOf(account(address): 0xCFF07C) -> 5581730240362
+    [3][CALL] from=0xcff07c, to=Vyper_contract, exchange(i(int128): 1, j(int128): 0, dx(uint256): 5581730240362, min_dy(uint256): 5470095635554) -> None
+      [4][CALL] from=Vyper_contract, to=0x000000, transferFromaddress() -> 0x23b872
+      [4][CALL] from=Vyper_contract, to=0x000000, fallback() -> 0x000000
+      [4][CALL] from=Vyper_contract, to=FiatTokenProxy, transferFrom(from(address): 0xCFF07C, to(address): 0xbEbc44, value(uint256): 5581730240362) -> True
+        [5][DELEGATECALL] from=FiatTokenProxy, to=FiatTokenV2_1, transferFrom(from(address): 0xCFF07C, to(address): 0xbEbc44, value(uint256): 5581730240362) -> True
+      [4][CALL] from=Vyper_contract, to=0x000000, fallback() -> 0x000000
+      [4][CALL] from=Vyper_contract, to=0x000000, transferaddress() -> 0xa9059c
+      [4][CALL] from=Vyper_contract, to=0x000000, fallback() -> 0x000000
+      [4][CALL] from=Vyper_contract, to=Dai, transfer(dst(address): 0xCFF07C, wad(uint256): 5581220040550673739846727) -> True
+      [4][CALL] from=Vyper_contract, to=0x000000, fallback() -> 0x000000
+    [3][STATICCALL] from=0xcff07c, to=Dai, balanceOf((address): 0xCFF07C) -> 5581220040550673739846727
+    [3][CALL] from=0xcff07c, to=Dai, transfer(dst(address): 0xBa399a, wad(uint256): 5581220040550673739846727) -> True
+  [2][CALL] from=0xcff07c, to=FiatTokenProxy, approve(spender(address): 0xBa399a, value(uint256): 115792089237316195423570985008687907853269...) -> True
+    [3][DELEGATECALL] from=FiatTokenProxy, to=FiatTokenV2_1, approve(spender(address): 0xBa399a, value(uint256): 115792089237316195423570985008687907853269...) -> True
+  [2][STATICCALL] from=0xcff07c, to=FiatTokenProxy, balanceOf(account(address): 0xCFF07C) -> 0
+    [3][DELEGATECALL] from=FiatTokenProxy, to=FiatTokenV2_1, balanceOf(account(address): 0xCFF07C) -> 0
+  [2][CALL] from=0xcff07c, to=FiatTokenProxy, transfer(to(address): 0xBa399a, value(uint256): 0) -> True
+    [3][DELEGATECALL] from=FiatTokenProxy, to=FiatTokenV2_1, transfer(to(address): 0xBa399a, value(uint256): 0) -> True
+  [2][CALL] from=0xcff07c, to=StandardERC20, approve(spender(address): 0xBa399a, amount(uint256): 115792089237316195423570985008687907853269...) -> True
+  [2][STATICCALL] from=0xcff07c, to=StandardERC20, balanceOf(account(address): 0xCFF07C) -> 74613657577043894100214078695625
+  [2][CALL] from=0xcff07c, to=StandardERC20, transfer(recipient(address): 0xBa399a, amount(uint256): 74613657577043894100214078695625) -> True
+  [2][STATICCALL] from=0xcff07c, to=UniswapV2Pair, balanceOf((address): 0xE2fE53) -> 53597710631078
+  [2][CALL] from=0xcff07c, to=AdminUpgradeabilityProxy, migrate(_id(uint256): 15326, params(tuple): {'pair': '0x67CeA36eEB36Ace126A3Ca6E214052..., noLiquidity(bool): True, sqrtPriceX96(uint160): 79210883607084793911461085816, _mintNFT(bool): False) -> None
+    [3][DELEGATECALL] from=AdminUpgradeabilityProxy, to=LockToken, migrate(_id(uint256): 15326, params(tuple): {'pair': '0x67CeA36eEB36Ace126A3Ca6E214052..., noLiquidity(bool): True, sqrtPriceX96(uint160): 79210883607084793911461085816, _mintNFT(bool): False) -> None
+      [4][STATICCALL] from=AdminUpgradeabilityProxy, to=NonfungiblePositionManager, totalSupply() -> 328095
+      [4][STATICCALL] from=AdminUpgradeabilityProxy, to=FiatTokenProxy, balanceOf(account(address): 0xE2fE53) -> 0
+        [5][DELEGATECALL] from=FiatTokenProxy, to=FiatTokenV2_1, balanceOf(account(address): 0xE2fE53) -> 0
+      [4][STATICCALL] from=AdminUpgradeabilityProxy, to=DejitaruTsuka, balanceOf(account(address): 0xE2fE53) -> 0
+      [4][CALL] from=AdminUpgradeabilityProxy, to=V3Migrator, createAndInitializePoolIfNecessary(token0(address): 0xA0b869, token1(address): 0xc5fB36, fee(uint24): 500, sqrtPriceX96(uint160): 79210883607084793911461085816) -> 0x4ae138
+        [5][STATICCALL] from=V3Migrator, to=UniswapV3Factory, getPool((address): 500) -> 0x4ae138
+        [5][STATICCALL] from=V3Migrator, to=UniswapV3Pool, slot0() -> ['13280772609506063623489343561062', '102439', '0', '1', '1', '0', 'True']
+      [4][CALL] from=AdminUpgradeabilityProxy, to=UniswapV2Pair, approve(spender(address): 0xA5644E, value(uint256): 53597710631078) -> True
+      [4][CALL] from=AdminUpgradeabilityProxy, to=V3Migrator, migrate(params(tuple): {'pair': '0x67CeA36eEB36Ace126A3Ca6E214052...) -> None
+        [5][CALL] from=V3Migrator, to=UniswapV2Pair, transferFrom(from(address): 0xE2fE53, to(address): 0x67CeA3, value(uint256): 53597710631078) -> True
+        [5][CALL] from=V3Migrator, to=UniswapV2Pair, burn(to(address): 0xA5644E) -> ['848194266023', '11957149213434629']
+          [6][STATICCALL] from=UniswapV2Pair, to=FiatTokenProxy, balanceOf(account(address): 0x67CeA3) -> 976250572519
+            [7][DELEGATECALL] from=FiatTokenProxy, to=FiatTokenV2_1, balanceOf(account(address): 0x67CeA3) -> 976250572519
+          [6][STATICCALL] from=UniswapV2Pair, to=DejitaruTsuka, balanceOf(account(address): 0x67CeA3) -> 13762382313710952
+          [6][STATICCALL] from=UniswapV2Pair, to=UniswapV2Factory, feeTo() -> 0x000000
+          [6][CALL] from=UniswapV2Pair, to=FiatTokenProxy, transfer(to(address): 0xA5644E, value(uint256): 848194266023) -> True
+            [7][DELEGATECALL] from=FiatTokenProxy, to=FiatTokenV2_1, transfer(to(address): 0xA5644E, value(uint256): 848194266023) -> True
+          [6][CALL] from=UniswapV2Pair, to=DejitaruTsuka, transfer(recipient(address): 0xA5644E, amount(uint256): 11957149213434629) -> True
+          [6][STATICCALL] from=UniswapV2Pair, to=FiatTokenProxy, balanceOf(account(address): 0x67CeA3) -> 128056306496
+            [7][DELEGATECALL] from=FiatTokenProxy, to=FiatTokenV2_1, balanceOf(account(address): 0x67CeA3) -> 128056306496
+          [6][STATICCALL] from=UniswapV2Pair, to=DejitaruTsuka, balanceOf(account(address): 0x67CeA3) -> 1805233100276323
+        [5][CALL] from=V3Migrator, to=FiatTokenProxy, approve(spender(address): 0xC36442, value(uint256): 8481942660) -> True
+          [6][DELEGATECALL] from=FiatTokenProxy, to=FiatTokenV2_1, approve(spender(address): 0xC36442, value(uint256): 8481942660) -> True
+        [5][CALL] from=V3Migrator, to=DejitaruTsuka, approve(spender(address): 0xC36442, amount(uint256): 119571492134346) -> True
+        [5][CALL] from=V3Migrator, to=NonfungiblePositionManager, mint(params(tuple): {'token0': '0xA0b86991c6218b36c1d19D4a2e9E...) -> ['345936', '11957697242112620', '0', '119571492134346']
+          [6][STATICCALL] from=NonfungiblePositionManager, to=UniswapV3Pool, slot0() -> ['13280772609506063623489343561062', '102439', '0', '1', '1', '0', 'True']
+          [6][CALL] from=NonfungiblePositionManager, to=UniswapV3Pool, mint(recipient(address): 0xC36442, tickLower(int24): -100, tickUpper(int24): 100, amount(uint128): 11957697242112620, data(bytes): b"\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00...) -> ['0', '119571492134346']
+            [7][STATICCALL] from=UniswapV3Pool, to=DejitaruTsuka, balanceOf(account(address): 0x4Ae138) -> 4
+            [7][CALL] from=UniswapV3Pool, to=NonfungiblePositionManager, uniswapV3MintCallback(amount0Owed(uint256): 0, amount1Owed(uint256): 119571492134346, data(bytes): b"\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00...) -> None
+              [8][CALL] from=NonfungiblePositionManager, to=DejitaruTsuka, transferFrom(sender(address): 0xA5644E, recipient(address): 0x4Ae138, amount(uint256): 119571492134346) -> True
+            [7][STATICCALL] from=UniswapV3Pool, to=DejitaruTsuka, balanceOf(account(address): 0x4Ae138) -> 119571492134350
+          [6][STATICCALL] from=NonfungiblePositionManager, to=UniswapV3Pool, positions((bytes32): b'S \x0b\x15G\x08\xb2\x0cE\xb7l\xdf\x08\xf...) -> ['11957697242112620', '0', '0', '0', '0']
+        [5][CALL] from=V3Migrator, to=FiatTokenProxy, approve(spender(address): 0xC36442, value(uint256): 0) -> True
+          [6][DELEGATECALL] from=FiatTokenProxy, to=FiatTokenV2_1, approve(spender(address): 0xC36442, value(uint256): 0) -> True
+        [5][CALL] from=V3Migrator, to=FiatTokenProxy, transfer(to(address): 0xE2fE53, value(uint256): 848194266023) -> True
+          [6][DELEGATECALL] from=FiatTokenProxy, to=FiatTokenV2_1, transfer(to(address): 0xE2fE53, value(uint256): 848194266023) -> True
+        [5][CALL] from=V3Migrator, to=DejitaruTsuka, transfer(recipient(address): 0xE2fE53, amount(uint256): 11837577721300283) -> True
+      [4][CALL][0.0] from=AdminUpgradeabilityProxy, to=0xcff07c
+      [4][STATICCALL] from=AdminUpgradeabilityProxy, to=FiatTokenProxy, balanceOf(account(address): 0xE2fE53) -> 848194266023
+        [5][DELEGATECALL] from=FiatTokenProxy, to=FiatTokenV2_1, balanceOf(account(address): 0xE2fE53) -> 848194266023
+      [4][CALL] from=AdminUpgradeabilityProxy, to=FiatTokenProxy, transfer(to(address): 0xCFF07C, value(uint256): 848194266023) -> True
+        [5][DELEGATECALL] from=FiatTokenProxy, to=FiatTokenV2_1, transfer(to(address): 0xCFF07C, value(uint256): 848194266023) -> True
+      [4][STATICCALL] from=AdminUpgradeabilityProxy, to=DejitaruTsuka, balanceOf(account(address): 0xE2fE53) -> 11837577721300283
+      [4][CALL] from=AdminUpgradeabilityProxy, to=DejitaruTsuka, transfer(recipient(address): 0xCFF07C, amount(uint256): 11837577721300283) -> True
+      [4][STATICCALL] from=AdminUpgradeabilityProxy, to=NonfungiblePositionManager, totalSupply() -> 328096
+      [4][STATICCALL] from=AdminUpgradeabilityProxy, to=NonfungiblePositionManager, tokenByIndex(index(uint256): 328095) -> 345936
+  [2][STATICCALL] from=0xcff07c, to=FiatTokenProxy, balanceOf(account(address): 0xCFF07C) -> 848194266023
+    [3][DELEGATECALL] from=FiatTokenProxy, to=FiatTokenV2_1, balanceOf(account(address): 0xCFF07C) -> 848194266023
+  [2][CALL] from=0xcff07c, to=0xcff07c, 0xf9b65204() -> None
+    [3][CALL] from=0xcff07c, to=FiatTokenProxy, approve(spender(address): 0xbEbc44, value(uint256): 115792089237316195423570985008687907853269...) -> True
+      [4][DELEGATECALL] from=FiatTokenProxy, to=FiatTokenV2_1, approve(spender(address): 0xbEbc44, value(uint256): 115792089237316195423570985008687907853269...) -> True
+    [3][STATICCALL] from=0xcff07c, to=FiatTokenProxy, balanceOf(account(address): 0xCFF07C) -> 848194266023
+      [4][DELEGATECALL] from=FiatTokenProxy, to=FiatTokenV2_1, balanceOf(account(address): 0xCFF07C) -> 848194266023
+    [3][STATICCALL] from=0xcff07c, to=FiatTokenProxy, balanceOf(account(address): 0xCFF07C) -> 848194266023
+      [4][DELEGATECALL] from=FiatTokenProxy, to=FiatTokenV2_1, balanceOf(account(address): 0xCFF07C) -> 848194266023
+    [3][CALL] from=0xcff07c, to=Vyper_contract, exchange(i(int128): 1, j(int128): 0, dx(uint256): 848194266023, min_dy(uint256): 831230380702) -> None
+      [4][CALL] from=Vyper_contract, to=0x000000, transferFromaddress() -> 0x23b872
+      [4][CALL] from=Vyper_contract, to=0x000000, fallback() -> 0x000000
+      [4][CALL] from=Vyper_contract, to=FiatTokenProxy, transferFrom(from(address): 0xCFF07C, to(address): 0xbEbc44, value(uint256): 848194266023) -> True
+        [5][DELEGATECALL] from=FiatTokenProxy, to=FiatTokenV2_1, transferFrom(from(address): 0xCFF07C, to(address): 0xbEbc44, value(uint256): 848194266023) -> True
+      [4][CALL] from=Vyper_contract, to=0x000000, fallback() -> 0x000000
+      [4][CALL] from=Vyper_contract, to=0x000000, transferaddress() -> 0xa9059c
+      [4][CALL] from=Vyper_contract, to=0x000000, fallback() -> 0x000000
+      [4][CALL] from=Vyper_contract, to=Dai, transfer(dst(address): 0xCFF07C, wad(uint256): 848107618317317621825664) -> True
+      [4][CALL] from=Vyper_contract, to=0x000000, fallback() -> 0x000000
+    [3][STATICCALL] from=0xcff07c, to=Dai, balanceOf((address): 0xCFF07C) -> 848107618317317621825664
+    [3][CALL] from=0xcff07c, to=Dai, transfer(dst(address): 0xBa399a, wad(uint256): 848107618317317621825664) -> True
+  [2][CALL] from=0xcff07c, to=FiatTokenProxy, approve(spender(address): 0xBa399a, value(uint256): 115792089237316195423570985008687907853269...) -> True
+    [3][DELEGATECALL] from=FiatTokenProxy, to=FiatTokenV2_1, approve(spender(address): 0xBa399a, value(uint256): 115792089237316195423570985008687907853269...) -> True
+  [2][STATICCALL] from=0xcff07c, to=FiatTokenProxy, balanceOf(account(address): 0xCFF07C) -> 0
+    [3][DELEGATECALL] from=FiatTokenProxy, to=FiatTokenV2_1, balanceOf(account(address): 0xCFF07C) -> 0
+  [2][CALL] from=0xcff07c, to=FiatTokenProxy, transfer(to(address): 0xBa399a, value(uint256): 0) -> True
+    [3][DELEGATECALL] from=FiatTokenProxy, to=FiatTokenV2_1, transfer(to(address): 0xBa399a, value(uint256): 0) -> True
+  [2][CALL] from=0xcff07c, to=DejitaruTsuka, approve(spender(address): 0xBa399a, amount(uint256): 115792089237316195423570985008687907853269...) -> True
+  [2][STATICCALL] from=0xcff07c, to=DejitaruTsuka, balanceOf(account(address): 0xCFF07C) -> 11837577721300283
+  [2][CALL] from=0xcff07c, to=DejitaruTsuka, transfer(recipient(address): 0xBa399a, amount(uint256): 11837577721300283) -> True
+  [2][STATICCALL] from=0xcff07c, to=UniswapV2Pair, balanceOf((address): 0xE2fE53) -> 253409000000000000000
+  [2][CALL] from=0xcff07c, to=AdminUpgradeabilityProxy, migrate(_id(uint256): 15327, params(tuple): {'pair': '0x9267C29e4f517cE9f6d603a15B50Aa..., noLiquidity(bool): True, sqrtPriceX96(uint160): 79210883607084793911461085816, _mintNFT(bool): False) -> None
+    [3][DELEGATECALL] from=AdminUpgradeabilityProxy, to=LockToken, migrate(_id(uint256): 15327, params(tuple): {'pair': '0x9267C29e4f517cE9f6d603a15B50Aa..., noLiquidity(bool): True, sqrtPriceX96(uint160): 79210883607084793911461085816, _mintNFT(bool): False) -> None
+      [4][STATICCALL] from=AdminUpgradeabilityProxy, to=NonfungiblePositionManager, totalSupply() -> 328096
+      [4][STATICCALL] from=AdminUpgradeabilityProxy, to=0x2d4abf, balanceOfaddress() -> 0x000000
+      [4][STATICCALL] from=AdminUpgradeabilityProxy, to=WETH9, balanceOf((address): 0xE2fE53) -> 1000000000000000
+      [4][CALL] from=AdminUpgradeabilityProxy, to=V3Migrator, createAndInitializePoolIfNecessary(token0(address): 0x2d4ABf, token1(address): 0xC02aaA, fee(uint24): 500, sqrtPriceX96(uint160): 79210883607084793911461085816) -> 0xeb2423
+        [5][STATICCALL] from=V3Migrator, to=UniswapV3Factory, getPool((address): 500) -> 0xeb2423
+        [5][STATICCALL] from=V3Migrator, to=UniswapV3Pool, slot0() -> ['79210883607084793911461085816', '-5', '0', '1', '1', '0', 'True']
+      [4][CALL] from=AdminUpgradeabilityProxy, to=UniswapV2Pair, approve(spender(address): 0xA5644E, value(uint256): 253409000000000000000) -> True
+      [4][CALL] from=AdminUpgradeabilityProxy, to=V3Migrator, migrate(params(tuple): {'pair': '0x9267C29e4f517cE9f6d603a15B50Aa...) -> None
+        [5][CALL] from=V3Migrator, to=UniswapV2Pair, transferFrom(from(address): 0xE2fE53, to(address): 0x9267C2, value(uint256): 253409000000000000000) -> True
+        [5][CALL] from=V3Migrator, to=UniswapV2Pair, burn(to(address): 0xA5644E) -> ['301333662914629319205', '220883485968767849303']
+          [6][STATICCALL] from=UniswapV2Pair, to=KNDX, balanceOf(account(address): 0x9267C2) -> 301333662914629320395
+          [6][STATICCALL] from=UniswapV2Pair, to=WETH9, balanceOf((address): 0x9267C2) -> 220883485968767850175
+          [6][STATICCALL] from=UniswapV2Pair, to=UniswapV2Factory, feeTo() -> 0x000000
+          [6][CALL] from=UniswapV2Pair, to=KNDX, transfer(recipient(address): 0xA5644E, amount(uint256): 301333662914629319205) -> True
+          [6][CALL] from=UniswapV2Pair, to=WETH9, transfer(dst(address): 0xA5644E, wad(uint256): 220883485968767849303) -> True
+          [6][STATICCALL] from=UniswapV2Pair, to=KNDX, balanceOf(account(address): 0x9267C2) -> 1190
+          [6][STATICCALL] from=UniswapV2Pair, to=WETH9, balanceOf((address): 0x9267C2) -> 872
+        [5][CALL] from=V3Migrator, to=0x2d4abf, approveaddress() -> 0x000000
+        [5][CALL] from=V3Migrator, to=WETH9, approve(guy(address): 0xC36442, wad(uint256): 2208834859687678493) -> True
+        [5][CALL] from=V3Migrator, to=NonfungiblePositionManager, mint(params(tuple): {'token0': '0x2d4ABfDcD1385951DF4317f9F346...) -> ['345937', '463147567964557277267', '2410873034705250155', '2208834859687678493']
+          [6][STATICCALL] from=NonfungiblePositionManager, to=UniswapV3Pool, slot0() -> ['79210883607084793911461085816', '-5', '0', '1', '1', '0', 'True']
+          [6][CALL] from=NonfungiblePositionManager, to=UniswapV3Pool, mint(recipient(address): 0xC36442, tickLower(int24): -100, tickUpper(int24): 100, amount(uint128): 463147567964557277267, data(bytes): b"\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00...) -> ['2410873034705250155', '2208834859687678493']
+            [7][STATICCALL] from=UniswapV3Pool, to=0x2d4abf, balanceOfaddress() -> 0x000000
+            [7][STATICCALL] from=UniswapV3Pool, to=WETH9, balanceOf((address): 0xEB2423) -> 6080621385004649099
+            [7][CALL] from=UniswapV3Pool, to=NonfungiblePositionManager, uniswapV3MintCallback(amount0Owed(uint256): 2410873034705250155, amount1Owed(uint256): 2208834859687678493, data(bytes): b"\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00...) -> None
+              [8][CALL] from=NonfungiblePositionManager, to=0x2d4abf, transferFromaddress() -> 0x000000
+              [8][CALL] from=NonfungiblePositionManager, to=WETH9, transferFrom(src(address): 0xA5644E, dst(address): 0xEB2423, wad(uint256): 2208834859687678493) -> True
+            [7][STATICCALL] from=UniswapV3Pool, to=0x2d4abf, balanceOfaddress() -> 0x000000
+            [7][STATICCALL] from=UniswapV3Pool, to=WETH9, balanceOf((address): 0xEB2423) -> 8289456244692327592
+          [6][STATICCALL] from=NonfungiblePositionManager, to=UniswapV3Pool, positions((bytes32): b'S \x0b\x15G\x08\xb2\x0cE\xb7l\xdf\x08\xf...) -> ['1738129712431611489668', '0', '0', '0', '0']
+        [5][CALL] from=V3Migrator, to=0x2d4abf, approveaddress() -> 0x000000
+        [5][CALL] from=V3Migrator, to=0x2d4abf, transferaddress() -> 0x000000
+        [5][CALL] from=V3Migrator, to=WETH9, withdraw(wad(uint256): 218674651109080170810) -> None
+          [6][CALL][218.67465110908017] from=WETH9, to=V3Migrator
+        [5][CALL][218.67465110908017] from=V3Migrator, to=AdminUpgradeabilityProxy
+          [6][DELEGATECALL][218.67465110908017] from=AdminUpgradeabilityProxy, to=LockToken
+      [4][CALL][218.67465110908017] from=AdminUpgradeabilityProxy, to=0xcff07c
+      [4][STATICCALL] from=AdminUpgradeabilityProxy, to=0x2d4abf, balanceOfaddress() -> 0x000000
+      [4][CALL] from=AdminUpgradeabilityProxy, to=0x2d4abf, transferaddress() -> 0x000000
+      [4][STATICCALL] from=AdminUpgradeabilityProxy, to=WETH9, balanceOf((address): 0xE2fE53) -> 1000000000000000
+      [4][STATICCALL] from=AdminUpgradeabilityProxy, to=NonfungiblePositionManager, totalSupply() -> 328097
+      [4][STATICCALL] from=AdminUpgradeabilityProxy, to=NonfungiblePositionManager, tokenByIndex(index(uint256): 328096) -> 345937
+  [2][CALL] from=0xcff07c, to=0xcff07c, 0xf9b65204() -> None
+  [2][CALL] from=0xcff07c, to=WETH9, approve(guy(address): 0xBa399a, wad(uint256): 115792089237316195423570985008687907853269...) -> True
+  [2][STATICCALL] from=0xcff07c, to=WETH9, balanceOf((address): 0xCFF07C) -> 0
+  [2][CALL] from=0xcff07c, to=WETH9, transfer(dst(address): 0xBa399a, wad(uint256): 0) -> True

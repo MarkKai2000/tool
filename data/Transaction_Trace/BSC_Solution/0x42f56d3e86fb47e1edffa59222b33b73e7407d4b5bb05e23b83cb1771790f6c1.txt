@@ -1,0 +1,306 @@
+[1][CALL] from=0x86aa1c, to=0x3c4e5b, flashuint256() -> None
+  [2][STATICCALL] from=0x3c4e5b, to=0xd9ca10, 0xec437760() -> 0x000000
+    [3][STATICCALL] from=0xd9ca10, to=StakingRewardFixedAPY, balanceOfRewardEquivalent(account(address): 0xe166A1) -> 3945499566364748531419435
+    [3][STATICCALL] from=0xd9ca10, to=PriceFeeds, queryRate(sourceToken(address): 0xCb492C, destToken(address): 0x99C486) -> ['69112824571024650', '1000000000000000000']
+      [4][STATICCALL] from=PriceFeeds, to=PriceFeedSwap, latestAnswer() -> 5590187455305
+        [5][STATICCALL] from=PriceFeedSwap, to=NimbusRouter, getAmountsOut(amountIn(uint256): 1000000000000000000, path(address[]): ['0xCb492C701F7fe71bC9C4B703b84B0Da933fF26...) -> [1000000000000000000, 5590187455305]
+          [6][STATICCALL] from=NimbusRouter, to=NimbusPair, getReserves() -> ['368181777762617473826', '65664564881005195739543187', '1670987102']
+      [4][STATICCALL] from=PriceFeeds, to=PriceFeedSwap, latestAnswer() -> 80884951382072
+        [5][STATICCALL] from=PriceFeedSwap, to=NimbusRouter, getAmountsOut(amountIn(uint256): 1000000000000000000, path(address[]): ['0x99C486b908434Ae4adF567e9990A929854d0c9...) -> [1000000000000000000, 80884951382072]
+          [6][STATICCALL] from=NimbusRouter, to=NimbusPair, getReserves() -> ['10546126891550149513792713', '855589810967400324742', '1670987138']
+    [3][STATICCALL] from=0xd9ca10, to=GNIMB, balanceOf(account(address): 0x3aA2B9) -> 13974836647503669949252311
+  [2][STATICCALL] from=0x3c4e5b, to=NBU_WBNB, balanceOf((address): 0x7D88A2) -> 368181777762617473826
+  [2][STATICCALL] from=0x3c4e5b, to=WBNB, balanceOf((address): 0x0fe261) -> 2181600350903934658340
+  [2][CALL] from=0x3c4e5b, to=DPPAdvanced, flashLoan(baseAmount(uint256): 2181600350903934658340, quoteAmount(uint256): 0, assetTo(address): 0x3C4e5b, data(bytes): b'\x00') -> None
+    [3][CALL] from=DPPAdvanced, to=WBNB, transfer(dst(address): 0x3C4e5b, wad(uint256): 2181600350903934658340) -> True
+    [3][CALL] from=DPPAdvanced, to=0x3c4e5b, DPPFlashLoanCalladdress() -> None
+      [4][STATICCALL] from=0x3c4e5b, to=WBNB, balanceOf((address): 0xaCAac9) -> 53157185635650022199044
+      [4][CALL] from=0x3c4e5b, to=BiswapPair, swap(amount0Out(uint256): 53157185635650022199043, amount1Out(uint256): 0, to(address): 0x3C4e5b, data(bytes): b'\x00') -> None
+        [5][CALL] from=BiswapPair, to=WBNB, transfer(dst(address): 0x3C4e5b, wad(uint256): 53157185635650022199043) -> True
+        [5][CALL] from=BiswapPair, to=0x3c4e5b, BiswapCalladdress() -> None
+          [6][STATICCALL] from=0x3c4e5b, to=WBNB, balanceOf((address): 0x3C4e5b) -> 55338785986553956857383
+          [6][CALL] from=0x3c4e5b, to=BiswapPair, swap(amount0Out(uint256): 0, amount1Out(uint256): 20138478454782625276947, to(address): 0x3C4e5b, data(bytes): b'\x00') -> None
+            [7][CALL] from=BiswapPair, to=WBNB, transfer(dst(address): 0x3C4e5b, wad(uint256): 20138478454782625276947) -> True
+            [7][CALL] from=BiswapPair, to=0x3c4e5b, BiswapCalladdress() -> None
+              [8][STATICCALL] from=0x3c4e5b, to=WBNB, balanceOf((address): 0x3C4e5b) -> 75477264441336582134330
+              [8][CALL] from=0x3c4e5b, to=WBNB, withdraw(wad(uint256): 75477264441336582134330) -> None
+                [9][CALL][75477.26444133658] from=WBNB, to=0x3c4e5b
+              [8][CALL] from=0x3c4e5b, to=NBU_WBNB, deposit() -> None
+              [8][CALL] from=0x3c4e5b, to=NBU_WBNB, approve(guy(address): 0x2C6cF6, wad(uint256): 75477264441336582134330) -> True
+              [8][CALL] from=0x3c4e5b, to=NimbusRouter, swapExactTokensForTokensSupportingFeeOnTransferTokens(amountIn(uint256): 75477264441336582134330, amountOutMin(uint256): 0, path(address[]): ['0xA2CA18FC541B7B101c64E64bBc2834B0506624..., to(address): 0x3C4e5b, deadline(uint256): 1670989223) -> None
+                [9][CALL] from=NimbusRouter, to=NBU_WBNB, transferFrom(src(address): 0x3C4e5b, dst(address): 0x7D88A2, wad(uint256): 75477264441336582134330) -> True
+                [9][STATICCALL] from=NimbusRouter, to=NIMB, balanceOf(account(address): 0x3C4e5b) -> 0
+                [9][STATICCALL] from=NimbusRouter, to=NimbusPair, getReserves() -> ['368181777762617473826', '65664564881005195739543187', '1670987102']
+                [9][STATICCALL] from=NimbusRouter, to=NBU_WBNB, balanceOf((address): 0x7D88A2) -> 75845446219099199608156
+                [9][CALL] from=NimbusRouter, to=NimbusPair, swap(amount0Out(uint256): 0, amount1Out(uint256): 65344850369813992897370958, to(address): 0x3C4e5b, data(bytes): b'') -> None
+                  [10][CALL] from=NimbusPair, to=NIMB, transfer(recipient(address): 0x3C4e5b, amount(uint256): 65344850369813992897370958) -> True
+                  [10][STATICCALL] from=NimbusPair, to=NBU_WBNB, balanceOf((address): 0x7D88A2) -> 75845446219099199608156
+                  [10][STATICCALL] from=NimbusPair, to=NIMB, balanceOf(account(address): 0x7D88A2) -> 319714511191202842172229
+                  [10][STATICCALL] from=NimbusPair, to=NimbusFactory, nimbusReferralProgram() -> 0x663b5d
+                  [10][CALL] from=NimbusPair, to=NBU_WBNB, transfer(dst(address): 0x663B5D, wad(uint256): 113215896662004873201) -> True
+                  [10][CALL] from=NimbusPair, to=NimbusReferralProgramLogic, recordFee(token(address): 0xA2CA18, recipient(address): 0x3C4e5b, amount(uint256): 113215896662004873201) -> None
+                    [11][STATICCALL] from=NimbusReferralProgramLogic, to=NBU_WBNB, balanceOf((address): 0x663B5D) -> 126649007156152705401
+                    [11][STATICCALL] from=NimbusReferralProgramLogic, to=NimbusReferralProgramUsers, userIdByAddress((address): 0x86Aa1c) -> 0
+                    [11][STATICCALL] from=NimbusReferralProgramLogic, to=NimbusReferralProgramUsers, userSponsor(user(uint256): 0) -> 0
+                [9][STATICCALL] from=NimbusRouter, to=NIMB, balanceOf(account(address): 0x3C4e5b) -> 65344850369813992897370958
+              [8][CALL] from=0x3c4e5b, to=0xe166a1, 0xa66edba2() -> None
+                [9][CALL] from=0xe166a1, to=StakingRewardFixedAPY, getReward() -> None
+                  [10][STATICCALL] from=StakingRewardFixedAPY, to=PriceFeeds, queryRate(sourceToken(address): 0xCb492C, destToken(address): 0x99C486) -> ['2919741977365277209898', '1000000000000000000']
+                    [11][STATICCALL] from=PriceFeeds, to=PriceFeedSwap, latestAnswer() -> 236163187887385213
+                      [12][STATICCALL] from=PriceFeedSwap, to=NimbusRouter, getAmountsOut(amountIn(uint256): 1000000000000000000, path(address[]): ['0xCb492C701F7fe71bC9C4B703b84B0Da933fF26...) -> [1000000000000000000, 236163187887385213]
+                        [13][STATICCALL] from=NimbusRouter, to=NimbusPair, getReserves() -> ['75732230322437194734955', '319714511191202842172229', '1670989223']
+                    [11][STATICCALL] from=PriceFeeds, to=PriceFeedSwap, latestAnswer() -> 80884951382072
+                      [12][STATICCALL] from=PriceFeedSwap, to=NimbusRouter, getAmountsOut(amountIn(uint256): 1000000000000000000, path(address[]): ['0x99C486b908434Ae4adF567e9990A929854d0c9...) -> [1000000000000000000, 80884951382072]
+                        [13][STATICCALL] from=NimbusRouter, to=NimbusPair, getReserves() -> ['10546126891550149513792713', '855589810967400324742', '1670987138']
+                  [10][CALL] from=StakingRewardFixedAPY, to=GNIMB, transfer(to(address): 0xe166A1, amount(uint256): 13855114349895843169290048) -> True
+                [9][STATICCALL] from=0xe166a1, to=GNIMB, balanceOf(account(address): 0xe166A1) -> 13855114349895843169290048
+                [9][CALL] from=0xe166a1, to=GNIMB, transfer(to(address): 0x3C4e5b, amount(uint256): 13855114349895843169290048) -> True
+              [8][STATICCALL] from=0x3c4e5b, to=StakingRewardFixedAPY, balanceOf(account(address): 0xe166A1) -> 154608210771026836098104
+              [8][STATICCALL] from=0x3c4e5b, to=GNIMB, balanceOf(account(address): 0x3aA2B9) -> 119722297607826779962263
+              [8][CALL] from=0x3c4e5b, to=GNIMB, transfer(to(address): 0x3aA2B9, amount(uint256): 34885913163200056135841) -> True
+              [8][CALL] from=0x3c4e5b, to=0xe166a1, 0x484e4699() -> None
+                [9][CALL] from=0xe166a1, to=StakingRewardFixedAPY, withdraw(nonce(uint256): 0) -> None
+                  [10][CALL] from=StakingRewardFixedAPY, to=GNIMB, transfer(to(address): 0xe166A1, amount(uint256): 154608210771026836098104) -> True
+                [9][STATICCALL] from=0xe166a1, to=GNIMB, balanceOf(account(address): 0xe166A1) -> 154608210771026836098104
+                [9][CALL] from=0xe166a1, to=GNIMB, transfer(to(address): 0x3C4e5b, amount(uint256): 154608210771026836098104) -> True
+              [8][STATICCALL] from=0x3c4e5b, to=GNIMB, balanceOf(account(address): 0x3C4e5b) -> 13974836647503669949252311
+              [8][STATICCALL] from=0x3c4e5b, to=GNIMB, balanceOf(account(address): 0x706065) -> 1722821572931921197708161
+              [8][STATICCALL] from=0x3c4e5b, to=0xf192dd, 0x5de54959() -> 0x000000
+                [9][STATICCALL] from=0xf192dd, to=LockStakingRewardFixedAPY, earned(account(address): 0xF192dd) -> 2733107167676698874514882
+                  [10][STATICCALL] from=LockStakingRewardFixedAPY, to=PriceFeeds, queryRate(sourceToken(address): 0xCb492C, destToken(address): 0x99C486) -> ['2919741977365277209898', '1000000000000000000']
+                    [11][STATICCALL] from=PriceFeeds, to=PriceFeedSwap, latestAnswer() -> 236163187887385213
+                      [12][STATICCALL] from=PriceFeedSwap, to=NimbusRouter, getAmountsOut(amountIn(uint256): 1000000000000000000, path(address[]): ['0xCb492C701F7fe71bC9C4B703b84B0Da933fF26...) -> [1000000000000000000, 236163187887385213]
+                        [13][STATICCALL] from=NimbusRouter, to=NimbusPair, getReserves() -> ['75732230322437194734955', '319714511191202842172229', '1670989223']
+                    [11][STATICCALL] from=PriceFeeds, to=PriceFeedSwap, latestAnswer() -> 80884951382072
+                      [12][STATICCALL] from=PriceFeedSwap, to=NimbusRouter, getAmountsOut(amountIn(uint256): 1000000000000000000, path(address[]): ['0x99C486b908434Ae4adF567e9990A929854d0c9...) -> [1000000000000000000, 80884951382072]
+                        [13][STATICCALL] from=NimbusRouter, to=NimbusPair, getReserves() -> ['10546126891550149513792713', '855589810967400324742', '1670987138']
+              [8][CALL] from=0x3c4e5b, to=GNIMB, transfer(to(address): 0x706065, amount(uint256): 1010285594744777676806721) -> True
+              [8][CALL] from=0x3c4e5b, to=0xf192dd, 0xa66edba2() -> None
+                [9][CALL] from=0xf192dd, to=LockStakingRewardFixedAPY, getReward() -> None
+                  [10][STATICCALL] from=LockStakingRewardFixedAPY, to=PriceFeeds, queryRate(sourceToken(address): 0xCb492C, destToken(address): 0x99C486) -> ['2919741977365277209898', '1000000000000000000']
+                    [11][STATICCALL] from=PriceFeeds, to=PriceFeedSwap, latestAnswer() -> 236163187887385213
+                      [12][STATICCALL] from=PriceFeedSwap, to=NimbusRouter, getAmountsOut(amountIn(uint256): 1000000000000000000, path(address[]): ['0xCb492C701F7fe71bC9C4B703b84B0Da933fF26...) -> [1000000000000000000, 236163187887385213]
+                        [13][STATICCALL] from=NimbusRouter, to=NimbusPair, getReserves() -> ['75732230322437194734955', '319714511191202842172229', '1670989223']
+                    [11][STATICCALL] from=PriceFeeds, to=PriceFeedSwap, latestAnswer() -> 80884951382072
+                      [12][STATICCALL] from=PriceFeedSwap, to=NimbusRouter, getAmountsOut(amountIn(uint256): 1000000000000000000, path(address[]): ['0x99C486b908434Ae4adF567e9990A929854d0c9...) -> [1000000000000000000, 80884951382072]
+                        [13][STATICCALL] from=NimbusRouter, to=NimbusPair, getReserves() -> ['10546126891550149513792713', '855589810967400324742', '1670987138']
+                  [10][CALL] from=LockStakingRewardFixedAPY, to=GNIMB, transfer(to(address): 0xF192dd, amount(uint256): 2733107167676698874514882) -> True
+                [9][STATICCALL] from=0xf192dd, to=GNIMB, balanceOf(account(address): 0xF192dd) -> 2733107167676698874514882
+                [9][CALL] from=0xf192dd, to=GNIMB, transfer(to(address): 0x3C4e5b, amount(uint256): 2733107167676698874514882) -> True
+              [8][STATICCALL] from=0x3c4e5b, to=GNIMB, balanceOf(account(address): 0x3C4e5b) -> 15697658220435591146960472
+              [8][STATICCALL] from=0x3c4e5b, to=GNIMB, balanceOf(account(address): 0xdEF57A) -> 783134358825383610974990
+              [8][STATICCALL] from=0x3c4e5b, to=0x4925aa, 0x5de54959() -> 0x000000
+                [9][STATICCALL] from=0x4925aa, to=LockStakingRewardFixedAPY, earned(account(address): 0x4925aA) -> 1364999511146764624384515
+                  [10][STATICCALL] from=LockStakingRewardFixedAPY, to=PriceFeeds, queryRate(sourceToken(address): 0xCb492C, destToken(address): 0x99C486) -> ['2919741977365277209898', '1000000000000000000']
+                    [11][STATICCALL] from=PriceFeeds, to=PriceFeedSwap, latestAnswer() -> 236163187887385213
+                      [12][STATICCALL] from=PriceFeedSwap, to=NimbusRouter, getAmountsOut(amountIn(uint256): 1000000000000000000, path(address[]): ['0xCb492C701F7fe71bC9C4B703b84B0Da933fF26...) -> [1000000000000000000, 236163187887385213]
+                        [13][STATICCALL] from=NimbusRouter, to=NimbusPair, getReserves() -> ['75732230322437194734955', '319714511191202842172229', '1670989223']
+                    [11][STATICCALL] from=PriceFeeds, to=PriceFeedSwap, latestAnswer() -> 80884951382072
+                      [12][STATICCALL] from=PriceFeedSwap, to=NimbusRouter, getAmountsOut(amountIn(uint256): 1000000000000000000, path(address[]): ['0x99C486b908434Ae4adF567e9990A929854d0c9...) -> [1000000000000000000, 80884951382072]
+                        [13][STATICCALL] from=NimbusRouter, to=NimbusPair, getReserves() -> ['10546126891550149513792713', '855589810967400324742', '1670987138']
+              [8][CALL] from=0x3c4e5b, to=GNIMB, transfer(to(address): 0xdEF57A, amount(uint256): 581865152321381013409525) -> True
+              [8][CALL] from=0x3c4e5b, to=0x4925aa, 0xa66edba2() -> None
+                [9][CALL] from=0x4925aa, to=LockStakingRewardFixedAPY, getReward() -> None
+                  [10][STATICCALL] from=LockStakingRewardFixedAPY, to=PriceFeeds, queryRate(sourceToken(address): 0xCb492C, destToken(address): 0x99C486) -> ['2919741977365277209898', '1000000000000000000']
+                    [11][STATICCALL] from=PriceFeeds, to=PriceFeedSwap, latestAnswer() -> 236163187887385213
+                      [12][STATICCALL] from=PriceFeedSwap, to=NimbusRouter, getAmountsOut(amountIn(uint256): 1000000000000000000, path(address[]): ['0xCb492C701F7fe71bC9C4B703b84B0Da933fF26...) -> [1000000000000000000, 236163187887385213]
+                        [13][STATICCALL] from=NimbusRouter, to=NimbusPair, getReserves() -> ['75732230322437194734955', '319714511191202842172229', '1670989223']
+                    [11][STATICCALL] from=PriceFeeds, to=PriceFeedSwap, latestAnswer() -> 80884951382072
+                      [12][STATICCALL] from=PriceFeedSwap, to=NimbusRouter, getAmountsOut(amountIn(uint256): 1000000000000000000, path(address[]): ['0x99C486b908434Ae4adF567e9990A929854d0c9...) -> [1000000000000000000, 80884951382072]
+                        [13][STATICCALL] from=NimbusRouter, to=NimbusPair, getReserves() -> ['10546126891550149513792713', '855589810967400324742', '1670987138']
+                  [10][CALL] from=LockStakingRewardFixedAPY, to=GNIMB, transfer(to(address): 0x4925aA, amount(uint256): 1364999511146764624384515) -> True
+                [9][STATICCALL] from=0x4925aa, to=GNIMB, balanceOf(account(address): 0x4925aA) -> 1364999511146764624384515
+                [9][CALL] from=0x4925aa, to=GNIMB, transfer(to(address): 0x3C4e5b, amount(uint256): 1364999511146764624384515) -> True
+              [8][STATICCALL] from=0x3c4e5b, to=NIMB, balanceOf(account(address): 0x3C4e5b) -> 65344850369813992897370958
+              [8][CALL] from=0x3c4e5b, to=NIMB, approve(spender(address): 0x2C6cF6, amount(uint256): 65344850369813992897370958) -> True
+              [8][CALL] from=0x3c4e5b, to=NimbusRouter, swapExactTokensForTokensSupportingFeeOnTransferTokens(amountIn(uint256): 65344850369813992897370958, amountOutMin(uint256): 0, path(address[]): ['0xCb492C701F7fe71bC9C4B703b84B0Da933fF26..., to(address): 0x3C4e5b, deadline(uint256): 1670989223) -> None
+                [9][CALL] from=NimbusRouter, to=NIMB, transferFrom(sender(address): 0x3C4e5b, recipient(address): 0x7D88A2, amount(uint256): 65344850369813992897370958) -> True
+                [9][STATICCALL] from=NimbusRouter, to=NBU_WBNB, balanceOf((address): 0x3C4e5b) -> 0
+                [9][STATICCALL] from=NimbusRouter, to=NimbusPair, getReserves() -> ['75732230322437194734955', '319714511191202842172229', '1670989223']
+                [9][STATICCALL] from=NimbusRouter, to=NIMB, balanceOf(account(address): 0x7D88A2) -> 65664564881005195739543187
+                [9][CALL] from=NimbusRouter, to=NimbusPair, swap(amount0Out(uint256): 75362393197990534625334, amount1Out(uint256): 0, to(address): 0x3C4e5b, data(bytes): b'') -> None
+                  [10][CALL] from=NimbusPair, to=NBU_WBNB, transfer(dst(address): 0x3C4e5b, wad(uint256): 75362393197990534625334) -> True
+                  [10][STATICCALL] from=NimbusPair, to=NBU_WBNB, balanceOf((address): 0x7D88A2) -> 369837124446660109621
+                  [10][STATICCALL] from=NimbusPair, to=NIMB, balanceOf(account(address): 0x7D88A2) -> 65664564881005195739543187
+                  [10][STATICCALL] from=NimbusPair, to=NimbusFactory, nimbusReferralProgram() -> 0x663b5d
+                  [10][CALL] from=NimbusPair, to=NIMB, transfer(recipient(address): 0x663B5D, amount(uint256): 98017275554720989346056) -> True
+                  [10][CALL] from=NimbusPair, to=NimbusReferralProgramLogic, recordFee(token(address): 0xCb492C, recipient(address): 0x3C4e5b, amount(uint256): 98017275554720989346056) -> None
+                    [11][STATICCALL] from=NimbusReferralProgramLogic, to=NIMB, balanceOf(account(address): 0x663B5D) -> 224019828268974201763825
+                    [11][STATICCALL] from=NimbusReferralProgramLogic, to=NimbusReferralProgramUsers, userIdByAddress((address): 0x86Aa1c) -> 0
+                    [11][STATICCALL] from=NimbusReferralProgramLogic, to=NimbusReferralProgramUsers, userSponsor(user(uint256): 0) -> 0
+                [9][STATICCALL] from=NimbusRouter, to=NBU_WBNB, balanceOf((address): 0x3C4e5b) -> 75362393197990534625334
+              [8][STATICCALL] from=0x3c4e5b, to=GNIMB, balanceOf(account(address): 0x3C4e5b) -> 16480792579260974757935462
+              [8][STATICCALL] from=0x3c4e5b, to=GNIMB, balanceOf(account(address): 0x0Ee1be) -> 1077382769904949790336747
+              [8][STATICCALL] from=0x3c4e5b, to=NimbusRouter, getAmountsOut(amountIn(uint256): 16480792579260974757935462, path(address[]): ['0x99C486b908434Ae4adF567e9990A929854d0c9...) -> [16480792579260974757935462, 521119738675267061179]
+                [9][STATICCALL] from=NimbusRouter, to=NimbusPair, getReserves() -> ['10546126891550149513792713', '855589810967400324742', '1670987138']
+              [8][STATICCALL] from=0x3c4e5b, to=NimbusRouter, getAmountsOut(amountIn(uint256): 16373054302270479778901788, path(address[]): ['0x99C486b908434Ae4adF567e9990A929854d0c9...) -> [16373054302270479778901788, 519782669800456652943]
+                [9][STATICCALL] from=NimbusRouter, to=NimbusPair, getReserves() -> ['10546126891550149513792713', '855589810967400324742', '1670987138']
+              [8][STATICCALL] from=0x3c4e5b, to=NimbusRouter, getAmountsOut(amountIn(uint256): 107738276990494979033674, path(address[]): ['0x99C486b908434Ae4adF567e9990A929854d0c9...) -> [107738276990494979033674, 1420730195038989035173546, 7820825157959278645]
+                [9][STATICCALL] from=NimbusRouter, to=NimbusPair, getReserves() -> ['1077382769904949790336747', '15670782301749009448148023', '1670976257']
+                [9][STATICCALL] from=NimbusRouter, to=NimbusPair, getReserves() -> ['369837124446660109621', '65566547605450474750197131', '1670989223']
+              [8][STATICCALL] from=0x3c4e5b, to=NimbusRouter, getAmountsOut(amountIn(uint256): 16265316025279984799868113, path(address[]): ['0x99C486b908434Ae4adF567e9990A929854d0c9...) -> [16265316025279984799868113, 518434867956185712365]
+                [9][STATICCALL] from=NimbusRouter, to=NimbusPair, getReserves() -> ['10546126891550149513792713', '855589810967400324742', '1670987138']
+              [8][STATICCALL] from=0x3c4e5b, to=NimbusRouter, getAmountsOut(amountIn(uint256): 215476553980989958067349, path(address[]): ['0x99C486b908434Ae4adF567e9990A929854d0c9...) -> [215476553980989958067349, 2605264291286270205069794, 14092966059199423957]
+                [9][STATICCALL] from=NimbusRouter, to=NimbusPair, getReserves() -> ['1077382769904949790336747', '15670782301749009448148023', '1670976257']
+                [9][STATICCALL] from=NimbusRouter, to=NimbusPair, getReserves() -> ['369837124446660109621', '65566547605450474750197131', '1670989223']
+              [8][STATICCALL] from=0x3c4e5b, to=NimbusRouter, getAmountsOut(amountIn(uint256): 16157577748289489820834438, path(address[]): ['0x99C486b908434Ae4adF567e9990A929854d0c9...) -> [16157577748289489820834438, 517076203387524423121]
+                [9][STATICCALL] from=NimbusRouter, to=NimbusPair, getReserves() -> ['10546126891550149513792713', '855589810967400324742', '1670987138']
+              [8][STATICCALL] from=0x3c4e5b, to=NimbusRouter, getAmountsOut(amountIn(uint256): 323214830971484937101024, path(address[]): ['0x99C486b908434Ae4adF567e9990A929854d0c9...) -> [323214830971484937101024, 3607983208723830902887439, 19234987493755528254]
+                [9][STATICCALL] from=NimbusRouter, to=NimbusPair, getReserves() -> ['1077382769904949790336747', '15670782301749009448148023', '1670976257']
+                [9][STATICCALL] from=NimbusRouter, to=NimbusPair, getReserves() -> ['369837124446660109621', '65566547605450474750197131', '1670989223']
+              [8][STATICCALL] from=0x3c4e5b, to=NimbusRouter, getAmountsOut(amountIn(uint256): 16049839471298994841800764, path(address[]): ['0x99C486b908434Ae4adF567e9990A929854d0c9...) -> [16049839471298994841800764, 515706544239538447478]
+                [9][STATICCALL] from=NimbusRouter, to=NimbusPair, getReserves() -> ['10546126891550149513792713', '855589810967400324742', '1670987138']
+              [8][STATICCALL] from=0x3c4e5b, to=NimbusRouter, getAmountsOut(amountIn(uint256): 430953107961979916134698, path(address[]): ['0x99C486b908434Ae4adF567e9990A929854d0c9...) -> [430953107961979916134698, 4467763784627898890421377, 23527085277993949685]
+                [9][STATICCALL] from=NimbusRouter, to=NimbusPair, getReserves() -> ['1077382769904949790336747', '15670782301749009448148023', '1670976257']
+                [9][STATICCALL] from=NimbusRouter, to=NimbusPair, getReserves() -> ['369837124446660109621', '65566547605450474750197131', '1670989223']
+              [8][STATICCALL] from=0x3c4e5b, to=NimbusRouter, getAmountsOut(amountIn(uint256): 15942101194308499862767089, path(address[]): ['0x99C486b908434Ae4adF567e9990A929854d0c9...) -> [15942101194308499862767089, 514325756514632215158]
+                [9][STATICCALL] from=NimbusRouter, to=NimbusPair, getReserves() -> ['10546126891550149513792713', '855589810967400324742', '1670987138']
+              [8][STATICCALL] from=0x3c4e5b, to=NimbusRouter, getAmountsOut(amountIn(uint256): 538691384952474895168373, path(address[]): ['0x99C486b908434Ae4adF567e9990A929854d0c9...) -> [538691384952474895168373, 5213136454735990130064587, 27163898997935193930]
+                [9][STATICCALL] from=NimbusRouter, to=NimbusPair, getReserves() -> ['1077382769904949790336747', '15670782301749009448148023', '1670976257']
+                [9][STATICCALL] from=NimbusRouter, to=NimbusPair, getReserves() -> ['369837124446660109621', '65566547605450474750197131', '1670989223']
+              [8][STATICCALL] from=0x3c4e5b, to=NimbusRouter, getAmountsOut(amountIn(uint256): 15834362917318004883733414, path(address[]): ['0x99C486b908434Ae4adF567e9990A929854d0c9...) -> [15834362917318004883733414, 512933704028848204558]
+                [9][STATICCALL] from=NimbusRouter, to=NimbusPair, getReserves() -> ['10546126891550149513792713', '855589810967400324742', '1670987138']
+              [8][STATICCALL] from=0x3c4e5b, to=NimbusRouter, getAmountsOut(amountIn(uint256): 646429661942969874202048, path(address[]): ['0x99C486b908434Ae4adF567e9990A929854d0c9...) -> [646429661942969874202048, 5865512434555285603730537, 30284851182332508561]
+                [9][STATICCALL] from=NimbusRouter, to=NimbusPair, getReserves() -> ['1077382769904949790336747', '15670782301749009448148023', '1670976257']
+                [9][STATICCALL] from=NimbusRouter, to=NimbusPair, getReserves() -> ['369837124446660109621', '65566547605450474750197131', '1670989223']
+              [8][STATICCALL] from=0x3c4e5b, to=NimbusRouter, getAmountsOut(amountIn(uint256): 15726624640327509904699740, path(address[]): ['0x99C486b908434Ae4adF567e9990A929854d0c9...) -> [15726624640327509904699740, 511530248367092283886]
+                [9][STATICCALL] from=NimbusRouter, to=NimbusPair, getReserves() -> ['10546126891550149513792713', '855589810967400324742', '1670987138']
+              [8][STATICCALL] from=0x3c4e5b, to=NimbusRouter, getAmountsOut(amountIn(uint256): 754167938933464853235722, path(address[]): ['0x99C486b908434Ae4adF567e9990A929854d0c9...) -> [754167938933464853235722, 6441273907998488541058070, 32992431143909713125]
+                [9][STATICCALL] from=NimbusRouter, to=NimbusPair, getReserves() -> ['1077382769904949790336747', '15670782301749009448148023', '1670976257']
+                [9][STATICCALL] from=NimbusRouter, to=NimbusPair, getReserves() -> ['369837124446660109621', '65566547605450474750197131', '1670989223']
+              [8][STATICCALL] from=0x3c4e5b, to=NimbusRouter, getAmountsOut(amountIn(uint256): 15618886363337014925666065, path(address[]): ['0x99C486b908434Ae4adF567e9990A929854d0c9...) -> [15618886363337014925666065, 510115248837254194968]
+                [9][STATICCALL] from=NimbusRouter, to=NimbusPair, getReserves() -> ['10546126891550149513792713', '855589810967400324742', '1670987138']
+              [8][STATICCALL] from=0x3c4e5b, to=NimbusRouter, getAmountsOut(amountIn(uint256): 861906215923959832269397, path(address[]): ['0x99C486b908434Ae4adF567e9990A929854d0c9...) -> [861906215923959832269397, 6953168649240659732889885, 35363664950139886025]
+                [9][STATICCALL] from=NimbusRouter, to=NimbusPair, getReserves() -> ['1077382769904949790336747', '15670782301749009448148023', '1670976257']
+                [9][STATICCALL] from=NimbusRouter, to=NimbusPair, getReserves() -> ['369837124446660109621', '65566547605450474750197131', '1670989223']
+              [8][STATICCALL] from=0x3c4e5b, to=NimbusRouter, getAmountsOut(amountIn(uint256): 15511148086346519946632390, path(address[]): ['0x99C486b908434Ae4adF567e9990A929854d0c9...) -> [15511148086346519946632390, 508688562423191241081]
+                [9][STATICCALL] from=NimbusRouter, to=NimbusPair, getReserves() -> ['10546126891550149513792713', '855589810967400324742', '1670987138']
+              [8][STATICCALL] from=0x3c4e5b, to=NimbusRouter, getAmountsOut(amountIn(uint256): 969644492914454811303072, path(address[]): ['0x99C486b908434Ae4adF567e9990A929854d0c9...) -> [969644492914454811303072, 7411264934042790374649880, 37457560833652525933]
+                [9][STATICCALL] from=NimbusRouter, to=NimbusPair, getReserves() -> ['1077382769904949790336747', '15670782301749009448148023', '1670976257']
+                [9][STATICCALL] from=NimbusRouter, to=NimbusPair, getReserves() -> ['369837124446660109621', '65566547605450474750197131', '1670989223']
+              [8][STATICCALL] from=0x3c4e5b, to=NimbusRouter, getAmountsOut(amountIn(uint256): 15403409809356024967598715, path(address[]): ['0x99C486b908434Ae4adF567e9990A929854d0c9...) -> [15403409809356024967598715, 507250043736542180596]
+                [9][STATICCALL] from=NimbusRouter, to=NimbusPair, getReserves() -> ['10546126891550149513792713', '855589810967400324742', '1670987138']
+              [8][STATICCALL] from=0x3c4e5b, to=NimbusRouter, getAmountsOut(amountIn(uint256): 1077382769904949790336747, path(address[]): ['0x99C486b908434Ae4adF567e9990A929854d0c9...) -> [1077382769904949790336747, 7823620408033932108063885, 39320086505450535720]
+                [9][STATICCALL] from=NimbusRouter, to=NimbusPair, getReserves() -> ['1077382769904949790336747', '15670782301749009448148023', '1670976257']
+                [9][STATICCALL] from=NimbusRouter, to=NimbusPair, getReserves() -> ['369837124446660109621', '65566547605450474750197131', '1670989223']
+              [8][STATICCALL] from=0x3c4e5b, to=NimbusRouter, getAmountsOut(amountIn(uint256): 15295671532365529988565041, path(address[]): ['0x99C486b908434Ae4adF567e9990A929854d0c9...) -> [15295671532365529988565041, 505799544967337229007]
+                [9][STATICCALL] from=NimbusRouter, to=NimbusPair, getReserves() -> ['10546126891550149513792713', '855589810967400324742', '1670987138']
+              [8][STATICCALL] from=0x3c4e5b, to=NimbusRouter, getAmountsOut(amountIn(uint256): 1185121046895444769370421, path(address[]): ['0x99C486b908434Ae4adF567e9990A929854d0c9...) -> [1185121046895444769370421, 8196760123207010379064211, 40987582911029742437]
+                [9][STATICCALL] from=NimbusRouter, to=NimbusPair, getReserves() -> ['1077382769904949790336747', '15670782301749009448148023', '1670976257']
+                [9][STATICCALL] from=NimbusRouter, to=NimbusPair, getReserves() -> ['369837124446660109621', '65566547605450474750197131', '1670989223']
+              [8][STATICCALL] from=0x3c4e5b, to=NimbusRouter, getAmountsOut(amountIn(uint256): 15187933255375035009531366, path(address[]): ['0x99C486b908434Ae4adF567e9990A929854d0c9...) -> [15187933255375035009531366, 504336915833368931275]
+                [9][STATICCALL] from=NimbusRouter, to=NimbusPair, getReserves() -> ['10546126891550149513792713', '855589810967400324742', '1670987138']
+              [8][STATICCALL] from=0x3c4e5b, to=NimbusRouter, getAmountsOut(amountIn(uint256): 1292859323885939748404096, path(address[]): ['0x99C486b908434Ae4adF567e9990A929854d0c9...) -> [1292859323885939748404096, 8536024378898431480497310, 42489158952834610000]
+                [9][STATICCALL] from=NimbusRouter, to=NimbusPair, getReserves() -> ['1077382769904949790336747', '15670782301749009448148023', '1670976257']
+                [9][STATICCALL] from=NimbusRouter, to=NimbusPair, getReserves() -> ['369837124446660109621', '65566547605450474750197131', '1670989223']
+              [8][STATICCALL] from=0x3c4e5b, to=NimbusRouter, getAmountsOut(amountIn(uint256): 15080194978384540030497691, path(address[]): ['0x99C486b908434Ae4adF567e9990A929854d0c9...) -> [15080194978384540030497691, 502862003528287482719]
+                [9][STATICCALL] from=NimbusRouter, to=NimbusPair, getReserves() -> ['10546126891550149513792713', '855589810967400324742', '1670987138']
+              [8][STATICCALL] from=0x3c4e5b, to=NimbusRouter, getAmountsOut(amountIn(uint256): 1400597600876434727437771, path(address[]): ['0x99C486b908434Ae4adF567e9990A929854d0c9...) -> [1400597600876434727437771, 8845825940201598861436632, 43848405247718015234]
+                [9][STATICCALL] from=NimbusRouter, to=NimbusPair, getReserves() -> ['1077382769904949790336747', '15670782301749009448148023', '1670976257']
+                [9][STATICCALL] from=NimbusRouter, to=NimbusPair, getReserves() -> ['369837124446660109621', '65566547605450474750197131', '1670989223']
+              [8][STATICCALL] from=0x3c4e5b, to=NimbusRouter, getAmountsOut(amountIn(uint256): 14972456701394045051464017, path(address[]): ['0x99C486b908434Ae4adF567e9990A929854d0c9...) -> [14972456701394045051464017, 501374652668382848052]
+                [9][STATICCALL] from=NimbusRouter, to=NimbusPair, getReserves() -> ['10546126891550149513792713', '855589810967400324742', '1670987138']
+              [8][STATICCALL] from=0x3c4e5b, to=NimbusRouter, getAmountsOut(amountIn(uint256): 1508335877866929706471445, path(address[]): ['0x99C486b908434Ae4adF567e9990A929854d0c9...) -> [1508335877866929706471445, 9129843032298717500511313, 45084642610057677618]
+                [9][STATICCALL] from=NimbusRouter, to=NimbusPair, getReserves() -> ['1077382769904949790336747', '15670782301749009448148023', '1670976257']
+                [9][STATICCALL] from=NimbusRouter, to=NimbusPair, getReserves() -> ['369837124446660109621', '65566547605450474750197131', '1670989223']
+              [8][STATICCALL] from=0x3c4e5b, to=NimbusRouter, getAmountsOut(amountIn(uint256): 14864718424403550072430342, path(address[]): ['0x99C486b908434Ae4adF567e9990A929854d0c9...) -> [14864718424403550072430342, 499874705238014752663]
+                [9][STATICCALL] from=NimbusRouter, to=NimbusPair, getReserves() -> ['10546126891550149513792713', '855589810967400324742', '1670987138']
+              [8][STATICCALL] from=0x3c4e5b, to=NimbusRouter, getAmountsOut(amountIn(uint256): 1616074154857424685505120, path(address[]): ['0x99C486b908434Ae4adF567e9990A929854d0c9...) -> [1616074154857424685505120, 9391166071835561462514672, 46213846252993635048]
+                [9][STATICCALL] from=NimbusRouter, to=NimbusPair, getReserves() -> ['1077382769904949790336747', '15670782301749009448148023', '1670976257']
+                [9][STATICCALL] from=NimbusRouter, to=NimbusPair, getReserves() -> ['369837124446660109621', '65566547605450474750197131', '1670989223']
+              [8][STATICCALL] from=0x3c4e5b, to=NimbusRouter, getAmountsOut(amountIn(uint256): 14756980147413055093396667, path(address[]): ['0x99C486b908434Ae4adF567e9990A929854d0c9...) -> [14756980147413055093396667, 498362000533650295999]
+                [9][STATICCALL] from=NimbusRouter, to=NimbusPair, getReserves() -> ['10546126891550149513792713', '855589810967400324742', '1670987138']
+              [8][STATICCALL] from=0x3c4e5b, to=NimbusRouter, getAmountsOut(amountIn(uint256): 1723812431847919664538795, path(address[]): ['0x99C486b908434Ae4adF567e9990A929854d0c9...) -> [1723812431847919664538795, 9632410576352504574478161, 47249339897697263878]
+                [9][STATICCALL] from=NimbusRouter, to=NimbusPair, getReserves() -> ['1077382769904949790336747', '15670782301749009448148023', '1670976257']
+                [9][STATICCALL] from=NimbusRouter, to=NimbusPair, getReserves() -> ['369837124446660109621', '65566547605450474750197131', '1670989223']
+              [8][STATICCALL] from=0x3c4e5b, to=NimbusRouter, getAmountsOut(amountIn(uint256): 14649241870422560114362993, path(address[]): ['0x99C486b908434Ae4adF567e9990A929854d0c9...) -> [14649241870422560114362993, 496836375106467561698]
+                [9][STATICCALL] from=NimbusRouter, to=NimbusPair, getReserves() -> ['10546126891550149513792713', '855589810967400324742', '1670987138']
+              [8][STATICCALL] from=0x3c4e5b, to=NimbusRouter, getAmountsOut(amountIn(uint256): 1831550708838414643572469, path(address[]): ['0x99C486b908434Ae4adF567e9990A929854d0c9...) -> [1831550708838414643572469, 9855805010662509226192467, 48202323959846875801]
+                [9][STATICCALL] from=NimbusRouter, to=NimbusPair, getReserves() -> ['1077382769904949790336747', '15670782301749009448148023', '1670976257']
+                [9][STATICCALL] from=NimbusRouter, to=NimbusPair, getReserves() -> ['369837124446660109621', '65566547605450474750197131', '1670989223']
+              [8][STATICCALL] from=0x3c4e5b, to=NimbusRouter, getAmountsOut(amountIn(uint256): 14541503593432065135329318, path(address[]): ['0x99C486b908434Ae4adF567e9990A929854d0c9...) -> [14541503593432065135329318, 495297662703482170871]
+                [9][STATICCALL] from=NimbusRouter, to=NimbusPair, getReserves() -> ['10546126891550149513792713', '855589810967400324742', '1670987138']
+              [8][STATICCALL] from=0x3c4e5b, to=NimbusRouter, getAmountsOut(amountIn(uint256): 1939288985828909622606144, path(address[]): ['0x99C486b908434Ae4adF567e9990A929854d0c9...) -> [1939288985828909622606144, 10063259829213043854450167, 49082282313742745009]
+                [9][STATICCALL] from=NimbusRouter, to=NimbusPair, getReserves() -> ['1077382769904949790336747', '15670782301749009448148023', '1670976257']
+                [9][STATICCALL] from=NimbusRouter, to=NimbusPair, getReserves() -> ['369837124446660109621', '65566547605450474750197131', '1670989223']
+              [8][STATICCALL] from=0x3c4e5b, to=NimbusRouter, getAmountsOut(amountIn(uint256): 14433765316441570156295643, path(address[]): ['0x99C486b908434Ae4adF567e9990A929854d0c9...) -> [14433765316441570156295643, 493745694207152241280]
+                [9][STATICCALL] from=NimbusRouter, to=NimbusPair, getReserves() -> ['10546126891550149513792713', '855589810967400324742', '1670987138']
+              [8][STATICCALL] from=0x3c4e5b, to=NimbusRouter, getAmountsOut(amountIn(uint256): 2047027262819404601639819, path(address[]): ['0x99C486b908434Ae4adF567e9990A929854d0c9...) -> [2047027262819404601639819, 10256422248627698786451576, 49897298997816281852]
+                [9][STATICCALL] from=NimbusRouter, to=NimbusPair, getReserves() -> ['1077382769904949790336747', '15670782301749009448148023', '1670976257']
+                [9][STATICCALL] from=NimbusRouter, to=NimbusPair, getReserves() -> ['369837124446660109621', '65566547605450474750197131', '1670989223']
+              [8][STATICCALL] from=0x3c4e5b, to=NimbusRouter, getAmountsOut(amountIn(uint256): 14326027039451075177261968, path(address[]): ['0x99C486b908434Ae4adF567e9990A929854d0c9...) -> [14326027039451075177261968, 492180297573415673763]
+                [9][STATICCALL] from=NimbusRouter, to=NimbusPair, getReserves() -> ['10546126891550149513792713', '855589810967400324742', '1670987138']
+              [8][STATICCALL] from=0x3c4e5b, to=NimbusRouter, getAmountsOut(amountIn(uint256): 2154765539809899580673494, path(address[]): ['0x99C486b908434Ae4adF567e9990A929854d0c9...) -> [2154765539809899580673494, 10436720076715940160189431, 50654307296092781940]
+                [9][STATICCALL] from=NimbusRouter, to=NimbusPair, getReserves() -> ['1077382769904949790336747', '15670782301749009448148023', '1670976257']
+                [9][STATICCALL] from=NimbusRouter, to=NimbusPair, getReserves() -> ['369837124446660109621', '65566547605450474750197131', '1670989223']
+              [8][STATICCALL] from=0x3c4e5b, to=GNIMB, balanceOf(account(address): 0x0Ee1be) -> 1077382769904949790336747
+              [8][CALL] from=0x3c4e5b, to=GNIMB, approve(spender(address): 0x2C6cF6, amount(uint256): 1292859323885939748404096) -> True
+              [8][CALL] from=0x3c4e5b, to=NimbusRouter, swapExactTokensForTokensSupportingFeeOnTransferTokens(amountIn(uint256): 1292859323885939748404096, amountOutMin(uint256): 0, path(address[]): ['0x99C486b908434Ae4adF567e9990A929854d0c9..., to(address): 0x3C4e5b, deadline(uint256): 1670989223) -> None
+                [9][CALL] from=NimbusRouter, to=GNIMB, transferFrom(from(address): 0x3C4e5b, to(address): 0x0Ee1be, amount(uint256): 1292859323885939748404096) -> True
+                [9][STATICCALL] from=NimbusRouter, to=NIMB, balanceOf(account(address): 0x3C4e5b) -> 0
+                [9][STATICCALL] from=NimbusRouter, to=NimbusPair, getReserves() -> ['1077382769904949790336747', '15670782301749009448148023', '1670976257']
+                [9][STATICCALL] from=NimbusRouter, to=GNIMB, balanceOf(account(address): 0x0Ee1be) -> 2370242093790889538740843
+                [9][CALL] from=NimbusRouter, to=NimbusPair, swap(amount0Out(uint256): 0, amount1Out(uint256): 8536024378898431480497310, to(address): 0x3C4e5b, data(bytes): b'') -> None
+                  [10][CALL] from=NimbusPair, to=NIMB, transfer(recipient(address): 0x3C4e5b, amount(uint256): 8536024378898431480497310) -> True
+                  [10][STATICCALL] from=NimbusPair, to=GNIMB, balanceOf(account(address): 0x0Ee1be) -> 2370242093790889538740843
+                  [10][STATICCALL] from=NimbusPair, to=NIMB, balanceOf(account(address): 0x0Ee1be) -> 7134757922850577967650713
+                  [10][STATICCALL] from=NimbusPair, to=NimbusFactory, nimbusReferralProgram() -> 0x663b5d
+                  [10][CALL] from=NimbusPair, to=GNIMB, transfer(to(address): 0x663B5D, amount(uint256): 1939288985828909622606) -> True
+                  [10][CALL] from=NimbusPair, to=NimbusReferralProgramLogic, recordFee(token(address): 0x99C486, recipient(address): 0x3C4e5b, amount(uint256): 1939288985828909622606) -> None
+                    [11][STATICCALL] from=NimbusReferralProgramLogic, to=GNIMB, balanceOf(account(address): 0x663B5D) -> 23420230047328600736181
+                    [11][STATICCALL] from=NimbusReferralProgramLogic, to=NimbusReferralProgramUsers, userIdByAddress((address): 0x86Aa1c) -> 0
+                    [11][STATICCALL] from=NimbusReferralProgramLogic, to=NimbusReferralProgramUsers, userSponsor(user(uint256): 0) -> 0
+                [9][STATICCALL] from=NimbusRouter, to=NIMB, balanceOf(account(address): 0x3C4e5b) -> 8536024378898431480497310
+              [8][STATICCALL] from=0x3c4e5b, to=NIMB, balanceOf(account(address): 0x3C4e5b) -> 8536024378898431480497310
+              [8][CALL] from=0x3c4e5b, to=NIMB, approve(spender(address): 0x2C6cF6, amount(uint256): 8536024378898431480497310) -> True
+              [8][CALL] from=0x3c4e5b, to=NimbusRouter, swapExactTokensForTokensSupportingFeeOnTransferTokens(amountIn(uint256): 8536024378898431480497310, amountOutMin(uint256): 0, path(address[]): ['0xCb492C701F7fe71bC9C4B703b84B0Da933fF26..., to(address): 0x3C4e5b, deadline(uint256): 1670989223) -> None
+                [9][CALL] from=NimbusRouter, to=NIMB, transferFrom(sender(address): 0x3C4e5b, recipient(address): 0x7D88A2, amount(uint256): 8536024378898431480497310) -> True
+                [9][STATICCALL] from=NimbusRouter, to=NBU_WBNB, balanceOf((address): 0x3C4e5b) -> 75362393197990534625334
+                [9][STATICCALL] from=NimbusRouter, to=NimbusPair, getReserves() -> ['369837124446660109621', '65566547605450474750197131', '1670989223']
+                [9][STATICCALL] from=NimbusRouter, to=NIMB, balanceOf(account(address): 0x7D88A2) -> 74102571984348906230694441
+                [9][CALL] from=NimbusRouter, to=NimbusPair, swap(amount0Out(uint256): 42489158952834610000, amount1Out(uint256): 0, to(address): 0x3C4e5b, data(bytes): b'') -> None
+                  [10][CALL] from=NimbusPair, to=NBU_WBNB, transfer(dst(address): 0x3C4e5b, wad(uint256): 42489158952834610000) -> True
+                  [10][STATICCALL] from=NimbusPair, to=NBU_WBNB, balanceOf((address): 0x7D88A2) -> 327347965493825499621
+                  [10][STATICCALL] from=NimbusPair, to=NIMB, balanceOf(account(address): 0x7D88A2) -> 74102571984348906230694441
+                  [10][STATICCALL] from=NimbusPair, to=NimbusFactory, nimbusReferralProgram() -> 0x663b5d
+                  [10][CALL] from=NimbusPair, to=NIMB, transfer(recipient(address): 0x663B5D, amount(uint256): 12804036568347647220745) -> True
+                  [10][CALL] from=NimbusPair, to=NimbusReferralProgramLogic, recordFee(token(address): 0xCb492C, recipient(address): 0x3C4e5b, amount(uint256): 12804036568347647220745) -> None
+                    [11][STATICCALL] from=NimbusReferralProgramLogic, to=NIMB, balanceOf(account(address): 0x663B5D) -> 236823864837321848984570
+                    [11][STATICCALL] from=NimbusReferralProgramLogic, to=NimbusReferralProgramUsers, userIdByAddress((address): 0x86Aa1c) -> 0
+                    [11][STATICCALL] from=NimbusReferralProgramLogic, to=NimbusReferralProgramUsers, userSponsor(user(uint256): 0) -> 0
+                [9][STATICCALL] from=NimbusRouter, to=NBU_WBNB, balanceOf((address): 0x3C4e5b) -> 75404882356943369235334
+              [8][STATICCALL] from=0x3c4e5b, to=GNIMB, balanceOf(account(address): 0x3C4e5b) -> 15187933255375035009531366
+              [8][CALL] from=0x3c4e5b, to=GNIMB, approve(spender(address): 0x2C6cF6, amount(uint256): 15187933255375035009531366) -> True
+              [8][CALL] from=0x3c4e5b, to=NimbusRouter, swapExactTokensForTokensSupportingFeeOnTransferTokens(amountIn(uint256): 15187933255375035009531366, amountOutMin(uint256): 0, path(address[]): ['0x99C486b908434Ae4adF567e9990A929854d0c9..., to(address): 0x3C4e5b, deadline(uint256): 1670989223) -> None
+                [9][CALL] from=NimbusRouter, to=GNIMB, transferFrom(from(address): 0x3C4e5b, to(address): 0x68D8fa, amount(uint256): 15187933255375035009531366) -> True
+                [9][STATICCALL] from=NimbusRouter, to=NBU_WBNB, balanceOf((address): 0x3C4e5b) -> 75404882356943369235334
+                [9][STATICCALL] from=NimbusRouter, to=NimbusPair, getReserves() -> ['10546126891550149513792713', '855589810967400324742', '1670987138']
+                [9][STATICCALL] from=NimbusRouter, to=GNIMB, balanceOf(account(address): 0x68D8fa) -> 25734060146925184523324079
+                [9][CALL] from=NimbusRouter, to=NimbusPair, swap(amount0Out(uint256): 0, amount1Out(uint256): 504336915833368931275, to(address): 0x3C4e5b, data(bytes): b'') -> None
+                  [10][CALL] from=NimbusPair, to=NBU_WBNB, transfer(dst(address): 0x3C4e5b, wad(uint256): 504336915833368931275) -> True
+                  [10][STATICCALL] from=NimbusPair, to=GNIMB, balanceOf(account(address): 0x68D8fa) -> 25734060146925184523324079
+                  [10][STATICCALL] from=NimbusPair, to=NBU_WBNB, balanceOf((address): 0x68D8fa) -> 351252895134031393467
+                  [10][STATICCALL] from=NimbusPair, to=NimbusFactory, nimbusReferralProgram() -> 0x663b5d
+                  [10][CALL] from=NimbusPair, to=GNIMB, transfer(to(address): 0x663B5D, amount(uint256): 22781899883062552514297) -> True
+                  [10][CALL] from=NimbusPair, to=NimbusReferralProgramLogic, recordFee(token(address): 0x99C486, recipient(address): 0x3C4e5b, amount(uint256): 22781899883062552514297) -> None
+                    [11][STATICCALL] from=NimbusReferralProgramLogic, to=GNIMB, balanceOf(account(address): 0x663B5D) -> 46202129930391153250478
+                    [11][STATICCALL] from=NimbusReferralProgramLogic, to=NimbusReferralProgramUsers, userIdByAddress((address): 0x86Aa1c) -> 0
+                    [11][STATICCALL] from=NimbusReferralProgramLogic, to=NimbusReferralProgramUsers, userSponsor(user(uint256): 0) -> 0
+                [9][STATICCALL] from=NimbusRouter, to=NBU_WBNB, balanceOf((address): 0x3C4e5b) -> 75909219272776738166609
+              [8][STATICCALL] from=0x3c4e5b, to=NBU_WBNB, balanceOf((address): 0x3C4e5b) -> 75909219272776738166609
+              [8][CALL] from=0x3c4e5b, to=NBU_WBNB, withdraw(wad(uint256): 75909219272776738166609) -> None
+                [9][CALL][75909.21927277674] from=NBU_WBNB, to=0x3c4e5b
+              [8][CALL] from=0x3c4e5b, to=WBNB, deposit() -> None
+              [8][CALL] from=0x3c4e5b, to=WBNB, transfer(dst(address): 0x8840C6, wad(uint256): 20180769259537668790028) -> True
+            [7][STATICCALL] from=BiswapPair, to=BEP20USDT, balanceOf(account(address): 0x8840C6) -> 17061025901742596235838876
+            [7][STATICCALL] from=BiswapPair, to=WBNB, balanceOf((address): 0x8840C6) -> 61913497260863633814578
+          [6][CALL] from=0x3c4e5b, to=WBNB, transfer(dst(address): 0xaCAac9, wad(uint256): 53268815725484887245660) -> True
+        [5][STATICCALL] from=BiswapPair, to=WBNB, balanceOf((address): 0xaCAac9) -> 53268815725484887245661
+        [5][STATICCALL] from=BiswapPair, to=BEP20Token, balanceOf(account(address): 0xaCAac9) -> 14656830224489461902995140
+      [4][CALL] from=0x3c4e5b, to=WBNB, transfer(dst(address): 0x0fe261, wad(uint256): 2181600350903934658340) -> True
+      [4][STATICCALL] from=0x3c4e5b, to=WBNB, balanceOf((address): 0x3C4e5b) -> 278033936850247472581
+      [4][CALL] from=0x3c4e5b, to=WBNB, transfer(dst(address): 0x9D3B56, wad(uint256): 278033936850247472581) -> True
+    [3][STATICCALL] from=DPPAdvanced, to=WBNB, balanceOf((address): 0x0fe261) -> 2181600350903934658340
+    [3][STATICCALL] from=DPPAdvanced, to=BEP20Token, balanceOf(account(address): 0x0fe261) -> 439548227490450313083505
+    [3][STATICCALL] from=DPPAdvanced, to=WBNB, balanceOf((address): 0x0fe261) -> 2181600350903934658340
+    [3][STATICCALL] from=DPPAdvanced, to=BEP20Token, balanceOf(account(address): 0x0fe261) -> 439548227490450313083505

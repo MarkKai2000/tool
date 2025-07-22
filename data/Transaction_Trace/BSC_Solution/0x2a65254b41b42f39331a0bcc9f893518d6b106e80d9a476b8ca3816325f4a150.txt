@@ -1,0 +1,75 @@
+[1][CALL] from=0xb32a53, to=0x631adf, 0xcd60b03d() -> None
+  [2][CALL] from=0x631adf, to=WBNB, deposit() -> None
+  [2][CALL] from=0x631adf, to=WBNB, approve(guy(address): 0x95e92B, wad(uint256): 1000000000000000) -> True
+  [2][CALL] from=0x631adf, to=ERC1967Proxy, depositaddress() -> 0x000000
+    [3][DELEGATECALL] from=ERC1967Proxy, to=0x637d8c, depositaddress() -> 0x000000
+      [4][STATICCALL] from=ERC1967Proxy, to=ERC1967Proxy, 0x456e08e2() -> 0x000000
+        [5][DELEGATECALL] from=ERC1967Proxy, to=0xb9d3bb, 0x456e08e2() -> 0x000000
+          [6][STATICCALL] from=ERC1967Proxy, to=PancakePair, token0() -> 0x55d398
+          [6][STATICCALL] from=ERC1967Proxy, to=PancakePair, token1() -> 0xbb4cdb
+          [6][STATICCALL] from=ERC1967Proxy, to=PancakePair, getReserves() -> ['21802473211242262108025422', '33188851079743329068970', '1746948824']
+          [6][STATICCALL] from=ERC1967Proxy, to=BEP20USDT, decimals() -> 18
+          [6][STATICCALL] from=ERC1967Proxy, to=WBNB, decimals() -> 18
+      [4][STATICCALL] from=ERC1967Proxy, to=ERC1967Proxy, 0x769b6f30() -> 0x000000
+        [5][DELEGATECALL] from=ERC1967Proxy, to=0xb9d3bb, 0x769b6f30() -> 0x000000
+          [6][STATICCALL] from=ERC1967Proxy, to=PancakePair, token0() -> 0x0dfb6a
+          [6][STATICCALL] from=ERC1967Proxy, to=PancakePair, token1() -> 0x55d398
+          [6][STATICCALL] from=ERC1967Proxy, to=PancakePair, getReserves() -> ['31989860347277356651458', '2159553516647587844183110', '1746948322']
+          [6][STATICCALL] from=ERC1967Proxy, to=BEP20USDT, decimals() -> 18
+          [6][STATICCALL] from=ERC1967Proxy, to=ERC1967Proxy, decimals() -> 0x000000
+            [7][DELEGATECALL] from=ERC1967Proxy, to=0xb1c460, decimals() -> 0x000000
+      [4][CALL] from=ERC1967Proxy, to=WBNB, transferFrom(src(address): 0x631adF, dst(address): 0x95e92B, wad(uint256): 1000000000000000) -> True
+      [4][CALL] from=ERC1967Proxy, to=ERC1967Proxy, mintaddress() -> None
+        [5][DELEGATECALL] from=ERC1967Proxy, to=0xb1c460, mintaddress() -> None
+  [2][CALL] from=0x631adf, to=ERC1967Proxy, approveaddress() -> 0x000000
+    [3][DELEGATECALL] from=ERC1967Proxy, to=0xb1c460, approveaddress() -> 0x000000
+  [2][CALL] from=0x631adf, to=PancakeRouter, swapExactTokensForTokensSupportingFeeOnTransferTokens(amountIn(uint256): 30000000000000000000000000, amountOutMin(uint256): 0, path(address[]): ['0x0dFb6Ac3A8Ea88d058bE219066931dB2BeE9A5..., to(address): 0xB32A53, deadline(uint256): 1746948826) -> None
+    [3][CALL] from=PancakeRouter, to=ERC1967Proxy, transferFromaddress() -> 0x000000
+      [4][DELEGATECALL] from=ERC1967Proxy, to=0xb1c460, transferFromaddress() -> 0x000000
+        [5][STATICCALL] from=ERC1967Proxy, to=ERC1967Proxy, 0x2ba3e289() -> 0x000000
+          [6][DELEGATECALL] from=ERC1967Proxy, to=0xb9d3bb, 0x2ba3e289() -> 0x000000
+        [5][STATICCALL] from=ERC1967Proxy, to=ERC1967Proxy, 0x2ba3e289() -> 0x000000
+          [6][DELEGATECALL] from=ERC1967Proxy, to=0xb9d3bb, 0x2ba3e289() -> 0x000000
+        [5][CALL] from=ERC1967Proxy, to=ERC1967Proxy, 0xb08b2f55() -> None
+          [6][DELEGATECALL] from=ERC1967Proxy, to=0xf703cb, 0xb08b2f55() -> None
+            [7][CALL] from=ERC1967Proxy, to=ERC1967Proxy, transferaddress() -> 0x000000
+              [8][DELEGATECALL] from=ERC1967Proxy, to=0xb1c460, transferaddress() -> 0x000000
+                [9][STATICCALL] from=ERC1967Proxy, to=ERC1967Proxy, 0x2ba3e289() -> 0x000000
+                  [10][DELEGATECALL] from=ERC1967Proxy, to=0xb9d3bb, 0x2ba3e289() -> 0x000000
+                [9][STATICCALL] from=ERC1967Proxy, to=ERC1967Proxy, 0x2ba3e289() -> 0x000000
+                  [10][DELEGATECALL] from=ERC1967Proxy, to=0xb9d3bb, 0x2ba3e289() -> 0x000000
+            [7][CALL] from=ERC1967Proxy, to=ERC1967Proxy, transferaddress() -> 0x000000
+              [8][DELEGATECALL] from=ERC1967Proxy, to=0xb1c460, transferaddress() -> 0x000000
+                [9][STATICCALL] from=ERC1967Proxy, to=ERC1967Proxy, 0x2ba3e289() -> 0x000000
+                  [10][DELEGATECALL] from=ERC1967Proxy, to=0xb9d3bb, 0x2ba3e289() -> 0x000000
+                [9][STATICCALL] from=ERC1967Proxy, to=ERC1967Proxy, 0x2ba3e289() -> 0x000000
+                  [10][DELEGATECALL] from=ERC1967Proxy, to=0xb9d3bb, 0x2ba3e289() -> 0x000000
+            [7][CALL] from=ERC1967Proxy, to=ERC1967Proxy, transferaddress() -> 0x000000
+              [8][DELEGATECALL] from=ERC1967Proxy, to=0xb1c460, transferaddress() -> 0x000000
+                [9][STATICCALL] from=ERC1967Proxy, to=ERC1967Proxy, 0x2ba3e289() -> 0x000000
+                  [10][DELEGATECALL] from=ERC1967Proxy, to=0xb9d3bb, 0x2ba3e289() -> 0x000000
+                [9][STATICCALL] from=ERC1967Proxy, to=ERC1967Proxy, 0x2ba3e289() -> 0x000000
+                  [10][DELEGATECALL] from=ERC1967Proxy, to=0xb9d3bb, 0x2ba3e289() -> 0x000000
+            [7][CALL] from=ERC1967Proxy, to=ERC1967Proxy, transferaddress() -> 0x000000
+              [8][DELEGATECALL] from=ERC1967Proxy, to=0xb1c460, transferaddress() -> 0x000000
+                [9][STATICCALL] from=ERC1967Proxy, to=ERC1967Proxy, 0x2ba3e289() -> 0x000000
+                  [10][DELEGATECALL] from=ERC1967Proxy, to=0xb9d3bb, 0x2ba3e289() -> 0x000000
+                [9][STATICCALL] from=ERC1967Proxy, to=ERC1967Proxy, 0x2ba3e289() -> 0x000000
+                  [10][DELEGATECALL] from=ERC1967Proxy, to=0xb9d3bb, 0x2ba3e289() -> 0x000000
+            [7][CALL] from=ERC1967Proxy, to=ERC1967Proxy, transferaddress() -> 0x000000
+              [8][DELEGATECALL] from=ERC1967Proxy, to=0xb1c460, transferaddress() -> 0x000000
+                [9][STATICCALL] from=ERC1967Proxy, to=ERC1967Proxy, 0x2ba3e289() -> 0x000000
+                  [10][DELEGATECALL] from=ERC1967Proxy, to=0xb9d3bb, 0x2ba3e289() -> 0x000000
+                [9][STATICCALL] from=ERC1967Proxy, to=ERC1967Proxy, 0x2ba3e289() -> 0x000000
+                  [10][DELEGATECALL] from=ERC1967Proxy, to=0xb9d3bb, 0x2ba3e289() -> 0x000000
+    [3][STATICCALL] from=PancakeRouter, to=BEP20USDT, balanceOf(account(address): 0xB32A53) -> 0
+    [3][STATICCALL] from=PancakeRouter, to=PancakePair, getReserves() -> ['31989860347277356651458', '2159553516647587844183110', '1746948322']
+    [3][STATICCALL] from=PancakeRouter, to=ERC1967Proxy, balanceOfaddress() -> 0x000000
+      [4][DELEGATECALL] from=ERC1967Proxy, to=0xb1c460, balanceOfaddress() -> 0x000000
+    [3][CALL] from=PancakeRouter, to=PancakePair, swap(amount0Out(uint256): 0, amount1Out(uint256): 2157126179348943736411799, to(address): 0xB32A53, data(bytes): b'') -> None
+      [4][CALL] from=PancakePair, to=BEP20USDT, transfer(recipient(address): 0xB32A53, amount(uint256): 2157126179348943736411799) -> True
+      [4][STATICCALL] from=PancakePair, to=ERC1967Proxy, balanceOfaddress() -> 0x000000
+        [5][DELEGATECALL] from=ERC1967Proxy, to=0xb1c460, balanceOfaddress() -> 0x000000
+      [4][STATICCALL] from=PancakePair, to=BEP20USDT, balanceOf(account(address): 0xB5252F) -> 2427337298644107771311
+    [3][STATICCALL] from=PancakeRouter, to=BEP20USDT, balanceOf(account(address): 0xB32A53) -> 2157126179348943736411799
+  [2][CALL][0.999] from=0x631adf, to=0x1266c6

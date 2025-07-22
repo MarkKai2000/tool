@@ -1,0 +1,17 @@
+[1][CALL] from=0x051370, to=UsdtCrvUsdStakeDaoCurve, withdrawStuckTokenaddress() -> None
+  [2][STATICCALL] from=UsdtCrvUsdStakeDaoCurve, to=Vyper_contract, balanceOfaddress() -> 0x000000
+    [3][DELEGATECALL] from=Vyper_contract, to=Vyper_contract, balanceOfaddress() -> 0x000000
+  [2][CALL] from=UsdtCrvUsdStakeDaoCurve, to=Vyper_contract, transferaddress() -> 0x000000
+    [3][DELEGATECALL] from=Vyper_contract, to=Vyper_contract, transferaddress() -> 0x000000
+      [4][STATICCALL] from=Vyper_contract, to=Vyper_contract, adjusted_balance_ofaddress() -> 0x000000
+        [5][STATICCALL] from=Vyper_contract, to=Vyper_contract, adjusted_balance_ofaddress() -> 0x000000
+          [6][STATICCALL] from=Vyper_contract, to=TransparentUpgradeableProxy, balanceOfaddress() -> 0x000000
+            [7][DELEGATECALL] from=TransparentUpgradeableProxy, to=Vyper_contract, balanceOfaddress() -> 0x000000
+      [4][STATICCALL] from=Vyper_contract, to=TransparentUpgradeableProxy, totalSupply() -> 0x000000
+        [5][DELEGATECALL] from=TransparentUpgradeableProxy, to=Vyper_contract, totalSupply() -> 0x000000
+      [4][STATICCALL] from=Vyper_contract, to=Vyper_contract, adjusted_balance_ofaddress() -> 0x000000
+        [5][STATICCALL] from=Vyper_contract, to=Vyper_contract, adjusted_balance_ofaddress() -> 0x000000
+          [6][STATICCALL] from=Vyper_contract, to=TransparentUpgradeableProxy, balanceOfaddress() -> 0x000000
+            [7][DELEGATECALL] from=TransparentUpgradeableProxy, to=Vyper_contract, balanceOfaddress() -> 0x000000
+      [4][STATICCALL] from=Vyper_contract, to=TransparentUpgradeableProxy, totalSupply() -> 0x000000
+        [5][DELEGATECALL] from=TransparentUpgradeableProxy, to=Vyper_contract, totalSupply() -> 0x000000

@@ -1,0 +1,7 @@
+[1][CALL] from=0x443cf2, to=0xa29e4f, 0x9c587698() -> None
+  [2][STATICCALL] from=0xa29e4f, to=OlympusERC20Token, balanceOf(account(address): 0x007FE7) -> 30437077948152
+  [2][CALL] from=0xa29e4f, to=BondFixedExpiryTeller, redeem(token_(address): 0xa29E4f, amount_(uint256): 30437077948152) -> None
+    [3][STATICCALL] from=BondFixedExpiryTeller, to=0xa29e4f, expiry() -> 0x000000
+    [3][CALL] from=BondFixedExpiryTeller, to=0xa29e4f, burnaddress() -> None
+    [3][STATICCALL] from=BondFixedExpiryTeller, to=0xa29e4f, underlying() -> 0x000000
+    [3][CALL] from=BondFixedExpiryTeller, to=OlympusERC20Token, transfer(recipient(address): 0xa29E4f, amount(uint256): 30437077948152) -> True

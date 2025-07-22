@@ -1,0 +1,434 @@
+[1][CALL] from=0xc59652, to=0x2cbef9, 0x8892170a() -> None
+  [2][STATICCALL] from=0x2cbef9, to=BARL, balanceOf(account(address): 0x04c80B) -> 78172967456332658855968
+  [2][CALL] from=0x2cbef9, to=WeightedIndex, flash(_recipient(address): 0x2cbEf9, _token(address): 0x3e2324, _amount(uint256): 78172967456332658855968, _data(bytes): b'') -> None
+    [3][STATICCALL] from=WeightedIndex, to=StakingPoolToken, poolRewards() -> 0xd71934
+    [3][STATICCALL] from=WeightedIndex, to=Dai, decimals() -> 18
+    [3][CALL] from=WeightedIndex, to=Dai, transferFrom(src(address): 0x2cbEf9, dst(address): 0xD71934, wad(uint256): 10000000000000000000) -> True
+    [3][STATICCALL] from=WeightedIndex, to=BARL, balanceOf(account(address): 0x04c80B) -> 78172967456332658855968
+    [3][CALL] from=WeightedIndex, to=BARL, transfer(recipient(address): 0x2cbEf9, amount(uint256): 78172967456332658855968) -> True
+    [3][CALL] from=WeightedIndex, to=0x2cbef9, 0xe98a5654() -> None
+      [4][STATICCALL] from=0x2cbef9, to=BARL, balanceOf(account(address): 0x2cbEf9) -> 78172967456332658855968
+      [4][CALL] from=0x2cbef9, to=WeightedIndex, bond(_token(address): 0x3e2324, _amount(uint256): 78172967456332658855968) -> None
+        [5][STATICCALL] from=WeightedIndex, to=BARL, balanceOf(account(address): 0x04c80B) -> 0
+        [5][CALL] from=WeightedIndex, to=BARL, transferFrom(sender(address): 0x2cbEf9, recipient(address): 0x04c80B, amount(uint256): 78172967456332658855968) -> True
+        [5][STATICCALL] from=WeightedIndex, to=BARL, balanceOf(account(address): 0x04c80B) -> 78172967456332658855968
+    [3][STATICCALL] from=WeightedIndex, to=BARL, balanceOf(account(address): 0x04c80B) -> 78172967456332658855968
+  [2][STATICCALL] from=0x2cbef9, to=BARL, balanceOf(account(address): 0x04c80B) -> 78172967456332658855968
+  [2][CALL] from=0x2cbef9, to=WeightedIndex, flash(_recipient(address): 0x2cbEf9, _token(address): 0x3e2324, _amount(uint256): 78172967456332658855968, _data(bytes): b'') -> None
+    [3][STATICCALL] from=WeightedIndex, to=StakingPoolToken, poolRewards() -> 0xd71934
+    [3][STATICCALL] from=WeightedIndex, to=Dai, decimals() -> 18
+    [3][CALL] from=WeightedIndex, to=Dai, transferFrom(src(address): 0x2cbEf9, dst(address): 0xD71934, wad(uint256): 10000000000000000000) -> True
+    [3][STATICCALL] from=WeightedIndex, to=BARL, balanceOf(account(address): 0x04c80B) -> 78172967456332658855968
+    [3][CALL] from=WeightedIndex, to=BARL, transfer(recipient(address): 0x2cbEf9, amount(uint256): 78172967456332658855968) -> True
+    [3][CALL] from=WeightedIndex, to=0x2cbef9, 0xe98a5654() -> None
+      [4][STATICCALL] from=0x2cbef9, to=BARL, balanceOf(account(address): 0x2cbEf9) -> 78172967456332658855968
+      [4][CALL] from=0x2cbef9, to=WeightedIndex, bond(_token(address): 0x3e2324, _amount(uint256): 78172967456332658855968) -> None
+        [5][STATICCALL] from=WeightedIndex, to=BARL, balanceOf(account(address): 0x04c80B) -> 0
+        [5][CALL] from=WeightedIndex, to=BARL, transferFrom(sender(address): 0x2cbEf9, recipient(address): 0x04c80B, amount(uint256): 78172967456332658855968) -> True
+        [5][STATICCALL] from=WeightedIndex, to=BARL, balanceOf(account(address): 0x04c80B) -> 78172967456332658855968
+    [3][STATICCALL] from=WeightedIndex, to=BARL, balanceOf(account(address): 0x04c80B) -> 78172967456332658855968
+  [2][STATICCALL] from=0x2cbef9, to=BARL, balanceOf(account(address): 0x04c80B) -> 78172967456332658855968
+  [2][CALL] from=0x2cbef9, to=WeightedIndex, flash(_recipient(address): 0x2cbEf9, _token(address): 0x3e2324, _amount(uint256): 78172967456332658855968, _data(bytes): b'') -> None
+    [3][STATICCALL] from=WeightedIndex, to=StakingPoolToken, poolRewards() -> 0xd71934
+    [3][STATICCALL] from=WeightedIndex, to=Dai, decimals() -> 18
+    [3][CALL] from=WeightedIndex, to=Dai, transferFrom(src(address): 0x2cbEf9, dst(address): 0xD71934, wad(uint256): 10000000000000000000) -> True
+    [3][STATICCALL] from=WeightedIndex, to=BARL, balanceOf(account(address): 0x04c80B) -> 78172967456332658855968
+    [3][CALL] from=WeightedIndex, to=BARL, transfer(recipient(address): 0x2cbEf9, amount(uint256): 78172967456332658855968) -> True
+    [3][CALL] from=WeightedIndex, to=0x2cbef9, 0xe98a5654() -> None
+      [4][STATICCALL] from=0x2cbef9, to=BARL, balanceOf(account(address): 0x2cbEf9) -> 78172967456332658855968
+      [4][CALL] from=0x2cbef9, to=WeightedIndex, bond(_token(address): 0x3e2324, _amount(uint256): 78172967456332658855968) -> None
+        [5][STATICCALL] from=WeightedIndex, to=BARL, balanceOf(account(address): 0x04c80B) -> 0
+        [5][CALL] from=WeightedIndex, to=BARL, transferFrom(sender(address): 0x2cbEf9, recipient(address): 0x04c80B, amount(uint256): 78172967456332658855968) -> True
+        [5][STATICCALL] from=WeightedIndex, to=BARL, balanceOf(account(address): 0x04c80B) -> 78172967456332658855968
+    [3][STATICCALL] from=WeightedIndex, to=BARL, balanceOf(account(address): 0x04c80B) -> 78172967456332658855968
+  [2][STATICCALL] from=0x2cbef9, to=BARL, balanceOf(account(address): 0x04c80B) -> 78172967456332658855968
+  [2][CALL] from=0x2cbef9, to=WeightedIndex, flash(_recipient(address): 0x2cbEf9, _token(address): 0x3e2324, _amount(uint256): 78172967456332658855968, _data(bytes): b'') -> None
+    [3][STATICCALL] from=WeightedIndex, to=StakingPoolToken, poolRewards() -> 0xd71934
+    [3][STATICCALL] from=WeightedIndex, to=Dai, decimals() -> 18
+    [3][CALL] from=WeightedIndex, to=Dai, transferFrom(src(address): 0x2cbEf9, dst(address): 0xD71934, wad(uint256): 10000000000000000000) -> True
+    [3][STATICCALL] from=WeightedIndex, to=BARL, balanceOf(account(address): 0x04c80B) -> 78172967456332658855968
+    [3][CALL] from=WeightedIndex, to=BARL, transfer(recipient(address): 0x2cbEf9, amount(uint256): 78172967456332658855968) -> True
+    [3][CALL] from=WeightedIndex, to=0x2cbef9, 0xe98a5654() -> None
+      [4][STATICCALL] from=0x2cbef9, to=BARL, balanceOf(account(address): 0x2cbEf9) -> 78172967456332658855968
+      [4][CALL] from=0x2cbef9, to=WeightedIndex, bond(_token(address): 0x3e2324, _amount(uint256): 78172967456332658855968) -> None
+        [5][STATICCALL] from=WeightedIndex, to=BARL, balanceOf(account(address): 0x04c80B) -> 0
+        [5][CALL] from=WeightedIndex, to=BARL, transferFrom(sender(address): 0x2cbEf9, recipient(address): 0x04c80B, amount(uint256): 78172967456332658855968) -> True
+        [5][STATICCALL] from=WeightedIndex, to=BARL, balanceOf(account(address): 0x04c80B) -> 78172967456332658855968
+    [3][STATICCALL] from=WeightedIndex, to=BARL, balanceOf(account(address): 0x04c80B) -> 78172967456332658855968
+  [2][STATICCALL] from=0x2cbef9, to=BARL, balanceOf(account(address): 0x04c80B) -> 78172967456332658855968
+  [2][CALL] from=0x2cbef9, to=WeightedIndex, flash(_recipient(address): 0x2cbEf9, _token(address): 0x3e2324, _amount(uint256): 78172967456332658855968, _data(bytes): b'') -> None
+    [3][STATICCALL] from=WeightedIndex, to=StakingPoolToken, poolRewards() -> 0xd71934
+    [3][STATICCALL] from=WeightedIndex, to=Dai, decimals() -> 18
+    [3][CALL] from=WeightedIndex, to=Dai, transferFrom(src(address): 0x2cbEf9, dst(address): 0xD71934, wad(uint256): 10000000000000000000) -> True
+    [3][STATICCALL] from=WeightedIndex, to=BARL, balanceOf(account(address): 0x04c80B) -> 78172967456332658855968
+    [3][CALL] from=WeightedIndex, to=BARL, transfer(recipient(address): 0x2cbEf9, amount(uint256): 78172967456332658855968) -> True
+    [3][CALL] from=WeightedIndex, to=0x2cbef9, 0xe98a5654() -> None
+      [4][STATICCALL] from=0x2cbef9, to=BARL, balanceOf(account(address): 0x2cbEf9) -> 78172967456332658855968
+      [4][CALL] from=0x2cbef9, to=WeightedIndex, bond(_token(address): 0x3e2324, _amount(uint256): 78172967456332658855968) -> None
+        [5][STATICCALL] from=WeightedIndex, to=BARL, balanceOf(account(address): 0x04c80B) -> 0
+        [5][CALL] from=WeightedIndex, to=BARL, transferFrom(sender(address): 0x2cbEf9, recipient(address): 0x04c80B, amount(uint256): 78172967456332658855968) -> True
+        [5][STATICCALL] from=WeightedIndex, to=BARL, balanceOf(account(address): 0x04c80B) -> 78172967456332658855968
+    [3][STATICCALL] from=WeightedIndex, to=BARL, balanceOf(account(address): 0x04c80B) -> 78172967456332658855968
+  [2][STATICCALL] from=0x2cbef9, to=BARL, balanceOf(account(address): 0x04c80B) -> 78172967456332658855968
+  [2][CALL] from=0x2cbef9, to=WeightedIndex, flash(_recipient(address): 0x2cbEf9, _token(address): 0x3e2324, _amount(uint256): 78172967456332658855968, _data(bytes): b'') -> None
+    [3][STATICCALL] from=WeightedIndex, to=StakingPoolToken, poolRewards() -> 0xd71934
+    [3][STATICCALL] from=WeightedIndex, to=Dai, decimals() -> 18
+    [3][CALL] from=WeightedIndex, to=Dai, transferFrom(src(address): 0x2cbEf9, dst(address): 0xD71934, wad(uint256): 10000000000000000000) -> True
+    [3][STATICCALL] from=WeightedIndex, to=BARL, balanceOf(account(address): 0x04c80B) -> 78172967456332658855968
+    [3][CALL] from=WeightedIndex, to=BARL, transfer(recipient(address): 0x2cbEf9, amount(uint256): 78172967456332658855968) -> True
+    [3][CALL] from=WeightedIndex, to=0x2cbef9, 0xe98a5654() -> None
+      [4][STATICCALL] from=0x2cbef9, to=BARL, balanceOf(account(address): 0x2cbEf9) -> 78172967456332658855968
+      [4][CALL] from=0x2cbef9, to=WeightedIndex, bond(_token(address): 0x3e2324, _amount(uint256): 78172967456332658855968) -> None
+        [5][STATICCALL] from=WeightedIndex, to=BARL, balanceOf(account(address): 0x04c80B) -> 0
+        [5][CALL] from=WeightedIndex, to=BARL, transferFrom(sender(address): 0x2cbEf9, recipient(address): 0x04c80B, amount(uint256): 78172967456332658855968) -> True
+        [5][STATICCALL] from=WeightedIndex, to=BARL, balanceOf(account(address): 0x04c80B) -> 78172967456332658855968
+    [3][STATICCALL] from=WeightedIndex, to=BARL, balanceOf(account(address): 0x04c80B) -> 78172967456332658855968
+  [2][STATICCALL] from=0x2cbef9, to=BARL, balanceOf(account(address): 0x04c80B) -> 78172967456332658855968
+  [2][CALL] from=0x2cbef9, to=WeightedIndex, flash(_recipient(address): 0x2cbEf9, _token(address): 0x3e2324, _amount(uint256): 78172967456332658855968, _data(bytes): b'') -> None
+    [3][STATICCALL] from=WeightedIndex, to=StakingPoolToken, poolRewards() -> 0xd71934
+    [3][STATICCALL] from=WeightedIndex, to=Dai, decimals() -> 18
+    [3][CALL] from=WeightedIndex, to=Dai, transferFrom(src(address): 0x2cbEf9, dst(address): 0xD71934, wad(uint256): 10000000000000000000) -> True
+    [3][STATICCALL] from=WeightedIndex, to=BARL, balanceOf(account(address): 0x04c80B) -> 78172967456332658855968
+    [3][CALL] from=WeightedIndex, to=BARL, transfer(recipient(address): 0x2cbEf9, amount(uint256): 78172967456332658855968) -> True
+    [3][CALL] from=WeightedIndex, to=0x2cbef9, 0xe98a5654() -> None
+      [4][STATICCALL] from=0x2cbef9, to=BARL, balanceOf(account(address): 0x2cbEf9) -> 78172967456332658855968
+      [4][CALL] from=0x2cbef9, to=WeightedIndex, bond(_token(address): 0x3e2324, _amount(uint256): 78172967456332658855968) -> None
+        [5][STATICCALL] from=WeightedIndex, to=BARL, balanceOf(account(address): 0x04c80B) -> 0
+        [5][CALL] from=WeightedIndex, to=BARL, transferFrom(sender(address): 0x2cbEf9, recipient(address): 0x04c80B, amount(uint256): 78172967456332658855968) -> True
+        [5][STATICCALL] from=WeightedIndex, to=BARL, balanceOf(account(address): 0x04c80B) -> 78172967456332658855968
+    [3][STATICCALL] from=WeightedIndex, to=BARL, balanceOf(account(address): 0x04c80B) -> 78172967456332658855968
+  [2][STATICCALL] from=0x2cbef9, to=BARL, balanceOf(account(address): 0x04c80B) -> 78172967456332658855968
+  [2][CALL] from=0x2cbef9, to=WeightedIndex, flash(_recipient(address): 0x2cbEf9, _token(address): 0x3e2324, _amount(uint256): 78172967456332658855968, _data(bytes): b'') -> None
+    [3][STATICCALL] from=WeightedIndex, to=StakingPoolToken, poolRewards() -> 0xd71934
+    [3][STATICCALL] from=WeightedIndex, to=Dai, decimals() -> 18
+    [3][CALL] from=WeightedIndex, to=Dai, transferFrom(src(address): 0x2cbEf9, dst(address): 0xD71934, wad(uint256): 10000000000000000000) -> True
+    [3][STATICCALL] from=WeightedIndex, to=BARL, balanceOf(account(address): 0x04c80B) -> 78172967456332658855968
+    [3][CALL] from=WeightedIndex, to=BARL, transfer(recipient(address): 0x2cbEf9, amount(uint256): 78172967456332658855968) -> True
+    [3][CALL] from=WeightedIndex, to=0x2cbef9, 0xe98a5654() -> None
+      [4][STATICCALL] from=0x2cbef9, to=BARL, balanceOf(account(address): 0x2cbEf9) -> 78172967456332658855968
+      [4][CALL] from=0x2cbef9, to=WeightedIndex, bond(_token(address): 0x3e2324, _amount(uint256): 78172967456332658855968) -> None
+        [5][STATICCALL] from=WeightedIndex, to=BARL, balanceOf(account(address): 0x04c80B) -> 0
+        [5][CALL] from=WeightedIndex, to=BARL, transferFrom(sender(address): 0x2cbEf9, recipient(address): 0x04c80B, amount(uint256): 78172967456332658855968) -> True
+        [5][STATICCALL] from=WeightedIndex, to=BARL, balanceOf(account(address): 0x04c80B) -> 78172967456332658855968
+    [3][STATICCALL] from=WeightedIndex, to=BARL, balanceOf(account(address): 0x04c80B) -> 78172967456332658855968
+  [2][STATICCALL] from=0x2cbef9, to=BARL, balanceOf(account(address): 0x04c80B) -> 78172967456332658855968
+  [2][CALL] from=0x2cbef9, to=WeightedIndex, flash(_recipient(address): 0x2cbEf9, _token(address): 0x3e2324, _amount(uint256): 78172967456332658855968, _data(bytes): b'') -> None
+    [3][STATICCALL] from=WeightedIndex, to=StakingPoolToken, poolRewards() -> 0xd71934
+    [3][STATICCALL] from=WeightedIndex, to=Dai, decimals() -> 18
+    [3][CALL] from=WeightedIndex, to=Dai, transferFrom(src(address): 0x2cbEf9, dst(address): 0xD71934, wad(uint256): 10000000000000000000) -> True
+    [3][STATICCALL] from=WeightedIndex, to=BARL, balanceOf(account(address): 0x04c80B) -> 78172967456332658855968
+    [3][CALL] from=WeightedIndex, to=BARL, transfer(recipient(address): 0x2cbEf9, amount(uint256): 78172967456332658855968) -> True
+    [3][CALL] from=WeightedIndex, to=0x2cbef9, 0xe98a5654() -> None
+      [4][STATICCALL] from=0x2cbef9, to=BARL, balanceOf(account(address): 0x2cbEf9) -> 78172967456332658855968
+      [4][CALL] from=0x2cbef9, to=WeightedIndex, bond(_token(address): 0x3e2324, _amount(uint256): 78172967456332658855968) -> None
+        [5][STATICCALL] from=WeightedIndex, to=BARL, balanceOf(account(address): 0x04c80B) -> 0
+        [5][CALL] from=WeightedIndex, to=BARL, transferFrom(sender(address): 0x2cbEf9, recipient(address): 0x04c80B, amount(uint256): 78172967456332658855968) -> True
+        [5][STATICCALL] from=WeightedIndex, to=BARL, balanceOf(account(address): 0x04c80B) -> 78172967456332658855968
+    [3][STATICCALL] from=WeightedIndex, to=BARL, balanceOf(account(address): 0x04c80B) -> 78172967456332658855968
+  [2][STATICCALL] from=0x2cbef9, to=BARL, balanceOf(account(address): 0x04c80B) -> 78172967456332658855968
+  [2][CALL] from=0x2cbef9, to=WeightedIndex, flash(_recipient(address): 0x2cbEf9, _token(address): 0x3e2324, _amount(uint256): 78172967456332658855968, _data(bytes): b'') -> None
+    [3][STATICCALL] from=WeightedIndex, to=StakingPoolToken, poolRewards() -> 0xd71934
+    [3][STATICCALL] from=WeightedIndex, to=Dai, decimals() -> 18
+    [3][CALL] from=WeightedIndex, to=Dai, transferFrom(src(address): 0x2cbEf9, dst(address): 0xD71934, wad(uint256): 10000000000000000000) -> True
+    [3][STATICCALL] from=WeightedIndex, to=BARL, balanceOf(account(address): 0x04c80B) -> 78172967456332658855968
+    [3][CALL] from=WeightedIndex, to=BARL, transfer(recipient(address): 0x2cbEf9, amount(uint256): 78172967456332658855968) -> True
+    [3][CALL] from=WeightedIndex, to=0x2cbef9, 0xe98a5654() -> None
+      [4][STATICCALL] from=0x2cbef9, to=BARL, balanceOf(account(address): 0x2cbEf9) -> 78172967456332658855968
+      [4][CALL] from=0x2cbef9, to=WeightedIndex, bond(_token(address): 0x3e2324, _amount(uint256): 78172967456332658855968) -> None
+        [5][STATICCALL] from=WeightedIndex, to=BARL, balanceOf(account(address): 0x04c80B) -> 0
+        [5][CALL] from=WeightedIndex, to=BARL, transferFrom(sender(address): 0x2cbEf9, recipient(address): 0x04c80B, amount(uint256): 78172967456332658855968) -> True
+        [5][STATICCALL] from=WeightedIndex, to=BARL, balanceOf(account(address): 0x04c80B) -> 78172967456332658855968
+    [3][STATICCALL] from=WeightedIndex, to=BARL, balanceOf(account(address): 0x04c80B) -> 78172967456332658855968
+  [2][STATICCALL] from=0x2cbef9, to=BARL, balanceOf(account(address): 0x04c80B) -> 78172967456332658855968
+  [2][CALL] from=0x2cbef9, to=WeightedIndex, flash(_recipient(address): 0x2cbEf9, _token(address): 0x3e2324, _amount(uint256): 78172967456332658855968, _data(bytes): b'') -> None
+    [3][STATICCALL] from=WeightedIndex, to=StakingPoolToken, poolRewards() -> 0xd71934
+    [3][STATICCALL] from=WeightedIndex, to=Dai, decimals() -> 18
+    [3][CALL] from=WeightedIndex, to=Dai, transferFrom(src(address): 0x2cbEf9, dst(address): 0xD71934, wad(uint256): 10000000000000000000) -> True
+    [3][STATICCALL] from=WeightedIndex, to=BARL, balanceOf(account(address): 0x04c80B) -> 78172967456332658855968
+    [3][CALL] from=WeightedIndex, to=BARL, transfer(recipient(address): 0x2cbEf9, amount(uint256): 78172967456332658855968) -> True
+    [3][CALL] from=WeightedIndex, to=0x2cbef9, 0xe98a5654() -> None
+      [4][STATICCALL] from=0x2cbef9, to=BARL, balanceOf(account(address): 0x2cbEf9) -> 78172967456332658855968
+      [4][CALL] from=0x2cbef9, to=WeightedIndex, bond(_token(address): 0x3e2324, _amount(uint256): 78172967456332658855968) -> None
+        [5][STATICCALL] from=WeightedIndex, to=BARL, balanceOf(account(address): 0x04c80B) -> 0
+        [5][CALL] from=WeightedIndex, to=BARL, transferFrom(sender(address): 0x2cbEf9, recipient(address): 0x04c80B, amount(uint256): 78172967456332658855968) -> True
+        [5][STATICCALL] from=WeightedIndex, to=BARL, balanceOf(account(address): 0x04c80B) -> 78172967456332658855968
+    [3][STATICCALL] from=WeightedIndex, to=BARL, balanceOf(account(address): 0x04c80B) -> 78172967456332658855968
+  [2][STATICCALL] from=0x2cbef9, to=BARL, balanceOf(account(address): 0x04c80B) -> 78172967456332658855968
+  [2][CALL] from=0x2cbef9, to=WeightedIndex, flash(_recipient(address): 0x2cbEf9, _token(address): 0x3e2324, _amount(uint256): 78172967456332658855968, _data(bytes): b'') -> None
+    [3][STATICCALL] from=WeightedIndex, to=StakingPoolToken, poolRewards() -> 0xd71934
+    [3][STATICCALL] from=WeightedIndex, to=Dai, decimals() -> 18
+    [3][CALL] from=WeightedIndex, to=Dai, transferFrom(src(address): 0x2cbEf9, dst(address): 0xD71934, wad(uint256): 10000000000000000000) -> True
+    [3][STATICCALL] from=WeightedIndex, to=BARL, balanceOf(account(address): 0x04c80B) -> 78172967456332658855968
+    [3][CALL] from=WeightedIndex, to=BARL, transfer(recipient(address): 0x2cbEf9, amount(uint256): 78172967456332658855968) -> True
+    [3][CALL] from=WeightedIndex, to=0x2cbef9, 0xe98a5654() -> None
+      [4][STATICCALL] from=0x2cbef9, to=BARL, balanceOf(account(address): 0x2cbEf9) -> 78172967456332658855968
+      [4][CALL] from=0x2cbef9, to=WeightedIndex, bond(_token(address): 0x3e2324, _amount(uint256): 78172967456332658855968) -> None
+        [5][STATICCALL] from=WeightedIndex, to=BARL, balanceOf(account(address): 0x04c80B) -> 0
+        [5][CALL] from=WeightedIndex, to=BARL, transferFrom(sender(address): 0x2cbEf9, recipient(address): 0x04c80B, amount(uint256): 78172967456332658855968) -> True
+        [5][STATICCALL] from=WeightedIndex, to=BARL, balanceOf(account(address): 0x04c80B) -> 78172967456332658855968
+    [3][STATICCALL] from=WeightedIndex, to=BARL, balanceOf(account(address): 0x04c80B) -> 78172967456332658855968
+  [2][STATICCALL] from=0x2cbef9, to=BARL, balanceOf(account(address): 0x04c80B) -> 78172967456332658855968
+  [2][CALL] from=0x2cbef9, to=WeightedIndex, flash(_recipient(address): 0x2cbEf9, _token(address): 0x3e2324, _amount(uint256): 78172967456332658855968, _data(bytes): b'') -> None
+    [3][STATICCALL] from=WeightedIndex, to=StakingPoolToken, poolRewards() -> 0xd71934
+    [3][STATICCALL] from=WeightedIndex, to=Dai, decimals() -> 18
+    [3][CALL] from=WeightedIndex, to=Dai, transferFrom(src(address): 0x2cbEf9, dst(address): 0xD71934, wad(uint256): 10000000000000000000) -> True
+    [3][STATICCALL] from=WeightedIndex, to=BARL, balanceOf(account(address): 0x04c80B) -> 78172967456332658855968
+    [3][CALL] from=WeightedIndex, to=BARL, transfer(recipient(address): 0x2cbEf9, amount(uint256): 78172967456332658855968) -> True
+    [3][CALL] from=WeightedIndex, to=0x2cbef9, 0xe98a5654() -> None
+      [4][STATICCALL] from=0x2cbef9, to=BARL, balanceOf(account(address): 0x2cbEf9) -> 78172967456332658855968
+      [4][CALL] from=0x2cbef9, to=WeightedIndex, bond(_token(address): 0x3e2324, _amount(uint256): 78172967456332658855968) -> None
+        [5][STATICCALL] from=WeightedIndex, to=BARL, balanceOf(account(address): 0x04c80B) -> 0
+        [5][CALL] from=WeightedIndex, to=BARL, transferFrom(sender(address): 0x2cbEf9, recipient(address): 0x04c80B, amount(uint256): 78172967456332658855968) -> True
+        [5][STATICCALL] from=WeightedIndex, to=BARL, balanceOf(account(address): 0x04c80B) -> 78172967456332658855968
+    [3][STATICCALL] from=WeightedIndex, to=BARL, balanceOf(account(address): 0x04c80B) -> 78172967456332658855968
+  [2][STATICCALL] from=0x2cbef9, to=BARL, balanceOf(account(address): 0x04c80B) -> 78172967456332658855968
+  [2][CALL] from=0x2cbef9, to=WeightedIndex, flash(_recipient(address): 0x2cbEf9, _token(address): 0x3e2324, _amount(uint256): 78172967456332658855968, _data(bytes): b'') -> None
+    [3][STATICCALL] from=WeightedIndex, to=StakingPoolToken, poolRewards() -> 0xd71934
+    [3][STATICCALL] from=WeightedIndex, to=Dai, decimals() -> 18
+    [3][CALL] from=WeightedIndex, to=Dai, transferFrom(src(address): 0x2cbEf9, dst(address): 0xD71934, wad(uint256): 10000000000000000000) -> True
+    [3][STATICCALL] from=WeightedIndex, to=BARL, balanceOf(account(address): 0x04c80B) -> 78172967456332658855968
+    [3][CALL] from=WeightedIndex, to=BARL, transfer(recipient(address): 0x2cbEf9, amount(uint256): 78172967456332658855968) -> True
+    [3][CALL] from=WeightedIndex, to=0x2cbef9, 0xe98a5654() -> None
+      [4][STATICCALL] from=0x2cbef9, to=BARL, balanceOf(account(address): 0x2cbEf9) -> 78172967456332658855968
+      [4][CALL] from=0x2cbef9, to=WeightedIndex, bond(_token(address): 0x3e2324, _amount(uint256): 78172967456332658855968) -> None
+        [5][STATICCALL] from=WeightedIndex, to=BARL, balanceOf(account(address): 0x04c80B) -> 0
+        [5][CALL] from=WeightedIndex, to=BARL, transferFrom(sender(address): 0x2cbEf9, recipient(address): 0x04c80B, amount(uint256): 78172967456332658855968) -> True
+        [5][STATICCALL] from=WeightedIndex, to=BARL, balanceOf(account(address): 0x04c80B) -> 78172967456332658855968
+    [3][STATICCALL] from=WeightedIndex, to=BARL, balanceOf(account(address): 0x04c80B) -> 78172967456332658855968
+  [2][STATICCALL] from=0x2cbef9, to=BARL, balanceOf(account(address): 0x04c80B) -> 78172967456332658855968
+  [2][CALL] from=0x2cbef9, to=WeightedIndex, flash(_recipient(address): 0x2cbEf9, _token(address): 0x3e2324, _amount(uint256): 78172967456332658855968, _data(bytes): b'') -> None
+    [3][STATICCALL] from=WeightedIndex, to=StakingPoolToken, poolRewards() -> 0xd71934
+    [3][STATICCALL] from=WeightedIndex, to=Dai, decimals() -> 18
+    [3][CALL] from=WeightedIndex, to=Dai, transferFrom(src(address): 0x2cbEf9, dst(address): 0xD71934, wad(uint256): 10000000000000000000) -> True
+    [3][STATICCALL] from=WeightedIndex, to=BARL, balanceOf(account(address): 0x04c80B) -> 78172967456332658855968
+    [3][CALL] from=WeightedIndex, to=BARL, transfer(recipient(address): 0x2cbEf9, amount(uint256): 78172967456332658855968) -> True
+    [3][CALL] from=WeightedIndex, to=0x2cbef9, 0xe98a5654() -> None
+      [4][STATICCALL] from=0x2cbef9, to=BARL, balanceOf(account(address): 0x2cbEf9) -> 78172967456332658855968
+      [4][CALL] from=0x2cbef9, to=WeightedIndex, bond(_token(address): 0x3e2324, _amount(uint256): 78172967456332658855968) -> None
+        [5][STATICCALL] from=WeightedIndex, to=BARL, balanceOf(account(address): 0x04c80B) -> 0
+        [5][CALL] from=WeightedIndex, to=BARL, transferFrom(sender(address): 0x2cbEf9, recipient(address): 0x04c80B, amount(uint256): 78172967456332658855968) -> True
+        [5][STATICCALL] from=WeightedIndex, to=BARL, balanceOf(account(address): 0x04c80B) -> 78172967456332658855968
+    [3][STATICCALL] from=WeightedIndex, to=BARL, balanceOf(account(address): 0x04c80B) -> 78172967456332658855968
+  [2][STATICCALL] from=0x2cbef9, to=BARL, balanceOf(account(address): 0x04c80B) -> 78172967456332658855968
+  [2][CALL] from=0x2cbef9, to=WeightedIndex, flash(_recipient(address): 0x2cbEf9, _token(address): 0x3e2324, _amount(uint256): 78172967456332658855968, _data(bytes): b'') -> None
+    [3][STATICCALL] from=WeightedIndex, to=StakingPoolToken, poolRewards() -> 0xd71934
+    [3][STATICCALL] from=WeightedIndex, to=Dai, decimals() -> 18
+    [3][CALL] from=WeightedIndex, to=Dai, transferFrom(src(address): 0x2cbEf9, dst(address): 0xD71934, wad(uint256): 10000000000000000000) -> True
+    [3][STATICCALL] from=WeightedIndex, to=BARL, balanceOf(account(address): 0x04c80B) -> 78172967456332658855968
+    [3][CALL] from=WeightedIndex, to=BARL, transfer(recipient(address): 0x2cbEf9, amount(uint256): 78172967456332658855968) -> True
+    [3][CALL] from=WeightedIndex, to=0x2cbef9, 0xe98a5654() -> None
+      [4][STATICCALL] from=0x2cbef9, to=BARL, balanceOf(account(address): 0x2cbEf9) -> 78172967456332658855968
+      [4][CALL] from=0x2cbef9, to=WeightedIndex, bond(_token(address): 0x3e2324, _amount(uint256): 78172967456332658855968) -> None
+        [5][STATICCALL] from=WeightedIndex, to=BARL, balanceOf(account(address): 0x04c80B) -> 0
+        [5][CALL] from=WeightedIndex, to=BARL, transferFrom(sender(address): 0x2cbEf9, recipient(address): 0x04c80B, amount(uint256): 78172967456332658855968) -> True
+        [5][STATICCALL] from=WeightedIndex, to=BARL, balanceOf(account(address): 0x04c80B) -> 78172967456332658855968
+    [3][STATICCALL] from=WeightedIndex, to=BARL, balanceOf(account(address): 0x04c80B) -> 78172967456332658855968
+  [2][STATICCALL] from=0x2cbef9, to=BARL, balanceOf(account(address): 0x04c80B) -> 78172967456332658855968
+  [2][CALL] from=0x2cbef9, to=WeightedIndex, flash(_recipient(address): 0x2cbEf9, _token(address): 0x3e2324, _amount(uint256): 78172967456332658855968, _data(bytes): b'') -> None
+    [3][STATICCALL] from=WeightedIndex, to=StakingPoolToken, poolRewards() -> 0xd71934
+    [3][STATICCALL] from=WeightedIndex, to=Dai, decimals() -> 18
+    [3][CALL] from=WeightedIndex, to=Dai, transferFrom(src(address): 0x2cbEf9, dst(address): 0xD71934, wad(uint256): 10000000000000000000) -> True
+    [3][STATICCALL] from=WeightedIndex, to=BARL, balanceOf(account(address): 0x04c80B) -> 78172967456332658855968
+    [3][CALL] from=WeightedIndex, to=BARL, transfer(recipient(address): 0x2cbEf9, amount(uint256): 78172967456332658855968) -> True
+    [3][CALL] from=WeightedIndex, to=0x2cbef9, 0xe98a5654() -> None
+      [4][STATICCALL] from=0x2cbef9, to=BARL, balanceOf(account(address): 0x2cbEf9) -> 78172967456332658855968
+      [4][CALL] from=0x2cbef9, to=WeightedIndex, bond(_token(address): 0x3e2324, _amount(uint256): 78172967456332658855968) -> None
+        [5][STATICCALL] from=WeightedIndex, to=BARL, balanceOf(account(address): 0x04c80B) -> 0
+        [5][CALL] from=WeightedIndex, to=BARL, transferFrom(sender(address): 0x2cbEf9, recipient(address): 0x04c80B, amount(uint256): 78172967456332658855968) -> True
+        [5][STATICCALL] from=WeightedIndex, to=BARL, balanceOf(account(address): 0x04c80B) -> 78172967456332658855968
+    [3][STATICCALL] from=WeightedIndex, to=BARL, balanceOf(account(address): 0x04c80B) -> 78172967456332658855968
+  [2][STATICCALL] from=0x2cbef9, to=BARL, balanceOf(account(address): 0x04c80B) -> 78172967456332658855968
+  [2][CALL] from=0x2cbef9, to=WeightedIndex, flash(_recipient(address): 0x2cbEf9, _token(address): 0x3e2324, _amount(uint256): 78172967456332658855968, _data(bytes): b'') -> None
+    [3][STATICCALL] from=WeightedIndex, to=StakingPoolToken, poolRewards() -> 0xd71934
+    [3][STATICCALL] from=WeightedIndex, to=Dai, decimals() -> 18
+    [3][CALL] from=WeightedIndex, to=Dai, transferFrom(src(address): 0x2cbEf9, dst(address): 0xD71934, wad(uint256): 10000000000000000000) -> True
+    [3][STATICCALL] from=WeightedIndex, to=BARL, balanceOf(account(address): 0x04c80B) -> 78172967456332658855968
+    [3][CALL] from=WeightedIndex, to=BARL, transfer(recipient(address): 0x2cbEf9, amount(uint256): 78172967456332658855968) -> True
+    [3][CALL] from=WeightedIndex, to=0x2cbef9, 0xe98a5654() -> None
+      [4][STATICCALL] from=0x2cbef9, to=BARL, balanceOf(account(address): 0x2cbEf9) -> 78172967456332658855968
+      [4][CALL] from=0x2cbef9, to=WeightedIndex, bond(_token(address): 0x3e2324, _amount(uint256): 78172967456332658855968) -> None
+        [5][STATICCALL] from=WeightedIndex, to=BARL, balanceOf(account(address): 0x04c80B) -> 0
+        [5][CALL] from=WeightedIndex, to=BARL, transferFrom(sender(address): 0x2cbEf9, recipient(address): 0x04c80B, amount(uint256): 78172967456332658855968) -> True
+        [5][STATICCALL] from=WeightedIndex, to=BARL, balanceOf(account(address): 0x04c80B) -> 78172967456332658855968
+    [3][STATICCALL] from=WeightedIndex, to=BARL, balanceOf(account(address): 0x04c80B) -> 78172967456332658855968
+  [2][STATICCALL] from=0x2cbef9, to=BARL, balanceOf(account(address): 0x04c80B) -> 78172967456332658855968
+  [2][CALL] from=0x2cbef9, to=WeightedIndex, flash(_recipient(address): 0x2cbEf9, _token(address): 0x3e2324, _amount(uint256): 78172967456332658855968, _data(bytes): b'') -> None
+    [3][STATICCALL] from=WeightedIndex, to=StakingPoolToken, poolRewards() -> 0xd71934
+    [3][STATICCALL] from=WeightedIndex, to=Dai, decimals() -> 18
+    [3][CALL] from=WeightedIndex, to=Dai, transferFrom(src(address): 0x2cbEf9, dst(address): 0xD71934, wad(uint256): 10000000000000000000) -> True
+    [3][STATICCALL] from=WeightedIndex, to=BARL, balanceOf(account(address): 0x04c80B) -> 78172967456332658855968
+    [3][CALL] from=WeightedIndex, to=BARL, transfer(recipient(address): 0x2cbEf9, amount(uint256): 78172967456332658855968) -> True
+    [3][CALL] from=WeightedIndex, to=0x2cbef9, 0xe98a5654() -> None
+      [4][STATICCALL] from=0x2cbef9, to=BARL, balanceOf(account(address): 0x2cbEf9) -> 78172967456332658855968
+      [4][CALL] from=0x2cbef9, to=WeightedIndex, bond(_token(address): 0x3e2324, _amount(uint256): 78172967456332658855968) -> None
+        [5][STATICCALL] from=WeightedIndex, to=BARL, balanceOf(account(address): 0x04c80B) -> 0
+        [5][CALL] from=WeightedIndex, to=BARL, transferFrom(sender(address): 0x2cbEf9, recipient(address): 0x04c80B, amount(uint256): 78172967456332658855968) -> True
+        [5][STATICCALL] from=WeightedIndex, to=BARL, balanceOf(account(address): 0x04c80B) -> 78172967456332658855968
+    [3][STATICCALL] from=WeightedIndex, to=BARL, balanceOf(account(address): 0x04c80B) -> 78172967456332658855968
+  [2][STATICCALL] from=0x2cbef9, to=BARL, balanceOf(account(address): 0x04c80B) -> 78172967456332658855968
+  [2][CALL] from=0x2cbef9, to=WeightedIndex, flash(_recipient(address): 0x2cbEf9, _token(address): 0x3e2324, _amount(uint256): 78172967456332658855968, _data(bytes): b'') -> None
+    [3][STATICCALL] from=WeightedIndex, to=StakingPoolToken, poolRewards() -> 0xd71934
+    [3][STATICCALL] from=WeightedIndex, to=Dai, decimals() -> 18
+    [3][CALL] from=WeightedIndex, to=Dai, transferFrom(src(address): 0x2cbEf9, dst(address): 0xD71934, wad(uint256): 10000000000000000000) -> True
+    [3][STATICCALL] from=WeightedIndex, to=BARL, balanceOf(account(address): 0x04c80B) -> 78172967456332658855968
+    [3][CALL] from=WeightedIndex, to=BARL, transfer(recipient(address): 0x2cbEf9, amount(uint256): 78172967456332658855968) -> True
+    [3][CALL] from=WeightedIndex, to=0x2cbef9, 0xe98a5654() -> None
+      [4][STATICCALL] from=0x2cbef9, to=BARL, balanceOf(account(address): 0x2cbEf9) -> 78172967456332658855968
+      [4][CALL] from=0x2cbef9, to=WeightedIndex, bond(_token(address): 0x3e2324, _amount(uint256): 78172967456332658855968) -> None
+        [5][STATICCALL] from=WeightedIndex, to=BARL, balanceOf(account(address): 0x04c80B) -> 0
+        [5][CALL] from=WeightedIndex, to=BARL, transferFrom(sender(address): 0x2cbEf9, recipient(address): 0x04c80B, amount(uint256): 78172967456332658855968) -> True
+        [5][STATICCALL] from=WeightedIndex, to=BARL, balanceOf(account(address): 0x04c80B) -> 78172967456332658855968
+    [3][STATICCALL] from=WeightedIndex, to=BARL, balanceOf(account(address): 0x04c80B) -> 78172967456332658855968
+  [2][STATICCALL] from=0x2cbef9, to=BARL, balanceOf(account(address): 0x04c80B) -> 78172967456332658855968
+  [2][CALL] from=0x2cbef9, to=WeightedIndex, flash(_recipient(address): 0x2cbEf9, _token(address): 0x3e2324, _amount(uint256): 78172967456332658855968, _data(bytes): b'') -> None
+    [3][STATICCALL] from=WeightedIndex, to=StakingPoolToken, poolRewards() -> 0xd71934
+    [3][STATICCALL] from=WeightedIndex, to=Dai, decimals() -> 18
+    [3][CALL] from=WeightedIndex, to=Dai, transferFrom(src(address): 0x2cbEf9, dst(address): 0xD71934, wad(uint256): 10000000000000000000) -> True
+    [3][STATICCALL] from=WeightedIndex, to=BARL, balanceOf(account(address): 0x04c80B) -> 78172967456332658855968
+    [3][CALL] from=WeightedIndex, to=BARL, transfer(recipient(address): 0x2cbEf9, amount(uint256): 78172967456332658855968) -> True
+    [3][CALL] from=WeightedIndex, to=0x2cbef9, 0xe98a5654() -> None
+      [4][STATICCALL] from=0x2cbef9, to=BARL, balanceOf(account(address): 0x2cbEf9) -> 78172967456332658855968
+      [4][CALL] from=0x2cbef9, to=WeightedIndex, bond(_token(address): 0x3e2324, _amount(uint256): 78172967456332658855968) -> None
+        [5][STATICCALL] from=WeightedIndex, to=BARL, balanceOf(account(address): 0x04c80B) -> 0
+        [5][CALL] from=WeightedIndex, to=BARL, transferFrom(sender(address): 0x2cbEf9, recipient(address): 0x04c80B, amount(uint256): 78172967456332658855968) -> True
+        [5][STATICCALL] from=WeightedIndex, to=BARL, balanceOf(account(address): 0x04c80B) -> 78172967456332658855968
+    [3][STATICCALL] from=WeightedIndex, to=BARL, balanceOf(account(address): 0x04c80B) -> 78172967456332658855968
+  [2][STATICCALL] from=0x2cbef9, to=BARL, balanceOf(account(address): 0x04c80B) -> 78172967456332658855968
+  [2][CALL] from=0x2cbef9, to=WeightedIndex, flash(_recipient(address): 0x2cbEf9, _token(address): 0x3e2324, _amount(uint256): 78172967456332658855968, _data(bytes): b'') -> None
+    [3][STATICCALL] from=WeightedIndex, to=StakingPoolToken, poolRewards() -> 0xd71934
+    [3][STATICCALL] from=WeightedIndex, to=Dai, decimals() -> 18
+    [3][CALL] from=WeightedIndex, to=Dai, transferFrom(src(address): 0x2cbEf9, dst(address): 0xD71934, wad(uint256): 10000000000000000000) -> True
+    [3][STATICCALL] from=WeightedIndex, to=BARL, balanceOf(account(address): 0x04c80B) -> 78172967456332658855968
+    [3][CALL] from=WeightedIndex, to=BARL, transfer(recipient(address): 0x2cbEf9, amount(uint256): 78172967456332658855968) -> True
+    [3][CALL] from=WeightedIndex, to=0x2cbef9, 0xe98a5654() -> None
+      [4][STATICCALL] from=0x2cbef9, to=BARL, balanceOf(account(address): 0x2cbEf9) -> 78172967456332658855968
+      [4][CALL] from=0x2cbef9, to=WeightedIndex, bond(_token(address): 0x3e2324, _amount(uint256): 78172967456332658855968) -> None
+        [5][STATICCALL] from=WeightedIndex, to=BARL, balanceOf(account(address): 0x04c80B) -> 0
+        [5][CALL] from=WeightedIndex, to=BARL, transferFrom(sender(address): 0x2cbEf9, recipient(address): 0x04c80B, amount(uint256): 78172967456332658855968) -> True
+        [5][STATICCALL] from=WeightedIndex, to=BARL, balanceOf(account(address): 0x04c80B) -> 78172967456332658855968
+    [3][STATICCALL] from=WeightedIndex, to=BARL, balanceOf(account(address): 0x04c80B) -> 78172967456332658855968
+  [2][STATICCALL] from=0x2cbef9, to=BARL, balanceOf(account(address): 0x04c80B) -> 78172967456332658855968
+  [2][CALL] from=0x2cbef9, to=WeightedIndex, flash(_recipient(address): 0x2cbEf9, _token(address): 0x3e2324, _amount(uint256): 78172967456332658855968, _data(bytes): b'') -> None
+    [3][STATICCALL] from=WeightedIndex, to=StakingPoolToken, poolRewards() -> 0xd71934
+    [3][STATICCALL] from=WeightedIndex, to=Dai, decimals() -> 18
+    [3][CALL] from=WeightedIndex, to=Dai, transferFrom(src(address): 0x2cbEf9, dst(address): 0xD71934, wad(uint256): 10000000000000000000) -> True
+    [3][STATICCALL] from=WeightedIndex, to=BARL, balanceOf(account(address): 0x04c80B) -> 78172967456332658855968
+    [3][CALL] from=WeightedIndex, to=BARL, transfer(recipient(address): 0x2cbEf9, amount(uint256): 78172967456332658855968) -> True
+    [3][CALL] from=WeightedIndex, to=0x2cbef9, 0xe98a5654() -> None
+      [4][STATICCALL] from=0x2cbef9, to=BARL, balanceOf(account(address): 0x2cbEf9) -> 78172967456332658855968
+      [4][CALL] from=0x2cbef9, to=WeightedIndex, bond(_token(address): 0x3e2324, _amount(uint256): 78172967456332658855968) -> None
+        [5][STATICCALL] from=WeightedIndex, to=BARL, balanceOf(account(address): 0x04c80B) -> 0
+        [5][CALL] from=WeightedIndex, to=BARL, transferFrom(sender(address): 0x2cbEf9, recipient(address): 0x04c80B, amount(uint256): 78172967456332658855968) -> True
+        [5][STATICCALL] from=WeightedIndex, to=BARL, balanceOf(account(address): 0x04c80B) -> 78172967456332658855968
+    [3][STATICCALL] from=WeightedIndex, to=BARL, balanceOf(account(address): 0x04c80B) -> 78172967456332658855968
+  [2][STATICCALL] from=0x2cbef9, to=BARL, balanceOf(account(address): 0x04c80B) -> 78172967456332658855968
+  [2][CALL] from=0x2cbef9, to=WeightedIndex, flash(_recipient(address): 0x2cbEf9, _token(address): 0x3e2324, _amount(uint256): 78172967456332658855968, _data(bytes): b'') -> None
+    [3][STATICCALL] from=WeightedIndex, to=StakingPoolToken, poolRewards() -> 0xd71934
+    [3][STATICCALL] from=WeightedIndex, to=Dai, decimals() -> 18
+    [3][CALL] from=WeightedIndex, to=Dai, transferFrom(src(address): 0x2cbEf9, dst(address): 0xD71934, wad(uint256): 10000000000000000000) -> True
+    [3][STATICCALL] from=WeightedIndex, to=BARL, balanceOf(account(address): 0x04c80B) -> 78172967456332658855968
+    [3][CALL] from=WeightedIndex, to=BARL, transfer(recipient(address): 0x2cbEf9, amount(uint256): 78172967456332658855968) -> True
+    [3][CALL] from=WeightedIndex, to=0x2cbef9, 0xe98a5654() -> None
+      [4][STATICCALL] from=0x2cbef9, to=BARL, balanceOf(account(address): 0x2cbEf9) -> 78172967456332658855968
+      [4][CALL] from=0x2cbef9, to=WeightedIndex, bond(_token(address): 0x3e2324, _amount(uint256): 78172967456332658855968) -> None
+        [5][STATICCALL] from=WeightedIndex, to=BARL, balanceOf(account(address): 0x04c80B) -> 0
+        [5][CALL] from=WeightedIndex, to=BARL, transferFrom(sender(address): 0x2cbEf9, recipient(address): 0x04c80B, amount(uint256): 78172967456332658855968) -> True
+        [5][STATICCALL] from=WeightedIndex, to=BARL, balanceOf(account(address): 0x04c80B) -> 78172967456332658855968
+    [3][STATICCALL] from=WeightedIndex, to=BARL, balanceOf(account(address): 0x04c80B) -> 78172967456332658855968
+  [2][STATICCALL] from=0x2cbef9, to=BARL, balanceOf(account(address): 0x04c80B) -> 78172967456332658855968
+  [2][CALL] from=0x2cbef9, to=WeightedIndex, flash(_recipient(address): 0x2cbEf9, _token(address): 0x3e2324, _amount(uint256): 78172967456332658855968, _data(bytes): b'') -> None
+    [3][STATICCALL] from=WeightedIndex, to=StakingPoolToken, poolRewards() -> 0xd71934
+    [3][STATICCALL] from=WeightedIndex, to=Dai, decimals() -> 18
+    [3][CALL] from=WeightedIndex, to=Dai, transferFrom(src(address): 0x2cbEf9, dst(address): 0xD71934, wad(uint256): 10000000000000000000) -> True
+    [3][STATICCALL] from=WeightedIndex, to=BARL, balanceOf(account(address): 0x04c80B) -> 78172967456332658855968
+    [3][CALL] from=WeightedIndex, to=BARL, transfer(recipient(address): 0x2cbEf9, amount(uint256): 78172967456332658855968) -> True
+    [3][CALL] from=WeightedIndex, to=0x2cbef9, 0xe98a5654() -> None
+      [4][STATICCALL] from=0x2cbef9, to=BARL, balanceOf(account(address): 0x2cbEf9) -> 78172967456332658855968
+      [4][CALL] from=0x2cbef9, to=WeightedIndex, bond(_token(address): 0x3e2324, _amount(uint256): 78172967456332658855968) -> None
+        [5][STATICCALL] from=WeightedIndex, to=BARL, balanceOf(account(address): 0x04c80B) -> 0
+        [5][CALL] from=WeightedIndex, to=BARL, transferFrom(sender(address): 0x2cbEf9, recipient(address): 0x04c80B, amount(uint256): 78172967456332658855968) -> True
+        [5][STATICCALL] from=WeightedIndex, to=BARL, balanceOf(account(address): 0x04c80B) -> 78172967456332658855968
+    [3][STATICCALL] from=WeightedIndex, to=BARL, balanceOf(account(address): 0x04c80B) -> 78172967456332658855968
+  [2][STATICCALL] from=0x2cbef9, to=BARL, balanceOf(account(address): 0x04c80B) -> 78172967456332658855968
+  [2][CALL] from=0x2cbef9, to=WeightedIndex, flash(_recipient(address): 0x2cbEf9, _token(address): 0x3e2324, _amount(uint256): 78172967456332658855968, _data(bytes): b'') -> None
+    [3][STATICCALL] from=WeightedIndex, to=StakingPoolToken, poolRewards() -> 0xd71934
+    [3][STATICCALL] from=WeightedIndex, to=Dai, decimals() -> 18
+    [3][CALL] from=WeightedIndex, to=Dai, transferFrom(src(address): 0x2cbEf9, dst(address): 0xD71934, wad(uint256): 10000000000000000000) -> True
+    [3][STATICCALL] from=WeightedIndex, to=BARL, balanceOf(account(address): 0x04c80B) -> 78172967456332658855968
+    [3][CALL] from=WeightedIndex, to=BARL, transfer(recipient(address): 0x2cbEf9, amount(uint256): 78172967456332658855968) -> True
+    [3][CALL] from=WeightedIndex, to=0x2cbef9, 0xe98a5654() -> None
+      [4][STATICCALL] from=0x2cbef9, to=BARL, balanceOf(account(address): 0x2cbEf9) -> 78172967456332658855968
+      [4][CALL] from=0x2cbef9, to=WeightedIndex, bond(_token(address): 0x3e2324, _amount(uint256): 78172967456332658855968) -> None
+        [5][STATICCALL] from=WeightedIndex, to=BARL, balanceOf(account(address): 0x04c80B) -> 0
+        [5][CALL] from=WeightedIndex, to=BARL, transferFrom(sender(address): 0x2cbEf9, recipient(address): 0x04c80B, amount(uint256): 78172967456332658855968) -> True
+        [5][STATICCALL] from=WeightedIndex, to=BARL, balanceOf(account(address): 0x04c80B) -> 78172967456332658855968
+    [3][STATICCALL] from=WeightedIndex, to=BARL, balanceOf(account(address): 0x04c80B) -> 78172967456332658855968
+  [2][STATICCALL] from=0x2cbef9, to=BARL, balanceOf(account(address): 0x04c80B) -> 78172967456332658855968
+  [2][CALL] from=0x2cbef9, to=WeightedIndex, flash(_recipient(address): 0x2cbEf9, _token(address): 0x3e2324, _amount(uint256): 78172967456332658855968, _data(bytes): b'') -> None
+    [3][STATICCALL] from=WeightedIndex, to=StakingPoolToken, poolRewards() -> 0xd71934
+    [3][STATICCALL] from=WeightedIndex, to=Dai, decimals() -> 18
+    [3][CALL] from=WeightedIndex, to=Dai, transferFrom(src(address): 0x2cbEf9, dst(address): 0xD71934, wad(uint256): 10000000000000000000) -> True
+    [3][STATICCALL] from=WeightedIndex, to=BARL, balanceOf(account(address): 0x04c80B) -> 78172967456332658855968
+    [3][CALL] from=WeightedIndex, to=BARL, transfer(recipient(address): 0x2cbEf9, amount(uint256): 78172967456332658855968) -> True
+    [3][CALL] from=WeightedIndex, to=0x2cbef9, 0xe98a5654() -> None
+      [4][STATICCALL] from=0x2cbef9, to=BARL, balanceOf(account(address): 0x2cbEf9) -> 78172967456332658855968
+      [4][CALL] from=0x2cbef9, to=WeightedIndex, bond(_token(address): 0x3e2324, _amount(uint256): 78172967456332658855968) -> None
+        [5][STATICCALL] from=WeightedIndex, to=BARL, balanceOf(account(address): 0x04c80B) -> 0
+        [5][CALL] from=WeightedIndex, to=BARL, transferFrom(sender(address): 0x2cbEf9, recipient(address): 0x04c80B, amount(uint256): 78172967456332658855968) -> True
+        [5][STATICCALL] from=WeightedIndex, to=BARL, balanceOf(account(address): 0x04c80B) -> 78172967456332658855968
+    [3][STATICCALL] from=WeightedIndex, to=BARL, balanceOf(account(address): 0x04c80B) -> 78172967456332658855968
+  [2][STATICCALL] from=0x2cbef9, to=BARL, balanceOf(account(address): 0x04c80B) -> 78172967456332658855968
+  [2][CALL] from=0x2cbef9, to=WeightedIndex, flash(_recipient(address): 0x2cbEf9, _token(address): 0x3e2324, _amount(uint256): 78172967456332658855968, _data(bytes): b'') -> None
+    [3][STATICCALL] from=WeightedIndex, to=StakingPoolToken, poolRewards() -> 0xd71934
+    [3][STATICCALL] from=WeightedIndex, to=Dai, decimals() -> 18
+    [3][CALL] from=WeightedIndex, to=Dai, transferFrom(src(address): 0x2cbEf9, dst(address): 0xD71934, wad(uint256): 10000000000000000000) -> True
+    [3][STATICCALL] from=WeightedIndex, to=BARL, balanceOf(account(address): 0x04c80B) -> 78172967456332658855968
+    [3][CALL] from=WeightedIndex, to=BARL, transfer(recipient(address): 0x2cbEf9, amount(uint256): 78172967456332658855968) -> True
+    [3][CALL] from=WeightedIndex, to=0x2cbef9, 0xe98a5654() -> None
+      [4][STATICCALL] from=0x2cbef9, to=BARL, balanceOf(account(address): 0x2cbEf9) -> 78172967456332658855968
+      [4][CALL] from=0x2cbef9, to=WeightedIndex, bond(_token(address): 0x3e2324, _amount(uint256): 78172967456332658855968) -> None
+        [5][STATICCALL] from=WeightedIndex, to=BARL, balanceOf(account(address): 0x04c80B) -> 0
+        [5][CALL] from=WeightedIndex, to=BARL, transferFrom(sender(address): 0x2cbEf9, recipient(address): 0x04c80B, amount(uint256): 78172967456332658855968) -> True
+        [5][STATICCALL] from=WeightedIndex, to=BARL, balanceOf(account(address): 0x04c80B) -> 78172967456332658855968
+    [3][STATICCALL] from=WeightedIndex, to=BARL, balanceOf(account(address): 0x04c80B) -> 78172967456332658855968
+  [2][STATICCALL] from=0x2cbef9, to=WeightedIndex, balanceOf(account(address): 0x2cbEf9) -> 2166954657889541303487452
+  [2][CALL] from=0x2cbef9, to=UniswapV2Router02, swapExactTokensForTokensSupportingFeeOnTransferTokens(amountIn(uint256): 2166954657889541303487452, amountOutMin(uint256): 0, path(address[]): ['0x04c80Bb477890F3021F03B068238836Ee20aA0..., to(address): 0xc59652, deadline(uint256): 1706492135) -> None
+    [3][CALL] from=UniswapV2Router02, to=WeightedIndex, transferFrom(sender(address): 0x2cbEf9, recipient(address): 0xaCFe34, amount(uint256): 2166954657889541303487452) -> True
+      [4][STATICCALL] from=WeightedIndex, to=StakingPoolToken, poolRewards() -> 0xd71934
+      [4][CALL] from=WeightedIndex, to=UniswapV2Router02, swapExactTokensForTokensSupportingFeeOnTransferTokens(amountIn(uint256): 151445806233200432196100, amountOutMin(uint256): 0, path(address[]): ['0x04c80Bb477890F3021F03B068238836Ee20aA0..., to(address): 0xD71934, deadline(uint256): 1706492135) -> None
+        [5][CALL] from=UniswapV2Router02, to=WeightedIndex, transferFrom(sender(address): 0x04c80B, recipient(address): 0xaCFe34, amount(uint256): 151445806233200432196100) -> True
+        [5][STATICCALL] from=UniswapV2Router02, to=Dai, balanceOf((address): 0xD71934) -> 433538523288194243531
+        [5][STATICCALL] from=UniswapV2Router02, to=UniswapV2Pair, getReserves() -> ['5495570047758747175519815', '2928321687153957675820', '1706481803']
+        [5][STATICCALL] from=UniswapV2Router02, to=WeightedIndex, balanceOf(account(address): 0xaCFe34) -> 5647015853991947607715915
+        [5][CALL] from=UniswapV2Router02, to=UniswapV2Pair, swap(amount0Out(uint256): 0, amount1Out(uint256): 78304573749346772903, to(address): 0xD71934, data(bytes): b'') -> None
+          [6][CALL] from=UniswapV2Pair, to=Dai, transfer(dst(address): 0xD71934, wad(uint256): 78304573749346772903) -> True
+          [6][STATICCALL] from=UniswapV2Pair, to=WeightedIndex, balanceOf(account(address): 0xaCFe34) -> 5647015853991947607715915
+          [6][STATICCALL] from=UniswapV2Pair, to=Dai, balanceOf((address): 0xaCFe34) -> 2850017113404610902917
+        [5][STATICCALL] from=UniswapV2Router02, to=Dai, balanceOf((address): 0xD71934) -> 511843097037541016434
+      [4][STATICCALL] from=WeightedIndex, to=Dai, balanceOf((address): 0xD71934) -> 511843097037541016434
+      [4][CALL] from=WeightedIndex, to=TokenRewards, depositFromDAI(_amountDAIDepositing(uint256): 0) -> None
+        [5][STATICCALL] from=TokenRewards, to=Dai, balanceOf((address): 0xD71934) -> 511843097037541016434
+        [5][STATICCALL] from=TokenRewards, to=SwapRouter, factory() -> 0x1f9843
+        [5][STATICCALL] from=TokenRewards, to=V3TwapUtilities, sqrtPriceX96FromPoolAndInterval(_poolAddress(address): 0x4eb374) -> 9849158976733071071906745123
+          [6][STATICCALL] from=V3TwapUtilities, to=UniswapV3Pool, observe(secondsAgos(uint32[]): [600, 0]) -> [[-5813589768, -5838610380], [28583718821358830930937036116131582831361, 28583718821358830930937100254624689515111]]
+        [5][STATICCALL] from=TokenRewards, to=V3TwapUtilities, priceX96FromSqrtPriceX96(sqrtPriceX96(uint160): 9849158976733071071906745123) -> 1224387004198116623736415242
+        [5][STATICCALL] from=TokenRewards, to=BARL, balanceOf(account(address): 0xD71934) -> 88107950905323758072200
+        [5][STATICCALL] from=TokenRewards, to=Dai, allowance((address): 0xE59242) -> 0
+        [5][CALL] from=TokenRewards, to=Dai, approve(usr(address): 0xE59242, wad(uint256): 511843097037541016434) -> True
+        [5][CALL] from=TokenRewards, to=SwapRouter, exactInputSingle(params(tuple): {'tokenIn': '0x6B175474E89094C44Da98b954Ee...) -> 32660894187352830216388
+          [6][CALL] from=SwapRouter, to=UniswapV3Pool, swap(recipient(address): 0xD71934, zeroForOne(bool): False, amountSpecified(int256): 511843097037541016434, sqrtPriceLimitX96(uint160): 146144670348521010328727305220398882237872..., data(bytes): b"\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00...) -> ['-32660894187352830216388', '511843097037541016434']
+            [7][CALL] from=UniswapV3Pool, to=BARL, transfer(recipient(address): 0xD71934, amount(uint256): 32660894187352830216388) -> True
+            [7][STATICCALL] from=UniswapV3Pool, to=Dai, balanceOf((address): 0x4eb374) -> 224097255686903876740016
+            [7][CALL] from=UniswapV3Pool, to=SwapRouter, uniswapV3SwapCallback(amount0Delta(int256): -32660894187352830216388, amount1Delta(int256): 511843097037541016434, _data(bytes): b"\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00...) -> None
+              [8][CALL] from=SwapRouter, to=Dai, transferFrom(src(address): 0xD71934, dst(address): 0x4eb374, wad(uint256): 511843097037541016434) -> True
+            [7][STATICCALL] from=UniswapV3Pool, to=Dai, balanceOf((address): 0x4eb374) -> 224609098783941417756450
+        [5][STATICCALL] from=TokenRewards, to=BARL, balanceOf(account(address): 0xD71934) -> 120768845092676588288588
+        [5][CALL] from=TokenRewards, to=BARL, burn(_amount(uint256): 1633044709367641510819) -> None
+    [3][STATICCALL] from=UniswapV2Router02, to=Dai, balanceOf((address): 0xc59652) -> 12301194508619607764
+    [3][STATICCALL] from=UniswapV2Router02, to=UniswapV2Pair, getReserves() -> ['5647015853991947607715915', '2850017113404610902917', '1706492135']
+    [3][STATICCALL] from=UniswapV2Router02, to=WeightedIndex, balanceOf(account(address): 0xaCFe34) -> 7813970511881488911203367
+    [3][CALL] from=UniswapV2Router02, to=UniswapV2Pair, swap(amount0Out(uint256): 0, amount1Out(uint256): 788646073959460719240, to(address): 0xc59652, data(bytes): b'') -> None
+      [4][CALL] from=UniswapV2Pair, to=Dai, transfer(dst(address): 0xc59652, wad(uint256): 788646073959460719240) -> True
+      [4][STATICCALL] from=UniswapV2Pair, to=WeightedIndex, balanceOf(account(address): 0xaCFe34) -> 7813970511881488911203367
+      [4][STATICCALL] from=UniswapV2Pair, to=Dai, balanceOf((address): 0xaCFe34) -> 2061371039445150183677
+    [3][STATICCALL] from=UniswapV2Router02, to=Dai, balanceOf((address): 0xc59652) -> 800947268468080327004

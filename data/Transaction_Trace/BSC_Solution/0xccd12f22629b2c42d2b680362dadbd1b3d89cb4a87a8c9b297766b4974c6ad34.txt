@@ -1,0 +1,101 @@
+[1][CALL] from=0x0d1969, to=0xefa208, 0x3cc17c29() -> None
+  [2][CALL] from=0xefa208, to=0x0f6c39, approve() -> None
+    [3][CALL] from=0x0f6c39, to=MetaPoint, approve(spender(address): 0xEfa208, amount(uint256): 115792089237316195423570985008687907853269...) -> True
+  [2][CALL] from=0xefa208, to=0x511f1b, approve() -> None
+    [3][CALL] from=0x511f1b, to=MetaPoint, approve(spender(address): 0xEfa208, amount(uint256): 115792089237316195423570985008687907853269...) -> True
+  [2][CALL] from=0xefa208, to=0x472c20, approve() -> None
+    [3][CALL] from=0x472c20, to=MetaPoint, approve(spender(address): 0xEfa208, amount(uint256): 115792089237316195423570985008687907853269...) -> True
+  [2][CALL] from=0xefa208, to=0xe2386a, approve() -> None
+    [3][CALL] from=0xe2386a, to=MetaPoint, approve(spender(address): 0xEfa208, amount(uint256): 115792089237316195423570985008687907853269...) -> True
+  [2][CALL] from=0xefa208, to=0x68e24c, approve() -> None
+    [3][CALL] from=0x68e24c, to=MetaPoint, approve(spender(address): 0xEfa208, amount(uint256): 115792089237316195423570985008687907853269...) -> True
+  [2][CALL] from=0xefa208, to=0x7fcd9a, approve() -> None
+    [3][CALL] from=0x7fcd9a, to=MetaPoint, approve(spender(address): 0xEfa208, amount(uint256): 115792089237316195423570985008687907853269...) -> True
+  [2][CALL] from=0xefa208, to=0xb805c5, approve() -> None
+    [3][CALL] from=0xb805c5, to=MetaPoint, approve(spender(address): 0xEfa208, amount(uint256): 115792089237316195423570985008687907853269...) -> True
+  [2][CALL] from=0xefa208, to=0xe056b0, approve() -> None
+    [3][CALL] from=0xe056b0, to=MetaPoint, approve(spender(address): 0xEfa208, amount(uint256): 115792089237316195423570985008687907853269...) -> True
+  [2][CALL] from=0xefa208, to=0x87b64b, approve() -> None
+    [3][CALL] from=0x87b64b, to=MetaPoint, approve(spender(address): 0xEfa208, amount(uint256): 115792089237316195423570985008687907853269...) -> True
+  [2][CALL] from=0xefa208, to=0xcec147, approve() -> None
+    [3][CALL] from=0xcec147, to=MetaPoint, approve(spender(address): 0xEfa208, amount(uint256): 115792089237316195423570985008687907853269...) -> True
+  [2][CALL] from=0xefa208, to=0x857720, approve() -> None
+    [3][CALL] from=0x857720, to=MetaPoint, approve(spender(address): 0xEfa208, amount(uint256): 115792089237316195423570985008687907853269...) -> True
+  [2][CALL] from=0xefa208, to=0xdc7aba, approve() -> None
+    [3][CALL] from=0xdc7aba, to=MetaPoint, approve(spender(address): 0xEfa208, amount(uint256): 115792089237316195423570985008687907853269...) -> True
+  [2][CALL] from=0xefa208, to=0x8f26df, approve() -> None
+    [3][CALL] from=0x8f26df, to=MetaPoint, approve(spender(address): 0xEfa208, amount(uint256): 115792089237316195423570985008687907853269...) -> True
+  [2][CALL] from=0xefa208, to=0x94cf88, approve() -> None
+    [3][CALL] from=0x94cf88, to=MetaPoint, approve(spender(address): 0xEfa208, amount(uint256): 115792089237316195423570985008687907853269...) -> True
+  [2][CALL] from=0xefa208, to=0x5b9bc5, approve() -> None
+    [3][CALL] from=0x5b9bc5, to=MetaPoint, approve(spender(address): 0xEfa208, amount(uint256): 115792089237316195423570985008687907853269...) -> True
+  [2][CALL] from=0xefa208, to=0xe8d710, approve() -> None
+    [3][CALL] from=0xe8d710, to=MetaPoint, approve(spender(address): 0xEfa208, amount(uint256): 115792089237316195423570985008687907853269...) -> True
+  [2][CALL] from=0xefa208, to=0x2c9897, approve() -> None
+    [3][CALL] from=0x2c9897, to=MetaPoint, approve(spender(address): 0xEfa208, amount(uint256): 115792089237316195423570985008687907853269...) -> True
+  [2][CALL] from=0xefa208, to=0x8766cc, approve() -> None
+    [3][CALL] from=0x8766cc, to=MetaPoint, approve(spender(address): 0xEfa208, amount(uint256): 115792089237316195423570985008687907853269...) -> True
+  [2][CALL] from=0xefa208, to=0xc583c8, approve() -> None
+    [3][CALL] from=0xc583c8, to=MetaPoint, approve(spender(address): 0xEfa208, amount(uint256): 115792089237316195423570985008687907853269...) -> True
+  [2][CALL] from=0xefa208, to=0x278e9b, approve() -> None
+    [3][CALL] from=0x278e9b, to=MetaPoint, approve(spender(address): 0xEfa208, amount(uint256): 115792089237316195423570985008687907853269...) -> True
+  [2][CALL] from=0xefa208, to=0x0df643, approve() -> None
+    [3][CALL] from=0x0df643, to=MetaPoint, approve(spender(address): 0xEfa208, amount(uint256): 115792089237316195423570985008687907853269...) -> True
+  [2][CALL] from=0xefa208, to=0x226aaa, approve() -> None
+    [3][CALL] from=0x226aaa, to=MetaPoint, approve(spender(address): 0xEfa208, amount(uint256): 115792089237316195423570985008687907853269...) -> True
+  [2][CALL] from=0xefa208, to=0xf9bbb8, approve() -> None
+    [3][CALL] from=0xf9bbb8, to=MetaPoint, approve(spender(address): 0xEfa208, amount(uint256): 115792089237316195423570985008687907853269...) -> True
+  [2][CALL] from=0xefa208, to=0x62f538, approve() -> None
+    [3][CALL] from=0x62f538, to=MetaPoint, approve(spender(address): 0xEfa208, amount(uint256): 115792089237316195423570985008687907853269...) -> True
+  [2][CALL] from=0xefa208, to=0xffdc4f, approve() -> None
+    [3][CALL] from=0xffdc4f, to=MetaPoint, approve(spender(address): 0xEfa208, amount(uint256): 115792089237316195423570985008687907853269...) -> True
+  [2][CALL] from=0xefa208, to=0x20ef46, approve() -> None
+    [3][CALL] from=0x20ef46, to=MetaPoint, approve(spender(address): 0xEfa208, amount(uint256): 115792089237316195423570985008687907853269...) -> True
+  [2][CALL] from=0xefa208, to=0xf40f64, approve() -> None
+    [3][CALL] from=0xf40f64, to=MetaPoint, approve(spender(address): 0xEfa208, amount(uint256): 115792089237316195423570985008687907853269...) -> True
+  [2][CALL] from=0xefa208, to=0xfb9ed6, approve() -> None
+    [3][CALL] from=0xfb9ed6, to=MetaPoint, approve(spender(address): 0xEfa208, amount(uint256): 115792089237316195423570985008687907853269...) -> True
+  [2][CALL] from=0xefa208, to=0x7921ab, approve() -> None
+    [3][CALL] from=0x7921ab, to=MetaPoint, approve(spender(address): 0xEfa208, amount(uint256): 115792089237316195423570985008687907853269...) -> True
+  [2][CALL] from=0xefa208, to=0xe5a0df, approve() -> None
+    [3][CALL] from=0xe5a0df, to=MetaPoint, approve(spender(address): 0xEfa208, amount(uint256): 115792089237316195423570985008687907853269...) -> True
+  [2][CALL] from=0xefa208, to=0x4de151, approve() -> None
+    [3][CALL] from=0x4de151, to=MetaPoint, approve(spender(address): 0xEfa208, amount(uint256): 115792089237316195423570985008687907853269...) -> True
+  [2][CALL] from=0xefa208, to=0xfc3caf, approve() -> None
+    [3][CALL] from=0xfc3caf, to=MetaPoint, approve(spender(address): 0xEfa208, amount(uint256): 115792089237316195423570985008687907853269...) -> True
+  [2][CALL] from=0xefa208, to=0xdfbf35, approve() -> None
+    [3][CALL] from=0xdfbf35, to=MetaPoint, approve(spender(address): 0xEfa208, amount(uint256): 115792089237316195423570985008687907853269...) -> True
+  [2][CALL] from=0xefa208, to=0xed5b66, approve() -> None
+    [3][CALL] from=0xed5b66, to=MetaPoint, approve(spender(address): 0xEfa208, amount(uint256): 115792089237316195423570985008687907853269...) -> True
+  [2][CALL] from=0xefa208, to=0x775b41, approve() -> None
+    [3][CALL] from=0x775b41, to=MetaPoint, approve(spender(address): 0xEfa208, amount(uint256): 115792089237316195423570985008687907853269...) -> True
+  [2][CALL] from=0xefa208, to=0x536be5, approve() -> None
+    [3][CALL] from=0x536be5, to=MetaPoint, approve(spender(address): 0xEfa208, amount(uint256): 115792089237316195423570985008687907853269...) -> True
+  [2][CALL] from=0xefa208, to=0xae7558, approve() -> None
+    [3][CALL] from=0xae7558, to=MetaPoint, approve(spender(address): 0xEfa208, amount(uint256): 115792089237316195423570985008687907853269...) -> True
+  [2][CALL] from=0xefa208, to=0x822085, approve() -> None
+    [3][CALL] from=0x822085, to=MetaPoint, approve(spender(address): 0xEfa208, amount(uint256): 115792089237316195423570985008687907853269...) -> True
+  [2][CALL] from=0xefa208, to=0x5501e8, approve() -> None
+    [3][CALL] from=0x5501e8, to=MetaPoint, approve(spender(address): 0xEfa208, amount(uint256): 115792089237316195423570985008687907853269...) -> True
+  [2][CALL] from=0xefa208, to=0x49282f, approve() -> None
+    [3][CALL] from=0x49282f, to=MetaPoint, approve(spender(address): 0xEfa208, amount(uint256): 115792089237316195423570985008687907853269...) -> True
+  [2][CALL] from=0xefa208, to=0x974bf9, approve() -> None
+    [3][CALL] from=0x974bf9, to=MetaPoint, approve(spender(address): 0xEfa208, amount(uint256): 115792089237316195423570985008687907853269...) -> True
+  [2][CALL] from=0xefa208, to=0xb4cb27, approve() -> None
+    [3][CALL] from=0xb4cb27, to=MetaPoint, approve(spender(address): 0xEfa208, amount(uint256): 115792089237316195423570985008687907853269...) -> True
+  [2][CALL] from=0xefa208, to=0xa18444, approve() -> None
+    [3][CALL] from=0xa18444, to=MetaPoint, approve(spender(address): 0xEfa208, amount(uint256): 115792089237316195423570985008687907853269...) -> True
+  [2][CALL] from=0xefa208, to=0xb5b379, approve() -> None
+    [3][CALL] from=0xb5b379, to=MetaPoint, approve(spender(address): 0xEfa208, amount(uint256): 115792089237316195423570985008687907853269...) -> True
+  [2][CALL] from=0xefa208, to=0x5c025e, approve() -> None
+    [3][CALL] from=0x5c025e, to=MetaPoint, approve(spender(address): 0xEfa208, amount(uint256): 115792089237316195423570985008687907853269...) -> True
+  [2][CALL] from=0xefa208, to=0xfc3ac6, approve() -> None
+    [3][CALL] from=0xfc3ac6, to=MetaPoint, approve(spender(address): 0xEfa208, amount(uint256): 115792089237316195423570985008687907853269...) -> True
+  [2][CALL] from=0xefa208, to=0x7be9ad, approve() -> None
+    [3][CALL] from=0x7be9ad, to=MetaPoint, approve(spender(address): 0xEfa208, amount(uint256): 115792089237316195423570985008687907853269...) -> True
+  [2][CALL] from=0xefa208, to=0xc265fc, approve() -> None
+    [3][CALL] from=0xc265fc, to=MetaPoint, approve(spender(address): 0xEfa208, amount(uint256): 115792089237316195423570985008687907853269...) -> True
+  [2][CALL] from=0xefa208, to=0x89c16a, approve() -> None
+    [3][CALL] from=0x89c16a, to=MetaPoint, approve(spender(address): 0xEfa208, amount(uint256): 115792089237316195423570985008687907853269...) -> True
+  [2][CALL] from=0xefa208, to=0xdd7958, approve() -> None
+    [3][CALL] from=0xdd7958, to=MetaPoint, approve(spender(address): 0xEfa208, amount(uint256): 115792089237316195423570985008687907853269...) -> True

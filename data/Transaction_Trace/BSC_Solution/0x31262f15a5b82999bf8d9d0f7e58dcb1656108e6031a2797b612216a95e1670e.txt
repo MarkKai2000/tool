@@ -1,0 +1,1035 @@
+[1][CREATE] from=0x886358, to=0xaa8958, atInversebrahint248() -> 0x608060
+  [2][CREATE] from=0xaa8958, to=0x50afa9, atInversebrahint248() -> 0x608060
+  [2][CALL] from=0xaa8958, to=0x50afa9, 0xad050155() -> None
+    [3][STATICCALL] from=0x50afa9, to=WUSD, balanceOf(account(address): 0x6102D8) -> 16839004009795998331120774
+    [3][CALL] from=0x50afa9, to=WaultSwapPair, swap(amount0Out(uint256): 16839004009795998331120773, amount1Out(uint256): 0, to(address): 0x50AFA9, data(bytes): b'\x00') -> None
+      [4][CALL] from=WaultSwapPair, to=WUSD, transfer(recipient(address): 0x50AFA9, amount(uint256): 16839004009795998331120773) -> True
+      [4][CALL] from=WaultSwapPair, to=0x50afa9, waultSwapCalladdress() -> None
+        [5][CALL] from=0x50afa9, to=WUSD, approve(spender(address): 0xa79Fe3, amount(uint256): 115792089237316195423570985008687907853269...) -> True
+        [5][STATICCALL] from=0x50afa9, to=WUSD, balanceOf(account(address): 0x50AFA9) -> 16839004009795998331120773
+        [5][CALL] from=0x50afa9, to=WUSDMaster, redeem(amount(uint256): 16839004009795998331120773) -> None
+          [6][STATICCALL] from=WUSDMaster, to=WUSD, totalSupply() -> 17034559121370751378263637
+          [6][STATICCALL] from=WUSDMaster, to=WaultSwapToken, balanceOf(account(address): 0xa79Fe3) -> 107739444541416365543950140
+          [6][CALL] from=WUSDMaster, to=WUSD, burn(account(address): 0x50AFA9, amount(uint256): 16839004009795998331120773) -> None
+          [6][CALL] from=WUSDMaster, to=BEP20USDT, transfer(recipient(address): 0x9d8372, amount(uint256): 117873028068571988317845) -> True
+          [6][CALL] from=WUSDMaster, to=BEP20USDT, transfer(recipient(address): 0x50AFA9, amount(uint256): 15037230580747826509690850) -> True
+          [6][CALL] from=WUSDMaster, to=WaultSwapToken, transfer(recipient(address): 0x50AFA9, amount(uint256): 106502606009336810473769680) -> True
+        [5][CALL] from=0x50afa9, to=PancakePair, swap(amount0Out(uint256): 40000000000000000000000000, amount1Out(uint256): 0, to(address): 0x50AFA9, data(bytes): b'\x00') -> None
+          [6][CALL] from=PancakePair, to=BEP20USDT, transfer(recipient(address): 0x50AFA9, amount(uint256): 40000000000000000000000000) -> True
+          [6][CALL] from=PancakePair, to=0x50afa9, pancakeCalladdress() -> None
+            [7][CALL] from=0x50afa9, to=BEP20USDT, approve(spender(address): 0xD48745, amount(uint256): 115792089237316195423570985008687907853269...) -> True
+            [7][CALL] from=0x50afa9, to=WaultSwapRouter, swapExactTokensForTokens(amountIn(uint256): 23000000000000000000000000, amountOutMin(uint256): 0, path(address[]): ['0x55d398326f99059fF775485246999027B31979..., to(address): 0x50AFA9, deadline(uint256): 1628041745) -> [23000000000000000000000000, 517938118862815525837144432]
+              [8][STATICCALL] from=WaultSwapRouter, to=WaultSwapPair, getReserves() -> ['11740520220497909455619647', '782853295192672429820266117', '1628041708']
+              [8][CALL] from=WaultSwapRouter, to=BEP20USDT, transferFrom(sender(address): 0x50AFA9, recipient(address): 0x50e8D9, amount(uint256): 23000000000000000000000000) -> True
+              [8][CALL] from=WaultSwapRouter, to=WaultSwapPair, swap(amount0Out(uint256): 0, amount1Out(uint256): 517938118862815525837144432, to(address): 0x50AFA9, data(bytes): b'') -> None
+                [9][CALL] from=WaultSwapPair, to=WaultSwapToken, transfer(recipient(address): 0x50AFA9, amount(uint256): 517938118862815525837144432) -> True
+                [9][STATICCALL] from=WaultSwapPair, to=BEP20USDT, balanceOf(account(address): 0x50e8D9) -> 34740520220497909455619647
+                [9][STATICCALL] from=WaultSwapPair, to=WaultSwapToken, balanceOf(account(address): 0x50e8D9) -> 264915176329856903983121685
+            [7][CALL] from=0x50afa9, to=BEP20USDT, approve(spender(address): 0xa79Fe3, amount(uint256): 115792089237316195423570985008687907853269...) -> True
+            [7][CALL] from=0x50afa9, to=WUSDMaster, stake(amount(uint256): 250000000000000000000000) -> None
+              [8][CALL] from=WUSDMaster, to=BEP20USDT, transferFrom(sender(address): 0x50AFA9, recipient(address): 0xa79Fe3, amount(uint256): 250000000000000000000000) -> True
+              [8][CALL] from=WUSDMaster, to=BEP20USDT, approve(spender(address): 0xD48745, amount(uint256): 25000000000000000000000) -> True
+              [8][CALL] from=WUSDMaster, to=WaultSwapRouter, swapExactTokensForTokensSupportingFeeOnTransferTokens(amountIn(uint256): 25000000000000000000000, amountOutMin(uint256): 0, path(address[]): ['0x55d398326f99059fF775485246999027B31979..., to(address): 0xa79Fe3, deadline(uint256): 1628041745) -> None
+                [9][CALL] from=WaultSwapRouter, to=BEP20USDT, transferFrom(sender(address): 0xa79Fe3, recipient(address): 0x50e8D9, amount(uint256): 25000000000000000000000) -> True
+                [9][STATICCALL] from=WaultSwapRouter, to=WaultSwapToken, balanceOf(account(address): 0xa79Fe3) -> 1236838532079555070180460
+                [9][STATICCALL] from=WaultSwapRouter, to=WaultSwapPair, getReserves() -> ['34740520220497909455619647', '264915176329856903983121685', '1628041745']
+                [9][STATICCALL] from=WaultSwapRouter, to=BEP20USDT, balanceOf(account(address): 0x50e8D9) -> 34765520220497909455619647
+                [9][CALL] from=WaultSwapRouter, to=WaultSwapPair, swap(amount0Out(uint256): 0, amount1Out(uint256): 190120645787579595899759, to(address): 0xa79Fe3, data(bytes): b'') -> None
+                  [10][CALL] from=WaultSwapPair, to=WaultSwapToken, transfer(recipient(address): 0xa79Fe3, amount(uint256): 190120645787579595899759) -> True
+                  [10][STATICCALL] from=WaultSwapPair, to=BEP20USDT, balanceOf(account(address): 0x50e8D9) -> 34765520220497909455619647
+                  [10][STATICCALL] from=WaultSwapPair, to=WaultSwapToken, balanceOf(account(address): 0x50e8D9) -> 264725055684069324387221926
+                [9][STATICCALL] from=WaultSwapRouter, to=WaultSwapToken, balanceOf(account(address): 0xa79Fe3) -> 1426959177867134666080219
+              [8][CALL] from=WUSDMaster, to=WUSD, mint(account(address): 0x50AFA9, amount(uint256): 250000000000000000000000) -> None
+            [7][CALL] from=0x50afa9, to=WUSDMaster, stake(amount(uint256): 250000000000000000000000) -> None
+              [8][CALL] from=WUSDMaster, to=BEP20USDT, transferFrom(sender(address): 0x50AFA9, recipient(address): 0xa79Fe3, amount(uint256): 250000000000000000000000) -> True
+              [8][CALL] from=WUSDMaster, to=BEP20USDT, approve(spender(address): 0xD48745, amount(uint256): 25000000000000000000000) -> True
+              [8][CALL] from=WUSDMaster, to=WaultSwapRouter, swapExactTokensForTokensSupportingFeeOnTransferTokens(amountIn(uint256): 25000000000000000000000, amountOutMin(uint256): 0, path(address[]): ['0x55d398326f99059fF775485246999027B31979..., to(address): 0xa79Fe3, deadline(uint256): 1628041745) -> None
+                [9][CALL] from=WaultSwapRouter, to=BEP20USDT, transferFrom(sender(address): 0xa79Fe3, recipient(address): 0x50e8D9, amount(uint256): 25000000000000000000000) -> True
+                [9][STATICCALL] from=WaultSwapRouter, to=WaultSwapToken, balanceOf(account(address): 0xa79Fe3) -> 1426959177867134666080219
+                [9][STATICCALL] from=WaultSwapRouter, to=WaultSwapPair, getReserves() -> ['34765520220497909455619647', '264725055684069324387221926', '1628041745']
+                [9][STATICCALL] from=WaultSwapRouter, to=BEP20USDT, balanceOf(account(address): 0x50e8D9) -> 34790520220497909455619647
+                [9][CALL] from=WaultSwapRouter, to=WaultSwapPair, swap(amount0Out(uint256): 0, amount1Out(uint256): 189847682352567026824461, to(address): 0xa79Fe3, data(bytes): b'') -> None
+                  [10][CALL] from=WaultSwapPair, to=WaultSwapToken, transfer(recipient(address): 0xa79Fe3, amount(uint256): 189847682352567026824461) -> True
+                  [10][STATICCALL] from=WaultSwapPair, to=BEP20USDT, balanceOf(account(address): 0x50e8D9) -> 34790520220497909455619647
+                  [10][STATICCALL] from=WaultSwapPair, to=WaultSwapToken, balanceOf(account(address): 0x50e8D9) -> 264535208001716757360397465
+                [9][STATICCALL] from=WaultSwapRouter, to=WaultSwapToken, balanceOf(account(address): 0xa79Fe3) -> 1616806860219701692904680
+              [8][CALL] from=WUSDMaster, to=WUSD, mint(account(address): 0x50AFA9, amount(uint256): 250000000000000000000000) -> None
+            [7][CALL] from=0x50afa9, to=WUSDMaster, stake(amount(uint256): 250000000000000000000000) -> None
+              [8][CALL] from=WUSDMaster, to=BEP20USDT, transferFrom(sender(address): 0x50AFA9, recipient(address): 0xa79Fe3, amount(uint256): 250000000000000000000000) -> True
+              [8][CALL] from=WUSDMaster, to=BEP20USDT, approve(spender(address): 0xD48745, amount(uint256): 25000000000000000000000) -> True
+              [8][CALL] from=WUSDMaster, to=WaultSwapRouter, swapExactTokensForTokensSupportingFeeOnTransferTokens(amountIn(uint256): 25000000000000000000000, amountOutMin(uint256): 0, path(address[]): ['0x55d398326f99059fF775485246999027B31979..., to(address): 0xa79Fe3, deadline(uint256): 1628041745) -> None
+                [9][CALL] from=WaultSwapRouter, to=BEP20USDT, transferFrom(sender(address): 0xa79Fe3, recipient(address): 0x50e8D9, amount(uint256): 25000000000000000000000) -> True
+                [9][STATICCALL] from=WaultSwapRouter, to=WaultSwapToken, balanceOf(account(address): 0xa79Fe3) -> 1616806860219701692904680
+                [9][STATICCALL] from=WaultSwapRouter, to=WaultSwapPair, getReserves() -> ['34790520220497909455619647', '264535208001716757360397465', '1628041745']
+                [9][STATICCALL] from=WaultSwapRouter, to=BEP20USDT, balanceOf(account(address): 0x50e8D9) -> 34815520220497909455619647
+                [9][CALL] from=WaultSwapRouter, to=WaultSwapPair, swap(amount0Out(uint256): 0, amount1Out(uint256): 189575306547401896858826, to(address): 0xa79Fe3, data(bytes): b'') -> None
+                  [10][CALL] from=WaultSwapPair, to=WaultSwapToken, transfer(recipient(address): 0xa79Fe3, amount(uint256): 189575306547401896858826) -> True
+                  [10][STATICCALL] from=WaultSwapPair, to=BEP20USDT, balanceOf(account(address): 0x50e8D9) -> 34815520220497909455619647
+                  [10][STATICCALL] from=WaultSwapPair, to=WaultSwapToken, balanceOf(account(address): 0x50e8D9) -> 264345632695169355463538639
+                [9][STATICCALL] from=WaultSwapRouter, to=WaultSwapToken, balanceOf(account(address): 0xa79Fe3) -> 1806382166767103589763506
+              [8][CALL] from=WUSDMaster, to=WUSD, mint(account(address): 0x50AFA9, amount(uint256): 250000000000000000000000) -> None
+            [7][CALL] from=0x50afa9, to=WUSDMaster, stake(amount(uint256): 250000000000000000000000) -> None
+              [8][CALL] from=WUSDMaster, to=BEP20USDT, transferFrom(sender(address): 0x50AFA9, recipient(address): 0xa79Fe3, amount(uint256): 250000000000000000000000) -> True
+              [8][CALL] from=WUSDMaster, to=BEP20USDT, approve(spender(address): 0xD48745, amount(uint256): 25000000000000000000000) -> True
+              [8][CALL] from=WUSDMaster, to=WaultSwapRouter, swapExactTokensForTokensSupportingFeeOnTransferTokens(amountIn(uint256): 25000000000000000000000, amountOutMin(uint256): 0, path(address[]): ['0x55d398326f99059fF775485246999027B31979..., to(address): 0xa79Fe3, deadline(uint256): 1628041745) -> None
+                [9][CALL] from=WaultSwapRouter, to=BEP20USDT, transferFrom(sender(address): 0xa79Fe3, recipient(address): 0x50e8D9, amount(uint256): 25000000000000000000000) -> True
+                [9][STATICCALL] from=WaultSwapRouter, to=WaultSwapToken, balanceOf(account(address): 0xa79Fe3) -> 1806382166767103589763506
+                [9][STATICCALL] from=WaultSwapRouter, to=WaultSwapPair, getReserves() -> ['34815520220497909455619647', '264345632695169355463538639', '1628041745']
+                [9][STATICCALL] from=WaultSwapRouter, to=BEP20USDT, balanceOf(account(address): 0x50e8D9) -> 34840520220497909455619647
+                [9][CALL] from=WaultSwapRouter, to=WaultSwapPair, swap(amount0Out(uint256): 0, amount1Out(uint256): 189303516686297450547874, to(address): 0xa79Fe3, data(bytes): b'') -> None
+                  [10][CALL] from=WaultSwapPair, to=WaultSwapToken, transfer(recipient(address): 0xa79Fe3, amount(uint256): 189303516686297450547874) -> True
+                  [10][STATICCALL] from=WaultSwapPair, to=BEP20USDT, balanceOf(account(address): 0x50e8D9) -> 34840520220497909455619647
+                  [10][STATICCALL] from=WaultSwapPair, to=WaultSwapToken, balanceOf(account(address): 0x50e8D9) -> 264156329178483058012990765
+                [9][STATICCALL] from=WaultSwapRouter, to=WaultSwapToken, balanceOf(account(address): 0xa79Fe3) -> 1995685683453401040311380
+              [8][CALL] from=WUSDMaster, to=WUSD, mint(account(address): 0x50AFA9, amount(uint256): 250000000000000000000000) -> None
+            [7][CALL] from=0x50afa9, to=WUSDMaster, stake(amount(uint256): 250000000000000000000000) -> None
+              [8][CALL] from=WUSDMaster, to=BEP20USDT, transferFrom(sender(address): 0x50AFA9, recipient(address): 0xa79Fe3, amount(uint256): 250000000000000000000000) -> True
+              [8][CALL] from=WUSDMaster, to=BEP20USDT, approve(spender(address): 0xD48745, amount(uint256): 25000000000000000000000) -> True
+              [8][CALL] from=WUSDMaster, to=WaultSwapRouter, swapExactTokensForTokensSupportingFeeOnTransferTokens(amountIn(uint256): 25000000000000000000000, amountOutMin(uint256): 0, path(address[]): ['0x55d398326f99059fF775485246999027B31979..., to(address): 0xa79Fe3, deadline(uint256): 1628041745) -> None
+                [9][CALL] from=WaultSwapRouter, to=BEP20USDT, transferFrom(sender(address): 0xa79Fe3, recipient(address): 0x50e8D9, amount(uint256): 25000000000000000000000) -> True
+                [9][STATICCALL] from=WaultSwapRouter, to=WaultSwapToken, balanceOf(account(address): 0xa79Fe3) -> 1995685683453401040311380
+                [9][STATICCALL] from=WaultSwapRouter, to=WaultSwapPair, getReserves() -> ['34840520220497909455619647', '264156329178483058012990765', '1628041745']
+                [9][STATICCALL] from=WaultSwapRouter, to=BEP20USDT, balanceOf(account(address): 0x50e8D9) -> 34865520220497909455619647
+                [9][CALL] from=WaultSwapRouter, to=WaultSwapPair, swap(amount0Out(uint256): 0, amount1Out(uint256): 189032311089508412840072, to(address): 0xa79Fe3, data(bytes): b'') -> None
+                  [10][CALL] from=WaultSwapPair, to=WaultSwapToken, transfer(recipient(address): 0xa79Fe3, amount(uint256): 189032311089508412840072) -> True
+                  [10][STATICCALL] from=WaultSwapPair, to=BEP20USDT, balanceOf(account(address): 0x50e8D9) -> 34865520220497909455619647
+                  [10][STATICCALL] from=WaultSwapPair, to=WaultSwapToken, balanceOf(account(address): 0x50e8D9) -> 263967296867393549600150693
+                [9][STATICCALL] from=WaultSwapRouter, to=WaultSwapToken, balanceOf(account(address): 0xa79Fe3) -> 2184717994542909453151452
+              [8][CALL] from=WUSDMaster, to=WUSD, mint(account(address): 0x50AFA9, amount(uint256): 250000000000000000000000) -> None
+            [7][CALL] from=0x50afa9, to=WUSDMaster, stake(amount(uint256): 250000000000000000000000) -> None
+              [8][CALL] from=WUSDMaster, to=BEP20USDT, transferFrom(sender(address): 0x50AFA9, recipient(address): 0xa79Fe3, amount(uint256): 250000000000000000000000) -> True
+              [8][CALL] from=WUSDMaster, to=BEP20USDT, approve(spender(address): 0xD48745, amount(uint256): 25000000000000000000000) -> True
+              [8][CALL] from=WUSDMaster, to=WaultSwapRouter, swapExactTokensForTokensSupportingFeeOnTransferTokens(amountIn(uint256): 25000000000000000000000, amountOutMin(uint256): 0, path(address[]): ['0x55d398326f99059fF775485246999027B31979..., to(address): 0xa79Fe3, deadline(uint256): 1628041745) -> None
+                [9][CALL] from=WaultSwapRouter, to=BEP20USDT, transferFrom(sender(address): 0xa79Fe3, recipient(address): 0x50e8D9, amount(uint256): 25000000000000000000000) -> True
+                [9][STATICCALL] from=WaultSwapRouter, to=WaultSwapToken, balanceOf(account(address): 0xa79Fe3) -> 2184717994542909453151452
+                [9][STATICCALL] from=WaultSwapRouter, to=WaultSwapPair, getReserves() -> ['34865520220497909455619647', '263967296867393549600150693', '1628041745']
+                [9][STATICCALL] from=WaultSwapRouter, to=BEP20USDT, balanceOf(account(address): 0x50e8D9) -> 34890520220497909455619647
+                [9][CALL] from=WaultSwapRouter, to=WaultSwapPair, swap(amount0Out(uint256): 0, amount1Out(uint256): 188761688083305024404694, to(address): 0xa79Fe3, data(bytes): b'') -> None
+                  [10][CALL] from=WaultSwapPair, to=WaultSwapToken, transfer(recipient(address): 0xa79Fe3, amount(uint256): 188761688083305024404694) -> True
+                  [10][STATICCALL] from=WaultSwapPair, to=BEP20USDT, balanceOf(account(address): 0x50e8D9) -> 34890520220497909455619647
+                  [10][STATICCALL] from=WaultSwapPair, to=WaultSwapToken, balanceOf(account(address): 0x50e8D9) -> 263778535179310244575745999
+                [9][STATICCALL] from=WaultSwapRouter, to=WaultSwapToken, balanceOf(account(address): 0xa79Fe3) -> 2373479682626214477556146
+              [8][CALL] from=WUSDMaster, to=WUSD, mint(account(address): 0x50AFA9, amount(uint256): 250000000000000000000000) -> None
+            [7][CALL] from=0x50afa9, to=WUSDMaster, stake(amount(uint256): 250000000000000000000000) -> None
+              [8][CALL] from=WUSDMaster, to=BEP20USDT, transferFrom(sender(address): 0x50AFA9, recipient(address): 0xa79Fe3, amount(uint256): 250000000000000000000000) -> True
+              [8][CALL] from=WUSDMaster, to=BEP20USDT, approve(spender(address): 0xD48745, amount(uint256): 25000000000000000000000) -> True
+              [8][CALL] from=WUSDMaster, to=WaultSwapRouter, swapExactTokensForTokensSupportingFeeOnTransferTokens(amountIn(uint256): 25000000000000000000000, amountOutMin(uint256): 0, path(address[]): ['0x55d398326f99059fF775485246999027B31979..., to(address): 0xa79Fe3, deadline(uint256): 1628041745) -> None
+                [9][CALL] from=WaultSwapRouter, to=BEP20USDT, transferFrom(sender(address): 0xa79Fe3, recipient(address): 0x50e8D9, amount(uint256): 25000000000000000000000) -> True
+                [9][STATICCALL] from=WaultSwapRouter, to=WaultSwapToken, balanceOf(account(address): 0xa79Fe3) -> 2373479682626214477556146
+                [9][STATICCALL] from=WaultSwapRouter, to=WaultSwapPair, getReserves() -> ['34890520220497909455619647', '263778535179310244575745999', '1628041745']
+                [9][STATICCALL] from=WaultSwapRouter, to=BEP20USDT, balanceOf(account(address): 0x50e8D9) -> 34915520220497909455619647
+                [9][CALL] from=WaultSwapRouter, to=WaultSwapPair, swap(amount0Out(uint256): 0, amount1Out(uint256): 188491645999947207049705, to(address): 0xa79Fe3, data(bytes): b'') -> None
+                  [10][CALL] from=WaultSwapPair, to=WaultSwapToken, transfer(recipient(address): 0xa79Fe3, amount(uint256): 188491645999947207049705) -> True
+                  [10][STATICCALL] from=WaultSwapPair, to=BEP20USDT, balanceOf(account(address): 0x50e8D9) -> 34915520220497909455619647
+                  [10][STATICCALL] from=WaultSwapPair, to=WaultSwapToken, balanceOf(account(address): 0x50e8D9) -> 263590043533310297368696294
+                [9][STATICCALL] from=WaultSwapRouter, to=WaultSwapToken, balanceOf(account(address): 0xa79Fe3) -> 2561971328626161684605851
+              [8][CALL] from=WUSDMaster, to=WUSD, mint(account(address): 0x50AFA9, amount(uint256): 250000000000000000000000) -> None
+            [7][CALL] from=0x50afa9, to=WUSDMaster, stake(amount(uint256): 250000000000000000000000) -> None
+              [8][CALL] from=WUSDMaster, to=BEP20USDT, transferFrom(sender(address): 0x50AFA9, recipient(address): 0xa79Fe3, amount(uint256): 250000000000000000000000) -> True
+              [8][CALL] from=WUSDMaster, to=BEP20USDT, approve(spender(address): 0xD48745, amount(uint256): 25000000000000000000000) -> True
+              [8][CALL] from=WUSDMaster, to=WaultSwapRouter, swapExactTokensForTokensSupportingFeeOnTransferTokens(amountIn(uint256): 25000000000000000000000, amountOutMin(uint256): 0, path(address[]): ['0x55d398326f99059fF775485246999027B31979..., to(address): 0xa79Fe3, deadline(uint256): 1628041745) -> None
+                [9][CALL] from=WaultSwapRouter, to=BEP20USDT, transferFrom(sender(address): 0xa79Fe3, recipient(address): 0x50e8D9, amount(uint256): 25000000000000000000000) -> True
+                [9][STATICCALL] from=WaultSwapRouter, to=WaultSwapToken, balanceOf(account(address): 0xa79Fe3) -> 2561971328626161684605851
+                [9][STATICCALL] from=WaultSwapRouter, to=WaultSwapPair, getReserves() -> ['34915520220497909455619647', '263590043533310297368696294', '1628041745']
+                [9][STATICCALL] from=WaultSwapRouter, to=BEP20USDT, balanceOf(account(address): 0x50e8D9) -> 34940520220497909455619647
+                [9][CALL] from=WaultSwapRouter, to=WaultSwapPair, swap(amount0Out(uint256): 0, amount1Out(uint256): 188222183177658858495678, to(address): 0xa79Fe3, data(bytes): b'') -> None
+                  [10][CALL] from=WaultSwapPair, to=WaultSwapToken, transfer(recipient(address): 0xa79Fe3, amount(uint256): 188222183177658858495678) -> True
+                  [10][STATICCALL] from=WaultSwapPair, to=BEP20USDT, balanceOf(account(address): 0x50e8D9) -> 34940520220497909455619647
+                  [10][STATICCALL] from=WaultSwapPair, to=WaultSwapToken, balanceOf(account(address): 0x50e8D9) -> 263401821350132638510200616
+                [9][STATICCALL] from=WaultSwapRouter, to=WaultSwapToken, balanceOf(account(address): 0xa79Fe3) -> 2750193511803820543101529
+              [8][CALL] from=WUSDMaster, to=WUSD, mint(account(address): 0x50AFA9, amount(uint256): 250000000000000000000000) -> None
+            [7][CALL] from=0x50afa9, to=WUSDMaster, stake(amount(uint256): 250000000000000000000000) -> None
+              [8][CALL] from=WUSDMaster, to=BEP20USDT, transferFrom(sender(address): 0x50AFA9, recipient(address): 0xa79Fe3, amount(uint256): 250000000000000000000000) -> True
+              [8][CALL] from=WUSDMaster, to=BEP20USDT, approve(spender(address): 0xD48745, amount(uint256): 25000000000000000000000) -> True
+              [8][CALL] from=WUSDMaster, to=WaultSwapRouter, swapExactTokensForTokensSupportingFeeOnTransferTokens(amountIn(uint256): 25000000000000000000000, amountOutMin(uint256): 0, path(address[]): ['0x55d398326f99059fF775485246999027B31979..., to(address): 0xa79Fe3, deadline(uint256): 1628041745) -> None
+                [9][CALL] from=WaultSwapRouter, to=BEP20USDT, transferFrom(sender(address): 0xa79Fe3, recipient(address): 0x50e8D9, amount(uint256): 25000000000000000000000) -> True
+                [9][STATICCALL] from=WaultSwapRouter, to=WaultSwapToken, balanceOf(account(address): 0xa79Fe3) -> 2750193511803820543101529
+                [9][STATICCALL] from=WaultSwapRouter, to=WaultSwapPair, getReserves() -> ['34940520220497909455619647', '263401821350132638510200616', '1628041745']
+                [9][STATICCALL] from=WaultSwapRouter, to=BEP20USDT, balanceOf(account(address): 0x50e8D9) -> 34965520220497909455619647
+                [9][CALL] from=WaultSwapRouter, to=WaultSwapPair, swap(amount0Out(uint256): 0, amount1Out(uint256): 187953297960602275765992, to(address): 0xa79Fe3, data(bytes): b'') -> None
+                  [10][CALL] from=WaultSwapPair, to=WaultSwapToken, transfer(recipient(address): 0xa79Fe3, amount(uint256): 187953297960602275765992) -> True
+                  [10][STATICCALL] from=WaultSwapPair, to=BEP20USDT, balanceOf(account(address): 0x50e8D9) -> 34965520220497909455619647
+                  [10][STATICCALL] from=WaultSwapPair, to=WaultSwapToken, balanceOf(account(address): 0x50e8D9) -> 263213868052172036234434624
+                [9][STATICCALL] from=WaultSwapRouter, to=WaultSwapToken, balanceOf(account(address): 0xa79Fe3) -> 2938146809764422818867521
+              [8][CALL] from=WUSDMaster, to=WUSD, mint(account(address): 0x50AFA9, amount(uint256): 250000000000000000000000) -> None
+            [7][CALL] from=0x50afa9, to=WUSDMaster, stake(amount(uint256): 250000000000000000000000) -> None
+              [8][CALL] from=WUSDMaster, to=BEP20USDT, transferFrom(sender(address): 0x50AFA9, recipient(address): 0xa79Fe3, amount(uint256): 250000000000000000000000) -> True
+              [8][CALL] from=WUSDMaster, to=BEP20USDT, approve(spender(address): 0xD48745, amount(uint256): 25000000000000000000000) -> True
+              [8][CALL] from=WUSDMaster, to=WaultSwapRouter, swapExactTokensForTokensSupportingFeeOnTransferTokens(amountIn(uint256): 25000000000000000000000, amountOutMin(uint256): 0, path(address[]): ['0x55d398326f99059fF775485246999027B31979..., to(address): 0xa79Fe3, deadline(uint256): 1628041745) -> None
+                [9][CALL] from=WaultSwapRouter, to=BEP20USDT, transferFrom(sender(address): 0xa79Fe3, recipient(address): 0x50e8D9, amount(uint256): 25000000000000000000000) -> True
+                [9][STATICCALL] from=WaultSwapRouter, to=WaultSwapToken, balanceOf(account(address): 0xa79Fe3) -> 2938146809764422818867521
+                [9][STATICCALL] from=WaultSwapRouter, to=WaultSwapPair, getReserves() -> ['34965520220497909455619647', '263213868052172036234434624', '1628041745']
+                [9][STATICCALL] from=WaultSwapRouter, to=BEP20USDT, balanceOf(account(address): 0x50e8D9) -> 34990520220497909455619647
+                [9][CALL] from=WaultSwapRouter, to=WaultSwapPair, swap(amount0Out(uint256): 0, amount1Out(uint256): 187684988698852706458373, to(address): 0xa79Fe3, data(bytes): b'') -> None
+                  [10][CALL] from=WaultSwapPair, to=WaultSwapToken, transfer(recipient(address): 0xa79Fe3, amount(uint256): 187684988698852706458373) -> True
+                  [10][STATICCALL] from=WaultSwapPair, to=BEP20USDT, balanceOf(account(address): 0x50e8D9) -> 34990520220497909455619647
+                  [10][STATICCALL] from=WaultSwapPair, to=WaultSwapToken, balanceOf(account(address): 0x50e8D9) -> 263026183063473183527976251
+                [9][STATICCALL] from=WaultSwapRouter, to=WaultSwapToken, balanceOf(account(address): 0xa79Fe3) -> 3125831798463275525325894
+              [8][CALL] from=WUSDMaster, to=WUSD, mint(account(address): 0x50AFA9, amount(uint256): 250000000000000000000000) -> None
+            [7][CALL] from=0x50afa9, to=WUSDMaster, stake(amount(uint256): 250000000000000000000000) -> None
+              [8][CALL] from=WUSDMaster, to=BEP20USDT, transferFrom(sender(address): 0x50AFA9, recipient(address): 0xa79Fe3, amount(uint256): 250000000000000000000000) -> True
+              [8][CALL] from=WUSDMaster, to=BEP20USDT, approve(spender(address): 0xD48745, amount(uint256): 25000000000000000000000) -> True
+              [8][CALL] from=WUSDMaster, to=WaultSwapRouter, swapExactTokensForTokensSupportingFeeOnTransferTokens(amountIn(uint256): 25000000000000000000000, amountOutMin(uint256): 0, path(address[]): ['0x55d398326f99059fF775485246999027B31979..., to(address): 0xa79Fe3, deadline(uint256): 1628041745) -> None
+                [9][CALL] from=WaultSwapRouter, to=BEP20USDT, transferFrom(sender(address): 0xa79Fe3, recipient(address): 0x50e8D9, amount(uint256): 25000000000000000000000) -> True
+                [9][STATICCALL] from=WaultSwapRouter, to=WaultSwapToken, balanceOf(account(address): 0xa79Fe3) -> 3125831798463275525325894
+                [9][STATICCALL] from=WaultSwapRouter, to=WaultSwapPair, getReserves() -> ['34990520220497909455619647', '263026183063473183527976251', '1628041745']
+                [9][STATICCALL] from=WaultSwapRouter, to=BEP20USDT, balanceOf(account(address): 0x50e8D9) -> 35015520220497909455619647
+                [9][CALL] from=WaultSwapRouter, to=WaultSwapPair, swap(amount0Out(uint256): 0, amount1Out(uint256): 187417253748373027167516, to(address): 0xa79Fe3, data(bytes): b'') -> None
+                  [10][CALL] from=WaultSwapPair, to=WaultSwapToken, transfer(recipient(address): 0xa79Fe3, amount(uint256): 187417253748373027167516) -> True
+                  [10][STATICCALL] from=WaultSwapPair, to=BEP20USDT, balanceOf(account(address): 0x50e8D9) -> 35015520220497909455619647
+                  [10][STATICCALL] from=WaultSwapPair, to=WaultSwapToken, balanceOf(account(address): 0x50e8D9) -> 262838765809724810500808735
+                [9][STATICCALL] from=WaultSwapRouter, to=WaultSwapToken, balanceOf(account(address): 0xa79Fe3) -> 3313249052211648552493410
+              [8][CALL] from=WUSDMaster, to=WUSD, mint(account(address): 0x50AFA9, amount(uint256): 250000000000000000000000) -> None
+            [7][CALL] from=0x50afa9, to=WUSDMaster, stake(amount(uint256): 250000000000000000000000) -> None
+              [8][CALL] from=WUSDMaster, to=BEP20USDT, transferFrom(sender(address): 0x50AFA9, recipient(address): 0xa79Fe3, amount(uint256): 250000000000000000000000) -> True
+              [8][CALL] from=WUSDMaster, to=BEP20USDT, approve(spender(address): 0xD48745, amount(uint256): 25000000000000000000000) -> True
+              [8][CALL] from=WUSDMaster, to=WaultSwapRouter, swapExactTokensForTokensSupportingFeeOnTransferTokens(amountIn(uint256): 25000000000000000000000, amountOutMin(uint256): 0, path(address[]): ['0x55d398326f99059fF775485246999027B31979..., to(address): 0xa79Fe3, deadline(uint256): 1628041745) -> None
+                [9][CALL] from=WaultSwapRouter, to=BEP20USDT, transferFrom(sender(address): 0xa79Fe3, recipient(address): 0x50e8D9, amount(uint256): 25000000000000000000000) -> True
+                [9][STATICCALL] from=WaultSwapRouter, to=WaultSwapToken, balanceOf(account(address): 0xa79Fe3) -> 3313249052211648552493410
+                [9][STATICCALL] from=WaultSwapRouter, to=WaultSwapPair, getReserves() -> ['35015520220497909455619647', '262838765809724810500808735', '1628041745']
+                [9][STATICCALL] from=WaultSwapRouter, to=BEP20USDT, balanceOf(account(address): 0x50e8D9) -> 35040520220497909455619647
+                [9][CALL] from=WaultSwapRouter, to=WaultSwapPair, swap(amount0Out(uint256): 0, amount1Out(uint256): 187150091470988548333233, to(address): 0xa79Fe3, data(bytes): b'') -> None
+                  [10][CALL] from=WaultSwapPair, to=WaultSwapToken, transfer(recipient(address): 0xa79Fe3, amount(uint256): 187150091470988548333233) -> True
+                  [10][STATICCALL] from=WaultSwapPair, to=BEP20USDT, balanceOf(account(address): 0x50e8D9) -> 35040520220497909455619647
+                  [10][STATICCALL] from=WaultSwapPair, to=WaultSwapToken, balanceOf(account(address): 0x50e8D9) -> 262651615718253821952475502
+                [9][STATICCALL] from=WaultSwapRouter, to=WaultSwapToken, balanceOf(account(address): 0xa79Fe3) -> 3500399143682637100826643
+              [8][CALL] from=WUSDMaster, to=WUSD, mint(account(address): 0x50AFA9, amount(uint256): 250000000000000000000000) -> None
+            [7][CALL] from=0x50afa9, to=WUSDMaster, stake(amount(uint256): 250000000000000000000000) -> None
+              [8][CALL] from=WUSDMaster, to=BEP20USDT, transferFrom(sender(address): 0x50AFA9, recipient(address): 0xa79Fe3, amount(uint256): 250000000000000000000000) -> True
+              [8][CALL] from=WUSDMaster, to=BEP20USDT, approve(spender(address): 0xD48745, amount(uint256): 25000000000000000000000) -> True
+              [8][CALL] from=WUSDMaster, to=WaultSwapRouter, swapExactTokensForTokensSupportingFeeOnTransferTokens(amountIn(uint256): 25000000000000000000000, amountOutMin(uint256): 0, path(address[]): ['0x55d398326f99059fF775485246999027B31979..., to(address): 0xa79Fe3, deadline(uint256): 1628041745) -> None
+                [9][CALL] from=WaultSwapRouter, to=BEP20USDT, transferFrom(sender(address): 0xa79Fe3, recipient(address): 0x50e8D9, amount(uint256): 25000000000000000000000) -> True
+                [9][STATICCALL] from=WaultSwapRouter, to=WaultSwapToken, balanceOf(account(address): 0xa79Fe3) -> 3500399143682637100826643
+                [9][STATICCALL] from=WaultSwapRouter, to=WaultSwapPair, getReserves() -> ['35040520220497909455619647', '262651615718253821952475502', '1628041745']
+                [9][STATICCALL] from=WaultSwapRouter, to=BEP20USDT, balanceOf(account(address): 0x50e8D9) -> 35065520220497909455619647
+                [9][CALL] from=WaultSwapRouter, to=WaultSwapPair, swap(amount0Out(uint256): 0, amount1Out(uint256): 186883500234361944793229, to(address): 0xa79Fe3, data(bytes): b'') -> None
+                  [10][CALL] from=WaultSwapPair, to=WaultSwapToken, transfer(recipient(address): 0xa79Fe3, amount(uint256): 186883500234361944793229) -> True
+                  [10][STATICCALL] from=WaultSwapPair, to=BEP20USDT, balanceOf(account(address): 0x50e8D9) -> 35065520220497909455619647
+                  [10][STATICCALL] from=WaultSwapPair, to=WaultSwapToken, balanceOf(account(address): 0x50e8D9) -> 262464732218019460007682273
+                [9][STATICCALL] from=WaultSwapRouter, to=WaultSwapToken, balanceOf(account(address): 0xa79Fe3) -> 3687282643916999045619872
+              [8][CALL] from=WUSDMaster, to=WUSD, mint(account(address): 0x50AFA9, amount(uint256): 250000000000000000000000) -> None
+            [7][CALL] from=0x50afa9, to=WUSDMaster, stake(amount(uint256): 250000000000000000000000) -> None
+              [8][CALL] from=WUSDMaster, to=BEP20USDT, transferFrom(sender(address): 0x50AFA9, recipient(address): 0xa79Fe3, amount(uint256): 250000000000000000000000) -> True
+              [8][CALL] from=WUSDMaster, to=BEP20USDT, approve(spender(address): 0xD48745, amount(uint256): 25000000000000000000000) -> True
+              [8][CALL] from=WUSDMaster, to=WaultSwapRouter, swapExactTokensForTokensSupportingFeeOnTransferTokens(amountIn(uint256): 25000000000000000000000, amountOutMin(uint256): 0, path(address[]): ['0x55d398326f99059fF775485246999027B31979..., to(address): 0xa79Fe3, deadline(uint256): 1628041745) -> None
+                [9][CALL] from=WaultSwapRouter, to=BEP20USDT, transferFrom(sender(address): 0xa79Fe3, recipient(address): 0x50e8D9, amount(uint256): 25000000000000000000000) -> True
+                [9][STATICCALL] from=WaultSwapRouter, to=WaultSwapToken, balanceOf(account(address): 0xa79Fe3) -> 3687282643916999045619872
+                [9][STATICCALL] from=WaultSwapRouter, to=WaultSwapPair, getReserves() -> ['35065520220497909455619647', '262464732218019460007682273', '1628041745']
+                [9][STATICCALL] from=WaultSwapRouter, to=BEP20USDT, balanceOf(account(address): 0x50e8D9) -> 35090520220497909455619647
+                [9][CALL] from=WaultSwapRouter, to=WaultSwapPair, swap(amount0Out(uint256): 0, amount1Out(uint256): 186617478411968311324226, to(address): 0xa79Fe3, data(bytes): b'') -> None
+                  [10][CALL] from=WaultSwapPair, to=WaultSwapToken, transfer(recipient(address): 0xa79Fe3, amount(uint256): 186617478411968311324226) -> True
+                  [10][STATICCALL] from=WaultSwapPair, to=BEP20USDT, balanceOf(account(address): 0x50e8D9) -> 35090520220497909455619647
+                  [10][STATICCALL] from=WaultSwapPair, to=WaultSwapToken, balanceOf(account(address): 0x50e8D9) -> 262278114739607491696358047
+                [9][STATICCALL] from=WaultSwapRouter, to=WaultSwapToken, balanceOf(account(address): 0xa79Fe3) -> 3873900122328967356944098
+              [8][CALL] from=WUSDMaster, to=WUSD, mint(account(address): 0x50AFA9, amount(uint256): 250000000000000000000000) -> None
+            [7][CALL] from=0x50afa9, to=WUSDMaster, stake(amount(uint256): 250000000000000000000000) -> None
+              [8][CALL] from=WUSDMaster, to=BEP20USDT, transferFrom(sender(address): 0x50AFA9, recipient(address): 0xa79Fe3, amount(uint256): 250000000000000000000000) -> True
+              [8][CALL] from=WUSDMaster, to=BEP20USDT, approve(spender(address): 0xD48745, amount(uint256): 25000000000000000000000) -> True
+              [8][CALL] from=WUSDMaster, to=WaultSwapRouter, swapExactTokensForTokensSupportingFeeOnTransferTokens(amountIn(uint256): 25000000000000000000000, amountOutMin(uint256): 0, path(address[]): ['0x55d398326f99059fF775485246999027B31979..., to(address): 0xa79Fe3, deadline(uint256): 1628041745) -> None
+                [9][CALL] from=WaultSwapRouter, to=BEP20USDT, transferFrom(sender(address): 0xa79Fe3, recipient(address): 0x50e8D9, amount(uint256): 25000000000000000000000) -> True
+                [9][STATICCALL] from=WaultSwapRouter, to=WaultSwapToken, balanceOf(account(address): 0xa79Fe3) -> 3873900122328967356944098
+                [9][STATICCALL] from=WaultSwapRouter, to=WaultSwapPair, getReserves() -> ['35090520220497909455619647', '262278114739607491696358047', '1628041745']
+                [9][STATICCALL] from=WaultSwapRouter, to=BEP20USDT, balanceOf(account(address): 0x50e8D9) -> 35115520220497909455619647
+                [9][CALL] from=WaultSwapRouter, to=WaultSwapPair, swap(amount0Out(uint256): 0, amount1Out(uint256): 186352024383070342459732, to(address): 0xa79Fe3, data(bytes): b'') -> None
+                  [10][CALL] from=WaultSwapPair, to=WaultSwapToken, transfer(recipient(address): 0xa79Fe3, amount(uint256): 186352024383070342459732) -> True
+                  [10][STATICCALL] from=WaultSwapPair, to=BEP20USDT, balanceOf(account(address): 0x50e8D9) -> 35115520220497909455619647
+                  [10][STATICCALL] from=WaultSwapPair, to=WaultSwapToken, balanceOf(account(address): 0x50e8D9) -> 262091762715224421353898315
+                [9][STATICCALL] from=WaultSwapRouter, to=WaultSwapToken, balanceOf(account(address): 0xa79Fe3) -> 4060252146712037699403830
+              [8][CALL] from=WUSDMaster, to=WUSD, mint(account(address): 0x50AFA9, amount(uint256): 250000000000000000000000) -> None
+            [7][CALL] from=0x50afa9, to=WUSDMaster, stake(amount(uint256): 250000000000000000000000) -> None
+              [8][CALL] from=WUSDMaster, to=BEP20USDT, transferFrom(sender(address): 0x50AFA9, recipient(address): 0xa79Fe3, amount(uint256): 250000000000000000000000) -> True
+              [8][CALL] from=WUSDMaster, to=BEP20USDT, approve(spender(address): 0xD48745, amount(uint256): 25000000000000000000000) -> True
+              [8][CALL] from=WUSDMaster, to=WaultSwapRouter, swapExactTokensForTokensSupportingFeeOnTransferTokens(amountIn(uint256): 25000000000000000000000, amountOutMin(uint256): 0, path(address[]): ['0x55d398326f99059fF775485246999027B31979..., to(address): 0xa79Fe3, deadline(uint256): 1628041745) -> None
+                [9][CALL] from=WaultSwapRouter, to=BEP20USDT, transferFrom(sender(address): 0xa79Fe3, recipient(address): 0x50e8D9, amount(uint256): 25000000000000000000000) -> True
+                [9][STATICCALL] from=WaultSwapRouter, to=WaultSwapToken, balanceOf(account(address): 0xa79Fe3) -> 4060252146712037699403830
+                [9][STATICCALL] from=WaultSwapRouter, to=WaultSwapPair, getReserves() -> ['35115520220497909455619647', '262091762715224421353898315', '1628041745']
+                [9][STATICCALL] from=WaultSwapRouter, to=BEP20USDT, balanceOf(account(address): 0x50e8D9) -> 35140520220497909455619647
+                [9][CALL] from=WaultSwapRouter, to=WaultSwapPair, swap(amount0Out(uint256): 0, amount1Out(uint256): 186087136532693635877333, to(address): 0xa79Fe3, data(bytes): b'') -> None
+                  [10][CALL] from=WaultSwapPair, to=WaultSwapToken, transfer(recipient(address): 0xa79Fe3, amount(uint256): 186087136532693635877333) -> True
+                  [10][STATICCALL] from=WaultSwapPair, to=BEP20USDT, balanceOf(account(address): 0x50e8D9) -> 35140520220497909455619647
+                  [10][STATICCALL] from=WaultSwapPair, to=WaultSwapToken, balanceOf(account(address): 0x50e8D9) -> 261905675578691727718020982
+                [9][STATICCALL] from=WaultSwapRouter, to=WaultSwapToken, balanceOf(account(address): 0xa79Fe3) -> 4246339283244731335281163
+              [8][CALL] from=WUSDMaster, to=WUSD, mint(account(address): 0x50AFA9, amount(uint256): 250000000000000000000000) -> None
+            [7][CALL] from=0x50afa9, to=WUSDMaster, stake(amount(uint256): 250000000000000000000000) -> None
+              [8][CALL] from=WUSDMaster, to=BEP20USDT, transferFrom(sender(address): 0x50AFA9, recipient(address): 0xa79Fe3, amount(uint256): 250000000000000000000000) -> True
+              [8][CALL] from=WUSDMaster, to=BEP20USDT, approve(spender(address): 0xD48745, amount(uint256): 25000000000000000000000) -> True
+              [8][CALL] from=WUSDMaster, to=WaultSwapRouter, swapExactTokensForTokensSupportingFeeOnTransferTokens(amountIn(uint256): 25000000000000000000000, amountOutMin(uint256): 0, path(address[]): ['0x55d398326f99059fF775485246999027B31979..., to(address): 0xa79Fe3, deadline(uint256): 1628041745) -> None
+                [9][CALL] from=WaultSwapRouter, to=BEP20USDT, transferFrom(sender(address): 0xa79Fe3, recipient(address): 0x50e8D9, amount(uint256): 25000000000000000000000) -> True
+                [9][STATICCALL] from=WaultSwapRouter, to=WaultSwapToken, balanceOf(account(address): 0xa79Fe3) -> 4246339283244731335281163
+                [9][STATICCALL] from=WaultSwapRouter, to=WaultSwapPair, getReserves() -> ['35140520220497909455619647', '261905675578691727718020982', '1628041745']
+                [9][STATICCALL] from=WaultSwapRouter, to=BEP20USDT, balanceOf(account(address): 0x50e8D9) -> 35165520220497909455619647
+                [9][CALL] from=WaultSwapRouter, to=WaultSwapPair, swap(amount0Out(uint256): 0, amount1Out(uint256): 185822813251602118652881, to(address): 0xa79Fe3, data(bytes): b'') -> None
+                  [10][CALL] from=WaultSwapPair, to=WaultSwapToken, transfer(recipient(address): 0xa79Fe3, amount(uint256): 185822813251602118652881) -> True
+                  [10][STATICCALL] from=WaultSwapPair, to=BEP20USDT, balanceOf(account(address): 0x50e8D9) -> 35165520220497909455619647
+                  [10][STATICCALL] from=WaultSwapPair, to=WaultSwapToken, balanceOf(account(address): 0x50e8D9) -> 261719852765440125599368101
+                [9][STATICCALL] from=WaultSwapRouter, to=WaultSwapToken, balanceOf(account(address): 0xa79Fe3) -> 4432162096496333453934044
+              [8][CALL] from=WUSDMaster, to=WUSD, mint(account(address): 0x50AFA9, amount(uint256): 250000000000000000000000) -> None
+            [7][CALL] from=0x50afa9, to=WUSDMaster, stake(amount(uint256): 250000000000000000000000) -> None
+              [8][CALL] from=WUSDMaster, to=BEP20USDT, transferFrom(sender(address): 0x50AFA9, recipient(address): 0xa79Fe3, amount(uint256): 250000000000000000000000) -> True
+              [8][CALL] from=WUSDMaster, to=BEP20USDT, approve(spender(address): 0xD48745, amount(uint256): 25000000000000000000000) -> True
+              [8][CALL] from=WUSDMaster, to=WaultSwapRouter, swapExactTokensForTokensSupportingFeeOnTransferTokens(amountIn(uint256): 25000000000000000000000, amountOutMin(uint256): 0, path(address[]): ['0x55d398326f99059fF775485246999027B31979..., to(address): 0xa79Fe3, deadline(uint256): 1628041745) -> None
+                [9][CALL] from=WaultSwapRouter, to=BEP20USDT, transferFrom(sender(address): 0xa79Fe3, recipient(address): 0x50e8D9, amount(uint256): 25000000000000000000000) -> True
+                [9][STATICCALL] from=WaultSwapRouter, to=WaultSwapToken, balanceOf(account(address): 0xa79Fe3) -> 4432162096496333453934044
+                [9][STATICCALL] from=WaultSwapRouter, to=WaultSwapPair, getReserves() -> ['35165520220497909455619647', '261719852765440125599368101', '1628041745']
+                [9][STATICCALL] from=WaultSwapRouter, to=BEP20USDT, balanceOf(account(address): 0x50e8D9) -> 35190520220497909455619647
+                [9][CALL] from=WaultSwapRouter, to=WaultSwapPair, swap(amount0Out(uint256): 0, amount1Out(uint256): 185559052936273595683469, to(address): 0xa79Fe3, data(bytes): b'') -> None
+                  [10][CALL] from=WaultSwapPair, to=WaultSwapToken, transfer(recipient(address): 0xa79Fe3, amount(uint256): 185559052936273595683469) -> True
+                  [10][STATICCALL] from=WaultSwapPair, to=BEP20USDT, balanceOf(account(address): 0x50e8D9) -> 35190520220497909455619647
+                  [10][STATICCALL] from=WaultSwapPair, to=WaultSwapToken, balanceOf(account(address): 0x50e8D9) -> 261534293712503852003684632
+                [9][STATICCALL] from=WaultSwapRouter, to=WaultSwapToken, balanceOf(account(address): 0xa79Fe3) -> 4617721149432607049617513
+              [8][CALL] from=WUSDMaster, to=WUSD, mint(account(address): 0x50AFA9, amount(uint256): 250000000000000000000000) -> None
+            [7][CALL] from=0x50afa9, to=WUSDMaster, stake(amount(uint256): 250000000000000000000000) -> None
+              [8][CALL] from=WUSDMaster, to=BEP20USDT, transferFrom(sender(address): 0x50AFA9, recipient(address): 0xa79Fe3, amount(uint256): 250000000000000000000000) -> True
+              [8][CALL] from=WUSDMaster, to=BEP20USDT, approve(spender(address): 0xD48745, amount(uint256): 25000000000000000000000) -> True
+              [8][CALL] from=WUSDMaster, to=WaultSwapRouter, swapExactTokensForTokensSupportingFeeOnTransferTokens(amountIn(uint256): 25000000000000000000000, amountOutMin(uint256): 0, path(address[]): ['0x55d398326f99059fF775485246999027B31979..., to(address): 0xa79Fe3, deadline(uint256): 1628041745) -> None
+                [9][CALL] from=WaultSwapRouter, to=BEP20USDT, transferFrom(sender(address): 0xa79Fe3, recipient(address): 0x50e8D9, amount(uint256): 25000000000000000000000) -> True
+                [9][STATICCALL] from=WaultSwapRouter, to=WaultSwapToken, balanceOf(account(address): 0xa79Fe3) -> 4617721149432607049617513
+                [9][STATICCALL] from=WaultSwapRouter, to=WaultSwapPair, getReserves() -> ['35190520220497909455619647', '261534293712503852003684632', '1628041745']
+                [9][STATICCALL] from=WaultSwapRouter, to=BEP20USDT, balanceOf(account(address): 0x50e8D9) -> 35215520220497909455619647
+                [9][CALL] from=WaultSwapRouter, to=WaultSwapPair, swap(amount0Out(uint256): 0, amount1Out(uint256): 185295853988875419585516, to(address): 0xa79Fe3, data(bytes): b'') -> None
+                  [10][CALL] from=WaultSwapPair, to=WaultSwapToken, transfer(recipient(address): 0xa79Fe3, amount(uint256): 185295853988875419585516) -> True
+                  [10][STATICCALL] from=WaultSwapPair, to=BEP20USDT, balanceOf(account(address): 0x50e8D9) -> 35215520220497909455619647
+                  [10][STATICCALL] from=WaultSwapPair, to=WaultSwapToken, balanceOf(account(address): 0x50e8D9) -> 261348997858514976584099116
+                [9][STATICCALL] from=WaultSwapRouter, to=WaultSwapToken, balanceOf(account(address): 0xa79Fe3) -> 4803017003421482469203029
+              [8][CALL] from=WUSDMaster, to=WUSD, mint(account(address): 0x50AFA9, amount(uint256): 250000000000000000000000) -> None
+            [7][CALL] from=0x50afa9, to=WUSDMaster, stake(amount(uint256): 250000000000000000000000) -> None
+              [8][CALL] from=WUSDMaster, to=BEP20USDT, transferFrom(sender(address): 0x50AFA9, recipient(address): 0xa79Fe3, amount(uint256): 250000000000000000000000) -> True
+              [8][CALL] from=WUSDMaster, to=BEP20USDT, approve(spender(address): 0xD48745, amount(uint256): 25000000000000000000000) -> True
+              [8][CALL] from=WUSDMaster, to=WaultSwapRouter, swapExactTokensForTokensSupportingFeeOnTransferTokens(amountIn(uint256): 25000000000000000000000, amountOutMin(uint256): 0, path(address[]): ['0x55d398326f99059fF775485246999027B31979..., to(address): 0xa79Fe3, deadline(uint256): 1628041745) -> None
+                [9][CALL] from=WaultSwapRouter, to=BEP20USDT, transferFrom(sender(address): 0xa79Fe3, recipient(address): 0x50e8D9, amount(uint256): 25000000000000000000000) -> True
+                [9][STATICCALL] from=WaultSwapRouter, to=WaultSwapToken, balanceOf(account(address): 0xa79Fe3) -> 4803017003421482469203029
+                [9][STATICCALL] from=WaultSwapRouter, to=WaultSwapPair, getReserves() -> ['35215520220497909455619647', '261348997858514976584099116', '1628041745']
+                [9][STATICCALL] from=WaultSwapRouter, to=BEP20USDT, balanceOf(account(address): 0x50e8D9) -> 35240520220497909455619647
+                [9][CALL] from=WaultSwapRouter, to=WaultSwapPair, swap(amount0Out(uint256): 0, amount1Out(uint256): 185033214817240281378744, to(address): 0xa79Fe3, data(bytes): b'') -> None
+                  [10][CALL] from=WaultSwapPair, to=WaultSwapToken, transfer(recipient(address): 0xa79Fe3, amount(uint256): 185033214817240281378744) -> True
+                  [10][STATICCALL] from=WaultSwapPair, to=BEP20USDT, balanceOf(account(address): 0x50e8D9) -> 35240520220497909455619647
+                  [10][STATICCALL] from=WaultSwapPair, to=WaultSwapToken, balanceOf(account(address): 0x50e8D9) -> 261163964643697736302720372
+                [9][STATICCALL] from=WaultSwapRouter, to=WaultSwapToken, balanceOf(account(address): 0xa79Fe3) -> 4988050218238722750581773
+              [8][CALL] from=WUSDMaster, to=WUSD, mint(account(address): 0x50AFA9, amount(uint256): 250000000000000000000000) -> None
+            [7][CALL] from=0x50afa9, to=WUSDMaster, stake(amount(uint256): 250000000000000000000000) -> None
+              [8][CALL] from=WUSDMaster, to=BEP20USDT, transferFrom(sender(address): 0x50AFA9, recipient(address): 0xa79Fe3, amount(uint256): 250000000000000000000000) -> True
+              [8][CALL] from=WUSDMaster, to=BEP20USDT, approve(spender(address): 0xD48745, amount(uint256): 25000000000000000000000) -> True
+              [8][CALL] from=WUSDMaster, to=WaultSwapRouter, swapExactTokensForTokensSupportingFeeOnTransferTokens(amountIn(uint256): 25000000000000000000000, amountOutMin(uint256): 0, path(address[]): ['0x55d398326f99059fF775485246999027B31979..., to(address): 0xa79Fe3, deadline(uint256): 1628041745) -> None
+                [9][CALL] from=WaultSwapRouter, to=BEP20USDT, transferFrom(sender(address): 0xa79Fe3, recipient(address): 0x50e8D9, amount(uint256): 25000000000000000000000) -> True
+                [9][STATICCALL] from=WaultSwapRouter, to=WaultSwapToken, balanceOf(account(address): 0xa79Fe3) -> 4988050218238722750581773
+                [9][STATICCALL] from=WaultSwapRouter, to=WaultSwapPair, getReserves() -> ['35240520220497909455619647', '261163964643697736302720372', '1628041745']
+                [9][STATICCALL] from=WaultSwapRouter, to=BEP20USDT, balanceOf(account(address): 0x50e8D9) -> 35265520220497909455619647
+                [9][CALL] from=WaultSwapRouter, to=WaultSwapPair, swap(amount0Out(uint256): 0, amount1Out(uint256): 184771133834842121271194, to(address): 0xa79Fe3, data(bytes): b'') -> None
+                  [10][CALL] from=WaultSwapPair, to=WaultSwapToken, transfer(recipient(address): 0xa79Fe3, amount(uint256): 184771133834842121271194) -> True
+                  [10][STATICCALL] from=WaultSwapPair, to=BEP20USDT, balanceOf(account(address): 0x50e8D9) -> 35265520220497909455619647
+                  [10][STATICCALL] from=WaultSwapPair, to=WaultSwapToken, balanceOf(account(address): 0x50e8D9) -> 260979193509862894181449178
+                [9][STATICCALL] from=WaultSwapRouter, to=WaultSwapToken, balanceOf(account(address): 0xa79Fe3) -> 5172821352073564871852967
+              [8][CALL] from=WUSDMaster, to=WUSD, mint(account(address): 0x50AFA9, amount(uint256): 250000000000000000000000) -> None
+            [7][CALL] from=0x50afa9, to=WUSDMaster, stake(amount(uint256): 250000000000000000000000) -> None
+              [8][CALL] from=WUSDMaster, to=BEP20USDT, transferFrom(sender(address): 0x50AFA9, recipient(address): 0xa79Fe3, amount(uint256): 250000000000000000000000) -> True
+              [8][CALL] from=WUSDMaster, to=BEP20USDT, approve(spender(address): 0xD48745, amount(uint256): 25000000000000000000000) -> True
+              [8][CALL] from=WUSDMaster, to=WaultSwapRouter, swapExactTokensForTokensSupportingFeeOnTransferTokens(amountIn(uint256): 25000000000000000000000, amountOutMin(uint256): 0, path(address[]): ['0x55d398326f99059fF775485246999027B31979..., to(address): 0xa79Fe3, deadline(uint256): 1628041745) -> None
+                [9][CALL] from=WaultSwapRouter, to=BEP20USDT, transferFrom(sender(address): 0xa79Fe3, recipient(address): 0x50e8D9, amount(uint256): 25000000000000000000000) -> True
+                [9][STATICCALL] from=WaultSwapRouter, to=WaultSwapToken, balanceOf(account(address): 0xa79Fe3) -> 5172821352073564871852967
+                [9][STATICCALL] from=WaultSwapRouter, to=WaultSwapPair, getReserves() -> ['35265520220497909455619647', '260979193509862894181449178', '1628041745']
+                [9][STATICCALL] from=WaultSwapRouter, to=BEP20USDT, balanceOf(account(address): 0x50e8D9) -> 35290520220497909455619647
+                [9][CALL] from=WaultSwapRouter, to=WaultSwapPair, swap(amount0Out(uint256): 0, amount1Out(uint256): 184509609460772158864817, to(address): 0xa79Fe3, data(bytes): b'') -> None
+                  [10][CALL] from=WaultSwapPair, to=WaultSwapToken, transfer(recipient(address): 0xa79Fe3, amount(uint256): 184509609460772158864817) -> True
+                  [10][STATICCALL] from=WaultSwapPair, to=BEP20USDT, balanceOf(account(address): 0x50e8D9) -> 35290520220497909455619647
+                  [10][STATICCALL] from=WaultSwapPair, to=WaultSwapToken, balanceOf(account(address): 0x50e8D9) -> 260794683900402122022584361
+                [9][STATICCALL] from=WaultSwapRouter, to=WaultSwapToken, balanceOf(account(address): 0xa79Fe3) -> 5357330961534337030717784
+              [8][CALL] from=WUSDMaster, to=WUSD, mint(account(address): 0x50AFA9, amount(uint256): 250000000000000000000000) -> None
+            [7][CALL] from=0x50afa9, to=WUSDMaster, stake(amount(uint256): 250000000000000000000000) -> None
+              [8][CALL] from=WUSDMaster, to=BEP20USDT, transferFrom(sender(address): 0x50AFA9, recipient(address): 0xa79Fe3, amount(uint256): 250000000000000000000000) -> True
+              [8][CALL] from=WUSDMaster, to=BEP20USDT, approve(spender(address): 0xD48745, amount(uint256): 25000000000000000000000) -> True
+              [8][CALL] from=WUSDMaster, to=WaultSwapRouter, swapExactTokensForTokensSupportingFeeOnTransferTokens(amountIn(uint256): 25000000000000000000000, amountOutMin(uint256): 0, path(address[]): ['0x55d398326f99059fF775485246999027B31979..., to(address): 0xa79Fe3, deadline(uint256): 1628041745) -> None
+                [9][CALL] from=WaultSwapRouter, to=BEP20USDT, transferFrom(sender(address): 0xa79Fe3, recipient(address): 0x50e8D9, amount(uint256): 25000000000000000000000) -> True
+                [9][STATICCALL] from=WaultSwapRouter, to=WaultSwapToken, balanceOf(account(address): 0xa79Fe3) -> 5357330961534337030717784
+                [9][STATICCALL] from=WaultSwapRouter, to=WaultSwapPair, getReserves() -> ['35290520220497909455619647', '260794683900402122022584361', '1628041745']
+                [9][STATICCALL] from=WaultSwapRouter, to=BEP20USDT, balanceOf(account(address): 0x50e8D9) -> 35315520220497909455619647
+                [9][CALL] from=WaultSwapRouter, to=WaultSwapPair, swap(amount0Out(uint256): 0, amount1Out(uint256): 184248640119715042105499, to(address): 0xa79Fe3, data(bytes): b'') -> None
+                  [10][CALL] from=WaultSwapPair, to=WaultSwapToken, transfer(recipient(address): 0xa79Fe3, amount(uint256): 184248640119715042105499) -> True
+                  [10][STATICCALL] from=WaultSwapPair, to=BEP20USDT, balanceOf(account(address): 0x50e8D9) -> 35315520220497909455619647
+                  [10][STATICCALL] from=WaultSwapPair, to=WaultSwapToken, balanceOf(account(address): 0x50e8D9) -> 260610435260282406980478862
+                [9][STATICCALL] from=WaultSwapRouter, to=WaultSwapToken, balanceOf(account(address): 0xa79Fe3) -> 5541579601654052072823283
+              [8][CALL] from=WUSDMaster, to=WUSD, mint(account(address): 0x50AFA9, amount(uint256): 250000000000000000000000) -> None
+            [7][CALL] from=0x50afa9, to=WUSDMaster, stake(amount(uint256): 250000000000000000000000) -> None
+              [8][CALL] from=WUSDMaster, to=BEP20USDT, transferFrom(sender(address): 0x50AFA9, recipient(address): 0xa79Fe3, amount(uint256): 250000000000000000000000) -> True
+              [8][CALL] from=WUSDMaster, to=BEP20USDT, approve(spender(address): 0xD48745, amount(uint256): 25000000000000000000000) -> True
+              [8][CALL] from=WUSDMaster, to=WaultSwapRouter, swapExactTokensForTokensSupportingFeeOnTransferTokens(amountIn(uint256): 25000000000000000000000, amountOutMin(uint256): 0, path(address[]): ['0x55d398326f99059fF775485246999027B31979..., to(address): 0xa79Fe3, deadline(uint256): 1628041745) -> None
+                [9][CALL] from=WaultSwapRouter, to=BEP20USDT, transferFrom(sender(address): 0xa79Fe3, recipient(address): 0x50e8D9, amount(uint256): 25000000000000000000000) -> True
+                [9][STATICCALL] from=WaultSwapRouter, to=WaultSwapToken, balanceOf(account(address): 0xa79Fe3) -> 5541579601654052072823283
+                [9][STATICCALL] from=WaultSwapRouter, to=WaultSwapPair, getReserves() -> ['35315520220497909455619647', '260610435260282406980478862', '1628041745']
+                [9][STATICCALL] from=WaultSwapRouter, to=BEP20USDT, balanceOf(account(address): 0x50e8D9) -> 35340520220497909455619647
+                [9][CALL] from=WaultSwapRouter, to=WaultSwapPair, swap(amount0Out(uint256): 0, amount1Out(uint256): 183988224241925114305686, to(address): 0xa79Fe3, data(bytes): b'') -> None
+                  [10][CALL] from=WaultSwapPair, to=WaultSwapToken, transfer(recipient(address): 0xa79Fe3, amount(uint256): 183988224241925114305686) -> True
+                  [10][STATICCALL] from=WaultSwapPair, to=BEP20USDT, balanceOf(account(address): 0x50e8D9) -> 35340520220497909455619647
+                  [10][STATICCALL] from=WaultSwapPair, to=WaultSwapToken, balanceOf(account(address): 0x50e8D9) -> 260426447036040481866173176
+                [9][STATICCALL] from=WaultSwapRouter, to=WaultSwapToken, balanceOf(account(address): 0xa79Fe3) -> 5725567825895977187128969
+              [8][CALL] from=WUSDMaster, to=WUSD, mint(account(address): 0x50AFA9, amount(uint256): 250000000000000000000000) -> None
+            [7][CALL] from=0x50afa9, to=WUSDMaster, stake(amount(uint256): 250000000000000000000000) -> None
+              [8][CALL] from=WUSDMaster, to=BEP20USDT, transferFrom(sender(address): 0x50AFA9, recipient(address): 0xa79Fe3, amount(uint256): 250000000000000000000000) -> True
+              [8][CALL] from=WUSDMaster, to=BEP20USDT, approve(spender(address): 0xD48745, amount(uint256): 25000000000000000000000) -> True
+              [8][CALL] from=WUSDMaster, to=WaultSwapRouter, swapExactTokensForTokensSupportingFeeOnTransferTokens(amountIn(uint256): 25000000000000000000000, amountOutMin(uint256): 0, path(address[]): ['0x55d398326f99059fF775485246999027B31979..., to(address): 0xa79Fe3, deadline(uint256): 1628041745) -> None
+                [9][CALL] from=WaultSwapRouter, to=BEP20USDT, transferFrom(sender(address): 0xa79Fe3, recipient(address): 0x50e8D9, amount(uint256): 25000000000000000000000) -> True
+                [9][STATICCALL] from=WaultSwapRouter, to=WaultSwapToken, balanceOf(account(address): 0xa79Fe3) -> 5725567825895977187128969
+                [9][STATICCALL] from=WaultSwapRouter, to=WaultSwapPair, getReserves() -> ['35340520220497909455619647', '260426447036040481866173176', '1628041745']
+                [9][STATICCALL] from=WaultSwapRouter, to=BEP20USDT, balanceOf(account(address): 0x50e8D9) -> 35365520220497909455619647
+                [9][CALL] from=WaultSwapRouter, to=WaultSwapPair, swap(amount0Out(uint256): 0, amount1Out(uint256): 183728360263202798572049, to(address): 0xa79Fe3, data(bytes): b'') -> None
+                  [10][CALL] from=WaultSwapPair, to=WaultSwapToken, transfer(recipient(address): 0xa79Fe3, amount(uint256): 183728360263202798572049) -> True
+                  [10][STATICCALL] from=WaultSwapPair, to=BEP20USDT, balanceOf(account(address): 0x50e8D9) -> 35365520220497909455619647
+                  [10][STATICCALL] from=WaultSwapPair, to=WaultSwapToken, balanceOf(account(address): 0x50e8D9) -> 260242718675777279067601127
+                [9][STATICCALL] from=WaultSwapRouter, to=WaultSwapToken, balanceOf(account(address): 0xa79Fe3) -> 5909296186159179985701018
+              [8][CALL] from=WUSDMaster, to=WUSD, mint(account(address): 0x50AFA9, amount(uint256): 250000000000000000000000) -> None
+            [7][CALL] from=0x50afa9, to=WUSDMaster, stake(amount(uint256): 250000000000000000000000) -> None
+              [8][CALL] from=WUSDMaster, to=BEP20USDT, transferFrom(sender(address): 0x50AFA9, recipient(address): 0xa79Fe3, amount(uint256): 250000000000000000000000) -> True
+              [8][CALL] from=WUSDMaster, to=BEP20USDT, approve(spender(address): 0xD48745, amount(uint256): 25000000000000000000000) -> True
+              [8][CALL] from=WUSDMaster, to=WaultSwapRouter, swapExactTokensForTokensSupportingFeeOnTransferTokens(amountIn(uint256): 25000000000000000000000, amountOutMin(uint256): 0, path(address[]): ['0x55d398326f99059fF775485246999027B31979..., to(address): 0xa79Fe3, deadline(uint256): 1628041745) -> None
+                [9][CALL] from=WaultSwapRouter, to=BEP20USDT, transferFrom(sender(address): 0xa79Fe3, recipient(address): 0x50e8D9, amount(uint256): 25000000000000000000000) -> True
+                [9][STATICCALL] from=WaultSwapRouter, to=WaultSwapToken, balanceOf(account(address): 0xa79Fe3) -> 5909296186159179985701018
+                [9][STATICCALL] from=WaultSwapRouter, to=WaultSwapPair, getReserves() -> ['35365520220497909455619647', '260242718675777279067601127', '1628041745']
+                [9][STATICCALL] from=WaultSwapRouter, to=BEP20USDT, balanceOf(account(address): 0x50e8D9) -> 35390520220497909455619647
+                [9][CALL] from=WaultSwapRouter, to=WaultSwapPair, swap(amount0Out(uint256): 0, amount1Out(uint256): 183469046624871098974864, to(address): 0xa79Fe3, data(bytes): b'') -> None
+                  [10][CALL] from=WaultSwapPair, to=WaultSwapToken, transfer(recipient(address): 0xa79Fe3, amount(uint256): 183469046624871098974864) -> True
+                  [10][STATICCALL] from=WaultSwapPair, to=BEP20USDT, balanceOf(account(address): 0x50e8D9) -> 35390520220497909455619647
+                  [10][STATICCALL] from=WaultSwapPair, to=WaultSwapToken, balanceOf(account(address): 0x50e8D9) -> 260059249629152407968626263
+                [9][STATICCALL] from=WaultSwapRouter, to=WaultSwapToken, balanceOf(account(address): 0xa79Fe3) -> 6092765232784051084675882
+              [8][CALL] from=WUSDMaster, to=WUSD, mint(account(address): 0x50AFA9, amount(uint256): 250000000000000000000000) -> None
+            [7][CALL] from=0x50afa9, to=WUSDMaster, stake(amount(uint256): 250000000000000000000000) -> None
+              [8][CALL] from=WUSDMaster, to=BEP20USDT, transferFrom(sender(address): 0x50AFA9, recipient(address): 0xa79Fe3, amount(uint256): 250000000000000000000000) -> True
+              [8][CALL] from=WUSDMaster, to=BEP20USDT, approve(spender(address): 0xD48745, amount(uint256): 25000000000000000000000) -> True
+              [8][CALL] from=WUSDMaster, to=WaultSwapRouter, swapExactTokensForTokensSupportingFeeOnTransferTokens(amountIn(uint256): 25000000000000000000000, amountOutMin(uint256): 0, path(address[]): ['0x55d398326f99059fF775485246999027B31979..., to(address): 0xa79Fe3, deadline(uint256): 1628041745) -> None
+                [9][CALL] from=WaultSwapRouter, to=BEP20USDT, transferFrom(sender(address): 0xa79Fe3, recipient(address): 0x50e8D9, amount(uint256): 25000000000000000000000) -> True
+                [9][STATICCALL] from=WaultSwapRouter, to=WaultSwapToken, balanceOf(account(address): 0xa79Fe3) -> 6092765232784051084675882
+                [9][STATICCALL] from=WaultSwapRouter, to=WaultSwapPair, getReserves() -> ['35390520220497909455619647', '260059249629152407968626263', '1628041745']
+                [9][STATICCALL] from=WaultSwapRouter, to=BEP20USDT, balanceOf(account(address): 0x50e8D9) -> 35415520220497909455619647
+                [9][CALL] from=WaultSwapRouter, to=WaultSwapPair, swap(amount0Out(uint256): 0, amount1Out(uint256): 183210281773752217800013, to(address): 0xa79Fe3, data(bytes): b'') -> None
+                  [10][CALL] from=WaultSwapPair, to=WaultSwapToken, transfer(recipient(address): 0xa79Fe3, amount(uint256): 183210281773752217800013) -> True
+                  [10][STATICCALL] from=WaultSwapPair, to=BEP20USDT, balanceOf(account(address): 0x50e8D9) -> 35415520220497909455619647
+                  [10][STATICCALL] from=WaultSwapPair, to=WaultSwapToken, balanceOf(account(address): 0x50e8D9) -> 259876039347378655750826250
+                [9][STATICCALL] from=WaultSwapRouter, to=WaultSwapToken, balanceOf(account(address): 0xa79Fe3) -> 6275975514557803302475895
+              [8][CALL] from=WUSDMaster, to=WUSD, mint(account(address): 0x50AFA9, amount(uint256): 250000000000000000000000) -> None
+            [7][CALL] from=0x50afa9, to=WUSDMaster, stake(amount(uint256): 250000000000000000000000) -> None
+              [8][CALL] from=WUSDMaster, to=BEP20USDT, transferFrom(sender(address): 0x50AFA9, recipient(address): 0xa79Fe3, amount(uint256): 250000000000000000000000) -> True
+              [8][CALL] from=WUSDMaster, to=BEP20USDT, approve(spender(address): 0xD48745, amount(uint256): 25000000000000000000000) -> True
+              [8][CALL] from=WUSDMaster, to=WaultSwapRouter, swapExactTokensForTokensSupportingFeeOnTransferTokens(amountIn(uint256): 25000000000000000000000, amountOutMin(uint256): 0, path(address[]): ['0x55d398326f99059fF775485246999027B31979..., to(address): 0xa79Fe3, deadline(uint256): 1628041745) -> None
+                [9][CALL] from=WaultSwapRouter, to=BEP20USDT, transferFrom(sender(address): 0xa79Fe3, recipient(address): 0x50e8D9, amount(uint256): 25000000000000000000000) -> True
+                [9][STATICCALL] from=WaultSwapRouter, to=WaultSwapToken, balanceOf(account(address): 0xa79Fe3) -> 6275975514557803302475895
+                [9][STATICCALL] from=WaultSwapRouter, to=WaultSwapPair, getReserves() -> ['35415520220497909455619647', '259876039347378655750826250', '1628041745']
+                [9][STATICCALL] from=WaultSwapRouter, to=BEP20USDT, balanceOf(account(address): 0x50e8D9) -> 35440520220497909455619647
+                [9][CALL] from=WaultSwapRouter, to=WaultSwapPair, swap(amount0Out(uint256): 0, amount1Out(uint256): 182952064162144288228680, to(address): 0xa79Fe3, data(bytes): b'') -> None
+                  [10][CALL] from=WaultSwapPair, to=WaultSwapToken, transfer(recipient(address): 0xa79Fe3, amount(uint256): 182952064162144288228680) -> True
+                  [10][STATICCALL] from=WaultSwapPair, to=BEP20USDT, balanceOf(account(address): 0x50e8D9) -> 35440520220497909455619647
+                  [10][STATICCALL] from=WaultSwapPair, to=WaultSwapToken, balanceOf(account(address): 0x50e8D9) -> 259693087283216511462597570
+                [9][STATICCALL] from=WaultSwapRouter, to=WaultSwapToken, balanceOf(account(address): 0xa79Fe3) -> 6458927578719947590704575
+              [8][CALL] from=WUSDMaster, to=WUSD, mint(account(address): 0x50AFA9, amount(uint256): 250000000000000000000000) -> None
+            [7][CALL] from=0x50afa9, to=WUSDMaster, stake(amount(uint256): 250000000000000000000000) -> None
+              [8][CALL] from=WUSDMaster, to=BEP20USDT, transferFrom(sender(address): 0x50AFA9, recipient(address): 0xa79Fe3, amount(uint256): 250000000000000000000000) -> True
+              [8][CALL] from=WUSDMaster, to=BEP20USDT, approve(spender(address): 0xD48745, amount(uint256): 25000000000000000000000) -> True
+              [8][CALL] from=WUSDMaster, to=WaultSwapRouter, swapExactTokensForTokensSupportingFeeOnTransferTokens(amountIn(uint256): 25000000000000000000000, amountOutMin(uint256): 0, path(address[]): ['0x55d398326f99059fF775485246999027B31979..., to(address): 0xa79Fe3, deadline(uint256): 1628041745) -> None
+                [9][CALL] from=WaultSwapRouter, to=BEP20USDT, transferFrom(sender(address): 0xa79Fe3, recipient(address): 0x50e8D9, amount(uint256): 25000000000000000000000) -> True
+                [9][STATICCALL] from=WaultSwapRouter, to=WaultSwapToken, balanceOf(account(address): 0xa79Fe3) -> 6458927578719947590704575
+                [9][STATICCALL] from=WaultSwapRouter, to=WaultSwapPair, getReserves() -> ['35440520220497909455619647', '259693087283216511462597570', '1628041745']
+                [9][STATICCALL] from=WaultSwapRouter, to=BEP20USDT, balanceOf(account(address): 0x50e8D9) -> 35465520220497909455619647
+                [9][CALL] from=WaultSwapRouter, to=WaultSwapPair, swap(amount0Out(uint256): 0, amount1Out(uint256): 182694392247798221793968, to(address): 0xa79Fe3, data(bytes): b'') -> None
+                  [10][CALL] from=WaultSwapPair, to=WaultSwapToken, transfer(recipient(address): 0xa79Fe3, amount(uint256): 182694392247798221793968) -> True
+                  [10][STATICCALL] from=WaultSwapPair, to=BEP20USDT, balanceOf(account(address): 0x50e8D9) -> 35465520220497909455619647
+                  [10][STATICCALL] from=WaultSwapPair, to=WaultSwapToken, balanceOf(account(address): 0x50e8D9) -> 259510392890968713240803602
+                [9][STATICCALL] from=WaultSwapRouter, to=WaultSwapToken, balanceOf(account(address): 0xa79Fe3) -> 6641621970967745812498543
+              [8][CALL] from=WUSDMaster, to=WUSD, mint(account(address): 0x50AFA9, amount(uint256): 250000000000000000000000) -> None
+            [7][CALL] from=0x50afa9, to=WUSDMaster, stake(amount(uint256): 250000000000000000000000) -> None
+              [8][CALL] from=WUSDMaster, to=BEP20USDT, transferFrom(sender(address): 0x50AFA9, recipient(address): 0xa79Fe3, amount(uint256): 250000000000000000000000) -> True
+              [8][CALL] from=WUSDMaster, to=BEP20USDT, approve(spender(address): 0xD48745, amount(uint256): 25000000000000000000000) -> True
+              [8][CALL] from=WUSDMaster, to=WaultSwapRouter, swapExactTokensForTokensSupportingFeeOnTransferTokens(amountIn(uint256): 25000000000000000000000, amountOutMin(uint256): 0, path(address[]): ['0x55d398326f99059fF775485246999027B31979..., to(address): 0xa79Fe3, deadline(uint256): 1628041745) -> None
+                [9][CALL] from=WaultSwapRouter, to=BEP20USDT, transferFrom(sender(address): 0xa79Fe3, recipient(address): 0x50e8D9, amount(uint256): 25000000000000000000000) -> True
+                [9][STATICCALL] from=WaultSwapRouter, to=WaultSwapToken, balanceOf(account(address): 0xa79Fe3) -> 6641621970967745812498543
+                [9][STATICCALL] from=WaultSwapRouter, to=WaultSwapPair, getReserves() -> ['35465520220497909455619647', '259510392890968713240803602', '1628041745']
+                [9][STATICCALL] from=WaultSwapRouter, to=BEP20USDT, balanceOf(account(address): 0x50e8D9) -> 35490520220497909455619647
+                [9][CALL] from=WaultSwapRouter, to=WaultSwapPair, swap(amount0Out(uint256): 0, amount1Out(uint256): 182437264493894669967806, to(address): 0xa79Fe3, data(bytes): b'') -> None
+                  [10][CALL] from=WaultSwapPair, to=WaultSwapToken, transfer(recipient(address): 0xa79Fe3, amount(uint256): 182437264493894669967806) -> True
+                  [10][STATICCALL] from=WaultSwapPair, to=BEP20USDT, balanceOf(account(address): 0x50e8D9) -> 35490520220497909455619647
+                  [10][STATICCALL] from=WaultSwapPair, to=WaultSwapToken, balanceOf(account(address): 0x50e8D9) -> 259327955626474818570835796
+                [9][STATICCALL] from=WaultSwapRouter, to=WaultSwapToken, balanceOf(account(address): 0xa79Fe3) -> 6824059235461640482466349
+              [8][CALL] from=WUSDMaster, to=WUSD, mint(account(address): 0x50AFA9, amount(uint256): 250000000000000000000000) -> None
+            [7][CALL] from=0x50afa9, to=WUSDMaster, stake(amount(uint256): 250000000000000000000000) -> None
+              [8][CALL] from=WUSDMaster, to=BEP20USDT, transferFrom(sender(address): 0x50AFA9, recipient(address): 0xa79Fe3, amount(uint256): 250000000000000000000000) -> True
+              [8][CALL] from=WUSDMaster, to=BEP20USDT, approve(spender(address): 0xD48745, amount(uint256): 25000000000000000000000) -> True
+              [8][CALL] from=WUSDMaster, to=WaultSwapRouter, swapExactTokensForTokensSupportingFeeOnTransferTokens(amountIn(uint256): 25000000000000000000000, amountOutMin(uint256): 0, path(address[]): ['0x55d398326f99059fF775485246999027B31979..., to(address): 0xa79Fe3, deadline(uint256): 1628041745) -> None
+                [9][CALL] from=WaultSwapRouter, to=BEP20USDT, transferFrom(sender(address): 0xa79Fe3, recipient(address): 0x50e8D9, amount(uint256): 25000000000000000000000) -> True
+                [9][STATICCALL] from=WaultSwapRouter, to=WaultSwapToken, balanceOf(account(address): 0xa79Fe3) -> 6824059235461640482466349
+                [9][STATICCALL] from=WaultSwapRouter, to=WaultSwapPair, getReserves() -> ['35490520220497909455619647', '259327955626474818570835796', '1628041745']
+                [9][STATICCALL] from=WaultSwapRouter, to=BEP20USDT, balanceOf(account(address): 0x50e8D9) -> 35515520220497909455619647
+                [9][CALL] from=WaultSwapRouter, to=WaultSwapPair, swap(amount0Out(uint256): 0, amount1Out(uint256): 182180679369021099235591, to(address): 0xa79Fe3, data(bytes): b'') -> None
+                  [10][CALL] from=WaultSwapPair, to=WaultSwapToken, transfer(recipient(address): 0xa79Fe3, amount(uint256): 182180679369021099235591) -> True
+                  [10][STATICCALL] from=WaultSwapPair, to=BEP20USDT, balanceOf(account(address): 0x50e8D9) -> 35515520220497909455619647
+                  [10][STATICCALL] from=WaultSwapPair, to=WaultSwapToken, balanceOf(account(address): 0x50e8D9) -> 259145774947105797471600205
+                [9][STATICCALL] from=WaultSwapRouter, to=WaultSwapToken, balanceOf(account(address): 0xa79Fe3) -> 7006239914830661581701940
+              [8][CALL] from=WUSDMaster, to=WUSD, mint(account(address): 0x50AFA9, amount(uint256): 250000000000000000000000) -> None
+            [7][CALL] from=0x50afa9, to=WUSDMaster, stake(amount(uint256): 250000000000000000000000) -> None
+              [8][CALL] from=WUSDMaster, to=BEP20USDT, transferFrom(sender(address): 0x50AFA9, recipient(address): 0xa79Fe3, amount(uint256): 250000000000000000000000) -> True
+              [8][CALL] from=WUSDMaster, to=BEP20USDT, approve(spender(address): 0xD48745, amount(uint256): 25000000000000000000000) -> True
+              [8][CALL] from=WUSDMaster, to=WaultSwapRouter, swapExactTokensForTokensSupportingFeeOnTransferTokens(amountIn(uint256): 25000000000000000000000, amountOutMin(uint256): 0, path(address[]): ['0x55d398326f99059fF775485246999027B31979..., to(address): 0xa79Fe3, deadline(uint256): 1628041745) -> None
+                [9][CALL] from=WaultSwapRouter, to=BEP20USDT, transferFrom(sender(address): 0xa79Fe3, recipient(address): 0x50e8D9, amount(uint256): 25000000000000000000000) -> True
+                [9][STATICCALL] from=WaultSwapRouter, to=WaultSwapToken, balanceOf(account(address): 0xa79Fe3) -> 7006239914830661581701940
+                [9][STATICCALL] from=WaultSwapRouter, to=WaultSwapPair, getReserves() -> ['35515520220497909455619647', '259145774947105797471600205', '1628041745']
+                [9][STATICCALL] from=WaultSwapRouter, to=BEP20USDT, balanceOf(account(address): 0x50e8D9) -> 35540520220497909455619647
+                [9][CALL] from=WaultSwapRouter, to=WaultSwapPair, swap(amount0Out(uint256): 0, amount1Out(uint256): 181924635347148979020090, to(address): 0xa79Fe3, data(bytes): b'') -> None
+                  [10][CALL] from=WaultSwapPair, to=WaultSwapToken, transfer(recipient(address): 0xa79Fe3, amount(uint256): 181924635347148979020090) -> True
+                  [10][STATICCALL] from=WaultSwapPair, to=BEP20USDT, balanceOf(account(address): 0x50e8D9) -> 35540520220497909455619647
+                  [10][STATICCALL] from=WaultSwapPair, to=WaultSwapToken, balanceOf(account(address): 0x50e8D9) -> 258963850311758648492580115
+                [9][STATICCALL] from=WaultSwapRouter, to=WaultSwapToken, balanceOf(account(address): 0xa79Fe3) -> 7188164550177810560722030
+              [8][CALL] from=WUSDMaster, to=WUSD, mint(account(address): 0x50AFA9, amount(uint256): 250000000000000000000000) -> None
+            [7][CALL] from=0x50afa9, to=WUSDMaster, stake(amount(uint256): 250000000000000000000000) -> None
+              [8][CALL] from=WUSDMaster, to=BEP20USDT, transferFrom(sender(address): 0x50AFA9, recipient(address): 0xa79Fe3, amount(uint256): 250000000000000000000000) -> True
+              [8][CALL] from=WUSDMaster, to=BEP20USDT, approve(spender(address): 0xD48745, amount(uint256): 25000000000000000000000) -> True
+              [8][CALL] from=WUSDMaster, to=WaultSwapRouter, swapExactTokensForTokensSupportingFeeOnTransferTokens(amountIn(uint256): 25000000000000000000000, amountOutMin(uint256): 0, path(address[]): ['0x55d398326f99059fF775485246999027B31979..., to(address): 0xa79Fe3, deadline(uint256): 1628041745) -> None
+                [9][CALL] from=WaultSwapRouter, to=BEP20USDT, transferFrom(sender(address): 0xa79Fe3, recipient(address): 0x50e8D9, amount(uint256): 25000000000000000000000) -> True
+                [9][STATICCALL] from=WaultSwapRouter, to=WaultSwapToken, balanceOf(account(address): 0xa79Fe3) -> 7188164550177810560722030
+                [9][STATICCALL] from=WaultSwapRouter, to=WaultSwapPair, getReserves() -> ['35540520220497909455619647', '258963850311758648492580115', '1628041745']
+                [9][STATICCALL] from=WaultSwapRouter, to=BEP20USDT, balanceOf(account(address): 0x50e8D9) -> 35565520220497909455619647
+                [9][CALL] from=WaultSwapRouter, to=WaultSwapPair, swap(amount0Out(uint256): 0, amount1Out(uint256): 181669130907611081820156, to(address): 0xa79Fe3, data(bytes): b'') -> None
+                  [10][CALL] from=WaultSwapPair, to=WaultSwapToken, transfer(recipient(address): 0xa79Fe3, amount(uint256): 181669130907611081820156) -> True
+                  [10][STATICCALL] from=WaultSwapPair, to=BEP20USDT, balanceOf(account(address): 0x50e8D9) -> 35565520220497909455619647
+                  [10][STATICCALL] from=WaultSwapPair, to=WaultSwapToken, balanceOf(account(address): 0x50e8D9) -> 258782181180851037410759959
+                [9][STATICCALL] from=WaultSwapRouter, to=WaultSwapToken, balanceOf(account(address): 0xa79Fe3) -> 7369833681085421642542186
+              [8][CALL] from=WUSDMaster, to=WUSD, mint(account(address): 0x50AFA9, amount(uint256): 250000000000000000000000) -> None
+            [7][CALL] from=0x50afa9, to=WUSDMaster, stake(amount(uint256): 250000000000000000000000) -> None
+              [8][CALL] from=WUSDMaster, to=BEP20USDT, transferFrom(sender(address): 0x50AFA9, recipient(address): 0xa79Fe3, amount(uint256): 250000000000000000000000) -> True
+              [8][CALL] from=WUSDMaster, to=BEP20USDT, approve(spender(address): 0xD48745, amount(uint256): 25000000000000000000000) -> True
+              [8][CALL] from=WUSDMaster, to=WaultSwapRouter, swapExactTokensForTokensSupportingFeeOnTransferTokens(amountIn(uint256): 25000000000000000000000, amountOutMin(uint256): 0, path(address[]): ['0x55d398326f99059fF775485246999027B31979..., to(address): 0xa79Fe3, deadline(uint256): 1628041745) -> None
+                [9][CALL] from=WaultSwapRouter, to=BEP20USDT, transferFrom(sender(address): 0xa79Fe3, recipient(address): 0x50e8D9, amount(uint256): 25000000000000000000000) -> True
+                [9][STATICCALL] from=WaultSwapRouter, to=WaultSwapToken, balanceOf(account(address): 0xa79Fe3) -> 7369833681085421642542186
+                [9][STATICCALL] from=WaultSwapRouter, to=WaultSwapPair, getReserves() -> ['35565520220497909455619647', '258782181180851037410759959', '1628041745']
+                [9][STATICCALL] from=WaultSwapRouter, to=BEP20USDT, balanceOf(account(address): 0x50e8D9) -> 35590520220497909455619647
+                [9][CALL] from=WaultSwapRouter, to=WaultSwapPair, swap(amount0Out(uint256): 0, amount1Out(uint256): 181414164535078894933833, to(address): 0xa79Fe3, data(bytes): b'') -> None
+                  [10][CALL] from=WaultSwapPair, to=WaultSwapToken, transfer(recipient(address): 0xa79Fe3, amount(uint256): 181414164535078894933833) -> True
+                  [10][STATICCALL] from=WaultSwapPair, to=BEP20USDT, balanceOf(account(address): 0x50e8D9) -> 35590520220497909455619647
+                  [10][STATICCALL] from=WaultSwapPair, to=WaultSwapToken, balanceOf(account(address): 0x50e8D9) -> 258600767016315958515826126
+                [9][STATICCALL] from=WaultSwapRouter, to=WaultSwapToken, balanceOf(account(address): 0xa79Fe3) -> 7551247845620500537476019
+              [8][CALL] from=WUSDMaster, to=WUSD, mint(account(address): 0x50AFA9, amount(uint256): 250000000000000000000000) -> None
+            [7][CALL] from=0x50afa9, to=WUSDMaster, stake(amount(uint256): 250000000000000000000000) -> None
+              [8][CALL] from=WUSDMaster, to=BEP20USDT, transferFrom(sender(address): 0x50AFA9, recipient(address): 0xa79Fe3, amount(uint256): 250000000000000000000000) -> True
+              [8][CALL] from=WUSDMaster, to=BEP20USDT, approve(spender(address): 0xD48745, amount(uint256): 25000000000000000000000) -> True
+              [8][CALL] from=WUSDMaster, to=WaultSwapRouter, swapExactTokensForTokensSupportingFeeOnTransferTokens(amountIn(uint256): 25000000000000000000000, amountOutMin(uint256): 0, path(address[]): ['0x55d398326f99059fF775485246999027B31979..., to(address): 0xa79Fe3, deadline(uint256): 1628041745) -> None
+                [9][CALL] from=WaultSwapRouter, to=BEP20USDT, transferFrom(sender(address): 0xa79Fe3, recipient(address): 0x50e8D9, amount(uint256): 25000000000000000000000) -> True
+                [9][STATICCALL] from=WaultSwapRouter, to=WaultSwapToken, balanceOf(account(address): 0xa79Fe3) -> 7551247845620500537476019
+                [9][STATICCALL] from=WaultSwapRouter, to=WaultSwapPair, getReserves() -> ['35590520220497909455619647', '258600767016315958515826126', '1628041745']
+                [9][STATICCALL] from=WaultSwapRouter, to=BEP20USDT, balanceOf(account(address): 0x50e8D9) -> 35615520220497909455619647
+                [9][CALL] from=WaultSwapRouter, to=WaultSwapPair, swap(amount0Out(uint256): 0, amount1Out(uint256): 181159734719540143139389, to(address): 0xa79Fe3, data(bytes): b'') -> None
+                  [10][CALL] from=WaultSwapPair, to=WaultSwapToken, transfer(recipient(address): 0xa79Fe3, amount(uint256): 181159734719540143139389) -> True
+                  [10][STATICCALL] from=WaultSwapPair, to=BEP20USDT, balanceOf(account(address): 0x50e8D9) -> 35615520220497909455619647
+                  [10][STATICCALL] from=WaultSwapPair, to=WaultSwapToken, balanceOf(account(address): 0x50e8D9) -> 258419607281596418372686737
+                [9][STATICCALL] from=WaultSwapRouter, to=WaultSwapToken, balanceOf(account(address): 0xa79Fe3) -> 7732407580340040680615408
+              [8][CALL] from=WUSDMaster, to=WUSD, mint(account(address): 0x50AFA9, amount(uint256): 250000000000000000000000) -> None
+            [7][CALL] from=0x50afa9, to=WUSDMaster, stake(amount(uint256): 250000000000000000000000) -> None
+              [8][CALL] from=WUSDMaster, to=BEP20USDT, transferFrom(sender(address): 0x50AFA9, recipient(address): 0xa79Fe3, amount(uint256): 250000000000000000000000) -> True
+              [8][CALL] from=WUSDMaster, to=BEP20USDT, approve(spender(address): 0xD48745, amount(uint256): 25000000000000000000000) -> True
+              [8][CALL] from=WUSDMaster, to=WaultSwapRouter, swapExactTokensForTokensSupportingFeeOnTransferTokens(amountIn(uint256): 25000000000000000000000, amountOutMin(uint256): 0, path(address[]): ['0x55d398326f99059fF775485246999027B31979..., to(address): 0xa79Fe3, deadline(uint256): 1628041745) -> None
+                [9][CALL] from=WaultSwapRouter, to=BEP20USDT, transferFrom(sender(address): 0xa79Fe3, recipient(address): 0x50e8D9, amount(uint256): 25000000000000000000000) -> True
+                [9][STATICCALL] from=WaultSwapRouter, to=WaultSwapToken, balanceOf(account(address): 0xa79Fe3) -> 7732407580340040680615408
+                [9][STATICCALL] from=WaultSwapRouter, to=WaultSwapPair, getReserves() -> ['35615520220497909455619647', '258419607281596418372686737', '1628041745']
+                [9][STATICCALL] from=WaultSwapRouter, to=BEP20USDT, balanceOf(account(address): 0x50e8D9) -> 35640520220497909455619647
+                [9][CALL] from=WaultSwapRouter, to=WaultSwapPair, swap(amount0Out(uint256): 0, amount1Out(uint256): 180905839956276421711797, to(address): 0xa79Fe3, data(bytes): b'') -> None
+                  [10][CALL] from=WaultSwapPair, to=WaultSwapToken, transfer(recipient(address): 0xa79Fe3, amount(uint256): 180905839956276421711797) -> True
+                  [10][STATICCALL] from=WaultSwapPair, to=BEP20USDT, balanceOf(account(address): 0x50e8D9) -> 35640520220497909455619647
+                  [10][STATICCALL] from=WaultSwapPair, to=WaultSwapToken, balanceOf(account(address): 0x50e8D9) -> 258238701441640141950974940
+                [9][STATICCALL] from=WaultSwapRouter, to=WaultSwapToken, balanceOf(account(address): 0xa79Fe3) -> 7913313420296317102327205
+              [8][CALL] from=WUSDMaster, to=WUSD, mint(account(address): 0x50AFA9, amount(uint256): 250000000000000000000000) -> None
+            [7][CALL] from=0x50afa9, to=WUSDMaster, stake(amount(uint256): 250000000000000000000000) -> None
+              [8][CALL] from=WUSDMaster, to=BEP20USDT, transferFrom(sender(address): 0x50AFA9, recipient(address): 0xa79Fe3, amount(uint256): 250000000000000000000000) -> True
+              [8][CALL] from=WUSDMaster, to=BEP20USDT, approve(spender(address): 0xD48745, amount(uint256): 25000000000000000000000) -> True
+              [8][CALL] from=WUSDMaster, to=WaultSwapRouter, swapExactTokensForTokensSupportingFeeOnTransferTokens(amountIn(uint256): 25000000000000000000000, amountOutMin(uint256): 0, path(address[]): ['0x55d398326f99059fF775485246999027B31979..., to(address): 0xa79Fe3, deadline(uint256): 1628041745) -> None
+                [9][CALL] from=WaultSwapRouter, to=BEP20USDT, transferFrom(sender(address): 0xa79Fe3, recipient(address): 0x50e8D9, amount(uint256): 25000000000000000000000) -> True
+                [9][STATICCALL] from=WaultSwapRouter, to=WaultSwapToken, balanceOf(account(address): 0xa79Fe3) -> 7913313420296317102327205
+                [9][STATICCALL] from=WaultSwapRouter, to=WaultSwapPair, getReserves() -> ['35640520220497909455619647', '258238701441640141950974940', '1628041745']
+                [9][STATICCALL] from=WaultSwapRouter, to=BEP20USDT, balanceOf(account(address): 0x50e8D9) -> 35665520220497909455619647
+                [9][CALL] from=WaultSwapRouter, to=WaultSwapPair, swap(amount0Out(uint256): 0, amount1Out(uint256): 180652478745840939156083, to(address): 0xa79Fe3, data(bytes): b'') -> None
+                  [10][CALL] from=WaultSwapPair, to=WaultSwapToken, transfer(recipient(address): 0xa79Fe3, amount(uint256): 180652478745840939156083) -> True
+                  [10][STATICCALL] from=WaultSwapPair, to=BEP20USDT, balanceOf(account(address): 0x50e8D9) -> 35665520220497909455619647
+                  [10][STATICCALL] from=WaultSwapPair, to=WaultSwapToken, balanceOf(account(address): 0x50e8D9) -> 258058048962894301011818857
+                [9][STATICCALL] from=WaultSwapRouter, to=WaultSwapToken, balanceOf(account(address): 0xa79Fe3) -> 8093965899042158041483288
+              [8][CALL] from=WUSDMaster, to=WUSD, mint(account(address): 0x50AFA9, amount(uint256): 250000000000000000000000) -> None
+            [7][CALL] from=0x50afa9, to=WUSDMaster, stake(amount(uint256): 250000000000000000000000) -> None
+              [8][CALL] from=WUSDMaster, to=BEP20USDT, transferFrom(sender(address): 0x50AFA9, recipient(address): 0xa79Fe3, amount(uint256): 250000000000000000000000) -> True
+              [8][CALL] from=WUSDMaster, to=BEP20USDT, approve(spender(address): 0xD48745, amount(uint256): 25000000000000000000000) -> True
+              [8][CALL] from=WUSDMaster, to=WaultSwapRouter, swapExactTokensForTokensSupportingFeeOnTransferTokens(amountIn(uint256): 25000000000000000000000, amountOutMin(uint256): 0, path(address[]): ['0x55d398326f99059fF775485246999027B31979..., to(address): 0xa79Fe3, deadline(uint256): 1628041745) -> None
+                [9][CALL] from=WaultSwapRouter, to=BEP20USDT, transferFrom(sender(address): 0xa79Fe3, recipient(address): 0x50e8D9, amount(uint256): 25000000000000000000000) -> True
+                [9][STATICCALL] from=WaultSwapRouter, to=WaultSwapToken, balanceOf(account(address): 0xa79Fe3) -> 8093965899042158041483288
+                [9][STATICCALL] from=WaultSwapRouter, to=WaultSwapPair, getReserves() -> ['35665520220497909455619647', '258058048962894301011818857', '1628041745']
+                [9][STATICCALL] from=WaultSwapRouter, to=BEP20USDT, balanceOf(account(address): 0x50e8D9) -> 35690520220497909455619647
+                [9][CALL] from=WaultSwapRouter, to=WaultSwapPair, swap(amount0Out(uint256): 0, amount1Out(uint256): 180399649594036369042871, to(address): 0xa79Fe3, data(bytes): b'') -> None
+                  [10][CALL] from=WaultSwapPair, to=WaultSwapToken, transfer(recipient(address): 0xa79Fe3, amount(uint256): 180399649594036369042871) -> True
+                  [10][STATICCALL] from=WaultSwapPair, to=BEP20USDT, balanceOf(account(address): 0x50e8D9) -> 35690520220497909455619647
+                  [10][STATICCALL] from=WaultSwapPair, to=WaultSwapToken, balanceOf(account(address): 0x50e8D9) -> 257877649313300264642775986
+                [9][STATICCALL] from=WaultSwapRouter, to=WaultSwapToken, balanceOf(account(address): 0xa79Fe3) -> 8274365548636194410526159
+              [8][CALL] from=WUSDMaster, to=WUSD, mint(account(address): 0x50AFA9, amount(uint256): 250000000000000000000000) -> None
+            [7][CALL] from=0x50afa9, to=WUSDMaster, stake(amount(uint256): 250000000000000000000000) -> None
+              [8][CALL] from=WUSDMaster, to=BEP20USDT, transferFrom(sender(address): 0x50AFA9, recipient(address): 0xa79Fe3, amount(uint256): 250000000000000000000000) -> True
+              [8][CALL] from=WUSDMaster, to=BEP20USDT, approve(spender(address): 0xD48745, amount(uint256): 25000000000000000000000) -> True
+              [8][CALL] from=WUSDMaster, to=WaultSwapRouter, swapExactTokensForTokensSupportingFeeOnTransferTokens(amountIn(uint256): 25000000000000000000000, amountOutMin(uint256): 0, path(address[]): ['0x55d398326f99059fF775485246999027B31979..., to(address): 0xa79Fe3, deadline(uint256): 1628041745) -> None
+                [9][CALL] from=WaultSwapRouter, to=BEP20USDT, transferFrom(sender(address): 0xa79Fe3, recipient(address): 0x50e8D9, amount(uint256): 25000000000000000000000) -> True
+                [9][STATICCALL] from=WaultSwapRouter, to=WaultSwapToken, balanceOf(account(address): 0xa79Fe3) -> 8274365548636194410526159
+                [9][STATICCALL] from=WaultSwapRouter, to=WaultSwapPair, getReserves() -> ['35690520220497909455619647', '257877649313300264642775986', '1628041745']
+                [9][STATICCALL] from=WaultSwapRouter, to=BEP20USDT, balanceOf(account(address): 0x50e8D9) -> 35715520220497909455619647
+                [9][CALL] from=WaultSwapRouter, to=WaultSwapPair, swap(amount0Out(uint256): 0, amount1Out(uint256): 180147351011892810335330, to(address): 0xa79Fe3, data(bytes): b'') -> None
+                  [10][CALL] from=WaultSwapPair, to=WaultSwapToken, transfer(recipient(address): 0xa79Fe3, amount(uint256): 180147351011892810335330) -> True
+                  [10][STATICCALL] from=WaultSwapPair, to=BEP20USDT, balanceOf(account(address): 0x50e8D9) -> 35715520220497909455619647
+                  [10][STATICCALL] from=WaultSwapPair, to=WaultSwapToken, balanceOf(account(address): 0x50e8D9) -> 257697501962288371832440656
+                [9][STATICCALL] from=WaultSwapRouter, to=WaultSwapToken, balanceOf(account(address): 0xa79Fe3) -> 8454512899648087220861489
+              [8][CALL] from=WUSDMaster, to=WUSD, mint(account(address): 0x50AFA9, amount(uint256): 250000000000000000000000) -> None
+            [7][CALL] from=0x50afa9, to=WUSDMaster, stake(amount(uint256): 250000000000000000000000) -> None
+              [8][CALL] from=WUSDMaster, to=BEP20USDT, transferFrom(sender(address): 0x50AFA9, recipient(address): 0xa79Fe3, amount(uint256): 250000000000000000000000) -> True
+              [8][CALL] from=WUSDMaster, to=BEP20USDT, approve(spender(address): 0xD48745, amount(uint256): 25000000000000000000000) -> True
+              [8][CALL] from=WUSDMaster, to=WaultSwapRouter, swapExactTokensForTokensSupportingFeeOnTransferTokens(amountIn(uint256): 25000000000000000000000, amountOutMin(uint256): 0, path(address[]): ['0x55d398326f99059fF775485246999027B31979..., to(address): 0xa79Fe3, deadline(uint256): 1628041745) -> None
+                [9][CALL] from=WaultSwapRouter, to=BEP20USDT, transferFrom(sender(address): 0xa79Fe3, recipient(address): 0x50e8D9, amount(uint256): 25000000000000000000000) -> True
+                [9][STATICCALL] from=WaultSwapRouter, to=WaultSwapToken, balanceOf(account(address): 0xa79Fe3) -> 8454512899648087220861489
+                [9][STATICCALL] from=WaultSwapRouter, to=WaultSwapPair, getReserves() -> ['35715520220497909455619647', '257697501962288371832440656', '1628041745']
+                [9][STATICCALL] from=WaultSwapRouter, to=BEP20USDT, balanceOf(account(address): 0x50e8D9) -> 35740520220497909455619647
+                [9][CALL] from=WaultSwapRouter, to=WaultSwapPair, swap(amount0Out(uint256): 0, amount1Out(uint256): 179895581515645855600569, to(address): 0xa79Fe3, data(bytes): b'') -> None
+                  [10][CALL] from=WaultSwapPair, to=WaultSwapToken, transfer(recipient(address): 0xa79Fe3, amount(uint256): 179895581515645855600569) -> True
+                  [10][STATICCALL] from=WaultSwapPair, to=BEP20USDT, balanceOf(account(address): 0x50e8D9) -> 35740520220497909455619647
+                  [10][STATICCALL] from=WaultSwapPair, to=WaultSwapToken, balanceOf(account(address): 0x50e8D9) -> 257517606380772725976840087
+                [9][STATICCALL] from=WaultSwapRouter, to=WaultSwapToken, balanceOf(account(address): 0xa79Fe3) -> 8634408481163733076462058
+              [8][CALL] from=WUSDMaster, to=WUSD, mint(account(address): 0x50AFA9, amount(uint256): 250000000000000000000000) -> None
+            [7][CALL] from=0x50afa9, to=WUSDMaster, stake(amount(uint256): 250000000000000000000000) -> None
+              [8][CALL] from=WUSDMaster, to=BEP20USDT, transferFrom(sender(address): 0x50AFA9, recipient(address): 0xa79Fe3, amount(uint256): 250000000000000000000000) -> True
+              [8][CALL] from=WUSDMaster, to=BEP20USDT, approve(spender(address): 0xD48745, amount(uint256): 25000000000000000000000) -> True
+              [8][CALL] from=WUSDMaster, to=WaultSwapRouter, swapExactTokensForTokensSupportingFeeOnTransferTokens(amountIn(uint256): 25000000000000000000000, amountOutMin(uint256): 0, path(address[]): ['0x55d398326f99059fF775485246999027B31979..., to(address): 0xa79Fe3, deadline(uint256): 1628041745) -> None
+                [9][CALL] from=WaultSwapRouter, to=BEP20USDT, transferFrom(sender(address): 0xa79Fe3, recipient(address): 0x50e8D9, amount(uint256): 25000000000000000000000) -> True
+                [9][STATICCALL] from=WaultSwapRouter, to=WaultSwapToken, balanceOf(account(address): 0xa79Fe3) -> 8634408481163733076462058
+                [9][STATICCALL] from=WaultSwapRouter, to=WaultSwapPair, getReserves() -> ['35740520220497909455619647', '257517606380772725976840087', '1628041745']
+                [9][STATICCALL] from=WaultSwapRouter, to=BEP20USDT, balanceOf(account(address): 0x50e8D9) -> 35765520220497909455619647
+                [9][CALL] from=WaultSwapRouter, to=WaultSwapPair, swap(amount0Out(uint256): 0, amount1Out(uint256): 179644339626714766502333, to(address): 0xa79Fe3, data(bytes): b'') -> None
+                  [10][CALL] from=WaultSwapPair, to=WaultSwapToken, transfer(recipient(address): 0xa79Fe3, amount(uint256): 179644339626714766502333) -> True
+                  [10][STATICCALL] from=WaultSwapPair, to=BEP20USDT, balanceOf(account(address): 0x50e8D9) -> 35765520220497909455619647
+                  [10][STATICCALL] from=WaultSwapPair, to=WaultSwapToken, balanceOf(account(address): 0x50e8D9) -> 257337962041146011210337754
+                [9][STATICCALL] from=WaultSwapRouter, to=WaultSwapToken, balanceOf(account(address): 0xa79Fe3) -> 8814052820790447842964391
+              [8][CALL] from=WUSDMaster, to=WUSD, mint(account(address): 0x50AFA9, amount(uint256): 250000000000000000000000) -> None
+            [7][CALL] from=0x50afa9, to=WUSDMaster, stake(amount(uint256): 250000000000000000000000) -> None
+              [8][CALL] from=WUSDMaster, to=BEP20USDT, transferFrom(sender(address): 0x50AFA9, recipient(address): 0xa79Fe3, amount(uint256): 250000000000000000000000) -> True
+              [8][CALL] from=WUSDMaster, to=BEP20USDT, approve(spender(address): 0xD48745, amount(uint256): 25000000000000000000000) -> True
+              [8][CALL] from=WUSDMaster, to=WaultSwapRouter, swapExactTokensForTokensSupportingFeeOnTransferTokens(amountIn(uint256): 25000000000000000000000, amountOutMin(uint256): 0, path(address[]): ['0x55d398326f99059fF775485246999027B31979..., to(address): 0xa79Fe3, deadline(uint256): 1628041745) -> None
+                [9][CALL] from=WaultSwapRouter, to=BEP20USDT, transferFrom(sender(address): 0xa79Fe3, recipient(address): 0x50e8D9, amount(uint256): 25000000000000000000000) -> True
+                [9][STATICCALL] from=WaultSwapRouter, to=WaultSwapToken, balanceOf(account(address): 0xa79Fe3) -> 8814052820790447842964391
+                [9][STATICCALL] from=WaultSwapRouter, to=WaultSwapPair, getReserves() -> ['35765520220497909455619647', '257337962041146011210337754', '1628041745']
+                [9][STATICCALL] from=WaultSwapRouter, to=BEP20USDT, balanceOf(account(address): 0x50e8D9) -> 35790520220497909455619647
+                [9][CALL] from=WaultSwapRouter, to=WaultSwapPair, swap(amount0Out(uint256): 0, amount1Out(uint256): 179393623871680755975671, to(address): 0xa79Fe3, data(bytes): b'') -> None
+                  [10][CALL] from=WaultSwapPair, to=WaultSwapToken, transfer(recipient(address): 0xa79Fe3, amount(uint256): 179393623871680755975671) -> True
+                  [10][STATICCALL] from=WaultSwapPair, to=BEP20USDT, balanceOf(account(address): 0x50e8D9) -> 35790520220497909455619647
+                  [10][STATICCALL] from=WaultSwapPair, to=WaultSwapToken, balanceOf(account(address): 0x50e8D9) -> 257158568417274330454362083
+                [9][STATICCALL] from=WaultSwapRouter, to=WaultSwapToken, balanceOf(account(address): 0xa79Fe3) -> 8993446444662128598940062
+              [8][CALL] from=WUSDMaster, to=WUSD, mint(account(address): 0x50AFA9, amount(uint256): 250000000000000000000000) -> None
+            [7][CALL] from=0x50afa9, to=WUSDMaster, stake(amount(uint256): 250000000000000000000000) -> None
+              [8][CALL] from=WUSDMaster, to=BEP20USDT, transferFrom(sender(address): 0x50AFA9, recipient(address): 0xa79Fe3, amount(uint256): 250000000000000000000000) -> True
+              [8][CALL] from=WUSDMaster, to=BEP20USDT, approve(spender(address): 0xD48745, amount(uint256): 25000000000000000000000) -> True
+              [8][CALL] from=WUSDMaster, to=WaultSwapRouter, swapExactTokensForTokensSupportingFeeOnTransferTokens(amountIn(uint256): 25000000000000000000000, amountOutMin(uint256): 0, path(address[]): ['0x55d398326f99059fF775485246999027B31979..., to(address): 0xa79Fe3, deadline(uint256): 1628041745) -> None
+                [9][CALL] from=WaultSwapRouter, to=BEP20USDT, transferFrom(sender(address): 0xa79Fe3, recipient(address): 0x50e8D9, amount(uint256): 25000000000000000000000) -> True
+                [9][STATICCALL] from=WaultSwapRouter, to=WaultSwapToken, balanceOf(account(address): 0xa79Fe3) -> 8993446444662128598940062
+                [9][STATICCALL] from=WaultSwapRouter, to=WaultSwapPair, getReserves() -> ['35790520220497909455619647', '257158568417274330454362083', '1628041745']
+                [9][STATICCALL] from=WaultSwapRouter, to=BEP20USDT, balanceOf(account(address): 0x50e8D9) -> 35815520220497909455619647
+                [9][CALL] from=WaultSwapRouter, to=WaultSwapPair, swap(amount0Out(uint256): 0, amount1Out(uint256): 179143432782265376487967, to(address): 0xa79Fe3, data(bytes): b'') -> None
+                  [10][CALL] from=WaultSwapPair, to=WaultSwapToken, transfer(recipient(address): 0xa79Fe3, amount(uint256): 179143432782265376487967) -> True
+                  [10][STATICCALL] from=WaultSwapPair, to=BEP20USDT, balanceOf(account(address): 0x50e8D9) -> 35815520220497909455619647
+                  [10][STATICCALL] from=WaultSwapPair, to=WaultSwapToken, balanceOf(account(address): 0x50e8D9) -> 256979424984492065077874116
+                [9][STATICCALL] from=WaultSwapRouter, to=WaultSwapToken, balanceOf(account(address): 0xa79Fe3) -> 9172589877444393975428029
+              [8][CALL] from=WUSDMaster, to=WUSD, mint(account(address): 0x50AFA9, amount(uint256): 250000000000000000000000) -> None
+            [7][CALL] from=0x50afa9, to=WUSDMaster, stake(amount(uint256): 250000000000000000000000) -> None
+              [8][CALL] from=WUSDMaster, to=BEP20USDT, transferFrom(sender(address): 0x50AFA9, recipient(address): 0xa79Fe3, amount(uint256): 250000000000000000000000) -> True
+              [8][CALL] from=WUSDMaster, to=BEP20USDT, approve(spender(address): 0xD48745, amount(uint256): 25000000000000000000000) -> True
+              [8][CALL] from=WUSDMaster, to=WaultSwapRouter, swapExactTokensForTokensSupportingFeeOnTransferTokens(amountIn(uint256): 25000000000000000000000, amountOutMin(uint256): 0, path(address[]): ['0x55d398326f99059fF775485246999027B31979..., to(address): 0xa79Fe3, deadline(uint256): 1628041745) -> None
+                [9][CALL] from=WaultSwapRouter, to=BEP20USDT, transferFrom(sender(address): 0xa79Fe3, recipient(address): 0x50e8D9, amount(uint256): 25000000000000000000000) -> True
+                [9][STATICCALL] from=WaultSwapRouter, to=WaultSwapToken, balanceOf(account(address): 0xa79Fe3) -> 9172589877444393975428029
+                [9][STATICCALL] from=WaultSwapRouter, to=WaultSwapPair, getReserves() -> ['35815520220497909455619647', '256979424984492065077874116', '1628041745']
+                [9][STATICCALL] from=WaultSwapRouter, to=BEP20USDT, balanceOf(account(address): 0x50e8D9) -> 35840520220497909455619647
+                [9][CALL] from=WaultSwapRouter, to=WaultSwapPair, swap(amount0Out(uint256): 0, amount1Out(uint256): 178893764895309013794523, to(address): 0xa79Fe3, data(bytes): b'') -> None
+                  [10][CALL] from=WaultSwapPair, to=WaultSwapToken, transfer(recipient(address): 0xa79Fe3, amount(uint256): 178893764895309013794523) -> True
+                  [10][STATICCALL] from=WaultSwapPair, to=BEP20USDT, balanceOf(account(address): 0x50e8D9) -> 35840520220497909455619647
+                  [10][STATICCALL] from=WaultSwapPair, to=WaultSwapToken, balanceOf(account(address): 0x50e8D9) -> 256800531219596756064079593
+                [9][STATICCALL] from=WaultSwapRouter, to=WaultSwapToken, balanceOf(account(address): 0xa79Fe3) -> 9351483642339702989222552
+              [8][CALL] from=WUSDMaster, to=WUSD, mint(account(address): 0x50AFA9, amount(uint256): 250000000000000000000000) -> None
+            [7][CALL] from=0x50afa9, to=WUSDMaster, stake(amount(uint256): 250000000000000000000000) -> None
+              [8][CALL] from=WUSDMaster, to=BEP20USDT, transferFrom(sender(address): 0x50AFA9, recipient(address): 0xa79Fe3, amount(uint256): 250000000000000000000000) -> True
+              [8][CALL] from=WUSDMaster, to=BEP20USDT, approve(spender(address): 0xD48745, amount(uint256): 25000000000000000000000) -> True
+              [8][CALL] from=WUSDMaster, to=WaultSwapRouter, swapExactTokensForTokensSupportingFeeOnTransferTokens(amountIn(uint256): 25000000000000000000000, amountOutMin(uint256): 0, path(address[]): ['0x55d398326f99059fF775485246999027B31979..., to(address): 0xa79Fe3, deadline(uint256): 1628041745) -> None
+                [9][CALL] from=WaultSwapRouter, to=BEP20USDT, transferFrom(sender(address): 0xa79Fe3, recipient(address): 0x50e8D9, amount(uint256): 25000000000000000000000) -> True
+                [9][STATICCALL] from=WaultSwapRouter, to=WaultSwapToken, balanceOf(account(address): 0xa79Fe3) -> 9351483642339702989222552
+                [9][STATICCALL] from=WaultSwapRouter, to=WaultSwapPair, getReserves() -> ['35840520220497909455619647', '256800531219596756064079593', '1628041745']
+                [9][STATICCALL] from=WaultSwapRouter, to=BEP20USDT, balanceOf(account(address): 0x50e8D9) -> 35865520220497909455619647
+                [9][CALL] from=WaultSwapRouter, to=WaultSwapPair, swap(amount0Out(uint256): 0, amount1Out(uint256): 178644618752749485600532, to(address): 0xa79Fe3, data(bytes): b'') -> None
+                  [10][CALL] from=WaultSwapPair, to=WaultSwapToken, transfer(recipient(address): 0xa79Fe3, amount(uint256): 178644618752749485600532) -> True
+                  [10][STATICCALL] from=WaultSwapPair, to=BEP20USDT, balanceOf(account(address): 0x50e8D9) -> 35865520220497909455619647
+                  [10][STATICCALL] from=WaultSwapPair, to=WaultSwapToken, balanceOf(account(address): 0x50e8D9) -> 256621886600844006578479061
+                [9][STATICCALL] from=WaultSwapRouter, to=WaultSwapToken, balanceOf(account(address): 0xa79Fe3) -> 9530128261092452474823084
+              [8][CALL] from=WUSDMaster, to=WUSD, mint(account(address): 0x50AFA9, amount(uint256): 250000000000000000000000) -> None
+            [7][CALL] from=0x50afa9, to=WUSDMaster, stake(amount(uint256): 250000000000000000000000) -> None
+              [8][CALL] from=WUSDMaster, to=BEP20USDT, transferFrom(sender(address): 0x50AFA9, recipient(address): 0xa79Fe3, amount(uint256): 250000000000000000000000) -> True
+              [8][CALL] from=WUSDMaster, to=BEP20USDT, approve(spender(address): 0xD48745, amount(uint256): 25000000000000000000000) -> True
+              [8][CALL] from=WUSDMaster, to=WaultSwapRouter, swapExactTokensForTokensSupportingFeeOnTransferTokens(amountIn(uint256): 25000000000000000000000, amountOutMin(uint256): 0, path(address[]): ['0x55d398326f99059fF775485246999027B31979..., to(address): 0xa79Fe3, deadline(uint256): 1628041745) -> None
+                [9][CALL] from=WaultSwapRouter, to=BEP20USDT, transferFrom(sender(address): 0xa79Fe3, recipient(address): 0x50e8D9, amount(uint256): 25000000000000000000000) -> True
+                [9][STATICCALL] from=WaultSwapRouter, to=WaultSwapToken, balanceOf(account(address): 0xa79Fe3) -> 9530128261092452474823084
+                [9][STATICCALL] from=WaultSwapRouter, to=WaultSwapPair, getReserves() -> ['35865520220497909455619647', '256621886600844006578479061', '1628041745']
+                [9][STATICCALL] from=WaultSwapRouter, to=BEP20USDT, balanceOf(account(address): 0x50e8D9) -> 35890520220497909455619647
+                [9][CALL] from=WaultSwapRouter, to=WaultSwapPair, swap(amount0Out(uint256): 0, amount1Out(uint256): 178395992901600744545015, to(address): 0xa79Fe3, data(bytes): b'') -> None
+                  [10][CALL] from=WaultSwapPair, to=WaultSwapToken, transfer(recipient(address): 0xa79Fe3, amount(uint256): 178395992901600744545015) -> True
+                  [10][STATICCALL] from=WaultSwapPair, to=BEP20USDT, balanceOf(account(address): 0x50e8D9) -> 35890520220497909455619647
+                  [10][STATICCALL] from=WaultSwapPair, to=WaultSwapToken, balanceOf(account(address): 0x50e8D9) -> 256443490607942405833934046
+                [9][STATICCALL] from=WaultSwapRouter, to=WaultSwapToken, balanceOf(account(address): 0xa79Fe3) -> 9708524253994053219368099
+              [8][CALL] from=WUSDMaster, to=WUSD, mint(account(address): 0x50AFA9, amount(uint256): 250000000000000000000000) -> None
+            [7][CALL] from=0x50afa9, to=WUSDMaster, stake(amount(uint256): 250000000000000000000000) -> None
+              [8][CALL] from=WUSDMaster, to=BEP20USDT, transferFrom(sender(address): 0x50AFA9, recipient(address): 0xa79Fe3, amount(uint256): 250000000000000000000000) -> True
+              [8][CALL] from=WUSDMaster, to=BEP20USDT, approve(spender(address): 0xD48745, amount(uint256): 25000000000000000000000) -> True
+              [8][CALL] from=WUSDMaster, to=WaultSwapRouter, swapExactTokensForTokensSupportingFeeOnTransferTokens(amountIn(uint256): 25000000000000000000000, amountOutMin(uint256): 0, path(address[]): ['0x55d398326f99059fF775485246999027B31979..., to(address): 0xa79Fe3, deadline(uint256): 1628041745) -> None
+                [9][CALL] from=WaultSwapRouter, to=BEP20USDT, transferFrom(sender(address): 0xa79Fe3, recipient(address): 0x50e8D9, amount(uint256): 25000000000000000000000) -> True
+                [9][STATICCALL] from=WaultSwapRouter, to=WaultSwapToken, balanceOf(account(address): 0xa79Fe3) -> 9708524253994053219368099
+                [9][STATICCALL] from=WaultSwapRouter, to=WaultSwapPair, getReserves() -> ['35890520220497909455619647', '256443490607942405833934046', '1628041745']
+                [9][STATICCALL] from=WaultSwapRouter, to=BEP20USDT, balanceOf(account(address): 0x50e8D9) -> 35915520220497909455619647
+                [9][CALL] from=WaultSwapRouter, to=WaultSwapPair, swap(amount0Out(uint256): 0, amount1Out(uint256): 178147885893931684925923, to(address): 0xa79Fe3, data(bytes): b'') -> None
+                  [10][CALL] from=WaultSwapPair, to=WaultSwapToken, transfer(recipient(address): 0xa79Fe3, amount(uint256): 178147885893931684925923) -> True
+                  [10][STATICCALL] from=WaultSwapPair, to=BEP20USDT, balanceOf(account(address): 0x50e8D9) -> 35915520220497909455619647
+                  [10][STATICCALL] from=WaultSwapPair, to=WaultSwapToken, balanceOf(account(address): 0x50e8D9) -> 256265342722048474149008123
+                [9][STATICCALL] from=WaultSwapRouter, to=WaultSwapToken, balanceOf(account(address): 0xa79Fe3) -> 9886672139887984904294022
+              [8][CALL] from=WUSDMaster, to=WUSD, mint(account(address): 0x50AFA9, amount(uint256): 250000000000000000000000) -> None
+            [7][CALL] from=0x50afa9, to=WUSDMaster, stake(amount(uint256): 250000000000000000000000) -> None
+              [8][CALL] from=WUSDMaster, to=BEP20USDT, transferFrom(sender(address): 0x50AFA9, recipient(address): 0xa79Fe3, amount(uint256): 250000000000000000000000) -> True
+              [8][CALL] from=WUSDMaster, to=BEP20USDT, approve(spender(address): 0xD48745, amount(uint256): 25000000000000000000000) -> True
+              [8][CALL] from=WUSDMaster, to=WaultSwapRouter, swapExactTokensForTokensSupportingFeeOnTransferTokens(amountIn(uint256): 25000000000000000000000, amountOutMin(uint256): 0, path(address[]): ['0x55d398326f99059fF775485246999027B31979..., to(address): 0xa79Fe3, deadline(uint256): 1628041745) -> None
+                [9][CALL] from=WaultSwapRouter, to=BEP20USDT, transferFrom(sender(address): 0xa79Fe3, recipient(address): 0x50e8D9, amount(uint256): 25000000000000000000000) -> True
+                [9][STATICCALL] from=WaultSwapRouter, to=WaultSwapToken, balanceOf(account(address): 0xa79Fe3) -> 9886672139887984904294022
+                [9][STATICCALL] from=WaultSwapRouter, to=WaultSwapPair, getReserves() -> ['35915520220497909455619647', '256265342722048474149008123', '1628041745']
+                [9][STATICCALL] from=WaultSwapRouter, to=BEP20USDT, balanceOf(account(address): 0x50e8D9) -> 35940520220497909455619647
+                [9][CALL] from=WaultSwapRouter, to=WaultSwapPair, swap(amount0Out(uint256): 0, amount1Out(uint256): 177900296286845052589270, to(address): 0xa79Fe3, data(bytes): b'') -> None
+                  [10][CALL] from=WaultSwapPair, to=WaultSwapToken, transfer(recipient(address): 0xa79Fe3, amount(uint256): 177900296286845052589270) -> True
+                  [10][STATICCALL] from=WaultSwapPair, to=BEP20USDT, balanceOf(account(address): 0x50e8D9) -> 35940520220497909455619647
+                  [10][STATICCALL] from=WaultSwapPair, to=WaultSwapToken, balanceOf(account(address): 0x50e8D9) -> 256087442425761629096418853
+                [9][STATICCALL] from=WaultSwapRouter, to=WaultSwapToken, balanceOf(account(address): 0xa79Fe3) -> 10064572436174829956883292
+              [8][CALL] from=WUSDMaster, to=WUSD, mint(account(address): 0x50AFA9, amount(uint256): 250000000000000000000000) -> None
+            [7][CALL] from=0x50afa9, to=WUSDMaster, stake(amount(uint256): 250000000000000000000000) -> None
+              [8][CALL] from=WUSDMaster, to=BEP20USDT, transferFrom(sender(address): 0x50AFA9, recipient(address): 0xa79Fe3, amount(uint256): 250000000000000000000000) -> True
+              [8][CALL] from=WUSDMaster, to=BEP20USDT, approve(spender(address): 0xD48745, amount(uint256): 25000000000000000000000) -> True
+              [8][CALL] from=WUSDMaster, to=WaultSwapRouter, swapExactTokensForTokensSupportingFeeOnTransferTokens(amountIn(uint256): 25000000000000000000000, amountOutMin(uint256): 0, path(address[]): ['0x55d398326f99059fF775485246999027B31979..., to(address): 0xa79Fe3, deadline(uint256): 1628041745) -> None
+                [9][CALL] from=WaultSwapRouter, to=BEP20USDT, transferFrom(sender(address): 0xa79Fe3, recipient(address): 0x50e8D9, amount(uint256): 25000000000000000000000) -> True
+                [9][STATICCALL] from=WaultSwapRouter, to=WaultSwapToken, balanceOf(account(address): 0xa79Fe3) -> 10064572436174829956883292
+                [9][STATICCALL] from=WaultSwapRouter, to=WaultSwapPair, getReserves() -> ['35940520220497909455619647', '256087442425761629096418853', '1628041745']
+                [9][STATICCALL] from=WaultSwapRouter, to=BEP20USDT, balanceOf(account(address): 0x50e8D9) -> 35965520220497909455619647
+                [9][CALL] from=WaultSwapRouter, to=WaultSwapPair, swap(amount0Out(uint256): 0, amount1Out(uint256): 177653222642456457408738, to(address): 0xa79Fe3, data(bytes): b'') -> None
+                  [10][CALL] from=WaultSwapPair, to=WaultSwapToken, transfer(recipient(address): 0xa79Fe3, amount(uint256): 177653222642456457408738) -> True
+                  [10][STATICCALL] from=WaultSwapPair, to=BEP20USDT, balanceOf(account(address): 0x50e8D9) -> 35965520220497909455619647
+                  [10][STATICCALL] from=WaultSwapPair, to=WaultSwapToken, balanceOf(account(address): 0x50e8D9) -> 255909789203119172639010115
+                [9][STATICCALL] from=WaultSwapRouter, to=WaultSwapToken, balanceOf(account(address): 0xa79Fe3) -> 10242225658817286414292030
+              [8][CALL] from=WUSDMaster, to=WUSD, mint(account(address): 0x50AFA9, amount(uint256): 250000000000000000000000) -> None
+            [7][CALL] from=0x50afa9, to=WUSDMaster, stake(amount(uint256): 250000000000000000000000) -> None
+              [8][CALL] from=WUSDMaster, to=BEP20USDT, transferFrom(sender(address): 0x50AFA9, recipient(address): 0xa79Fe3, amount(uint256): 250000000000000000000000) -> True
+              [8][CALL] from=WUSDMaster, to=BEP20USDT, approve(spender(address): 0xD48745, amount(uint256): 25000000000000000000000) -> True
+              [8][CALL] from=WUSDMaster, to=WaultSwapRouter, swapExactTokensForTokensSupportingFeeOnTransferTokens(amountIn(uint256): 25000000000000000000000, amountOutMin(uint256): 0, path(address[]): ['0x55d398326f99059fF775485246999027B31979..., to(address): 0xa79Fe3, deadline(uint256): 1628041745) -> None
+                [9][CALL] from=WaultSwapRouter, to=BEP20USDT, transferFrom(sender(address): 0xa79Fe3, recipient(address): 0x50e8D9, amount(uint256): 25000000000000000000000) -> True
+                [9][STATICCALL] from=WaultSwapRouter, to=WaultSwapToken, balanceOf(account(address): 0xa79Fe3) -> 10242225658817286414292030
+                [9][STATICCALL] from=WaultSwapRouter, to=WaultSwapPair, getReserves() -> ['35965520220497909455619647', '255909789203119172639010115', '1628041745']
+                [9][STATICCALL] from=WaultSwapRouter, to=BEP20USDT, balanceOf(account(address): 0x50e8D9) -> 35990520220497909455619647
+                [9][CALL] from=WaultSwapRouter, to=WaultSwapPair, swap(amount0Out(uint256): 0, amount1Out(uint256): 177406663527873487785813, to(address): 0xa79Fe3, data(bytes): b'') -> None
+                  [10][CALL] from=WaultSwapPair, to=WaultSwapToken, transfer(recipient(address): 0xa79Fe3, amount(uint256): 177406663527873487785813) -> True
+                  [10][STATICCALL] from=WaultSwapPair, to=BEP20USDT, balanceOf(account(address): 0x50e8D9) -> 35990520220497909455619647
+                  [10][STATICCALL] from=WaultSwapPair, to=WaultSwapToken, balanceOf(account(address): 0x50e8D9) -> 255732382539591299151224302
+                [9][STATICCALL] from=WaultSwapRouter, to=WaultSwapToken, balanceOf(account(address): 0xa79Fe3) -> 10419632322345159902077843
+              [8][CALL] from=WUSDMaster, to=WUSD, mint(account(address): 0x50AFA9, amount(uint256): 250000000000000000000000) -> None
+            [7][CALL] from=0x50afa9, to=WUSDMaster, stake(amount(uint256): 250000000000000000000000) -> None
+              [8][CALL] from=WUSDMaster, to=BEP20USDT, transferFrom(sender(address): 0x50AFA9, recipient(address): 0xa79Fe3, amount(uint256): 250000000000000000000000) -> True
+              [8][CALL] from=WUSDMaster, to=BEP20USDT, approve(spender(address): 0xD48745, amount(uint256): 25000000000000000000000) -> True
+              [8][CALL] from=WUSDMaster, to=WaultSwapRouter, swapExactTokensForTokensSupportingFeeOnTransferTokens(amountIn(uint256): 25000000000000000000000, amountOutMin(uint256): 0, path(address[]): ['0x55d398326f99059fF775485246999027B31979..., to(address): 0xa79Fe3, deadline(uint256): 1628041745) -> None
+                [9][CALL] from=WaultSwapRouter, to=BEP20USDT, transferFrom(sender(address): 0xa79Fe3, recipient(address): 0x50e8D9, amount(uint256): 25000000000000000000000) -> True
+                [9][STATICCALL] from=WaultSwapRouter, to=WaultSwapToken, balanceOf(account(address): 0xa79Fe3) -> 10419632322345159902077843
+                [9][STATICCALL] from=WaultSwapRouter, to=WaultSwapPair, getReserves() -> ['35990520220497909455619647', '255732382539591299151224302', '1628041745']
+                [9][STATICCALL] from=WaultSwapRouter, to=BEP20USDT, balanceOf(account(address): 0x50e8D9) -> 36015520220497909455619647
+                [9][CALL] from=WaultSwapRouter, to=WaultSwapPair, swap(amount0Out(uint256): 0, amount1Out(uint256): 177160617515174926604049, to(address): 0xa79Fe3, data(bytes): b'') -> None
+                  [10][CALL] from=WaultSwapPair, to=WaultSwapToken, transfer(recipient(address): 0xa79Fe3, amount(uint256): 177160617515174926604049) -> True
+                  [10][STATICCALL] from=WaultSwapPair, to=BEP20USDT, balanceOf(account(address): 0x50e8D9) -> 36015520220497909455619647
+                  [10][STATICCALL] from=WaultSwapPair, to=WaultSwapToken, balanceOf(account(address): 0x50e8D9) -> 255555221922076124224620253
+                [9][STATICCALL] from=WaultSwapRouter, to=WaultSwapToken, balanceOf(account(address): 0xa79Fe3) -> 10596792939860334828681892
+              [8][CALL] from=WUSDMaster, to=WUSD, mint(account(address): 0x50AFA9, amount(uint256): 250000000000000000000000) -> None
+            [7][CALL] from=0x50afa9, to=WUSDMaster, stake(amount(uint256): 250000000000000000000000) -> None
+              [8][CALL] from=WUSDMaster, to=BEP20USDT, transferFrom(sender(address): 0x50AFA9, recipient(address): 0xa79Fe3, amount(uint256): 250000000000000000000000) -> True
+              [8][CALL] from=WUSDMaster, to=BEP20USDT, approve(spender(address): 0xD48745, amount(uint256): 25000000000000000000000) -> True
+              [8][CALL] from=WUSDMaster, to=WaultSwapRouter, swapExactTokensForTokensSupportingFeeOnTransferTokens(amountIn(uint256): 25000000000000000000000, amountOutMin(uint256): 0, path(address[]): ['0x55d398326f99059fF775485246999027B31979..., to(address): 0xa79Fe3, deadline(uint256): 1628041745) -> None
+                [9][CALL] from=WaultSwapRouter, to=BEP20USDT, transferFrom(sender(address): 0xa79Fe3, recipient(address): 0x50e8D9, amount(uint256): 25000000000000000000000) -> True
+                [9][STATICCALL] from=WaultSwapRouter, to=WaultSwapToken, balanceOf(account(address): 0xa79Fe3) -> 10596792939860334828681892
+                [9][STATICCALL] from=WaultSwapRouter, to=WaultSwapPair, getReserves() -> ['36015520220497909455619647', '255555221922076124224620253', '1628041745']
+                [9][STATICCALL] from=WaultSwapRouter, to=BEP20USDT, balanceOf(account(address): 0x50e8D9) -> 36040520220497909455619647
+                [9][CALL] from=WaultSwapRouter, to=WaultSwapPair, swap(amount0Out(uint256): 0, amount1Out(uint256): 176915083181390068074603, to(address): 0xa79Fe3, data(bytes): b'') -> None
+                  [10][CALL] from=WaultSwapPair, to=WaultSwapToken, transfer(recipient(address): 0xa79Fe3, amount(uint256): 176915083181390068074603) -> True
+                  [10][STATICCALL] from=WaultSwapPair, to=BEP20USDT, balanceOf(account(address): 0x50e8D9) -> 36040520220497909455619647
+                  [10][STATICCALL] from=WaultSwapPair, to=WaultSwapToken, balanceOf(account(address): 0x50e8D9) -> 255378306838894734156545650
+                [9][STATICCALL] from=WaultSwapRouter, to=WaultSwapToken, balanceOf(account(address): 0xa79Fe3) -> 10773708023041724896756495
+              [8][CALL] from=WUSDMaster, to=WUSD, mint(account(address): 0x50AFA9, amount(uint256): 250000000000000000000000) -> None
+            [7][CALL] from=0x50afa9, to=WUSDMaster, stake(amount(uint256): 250000000000000000000000) -> None
+              [8][CALL] from=WUSDMaster, to=BEP20USDT, transferFrom(sender(address): 0x50AFA9, recipient(address): 0xa79Fe3, amount(uint256): 250000000000000000000000) -> True
+              [8][CALL] from=WUSDMaster, to=BEP20USDT, approve(spender(address): 0xD48745, amount(uint256): 25000000000000000000000) -> True
+              [8][CALL] from=WUSDMaster, to=WaultSwapRouter, swapExactTokensForTokensSupportingFeeOnTransferTokens(amountIn(uint256): 25000000000000000000000, amountOutMin(uint256): 0, path(address[]): ['0x55d398326f99059fF775485246999027B31979..., to(address): 0xa79Fe3, deadline(uint256): 1628041745) -> None
+                [9][CALL] from=WaultSwapRouter, to=BEP20USDT, transferFrom(sender(address): 0xa79Fe3, recipient(address): 0x50e8D9, amount(uint256): 25000000000000000000000) -> True
+                [9][STATICCALL] from=WaultSwapRouter, to=WaultSwapToken, balanceOf(account(address): 0xa79Fe3) -> 10773708023041724896756495
+                [9][STATICCALL] from=WaultSwapRouter, to=WaultSwapPair, getReserves() -> ['36040520220497909455619647', '255378306838894734156545650', '1628041745']
+                [9][STATICCALL] from=WaultSwapRouter, to=BEP20USDT, balanceOf(account(address): 0x50e8D9) -> 36065520220497909455619647
+                [9][CALL] from=WaultSwapRouter, to=WaultSwapPair, swap(amount0Out(uint256): 0, amount1Out(uint256): 176670059108478134913689, to(address): 0xa79Fe3, data(bytes): b'') -> None
+                  [10][CALL] from=WaultSwapPair, to=WaultSwapToken, transfer(recipient(address): 0xa79Fe3, amount(uint256): 176670059108478134913689) -> True
+                  [10][STATICCALL] from=WaultSwapPair, to=BEP20USDT, balanceOf(account(address): 0x50e8D9) -> 36065520220497909455619647
+                  [10][STATICCALL] from=WaultSwapPair, to=WaultSwapToken, balanceOf(account(address): 0x50e8D9) -> 255201636779786256021631961
+                [9][STATICCALL] from=WaultSwapRouter, to=WaultSwapToken, balanceOf(account(address): 0xa79Fe3) -> 10950378082150203031670184
+              [8][CALL] from=WUSDMaster, to=WUSD, mint(account(address): 0x50AFA9, amount(uint256): 250000000000000000000000) -> None
+            [7][CALL] from=0x50afa9, to=WUSDMaster, stake(amount(uint256): 250000000000000000000000) -> None
+              [8][CALL] from=WUSDMaster, to=BEP20USDT, transferFrom(sender(address): 0x50AFA9, recipient(address): 0xa79Fe3, amount(uint256): 250000000000000000000000) -> True
+              [8][CALL] from=WUSDMaster, to=BEP20USDT, approve(spender(address): 0xD48745, amount(uint256): 25000000000000000000000) -> True
+              [8][CALL] from=WUSDMaster, to=WaultSwapRouter, swapExactTokensForTokensSupportingFeeOnTransferTokens(amountIn(uint256): 25000000000000000000000, amountOutMin(uint256): 0, path(address[]): ['0x55d398326f99059fF775485246999027B31979..., to(address): 0xa79Fe3, deadline(uint256): 1628041745) -> None
+                [9][CALL] from=WaultSwapRouter, to=BEP20USDT, transferFrom(sender(address): 0xa79Fe3, recipient(address): 0x50e8D9, amount(uint256): 25000000000000000000000) -> True
+                [9][STATICCALL] from=WaultSwapRouter, to=WaultSwapToken, balanceOf(account(address): 0xa79Fe3) -> 10950378082150203031670184
+                [9][STATICCALL] from=WaultSwapRouter, to=WaultSwapPair, getReserves() -> ['36065520220497909455619647', '255201636779786256021631961', '1628041745']
+                [9][STATICCALL] from=WaultSwapRouter, to=BEP20USDT, balanceOf(account(address): 0x50e8D9) -> 36090520220497909455619647
+                [9][CALL] from=WaultSwapRouter, to=WaultSwapPair, swap(amount0Out(uint256): 0, amount1Out(uint256): 176425543883307795296089, to(address): 0xa79Fe3, data(bytes): b'') -> None
+                  [10][CALL] from=WaultSwapPair, to=WaultSwapToken, transfer(recipient(address): 0xa79Fe3, amount(uint256): 176425543883307795296089) -> True
+                  [10][STATICCALL] from=WaultSwapPair, to=BEP20USDT, balanceOf(account(address): 0x50e8D9) -> 36090520220497909455619647
+                  [10][STATICCALL] from=WaultSwapPair, to=WaultSwapToken, balanceOf(account(address): 0x50e8D9) -> 255025211235902948226335872
+                [9][STATICCALL] from=WaultSwapRouter, to=WaultSwapToken, balanceOf(account(address): 0xa79Fe3) -> 11126803626033510826966273
+              [8][CALL] from=WUSDMaster, to=WUSD, mint(account(address): 0x50AFA9, amount(uint256): 250000000000000000000000) -> None
+            [7][CALL] from=0x50afa9, to=WUSDMaster, stake(amount(uint256): 250000000000000000000000) -> None
+              [8][CALL] from=WUSDMaster, to=BEP20USDT, transferFrom(sender(address): 0x50AFA9, recipient(address): 0xa79Fe3, amount(uint256): 250000000000000000000000) -> True
+              [8][CALL] from=WUSDMaster, to=BEP20USDT, approve(spender(address): 0xD48745, amount(uint256): 25000000000000000000000) -> True
+              [8][CALL] from=WUSDMaster, to=WaultSwapRouter, swapExactTokensForTokensSupportingFeeOnTransferTokens(amountIn(uint256): 25000000000000000000000, amountOutMin(uint256): 0, path(address[]): ['0x55d398326f99059fF775485246999027B31979..., to(address): 0xa79Fe3, deadline(uint256): 1628041745) -> None
+                [9][CALL] from=WaultSwapRouter, to=BEP20USDT, transferFrom(sender(address): 0xa79Fe3, recipient(address): 0x50e8D9, amount(uint256): 25000000000000000000000) -> True
+                [9][STATICCALL] from=WaultSwapRouter, to=WaultSwapToken, balanceOf(account(address): 0xa79Fe3) -> 11126803626033510826966273
+                [9][STATICCALL] from=WaultSwapRouter, to=WaultSwapPair, getReserves() -> ['36090520220497909455619647', '255025211235902948226335872', '1628041745']
+                [9][STATICCALL] from=WaultSwapRouter, to=BEP20USDT, balanceOf(account(address): 0x50e8D9) -> 36115520220497909455619647
+                [9][CALL] from=WaultSwapRouter, to=WaultSwapPair, swap(amount0Out(uint256): 0, amount1Out(uint256): 176181536097636779032319, to(address): 0xa79Fe3, data(bytes): b'') -> None
+                  [10][CALL] from=WaultSwapPair, to=WaultSwapToken, transfer(recipient(address): 0xa79Fe3, amount(uint256): 176181536097636779032319) -> True
+                  [10][STATICCALL] from=WaultSwapPair, to=BEP20USDT, balanceOf(account(address): 0x50e8D9) -> 36115520220497909455619647
+                  [10][STATICCALL] from=WaultSwapPair, to=WaultSwapToken, balanceOf(account(address): 0x50e8D9) -> 254849029699805311447303553
+                [9][STATICCALL] from=WaultSwapRouter, to=WaultSwapToken, balanceOf(account(address): 0xa79Fe3) -> 11302985162131147605998592
+              [8][CALL] from=WUSDMaster, to=WUSD, mint(account(address): 0x50AFA9, amount(uint256): 250000000000000000000000) -> None
+            [7][CALL] from=0x50afa9, to=WUSDMaster, stake(amount(uint256): 250000000000000000000000) -> None
+              [8][CALL] from=WUSDMaster, to=BEP20USDT, transferFrom(sender(address): 0x50AFA9, recipient(address): 0xa79Fe3, amount(uint256): 250000000000000000000000) -> True
+              [8][CALL] from=WUSDMaster, to=BEP20USDT, approve(spender(address): 0xD48745, amount(uint256): 25000000000000000000000) -> True
+              [8][CALL] from=WUSDMaster, to=WaultSwapRouter, swapExactTokensForTokensSupportingFeeOnTransferTokens(amountIn(uint256): 25000000000000000000000, amountOutMin(uint256): 0, path(address[]): ['0x55d398326f99059fF775485246999027B31979..., to(address): 0xa79Fe3, deadline(uint256): 1628041745) -> None
+                [9][CALL] from=WaultSwapRouter, to=BEP20USDT, transferFrom(sender(address): 0xa79Fe3, recipient(address): 0x50e8D9, amount(uint256): 25000000000000000000000) -> True
+                [9][STATICCALL] from=WaultSwapRouter, to=WaultSwapToken, balanceOf(account(address): 0xa79Fe3) -> 11302985162131147605998592
+                [9][STATICCALL] from=WaultSwapRouter, to=WaultSwapPair, getReserves() -> ['36115520220497909455619647', '254849029699805311447303553', '1628041745']
+                [9][STATICCALL] from=WaultSwapRouter, to=BEP20USDT, balanceOf(account(address): 0x50e8D9) -> 36140520220497909455619647
+                [9][CALL] from=WaultSwapRouter, to=WaultSwapPair, swap(amount0Out(uint256): 0, amount1Out(uint256): 175938034348091592420492, to(address): 0xa79Fe3, data(bytes): b'') -> None
+                  [10][CALL] from=WaultSwapPair, to=WaultSwapToken, transfer(recipient(address): 0xa79Fe3, amount(uint256): 175938034348091592420492) -> True
+                  [10][STATICCALL] from=WaultSwapPair, to=BEP20USDT, balanceOf(account(address): 0x50e8D9) -> 36140520220497909455619647
+                  [10][STATICCALL] from=WaultSwapPair, to=WaultSwapToken, balanceOf(account(address): 0x50e8D9) -> 254673091665457219854883061
+                [9][STATICCALL] from=WaultSwapRouter, to=WaultSwapToken, balanceOf(account(address): 0xa79Fe3) -> 11478923196479239198419084
+              [8][CALL] from=WUSDMaster, to=WUSD, mint(account(address): 0x50AFA9, amount(uint256): 250000000000000000000000) -> None
+            [7][CALL] from=0x50afa9, to=WUSDMaster, stake(amount(uint256): 250000000000000000000000) -> None
+              [8][CALL] from=WUSDMaster, to=BEP20USDT, transferFrom(sender(address): 0x50AFA9, recipient(address): 0xa79Fe3, amount(uint256): 250000000000000000000000) -> True
+              [8][CALL] from=WUSDMaster, to=BEP20USDT, approve(spender(address): 0xD48745, amount(uint256): 25000000000000000000000) -> True
+              [8][CALL] from=WUSDMaster, to=WaultSwapRouter, swapExactTokensForTokensSupportingFeeOnTransferTokens(amountIn(uint256): 25000000000000000000000, amountOutMin(uint256): 0, path(address[]): ['0x55d398326f99059fF775485246999027B31979..., to(address): 0xa79Fe3, deadline(uint256): 1628041745) -> None
+                [9][CALL] from=WaultSwapRouter, to=BEP20USDT, transferFrom(sender(address): 0xa79Fe3, recipient(address): 0x50e8D9, amount(uint256): 25000000000000000000000) -> True
+                [9][STATICCALL] from=WaultSwapRouter, to=WaultSwapToken, balanceOf(account(address): 0xa79Fe3) -> 11478923196479239198419084
+                [9][STATICCALL] from=WaultSwapRouter, to=WaultSwapPair, getReserves() -> ['36140520220497909455619647', '254673091665457219854883061', '1628041745']
+                [9][STATICCALL] from=WaultSwapRouter, to=BEP20USDT, balanceOf(account(address): 0x50e8D9) -> 36165520220497909455619647
+                [9][CALL] from=WaultSwapRouter, to=WaultSwapPair, swap(amount0Out(uint256): 0, amount1Out(uint256): 175695037236147331227316, to(address): 0xa79Fe3, data(bytes): b'') -> None
+                  [10][CALL] from=WaultSwapPair, to=WaultSwapToken, transfer(recipient(address): 0xa79Fe3, amount(uint256): 175695037236147331227316) -> True
+                  [10][STATICCALL] from=WaultSwapPair, to=BEP20USDT, balanceOf(account(address): 0x50e8D9) -> 36165520220497909455619647
+                  [10][STATICCALL] from=WaultSwapPair, to=WaultSwapToken, balanceOf(account(address): 0x50e8D9) -> 254497396628221072523655745
+                [9][STATICCALL] from=WaultSwapRouter, to=WaultSwapToken, balanceOf(account(address): 0xa79Fe3) -> 11654618233715386529646400
+              [8][CALL] from=WUSDMaster, to=WUSD, mint(account(address): 0x50AFA9, amount(uint256): 250000000000000000000000) -> None
+            [7][CALL] from=0x50afa9, to=WUSDMaster, stake(amount(uint256): 250000000000000000000000) -> None
+              [8][CALL] from=WUSDMaster, to=BEP20USDT, transferFrom(sender(address): 0x50AFA9, recipient(address): 0xa79Fe3, amount(uint256): 250000000000000000000000) -> True
+              [8][CALL] from=WUSDMaster, to=BEP20USDT, approve(spender(address): 0xD48745, amount(uint256): 25000000000000000000000) -> True
+              [8][CALL] from=WUSDMaster, to=WaultSwapRouter, swapExactTokensForTokensSupportingFeeOnTransferTokens(amountIn(uint256): 25000000000000000000000, amountOutMin(uint256): 0, path(address[]): ['0x55d398326f99059fF775485246999027B31979..., to(address): 0xa79Fe3, deadline(uint256): 1628041745) -> None
+                [9][CALL] from=WaultSwapRouter, to=BEP20USDT, transferFrom(sender(address): 0xa79Fe3, recipient(address): 0x50e8D9, amount(uint256): 25000000000000000000000) -> True
+                [9][STATICCALL] from=WaultSwapRouter, to=WaultSwapToken, balanceOf(account(address): 0xa79Fe3) -> 11654618233715386529646400
+                [9][STATICCALL] from=WaultSwapRouter, to=WaultSwapPair, getReserves() -> ['36165520220497909455619647', '254497396628221072523655745', '1628041745']
+                [9][STATICCALL] from=WaultSwapRouter, to=BEP20USDT, balanceOf(account(address): 0x50e8D9) -> 36190520220497909455619647
+                [9][CALL] from=WaultSwapRouter, to=WaultSwapPair, swap(amount0Out(uint256): 0, amount1Out(uint256): 175452543368107591256097, to(address): 0xa79Fe3, data(bytes): b'') -> None
+                  [10][CALL] from=WaultSwapPair, to=WaultSwapToken, transfer(recipient(address): 0xa79Fe3, amount(uint256): 175452543368107591256097) -> True
+                  [10][STATICCALL] from=WaultSwapPair, to=BEP20USDT, balanceOf(account(address): 0x50e8D9) -> 36190520220497909455619647
+                  [10][STATICCALL] from=WaultSwapPair, to=WaultSwapToken, balanceOf(account(address): 0x50e8D9) -> 254321944084852964932399648
+                [9][STATICCALL] from=WaultSwapRouter, to=WaultSwapToken, balanceOf(account(address): 0xa79Fe3) -> 11830070777083494120902497
+              [8][CALL] from=WUSDMaster, to=WUSD, mint(account(address): 0x50AFA9, amount(uint256): 250000000000000000000000) -> None
+            [7][CALL] from=0x50afa9, to=WUSDMaster, stake(amount(uint256): 250000000000000000000000) -> None
+              [8][CALL] from=WUSDMaster, to=BEP20USDT, transferFrom(sender(address): 0x50AFA9, recipient(address): 0xa79Fe3, amount(uint256): 250000000000000000000000) -> True
+              [8][CALL] from=WUSDMaster, to=BEP20USDT, approve(spender(address): 0xD48745, amount(uint256): 25000000000000000000000) -> True
+              [8][CALL] from=WUSDMaster, to=WaultSwapRouter, swapExactTokensForTokensSupportingFeeOnTransferTokens(amountIn(uint256): 25000000000000000000000, amountOutMin(uint256): 0, path(address[]): ['0x55d398326f99059fF775485246999027B31979..., to(address): 0xa79Fe3, deadline(uint256): 1628041745) -> None
+                [9][CALL] from=WaultSwapRouter, to=BEP20USDT, transferFrom(sender(address): 0xa79Fe3, recipient(address): 0x50e8D9, amount(uint256): 25000000000000000000000) -> True
+                [9][STATICCALL] from=WaultSwapRouter, to=WaultSwapToken, balanceOf(account(address): 0xa79Fe3) -> 11830070777083494120902497
+                [9][STATICCALL] from=WaultSwapRouter, to=WaultSwapPair, getReserves() -> ['36190520220497909455619647', '254321944084852964932399648', '1628041745']
+                [9][STATICCALL] from=WaultSwapRouter, to=BEP20USDT, balanceOf(account(address): 0x50e8D9) -> 36215520220497909455619647
+                [9][CALL] from=WaultSwapRouter, to=WaultSwapPair, swap(amount0Out(uint256): 0, amount1Out(uint256): 175210551355084475962917, to(address): 0xa79Fe3, data(bytes): b'') -> None
+                  [10][CALL] from=WaultSwapPair, to=WaultSwapToken, transfer(recipient(address): 0xa79Fe3, amount(uint256): 175210551355084475962917) -> True
+                  [10][STATICCALL] from=WaultSwapPair, to=BEP20USDT, balanceOf(account(address): 0x50e8D9) -> 36215520220497909455619647
+                  [10][STATICCALL] from=WaultSwapPair, to=WaultSwapToken, balanceOf(account(address): 0x50e8D9) -> 254146733533497880456436731
+                [9][STATICCALL] from=WaultSwapRouter, to=WaultSwapToken, balanceOf(account(address): 0xa79Fe3) -> 12005281328438578596865414
+              [8][CALL] from=WUSDMaster, to=WUSD, mint(account(address): 0x50AFA9, amount(uint256): 250000000000000000000000) -> None
+            [7][CALL] from=0x50afa9, to=WUSDMaster, stake(amount(uint256): 250000000000000000000000) -> None
+              [8][CALL] from=WUSDMaster, to=BEP20USDT, transferFrom(sender(address): 0x50AFA9, recipient(address): 0xa79Fe3, amount(uint256): 250000000000000000000000) -> True
+              [8][CALL] from=WUSDMaster, to=BEP20USDT, approve(spender(address): 0xD48745, amount(uint256): 25000000000000000000000) -> True
+              [8][CALL] from=WUSDMaster, to=WaultSwapRouter, swapExactTokensForTokensSupportingFeeOnTransferTokens(amountIn(uint256): 25000000000000000000000, amountOutMin(uint256): 0, path(address[]): ['0x55d398326f99059fF775485246999027B31979..., to(address): 0xa79Fe3, deadline(uint256): 1628041745) -> None
+                [9][CALL] from=WaultSwapRouter, to=BEP20USDT, transferFrom(sender(address): 0xa79Fe3, recipient(address): 0x50e8D9, amount(uint256): 25000000000000000000000) -> True
+                [9][STATICCALL] from=WaultSwapRouter, to=WaultSwapToken, balanceOf(account(address): 0xa79Fe3) -> 12005281328438578596865414
+                [9][STATICCALL] from=WaultSwapRouter, to=WaultSwapPair, getReserves() -> ['36215520220497909455619647', '254146733533497880456436731', '1628041745']
+                [9][STATICCALL] from=WaultSwapRouter, to=BEP20USDT, balanceOf(account(address): 0x50e8D9) -> 36240520220497909455619647
+                [9][CALL] from=WaultSwapRouter, to=WaultSwapPair, swap(amount0Out(uint256): 0, amount1Out(uint256): 174969059812978700585589, to(address): 0xa79Fe3, data(bytes): b'') -> None
+                  [10][CALL] from=WaultSwapPair, to=WaultSwapToken, transfer(recipient(address): 0xa79Fe3, amount(uint256): 174969059812978700585589) -> True
+                  [10][STATICCALL] from=WaultSwapPair, to=BEP20USDT, balanceOf(account(address): 0x50e8D9) -> 36240520220497909455619647
+                  [10][STATICCALL] from=WaultSwapPair, to=WaultSwapToken, balanceOf(account(address): 0x50e8D9) -> 253971764473684901755851142
+                [9][STATICCALL] from=WaultSwapRouter, to=WaultSwapToken, balanceOf(account(address): 0xa79Fe3) -> 12180250388251557297451003
+              [8][CALL] from=WUSDMaster, to=WUSD, mint(account(address): 0x50AFA9, amount(uint256): 250000000000000000000000) -> None
+            [7][CALL] from=0x50afa9, to=WUSDMaster, stake(amount(uint256): 250000000000000000000000) -> None
+              [8][CALL] from=WUSDMaster, to=BEP20USDT, transferFrom(sender(address): 0x50AFA9, recipient(address): 0xa79Fe3, amount(uint256): 250000000000000000000000) -> True
+              [8][CALL] from=WUSDMaster, to=BEP20USDT, approve(spender(address): 0xD48745, amount(uint256): 25000000000000000000000) -> True
+              [8][CALL] from=WUSDMaster, to=WaultSwapRouter, swapExactTokensForTokensSupportingFeeOnTransferTokens(amountIn(uint256): 25000000000000000000000, amountOutMin(uint256): 0, path(address[]): ['0x55d398326f99059fF775485246999027B31979..., to(address): 0xa79Fe3, deadline(uint256): 1628041745) -> None
+                [9][CALL] from=WaultSwapRouter, to=BEP20USDT, transferFrom(sender(address): 0xa79Fe3, recipient(address): 0x50e8D9, amount(uint256): 25000000000000000000000) -> True
+                [9][STATICCALL] from=WaultSwapRouter, to=WaultSwapToken, balanceOf(account(address): 0xa79Fe3) -> 12180250388251557297451003
+                [9][STATICCALL] from=WaultSwapRouter, to=WaultSwapPair, getReserves() -> ['36240520220497909455619647', '253971764473684901755851142', '1628041745']
+                [9][STATICCALL] from=WaultSwapRouter, to=BEP20USDT, balanceOf(account(address): 0x50e8D9) -> 36265520220497909455619647
+                [9][CALL] from=WaultSwapRouter, to=WaultSwapPair, swap(amount0Out(uint256): 0, amount1Out(uint256): 174728067362459792253220, to(address): 0xa79Fe3, data(bytes): b'') -> None
+                  [10][CALL] from=WaultSwapPair, to=WaultSwapToken, transfer(recipient(address): 0xa79Fe3, amount(uint256): 174728067362459792253220) -> True
+                  [10][STATICCALL] from=WaultSwapPair, to=BEP20USDT, balanceOf(account(address): 0x50e8D9) -> 36265520220497909455619647
+                  [10][STATICCALL] from=WaultSwapPair, to=WaultSwapToken, balanceOf(account(address): 0x50e8D9) -> 253797036406322441963597922
+                [9][STATICCALL] from=WaultSwapRouter, to=WaultSwapToken, balanceOf(account(address): 0xa79Fe3) -> 12354978455614017089704223
+              [8][CALL] from=WUSDMaster, to=WUSD, mint(account(address): 0x50AFA9, amount(uint256): 250000000000000000000000) -> None
+            [7][CALL] from=0x50afa9, to=WUSDMaster, stake(amount(uint256): 250000000000000000000000) -> None
+              [8][CALL] from=WUSDMaster, to=BEP20USDT, transferFrom(sender(address): 0x50AFA9, recipient(address): 0xa79Fe3, amount(uint256): 250000000000000000000000) -> True
+              [8][CALL] from=WUSDMaster, to=BEP20USDT, approve(spender(address): 0xD48745, amount(uint256): 25000000000000000000000) -> True
+              [8][CALL] from=WUSDMaster, to=WaultSwapRouter, swapExactTokensForTokensSupportingFeeOnTransferTokens(amountIn(uint256): 25000000000000000000000, amountOutMin(uint256): 0, path(address[]): ['0x55d398326f99059fF775485246999027B31979..., to(address): 0xa79Fe3, deadline(uint256): 1628041745) -> None
+                [9][CALL] from=WaultSwapRouter, to=BEP20USDT, transferFrom(sender(address): 0xa79Fe3, recipient(address): 0x50e8D9, amount(uint256): 25000000000000000000000) -> True
+                [9][STATICCALL] from=WaultSwapRouter, to=WaultSwapToken, balanceOf(account(address): 0xa79Fe3) -> 12354978455614017089704223
+                [9][STATICCALL] from=WaultSwapRouter, to=WaultSwapPair, getReserves() -> ['36265520220497909455619647', '253797036406322441963597922', '1628041745']
+                [9][STATICCALL] from=WaultSwapRouter, to=BEP20USDT, balanceOf(account(address): 0x50e8D9) -> 36290520220497909455619647
+                [9][CALL] from=WaultSwapRouter, to=WaultSwapPair, swap(amount0Out(uint256): 0, amount1Out(uint256): 174487572628946385547596, to(address): 0xa79Fe3, data(bytes): b'') -> None
+                  [10][CALL] from=WaultSwapPair, to=WaultSwapToken, transfer(recipient(address): 0xa79Fe3, amount(uint256): 174487572628946385547596) -> True
+                  [10][STATICCALL] from=WaultSwapPair, to=BEP20USDT, balanceOf(account(address): 0x50e8D9) -> 36290520220497909455619647
+                  [10][STATICCALL] from=WaultSwapPair, to=WaultSwapToken, balanceOf(account(address): 0x50e8D9) -> 253622548833693495578050326
+                [9][STATICCALL] from=WaultSwapRouter, to=WaultSwapToken, balanceOf(account(address): 0xa79Fe3) -> 12529466028242963475251819
+              [8][CALL] from=WUSDMaster, to=WUSD, mint(account(address): 0x50AFA9, amount(uint256): 250000000000000000000000) -> None
+            [7][CALL] from=0x50afa9, to=WUSDMaster, stake(amount(uint256): 250000000000000000000000) -> None
+              [8][CALL] from=WUSDMaster, to=BEP20USDT, transferFrom(sender(address): 0x50AFA9, recipient(address): 0xa79Fe3, amount(uint256): 250000000000000000000000) -> True
+              [8][CALL] from=WUSDMaster, to=BEP20USDT, approve(spender(address): 0xD48745, amount(uint256): 25000000000000000000000) -> True
+              [8][CALL] from=WUSDMaster, to=WaultSwapRouter, swapExactTokensForTokensSupportingFeeOnTransferTokens(amountIn(uint256): 25000000000000000000000, amountOutMin(uint256): 0, path(address[]): ['0x55d398326f99059fF775485246999027B31979..., to(address): 0xa79Fe3, deadline(uint256): 1628041745) -> None
+                [9][CALL] from=WaultSwapRouter, to=BEP20USDT, transferFrom(sender(address): 0xa79Fe3, recipient(address): 0x50e8D9, amount(uint256): 25000000000000000000000) -> True
+                [9][STATICCALL] from=WaultSwapRouter, to=WaultSwapToken, balanceOf(account(address): 0xa79Fe3) -> 12529466028242963475251819
+                [9][STATICCALL] from=WaultSwapRouter, to=WaultSwapPair, getReserves() -> ['36290520220497909455619647', '253622548833693495578050326', '1628041745']
+                [9][STATICCALL] from=WaultSwapRouter, to=BEP20USDT, balanceOf(account(address): 0x50e8D9) -> 36315520220497909455619647
+                [9][CALL] from=WaultSwapRouter, to=WaultSwapPair, swap(amount0Out(uint256): 0, amount1Out(uint256): 174247574242586612990803, to(address): 0xa79Fe3, data(bytes): b'') -> None
+                  [10][CALL] from=WaultSwapPair, to=WaultSwapToken, transfer(recipient(address): 0xa79Fe3, amount(uint256): 174247574242586612990803) -> True
+                  [10][STATICCALL] from=WaultSwapPair, to=BEP20USDT, balanceOf(account(address): 0x50e8D9) -> 36315520220497909455619647
+                  [10][STATICCALL] from=WaultSwapPair, to=WaultSwapToken, balanceOf(account(address): 0x50e8D9) -> 253448301259450908965059523
+                [9][STATICCALL] from=WaultSwapRouter, to=WaultSwapToken, balanceOf(account(address): 0xa79Fe3) -> 12703713602485550088242622
+              [8][CALL] from=WUSDMaster, to=WUSD, mint(account(address): 0x50AFA9, amount(uint256): 250000000000000000000000) -> None
+            [7][CALL] from=0x50afa9, to=WUSDMaster, stake(amount(uint256): 250000000000000000000000) -> None
+              [8][CALL] from=WUSDMaster, to=BEP20USDT, transferFrom(sender(address): 0x50AFA9, recipient(address): 0xa79Fe3, amount(uint256): 250000000000000000000000) -> True
+              [8][CALL] from=WUSDMaster, to=BEP20USDT, approve(spender(address): 0xD48745, amount(uint256): 25000000000000000000000) -> True
+              [8][CALL] from=WUSDMaster, to=WaultSwapRouter, swapExactTokensForTokensSupportingFeeOnTransferTokens(amountIn(uint256): 25000000000000000000000, amountOutMin(uint256): 0, path(address[]): ['0x55d398326f99059fF775485246999027B31979..., to(address): 0xa79Fe3, deadline(uint256): 1628041745) -> None
+                [9][CALL] from=WaultSwapRouter, to=BEP20USDT, transferFrom(sender(address): 0xa79Fe3, recipient(address): 0x50e8D9, amount(uint256): 25000000000000000000000) -> True
+                [9][STATICCALL] from=WaultSwapRouter, to=WaultSwapToken, balanceOf(account(address): 0xa79Fe3) -> 12703713602485550088242622
+                [9][STATICCALL] from=WaultSwapRouter, to=WaultSwapPair, getReserves() -> ['36315520220497909455619647', '253448301259450908965059523', '1628041745']
+                [9][STATICCALL] from=WaultSwapRouter, to=BEP20USDT, balanceOf(account(address): 0x50e8D9) -> 36340520220497909455619647
+                [9][CALL] from=WaultSwapRouter, to=WaultSwapPair, swap(amount0Out(uint256): 0, amount1Out(uint256): 174008070838238589936818, to(address): 0xa79Fe3, data(bytes): b'') -> None
+                  [10][CALL] from=WaultSwapPair, to=WaultSwapToken, transfer(recipient(address): 0xa79Fe3, amount(uint256): 174008070838238589936818) -> True
+                  [10][STATICCALL] from=WaultSwapPair, to=BEP20USDT, balanceOf(account(address): 0x50e8D9) -> 36340520220497909455619647
+                  [10][STATICCALL] from=WaultSwapPair, to=WaultSwapToken, balanceOf(account(address): 0x50e8D9) -> 253274293188612670375122705
+                [9][STATICCALL] from=WaultSwapRouter, to=WaultSwapToken, balanceOf(account(address): 0xa79Fe3) -> 12877721673323788678179440
+              [8][CALL] from=WUSDMaster, to=WUSD, mint(account(address): 0x50AFA9, amount(uint256): 250000000000000000000000) -> None
+            [7][CALL] from=0x50afa9, to=WUSDMaster, stake(amount(uint256): 250000000000000000000000) -> None
+              [8][CALL] from=WUSDMaster, to=BEP20USDT, transferFrom(sender(address): 0x50AFA9, recipient(address): 0xa79Fe3, amount(uint256): 250000000000000000000000) -> True
+              [8][CALL] from=WUSDMaster, to=BEP20USDT, approve(spender(address): 0xD48745, amount(uint256): 25000000000000000000000) -> True
+              [8][CALL] from=WUSDMaster, to=WaultSwapRouter, swapExactTokensForTokensSupportingFeeOnTransferTokens(amountIn(uint256): 25000000000000000000000, amountOutMin(uint256): 0, path(address[]): ['0x55d398326f99059fF775485246999027B31979..., to(address): 0xa79Fe3, deadline(uint256): 1628041745) -> None
+                [9][CALL] from=WaultSwapRouter, to=BEP20USDT, transferFrom(sender(address): 0xa79Fe3, recipient(address): 0x50e8D9, amount(uint256): 25000000000000000000000) -> True
+                [9][STATICCALL] from=WaultSwapRouter, to=WaultSwapToken, balanceOf(account(address): 0xa79Fe3) -> 12877721673323788678179440
+                [9][STATICCALL] from=WaultSwapRouter, to=WaultSwapPair, getReserves() -> ['36340520220497909455619647', '253274293188612670375122705', '1628041745']
+                [9][STATICCALL] from=WaultSwapRouter, to=BEP20USDT, balanceOf(account(address): 0x50e8D9) -> 36365520220497909455619647
+                [9][CALL] from=WaultSwapRouter, to=WaultSwapPair, swap(amount0Out(uint256): 0, amount1Out(uint256): 173769061055450993347987, to(address): 0xa79Fe3, data(bytes): b'') -> None
+                  [10][CALL] from=WaultSwapPair, to=WaultSwapToken, transfer(recipient(address): 0xa79Fe3, amount(uint256): 173769061055450993347987) -> True
+                  [10][STATICCALL] from=WaultSwapPair, to=BEP20USDT, balanceOf(account(address): 0x50e8D9) -> 36365520220497909455619647
+                  [10][STATICCALL] from=WaultSwapPair, to=WaultSwapToken, balanceOf(account(address): 0x50e8D9) -> 253100524127557219381774718
+                [9][STATICCALL] from=WaultSwapRouter, to=WaultSwapToken, balanceOf(account(address): 0xa79Fe3) -> 13051490734379239671527427
+              [8][CALL] from=WUSDMaster, to=WUSD, mint(account(address): 0x50AFA9, amount(uint256): 250000000000000000000000) -> None
+            [7][CALL] from=0x50afa9, to=WUSDMaster, stake(amount(uint256): 250000000000000000000000) -> None
+              [8][CALL] from=WUSDMaster, to=BEP20USDT, transferFrom(sender(address): 0x50AFA9, recipient(address): 0xa79Fe3, amount(uint256): 250000000000000000000000) -> True
+              [8][CALL] from=WUSDMaster, to=BEP20USDT, approve(spender(address): 0xD48745, amount(uint256): 25000000000000000000000) -> True
+              [8][CALL] from=WUSDMaster, to=WaultSwapRouter, swapExactTokensForTokensSupportingFeeOnTransferTokens(amountIn(uint256): 25000000000000000000000, amountOutMin(uint256): 0, path(address[]): ['0x55d398326f99059fF775485246999027B31979..., to(address): 0xa79Fe3, deadline(uint256): 1628041745) -> None
+                [9][CALL] from=WaultSwapRouter, to=BEP20USDT, transferFrom(sender(address): 0xa79Fe3, recipient(address): 0x50e8D9, amount(uint256): 25000000000000000000000) -> True
+                [9][STATICCALL] from=WaultSwapRouter, to=WaultSwapToken, balanceOf(account(address): 0xa79Fe3) -> 13051490734379239671527427
+                [9][STATICCALL] from=WaultSwapRouter, to=WaultSwapPair, getReserves() -> ['36365520220497909455619647', '253100524127557219381774718', '1628041745']
+                [9][STATICCALL] from=WaultSwapRouter, to=BEP20USDT, balanceOf(account(address): 0x50e8D9) -> 36390520220497909455619647
+                [9][CALL] from=WaultSwapRouter, to=WaultSwapPair, swap(amount0Out(uint256): 0, amount1Out(uint256): 173530543538443733940535, to(address): 0xa79Fe3, data(bytes): b'') -> None
+                  [10][CALL] from=WaultSwapPair, to=WaultSwapToken, transfer(recipient(address): 0xa79Fe3, amount(uint256): 173530543538443733940535) -> True
+                  [10][STATICCALL] from=WaultSwapPair, to=BEP20USDT, balanceOf(account(address): 0x50e8D9) -> 36390520220497909455619647
+                  [10][STATICCALL] from=WaultSwapPair, to=WaultSwapToken, balanceOf(account(address): 0x50e8D9) -> 252926993584018775647834183
+                [9][STATICCALL] from=WaultSwapRouter, to=WaultSwapToken, balanceOf(account(address): 0xa79Fe3) -> 13225021277917683405467962
+              [8][CALL] from=WUSDMaster, to=WUSD, mint(account(address): 0x50AFA9, amount(uint256): 250000000000000000000000) -> None
+            [7][CALL] from=0x50afa9, to=WUSDMaster, stake(amount(uint256): 250000000000000000000000) -> None
+              [8][CALL] from=WUSDMaster, to=BEP20USDT, transferFrom(sender(address): 0x50AFA9, recipient(address): 0xa79Fe3, amount(uint256): 250000000000000000000000) -> True
+              [8][CALL] from=WUSDMaster, to=BEP20USDT, approve(spender(address): 0xD48745, amount(uint256): 25000000000000000000000) -> True
+              [8][CALL] from=WUSDMaster, to=WaultSwapRouter, swapExactTokensForTokensSupportingFeeOnTransferTokens(amountIn(uint256): 25000000000000000000000, amountOutMin(uint256): 0, path(address[]): ['0x55d398326f99059fF775485246999027B31979..., to(address): 0xa79Fe3, deadline(uint256): 1628041745) -> None
+                [9][CALL] from=WaultSwapRouter, to=BEP20USDT, transferFrom(sender(address): 0xa79Fe3, recipient(address): 0x50e8D9, amount(uint256): 25000000000000000000000) -> True
+                [9][STATICCALL] from=WaultSwapRouter, to=WaultSwapToken, balanceOf(account(address): 0xa79Fe3) -> 13225021277917683405467962
+                [9][STATICCALL] from=WaultSwapRouter, to=WaultSwapPair, getReserves() -> ['36390520220497909455619647', '252926993584018775647834183', '1628041745']
+                [9][STATICCALL] from=WaultSwapRouter, to=BEP20USDT, balanceOf(account(address): 0x50e8D9) -> 36415520220497909455619647
+                [9][CALL] from=WaultSwapRouter, to=WaultSwapPair, swap(amount0Out(uint256): 0, amount1Out(uint256): 173292516936088721186444, to(address): 0xa79Fe3, data(bytes): b'') -> None
+                  [10][CALL] from=WaultSwapPair, to=WaultSwapToken, transfer(recipient(address): 0xa79Fe3, amount(uint256): 173292516936088721186444) -> True
+                  [10][STATICCALL] from=WaultSwapPair, to=BEP20USDT, balanceOf(account(address): 0x50e8D9) -> 36415520220497909455619647
+                  [10][STATICCALL] from=WaultSwapPair, to=WaultSwapToken, balanceOf(account(address): 0x50e8D9) -> 252753701067082686926647739
+                [9][STATICCALL] from=WaultSwapRouter, to=WaultSwapToken, balanceOf(account(address): 0xa79Fe3) -> 13398313794853772126654406
+              [8][CALL] from=WUSDMaster, to=WUSD, mint(account(address): 0x50AFA9, amount(uint256): 250000000000000000000000) -> None
+            [7][CALL] from=0x50afa9, to=WUSDMaster, stake(amount(uint256): 250000000000000000000000) -> None
+              [8][CALL] from=WUSDMaster, to=BEP20USDT, transferFrom(sender(address): 0x50AFA9, recipient(address): 0xa79Fe3, amount(uint256): 250000000000000000000000) -> True
+              [8][CALL] from=WUSDMaster, to=BEP20USDT, approve(spender(address): 0xD48745, amount(uint256): 25000000000000000000000) -> True
+              [8][CALL] from=WUSDMaster, to=WaultSwapRouter, swapExactTokensForTokensSupportingFeeOnTransferTokens(amountIn(uint256): 25000000000000000000000, amountOutMin(uint256): 0, path(address[]): ['0x55d398326f99059fF775485246999027B31979..., to(address): 0xa79Fe3, deadline(uint256): 1628041745) -> None
+                [9][CALL] from=WaultSwapRouter, to=BEP20USDT, transferFrom(sender(address): 0xa79Fe3, recipient(address): 0x50e8D9, amount(uint256): 25000000000000000000000) -> True
+                [9][STATICCALL] from=WaultSwapRouter, to=WaultSwapToken, balanceOf(account(address): 0xa79Fe3) -> 13398313794853772126654406
+                [9][STATICCALL] from=WaultSwapRouter, to=WaultSwapPair, getReserves() -> ['36415520220497909455619647', '252753701067082686926647739', '1628041745']
+                [9][STATICCALL] from=WaultSwapRouter, to=BEP20USDT, balanceOf(account(address): 0x50e8D9) -> 36440520220497909455619647
+                [9][CALL] from=WaultSwapRouter, to=WaultSwapPair, swap(amount0Out(uint256): 0, amount1Out(uint256): 173054979901890720662183, to(address): 0xa79Fe3, data(bytes): b'') -> None
+                  [10][CALL] from=WaultSwapPair, to=WaultSwapToken, transfer(recipient(address): 0xa79Fe3, amount(uint256): 173054979901890720662183) -> True
+                  [10][STATICCALL] from=WaultSwapPair, to=BEP20USDT, balanceOf(account(address): 0x50e8D9) -> 36440520220497909455619647
+                  [10][STATICCALL] from=WaultSwapPair, to=WaultSwapToken, balanceOf(account(address): 0x50e8D9) -> 252580646087180796205985556
+                [9][STATICCALL] from=WaultSwapRouter, to=WaultSwapToken, balanceOf(account(address): 0xa79Fe3) -> 13571368774755662847316589
+              [8][CALL] from=WUSDMaster, to=WUSD, mint(account(address): 0x50AFA9, amount(uint256): 250000000000000000000000) -> None
+            [7][CALL] from=0x50afa9, to=WaultSwapToken, approve(spender(address): 0xD48745, amount(uint256): 115792089237316195423570985008687907853269...) -> True
+            [7][STATICCALL] from=0x50afa9, to=WaultSwapToken, balanceOf(account(address): 0x50AFA9) -> 624440724872152336310914112
+            [7][CALL] from=0x50afa9, to=WaultSwapRouter, swapExactTokensForTokens(amountIn(uint256): 624440724872152336310914112, amountOutMin(uint256): 0, path(address[]): ['0xa9c41A46a6B3531d28d5c32F6633dd2fF05dFB..., to(address): 0x50AFA9, deadline(uint256): 1628041745) -> [624440724872152336310914112, 25930747132968694969927012]
+              [8][STATICCALL] from=WaultSwapRouter, to=WaultSwapPair, getReserves() -> ['36440520220497909455619647', '252580646087180796205985556', '1628041745']
+              [8][CALL] from=WaultSwapRouter, to=WaultSwapToken, transferFrom(sender(address): 0x50AFA9, recipient(address): 0x50e8D9, amount(uint256): 624440724872152336310914112) -> True
+              [8][CALL] from=WaultSwapRouter, to=WaultSwapPair, swap(amount0Out(uint256): 25930747132968694969927012, amount1Out(uint256): 0, to(address): 0x50AFA9, data(bytes): b'') -> None
+                [9][CALL] from=WaultSwapPair, to=BEP20USDT, transfer(recipient(address): 0x50AFA9, amount(uint256): 25930747132968694969927012) -> True
+                [9][STATICCALL] from=WaultSwapPair, to=BEP20USDT, balanceOf(account(address): 0x50e8D9) -> 10509773087529214485692635
+                [9][STATICCALL] from=WaultSwapPair, to=WaultSwapToken, balanceOf(account(address): 0x50e8D9) -> 877021370959333132516899668
+            [7][CALL] from=0x50afa9, to=BEP20USDT, transfer(recipient(address): 0x16b9a8, amount(uint256): 40120361083249749247743229) -> True
+          [6][STATICCALL] from=PancakePair, to=BEP20USDT, balanceOf(account(address): 0x16b9a8) -> 132427617878135562248885975
+          [6][STATICCALL] from=PancakePair, to=WBNB, balanceOf((address): 0x16b9a8) -> 407847218773616057408874
+        [5][CALL] from=0x50afa9, to=WUSD, transfer(recipient(address): 0x6102D8, amount(uint256): 16889673028882646269930564) -> True
+      [4][STATICCALL] from=WaultSwapPair, to=WUSD, balanceOf(account(address): 0x6102D8) -> 16889673028882646269930565
+      [4][STATICCALL] from=WaultSwapPair, to=BEP20Token, balanceOf(account(address): 0x6102D8) -> 16872865156549478971040297
+    [3][CALL] from=0x50afa9, to=WUSD, approve(spender(address): 0xD48745, amount(uint256): 115792089237316195423570985008687907853269...) -> True
+    [3][STATICCALL] from=0x50afa9, to=WUSD, balanceOf(account(address): 0x50AFA9) -> 110326971117353730069436
+    [3][CALL] from=0x50afa9, to=WaultSwapRouter, swapExactTokensForTokens(amountIn(uint256): 110326971117353730069436, amountOutMin(uint256): 0, path(address[]): ['0x3fF997eAeA488A082fb7Efc8e6B9951990D0c3..., to(address): 0x50AFA9, deadline(uint256): 1628041745) -> [110326971117353730069436, 109284303328965007193911]
+      [4][STATICCALL] from=WaultSwapRouter, to=WaultSwapPair, getReserves() -> ['16889673028882646269930565', '16872865156549478971040297', '1628041745']
+      [4][CALL] from=WaultSwapRouter, to=WUSD, transferFrom(sender(address): 0x50AFA9, recipient(address): 0x6102D8, amount(uint256): 110326971117353730069436) -> True
+      [4][CALL] from=WaultSwapRouter, to=WaultSwapPair, swap(amount0Out(uint256): 0, amount1Out(uint256): 109284303328965007193911, to(address): 0x50AFA9, data(bytes): b'') -> None
+        [5][CALL] from=WaultSwapPair, to=BEP20Token, transfer(recipient(address): 0x50AFA9, amount(uint256): 109284303328965007193911) -> True
+        [5][STATICCALL] from=WaultSwapPair, to=WUSD, balanceOf(account(address): 0x6102D8) -> 17000000000000000000000001
+        [5][STATICCALL] from=WaultSwapPair, to=BEP20Token, balanceOf(account(address): 0x6102D8) -> 16763580853220513963846386
+    [3][STATICCALL] from=0x50afa9, to=BEP20Token, balanceOf(account(address): 0x50AFA9) -> 109284303328965007193911
+    [3][STATICCALL] from=0x50afa9, to=BEP20USDT, balanceOf(account(address): 0x50AFA9) -> 847616630466772231874633
+    [3][CALL] from=0x50afa9, to=BEP20Token, approve(spender(address): 0x10ED43, amount(uint256): 115792089237316195423570985008687907853269...) -> True
+    [3][STATICCALL] from=0x50afa9, to=BEP20Token, balanceOf(account(address): 0x50AFA9) -> 109284303328965007193911
+    [3][CALL] from=0x50afa9, to=PancakeRouter, swapExactTokensForTokens(amountIn(uint256): 109284303328965007193911, amountOutMin(uint256): 0, path(address[]): ['0xe9e7CEA3DedcA5984780Bafc599bD69ADd087D..., to(address): 0x886358, deadline(uint256): 1628041745) -> [109284303328965007193911, 335848490911995985324, 42952549852707369734]
+      [4][STATICCALL] from=PancakeRouter, to=PancakePair, getReserves() -> ['765941250144851221836157', '248503368544689599637272678', '1628041741']
+      [4][STATICCALL] from=PancakeRouter, to=PancakePair, getReserves() -> ['33361768267814077436031', '259870457776886142834919', '1628041708']
+      [4][CALL] from=PancakeRouter, to=BEP20Token, transferFrom(sender(address): 0x50AFA9, recipient(address): 0x58F876, amount(uint256): 109284303328965007193911) -> True
+      [4][CALL] from=PancakeRouter, to=PancakePair, swap(amount0Out(uint256): 335848490911995985324, amount1Out(uint256): 0, to(address): 0x74E471, data(bytes): b'') -> None
+        [5][CALL] from=PancakePair, to=WBNB, transfer(dst(address): 0x74E471, wad(uint256): 335848490911995985324) -> True
+        [5][STATICCALL] from=PancakePair, to=WBNB, balanceOf((address): 0x58F876) -> 765605401653939225850833
+        [5][STATICCALL] from=PancakePair, to=BEP20Token, balanceOf(account(address): 0x58F876) -> 248612652848018564644466589
+      [4][CALL] from=PancakeRouter, to=PancakePair, swap(amount0Out(uint256): 42952549852707369734, amount1Out(uint256): 0, to(address): 0x886358, data(bytes): b'') -> None
+        [5][CALL] from=PancakePair, to=BEP20Ethereum, transfer(recipient(address): 0x886358, amount(uint256): 42952549852707369734) -> True
+        [5][STATICCALL] from=PancakePair, to=BEP20Ethereum, balanceOf(account(address): 0x74E471) -> 33318815717961370066297
+        [5][STATICCALL] from=PancakePair, to=WBNB, balanceOf((address): 0x74E471) -> 260206306267798138820243
+    [3][CALL] from=0x50afa9, to=BEP20USDT, approve(spender(address): 0x10ED43, amount(uint256): 115792089237316195423570985008687907853269...) -> True
+    [3][STATICCALL] from=0x50afa9, to=BEP20USDT, balanceOf(account(address): 0x50AFA9) -> 847616630466772231874633
+    [3][CALL] from=0x50afa9, to=PancakeRouter, swapExactTokensForTokens(amountIn(uint256): 847616630466772231874633, amountOutMin(uint256): 0, path(address[]): ['0x55d398326f99059fF775485246999027B31979..., to(address): 0x886358, deadline(uint256): 1628041745) -> [847616630466772231874633, 2587422368723336563694, 327239320654009276494]
+      [4][STATICCALL] from=PancakeRouter, to=PancakePair, getReserves() -> ['132427617878135562248885975', '407847218773616057408874', '1628041745']
+      [4][STATICCALL] from=PancakeRouter, to=PancakePair, getReserves() -> ['33318815717961370066297', '260206306267798138820243', '1628041745']
+      [4][CALL] from=PancakeRouter, to=BEP20USDT, transferFrom(sender(address): 0x50AFA9, recipient(address): 0x16b9a8, amount(uint256): 847616630466772231874633) -> True
+      [4][CALL] from=PancakeRouter, to=PancakePair, swap(amount0Out(uint256): 0, amount1Out(uint256): 2587422368723336563694, to(address): 0x74E471, data(bytes): b'') -> None
+        [5][CALL] from=PancakePair, to=WBNB, transfer(dst(address): 0x74E471, wad(uint256): 2587422368723336563694) -> True
+        [5][STATICCALL] from=PancakePair, to=BEP20USDT, balanceOf(account(address): 0x16b9a8) -> 133275234508602334480760608
+        [5][STATICCALL] from=PancakePair, to=WBNB, balanceOf((address): 0x16b9a8) -> 405259796404892720845180
+      [4][CALL] from=PancakeRouter, to=PancakePair, swap(amount0Out(uint256): 327239320654009276494, amount1Out(uint256): 0, to(address): 0x886358, data(bytes): b'') -> None
+        [5][CALL] from=PancakePair, to=BEP20Ethereum, transfer(recipient(address): 0x886358, amount(uint256): 327239320654009276494) -> True
+        [5][STATICCALL] from=PancakePair, to=BEP20Ethereum, balanceOf(account(address): 0x74E471) -> 32991576397307360789803
+        [5][STATICCALL] from=PancakePair, to=WBNB, balanceOf((address): 0x74E471) -> 262793728636521475383937
+    [3][STATICCALL] from=0x50afa9, to=BEP20Ethereum, balanceOf(account(address): 0x886358) -> 370914002096716646228

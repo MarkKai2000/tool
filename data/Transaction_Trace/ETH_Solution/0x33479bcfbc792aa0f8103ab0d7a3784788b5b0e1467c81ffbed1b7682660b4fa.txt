@@ -1,0 +1,4 @@
+[1][CALL] from=0x1751e3, to=0x897679, 0x74a97af6() -> 0x000000
+  [2][CALL] from=0x897679, to=0x2d85f5, 0x74a97af6() -> 0x000000
+    [3][CALL] from=0x2d85f5, to=StakingRewards, withdraw(amount(uint256): 8792873290680252648282) -> None
+      [4][CALL] from=StakingRewards, to=UniswapV2Pair, transfer(to(address): 0x2D85F5, value(uint256): 8792873290680252648282) -> True

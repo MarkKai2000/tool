@@ -1,0 +1,94 @@
+[1][CALL] from=0x14c199, to=0x6cFa86, 0xb727281f() -> None
+  [2][STATICCALL] from=0x6cFa86, to=Curve, viewDeposituint256() -> 0x000000
+    [3][DELEGATECALL] from=Curve, to=ProportionalLiquidity, 0x822f39d5() -> 0x000000
+      [4][STATICCALL] from=Curve, to=0x08cd9d, viewNumeraireBalanceLPRatiouint256() -> 0x000000
+        [5][STATICCALL] from=0x08cd9d, to=FiatTokenProxy, balanceOf(_address(address): 0x461611) -> 3443204368289954
+          [6][DELEGATECALL] from=FiatTokenProxy, to=FiatTokenV1, balanceOf(_address(address): 0x461611) -> 3443204368289954
+        [5][STATICCALL] from=0x08cd9d, to=FiatTokenProxy, balanceOf(account(address): 0x461611) -> 150611492393
+          [6][DELEGATECALL] from=FiatTokenProxy, to=FiatTokenV2_1, balanceOf(account(address): 0x461611) -> 150611492393
+      [4][STATICCALL] from=Curve, to=0xc2e645, viewNumeraireBalanceLPRatiouint256() -> 0x000000
+        [5][STATICCALL] from=0xc2e645, to=FiatTokenProxy, balanceOf(account(address): 0x461611) -> 150611492393
+          [6][DELEGATECALL] from=FiatTokenProxy, to=FiatTokenV2_1, balanceOf(account(address): 0x461611) -> 150611492393
+        [5][STATICCALL] from=0xc2e645, to=FiatTokenProxy, balanceOf(account(address): 0x461611) -> 150611492393
+          [6][DELEGATECALL] from=FiatTokenProxy, to=FiatTokenV2_1, balanceOf(account(address): 0x461611) -> 150611492393
+      [4][STATICCALL] from=Curve, to=0x08cd9d, viewRawAmountLPRatiouint256() -> 0x000000
+        [5][STATICCALL] from=0x08cd9d, to=FiatTokenProxy, balanceOf(_address(address): 0x461611) -> 3443204368289954
+          [6][DELEGATECALL] from=FiatTokenProxy, to=FiatTokenV1, balanceOf(_address(address): 0x461611) -> 3443204368289954
+        [5][STATICCALL] from=0x08cd9d, to=FiatTokenProxy, balanceOf(account(address): 0x461611) -> 150611492393
+          [6][DELEGATECALL] from=FiatTokenProxy, to=FiatTokenV2_1, balanceOf(account(address): 0x461611) -> 150611492393
+      [4][STATICCALL] from=Curve, to=0xc2e645, viewRawAmountLPRatiouint256() -> 0x000000
+        [5][STATICCALL] from=0xc2e645, to=FiatTokenProxy, balanceOf(account(address): 0x461611) -> 150611492393
+          [6][DELEGATECALL] from=FiatTokenProxy, to=FiatTokenV2_1, balanceOf(account(address): 0x461611) -> 150611492393
+        [5][STATICCALL] from=0xc2e645, to=FiatTokenProxy, balanceOf(account(address): 0x461611) -> 150611492393
+          [6][DELEGATECALL] from=FiatTokenProxy, to=FiatTokenV2_1, balanceOf(account(address): 0x461611) -> 150611492393
+  [2][CALL] from=0x6cFa86, to=Curve, flash(recipient(address): 0x6cFa86, amount0(uint256): 2209302325559302, amount1(uint256): 95000000000, data(bytes): b'0xcallflash') -> None
+    [3][STATICCALL] from=Curve, to=FiatTokenProxy, balanceOf(_address(address): 0x461611) -> 3443204368289954
+      [4][DELEGATECALL] from=FiatTokenProxy, to=FiatTokenV1, balanceOf(_address(address): 0x461611) -> 3443204368289954
+    [3][STATICCALL] from=Curve, to=FiatTokenProxy, balanceOf(account(address): 0x461611) -> 150611492393
+      [4][DELEGATECALL] from=FiatTokenProxy, to=FiatTokenV2_1, balanceOf(account(address): 0x461611) -> 150611492393
+    [3][STATICCALL] from=Curve, to=FiatTokenProxy, balanceOf(_address(address): 0x461611) -> 3443204368289954
+      [4][DELEGATECALL] from=FiatTokenProxy, to=FiatTokenV1, balanceOf(_address(address): 0x461611) -> 3443204368289954
+    [3][STATICCALL] from=Curve, to=FiatTokenProxy, balanceOf(account(address): 0x461611) -> 150611492393
+      [4][DELEGATECALL] from=FiatTokenProxy, to=FiatTokenV2_1, balanceOf(account(address): 0x461611) -> 150611492393
+    [3][CALL] from=Curve, to=FiatTokenProxy, transfer(_to(address): 0x6cFa86, _amount(uint256): 2209302325559302) -> True
+      [4][DELEGATECALL] from=FiatTokenProxy, to=FiatTokenV1, transfer(_to(address): 0x6cFa86, _amount(uint256): 2209302325559302) -> True
+    [3][CALL] from=Curve, to=FiatTokenProxy, transfer(to(address): 0x6cFa86, value(uint256): 95000000000) -> True
+      [4][DELEGATECALL] from=FiatTokenProxy, to=FiatTokenV2_1, transfer(to(address): 0x6cFa86, value(uint256): 95000000000) -> True
+    [3][CALL] from=Curve, to=0x6cFa86, 0xc3924ed6() -> None
+      [4][CALL] from=0x6cFa86, to=Curve, deposituint256() -> 0x000000
+        [5][DELEGATECALL] from=Curve, to=ProportionalLiquidity, 0x445cc62b() -> 0x000000
+          [6][STATICCALL] from=Curve, to=0x08cd9d, viewNumeraireBalanceLPRatiouint256() -> 0x000000
+            [7][STATICCALL] from=0x08cd9d, to=FiatTokenProxy, balanceOf(_address(address): 0x461611) -> 1233902042730652
+              [8][DELEGATECALL] from=FiatTokenProxy, to=FiatTokenV1, balanceOf(_address(address): 0x461611) -> 1233902042730652
+            [7][STATICCALL] from=0x08cd9d, to=FiatTokenProxy, balanceOf(account(address): 0x461611) -> 55611492393
+              [8][DELEGATECALL] from=FiatTokenProxy, to=FiatTokenV2_1, balanceOf(account(address): 0x461611) -> 55611492393
+          [6][STATICCALL] from=Curve, to=0xc2e645, viewNumeraireBalanceLPRatiouint256() -> 0x000000
+            [7][STATICCALL] from=0xc2e645, to=FiatTokenProxy, balanceOf(account(address): 0x461611) -> 55611492393
+              [8][DELEGATECALL] from=FiatTokenProxy, to=FiatTokenV2_1, balanceOf(account(address): 0x461611) -> 55611492393
+            [7][STATICCALL] from=0xc2e645, to=FiatTokenProxy, balanceOf(account(address): 0x461611) -> 55611492393
+              [8][DELEGATECALL] from=FiatTokenProxy, to=FiatTokenV2_1, balanceOf(account(address): 0x461611) -> 55611492393
+          [6][DELEGATECALL] from=Curve, to=0x08cd9d, intakeNumeraireLPRatiouint256() -> 0x000000
+            [7][STATICCALL] from=Curve, to=FiatTokenProxy, balanceOf(_address(address): 0x461611) -> 1233902042730652
+              [8][DELEGATECALL] from=FiatTokenProxy, to=FiatTokenV1, balanceOf(_address(address): 0x461611) -> 1233902042730652
+            [7][STATICCALL] from=Curve, to=FiatTokenProxy, balanceOf(account(address): 0x461611) -> 55611492393
+              [8][DELEGATECALL] from=FiatTokenProxy, to=FiatTokenV2_1, balanceOf(account(address): 0x461611) -> 55611492393
+            [7][CALL] from=Curve, to=FiatTokenProxy, transferFrom(_from(address): 0x6cFa86, _to(address): 0x461611, _amount(uint256): 2222222222200000) -> True
+              [8][DELEGATECALL] from=FiatTokenProxy, to=FiatTokenV1, transferFrom(_from(address): 0x6cFa86, _to(address): 0x461611, _amount(uint256): 2222222222200000) -> True
+          [6][DELEGATECALL] from=Curve, to=0xc2e645, intakeNumeraireLPRatiouint256() -> 0x000000
+            [7][STATICCALL] from=Curve, to=FiatTokenProxy, balanceOf(account(address): 0x461611) -> 55611492393
+              [8][DELEGATECALL] from=FiatTokenProxy, to=FiatTokenV2_1, balanceOf(account(address): 0x461611) -> 55611492393
+            [7][STATICCALL] from=Curve, to=FiatTokenProxy, balanceOf(account(address): 0x461611) -> 55611492393
+              [8][DELEGATECALL] from=FiatTokenProxy, to=FiatTokenV2_1, balanceOf(account(address): 0x461611) -> 55611492393
+            [7][CALL] from=Curve, to=FiatTokenProxy, transferFrom(from(address): 0x6cFa86, to(address): 0x461611, value(uint256): 100000000000) -> True
+              [8][DELEGATECALL] from=FiatTokenProxy, to=FiatTokenV2_1, transferFrom(from(address): 0x6cFa86, to(address): 0x461611, value(uint256): 100000000000) -> True
+    [3][STATICCALL] from=Curve, to=FiatTokenProxy, balanceOf(_address(address): 0x461611) -> 3456124264930652
+      [4][DELEGATECALL] from=FiatTokenProxy, to=FiatTokenV1, balanceOf(_address(address): 0x461611) -> 3456124264930652
+    [3][STATICCALL] from=Curve, to=FiatTokenProxy, balanceOf(account(address): 0x461611) -> 155611492393
+      [4][DELEGATECALL] from=FiatTokenProxy, to=FiatTokenV2_1, balanceOf(account(address): 0x461611) -> 155611492393
+    [3][CALL] from=Curve, to=FiatTokenProxy, transfer(_to(address): 0x27E843, _amount(uint256): 12919896640698) -> True
+      [4][DELEGATECALL] from=FiatTokenProxy, to=FiatTokenV1, transfer(_to(address): 0x27E843, _amount(uint256): 12919896640698) -> True
+    [3][CALL] from=Curve, to=FiatTokenProxy, transfer(to(address): 0x27E843, value(uint256): 5000000000) -> True
+      [4][DELEGATECALL] from=FiatTokenProxy, to=FiatTokenV2_1, transfer(to(address): 0x27E843, value(uint256): 5000000000) -> True
+  [2][STATICCALL] from=0x6cFa86, to=Curve, balanceOf(_account(address): 0x6cFa86) -> 2426351278957777281372210
+  [2][CALL] from=0x6cFa86, to=Curve, withdrawuint256() -> 0x000000
+    [3][DELEGATECALL] from=Curve, to=ProportionalLiquidity, 0x44fd3db0() -> 0x000000
+      [4][STATICCALL] from=Curve, to=0x08cd9d, viewNumeraireBalanceaddress() -> 0x000000
+        [5][STATICCALL] from=0x08cd9d, to=EACAggregatorProxy, latestRoundData() -> ['18446744073709552074', '6417', '1668092435', '1668092435', '18446744073709552074']
+          [6][STATICCALL] from=EACAggregatorProxy, to=AccessControlledOffchainAggregator, latestRoundData() -> ['458', '6417', '1668092435', '1668092435', '458']
+        [5][STATICCALL] from=0x08cd9d, to=FiatTokenProxy, balanceOf(_address(address): 0x461611) -> 3443204368289954
+          [6][DELEGATECALL] from=FiatTokenProxy, to=FiatTokenV1, balanceOf(_address(address): 0x461611) -> 3443204368289954
+      [4][STATICCALL] from=Curve, to=0xc2e645, viewNumeraireBalanceaddress() -> 0x000000
+        [5][STATICCALL] from=0xc2e645, to=EACAggregatorProxy, latestRoundData() -> ['36893488147419103967', '99983254', '1668101663', '1668101663', '36893488147419103967']
+          [6][STATICCALL] from=EACAggregatorProxy, to=AccessControlledOffchainAggregator, latestRoundData() -> ['735', '99983254', '1668101663', '1668101663', '735']
+        [5][STATICCALL] from=0xc2e645, to=FiatTokenProxy, balanceOf(account(address): 0x461611) -> 150611492393
+          [6][DELEGATECALL] from=FiatTokenProxy, to=FiatTokenV2_1, balanceOf(account(address): 0x461611) -> 150611492393
+      [4][DELEGATECALL] from=Curve, to=0x08cd9d, outputNumeraireaddress() -> 0x000000
+        [5][STATICCALL] from=Curve, to=EACAggregatorProxy, latestRoundData() -> ['18446744073709552074', '6417', '1668092435', '1668092435', '18446744073709552074']
+          [6][STATICCALL] from=EACAggregatorProxy, to=AccessControlledOffchainAggregator, latestRoundData() -> ['458', '6417', '1668092435', '1668092435', '458']
+        [5][CALL] from=Curve, to=FiatTokenProxy, transfer(_to(address): 0x6cFa86, _amount(uint256): 2212692851488234) -> True
+          [6][DELEGATECALL] from=FiatTokenProxy, to=FiatTokenV1, transfer(_to(address): 0x6cFa86, _amount(uint256): 2212692851488234) -> True
+      [4][DELEGATECALL] from=Curve, to=0xc2e645, outputNumeraireaddress() -> 0x000000
+        [5][STATICCALL] from=Curve, to=EACAggregatorProxy, latestRoundData() -> ['36893488147419103967', '99983254', '1668101663', '1668101663', '36893488147419103967']
+          [6][STATICCALL] from=EACAggregatorProxy, to=AccessControlledOffchainAggregator, latestRoundData() -> ['735', '99983254', '1668101663', '1668101663', '735']
+        [5][CALL] from=Curve, to=FiatTokenProxy, transfer(to(address): 0x6cFa86, value(uint256): 96786869707) -> True
+          [6][DELEGATECALL] from=FiatTokenProxy, to=FiatTokenV2_1, transfer(to(address): 0x6cFa86, value(uint256): 96786869707) -> True

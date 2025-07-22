@@ -1,0 +1,2 @@
+[1][CALL] from=0xd771df, to=TransparentUpgradeableProxy, 0xb5863c10() -> None
+  [2][DELEGATECALL] from=TransparentUpgradeableProxy, to=0x312dc3, 0xb5863c10() -> None

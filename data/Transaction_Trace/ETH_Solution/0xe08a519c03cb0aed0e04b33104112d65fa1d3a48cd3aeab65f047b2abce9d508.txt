@@ -1,0 +1,2 @@
+[1][CALL] from=0xa169df, to=FoMo3Dlong, withdraw() -> None
+  [2][CALL][10469.660003123932] from=FoMo3Dlong, to=0xa169df

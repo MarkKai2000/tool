@@ -1,0 +1,1 @@
+[1][CALL] from=0xd19cb0, to=CRYPTONINJAWORLD, burn(tokenId(uint256): 9071) -> None

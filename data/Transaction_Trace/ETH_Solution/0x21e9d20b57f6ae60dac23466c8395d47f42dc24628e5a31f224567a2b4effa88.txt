@@ -1,0 +1,100 @@
+[1][CALL] from=0xcf267e, to=0xc5918a, 0x58f69e07() -> None
+  [2][CALL] from=0xc5918a, to=LedgerChannel, createChannel(_lcID(bytes32): b'N\x03ez\xeaE\xa9O\xc7\xd4{\xa8&\xc8\xd6g..., _partyI(address): 0xcf267e, _confirmTime(uint256): 115792089237316195423570985008687907853269..., _token(address): 0xc5918a, _balances(uint256[2]): [5000000000000000000, 1]) -> None
+    [3][CALL] from=LedgerChannel, to=0xc5918a, transferFromaddress() -> 0x000000
+  [2][CALL] from=0xc5918a, to=LedgerChannel, LCOpenTimeout(_lcID(bytes32): b'N\x03ez\xeaE\xa9O\xc7\xd4{\xa8&\xc8\xd6g...) -> None
+    [3][CALL][5.0] from=LedgerChannel, to=0xc5918a
+    [3][CALL] from=LedgerChannel, to=0xc5918a, transferaddress() -> 0x000000
+      [4][CALL] from=0xc5918a, to=LedgerChannel, LCOpenTimeout(_lcID(bytes32): b'N\x03ez\xeaE\xa9O\xc7\xd4{\xa8&\xc8\xd6g...) -> None
+        [5][CALL][5.0] from=LedgerChannel, to=0xc5918a
+        [5][CALL] from=LedgerChannel, to=0xc5918a, transferaddress() -> 0x000000
+          [6][CALL] from=0xc5918a, to=LedgerChannel, LCOpenTimeout(_lcID(bytes32): b'N\x03ez\xeaE\xa9O\xc7\xd4{\xa8&\xc8\xd6g...) -> None
+            [7][CALL][5.0] from=LedgerChannel, to=0xc5918a
+            [7][CALL] from=LedgerChannel, to=0xc5918a, transferaddress() -> 0x000000
+              [8][CALL] from=0xc5918a, to=LedgerChannel, LCOpenTimeout(_lcID(bytes32): b'N\x03ez\xeaE\xa9O\xc7\xd4{\xa8&\xc8\xd6g...) -> None
+                [9][CALL][5.0] from=LedgerChannel, to=0xc5918a
+                [9][CALL] from=LedgerChannel, to=0xc5918a, transferaddress() -> 0x000000
+                  [10][CALL] from=0xc5918a, to=LedgerChannel, LCOpenTimeout(_lcID(bytes32): b'N\x03ez\xeaE\xa9O\xc7\xd4{\xa8&\xc8\xd6g...) -> None
+                    [11][CALL][5.0] from=LedgerChannel, to=0xc5918a
+                    [11][CALL] from=LedgerChannel, to=0xc5918a, transferaddress() -> 0x000000
+                      [12][CALL] from=0xc5918a, to=LedgerChannel, LCOpenTimeout(_lcID(bytes32): b'N\x03ez\xeaE\xa9O\xc7\xd4{\xa8&\xc8\xd6g...) -> None
+                        [13][CALL][5.0] from=LedgerChannel, to=0xc5918a
+                        [13][CALL] from=LedgerChannel, to=0xc5918a, transferaddress() -> 0x000000
+                          [14][CALL] from=0xc5918a, to=LedgerChannel, LCOpenTimeout(_lcID(bytes32): b'N\x03ez\xeaE\xa9O\xc7\xd4{\xa8&\xc8\xd6g...) -> None
+                            [15][CALL][5.0] from=LedgerChannel, to=0xc5918a
+                            [15][CALL] from=LedgerChannel, to=0xc5918a, transferaddress() -> 0x000000
+                              [16][CALL] from=0xc5918a, to=LedgerChannel, LCOpenTimeout(_lcID(bytes32): b'N\x03ez\xeaE\xa9O\xc7\xd4{\xa8&\xc8\xd6g...) -> None
+                                [17][CALL][5.0] from=LedgerChannel, to=0xc5918a
+                                [17][CALL] from=LedgerChannel, to=0xc5918a, transferaddress() -> 0x000000
+                                  [18][CALL] from=0xc5918a, to=LedgerChannel, LCOpenTimeout(_lcID(bytes32): b'N\x03ez\xeaE\xa9O\xc7\xd4{\xa8&\xc8\xd6g...) -> None
+                                    [19][CALL][5.0] from=LedgerChannel, to=0xc5918a
+                                    [19][CALL] from=LedgerChannel, to=0xc5918a, transferaddress() -> 0x000000
+                                      [20][CALL] from=0xc5918a, to=LedgerChannel, LCOpenTimeout(_lcID(bytes32): b'N\x03ez\xeaE\xa9O\xc7\xd4{\xa8&\xc8\xd6g...) -> None
+                                        [21][CALL][5.0] from=LedgerChannel, to=0xc5918a
+                                        [21][CALL] from=LedgerChannel, to=0xc5918a, transferaddress() -> 0x000000
+                                          [22][CALL] from=0xc5918a, to=LedgerChannel, LCOpenTimeout(_lcID(bytes32): b'N\x03ez\xeaE\xa9O\xc7\xd4{\xa8&\xc8\xd6g...) -> None
+                                            [23][CALL][5.0] from=LedgerChannel, to=0xc5918a
+                                            [23][CALL] from=LedgerChannel, to=0xc5918a, transferaddress() -> 0x000000
+                                              [24][CALL] from=0xc5918a, to=LedgerChannel, LCOpenTimeout(_lcID(bytes32): b'N\x03ez\xeaE\xa9O\xc7\xd4{\xa8&\xc8\xd6g...) -> None
+                                                [25][CALL][5.0] from=LedgerChannel, to=0xc5918a
+                                                [25][CALL] from=LedgerChannel, to=0xc5918a, transferaddress() -> 0x000000
+                                                  [26][CALL] from=0xc5918a, to=LedgerChannel, LCOpenTimeout(_lcID(bytes32): b'N\x03ez\xeaE\xa9O\xc7\xd4{\xa8&\xc8\xd6g...) -> None
+                                                    [27][CALL][5.0] from=LedgerChannel, to=0xc5918a
+                                                    [27][CALL] from=LedgerChannel, to=0xc5918a, transferaddress() -> 0x000000
+                                                      [28][CALL] from=0xc5918a, to=LedgerChannel, LCOpenTimeout(_lcID(bytes32): b'N\x03ez\xeaE\xa9O\xc7\xd4{\xa8&\xc8\xd6g...) -> None
+                                                        [29][CALL][5.0] from=LedgerChannel, to=0xc5918a
+                                                        [29][CALL] from=LedgerChannel, to=0xc5918a, transferaddress() -> 0x000000
+                                                          [30][CALL] from=0xc5918a, to=LedgerChannel, LCOpenTimeout(_lcID(bytes32): b'N\x03ez\xeaE\xa9O\xc7\xd4{\xa8&\xc8\xd6g...) -> None
+                                                            [31][CALL][5.0] from=LedgerChannel, to=0xc5918a
+                                                            [31][CALL] from=LedgerChannel, to=0xc5918a, transferaddress() -> 0x000000
+                                                              [32][CALL] from=0xc5918a, to=LedgerChannel, LCOpenTimeout(_lcID(bytes32): b'N\x03ez\xeaE\xa9O\xc7\xd4{\xa8&\xc8\xd6g...) -> None
+                                                                [33][CALL][5.0] from=LedgerChannel, to=0xc5918a
+                                                                [33][CALL] from=LedgerChannel, to=0xc5918a, transferaddress() -> 0x000000
+                                                                  [34][CALL] from=0xc5918a, to=LedgerChannel, LCOpenTimeout(_lcID(bytes32): b'N\x03ez\xeaE\xa9O\xc7\xd4{\xa8&\xc8\xd6g...) -> None
+                                                                    [35][CALL][5.0] from=LedgerChannel, to=0xc5918a
+                                                                    [35][CALL] from=LedgerChannel, to=0xc5918a, transferaddress() -> 0x000000
+                                                                      [36][CALL] from=0xc5918a, to=LedgerChannel, LCOpenTimeout(_lcID(bytes32): b'N\x03ez\xeaE\xa9O\xc7\xd4{\xa8&\xc8\xd6g...) -> None
+                                                                        [37][CALL][5.0] from=LedgerChannel, to=0xc5918a
+                                                                        [37][CALL] from=LedgerChannel, to=0xc5918a, transferaddress() -> 0x000000
+                                                                          [38][CALL] from=0xc5918a, to=LedgerChannel, LCOpenTimeout(_lcID(bytes32): b'N\x03ez\xeaE\xa9O\xc7\xd4{\xa8&\xc8\xd6g...) -> None
+                                                                            [39][CALL][5.0] from=LedgerChannel, to=0xc5918a
+                                                                            [39][CALL] from=LedgerChannel, to=0xc5918a, transferaddress() -> 0x000000
+                                                                              [40][CALL] from=0xc5918a, to=LedgerChannel, LCOpenTimeout(_lcID(bytes32): b'N\x03ez\xeaE\xa9O\xc7\xd4{\xa8&\xc8\xd6g...) -> None
+                                                                                [41][CALL][5.0] from=LedgerChannel, to=0xc5918a
+                                                                                [41][CALL] from=LedgerChannel, to=0xc5918a, transferaddress() -> 0x000000
+                                                                                  [42][CALL] from=0xc5918a, to=LedgerChannel, LCOpenTimeout(_lcID(bytes32): b'N\x03ez\xeaE\xa9O\xc7\xd4{\xa8&\xc8\xd6g...) -> None
+                                                                                    [43][CALL][5.0] from=LedgerChannel, to=0xc5918a
+                                                                                    [43][CALL] from=LedgerChannel, to=0xc5918a, transferaddress() -> 0x000000
+                                                                                      [44][CALL] from=0xc5918a, to=LedgerChannel, LCOpenTimeout(_lcID(bytes32): b'N\x03ez\xeaE\xa9O\xc7\xd4{\xa8&\xc8\xd6g...) -> None
+                                                                                        [45][CALL][5.0] from=LedgerChannel, to=0xc5918a
+                                                                                        [45][CALL] from=LedgerChannel, to=0xc5918a, transferaddress() -> 0x000000
+                                                                                          [46][CALL] from=0xc5918a, to=LedgerChannel, LCOpenTimeout(_lcID(bytes32): b'N\x03ez\xeaE\xa9O\xc7\xd4{\xa8&\xc8\xd6g...) -> None
+                                                                                            [47][CALL][5.0] from=LedgerChannel, to=0xc5918a
+                                                                                            [47][CALL] from=LedgerChannel, to=0xc5918a, transferaddress() -> 0x000000
+                                                                                              [48][CALL] from=0xc5918a, to=LedgerChannel, LCOpenTimeout(_lcID(bytes32): b'N\x03ez\xeaE\xa9O\xc7\xd4{\xa8&\xc8\xd6g...) -> None
+                                                                                                [49][CALL][5.0] from=LedgerChannel, to=0xc5918a
+                                                                                                [49][CALL] from=LedgerChannel, to=0xc5918a, transferaddress() -> 0x000000
+                                                                                                  [50][CALL] from=0xc5918a, to=LedgerChannel, LCOpenTimeout(_lcID(bytes32): b'N\x03ez\xeaE\xa9O\xc7\xd4{\xa8&\xc8\xd6g...) -> None
+                                                                                                    [51][CALL][5.0] from=LedgerChannel, to=0xc5918a
+                                                                                                    [51][CALL] from=LedgerChannel, to=0xc5918a, transferaddress() -> 0x000000
+                                                                                                      [52][CALL] from=0xc5918a, to=LedgerChannel, LCOpenTimeout(_lcID(bytes32): b'N\x03ez\xeaE\xa9O\xc7\xd4{\xa8&\xc8\xd6g...) -> None
+                                                                                                        [53][CALL][5.0] from=LedgerChannel, to=0xc5918a
+                                                                                                        [53][CALL] from=LedgerChannel, to=0xc5918a, transferaddress() -> 0x000000
+                                                                                                          [54][CALL] from=0xc5918a, to=LedgerChannel, LCOpenTimeout(_lcID(bytes32): b'N\x03ez\xeaE\xa9O\xc7\xd4{\xa8&\xc8\xd6g...) -> None
+                                                                                                            [55][CALL][5.0] from=LedgerChannel, to=0xc5918a
+                                                                                                            [55][CALL] from=LedgerChannel, to=0xc5918a, transferaddress() -> 0x000000
+                                                                                                              [56][CALL] from=0xc5918a, to=LedgerChannel, LCOpenTimeout(_lcID(bytes32): b'N\x03ez\xeaE\xa9O\xc7\xd4{\xa8&\xc8\xd6g...) -> None
+                                                                                                                [57][CALL][5.0] from=LedgerChannel, to=0xc5918a
+                                                                                                                [57][CALL] from=LedgerChannel, to=0xc5918a, transferaddress() -> 0x000000
+                                                                                                                  [58][CALL] from=0xc5918a, to=LedgerChannel, LCOpenTimeout(_lcID(bytes32): b'N\x03ez\xeaE\xa9O\xc7\xd4{\xa8&\xc8\xd6g...) -> None
+                                                                                                                    [59][CALL][5.0] from=LedgerChannel, to=0xc5918a
+                                                                                                                    [59][CALL] from=LedgerChannel, to=0xc5918a, transferaddress() -> 0x000000
+                                                                                                                      [60][CALL] from=0xc5918a, to=LedgerChannel, LCOpenTimeout(_lcID(bytes32): b'N\x03ez\xeaE\xa9O\xc7\xd4{\xa8&\xc8\xd6g...) -> None
+                                                                                                                        [61][CALL][5.0] from=LedgerChannel, to=0xc5918a
+                                                                                                                        [61][CALL] from=LedgerChannel, to=0xc5918a, transferaddress() -> 0x000000
+                                                                                                                          [62][CALL] from=0xc5918a, to=LedgerChannel, LCOpenTimeout(_lcID(bytes32): b'N\x03ez\xeaE\xa9O\xc7\xd4{\xa8&\xc8\xd6g...) -> None
+                                                                                                                            [63][CALL][5.0] from=LedgerChannel, to=0xc5918a
+                                                                                                                            [63][CALL] from=LedgerChannel, to=0xc5918a, transferaddress() -> 0x000000
+                                                                                                                              [64][CALL] from=0xc5918a, to=LedgerChannel, LCOpenTimeout(_lcID(bytes32): b'N\x03ez\xeaE\xa9O\xc7\xd4{\xa8&\xc8\xd6g...) -> None
+                                                                                                                                [65][CALL][5.0] from=LedgerChannel, to=0xc5918a
+                                                                                                                                [65][CALL] from=LedgerChannel, to=0xc5918a, transferaddress() -> 0x000000
+  [2][CALL][160.0] from=0xc5918a, to=0xcf267e

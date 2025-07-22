@@ -1,0 +1,51 @@
+[1][CALL] from=0x6ec21d, to=0x9420f8, 0x9d9bc82b() -> None
+  [2][CREATE] from=0x9420f8, to=0x466b85, atInversebrahint248() -> 0x608060
+  [2][CALL] from=0x9420f8, to=0x466b85, start() -> 0x000000
+    [3][CALL] from=0x466b85, to=Vault, flashLoan(recipient(address): 0x466B85, tokens(address[]): ['0xC02aaA39b223FE8D0A0e5C4F27eAD9083C756C..., amounts(uint256[]): [80000000000000000000000], userData(bytes): b'') -> None
+      [4][STATICCALL] from=Vault, to=WETH9, balanceOf((address): 0xBA1222) -> 86795127034225377702217
+      [4][STATICCALL] from=Vault, to=ProtocolFeesCollector, getFlashLoanFeePercentage() -> 0
+      [4][CALL] from=Vault, to=WETH9, transfer(dst(address): 0x466B85, wad(uint256): 80000000000000000000000) -> True
+      [4][CALL] from=Vault, to=0x466b85, receiveFlashLoanaddress[]() -> None
+        [5][CALL] from=0x466b85, to=WETH9, withdraw(wad(uint256): 80000000000000000000000) -> None
+          [6][CALL][80000.0] from=WETH9, to=0x466b85
+        [5][CALL] from=0x466b85, to=Vyper_contract, add_liquidity(_amounts(uint256[2]): [40000000000000000000000, 0], _min_mint_amount(uint256): 0) -> 32431418915862116695669
+          [6][DELEGATECALL] from=Vyper_contract, to=Vyper_contract, add_liquidity(_amounts(uint256[2]): [40000000000000000000000, 0], _min_mint_amount(uint256): 0) -> 32431418915862116695669
+        [5][STATICCALL] from=0x466b85, to=Vyper_contract, balanceOf(arg0(address): 0x466B85) -> 32431418915862116695669
+          [6][DELEGATECALL] from=Vyper_contract, to=Vyper_contract, balanceOf(arg0(address): 0x466B85) -> 32431418915862116695669
+        [5][CALL] from=0x466b85, to=Vyper_contract, remove_liquidity(_burn_amount(uint256): 32431418915862116695669, _min_amounts(uint256[2]): [0, 0]) -> [34316009777207925757865, 3740210604054045734722]
+          [6][DELEGATECALL] from=Vyper_contract, to=Vyper_contract, remove_liquidity(_burn_amount(uint256): 32431418915862116695669, _min_amounts(uint256[2]): [0, 0]) -> [34316009777207925757865, 3740210604054045734722]
+            [7][CALL] from=Vyper_contract, to=0x000000, fallback() -> 0x000000
+            [7][CALL][34316.009777207924] from=Vyper_contract, to=0x466b85
+              [8][CALL] from=0x466b85, to=Vyper_contract, add_liquidity(_amounts(uint256[2]): [40000000000000000000000, 0], _min_mint_amount(uint256): 0) -> 82182763636158886167824
+                [9][DELEGATECALL] from=Vyper_contract, to=Vyper_contract, add_liquidity(_amounts(uint256[2]): [40000000000000000000000, 0], _min_mint_amount(uint256): 0) -> 82182763636158886167824
+            [7][CALL] from=Vyper_contract, to=0x000000, transferaddress() -> 0xa9059c
+            [7][CALL] from=Vyper_contract, to=0x000000, fallback() -> 0x000000
+            [7][CALL] from=Vyper_contract, to=PETH, transfer(to(address): 0x466B85, amount(uint256): 3740210604054045734722) -> True
+            [7][CALL] from=Vyper_contract, to=0x000000, fallback() -> 0x000000
+        [5][STATICCALL] from=0x466b85, to=Vyper_contract, balanceOf(arg0(address): 0x466B85) -> 82182763636158886167824
+          [6][DELEGATECALL] from=Vyper_contract, to=Vyper_contract, balanceOf(arg0(address): 0x466B85) -> 82182763636158886167824
+        [5][CALL] from=0x466b85, to=Vyper_contract, remove_liquidity(_burn_amount(uint256): 10272845454519860770978, _min_amounts(uint256[2]): [0, 0]) -> [47506535930968087901649, 1184734026053087584457]
+          [6][DELEGATECALL] from=Vyper_contract, to=Vyper_contract, remove_liquidity(_burn_amount(uint256): 10272845454519860770978, _min_amounts(uint256[2]): [0, 0]) -> [47506535930968087901649, 1184734026053087584457]
+            [7][CALL] from=Vyper_contract, to=0x000000, fallback() -> 0x000000
+            [7][CALL][47506.535930968086] from=Vyper_contract, to=0x466b85
+            [7][CALL] from=Vyper_contract, to=0x000000, transferaddress() -> 0xa9059c
+            [7][CALL] from=Vyper_contract, to=0x000000, fallback() -> 0x000000
+            [7][CALL] from=Vyper_contract, to=PETH, transfer(to(address): 0x466B85, amount(uint256): 1184734026053087584457) -> True
+            [7][CALL] from=Vyper_contract, to=0x000000, fallback() -> 0x000000
+        [5][STATICCALL] from=0x466b85, to=PETH, balanceOf(account(address): 0x466B85) -> 4924944630107133319179
+        [5][CALL] from=0x466b85, to=PETH, approve(spender(address): 0x984848, amount(uint256): 4924944630107133319179) -> True
+        [5][STATICCALL] from=0x466b85, to=PETH, balanceOf(account(address): 0x466B85) -> 4924944630107133319179
+        [5][STATICCALL] from=0x466b85, to=PETH, balanceOf(account(address): 0x466B85) -> 4924944630107133319179
+        [5][CALL] from=0x466b85, to=Vyper_contract, exchange(i(int128): 1, j(int128): 0, _dx(uint256): 4924944630107133319179, _min_dy(uint256): 3924944630107133319179) -> 4285108951030650177969
+          [6][DELEGATECALL] from=Vyper_contract, to=Vyper_contract, exchange(i(int128): 1, j(int128): 0, _dx(uint256): 4924944630107133319179, _min_dy(uint256): 3924944630107133319179) -> 4285108951030650177969
+            [7][CALL] from=Vyper_contract, to=0x000000, transferFromaddress() -> 0x23b872
+            [7][CALL] from=Vyper_contract, to=0x000000, fallback() -> 0x000000
+            [7][CALL] from=Vyper_contract, to=PETH, transferFrom(from(address): 0x466B85, to(address): 0x984848, amount(uint256): 4924944630107133319179) -> True
+            [7][CALL] from=Vyper_contract, to=0x000000, fallback() -> 0x000000
+            [7][CALL] from=Vyper_contract, to=0x000000, fallback() -> 0x000000
+            [7][CALL][4285.10895103065] from=Vyper_contract, to=0x466b85
+        [5][CALL] from=0x466b85, to=WETH9, deposit() -> None
+        [5][CALL] from=0x466b85, to=WETH9, transfer(dst(address): 0xBA1222, wad(uint256): 80000000000000000000000) -> True
+        [5][STATICCALL] from=0x466b85, to=WETH9, balanceOf((address): 0x466B85) -> 6106654659206663837483
+        [5][CALL] from=0x466b85, to=WETH9, transfer(dst(address): 0x9420F8, wad(uint256): 6106654659206663837483) -> True
+      [4][STATICCALL] from=Vault, to=WETH9, balanceOf((address): 0xBA1222) -> 86795127034225377702217

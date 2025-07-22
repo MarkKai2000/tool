@@ -1,0 +1,1150 @@
+[1][CALL] from=0x8f7370, to=0xB618D9, 0x4ee72226() -> None
+  [2][CALL] from=0xB618D9, to=0xac4b3d, flashaddress() -> None
+    [3][STATICCALL] from=0xac4b3d, to=SimpleToken, balanceOf(account(address): 0xAc4b3D) -> 892404538720741080345243
+    [3][STATICCALL] from=0xac4b3d, to=WETH9, balanceOf((address): 0xAc4b3D) -> 186390928587179157982
+    [3][CALL] from=0xac4b3d, to=SimpleToken, transfer(recipient(address): 0xB618D9, amount(uint256): 220000000000000000000000) -> True
+    [3][CALL] from=0xac4b3d, to=0xB618D9, uniswapV3FlashCallbackuint256() -> None
+      [4][CALL] from=0xB618D9, to=SimpleToken, approve(spender(address): 0x736257, amount(uint256): 220000000000000000000000) -> True
+      [4][CALL] from=0xB618D9, to=TransparentUpgradeableProxy, mint(mintAmount(uint256): 220000000000000000000000) -> 0
+        [5][DELEGATECALL] from=TransparentUpgradeableProxy, to=ApePool, mint(mintAmount(uint256): 220000000000000000000000) -> 0
+          [6][STATICCALL] from=TransparentUpgradeableProxy, to=ApeCoinStaking, addressPosition((address): 0x736257) -> ['0', '0']
+          [6][STATICCALL] from=TransparentUpgradeableProxy, to=ApeCoinStaking, pendingRewards(_poolId(uint256): 0, _address(address): 0x736257, _tokenId(uint256): 0) -> 0
+          [6][STATICCALL] from=TransparentUpgradeableProxy, to=SimpleToken, balanceOf(account(address): 0x736257) -> 0
+          [6][STATICCALL] from=TransparentUpgradeableProxy, to=ApeCoinStaking, pools((uint256): 0) -> ['1686967200', '2', '77959594578037454790892529', '402404451968839888']
+          [6][STATICCALL] from=TransparentUpgradeableProxy, to=ApeCoinStaking, getTimeRangeBy(_poolId(uint256): 0, _index(uint256): 2) -> None
+          [6][STATICCALL] from=TransparentUpgradeableProxy, to=JumpRateModelV2, getBorrowRate(cash(uint256): 0, borrows(uint256): 376530168693809981935162, reserves(uint256): 0, rewardRatePerBlock(uint256): 146831015590) -> 322820361098
+          [6][STATICCALL] from=TransparentUpgradeableProxy, to=ApeCoinStaking, pendingRewards(_poolId(uint256): 0, _address(address): 0x736257, _tokenId(uint256): 0) -> 0
+          [6][STATICCALL] from=TransparentUpgradeableProxy, to=ApeCoinStaking, addressPosition((address): 0x736257) -> ['0', '0']
+          [6][STATICCALL] from=TransparentUpgradeableProxy, to=ApeCoinStaking, pendingRewards(_poolId(uint256): 0, _address(address): 0x736257, _tokenId(uint256): 0) -> 0
+          [6][STATICCALL] from=TransparentUpgradeableProxy, to=SimpleToken, balanceOf(account(address): 0x736257) -> 0
+          [6][CALL] from=TransparentUpgradeableProxy, to=ApeCoinStaking, claimSelfApeCoin() -> None
+          [6][STATICCALL] from=TransparentUpgradeableProxy, to=ApeCoinStaking, addressPosition((address): 0x736257) -> ['0', '0']
+          [6][STATICCALL] from=TransparentUpgradeableProxy, to=ApeCoinStaking, pendingRewards(_poolId(uint256): 0, _address(address): 0x736257, _tokenId(uint256): 0) -> 0
+          [6][STATICCALL] from=TransparentUpgradeableProxy, to=SimpleToken, balanceOf(account(address): 0x736257) -> 0
+          [6][STATICCALL] from=TransparentUpgradeableProxy, to=SimpleToken, balanceOf(account(address): 0x736257) -> 0
+          [6][CALL] from=TransparentUpgradeableProxy, to=SimpleToken, transferFrom(sender(address): 0xB618D9, recipient(address): 0x736257, amount(uint256): 220000000000000000000000) -> True
+          [6][STATICCALL] from=TransparentUpgradeableProxy, to=SimpleToken, balanceOf(account(address): 0x736257) -> 220000000000000000000000
+          [6][STATICCALL] from=TransparentUpgradeableProxy, to=SimpleToken, balanceOf(account(address): 0x736257) -> 220000000000000000000000
+          [6][STATICCALL] from=TransparentUpgradeableProxy, to=SimpleToken, allowance(owner(address): 0x736257, spender(address): 0x5954aB) -> 115792089237316195423570985008687907853269984665640563650253211044871298229795
+          [6][CALL] from=TransparentUpgradeableProxy, to=ApeCoinStaking, depositSelfApeCoin(_amount(uint256): 220000000000000000000000) -> None
+            [7][CALL] from=ApeCoinStaking, to=SimpleToken, transferFrom(sender(address): 0x736257, recipient(address): 0x5954aB, amount(uint256): 220000000000000000000000) -> True
+      [4][STATICCALL] from=0xB618D9, to=TransparentUpgradeableProxy, balanceOf(account(address): 0xB618D9) -> 1074845519453938
+        [5][DELEGATECALL] from=TransparentUpgradeableProxy, to=ApePool, balanceOf(account(address): 0xB618D9) -> 1074845519453938
+      [4][CALL] from=0xB618D9, to=TransparentUpgradeableProxy, approve(spender(address): 0x3B2da9, amount(uint256): 1074845519453938) -> True
+        [5][DELEGATECALL] from=TransparentUpgradeableProxy, to=ApePool, approve(spender(address): 0x3B2da9, amount(uint256): 1074845519453938) -> True
+      [4][CALL] from=0xB618D9, to=CErc20Delegator, mint(mintAmount(uint256): 1074845519453938) -> 0
+        [5][DELEGATECALL] from=CErc20Delegator, to=CErc20Delegate, mint(mintAmount(uint256): 1074845519453938) -> 0
+          [6][STATICCALL] from=CErc20Delegator, to=TransparentUpgradeableProxy, balanceOf(account(address): 0x3B2da9) -> 1721876322314030
+            [7][DELEGATECALL] from=TransparentUpgradeableProxy, to=ApePool, balanceOf(account(address): 0x3B2da9) -> 1721876322314030
+          [6][STATICCALL] from=CErc20Delegator, to=JumpRateModelV2, getBorrowRate(cash(uint256): 1721876322314030, borrows(uint256): 0, reserves(uint256): 0) -> 9512937595
+          [6][CALL] from=CErc20Delegator, to=Unitroller, mintAllowed(cToken(address): 0x3B2da9, minter(address): 0xB618D9, mintAmount(uint256): 1074845519453938) -> 0
+            [7][DELEGATECALL] from=Unitroller, to=Comptroller, mintAllowed(cToken(address): 0x3B2da9, minter(address): 0xB618D9, mintAmount(uint256): 1074845519453938) -> 0
+              [8][STATICCALL] from=Unitroller, to=CErc20Delegator, balanceOf(owner(address): 0xB618D9) -> 80613661933061650
+                [9][STATICCALL] from=CErc20Delegator, to=CErc20Delegator, delegateToImplementationbytes() -> 0x000000
+                  [10][DELEGATECALL] from=CErc20Delegator, to=CErc20Delegate, balanceOf(owner(address): 0xB618D9) -> 80613661933061650
+          [6][STATICCALL] from=CErc20Delegator, to=TransparentUpgradeableProxy, balanceOf(account(address): 0x3B2da9) -> 1721876322314030
+            [7][DELEGATECALL] from=TransparentUpgradeableProxy, to=ApePool, balanceOf(account(address): 0x3B2da9) -> 1721876322314030
+          [6][STATICCALL] from=CErc20Delegator, to=TransparentUpgradeableProxy, balanceOf(account(address): 0x3B2da9) -> 1721876322314030
+            [7][DELEGATECALL] from=TransparentUpgradeableProxy, to=ApePool, balanceOf(account(address): 0x3B2da9) -> 1721876322314030
+          [6][CALL] from=CErc20Delegator, to=TransparentUpgradeableProxy, transferFrom(from(address): 0xB618D9, to(address): 0x3B2da9, amount(uint256): 1074845519453938) -> True
+            [7][DELEGATECALL] from=TransparentUpgradeableProxy, to=ApePool, transferFrom(from(address): 0xB618D9, to(address): 0x3B2da9, amount(uint256): 1074845519453938) -> True
+          [6][STATICCALL] from=CErc20Delegator, to=TransparentUpgradeableProxy, balanceOf(account(address): 0x3B2da9) -> 2796721841767968
+            [7][DELEGATECALL] from=TransparentUpgradeableProxy, to=ApePool, balanceOf(account(address): 0x3B2da9) -> 2796721841767968
+      [4][STATICCALL] from=0xB618D9, to=TransparentUpgradeableProxy, getCash() -> 220000000000000000000000
+        [5][DELEGATECALL] from=TransparentUpgradeableProxy, to=ApePool, getCash() -> 220000000000000000000000
+          [6][STATICCALL] from=TransparentUpgradeableProxy, to=ApeCoinStaking, addressPosition((address): 0x736257) -> ['220000000000000000000000', '88528979433144775360000000000000000000000']
+          [6][STATICCALL] from=TransparentUpgradeableProxy, to=ApeCoinStaking, pendingRewards(_poolId(uint256): 0, _address(address): 0x736257, _tokenId(uint256): 0) -> 0
+          [6][STATICCALL] from=TransparentUpgradeableProxy, to=SimpleToken, balanceOf(account(address): 0x736257) -> 0
+      [4][CREATE] from=0xB618D9, to=0xeB5252, atInversebrahint248() -> 0x608060
+        [5][CALL] from=0xeB5252, to=TransparentUpgradeableProxy, depositAndBorrowApeAndStake(depositInfo(tuple): {'mainTokenIds': [], 'bakcTokenIds': []}, stakingInfo(tuple): {'nftAsset': '0xBC4CA0EdA7647A8aB7C2061c2E..., _nfts(tuple[]): [], _nftPairs(tuple[]): []) -> None
+          [6][DELEGATECALL] from=TransparentUpgradeableProxy, to=ApeStaking, depositAndBorrowApeAndStake(depositInfo(tuple): {'mainTokenIds': [], 'bakcTokenIds': []}, stakingInfo(tuple): {'nftAsset': '0xBC4CA0EdA7647A8aB7C2061c2E..., _nfts(tuple[]): [], _nftPairs(tuple[]): []) -> None
+            [7][STATICCALL] from=TransparentUpgradeableProxy, to=TransparentUpgradeableProxy, borrowRatePerBlock() -> 230245936339
+              [8][DELEGATECALL] from=TransparentUpgradeableProxy, to=ApePool, borrowRatePerBlock() -> 230245936339
+                [9][STATICCALL] from=TransparentUpgradeableProxy, to=ApeCoinStaking, addressPosition((address): 0x736257) -> ['220000000000000000000000', '88528979433144775360000000000000000000000']
+                [9][STATICCALL] from=TransparentUpgradeableProxy, to=ApeCoinStaking, pendingRewards(_poolId(uint256): 0, _address(address): 0x736257, _tokenId(uint256): 0) -> 0
+                [9][STATICCALL] from=TransparentUpgradeableProxy, to=SimpleToken, balanceOf(account(address): 0x736257) -> 0
+                [9][STATICCALL] from=TransparentUpgradeableProxy, to=ApeCoinStaking, pools((uint256): 0) -> ['1686967200', '2', '78179594578037454790892529', '402404451968839888']
+                [9][STATICCALL] from=TransparentUpgradeableProxy, to=ApeCoinStaking, getTimeRangeBy(_poolId(uint256): 0, _index(uint256): 2) -> None
+                [9][STATICCALL] from=TransparentUpgradeableProxy, to=JumpRateModelV2, getBorrowRate(cash(uint256): 220000000000000000000000, borrows(uint256): 376531019555045136121315, reserves(uint256): 0, rewardRatePerBlock(uint256): 146417828189) -> 230245936339
+            [7][STATICCALL] from=TransparentUpgradeableProxy, to=ApeCoinStaking, pools((uint256): 1) -> ['1686967200', '2', '48770650011458162941385286', '755724729246458137']
+            [7][STATICCALL] from=TransparentUpgradeableProxy, to=ApeCoinStaking, getTimeRangeBy(_poolId(uint256): 1, _index(uint256): 2) -> None
+            [7][CALL] from=TransparentUpgradeableProxy, to=TransparentUpgradeableProxy, borrowBehalf(borrower(address): 0xeB5252, borrowAmount(uint256): 220000000000000000000000) -> 0
+              [8][DELEGATECALL] from=TransparentUpgradeableProxy, to=ApePool, borrowBehalf(borrower(address): 0xeB5252, borrowAmount(uint256): 220000000000000000000000) -> 0
+                [9][STATICCALL] from=TransparentUpgradeableProxy, to=ApeCoinStaking, addressPosition((address): 0x736257) -> ['220000000000000000000000', '88528979433144775360000000000000000000000']
+                [9][STATICCALL] from=TransparentUpgradeableProxy, to=ApeCoinStaking, pendingRewards(_poolId(uint256): 0, _address(address): 0x736257, _tokenId(uint256): 0) -> 0
+                [9][STATICCALL] from=TransparentUpgradeableProxy, to=SimpleToken, balanceOf(account(address): 0x736257) -> 0
+                [9][STATICCALL] from=TransparentUpgradeableProxy, to=SimpleToken, balanceOf(account(address): 0x736257) -> 0
+                [9][STATICCALL] from=TransparentUpgradeableProxy, to=ApeCoinStaking, pendingRewards(_poolId(uint256): 0, _address(address): 0x736257, _tokenId(uint256): 0) -> 0
+                [9][CALL] from=TransparentUpgradeableProxy, to=ApeCoinStaking, claimSelfApeCoin() -> None
+                [9][STATICCALL] from=TransparentUpgradeableProxy, to=ApeCoinStaking, addressPosition((address): 0x736257) -> ['220000000000000000000000', '88528979433144775360000000000000000000000']
+                [9][CALL] from=TransparentUpgradeableProxy, to=ApeCoinStaking, withdrawSelfApeCoin(_amount(uint256): 220000000000000000000000) -> None
+                  [10][CALL] from=ApeCoinStaking, to=SimpleToken, transfer(recipient(address): 0x736257, amount(uint256): 220000000000000000000000) -> True
+                [9][CALL] from=TransparentUpgradeableProxy, to=SimpleToken, transfer(recipient(address): 0x0B8903, amount(uint256): 220000000000000000000000) -> True
+            [7][CALL] from=TransparentUpgradeableProxy, to=SimpleToken, transfer(recipient(address): 0x5f0A4a, amount(uint256): 220000000000000000000000) -> True
+      [4][STATICCALL] from=0xB618D9, to=Unitroller, getAccountLiquidity(account(address): 0xB618D9) -> ['0', '288192569997312757895648', '0']
+        [5][DELEGATECALL] from=Unitroller, to=Comptroller, getAccountLiquidity(account(address): 0xB618D9) -> ['0', '288192569997312757895648', '0']
+          [6][STATICCALL] from=Unitroller, to=CErc20Delegator, getAccountSnapshot(account(address): 0xB618D9) -> ['0', '134355937905758550', '0', '20000000000000000']
+            [7][STATICCALL] from=CErc20Delegator, to=CErc20Delegator, delegateToImplementationbytes() -> 0x000000
+              [8][DELEGATECALL] from=CErc20Delegator, to=CErc20Delegate, getAccountSnapshot(account(address): 0xB618D9) -> ['0', '134355937905758550', '0', '20000000000000000']
+                [9][STATICCALL] from=CErc20Delegator, to=TransparentUpgradeableProxy, balanceOf(account(address): 0x3B2da9) -> 2796721841767968
+                  [10][DELEGATECALL] from=TransparentUpgradeableProxy, to=ApePool, balanceOf(account(address): 0x3B2da9) -> 2796721841767968
+          [6][STATICCALL] from=Unitroller, to=MultipleSourceAdvanceOracle, getUnderlyingPrice(cToken(address): 0x3B2da9) -> 428771500000000000000000000
+            [7][STATICCALL] from=MultipleSourceAdvanceOracle, to=CErc20Delegator, symbol() -> isAPE
+            [7][STATICCALL] from=MultipleSourceAdvanceOracle, to=CErc20Delegator, underlying() -> 0x736257
+            [7][STATICCALL] from=MultipleSourceAdvanceOracle, to=SAPEOracle, latestRoundData() -> ['18446744073709554811', '4287715', '1686936131', '1686936131', '18446744073709554811']
+              [8][STATICCALL] from=SAPEOracle, to=EACAggregatorProxy, latestRoundData() -> ['18446744073709554811', '209483287', '1686936131', '1686936131', '18446744073709554811']
+                [9][STATICCALL] from=EACAggregatorProxy, to=AccessControlledOffchainAggregator, latestRoundData() -> ['3195', '209483287', '1686936131', '1686936131', '3195']
+              [8][STATICCALL] from=SAPEOracle, to=TransparentUpgradeableProxy, exchangeRateStored() -> 204680575969436260630241370
+                [9][DELEGATECALL] from=TransparentUpgradeableProxy, to=ApePool, exchangeRateStored() -> 204680575969436260630241370
+                  [10][STATICCALL] from=TransparentUpgradeableProxy, to=ApeCoinStaking, addressPosition((address): 0x736257) -> ['0', '0']
+                  [10][STATICCALL] from=TransparentUpgradeableProxy, to=ApeCoinStaking, pendingRewards(_poolId(uint256): 0, _address(address): 0x736257, _tokenId(uint256): 0) -> 0
+                  [10][STATICCALL] from=TransparentUpgradeableProxy, to=SimpleToken, balanceOf(account(address): 0x736257) -> 0
+            [7][STATICCALL] from=MultipleSourceAdvanceOracle, to=SAPEOracle, decimals() -> 8
+              [8][STATICCALL] from=SAPEOracle, to=EACAggregatorProxy, decimals() -> 8
+                [9][STATICCALL] from=EACAggregatorProxy, to=AccessControlledOffchainAggregator, decimals() -> 8
+            [7][STATICCALL] from=MultipleSourceAdvanceOracle, to=TransparentUpgradeableProxy, decimals() -> 8
+              [8][DELEGATECALL] from=TransparentUpgradeableProxy, to=ApePool, decimals() -> 8
+          [6][STATICCALL] from=Unitroller, to=CNftDelegator, getAccountSnapshot(account(address): 0xB618D9) -> ['0', '0', '1005000000000000000000', '200082300536582978318526122']
+            [7][STATICCALL] from=CNftDelegator, to=CNftDelegator, delegateToImplementationbytes() -> 0x000000
+              [8][DELEGATECALL] from=CNftDelegator, to=CNftDelegate, getAccountSnapshot(account(address): 0xB618D9) -> ['0', '0', '1005000000000000000000', '200082300536582978318526122']
+                [9][STATICCALL] from=CNftDelegator, to=BeaconProxy, balanceOf(account(address): 0x9C1c49) -> 4494000000000000000000
+                  [10][STATICCALL] from=BeaconProxy, to=UpgradeableBeacon, implementation() -> 0x9b8880
+                  [10][DELEGATECALL] from=BeaconProxy, to=PTokenBAYC, balanceOf(account(address): 0x9C1c49) -> 4494000000000000000000
+          [6][STATICCALL] from=Unitroller, to=MultipleSourceAdvanceOracle, getUnderlyingPrice(cToken(address): 0x9C1c49) -> 75486097247200000000
+            [7][STATICCALL] from=MultipleSourceAdvanceOracle, to=CNftDelegator, symbol() -> iP-BAYC
+            [7][STATICCALL] from=MultipleSourceAdvanceOracle, to=CNftDelegator, underlying() -> 0x5f0a4a
+            [7][STATICCALL] from=MultipleSourceAdvanceOracle, to=EACAggregatorProxy, latestRoundData() -> ['18446744073709551856', '44000080000000000000', '1686967235', '1686967235', '18446744073709551856']
+              [8][STATICCALL] from=EACAggregatorProxy, to=AccessControlledOffchainAggregator, latestRoundData() -> ['240', '44000080000000000000', '1686967235', '1686967235', '240']
+            [7][STATICCALL] from=MultipleSourceAdvanceOracle, to=EACAggregatorProxy, decimals() -> 18
+              [8][STATICCALL] from=EACAggregatorProxy, to=AccessControlledOffchainAggregator, decimals() -> 18
+            [7][STATICCALL] from=MultipleSourceAdvanceOracle, to=EACAggregatorProxy, latestRoundData() -> ['110680464442257312251', '171559000000', '1686966923', '1686966923', '110680464442257312251']
+              [8][STATICCALL] from=EACAggregatorProxy, to=AccessControlledOffchainAggregator, latestRoundData() -> ['2555', '171559000000', '1686966923', '1686966923', '2555']
+            [7][STATICCALL] from=MultipleSourceAdvanceOracle, to=EACAggregatorProxy, decimals() -> 8
+              [8][STATICCALL] from=EACAggregatorProxy, to=AccessControlledOffchainAggregator, decimals() -> 8
+            [7][STATICCALL] from=MultipleSourceAdvanceOracle, to=BeaconProxy, decimals() -> 18
+              [8][STATICCALL] from=BeaconProxy, to=UpgradeableBeacon, implementation() -> 0x9b8880
+              [8][DELEGATECALL] from=BeaconProxy, to=PTokenBAYC, decimals() -> 18
+          [6][STATICCALL] from=Unitroller, to=CEther, getAccountSnapshot(account(address): 0xB618D9) -> ['0', '0', '190744797198840438310', '200272141797628272922041611']
+          [6][STATICCALL] from=Unitroller, to=MultipleSourceAdvanceOracle, getUnderlyingPrice(cToken(address): 0x37B614) -> 1715590000000000000000
+            [7][STATICCALL] from=MultipleSourceAdvanceOracle, to=CEther, symbol() -> iETH
+            [7][STATICCALL] from=MultipleSourceAdvanceOracle, to=EACAggregatorProxy, latestRoundData() -> ['110680464442257312251', '171559000000', '1686966923', '1686966923', '110680464442257312251']
+              [8][STATICCALL] from=EACAggregatorProxy, to=AccessControlledOffchainAggregator, latestRoundData() -> ['2555', '171559000000', '1686966923', '1686966923', '2555']
+            [7][STATICCALL] from=MultipleSourceAdvanceOracle, to=EACAggregatorProxy, decimals() -> 8
+              [8][STATICCALL] from=EACAggregatorProxy, to=AccessControlledOffchainAggregator, decimals() -> 8
+            [7][STATICCALL] from=MultipleSourceAdvanceOracle, to=WETH9, decimals() -> 18
+      [4][STATICCALL] from=0xB618D9, to=CErc20Delegator, getCash() -> 102469546694
+        [5][STATICCALL] from=CErc20Delegator, to=CErc20Delegator, delegateToImplementationbytes() -> 0x000000
+          [6][DELEGATECALL] from=CErc20Delegator, to=CErc20Delegate, getCash() -> 102469546694
+            [7][STATICCALL] from=CErc20Delegator, to=TetherToken, balanceOf(who(address): 0x0b7d8E) -> 102469546694
+      [4][STATICCALL] from=0xB618D9, to=MultipleSourceAdvanceOracle, getUnderlyingPrice(cToken(address): 0x0b7d8E) -> 999082860000000000000000000000
+        [5][STATICCALL] from=MultipleSourceAdvanceOracle, to=CErc20Delegator, symbol() -> iUSDT
+        [5][STATICCALL] from=MultipleSourceAdvanceOracle, to=CErc20Delegator, underlying() -> 0xdac17f
+        [5][STATICCALL] from=MultipleSourceAdvanceOracle, to=EACAggregatorProxy, latestRoundData() -> ['36893488147419104185', '99908286', '1686900047', '1686900047', '36893488147419104185']
+          [6][STATICCALL] from=EACAggregatorProxy, to=AccessControlledOffchainAggregator, latestRoundData() -> ['953', '99908286', '1686900047', '1686900047', '953']
+        [5][STATICCALL] from=MultipleSourceAdvanceOracle, to=EACAggregatorProxy, decimals() -> 8
+          [6][STATICCALL] from=EACAggregatorProxy, to=AccessControlledOffchainAggregator, decimals() -> 8
+        [5][STATICCALL] from=MultipleSourceAdvanceOracle, to=TetherToken, decimals() -> 6
+      [4][CALL] from=0xB618D9, to=CErc20Delegator, borrow(borrowAmount(uint256): 102469546694) -> 0
+        [5][DELEGATECALL] from=CErc20Delegator, to=CErc20Delegate, borrow(borrowAmount(uint256): 102469546694) -> 0
+          [6][STATICCALL] from=CErc20Delegator, to=TetherToken, balanceOf(who(address): 0x0b7d8E) -> 102469546694
+          [6][STATICCALL] from=CErc20Delegator, to=JumpRateModelV2, getBorrowRate(cash(uint256): 102469546694, borrows(uint256): 100005621407, reserves(uint256): 422694) -> 11746492552
+          [6][CALL] from=CErc20Delegator, to=Unitroller, borrowAllowed(cToken(address): 0x0b7d8E, borrower(address): 0xB618D9, borrowAmount(uint256): 102469546694) -> 0
+            [7][DELEGATECALL] from=Unitroller, to=Comptroller, borrowAllowed(cToken(address): 0x0b7d8E, borrower(address): 0xB618D9, borrowAmount(uint256): 102469546694) -> 0
+              [8][STATICCALL] from=Unitroller, to=MultipleSourceAdvanceOracle, getUnderlyingPrice(cToken(address): 0x0b7d8E) -> 999082860000000000000000000000
+                [9][STATICCALL] from=MultipleSourceAdvanceOracle, to=CErc20Delegator, symbol() -> iUSDT
+                [9][STATICCALL] from=MultipleSourceAdvanceOracle, to=CErc20Delegator, underlying() -> 0xdac17f
+                [9][STATICCALL] from=MultipleSourceAdvanceOracle, to=EACAggregatorProxy, latestRoundData() -> ['36893488147419104185', '99908286', '1686900047', '1686900047', '36893488147419104185']
+                  [10][STATICCALL] from=EACAggregatorProxy, to=AccessControlledOffchainAggregator, latestRoundData() -> ['953', '99908286', '1686900047', '1686900047', '953']
+                [9][STATICCALL] from=MultipleSourceAdvanceOracle, to=EACAggregatorProxy, decimals() -> 8
+                  [10][STATICCALL] from=EACAggregatorProxy, to=AccessControlledOffchainAggregator, decimals() -> 8
+                [9][STATICCALL] from=MultipleSourceAdvanceOracle, to=TetherToken, decimals() -> 6
+              [8][STATICCALL] from=Unitroller, to=CErc20Delegator, getAccountSnapshot(account(address): 0xB618D9) -> ['0', '134355937905758550', '0', '20000000000000000']
+                [9][STATICCALL] from=CErc20Delegator, to=CErc20Delegator, delegateToImplementationbytes() -> 0x000000
+                  [10][DELEGATECALL] from=CErc20Delegator, to=CErc20Delegate, getAccountSnapshot(account(address): 0xB618D9) -> ['0', '134355937905758550', '0', '20000000000000000']
+                    [11][STATICCALL] from=CErc20Delegator, to=TransparentUpgradeableProxy, balanceOf(account(address): 0x3B2da9) -> 2796721841767968
+                      [12][DELEGATECALL] from=TransparentUpgradeableProxy, to=ApePool, balanceOf(account(address): 0x3B2da9) -> 2796721841767968
+              [8][STATICCALL] from=Unitroller, to=MultipleSourceAdvanceOracle, getUnderlyingPrice(cToken(address): 0x3B2da9) -> 428771500000000000000000000
+                [9][STATICCALL] from=MultipleSourceAdvanceOracle, to=CErc20Delegator, symbol() -> isAPE
+                [9][STATICCALL] from=MultipleSourceAdvanceOracle, to=CErc20Delegator, underlying() -> 0x736257
+                [9][STATICCALL] from=MultipleSourceAdvanceOracle, to=SAPEOracle, latestRoundData() -> ['18446744073709554811', '4287715', '1686936131', '1686936131', '18446744073709554811']
+                  [10][STATICCALL] from=SAPEOracle, to=EACAggregatorProxy, latestRoundData() -> ['18446744073709554811', '209483287', '1686936131', '1686936131', '18446744073709554811']
+                    [11][STATICCALL] from=EACAggregatorProxy, to=AccessControlledOffchainAggregator, latestRoundData() -> ['3195', '209483287', '1686936131', '1686936131', '3195']
+                  [10][STATICCALL] from=SAPEOracle, to=TransparentUpgradeableProxy, exchangeRateStored() -> 204680575969436260630241370
+                    [11][DELEGATECALL] from=TransparentUpgradeableProxy, to=ApePool, exchangeRateStored() -> 204680575969436260630241370
+                      [12][STATICCALL] from=TransparentUpgradeableProxy, to=ApeCoinStaking, addressPosition((address): 0x736257) -> ['0', '0']
+                      [12][STATICCALL] from=TransparentUpgradeableProxy, to=ApeCoinStaking, pendingRewards(_poolId(uint256): 0, _address(address): 0x736257, _tokenId(uint256): 0) -> 0
+                      [12][STATICCALL] from=TransparentUpgradeableProxy, to=SimpleToken, balanceOf(account(address): 0x736257) -> 0
+                [9][STATICCALL] from=MultipleSourceAdvanceOracle, to=SAPEOracle, decimals() -> 8
+                  [10][STATICCALL] from=SAPEOracle, to=EACAggregatorProxy, decimals() -> 8
+                    [11][STATICCALL] from=EACAggregatorProxy, to=AccessControlledOffchainAggregator, decimals() -> 8
+                [9][STATICCALL] from=MultipleSourceAdvanceOracle, to=TransparentUpgradeableProxy, decimals() -> 8
+                  [10][DELEGATECALL] from=TransparentUpgradeableProxy, to=ApePool, decimals() -> 8
+              [8][STATICCALL] from=Unitroller, to=CNftDelegator, getAccountSnapshot(account(address): 0xB618D9) -> ['0', '0', '1005000000000000000000', '200082300536582978318526122']
+                [9][STATICCALL] from=CNftDelegator, to=CNftDelegator, delegateToImplementationbytes() -> 0x000000
+                  [10][DELEGATECALL] from=CNftDelegator, to=CNftDelegate, getAccountSnapshot(account(address): 0xB618D9) -> ['0', '0', '1005000000000000000000', '200082300536582978318526122']
+                    [11][STATICCALL] from=CNftDelegator, to=BeaconProxy, balanceOf(account(address): 0x9C1c49) -> 4494000000000000000000
+                      [12][STATICCALL] from=BeaconProxy, to=UpgradeableBeacon, implementation() -> 0x9b8880
+                      [12][DELEGATECALL] from=BeaconProxy, to=PTokenBAYC, balanceOf(account(address): 0x9C1c49) -> 4494000000000000000000
+              [8][STATICCALL] from=Unitroller, to=MultipleSourceAdvanceOracle, getUnderlyingPrice(cToken(address): 0x9C1c49) -> 75486097247200000000
+                [9][STATICCALL] from=MultipleSourceAdvanceOracle, to=CNftDelegator, symbol() -> iP-BAYC
+                [9][STATICCALL] from=MultipleSourceAdvanceOracle, to=CNftDelegator, underlying() -> 0x5f0a4a
+                [9][STATICCALL] from=MultipleSourceAdvanceOracle, to=EACAggregatorProxy, latestRoundData() -> ['18446744073709551856', '44000080000000000000', '1686967235', '1686967235', '18446744073709551856']
+                  [10][STATICCALL] from=EACAggregatorProxy, to=AccessControlledOffchainAggregator, latestRoundData() -> ['240', '44000080000000000000', '1686967235', '1686967235', '240']
+                [9][STATICCALL] from=MultipleSourceAdvanceOracle, to=EACAggregatorProxy, decimals() -> 18
+                  [10][STATICCALL] from=EACAggregatorProxy, to=AccessControlledOffchainAggregator, decimals() -> 18
+                [9][STATICCALL] from=MultipleSourceAdvanceOracle, to=EACAggregatorProxy, latestRoundData() -> ['110680464442257312251', '171559000000', '1686966923', '1686966923', '110680464442257312251']
+                  [10][STATICCALL] from=EACAggregatorProxy, to=AccessControlledOffchainAggregator, latestRoundData() -> ['2555', '171559000000', '1686966923', '1686966923', '2555']
+                [9][STATICCALL] from=MultipleSourceAdvanceOracle, to=EACAggregatorProxy, decimals() -> 8
+                  [10][STATICCALL] from=EACAggregatorProxy, to=AccessControlledOffchainAggregator, decimals() -> 8
+                [9][STATICCALL] from=MultipleSourceAdvanceOracle, to=BeaconProxy, decimals() -> 18
+                  [10][STATICCALL] from=BeaconProxy, to=UpgradeableBeacon, implementation() -> 0x9b8880
+                  [10][DELEGATECALL] from=BeaconProxy, to=PTokenBAYC, decimals() -> 18
+              [8][STATICCALL] from=Unitroller, to=CEther, getAccountSnapshot(account(address): 0xB618D9) -> ['0', '0', '190744797198840438310', '200272141797628272922041611']
+              [8][STATICCALL] from=Unitroller, to=MultipleSourceAdvanceOracle, getUnderlyingPrice(cToken(address): 0x37B614) -> 1715590000000000000000
+                [9][STATICCALL] from=MultipleSourceAdvanceOracle, to=CEther, symbol() -> iETH
+                [9][STATICCALL] from=MultipleSourceAdvanceOracle, to=EACAggregatorProxy, latestRoundData() -> ['110680464442257312251', '171559000000', '1686966923', '1686966923', '110680464442257312251']
+                  [10][STATICCALL] from=EACAggregatorProxy, to=AccessControlledOffchainAggregator, latestRoundData() -> ['2555', '171559000000', '1686966923', '1686966923', '2555']
+                [9][STATICCALL] from=MultipleSourceAdvanceOracle, to=EACAggregatorProxy, decimals() -> 8
+                  [10][STATICCALL] from=EACAggregatorProxy, to=AccessControlledOffchainAggregator, decimals() -> 8
+                [9][STATICCALL] from=MultipleSourceAdvanceOracle, to=WETH9, decimals() -> 18
+              [8][STATICCALL] from=Unitroller, to=CErc20Delegator, getAccountSnapshot(account(address): 0xB618D9) -> ['0', '0', '0', '200037214229046']
+                [9][STATICCALL] from=CErc20Delegator, to=CErc20Delegator, delegateToImplementationbytes() -> 0x000000
+                  [10][DELEGATECALL] from=CErc20Delegator, to=CErc20Delegate, getAccountSnapshot(account(address): 0xB618D9) -> ['0', '0', '0', '200037214229046']
+                    [11][STATICCALL] from=CErc20Delegator, to=TetherToken, balanceOf(who(address): 0x0b7d8E) -> 102469546694
+              [8][STATICCALL] from=Unitroller, to=MultipleSourceAdvanceOracle, getUnderlyingPrice(cToken(address): 0x0b7d8E) -> 999082860000000000000000000000
+                [9][STATICCALL] from=MultipleSourceAdvanceOracle, to=CErc20Delegator, symbol() -> iUSDT
+                [9][STATICCALL] from=MultipleSourceAdvanceOracle, to=CErc20Delegator, underlying() -> 0xdac17f
+                [9][STATICCALL] from=MultipleSourceAdvanceOracle, to=EACAggregatorProxy, latestRoundData() -> ['36893488147419104185', '99908286', '1686900047', '1686900047', '36893488147419104185']
+                  [10][STATICCALL] from=EACAggregatorProxy, to=AccessControlledOffchainAggregator, latestRoundData() -> ['953', '99908286', '1686900047', '1686900047', '953']
+                [9][STATICCALL] from=MultipleSourceAdvanceOracle, to=EACAggregatorProxy, decimals() -> 8
+                  [10][STATICCALL] from=EACAggregatorProxy, to=AccessControlledOffchainAggregator, decimals() -> 8
+                [9][STATICCALL] from=MultipleSourceAdvanceOracle, to=TetherToken, decimals() -> 6
+              [8][STATICCALL] from=Unitroller, to=CErc20Delegator, borrowIndex() -> 1000449541987016734
+              [8][STATICCALL] from=Unitroller, to=CErc20Delegator, borrowBalanceStored(account(address): 0xB618D9) -> 0
+                [9][STATICCALL] from=CErc20Delegator, to=CErc20Delegator, delegateToImplementationbytes() -> 0x000000
+                  [10][DELEGATECALL] from=CErc20Delegator, to=CErc20Delegate, borrowBalanceStored(account(address): 0xB618D9) -> 0
+          [6][STATICCALL] from=CErc20Delegator, to=TetherToken, balanceOf(who(address): 0x0b7d8E) -> 102469546694
+          [6][CALL] from=CErc20Delegator, to=TetherToken, transfer(_to(address): 0xB618D9, _value(uint256): 102469546694) -> None
+      [4][STATICCALL] from=0xB618D9, to=Unitroller, getAccountLiquidity(account(address): 0xB618D9) -> ['0', '185817002223367693055648', '0']
+        [5][DELEGATECALL] from=Unitroller, to=Comptroller, getAccountLiquidity(account(address): 0xB618D9) -> ['0', '185817002223367693055648', '0']
+          [6][STATICCALL] from=Unitroller, to=CErc20Delegator, getAccountSnapshot(account(address): 0xB618D9) -> ['0', '134355937905758550', '0', '20000000000000000']
+            [7][STATICCALL] from=CErc20Delegator, to=CErc20Delegator, delegateToImplementationbytes() -> 0x000000
+              [8][DELEGATECALL] from=CErc20Delegator, to=CErc20Delegate, getAccountSnapshot(account(address): 0xB618D9) -> ['0', '134355937905758550', '0', '20000000000000000']
+                [9][STATICCALL] from=CErc20Delegator, to=TransparentUpgradeableProxy, balanceOf(account(address): 0x3B2da9) -> 2796721841767968
+                  [10][DELEGATECALL] from=TransparentUpgradeableProxy, to=ApePool, balanceOf(account(address): 0x3B2da9) -> 2796721841767968
+          [6][STATICCALL] from=Unitroller, to=MultipleSourceAdvanceOracle, getUnderlyingPrice(cToken(address): 0x3B2da9) -> 428771500000000000000000000
+            [7][STATICCALL] from=MultipleSourceAdvanceOracle, to=CErc20Delegator, symbol() -> isAPE
+            [7][STATICCALL] from=MultipleSourceAdvanceOracle, to=CErc20Delegator, underlying() -> 0x736257
+            [7][STATICCALL] from=MultipleSourceAdvanceOracle, to=SAPEOracle, latestRoundData() -> ['18446744073709554811', '4287715', '1686936131', '1686936131', '18446744073709554811']
+              [8][STATICCALL] from=SAPEOracle, to=EACAggregatorProxy, latestRoundData() -> ['18446744073709554811', '209483287', '1686936131', '1686936131', '18446744073709554811']
+                [9][STATICCALL] from=EACAggregatorProxy, to=AccessControlledOffchainAggregator, latestRoundData() -> ['3195', '209483287', '1686936131', '1686936131', '3195']
+              [8][STATICCALL] from=SAPEOracle, to=TransparentUpgradeableProxy, exchangeRateStored() -> 204680575969436260630241370
+                [9][DELEGATECALL] from=TransparentUpgradeableProxy, to=ApePool, exchangeRateStored() -> 204680575969436260630241370
+                  [10][STATICCALL] from=TransparentUpgradeableProxy, to=ApeCoinStaking, addressPosition((address): 0x736257) -> ['0', '0']
+                  [10][STATICCALL] from=TransparentUpgradeableProxy, to=ApeCoinStaking, pendingRewards(_poolId(uint256): 0, _address(address): 0x736257, _tokenId(uint256): 0) -> 0
+                  [10][STATICCALL] from=TransparentUpgradeableProxy, to=SimpleToken, balanceOf(account(address): 0x736257) -> 0
+            [7][STATICCALL] from=MultipleSourceAdvanceOracle, to=SAPEOracle, decimals() -> 8
+              [8][STATICCALL] from=SAPEOracle, to=EACAggregatorProxy, decimals() -> 8
+                [9][STATICCALL] from=EACAggregatorProxy, to=AccessControlledOffchainAggregator, decimals() -> 8
+            [7][STATICCALL] from=MultipleSourceAdvanceOracle, to=TransparentUpgradeableProxy, decimals() -> 8
+              [8][DELEGATECALL] from=TransparentUpgradeableProxy, to=ApePool, decimals() -> 8
+          [6][STATICCALL] from=Unitroller, to=CNftDelegator, getAccountSnapshot(account(address): 0xB618D9) -> ['0', '0', '1005000000000000000000', '200082300536582978318526122']
+            [7][STATICCALL] from=CNftDelegator, to=CNftDelegator, delegateToImplementationbytes() -> 0x000000
+              [8][DELEGATECALL] from=CNftDelegator, to=CNftDelegate, getAccountSnapshot(account(address): 0xB618D9) -> ['0', '0', '1005000000000000000000', '200082300536582978318526122']
+                [9][STATICCALL] from=CNftDelegator, to=BeaconProxy, balanceOf(account(address): 0x9C1c49) -> 4494000000000000000000
+                  [10][STATICCALL] from=BeaconProxy, to=UpgradeableBeacon, implementation() -> 0x9b8880
+                  [10][DELEGATECALL] from=BeaconProxy, to=PTokenBAYC, balanceOf(account(address): 0x9C1c49) -> 4494000000000000000000
+          [6][STATICCALL] from=Unitroller, to=MultipleSourceAdvanceOracle, getUnderlyingPrice(cToken(address): 0x9C1c49) -> 75486097247200000000
+            [7][STATICCALL] from=MultipleSourceAdvanceOracle, to=CNftDelegator, symbol() -> iP-BAYC
+            [7][STATICCALL] from=MultipleSourceAdvanceOracle, to=CNftDelegator, underlying() -> 0x5f0a4a
+            [7][STATICCALL] from=MultipleSourceAdvanceOracle, to=EACAggregatorProxy, latestRoundData() -> ['18446744073709551856', '44000080000000000000', '1686967235', '1686967235', '18446744073709551856']
+              [8][STATICCALL] from=EACAggregatorProxy, to=AccessControlledOffchainAggregator, latestRoundData() -> ['240', '44000080000000000000', '1686967235', '1686967235', '240']
+            [7][STATICCALL] from=MultipleSourceAdvanceOracle, to=EACAggregatorProxy, decimals() -> 18
+              [8][STATICCALL] from=EACAggregatorProxy, to=AccessControlledOffchainAggregator, decimals() -> 18
+            [7][STATICCALL] from=MultipleSourceAdvanceOracle, to=EACAggregatorProxy, latestRoundData() -> ['110680464442257312251', '171559000000', '1686966923', '1686966923', '110680464442257312251']
+              [8][STATICCALL] from=EACAggregatorProxy, to=AccessControlledOffchainAggregator, latestRoundData() -> ['2555', '171559000000', '1686966923', '1686966923', '2555']
+            [7][STATICCALL] from=MultipleSourceAdvanceOracle, to=EACAggregatorProxy, decimals() -> 8
+              [8][STATICCALL] from=EACAggregatorProxy, to=AccessControlledOffchainAggregator, decimals() -> 8
+            [7][STATICCALL] from=MultipleSourceAdvanceOracle, to=BeaconProxy, decimals() -> 18
+              [8][STATICCALL] from=BeaconProxy, to=UpgradeableBeacon, implementation() -> 0x9b8880
+              [8][DELEGATECALL] from=BeaconProxy, to=PTokenBAYC, decimals() -> 18
+          [6][STATICCALL] from=Unitroller, to=CEther, getAccountSnapshot(account(address): 0xB618D9) -> ['0', '0', '190744797198840438310', '200272141797628272922041611']
+          [6][STATICCALL] from=Unitroller, to=MultipleSourceAdvanceOracle, getUnderlyingPrice(cToken(address): 0x37B614) -> 1715590000000000000000
+            [7][STATICCALL] from=MultipleSourceAdvanceOracle, to=CEther, symbol() -> iETH
+            [7][STATICCALL] from=MultipleSourceAdvanceOracle, to=EACAggregatorProxy, latestRoundData() -> ['110680464442257312251', '171559000000', '1686966923', '1686966923', '110680464442257312251']
+              [8][STATICCALL] from=EACAggregatorProxy, to=AccessControlledOffchainAggregator, latestRoundData() -> ['2555', '171559000000', '1686966923', '1686966923', '2555']
+            [7][STATICCALL] from=MultipleSourceAdvanceOracle, to=EACAggregatorProxy, decimals() -> 8
+              [8][STATICCALL] from=EACAggregatorProxy, to=AccessControlledOffchainAggregator, decimals() -> 8
+            [7][STATICCALL] from=MultipleSourceAdvanceOracle, to=WETH9, decimals() -> 18
+          [6][STATICCALL] from=Unitroller, to=CErc20Delegator, getAccountSnapshot(account(address): 0xB618D9) -> ['0', '0', '102469546694', '200037214229046']
+            [7][STATICCALL] from=CErc20Delegator, to=CErc20Delegator, delegateToImplementationbytes() -> 0x000000
+              [8][DELEGATECALL] from=CErc20Delegator, to=CErc20Delegate, getAccountSnapshot(account(address): 0xB618D9) -> ['0', '0', '102469546694', '200037214229046']
+                [9][STATICCALL] from=CErc20Delegator, to=TetherToken, balanceOf(who(address): 0x0b7d8E) -> 0
+          [6][STATICCALL] from=Unitroller, to=MultipleSourceAdvanceOracle, getUnderlyingPrice(cToken(address): 0x0b7d8E) -> 999082860000000000000000000000
+            [7][STATICCALL] from=MultipleSourceAdvanceOracle, to=CErc20Delegator, symbol() -> iUSDT
+            [7][STATICCALL] from=MultipleSourceAdvanceOracle, to=CErc20Delegator, underlying() -> 0xdac17f
+            [7][STATICCALL] from=MultipleSourceAdvanceOracle, to=EACAggregatorProxy, latestRoundData() -> ['36893488147419104185', '99908286', '1686900047', '1686900047', '36893488147419104185']
+              [8][STATICCALL] from=EACAggregatorProxy, to=AccessControlledOffchainAggregator, latestRoundData() -> ['953', '99908286', '1686900047', '1686900047', '953']
+            [7][STATICCALL] from=MultipleSourceAdvanceOracle, to=EACAggregatorProxy, decimals() -> 8
+              [8][STATICCALL] from=EACAggregatorProxy, to=AccessControlledOffchainAggregator, decimals() -> 8
+            [7][STATICCALL] from=MultipleSourceAdvanceOracle, to=TetherToken, decimals() -> 6
+      [4][STATICCALL] from=0xB618D9, to=CErc20Delegator, getCash() -> 700009900
+        [5][STATICCALL] from=CErc20Delegator, to=CErc20Delegator, delegateToImplementationbytes() -> 0x000000
+          [6][DELEGATECALL] from=CErc20Delegator, to=CErc20Delegate, getCash() -> 700009900
+            [7][STATICCALL] from=CErc20Delegator, to=WBTC, balanceOf(_owner(address): 0x6A5508) -> 700009900
+      [4][STATICCALL] from=0xB618D9, to=MultipleSourceAdvanceOracle, getUnderlyingPrice(cToken(address): 0x6A5508) -> 262378320430000000000000000000000
+        [5][STATICCALL] from=MultipleSourceAdvanceOracle, to=CErc20Delegator, symbol() -> iWBTC
+        [5][STATICCALL] from=MultipleSourceAdvanceOracle, to=CErc20Delegator, underlying() -> 0x2260fa
+        [5][STATICCALL] from=MultipleSourceAdvanceOracle, to=EACAggregatorProxy, latestRoundData() -> ['110680464442257312227', '2623783204300', '1686966947', '1686966947', '110680464442257312227']
+          [6][STATICCALL] from=EACAggregatorProxy, to=AccessControlledOffchainAggregator, latestRoundData() -> ['2531', '2623783204300', '1686966947', '1686966947', '2531']
+        [5][STATICCALL] from=MultipleSourceAdvanceOracle, to=EACAggregatorProxy, decimals() -> 8
+          [6][STATICCALL] from=EACAggregatorProxy, to=AccessControlledOffchainAggregator, decimals() -> 8
+        [5][STATICCALL] from=MultipleSourceAdvanceOracle, to=WBTC, decimals() -> 8
+      [4][CALL] from=0xB618D9, to=CErc20Delegator, borrow(borrowAmount(uint256): 700009900) -> 0
+        [5][DELEGATECALL] from=CErc20Delegator, to=CErc20Delegate, borrow(borrowAmount(uint256): 700009900) -> 0
+          [6][STATICCALL] from=CErc20Delegator, to=WBTC, balanceOf(_owner(address): 0x6A5508) -> 700009900
+          [6][STATICCALL] from=CErc20Delegator, to=JumpRateModelV2, getBorrowRate(cash(uint256): 700009900, borrows(uint256): 100, reserves(uint256): 0) -> 9512947787
+          [6][CALL] from=CErc20Delegator, to=Unitroller, borrowAllowed(cToken(address): 0x6A5508, borrower(address): 0xB618D9, borrowAmount(uint256): 700009900) -> 0
+            [7][DELEGATECALL] from=Unitroller, to=Comptroller, borrowAllowed(cToken(address): 0x6A5508, borrower(address): 0xB618D9, borrowAmount(uint256): 700009900) -> 0
+              [8][STATICCALL] from=Unitroller, to=MultipleSourceAdvanceOracle, getUnderlyingPrice(cToken(address): 0x6A5508) -> 262378320430000000000000000000000
+                [9][STATICCALL] from=MultipleSourceAdvanceOracle, to=CErc20Delegator, symbol() -> iWBTC
+                [9][STATICCALL] from=MultipleSourceAdvanceOracle, to=CErc20Delegator, underlying() -> 0x2260fa
+                [9][STATICCALL] from=MultipleSourceAdvanceOracle, to=EACAggregatorProxy, latestRoundData() -> ['110680464442257312227', '2623783204300', '1686966947', '1686966947', '110680464442257312227']
+                  [10][STATICCALL] from=EACAggregatorProxy, to=AccessControlledOffchainAggregator, latestRoundData() -> ['2531', '2623783204300', '1686966947', '1686966947', '2531']
+                [9][STATICCALL] from=MultipleSourceAdvanceOracle, to=EACAggregatorProxy, decimals() -> 8
+                  [10][STATICCALL] from=EACAggregatorProxy, to=AccessControlledOffchainAggregator, decimals() -> 8
+                [9][STATICCALL] from=MultipleSourceAdvanceOracle, to=WBTC, decimals() -> 8
+              [8][STATICCALL] from=Unitroller, to=CErc20Delegator, getAccountSnapshot(account(address): 0xB618D9) -> ['0', '134355937905758550', '0', '20000000000000000']
+                [9][STATICCALL] from=CErc20Delegator, to=CErc20Delegator, delegateToImplementationbytes() -> 0x000000
+                  [10][DELEGATECALL] from=CErc20Delegator, to=CErc20Delegate, getAccountSnapshot(account(address): 0xB618D9) -> ['0', '134355937905758550', '0', '20000000000000000']
+                    [11][STATICCALL] from=CErc20Delegator, to=TransparentUpgradeableProxy, balanceOf(account(address): 0x3B2da9) -> 2796721841767968
+                      [12][DELEGATECALL] from=TransparentUpgradeableProxy, to=ApePool, balanceOf(account(address): 0x3B2da9) -> 2796721841767968
+              [8][STATICCALL] from=Unitroller, to=MultipleSourceAdvanceOracle, getUnderlyingPrice(cToken(address): 0x3B2da9) -> 428771500000000000000000000
+                [9][STATICCALL] from=MultipleSourceAdvanceOracle, to=CErc20Delegator, symbol() -> isAPE
+                [9][STATICCALL] from=MultipleSourceAdvanceOracle, to=CErc20Delegator, underlying() -> 0x736257
+                [9][STATICCALL] from=MultipleSourceAdvanceOracle, to=SAPEOracle, latestRoundData() -> ['18446744073709554811', '4287715', '1686936131', '1686936131', '18446744073709554811']
+                  [10][STATICCALL] from=SAPEOracle, to=EACAggregatorProxy, latestRoundData() -> ['18446744073709554811', '209483287', '1686936131', '1686936131', '18446744073709554811']
+                    [11][STATICCALL] from=EACAggregatorProxy, to=AccessControlledOffchainAggregator, latestRoundData() -> ['3195', '209483287', '1686936131', '1686936131', '3195']
+                  [10][STATICCALL] from=SAPEOracle, to=TransparentUpgradeableProxy, exchangeRateStored() -> 204680575969436260630241370
+                    [11][DELEGATECALL] from=TransparentUpgradeableProxy, to=ApePool, exchangeRateStored() -> 204680575969436260630241370
+                      [12][STATICCALL] from=TransparentUpgradeableProxy, to=ApeCoinStaking, addressPosition((address): 0x736257) -> ['0', '0']
+                      [12][STATICCALL] from=TransparentUpgradeableProxy, to=ApeCoinStaking, pendingRewards(_poolId(uint256): 0, _address(address): 0x736257, _tokenId(uint256): 0) -> 0
+                      [12][STATICCALL] from=TransparentUpgradeableProxy, to=SimpleToken, balanceOf(account(address): 0x736257) -> 0
+                [9][STATICCALL] from=MultipleSourceAdvanceOracle, to=SAPEOracle, decimals() -> 8
+                  [10][STATICCALL] from=SAPEOracle, to=EACAggregatorProxy, decimals() -> 8
+                    [11][STATICCALL] from=EACAggregatorProxy, to=AccessControlledOffchainAggregator, decimals() -> 8
+                [9][STATICCALL] from=MultipleSourceAdvanceOracle, to=TransparentUpgradeableProxy, decimals() -> 8
+                  [10][DELEGATECALL] from=TransparentUpgradeableProxy, to=ApePool, decimals() -> 8
+              [8][STATICCALL] from=Unitroller, to=CNftDelegator, getAccountSnapshot(account(address): 0xB618D9) -> ['0', '0', '1005000000000000000000', '200082300536582978318526122']
+                [9][STATICCALL] from=CNftDelegator, to=CNftDelegator, delegateToImplementationbytes() -> 0x000000
+                  [10][DELEGATECALL] from=CNftDelegator, to=CNftDelegate, getAccountSnapshot(account(address): 0xB618D9) -> ['0', '0', '1005000000000000000000', '200082300536582978318526122']
+                    [11][STATICCALL] from=CNftDelegator, to=BeaconProxy, balanceOf(account(address): 0x9C1c49) -> 4494000000000000000000
+                      [12][STATICCALL] from=BeaconProxy, to=UpgradeableBeacon, implementation() -> 0x9b8880
+                      [12][DELEGATECALL] from=BeaconProxy, to=PTokenBAYC, balanceOf(account(address): 0x9C1c49) -> 4494000000000000000000
+              [8][STATICCALL] from=Unitroller, to=MultipleSourceAdvanceOracle, getUnderlyingPrice(cToken(address): 0x9C1c49) -> 75486097247200000000
+                [9][STATICCALL] from=MultipleSourceAdvanceOracle, to=CNftDelegator, symbol() -> iP-BAYC
+                [9][STATICCALL] from=MultipleSourceAdvanceOracle, to=CNftDelegator, underlying() -> 0x5f0a4a
+                [9][STATICCALL] from=MultipleSourceAdvanceOracle, to=EACAggregatorProxy, latestRoundData() -> ['18446744073709551856', '44000080000000000000', '1686967235', '1686967235', '18446744073709551856']
+                  [10][STATICCALL] from=EACAggregatorProxy, to=AccessControlledOffchainAggregator, latestRoundData() -> ['240', '44000080000000000000', '1686967235', '1686967235', '240']
+                [9][STATICCALL] from=MultipleSourceAdvanceOracle, to=EACAggregatorProxy, decimals() -> 18
+                  [10][STATICCALL] from=EACAggregatorProxy, to=AccessControlledOffchainAggregator, decimals() -> 18
+                [9][STATICCALL] from=MultipleSourceAdvanceOracle, to=EACAggregatorProxy, latestRoundData() -> ['110680464442257312251', '171559000000', '1686966923', '1686966923', '110680464442257312251']
+                  [10][STATICCALL] from=EACAggregatorProxy, to=AccessControlledOffchainAggregator, latestRoundData() -> ['2555', '171559000000', '1686966923', '1686966923', '2555']
+                [9][STATICCALL] from=MultipleSourceAdvanceOracle, to=EACAggregatorProxy, decimals() -> 8
+                  [10][STATICCALL] from=EACAggregatorProxy, to=AccessControlledOffchainAggregator, decimals() -> 8
+                [9][STATICCALL] from=MultipleSourceAdvanceOracle, to=BeaconProxy, decimals() -> 18
+                  [10][STATICCALL] from=BeaconProxy, to=UpgradeableBeacon, implementation() -> 0x9b8880
+                  [10][DELEGATECALL] from=BeaconProxy, to=PTokenBAYC, decimals() -> 18
+              [8][STATICCALL] from=Unitroller, to=CEther, getAccountSnapshot(account(address): 0xB618D9) -> ['0', '0', '190744797198840438310', '200272141797628272922041611']
+              [8][STATICCALL] from=Unitroller, to=MultipleSourceAdvanceOracle, getUnderlyingPrice(cToken(address): 0x37B614) -> 1715590000000000000000
+                [9][STATICCALL] from=MultipleSourceAdvanceOracle, to=CEther, symbol() -> iETH
+                [9][STATICCALL] from=MultipleSourceAdvanceOracle, to=EACAggregatorProxy, latestRoundData() -> ['110680464442257312251', '171559000000', '1686966923', '1686966923', '110680464442257312251']
+                  [10][STATICCALL] from=EACAggregatorProxy, to=AccessControlledOffchainAggregator, latestRoundData() -> ['2555', '171559000000', '1686966923', '1686966923', '2555']
+                [9][STATICCALL] from=MultipleSourceAdvanceOracle, to=EACAggregatorProxy, decimals() -> 8
+                  [10][STATICCALL] from=EACAggregatorProxy, to=AccessControlledOffchainAggregator, decimals() -> 8
+                [9][STATICCALL] from=MultipleSourceAdvanceOracle, to=WETH9, decimals() -> 18
+              [8][STATICCALL] from=Unitroller, to=CErc20Delegator, getAccountSnapshot(account(address): 0xB618D9) -> ['0', '0', '102469546694', '200037214229046']
+                [9][STATICCALL] from=CErc20Delegator, to=CErc20Delegator, delegateToImplementationbytes() -> 0x000000
+                  [10][DELEGATECALL] from=CErc20Delegator, to=CErc20Delegate, getAccountSnapshot(account(address): 0xB618D9) -> ['0', '0', '102469546694', '200037214229046']
+                    [11][STATICCALL] from=CErc20Delegator, to=TetherToken, balanceOf(who(address): 0x0b7d8E) -> 0
+              [8][STATICCALL] from=Unitroller, to=MultipleSourceAdvanceOracle, getUnderlyingPrice(cToken(address): 0x0b7d8E) -> 999082860000000000000000000000
+                [9][STATICCALL] from=MultipleSourceAdvanceOracle, to=CErc20Delegator, symbol() -> iUSDT
+                [9][STATICCALL] from=MultipleSourceAdvanceOracle, to=CErc20Delegator, underlying() -> 0xdac17f
+                [9][STATICCALL] from=MultipleSourceAdvanceOracle, to=EACAggregatorProxy, latestRoundData() -> ['36893488147419104185', '99908286', '1686900047', '1686900047', '36893488147419104185']
+                  [10][STATICCALL] from=EACAggregatorProxy, to=AccessControlledOffchainAggregator, latestRoundData() -> ['953', '99908286', '1686900047', '1686900047', '953']
+                [9][STATICCALL] from=MultipleSourceAdvanceOracle, to=EACAggregatorProxy, decimals() -> 8
+                  [10][STATICCALL] from=EACAggregatorProxy, to=AccessControlledOffchainAggregator, decimals() -> 8
+                [9][STATICCALL] from=MultipleSourceAdvanceOracle, to=TetherToken, decimals() -> 6
+              [8][STATICCALL] from=Unitroller, to=CErc20Delegator, getAccountSnapshot(account(address): 0xB618D9) -> ['0', '0', '0', '20000000000000000']
+                [9][STATICCALL] from=CErc20Delegator, to=CErc20Delegator, delegateToImplementationbytes() -> 0x000000
+                  [10][DELEGATECALL] from=CErc20Delegator, to=CErc20Delegate, getAccountSnapshot(account(address): 0xB618D9) -> ['0', '0', '0', '20000000000000000']
+                    [11][STATICCALL] from=CErc20Delegator, to=WBTC, balanceOf(_owner(address): 0x6A5508) -> 700009900
+              [8][STATICCALL] from=Unitroller, to=MultipleSourceAdvanceOracle, getUnderlyingPrice(cToken(address): 0x6A5508) -> 262378320430000000000000000000000
+                [9][STATICCALL] from=MultipleSourceAdvanceOracle, to=CErc20Delegator, symbol() -> iWBTC
+                [9][STATICCALL] from=MultipleSourceAdvanceOracle, to=CErc20Delegator, underlying() -> 0x2260fa
+                [9][STATICCALL] from=MultipleSourceAdvanceOracle, to=EACAggregatorProxy, latestRoundData() -> ['110680464442257312227', '2623783204300', '1686966947', '1686966947', '110680464442257312227']
+                  [10][STATICCALL] from=EACAggregatorProxy, to=AccessControlledOffchainAggregator, latestRoundData() -> ['2531', '2623783204300', '1686966947', '1686966947', '2531']
+                [9][STATICCALL] from=MultipleSourceAdvanceOracle, to=EACAggregatorProxy, decimals() -> 8
+                  [10][STATICCALL] from=EACAggregatorProxy, to=AccessControlledOffchainAggregator, decimals() -> 8
+                [9][STATICCALL] from=MultipleSourceAdvanceOracle, to=WBTC, decimals() -> 8
+              [8][STATICCALL] from=Unitroller, to=CErc20Delegator, borrowIndex() -> 1003705195289445471
+              [8][STATICCALL] from=Unitroller, to=CErc20Delegator, borrowBalanceStored(account(address): 0xB618D9) -> 0
+                [9][STATICCALL] from=CErc20Delegator, to=CErc20Delegator, delegateToImplementationbytes() -> 0x000000
+                  [10][DELEGATECALL] from=CErc20Delegator, to=CErc20Delegate, borrowBalanceStored(account(address): 0xB618D9) -> 0
+          [6][STATICCALL] from=CErc20Delegator, to=WBTC, balanceOf(_owner(address): 0x6A5508) -> 700009900
+          [6][CALL] from=CErc20Delegator, to=WBTC, transfer(_to(address): 0xB618D9, _value(uint256): 700009900) -> True
+      [4][STATICCALL] from=0xB618D9, to=ApeCoinStaking, pools((uint256): 1) -> ['1686967200', '2', '48770650011458162941385286', '755724729246458137']
+      [4][STATICCALL] from=0xB618D9, to=ApeCoinStaking, getTimeRangeBy(_poolId(uint256): 1, _index(uint256): 2) -> None
+      [4][STATICCALL] from=0xB618D9, to=SimpleToken, balanceOf(account(address): 0x5f0A4a) -> 220000000000000000000000
+      [4][CALL] from=0xB618D9, to=TransparentUpgradeableProxy, depositAndBorrowApeAndStake(depositInfo(tuple): {'mainTokenIds': [], 'bakcTokenIds': []}, stakingInfo(tuple): {'nftAsset': '0xBC4CA0EdA7647A8aB7C2061c2E..., _nfts(tuple[]): [{'tokenId': 9829, 'amount': 1009400000000..., _nftPairs(tuple[]): []) -> None
+        [5][DELEGATECALL] from=TransparentUpgradeableProxy, to=ApeStaking, depositAndBorrowApeAndStake(depositInfo(tuple): {'mainTokenIds': [], 'bakcTokenIds': []}, stakingInfo(tuple): {'nftAsset': '0xBC4CA0EdA7647A8aB7C2061c2E..., _nfts(tuple[]): [{'tokenId': 9829, 'amount': 1009400000000..., _nftPairs(tuple[]): []) -> None
+          [6][STATICCALL] from=TransparentUpgradeableProxy, to=ApeCoinStaking, nftPosition((uint256): 9829) -> ['0', '0']
+          [6][CALL] from=TransparentUpgradeableProxy, to=BeaconProxy, depositApeCoin(amount(uint256): 10094000000000000000000, _nfts(tuple[]): [{'tokenId': 9829, 'amount': 1009400000000...) -> None
+            [7][STATICCALL] from=BeaconProxy, to=UpgradeableBeacon, implementation() -> 0x9b8880
+            [7][DELEGATECALL] from=BeaconProxy, to=PTokenBAYC, depositApeCoin(amount(uint256): 10094000000000000000000, _nfts(tuple[]): [{'tokenId': 9829, 'amount': 1009400000000...) -> None
+              [8][STATICCALL] from=BeaconProxy, to=TransparentUpgradeableProxy, apeCoinStaking() -> 0x5954ab
+                [9][DELEGATECALL] from=TransparentUpgradeableProxy, to=ApeStaking, apeCoinStaking() -> 0x5954ab
+              [8][STATICCALL] from=BeaconProxy, to=ApeCoinStaking, apeCoin() -> 0x4d2244
+              [8][STATICCALL] from=BeaconProxy, to=SimpleToken, allowance(owner(address): 0x5f0A4a, spender(address): 0x5954aB) -> 115792089237316195423570985008687907853269984665640563642813801842509107503980
+              [8][STATICCALL] from=BeaconProxy, to=TransparentUpgradeableProxy, apeCoinStaking() -> 0x5954ab
+                [9][DELEGATECALL] from=TransparentUpgradeableProxy, to=ApeStaking, apeCoinStaking() -> 0x5954ab
+              [8][CALL] from=BeaconProxy, to=ApeCoinStaking, depositBAYC(_nfts(tuple[]): [{'tokenId': 9829, 'amount': 1009400000000...) -> None
+                [9][STATICCALL] from=ApeCoinStaking, to=BoredApeYachtClub, ownerOf(tokenId(uint256): 9829) -> 0x5f0a4a
+                [9][CALL] from=ApeCoinStaking, to=SimpleToken, transferFrom(sender(address): 0x5f0A4a, recipient(address): 0x5954aB, amount(uint256): 10094000000000000000000) -> True
+      [4][CALL] from=0xB618D9, to=TransparentUpgradeableProxy, withdrawApeCoin(nftAsset(address): 0xBC4CA0, _nfts(tuple[]): [{'tokenId': 9829, 'amount': 1009400000000..., _nftPairs(tuple[]): []) -> None
+        [5][DELEGATECALL] from=TransparentUpgradeableProxy, to=ApeStaking, withdrawApeCoin(nftAsset(address): 0xBC4CA0, _nfts(tuple[]): [{'tokenId': 9829, 'amount': 1009400000000..., _nftPairs(tuple[]): []) -> None
+          [6][STATICCALL] from=TransparentUpgradeableProxy, to=ApeCoinStaking, nftPosition((uint256): 9829) -> ['10094000000000000000000', '7628285417013748434878000000000000000000']
+          [6][STATICCALL] from=TransparentUpgradeableProxy, to=ApeCoinStaking, pendingRewards(_poolId(uint256): 1, _address(address): 0x000000, _tokenId(uint256): 9829) -> 0
+          [6][CALL] from=TransparentUpgradeableProxy, to=BeaconProxy, withdrawApeCoin(_nfts(tuple[]): [{'tokenId': 9829, 'amount': 1009400000000..., recipient(address): 0x0B8903) -> None
+            [7][STATICCALL] from=BeaconProxy, to=UpgradeableBeacon, implementation() -> 0x9b8880
+            [7][DELEGATECALL] from=BeaconProxy, to=PTokenBAYC, withdrawApeCoin(_nfts(tuple[]): [{'tokenId': 9829, 'amount': 1009400000000..., recipient(address): 0x0B8903) -> None
+              [8][STATICCALL] from=BeaconProxy, to=TransparentUpgradeableProxy, apeCoinStaking() -> 0x5954ab
+                [9][DELEGATECALL] from=TransparentUpgradeableProxy, to=ApeStaking, apeCoinStaking() -> 0x5954ab
+              [8][CALL] from=BeaconProxy, to=ApeCoinStaking, withdrawBAYC(_nfts(tuple[]): [{'tokenId': 9829, 'amount': 1009400000000..., _recipient(address): 0x0B8903) -> None
+                [9][STATICCALL] from=ApeCoinStaking, to=BoredApeYachtClub, ownerOf(tokenId(uint256): 9829) -> 0x5f0a4a
+                [9][CALL] from=ApeCoinStaking, to=SimpleToken, transfer(recipient(address): 0x0B8903, amount(uint256): 10094000000000000000000) -> True
+          [6][STATICCALL] from=TransparentUpgradeableProxy, to=SimpleToken, allowance(owner(address): 0x0B8903, spender(address): 0x736257) -> 115792089237316195423570985008687907853269984665640564026861970295192758185581
+          [6][CALL] from=TransparentUpgradeableProxy, to=TransparentUpgradeableProxy, borrowBalanceCurrent(account(address): 0xB618D9) -> 0
+            [7][DELEGATECALL] from=TransparentUpgradeableProxy, to=ApePool, borrowBalanceCurrent(account(address): 0xB618D9) -> 0
+          [6][CALL] from=TransparentUpgradeableProxy, to=SimpleToken, transfer(recipient(address): 0xB618D9, amount(uint256): 10094000000000000000000) -> True
+      [4][STATICCALL] from=0xB618D9, to=ApeCoinStaking, pools((uint256): 1) -> ['1686967200', '2', '48770650011458162941385286', '755724729246458137']
+      [4][STATICCALL] from=0xB618D9, to=ApeCoinStaking, getTimeRangeBy(_poolId(uint256): 1, _index(uint256): 2) -> None
+      [4][STATICCALL] from=0xB618D9, to=SimpleToken, balanceOf(account(address): 0x5f0A4a) -> 209906000000000000000000
+      [4][CALL] from=0xB618D9, to=TransparentUpgradeableProxy, depositAndBorrowApeAndStake(depositInfo(tuple): {'mainTokenIds': [], 'bakcTokenIds': []}, stakingInfo(tuple): {'nftAsset': '0xBC4CA0EdA7647A8aB7C2061c2E..., _nfts(tuple[]): [{'tokenId': 9829, 'amount': 1009400000000..., _nftPairs(tuple[]): []) -> None
+        [5][DELEGATECALL] from=TransparentUpgradeableProxy, to=ApeStaking, depositAndBorrowApeAndStake(depositInfo(tuple): {'mainTokenIds': [], 'bakcTokenIds': []}, stakingInfo(tuple): {'nftAsset': '0xBC4CA0EdA7647A8aB7C2061c2E..., _nfts(tuple[]): [{'tokenId': 9829, 'amount': 1009400000000..., _nftPairs(tuple[]): []) -> None
+          [6][STATICCALL] from=TransparentUpgradeableProxy, to=ApeCoinStaking, nftPosition((uint256): 9829) -> ['0', '0']
+          [6][CALL] from=TransparentUpgradeableProxy, to=BeaconProxy, depositApeCoin(amount(uint256): 10094000000000000000000, _nfts(tuple[]): [{'tokenId': 9829, 'amount': 1009400000000...) -> None
+            [7][STATICCALL] from=BeaconProxy, to=UpgradeableBeacon, implementation() -> 0x9b8880
+            [7][DELEGATECALL] from=BeaconProxy, to=PTokenBAYC, depositApeCoin(amount(uint256): 10094000000000000000000, _nfts(tuple[]): [{'tokenId': 9829, 'amount': 1009400000000...) -> None
+              [8][STATICCALL] from=BeaconProxy, to=TransparentUpgradeableProxy, apeCoinStaking() -> 0x5954ab
+                [9][DELEGATECALL] from=TransparentUpgradeableProxy, to=ApeStaking, apeCoinStaking() -> 0x5954ab
+              [8][STATICCALL] from=BeaconProxy, to=ApeCoinStaking, apeCoin() -> 0x4d2244
+              [8][STATICCALL] from=BeaconProxy, to=SimpleToken, allowance(owner(address): 0x5f0A4a, spender(address): 0x5954aB) -> 115792089237316195423570985008687907853269984665640563632719801842509107503980
+              [8][STATICCALL] from=BeaconProxy, to=TransparentUpgradeableProxy, apeCoinStaking() -> 0x5954ab
+                [9][DELEGATECALL] from=TransparentUpgradeableProxy, to=ApeStaking, apeCoinStaking() -> 0x5954ab
+              [8][CALL] from=BeaconProxy, to=ApeCoinStaking, depositBAYC(_nfts(tuple[]): [{'tokenId': 9829, 'amount': 1009400000000...) -> None
+                [9][STATICCALL] from=ApeCoinStaking, to=BoredApeYachtClub, ownerOf(tokenId(uint256): 9829) -> 0x5f0a4a
+                [9][CALL] from=ApeCoinStaking, to=SimpleToken, transferFrom(sender(address): 0x5f0A4a, recipient(address): 0x5954aB, amount(uint256): 10094000000000000000000) -> True
+      [4][CALL] from=0xB618D9, to=TransparentUpgradeableProxy, withdrawApeCoin(nftAsset(address): 0xBC4CA0, _nfts(tuple[]): [{'tokenId': 9829, 'amount': 1009400000000..., _nftPairs(tuple[]): []) -> None
+        [5][DELEGATECALL] from=TransparentUpgradeableProxy, to=ApeStaking, withdrawApeCoin(nftAsset(address): 0xBC4CA0, _nfts(tuple[]): [{'tokenId': 9829, 'amount': 1009400000000..., _nftPairs(tuple[]): []) -> None
+          [6][STATICCALL] from=TransparentUpgradeableProxy, to=ApeCoinStaking, nftPosition((uint256): 9829) -> ['10094000000000000000000', '7628285417013748434878000000000000000000']
+          [6][STATICCALL] from=TransparentUpgradeableProxy, to=ApeCoinStaking, pendingRewards(_poolId(uint256): 1, _address(address): 0x000000, _tokenId(uint256): 9829) -> 0
+          [6][CALL] from=TransparentUpgradeableProxy, to=BeaconProxy, withdrawApeCoin(_nfts(tuple[]): [{'tokenId': 9829, 'amount': 1009400000000..., recipient(address): 0x0B8903) -> None
+            [7][STATICCALL] from=BeaconProxy, to=UpgradeableBeacon, implementation() -> 0x9b8880
+            [7][DELEGATECALL] from=BeaconProxy, to=PTokenBAYC, withdrawApeCoin(_nfts(tuple[]): [{'tokenId': 9829, 'amount': 1009400000000..., recipient(address): 0x0B8903) -> None
+              [8][STATICCALL] from=BeaconProxy, to=TransparentUpgradeableProxy, apeCoinStaking() -> 0x5954ab
+                [9][DELEGATECALL] from=TransparentUpgradeableProxy, to=ApeStaking, apeCoinStaking() -> 0x5954ab
+              [8][CALL] from=BeaconProxy, to=ApeCoinStaking, withdrawBAYC(_nfts(tuple[]): [{'tokenId': 9829, 'amount': 1009400000000..., _recipient(address): 0x0B8903) -> None
+                [9][STATICCALL] from=ApeCoinStaking, to=BoredApeYachtClub, ownerOf(tokenId(uint256): 9829) -> 0x5f0a4a
+                [9][CALL] from=ApeCoinStaking, to=SimpleToken, transfer(recipient(address): 0x0B8903, amount(uint256): 10094000000000000000000) -> True
+          [6][STATICCALL] from=TransparentUpgradeableProxy, to=SimpleToken, allowance(owner(address): 0x0B8903, spender(address): 0x736257) -> 115792089237316195423570985008687907853269984665640564026861970295192758185581
+          [6][CALL] from=TransparentUpgradeableProxy, to=TransparentUpgradeableProxy, borrowBalanceCurrent(account(address): 0xB618D9) -> 0
+            [7][DELEGATECALL] from=TransparentUpgradeableProxy, to=ApePool, borrowBalanceCurrent(account(address): 0xB618D9) -> 0
+          [6][CALL] from=TransparentUpgradeableProxy, to=SimpleToken, transfer(recipient(address): 0xB618D9, amount(uint256): 10094000000000000000000) -> True
+      [4][STATICCALL] from=0xB618D9, to=ApeCoinStaking, pools((uint256): 1) -> ['1686967200', '2', '48770650011458162941385286', '755724729246458137']
+      [4][STATICCALL] from=0xB618D9, to=ApeCoinStaking, getTimeRangeBy(_poolId(uint256): 1, _index(uint256): 2) -> None
+      [4][STATICCALL] from=0xB618D9, to=SimpleToken, balanceOf(account(address): 0x5f0A4a) -> 199812000000000000000000
+      [4][CALL] from=0xB618D9, to=TransparentUpgradeableProxy, depositAndBorrowApeAndStake(depositInfo(tuple): {'mainTokenIds': [], 'bakcTokenIds': []}, stakingInfo(tuple): {'nftAsset': '0xBC4CA0EdA7647A8aB7C2061c2E..., _nfts(tuple[]): [{'tokenId': 9829, 'amount': 1009400000000..., _nftPairs(tuple[]): []) -> None
+        [5][DELEGATECALL] from=TransparentUpgradeableProxy, to=ApeStaking, depositAndBorrowApeAndStake(depositInfo(tuple): {'mainTokenIds': [], 'bakcTokenIds': []}, stakingInfo(tuple): {'nftAsset': '0xBC4CA0EdA7647A8aB7C2061c2E..., _nfts(tuple[]): [{'tokenId': 9829, 'amount': 1009400000000..., _nftPairs(tuple[]): []) -> None
+          [6][STATICCALL] from=TransparentUpgradeableProxy, to=ApeCoinStaking, nftPosition((uint256): 9829) -> ['0', '0']
+          [6][CALL] from=TransparentUpgradeableProxy, to=BeaconProxy, depositApeCoin(amount(uint256): 10094000000000000000000, _nfts(tuple[]): [{'tokenId': 9829, 'amount': 1009400000000...) -> None
+            [7][STATICCALL] from=BeaconProxy, to=UpgradeableBeacon, implementation() -> 0x9b8880
+            [7][DELEGATECALL] from=BeaconProxy, to=PTokenBAYC, depositApeCoin(amount(uint256): 10094000000000000000000, _nfts(tuple[]): [{'tokenId': 9829, 'amount': 1009400000000...) -> None
+              [8][STATICCALL] from=BeaconProxy, to=TransparentUpgradeableProxy, apeCoinStaking() -> 0x5954ab
+                [9][DELEGATECALL] from=TransparentUpgradeableProxy, to=ApeStaking, apeCoinStaking() -> 0x5954ab
+              [8][STATICCALL] from=BeaconProxy, to=ApeCoinStaking, apeCoin() -> 0x4d2244
+              [8][STATICCALL] from=BeaconProxy, to=SimpleToken, allowance(owner(address): 0x5f0A4a, spender(address): 0x5954aB) -> 115792089237316195423570985008687907853269984665640563622625801842509107503980
+              [8][STATICCALL] from=BeaconProxy, to=TransparentUpgradeableProxy, apeCoinStaking() -> 0x5954ab
+                [9][DELEGATECALL] from=TransparentUpgradeableProxy, to=ApeStaking, apeCoinStaking() -> 0x5954ab
+              [8][CALL] from=BeaconProxy, to=ApeCoinStaking, depositBAYC(_nfts(tuple[]): [{'tokenId': 9829, 'amount': 1009400000000...) -> None
+                [9][STATICCALL] from=ApeCoinStaking, to=BoredApeYachtClub, ownerOf(tokenId(uint256): 9829) -> 0x5f0a4a
+                [9][CALL] from=ApeCoinStaking, to=SimpleToken, transferFrom(sender(address): 0x5f0A4a, recipient(address): 0x5954aB, amount(uint256): 10094000000000000000000) -> True
+      [4][CALL] from=0xB618D9, to=TransparentUpgradeableProxy, withdrawApeCoin(nftAsset(address): 0xBC4CA0, _nfts(tuple[]): [{'tokenId': 9829, 'amount': 1009400000000..., _nftPairs(tuple[]): []) -> None
+        [5][DELEGATECALL] from=TransparentUpgradeableProxy, to=ApeStaking, withdrawApeCoin(nftAsset(address): 0xBC4CA0, _nfts(tuple[]): [{'tokenId': 9829, 'amount': 1009400000000..., _nftPairs(tuple[]): []) -> None
+          [6][STATICCALL] from=TransparentUpgradeableProxy, to=ApeCoinStaking, nftPosition((uint256): 9829) -> ['10094000000000000000000', '7628285417013748434878000000000000000000']
+          [6][STATICCALL] from=TransparentUpgradeableProxy, to=ApeCoinStaking, pendingRewards(_poolId(uint256): 1, _address(address): 0x000000, _tokenId(uint256): 9829) -> 0
+          [6][CALL] from=TransparentUpgradeableProxy, to=BeaconProxy, withdrawApeCoin(_nfts(tuple[]): [{'tokenId': 9829, 'amount': 1009400000000..., recipient(address): 0x0B8903) -> None
+            [7][STATICCALL] from=BeaconProxy, to=UpgradeableBeacon, implementation() -> 0x9b8880
+            [7][DELEGATECALL] from=BeaconProxy, to=PTokenBAYC, withdrawApeCoin(_nfts(tuple[]): [{'tokenId': 9829, 'amount': 1009400000000..., recipient(address): 0x0B8903) -> None
+              [8][STATICCALL] from=BeaconProxy, to=TransparentUpgradeableProxy, apeCoinStaking() -> 0x5954ab
+                [9][DELEGATECALL] from=TransparentUpgradeableProxy, to=ApeStaking, apeCoinStaking() -> 0x5954ab
+              [8][CALL] from=BeaconProxy, to=ApeCoinStaking, withdrawBAYC(_nfts(tuple[]): [{'tokenId': 9829, 'amount': 1009400000000..., _recipient(address): 0x0B8903) -> None
+                [9][STATICCALL] from=ApeCoinStaking, to=BoredApeYachtClub, ownerOf(tokenId(uint256): 9829) -> 0x5f0a4a
+                [9][CALL] from=ApeCoinStaking, to=SimpleToken, transfer(recipient(address): 0x0B8903, amount(uint256): 10094000000000000000000) -> True
+          [6][STATICCALL] from=TransparentUpgradeableProxy, to=SimpleToken, allowance(owner(address): 0x0B8903, spender(address): 0x736257) -> 115792089237316195423570985008687907853269984665640564026861970295192758185581
+          [6][CALL] from=TransparentUpgradeableProxy, to=TransparentUpgradeableProxy, borrowBalanceCurrent(account(address): 0xB618D9) -> 0
+            [7][DELEGATECALL] from=TransparentUpgradeableProxy, to=ApePool, borrowBalanceCurrent(account(address): 0xB618D9) -> 0
+          [6][CALL] from=TransparentUpgradeableProxy, to=SimpleToken, transfer(recipient(address): 0xB618D9, amount(uint256): 10094000000000000000000) -> True
+      [4][STATICCALL] from=0xB618D9, to=ApeCoinStaking, pools((uint256): 1) -> ['1686967200', '2', '48770650011458162941385286', '755724729246458137']
+      [4][STATICCALL] from=0xB618D9, to=ApeCoinStaking, getTimeRangeBy(_poolId(uint256): 1, _index(uint256): 2) -> None
+      [4][STATICCALL] from=0xB618D9, to=SimpleToken, balanceOf(account(address): 0x5f0A4a) -> 189718000000000000000000
+      [4][CALL] from=0xB618D9, to=TransparentUpgradeableProxy, depositAndBorrowApeAndStake(depositInfo(tuple): {'mainTokenIds': [], 'bakcTokenIds': []}, stakingInfo(tuple): {'nftAsset': '0xBC4CA0EdA7647A8aB7C2061c2E..., _nfts(tuple[]): [{'tokenId': 9829, 'amount': 1009400000000..., _nftPairs(tuple[]): []) -> None
+        [5][DELEGATECALL] from=TransparentUpgradeableProxy, to=ApeStaking, depositAndBorrowApeAndStake(depositInfo(tuple): {'mainTokenIds': [], 'bakcTokenIds': []}, stakingInfo(tuple): {'nftAsset': '0xBC4CA0EdA7647A8aB7C2061c2E..., _nfts(tuple[]): [{'tokenId': 9829, 'amount': 1009400000000..., _nftPairs(tuple[]): []) -> None
+          [6][STATICCALL] from=TransparentUpgradeableProxy, to=ApeCoinStaking, nftPosition((uint256): 9829) -> ['0', '0']
+          [6][CALL] from=TransparentUpgradeableProxy, to=BeaconProxy, depositApeCoin(amount(uint256): 10094000000000000000000, _nfts(tuple[]): [{'tokenId': 9829, 'amount': 1009400000000...) -> None
+            [7][STATICCALL] from=BeaconProxy, to=UpgradeableBeacon, implementation() -> 0x9b8880
+            [7][DELEGATECALL] from=BeaconProxy, to=PTokenBAYC, depositApeCoin(amount(uint256): 10094000000000000000000, _nfts(tuple[]): [{'tokenId': 9829, 'amount': 1009400000000...) -> None
+              [8][STATICCALL] from=BeaconProxy, to=TransparentUpgradeableProxy, apeCoinStaking() -> 0x5954ab
+                [9][DELEGATECALL] from=TransparentUpgradeableProxy, to=ApeStaking, apeCoinStaking() -> 0x5954ab
+              [8][STATICCALL] from=BeaconProxy, to=ApeCoinStaking, apeCoin() -> 0x4d2244
+              [8][STATICCALL] from=BeaconProxy, to=SimpleToken, allowance(owner(address): 0x5f0A4a, spender(address): 0x5954aB) -> 115792089237316195423570985008687907853269984665640563612531801842509107503980
+              [8][STATICCALL] from=BeaconProxy, to=TransparentUpgradeableProxy, apeCoinStaking() -> 0x5954ab
+                [9][DELEGATECALL] from=TransparentUpgradeableProxy, to=ApeStaking, apeCoinStaking() -> 0x5954ab
+              [8][CALL] from=BeaconProxy, to=ApeCoinStaking, depositBAYC(_nfts(tuple[]): [{'tokenId': 9829, 'amount': 1009400000000...) -> None
+                [9][STATICCALL] from=ApeCoinStaking, to=BoredApeYachtClub, ownerOf(tokenId(uint256): 9829) -> 0x5f0a4a
+                [9][CALL] from=ApeCoinStaking, to=SimpleToken, transferFrom(sender(address): 0x5f0A4a, recipient(address): 0x5954aB, amount(uint256): 10094000000000000000000) -> True
+      [4][CALL] from=0xB618D9, to=TransparentUpgradeableProxy, withdrawApeCoin(nftAsset(address): 0xBC4CA0, _nfts(tuple[]): [{'tokenId': 9829, 'amount': 1009400000000..., _nftPairs(tuple[]): []) -> None
+        [5][DELEGATECALL] from=TransparentUpgradeableProxy, to=ApeStaking, withdrawApeCoin(nftAsset(address): 0xBC4CA0, _nfts(tuple[]): [{'tokenId': 9829, 'amount': 1009400000000..., _nftPairs(tuple[]): []) -> None
+          [6][STATICCALL] from=TransparentUpgradeableProxy, to=ApeCoinStaking, nftPosition((uint256): 9829) -> ['10094000000000000000000', '7628285417013748434878000000000000000000']
+          [6][STATICCALL] from=TransparentUpgradeableProxy, to=ApeCoinStaking, pendingRewards(_poolId(uint256): 1, _address(address): 0x000000, _tokenId(uint256): 9829) -> 0
+          [6][CALL] from=TransparentUpgradeableProxy, to=BeaconProxy, withdrawApeCoin(_nfts(tuple[]): [{'tokenId': 9829, 'amount': 1009400000000..., recipient(address): 0x0B8903) -> None
+            [7][STATICCALL] from=BeaconProxy, to=UpgradeableBeacon, implementation() -> 0x9b8880
+            [7][DELEGATECALL] from=BeaconProxy, to=PTokenBAYC, withdrawApeCoin(_nfts(tuple[]): [{'tokenId': 9829, 'amount': 1009400000000..., recipient(address): 0x0B8903) -> None
+              [8][STATICCALL] from=BeaconProxy, to=TransparentUpgradeableProxy, apeCoinStaking() -> 0x5954ab
+                [9][DELEGATECALL] from=TransparentUpgradeableProxy, to=ApeStaking, apeCoinStaking() -> 0x5954ab
+              [8][CALL] from=BeaconProxy, to=ApeCoinStaking, withdrawBAYC(_nfts(tuple[]): [{'tokenId': 9829, 'amount': 1009400000000..., _recipient(address): 0x0B8903) -> None
+                [9][STATICCALL] from=ApeCoinStaking, to=BoredApeYachtClub, ownerOf(tokenId(uint256): 9829) -> 0x5f0a4a
+                [9][CALL] from=ApeCoinStaking, to=SimpleToken, transfer(recipient(address): 0x0B8903, amount(uint256): 10094000000000000000000) -> True
+          [6][STATICCALL] from=TransparentUpgradeableProxy, to=SimpleToken, allowance(owner(address): 0x0B8903, spender(address): 0x736257) -> 115792089237316195423570985008687907853269984665640564026861970295192758185581
+          [6][CALL] from=TransparentUpgradeableProxy, to=TransparentUpgradeableProxy, borrowBalanceCurrent(account(address): 0xB618D9) -> 0
+            [7][DELEGATECALL] from=TransparentUpgradeableProxy, to=ApePool, borrowBalanceCurrent(account(address): 0xB618D9) -> 0
+          [6][CALL] from=TransparentUpgradeableProxy, to=SimpleToken, transfer(recipient(address): 0xB618D9, amount(uint256): 10094000000000000000000) -> True
+      [4][STATICCALL] from=0xB618D9, to=ApeCoinStaking, pools((uint256): 1) -> ['1686967200', '2', '48770650011458162941385286', '755724729246458137']
+      [4][STATICCALL] from=0xB618D9, to=ApeCoinStaking, getTimeRangeBy(_poolId(uint256): 1, _index(uint256): 2) -> None
+      [4][STATICCALL] from=0xB618D9, to=SimpleToken, balanceOf(account(address): 0x5f0A4a) -> 179624000000000000000000
+      [4][CALL] from=0xB618D9, to=TransparentUpgradeableProxy, depositAndBorrowApeAndStake(depositInfo(tuple): {'mainTokenIds': [], 'bakcTokenIds': []}, stakingInfo(tuple): {'nftAsset': '0xBC4CA0EdA7647A8aB7C2061c2E..., _nfts(tuple[]): [{'tokenId': 9829, 'amount': 1009400000000..., _nftPairs(tuple[]): []) -> None
+        [5][DELEGATECALL] from=TransparentUpgradeableProxy, to=ApeStaking, depositAndBorrowApeAndStake(depositInfo(tuple): {'mainTokenIds': [], 'bakcTokenIds': []}, stakingInfo(tuple): {'nftAsset': '0xBC4CA0EdA7647A8aB7C2061c2E..., _nfts(tuple[]): [{'tokenId': 9829, 'amount': 1009400000000..., _nftPairs(tuple[]): []) -> None
+          [6][STATICCALL] from=TransparentUpgradeableProxy, to=ApeCoinStaking, nftPosition((uint256): 9829) -> ['0', '0']
+          [6][CALL] from=TransparentUpgradeableProxy, to=BeaconProxy, depositApeCoin(amount(uint256): 10094000000000000000000, _nfts(tuple[]): [{'tokenId': 9829, 'amount': 1009400000000...) -> None
+            [7][STATICCALL] from=BeaconProxy, to=UpgradeableBeacon, implementation() -> 0x9b8880
+            [7][DELEGATECALL] from=BeaconProxy, to=PTokenBAYC, depositApeCoin(amount(uint256): 10094000000000000000000, _nfts(tuple[]): [{'tokenId': 9829, 'amount': 1009400000000...) -> None
+              [8][STATICCALL] from=BeaconProxy, to=TransparentUpgradeableProxy, apeCoinStaking() -> 0x5954ab
+                [9][DELEGATECALL] from=TransparentUpgradeableProxy, to=ApeStaking, apeCoinStaking() -> 0x5954ab
+              [8][STATICCALL] from=BeaconProxy, to=ApeCoinStaking, apeCoin() -> 0x4d2244
+              [8][STATICCALL] from=BeaconProxy, to=SimpleToken, allowance(owner(address): 0x5f0A4a, spender(address): 0x5954aB) -> 115792089237316195423570985008687907853269984665640563602437801842509107503980
+              [8][STATICCALL] from=BeaconProxy, to=TransparentUpgradeableProxy, apeCoinStaking() -> 0x5954ab
+                [9][DELEGATECALL] from=TransparentUpgradeableProxy, to=ApeStaking, apeCoinStaking() -> 0x5954ab
+              [8][CALL] from=BeaconProxy, to=ApeCoinStaking, depositBAYC(_nfts(tuple[]): [{'tokenId': 9829, 'amount': 1009400000000...) -> None
+                [9][STATICCALL] from=ApeCoinStaking, to=BoredApeYachtClub, ownerOf(tokenId(uint256): 9829) -> 0x5f0a4a
+                [9][CALL] from=ApeCoinStaking, to=SimpleToken, transferFrom(sender(address): 0x5f0A4a, recipient(address): 0x5954aB, amount(uint256): 10094000000000000000000) -> True
+      [4][CALL] from=0xB618D9, to=TransparentUpgradeableProxy, withdrawApeCoin(nftAsset(address): 0xBC4CA0, _nfts(tuple[]): [{'tokenId': 9829, 'amount': 1009400000000..., _nftPairs(tuple[]): []) -> None
+        [5][DELEGATECALL] from=TransparentUpgradeableProxy, to=ApeStaking, withdrawApeCoin(nftAsset(address): 0xBC4CA0, _nfts(tuple[]): [{'tokenId': 9829, 'amount': 1009400000000..., _nftPairs(tuple[]): []) -> None
+          [6][STATICCALL] from=TransparentUpgradeableProxy, to=ApeCoinStaking, nftPosition((uint256): 9829) -> ['10094000000000000000000', '7628285417013748434878000000000000000000']
+          [6][STATICCALL] from=TransparentUpgradeableProxy, to=ApeCoinStaking, pendingRewards(_poolId(uint256): 1, _address(address): 0x000000, _tokenId(uint256): 9829) -> 0
+          [6][CALL] from=TransparentUpgradeableProxy, to=BeaconProxy, withdrawApeCoin(_nfts(tuple[]): [{'tokenId': 9829, 'amount': 1009400000000..., recipient(address): 0x0B8903) -> None
+            [7][STATICCALL] from=BeaconProxy, to=UpgradeableBeacon, implementation() -> 0x9b8880
+            [7][DELEGATECALL] from=BeaconProxy, to=PTokenBAYC, withdrawApeCoin(_nfts(tuple[]): [{'tokenId': 9829, 'amount': 1009400000000..., recipient(address): 0x0B8903) -> None
+              [8][STATICCALL] from=BeaconProxy, to=TransparentUpgradeableProxy, apeCoinStaking() -> 0x5954ab
+                [9][DELEGATECALL] from=TransparentUpgradeableProxy, to=ApeStaking, apeCoinStaking() -> 0x5954ab
+              [8][CALL] from=BeaconProxy, to=ApeCoinStaking, withdrawBAYC(_nfts(tuple[]): [{'tokenId': 9829, 'amount': 1009400000000..., _recipient(address): 0x0B8903) -> None
+                [9][STATICCALL] from=ApeCoinStaking, to=BoredApeYachtClub, ownerOf(tokenId(uint256): 9829) -> 0x5f0a4a
+                [9][CALL] from=ApeCoinStaking, to=SimpleToken, transfer(recipient(address): 0x0B8903, amount(uint256): 10094000000000000000000) -> True
+          [6][STATICCALL] from=TransparentUpgradeableProxy, to=SimpleToken, allowance(owner(address): 0x0B8903, spender(address): 0x736257) -> 115792089237316195423570985008687907853269984665640564026861970295192758185581
+          [6][CALL] from=TransparentUpgradeableProxy, to=TransparentUpgradeableProxy, borrowBalanceCurrent(account(address): 0xB618D9) -> 0
+            [7][DELEGATECALL] from=TransparentUpgradeableProxy, to=ApePool, borrowBalanceCurrent(account(address): 0xB618D9) -> 0
+          [6][CALL] from=TransparentUpgradeableProxy, to=SimpleToken, transfer(recipient(address): 0xB618D9, amount(uint256): 10094000000000000000000) -> True
+      [4][STATICCALL] from=0xB618D9, to=ApeCoinStaking, pools((uint256): 1) -> ['1686967200', '2', '48770650011458162941385286', '755724729246458137']
+      [4][STATICCALL] from=0xB618D9, to=ApeCoinStaking, getTimeRangeBy(_poolId(uint256): 1, _index(uint256): 2) -> None
+      [4][STATICCALL] from=0xB618D9, to=SimpleToken, balanceOf(account(address): 0x5f0A4a) -> 169530000000000000000000
+      [4][CALL] from=0xB618D9, to=TransparentUpgradeableProxy, depositAndBorrowApeAndStake(depositInfo(tuple): {'mainTokenIds': [], 'bakcTokenIds': []}, stakingInfo(tuple): {'nftAsset': '0xBC4CA0EdA7647A8aB7C2061c2E..., _nfts(tuple[]): [{'tokenId': 9829, 'amount': 1009400000000..., _nftPairs(tuple[]): []) -> None
+        [5][DELEGATECALL] from=TransparentUpgradeableProxy, to=ApeStaking, depositAndBorrowApeAndStake(depositInfo(tuple): {'mainTokenIds': [], 'bakcTokenIds': []}, stakingInfo(tuple): {'nftAsset': '0xBC4CA0EdA7647A8aB7C2061c2E..., _nfts(tuple[]): [{'tokenId': 9829, 'amount': 1009400000000..., _nftPairs(tuple[]): []) -> None
+          [6][STATICCALL] from=TransparentUpgradeableProxy, to=ApeCoinStaking, nftPosition((uint256): 9829) -> ['0', '0']
+          [6][CALL] from=TransparentUpgradeableProxy, to=BeaconProxy, depositApeCoin(amount(uint256): 10094000000000000000000, _nfts(tuple[]): [{'tokenId': 9829, 'amount': 1009400000000...) -> None
+            [7][STATICCALL] from=BeaconProxy, to=UpgradeableBeacon, implementation() -> 0x9b8880
+            [7][DELEGATECALL] from=BeaconProxy, to=PTokenBAYC, depositApeCoin(amount(uint256): 10094000000000000000000, _nfts(tuple[]): [{'tokenId': 9829, 'amount': 1009400000000...) -> None
+              [8][STATICCALL] from=BeaconProxy, to=TransparentUpgradeableProxy, apeCoinStaking() -> 0x5954ab
+                [9][DELEGATECALL] from=TransparentUpgradeableProxy, to=ApeStaking, apeCoinStaking() -> 0x5954ab
+              [8][STATICCALL] from=BeaconProxy, to=ApeCoinStaking, apeCoin() -> 0x4d2244
+              [8][STATICCALL] from=BeaconProxy, to=SimpleToken, allowance(owner(address): 0x5f0A4a, spender(address): 0x5954aB) -> 115792089237316195423570985008687907853269984665640563592343801842509107503980
+              [8][STATICCALL] from=BeaconProxy, to=TransparentUpgradeableProxy, apeCoinStaking() -> 0x5954ab
+                [9][DELEGATECALL] from=TransparentUpgradeableProxy, to=ApeStaking, apeCoinStaking() -> 0x5954ab
+              [8][CALL] from=BeaconProxy, to=ApeCoinStaking, depositBAYC(_nfts(tuple[]): [{'tokenId': 9829, 'amount': 1009400000000...) -> None
+                [9][STATICCALL] from=ApeCoinStaking, to=BoredApeYachtClub, ownerOf(tokenId(uint256): 9829) -> 0x5f0a4a
+                [9][CALL] from=ApeCoinStaking, to=SimpleToken, transferFrom(sender(address): 0x5f0A4a, recipient(address): 0x5954aB, amount(uint256): 10094000000000000000000) -> True
+      [4][CALL] from=0xB618D9, to=TransparentUpgradeableProxy, withdrawApeCoin(nftAsset(address): 0xBC4CA0, _nfts(tuple[]): [{'tokenId': 9829, 'amount': 1009400000000..., _nftPairs(tuple[]): []) -> None
+        [5][DELEGATECALL] from=TransparentUpgradeableProxy, to=ApeStaking, withdrawApeCoin(nftAsset(address): 0xBC4CA0, _nfts(tuple[]): [{'tokenId': 9829, 'amount': 1009400000000..., _nftPairs(tuple[]): []) -> None
+          [6][STATICCALL] from=TransparentUpgradeableProxy, to=ApeCoinStaking, nftPosition((uint256): 9829) -> ['10094000000000000000000', '7628285417013748434878000000000000000000']
+          [6][STATICCALL] from=TransparentUpgradeableProxy, to=ApeCoinStaking, pendingRewards(_poolId(uint256): 1, _address(address): 0x000000, _tokenId(uint256): 9829) -> 0
+          [6][CALL] from=TransparentUpgradeableProxy, to=BeaconProxy, withdrawApeCoin(_nfts(tuple[]): [{'tokenId': 9829, 'amount': 1009400000000..., recipient(address): 0x0B8903) -> None
+            [7][STATICCALL] from=BeaconProxy, to=UpgradeableBeacon, implementation() -> 0x9b8880
+            [7][DELEGATECALL] from=BeaconProxy, to=PTokenBAYC, withdrawApeCoin(_nfts(tuple[]): [{'tokenId': 9829, 'amount': 1009400000000..., recipient(address): 0x0B8903) -> None
+              [8][STATICCALL] from=BeaconProxy, to=TransparentUpgradeableProxy, apeCoinStaking() -> 0x5954ab
+                [9][DELEGATECALL] from=TransparentUpgradeableProxy, to=ApeStaking, apeCoinStaking() -> 0x5954ab
+              [8][CALL] from=BeaconProxy, to=ApeCoinStaking, withdrawBAYC(_nfts(tuple[]): [{'tokenId': 9829, 'amount': 1009400000000..., _recipient(address): 0x0B8903) -> None
+                [9][STATICCALL] from=ApeCoinStaking, to=BoredApeYachtClub, ownerOf(tokenId(uint256): 9829) -> 0x5f0a4a
+                [9][CALL] from=ApeCoinStaking, to=SimpleToken, transfer(recipient(address): 0x0B8903, amount(uint256): 10094000000000000000000) -> True
+          [6][STATICCALL] from=TransparentUpgradeableProxy, to=SimpleToken, allowance(owner(address): 0x0B8903, spender(address): 0x736257) -> 115792089237316195423570985008687907853269984665640564026861970295192758185581
+          [6][CALL] from=TransparentUpgradeableProxy, to=TransparentUpgradeableProxy, borrowBalanceCurrent(account(address): 0xB618D9) -> 0
+            [7][DELEGATECALL] from=TransparentUpgradeableProxy, to=ApePool, borrowBalanceCurrent(account(address): 0xB618D9) -> 0
+          [6][CALL] from=TransparentUpgradeableProxy, to=SimpleToken, transfer(recipient(address): 0xB618D9, amount(uint256): 10094000000000000000000) -> True
+      [4][STATICCALL] from=0xB618D9, to=ApeCoinStaking, pools((uint256): 1) -> ['1686967200', '2', '48770650011458162941385286', '755724729246458137']
+      [4][STATICCALL] from=0xB618D9, to=ApeCoinStaking, getTimeRangeBy(_poolId(uint256): 1, _index(uint256): 2) -> None
+      [4][STATICCALL] from=0xB618D9, to=SimpleToken, balanceOf(account(address): 0x5f0A4a) -> 159436000000000000000000
+      [4][CALL] from=0xB618D9, to=TransparentUpgradeableProxy, depositAndBorrowApeAndStake(depositInfo(tuple): {'mainTokenIds': [], 'bakcTokenIds': []}, stakingInfo(tuple): {'nftAsset': '0xBC4CA0EdA7647A8aB7C2061c2E..., _nfts(tuple[]): [{'tokenId': 9829, 'amount': 1009400000000..., _nftPairs(tuple[]): []) -> None
+        [5][DELEGATECALL] from=TransparentUpgradeableProxy, to=ApeStaking, depositAndBorrowApeAndStake(depositInfo(tuple): {'mainTokenIds': [], 'bakcTokenIds': []}, stakingInfo(tuple): {'nftAsset': '0xBC4CA0EdA7647A8aB7C2061c2E..., _nfts(tuple[]): [{'tokenId': 9829, 'amount': 1009400000000..., _nftPairs(tuple[]): []) -> None
+          [6][STATICCALL] from=TransparentUpgradeableProxy, to=ApeCoinStaking, nftPosition((uint256): 9829) -> ['0', '0']
+          [6][CALL] from=TransparentUpgradeableProxy, to=BeaconProxy, depositApeCoin(amount(uint256): 10094000000000000000000, _nfts(tuple[]): [{'tokenId': 9829, 'amount': 1009400000000...) -> None
+            [7][STATICCALL] from=BeaconProxy, to=UpgradeableBeacon, implementation() -> 0x9b8880
+            [7][DELEGATECALL] from=BeaconProxy, to=PTokenBAYC, depositApeCoin(amount(uint256): 10094000000000000000000, _nfts(tuple[]): [{'tokenId': 9829, 'amount': 1009400000000...) -> None
+              [8][STATICCALL] from=BeaconProxy, to=TransparentUpgradeableProxy, apeCoinStaking() -> 0x5954ab
+                [9][DELEGATECALL] from=TransparentUpgradeableProxy, to=ApeStaking, apeCoinStaking() -> 0x5954ab
+              [8][STATICCALL] from=BeaconProxy, to=ApeCoinStaking, apeCoin() -> 0x4d2244
+              [8][STATICCALL] from=BeaconProxy, to=SimpleToken, allowance(owner(address): 0x5f0A4a, spender(address): 0x5954aB) -> 115792089237316195423570985008687907853269984665640563582249801842509107503980
+              [8][STATICCALL] from=BeaconProxy, to=TransparentUpgradeableProxy, apeCoinStaking() -> 0x5954ab
+                [9][DELEGATECALL] from=TransparentUpgradeableProxy, to=ApeStaking, apeCoinStaking() -> 0x5954ab
+              [8][CALL] from=BeaconProxy, to=ApeCoinStaking, depositBAYC(_nfts(tuple[]): [{'tokenId': 9829, 'amount': 1009400000000...) -> None
+                [9][STATICCALL] from=ApeCoinStaking, to=BoredApeYachtClub, ownerOf(tokenId(uint256): 9829) -> 0x5f0a4a
+                [9][CALL] from=ApeCoinStaking, to=SimpleToken, transferFrom(sender(address): 0x5f0A4a, recipient(address): 0x5954aB, amount(uint256): 10094000000000000000000) -> True
+      [4][CALL] from=0xB618D9, to=TransparentUpgradeableProxy, withdrawApeCoin(nftAsset(address): 0xBC4CA0, _nfts(tuple[]): [{'tokenId': 9829, 'amount': 1009400000000..., _nftPairs(tuple[]): []) -> None
+        [5][DELEGATECALL] from=TransparentUpgradeableProxy, to=ApeStaking, withdrawApeCoin(nftAsset(address): 0xBC4CA0, _nfts(tuple[]): [{'tokenId': 9829, 'amount': 1009400000000..., _nftPairs(tuple[]): []) -> None
+          [6][STATICCALL] from=TransparentUpgradeableProxy, to=ApeCoinStaking, nftPosition((uint256): 9829) -> ['10094000000000000000000', '7628285417013748434878000000000000000000']
+          [6][STATICCALL] from=TransparentUpgradeableProxy, to=ApeCoinStaking, pendingRewards(_poolId(uint256): 1, _address(address): 0x000000, _tokenId(uint256): 9829) -> 0
+          [6][CALL] from=TransparentUpgradeableProxy, to=BeaconProxy, withdrawApeCoin(_nfts(tuple[]): [{'tokenId': 9829, 'amount': 1009400000000..., recipient(address): 0x0B8903) -> None
+            [7][STATICCALL] from=BeaconProxy, to=UpgradeableBeacon, implementation() -> 0x9b8880
+            [7][DELEGATECALL] from=BeaconProxy, to=PTokenBAYC, withdrawApeCoin(_nfts(tuple[]): [{'tokenId': 9829, 'amount': 1009400000000..., recipient(address): 0x0B8903) -> None
+              [8][STATICCALL] from=BeaconProxy, to=TransparentUpgradeableProxy, apeCoinStaking() -> 0x5954ab
+                [9][DELEGATECALL] from=TransparentUpgradeableProxy, to=ApeStaking, apeCoinStaking() -> 0x5954ab
+              [8][CALL] from=BeaconProxy, to=ApeCoinStaking, withdrawBAYC(_nfts(tuple[]): [{'tokenId': 9829, 'amount': 1009400000000..., _recipient(address): 0x0B8903) -> None
+                [9][STATICCALL] from=ApeCoinStaking, to=BoredApeYachtClub, ownerOf(tokenId(uint256): 9829) -> 0x5f0a4a
+                [9][CALL] from=ApeCoinStaking, to=SimpleToken, transfer(recipient(address): 0x0B8903, amount(uint256): 10094000000000000000000) -> True
+          [6][STATICCALL] from=TransparentUpgradeableProxy, to=SimpleToken, allowance(owner(address): 0x0B8903, spender(address): 0x736257) -> 115792089237316195423570985008687907853269984665640564026861970295192758185581
+          [6][CALL] from=TransparentUpgradeableProxy, to=TransparentUpgradeableProxy, borrowBalanceCurrent(account(address): 0xB618D9) -> 0
+            [7][DELEGATECALL] from=TransparentUpgradeableProxy, to=ApePool, borrowBalanceCurrent(account(address): 0xB618D9) -> 0
+          [6][CALL] from=TransparentUpgradeableProxy, to=SimpleToken, transfer(recipient(address): 0xB618D9, amount(uint256): 10094000000000000000000) -> True
+      [4][STATICCALL] from=0xB618D9, to=ApeCoinStaking, pools((uint256): 1) -> ['1686967200', '2', '48770650011458162941385286', '755724729246458137']
+      [4][STATICCALL] from=0xB618D9, to=ApeCoinStaking, getTimeRangeBy(_poolId(uint256): 1, _index(uint256): 2) -> None
+      [4][STATICCALL] from=0xB618D9, to=SimpleToken, balanceOf(account(address): 0x5f0A4a) -> 149342000000000000000000
+      [4][CALL] from=0xB618D9, to=TransparentUpgradeableProxy, depositAndBorrowApeAndStake(depositInfo(tuple): {'mainTokenIds': [], 'bakcTokenIds': []}, stakingInfo(tuple): {'nftAsset': '0xBC4CA0EdA7647A8aB7C2061c2E..., _nfts(tuple[]): [{'tokenId': 9829, 'amount': 1009400000000..., _nftPairs(tuple[]): []) -> None
+        [5][DELEGATECALL] from=TransparentUpgradeableProxy, to=ApeStaking, depositAndBorrowApeAndStake(depositInfo(tuple): {'mainTokenIds': [], 'bakcTokenIds': []}, stakingInfo(tuple): {'nftAsset': '0xBC4CA0EdA7647A8aB7C2061c2E..., _nfts(tuple[]): [{'tokenId': 9829, 'amount': 1009400000000..., _nftPairs(tuple[]): []) -> None
+          [6][STATICCALL] from=TransparentUpgradeableProxy, to=ApeCoinStaking, nftPosition((uint256): 9829) -> ['0', '0']
+          [6][CALL] from=TransparentUpgradeableProxy, to=BeaconProxy, depositApeCoin(amount(uint256): 10094000000000000000000, _nfts(tuple[]): [{'tokenId': 9829, 'amount': 1009400000000...) -> None
+            [7][STATICCALL] from=BeaconProxy, to=UpgradeableBeacon, implementation() -> 0x9b8880
+            [7][DELEGATECALL] from=BeaconProxy, to=PTokenBAYC, depositApeCoin(amount(uint256): 10094000000000000000000, _nfts(tuple[]): [{'tokenId': 9829, 'amount': 1009400000000...) -> None
+              [8][STATICCALL] from=BeaconProxy, to=TransparentUpgradeableProxy, apeCoinStaking() -> 0x5954ab
+                [9][DELEGATECALL] from=TransparentUpgradeableProxy, to=ApeStaking, apeCoinStaking() -> 0x5954ab
+              [8][STATICCALL] from=BeaconProxy, to=ApeCoinStaking, apeCoin() -> 0x4d2244
+              [8][STATICCALL] from=BeaconProxy, to=SimpleToken, allowance(owner(address): 0x5f0A4a, spender(address): 0x5954aB) -> 115792089237316195423570985008687907853269984665640563572155801842509107503980
+              [8][STATICCALL] from=BeaconProxy, to=TransparentUpgradeableProxy, apeCoinStaking() -> 0x5954ab
+                [9][DELEGATECALL] from=TransparentUpgradeableProxy, to=ApeStaking, apeCoinStaking() -> 0x5954ab
+              [8][CALL] from=BeaconProxy, to=ApeCoinStaking, depositBAYC(_nfts(tuple[]): [{'tokenId': 9829, 'amount': 1009400000000...) -> None
+                [9][STATICCALL] from=ApeCoinStaking, to=BoredApeYachtClub, ownerOf(tokenId(uint256): 9829) -> 0x5f0a4a
+                [9][CALL] from=ApeCoinStaking, to=SimpleToken, transferFrom(sender(address): 0x5f0A4a, recipient(address): 0x5954aB, amount(uint256): 10094000000000000000000) -> True
+      [4][CALL] from=0xB618D9, to=TransparentUpgradeableProxy, withdrawApeCoin(nftAsset(address): 0xBC4CA0, _nfts(tuple[]): [{'tokenId': 9829, 'amount': 1009400000000..., _nftPairs(tuple[]): []) -> None
+        [5][DELEGATECALL] from=TransparentUpgradeableProxy, to=ApeStaking, withdrawApeCoin(nftAsset(address): 0xBC4CA0, _nfts(tuple[]): [{'tokenId': 9829, 'amount': 1009400000000..., _nftPairs(tuple[]): []) -> None
+          [6][STATICCALL] from=TransparentUpgradeableProxy, to=ApeCoinStaking, nftPosition((uint256): 9829) -> ['10094000000000000000000', '7628285417013748434878000000000000000000']
+          [6][STATICCALL] from=TransparentUpgradeableProxy, to=ApeCoinStaking, pendingRewards(_poolId(uint256): 1, _address(address): 0x000000, _tokenId(uint256): 9829) -> 0
+          [6][CALL] from=TransparentUpgradeableProxy, to=BeaconProxy, withdrawApeCoin(_nfts(tuple[]): [{'tokenId': 9829, 'amount': 1009400000000..., recipient(address): 0x0B8903) -> None
+            [7][STATICCALL] from=BeaconProxy, to=UpgradeableBeacon, implementation() -> 0x9b8880
+            [7][DELEGATECALL] from=BeaconProxy, to=PTokenBAYC, withdrawApeCoin(_nfts(tuple[]): [{'tokenId': 9829, 'amount': 1009400000000..., recipient(address): 0x0B8903) -> None
+              [8][STATICCALL] from=BeaconProxy, to=TransparentUpgradeableProxy, apeCoinStaking() -> 0x5954ab
+                [9][DELEGATECALL] from=TransparentUpgradeableProxy, to=ApeStaking, apeCoinStaking() -> 0x5954ab
+              [8][CALL] from=BeaconProxy, to=ApeCoinStaking, withdrawBAYC(_nfts(tuple[]): [{'tokenId': 9829, 'amount': 1009400000000..., _recipient(address): 0x0B8903) -> None
+                [9][STATICCALL] from=ApeCoinStaking, to=BoredApeYachtClub, ownerOf(tokenId(uint256): 9829) -> 0x5f0a4a
+                [9][CALL] from=ApeCoinStaking, to=SimpleToken, transfer(recipient(address): 0x0B8903, amount(uint256): 10094000000000000000000) -> True
+          [6][STATICCALL] from=TransparentUpgradeableProxy, to=SimpleToken, allowance(owner(address): 0x0B8903, spender(address): 0x736257) -> 115792089237316195423570985008687907853269984665640564026861970295192758185581
+          [6][CALL] from=TransparentUpgradeableProxy, to=TransparentUpgradeableProxy, borrowBalanceCurrent(account(address): 0xB618D9) -> 0
+            [7][DELEGATECALL] from=TransparentUpgradeableProxy, to=ApePool, borrowBalanceCurrent(account(address): 0xB618D9) -> 0
+          [6][CALL] from=TransparentUpgradeableProxy, to=SimpleToken, transfer(recipient(address): 0xB618D9, amount(uint256): 10094000000000000000000) -> True
+      [4][STATICCALL] from=0xB618D9, to=ApeCoinStaking, pools((uint256): 1) -> ['1686967200', '2', '48770650011458162941385286', '755724729246458137']
+      [4][STATICCALL] from=0xB618D9, to=ApeCoinStaking, getTimeRangeBy(_poolId(uint256): 1, _index(uint256): 2) -> None
+      [4][STATICCALL] from=0xB618D9, to=SimpleToken, balanceOf(account(address): 0x5f0A4a) -> 139248000000000000000000
+      [4][CALL] from=0xB618D9, to=TransparentUpgradeableProxy, depositAndBorrowApeAndStake(depositInfo(tuple): {'mainTokenIds': [], 'bakcTokenIds': []}, stakingInfo(tuple): {'nftAsset': '0xBC4CA0EdA7647A8aB7C2061c2E..., _nfts(tuple[]): [{'tokenId': 9829, 'amount': 1009400000000..., _nftPairs(tuple[]): []) -> None
+        [5][DELEGATECALL] from=TransparentUpgradeableProxy, to=ApeStaking, depositAndBorrowApeAndStake(depositInfo(tuple): {'mainTokenIds': [], 'bakcTokenIds': []}, stakingInfo(tuple): {'nftAsset': '0xBC4CA0EdA7647A8aB7C2061c2E..., _nfts(tuple[]): [{'tokenId': 9829, 'amount': 1009400000000..., _nftPairs(tuple[]): []) -> None
+          [6][STATICCALL] from=TransparentUpgradeableProxy, to=ApeCoinStaking, nftPosition((uint256): 9829) -> ['0', '0']
+          [6][CALL] from=TransparentUpgradeableProxy, to=BeaconProxy, depositApeCoin(amount(uint256): 10094000000000000000000, _nfts(tuple[]): [{'tokenId': 9829, 'amount': 1009400000000...) -> None
+            [7][STATICCALL] from=BeaconProxy, to=UpgradeableBeacon, implementation() -> 0x9b8880
+            [7][DELEGATECALL] from=BeaconProxy, to=PTokenBAYC, depositApeCoin(amount(uint256): 10094000000000000000000, _nfts(tuple[]): [{'tokenId': 9829, 'amount': 1009400000000...) -> None
+              [8][STATICCALL] from=BeaconProxy, to=TransparentUpgradeableProxy, apeCoinStaking() -> 0x5954ab
+                [9][DELEGATECALL] from=TransparentUpgradeableProxy, to=ApeStaking, apeCoinStaking() -> 0x5954ab
+              [8][STATICCALL] from=BeaconProxy, to=ApeCoinStaking, apeCoin() -> 0x4d2244
+              [8][STATICCALL] from=BeaconProxy, to=SimpleToken, allowance(owner(address): 0x5f0A4a, spender(address): 0x5954aB) -> 115792089237316195423570985008687907853269984665640563562061801842509107503980
+              [8][STATICCALL] from=BeaconProxy, to=TransparentUpgradeableProxy, apeCoinStaking() -> 0x5954ab
+                [9][DELEGATECALL] from=TransparentUpgradeableProxy, to=ApeStaking, apeCoinStaking() -> 0x5954ab
+              [8][CALL] from=BeaconProxy, to=ApeCoinStaking, depositBAYC(_nfts(tuple[]): [{'tokenId': 9829, 'amount': 1009400000000...) -> None
+                [9][STATICCALL] from=ApeCoinStaking, to=BoredApeYachtClub, ownerOf(tokenId(uint256): 9829) -> 0x5f0a4a
+                [9][CALL] from=ApeCoinStaking, to=SimpleToken, transferFrom(sender(address): 0x5f0A4a, recipient(address): 0x5954aB, amount(uint256): 10094000000000000000000) -> True
+      [4][CALL] from=0xB618D9, to=TransparentUpgradeableProxy, withdrawApeCoin(nftAsset(address): 0xBC4CA0, _nfts(tuple[]): [{'tokenId': 9829, 'amount': 1009400000000..., _nftPairs(tuple[]): []) -> None
+        [5][DELEGATECALL] from=TransparentUpgradeableProxy, to=ApeStaking, withdrawApeCoin(nftAsset(address): 0xBC4CA0, _nfts(tuple[]): [{'tokenId': 9829, 'amount': 1009400000000..., _nftPairs(tuple[]): []) -> None
+          [6][STATICCALL] from=TransparentUpgradeableProxy, to=ApeCoinStaking, nftPosition((uint256): 9829) -> ['10094000000000000000000', '7628285417013748434878000000000000000000']
+          [6][STATICCALL] from=TransparentUpgradeableProxy, to=ApeCoinStaking, pendingRewards(_poolId(uint256): 1, _address(address): 0x000000, _tokenId(uint256): 9829) -> 0
+          [6][CALL] from=TransparentUpgradeableProxy, to=BeaconProxy, withdrawApeCoin(_nfts(tuple[]): [{'tokenId': 9829, 'amount': 1009400000000..., recipient(address): 0x0B8903) -> None
+            [7][STATICCALL] from=BeaconProxy, to=UpgradeableBeacon, implementation() -> 0x9b8880
+            [7][DELEGATECALL] from=BeaconProxy, to=PTokenBAYC, withdrawApeCoin(_nfts(tuple[]): [{'tokenId': 9829, 'amount': 1009400000000..., recipient(address): 0x0B8903) -> None
+              [8][STATICCALL] from=BeaconProxy, to=TransparentUpgradeableProxy, apeCoinStaking() -> 0x5954ab
+                [9][DELEGATECALL] from=TransparentUpgradeableProxy, to=ApeStaking, apeCoinStaking() -> 0x5954ab
+              [8][CALL] from=BeaconProxy, to=ApeCoinStaking, withdrawBAYC(_nfts(tuple[]): [{'tokenId': 9829, 'amount': 1009400000000..., _recipient(address): 0x0B8903) -> None
+                [9][STATICCALL] from=ApeCoinStaking, to=BoredApeYachtClub, ownerOf(tokenId(uint256): 9829) -> 0x5f0a4a
+                [9][CALL] from=ApeCoinStaking, to=SimpleToken, transfer(recipient(address): 0x0B8903, amount(uint256): 10094000000000000000000) -> True
+          [6][STATICCALL] from=TransparentUpgradeableProxy, to=SimpleToken, allowance(owner(address): 0x0B8903, spender(address): 0x736257) -> 115792089237316195423570985008687907853269984665640564026861970295192758185581
+          [6][CALL] from=TransparentUpgradeableProxy, to=TransparentUpgradeableProxy, borrowBalanceCurrent(account(address): 0xB618D9) -> 0
+            [7][DELEGATECALL] from=TransparentUpgradeableProxy, to=ApePool, borrowBalanceCurrent(account(address): 0xB618D9) -> 0
+          [6][CALL] from=TransparentUpgradeableProxy, to=SimpleToken, transfer(recipient(address): 0xB618D9, amount(uint256): 10094000000000000000000) -> True
+      [4][STATICCALL] from=0xB618D9, to=ApeCoinStaking, pools((uint256): 1) -> ['1686967200', '2', '48770650011458162941385286', '755724729246458137']
+      [4][STATICCALL] from=0xB618D9, to=ApeCoinStaking, getTimeRangeBy(_poolId(uint256): 1, _index(uint256): 2) -> None
+      [4][STATICCALL] from=0xB618D9, to=SimpleToken, balanceOf(account(address): 0x5f0A4a) -> 129154000000000000000000
+      [4][CALL] from=0xB618D9, to=TransparentUpgradeableProxy, depositAndBorrowApeAndStake(depositInfo(tuple): {'mainTokenIds': [], 'bakcTokenIds': []}, stakingInfo(tuple): {'nftAsset': '0xBC4CA0EdA7647A8aB7C2061c2E..., _nfts(tuple[]): [{'tokenId': 9829, 'amount': 1009400000000..., _nftPairs(tuple[]): []) -> None
+        [5][DELEGATECALL] from=TransparentUpgradeableProxy, to=ApeStaking, depositAndBorrowApeAndStake(depositInfo(tuple): {'mainTokenIds': [], 'bakcTokenIds': []}, stakingInfo(tuple): {'nftAsset': '0xBC4CA0EdA7647A8aB7C2061c2E..., _nfts(tuple[]): [{'tokenId': 9829, 'amount': 1009400000000..., _nftPairs(tuple[]): []) -> None
+          [6][STATICCALL] from=TransparentUpgradeableProxy, to=ApeCoinStaking, nftPosition((uint256): 9829) -> ['0', '0']
+          [6][CALL] from=TransparentUpgradeableProxy, to=BeaconProxy, depositApeCoin(amount(uint256): 10094000000000000000000, _nfts(tuple[]): [{'tokenId': 9829, 'amount': 1009400000000...) -> None
+            [7][STATICCALL] from=BeaconProxy, to=UpgradeableBeacon, implementation() -> 0x9b8880
+            [7][DELEGATECALL] from=BeaconProxy, to=PTokenBAYC, depositApeCoin(amount(uint256): 10094000000000000000000, _nfts(tuple[]): [{'tokenId': 9829, 'amount': 1009400000000...) -> None
+              [8][STATICCALL] from=BeaconProxy, to=TransparentUpgradeableProxy, apeCoinStaking() -> 0x5954ab
+                [9][DELEGATECALL] from=TransparentUpgradeableProxy, to=ApeStaking, apeCoinStaking() -> 0x5954ab
+              [8][STATICCALL] from=BeaconProxy, to=ApeCoinStaking, apeCoin() -> 0x4d2244
+              [8][STATICCALL] from=BeaconProxy, to=SimpleToken, allowance(owner(address): 0x5f0A4a, spender(address): 0x5954aB) -> 115792089237316195423570985008687907853269984665640563551967801842509107503980
+              [8][STATICCALL] from=BeaconProxy, to=TransparentUpgradeableProxy, apeCoinStaking() -> 0x5954ab
+                [9][DELEGATECALL] from=TransparentUpgradeableProxy, to=ApeStaking, apeCoinStaking() -> 0x5954ab
+              [8][CALL] from=BeaconProxy, to=ApeCoinStaking, depositBAYC(_nfts(tuple[]): [{'tokenId': 9829, 'amount': 1009400000000...) -> None
+                [9][STATICCALL] from=ApeCoinStaking, to=BoredApeYachtClub, ownerOf(tokenId(uint256): 9829) -> 0x5f0a4a
+                [9][CALL] from=ApeCoinStaking, to=SimpleToken, transferFrom(sender(address): 0x5f0A4a, recipient(address): 0x5954aB, amount(uint256): 10094000000000000000000) -> True
+      [4][CALL] from=0xB618D9, to=TransparentUpgradeableProxy, withdrawApeCoin(nftAsset(address): 0xBC4CA0, _nfts(tuple[]): [{'tokenId': 9829, 'amount': 1009400000000..., _nftPairs(tuple[]): []) -> None
+        [5][DELEGATECALL] from=TransparentUpgradeableProxy, to=ApeStaking, withdrawApeCoin(nftAsset(address): 0xBC4CA0, _nfts(tuple[]): [{'tokenId': 9829, 'amount': 1009400000000..., _nftPairs(tuple[]): []) -> None
+          [6][STATICCALL] from=TransparentUpgradeableProxy, to=ApeCoinStaking, nftPosition((uint256): 9829) -> ['10094000000000000000000', '7628285417013748434878000000000000000000']
+          [6][STATICCALL] from=TransparentUpgradeableProxy, to=ApeCoinStaking, pendingRewards(_poolId(uint256): 1, _address(address): 0x000000, _tokenId(uint256): 9829) -> 0
+          [6][CALL] from=TransparentUpgradeableProxy, to=BeaconProxy, withdrawApeCoin(_nfts(tuple[]): [{'tokenId': 9829, 'amount': 1009400000000..., recipient(address): 0x0B8903) -> None
+            [7][STATICCALL] from=BeaconProxy, to=UpgradeableBeacon, implementation() -> 0x9b8880
+            [7][DELEGATECALL] from=BeaconProxy, to=PTokenBAYC, withdrawApeCoin(_nfts(tuple[]): [{'tokenId': 9829, 'amount': 1009400000000..., recipient(address): 0x0B8903) -> None
+              [8][STATICCALL] from=BeaconProxy, to=TransparentUpgradeableProxy, apeCoinStaking() -> 0x5954ab
+                [9][DELEGATECALL] from=TransparentUpgradeableProxy, to=ApeStaking, apeCoinStaking() -> 0x5954ab
+              [8][CALL] from=BeaconProxy, to=ApeCoinStaking, withdrawBAYC(_nfts(tuple[]): [{'tokenId': 9829, 'amount': 1009400000000..., _recipient(address): 0x0B8903) -> None
+                [9][STATICCALL] from=ApeCoinStaking, to=BoredApeYachtClub, ownerOf(tokenId(uint256): 9829) -> 0x5f0a4a
+                [9][CALL] from=ApeCoinStaking, to=SimpleToken, transfer(recipient(address): 0x0B8903, amount(uint256): 10094000000000000000000) -> True
+          [6][STATICCALL] from=TransparentUpgradeableProxy, to=SimpleToken, allowance(owner(address): 0x0B8903, spender(address): 0x736257) -> 115792089237316195423570985008687907853269984665640564026861970295192758185581
+          [6][CALL] from=TransparentUpgradeableProxy, to=TransparentUpgradeableProxy, borrowBalanceCurrent(account(address): 0xB618D9) -> 0
+            [7][DELEGATECALL] from=TransparentUpgradeableProxy, to=ApePool, borrowBalanceCurrent(account(address): 0xB618D9) -> 0
+          [6][CALL] from=TransparentUpgradeableProxy, to=SimpleToken, transfer(recipient(address): 0xB618D9, amount(uint256): 10094000000000000000000) -> True
+      [4][STATICCALL] from=0xB618D9, to=ApeCoinStaking, pools((uint256): 1) -> ['1686967200', '2', '48770650011458162941385286', '755724729246458137']
+      [4][STATICCALL] from=0xB618D9, to=ApeCoinStaking, getTimeRangeBy(_poolId(uint256): 1, _index(uint256): 2) -> None
+      [4][STATICCALL] from=0xB618D9, to=SimpleToken, balanceOf(account(address): 0x5f0A4a) -> 119060000000000000000000
+      [4][CALL] from=0xB618D9, to=TransparentUpgradeableProxy, depositAndBorrowApeAndStake(depositInfo(tuple): {'mainTokenIds': [], 'bakcTokenIds': []}, stakingInfo(tuple): {'nftAsset': '0xBC4CA0EdA7647A8aB7C2061c2E..., _nfts(tuple[]): [{'tokenId': 9829, 'amount': 1009400000000..., _nftPairs(tuple[]): []) -> None
+        [5][DELEGATECALL] from=TransparentUpgradeableProxy, to=ApeStaking, depositAndBorrowApeAndStake(depositInfo(tuple): {'mainTokenIds': [], 'bakcTokenIds': []}, stakingInfo(tuple): {'nftAsset': '0xBC4CA0EdA7647A8aB7C2061c2E..., _nfts(tuple[]): [{'tokenId': 9829, 'amount': 1009400000000..., _nftPairs(tuple[]): []) -> None
+          [6][STATICCALL] from=TransparentUpgradeableProxy, to=ApeCoinStaking, nftPosition((uint256): 9829) -> ['0', '0']
+          [6][CALL] from=TransparentUpgradeableProxy, to=BeaconProxy, depositApeCoin(amount(uint256): 10094000000000000000000, _nfts(tuple[]): [{'tokenId': 9829, 'amount': 1009400000000...) -> None
+            [7][STATICCALL] from=BeaconProxy, to=UpgradeableBeacon, implementation() -> 0x9b8880
+            [7][DELEGATECALL] from=BeaconProxy, to=PTokenBAYC, depositApeCoin(amount(uint256): 10094000000000000000000, _nfts(tuple[]): [{'tokenId': 9829, 'amount': 1009400000000...) -> None
+              [8][STATICCALL] from=BeaconProxy, to=TransparentUpgradeableProxy, apeCoinStaking() -> 0x5954ab
+                [9][DELEGATECALL] from=TransparentUpgradeableProxy, to=ApeStaking, apeCoinStaking() -> 0x5954ab
+              [8][STATICCALL] from=BeaconProxy, to=ApeCoinStaking, apeCoin() -> 0x4d2244
+              [8][STATICCALL] from=BeaconProxy, to=SimpleToken, allowance(owner(address): 0x5f0A4a, spender(address): 0x5954aB) -> 115792089237316195423570985008687907853269984665640563541873801842509107503980
+              [8][STATICCALL] from=BeaconProxy, to=TransparentUpgradeableProxy, apeCoinStaking() -> 0x5954ab
+                [9][DELEGATECALL] from=TransparentUpgradeableProxy, to=ApeStaking, apeCoinStaking() -> 0x5954ab
+              [8][CALL] from=BeaconProxy, to=ApeCoinStaking, depositBAYC(_nfts(tuple[]): [{'tokenId': 9829, 'amount': 1009400000000...) -> None
+                [9][STATICCALL] from=ApeCoinStaking, to=BoredApeYachtClub, ownerOf(tokenId(uint256): 9829) -> 0x5f0a4a
+                [9][CALL] from=ApeCoinStaking, to=SimpleToken, transferFrom(sender(address): 0x5f0A4a, recipient(address): 0x5954aB, amount(uint256): 10094000000000000000000) -> True
+      [4][CALL] from=0xB618D9, to=TransparentUpgradeableProxy, withdrawApeCoin(nftAsset(address): 0xBC4CA0, _nfts(tuple[]): [{'tokenId': 9829, 'amount': 1009400000000..., _nftPairs(tuple[]): []) -> None
+        [5][DELEGATECALL] from=TransparentUpgradeableProxy, to=ApeStaking, withdrawApeCoin(nftAsset(address): 0xBC4CA0, _nfts(tuple[]): [{'tokenId': 9829, 'amount': 1009400000000..., _nftPairs(tuple[]): []) -> None
+          [6][STATICCALL] from=TransparentUpgradeableProxy, to=ApeCoinStaking, nftPosition((uint256): 9829) -> ['10094000000000000000000', '7628285417013748434878000000000000000000']
+          [6][STATICCALL] from=TransparentUpgradeableProxy, to=ApeCoinStaking, pendingRewards(_poolId(uint256): 1, _address(address): 0x000000, _tokenId(uint256): 9829) -> 0
+          [6][CALL] from=TransparentUpgradeableProxy, to=BeaconProxy, withdrawApeCoin(_nfts(tuple[]): [{'tokenId': 9829, 'amount': 1009400000000..., recipient(address): 0x0B8903) -> None
+            [7][STATICCALL] from=BeaconProxy, to=UpgradeableBeacon, implementation() -> 0x9b8880
+            [7][DELEGATECALL] from=BeaconProxy, to=PTokenBAYC, withdrawApeCoin(_nfts(tuple[]): [{'tokenId': 9829, 'amount': 1009400000000..., recipient(address): 0x0B8903) -> None
+              [8][STATICCALL] from=BeaconProxy, to=TransparentUpgradeableProxy, apeCoinStaking() -> 0x5954ab
+                [9][DELEGATECALL] from=TransparentUpgradeableProxy, to=ApeStaking, apeCoinStaking() -> 0x5954ab
+              [8][CALL] from=BeaconProxy, to=ApeCoinStaking, withdrawBAYC(_nfts(tuple[]): [{'tokenId': 9829, 'amount': 1009400000000..., _recipient(address): 0x0B8903) -> None
+                [9][STATICCALL] from=ApeCoinStaking, to=BoredApeYachtClub, ownerOf(tokenId(uint256): 9829) -> 0x5f0a4a
+                [9][CALL] from=ApeCoinStaking, to=SimpleToken, transfer(recipient(address): 0x0B8903, amount(uint256): 10094000000000000000000) -> True
+          [6][STATICCALL] from=TransparentUpgradeableProxy, to=SimpleToken, allowance(owner(address): 0x0B8903, spender(address): 0x736257) -> 115792089237316195423570985008687907853269984665640564026861970295192758185581
+          [6][CALL] from=TransparentUpgradeableProxy, to=TransparentUpgradeableProxy, borrowBalanceCurrent(account(address): 0xB618D9) -> 0
+            [7][DELEGATECALL] from=TransparentUpgradeableProxy, to=ApePool, borrowBalanceCurrent(account(address): 0xB618D9) -> 0
+          [6][CALL] from=TransparentUpgradeableProxy, to=SimpleToken, transfer(recipient(address): 0xB618D9, amount(uint256): 10094000000000000000000) -> True
+      [4][STATICCALL] from=0xB618D9, to=ApeCoinStaking, pools((uint256): 1) -> ['1686967200', '2', '48770650011458162941385286', '755724729246458137']
+      [4][STATICCALL] from=0xB618D9, to=ApeCoinStaking, getTimeRangeBy(_poolId(uint256): 1, _index(uint256): 2) -> None
+      [4][STATICCALL] from=0xB618D9, to=SimpleToken, balanceOf(account(address): 0x5f0A4a) -> 108966000000000000000000
+      [4][CALL] from=0xB618D9, to=TransparentUpgradeableProxy, depositAndBorrowApeAndStake(depositInfo(tuple): {'mainTokenIds': [], 'bakcTokenIds': []}, stakingInfo(tuple): {'nftAsset': '0xBC4CA0EdA7647A8aB7C2061c2E..., _nfts(tuple[]): [{'tokenId': 9829, 'amount': 1009400000000..., _nftPairs(tuple[]): []) -> None
+        [5][DELEGATECALL] from=TransparentUpgradeableProxy, to=ApeStaking, depositAndBorrowApeAndStake(depositInfo(tuple): {'mainTokenIds': [], 'bakcTokenIds': []}, stakingInfo(tuple): {'nftAsset': '0xBC4CA0EdA7647A8aB7C2061c2E..., _nfts(tuple[]): [{'tokenId': 9829, 'amount': 1009400000000..., _nftPairs(tuple[]): []) -> None
+          [6][STATICCALL] from=TransparentUpgradeableProxy, to=ApeCoinStaking, nftPosition((uint256): 9829) -> ['0', '0']
+          [6][CALL] from=TransparentUpgradeableProxy, to=BeaconProxy, depositApeCoin(amount(uint256): 10094000000000000000000, _nfts(tuple[]): [{'tokenId': 9829, 'amount': 1009400000000...) -> None
+            [7][STATICCALL] from=BeaconProxy, to=UpgradeableBeacon, implementation() -> 0x9b8880
+            [7][DELEGATECALL] from=BeaconProxy, to=PTokenBAYC, depositApeCoin(amount(uint256): 10094000000000000000000, _nfts(tuple[]): [{'tokenId': 9829, 'amount': 1009400000000...) -> None
+              [8][STATICCALL] from=BeaconProxy, to=TransparentUpgradeableProxy, apeCoinStaking() -> 0x5954ab
+                [9][DELEGATECALL] from=TransparentUpgradeableProxy, to=ApeStaking, apeCoinStaking() -> 0x5954ab
+              [8][STATICCALL] from=BeaconProxy, to=ApeCoinStaking, apeCoin() -> 0x4d2244
+              [8][STATICCALL] from=BeaconProxy, to=SimpleToken, allowance(owner(address): 0x5f0A4a, spender(address): 0x5954aB) -> 115792089237316195423570985008687907853269984665640563531779801842509107503980
+              [8][STATICCALL] from=BeaconProxy, to=TransparentUpgradeableProxy, apeCoinStaking() -> 0x5954ab
+                [9][DELEGATECALL] from=TransparentUpgradeableProxy, to=ApeStaking, apeCoinStaking() -> 0x5954ab
+              [8][CALL] from=BeaconProxy, to=ApeCoinStaking, depositBAYC(_nfts(tuple[]): [{'tokenId': 9829, 'amount': 1009400000000...) -> None
+                [9][STATICCALL] from=ApeCoinStaking, to=BoredApeYachtClub, ownerOf(tokenId(uint256): 9829) -> 0x5f0a4a
+                [9][CALL] from=ApeCoinStaking, to=SimpleToken, transferFrom(sender(address): 0x5f0A4a, recipient(address): 0x5954aB, amount(uint256): 10094000000000000000000) -> True
+      [4][CALL] from=0xB618D9, to=TransparentUpgradeableProxy, withdrawApeCoin(nftAsset(address): 0xBC4CA0, _nfts(tuple[]): [{'tokenId': 9829, 'amount': 1009400000000..., _nftPairs(tuple[]): []) -> None
+        [5][DELEGATECALL] from=TransparentUpgradeableProxy, to=ApeStaking, withdrawApeCoin(nftAsset(address): 0xBC4CA0, _nfts(tuple[]): [{'tokenId': 9829, 'amount': 1009400000000..., _nftPairs(tuple[]): []) -> None
+          [6][STATICCALL] from=TransparentUpgradeableProxy, to=ApeCoinStaking, nftPosition((uint256): 9829) -> ['10094000000000000000000', '7628285417013748434878000000000000000000']
+          [6][STATICCALL] from=TransparentUpgradeableProxy, to=ApeCoinStaking, pendingRewards(_poolId(uint256): 1, _address(address): 0x000000, _tokenId(uint256): 9829) -> 0
+          [6][CALL] from=TransparentUpgradeableProxy, to=BeaconProxy, withdrawApeCoin(_nfts(tuple[]): [{'tokenId': 9829, 'amount': 1009400000000..., recipient(address): 0x0B8903) -> None
+            [7][STATICCALL] from=BeaconProxy, to=UpgradeableBeacon, implementation() -> 0x9b8880
+            [7][DELEGATECALL] from=BeaconProxy, to=PTokenBAYC, withdrawApeCoin(_nfts(tuple[]): [{'tokenId': 9829, 'amount': 1009400000000..., recipient(address): 0x0B8903) -> None
+              [8][STATICCALL] from=BeaconProxy, to=TransparentUpgradeableProxy, apeCoinStaking() -> 0x5954ab
+                [9][DELEGATECALL] from=TransparentUpgradeableProxy, to=ApeStaking, apeCoinStaking() -> 0x5954ab
+              [8][CALL] from=BeaconProxy, to=ApeCoinStaking, withdrawBAYC(_nfts(tuple[]): [{'tokenId': 9829, 'amount': 1009400000000..., _recipient(address): 0x0B8903) -> None
+                [9][STATICCALL] from=ApeCoinStaking, to=BoredApeYachtClub, ownerOf(tokenId(uint256): 9829) -> 0x5f0a4a
+                [9][CALL] from=ApeCoinStaking, to=SimpleToken, transfer(recipient(address): 0x0B8903, amount(uint256): 10094000000000000000000) -> True
+          [6][STATICCALL] from=TransparentUpgradeableProxy, to=SimpleToken, allowance(owner(address): 0x0B8903, spender(address): 0x736257) -> 115792089237316195423570985008687907853269984665640564026861970295192758185581
+          [6][CALL] from=TransparentUpgradeableProxy, to=TransparentUpgradeableProxy, borrowBalanceCurrent(account(address): 0xB618D9) -> 0
+            [7][DELEGATECALL] from=TransparentUpgradeableProxy, to=ApePool, borrowBalanceCurrent(account(address): 0xB618D9) -> 0
+          [6][CALL] from=TransparentUpgradeableProxy, to=SimpleToken, transfer(recipient(address): 0xB618D9, amount(uint256): 10094000000000000000000) -> True
+      [4][STATICCALL] from=0xB618D9, to=ApeCoinStaking, pools((uint256): 1) -> ['1686967200', '2', '48770650011458162941385286', '755724729246458137']
+      [4][STATICCALL] from=0xB618D9, to=ApeCoinStaking, getTimeRangeBy(_poolId(uint256): 1, _index(uint256): 2) -> None
+      [4][STATICCALL] from=0xB618D9, to=SimpleToken, balanceOf(account(address): 0x5f0A4a) -> 98872000000000000000000
+      [4][CALL] from=0xB618D9, to=TransparentUpgradeableProxy, depositAndBorrowApeAndStake(depositInfo(tuple): {'mainTokenIds': [], 'bakcTokenIds': []}, stakingInfo(tuple): {'nftAsset': '0xBC4CA0EdA7647A8aB7C2061c2E..., _nfts(tuple[]): [{'tokenId': 9829, 'amount': 1009400000000..., _nftPairs(tuple[]): []) -> None
+        [5][DELEGATECALL] from=TransparentUpgradeableProxy, to=ApeStaking, depositAndBorrowApeAndStake(depositInfo(tuple): {'mainTokenIds': [], 'bakcTokenIds': []}, stakingInfo(tuple): {'nftAsset': '0xBC4CA0EdA7647A8aB7C2061c2E..., _nfts(tuple[]): [{'tokenId': 9829, 'amount': 1009400000000..., _nftPairs(tuple[]): []) -> None
+          [6][STATICCALL] from=TransparentUpgradeableProxy, to=ApeCoinStaking, nftPosition((uint256): 9829) -> ['0', '0']
+          [6][CALL] from=TransparentUpgradeableProxy, to=BeaconProxy, depositApeCoin(amount(uint256): 10094000000000000000000, _nfts(tuple[]): [{'tokenId': 9829, 'amount': 1009400000000...) -> None
+            [7][STATICCALL] from=BeaconProxy, to=UpgradeableBeacon, implementation() -> 0x9b8880
+            [7][DELEGATECALL] from=BeaconProxy, to=PTokenBAYC, depositApeCoin(amount(uint256): 10094000000000000000000, _nfts(tuple[]): [{'tokenId': 9829, 'amount': 1009400000000...) -> None
+              [8][STATICCALL] from=BeaconProxy, to=TransparentUpgradeableProxy, apeCoinStaking() -> 0x5954ab
+                [9][DELEGATECALL] from=TransparentUpgradeableProxy, to=ApeStaking, apeCoinStaking() -> 0x5954ab
+              [8][STATICCALL] from=BeaconProxy, to=ApeCoinStaking, apeCoin() -> 0x4d2244
+              [8][STATICCALL] from=BeaconProxy, to=SimpleToken, allowance(owner(address): 0x5f0A4a, spender(address): 0x5954aB) -> 115792089237316195423570985008687907853269984665640563521685801842509107503980
+              [8][STATICCALL] from=BeaconProxy, to=TransparentUpgradeableProxy, apeCoinStaking() -> 0x5954ab
+                [9][DELEGATECALL] from=TransparentUpgradeableProxy, to=ApeStaking, apeCoinStaking() -> 0x5954ab
+              [8][CALL] from=BeaconProxy, to=ApeCoinStaking, depositBAYC(_nfts(tuple[]): [{'tokenId': 9829, 'amount': 1009400000000...) -> None
+                [9][STATICCALL] from=ApeCoinStaking, to=BoredApeYachtClub, ownerOf(tokenId(uint256): 9829) -> 0x5f0a4a
+                [9][CALL] from=ApeCoinStaking, to=SimpleToken, transferFrom(sender(address): 0x5f0A4a, recipient(address): 0x5954aB, amount(uint256): 10094000000000000000000) -> True
+      [4][CALL] from=0xB618D9, to=TransparentUpgradeableProxy, withdrawApeCoin(nftAsset(address): 0xBC4CA0, _nfts(tuple[]): [{'tokenId': 9829, 'amount': 1009400000000..., _nftPairs(tuple[]): []) -> None
+        [5][DELEGATECALL] from=TransparentUpgradeableProxy, to=ApeStaking, withdrawApeCoin(nftAsset(address): 0xBC4CA0, _nfts(tuple[]): [{'tokenId': 9829, 'amount': 1009400000000..., _nftPairs(tuple[]): []) -> None
+          [6][STATICCALL] from=TransparentUpgradeableProxy, to=ApeCoinStaking, nftPosition((uint256): 9829) -> ['10094000000000000000000', '7628285417013748434878000000000000000000']
+          [6][STATICCALL] from=TransparentUpgradeableProxy, to=ApeCoinStaking, pendingRewards(_poolId(uint256): 1, _address(address): 0x000000, _tokenId(uint256): 9829) -> 0
+          [6][CALL] from=TransparentUpgradeableProxy, to=BeaconProxy, withdrawApeCoin(_nfts(tuple[]): [{'tokenId': 9829, 'amount': 1009400000000..., recipient(address): 0x0B8903) -> None
+            [7][STATICCALL] from=BeaconProxy, to=UpgradeableBeacon, implementation() -> 0x9b8880
+            [7][DELEGATECALL] from=BeaconProxy, to=PTokenBAYC, withdrawApeCoin(_nfts(tuple[]): [{'tokenId': 9829, 'amount': 1009400000000..., recipient(address): 0x0B8903) -> None
+              [8][STATICCALL] from=BeaconProxy, to=TransparentUpgradeableProxy, apeCoinStaking() -> 0x5954ab
+                [9][DELEGATECALL] from=TransparentUpgradeableProxy, to=ApeStaking, apeCoinStaking() -> 0x5954ab
+              [8][CALL] from=BeaconProxy, to=ApeCoinStaking, withdrawBAYC(_nfts(tuple[]): [{'tokenId': 9829, 'amount': 1009400000000..., _recipient(address): 0x0B8903) -> None
+                [9][STATICCALL] from=ApeCoinStaking, to=BoredApeYachtClub, ownerOf(tokenId(uint256): 9829) -> 0x5f0a4a
+                [9][CALL] from=ApeCoinStaking, to=SimpleToken, transfer(recipient(address): 0x0B8903, amount(uint256): 10094000000000000000000) -> True
+          [6][STATICCALL] from=TransparentUpgradeableProxy, to=SimpleToken, allowance(owner(address): 0x0B8903, spender(address): 0x736257) -> 115792089237316195423570985008687907853269984665640564026861970295192758185581
+          [6][CALL] from=TransparentUpgradeableProxy, to=TransparentUpgradeableProxy, borrowBalanceCurrent(account(address): 0xB618D9) -> 0
+            [7][DELEGATECALL] from=TransparentUpgradeableProxy, to=ApePool, borrowBalanceCurrent(account(address): 0xB618D9) -> 0
+          [6][CALL] from=TransparentUpgradeableProxy, to=SimpleToken, transfer(recipient(address): 0xB618D9, amount(uint256): 10094000000000000000000) -> True
+      [4][STATICCALL] from=0xB618D9, to=ApeCoinStaking, pools((uint256): 1) -> ['1686967200', '2', '48770650011458162941385286', '755724729246458137']
+      [4][STATICCALL] from=0xB618D9, to=ApeCoinStaking, getTimeRangeBy(_poolId(uint256): 1, _index(uint256): 2) -> None
+      [4][STATICCALL] from=0xB618D9, to=SimpleToken, balanceOf(account(address): 0x5f0A4a) -> 88778000000000000000000
+      [4][CALL] from=0xB618D9, to=TransparentUpgradeableProxy, depositAndBorrowApeAndStake(depositInfo(tuple): {'mainTokenIds': [], 'bakcTokenIds': []}, stakingInfo(tuple): {'nftAsset': '0xBC4CA0EdA7647A8aB7C2061c2E..., _nfts(tuple[]): [{'tokenId': 9829, 'amount': 1009400000000..., _nftPairs(tuple[]): []) -> None
+        [5][DELEGATECALL] from=TransparentUpgradeableProxy, to=ApeStaking, depositAndBorrowApeAndStake(depositInfo(tuple): {'mainTokenIds': [], 'bakcTokenIds': []}, stakingInfo(tuple): {'nftAsset': '0xBC4CA0EdA7647A8aB7C2061c2E..., _nfts(tuple[]): [{'tokenId': 9829, 'amount': 1009400000000..., _nftPairs(tuple[]): []) -> None
+          [6][STATICCALL] from=TransparentUpgradeableProxy, to=ApeCoinStaking, nftPosition((uint256): 9829) -> ['0', '0']
+          [6][CALL] from=TransparentUpgradeableProxy, to=BeaconProxy, depositApeCoin(amount(uint256): 10094000000000000000000, _nfts(tuple[]): [{'tokenId': 9829, 'amount': 1009400000000...) -> None
+            [7][STATICCALL] from=BeaconProxy, to=UpgradeableBeacon, implementation() -> 0x9b8880
+            [7][DELEGATECALL] from=BeaconProxy, to=PTokenBAYC, depositApeCoin(amount(uint256): 10094000000000000000000, _nfts(tuple[]): [{'tokenId': 9829, 'amount': 1009400000000...) -> None
+              [8][STATICCALL] from=BeaconProxy, to=TransparentUpgradeableProxy, apeCoinStaking() -> 0x5954ab
+                [9][DELEGATECALL] from=TransparentUpgradeableProxy, to=ApeStaking, apeCoinStaking() -> 0x5954ab
+              [8][STATICCALL] from=BeaconProxy, to=ApeCoinStaking, apeCoin() -> 0x4d2244
+              [8][STATICCALL] from=BeaconProxy, to=SimpleToken, allowance(owner(address): 0x5f0A4a, spender(address): 0x5954aB) -> 115792089237316195423570985008687907853269984665640563511591801842509107503980
+              [8][STATICCALL] from=BeaconProxy, to=TransparentUpgradeableProxy, apeCoinStaking() -> 0x5954ab
+                [9][DELEGATECALL] from=TransparentUpgradeableProxy, to=ApeStaking, apeCoinStaking() -> 0x5954ab
+              [8][CALL] from=BeaconProxy, to=ApeCoinStaking, depositBAYC(_nfts(tuple[]): [{'tokenId': 9829, 'amount': 1009400000000...) -> None
+                [9][STATICCALL] from=ApeCoinStaking, to=BoredApeYachtClub, ownerOf(tokenId(uint256): 9829) -> 0x5f0a4a
+                [9][CALL] from=ApeCoinStaking, to=SimpleToken, transferFrom(sender(address): 0x5f0A4a, recipient(address): 0x5954aB, amount(uint256): 10094000000000000000000) -> True
+      [4][CALL] from=0xB618D9, to=TransparentUpgradeableProxy, withdrawApeCoin(nftAsset(address): 0xBC4CA0, _nfts(tuple[]): [{'tokenId': 9829, 'amount': 1009400000000..., _nftPairs(tuple[]): []) -> None
+        [5][DELEGATECALL] from=TransparentUpgradeableProxy, to=ApeStaking, withdrawApeCoin(nftAsset(address): 0xBC4CA0, _nfts(tuple[]): [{'tokenId': 9829, 'amount': 1009400000000..., _nftPairs(tuple[]): []) -> None
+          [6][STATICCALL] from=TransparentUpgradeableProxy, to=ApeCoinStaking, nftPosition((uint256): 9829) -> ['10094000000000000000000', '7628285417013748434878000000000000000000']
+          [6][STATICCALL] from=TransparentUpgradeableProxy, to=ApeCoinStaking, pendingRewards(_poolId(uint256): 1, _address(address): 0x000000, _tokenId(uint256): 9829) -> 0
+          [6][CALL] from=TransparentUpgradeableProxy, to=BeaconProxy, withdrawApeCoin(_nfts(tuple[]): [{'tokenId': 9829, 'amount': 1009400000000..., recipient(address): 0x0B8903) -> None
+            [7][STATICCALL] from=BeaconProxy, to=UpgradeableBeacon, implementation() -> 0x9b8880
+            [7][DELEGATECALL] from=BeaconProxy, to=PTokenBAYC, withdrawApeCoin(_nfts(tuple[]): [{'tokenId': 9829, 'amount': 1009400000000..., recipient(address): 0x0B8903) -> None
+              [8][STATICCALL] from=BeaconProxy, to=TransparentUpgradeableProxy, apeCoinStaking() -> 0x5954ab
+                [9][DELEGATECALL] from=TransparentUpgradeableProxy, to=ApeStaking, apeCoinStaking() -> 0x5954ab
+              [8][CALL] from=BeaconProxy, to=ApeCoinStaking, withdrawBAYC(_nfts(tuple[]): [{'tokenId': 9829, 'amount': 1009400000000..., _recipient(address): 0x0B8903) -> None
+                [9][STATICCALL] from=ApeCoinStaking, to=BoredApeYachtClub, ownerOf(tokenId(uint256): 9829) -> 0x5f0a4a
+                [9][CALL] from=ApeCoinStaking, to=SimpleToken, transfer(recipient(address): 0x0B8903, amount(uint256): 10094000000000000000000) -> True
+          [6][STATICCALL] from=TransparentUpgradeableProxy, to=SimpleToken, allowance(owner(address): 0x0B8903, spender(address): 0x736257) -> 115792089237316195423570985008687907853269984665640564026861970295192758185581
+          [6][CALL] from=TransparentUpgradeableProxy, to=TransparentUpgradeableProxy, borrowBalanceCurrent(account(address): 0xB618D9) -> 0
+            [7][DELEGATECALL] from=TransparentUpgradeableProxy, to=ApePool, borrowBalanceCurrent(account(address): 0xB618D9) -> 0
+          [6][CALL] from=TransparentUpgradeableProxy, to=SimpleToken, transfer(recipient(address): 0xB618D9, amount(uint256): 10094000000000000000000) -> True
+      [4][STATICCALL] from=0xB618D9, to=ApeCoinStaking, pools((uint256): 1) -> ['1686967200', '2', '48770650011458162941385286', '755724729246458137']
+      [4][STATICCALL] from=0xB618D9, to=ApeCoinStaking, getTimeRangeBy(_poolId(uint256): 1, _index(uint256): 2) -> None
+      [4][STATICCALL] from=0xB618D9, to=SimpleToken, balanceOf(account(address): 0x5f0A4a) -> 78684000000000000000000
+      [4][CALL] from=0xB618D9, to=TransparentUpgradeableProxy, depositAndBorrowApeAndStake(depositInfo(tuple): {'mainTokenIds': [], 'bakcTokenIds': []}, stakingInfo(tuple): {'nftAsset': '0xBC4CA0EdA7647A8aB7C2061c2E..., _nfts(tuple[]): [{'tokenId': 9829, 'amount': 1009400000000..., _nftPairs(tuple[]): []) -> None
+        [5][DELEGATECALL] from=TransparentUpgradeableProxy, to=ApeStaking, depositAndBorrowApeAndStake(depositInfo(tuple): {'mainTokenIds': [], 'bakcTokenIds': []}, stakingInfo(tuple): {'nftAsset': '0xBC4CA0EdA7647A8aB7C2061c2E..., _nfts(tuple[]): [{'tokenId': 9829, 'amount': 1009400000000..., _nftPairs(tuple[]): []) -> None
+          [6][STATICCALL] from=TransparentUpgradeableProxy, to=ApeCoinStaking, nftPosition((uint256): 9829) -> ['0', '0']
+          [6][CALL] from=TransparentUpgradeableProxy, to=BeaconProxy, depositApeCoin(amount(uint256): 10094000000000000000000, _nfts(tuple[]): [{'tokenId': 9829, 'amount': 1009400000000...) -> None
+            [7][STATICCALL] from=BeaconProxy, to=UpgradeableBeacon, implementation() -> 0x9b8880
+            [7][DELEGATECALL] from=BeaconProxy, to=PTokenBAYC, depositApeCoin(amount(uint256): 10094000000000000000000, _nfts(tuple[]): [{'tokenId': 9829, 'amount': 1009400000000...) -> None
+              [8][STATICCALL] from=BeaconProxy, to=TransparentUpgradeableProxy, apeCoinStaking() -> 0x5954ab
+                [9][DELEGATECALL] from=TransparentUpgradeableProxy, to=ApeStaking, apeCoinStaking() -> 0x5954ab
+              [8][STATICCALL] from=BeaconProxy, to=ApeCoinStaking, apeCoin() -> 0x4d2244
+              [8][STATICCALL] from=BeaconProxy, to=SimpleToken, allowance(owner(address): 0x5f0A4a, spender(address): 0x5954aB) -> 115792089237316195423570985008687907853269984665640563501497801842509107503980
+              [8][STATICCALL] from=BeaconProxy, to=TransparentUpgradeableProxy, apeCoinStaking() -> 0x5954ab
+                [9][DELEGATECALL] from=TransparentUpgradeableProxy, to=ApeStaking, apeCoinStaking() -> 0x5954ab
+              [8][CALL] from=BeaconProxy, to=ApeCoinStaking, depositBAYC(_nfts(tuple[]): [{'tokenId': 9829, 'amount': 1009400000000...) -> None
+                [9][STATICCALL] from=ApeCoinStaking, to=BoredApeYachtClub, ownerOf(tokenId(uint256): 9829) -> 0x5f0a4a
+                [9][CALL] from=ApeCoinStaking, to=SimpleToken, transferFrom(sender(address): 0x5f0A4a, recipient(address): 0x5954aB, amount(uint256): 10094000000000000000000) -> True
+      [4][CALL] from=0xB618D9, to=TransparentUpgradeableProxy, withdrawApeCoin(nftAsset(address): 0xBC4CA0, _nfts(tuple[]): [{'tokenId': 9829, 'amount': 1009400000000..., _nftPairs(tuple[]): []) -> None
+        [5][DELEGATECALL] from=TransparentUpgradeableProxy, to=ApeStaking, withdrawApeCoin(nftAsset(address): 0xBC4CA0, _nfts(tuple[]): [{'tokenId': 9829, 'amount': 1009400000000..., _nftPairs(tuple[]): []) -> None
+          [6][STATICCALL] from=TransparentUpgradeableProxy, to=ApeCoinStaking, nftPosition((uint256): 9829) -> ['10094000000000000000000', '7628285417013748434878000000000000000000']
+          [6][STATICCALL] from=TransparentUpgradeableProxy, to=ApeCoinStaking, pendingRewards(_poolId(uint256): 1, _address(address): 0x000000, _tokenId(uint256): 9829) -> 0
+          [6][CALL] from=TransparentUpgradeableProxy, to=BeaconProxy, withdrawApeCoin(_nfts(tuple[]): [{'tokenId': 9829, 'amount': 1009400000000..., recipient(address): 0x0B8903) -> None
+            [7][STATICCALL] from=BeaconProxy, to=UpgradeableBeacon, implementation() -> 0x9b8880
+            [7][DELEGATECALL] from=BeaconProxy, to=PTokenBAYC, withdrawApeCoin(_nfts(tuple[]): [{'tokenId': 9829, 'amount': 1009400000000..., recipient(address): 0x0B8903) -> None
+              [8][STATICCALL] from=BeaconProxy, to=TransparentUpgradeableProxy, apeCoinStaking() -> 0x5954ab
+                [9][DELEGATECALL] from=TransparentUpgradeableProxy, to=ApeStaking, apeCoinStaking() -> 0x5954ab
+              [8][CALL] from=BeaconProxy, to=ApeCoinStaking, withdrawBAYC(_nfts(tuple[]): [{'tokenId': 9829, 'amount': 1009400000000..., _recipient(address): 0x0B8903) -> None
+                [9][STATICCALL] from=ApeCoinStaking, to=BoredApeYachtClub, ownerOf(tokenId(uint256): 9829) -> 0x5f0a4a
+                [9][CALL] from=ApeCoinStaking, to=SimpleToken, transfer(recipient(address): 0x0B8903, amount(uint256): 10094000000000000000000) -> True
+          [6][STATICCALL] from=TransparentUpgradeableProxy, to=SimpleToken, allowance(owner(address): 0x0B8903, spender(address): 0x736257) -> 115792089237316195423570985008687907853269984665640564026861970295192758185581
+          [6][CALL] from=TransparentUpgradeableProxy, to=TransparentUpgradeableProxy, borrowBalanceCurrent(account(address): 0xB618D9) -> 0
+            [7][DELEGATECALL] from=TransparentUpgradeableProxy, to=ApePool, borrowBalanceCurrent(account(address): 0xB618D9) -> 0
+          [6][CALL] from=TransparentUpgradeableProxy, to=SimpleToken, transfer(recipient(address): 0xB618D9, amount(uint256): 10094000000000000000000) -> True
+      [4][STATICCALL] from=0xB618D9, to=ApeCoinStaking, pools((uint256): 1) -> ['1686967200', '2', '48770650011458162941385286', '755724729246458137']
+      [4][STATICCALL] from=0xB618D9, to=ApeCoinStaking, getTimeRangeBy(_poolId(uint256): 1, _index(uint256): 2) -> None
+      [4][STATICCALL] from=0xB618D9, to=SimpleToken, balanceOf(account(address): 0x5f0A4a) -> 68590000000000000000000
+      [4][CALL] from=0xB618D9, to=TransparentUpgradeableProxy, depositAndBorrowApeAndStake(depositInfo(tuple): {'mainTokenIds': [], 'bakcTokenIds': []}, stakingInfo(tuple): {'nftAsset': '0xBC4CA0EdA7647A8aB7C2061c2E..., _nfts(tuple[]): [{'tokenId': 9829, 'amount': 1009400000000..., _nftPairs(tuple[]): []) -> None
+        [5][DELEGATECALL] from=TransparentUpgradeableProxy, to=ApeStaking, depositAndBorrowApeAndStake(depositInfo(tuple): {'mainTokenIds': [], 'bakcTokenIds': []}, stakingInfo(tuple): {'nftAsset': '0xBC4CA0EdA7647A8aB7C2061c2E..., _nfts(tuple[]): [{'tokenId': 9829, 'amount': 1009400000000..., _nftPairs(tuple[]): []) -> None
+          [6][STATICCALL] from=TransparentUpgradeableProxy, to=ApeCoinStaking, nftPosition((uint256): 9829) -> ['0', '0']
+          [6][CALL] from=TransparentUpgradeableProxy, to=BeaconProxy, depositApeCoin(amount(uint256): 10094000000000000000000, _nfts(tuple[]): [{'tokenId': 9829, 'amount': 1009400000000...) -> None
+            [7][STATICCALL] from=BeaconProxy, to=UpgradeableBeacon, implementation() -> 0x9b8880
+            [7][DELEGATECALL] from=BeaconProxy, to=PTokenBAYC, depositApeCoin(amount(uint256): 10094000000000000000000, _nfts(tuple[]): [{'tokenId': 9829, 'amount': 1009400000000...) -> None
+              [8][STATICCALL] from=BeaconProxy, to=TransparentUpgradeableProxy, apeCoinStaking() -> 0x5954ab
+                [9][DELEGATECALL] from=TransparentUpgradeableProxy, to=ApeStaking, apeCoinStaking() -> 0x5954ab
+              [8][STATICCALL] from=BeaconProxy, to=ApeCoinStaking, apeCoin() -> 0x4d2244
+              [8][STATICCALL] from=BeaconProxy, to=SimpleToken, allowance(owner(address): 0x5f0A4a, spender(address): 0x5954aB) -> 115792089237316195423570985008687907853269984665640563491403801842509107503980
+              [8][STATICCALL] from=BeaconProxy, to=TransparentUpgradeableProxy, apeCoinStaking() -> 0x5954ab
+                [9][DELEGATECALL] from=TransparentUpgradeableProxy, to=ApeStaking, apeCoinStaking() -> 0x5954ab
+              [8][CALL] from=BeaconProxy, to=ApeCoinStaking, depositBAYC(_nfts(tuple[]): [{'tokenId': 9829, 'amount': 1009400000000...) -> None
+                [9][STATICCALL] from=ApeCoinStaking, to=BoredApeYachtClub, ownerOf(tokenId(uint256): 9829) -> 0x5f0a4a
+                [9][CALL] from=ApeCoinStaking, to=SimpleToken, transferFrom(sender(address): 0x5f0A4a, recipient(address): 0x5954aB, amount(uint256): 10094000000000000000000) -> True
+      [4][CALL] from=0xB618D9, to=TransparentUpgradeableProxy, withdrawApeCoin(nftAsset(address): 0xBC4CA0, _nfts(tuple[]): [{'tokenId': 9829, 'amount': 1009400000000..., _nftPairs(tuple[]): []) -> None
+        [5][DELEGATECALL] from=TransparentUpgradeableProxy, to=ApeStaking, withdrawApeCoin(nftAsset(address): 0xBC4CA0, _nfts(tuple[]): [{'tokenId': 9829, 'amount': 1009400000000..., _nftPairs(tuple[]): []) -> None
+          [6][STATICCALL] from=TransparentUpgradeableProxy, to=ApeCoinStaking, nftPosition((uint256): 9829) -> ['10094000000000000000000', '7628285417013748434878000000000000000000']
+          [6][STATICCALL] from=TransparentUpgradeableProxy, to=ApeCoinStaking, pendingRewards(_poolId(uint256): 1, _address(address): 0x000000, _tokenId(uint256): 9829) -> 0
+          [6][CALL] from=TransparentUpgradeableProxy, to=BeaconProxy, withdrawApeCoin(_nfts(tuple[]): [{'tokenId': 9829, 'amount': 1009400000000..., recipient(address): 0x0B8903) -> None
+            [7][STATICCALL] from=BeaconProxy, to=UpgradeableBeacon, implementation() -> 0x9b8880
+            [7][DELEGATECALL] from=BeaconProxy, to=PTokenBAYC, withdrawApeCoin(_nfts(tuple[]): [{'tokenId': 9829, 'amount': 1009400000000..., recipient(address): 0x0B8903) -> None
+              [8][STATICCALL] from=BeaconProxy, to=TransparentUpgradeableProxy, apeCoinStaking() -> 0x5954ab
+                [9][DELEGATECALL] from=TransparentUpgradeableProxy, to=ApeStaking, apeCoinStaking() -> 0x5954ab
+              [8][CALL] from=BeaconProxy, to=ApeCoinStaking, withdrawBAYC(_nfts(tuple[]): [{'tokenId': 9829, 'amount': 1009400000000..., _recipient(address): 0x0B8903) -> None
+                [9][STATICCALL] from=ApeCoinStaking, to=BoredApeYachtClub, ownerOf(tokenId(uint256): 9829) -> 0x5f0a4a
+                [9][CALL] from=ApeCoinStaking, to=SimpleToken, transfer(recipient(address): 0x0B8903, amount(uint256): 10094000000000000000000) -> True
+          [6][STATICCALL] from=TransparentUpgradeableProxy, to=SimpleToken, allowance(owner(address): 0x0B8903, spender(address): 0x736257) -> 115792089237316195423570985008687907853269984665640564026861970295192758185581
+          [6][CALL] from=TransparentUpgradeableProxy, to=TransparentUpgradeableProxy, borrowBalanceCurrent(account(address): 0xB618D9) -> 0
+            [7][DELEGATECALL] from=TransparentUpgradeableProxy, to=ApePool, borrowBalanceCurrent(account(address): 0xB618D9) -> 0
+          [6][CALL] from=TransparentUpgradeableProxy, to=SimpleToken, transfer(recipient(address): 0xB618D9, amount(uint256): 10094000000000000000000) -> True
+      [4][STATICCALL] from=0xB618D9, to=ApeCoinStaking, pools((uint256): 1) -> ['1686967200', '2', '48770650011458162941385286', '755724729246458137']
+      [4][STATICCALL] from=0xB618D9, to=ApeCoinStaking, getTimeRangeBy(_poolId(uint256): 1, _index(uint256): 2) -> None
+      [4][STATICCALL] from=0xB618D9, to=SimpleToken, balanceOf(account(address): 0x5f0A4a) -> 58496000000000000000000
+      [4][CALL] from=0xB618D9, to=TransparentUpgradeableProxy, depositAndBorrowApeAndStake(depositInfo(tuple): {'mainTokenIds': [], 'bakcTokenIds': []}, stakingInfo(tuple): {'nftAsset': '0xBC4CA0EdA7647A8aB7C2061c2E..., _nfts(tuple[]): [{'tokenId': 9829, 'amount': 1009400000000..., _nftPairs(tuple[]): []) -> None
+        [5][DELEGATECALL] from=TransparentUpgradeableProxy, to=ApeStaking, depositAndBorrowApeAndStake(depositInfo(tuple): {'mainTokenIds': [], 'bakcTokenIds': []}, stakingInfo(tuple): {'nftAsset': '0xBC4CA0EdA7647A8aB7C2061c2E..., _nfts(tuple[]): [{'tokenId': 9829, 'amount': 1009400000000..., _nftPairs(tuple[]): []) -> None
+          [6][STATICCALL] from=TransparentUpgradeableProxy, to=ApeCoinStaking, nftPosition((uint256): 9829) -> ['0', '0']
+          [6][CALL] from=TransparentUpgradeableProxy, to=BeaconProxy, depositApeCoin(amount(uint256): 10094000000000000000000, _nfts(tuple[]): [{'tokenId': 9829, 'amount': 1009400000000...) -> None
+            [7][STATICCALL] from=BeaconProxy, to=UpgradeableBeacon, implementation() -> 0x9b8880
+            [7][DELEGATECALL] from=BeaconProxy, to=PTokenBAYC, depositApeCoin(amount(uint256): 10094000000000000000000, _nfts(tuple[]): [{'tokenId': 9829, 'amount': 1009400000000...) -> None
+              [8][STATICCALL] from=BeaconProxy, to=TransparentUpgradeableProxy, apeCoinStaking() -> 0x5954ab
+                [9][DELEGATECALL] from=TransparentUpgradeableProxy, to=ApeStaking, apeCoinStaking() -> 0x5954ab
+              [8][STATICCALL] from=BeaconProxy, to=ApeCoinStaking, apeCoin() -> 0x4d2244
+              [8][STATICCALL] from=BeaconProxy, to=SimpleToken, allowance(owner(address): 0x5f0A4a, spender(address): 0x5954aB) -> 115792089237316195423570985008687907853269984665640563481309801842509107503980
+              [8][STATICCALL] from=BeaconProxy, to=TransparentUpgradeableProxy, apeCoinStaking() -> 0x5954ab
+                [9][DELEGATECALL] from=TransparentUpgradeableProxy, to=ApeStaking, apeCoinStaking() -> 0x5954ab
+              [8][CALL] from=BeaconProxy, to=ApeCoinStaking, depositBAYC(_nfts(tuple[]): [{'tokenId': 9829, 'amount': 1009400000000...) -> None
+                [9][STATICCALL] from=ApeCoinStaking, to=BoredApeYachtClub, ownerOf(tokenId(uint256): 9829) -> 0x5f0a4a
+                [9][CALL] from=ApeCoinStaking, to=SimpleToken, transferFrom(sender(address): 0x5f0A4a, recipient(address): 0x5954aB, amount(uint256): 10094000000000000000000) -> True
+      [4][CALL] from=0xB618D9, to=TransparentUpgradeableProxy, withdrawApeCoin(nftAsset(address): 0xBC4CA0, _nfts(tuple[]): [{'tokenId': 9829, 'amount': 1009400000000..., _nftPairs(tuple[]): []) -> None
+        [5][DELEGATECALL] from=TransparentUpgradeableProxy, to=ApeStaking, withdrawApeCoin(nftAsset(address): 0xBC4CA0, _nfts(tuple[]): [{'tokenId': 9829, 'amount': 1009400000000..., _nftPairs(tuple[]): []) -> None
+          [6][STATICCALL] from=TransparentUpgradeableProxy, to=ApeCoinStaking, nftPosition((uint256): 9829) -> ['10094000000000000000000', '7628285417013748434878000000000000000000']
+          [6][STATICCALL] from=TransparentUpgradeableProxy, to=ApeCoinStaking, pendingRewards(_poolId(uint256): 1, _address(address): 0x000000, _tokenId(uint256): 9829) -> 0
+          [6][CALL] from=TransparentUpgradeableProxy, to=BeaconProxy, withdrawApeCoin(_nfts(tuple[]): [{'tokenId': 9829, 'amount': 1009400000000..., recipient(address): 0x0B8903) -> None
+            [7][STATICCALL] from=BeaconProxy, to=UpgradeableBeacon, implementation() -> 0x9b8880
+            [7][DELEGATECALL] from=BeaconProxy, to=PTokenBAYC, withdrawApeCoin(_nfts(tuple[]): [{'tokenId': 9829, 'amount': 1009400000000..., recipient(address): 0x0B8903) -> None
+              [8][STATICCALL] from=BeaconProxy, to=TransparentUpgradeableProxy, apeCoinStaking() -> 0x5954ab
+                [9][DELEGATECALL] from=TransparentUpgradeableProxy, to=ApeStaking, apeCoinStaking() -> 0x5954ab
+              [8][CALL] from=BeaconProxy, to=ApeCoinStaking, withdrawBAYC(_nfts(tuple[]): [{'tokenId': 9829, 'amount': 1009400000000..., _recipient(address): 0x0B8903) -> None
+                [9][STATICCALL] from=ApeCoinStaking, to=BoredApeYachtClub, ownerOf(tokenId(uint256): 9829) -> 0x5f0a4a
+                [9][CALL] from=ApeCoinStaking, to=SimpleToken, transfer(recipient(address): 0x0B8903, amount(uint256): 10094000000000000000000) -> True
+          [6][STATICCALL] from=TransparentUpgradeableProxy, to=SimpleToken, allowance(owner(address): 0x0B8903, spender(address): 0x736257) -> 115792089237316195423570985008687907853269984665640564026861970295192758185581
+          [6][CALL] from=TransparentUpgradeableProxy, to=TransparentUpgradeableProxy, borrowBalanceCurrent(account(address): 0xB618D9) -> 0
+            [7][DELEGATECALL] from=TransparentUpgradeableProxy, to=ApePool, borrowBalanceCurrent(account(address): 0xB618D9) -> 0
+          [6][CALL] from=TransparentUpgradeableProxy, to=SimpleToken, transfer(recipient(address): 0xB618D9, amount(uint256): 10094000000000000000000) -> True
+      [4][STATICCALL] from=0xB618D9, to=ApeCoinStaking, pools((uint256): 1) -> ['1686967200', '2', '48770650011458162941385286', '755724729246458137']
+      [4][STATICCALL] from=0xB618D9, to=ApeCoinStaking, getTimeRangeBy(_poolId(uint256): 1, _index(uint256): 2) -> None
+      [4][STATICCALL] from=0xB618D9, to=SimpleToken, balanceOf(account(address): 0x5f0A4a) -> 48402000000000000000000
+      [4][CALL] from=0xB618D9, to=TransparentUpgradeableProxy, depositAndBorrowApeAndStake(depositInfo(tuple): {'mainTokenIds': [], 'bakcTokenIds': []}, stakingInfo(tuple): {'nftAsset': '0xBC4CA0EdA7647A8aB7C2061c2E..., _nfts(tuple[]): [{'tokenId': 9829, 'amount': 1009400000000..., _nftPairs(tuple[]): []) -> None
+        [5][DELEGATECALL] from=TransparentUpgradeableProxy, to=ApeStaking, depositAndBorrowApeAndStake(depositInfo(tuple): {'mainTokenIds': [], 'bakcTokenIds': []}, stakingInfo(tuple): {'nftAsset': '0xBC4CA0EdA7647A8aB7C2061c2E..., _nfts(tuple[]): [{'tokenId': 9829, 'amount': 1009400000000..., _nftPairs(tuple[]): []) -> None
+          [6][STATICCALL] from=TransparentUpgradeableProxy, to=ApeCoinStaking, nftPosition((uint256): 9829) -> ['0', '0']
+          [6][CALL] from=TransparentUpgradeableProxy, to=BeaconProxy, depositApeCoin(amount(uint256): 10094000000000000000000, _nfts(tuple[]): [{'tokenId': 9829, 'amount': 1009400000000...) -> None
+            [7][STATICCALL] from=BeaconProxy, to=UpgradeableBeacon, implementation() -> 0x9b8880
+            [7][DELEGATECALL] from=BeaconProxy, to=PTokenBAYC, depositApeCoin(amount(uint256): 10094000000000000000000, _nfts(tuple[]): [{'tokenId': 9829, 'amount': 1009400000000...) -> None
+              [8][STATICCALL] from=BeaconProxy, to=TransparentUpgradeableProxy, apeCoinStaking() -> 0x5954ab
+                [9][DELEGATECALL] from=TransparentUpgradeableProxy, to=ApeStaking, apeCoinStaking() -> 0x5954ab
+              [8][STATICCALL] from=BeaconProxy, to=ApeCoinStaking, apeCoin() -> 0x4d2244
+              [8][STATICCALL] from=BeaconProxy, to=SimpleToken, allowance(owner(address): 0x5f0A4a, spender(address): 0x5954aB) -> 115792089237316195423570985008687907853269984665640563471215801842509107503980
+              [8][STATICCALL] from=BeaconProxy, to=TransparentUpgradeableProxy, apeCoinStaking() -> 0x5954ab
+                [9][DELEGATECALL] from=TransparentUpgradeableProxy, to=ApeStaking, apeCoinStaking() -> 0x5954ab
+              [8][CALL] from=BeaconProxy, to=ApeCoinStaking, depositBAYC(_nfts(tuple[]): [{'tokenId': 9829, 'amount': 1009400000000...) -> None
+                [9][STATICCALL] from=ApeCoinStaking, to=BoredApeYachtClub, ownerOf(tokenId(uint256): 9829) -> 0x5f0a4a
+                [9][CALL] from=ApeCoinStaking, to=SimpleToken, transferFrom(sender(address): 0x5f0A4a, recipient(address): 0x5954aB, amount(uint256): 10094000000000000000000) -> True
+      [4][CALL] from=0xB618D9, to=TransparentUpgradeableProxy, withdrawApeCoin(nftAsset(address): 0xBC4CA0, _nfts(tuple[]): [{'tokenId': 9829, 'amount': 1009400000000..., _nftPairs(tuple[]): []) -> None
+        [5][DELEGATECALL] from=TransparentUpgradeableProxy, to=ApeStaking, withdrawApeCoin(nftAsset(address): 0xBC4CA0, _nfts(tuple[]): [{'tokenId': 9829, 'amount': 1009400000000..., _nftPairs(tuple[]): []) -> None
+          [6][STATICCALL] from=TransparentUpgradeableProxy, to=ApeCoinStaking, nftPosition((uint256): 9829) -> ['10094000000000000000000', '7628285417013748434878000000000000000000']
+          [6][STATICCALL] from=TransparentUpgradeableProxy, to=ApeCoinStaking, pendingRewards(_poolId(uint256): 1, _address(address): 0x000000, _tokenId(uint256): 9829) -> 0
+          [6][CALL] from=TransparentUpgradeableProxy, to=BeaconProxy, withdrawApeCoin(_nfts(tuple[]): [{'tokenId': 9829, 'amount': 1009400000000..., recipient(address): 0x0B8903) -> None
+            [7][STATICCALL] from=BeaconProxy, to=UpgradeableBeacon, implementation() -> 0x9b8880
+            [7][DELEGATECALL] from=BeaconProxy, to=PTokenBAYC, withdrawApeCoin(_nfts(tuple[]): [{'tokenId': 9829, 'amount': 1009400000000..., recipient(address): 0x0B8903) -> None
+              [8][STATICCALL] from=BeaconProxy, to=TransparentUpgradeableProxy, apeCoinStaking() -> 0x5954ab
+                [9][DELEGATECALL] from=TransparentUpgradeableProxy, to=ApeStaking, apeCoinStaking() -> 0x5954ab
+              [8][CALL] from=BeaconProxy, to=ApeCoinStaking, withdrawBAYC(_nfts(tuple[]): [{'tokenId': 9829, 'amount': 1009400000000..., _recipient(address): 0x0B8903) -> None
+                [9][STATICCALL] from=ApeCoinStaking, to=BoredApeYachtClub, ownerOf(tokenId(uint256): 9829) -> 0x5f0a4a
+                [9][CALL] from=ApeCoinStaking, to=SimpleToken, transfer(recipient(address): 0x0B8903, amount(uint256): 10094000000000000000000) -> True
+          [6][STATICCALL] from=TransparentUpgradeableProxy, to=SimpleToken, allowance(owner(address): 0x0B8903, spender(address): 0x736257) -> 115792089237316195423570985008687907853269984665640564026861970295192758185581
+          [6][CALL] from=TransparentUpgradeableProxy, to=TransparentUpgradeableProxy, borrowBalanceCurrent(account(address): 0xB618D9) -> 0
+            [7][DELEGATECALL] from=TransparentUpgradeableProxy, to=ApePool, borrowBalanceCurrent(account(address): 0xB618D9) -> 0
+          [6][CALL] from=TransparentUpgradeableProxy, to=SimpleToken, transfer(recipient(address): 0xB618D9, amount(uint256): 10094000000000000000000) -> True
+      [4][STATICCALL] from=0xB618D9, to=ApeCoinStaking, pools((uint256): 1) -> ['1686967200', '2', '48770650011458162941385286', '755724729246458137']
+      [4][STATICCALL] from=0xB618D9, to=ApeCoinStaking, getTimeRangeBy(_poolId(uint256): 1, _index(uint256): 2) -> None
+      [4][STATICCALL] from=0xB618D9, to=SimpleToken, balanceOf(account(address): 0x5f0A4a) -> 38308000000000000000000
+      [4][CALL] from=0xB618D9, to=TransparentUpgradeableProxy, depositAndBorrowApeAndStake(depositInfo(tuple): {'mainTokenIds': [], 'bakcTokenIds': []}, stakingInfo(tuple): {'nftAsset': '0xBC4CA0EdA7647A8aB7C2061c2E..., _nfts(tuple[]): [{'tokenId': 9829, 'amount': 1009400000000..., _nftPairs(tuple[]): []) -> None
+        [5][DELEGATECALL] from=TransparentUpgradeableProxy, to=ApeStaking, depositAndBorrowApeAndStake(depositInfo(tuple): {'mainTokenIds': [], 'bakcTokenIds': []}, stakingInfo(tuple): {'nftAsset': '0xBC4CA0EdA7647A8aB7C2061c2E..., _nfts(tuple[]): [{'tokenId': 9829, 'amount': 1009400000000..., _nftPairs(tuple[]): []) -> None
+          [6][STATICCALL] from=TransparentUpgradeableProxy, to=ApeCoinStaking, nftPosition((uint256): 9829) -> ['0', '0']
+          [6][CALL] from=TransparentUpgradeableProxy, to=BeaconProxy, depositApeCoin(amount(uint256): 10094000000000000000000, _nfts(tuple[]): [{'tokenId': 9829, 'amount': 1009400000000...) -> None
+            [7][STATICCALL] from=BeaconProxy, to=UpgradeableBeacon, implementation() -> 0x9b8880
+            [7][DELEGATECALL] from=BeaconProxy, to=PTokenBAYC, depositApeCoin(amount(uint256): 10094000000000000000000, _nfts(tuple[]): [{'tokenId': 9829, 'amount': 1009400000000...) -> None
+              [8][STATICCALL] from=BeaconProxy, to=TransparentUpgradeableProxy, apeCoinStaking() -> 0x5954ab
+                [9][DELEGATECALL] from=TransparentUpgradeableProxy, to=ApeStaking, apeCoinStaking() -> 0x5954ab
+              [8][STATICCALL] from=BeaconProxy, to=ApeCoinStaking, apeCoin() -> 0x4d2244
+              [8][STATICCALL] from=BeaconProxy, to=SimpleToken, allowance(owner(address): 0x5f0A4a, spender(address): 0x5954aB) -> 115792089237316195423570985008687907853269984665640563461121801842509107503980
+              [8][STATICCALL] from=BeaconProxy, to=TransparentUpgradeableProxy, apeCoinStaking() -> 0x5954ab
+                [9][DELEGATECALL] from=TransparentUpgradeableProxy, to=ApeStaking, apeCoinStaking() -> 0x5954ab
+              [8][CALL] from=BeaconProxy, to=ApeCoinStaking, depositBAYC(_nfts(tuple[]): [{'tokenId': 9829, 'amount': 1009400000000...) -> None
+                [9][STATICCALL] from=ApeCoinStaking, to=BoredApeYachtClub, ownerOf(tokenId(uint256): 9829) -> 0x5f0a4a
+                [9][CALL] from=ApeCoinStaking, to=SimpleToken, transferFrom(sender(address): 0x5f0A4a, recipient(address): 0x5954aB, amount(uint256): 10094000000000000000000) -> True
+      [4][CALL] from=0xB618D9, to=TransparentUpgradeableProxy, withdrawApeCoin(nftAsset(address): 0xBC4CA0, _nfts(tuple[]): [{'tokenId': 9829, 'amount': 1009400000000..., _nftPairs(tuple[]): []) -> None
+        [5][DELEGATECALL] from=TransparentUpgradeableProxy, to=ApeStaking, withdrawApeCoin(nftAsset(address): 0xBC4CA0, _nfts(tuple[]): [{'tokenId': 9829, 'amount': 1009400000000..., _nftPairs(tuple[]): []) -> None
+          [6][STATICCALL] from=TransparentUpgradeableProxy, to=ApeCoinStaking, nftPosition((uint256): 9829) -> ['10094000000000000000000', '7628285417013748434878000000000000000000']
+          [6][STATICCALL] from=TransparentUpgradeableProxy, to=ApeCoinStaking, pendingRewards(_poolId(uint256): 1, _address(address): 0x000000, _tokenId(uint256): 9829) -> 0
+          [6][CALL] from=TransparentUpgradeableProxy, to=BeaconProxy, withdrawApeCoin(_nfts(tuple[]): [{'tokenId': 9829, 'amount': 1009400000000..., recipient(address): 0x0B8903) -> None
+            [7][STATICCALL] from=BeaconProxy, to=UpgradeableBeacon, implementation() -> 0x9b8880
+            [7][DELEGATECALL] from=BeaconProxy, to=PTokenBAYC, withdrawApeCoin(_nfts(tuple[]): [{'tokenId': 9829, 'amount': 1009400000000..., recipient(address): 0x0B8903) -> None
+              [8][STATICCALL] from=BeaconProxy, to=TransparentUpgradeableProxy, apeCoinStaking() -> 0x5954ab
+                [9][DELEGATECALL] from=TransparentUpgradeableProxy, to=ApeStaking, apeCoinStaking() -> 0x5954ab
+              [8][CALL] from=BeaconProxy, to=ApeCoinStaking, withdrawBAYC(_nfts(tuple[]): [{'tokenId': 9829, 'amount': 1009400000000..., _recipient(address): 0x0B8903) -> None
+                [9][STATICCALL] from=ApeCoinStaking, to=BoredApeYachtClub, ownerOf(tokenId(uint256): 9829) -> 0x5f0a4a
+                [9][CALL] from=ApeCoinStaking, to=SimpleToken, transfer(recipient(address): 0x0B8903, amount(uint256): 10094000000000000000000) -> True
+          [6][STATICCALL] from=TransparentUpgradeableProxy, to=SimpleToken, allowance(owner(address): 0x0B8903, spender(address): 0x736257) -> 115792089237316195423570985008687907853269984665640564026861970295192758185581
+          [6][CALL] from=TransparentUpgradeableProxy, to=TransparentUpgradeableProxy, borrowBalanceCurrent(account(address): 0xB618D9) -> 0
+            [7][DELEGATECALL] from=TransparentUpgradeableProxy, to=ApePool, borrowBalanceCurrent(account(address): 0xB618D9) -> 0
+          [6][CALL] from=TransparentUpgradeableProxy, to=SimpleToken, transfer(recipient(address): 0xB618D9, amount(uint256): 10094000000000000000000) -> True
+      [4][STATICCALL] from=0xB618D9, to=ApeCoinStaking, pools((uint256): 1) -> ['1686967200', '2', '48770650011458162941385286', '755724729246458137']
+      [4][STATICCALL] from=0xB618D9, to=ApeCoinStaking, getTimeRangeBy(_poolId(uint256): 1, _index(uint256): 2) -> None
+      [4][STATICCALL] from=0xB618D9, to=SimpleToken, balanceOf(account(address): 0x5f0A4a) -> 28214000000000000000000
+      [4][CALL] from=0xB618D9, to=TransparentUpgradeableProxy, depositAndBorrowApeAndStake(depositInfo(tuple): {'mainTokenIds': [], 'bakcTokenIds': []}, stakingInfo(tuple): {'nftAsset': '0xBC4CA0EdA7647A8aB7C2061c2E..., _nfts(tuple[]): [{'tokenId': 9829, 'amount': 1009400000000..., _nftPairs(tuple[]): []) -> None
+        [5][DELEGATECALL] from=TransparentUpgradeableProxy, to=ApeStaking, depositAndBorrowApeAndStake(depositInfo(tuple): {'mainTokenIds': [], 'bakcTokenIds': []}, stakingInfo(tuple): {'nftAsset': '0xBC4CA0EdA7647A8aB7C2061c2E..., _nfts(tuple[]): [{'tokenId': 9829, 'amount': 1009400000000..., _nftPairs(tuple[]): []) -> None
+          [6][STATICCALL] from=TransparentUpgradeableProxy, to=ApeCoinStaking, nftPosition((uint256): 9829) -> ['0', '0']
+          [6][CALL] from=TransparentUpgradeableProxy, to=BeaconProxy, depositApeCoin(amount(uint256): 10094000000000000000000, _nfts(tuple[]): [{'tokenId': 9829, 'amount': 1009400000000...) -> None
+            [7][STATICCALL] from=BeaconProxy, to=UpgradeableBeacon, implementation() -> 0x9b8880
+            [7][DELEGATECALL] from=BeaconProxy, to=PTokenBAYC, depositApeCoin(amount(uint256): 10094000000000000000000, _nfts(tuple[]): [{'tokenId': 9829, 'amount': 1009400000000...) -> None
+              [8][STATICCALL] from=BeaconProxy, to=TransparentUpgradeableProxy, apeCoinStaking() -> 0x5954ab
+                [9][DELEGATECALL] from=TransparentUpgradeableProxy, to=ApeStaking, apeCoinStaking() -> 0x5954ab
+              [8][STATICCALL] from=BeaconProxy, to=ApeCoinStaking, apeCoin() -> 0x4d2244
+              [8][STATICCALL] from=BeaconProxy, to=SimpleToken, allowance(owner(address): 0x5f0A4a, spender(address): 0x5954aB) -> 115792089237316195423570985008687907853269984665640563451027801842509107503980
+              [8][STATICCALL] from=BeaconProxy, to=TransparentUpgradeableProxy, apeCoinStaking() -> 0x5954ab
+                [9][DELEGATECALL] from=TransparentUpgradeableProxy, to=ApeStaking, apeCoinStaking() -> 0x5954ab
+              [8][CALL] from=BeaconProxy, to=ApeCoinStaking, depositBAYC(_nfts(tuple[]): [{'tokenId': 9829, 'amount': 1009400000000...) -> None
+                [9][STATICCALL] from=ApeCoinStaking, to=BoredApeYachtClub, ownerOf(tokenId(uint256): 9829) -> 0x5f0a4a
+                [9][CALL] from=ApeCoinStaking, to=SimpleToken, transferFrom(sender(address): 0x5f0A4a, recipient(address): 0x5954aB, amount(uint256): 10094000000000000000000) -> True
+      [4][CALL] from=0xB618D9, to=TransparentUpgradeableProxy, withdrawApeCoin(nftAsset(address): 0xBC4CA0, _nfts(tuple[]): [{'tokenId': 9829, 'amount': 1009400000000..., _nftPairs(tuple[]): []) -> None
+        [5][DELEGATECALL] from=TransparentUpgradeableProxy, to=ApeStaking, withdrawApeCoin(nftAsset(address): 0xBC4CA0, _nfts(tuple[]): [{'tokenId': 9829, 'amount': 1009400000000..., _nftPairs(tuple[]): []) -> None
+          [6][STATICCALL] from=TransparentUpgradeableProxy, to=ApeCoinStaking, nftPosition((uint256): 9829) -> ['10094000000000000000000', '7628285417013748434878000000000000000000']
+          [6][STATICCALL] from=TransparentUpgradeableProxy, to=ApeCoinStaking, pendingRewards(_poolId(uint256): 1, _address(address): 0x000000, _tokenId(uint256): 9829) -> 0
+          [6][CALL] from=TransparentUpgradeableProxy, to=BeaconProxy, withdrawApeCoin(_nfts(tuple[]): [{'tokenId': 9829, 'amount': 1009400000000..., recipient(address): 0x0B8903) -> None
+            [7][STATICCALL] from=BeaconProxy, to=UpgradeableBeacon, implementation() -> 0x9b8880
+            [7][DELEGATECALL] from=BeaconProxy, to=PTokenBAYC, withdrawApeCoin(_nfts(tuple[]): [{'tokenId': 9829, 'amount': 1009400000000..., recipient(address): 0x0B8903) -> None
+              [8][STATICCALL] from=BeaconProxy, to=TransparentUpgradeableProxy, apeCoinStaking() -> 0x5954ab
+                [9][DELEGATECALL] from=TransparentUpgradeableProxy, to=ApeStaking, apeCoinStaking() -> 0x5954ab
+              [8][CALL] from=BeaconProxy, to=ApeCoinStaking, withdrawBAYC(_nfts(tuple[]): [{'tokenId': 9829, 'amount': 1009400000000..., _recipient(address): 0x0B8903) -> None
+                [9][STATICCALL] from=ApeCoinStaking, to=BoredApeYachtClub, ownerOf(tokenId(uint256): 9829) -> 0x5f0a4a
+                [9][CALL] from=ApeCoinStaking, to=SimpleToken, transfer(recipient(address): 0x0B8903, amount(uint256): 10094000000000000000000) -> True
+          [6][STATICCALL] from=TransparentUpgradeableProxy, to=SimpleToken, allowance(owner(address): 0x0B8903, spender(address): 0x736257) -> 115792089237316195423570985008687907853269984665640564026861970295192758185581
+          [6][CALL] from=TransparentUpgradeableProxy, to=TransparentUpgradeableProxy, borrowBalanceCurrent(account(address): 0xB618D9) -> 0
+            [7][DELEGATECALL] from=TransparentUpgradeableProxy, to=ApePool, borrowBalanceCurrent(account(address): 0xB618D9) -> 0
+          [6][CALL] from=TransparentUpgradeableProxy, to=SimpleToken, transfer(recipient(address): 0xB618D9, amount(uint256): 10094000000000000000000) -> True
+      [4][STATICCALL] from=0xB618D9, to=ApeCoinStaking, pools((uint256): 1) -> ['1686967200', '2', '48770650011458162941385286', '755724729246458137']
+      [4][STATICCALL] from=0xB618D9, to=ApeCoinStaking, getTimeRangeBy(_poolId(uint256): 1, _index(uint256): 2) -> None
+      [4][STATICCALL] from=0xB618D9, to=SimpleToken, balanceOf(account(address): 0x5f0A4a) -> 18120000000000000000000
+      [4][CALL] from=0xB618D9, to=TransparentUpgradeableProxy, depositAndBorrowApeAndStake(depositInfo(tuple): {'mainTokenIds': [], 'bakcTokenIds': []}, stakingInfo(tuple): {'nftAsset': '0xBC4CA0EdA7647A8aB7C2061c2E..., _nfts(tuple[]): [{'tokenId': 9829, 'amount': 1009400000000..., _nftPairs(tuple[]): []) -> None
+        [5][DELEGATECALL] from=TransparentUpgradeableProxy, to=ApeStaking, depositAndBorrowApeAndStake(depositInfo(tuple): {'mainTokenIds': [], 'bakcTokenIds': []}, stakingInfo(tuple): {'nftAsset': '0xBC4CA0EdA7647A8aB7C2061c2E..., _nfts(tuple[]): [{'tokenId': 9829, 'amount': 1009400000000..., _nftPairs(tuple[]): []) -> None
+          [6][STATICCALL] from=TransparentUpgradeableProxy, to=ApeCoinStaking, nftPosition((uint256): 9829) -> ['0', '0']
+          [6][CALL] from=TransparentUpgradeableProxy, to=BeaconProxy, depositApeCoin(amount(uint256): 10094000000000000000000, _nfts(tuple[]): [{'tokenId': 9829, 'amount': 1009400000000...) -> None
+            [7][STATICCALL] from=BeaconProxy, to=UpgradeableBeacon, implementation() -> 0x9b8880
+            [7][DELEGATECALL] from=BeaconProxy, to=PTokenBAYC, depositApeCoin(amount(uint256): 10094000000000000000000, _nfts(tuple[]): [{'tokenId': 9829, 'amount': 1009400000000...) -> None
+              [8][STATICCALL] from=BeaconProxy, to=TransparentUpgradeableProxy, apeCoinStaking() -> 0x5954ab
+                [9][DELEGATECALL] from=TransparentUpgradeableProxy, to=ApeStaking, apeCoinStaking() -> 0x5954ab
+              [8][STATICCALL] from=BeaconProxy, to=ApeCoinStaking, apeCoin() -> 0x4d2244
+              [8][STATICCALL] from=BeaconProxy, to=SimpleToken, allowance(owner(address): 0x5f0A4a, spender(address): 0x5954aB) -> 115792089237316195423570985008687907853269984665640563440933801842509107503980
+              [8][STATICCALL] from=BeaconProxy, to=TransparentUpgradeableProxy, apeCoinStaking() -> 0x5954ab
+                [9][DELEGATECALL] from=TransparentUpgradeableProxy, to=ApeStaking, apeCoinStaking() -> 0x5954ab
+              [8][CALL] from=BeaconProxy, to=ApeCoinStaking, depositBAYC(_nfts(tuple[]): [{'tokenId': 9829, 'amount': 1009400000000...) -> None
+                [9][STATICCALL] from=ApeCoinStaking, to=BoredApeYachtClub, ownerOf(tokenId(uint256): 9829) -> 0x5f0a4a
+                [9][CALL] from=ApeCoinStaking, to=SimpleToken, transferFrom(sender(address): 0x5f0A4a, recipient(address): 0x5954aB, amount(uint256): 10094000000000000000000) -> True
+      [4][CALL] from=0xB618D9, to=TransparentUpgradeableProxy, withdrawApeCoin(nftAsset(address): 0xBC4CA0, _nfts(tuple[]): [{'tokenId': 9829, 'amount': 1009400000000..., _nftPairs(tuple[]): []) -> None
+        [5][DELEGATECALL] from=TransparentUpgradeableProxy, to=ApeStaking, withdrawApeCoin(nftAsset(address): 0xBC4CA0, _nfts(tuple[]): [{'tokenId': 9829, 'amount': 1009400000000..., _nftPairs(tuple[]): []) -> None
+          [6][STATICCALL] from=TransparentUpgradeableProxy, to=ApeCoinStaking, nftPosition((uint256): 9829) -> ['10094000000000000000000', '7628285417013748434878000000000000000000']
+          [6][STATICCALL] from=TransparentUpgradeableProxy, to=ApeCoinStaking, pendingRewards(_poolId(uint256): 1, _address(address): 0x000000, _tokenId(uint256): 9829) -> 0
+          [6][CALL] from=TransparentUpgradeableProxy, to=BeaconProxy, withdrawApeCoin(_nfts(tuple[]): [{'tokenId': 9829, 'amount': 1009400000000..., recipient(address): 0x0B8903) -> None
+            [7][STATICCALL] from=BeaconProxy, to=UpgradeableBeacon, implementation() -> 0x9b8880
+            [7][DELEGATECALL] from=BeaconProxy, to=PTokenBAYC, withdrawApeCoin(_nfts(tuple[]): [{'tokenId': 9829, 'amount': 1009400000000..., recipient(address): 0x0B8903) -> None
+              [8][STATICCALL] from=BeaconProxy, to=TransparentUpgradeableProxy, apeCoinStaking() -> 0x5954ab
+                [9][DELEGATECALL] from=TransparentUpgradeableProxy, to=ApeStaking, apeCoinStaking() -> 0x5954ab
+              [8][CALL] from=BeaconProxy, to=ApeCoinStaking, withdrawBAYC(_nfts(tuple[]): [{'tokenId': 9829, 'amount': 1009400000000..., _recipient(address): 0x0B8903) -> None
+                [9][STATICCALL] from=ApeCoinStaking, to=BoredApeYachtClub, ownerOf(tokenId(uint256): 9829) -> 0x5f0a4a
+                [9][CALL] from=ApeCoinStaking, to=SimpleToken, transfer(recipient(address): 0x0B8903, amount(uint256): 10094000000000000000000) -> True
+          [6][STATICCALL] from=TransparentUpgradeableProxy, to=SimpleToken, allowance(owner(address): 0x0B8903, spender(address): 0x736257) -> 115792089237316195423570985008687907853269984665640564026861970295192758185581
+          [6][CALL] from=TransparentUpgradeableProxy, to=TransparentUpgradeableProxy, borrowBalanceCurrent(account(address): 0xB618D9) -> 0
+            [7][DELEGATECALL] from=TransparentUpgradeableProxy, to=ApePool, borrowBalanceCurrent(account(address): 0xB618D9) -> 0
+          [6][CALL] from=TransparentUpgradeableProxy, to=SimpleToken, transfer(recipient(address): 0xB618D9, amount(uint256): 10094000000000000000000) -> True
+      [4][STATICCALL] from=0xB618D9, to=ApeCoinStaking, pools((uint256): 1) -> ['1686967200', '2', '48770650011458162941385286', '755724729246458137']
+      [4][STATICCALL] from=0xB618D9, to=ApeCoinStaking, getTimeRangeBy(_poolId(uint256): 1, _index(uint256): 2) -> None
+      [4][STATICCALL] from=0xB618D9, to=SimpleToken, balanceOf(account(address): 0x5f0A4a) -> 8026000000000000000000
+      [4][CALL] from=0xB618D9, to=TransparentUpgradeableProxy, depositAndBorrowApeAndStake(depositInfo(tuple): {'mainTokenIds': [], 'bakcTokenIds': []}, stakingInfo(tuple): {'nftAsset': '0xBC4CA0EdA7647A8aB7C2061c2E..., _nfts(tuple[]): [{'tokenId': 9829, 'amount': 8026000000000..., _nftPairs(tuple[]): []) -> None
+        [5][DELEGATECALL] from=TransparentUpgradeableProxy, to=ApeStaking, depositAndBorrowApeAndStake(depositInfo(tuple): {'mainTokenIds': [], 'bakcTokenIds': []}, stakingInfo(tuple): {'nftAsset': '0xBC4CA0EdA7647A8aB7C2061c2E..., _nfts(tuple[]): [{'tokenId': 9829, 'amount': 8026000000000..., _nftPairs(tuple[]): []) -> None
+          [6][STATICCALL] from=TransparentUpgradeableProxy, to=ApeCoinStaking, nftPosition((uint256): 9829) -> ['0', '0']
+          [6][CALL] from=TransparentUpgradeableProxy, to=BeaconProxy, depositApeCoin(amount(uint256): 8026000000000000000000, _nfts(tuple[]): [{'tokenId': 9829, 'amount': 8026000000000...) -> None
+            [7][STATICCALL] from=BeaconProxy, to=UpgradeableBeacon, implementation() -> 0x9b8880
+            [7][DELEGATECALL] from=BeaconProxy, to=PTokenBAYC, depositApeCoin(amount(uint256): 8026000000000000000000, _nfts(tuple[]): [{'tokenId': 9829, 'amount': 8026000000000...) -> None
+              [8][STATICCALL] from=BeaconProxy, to=TransparentUpgradeableProxy, apeCoinStaking() -> 0x5954ab
+                [9][DELEGATECALL] from=TransparentUpgradeableProxy, to=ApeStaking, apeCoinStaking() -> 0x5954ab
+              [8][STATICCALL] from=BeaconProxy, to=ApeCoinStaking, apeCoin() -> 0x4d2244
+              [8][STATICCALL] from=BeaconProxy, to=SimpleToken, allowance(owner(address): 0x5f0A4a, spender(address): 0x5954aB) -> 115792089237316195423570985008687907853269984665640563430839801842509107503980
+              [8][STATICCALL] from=BeaconProxy, to=TransparentUpgradeableProxy, apeCoinStaking() -> 0x5954ab
+                [9][DELEGATECALL] from=TransparentUpgradeableProxy, to=ApeStaking, apeCoinStaking() -> 0x5954ab
+              [8][CALL] from=BeaconProxy, to=ApeCoinStaking, depositBAYC(_nfts(tuple[]): [{'tokenId': 9829, 'amount': 8026000000000...) -> None
+                [9][STATICCALL] from=ApeCoinStaking, to=BoredApeYachtClub, ownerOf(tokenId(uint256): 9829) -> 0x5f0a4a
+                [9][CALL] from=ApeCoinStaking, to=SimpleToken, transferFrom(sender(address): 0x5f0A4a, recipient(address): 0x5954aB, amount(uint256): 8026000000000000000000) -> True
+      [4][CALL] from=0xB618D9, to=TransparentUpgradeableProxy, withdrawApeCoin(nftAsset(address): 0xBC4CA0, _nfts(tuple[]): [{'tokenId': 9829, 'amount': 8026000000000..., _nftPairs(tuple[]): []) -> None
+        [5][DELEGATECALL] from=TransparentUpgradeableProxy, to=ApeStaking, withdrawApeCoin(nftAsset(address): 0xBC4CA0, _nfts(tuple[]): [{'tokenId': 9829, 'amount': 8026000000000..., _nftPairs(tuple[]): []) -> None
+          [6][STATICCALL] from=TransparentUpgradeableProxy, to=ApeCoinStaking, nftPosition((uint256): 9829) -> ['8026000000000000000000', '6065446676932073007562000000000000000000']
+          [6][STATICCALL] from=TransparentUpgradeableProxy, to=ApeCoinStaking, pendingRewards(_poolId(uint256): 1, _address(address): 0x000000, _tokenId(uint256): 9829) -> 0
+          [6][CALL] from=TransparentUpgradeableProxy, to=BeaconProxy, withdrawApeCoin(_nfts(tuple[]): [{'tokenId': 9829, 'amount': 8026000000000..., recipient(address): 0x0B8903) -> None
+            [7][STATICCALL] from=BeaconProxy, to=UpgradeableBeacon, implementation() -> 0x9b8880
+            [7][DELEGATECALL] from=BeaconProxy, to=PTokenBAYC, withdrawApeCoin(_nfts(tuple[]): [{'tokenId': 9829, 'amount': 8026000000000..., recipient(address): 0x0B8903) -> None
+              [8][STATICCALL] from=BeaconProxy, to=TransparentUpgradeableProxy, apeCoinStaking() -> 0x5954ab
+                [9][DELEGATECALL] from=TransparentUpgradeableProxy, to=ApeStaking, apeCoinStaking() -> 0x5954ab
+              [8][CALL] from=BeaconProxy, to=ApeCoinStaking, withdrawBAYC(_nfts(tuple[]): [{'tokenId': 9829, 'amount': 8026000000000..., _recipient(address): 0x0B8903) -> None
+                [9][STATICCALL] from=ApeCoinStaking, to=BoredApeYachtClub, ownerOf(tokenId(uint256): 9829) -> 0x5f0a4a
+                [9][CALL] from=ApeCoinStaking, to=SimpleToken, transfer(recipient(address): 0x0B8903, amount(uint256): 8026000000000000000000) -> True
+          [6][STATICCALL] from=TransparentUpgradeableProxy, to=SimpleToken, allowance(owner(address): 0x0B8903, spender(address): 0x736257) -> 115792089237316195423570985008687907853269984665640564026861970295192758185581
+          [6][CALL] from=TransparentUpgradeableProxy, to=TransparentUpgradeableProxy, borrowBalanceCurrent(account(address): 0xB618D9) -> 0
+            [7][DELEGATECALL] from=TransparentUpgradeableProxy, to=ApePool, borrowBalanceCurrent(account(address): 0xB618D9) -> 0
+          [6][CALL] from=TransparentUpgradeableProxy, to=SimpleToken, transfer(recipient(address): 0xB618D9, amount(uint256): 8026000000000000000000) -> True
+      [4][STATICCALL] from=0xB618D9, to=ApeCoinStaking, pools((uint256): 1) -> ['1686967200', '2', '48770650011458162941385286', '755724729246458137']
+      [4][STATICCALL] from=0xB618D9, to=ApeCoinStaking, getTimeRangeBy(_poolId(uint256): 1, _index(uint256): 2) -> None
+      [4][STATICCALL] from=0xB618D9, to=SimpleToken, balanceOf(account(address): 0x5f0A4a) -> 0
+      [4][STATICCALL] from=0xB618D9, to=SimpleToken, balanceOf(account(address): 0xB618D9) -> 225237682165404022135955
+      [4][CALL] from=0xB618D9, to=SimpleToken, transfer(recipient(address): 0xAc4b3D, amount(uint256): 220660000000000000000000) -> True
+    [3][STATICCALL] from=0xac4b3d, to=SimpleToken, balanceOf(account(address): 0xAc4b3D) -> 893064538720741080345243
+    [3][STATICCALL] from=0xac4b3d, to=WETH9, balanceOf((address): 0xAc4b3D) -> 186390928587179157982

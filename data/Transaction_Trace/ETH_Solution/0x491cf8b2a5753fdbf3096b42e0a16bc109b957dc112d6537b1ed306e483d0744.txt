@@ -1,0 +1,9 @@
+[1][CALL] from=0x53635b, to=0xba8ce8, 0x18e299ee() -> None
+  [2][STATICCALL] from=0xba8ce8, to=TransparentUpgradeableProxy, allowance(owner(address): 0x279a7D, spender(address): 0x3d2060) -> 188013365080870249823427
+    [3][DELEGATECALL] from=TransparentUpgradeableProxy, to=SdCrvCompounder, allowance(owner(address): 0x279a7D, spender(address): 0x3d2060) -> 188013365080870249823427
+  [2][STATICCALL] from=0xba8ce8, to=TransparentUpgradeableProxy, balanceOf(account(address): 0x279a7D) -> 188013365080870249823427
+    [3][DELEGATECALL] from=TransparentUpgradeableProxy, to=SdCrvCompounder, balanceOf(account(address): 0x279a7D) -> 188013365080870249823427
+  [2][CALL] from=0xba8ce8, to=AMTransparentUpgradeableProxy, execute(_commands(bytes): b'\x12', _inputs(bytes[]): [b'\x00\x00\x00\x00\x00\x00\x00\x00\x00\x0...) -> None
+    [3][DELEGATECALL] from=AMTransparentUpgradeableProxy, to=Router, execute(_commands(bytes): b'\x12', _inputs(bytes[]): [b'\x00\x00\x00\x00\x00\x00\x00\x00\x00\x0...) -> None
+      [4][CALL] from=AMTransparentUpgradeableProxy, to=TransparentUpgradeableProxy, transferFrom(sender(address): 0x279a7D, recipient(address): 0xBa8CE8, amount(uint256): 188013365080870249823427) -> True
+        [5][DELEGATECALL] from=TransparentUpgradeableProxy, to=SdCrvCompounder, transferFrom(sender(address): 0x279a7D, recipient(address): 0xBa8CE8, amount(uint256): 188013365080870249823427) -> True

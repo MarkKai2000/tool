@@ -1,0 +1,1191 @@
+[1][CALL] from=0xf9e3d0, to=0xdfb6fa, 0x6466c309() -> None
+  [2][CALL] from=0xdfb6fa, to=InitializableImmutableAdminUpgradeabilityProxy, flashLoan(receiverAddress(address): 0xdFb6fa, assets(address[]): ['0xdAC17F958D2ee523a2206206994597C13D831e..., amounts(uint256[]): [30000000000000, 13000000000000000000000, ..., modes(uint256[]): [0, 0, 0, 0, 0, 0], onBehalfOf(address): 0xdFb6fa, params(bytes): b'', referralCode(uint16): 0) -> None
+    [3][DELEGATECALL] from=InitializableImmutableAdminUpgradeabilityProxy, to=LendingPool, flashLoan(receiverAddress(address): 0xdFb6fa, assets(address[]): ['0xdAC17F958D2ee523a2206206994597C13D831e..., amounts(uint256[]): [30000000000000, 13000000000000000000000, ..., modes(uint256[]): [0, 0, 0, 0, 0, 0], onBehalfOf(address): 0xdFb6fa, params(bytes): b'', referralCode(uint16): 0) -> None
+      [4][CALL] from=InitializableImmutableAdminUpgradeabilityProxy, to=InitializableImmutableAdminUpgradeabilityProxy, transferUnderlyingTo(target(address): 0xdFb6fa, amount(uint256): 30000000000000) -> 30000000000000
+        [5][DELEGATECALL] from=InitializableImmutableAdminUpgradeabilityProxy, to=AToken, transferUnderlyingTo(target(address): 0xdFb6fa, amount(uint256): 30000000000000) -> 30000000000000
+          [6][CALL] from=InitializableImmutableAdminUpgradeabilityProxy, to=TetherToken, transfer(_to(address): 0xdFb6fa, _value(uint256): 30000000000000) -> None
+      [4][CALL] from=InitializableImmutableAdminUpgradeabilityProxy, to=InitializableImmutableAdminUpgradeabilityProxy, transferUnderlyingTo(target(address): 0xdFb6fa, amount(uint256): 13000000000000000000000) -> 13000000000000000000000
+        [5][DELEGATECALL] from=InitializableImmutableAdminUpgradeabilityProxy, to=AToken, transferUnderlyingTo(target(address): 0xdFb6fa, amount(uint256): 13000000000000000000000) -> 13000000000000000000000
+          [6][CALL] from=InitializableImmutableAdminUpgradeabilityProxy, to=WETH9, transfer(dst(address): 0xdFb6fa, wad(uint256): 13000000000000000000000) -> True
+      [4][CALL] from=InitializableImmutableAdminUpgradeabilityProxy, to=InitializableImmutableAdminUpgradeabilityProxy, transferUnderlyingTo(target(address): 0xdFb6fa, amount(uint256): 140000000000) -> 140000000000
+        [5][DELEGATECALL] from=InitializableImmutableAdminUpgradeabilityProxy, to=AToken, transferUnderlyingTo(target(address): 0xdFb6fa, amount(uint256): 140000000000) -> 140000000000
+          [6][CALL] from=InitializableImmutableAdminUpgradeabilityProxy, to=WBTC, transfer(_to(address): 0xdFb6fa, _value(uint256): 140000000000) -> True
+      [4][CALL] from=InitializableImmutableAdminUpgradeabilityProxy, to=InitializableImmutableAdminUpgradeabilityProxy, transferUnderlyingTo(target(address): 0xdFb6fa, amount(uint256): 30000000000000) -> 30000000000000
+        [5][DELEGATECALL] from=InitializableImmutableAdminUpgradeabilityProxy, to=AToken, transferUnderlyingTo(target(address): 0xdFb6fa, amount(uint256): 30000000000000) -> 30000000000000
+          [6][CALL] from=InitializableImmutableAdminUpgradeabilityProxy, to=FiatTokenProxy, transfer(to(address): 0xdFb6fa, value(uint256): 30000000000000) -> True
+            [7][DELEGATECALL] from=FiatTokenProxy, to=FiatTokenV2_1, transfer(to(address): 0xdFb6fa, value(uint256): 30000000000000) -> True
+      [4][CALL] from=InitializableImmutableAdminUpgradeabilityProxy, to=InitializableImmutableAdminUpgradeabilityProxy, transferUnderlyingTo(target(address): 0xdFb6fa, amount(uint256): 3000000000000000000000000) -> 3000000000000000000000000
+        [5][DELEGATECALL] from=InitializableImmutableAdminUpgradeabilityProxy, to=AToken, transferUnderlyingTo(target(address): 0xdFb6fa, amount(uint256): 3000000000000000000000000) -> 3000000000000000000000000
+          [6][CALL] from=InitializableImmutableAdminUpgradeabilityProxy, to=Dai, transfer(dst(address): 0xdFb6fa, wad(uint256): 3000000000000000000000000) -> True
+      [4][CALL] from=InitializableImmutableAdminUpgradeabilityProxy, to=InitializableImmutableAdminUpgradeabilityProxy, transferUnderlyingTo(target(address): 0xdFb6fa, amount(uint256): 200000000000000000000000) -> 200000000000000000000000
+        [5][DELEGATECALL] from=InitializableImmutableAdminUpgradeabilityProxy, to=DelegationAwareAToken, transferUnderlyingTo(target(address): 0xdFb6fa, amount(uint256): 200000000000000000000000) -> 200000000000000000000000
+          [6][CALL] from=InitializableImmutableAdminUpgradeabilityProxy, to=Uni, transfer(dst(address): 0xdFb6fa, rawAmount(uint256): 200000000000000000000000) -> True
+      [4][CALL] from=InitializableImmutableAdminUpgradeabilityProxy, to=0xdfb6fa, executeOperationaddress[]() -> 0x000000
+        [5][STATICCALL] from=0xdfb6fa, to=SorbettoFragola, pool() -> 0x4e68cc
+        [5][STATICCALL] from=0xdfb6fa, to=SorbettoFragola, tickLower() -> -200820
+        [5][STATICCALL] from=0xdfb6fa, to=SorbettoFragola, tickUpper() -> -196800
+        [5][STATICCALL] from=0xdfb6fa, to=SorbettoFragola, token0() -> 0xc02aaa
+        [5][STATICCALL] from=0xdfb6fa, to=SorbettoFragola, token1() -> 0xdac17f
+        [5][STATICCALL] from=0xdfb6fa, to=WETH9, balanceOf((address): 0xdFb6fa) -> 13000000000000000000000
+        [5][STATICCALL] from=0xdfb6fa, to=TetherToken, balanceOf(who(address): 0xdFb6fa) -> 30000000000000
+        [5][STATICCALL] from=0xdfb6fa, to=WETH9, allowance((address): 0xc4ff55) -> 0
+        [5][CALL] from=0xdfb6fa, to=WETH9, approve(guy(address): 0xc4ff55, wad(uint256): 13000000000000000000000) -> True
+        [5][STATICCALL] from=0xdfb6fa, to=TetherToken, allowance(_owner(address): 0xdFb6fa, _spender(address): 0xc4ff55) -> 0
+        [5][CALL] from=0xdfb6fa, to=TetherToken, approve(_spender(address): 0xc4ff55, _value(uint256): 30000000000000) -> None
+        [5][CALL] from=0xdfb6fa, to=SorbettoFragola, deposit(amount0Desired(uint256): 13000000000000000000000, amount1Desired(uint256): 30000000000000) -> ['10520294087322201216', '5462934805684430122507', '30000000000000']
+          [6][STATICCALL] from=SorbettoFragola, to=SorbettoStrategy, maxTwapDeviation() -> 40
+          [6][STATICCALL] from=SorbettoFragola, to=SorbettoStrategy, twapDuration() -> 150
+          [6][STATICCALL] from=SorbettoFragola, to=UniswapV3Pool, slot0() -> ['3971461645463204669051653', '-198029', '8', '10', '10', '0', 'True']
+          [6][STATICCALL] from=SorbettoFragola, to=UniswapV3Pool, observe(secondsAgos(uint32[]): [150, 0]) -> [[-1546418566144, -1546448270494], [850310585722533678344525539, 850313915242653030794374167]]
+          [6][STATICCALL] from=SorbettoFragola, to=UniswapV3Pool, positions((bytes32): b'\xc2\xce\xf0V\x07\xa5\xfe~\xf9\xf4\x7fE\...) -> ['674352325421891217', '288300097049228941768945329956986003048898', '729438166892046065048136676804096', '0', '0']
+          [6][CALL] from=SorbettoFragola, to=UniswapV3Pool, burn(tickLower(int24): -200820, tickUpper(int24): -196800, amount(uint128): 0) -> ['0', '0']
+          [6][CALL] from=SorbettoFragola, to=UniswapV3Pool, collect(recipient(address): 0xc4ff55, tickLower(int24): -200820, tickUpper(int24): -196800, amount0Requested(uint128): 340282366920938463463374607431768211455, amount1Requested(uint128): 340282366920938463463374607431768211455) -> ['310842000818367370', '1361897484']
+            [7][CALL] from=UniswapV3Pool, to=WETH9, transfer(dst(address): 0xc4ff55, wad(uint256): 310842000818367370) -> True
+            [7][CALL] from=UniswapV3Pool, to=TetherToken, transfer(_to(address): 0xc4ff55, _value(uint256): 1361897484) -> None
+          [6][STATICCALL] from=SorbettoFragola, to=SorbettoStrategy, protocolFee() -> 100000
+          [6][STATICCALL] from=SorbettoFragola, to=SorbettoStrategy, protocolFee() -> 100000
+          [6][STATICCALL] from=SorbettoFragola, to=UniswapV3Pool, positions((bytes32): b'\xc2\xce\xf0V\x07\xa5\xfe~\xf9\xf4\x7fE\...) -> ['674352325421891217', '288456949851227866470867747604976205984401', '730125388811757853836977482428420', '0', '0']
+          [6][STATICCALL] from=SorbettoFragola, to=UniswapV3Pool, slot0() -> ['3971461645463204669051653', '-198029', '8', '10', '10', '0', 'True']
+          [6][CALL] from=SorbettoFragola, to=UniswapV3Pool, mint(recipient(address): 0xc4ff55, tickLower(int24): -200820, tickUpper(int24): -196800, amount(uint128): 4594999273548660445, data(bytes): b'\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00...) -> ['5462934805684430122507', '30000000000000']
+            [7][STATICCALL] from=UniswapV3Pool, to=WETH9, balanceOf((address): 0x4e68Cc) -> 27472664342396866108846
+            [7][STATICCALL] from=UniswapV3Pool, to=TetherToken, balanceOf(who(address): 0x4e68Cc) -> 67637796462602
+            [7][CALL] from=UniswapV3Pool, to=SorbettoFragola, uniswapV3MintCallback(amount0(uint256): 5462934805684430122507, amount1(uint256): 30000000000000, data(bytes): b'\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00...) -> None
+              [8][CALL] from=SorbettoFragola, to=WETH9, transferFrom(src(address): 0xdFb6fa, dst(address): 0x4e68Cc, wad(uint256): 5462934805684430122507) -> True
+              [8][CALL] from=SorbettoFragola, to=TetherToken, transferFrom(_from(address): 0xdFb6fa, _to(address): 0x4e68Cc, _value(uint256): 30000000000000) -> None
+            [7][STATICCALL] from=UniswapV3Pool, to=WETH9, balanceOf((address): 0x4e68Cc) -> 32935599148081296231353
+            [7][STATICCALL] from=UniswapV3Pool, to=TetherToken, balanceOf(who(address): 0x4e68Cc) -> 97637796462602
+        [5][STATICCALL] from=0xdfb6fa, to=SorbettoFragola, balanceOf(account(address): 0xdFb6fa) -> 10520294087322201216
+        [5][CALL] from=0xdfb6fa, to=SorbettoFragola, transfer(recipient(address): 0x576Cf5, amount(uint256): 10520294087322201216) -> True
+        [5][CALL] from=0xdfb6fa, to=0x576Cf5, 0x9c81744a() -> None
+          [6][CALL] from=0x576Cf5, to=SorbettoFragola, collectFees(amount0(uint256): 0, amount1(uint256): 0) -> None
+            [7][STATICCALL] from=SorbettoFragola, to=UniswapV3Pool, positions((bytes32): b'\xc2\xce\xf0V\x07\xa5\xfe~\xf9\xf4\x7fE\...) -> ['5269351598970551662', '288456949851227866470867747604976205984401', '730125388811757853836977482428420', '0', '0']
+            [7][CALL] from=SorbettoFragola, to=UniswapV3Pool, burn(tickLower(int24): -200820, tickUpper(int24): -196800, amount(uint128): 0) -> ['0', '0']
+            [7][CALL] from=SorbettoFragola, to=UniswapV3Pool, collect(recipient(address): 0xc4ff55, tickLower(int24): -200820, tickUpper(int24): -196800, amount0Requested(uint128): 340282366920938463463374607431768211455, amount1Requested(uint128): 340282366920938463463374607431768211455) -> ['0', '0']
+            [7][STATICCALL] from=SorbettoFragola, to=SorbettoStrategy, protocolFee() -> 100000
+            [7][STATICCALL] from=SorbettoFragola, to=SorbettoStrategy, protocolFee() -> 100000
+            [7][STATICCALL] from=SorbettoFragola, to=WETH9, balanceOf((address): 0xc4ff55) -> 10448444544057658569
+            [7][STATICCALL] from=SorbettoFragola, to=TetherToken, balanceOf(who(address): 0xc4ff55) -> 1361897484
+        [5][CALL] from=0xdfb6fa, to=0x576Cf5, transferTokensaddress() -> None
+          [6][STATICCALL] from=0x576Cf5, to=SorbettoFragola, balanceOf(account(address): 0x576Cf5) -> 10520294087322201216
+          [6][CALL] from=0x576Cf5, to=SorbettoFragola, transfer(recipient(address): 0xd282f7, amount(uint256): 10520294087322201216) -> True
+        [5][CALL] from=0xdfb6fa, to=0xd282f7, 0x9c81744a() -> None
+          [6][CALL] from=0xd282f7, to=SorbettoFragola, collectFees(amount0(uint256): 0, amount1(uint256): 0) -> None
+            [7][STATICCALL] from=SorbettoFragola, to=UniswapV3Pool, positions((bytes32): b'\xc2\xce\xf0V\x07\xa5\xfe~\xf9\xf4\x7fE\...) -> ['5269351598970551662', '288456949851227866470867747604976205984401', '730125388811757853836977482428420', '0', '0']
+            [7][CALL] from=SorbettoFragola, to=UniswapV3Pool, burn(tickLower(int24): -200820, tickUpper(int24): -196800, amount(uint128): 0) -> ['0', '0']
+            [7][CALL] from=SorbettoFragola, to=UniswapV3Pool, collect(recipient(address): 0xc4ff55, tickLower(int24): -200820, tickUpper(int24): -196800, amount0Requested(uint128): 340282366920938463463374607431768211455, amount1Requested(uint128): 340282366920938463463374607431768211455) -> ['0', '0']
+            [7][STATICCALL] from=SorbettoFragola, to=SorbettoStrategy, protocolFee() -> 100000
+            [7][STATICCALL] from=SorbettoFragola, to=SorbettoStrategy, protocolFee() -> 100000
+            [7][STATICCALL] from=SorbettoFragola, to=WETH9, balanceOf((address): 0xc4ff55) -> 10448444544057658569
+            [7][STATICCALL] from=SorbettoFragola, to=TetherToken, balanceOf(who(address): 0xc4ff55) -> 1361897484
+        [5][CALL] from=0xdfb6fa, to=0xd282f7, transferTokensaddress() -> None
+          [6][STATICCALL] from=0xd282f7, to=SorbettoFragola, balanceOf(account(address): 0xd282f7) -> 10520294087322201216
+          [6][CALL] from=0xd282f7, to=SorbettoFragola, transfer(recipient(address): 0xdFb6fa, amount(uint256): 10520294087322201216) -> True
+        [5][STATICCALL] from=0xdfb6fa, to=SorbettoFragola, balanceOf(account(address): 0xdFb6fa) -> 10520294087322201216
+        [5][CALL] from=0xdfb6fa, to=SorbettoFragola, withdraw(shares(uint256): 10520294087322201216) -> ['5462934805684430121318', '29999999999999']
+          [6][STATICCALL] from=SorbettoFragola, to=SorbettoStrategy, maxTwapDeviation() -> 40
+          [6][STATICCALL] from=SorbettoFragola, to=SorbettoStrategy, twapDuration() -> 150
+          [6][STATICCALL] from=SorbettoFragola, to=UniswapV3Pool, slot0() -> ['3971461645463204669051653', '-198029', '9', '10', '10', '0', 'True']
+          [6][STATICCALL] from=SorbettoFragola, to=UniswapV3Pool, observe(secondsAgos(uint32[]): [150, 0]) -> [[-1546418566144, -1546448270494], [850310585722533678344525539, 850313915242653030794374167]]
+          [6][STATICCALL] from=SorbettoFragola, to=UniswapV3Pool, positions((bytes32): b'\xc2\xce\xf0V\x07\xa5\xfe~\xf9\xf4\x7fE\...) -> ['5269351598970551662', '288456949851227866470867747604976205984401', '730125388811757853836977482428420', '0', '0']
+          [6][CALL] from=SorbettoFragola, to=UniswapV3Pool, burn(tickLower(int24): -200820, tickUpper(int24): -196800, amount(uint128): 0) -> ['0', '0']
+          [6][CALL] from=SorbettoFragola, to=UniswapV3Pool, collect(recipient(address): 0xc4ff55, tickLower(int24): -200820, tickUpper(int24): -196800, amount0Requested(uint128): 340282366920938463463374607431768211455, amount1Requested(uint128): 340282366920938463463374607431768211455) -> ['0', '0']
+          [6][STATICCALL] from=SorbettoFragola, to=SorbettoStrategy, protocolFee() -> 100000
+          [6][STATICCALL] from=SorbettoFragola, to=SorbettoStrategy, protocolFee() -> 100000
+          [6][STATICCALL] from=SorbettoFragola, to=UniswapV3Pool, positions((bytes32): b'\xc2\xce\xf0V\x07\xa5\xfe~\xf9\xf4\x7fE\...) -> ['5269351598970551662', '288456949851227866470867747604976205984401', '730125388811757853836977482428420', '0', '0']
+          [6][CALL] from=SorbettoFragola, to=UniswapV3Pool, burn(tickLower(int24): -200820, tickUpper(int24): -196800, amount(uint128): 4594999273548660444) -> ['5462934805684430121318', '29999999999999']
+          [6][CALL] from=SorbettoFragola, to=UniswapV3Pool, collect(recipient(address): 0xdFb6fa, tickLower(int24): -200820, tickUpper(int24): -196800, amount0Requested(uint128): 5462934805684430121318, amount1Requested(uint128): 29999999999999) -> ['5462934805684430121318', '29999999999999']
+            [7][CALL] from=UniswapV3Pool, to=WETH9, transfer(dst(address): 0xdFb6fa, wad(uint256): 5462934805684430121318) -> True
+            [7][CALL] from=UniswapV3Pool, to=TetherToken, transfer(_to(address): 0xdFb6fa, _value(uint256): 29999999999999) -> None
+        [5][STATICCALL] from=0xdfb6fa, to=SorbettoFragola, userInfo((address): 0x576Cf5) -> ['957182808388617756829', '2153268895539', '90984415496720749373', '204677633312']
+        [5][STATICCALL] from=0xdfb6fa, to=SorbettoFragola, position() -> ['674352325421891218', '288456949851227866470867747604976205984401', '730125388811757853836977482428420', '0', '0']
+          [6][STATICCALL] from=SorbettoFragola, to=UniswapV3Pool, positions((bytes32): b'\xc2\xce\xf0V\x07\xa5\xfe~\xf9\xf4\x7fE\...) -> ['674352325421891218', '288456949851227866470867747604976205984401', '730125388811757853836977482428420', '0', '0']
+        [5][STATICCALL] from=0xdfb6fa, to=UniswapV3Pool, slot0() -> ['3971461645463204669051653', '-198029', '9', '10', '10', '0', 'True']
+        [5][CALL] from=0xdfb6fa, to=0x576Cf5, 0x9c81744a() -> None
+          [6][CALL] from=0x576Cf5, to=SorbettoFragola, collectFees(amount0(uint256): 957182808388617756829, amount1(uint256): 2153268895539) -> None
+            [7][STATICCALL] from=SorbettoFragola, to=UniswapV3Pool, positions((bytes32): b'\xc2\xce\xf0V\x07\xa5\xfe~\xf9\xf4\x7fE\...) -> ['674352325421891218', '288456949851227866470867747604976205984401', '730125388811757853836977482428420', '0', '0']
+            [7][CALL] from=SorbettoFragola, to=UniswapV3Pool, burn(tickLower(int24): -200820, tickUpper(int24): -196800, amount(uint128): 0) -> ['0', '0']
+            [7][CALL] from=SorbettoFragola, to=UniswapV3Pool, collect(recipient(address): 0xc4ff55, tickLower(int24): -200820, tickUpper(int24): -196800, amount0Requested(uint128): 340282366920938463463374607431768211455, amount1Requested(uint128): 340282366920938463463374607431768211455) -> ['0', '0']
+            [7][STATICCALL] from=SorbettoFragola, to=SorbettoStrategy, protocolFee() -> 100000
+            [7][STATICCALL] from=SorbettoFragola, to=SorbettoStrategy, protocolFee() -> 100000
+            [7][STATICCALL] from=SorbettoFragola, to=WETH9, balanceOf((address): 0xc4ff55) -> 10448444544057658569
+            [7][STATICCALL] from=SorbettoFragola, to=TetherToken, balanceOf(who(address): 0xc4ff55) -> 1361897484
+            [7][STATICCALL] from=SorbettoFragola, to=UniswapV3Pool, slot0() -> ['3971461645463204669051653', '-198029', '9', '10', '10', '0', 'True']
+            [7][STATICCALL] from=SorbettoFragola, to=UniswapV3Pool, positions((bytes32): b'\xc2\xce\xf0V\x07\xa5\xfe~\xf9\xf4\x7fE\...) -> ['674352325421891218', '288456949851227866470867747604976205984401', '730125388811757853836977482428420', '0', '0']
+            [7][CALL] from=SorbettoFragola, to=UniswapV3Pool, burn(tickLower(int24): -200820, tickUpper(int24): -196800, amount(uint128): 329808967025221047) -> ['392105586514589147486', '2153268895538']
+            [7][CALL] from=SorbettoFragola, to=UniswapV3Pool, collect(recipient(address): 0x576Cf5, tickLower(int24): -200820, tickUpper(int24): -196800, amount0Requested(uint128): 392105586514589147486, amount1Requested(uint128): 2153268895538) -> ['392105586514589147486', '2153268895538']
+              [8][CALL] from=UniswapV3Pool, to=WETH9, transfer(dst(address): 0x576Cf5, wad(uint256): 392105586514589147486) -> True
+              [8][CALL] from=UniswapV3Pool, to=TetherToken, transfer(_to(address): 0x576Cf5, _value(uint256): 2153268895538) -> None
+        [5][STATICCALL] from=0xdfb6fa, to=SorbettoFragola, userInfo((address): 0xd282f7) -> ['957182808388617756829', '2153268895539', '90984415496720749373', '204677633312']
+        [5][STATICCALL] from=0xdfb6fa, to=SorbettoFragola, position() -> ['344543358396670171', '288456949851227866470867747604976205984401', '730125388811757853836977482428420', '0', '0']
+          [6][STATICCALL] from=SorbettoFragola, to=UniswapV3Pool, positions((bytes32): b'\xc2\xce\xf0V\x07\xa5\xfe~\xf9\xf4\x7fE\...) -> ['344543358396670171', '288456949851227866470867747604976205984401', '730125388811757853836977482428420', '0', '0']
+        [5][STATICCALL] from=0xdfb6fa, to=UniswapV3Pool, slot0() -> ['3971461645463204669051653', '-198029', '9', '10', '10', '0', 'True']
+        [5][CALL] from=0xdfb6fa, to=0xd282f7, 0x9c81744a() -> None
+          [6][CALL] from=0xd282f7, to=SorbettoFragola, collectFees(amount0(uint256): 957182808388617756829, amount1(uint256): 2153268895539) -> None
+            [7][STATICCALL] from=SorbettoFragola, to=UniswapV3Pool, positions((bytes32): b'\xc2\xce\xf0V\x07\xa5\xfe~\xf9\xf4\x7fE\...) -> ['344543358396670171', '288456949851227866470867747604976205984401', '730125388811757853836977482428420', '0', '0']
+            [7][CALL] from=SorbettoFragola, to=UniswapV3Pool, burn(tickLower(int24): -200820, tickUpper(int24): -196800, amount(uint128): 0) -> ['0', '0']
+            [7][CALL] from=SorbettoFragola, to=UniswapV3Pool, collect(recipient(address): 0xc4ff55, tickLower(int24): -200820, tickUpper(int24): -196800, amount0Requested(uint128): 340282366920938463463374607431768211455, amount1Requested(uint128): 340282366920938463463374607431768211455) -> ['0', '0']
+            [7][STATICCALL] from=SorbettoFragola, to=SorbettoStrategy, protocolFee() -> 100000
+            [7][STATICCALL] from=SorbettoFragola, to=SorbettoStrategy, protocolFee() -> 100000
+            [7][STATICCALL] from=SorbettoFragola, to=WETH9, balanceOf((address): 0xc4ff55) -> 10448444544057658569
+            [7][STATICCALL] from=SorbettoFragola, to=TetherToken, balanceOf(who(address): 0xc4ff55) -> 1361897484
+            [7][STATICCALL] from=SorbettoFragola, to=UniswapV3Pool, slot0() -> ['3971461645463204669051653', '-198029', '9', '10', '10', '0', 'True']
+            [7][STATICCALL] from=SorbettoFragola, to=UniswapV3Pool, positions((bytes32): b'\xc2\xce\xf0V\x07\xa5\xfe~\xf9\xf4\x7fE\...) -> ['344543358396670171', '288456949851227866470867747604976205984401', '730125388811757853836977482428420', '0', '0']
+            [7][CALL] from=SorbettoFragola, to=UniswapV3Pool, burn(tickLower(int24): -200820, tickUpper(int24): -196800, amount(uint128): 329808967025221047) -> ['392105586514589147486', '2153268895538']
+            [7][CALL] from=SorbettoFragola, to=UniswapV3Pool, collect(recipient(address): 0xd282f7, tickLower(int24): -200820, tickUpper(int24): -196800, amount0Requested(uint128): 392105586514589147486, amount1Requested(uint128): 2153268895538) -> ['392105586514589147486', '2153268895538']
+              [8][CALL] from=UniswapV3Pool, to=WETH9, transfer(dst(address): 0xd282f7, wad(uint256): 392105586514589147486) -> True
+              [8][CALL] from=UniswapV3Pool, to=TetherToken, transfer(_to(address): 0xd282f7, _value(uint256): 2153268895538) -> None
+        [5][STATICCALL] from=0xdfb6fa, to=SorbettoFragola, userInfo((address): 0xd282f7) -> ['565077221874028609343', '1', '90984415496720749373', '204677633312']
+        [5][STATICCALL] from=0xdfb6fa, to=WETH9, balanceOf((address): 0xc4ff55) -> 10448444544057658569
+        [5][STATICCALL] from=0xdfb6fa, to=TetherToken, balanceOf(who(address): 0xc4ff55) -> 1361897484
+        [5][CALL] from=0xdfb6fa, to=0xd282f7, 0x9c81744a() -> None
+          [6][CALL] from=0xd282f7, to=SorbettoFragola, collectFees(amount0(uint256): 10448444544057658569, amount1(uint256): 1) -> None
+            [7][STATICCALL] from=SorbettoFragola, to=UniswapV3Pool, positions((bytes32): b'\xc2\xce\xf0V\x07\xa5\xfe~\xf9\xf4\x7fE\...) -> ['14734391371449124', '288456949851227866470867747604976205984401', '730125388811757853836977482428420', '0', '0']
+            [7][CALL] from=SorbettoFragola, to=UniswapV3Pool, burn(tickLower(int24): -200820, tickUpper(int24): -196800, amount(uint128): 0) -> ['0', '0']
+            [7][CALL] from=SorbettoFragola, to=UniswapV3Pool, collect(recipient(address): 0xc4ff55, tickLower(int24): -200820, tickUpper(int24): -196800, amount0Requested(uint128): 340282366920938463463374607431768211455, amount1Requested(uint128): 340282366920938463463374607431768211455) -> ['0', '0']
+            [7][STATICCALL] from=SorbettoFragola, to=SorbettoStrategy, protocolFee() -> 100000
+            [7][STATICCALL] from=SorbettoFragola, to=SorbettoStrategy, protocolFee() -> 100000
+            [7][STATICCALL] from=SorbettoFragola, to=WETH9, balanceOf((address): 0xc4ff55) -> 10448444544057658569
+            [7][STATICCALL] from=SorbettoFragola, to=TetherToken, balanceOf(who(address): 0xc4ff55) -> 1361897484
+            [7][CALL] from=SorbettoFragola, to=WETH9, transfer(dst(address): 0xd282f7, wad(uint256): 10448444544057658569) -> True
+            [7][CALL] from=SorbettoFragola, to=TetherToken, transfer(_to(address): 0xd282f7, _value(uint256): 1) -> None
+        [5][STATICCALL] from=0xdfb6fa, to=SorbettoFragola, pool() -> 0x8ad599
+        [5][STATICCALL] from=0xdfb6fa, to=SorbettoFragola, tickLower() -> 196680
+        [5][STATICCALL] from=0xdfb6fa, to=SorbettoFragola, tickUpper() -> 201000
+        [5][STATICCALL] from=0xdfb6fa, to=SorbettoFragola, token0() -> 0xa0b869
+        [5][STATICCALL] from=0xdfb6fa, to=SorbettoFragola, token1() -> 0xc02aaa
+        [5][STATICCALL] from=0xdfb6fa, to=FiatTokenProxy, balanceOf(account(address): 0xdFb6fa) -> 30000000000000
+          [6][DELEGATECALL] from=FiatTokenProxy, to=FiatTokenV2_1, balanceOf(account(address): 0xdFb6fa) -> 30000000000000
+        [5][STATICCALL] from=0xdfb6fa, to=WETH9, balanceOf((address): 0xdFb6fa) -> 12999999999999999998811
+        [5][STATICCALL] from=0xdfb6fa, to=FiatTokenProxy, allowance(owner(address): 0xdFb6fa, spender(address): 0xd63b34) -> 0
+          [6][DELEGATECALL] from=FiatTokenProxy, to=FiatTokenV2_1, allowance(owner(address): 0xdFb6fa, spender(address): 0xd63b34) -> 0
+        [5][CALL] from=0xdfb6fa, to=FiatTokenProxy, approve(spender(address): 0xd63b34, value(uint256): 30000000000000) -> True
+          [6][DELEGATECALL] from=FiatTokenProxy, to=FiatTokenV2_1, approve(spender(address): 0xd63b34, value(uint256): 30000000000000) -> True
+        [5][STATICCALL] from=0xdfb6fa, to=WETH9, allowance((address): 0xd63b34) -> 0
+        [5][CALL] from=0xdfb6fa, to=WETH9, approve(guy(address): 0xd63b34, wad(uint256): 12999999999999999998811) -> True
+        [5][CALL] from=0xdfb6fa, to=SorbettoFragola, deposit(amount0Desired(uint256): 30000000000000, amount1Desired(uint256): 12999999999999999998811) -> ['11049813493007762278', '30000000000000', '5636518257293000745990']
+          [6][STATICCALL] from=SorbettoFragola, to=SorbettoStrategy, maxTwapDeviation() -> 40
+          [6][STATICCALL] from=SorbettoFragola, to=SorbettoStrategy, twapDuration() -> 150
+          [6][STATICCALL] from=SorbettoFragola, to=UniswapV3Pool, slot0() -> ['1580495203443653929987995124964831', '198028', '122', '360', '360', '0', 'True']
+          [6][STATICCALL] from=SorbettoFragola, to=UniswapV3Pool, observe(secondsAgos(uint32[]): [150, 0]) -> [[1558659591063, 1558689295263], [198044337547991852052391457274405200445888, 198044337547991852053971703012180103747168]]
+          [6][STATICCALL] from=SorbettoFragola, to=UniswapV3Pool, positions((bytes32): b'a$9\xcf\x0c\xf6Q\x92Y\x17\xa0g<\xb5z\xc1...) -> ['540180660443453167', '644903519215063532737183138112582', '278192862730373583018184224031343806086514', '0', '0']
+          [6][CALL] from=SorbettoFragola, to=UniswapV3Pool, burn(tickLower(int24): 196680, tickUpper(int24): 201000, amount(uint128): 0) -> ['0', '0']
+          [6][CALL] from=SorbettoFragola, to=UniswapV3Pool, collect(recipient(address): 0xd63b34, tickLower(int24): 196680, tickUpper(int24): 201000, amount0Requested(uint128): 340282366920938463463374607431768211455, amount1Requested(uint128): 340282366920938463463374607431768211455) -> ['202472666', '53502797439947757']
+            [7][CALL] from=UniswapV3Pool, to=FiatTokenProxy, transfer(to(address): 0xd63b34, value(uint256): 202472666) -> True
+              [8][DELEGATECALL] from=FiatTokenProxy, to=FiatTokenV2_1, transfer(to(address): 0xd63b34, value(uint256): 202472666) -> True
+            [7][CALL] from=UniswapV3Pool, to=WETH9, transfer(dst(address): 0xd63b34, wad(uint256): 53502797439947757) -> True
+          [6][STATICCALL] from=SorbettoFragola, to=SorbettoStrategy, protocolFee() -> 100000
+          [6][STATICCALL] from=SorbettoFragola, to=SorbettoStrategy, protocolFee() -> 100000
+          [6][STATICCALL] from=SorbettoFragola, to=UniswapV3Pool, positions((bytes32): b'a$9\xcf\x0c\xf6Q\x92Y\x17\xa0g<\xb5z\xc1...) -> ['540180660443453167', '645031065206764202698998950566244', '278226566377843692297647363507415944030384', '0', '0']
+          [6][STATICCALL] from=SorbettoFragola, to=UniswapV3Pool, slot0() -> ['1580495203443653929987995124964831', '198028', '122', '360', '360', '0', 'True']
+          [6][CALL] from=SorbettoFragola, to=UniswapV3Pool, mint(recipient(address): 0xd63b34, tickLower(int24): 196680, tickUpper(int24): 201000, amount(uint128): 4334482527783096644, data(bytes): b'\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00...) -> ['30000000000000', '5636518257293000745990']
+            [7][STATICCALL] from=UniswapV3Pool, to=FiatTokenProxy, balanceOf(account(address): 0x8ad599) -> 127515831654945
+              [8][DELEGATECALL] from=FiatTokenProxy, to=FiatTokenV2_1, balanceOf(account(address): 0x8ad599) -> 127515831654945
+            [7][STATICCALL] from=UniswapV3Pool, to=WETH9, balanceOf((address): 0x8ad599) -> 52386679825418416129542
+            [7][CALL] from=UniswapV3Pool, to=SorbettoFragola, uniswapV3MintCallback(amount0(uint256): 30000000000000, amount1(uint256): 5636518257293000745990, data(bytes): b'\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00...) -> None
+              [8][CALL] from=SorbettoFragola, to=FiatTokenProxy, transferFrom(from(address): 0xdFb6fa, to(address): 0x8ad599, value(uint256): 30000000000000) -> True
+                [9][DELEGATECALL] from=FiatTokenProxy, to=FiatTokenV2_1, transferFrom(from(address): 0xdFb6fa, to(address): 0x8ad599, value(uint256): 30000000000000) -> True
+              [8][CALL] from=SorbettoFragola, to=WETH9, transferFrom(src(address): 0xdFb6fa, dst(address): 0x8ad599, wad(uint256): 5636518257293000745990) -> True
+            [7][STATICCALL] from=UniswapV3Pool, to=FiatTokenProxy, balanceOf(account(address): 0x8ad599) -> 157515831654945
+              [8][DELEGATECALL] from=FiatTokenProxy, to=FiatTokenV2_1, balanceOf(account(address): 0x8ad599) -> 157515831654945
+            [7][STATICCALL] from=UniswapV3Pool, to=WETH9, balanceOf((address): 0x8ad599) -> 58023198082711416875532
+        [5][STATICCALL] from=0xdfb6fa, to=SorbettoFragola, balanceOf(account(address): 0xdFb6fa) -> 11049813493007762278
+        [5][CALL] from=0xdfb6fa, to=SorbettoFragola, transfer(recipient(address): 0x576Cf5, amount(uint256): 11049813493007762278) -> True
+        [5][CALL] from=0xdfb6fa, to=0x576Cf5, 0x9c81744a() -> None
+          [6][CALL] from=0x576Cf5, to=SorbettoFragola, collectFees(amount0(uint256): 0, amount1(uint256): 0) -> None
+            [7][STATICCALL] from=SorbettoFragola, to=UniswapV3Pool, positions((bytes32): b'a$9\xcf\x0c\xf6Q\x92Y\x17\xa0g<\xb5z\xc1...) -> ['4874663188226549811', '645031065206764202698998950566244', '278226566377843692297647363507415944030384', '0', '0']
+            [7][CALL] from=SorbettoFragola, to=UniswapV3Pool, burn(tickLower(int24): 196680, tickUpper(int24): 201000, amount(uint128): 0) -> ['0', '0']
+            [7][CALL] from=SorbettoFragola, to=UniswapV3Pool, collect(recipient(address): 0xd63b34, tickLower(int24): 196680, tickUpper(int24): 201000, amount0Requested(uint128): 340282366920938463463374607431768211455, amount1Requested(uint128): 340282366920938463463374607431768211455) -> ['0', '0']
+            [7][STATICCALL] from=SorbettoFragola, to=SorbettoStrategy, protocolFee() -> 100000
+            [7][STATICCALL] from=SorbettoFragola, to=SorbettoStrategy, protocolFee() -> 100000
+            [7][STATICCALL] from=SorbettoFragola, to=FiatTokenProxy, balanceOf(account(address): 0xd63b34) -> 41877670555
+              [8][DELEGATECALL] from=FiatTokenProxy, to=FiatTokenV2_1, balanceOf(account(address): 0xd63b34) -> 41877670555
+            [7][STATICCALL] from=SorbettoFragola, to=WETH9, balanceOf((address): 0xd63b34) -> 358765264881887021
+        [5][CALL] from=0xdfb6fa, to=0x576Cf5, transferTokensaddress() -> None
+          [6][STATICCALL] from=0x576Cf5, to=SorbettoFragola, balanceOf(account(address): 0x576Cf5) -> 11049813493007762278
+          [6][CALL] from=0x576Cf5, to=SorbettoFragola, transfer(recipient(address): 0xd282f7, amount(uint256): 11049813493007762278) -> True
+        [5][CALL] from=0xdfb6fa, to=0xd282f7, 0x9c81744a() -> None
+          [6][CALL] from=0xd282f7, to=SorbettoFragola, collectFees(amount0(uint256): 0, amount1(uint256): 0) -> None
+            [7][STATICCALL] from=SorbettoFragola, to=UniswapV3Pool, positions((bytes32): b'a$9\xcf\x0c\xf6Q\x92Y\x17\xa0g<\xb5z\xc1...) -> ['4874663188226549811', '645031065206764202698998950566244', '278226566377843692297647363507415944030384', '0', '0']
+            [7][CALL] from=SorbettoFragola, to=UniswapV3Pool, burn(tickLower(int24): 196680, tickUpper(int24): 201000, amount(uint128): 0) -> ['0', '0']
+            [7][CALL] from=SorbettoFragola, to=UniswapV3Pool, collect(recipient(address): 0xd63b34, tickLower(int24): 196680, tickUpper(int24): 201000, amount0Requested(uint128): 340282366920938463463374607431768211455, amount1Requested(uint128): 340282366920938463463374607431768211455) -> ['0', '0']
+            [7][STATICCALL] from=SorbettoFragola, to=SorbettoStrategy, protocolFee() -> 100000
+            [7][STATICCALL] from=SorbettoFragola, to=SorbettoStrategy, protocolFee() -> 100000
+            [7][STATICCALL] from=SorbettoFragola, to=FiatTokenProxy, balanceOf(account(address): 0xd63b34) -> 41877670555
+              [8][DELEGATECALL] from=FiatTokenProxy, to=FiatTokenV2_1, balanceOf(account(address): 0xd63b34) -> 41877670555
+            [7][STATICCALL] from=SorbettoFragola, to=WETH9, balanceOf((address): 0xd63b34) -> 358765264881887021
+        [5][CALL] from=0xdfb6fa, to=0xd282f7, transferTokensaddress() -> None
+          [6][STATICCALL] from=0xd282f7, to=SorbettoFragola, balanceOf(account(address): 0xd282f7) -> 11049813493007762278
+          [6][CALL] from=0xd282f7, to=SorbettoFragola, transfer(recipient(address): 0xdFb6fa, amount(uint256): 11049813493007762278) -> True
+        [5][STATICCALL] from=0xdfb6fa, to=SorbettoFragola, balanceOf(account(address): 0xdFb6fa) -> 11049813493007762278
+        [5][CALL] from=0xdfb6fa, to=SorbettoFragola, withdraw(shares(uint256): 11049813493007762278) -> ['29999999999999', '5636518257293000744689']
+          [6][STATICCALL] from=SorbettoFragola, to=SorbettoStrategy, maxTwapDeviation() -> 40
+          [6][STATICCALL] from=SorbettoFragola, to=SorbettoStrategy, twapDuration() -> 150
+          [6][STATICCALL] from=SorbettoFragola, to=UniswapV3Pool, slot0() -> ['1580495203443653929987995124964831', '198028', '123', '360', '360', '0', 'True']
+          [6][STATICCALL] from=SorbettoFragola, to=UniswapV3Pool, observe(secondsAgos(uint32[]): [150, 0]) -> [[1558659591063, 1558689295263], [198044337547991852052391457274405200445888, 198044337547991852053971703012180103747168]]
+          [6][STATICCALL] from=SorbettoFragola, to=UniswapV3Pool, positions((bytes32): b'a$9\xcf\x0c\xf6Q\x92Y\x17\xa0g<\xb5z\xc1...) -> ['4874663188226549811', '645031065206764202698998950566244', '278226566377843692297647363507415944030384', '0', '0']
+          [6][CALL] from=SorbettoFragola, to=UniswapV3Pool, burn(tickLower(int24): 196680, tickUpper(int24): 201000, amount(uint128): 0) -> ['0', '0']
+          [6][CALL] from=SorbettoFragola, to=UniswapV3Pool, collect(recipient(address): 0xd63b34, tickLower(int24): 196680, tickUpper(int24): 201000, amount0Requested(uint128): 340282366920938463463374607431768211455, amount1Requested(uint128): 340282366920938463463374607431768211455) -> ['0', '0']
+          [6][STATICCALL] from=SorbettoFragola, to=SorbettoStrategy, protocolFee() -> 100000
+          [6][STATICCALL] from=SorbettoFragola, to=SorbettoStrategy, protocolFee() -> 100000
+          [6][STATICCALL] from=SorbettoFragola, to=UniswapV3Pool, positions((bytes32): b'a$9\xcf\x0c\xf6Q\x92Y\x17\xa0g<\xb5z\xc1...) -> ['4874663188226549811', '645031065206764202698998950566244', '278226566377843692297647363507415944030384', '0', '0']
+          [6][CALL] from=SorbettoFragola, to=UniswapV3Pool, burn(tickLower(int24): 196680, tickUpper(int24): 201000, amount(uint128): 4334482527783096643) -> ['29999999999999', '5636518257293000744689']
+          [6][CALL] from=SorbettoFragola, to=UniswapV3Pool, collect(recipient(address): 0xdFb6fa, tickLower(int24): 196680, tickUpper(int24): 201000, amount0Requested(uint128): 29999999999999, amount1Requested(uint128): 5636518257293000744689) -> ['29999999999999', '5636518257293000744689']
+            [7][CALL] from=UniswapV3Pool, to=FiatTokenProxy, transfer(to(address): 0xdFb6fa, value(uint256): 29999999999999) -> True
+              [8][DELEGATECALL] from=FiatTokenProxy, to=FiatTokenV2_1, transfer(to(address): 0xdFb6fa, value(uint256): 29999999999999) -> True
+            [7][CALL] from=UniswapV3Pool, to=WETH9, transfer(dst(address): 0xdFb6fa, wad(uint256): 5636518257293000744689) -> True
+        [5][STATICCALL] from=0xdfb6fa, to=SorbettoFragola, userInfo((address): 0x576Cf5) -> ['2213550007203', '1008459192521606860404', '200324648792', '91264815750940244176']
+        [5][STATICCALL] from=0xdfb6fa, to=SorbettoFragola, position() -> ['540180660443453168', '645031065206764202698998950566244', '278226566377843692297647363507415944030384', '0', '0']
+          [6][STATICCALL] from=SorbettoFragola, to=UniswapV3Pool, positions((bytes32): b'a$9\xcf\x0c\xf6Q\x92Y\x17\xa0g<\xb5z\xc1...) -> ['540180660443453168', '645031065206764202698998950566244', '278226566377843692297647363507415944030384', '0', '0']
+        [5][STATICCALL] from=0xdfb6fa, to=UniswapV3Pool, slot0() -> ['1580495203443653929987995124964831', '198028', '123', '360', '360', '0', 'True']
+        [5][CALL] from=0xdfb6fa, to=0x576Cf5, 0x9c81744a() -> None
+          [6][CALL] from=0x576Cf5, to=SorbettoFragola, collectFees(amount0(uint256): 2213550007203, amount1(uint256): 1008459192521606860404) -> None
+            [7][STATICCALL] from=SorbettoFragola, to=UniswapV3Pool, positions((bytes32): b'a$9\xcf\x0c\xf6Q\x92Y\x17\xa0g<\xb5z\xc1...) -> ['540180660443453168', '645031065206764202698998950566244', '278226566377843692297647363507415944030384', '0', '0']
+            [7][CALL] from=SorbettoFragola, to=UniswapV3Pool, burn(tickLower(int24): 196680, tickUpper(int24): 201000, amount(uint128): 0) -> ['0', '0']
+            [7][CALL] from=SorbettoFragola, to=UniswapV3Pool, collect(recipient(address): 0xd63b34, tickLower(int24): 196680, tickUpper(int24): 201000, amount0Requested(uint128): 340282366920938463463374607431768211455, amount1Requested(uint128): 340282366920938463463374607431768211455) -> ['0', '0']
+            [7][STATICCALL] from=SorbettoFragola, to=SorbettoStrategy, protocolFee() -> 100000
+            [7][STATICCALL] from=SorbettoFragola, to=SorbettoStrategy, protocolFee() -> 100000
+            [7][STATICCALL] from=SorbettoFragola, to=FiatTokenProxy, balanceOf(account(address): 0xd63b34) -> 41877670555
+              [8][DELEGATECALL] from=FiatTokenProxy, to=FiatTokenV2_1, balanceOf(account(address): 0xd63b34) -> 41877670555
+            [7][STATICCALL] from=SorbettoFragola, to=WETH9, balanceOf((address): 0xd63b34) -> 358765264881887021
+            [7][STATICCALL] from=SorbettoFragola, to=UniswapV3Pool, slot0() -> ['1580495203443653929987995124964831', '198028', '123', '360', '360', '0', 'True']
+            [7][STATICCALL] from=SorbettoFragola, to=UniswapV3Pool, positions((bytes32): b'a$9\xcf\x0c\xf6Q\x92Y\x17\xa0g<\xb5z\xc1...) -> ['540180660443453168', '645031065206764202698998950566244', '278226566377843692297647363507415944030384', '0', '0']
+            [7][CALL] from=SorbettoFragola, to=UniswapV3Pool, burn(tickLower(int24): 196680, tickUpper(int24): 201000, amount(uint128): 319819794353185040) -> ['2213550007202', '415890500967692092580']
+            [7][CALL] from=SorbettoFragola, to=UniswapV3Pool, collect(recipient(address): 0x576Cf5, tickLower(int24): 196680, tickUpper(int24): 201000, amount0Requested(uint128): 2213550007202, amount1Requested(uint128): 415890500967692092580) -> ['2213550007202', '415890500967692092580']
+              [8][CALL] from=UniswapV3Pool, to=FiatTokenProxy, transfer(to(address): 0x576Cf5, value(uint256): 2213550007202) -> True
+                [9][DELEGATECALL] from=FiatTokenProxy, to=FiatTokenV2_1, transfer(to(address): 0x576Cf5, value(uint256): 2213550007202) -> True
+              [8][CALL] from=UniswapV3Pool, to=WETH9, transfer(dst(address): 0x576Cf5, wad(uint256): 415890500967692092580) -> True
+        [5][STATICCALL] from=0xdfb6fa, to=SorbettoFragola, userInfo((address): 0xd282f7) -> ['2213550007203', '1008459192521606860404', '200324648792', '91264815750940244176']
+        [5][STATICCALL] from=0xdfb6fa, to=SorbettoFragola, position() -> ['220360866090268128', '645031065206764202698998950566244', '278226566377843692297647363507415944030384', '0', '0']
+          [6][STATICCALL] from=SorbettoFragola, to=UniswapV3Pool, positions((bytes32): b'a$9\xcf\x0c\xf6Q\x92Y\x17\xa0g<\xb5z\xc1...) -> ['220360866090268128', '645031065206764202698998950566244', '278226566377843692297647363507415944030384', '0', '0']
+        [5][STATICCALL] from=0xdfb6fa, to=UniswapV3Pool, slot0() -> ['1580495203443653929987995124964831', '198028', '123', '360', '360', '0', 'True']
+        [5][STATICCALL] from=0xdfb6fa, to=UniswapV3Pool, slot0() -> ['1580495203443653929987995124964831', '198028', '123', '360', '360', '0', 'True']
+        [5][CALL] from=0xdfb6fa, to=0xd282f7, 0x9c81744a() -> None
+          [6][CALL] from=0xd282f7, to=SorbettoFragola, collectFees(amount0(uint256): 1525170753448, amount1(uint256): 286555093243381779079) -> None
+            [7][STATICCALL] from=SorbettoFragola, to=UniswapV3Pool, positions((bytes32): b'a$9\xcf\x0c\xf6Q\x92Y\x17\xa0g<\xb5z\xc1...) -> ['220360866090268128', '645031065206764202698998950566244', '278226566377843692297647363507415944030384', '0', '0']
+            [7][CALL] from=SorbettoFragola, to=UniswapV3Pool, burn(tickLower(int24): 196680, tickUpper(int24): 201000, amount(uint128): 0) -> ['0', '0']
+            [7][CALL] from=SorbettoFragola, to=UniswapV3Pool, collect(recipient(address): 0xd63b34, tickLower(int24): 196680, tickUpper(int24): 201000, amount0Requested(uint128): 340282366920938463463374607431768211455, amount1Requested(uint128): 340282366920938463463374607431768211455) -> ['0', '0']
+            [7][STATICCALL] from=SorbettoFragola, to=SorbettoStrategy, protocolFee() -> 100000
+            [7][STATICCALL] from=SorbettoFragola, to=SorbettoStrategy, protocolFee() -> 100000
+            [7][STATICCALL] from=SorbettoFragola, to=FiatTokenProxy, balanceOf(account(address): 0xd63b34) -> 41877670555
+              [8][DELEGATECALL] from=FiatTokenProxy, to=FiatTokenV2_1, balanceOf(account(address): 0xd63b34) -> 41877670555
+            [7][STATICCALL] from=SorbettoFragola, to=WETH9, balanceOf((address): 0xd63b34) -> 358765264881887021
+            [7][STATICCALL] from=SorbettoFragola, to=UniswapV3Pool, slot0() -> ['1580495203443653929987995124964831', '198028', '123', '360', '360', '0', 'True']
+            [7][STATICCALL] from=SorbettoFragola, to=UniswapV3Pool, positions((bytes32): b'a$9\xcf\x0c\xf6Q\x92Y\x17\xa0g<\xb5z\xc1...) -> ['220360866090268128', '645031065206764202698998950566244', '278226566377843692297647363507415944030384', '0', '0']
+            [7][CALL] from=SorbettoFragola, to=UniswapV3Pool, burn(tickLower(int24): 196680, tickUpper(int24): 201000, amount(uint128): 220360866090204570) -> ['1525170753447', '286555093243299128883']
+            [7][CALL] from=SorbettoFragola, to=UniswapV3Pool, collect(recipient(address): 0xd282f7, tickLower(int24): 196680, tickUpper(int24): 201000, amount0Requested(uint128): 1525170753447, amount1Requested(uint128): 286555093243299128883) -> ['1525170753447', '286555093243299128883']
+              [8][CALL] from=UniswapV3Pool, to=FiatTokenProxy, transfer(to(address): 0xd282f7, value(uint256): 1525170753447) -> True
+                [9][DELEGATECALL] from=FiatTokenProxy, to=FiatTokenV2_1, transfer(to(address): 0xd282f7, value(uint256): 1525170753447) -> True
+              [8][CALL] from=UniswapV3Pool, to=WETH9, transfer(dst(address): 0xd282f7, wad(uint256): 286555093243299128883) -> True
+        [5][STATICCALL] from=0xdfb6fa, to=SorbettoFragola, userInfo((address): 0xd282f7) -> ['688379253756', '721904099278307731521', '200324648792', '91264815750940244176']
+        [5][STATICCALL] from=0xdfb6fa, to=FiatTokenProxy, balanceOf(account(address): 0xd63b34) -> 41877670555
+          [6][DELEGATECALL] from=FiatTokenProxy, to=FiatTokenV2_1, balanceOf(account(address): 0xd63b34) -> 41877670555
+        [5][STATICCALL] from=0xdfb6fa, to=WETH9, balanceOf((address): 0xd63b34) -> 358765264881887021
+        [5][CALL] from=0xdfb6fa, to=0xd282f7, 0x9c81744a() -> None
+          [6][CALL] from=0xd282f7, to=SorbettoFragola, collectFees(amount0(uint256): 41877670555, amount1(uint256): 358765264881887021) -> None
+            [7][STATICCALL] from=SorbettoFragola, to=UniswapV3Pool, positions((bytes32): b'a$9\xcf\x0c\xf6Q\x92Y\x17\xa0g<\xb5z\xc1...) -> ['63558', '645031065206764202698998950566244', '278226566377843692297647363507415944030384', '0', '0']
+            [7][CALL] from=SorbettoFragola, to=UniswapV3Pool, burn(tickLower(int24): 196680, tickUpper(int24): 201000, amount(uint128): 0) -> ['0', '0']
+            [7][CALL] from=SorbettoFragola, to=UniswapV3Pool, collect(recipient(address): 0xd63b34, tickLower(int24): 196680, tickUpper(int24): 201000, amount0Requested(uint128): 340282366920938463463374607431768211455, amount1Requested(uint128): 340282366920938463463374607431768211455) -> ['0', '0']
+            [7][STATICCALL] from=SorbettoFragola, to=SorbettoStrategy, protocolFee() -> 100000
+            [7][STATICCALL] from=SorbettoFragola, to=SorbettoStrategy, protocolFee() -> 100000
+            [7][STATICCALL] from=SorbettoFragola, to=FiatTokenProxy, balanceOf(account(address): 0xd63b34) -> 41877670555
+              [8][DELEGATECALL] from=FiatTokenProxy, to=FiatTokenV2_1, balanceOf(account(address): 0xd63b34) -> 41877670555
+            [7][STATICCALL] from=SorbettoFragola, to=WETH9, balanceOf((address): 0xd63b34) -> 358765264881887021
+            [7][CALL] from=SorbettoFragola, to=FiatTokenProxy, transfer(to(address): 0xd282f7, value(uint256): 41877670555) -> True
+              [8][DELEGATECALL] from=FiatTokenProxy, to=FiatTokenV2_1, transfer(to(address): 0xd282f7, value(uint256): 41877670555) -> True
+            [7][CALL] from=SorbettoFragola, to=WETH9, transfer(dst(address): 0xd282f7, wad(uint256): 358765264881887021) -> True
+        [5][STATICCALL] from=0xdfb6fa, to=SorbettoFragola, pool() -> 0xcbcdf9
+        [5][STATICCALL] from=0xdfb6fa, to=SorbettoFragola, tickLower() -> 256620
+        [5][STATICCALL] from=0xdfb6fa, to=SorbettoFragola, tickUpper() -> 259140
+        [5][STATICCALL] from=0xdfb6fa, to=SorbettoFragola, token0() -> 0x2260fa
+        [5][STATICCALL] from=0xdfb6fa, to=SorbettoFragola, token1() -> 0xc02aaa
+        [5][STATICCALL] from=0xdfb6fa, to=WBTC, balanceOf(_owner(address): 0xdFb6fa) -> 140000000000
+        [5][STATICCALL] from=0xdfb6fa, to=WETH9, balanceOf((address): 0xdFb6fa) -> 12999999999999999997510
+        [5][STATICCALL] from=0xdfb6fa, to=WBTC, allowance(_owner(address): 0xdFb6fa, _spender(address): 0x0A8143) -> 0
+        [5][CALL] from=0xdfb6fa, to=WBTC, approve(_spender(address): 0x0A8143, _value(uint256): 140000000000) -> True
+        [5][STATICCALL] from=0xdfb6fa, to=WETH9, allowance((address): 0x0A8143) -> 0
+        [5][CALL] from=0xdfb6fa, to=WETH9, approve(guy(address): 0x0A8143, wad(uint256): 12999999999999999997510) -> True
+        [5][CALL] from=0xdfb6fa, to=SorbettoFragola, deposit(amount0Desired(uint256): 140000000000, amount1Desired(uint256): 12999999999999999997510) -> ['1015927662999207940', '140000000000', '12604450996396525202954']
+          [6][STATICCALL] from=SorbettoFragola, to=SorbettoStrategy, maxTwapDeviation() -> 40
+          [6][STATICCALL] from=SorbettoFragola, to=SorbettoStrategy, twapDuration() -> 150
+          [6][STATICCALL] from=SorbettoFragola, to=UniswapV3Pool, slot0() -> ['30981312195052758550006119621292106', '257544', '116', '150', '150', '0', 'True']
+          [6][STATICCALL] from=SorbettoFragola, to=UniswapV3Pool, observe(secondsAgos(uint32[]): [150, 0]) -> [[2027802416207, 2027841047807], [710313193537393485900963106853, 710313254463052734320736656909]]
+          [6][STATICCALL] from=SorbettoFragola, to=UniswapV3Pool, positions((bytes32): b"\xbe'-\xb3\xa7\xf7\xef\xa4P\x93\x10\x06\...) -> ['36253645682197052', '7873297682765662417624005252777', '1222113426116961157429187660776924619076021', '0', '0']
+          [6][CALL] from=SorbettoFragola, to=UniswapV3Pool, burn(tickLower(int24): 256620, tickUpper(int24): 259140, amount(uint128): 0) -> ['0', '0']
+          [6][CALL] from=SorbettoFragola, to=UniswapV3Pool, collect(recipient(address): 0x0A8143, tickLower(int24): 256620, tickUpper(int24): 259140, amount0Requested(uint128): 340282366920938463463374607431768211455, amount1Requested(uint128): 340282366920938463463374607431768211455) -> ['860113', '27540258507958979']
+            [7][CALL] from=UniswapV3Pool, to=WBTC, transfer(_to(address): 0x0A8143, _value(uint256): 860113) -> True
+            [7][CALL] from=UniswapV3Pool, to=WETH9, transfer(dst(address): 0x0A8143, wad(uint256): 27540258507958979) -> True
+          [6][STATICCALL] from=SorbettoFragola, to=SorbettoStrategy, protocolFee() -> 100000
+          [6][STATICCALL] from=SorbettoFragola, to=SorbettoStrategy, protocolFee() -> 100000
+          [6][STATICCALL] from=SorbettoFragola, to=UniswapV3Pool, positions((bytes32): b"\xbe'-\xb3\xa7\xf7\xef\xa4P\x93\x10\x06\...) -> ['36253645682197052', '7881370845227952027731588558511', '1222371923274263734762101359902833222658891', '0', '0']
+          [6][STATICCALL] from=SorbettoFragola, to=UniswapV3Pool, slot0() -> ['30981312195052758550006119621292106', '257544', '116', '150', '150', '0', 'True']
+          [6][CALL] from=SorbettoFragola, to=UniswapV3Pool, mint(recipient(address): 0x0A8143, tickLower(int24): 256620, tickUpper(int24): 259140, amount(uint128): 713862556597574469, data(bytes): b'\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00...) -> ['140000000000', '12604450996396525202954']
+            [7][STATICCALL] from=UniswapV3Pool, to=WBTC, balanceOf(_owner(address): 0xCBCdF9) -> 236964314624
+            [7][STATICCALL] from=UniswapV3Pool, to=WETH9, balanceOf((address): 0xCBCdF9) -> 39149733631045873318425
+            [7][CALL] from=UniswapV3Pool, to=SorbettoFragola, uniswapV3MintCallback(amount0(uint256): 140000000000, amount1(uint256): 12604450996396525202954, data(bytes): b'\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00...) -> None
+              [8][CALL] from=SorbettoFragola, to=WBTC, transferFrom(_from(address): 0xdFb6fa, _to(address): 0xCBCdF9, _value(uint256): 140000000000) -> True
+              [8][CALL] from=SorbettoFragola, to=WETH9, transferFrom(src(address): 0xdFb6fa, dst(address): 0xCBCdF9, wad(uint256): 12604450996396525202954) -> True
+            [7][STATICCALL] from=UniswapV3Pool, to=WBTC, balanceOf(_owner(address): 0xCBCdF9) -> 376964314624
+            [7][STATICCALL] from=UniswapV3Pool, to=WETH9, balanceOf((address): 0xCBCdF9) -> 51754184627442398521379
+        [5][STATICCALL] from=0xdfb6fa, to=SorbettoFragola, balanceOf(account(address): 0xdFb6fa) -> 1015927662999207940
+        [5][CALL] from=0xdfb6fa, to=SorbettoFragola, transfer(recipient(address): 0x576Cf5, amount(uint256): 1015927662999207940) -> True
+        [5][CALL] from=0xdfb6fa, to=0x576Cf5, 0x9c81744a() -> None
+          [6][CALL] from=0x576Cf5, to=SorbettoFragola, collectFees(amount0(uint256): 0, amount1(uint256): 0) -> None
+            [7][STATICCALL] from=SorbettoFragola, to=UniswapV3Pool, positions((bytes32): b"\xbe'-\xb3\xa7\xf7\xef\xa4P\x93\x10\x06\...) -> ['750116202279771521', '7881370845227952027731588558511', '1222371923274263734762101359902833222658891', '0', '0']
+            [7][CALL] from=SorbettoFragola, to=UniswapV3Pool, burn(tickLower(int24): 256620, tickUpper(int24): 259140, amount(uint128): 0) -> ['0', '0']
+            [7][CALL] from=SorbettoFragola, to=UniswapV3Pool, collect(recipient(address): 0x0A8143, tickLower(int24): 256620, tickUpper(int24): 259140, amount0Requested(uint128): 340282366920938463463374607431768211455, amount1Requested(uint128): 340282366920938463463374607431768211455) -> ['0', '0']
+            [7][STATICCALL] from=SorbettoFragola, to=SorbettoStrategy, protocolFee() -> 100000
+            [7][STATICCALL] from=SorbettoFragola, to=SorbettoStrategy, protocolFee() -> 100000
+            [7][STATICCALL] from=SorbettoFragola, to=WBTC, balanceOf(_owner(address): 0x0A8143) -> 175537727
+            [7][STATICCALL] from=SorbettoFragola, to=WETH9, balanceOf((address): 0x0A8143) -> 27540258507959674
+        [5][CALL] from=0xdfb6fa, to=0x576Cf5, transferTokensaddress() -> None
+          [6][STATICCALL] from=0x576Cf5, to=SorbettoFragola, balanceOf(account(address): 0x576Cf5) -> 1015927662999207940
+          [6][CALL] from=0x576Cf5, to=SorbettoFragola, transfer(recipient(address): 0xd282f7, amount(uint256): 1015927662999207940) -> True
+        [5][CALL] from=0xdfb6fa, to=0xd282f7, 0x9c81744a() -> None
+          [6][CALL] from=0xd282f7, to=SorbettoFragola, collectFees(amount0(uint256): 0, amount1(uint256): 0) -> None
+            [7][STATICCALL] from=SorbettoFragola, to=UniswapV3Pool, positions((bytes32): b"\xbe'-\xb3\xa7\xf7\xef\xa4P\x93\x10\x06\...) -> ['750116202279771521', '7881370845227952027731588558511', '1222371923274263734762101359902833222658891', '0', '0']
+            [7][CALL] from=SorbettoFragola, to=UniswapV3Pool, burn(tickLower(int24): 256620, tickUpper(int24): 259140, amount(uint128): 0) -> ['0', '0']
+            [7][CALL] from=SorbettoFragola, to=UniswapV3Pool, collect(recipient(address): 0x0A8143, tickLower(int24): 256620, tickUpper(int24): 259140, amount0Requested(uint128): 340282366920938463463374607431768211455, amount1Requested(uint128): 340282366920938463463374607431768211455) -> ['0', '0']
+            [7][STATICCALL] from=SorbettoFragola, to=SorbettoStrategy, protocolFee() -> 100000
+            [7][STATICCALL] from=SorbettoFragola, to=SorbettoStrategy, protocolFee() -> 100000
+            [7][STATICCALL] from=SorbettoFragola, to=WBTC, balanceOf(_owner(address): 0x0A8143) -> 175537727
+            [7][STATICCALL] from=SorbettoFragola, to=WETH9, balanceOf((address): 0x0A8143) -> 27540258507959674
+        [5][CALL] from=0xdfb6fa, to=0xd282f7, transferTokensaddress() -> None
+          [6][STATICCALL] from=0xd282f7, to=SorbettoFragola, balanceOf(account(address): 0xd282f7) -> 1015927662999207940
+          [6][CALL] from=0xd282f7, to=SorbettoFragola, transfer(recipient(address): 0xdFb6fa, amount(uint256): 1015927662999207940) -> True
+        [5][STATICCALL] from=0xdfb6fa, to=SorbettoFragola, balanceOf(account(address): 0xdFb6fa) -> 1015927662999207940
+        [5][CALL] from=0xdfb6fa, to=SorbettoFragola, withdraw(shares(uint256): 1015927662999207940) -> ['139999999999', '12604450996396525185296']
+          [6][STATICCALL] from=SorbettoFragola, to=SorbettoStrategy, maxTwapDeviation() -> 40
+          [6][STATICCALL] from=SorbettoFragola, to=SorbettoStrategy, twapDuration() -> 150
+          [6][STATICCALL] from=SorbettoFragola, to=UniswapV3Pool, slot0() -> ['30981312195052758550006119621292106', '257544', '117', '150', '150', '0', 'True']
+          [6][STATICCALL] from=SorbettoFragola, to=UniswapV3Pool, observe(secondsAgos(uint32[]): [150, 0]) -> [[2027802416207, 2027841047807], [710313193537393485900963106853, 710313254463052734320736656909]]
+          [6][STATICCALL] from=SorbettoFragola, to=UniswapV3Pool, positions((bytes32): b"\xbe'-\xb3\xa7\xf7\xef\xa4P\x93\x10\x06\...) -> ['750116202279771521', '7881370845227952027731588558511', '1222371923274263734762101359902833222658891', '0', '0']
+          [6][CALL] from=SorbettoFragola, to=UniswapV3Pool, burn(tickLower(int24): 256620, tickUpper(int24): 259140, amount(uint128): 0) -> ['0', '0']
+          [6][CALL] from=SorbettoFragola, to=UniswapV3Pool, collect(recipient(address): 0x0A8143, tickLower(int24): 256620, tickUpper(int24): 259140, amount0Requested(uint128): 340282366920938463463374607431768211455, amount1Requested(uint128): 340282366920938463463374607431768211455) -> ['0', '0']
+          [6][STATICCALL] from=SorbettoFragola, to=SorbettoStrategy, protocolFee() -> 100000
+          [6][STATICCALL] from=SorbettoFragola, to=SorbettoStrategy, protocolFee() -> 100000
+          [6][STATICCALL] from=SorbettoFragola, to=UniswapV3Pool, positions((bytes32): b"\xbe'-\xb3\xa7\xf7\xef\xa4P\x93\x10\x06\...) -> ['750116202279771521', '7881370845227952027731588558511', '1222371923274263734762101359902833222658891', '0', '0']
+          [6][CALL] from=SorbettoFragola, to=UniswapV3Pool, burn(tickLower(int24): 256620, tickUpper(int24): 259140, amount(uint128): 713862556597574468) -> ['139999999999', '12604450996396525185296']
+          [6][CALL] from=SorbettoFragola, to=UniswapV3Pool, collect(recipient(address): 0xdFb6fa, tickLower(int24): 256620, tickUpper(int24): 259140, amount0Requested(uint128): 139999999999, amount1Requested(uint128): 12604450996396525185296) -> ['139999999999', '12604450996396525185296']
+            [7][CALL] from=UniswapV3Pool, to=WBTC, transfer(_to(address): 0xdFb6fa, _value(uint256): 139999999999) -> True
+            [7][CALL] from=UniswapV3Pool, to=WETH9, transfer(dst(address): 0xdFb6fa, wad(uint256): 12604450996396525185296) -> True
+        [5][STATICCALL] from=0xdfb6fa, to=SorbettoFragola, userInfo((address): 0x576Cf5) -> ['4716406358', '702197155635536587866', '4642462776', '691188143811853315336']
+        [5][STATICCALL] from=0xdfb6fa, to=SorbettoFragola, position() -> ['36253645682197053', '7881370845227952027731588558511', '1222371923274263734762101359902833222658891', '0', '0']
+          [6][STATICCALL] from=SorbettoFragola, to=UniswapV3Pool, positions((bytes32): b"\xbe'-\xb3\xa7\xf7\xef\xa4P\x93\x10\x06\...) -> ['36253645682197053', '7881370845227952027731588558511', '1222371923274263734762101359902833222658891', '0', '0']
+        [5][STATICCALL] from=0xdfb6fa, to=UniswapV3Pool, slot0() -> ['30981312195052758550006119621292106', '257544', '117', '150', '150', '0', 'True']
+        [5][CALL] from=0xdfb6fa, to=0x576Cf5, 0x9c81744a() -> None
+          [6][CALL] from=0x576Cf5, to=SorbettoFragola, collectFees(amount0(uint256): 4716406358, amount1(uint256): 702197155635536587866) -> None
+            [7][STATICCALL] from=SorbettoFragola, to=UniswapV3Pool, positions((bytes32): b"\xbe'-\xb3\xa7\xf7\xef\xa4P\x93\x10\x06\...) -> ['36253645682197053', '7881370845227952027731588558511', '1222371923274263734762101359902833222658891', '0', '0']
+            [7][CALL] from=SorbettoFragola, to=UniswapV3Pool, burn(tickLower(int24): 256620, tickUpper(int24): 259140, amount(uint128): 0) -> ['0', '0']
+            [7][CALL] from=SorbettoFragola, to=UniswapV3Pool, collect(recipient(address): 0x0A8143, tickLower(int24): 256620, tickUpper(int24): 259140, amount0Requested(uint128): 340282366920938463463374607431768211455, amount1Requested(uint128): 340282366920938463463374607431768211455) -> ['0', '0']
+            [7][STATICCALL] from=SorbettoFragola, to=SorbettoStrategy, protocolFee() -> 100000
+            [7][STATICCALL] from=SorbettoFragola, to=SorbettoStrategy, protocolFee() -> 100000
+            [7][STATICCALL] from=SorbettoFragola, to=WBTC, balanceOf(_owner(address): 0x0A8143) -> 175537727
+            [7][STATICCALL] from=SorbettoFragola, to=WETH9, balanceOf((address): 0x0A8143) -> 27540258507959674
+            [7][STATICCALL] from=SorbettoFragola, to=UniswapV3Pool, slot0() -> ['30981312195052758550006119621292106', '257544', '117', '150', '150', '0', 'True']
+            [7][STATICCALL] from=SorbettoFragola, to=UniswapV3Pool, positions((bytes32): b"\xbe'-\xb3\xa7\xf7\xef\xa4P\x93\x10\x06\...) -> ['36253645682197053', '7881370845227952027731588558511', '1222371923274263734762101359902833222658891', '0', '0']
+            [7][CALL] from=SorbettoFragola, to=UniswapV3Pool, burn(tickLower(int24): 256620, tickUpper(int24): 259140, amount(uint128): 24049042147678107) -> ['4716406357', '424626520132171463676']
+            [7][CALL] from=SorbettoFragola, to=UniswapV3Pool, collect(recipient(address): 0x576Cf5, tickLower(int24): 256620, tickUpper(int24): 259140, amount0Requested(uint128): 4716406357, amount1Requested(uint128): 424626520132171463676) -> ['4716406357', '424626520132171463676']
+              [8][CALL] from=UniswapV3Pool, to=WBTC, transfer(_to(address): 0x576Cf5, _value(uint256): 4716406357) -> True
+              [8][CALL] from=UniswapV3Pool, to=WETH9, transfer(dst(address): 0x576Cf5, wad(uint256): 424626520132171463676) -> True
+        [5][STATICCALL] from=0xdfb6fa, to=SorbettoFragola, userInfo((address): 0xd282f7) -> ['4716406358', '702197155635536587866', '4642462776', '691188143811853315336']
+        [5][STATICCALL] from=0xdfb6fa, to=SorbettoFragola, position() -> ['12204603534518946', '7881370845227952027731588558511', '1222371923274263734762101359902833222658891', '0', '0']
+          [6][STATICCALL] from=SorbettoFragola, to=UniswapV3Pool, positions((bytes32): b"\xbe'-\xb3\xa7\xf7\xef\xa4P\x93\x10\x06\...) -> ['12204603534518946', '7881370845227952027731588558511', '1222371923274263734762101359902833222658891', '0', '0']
+        [5][STATICCALL] from=0xdfb6fa, to=UniswapV3Pool, slot0() -> ['30981312195052758550006119621292106', '257544', '117', '150', '150', '0', 'True']
+        [5][STATICCALL] from=0xdfb6fa, to=UniswapV3Pool, slot0() -> ['30981312195052758550006119621292106', '257544', '117', '150', '150', '0', 'True']
+        [5][CALL] from=0xdfb6fa, to=0xd282f7, 0x9c81744a() -> None
+          [6][CALL] from=0xd282f7, to=SorbettoFragola, collectFees(amount0(uint256): 2393520263, amount1(uint256): 215492920534297942113) -> None
+            [7][STATICCALL] from=SorbettoFragola, to=UniswapV3Pool, positions((bytes32): b"\xbe'-\xb3\xa7\xf7\xef\xa4P\x93\x10\x06\...) -> ['12204603534518946', '7881370845227952027731588558511', '1222371923274263734762101359902833222658891', '0', '0']
+            [7][CALL] from=SorbettoFragola, to=UniswapV3Pool, burn(tickLower(int24): 256620, tickUpper(int24): 259140, amount(uint128): 0) -> ['0', '0']
+            [7][CALL] from=SorbettoFragola, to=UniswapV3Pool, collect(recipient(address): 0x0A8143, tickLower(int24): 256620, tickUpper(int24): 259140, amount0Requested(uint128): 340282366920938463463374607431768211455, amount1Requested(uint128): 340282366920938463463374607431768211455) -> ['0', '0']
+            [7][STATICCALL] from=SorbettoFragola, to=SorbettoStrategy, protocolFee() -> 100000
+            [7][STATICCALL] from=SorbettoFragola, to=SorbettoStrategy, protocolFee() -> 100000
+            [7][STATICCALL] from=SorbettoFragola, to=WBTC, balanceOf(_owner(address): 0x0A8143) -> 175537727
+            [7][STATICCALL] from=SorbettoFragola, to=WETH9, balanceOf((address): 0x0A8143) -> 27540258507959674
+            [7][STATICCALL] from=SorbettoFragola, to=UniswapV3Pool, slot0() -> ['30981312195052758550006119621292106', '257544', '117', '150', '150', '0', 'True']
+            [7][STATICCALL] from=SorbettoFragola, to=UniswapV3Pool, positions((bytes32): b"\xbe'-\xb3\xa7\xf7\xef\xa4P\x93\x10\x06\...) -> ['12204603534518946', '7881370845227952027731588558511', '1222371923274263734762101359902833222658891', '0', '0']
+            [7][CALL] from=SorbettoFragola, to=UniswapV3Pool, burn(tickLower(int24): 256620, tickUpper(int24): 259140, amount(uint128): 12204603530094848) -> ['2393520262', '215492920456183008182']
+            [7][CALL] from=SorbettoFragola, to=UniswapV3Pool, collect(recipient(address): 0xd282f7, tickLower(int24): 256620, tickUpper(int24): 259140, amount0Requested(uint128): 2393520262, amount1Requested(uint128): 215492920456183008182) -> ['2393520262', '215492920456183008182']
+              [8][CALL] from=UniswapV3Pool, to=WBTC, transfer(_to(address): 0xd282f7, _value(uint256): 2393520262) -> True
+              [8][CALL] from=UniswapV3Pool, to=WETH9, transfer(dst(address): 0xd282f7, wad(uint256): 215492920456183008182) -> True
+        [5][STATICCALL] from=0xdfb6fa, to=SorbettoFragola, userInfo((address): 0xd282f7) -> ['2322886096', '486704235179353579684', '4642462776', '691188143811853315336']
+        [5][STATICCALL] from=0xdfb6fa, to=WBTC, balanceOf(_owner(address): 0x0A8143) -> 175537727
+        [5][STATICCALL] from=0xdfb6fa, to=WETH9, balanceOf((address): 0x0A8143) -> 27540258507959674
+        [5][CALL] from=0xdfb6fa, to=0xd282f7, 0x9c81744a() -> None
+          [6][CALL] from=0xd282f7, to=SorbettoFragola, collectFees(amount0(uint256): 175537727, amount1(uint256): 27540258507959674) -> None
+            [7][STATICCALL] from=SorbettoFragola, to=UniswapV3Pool, positions((bytes32): b"\xbe'-\xb3\xa7\xf7\xef\xa4P\x93\x10\x06\...) -> ['4424098', '7881370845227952027731588558511', '1222371923274263734762101359902833222658891', '0', '0']
+            [7][CALL] from=SorbettoFragola, to=UniswapV3Pool, burn(tickLower(int24): 256620, tickUpper(int24): 259140, amount(uint128): 0) -> ['0', '0']
+            [7][CALL] from=SorbettoFragola, to=UniswapV3Pool, collect(recipient(address): 0x0A8143, tickLower(int24): 256620, tickUpper(int24): 259140, amount0Requested(uint128): 340282366920938463463374607431768211455, amount1Requested(uint128): 340282366920938463463374607431768211455) -> ['0', '0']
+            [7][STATICCALL] from=SorbettoFragola, to=SorbettoStrategy, protocolFee() -> 100000
+            [7][STATICCALL] from=SorbettoFragola, to=SorbettoStrategy, protocolFee() -> 100000
+            [7][STATICCALL] from=SorbettoFragola, to=WBTC, balanceOf(_owner(address): 0x0A8143) -> 175537727
+            [7][STATICCALL] from=SorbettoFragola, to=WETH9, balanceOf((address): 0x0A8143) -> 27540258507959674
+            [7][CALL] from=SorbettoFragola, to=WBTC, transfer(_to(address): 0xd282f7, _value(uint256): 175537727) -> True
+            [7][CALL] from=SorbettoFragola, to=WETH9, transfer(dst(address): 0xd282f7, wad(uint256): 27540258507959674) -> True
+        [5][STATICCALL] from=0xdfb6fa, to=SorbettoFragola, pool() -> 0x11b815
+        [5][STATICCALL] from=0xdfb6fa, to=SorbettoFragola, tickLower() -> -201230
+        [5][STATICCALL] from=0xdfb6fa, to=SorbettoFragola, tickUpper() -> -196850
+        [5][STATICCALL] from=0xdfb6fa, to=SorbettoFragola, token0() -> 0xc02aaa
+        [5][STATICCALL] from=0xdfb6fa, to=SorbettoFragola, token1() -> 0xdac17f
+        [5][STATICCALL] from=0xdfb6fa, to=WETH9, balanceOf((address): 0xdFb6fa) -> 12999999999999999979852
+        [5][STATICCALL] from=0xdfb6fa, to=TetherToken, balanceOf(who(address): 0xdFb6fa) -> 29999999999999
+        [5][STATICCALL] from=0xdfb6fa, to=WETH9, allowance((address): 0x98d149) -> 0
+        [5][CALL] from=0xdfb6fa, to=WETH9, approve(guy(address): 0x98d149, wad(uint256): 12999999999999999979852) -> True
+        [5][STATICCALL] from=0xdfb6fa, to=TetherToken, allowance(_owner(address): 0xdFb6fa, _spender(address): 0x98d149) -> 0
+        [5][CALL] from=0xdfb6fa, to=TetherToken, approve(_spender(address): 0x98d149, _value(uint256): 29999999999999) -> None
+        [5][CALL] from=0xdfb6fa, to=SorbettoFragola, deposit(amount0Desired(uint256): 12999999999999999979852, amount1Desired(uint256): 29999999999999) -> ['9694769504403033230', '4697962509877190643262', '29999999999999']
+          [6][STATICCALL] from=SorbettoFragola, to=SorbettoStrategy, maxTwapDeviation() -> 40
+          [6][STATICCALL] from=SorbettoFragola, to=SorbettoStrategy, twapDuration() -> 150
+          [6][STATICCALL] from=SorbettoFragola, to=UniswapV3Pool, slot0() -> ['3968747411754983297333251', '-198043', '2', '10', '10', '0', 'True']
+          [6][STATICCALL] from=SorbettoFragola, to=UniswapV3Pool, observe(secondsAgos(uint32[]): [150, 0]) -> [[-1542785702270, -1542815409561], [751852078529451724681948236027, 751852089544533961716071653411]]
+          [6][STATICCALL] from=SorbettoFragola, to=UniswapV3Pool, positions((bytes32): b'\x99\xe1\x8aj\xeb$#\xf5*}\x19\x9f\x7f\xf...) -> ['94525598521286115', '0', '0', '0', '0']
+          [6][CALL] from=SorbettoFragola, to=UniswapV3Pool, burn(tickLower(int24): -201230, tickUpper(int24): -196850, amount(uint128): 0) -> ['0', '0']
+          [6][CALL] from=SorbettoFragola, to=UniswapV3Pool, collect(recipient(address): 0x98d149, tickLower(int24): -201230, tickUpper(int24): -196850, amount0Requested(uint128): 340282366920938463463374607431768211455, amount1Requested(uint128): 340282366920938463463374607431768211455) -> ['38740904106257127', '118293308']
+            [7][CALL] from=UniswapV3Pool, to=WETH9, transfer(dst(address): 0x98d149, wad(uint256): 38740904106257127) -> True
+            [7][CALL] from=UniswapV3Pool, to=TetherToken, transfer(_to(address): 0x98d149, _value(uint256): 118293308) -> None
+          [6][STATICCALL] from=SorbettoFragola, to=SorbettoStrategy, protocolFee() -> 100000
+          [6][STATICCALL] from=SorbettoFragola, to=SorbettoStrategy, protocolFee() -> 100000
+          [6][STATICCALL] from=SorbettoFragola, to=UniswapV3Pool, positions((bytes32): b'\x99\xe1\x8aj\xeb$#\xf5*}\x19\x9f\x7f\xf...) -> ['94525598521286115', '139463243313562820124104084377221099910', '425843662336252979195292669818', '0', '0']
+          [6][STATICCALL] from=SorbettoFragola, to=UniswapV3Pool, slot0() -> ['3968747411754983297333251', '-198043', '2', '10', '10', '0', 'True']
+          [6][CALL] from=SorbettoFragola, to=UniswapV3Pool, mint(recipient(address): 0x98d149, tickLower(int24): -201230, tickUpper(int24): -196850, amount(uint128): 4065483613299977897, data(bytes): b'\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00...) -> ['4697962509877190643262', '29999999999999']
+            [7][STATICCALL] from=UniswapV3Pool, to=WETH9, balanceOf((address): 0x11b815) -> 7055817507644500656105
+            [7][STATICCALL] from=UniswapV3Pool, to=TetherToken, balanceOf(who(address): 0x11b815) -> 6098840802399
+            [7][CALL] from=UniswapV3Pool, to=SorbettoFragola, uniswapV3MintCallback(amount0(uint256): 4697962509877190643262, amount1(uint256): 29999999999999, data(bytes): b'\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00...) -> None
+              [8][CALL] from=SorbettoFragola, to=WETH9, transferFrom(src(address): 0xdFb6fa, dst(address): 0x11b815, wad(uint256): 4697962509877190643262) -> True
+              [8][CALL] from=SorbettoFragola, to=TetherToken, transferFrom(_from(address): 0xdFb6fa, _to(address): 0x11b815, _value(uint256): 29999999999999) -> None
+            [7][STATICCALL] from=UniswapV3Pool, to=WETH9, balanceOf((address): 0x11b815) -> 11753780017521691299367
+            [7][STATICCALL] from=UniswapV3Pool, to=TetherToken, balanceOf(who(address): 0x11b815) -> 36098840802398
+        [5][STATICCALL] from=0xdfb6fa, to=SorbettoFragola, balanceOf(account(address): 0xdFb6fa) -> 9694769504403033230
+        [5][CALL] from=0xdfb6fa, to=SorbettoFragola, transfer(recipient(address): 0x576Cf5, amount(uint256): 9694769504403033230) -> True
+        [5][CALL] from=0xdfb6fa, to=0x576Cf5, 0x9c81744a() -> None
+          [6][CALL] from=0x576Cf5, to=SorbettoFragola, collectFees(amount0(uint256): 0, amount1(uint256): 0) -> None
+            [7][STATICCALL] from=SorbettoFragola, to=UniswapV3Pool, positions((bytes32): b'\x99\xe1\x8aj\xeb$#\xf5*}\x19\x9f\x7f\xf...) -> ['4160009211821264012', '139463243313562820124104084377221099910', '425843662336252979195292669818', '0', '0']
+            [7][CALL] from=SorbettoFragola, to=UniswapV3Pool, burn(tickLower(int24): -201230, tickUpper(int24): -196850, amount(uint128): 0) -> ['0', '0']
+            [7][CALL] from=SorbettoFragola, to=UniswapV3Pool, collect(recipient(address): 0x98d149, tickLower(int24): -201230, tickUpper(int24): -196850, amount0Requested(uint128): 340282366920938463463374607431768211455, amount1Requested(uint128): 340282366920938463463374607431768211455) -> ['0', '0']
+            [7][STATICCALL] from=SorbettoFragola, to=SorbettoStrategy, protocolFee() -> 100000
+            [7][STATICCALL] from=SorbettoFragola, to=SorbettoStrategy, protocolFee() -> 100000
+            [7][STATICCALL] from=SorbettoFragola, to=WETH9, balanceOf((address): 0x98d149) -> 51456792029428364
+            [7][STATICCALL] from=SorbettoFragola, to=TetherToken, balanceOf(who(address): 0x98d149) -> 118293308
+        [5][CALL] from=0xdfb6fa, to=0x576Cf5, transferTokensaddress() -> None
+          [6][STATICCALL] from=0x576Cf5, to=SorbettoFragola, balanceOf(account(address): 0x576Cf5) -> 9694769504403033230
+          [6][CALL] from=0x576Cf5, to=SorbettoFragola, transfer(recipient(address): 0xdFb6fa, amount(uint256): 9694769504403033230) -> True
+        [5][STATICCALL] from=0xdfb6fa, to=SorbettoFragola, balanceOf(account(address): 0xdFb6fa) -> 9694769504403033230
+        [5][CALL] from=0xdfb6fa, to=SorbettoFragola, withdraw(shares(uint256): 9694769504403033230) -> ['4697962509877190642105', '29999999999998']
+          [6][STATICCALL] from=SorbettoFragola, to=SorbettoStrategy, maxTwapDeviation() -> 40
+          [6][STATICCALL] from=SorbettoFragola, to=SorbettoStrategy, twapDuration() -> 150
+          [6][STATICCALL] from=SorbettoFragola, to=UniswapV3Pool, slot0() -> ['3968747411754983297333251', '-198043', '3', '10', '10', '0', 'True']
+          [6][STATICCALL] from=SorbettoFragola, to=UniswapV3Pool, observe(secondsAgos(uint32[]): [150, 0]) -> [[-1542785702270, -1542815409561], [751852078529451724681948236027, 751852089544533961716071653411]]
+          [6][STATICCALL] from=SorbettoFragola, to=UniswapV3Pool, positions((bytes32): b'\x99\xe1\x8aj\xeb$#\xf5*}\x19\x9f\x7f\xf...) -> ['4160009211821264012', '139463243313562820124104084377221099910', '425843662336252979195292669818', '0', '0']
+          [6][CALL] from=SorbettoFragola, to=UniswapV3Pool, burn(tickLower(int24): -201230, tickUpper(int24): -196850, amount(uint128): 0) -> ['0', '0']
+          [6][CALL] from=SorbettoFragola, to=UniswapV3Pool, collect(recipient(address): 0x98d149, tickLower(int24): -201230, tickUpper(int24): -196850, amount0Requested(uint128): 340282366920938463463374607431768211455, amount1Requested(uint128): 340282366920938463463374607431768211455) -> ['0', '0']
+          [6][STATICCALL] from=SorbettoFragola, to=SorbettoStrategy, protocolFee() -> 100000
+          [6][STATICCALL] from=SorbettoFragola, to=SorbettoStrategy, protocolFee() -> 100000
+          [6][STATICCALL] from=SorbettoFragola, to=UniswapV3Pool, positions((bytes32): b'\x99\xe1\x8aj\xeb$#\xf5*}\x19\x9f\x7f\xf...) -> ['4160009211821264012', '139463243313562820124104084377221099910', '425843662336252979195292669818', '0', '0']
+          [6][CALL] from=SorbettoFragola, to=UniswapV3Pool, burn(tickLower(int24): -201230, tickUpper(int24): -196850, amount(uint128): 4065483613299977896) -> ['4697962509877190642105', '29999999999998']
+          [6][CALL] from=SorbettoFragola, to=UniswapV3Pool, collect(recipient(address): 0xdFb6fa, tickLower(int24): -201230, tickUpper(int24): -196850, amount0Requested(uint128): 4697962509877190642105, amount1Requested(uint128): 29999999999998) -> ['4697962509877190642105', '29999999999998']
+            [7][CALL] from=UniswapV3Pool, to=WETH9, transfer(dst(address): 0xdFb6fa, wad(uint256): 4697962509877190642105) -> True
+            [7][CALL] from=UniswapV3Pool, to=TetherToken, transfer(_to(address): 0xdFb6fa, _value(uint256): 29999999999998) -> None
+        [5][STATICCALL] from=0xdfb6fa, to=SorbettoFragola, userInfo((address): 0x576Cf5) -> ['914336314580352755194', '1928362883750', '94312331424186250734', '198907553488']
+        [5][STATICCALL] from=0xdfb6fa, to=SorbettoFragola, position() -> ['94525598521286116', '139463243313562820124104084377221099910', '425843662336252979195292669818', '0', '0']
+          [6][STATICCALL] from=SorbettoFragola, to=UniswapV3Pool, positions((bytes32): b'\x99\xe1\x8aj\xeb$#\xf5*}\x19\x9f\x7f\xf...) -> ['94525598521286116', '139463243313562820124104084377221099910', '425843662336252979195292669818', '0', '0']
+        [5][STATICCALL] from=0xdfb6fa, to=UniswapV3Pool, slot0() -> ['3968747411754983297333251', '-198043', '3', '10', '10', '0', 'True']
+        [5][STATICCALL] from=0xdfb6fa, to=UniswapV3Pool, slot0() -> ['3968747411754983297333251', '-198043', '3', '10', '10', '0', 'True']
+        [5][CALL] from=0xdfb6fa, to=0x576Cf5, 0x9c81744a() -> None
+          [6][CALL] from=0x576Cf5, to=SorbettoFragola, collectFees(amount0(uint256): 109231215844514100513, amount1(uint256): 697522908802) -> None
+            [7][STATICCALL] from=SorbettoFragola, to=UniswapV3Pool, positions((bytes32): b'\x99\xe1\x8aj\xeb$#\xf5*}\x19\x9f\x7f\xf...) -> ['94525598521286116', '139463243313562820124104084377221099910', '425843662336252979195292669818', '0', '0']
+            [7][CALL] from=SorbettoFragola, to=UniswapV3Pool, burn(tickLower(int24): -201230, tickUpper(int24): -196850, amount(uint128): 0) -> ['0', '0']
+            [7][CALL] from=SorbettoFragola, to=UniswapV3Pool, collect(recipient(address): 0x98d149, tickLower(int24): -201230, tickUpper(int24): -196850, amount0Requested(uint128): 340282366920938463463374607431768211455, amount1Requested(uint128): 340282366920938463463374607431768211455) -> ['0', '0']
+            [7][STATICCALL] from=SorbettoFragola, to=SorbettoStrategy, protocolFee() -> 100000
+            [7][STATICCALL] from=SorbettoFragola, to=SorbettoStrategy, protocolFee() -> 100000
+            [7][STATICCALL] from=SorbettoFragola, to=WETH9, balanceOf((address): 0x98d149) -> 51456792029428364
+            [7][STATICCALL] from=SorbettoFragola, to=TetherToken, balanceOf(who(address): 0x98d149) -> 118293308
+            [7][STATICCALL] from=SorbettoFragola, to=UniswapV3Pool, slot0() -> ['3968747411754983297333251', '-198043', '3', '10', '10', '0', 'True']
+            [7][STATICCALL] from=SorbettoFragola, to=UniswapV3Pool, positions((bytes32): b'\x99\xe1\x8aj\xeb$#\xf5*}\x19\x9f\x7f\xf...) -> ['94525598521286116', '139463243313562820124104084377221099910', '425843662336252979195292669818', '0', '0']
+            [7][CALL] from=SorbettoFragola, to=UniswapV3Pool, burn(tickLower(int24): -201230, tickUpper(int24): -196850, amount(uint128): 94525598521198681) -> ['109231215844413063001', '697522908801']
+            [7][CALL] from=SorbettoFragola, to=UniswapV3Pool, collect(recipient(address): 0x576Cf5, tickLower(int24): -201230, tickUpper(int24): -196850, amount0Requested(uint128): 109231215844413063001, amount1Requested(uint128): 697522908801) -> ['109231215844413063001', '697522908801']
+              [8][CALL] from=UniswapV3Pool, to=WETH9, transfer(dst(address): 0x576Cf5, wad(uint256): 109231215844413063001) -> True
+              [8][CALL] from=UniswapV3Pool, to=TetherToken, transfer(_to(address): 0x576Cf5, _value(uint256): 697522908801) -> None
+        [5][STATICCALL] from=0xdfb6fa, to=SorbettoFragola, userInfo((address): 0x576Cf5) -> ['805105098735939692193', '1230839974949', '94312331424186250734', '198907553488']
+        [5][STATICCALL] from=0xdfb6fa, to=WETH9, balanceOf((address): 0x98d149) -> 51456792029428364
+        [5][STATICCALL] from=0xdfb6fa, to=TetherToken, balanceOf(who(address): 0x98d149) -> 118293308
+        [5][CALL] from=0xdfb6fa, to=0x576Cf5, 0x9c81744a() -> None
+          [6][CALL] from=0x576Cf5, to=SorbettoFragola, collectFees(amount0(uint256): 51456792029428364, amount1(uint256): 118293308) -> None
+            [7][STATICCALL] from=SorbettoFragola, to=UniswapV3Pool, positions((bytes32): b'\x99\xe1\x8aj\xeb$#\xf5*}\x19\x9f\x7f\xf...) -> ['87435', '139463243313562820124104084377221099910', '425843662336252979195292669818', '0', '0']
+            [7][CALL] from=SorbettoFragola, to=UniswapV3Pool, burn(tickLower(int24): -201230, tickUpper(int24): -196850, amount(uint128): 0) -> ['0', '0']
+            [7][CALL] from=SorbettoFragola, to=UniswapV3Pool, collect(recipient(address): 0x98d149, tickLower(int24): -201230, tickUpper(int24): -196850, amount0Requested(uint128): 340282366920938463463374607431768211455, amount1Requested(uint128): 340282366920938463463374607431768211455) -> ['0', '0']
+            [7][STATICCALL] from=SorbettoFragola, to=SorbettoStrategy, protocolFee() -> 100000
+            [7][STATICCALL] from=SorbettoFragola, to=SorbettoStrategy, protocolFee() -> 100000
+            [7][STATICCALL] from=SorbettoFragola, to=WETH9, balanceOf((address): 0x98d149) -> 51456792029428364
+            [7][STATICCALL] from=SorbettoFragola, to=TetherToken, balanceOf(who(address): 0x98d149) -> 118293308
+            [7][CALL] from=SorbettoFragola, to=WETH9, transfer(dst(address): 0x576Cf5, wad(uint256): 51456792029428364) -> True
+            [7][CALL] from=SorbettoFragola, to=TetherToken, transfer(_to(address): 0x576Cf5, _value(uint256): 118293308) -> None
+        [5][STATICCALL] from=0xdfb6fa, to=SorbettoFragola, pool() -> 0x99ac8c
+        [5][STATICCALL] from=0xdfb6fa, to=SorbettoFragola, tickLower() -> 58440
+        [5][STATICCALL] from=0xdfb6fa, to=SorbettoFragola, tickUpper() -> 60540
+        [5][STATICCALL] from=0xdfb6fa, to=SorbettoFragola, token0() -> 0x2260fa
+        [5][STATICCALL] from=0xdfb6fa, to=SorbettoFragola, token1() -> 0xa0b869
+        [5][STATICCALL] from=0xdfb6fa, to=WBTC, balanceOf(_owner(address): 0xdFb6fa) -> 139999999999
+        [5][STATICCALL] from=0xdfb6fa, to=FiatTokenProxy, balanceOf(account(address): 0xdFb6fa) -> 29999999999999
+          [6][DELEGATECALL] from=FiatTokenProxy, to=FiatTokenV2_1, balanceOf(account(address): 0xdFb6fa) -> 29999999999999
+        [5][STATICCALL] from=0xdfb6fa, to=WBTC, allowance(_owner(address): 0xdFb6fa, _spender(address): 0xB53Dc3) -> 0
+        [5][CALL] from=0xdfb6fa, to=WBTC, approve(_spender(address): 0xB53Dc3, _value(uint256): 139999999999) -> True
+        [5][STATICCALL] from=0xdfb6fa, to=FiatTokenProxy, allowance(owner(address): 0xdFb6fa, spender(address): 0xB53Dc3) -> 0
+          [6][DELEGATECALL] from=FiatTokenProxy, to=FiatTokenV2_1, allowance(owner(address): 0xdFb6fa, spender(address): 0xB53Dc3) -> 0
+        [5][CALL] from=0xdfb6fa, to=FiatTokenProxy, approve(spender(address): 0xB53Dc3, value(uint256): 29999999999999) -> True
+          [6][DELEGATECALL] from=FiatTokenProxy, to=FiatTokenV2_1, approve(spender(address): 0xB53Dc3, value(uint256): 29999999999999) -> True
+        [5][CALL] from=0xdfb6fa, to=SorbettoFragola, deposit(amount0Desired(uint256): 139999999999, amount1Desired(uint256): 29999999999999) -> ['35864087448105', '78024151473', '29999999999999']
+          [6][STATICCALL] from=SorbettoFragola, to=SorbettoStrategy, maxTwapDeviation() -> 40
+          [6][STATICCALL] from=SorbettoFragola, to=SorbettoStrategy, twapDuration() -> 150
+          [6][STATICCALL] from=SorbettoFragola, to=UniswapV3Pool_VerifiedByNG, slot0() -> ['1551171524864117535734990216000', '59491', '1', '10', '10', '0', 'True']
+          [6][STATICCALL] from=SorbettoFragola, to=UniswapV3Pool_VerifiedByNG, observe(secondsAgos(uint32[]): [150, 0]) -> [[461820680638, 461829604288], [5607857941806070102660138472603464, 5607864967125734851101596591198900]]
+          [6][STATICCALL] from=SorbettoFragola, to=UniswapV3Pool_VerifiedByNG, positions((bytes32): b'\xca\x97\x04\xaf\xe3u\xb7\x86A\x03hH\x07...) -> ['918671171854', '130210771014212657478208560462775687', '49575035484272580161011978335476346905', '0', '0']
+          [6][CALL] from=SorbettoFragola, to=UniswapV3Pool_VerifiedByNG, burn(tickLower(int24): 58440, tickUpper(int24): 60540, amount(uint128): 0) -> ['0', '0']
+          [6][CALL] from=SorbettoFragola, to=UniswapV3Pool_VerifiedByNG, collect(recipient(address): 0xB53Dc3, tickLower(int24): 58440, tickUpper(int24): 60540, amount0Requested(uint128): 340282366920938463463374607431768211455, amount1Requested(uint128): 340282366920938463463374607431768211455) -> ['439402', '350023335']
+            [7][CALL] from=UniswapV3Pool_VerifiedByNG, to=WBTC, transfer(_to(address): 0xB53Dc3, _value(uint256): 439402) -> True
+            [7][CALL] from=UniswapV3Pool_VerifiedByNG, to=FiatTokenProxy, transfer(to(address): 0xB53Dc3, value(uint256): 350023335) -> True
+              [8][DELEGATECALL] from=FiatTokenProxy, to=FiatTokenV2_1, transfer(to(address): 0xB53Dc3, value(uint256): 350023335) -> True
+          [6][STATICCALL] from=SorbettoFragola, to=SorbettoStrategy, protocolFee() -> 100000
+          [6][STATICCALL] from=SorbettoFragola, to=SorbettoStrategy, protocolFee() -> 100000
+          [6][STATICCALL] from=SorbettoFragola, to=UniswapV3Pool_VerifiedByNG, positions((bytes32): b'\xca\x97\x04\xaf\xe3u\xb7\x86A\x03hH\x07...) -> ['918671171854', '130373529009459304731708853782254919', '49704686629064591987525354367538266539', '0', '0']
+          [6][STATICCALL] from=SorbettoFragola, to=UniswapV3Pool_VerifiedByNG, slot0() -> ['1551171524864117535734990216000', '59491', '1', '10', '10', '0', 'True']
+          [6][CALL] from=SorbettoFragola, to=UniswapV3Pool_VerifiedByNG, mint(recipient(address): 0xB53Dc3, tickLower(int24): 58440, tickUpper(int24): 60540, amount(uint128): 29914923267247, data(bytes): b'\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00...) -> ['78024151473', '29999999999999']
+            [7][STATICCALL] from=UniswapV3Pool_VerifiedByNG, to=WBTC, balanceOf(_owner(address): 0x99ac8c) -> 47684349501
+            [7][STATICCALL] from=UniswapV3Pool_VerifiedByNG, to=FiatTokenProxy, balanceOf(account(address): 0x99ac8c) -> 18852549778142
+              [8][DELEGATECALL] from=FiatTokenProxy, to=FiatTokenV2_1, balanceOf(account(address): 0x99ac8c) -> 18852549778142
+            [7][CALL] from=UniswapV3Pool_VerifiedByNG, to=SorbettoFragola, uniswapV3MintCallback(amount0(uint256): 78024151473, amount1(uint256): 29999999999999, data(bytes): b'\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00...) -> None
+              [8][CALL] from=SorbettoFragola, to=WBTC, transferFrom(_from(address): 0xdFb6fa, _to(address): 0x99ac8c, _value(uint256): 78024151473) -> True
+              [8][CALL] from=SorbettoFragola, to=FiatTokenProxy, transferFrom(from(address): 0xdFb6fa, to(address): 0x99ac8c, value(uint256): 29999999999999) -> True
+                [9][DELEGATECALL] from=FiatTokenProxy, to=FiatTokenV2_1, transferFrom(from(address): 0xdFb6fa, to(address): 0x99ac8c, value(uint256): 29999999999999) -> True
+            [7][STATICCALL] from=UniswapV3Pool_VerifiedByNG, to=WBTC, balanceOf(_owner(address): 0x99ac8c) -> 125708500974
+            [7][STATICCALL] from=UniswapV3Pool_VerifiedByNG, to=FiatTokenProxy, balanceOf(account(address): 0x99ac8c) -> 48852549778141
+              [8][DELEGATECALL] from=FiatTokenProxy, to=FiatTokenV2_1, balanceOf(account(address): 0x99ac8c) -> 48852549778141
+        [5][STATICCALL] from=0xdfb6fa, to=SorbettoFragola, balanceOf(account(address): 0xdFb6fa) -> 35864087448105
+        [5][CALL] from=0xdfb6fa, to=SorbettoFragola, transfer(recipient(address): 0x576Cf5, amount(uint256): 35864087448105) -> True
+        [5][CALL] from=0xdfb6fa, to=0x576Cf5, 0x9c81744a() -> None
+          [6][CALL] from=0x576Cf5, to=SorbettoFragola, collectFees(amount0(uint256): 0, amount1(uint256): 0) -> None
+            [7][STATICCALL] from=SorbettoFragola, to=UniswapV3Pool_VerifiedByNG, positions((bytes32): b'\xca\x97\x04\xaf\xe3u\xb7\x86A\x03hH\x07...) -> ['30833594439101', '130373529009459304731708853782254919', '49704686629064591987525354367538266539', '0', '0']
+            [7][CALL] from=SorbettoFragola, to=UniswapV3Pool_VerifiedByNG, burn(tickLower(int24): 58440, tickUpper(int24): 60540, amount(uint128): 0) -> ['0', '0']
+            [7][CALL] from=SorbettoFragola, to=UniswapV3Pool_VerifiedByNG, collect(recipient(address): 0xB53Dc3, tickLower(int24): 58440, tickUpper(int24): 60540, amount0Requested(uint128): 340282366920938463463374607431768211455, amount1Requested(uint128): 340282366920938463463374607431768211455) -> ['0', '0']
+            [7][STATICCALL] from=SorbettoFragola, to=SorbettoStrategy, protocolFee() -> 100000
+            [7][STATICCALL] from=SorbettoFragola, to=SorbettoStrategy, protocolFee() -> 100000
+            [7][STATICCALL] from=SorbettoFragola, to=WBTC, balanceOf(_owner(address): 0xB53Dc3) -> 60656181
+            [7][STATICCALL] from=SorbettoFragola, to=FiatTokenProxy, balanceOf(account(address): 0xB53Dc3) -> 350023335
+              [8][DELEGATECALL] from=FiatTokenProxy, to=FiatTokenV2_1, balanceOf(account(address): 0xB53Dc3) -> 350023335
+        [5][CALL] from=0xdfb6fa, to=0x576Cf5, transferTokensaddress() -> None
+          [6][STATICCALL] from=0x576Cf5, to=SorbettoFragola, balanceOf(account(address): 0x576Cf5) -> 35864087448105
+          [6][CALL] from=0x576Cf5, to=SorbettoFragola, transfer(recipient(address): 0xdFb6fa, amount(uint256): 35864087448105) -> True
+        [5][STATICCALL] from=0xdfb6fa, to=SorbettoFragola, balanceOf(account(address): 0xdFb6fa) -> 35864087448105
+        [5][CALL] from=0xdfb6fa, to=SorbettoFragola, withdraw(shares(uint256): 35864087448105) -> ['78024151472', '29999999999997']
+          [6][STATICCALL] from=SorbettoFragola, to=SorbettoStrategy, maxTwapDeviation() -> 40
+          [6][STATICCALL] from=SorbettoFragola, to=SorbettoStrategy, twapDuration() -> 150
+          [6][STATICCALL] from=SorbettoFragola, to=UniswapV3Pool_VerifiedByNG, slot0() -> ['1551171524864117535734990216000', '59491', '2', '10', '10', '0', 'True']
+          [6][STATICCALL] from=SorbettoFragola, to=UniswapV3Pool_VerifiedByNG, observe(secondsAgos(uint32[]): [150, 0]) -> [[461820680638, 461829604288], [5607857941806070102660138472603464, 5607864967125734851101596591198900]]
+          [6][STATICCALL] from=SorbettoFragola, to=UniswapV3Pool_VerifiedByNG, positions((bytes32): b'\xca\x97\x04\xaf\xe3u\xb7\x86A\x03hH\x07...) -> ['30833594439101', '130373529009459304731708853782254919', '49704686629064591987525354367538266539', '0', '0']
+          [6][CALL] from=SorbettoFragola, to=UniswapV3Pool_VerifiedByNG, burn(tickLower(int24): 58440, tickUpper(int24): 60540, amount(uint128): 0) -> ['0', '0']
+          [6][CALL] from=SorbettoFragola, to=UniswapV3Pool_VerifiedByNG, collect(recipient(address): 0xB53Dc3, tickLower(int24): 58440, tickUpper(int24): 60540, amount0Requested(uint128): 340282366920938463463374607431768211455, amount1Requested(uint128): 340282366920938463463374607431768211455) -> ['0', '0']
+          [6][STATICCALL] from=SorbettoFragola, to=SorbettoStrategy, protocolFee() -> 100000
+          [6][STATICCALL] from=SorbettoFragola, to=SorbettoStrategy, protocolFee() -> 100000
+          [6][STATICCALL] from=SorbettoFragola, to=UniswapV3Pool_VerifiedByNG, positions((bytes32): b'\xca\x97\x04\xaf\xe3u\xb7\x86A\x03hH\x07...) -> ['30833594439101', '130373529009459304731708853782254919', '49704686629064591987525354367538266539', '0', '0']
+          [6][CALL] from=SorbettoFragola, to=UniswapV3Pool_VerifiedByNG, burn(tickLower(int24): 58440, tickUpper(int24): 60540, amount(uint128): 29914923267246) -> ['78024151472', '29999999999997']
+          [6][CALL] from=SorbettoFragola, to=UniswapV3Pool_VerifiedByNG, collect(recipient(address): 0xdFb6fa, tickLower(int24): 58440, tickUpper(int24): 60540, amount0Requested(uint128): 78024151472, amount1Requested(uint128): 29999999999997) -> ['78024151472', '29999999999997']
+            [7][CALL] from=UniswapV3Pool_VerifiedByNG, to=WBTC, transfer(_to(address): 0xdFb6fa, _value(uint256): 78024151472) -> True
+            [7][CALL] from=UniswapV3Pool_VerifiedByNG, to=FiatTokenProxy, transfer(to(address): 0xdFb6fa, value(uint256): 29999999999997) -> True
+              [8][DELEGATECALL] from=FiatTokenProxy, to=FiatTokenV2_1, transfer(to(address): 0xdFb6fa, value(uint256): 29999999999997) -> True
+        [5][STATICCALL] from=0xdfb6fa, to=SorbettoFragola, userInfo((address): 0x576Cf5) -> ['6625419894', '2368878238980', '184736887681203', '66051540901683908']
+        [5][STATICCALL] from=0xdfb6fa, to=SorbettoFragola, position() -> ['918671171855', '130373529009459304731708853782254919', '49704686629064591987525354367538266539', '0', '0']
+          [6][STATICCALL] from=SorbettoFragola, to=UniswapV3Pool_VerifiedByNG, positions((bytes32): b'\xca\x97\x04\xaf\xe3u\xb7\x86A\x03hH\x07...) -> ['918671171855', '130373529009459304731708853782254919', '49704686629064591987525354367538266539', '0', '0']
+        [5][STATICCALL] from=0xdfb6fa, to=UniswapV3Pool_VerifiedByNG, slot0() -> ['1551171524864117535734990216000', '59491', '2', '10', '10', '0', 'True']
+        [5][STATICCALL] from=0xdfb6fa, to=UniswapV3Pool_VerifiedByNG, slot0() -> ['1551171524864117535734990216000', '59491', '2', '10', '10', '0', 'True']
+        [5][CALL] from=0xdfb6fa, to=0x576Cf5, 0x9c81744a() -> None
+          [6][CALL] from=0x576Cf5, to=SorbettoFragola, collectFees(amount0(uint256): 2396079643, amount1(uint256): 921283832468) -> None
+            [7][STATICCALL] from=SorbettoFragola, to=UniswapV3Pool_VerifiedByNG, positions((bytes32): b'\xca\x97\x04\xaf\xe3u\xb7\x86A\x03hH\x07...) -> ['918671171855', '130373529009459304731708853782254919', '49704686629064591987525354367538266539', '0', '0']
+            [7][CALL] from=SorbettoFragola, to=UniswapV3Pool_VerifiedByNG, burn(tickLower(int24): 58440, tickUpper(int24): 60540, amount(uint128): 0) -> ['0', '0']
+            [7][CALL] from=SorbettoFragola, to=UniswapV3Pool_VerifiedByNG, collect(recipient(address): 0xB53Dc3, tickLower(int24): 58440, tickUpper(int24): 60540, amount0Requested(uint128): 340282366920938463463374607431768211455, amount1Requested(uint128): 340282366920938463463374607431768211455) -> ['0', '0']
+            [7][STATICCALL] from=SorbettoFragola, to=SorbettoStrategy, protocolFee() -> 100000
+            [7][STATICCALL] from=SorbettoFragola, to=SorbettoStrategy, protocolFee() -> 100000
+            [7][STATICCALL] from=SorbettoFragola, to=WBTC, balanceOf(_owner(address): 0xB53Dc3) -> 60656181
+            [7][STATICCALL] from=SorbettoFragola, to=FiatTokenProxy, balanceOf(account(address): 0xB53Dc3) -> 350023335
+              [8][DELEGATECALL] from=FiatTokenProxy, to=FiatTokenV2_1, balanceOf(account(address): 0xB53Dc3) -> 350023335
+            [7][STATICCALL] from=SorbettoFragola, to=UniswapV3Pool_VerifiedByNG, slot0() -> ['1551171524864117535734990216000', '59491', '2', '10', '10', '0', 'True']
+            [7][STATICCALL] from=SorbettoFragola, to=UniswapV3Pool_VerifiedByNG, positions((bytes32): b'\xca\x97\x04\xaf\xe3u\xb7\x86A\x03hH\x07...) -> ['918671171855', '130373529009459304731708853782254919', '49704686629064591987525354367538266539', '0', '0']
+            [7][CALL] from=SorbettoFragola, to=UniswapV3Pool_VerifiedByNG, burn(tickLower(int24): 58440, tickUpper(int24): 60540, amount(uint128): 918671171809) -> ['2396079642', '921283832422']
+            [7][CALL] from=SorbettoFragola, to=UniswapV3Pool_VerifiedByNG, collect(recipient(address): 0x576Cf5, tickLower(int24): 58440, tickUpper(int24): 60540, amount0Requested(uint128): 2396079642, amount1Requested(uint128): 921283832422) -> ['2396079642', '921283832422']
+              [8][CALL] from=UniswapV3Pool_VerifiedByNG, to=WBTC, transfer(_to(address): 0x576Cf5, _value(uint256): 2396079642) -> True
+              [8][CALL] from=UniswapV3Pool_VerifiedByNG, to=FiatTokenProxy, transfer(to(address): 0x576Cf5, value(uint256): 921283832422) -> True
+                [9][DELEGATECALL] from=FiatTokenProxy, to=FiatTokenV2_1, transfer(to(address): 0x576Cf5, value(uint256): 921283832422) -> True
+        [5][STATICCALL] from=0xdfb6fa, to=SorbettoFragola, userInfo((address): 0x576Cf5) -> ['4229340252', '1447594406558', '184736887681203', '66051540901683908']
+        [5][STATICCALL] from=0xdfb6fa, to=WBTC, balanceOf(_owner(address): 0xB53Dc3) -> 60656181
+        [5][STATICCALL] from=0xdfb6fa, to=FiatTokenProxy, balanceOf(account(address): 0xB53Dc3) -> 350023335
+          [6][DELEGATECALL] from=FiatTokenProxy, to=FiatTokenV2_1, balanceOf(account(address): 0xB53Dc3) -> 350023335
+        [5][CALL] from=0xdfb6fa, to=0x576Cf5, 0x9c81744a() -> None
+          [6][CALL] from=0x576Cf5, to=SorbettoFragola, collectFees(amount0(uint256): 60656181, amount1(uint256): 350023335) -> None
+            [7][STATICCALL] from=SorbettoFragola, to=UniswapV3Pool_VerifiedByNG, positions((bytes32): b'\xca\x97\x04\xaf\xe3u\xb7\x86A\x03hH\x07...) -> ['46', '130373529009459304731708853782254919', '49704686629064591987525354367538266539', '0', '0']
+            [7][CALL] from=SorbettoFragola, to=UniswapV3Pool_VerifiedByNG, burn(tickLower(int24): 58440, tickUpper(int24): 60540, amount(uint128): 0) -> ['0', '0']
+            [7][CALL] from=SorbettoFragola, to=UniswapV3Pool_VerifiedByNG, collect(recipient(address): 0xB53Dc3, tickLower(int24): 58440, tickUpper(int24): 60540, amount0Requested(uint128): 340282366920938463463374607431768211455, amount1Requested(uint128): 340282366920938463463374607431768211455) -> ['0', '0']
+            [7][STATICCALL] from=SorbettoFragola, to=SorbettoStrategy, protocolFee() -> 100000
+            [7][STATICCALL] from=SorbettoFragola, to=SorbettoStrategy, protocolFee() -> 100000
+            [7][STATICCALL] from=SorbettoFragola, to=WBTC, balanceOf(_owner(address): 0xB53Dc3) -> 60656181
+            [7][STATICCALL] from=SorbettoFragola, to=FiatTokenProxy, balanceOf(account(address): 0xB53Dc3) -> 350023335
+              [8][DELEGATECALL] from=FiatTokenProxy, to=FiatTokenV2_1, balanceOf(account(address): 0xB53Dc3) -> 350023335
+            [7][CALL] from=SorbettoFragola, to=WBTC, transfer(_to(address): 0x576Cf5, _value(uint256): 60656181) -> True
+            [7][CALL] from=SorbettoFragola, to=FiatTokenProxy, transfer(to(address): 0x576Cf5, value(uint256): 350023335) -> True
+              [8][DELEGATECALL] from=FiatTokenProxy, to=FiatTokenV2_1, transfer(to(address): 0x576Cf5, value(uint256): 350023335) -> True
+        [5][STATICCALL] from=0xdfb6fa, to=SorbettoFragola, pool() -> 0x88e6a0
+        [5][STATICCALL] from=0xdfb6fa, to=SorbettoFragola, tickLower() -> 196850
+        [5][STATICCALL] from=0xdfb6fa, to=SorbettoFragola, tickUpper() -> 200430
+        [5][STATICCALL] from=0xdfb6fa, to=SorbettoFragola, token0() -> 0xa0b869
+        [5][STATICCALL] from=0xdfb6fa, to=SorbettoFragola, token1() -> 0xc02aaa
+        [5][STATICCALL] from=0xdfb6fa, to=FiatTokenProxy, balanceOf(account(address): 0xdFb6fa) -> 29999999999997
+          [6][DELEGATECALL] from=FiatTokenProxy, to=FiatTokenV2_1, balanceOf(account(address): 0xdFb6fa) -> 29999999999997
+        [5][STATICCALL] from=0xdfb6fa, to=WETH9, balanceOf((address): 0xdFb6fa) -> 12999999999999999978695
+        [5][STATICCALL] from=0xdfb6fa, to=FiatTokenProxy, allowance(owner(address): 0xdFb6fa, spender(address): 0x6f3F35) -> 0
+          [6][DELEGATECALL] from=FiatTokenProxy, to=FiatTokenV2_1, allowance(owner(address): 0xdFb6fa, spender(address): 0x6f3F35) -> 0
+        [5][CALL] from=0xdfb6fa, to=FiatTokenProxy, approve(spender(address): 0x6f3F35, value(uint256): 29999999999997) -> True
+          [6][DELEGATECALL] from=FiatTokenProxy, to=FiatTokenV2_1, approve(spender(address): 0x6f3F35, value(uint256): 29999999999997) -> True
+        [5][STATICCALL] from=0xdfb6fa, to=WETH9, allowance((address): 0x6f3F35) -> 0
+        [5][CALL] from=0xdfb6fa, to=WETH9, approve(guy(address): 0x6f3F35, wad(uint256): 12999999999999999978695) -> True
+        [5][CALL] from=0xdfb6fa, to=SorbettoFragola, deposit(amount0Desired(uint256): 29999999999997, amount1Desired(uint256): 12999999999999999978695) -> ['10265815882652038166', '29999999999997', '6260738603027559428836']
+          [6][STATICCALL] from=SorbettoFragola, to=SorbettoStrategy, maxTwapDeviation() -> 40
+          [6][STATICCALL] from=SorbettoFragola, to=SorbettoStrategy, twapDuration() -> 150
+          [6][STATICCALL] from=SorbettoFragola, to=0x88e6A0, slot0() -> 0x000000
+          [6][STATICCALL] from=SorbettoFragola, to=0x88e6A0, observeuint32[]() -> 0x000000
+          [6][STATICCALL] from=SorbettoFragola, to=0x88e6A0, positionsbytes32() -> 0x000000
+          [6][CALL] from=SorbettoFragola, to=0x88e6A0, burnint24() -> 0x000000
+          [6][CALL] from=SorbettoFragola, to=0x88e6A0, collectaddress() -> 0x000000
+            [7][CALL] from=0x88e6A0, to=FiatTokenProxy, transfer(to(address): 0x6f3F35, value(uint256): 199954964) -> True
+              [8][DELEGATECALL] from=FiatTokenProxy, to=FiatTokenV2_1, transfer(to(address): 0x6f3F35, value(uint256): 199954964) -> True
+            [7][CALL] from=0x88e6A0, to=WETH9, transfer(dst(address): 0x6f3F35, wad(uint256): 68499892231858806) -> True
+          [6][STATICCALL] from=SorbettoFragola, to=SorbettoStrategy, protocolFee() -> 100000
+          [6][STATICCALL] from=SorbettoFragola, to=SorbettoStrategy, protocolFee() -> 100000
+          [6][STATICCALL] from=SorbettoFragola, to=0x88e6A0, positionsbytes32() -> 0x000000
+          [6][STATICCALL] from=SorbettoFragola, to=0x88e6A0, slot0() -> 0x000000
+          [6][CALL] from=SorbettoFragola, to=0x88e6A0, mintaddress() -> 0x000000
+            [7][STATICCALL] from=0x88e6A0, to=FiatTokenProxy, balanceOf(account(address): 0x88e6A0) -> 59917492606943
+              [8][DELEGATECALL] from=FiatTokenProxy, to=FiatTokenV2_1, balanceOf(account(address): 0x88e6A0) -> 59917492606943
+            [7][STATICCALL] from=0x88e6A0, to=WETH9, balanceOf((address): 0x88e6A0) -> 25582923432172036645407
+            [7][CALL] from=0x88e6A0, to=SorbettoFragola, uniswapV3MintCallback(amount0(uint256): 29999999999997, amount1(uint256): 6260738603027559428836, data(bytes): b'\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00...) -> None
+              [8][CALL] from=SorbettoFragola, to=FiatTokenProxy, transferFrom(from(address): 0xdFb6fa, to(address): 0x88e6A0, value(uint256): 29999999999997) -> True
+                [9][DELEGATECALL] from=FiatTokenProxy, to=FiatTokenV2_1, transferFrom(from(address): 0xdFb6fa, to(address): 0x88e6A0, value(uint256): 29999999999997) -> True
+              [8][CALL] from=SorbettoFragola, to=WETH9, transferFrom(src(address): 0xdFb6fa, dst(address): 0x88e6A0, wad(uint256): 6260738603027559428836) -> True
+            [7][STATICCALL] from=0x88e6A0, to=FiatTokenProxy, balanceOf(account(address): 0x88e6A0) -> 89917492606940
+              [8][DELEGATECALL] from=FiatTokenProxy, to=FiatTokenV2_1, balanceOf(account(address): 0x88e6A0) -> 89917492606940
+            [7][STATICCALL] from=0x88e6A0, to=WETH9, balanceOf((address): 0x88e6A0) -> 31843662035199596074243
+        [5][STATICCALL] from=0xdfb6fa, to=SorbettoFragola, balanceOf(account(address): 0xdFb6fa) -> 10265815882652038166
+        [5][CALL] from=0xdfb6fa, to=SorbettoFragola, transfer(recipient(address): 0x576Cf5, amount(uint256): 10265815882652038166) -> True
+        [5][CALL] from=0xdfb6fa, to=0x576Cf5, 0x9c81744a() -> None
+          [6][CALL] from=0x576Cf5, to=SorbettoFragola, collectFees(amount0(uint256): 0, amount1(uint256): 0) -> None
+            [7][STATICCALL] from=SorbettoFragola, to=0x88e6A0, positionsbytes32() -> 0x000000
+            [7][CALL] from=SorbettoFragola, to=0x88e6A0, burnint24() -> 0x000000
+            [7][CALL] from=SorbettoFragola, to=0x88e6A0, collectaddress() -> 0x000000
+            [7][STATICCALL] from=SorbettoFragola, to=SorbettoStrategy, protocolFee() -> 100000
+            [7][STATICCALL] from=SorbettoFragola, to=SorbettoStrategy, protocolFee() -> 100000
+            [7][STATICCALL] from=SorbettoFragola, to=FiatTokenProxy, balanceOf(account(address): 0x6f3F35) -> 785435307
+              [8][DELEGATECALL] from=FiatTokenProxy, to=FiatTokenV2_1, balanceOf(account(address): 0x6f3F35) -> 785435307
+            [7][STATICCALL] from=SorbettoFragola, to=WETH9, balanceOf((address): 0x6f3F35) -> 68499892231859261
+        [5][CALL] from=0xdfb6fa, to=0x576Cf5, transferTokensaddress() -> None
+          [6][STATICCALL] from=0x576Cf5, to=SorbettoFragola, balanceOf(account(address): 0x576Cf5) -> 10265815882652038166
+          [6][CALL] from=0x576Cf5, to=SorbettoFragola, transfer(recipient(address): 0xdFb6fa, amount(uint256): 10265815882652038166) -> True
+        [5][STATICCALL] from=0xdfb6fa, to=SorbettoFragola, balanceOf(account(address): 0xdFb6fa) -> 10265815882652038166
+        [5][CALL] from=0xdfb6fa, to=SorbettoFragola, withdraw(shares(uint256): 10265815882652038166) -> ['29999999999996', '6260738603027559427666']
+          [6][STATICCALL] from=SorbettoFragola, to=SorbettoStrategy, maxTwapDeviation() -> 40
+          [6][STATICCALL] from=SorbettoFragola, to=SorbettoStrategy, twapDuration() -> 150
+          [6][STATICCALL] from=SorbettoFragola, to=0x88e6A0, slot0() -> 0x000000
+          [6][STATICCALL] from=SorbettoFragola, to=0x88e6A0, observeuint32[]() -> 0x000000
+          [6][STATICCALL] from=SorbettoFragola, to=0x88e6A0, positionsbytes32() -> 0x000000
+          [6][CALL] from=SorbettoFragola, to=0x88e6A0, burnint24() -> 0x000000
+          [6][CALL] from=SorbettoFragola, to=0x88e6A0, collectaddress() -> 0x000000
+          [6][STATICCALL] from=SorbettoFragola, to=SorbettoStrategy, protocolFee() -> 100000
+          [6][STATICCALL] from=SorbettoFragola, to=SorbettoStrategy, protocolFee() -> 100000
+          [6][STATICCALL] from=SorbettoFragola, to=0x88e6A0, positionsbytes32() -> 0x000000
+          [6][CALL] from=SorbettoFragola, to=0x88e6A0, burnint24() -> 0x000000
+          [6][CALL] from=SorbettoFragola, to=0x88e6A0, collectaddress() -> 0x000000
+            [7][CALL] from=0x88e6A0, to=FiatTokenProxy, transfer(to(address): 0xdFb6fa, value(uint256): 29999999999996) -> True
+              [8][DELEGATECALL] from=FiatTokenProxy, to=FiatTokenV2_1, transfer(to(address): 0xdFb6fa, value(uint256): 29999999999996) -> True
+            [7][CALL] from=0x88e6A0, to=WETH9, transfer(dst(address): 0xdFb6fa, wad(uint256): 6260738603027559427666) -> True
+        [5][STATICCALL] from=0xdfb6fa, to=SorbettoFragola, userInfo((address): 0x576Cf5) -> ['1801960998956', '834855148490340145807', '175530227656', '81323799105061129031']
+        [5][STATICCALL] from=0xdfb6fa, to=SorbettoFragola, position() -> ['126927705843187905', '536062225842048482860442010920', '183642375851994571302805522559272066267', '0', '0']
+          [6][STATICCALL] from=SorbettoFragola, to=0x88e6A0, positionsbytes32() -> 0x000000
+        [5][STATICCALL] from=0xdfb6fa, to=0x88e6A0, slot0() -> 0x000000
+        [5][STATICCALL] from=0xdfb6fa, to=0x88e6A0, slot0() -> 0x000000
+        [5][CALL] from=0xdfb6fa, to=0x576Cf5, 0x9c81744a() -> None
+          [6][CALL] from=0x576Cf5, to=SorbettoFragola, collectFees(amount0(uint256): 711067726156, amount1(uint256): 148393638750498448884) -> None
+            [7][STATICCALL] from=SorbettoFragola, to=0x88e6A0, positionsbytes32() -> 0x000000
+            [7][CALL] from=SorbettoFragola, to=0x88e6A0, burnint24() -> 0x000000
+            [7][CALL] from=SorbettoFragola, to=0x88e6A0, collectaddress() -> 0x000000
+            [7][STATICCALL] from=SorbettoFragola, to=SorbettoStrategy, protocolFee() -> 100000
+            [7][STATICCALL] from=SorbettoFragola, to=SorbettoStrategy, protocolFee() -> 100000
+            [7][STATICCALL] from=SorbettoFragola, to=FiatTokenProxy, balanceOf(account(address): 0x6f3F35) -> 785435307
+              [8][DELEGATECALL] from=FiatTokenProxy, to=FiatTokenV2_1, balanceOf(account(address): 0x6f3F35) -> 785435307
+            [7][STATICCALL] from=SorbettoFragola, to=WETH9, balanceOf((address): 0x6f3F35) -> 68499892231859261
+            [7][STATICCALL] from=SorbettoFragola, to=0x88e6A0, slot0() -> 0x000000
+            [7][STATICCALL] from=SorbettoFragola, to=0x88e6A0, positionsbytes32() -> 0x000000
+            [7][CALL] from=SorbettoFragola, to=0x88e6A0, burnint24() -> 0x000000
+            [7][CALL] from=SorbettoFragola, to=0x88e6A0, collectaddress() -> 0x000000
+              [8][CALL] from=0x88e6A0, to=FiatTokenProxy, transfer(to(address): 0x576Cf5, value(uint256): 711067726155) -> True
+                [9][DELEGATECALL] from=FiatTokenProxy, to=FiatTokenV2_1, transfer(to(address): 0x576Cf5, value(uint256): 711067726155) -> True
+              [8][CALL] from=0x88e6A0, to=WETH9, transfer(dst(address): 0x576Cf5, wad(uint256): 148393638750411459388) -> True
+        [5][STATICCALL] from=0xdfb6fa, to=SorbettoFragola, userInfo((address): 0x576Cf5) -> ['1090893272801', '686461509739928686419', '175530227656', '81323799105061129031']
+        [5][STATICCALL] from=0xdfb6fa, to=FiatTokenProxy, balanceOf(account(address): 0x6f3F35) -> 785435307
+          [6][DELEGATECALL] from=FiatTokenProxy, to=FiatTokenV2_1, balanceOf(account(address): 0x6f3F35) -> 785435307
+        [5][STATICCALL] from=0xdfb6fa, to=WETH9, balanceOf((address): 0x6f3F35) -> 68499892231859261
+        [5][CALL] from=0xdfb6fa, to=0x576Cf5, 0x9c81744a() -> None
+          [6][CALL] from=0x576Cf5, to=SorbettoFragola, collectFees(amount0(uint256): 785435307, amount1(uint256): 68499892231859261) -> None
+            [7][STATICCALL] from=SorbettoFragola, to=0x88e6A0, positionsbytes32() -> 0x000000
+            [7][CALL] from=SorbettoFragola, to=0x88e6A0, burnint24() -> 0x000000
+            [7][CALL] from=SorbettoFragola, to=0x88e6A0, collectaddress() -> 0x000000
+            [7][STATICCALL] from=SorbettoFragola, to=SorbettoStrategy, protocolFee() -> 100000
+            [7][STATICCALL] from=SorbettoFragola, to=SorbettoStrategy, protocolFee() -> 100000
+            [7][STATICCALL] from=SorbettoFragola, to=FiatTokenProxy, balanceOf(account(address): 0x6f3F35) -> 785435307
+              [8][DELEGATECALL] from=FiatTokenProxy, to=FiatTokenV2_1, balanceOf(account(address): 0x6f3F35) -> 785435307
+            [7][STATICCALL] from=SorbettoFragola, to=WETH9, balanceOf((address): 0x6f3F35) -> 68499892231859261
+            [7][CALL] from=SorbettoFragola, to=FiatTokenProxy, transfer(to(address): 0x576Cf5, value(uint256): 785435307) -> True
+              [8][DELEGATECALL] from=FiatTokenProxy, to=FiatTokenV2_1, transfer(to(address): 0x576Cf5, value(uint256): 785435307) -> True
+            [7][CALL] from=SorbettoFragola, to=WETH9, transfer(dst(address): 0x576Cf5, wad(uint256): 68499892231859261) -> True
+        [5][STATICCALL] from=0xdfb6fa, to=SorbettoFragola, pool() -> 0x60594a
+        [5][STATICCALL] from=0xdfb6fa, to=SorbettoFragola, tickLower() -> -79460
+        [5][STATICCALL] from=0xdfb6fa, to=SorbettoFragola, tickUpper() -> -76370
+        [5][STATICCALL] from=0xdfb6fa, to=SorbettoFragola, token0() -> 0x6b1754
+        [5][STATICCALL] from=0xdfb6fa, to=SorbettoFragola, token1() -> 0xc02aaa
+        [5][STATICCALL] from=0xdfb6fa, to=Dai, balanceOf((address): 0xdFb6fa) -> 3000000000000000000000000
+        [5][STATICCALL] from=0xdfb6fa, to=WETH9, balanceOf((address): 0xdFb6fa) -> 12999999999999999977525
+        [5][STATICCALL] from=0xdfb6fa, to=Dai, allowance((address): 0xDD9011) -> 0
+        [5][CALL] from=0xdfb6fa, to=Dai, approve(usr(address): 0xDD9011, wad(uint256): 3000000000000000000000000) -> True
+        [5][STATICCALL] from=0xdfb6fa, to=WETH9, allowance((address): 0xDD9011) -> 0
+        [5][CALL] from=0xdfb6fa, to=WETH9, approve(guy(address): 0xDD9011, wad(uint256): 12999999999999999977525) -> True
+        [5][CALL] from=0xdfb6fa, to=SorbettoFragola, deposit(amount0Desired(uint256): 3000000000000000000000000, amount1Desired(uint256): 12999999999999999977525) -> ['1116745595199643040792804', '2999999999999999999999996', '764377773132538425545']
+          [6][STATICCALL] from=SorbettoFragola, to=SorbettoStrategy, maxTwapDeviation() -> 40
+          [6][STATICCALL] from=SorbettoFragola, to=SorbettoStrategy, twapDuration() -> 150
+          [6][STATICCALL] from=SorbettoFragola, to=0x60594a, slot0() -> 0x000000
+          [6][STATICCALL] from=SorbettoFragola, to=0x60594a, observeuint32[]() -> 0x000000
+          [6][STATICCALL] from=SorbettoFragola, to=0x60594a, positionsbytes32() -> 0x000000
+          [6][CALL] from=SorbettoFragola, to=0x60594a, burnint24() -> 0x000000
+          [6][CALL] from=SorbettoFragola, to=0x60594a, collectaddress() -> 0x000000
+            [7][CALL] from=0x60594a, to=Dai, transfer(dst(address): 0xDD9011, wad(uint256): 32504766719343033390) -> True
+            [7][CALL] from=0x60594a, to=WETH9, transfer(dst(address): 0xDD9011, wad(uint256): 9622652369457259) -> True
+          [6][STATICCALL] from=SorbettoFragola, to=SorbettoStrategy, protocolFee() -> 100000
+          [6][STATICCALL] from=SorbettoFragola, to=SorbettoStrategy, protocolFee() -> 100000
+          [6][STATICCALL] from=SorbettoFragola, to=0x60594a, positionsbytes32() -> 0x000000
+          [6][STATICCALL] from=SorbettoFragola, to=0x60594a, slot0() -> 0x000000
+          [6][CALL] from=SorbettoFragola, to=0x60594a, mintaddress() -> 0x000000
+            [7][STATICCALL] from=0x60594a, to=Dai, balanceOf((address): 0x60594a) -> 4988681997547323891001890
+            [7][STATICCALL] from=0x60594a, to=WETH9, balanceOf((address): 0x60594a) -> 4443980860554082521062
+            [7][CALL] from=0x60594a, to=SorbettoFragola, uniswapV3MintCallback(amount0(uint256): 2999999999999999999999996, amount1(uint256): 764377773132538425545, data(bytes): b'\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00...) -> None
+              [8][CALL] from=SorbettoFragola, to=Dai, transferFrom(src(address): 0xdFb6fa, dst(address): 0x60594a, wad(uint256): 2999999999999999999999996) -> True
+              [8][CALL] from=SorbettoFragola, to=WETH9, transferFrom(src(address): 0xdFb6fa, dst(address): 0x60594a, wad(uint256): 764377773132538425545) -> True
+            [7][STATICCALL] from=0x60594a, to=Dai, balanceOf((address): 0x60594a) -> 7988681997547323891001886
+            [7][STATICCALL] from=0x60594a, to=WETH9, balanceOf((address): 0x60594a) -> 5208358633686620946607
+        [5][STATICCALL] from=0xdfb6fa, to=SorbettoFragola, balanceOf(account(address): 0xdFb6fa) -> 1116745595199643040792804
+        [5][CALL] from=0xdfb6fa, to=SorbettoFragola, transfer(recipient(address): 0x576Cf5, amount(uint256): 1116745595199643040792804) -> True
+        [5][CALL] from=0xdfb6fa, to=0x576Cf5, 0x9c81744a() -> None
+          [6][CALL] from=0x576Cf5, to=SorbettoFragola, collectFees(amount0(uint256): 0, amount1(uint256): 0) -> None
+            [7][STATICCALL] from=SorbettoFragola, to=0x60594a, positionsbytes32() -> 0x000000
+            [7][CALL] from=SorbettoFragola, to=0x60594a, burnint24() -> 0x000000
+            [7][CALL] from=SorbettoFragola, to=0x60594a, collectaddress() -> 0x000000
+            [7][STATICCALL] from=SorbettoFragola, to=SorbettoStrategy, protocolFee() -> 100000
+            [7][STATICCALL] from=SorbettoFragola, to=SorbettoStrategy, protocolFee() -> 100000
+            [7][STATICCALL] from=SorbettoFragola, to=Dai, balanceOf((address): 0xDD9011) -> 330778378101188907649
+            [7][STATICCALL] from=SorbettoFragola, to=WETH9, balanceOf((address): 0xDD9011) -> 9622652369457259
+        [5][CALL] from=0xdfb6fa, to=0x576Cf5, transferTokensaddress() -> None
+          [6][STATICCALL] from=0x576Cf5, to=SorbettoFragola, balanceOf(account(address): 0x576Cf5) -> 1116745595199643040792804
+          [6][CALL] from=0x576Cf5, to=SorbettoFragola, transfer(recipient(address): 0xd282f7, amount(uint256): 1116745595199643040792804) -> True
+        [5][CALL] from=0xdfb6fa, to=0xd282f7, 0x9c81744a() -> None
+          [6][CALL] from=0xd282f7, to=SorbettoFragola, collectFees(amount0(uint256): 0, amount1(uint256): 0) -> None
+            [7][STATICCALL] from=SorbettoFragola, to=0x60594a, positionsbytes32() -> 0x000000
+            [7][CALL] from=SorbettoFragola, to=0x60594a, burnint24() -> 0x000000
+            [7][CALL] from=SorbettoFragola, to=0x60594a, collectaddress() -> 0x000000
+            [7][STATICCALL] from=SorbettoFragola, to=SorbettoStrategy, protocolFee() -> 100000
+            [7][STATICCALL] from=SorbettoFragola, to=SorbettoStrategy, protocolFee() -> 100000
+            [7][STATICCALL] from=SorbettoFragola, to=Dai, balanceOf((address): 0xDD9011) -> 330778378101188907649
+            [7][STATICCALL] from=SorbettoFragola, to=WETH9, balanceOf((address): 0xDD9011) -> 9622652369457259
+        [5][CALL] from=0xdfb6fa, to=0xd282f7, transferTokensaddress() -> None
+          [6][STATICCALL] from=0xd282f7, to=SorbettoFragola, balanceOf(account(address): 0xd282f7) -> 1116745595199643040792804
+          [6][CALL] from=0xd282f7, to=SorbettoFragola, transfer(recipient(address): 0xdFb6fa, amount(uint256): 1116745595199643040792804) -> True
+        [5][STATICCALL] from=0xdfb6fa, to=SorbettoFragola, balanceOf(account(address): 0xdFb6fa) -> 1116745595199643040792804
+        [5][CALL] from=0xdfb6fa, to=SorbettoFragola, withdraw(shares(uint256): 1116745595199643040792804) -> ['2999999999999999999999990', '764377773132538425544']
+          [6][STATICCALL] from=SorbettoFragola, to=SorbettoStrategy, maxTwapDeviation() -> 40
+          [6][STATICCALL] from=SorbettoFragola, to=SorbettoStrategy, twapDuration() -> 150
+          [6][STATICCALL] from=SorbettoFragola, to=0x60594a, slot0() -> 0x000000
+          [6][STATICCALL] from=SorbettoFragola, to=0x60594a, observeuint32[]() -> 0x000000
+          [6][STATICCALL] from=SorbettoFragola, to=0x60594a, positionsbytes32() -> 0x000000
+          [6][CALL] from=SorbettoFragola, to=0x60594a, burnint24() -> 0x000000
+          [6][CALL] from=SorbettoFragola, to=0x60594a, collectaddress() -> 0x000000
+          [6][STATICCALL] from=SorbettoFragola, to=SorbettoStrategy, protocolFee() -> 100000
+          [6][STATICCALL] from=SorbettoFragola, to=SorbettoStrategy, protocolFee() -> 100000
+          [6][STATICCALL] from=SorbettoFragola, to=0x60594a, positionsbytes32() -> 0x000000
+          [6][CALL] from=SorbettoFragola, to=0x60594a, burnint24() -> 0x000000
+          [6][CALL] from=SorbettoFragola, to=0x60594a, collectaddress() -> 0x000000
+            [7][CALL] from=0x60594a, to=Dai, transfer(dst(address): 0xdFb6fa, wad(uint256): 2999999999999999999999990) -> True
+            [7][CALL] from=0x60594a, to=WETH9, transfer(dst(address): 0xdFb6fa, wad(uint256): 764377773132538425544) -> True
+        [5][STATICCALL] from=0xdfb6fa, to=SorbettoFragola, userInfo((address): 0x576Cf5) -> ['171548839330528685382077', '82110798953471682103', '153614968411727226', '73526861718933']
+        [5][STATICCALL] from=0xdfb6fa, to=SorbettoFragola, position() -> ['35799225171785164642829', '308967551738758410018029823658257240', '91466195388971627328363867899299', '0', '0']
+          [6][STATICCALL] from=SorbettoFragola, to=0x60594a, positionsbytes32() -> 0x000000
+        [5][STATICCALL] from=0xdfb6fa, to=0x60594a, slot0() -> 0x000000
+        [5][STATICCALL] from=0xdfb6fa, to=0x60594a, slot0() -> 0x000000
+        [5][CALL] from=0xdfb6fa, to=0x576Cf5, 0x9c81744a() -> None
+          [6][CALL] from=0x576Cf5, to=SorbettoFragola, collectFees(amount0(uint256): 162297271410468448411202, amount1(uint256): 41352142302073688768) -> None
+            [7][STATICCALL] from=SorbettoFragola, to=0x60594a, positionsbytes32() -> 0x000000
+            [7][CALL] from=SorbettoFragola, to=0x60594a, burnint24() -> 0x000000
+            [7][CALL] from=SorbettoFragola, to=0x60594a, collectaddress() -> 0x000000
+            [7][STATICCALL] from=SorbettoFragola, to=SorbettoStrategy, protocolFee() -> 100000
+            [7][STATICCALL] from=SorbettoFragola, to=SorbettoStrategy, protocolFee() -> 100000
+            [7][STATICCALL] from=SorbettoFragola, to=Dai, balanceOf((address): 0xDD9011) -> 330778378101188907649
+            [7][STATICCALL] from=SorbettoFragola, to=WETH9, balanceOf((address): 0xDD9011) -> 9622652369457259
+            [7][STATICCALL] from=SorbettoFragola, to=0x60594a, slot0() -> 0x000000
+            [7][STATICCALL] from=SorbettoFragola, to=0x60594a, positionsbytes32() -> 0x000000
+            [7][CALL] from=SorbettoFragola, to=0x60594a, burnint24() -> 0x000000
+            [7][CALL] from=SorbettoFragola, to=0x60594a, collectaddress() -> 0x000000
+              [8][CALL] from=0x60594a, to=Dai, transfer(dst(address): 0x576Cf5, wad(uint256): 162297271410468448408359) -> True
+              [8][CALL] from=0x60594a, to=WETH9, transfer(dst(address): 0x576Cf5, wad(uint256): 41352142302073688767) -> True
+        [5][STATICCALL] from=0xdfb6fa, to=SorbettoFragola, userInfo((address): 0xd282f7) -> ['171548839330528685382077', '82110798953471682103', '153614968411727226', '73526861718933']
+        [5][STATICCALL] from=0xdfb6fa, to=SorbettoFragola, position() -> ['627', '308967551738758410018029823658257240', '91466195388971627328363867899299', '0', '0']
+          [6][STATICCALL] from=SorbettoFragola, to=0x60594a, positionsbytes32() -> 0x000000
+        [5][STATICCALL] from=0xdfb6fa, to=0x60594a, slot0() -> 0x000000
+        [5][STATICCALL] from=0xdfb6fa, to=0x60594a, slot0() -> 0x000000
+        [5][CALL] from=0xdfb6fa, to=0xd282f7, 0x9c81744a() -> None
+          [6][CALL] from=0xd282f7, to=SorbettoFragola, collectFees(amount0(uint256): 2842, amount1(uint256): 0) -> None
+            [7][STATICCALL] from=SorbettoFragola, to=0x60594a, positionsbytes32() -> 0x000000
+            [7][CALL] from=SorbettoFragola, to=0x60594a, burnint24() -> 0x000000
+            [7][CALL] from=SorbettoFragola, to=0x60594a, collectaddress() -> 0x000000
+            [7][STATICCALL] from=SorbettoFragola, to=SorbettoStrategy, protocolFee() -> 100000
+            [7][STATICCALL] from=SorbettoFragola, to=SorbettoStrategy, protocolFee() -> 100000
+            [7][STATICCALL] from=SorbettoFragola, to=Dai, balanceOf((address): 0xDD9011) -> 330778378101188907649
+            [7][STATICCALL] from=SorbettoFragola, to=WETH9, balanceOf((address): 0xDD9011) -> 9622652369457259
+            [7][CALL] from=SorbettoFragola, to=Dai, transfer(dst(address): 0xd282f7, wad(uint256): 2842) -> True
+        [5][STATICCALL] from=0xdfb6fa, to=SorbettoFragola, userInfo((address): 0xd282f7) -> ['171548839330528685379235', '82110798953471682103', '153614968411727226', '73526861718933']
+        [5][STATICCALL] from=0xdfb6fa, to=Dai, balanceOf((address): 0xDD9011) -> 330778378101188904807
+        [5][STATICCALL] from=0xdfb6fa, to=WETH9, balanceOf((address): 0xDD9011) -> 9622652369457259
+        [5][CALL] from=0xdfb6fa, to=0xd282f7, 0x9c81744a() -> None
+          [6][CALL] from=0xd282f7, to=SorbettoFragola, collectFees(amount0(uint256): 330778378101188904807, amount1(uint256): 9622652369457259) -> None
+            [7][STATICCALL] from=SorbettoFragola, to=0x60594a, positionsbytes32() -> 0x000000
+            [7][CALL] from=SorbettoFragola, to=0x60594a, burnint24() -> 0x000000
+            [7][CALL] from=SorbettoFragola, to=0x60594a, collectaddress() -> 0x000000
+            [7][STATICCALL] from=SorbettoFragola, to=SorbettoStrategy, protocolFee() -> 100000
+            [7][STATICCALL] from=SorbettoFragola, to=SorbettoStrategy, protocolFee() -> 100000
+            [7][STATICCALL] from=SorbettoFragola, to=Dai, balanceOf((address): 0xDD9011) -> 330778378101188904807
+            [7][STATICCALL] from=SorbettoFragola, to=WETH9, balanceOf((address): 0xDD9011) -> 9622652369457259
+            [7][CALL] from=SorbettoFragola, to=Dai, transfer(dst(address): 0xd282f7, wad(uint256): 330778378101188904807) -> True
+            [7][CALL] from=SorbettoFragola, to=WETH9, transfer(dst(address): 0xd282f7, wad(uint256): 9622652369457259) -> True
+        [5][STATICCALL] from=0xdfb6fa, to=SorbettoFragola, pool() -> 0x1d4206
+        [5][STATICCALL] from=0xdfb6fa, to=SorbettoFragola, tickLower() -> -49380
+        [5][STATICCALL] from=0xdfb6fa, to=SorbettoFragola, tickUpper() -> -46560
+        [5][STATICCALL] from=0xdfb6fa, to=SorbettoFragola, token0() -> 0x1f9840
+        [5][STATICCALL] from=0xdfb6fa, to=SorbettoFragola, token1() -> 0xc02aaa
+        [5][STATICCALL] from=0xdfb6fa, to=Uni, balanceOf(account(address): 0xdFb6fa) -> 200000000000000000000000
+        [5][STATICCALL] from=0xdfb6fa, to=WETH9, balanceOf((address): 0xdFb6fa) -> 12999999999999999977524
+        [5][STATICCALL] from=0xdfb6fa, to=Uni, allowance(account(address): 0xdFb6fa, spender(address): 0xE22EAC) -> 0
+        [5][CALL] from=0xdfb6fa, to=Uni, approve(spender(address): 0xE22EAC, rawAmount(uint256): 200000000000000000000000) -> True
+        [5][STATICCALL] from=0xdfb6fa, to=WETH9, allowance((address): 0xE22EAC) -> 0
+        [5][CALL] from=0xdfb6fa, to=WETH9, approve(guy(address): 0xE22EAC, wad(uint256): 12999999999999999977524) -> True
+        [5][CALL] from=0xdfb6fa, to=SorbettoFragola, deposit(amount0Desired(uint256): 200000000000000000000000, amount1Desired(uint256): 12999999999999999977524) -> ['527768802124133762559714', '200000000000000000000000', '2643598673111292825443']
+          [6][STATICCALL] from=SorbettoFragola, to=SorbettoStrategy, maxTwapDeviation() -> 40
+          [6][STATICCALL] from=SorbettoFragola, to=SorbettoStrategy, twapDuration() -> 150
+          [6][STATICCALL] from=SorbettoFragola, to=UniswapV3Pool, slot0() -> ['7313388324737507563699582159', '-47655', '33', '50', '50', '0', 'True']
+          [6][STATICCALL] from=SorbettoFragola, to=UniswapV3Pool, observe(secondsAgos(uint32[]): [150, 0]) -> [[-368316863659, -368324011909], [12141226245363870411891324, 12141226284179175485340094]]
+          [6][STATICCALL] from=SorbettoFragola, to=UniswapV3Pool, positions((bytes32): b'\x86<\xef\xcd\xb2\xd1(\xec\x03k\x0f\xfc"...) -> ['17622070888061080924152', '12980853248844889279557353254764344865', '111369610011066332186258198951485356', '0', '0']
+          [6][CALL] from=SorbettoFragola, to=UniswapV3Pool, burn(tickLower(int24): -49380, tickUpper(int24): -46560, amount(uint128): 0) -> ['0', '0']
+          [6][CALL] from=SorbettoFragola, to=UniswapV3Pool, collect(recipient(address): 0xE22EAC, tickLower(int24): -49380, tickUpper(int24): -46560, amount0Requested(uint128): 340282366920938463463374607431768211455, amount1Requested(uint128): 340282366920938463463374607431768211455) -> ['15291272957590614661', '140442803813772862']
+            [7][CALL] from=UniswapV3Pool, to=Uni, transfer(dst(address): 0xE22EAC, rawAmount(uint256): 15291272957590614661) -> True
+            [7][CALL] from=UniswapV3Pool, to=WETH9, transfer(dst(address): 0xE22EAC, wad(uint256): 140442803813772862) -> True
+          [6][STATICCALL] from=SorbettoFragola, to=SorbettoStrategy, protocolFee() -> 100000
+          [6][STATICCALL] from=SorbettoFragola, to=SorbettoStrategy, protocolFee() -> 100000
+          [6][STATICCALL] from=SorbettoFragola, to=UniswapV3Pool, positions((bytes32): b'\x86<\xef\xcd\xb2\xd1(\xec\x03k\x0f\xfc"...) -> ['17622070888061080924152', '13276127884175537813869935696426791511', '114081561971896396030744996971070090', '0', '0']
+          [6][STATICCALL] from=SorbettoFragola, to=UniswapV3Pool, slot0() -> ['7313388324737507563699582159', '-47655', '33', '50', '50', '0', 'True']
+          [6][CALL] from=SorbettoFragola, to=UniswapV3Pool, mint(recipient(address): 0xE22EAC, tickLower(int24): -49380, tickUpper(int24): -46560, amount(uint128): 346565130836968060986148, data(bytes): b'\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00...) -> ['200000000000000000000000', '2643598673111292825443']
+            [7][STATICCALL] from=UniswapV3Pool, to=Uni, balanceOf(account(address): 0x1d4206) -> 2264741052283754645270844
+            [7][STATICCALL] from=UniswapV3Pool, to=WETH9, balanceOf((address): 0x1d4206) -> 7198000211802613985402
+            [7][CALL] from=UniswapV3Pool, to=SorbettoFragola, uniswapV3MintCallback(amount0(uint256): 200000000000000000000000, amount1(uint256): 2643598673111292825443, data(bytes): b'\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00...) -> None
+              [8][CALL] from=SorbettoFragola, to=Uni, transferFrom(src(address): 0xdFb6fa, dst(address): 0x1d4206, rawAmount(uint256): 200000000000000000000000) -> True
+              [8][CALL] from=SorbettoFragola, to=WETH9, transferFrom(src(address): 0xdFb6fa, dst(address): 0x1d4206, wad(uint256): 2643598673111292825443) -> True
+            [7][STATICCALL] from=UniswapV3Pool, to=Uni, balanceOf(account(address): 0x1d4206) -> 2464741052283754645270844
+            [7][STATICCALL] from=UniswapV3Pool, to=WETH9, balanceOf((address): 0x1d4206) -> 9841598884913906810845
+        [5][STATICCALL] from=0xdfb6fa, to=SorbettoFragola, balanceOf(account(address): 0xdFb6fa) -> 527768802124133762559714
+        [5][CALL] from=0xdfb6fa, to=SorbettoFragola, transfer(recipient(address): 0x576Cf5, amount(uint256): 527768802124133762559714) -> True
+        [5][CALL] from=0xdfb6fa, to=0x576Cf5, 0x9c81744a() -> None
+          [6][CALL] from=0x576Cf5, to=SorbettoFragola, collectFees(amount0(uint256): 0, amount1(uint256): 0) -> None
+            [7][STATICCALL] from=SorbettoFragola, to=UniswapV3Pool, positions((bytes32): b'\x86<\xef\xcd\xb2\xd1(\xec\x03k\x0f\xfc"...) -> ['364187201725029141910300', '13276127884175537813869935696426791511', '114081561971896396030744996971070090', '0', '0']
+            [7][CALL] from=SorbettoFragola, to=UniswapV3Pool, burn(tickLower(int24): -49380, tickUpper(int24): -46560, amount(uint128): 0) -> ['0', '0']
+            [7][CALL] from=SorbettoFragola, to=UniswapV3Pool, collect(recipient(address): 0xE22EAC, tickLower(int24): -49380, tickUpper(int24): -46560, amount0Requested(uint128): 340282366920938463463374607431768211455, amount1Requested(uint128): 340282366920938463463374607431768211455) -> ['0', '0']
+            [7][STATICCALL] from=SorbettoFragola, to=SorbettoStrategy, protocolFee() -> 100000
+            [7][STATICCALL] from=SorbettoFragola, to=SorbettoStrategy, protocolFee() -> 100000
+            [7][STATICCALL] from=SorbettoFragola, to=Uni, balanceOf(account(address): 0xE22EAC) -> 495502592207192163174
+            [7][STATICCALL] from=SorbettoFragola, to=WETH9, balanceOf((address): 0xE22EAC) -> 1287406519113223826
+        [5][CALL] from=0xdfb6fa, to=0x576Cf5, transferTokensaddress() -> None
+          [6][STATICCALL] from=0x576Cf5, to=SorbettoFragola, balanceOf(account(address): 0x576Cf5) -> 527768802124133762559714
+          [6][CALL] from=0x576Cf5, to=SorbettoFragola, transfer(recipient(address): 0xd282f7, amount(uint256): 527768802124133762559714) -> True
+        [5][CALL] from=0xdfb6fa, to=0xd282f7, 0x9c81744a() -> None
+          [6][CALL] from=0xd282f7, to=SorbettoFragola, collectFees(amount0(uint256): 0, amount1(uint256): 0) -> None
+            [7][STATICCALL] from=SorbettoFragola, to=UniswapV3Pool, positions((bytes32): b'\x86<\xef\xcd\xb2\xd1(\xec\x03k\x0f\xfc"...) -> ['364187201725029141910300', '13276127884175537813869935696426791511', '114081561971896396030744996971070090', '0', '0']
+            [7][CALL] from=SorbettoFragola, to=UniswapV3Pool, burn(tickLower(int24): -49380, tickUpper(int24): -46560, amount(uint128): 0) -> ['0', '0']
+            [7][CALL] from=SorbettoFragola, to=UniswapV3Pool, collect(recipient(address): 0xE22EAC, tickLower(int24): -49380, tickUpper(int24): -46560, amount0Requested(uint128): 340282366920938463463374607431768211455, amount1Requested(uint128): 340282366920938463463374607431768211455) -> ['0', '0']
+            [7][STATICCALL] from=SorbettoFragola, to=SorbettoStrategy, protocolFee() -> 100000
+            [7][STATICCALL] from=SorbettoFragola, to=SorbettoStrategy, protocolFee() -> 100000
+            [7][STATICCALL] from=SorbettoFragola, to=Uni, balanceOf(account(address): 0xE22EAC) -> 495502592207192163174
+            [7][STATICCALL] from=SorbettoFragola, to=WETH9, balanceOf((address): 0xE22EAC) -> 1287406519113223826
+        [5][CALL] from=0xdfb6fa, to=0xd282f7, transferTokensaddress() -> None
+          [6][STATICCALL] from=0xd282f7, to=SorbettoFragola, balanceOf(account(address): 0xd282f7) -> 527768802124133762559714
+          [6][CALL] from=0xd282f7, to=SorbettoFragola, transfer(recipient(address): 0xdFb6fa, amount(uint256): 527768802124133762559714) -> True
+        [5][STATICCALL] from=0xdfb6fa, to=SorbettoFragola, balanceOf(account(address): 0xdFb6fa) -> 527768802124133762559714
+        [5][CALL] from=0xdfb6fa, to=SorbettoFragola, withdraw(shares(uint256): 527768802124133762559714) -> ['199999999999999999999999', '2643598673111292825442']
+          [6][STATICCALL] from=SorbettoFragola, to=SorbettoStrategy, maxTwapDeviation() -> 40
+          [6][STATICCALL] from=SorbettoFragola, to=SorbettoStrategy, twapDuration() -> 150
+          [6][STATICCALL] from=SorbettoFragola, to=UniswapV3Pool, slot0() -> ['7313388324737507563699582159', '-47655', '34', '50', '50', '0', 'True']
+          [6][STATICCALL] from=SorbettoFragola, to=UniswapV3Pool, observe(secondsAgos(uint32[]): [150, 0]) -> [[-368316863659, -368324011909], [12141226245363870411891323, 12141226284179175485340094]]
+          [6][STATICCALL] from=SorbettoFragola, to=UniswapV3Pool, positions((bytes32): b'\x86<\xef\xcd\xb2\xd1(\xec\x03k\x0f\xfc"...) -> ['364187201725029141910300', '13276127884175537813869935696426791511', '114081561971896396030744996971070090', '0', '0']
+          [6][CALL] from=SorbettoFragola, to=UniswapV3Pool, burn(tickLower(int24): -49380, tickUpper(int24): -46560, amount(uint128): 0) -> ['0', '0']
+          [6][CALL] from=SorbettoFragola, to=UniswapV3Pool, collect(recipient(address): 0xE22EAC, tickLower(int24): -49380, tickUpper(int24): -46560, amount0Requested(uint128): 340282366920938463463374607431768211455, amount1Requested(uint128): 340282366920938463463374607431768211455) -> ['0', '0']
+          [6][STATICCALL] from=SorbettoFragola, to=SorbettoStrategy, protocolFee() -> 100000
+          [6][STATICCALL] from=SorbettoFragola, to=SorbettoStrategy, protocolFee() -> 100000
+          [6][STATICCALL] from=SorbettoFragola, to=UniswapV3Pool, positions((bytes32): b'\x86<\xef\xcd\xb2\xd1(\xec\x03k\x0f\xfc"...) -> ['364187201725029141910300', '13276127884175537813869935696426791511', '114081561971896396030744996971070090', '0', '0']
+          [6][CALL] from=SorbettoFragola, to=UniswapV3Pool, burn(tickLower(int24): -49380, tickUpper(int24): -46560, amount(uint128): 346565130836968060986147) -> ['199999999999999999999999', '2643598673111292825442']
+          [6][CALL] from=SorbettoFragola, to=UniswapV3Pool, collect(recipient(address): 0xdFb6fa, tickLower(int24): -49380, tickUpper(int24): -46560, amount0Requested(uint128): 199999999999999999999999, amount1Requested(uint128): 2643598673111292825442) -> ['199999999999999999999999', '2643598673111292825442']
+            [7][CALL] from=UniswapV3Pool, to=Uni, transfer(dst(address): 0xdFb6fa, rawAmount(uint256): 199999999999999999999999) -> True
+            [7][CALL] from=UniswapV3Pool, to=WETH9, transfer(dst(address): 0xdFb6fa, wad(uint256): 2643598673111292825442) -> True
+        [5][STATICCALL] from=0xdfb6fa, to=SorbettoFragola, userInfo((address): 0x576Cf5) -> ['9744638682077619112827', '83474444471943711984', '18463839929260603', '158164795145110']
+        [5][STATICCALL] from=0xdfb6fa, to=SorbettoFragola, position() -> ['17622070888061080924153', '13276127884175537813869935696426791511', '114081561971896396030744996971070090', '0', '0']
+          [6][STATICCALL] from=SorbettoFragola, to=UniswapV3Pool, positions((bytes32): b'\x86<\xef\xcd\xb2\xd1(\xec\x03k\x0f\xfc"...) -> ['17622070888061080924153', '13276127884175537813869935696426791511', '114081561971896396030744996971070090', '0', '0']
+        [5][STATICCALL] from=0xdfb6fa, to=UniswapV3Pool, slot0() -> ['7313388324737507563699582159', '-47655', '34', '50', '50', '0', 'True']
+        [5][CALL] from=0xdfb6fa, to=0x576Cf5, 0x9c81744a() -> None
+          [6][CALL] from=0x576Cf5, to=SorbettoFragola, collectFees(amount0(uint256): 9744638682077619112827, amount1(uint256): 83474444471943711984) -> None
+            [7][STATICCALL] from=SorbettoFragola, to=UniswapV3Pool, positions((bytes32): b'\x86<\xef\xcd\xb2\xd1(\xec\x03k\x0f\xfc"...) -> ['17622070888061080924153', '13276127884175537813869935696426791511', '114081561971896396030744996971070090', '0', '0']
+            [7][CALL] from=SorbettoFragola, to=UniswapV3Pool, burn(tickLower(int24): -49380, tickUpper(int24): -46560, amount(uint128): 0) -> ['0', '0']
+            [7][CALL] from=SorbettoFragola, to=UniswapV3Pool, collect(recipient(address): 0xE22EAC, tickLower(int24): -49380, tickUpper(int24): -46560, amount0Requested(uint128): 340282366920938463463374607431768211455, amount1Requested(uint128): 340282366920938463463374607431768211455) -> ['0', '0']
+            [7][STATICCALL] from=SorbettoFragola, to=SorbettoStrategy, protocolFee() -> 100000
+            [7][STATICCALL] from=SorbettoFragola, to=SorbettoStrategy, protocolFee() -> 100000
+            [7][STATICCALL] from=SorbettoFragola, to=Uni, balanceOf(account(address): 0xE22EAC) -> 495502592207192163174
+            [7][STATICCALL] from=SorbettoFragola, to=WETH9, balanceOf((address): 0xE22EAC) -> 1287406519113223826
+            [7][STATICCALL] from=SorbettoFragola, to=UniswapV3Pool, slot0() -> ['7313388324737507563699582159', '-47655', '34', '50', '50', '0', 'True']
+            [7][STATICCALL] from=SorbettoFragola, to=UniswapV3Pool, positions((bytes32): b'\x86<\xef\xcd\xb2\xd1(\xec\x03k\x0f\xfc"...) -> ['17622070888061080924153', '13276127884175537813869935696426791511', '114081561971896396030744996971070090', '0', '0']
+            [7][CALL] from=SorbettoFragola, to=UniswapV3Pool, burn(tickLower(int24): -49380, tickUpper(int24): -46560, amount(uint128): 10943163220730101446030) -> ['6315213070802560692190', '83474444471943711983']
+            [7][CALL] from=SorbettoFragola, to=UniswapV3Pool, collect(recipient(address): 0x576Cf5, tickLower(int24): -49380, tickUpper(int24): -46560, amount0Requested(uint128): 6315213070802560692190, amount1Requested(uint128): 83474444471943711983) -> ['6315213070802560692190', '83474444471943711983']
+              [8][CALL] from=UniswapV3Pool, to=Uni, transfer(dst(address): 0x576Cf5, rawAmount(uint256): 6315213070802560692190) -> True
+              [8][CALL] from=UniswapV3Pool, to=WETH9, transfer(dst(address): 0x576Cf5, wad(uint256): 83474444471943711983) -> True
+        [5][STATICCALL] from=0xdfb6fa, to=SorbettoFragola, userInfo((address): 0xd282f7) -> ['9744638682077619112827', '83474444471943711984', '18463839929260603', '158164795145110']
+        [5][STATICCALL] from=0xdfb6fa, to=SorbettoFragola, position() -> ['6678907667330979478123', '13276127884175537813869935696426791511', '114081561971896396030744996971070090', '0', '0']
+          [6][STATICCALL] from=SorbettoFragola, to=UniswapV3Pool, positions((bytes32): b'\x86<\xef\xcd\xb2\xd1(\xec\x03k\x0f\xfc"...) -> ['6678907667330979478123', '13276127884175537813869935696426791511', '114081561971896396030744996971070090', '0', '0']
+        [5][STATICCALL] from=0xdfb6fa, to=UniswapV3Pool, slot0() -> ['7313388324737507563699582159', '-47655', '34', '50', '50', '0', 'True']
+        [5][STATICCALL] from=0xdfb6fa, to=UniswapV3Pool, slot0() -> ['7313388324737507563699582159', '-47655', '34', '50', '50', '0', 'True']
+        [5][CALL] from=0xdfb6fa, to=0xd282f7, 0x9c81744a() -> None
+          [6][CALL] from=0xd282f7, to=SorbettoFragola, collectFees(amount0(uint256): 3854344867991284481188, amount1(uint256): 50946704893675403803) -> None
+            [7][STATICCALL] from=SorbettoFragola, to=UniswapV3Pool, positions((bytes32): b'\x86<\xef\xcd\xb2\xd1(\xec\x03k\x0f\xfc"...) -> ['6678907667330979478123', '13276127884175537813869935696426791511', '114081561971896396030744996971070090', '0', '0']
+            [7][CALL] from=SorbettoFragola, to=UniswapV3Pool, burn(tickLower(int24): -49380, tickUpper(int24): -46560, amount(uint128): 0) -> ['0', '0']
+            [7][CALL] from=SorbettoFragola, to=UniswapV3Pool, collect(recipient(address): 0xE22EAC, tickLower(int24): -49380, tickUpper(int24): -46560, amount0Requested(uint128): 340282366920938463463374607431768211455, amount1Requested(uint128): 340282366920938463463374607431768211455) -> ['0', '0']
+            [7][STATICCALL] from=SorbettoFragola, to=SorbettoStrategy, protocolFee() -> 100000
+            [7][STATICCALL] from=SorbettoFragola, to=SorbettoStrategy, protocolFee() -> 100000
+            [7][STATICCALL] from=SorbettoFragola, to=Uni, balanceOf(account(address): 0xE22EAC) -> 495502592207192163174
+            [7][STATICCALL] from=SorbettoFragola, to=WETH9, balanceOf((address): 0xE22EAC) -> 1287406519113223826
+            [7][STATICCALL] from=SorbettoFragola, to=UniswapV3Pool, slot0() -> ['7313388324737507563699582159', '-47655', '34', '50', '50', '0', 'True']
+            [7][STATICCALL] from=SorbettoFragola, to=UniswapV3Pool, positions((bytes32): b'\x86<\xef\xcd\xb2\xd1(\xec\x03k\x0f\xfc"...) -> ['6678907667330979478123', '13276127884175537813869935696426791511', '114081561971896396030744996971070090', '0', '0']
+            [7][CALL] from=SorbettoFragola, to=UniswapV3Pool, burn(tickLower(int24): -49380, tickUpper(int24): -46560, amount(uint128): 6678907667330979478107) -> ['3854344867991284481179', '50946704893675403802']
+            [7][CALL] from=SorbettoFragola, to=UniswapV3Pool, collect(recipient(address): 0xd282f7, tickLower(int24): -49380, tickUpper(int24): -46560, amount0Requested(uint128): 3854344867991284481179, amount1Requested(uint128): 50946704893675403802) -> ['3854344867991284481179', '50946704893675403802']
+              [8][CALL] from=UniswapV3Pool, to=Uni, transfer(dst(address): 0xd282f7, rawAmount(uint256): 3854344867991284481179) -> True
+              [8][CALL] from=UniswapV3Pool, to=WETH9, transfer(dst(address): 0xd282f7, wad(uint256): 50946704893675403802) -> True
+        [5][STATICCALL] from=0xdfb6fa, to=SorbettoFragola, userInfo((address): 0xd282f7) -> ['5890293814086334631648', '32527739578268308182', '18463839929260603', '158164795145110']
+        [5][STATICCALL] from=0xdfb6fa, to=Uni, balanceOf(account(address): 0xE22EAC) -> 495502592207192163174
+        [5][STATICCALL] from=0xdfb6fa, to=WETH9, balanceOf((address): 0xE22EAC) -> 1287406519113223826
+        [5][CALL] from=0xdfb6fa, to=0xd282f7, 0x9c81744a() -> None
+          [6][CALL] from=0xd282f7, to=SorbettoFragola, collectFees(amount0(uint256): 495502592207192163174, amount1(uint256): 1287406519113223826) -> None
+            [7][STATICCALL] from=SorbettoFragola, to=UniswapV3Pool, positions((bytes32): b'\x86<\xef\xcd\xb2\xd1(\xec\x03k\x0f\xfc"...) -> ['16', '13276127884175537813869935696426791511', '114081561971896396030744996971070090', '0', '0']
+            [7][CALL] from=SorbettoFragola, to=UniswapV3Pool, burn(tickLower(int24): -49380, tickUpper(int24): -46560, amount(uint128): 0) -> ['0', '0']
+            [7][CALL] from=SorbettoFragola, to=UniswapV3Pool, collect(recipient(address): 0xE22EAC, tickLower(int24): -49380, tickUpper(int24): -46560, amount0Requested(uint128): 340282366920938463463374607431768211455, amount1Requested(uint128): 340282366920938463463374607431768211455) -> ['0', '0']
+            [7][STATICCALL] from=SorbettoFragola, to=SorbettoStrategy, protocolFee() -> 100000
+            [7][STATICCALL] from=SorbettoFragola, to=SorbettoStrategy, protocolFee() -> 100000
+            [7][STATICCALL] from=SorbettoFragola, to=Uni, balanceOf(account(address): 0xE22EAC) -> 495502592207192163174
+            [7][STATICCALL] from=SorbettoFragola, to=WETH9, balanceOf((address): 0xE22EAC) -> 1287406519113223826
+            [7][CALL] from=SorbettoFragola, to=Uni, transfer(dst(address): 0xd282f7, rawAmount(uint256): 495502592207192163174) -> True
+            [7][CALL] from=SorbettoFragola, to=WETH9, transfer(dst(address): 0xd282f7, wad(uint256): 1287406519113223826) -> True
+        [5][CALL] from=0xdfb6fa, to=0x576Cf5, transferTokensaddress() -> None
+          [6][STATICCALL] from=0x576Cf5, to=TetherToken, balanceOf(who(address): 0x576Cf5) -> 2850910097647
+          [6][CALL] from=0x576Cf5, to=TetherToken, transfer(_to(address): 0xdFb6fa, _value(uint256): 2850910097647) -> None
+        [5][CALL] from=0xdfb6fa, to=0xd282f7, transferTokensaddress() -> None
+          [6][STATICCALL] from=0xd282f7, to=TetherToken, balanceOf(who(address): 0xd282f7) -> 2153268895539
+          [6][CALL] from=0xd282f7, to=TetherToken, transfer(_to(address): 0xdFb6fa, _value(uint256): 2153268895539) -> None
+        [5][STATICCALL] from=0xdfb6fa, to=TetherToken, allowance(_owner(address): 0xdFb6fa, _spender(address): 0x7d2768) -> 0
+        [5][CALL] from=0xdfb6fa, to=TetherToken, approve(_spender(address): 0x7d2768, _value(uint256): 30027000000000) -> None
+        [5][CALL] from=0xdfb6fa, to=0x576Cf5, transferTokensaddress() -> None
+          [6][STATICCALL] from=0x576Cf5, to=WETH9, balanceOf((address): 0x576Cf5) -> 1615194005667555914506
+          [6][CALL] from=0x576Cf5, to=WETH9, transfer(dst(address): 0xdFb6fa, wad(uint256): 1615194005667555914506) -> True
+        [5][CALL] from=0xdfb6fa, to=0xd282f7, transferTokensaddress() -> None
+          [6][STATICCALL] from=0xd282f7, to=WETH9, balanceOf((address): 0xd282f7) -> 957232084346676874702
+          [6][CALL] from=0xd282f7, to=WETH9, transfer(dst(address): 0xdFb6fa, wad(uint256): 957232084346676874702) -> True
+        [5][STATICCALL] from=0xdfb6fa, to=WETH9, allowance((address): 0x7d2768) -> 0
+        [5][CALL] from=0xdfb6fa, to=WETH9, approve(guy(address): 0x7d2768, wad(uint256): 13011700000000000000000) -> True
+        [5][CALL] from=0xdfb6fa, to=0x576Cf5, transferTokensaddress() -> None
+          [6][STATICCALL] from=0x576Cf5, to=WBTC, balanceOf(_owner(address): 0x576Cf5) -> 7173142180
+          [6][CALL] from=0x576Cf5, to=WBTC, transfer(_to(address): 0xdFb6fa, _value(uint256): 7173142180) -> True
+        [5][CALL] from=0xdfb6fa, to=0xd282f7, transferTokensaddress() -> None
+          [6][STATICCALL] from=0xd282f7, to=WBTC, balanceOf(_owner(address): 0xd282f7) -> 2569057989
+          [6][CALL] from=0xd282f7, to=WBTC, transfer(_to(address): 0xdFb6fa, _value(uint256): 2569057989) -> True
+        [5][STATICCALL] from=0xdfb6fa, to=WBTC, allowance(_owner(address): 0xdFb6fa, _spender(address): 0x7d2768) -> 0
+        [5][CALL] from=0xdfb6fa, to=WBTC, approve(_spender(address): 0x7d2768, _value(uint256): 140126000000) -> True
+        [5][CALL] from=0xdfb6fa, to=0x576Cf5, transferTokensaddress() -> None
+          [6][STATICCALL] from=0x576Cf5, to=FiatTokenProxy, balanceOf(account(address): 0x576Cf5) -> 3847037024421
+            [7][DELEGATECALL] from=FiatTokenProxy, to=FiatTokenV2_1, balanceOf(account(address): 0x576Cf5) -> 3847037024421
+          [6][CALL] from=0x576Cf5, to=FiatTokenProxy, transfer(to(address): 0xdFb6fa, value(uint256): 3847037024421) -> True
+            [7][DELEGATECALL] from=FiatTokenProxy, to=FiatTokenV2_1, transfer(to(address): 0xdFb6fa, value(uint256): 3847037024421) -> True
+        [5][CALL] from=0xdfb6fa, to=0xd282f7, transferTokensaddress() -> None
+          [6][STATICCALL] from=0xd282f7, to=FiatTokenProxy, balanceOf(account(address): 0xd282f7) -> 1567048424002
+            [7][DELEGATECALL] from=FiatTokenProxy, to=FiatTokenV2_1, balanceOf(account(address): 0xd282f7) -> 1567048424002
+          [6][CALL] from=0xd282f7, to=FiatTokenProxy, transfer(to(address): 0xdFb6fa, value(uint256): 1567048424002) -> True
+            [7][DELEGATECALL] from=FiatTokenProxy, to=FiatTokenV2_1, transfer(to(address): 0xdFb6fa, value(uint256): 1567048424002) -> True
+        [5][STATICCALL] from=0xdfb6fa, to=FiatTokenProxy, allowance(owner(address): 0xdFb6fa, spender(address): 0x7d2768) -> 0
+          [6][DELEGATECALL] from=FiatTokenProxy, to=FiatTokenV2_1, allowance(owner(address): 0xdFb6fa, spender(address): 0x7d2768) -> 0
+        [5][CALL] from=0xdfb6fa, to=FiatTokenProxy, approve(spender(address): 0x7d2768, value(uint256): 30027000000000) -> True
+          [6][DELEGATECALL] from=FiatTokenProxy, to=FiatTokenV2_1, approve(spender(address): 0x7d2768, value(uint256): 30027000000000) -> True
+        [5][CALL] from=0xdfb6fa, to=0x576Cf5, transferTokensaddress() -> None
+          [6][STATICCALL] from=0x576Cf5, to=Dai, balanceOf((address): 0x576Cf5) -> 162297271410468448408359
+          [6][CALL] from=0x576Cf5, to=Dai, transfer(dst(address): 0xdFb6fa, wad(uint256): 162297271410468448408359) -> True
+        [5][CALL] from=0xdfb6fa, to=0xd282f7, transferTokensaddress() -> None
+          [6][STATICCALL] from=0xd282f7, to=Dai, balanceOf((address): 0xd282f7) -> 330778378101188907649
+          [6][CALL] from=0xd282f7, to=Dai, transfer(dst(address): 0xdFb6fa, wad(uint256): 330778378101188907649) -> True
+        [5][STATICCALL] from=0xdfb6fa, to=Dai, allowance((address): 0x7d2768) -> 0
+        [5][CALL] from=0xdfb6fa, to=Dai, approve(usr(address): 0x7d2768, wad(uint256): 3002700000000000000000000) -> True
+        [5][CALL] from=0xdfb6fa, to=0x576Cf5, transferTokensaddress() -> None
+          [6][STATICCALL] from=0x576Cf5, to=Uni, balanceOf(account(address): 0x576Cf5) -> 6315213070802560692190
+          [6][CALL] from=0x576Cf5, to=Uni, transfer(dst(address): 0xdFb6fa, rawAmount(uint256): 6315213070802560692190) -> True
+        [5][CALL] from=0xdfb6fa, to=0xd282f7, transferTokensaddress() -> None
+          [6][STATICCALL] from=0xd282f7, to=Uni, balanceOf(account(address): 0xd282f7) -> 4349847460198476644353
+          [6][CALL] from=0xd282f7, to=Uni, transfer(dst(address): 0xdFb6fa, rawAmount(uint256): 4349847460198476644353) -> True
+        [5][STATICCALL] from=0xdfb6fa, to=Uni, allowance(account(address): 0xdFb6fa, spender(address): 0x7d2768) -> 0
+        [5][CALL] from=0xdfb6fa, to=Uni, approve(spender(address): 0x7d2768, rawAmount(uint256): 200180000000000000000000) -> True
+      [4][STATICCALL] from=InitializableImmutableAdminUpgradeabilityProxy, to=InitializableImmutableAdminUpgradeabilityProxy, scaledTotalSupply() -> 958409217064143
+        [5][DELEGATECALL] from=InitializableImmutableAdminUpgradeabilityProxy, to=VariableDebtToken, scaledTotalSupply() -> 958409217064143
+      [4][STATICCALL] from=InitializableImmutableAdminUpgradeabilityProxy, to=InitializableImmutableAdminUpgradeabilityProxy, getSupplyData() -> ['13210798834662', '13210852203087', '109825464530907380953730698', '1628030062']
+        [5][DELEGATECALL] from=InitializableImmutableAdminUpgradeabilityProxy, to=StableDebtToken, getSupplyData() -> ['13210798834662', '13210852203087', '109825464530907380953730698', '1628030062']
+      [4][CALL] from=InitializableImmutableAdminUpgradeabilityProxy, to=InitializableImmutableAdminUpgradeabilityProxy, mintToTreasury(amount(uint256): 108108409, index(uint256): 1053065862626766458966566235) -> None
+        [5][DELEGATECALL] from=InitializableImmutableAdminUpgradeabilityProxy, to=AToken, mintToTreasury(amount(uint256): 108108409, index(uint256): 1053065862626766458966566235) -> None
+          [6][CALL] from=InitializableImmutableAdminUpgradeabilityProxy, to=InitializableImmutableAdminUpgradeabilityProxy, handleAction(user(address): 0x464C71, totalSupply(uint256): 1294672427220597, userBalance(uint256): 1554006486307) -> None
+            [7][DELEGATECALL] from=InitializableImmutableAdminUpgradeabilityProxy, to=StakedTokenIncentivesController, handleAction(user(address): 0x464C71, totalSupply(uint256): 1294672427220597, userBalance(uint256): 1554006486307) -> None
+      [4][STATICCALL] from=InitializableImmutableAdminUpgradeabilityProxy, to=InitializableImmutableAdminUpgradeabilityProxy, totalSupply() -> 1363375444498557
+        [5][DELEGATECALL] from=InitializableImmutableAdminUpgradeabilityProxy, to=AToken, totalSupply() -> 1363375444498557
+          [6][STATICCALL] from=InitializableImmutableAdminUpgradeabilityProxy, to=InitializableImmutableAdminUpgradeabilityProxy, getReserveNormalizedIncome(asset(address): 0xdAC17F) -> 1053065862626766458966566235
+            [7][DELEGATECALL] from=InitializableImmutableAdminUpgradeabilityProxy, to=LendingPool, getReserveNormalizedIncome(asset(address): 0xdAC17F) -> 1053065862626766458966566235
+      [4][STATICCALL] from=InitializableImmutableAdminUpgradeabilityProxy, to=InitializableImmutableAdminUpgradeabilityProxy, getTotalSupplyAndAvgRate() -> ['13210852203087', '109825464530907380953730698']
+        [5][DELEGATECALL] from=InitializableImmutableAdminUpgradeabilityProxy, to=StableDebtToken, getTotalSupplyAndAvgRate() -> ['13210852203087', '109825464530907380953730698']
+      [4][STATICCALL] from=InitializableImmutableAdminUpgradeabilityProxy, to=InitializableImmutableAdminUpgradeabilityProxy, scaledTotalSupply() -> 958409217064143
+        [5][DELEGATECALL] from=InitializableImmutableAdminUpgradeabilityProxy, to=VariableDebtToken, scaledTotalSupply() -> 958409217064143
+      [4][STATICCALL] from=InitializableImmutableAdminUpgradeabilityProxy, to=TetherToken, balanceOf(who(address): 0x3Ed3B4) -> 279265129025080
+      [4][STATICCALL] from=InitializableImmutableAdminUpgradeabilityProxy, to=DefaultReserveInterestRateStrategy, calculateInterestRates(reserve(address): 0xdAC17F, availableLiquidity(uint256): 309292129025080, totalStableDebt(uint256): 13210852203087, totalVariableDebt(uint256): 1040910528771718, averageStableBorrowRate(uint256): 109825464530907380953730698, reserveFactor(uint256): 1000) -> ['24568440730195851383504241', '117181082192166237749353817', '34362164384332475498707634']
+        [5][STATICCALL] from=DefaultReserveInterestRateStrategy, to=LendingPoolAddressesProvider, getLendingRateOracle() -> 0x8a32f4
+        [5][STATICCALL] from=DefaultReserveInterestRateStrategy, to=LendingRateOracle, getMarketBorrowRate(asset(address): 0xdAC17F) -> 100000000000000000000000000
+      [4][CALL] from=InitializableImmutableAdminUpgradeabilityProxy, to=TetherToken, transferFrom(_from(address): 0xdFb6fa, _to(address): 0x3Ed3B4, _value(uint256): 30027000000000) -> None
+      [4][STATICCALL] from=InitializableImmutableAdminUpgradeabilityProxy, to=InitializableImmutableAdminUpgradeabilityProxy, scaledTotalSupply() -> 79846720468599549066497
+        [5][DELEGATECALL] from=InitializableImmutableAdminUpgradeabilityProxy, to=VariableDebtToken, scaledTotalSupply() -> 79846720468599549066497
+      [4][STATICCALL] from=InitializableImmutableAdminUpgradeabilityProxy, to=InitializableImmutableAdminUpgradeabilityProxy, getSupplyData() -> ['696576733548820279400', '696662660250340938477', '46561153799223800577086682', '1627947678']
+        [5][DELEGATECALL] from=InitializableImmutableAdminUpgradeabilityProxy, to=StableDebtToken, getSupplyData() -> ['696576733548820279400', '696662660250340938477', '46561153799223800577086682', '1627947678']
+      [4][CALL] from=InitializableImmutableAdminUpgradeabilityProxy, to=InitializableImmutableAdminUpgradeabilityProxy, mintToTreasury(amount(uint256): 458067301496909, index(uint256): 1007379976278665851229157641) -> None
+        [5][DELEGATECALL] from=InitializableImmutableAdminUpgradeabilityProxy, to=AToken, mintToTreasury(amount(uint256): 458067301496909, index(uint256): 1007379976278665851229157641) -> None
+          [6][CALL] from=InitializableImmutableAdminUpgradeabilityProxy, to=InitializableImmutableAdminUpgradeabilityProxy, handleAction(user(address): 0x464C71, totalSupply(uint256): 1760279601750080176299927, userBalance(uint256): 38035129639959057093) -> None
+            [7][DELEGATECALL] from=InitializableImmutableAdminUpgradeabilityProxy, to=StakedTokenIncentivesController, handleAction(user(address): 0x464C71, totalSupply(uint256): 1760279601750080176299927, userBalance(uint256): 38035129639959057093) -> None
+      [4][STATICCALL] from=InitializableImmutableAdminUpgradeabilityProxy, to=InitializableImmutableAdminUpgradeabilityProxy, totalSupply() -> 1773270423912882441119013
+        [5][DELEGATECALL] from=InitializableImmutableAdminUpgradeabilityProxy, to=AToken, totalSupply() -> 1773270423912882441119013
+          [6][STATICCALL] from=InitializableImmutableAdminUpgradeabilityProxy, to=InitializableImmutableAdminUpgradeabilityProxy, getReserveNormalizedIncome(asset(address): 0xC02aaA) -> 1007379976278665851229157641
+            [7][DELEGATECALL] from=InitializableImmutableAdminUpgradeabilityProxy, to=LendingPool, getReserveNormalizedIncome(asset(address): 0xC02aaA) -> 1007379976278665851229157641
+      [4][STATICCALL] from=InitializableImmutableAdminUpgradeabilityProxy, to=InitializableImmutableAdminUpgradeabilityProxy, getTotalSupplyAndAvgRate() -> ['696662660250340938477', '46561153799223800577086682']
+        [5][DELEGATECALL] from=InitializableImmutableAdminUpgradeabilityProxy, to=StableDebtToken, getTotalSupplyAndAvgRate() -> ['696662660250340938477', '46561153799223800577086682']
+      [4][STATICCALL] from=InitializableImmutableAdminUpgradeabilityProxy, to=InitializableImmutableAdminUpgradeabilityProxy, scaledTotalSupply() -> 79846720468599549066497
+        [5][DELEGATECALL] from=InitializableImmutableAdminUpgradeabilityProxy, to=VariableDebtToken, scaledTotalSupply() -> 79846720468599549066497
+      [4][STATICCALL] from=InitializableImmutableAdminUpgradeabilityProxy, to=WETH9, balanceOf((address): 0x030bA8) -> 1679048695671674707857140
+      [4][STATICCALL] from=InitializableImmutableAdminUpgradeabilityProxy, to=DefaultReserveInterestRateStrategy, calculateInterestRates(reserve(address): 0xC02aaA, availableLiquidity(uint256): 1692060395671674707857140, totalStableDebt(uint256): 696662660250340938477, totalVariableDebt(uint256): 80525065656941677538932, averageStableBorrowRate(uint256): 46561153799223800577086682, reserveFactor(uint256): 1000) -> ['246854749216747180527622', '37046622949217575033548336', '5637298359374060026838668']
+        [5][STATICCALL] from=DefaultReserveInterestRateStrategy, to=LendingPoolAddressesProvider, getLendingRateOracle() -> 0x8a32f4
+        [5][STATICCALL] from=DefaultReserveInterestRateStrategy, to=LendingRateOracle, getMarketBorrowRate(asset(address): 0xC02aaA) -> 30000000000000000000000000
+      [4][CALL] from=InitializableImmutableAdminUpgradeabilityProxy, to=WETH9, transferFrom(src(address): 0xdFb6fa, dst(address): 0x030bA8, wad(uint256): 13011700000000000000000) -> True
+      [4][STATICCALL] from=InitializableImmutableAdminUpgradeabilityProxy, to=InitializableImmutableAdminUpgradeabilityProxy, scaledTotalSupply() -> 245747852683
+        [5][DELEGATECALL] from=InitializableImmutableAdminUpgradeabilityProxy, to=VariableDebtToken, scaledTotalSupply() -> 245747852683
+      [4][STATICCALL] from=InitializableImmutableAdminUpgradeabilityProxy, to=InitializableImmutableAdminUpgradeabilityProxy, getSupplyData() -> ['844405355', '844671787', '46610543585138115330876839', '1627817775']
+        [5][DELEGATECALL] from=InitializableImmutableAdminUpgradeabilityProxy, to=StableDebtToken, getSupplyData() -> ['844405355', '844671787', '46610543585138115330876839', '1627817775']
+      [4][CALL] from=InitializableImmutableAdminUpgradeabilityProxy, to=InitializableImmutableAdminUpgradeabilityProxy, mintToTreasury(amount(uint256): 9682, index(uint256): 1001369757042108371733764281) -> None
+        [5][DELEGATECALL] from=InitializableImmutableAdminUpgradeabilityProxy, to=AToken, mintToTreasury(amount(uint256): 9682, index(uint256): 1001369757042108371733764281) -> None
+          [6][CALL] from=InitializableImmutableAdminUpgradeabilityProxy, to=InitializableImmutableAdminUpgradeabilityProxy, handleAction(user(address): 0x464C71, totalSupply(uint256): 4134239514691, userBalance(uint256): 127695073) -> None
+            [7][DELEGATECALL] from=InitializableImmutableAdminUpgradeabilityProxy, to=StakedTokenIncentivesController, handleAction(user(address): 0x464C71, totalSupply(uint256): 4134239514691, userBalance(uint256): 127695073) -> None
+      [4][STATICCALL] from=InitializableImmutableAdminUpgradeabilityProxy, to=InitializableImmutableAdminUpgradeabilityProxy, totalSupply() -> 4139902428062
+        [5][DELEGATECALL] from=InitializableImmutableAdminUpgradeabilityProxy, to=AToken, totalSupply() -> 4139902428062
+          [6][STATICCALL] from=InitializableImmutableAdminUpgradeabilityProxy, to=InitializableImmutableAdminUpgradeabilityProxy, getReserveNormalizedIncome(asset(address): 0x2260FA) -> 1001369757042108371733764281
+            [7][DELEGATECALL] from=InitializableImmutableAdminUpgradeabilityProxy, to=LendingPool, getReserveNormalizedIncome(asset(address): 0x2260FA) -> 1001369757042108371733764281
+      [4][STATICCALL] from=InitializableImmutableAdminUpgradeabilityProxy, to=InitializableImmutableAdminUpgradeabilityProxy, getTotalSupplyAndAvgRate() -> ['844671787', '46610543585138115330876839']
+        [5][DELEGATECALL] from=InitializableImmutableAdminUpgradeabilityProxy, to=StableDebtToken, getTotalSupplyAndAvgRate() -> ['844671787', '46610543585138115330876839']
+      [4][STATICCALL] from=InitializableImmutableAdminUpgradeabilityProxy, to=InitializableImmutableAdminUpgradeabilityProxy, scaledTotalSupply() -> 245747852683
+        [5][DELEGATECALL] from=InitializableImmutableAdminUpgradeabilityProxy, to=VariableDebtToken, scaledTotalSupply() -> 245747852683
+      [4][STATICCALL] from=InitializableImmutableAdminUpgradeabilityProxy, to=WBTC, balanceOf(_owner(address): 0x9ff58f) -> 3751737685687
+      [4][STATICCALL] from=InitializableImmutableAdminUpgradeabilityProxy, to=DefaultReserveInterestRateStrategy, calculateInterestRates(reserve(address): 0x2260FA, availableLiquidity(uint256): 3891863685687, totalStableDebt(uint256): 844671787, totalVariableDebt(uint256): 247320070228, averageStableBorrowRate(uint256): 46610543585138115330876839, reserveFactor(uint256): 2000) -> ['360189206136353215647202', '39221963507246456607164311', '7377570805797165285731449']
+        [5][STATICCALL] from=DefaultReserveInterestRateStrategy, to=LendingPoolAddressesProvider, getLendingRateOracle() -> 0x8a32f4
+        [5][STATICCALL] from=DefaultReserveInterestRateStrategy, to=LendingRateOracle, getMarketBorrowRate(asset(address): 0x2260FA) -> 30000000000000000000000000
+      [4][CALL] from=InitializableImmutableAdminUpgradeabilityProxy, to=WBTC, transferFrom(_from(address): 0xdFb6fa, _to(address): 0x9ff58f, _value(uint256): 140126000000) -> True
+      [4][STATICCALL] from=InitializableImmutableAdminUpgradeabilityProxy, to=InitializableImmutableAdminUpgradeabilityProxy, scaledTotalSupply() -> 3926777094137841
+        [5][DELEGATECALL] from=InitializableImmutableAdminUpgradeabilityProxy, to=VariableDebtToken, scaledTotalSupply() -> 3926777094137841
+      [4][STATICCALL] from=InitializableImmutableAdminUpgradeabilityProxy, to=InitializableImmutableAdminUpgradeabilityProxy, getSupplyData() -> ['35974581020672', '35974585386728', '103442349425811663258054939', '1628031185']
+        [5][DELEGATECALL] from=InitializableImmutableAdminUpgradeabilityProxy, to=StableDebtToken, getSupplyData() -> ['35974581020672', '35974585386728', '103442349425811663258054939', '1628031185']
+      [4][CALL] from=InitializableImmutableAdminUpgradeabilityProxy, to=InitializableImmutableAdminUpgradeabilityProxy, mintToTreasury(amount(uint256): 16460119, index(uint256): 1046332939690778825499411677) -> None
+        [5][DELEGATECALL] from=InitializableImmutableAdminUpgradeabilityProxy, to=AToken, mintToTreasury(amount(uint256): 16460119, index(uint256): 1046332939690778825499411677) -> None
+          [6][CALL] from=InitializableImmutableAdminUpgradeabilityProxy, to=InitializableImmutableAdminUpgradeabilityProxy, handleAction(user(address): 0x464C71, totalSupply(uint256): 5515844630695526, userBalance(uint256): 4154444837702) -> None
+            [7][DELEGATECALL] from=InitializableImmutableAdminUpgradeabilityProxy, to=StakedTokenIncentivesController, handleAction(user(address): 0x464C71, totalSupply(uint256): 5515844630695526, userBalance(uint256): 4154444837702) -> None
+      [4][STATICCALL] from=InitializableImmutableAdminUpgradeabilityProxy, to=InitializableImmutableAdminUpgradeabilityProxy, totalSupply() -> 5771409943773367
+        [5][DELEGATECALL] from=InitializableImmutableAdminUpgradeabilityProxy, to=AToken, totalSupply() -> 5771409943773367
+          [6][STATICCALL] from=InitializableImmutableAdminUpgradeabilityProxy, to=InitializableImmutableAdminUpgradeabilityProxy, getReserveNormalizedIncome(asset(address): 0xA0b869) -> 1046332939690778825499411677
+            [7][DELEGATECALL] from=InitializableImmutableAdminUpgradeabilityProxy, to=LendingPool, getReserveNormalizedIncome(asset(address): 0xA0b869) -> 1046332939690778825499411677
+      [4][STATICCALL] from=InitializableImmutableAdminUpgradeabilityProxy, to=InitializableImmutableAdminUpgradeabilityProxy, getTotalSupplyAndAvgRate() -> ['35974585386728', '103442349425811663258054939']
+        [5][DELEGATECALL] from=InitializableImmutableAdminUpgradeabilityProxy, to=StableDebtToken, getTotalSupplyAndAvgRate() -> ['35974585386728', '103442349425811663258054939']
+      [4][STATICCALL] from=InitializableImmutableAdminUpgradeabilityProxy, to=InitializableImmutableAdminUpgradeabilityProxy, scaledTotalSupply() -> 3926777094137841
+        [5][DELEGATECALL] from=InitializableImmutableAdminUpgradeabilityProxy, to=VariableDebtToken, scaledTotalSupply() -> 3926777094137841
+      [4][STATICCALL] from=InitializableImmutableAdminUpgradeabilityProxy, to=FiatTokenProxy, balanceOf(account(address): 0xBcca60) -> 1512109823597248
+        [5][DELEGATECALL] from=FiatTokenProxy, to=FiatTokenV2_1, balanceOf(account(address): 0xBcca60) -> 1512109823597248
+      [4][STATICCALL] from=InitializableImmutableAdminUpgradeabilityProxy, to=DefaultReserveInterestRateStrategy, calculateInterestRates(reserve(address): 0xA0b869, availableLiquidity(uint256): 1542136823597248, totalStableDebt(uint256): 35974585386728, totalVariableDebt(uint256): 4193325561672077, averageStableBorrowRate(uint256): 103442349425811663258054939, reserveFactor(uint256): 1000) -> ['21877336256703153681666721', '106284410310684628797277380', '32568820621369257594554760']
+        [5][STATICCALL] from=DefaultReserveInterestRateStrategy, to=LendingPoolAddressesProvider, getLendingRateOracle() -> 0x8a32f4
+        [5][STATICCALL] from=DefaultReserveInterestRateStrategy, to=LendingRateOracle, getMarketBorrowRate(asset(address): 0xA0b869) -> 90000000000000000000000000
+      [4][CALL] from=InitializableImmutableAdminUpgradeabilityProxy, to=FiatTokenProxy, transferFrom(from(address): 0xdFb6fa, to(address): 0xBcca60, value(uint256): 30027000000000) -> True
+        [5][DELEGATECALL] from=FiatTokenProxy, to=FiatTokenV2_1, transferFrom(from(address): 0xdFb6fa, to(address): 0xBcca60, value(uint256): 30027000000000) -> True
+      [4][STATICCALL] from=InitializableImmutableAdminUpgradeabilityProxy, to=InitializableImmutableAdminUpgradeabilityProxy, scaledTotalSupply() -> 1102932268751337329395791290
+        [5][DELEGATECALL] from=InitializableImmutableAdminUpgradeabilityProxy, to=VariableDebtToken, scaledTotalSupply() -> 1102932268751337329395791290
+      [4][STATICCALL] from=InitializableImmutableAdminUpgradeabilityProxy, to=InitializableImmutableAdminUpgradeabilityProxy, getSupplyData() -> ['10429777083444745198940968', '10431630793005060823141274', '106385066571042777701427634', '1627978541']
+        [5][DELEGATECALL] from=InitializableImmutableAdminUpgradeabilityProxy, to=StableDebtToken, getSupplyData() -> ['10429777083444745198940968', '10431630793005060823141274', '106385066571042777701427634', '1627978541']
+      [4][CALL] from=InitializableImmutableAdminUpgradeabilityProxy, to=InitializableImmutableAdminUpgradeabilityProxy, mintToTreasury(amount(uint256): 322100432831253781629, index(uint256): 1047157489807280321096021064) -> None
+        [5][DELEGATECALL] from=InitializableImmutableAdminUpgradeabilityProxy, to=AToken, mintToTreasury(amount(uint256): 322100432831253781629, index(uint256): 1047157489807280321096021064) -> None
+          [6][CALL] from=InitializableImmutableAdminUpgradeabilityProxy, to=InitializableImmutableAdminUpgradeabilityProxy, handleAction(user(address): 0x464C71, totalSupply(uint256): 1486604510009422676047508946, userBalance(uint256): 1485573850109732966296758) -> None
+            [7][DELEGATECALL] from=InitializableImmutableAdminUpgradeabilityProxy, to=StakedTokenIncentivesController, handleAction(user(address): 0x464C71, totalSupply(uint256): 1486604510009422676047508946, userBalance(uint256): 1485573850109732966296758) -> None
+      [4][STATICCALL] from=InitializableImmutableAdminUpgradeabilityProxy, to=InitializableImmutableAdminUpgradeabilityProxy, totalSupply() -> 1556709369138081813226551339
+        [5][DELEGATECALL] from=InitializableImmutableAdminUpgradeabilityProxy, to=AToken, totalSupply() -> 1556709369138081813226551339
+          [6][STATICCALL] from=InitializableImmutableAdminUpgradeabilityProxy, to=InitializableImmutableAdminUpgradeabilityProxy, getReserveNormalizedIncome(asset(address): 0x6B1754) -> 1047157489807280321096021064
+            [7][DELEGATECALL] from=InitializableImmutableAdminUpgradeabilityProxy, to=LendingPool, getReserveNormalizedIncome(asset(address): 0x6B1754) -> 1047157489807280321096021064
+      [4][STATICCALL] from=InitializableImmutableAdminUpgradeabilityProxy, to=InitializableImmutableAdminUpgradeabilityProxy, getTotalSupplyAndAvgRate() -> ['10431630793005060823141274', '106385066571042777701427634']
+        [5][DELEGATECALL] from=InitializableImmutableAdminUpgradeabilityProxy, to=StableDebtToken, getTotalSupplyAndAvgRate() -> ['10431630793005060823141274', '106385066571042777701427634']
+      [4][STATICCALL] from=InitializableImmutableAdminUpgradeabilityProxy, to=InitializableImmutableAdminUpgradeabilityProxy, scaledTotalSupply() -> 1102932268751337329395791290
+        [5][DELEGATECALL] from=InitializableImmutableAdminUpgradeabilityProxy, to=VariableDebtToken, scaledTotalSupply() -> 1102932268751337329395791290
+      [4][STATICCALL] from=InitializableImmutableAdminUpgradeabilityProxy, to=Dai, balanceOf((address): 0x028171) -> 356215867558209377889896684
+      [4][STATICCALL] from=InitializableImmutableAdminUpgradeabilityProxy, to=DefaultReserveInterestRateStrategy, calculateInterestRates(reserve(address): 0x6B1754, availableLiquidity(uint256): 359218567558209377889896684, totalStableDebt(uint256): 10431630793005060823141274, totalVariableDebt(uint256): 1187061889073061642963320094, averageStableBorrowRate(uint256): 106385066571042777701427634, reserveFactor(uint256): 1000) -> ['27037867389957737914238662', '119231133514345454954381783', '38462267028690909908763566']
+        [5][STATICCALL] from=DefaultReserveInterestRateStrategy, to=LendingPoolAddressesProvider, getLendingRateOracle() -> 0x8a32f4
+        [5][STATICCALL] from=DefaultReserveInterestRateStrategy, to=LendingRateOracle, getMarketBorrowRate(asset(address): 0x6B1754) -> 100000000000000000000000000
+      [4][CALL] from=InitializableImmutableAdminUpgradeabilityProxy, to=Dai, transferFrom(src(address): 0xdFb6fa, dst(address): 0x028171, wad(uint256): 3002700000000000000000000) -> True
+      [4][STATICCALL] from=InitializableImmutableAdminUpgradeabilityProxy, to=InitializableImmutableAdminUpgradeabilityProxy, scaledTotalSupply() -> 308056666822016035451802
+        [5][DELEGATECALL] from=InitializableImmutableAdminUpgradeabilityProxy, to=VariableDebtToken, scaledTotalSupply() -> 308056666822016035451802
+      [4][STATICCALL] from=InitializableImmutableAdminUpgradeabilityProxy, to=InitializableImmutableAdminUpgradeabilityProxy, getSupplyData() -> ['1533265091599495689', '1533381583335498174', '113977414605081642318524', '1607010425']
+        [5][DELEGATECALL] from=InitializableImmutableAdminUpgradeabilityProxy, to=StableDebtToken, getSupplyData() -> ['1533265091599495689', '1533381583335498174', '113977414605081642318524', '1607010425']
+      [4][CALL] from=InitializableImmutableAdminUpgradeabilityProxy, to=InitializableImmutableAdminUpgradeabilityProxy, mintToTreasury(amount(uint256): 218789903478599034, index(uint256): 1001153015938213198481150024) -> None
+        [5][DELEGATECALL] from=InitializableImmutableAdminUpgradeabilityProxy, to=DelegationAwareAToken, mintToTreasury(amount(uint256): 218789903478599034, index(uint256): 1001153015938213198481150024) -> None
+      [4][STATICCALL] from=InitializableImmutableAdminUpgradeabilityProxy, to=InitializableImmutableAdminUpgradeabilityProxy, totalSupply() -> 3911416636314346748074239
+        [5][DELEGATECALL] from=InitializableImmutableAdminUpgradeabilityProxy, to=DelegationAwareAToken, totalSupply() -> 3911416636314346748074239
+          [6][STATICCALL] from=InitializableImmutableAdminUpgradeabilityProxy, to=InitializableImmutableAdminUpgradeabilityProxy, getReserveNormalizedIncome(asset(address): 0x1f9840) -> 1001153015938213198481150024
+            [7][DELEGATECALL] from=InitializableImmutableAdminUpgradeabilityProxy, to=LendingPool, getReserveNormalizedIncome(asset(address): 0x1f9840) -> 1001153015938213198481150024
+      [4][STATICCALL] from=InitializableImmutableAdminUpgradeabilityProxy, to=InitializableImmutableAdminUpgradeabilityProxy, getTotalSupplyAndAvgRate() -> ['1533381583335498174', '113977414605081642318524']
+        [5][DELEGATECALL] from=InitializableImmutableAdminUpgradeabilityProxy, to=StableDebtToken, getTotalSupplyAndAvgRate() -> ['1533381583335498174', '113977414605081642318524']
+      [4][STATICCALL] from=InitializableImmutableAdminUpgradeabilityProxy, to=InitializableImmutableAdminUpgradeabilityProxy, scaledTotalSupply() -> 308056666822016035451802
+        [5][DELEGATECALL] from=InitializableImmutableAdminUpgradeabilityProxy, to=VariableDebtToken, scaledTotalSupply() -> 308056666822016035451802
+      [4][STATICCALL] from=InitializableImmutableAdminUpgradeabilityProxy, to=Uni, balanceOf(account(address): 0xB9D7CB) -> 3401145153633451634392754
+      [4][STATICCALL] from=InitializableImmutableAdminUpgradeabilityProxy, to=DefaultReserveInterestRateStrategy, calculateInterestRates(reserve(address): 0x1f9840, availableLiquidity(uint256): 3601325153633451634392754, totalStableDebt(uint256): 1533381583335498174, totalVariableDebt(uint256): 310269960650284411415072, averageStableBorrowRate(uint256): 113977414605081642318524, reserveFactor(uint256): 2000) -> ['782977009495145707144383', '21152248692243991356771534', '12338811737142328291450062']
+        [5][STATICCALL] from=DefaultReserveInterestRateStrategy, to=LendingPoolAddressesProvider, getLendingRateOracle() -> 0x8a32f4
+        [5][STATICCALL] from=DefaultReserveInterestRateStrategy, to=LendingRateOracle, getMarketBorrowRate(asset(address): 0x1f9840) -> 0
+      [4][CALL] from=InitializableImmutableAdminUpgradeabilityProxy, to=Uni, transferFrom(src(address): 0xdFb6fa, dst(address): 0xB9D7CB, rawAmount(uint256): 200180000000000000000000) -> True
+  [2][CALL] from=0xdfb6fa, to=WETH9, withdraw(wad(uint256): 0) -> None
+    [3][CALL][0.0] from=WETH9, to=0xdfb6fa
+  [2][CALL][0.0] from=0xdfb6fa, to=0x99c85b
+  [2][STATICCALL] from=0xdfb6fa, to=TetherToken, balanceOf(who(address): 0xdFb6fa) -> 4977178993184
+  [2][CALL] from=0xdfb6fa, to=TetherToken, transfer(_to(address): 0xf9E3D0, _value(uint256): 4977178993184) -> None
+  [2][STATICCALL] from=0xdfb6fa, to=WETH9, balanceOf((address): 0xdFb6fa) -> 2560726090014232766731
+  [2][CALL] from=0xdfb6fa, to=WETH9, transfer(dst(address): 0xf9E3D0, wad(uint256): 2560726090014232766731) -> True
+  [2][STATICCALL] from=0xdfb6fa, to=WBTC, balanceOf(_owner(address): 0xdFb6fa) -> 9616200167
+  [2][CALL] from=0xdfb6fa, to=WBTC, transfer(_to(address): 0xf9E3D0, _value(uint256): 9616200167) -> True
+  [2][STATICCALL] from=0xdfb6fa, to=FiatTokenProxy, balanceOf(account(address): 0xdFb6fa) -> 5387085448419
+    [3][DELEGATECALL] from=FiatTokenProxy, to=FiatTokenV2_1, balanceOf(account(address): 0xdFb6fa) -> 5387085448419
+  [2][CALL] from=0xdfb6fa, to=FiatTokenProxy, transfer(to(address): 0xf9E3D0, value(uint256): 5387085448419) -> True
+    [3][DELEGATECALL] from=FiatTokenProxy, to=FiatTokenV2_1, transfer(to(address): 0xf9E3D0, value(uint256): 5387085448419) -> True
+  [2][STATICCALL] from=0xdfb6fa, to=Dai, balanceOf((address): 0xdFb6fa) -> 159928049788569637316002
+  [2][CALL] from=0xdfb6fa, to=Dai, transfer(dst(address): 0xf9E3D0, wad(uint256): 159928049788569637316002) -> True
+  [2][STATICCALL] from=0xdfb6fa, to=Uni, balanceOf(account(address): 0xdFb6fa) -> 10485060531001037336542
+  [2][CALL] from=0xdfb6fa, to=Uni, transfer(dst(address): 0xf9E3D0, rawAmount(uint256): 10485060531001037336542) -> True

@@ -1,0 +1,23 @@
+[1][CALL] from=0x2deA40, to=0xe63a5c, 0x227636c0() -> None
+  [2][CALL] from=0xe63a5c, to=WBNB, approve(guy(address): 0xAdEfb9, wad(uint256): 115792089237316195423570985008687907853269...) -> True
+  [2][STATICCALL] from=0xe63a5c, to=PancakePair, token0() -> 0x55d398
+  [2][CALL] from=0xe63a5c, to=PancakePair, swap(amount0Out(uint256): 0, amount1Out(uint256): 2000000000000000000000, to(address): 0xE63a5C, data(bytes): b'00') -> None
+    [3][CALL] from=PancakePair, to=WBNB, transfer(dst(address): 0xE63a5C, wad(uint256): 2000000000000000000000) -> True
+    [3][CALL] from=PancakePair, to=0xe63a5c, pancakeCalladdress() -> None
+      [4][CALL] from=0xe63a5c, to=BankrollNetworkStack, donatePool(amount(uint256): 1000000000000000000000) -> 0
+        [5][CALL] from=BankrollNetworkStack, to=WBNB, transferFrom(src(address): 0xE63a5C, dst(address): 0xAdEfb9, wad(uint256): 1000000000000000000000) -> True
+      [4][CALL] from=0xe63a5c, to=BankrollNetworkStack, buy(buy_amount(uint256): 240000000000000000000) -> 216000000000000000000
+        [5][CALL] from=BankrollNetworkStack, to=WBNB, transferFrom(src(address): 0xE63a5C, dst(address): 0xAdEfb9, wad(uint256): 240000000000000000000) -> True
+        [5][STATICCALL] from=BankrollNetworkStack, to=WBNB, balanceOf((address): 0xAdEfb9) -> 1269786528993752134174
+      [4][STATICCALL] from=0xe63a5c, to=BankrollNetworkStack, myTokens() -> 216000000000000000000
+      [4][CALL] from=0xe63a5c, to=BankrollNetworkStack, sell(_amountOfTokens(uint256): 216000000000000000000) -> None
+      [4][STATICCALL] from=0xe63a5c, to=BankrollNetworkStack, myDividends() -> 1363851513770135689714
+      [4][STATICCALL] from=0xe63a5c, to=WBNB, balanceOf((address): 0xAdEfb9) -> 1269786528993752134174
+      [4][CALL] from=0xe63a5c, to=WBNB, transfer(dst(address): 0xAdEfb9, wad(uint256): 94064984776383565540) -> True
+      [4][CALL] from=0xe63a5c, to=BankrollNetworkStack, withdraw() -> None
+        [5][CALL] from=BankrollNetworkStack, to=WBNB, transfer(dst(address): 0xE63a5C, wad(uint256): 1363851513770135689714) -> True
+      [4][CALL] from=0xe63a5c, to=WBNB, transfer(dst(address): 0x16b9a8, wad(uint256): 2005200000000000000000) -> True
+    [3][STATICCALL] from=PancakePair, to=BEP20USDT, balanceOf(account(address): 0x16b9a8) -> 17263048373043784217668539
+    [3][STATICCALL] from=PancakePair, to=WBNB, balanceOf((address): 0x16b9a8) -> 26795121916654350168056
+  [2][STATICCALL] from=0xe63a5c, to=WBNB, balanceOf((address): 0xE63a5C) -> 24586528993752124174
+  [2][CALL] from=0xe63a5c, to=WBNB, transfer(dst(address): 0x2deA40, wad(uint256): 24586528993752124174) -> True

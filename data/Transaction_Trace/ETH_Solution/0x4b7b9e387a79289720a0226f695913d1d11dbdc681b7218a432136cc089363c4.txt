@@ -1,0 +1,18 @@
+[1][CALL] from=0x2d50db, to=TornadoCash_eth, withdraw(_proof(bytes): b"\x0c\xaez\x9a\xeb<\x02*7eav}\xbb\xb3\xc7..., _root(bytes32): b"(\xe6<@T\x00j\xd8\xde\xcb\x9eR\xa9\xdf\x..., _nullifierHash(bytes32): b'$\x01X\x15^\xa9b\xf5\x0b\xbd\x88\xbe6\xe..., _recipient(address): 0xF224ab, _relayer(address): 0x2d50db, _fee(uint256): 16000000000000000, _refund(uint256): 0) -> None
+  [2][CALL] from=TornadoCash_eth, to=Verifier, verifyProof(proof(bytes): b"\x0c\xaez\x9a\xeb<\x02*7eav}\xbb\xb3\xc7..., input(uint256[6]): [18499304607293482259113714689897968578647...) -> True
+    [3][STATICCALL] from=Verifier, to=0x000000, fallback() -> 0x23df1b
+    [3][STATICCALL] from=Verifier, to=0x000000, 0x1c7b2adf() -> 0x19bbfc
+    [3][STATICCALL] from=Verifier, to=0x000000, 0x23df1bc9() -> 0x02eb15
+    [3][STATICCALL] from=Verifier, to=0x000000, 0x1cecfe92() -> 0x1646df
+    [3][STATICCALL] from=Verifier, to=0x000000, 0x02eb15a0() -> 0x27c4e5
+    [3][STATICCALL] from=Verifier, to=0x000000, 0x1584616a() -> 0x222460
+    [3][STATICCALL] from=Verifier, to=0x000000, 0x27c4e561() -> 0x00f7ac
+    [3][STATICCALL] from=Verifier, to=0x000000, 0x12fbb5bf() -> 0x03d320
+    [3][STATICCALL] from=Verifier, to=0x000000, 0x00f7ac91() -> 0x1c95da
+    [3][STATICCALL] from=Verifier, to=0x000000, 0x0adb5137() -> 0x192f39
+    [3][STATICCALL] from=Verifier, to=0x000000, 0x1c95daf7() -> 0x15ccb3
+    [3][STATICCALL] from=Verifier, to=0x000000, 0x21e7c9bf() -> 0x000000
+    [3][STATICCALL] from=Verifier, to=0x000000, 0x15ccb380() -> 0x15ccb3
+    [3][STATICCALL] from=Verifier, to=0x000000, 0x0cae7a9a() -> 0x000000
+  [2][CALL][9.984] from=TornadoCash_eth, to=0xf224ab
+  [2][CALL][0.016] from=TornadoCash_eth, to=0x2d50db

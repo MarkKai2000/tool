@@ -1,0 +1,38 @@
+[1][CALL] from=0x684083, to=0x194fC3, 0xbf4c1d60() -> None
+  [2][CALL] from=0x194fC3, to=FiatTokenProxy, approve(spender(address): 0xDE62E1, value(uint256): 115792089237316195423570985008687907853269...) -> True
+    [3][DELEGATECALL] from=FiatTokenProxy, to=FiatTokenV2_1, approve(spender(address): 0xDE62E1, value(uint256): 115792089237316195423570985008687907853269...) -> True
+  [2][CALL] from=0x194fC3, to=TimeOwnedUpgradeabilityProxy, balanceOf((address): 0x58f5F0) -> 4061693776672209
+    [3][DELEGATECALL] from=TimeOwnedUpgradeabilityProxy, to=TrueFi, balanceOf((address): 0x58f5F0) -> 4061693776672209
+  [2][CALL] from=0x194fC3, to=TimeOwnedUpgradeabilityProxy, allowance((address): 0xDE62E1) -> 1796093750000000
+    [3][DELEGATECALL] from=TimeOwnedUpgradeabilityProxy, to=TrueFi, allowance((address): 0xDE62E1) -> 1796093750000000
+  [2][CALL] from=0x194fC3, to=DexibleProxy, selfSwap(request(tuple): {'feeToken': '0xA0b86991c6218b36c1d19D4a2e...) -> None
+    [3][DELEGATECALL] from=DexibleProxy, to=Dexible, selfSwap(request(tuple): {'feeToken': '0xA0b86991c6218b36c1d19D4a2e...) -> None
+      [4][CALL] from=DexibleProxy, to=DexibleProxy, fill(request(tuple): {'executionRequest': {'requester': '0x194f..., meta(tuple): {'feeIsInput': False, 'isSelfSwap': True, ...) -> None
+        [5][DELEGATECALL] from=DexibleProxy, to=Dexible, fill(request(tuple): {'executionRequest': {'requester': '0x194f..., meta(tuple): {'feeIsInput': False, 'isSelfSwap': True, ...) -> None
+          [6][STATICCALL] from=DexibleProxy, to=CommunityVault, isFeeTokenAllowed(token(address): 0xA0b869) -> True
+          [6][STATICCALL] from=DexibleProxy, to=DXBL, balanceOf(account(address): 0x194fC3) -> 144035000000000000
+          [6][CALL] from=DexibleProxy, to=FiatTokenProxy, transferFrom(from(address): 0x194fC3, to(address): 0xDE62E1, value(uint256): 0) -> True
+            [7][DELEGATECALL] from=FiatTokenProxy, to=FiatTokenV2_1, transferFrom(from(address): 0x194fC3, to(address): 0xDE62E1, value(uint256): 0) -> True
+          [6][STATICCALL] from=DexibleProxy, to=FiatTokenProxy, balanceOf(account(address): 0xDE62E1) -> 0
+            [7][DELEGATECALL] from=FiatTokenProxy, to=FiatTokenV2_1, balanceOf(account(address): 0xDE62E1) -> 0
+          [6][CALL] from=DexibleProxy, to=TimeOwnedUpgradeabilityProxy, approve(spender(address): 0xDE62E1, amount(uint256): 0) -> True
+            [7][DELEGATECALL] from=TimeOwnedUpgradeabilityProxy, to=TrueFi, approve(spender(address): 0xDE62E1, amount(uint256): 0) -> True
+          [6][CALL] from=DexibleProxy, to=TimeOwnedUpgradeabilityProxy, transferFrom(sender(address): 0x58f5F0, recipient(address): 0x684083, amount(uint256): 1796093750000000) -> True
+            [7][DELEGATECALL] from=TimeOwnedUpgradeabilityProxy, to=TrueFi, transferFrom(sender(address): 0x58f5F0, recipient(address): 0x684083, amount(uint256): 1796093750000000) -> True
+          [6][STATICCALL] from=DexibleProxy, to=FiatTokenProxy, balanceOf(account(address): 0xDE62E1) -> 0
+            [7][DELEGATECALL] from=FiatTokenProxy, to=FiatTokenV2_1, balanceOf(account(address): 0xDE62E1) -> 0
+          [6][STATICCALL] from=DexibleProxy, to=0x000000, 0xc67ea9d1() -> None
+      [4][CALL] from=DexibleProxy, to=CommunityVault, rewardTrader(trader(address): 0x194fC3, feeToken(address): 0xA0b869, amount(uint256): 14403789) -> None
+        [5][STATICCALL] from=CommunityVault, to=CommunityVault, computeVolumeUSD(feeToken(address): 0xA0b869, amount(uint256): 14403789) -> 14403500
+          [6][STATICCALL] from=CommunityVault, to=EACAggregatorProxy, latestRoundData() -> ['36893488147419104066', '99998000', '1676526671', '1676526671', '36893488147419104066']
+            [7][STATICCALL] from=EACAggregatorProxy, to=AccessControlledOffchainAggregator, latestRoundData() -> ['834', '99998000', '1676526671', '1676526671', '834']
+        [5][STATICCALL] from=CommunityVault, to=CommunityVault, currentMintRateUSD() -> 100000000
+        [5][CALL] from=CommunityVault, to=DXBL, mint(receiver(address): 0x194fC3, amount(uint256): 144035000000000000) -> None
+        [5][STATICCALL] from=CommunityVault, to=CommunityVault, canMigrate() -> False
+      [4][STATICCALL] from=DexibleProxy, to=DXBL, computeDiscountedFee(request(tuple): {'referred': False, 'trader': '0x194fC30F9...) -> 11523
+      [4][CALL] from=DexibleProxy, to=FiatTokenProxy, transferFrom(from(address): 0x194fC3, to(address): 0x5DB6E1, value(uint256): 5762) -> True
+        [5][DELEGATECALL] from=FiatTokenProxy, to=FiatTokenV2_1, transferFrom(from(address): 0x194fC3, to(address): 0x5DB6E1, value(uint256): 5762) -> True
+      [4][CALL] from=DexibleProxy, to=FiatTokenProxy, transferFrom(from(address): 0x194fC3, to(address): 0xEB8905, value(uint256): 5761) -> True
+        [5][DELEGATECALL] from=FiatTokenProxy, to=FiatTokenV2_1, transferFrom(from(address): 0x194fC3, to(address): 0xEB8905, value(uint256): 5761) -> True
+      [4][CALL] from=DexibleProxy, to=FiatTokenProxy, transfer(to(address): 0x194fC3, value(uint256): 0) -> True
+        [5][DELEGATECALL] from=FiatTokenProxy, to=FiatTokenV2_1, transfer(to(address): 0x194fC3, value(uint256): 0) -> True

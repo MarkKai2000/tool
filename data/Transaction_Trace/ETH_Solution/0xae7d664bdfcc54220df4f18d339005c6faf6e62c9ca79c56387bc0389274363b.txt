@@ -1,0 +1,46 @@
+[1][CALL] from=0xa9bf70, to=0x538359, a() -> None
+  [2][CALL] from=0x538359, to=IMBTC, approve(spender(address): 0x0eEe3E, value(uint256): 115792089237316195423570985008687907853269...) -> True
+  [2][CALL] from=0x538359, to=ERC1820Registry, setInterfaceImplementer(_addr(address): 0x538359, _interfaceHash(bytes32): b')\xdd\xb5\x89\xb1\xfb_\xc7\xcf9Ia\xc1\xa..., _implementer(address): 0x538359) -> None
+  [2][STATICCALL] from=0x538359, to=IMBTC, balanceOf(who(address): 0x538359) -> 21594
+  [2][CALL] from=0x538359, to=MoneyMarket, supply(asset(address): 0x3212b2, amount(uint256): 21593) -> 0
+    [3][CALL] from=MoneyMarket, to=IMBTC, allowance(holder(address): 0x538359, spender(address): 0x0eEe3E) -> 115792089237316195423570985008687907853269984665640564039457584007913129639935
+    [3][CALL] from=MoneyMarket, to=IMBTC, balanceOf(who(address): 0x538359) -> 21594
+    [3][CALL] from=MoneyMarket, to=IMBTC, balanceOf(who(address): 0x0eEe3E) -> 29134710219
+    [3][CALL] from=MoneyMarket, to=0x9a18c4, getSupplyRateaddress() -> 0x000000
+    [3][CALL] from=MoneyMarket, to=0x9a18c4, getBorrowRateaddress() -> 0x000000
+      [4][CALL] from=0x9a18c4, to=IMBTC, balanceOf(who(address): 0x0eEe3E) -> 29134710219
+      [4][CALL] from=0x9a18c4, to=MoneyMarket, oracle() -> 0xb62070
+      [4][CALL] from=0x9a18c4, to=0xb62070, mostRecentCaller() -> 0x000000
+      [4][CALL] from=0x9a18c4, to=0xb62070, mostRecentBlock() -> 0x000000
+    [3][CALL] from=MoneyMarket, to=IMBTC, transferFrom(holder(address): 0x538359, recipient(address): 0x0eEe3E, amount(uint256): 21593) -> True
+      [4][STATICCALL] from=IMBTC, to=ERC1820Registry, getInterfaceImplementer(_addr(address): 0x538359, _interfaceHash(bytes32): b')\xdd\xb5\x89\xb1\xfb_\xc7\xcf9Ia\xc1\xa...) -> 0x538359
+      [4][CALL] from=IMBTC, to=0x538359, tokensToSendaddress() -> None
+      [4][STATICCALL] from=IMBTC, to=ERC1820Registry, getInterfaceImplementer(_addr(address): 0x0eEe3E, _interfaceHash(bytes32): b'\xb2\x81\xfc\x8c\x12\x95M"TM\xb4]\xe3\x1...) -> 0x000000
+  [2][CALL] from=0x538359, to=MoneyMarket, supply(asset(address): 0x3212b2, amount(uint256): 1) -> 0
+    [3][CALL] from=MoneyMarket, to=IMBTC, allowance(holder(address): 0x538359, spender(address): 0x0eEe3E) -> 115792089237316195423570985008687907853269984665640564039457584007913129618342
+    [3][CALL] from=MoneyMarket, to=IMBTC, balanceOf(who(address): 0x538359) -> 1
+    [3][CALL] from=MoneyMarket, to=IMBTC, balanceOf(who(address): 0x0eEe3E) -> 29134731812
+    [3][CALL] from=MoneyMarket, to=0x9a18c4, getSupplyRateaddress() -> 0x000000
+    [3][CALL] from=MoneyMarket, to=0x9a18c4, getBorrowRateaddress() -> 0x000000
+      [4][CALL] from=0x9a18c4, to=IMBTC, balanceOf(who(address): 0x0eEe3E) -> 29134731812
+      [4][CALL] from=0x9a18c4, to=MoneyMarket, oracle() -> 0xb62070
+      [4][CALL] from=0x9a18c4, to=0xb62070, mostRecentCaller() -> 0x000000
+      [4][CALL] from=0x9a18c4, to=0xb62070, mostRecentBlock() -> 0x000000
+    [3][CALL] from=MoneyMarket, to=IMBTC, transferFrom(holder(address): 0x538359, recipient(address): 0x0eEe3E, amount(uint256): 1) -> True
+      [4][STATICCALL] from=IMBTC, to=ERC1820Registry, getInterfaceImplementer(_addr(address): 0x538359, _interfaceHash(bytes32): b')\xdd\xb5\x89\xb1\xfb_\xc7\xcf9Ia\xc1\xa...) -> 0x538359
+      [4][CALL] from=IMBTC, to=0x538359, tokensToSendaddress() -> None
+        [5][STATICCALL] from=0x538359, to=MoneyMarket, getSupplyBalance(account(address): 0x538359, asset(address): 0x3212b2) -> 43188
+        [5][STATICCALL] from=0x538359, to=IMBTC, balanceOf(who(address): 0x0eEe3E) -> 29134731812
+        [5][CALL] from=0x538359, to=MoneyMarket, withdraw(asset(address): 0x3212b2, requestedAmount(uint256): 43188) -> 0
+          [6][CALL] from=MoneyMarket, to=0xb62070, assetPricesaddress() -> 0x000000
+            [7][CALL] from=0xb62070, to=0xe171d8, assetPricesaddress() -> 0x000000
+          [6][CALL] from=MoneyMarket, to=IMBTC, balanceOf(who(address): 0x0eEe3E) -> 29134731812
+          [6][CALL] from=MoneyMarket, to=0xb62070, assetPricesaddress() -> 0x000000
+            [7][CALL] from=0xb62070, to=0xe171d8, assetPricesaddress() -> 0x000000
+          [6][CALL] from=MoneyMarket, to=0x9a18c4, getSupplyRateaddress() -> 0x000000
+          [6][CALL] from=MoneyMarket, to=0x9a18c4, getBorrowRateaddress() -> 0x000000
+            [7][CALL] from=0x9a18c4, to=IMBTC, balanceOf(who(address): 0x0eEe3E) -> 29134731812
+          [6][CALL] from=MoneyMarket, to=IMBTC, transfer(recipient(address): 0x538359, amount(uint256): 43188) -> True
+            [7][STATICCALL] from=IMBTC, to=ERC1820Registry, getInterfaceImplementer(_addr(address): 0x0eEe3E, _interfaceHash(bytes32): b')\xdd\xb5\x89\xb1\xfb_\xc7\xcf9Ia\xc1\xa...) -> 0x000000
+            [7][STATICCALL] from=IMBTC, to=ERC1820Registry, getInterfaceImplementer(_addr(address): 0x538359, _interfaceHash(bytes32): b'\xb2\x81\xfc\x8c\x12\x95M"TM\xb4]\xe3\x1...) -> 0x000000
+      [4][STATICCALL] from=IMBTC, to=ERC1820Registry, getInterfaceImplementer(_addr(address): 0x0eEe3E, _interfaceHash(bytes32): b'\xb2\x81\xfc\x8c\x12\x95M"TM\xb4]\xe3\x1...) -> 0x000000

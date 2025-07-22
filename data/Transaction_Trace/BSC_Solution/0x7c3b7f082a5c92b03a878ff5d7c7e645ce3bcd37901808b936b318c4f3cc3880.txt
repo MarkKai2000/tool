@@ -1,0 +1,197 @@
+[1][CALL] from=0x8a0a1e, to=0x1cb6d2, start() -> None
+  [2][STATICCALL] from=0x1cb6d2, to=GenToken, balanceOf(account(address): 0xC89fba) -> 273360810573168302553810
+  [2][CALL] from=0x1cb6d2, to=PancakePair, swap(amount0Out(uint256): 273360810573168302553809, amount1Out(uint256): 0, to(address): 0x1Cb6d2, data(bytes): b'\x00') -> None
+    [3][CALL] from=PancakePair, to=GenToken, transfer(recipient(address): 0x1Cb6d2, amount(uint256): 273360810573168302553809) -> True
+    [3][CALL] from=PancakePair, to=0x1cb6d2, pancakeCalladdress() -> None
+      [4][STATICCALL] from=0x1cb6d2, to=GenToken, balanceOf(account(address): 0x1Cb6d2) -> 273360810573168302553809
+      [4][STATICCALL] from=0x1cb6d2, to=MasterChef, poolInfo((uint256): 0) -> ['661253341524108246733255', '0xb0f293', '6000', '8169230', '1130943623395', '0']
+      [4][STATICCALL] from=0x1cb6d2, to=GenToken, balanceOf(account(address): 0xF1F8E3) -> 457276819624780358921957
+      [4][STATICCALL] from=0x1cb6d2, to=GenToken, balanceOf(account(address): 0x1Cb6d2) -> 273360810573168302553809
+      [4][CALL] from=0x1cb6d2, to=GenToken, transfer(recipient(address): 0x5eD40e, amount(uint256): 273360810573168302553809) -> True
+      [4][CALL] from=0x1cb6d2, to=0x5ed40e, 0x6ead30df() -> None
+        [5][CALL] from=0x5ed40e, to=GenToken, approve(spender(address): 0xF1F8E3, amount(uint256): 100000000000000000000000000000000000000000...) -> True
+        [5][CALL] from=0x5ed40e, to=GenNFT, setApprovalForAll(operator(address): 0x1C28c5, approved(bool): True) -> None
+        [5][STATICCALL] from=0x5ed40e, to=GenToken, balanceOf(account(address): 0x5eD40e) -> 273360810573168302553809
+        [5][CALL] from=0x5ed40e, to=MasterChef, deposit(_pid(uint256): 0, _amount(uint256): 273360810573168302553809) -> None
+          [6][CALL] from=MasterChef, to=GenToken, mint(account(address): 0xBf7f01, amount(uint256): 38400000000000000) -> None
+          [6][CALL] from=MasterChef, to=GenToken, mint(account(address): 0xF1F8E3, amount(uint256): 384000000000000000) -> None
+          [6][CALL] from=MasterChef, to=GenToken, transferFrom(sender(address): 0x5eD40e, recipient(address): 0xF1F8E3, amount(uint256): 273360810573168302553809) -> True
+          [6][STATICCALL] from=MasterChef, to=Proxy, bonus(user(address): 0x5eD40e) -> 0
+            [7][STATICCALL] from=Proxy, to=Evolution, bonus(user(address): 0x5eD40e) -> 0
+        [5][CALL] from=0x5ed40e, to=Evolution, depositNFT(_nftId(uint256): 62361) -> None
+          [6][CALL] from=Evolution, to=GenNFT, safeTransferFrom(from(address): 0x5eD40e, to(address): 0x1C28c5, tokenId(uint256): 62361) -> None
+            [7][CALL] from=GenNFT, to=Evolution, onERC721Received((address): b'') -> 0x150b7a02
+        [5][CALL] from=0x5ed40e, to=MasterChef, updatePower(_pid(uint256): 0) -> None
+          [6][STATICCALL] from=MasterChef, to=Proxy, bonus(user(address): 0x5eD40e) -> 27
+            [7][STATICCALL] from=Proxy, to=Evolution, bonus(user(address): 0x5eD40e) -> 27
+              [8][STATICCALL] from=Evolution, to=GenNFT, getTypeByTokenId(id(uint256): 62361) -> None
+        [5][CALL] from=0x5ed40e, to=MasterChef, withdraw(_pid(uint256): 0, _amount(uint256): 273360810573168302553809) -> None
+          [6][STATICCALL] from=MasterChef, to=GenToken, balanceOf(account(address): 0xF1F8E3) -> 730638014197948661475766
+          [6][STATICCALL] from=MasterChef, to=GenToken, balanceOf(account(address): 0xF1F8E3) -> 730638014197948661475766
+          [6][CALL] from=MasterChef, to=GenToken, transfer(recipient(address): 0x5eD40e, amount(uint256): 83472072574104800690254) -> True
+          [6][CALL] from=MasterChef, to=GenToken, transfer(recipient(address): 0x5eD40e, amount(uint256): 273360810573168302553809) -> True
+          [6][STATICCALL] from=MasterChef, to=Proxy, bonus(user(address): 0x5eD40e) -> 27
+            [7][STATICCALL] from=Proxy, to=Evolution, bonus(user(address): 0x5eD40e) -> 27
+              [8][STATICCALL] from=Evolution, to=GenNFT, getTypeByTokenId(id(uint256): 62361) -> None
+        [5][STATICCALL] from=0x5ed40e, to=0x5ed40e, owner() -> 0x000000
+        [5][STATICCALL] from=0x5ed40e, to=GenToken, balanceOf(account(address): 0x5eD40e) -> 356832883147273103244063
+        [5][CALL] from=0x5ed40e, to=GenToken, transfer(recipient(address): 0x1Cb6d2, amount(uint256): 356832883147273103244063) -> True
+      [4][STATICCALL] from=0x1cb6d2, to=GenToken, balanceOf(account(address): 0x1Cb6d2) -> 356832883147273103244063
+      [4][STATICCALL] from=0x1cb6d2, to=MasterChef, poolInfo((uint256): 0) -> ['661253341524108246733255', '0xb0f293', '6000', '8169232', '1130944204110', '0']
+      [4][STATICCALL] from=0x1cb6d2, to=GenToken, balanceOf(account(address): 0xF1F8E3) -> 373805131050675558231703
+      [4][STATICCALL] from=0x1cb6d2, to=GenToken, balanceOf(account(address): 0x1Cb6d2) -> 356832883147273103244063
+      [4][CALL] from=0x1cb6d2, to=GenToken, transfer(recipient(address): 0xC3CA2B, amount(uint256): 356832883147273103244063) -> True
+      [4][CALL] from=0x1cb6d2, to=0xc3ca2b, 0x6ead30df() -> None
+        [5][CALL] from=0xc3ca2b, to=GenToken, approve(spender(address): 0xF1F8E3, amount(uint256): 100000000000000000000000000000000000000000...) -> True
+        [5][CALL] from=0xc3ca2b, to=GenNFT, setApprovalForAll(operator(address): 0x1C28c5, approved(bool): True) -> None
+        [5][STATICCALL] from=0xc3ca2b, to=GenToken, balanceOf(account(address): 0xC3CA2B) -> 356832883147273103244063
+        [5][CALL] from=0xc3ca2b, to=MasterChef, deposit(_pid(uint256): 0, _amount(uint256): 356832883147273103244063) -> None
+          [6][CALL] from=MasterChef, to=GenToken, transferFrom(sender(address): 0xC3CA2B, recipient(address): 0xF1F8E3, amount(uint256): 356832883147273103244063) -> True
+          [6][STATICCALL] from=MasterChef, to=Proxy, bonus(user(address): 0xC3CA2B) -> 0
+            [7][STATICCALL] from=Proxy, to=Evolution, bonus(user(address): 0xC3CA2B) -> 0
+        [5][CALL] from=0xc3ca2b, to=Evolution, depositNFT(_nftId(uint256): 62354) -> None
+          [6][CALL] from=Evolution, to=GenNFT, safeTransferFrom(from(address): 0xC3CA2B, to(address): 0x1C28c5, tokenId(uint256): 62354) -> None
+            [7][CALL] from=GenNFT, to=Evolution, onERC721Received((address): b'') -> 0x150b7a02
+        [5][CALL] from=0xc3ca2b, to=MasterChef, updatePower(_pid(uint256): 0) -> None
+          [6][STATICCALL] from=MasterChef, to=Proxy, bonus(user(address): 0xC3CA2B) -> 20
+            [7][STATICCALL] from=Proxy, to=Evolution, bonus(user(address): 0xC3CA2B) -> 20
+              [8][STATICCALL] from=Evolution, to=GenNFT, getTypeByTokenId(id(uint256): 62354) -> None
+        [5][CALL] from=0xc3ca2b, to=MasterChef, withdraw(_pid(uint256): 0, _amount(uint256): 356832883147273103244063) -> None
+          [6][STATICCALL] from=MasterChef, to=GenToken, balanceOf(account(address): 0xF1F8E3) -> 730638014197948661475766
+          [6][STATICCALL] from=MasterChef, to=GenToken, balanceOf(account(address): 0xF1F8E3) -> 730638014197948661475766
+          [6][CALL] from=MasterChef, to=GenToken, transfer(recipient(address): 0xC3CA2B, amount(uint256): 80711616206253882333033) -> True
+          [6][CALL] from=MasterChef, to=GenToken, transfer(recipient(address): 0xC3CA2B, amount(uint256): 356832883147273103244063) -> True
+          [6][STATICCALL] from=MasterChef, to=Proxy, bonus(user(address): 0xC3CA2B) -> 20
+            [7][STATICCALL] from=Proxy, to=Evolution, bonus(user(address): 0xC3CA2B) -> 20
+              [8][STATICCALL] from=Evolution, to=GenNFT, getTypeByTokenId(id(uint256): 62354) -> None
+        [5][STATICCALL] from=0xc3ca2b, to=0xc3ca2b, owner() -> 0x000000
+        [5][STATICCALL] from=0xc3ca2b, to=GenToken, balanceOf(account(address): 0xC3CA2B) -> 437544499353526985577096
+        [5][CALL] from=0xc3ca2b, to=GenToken, transfer(recipient(address): 0x1Cb6d2, amount(uint256): 437544499353526985577096) -> True
+      [4][STATICCALL] from=0x1cb6d2, to=GenToken, balanceOf(account(address): 0x1Cb6d2) -> 437544499353526985577096
+      [4][STATICCALL] from=0x1cb6d2, to=MasterChef, poolInfo((uint256): 0) -> ['661253341524108246733255', '0xb0f293', '6000', '8169232', '1130944204110', '0']
+      [4][STATICCALL] from=0x1cb6d2, to=GenToken, balanceOf(account(address): 0xF1F8E3) -> 293093514844421675898670
+      [4][STATICCALL] from=0x1cb6d2, to=GenToken, balanceOf(account(address): 0x1Cb6d2) -> 437544499353526985577096
+      [4][CALL] from=0x1cb6d2, to=GenToken, transfer(recipient(address): 0x79B105, amount(uint256): 437544499353526985577096) -> True
+      [4][CALL] from=0x1cb6d2, to=0x79b105, 0x6ead30df() -> None
+        [5][CALL] from=0x79b105, to=GenToken, approve(spender(address): 0xF1F8E3, amount(uint256): 100000000000000000000000000000000000000000...) -> True
+        [5][CALL] from=0x79b105, to=GenNFT, setApprovalForAll(operator(address): 0x1C28c5, approved(bool): True) -> None
+        [5][STATICCALL] from=0x79b105, to=GenToken, balanceOf(account(address): 0x79B105) -> 437544499353526985577096
+        [5][CALL] from=0x79b105, to=MasterChef, deposit(_pid(uint256): 0, _amount(uint256): 437544499353526985577096) -> None
+          [6][CALL] from=MasterChef, to=GenToken, transferFrom(sender(address): 0x79B105, recipient(address): 0xF1F8E3, amount(uint256): 437544499353526985577096) -> True
+          [6][STATICCALL] from=MasterChef, to=Proxy, bonus(user(address): 0x79B105) -> 0
+            [7][STATICCALL] from=Proxy, to=Evolution, bonus(user(address): 0x79B105) -> 0
+        [5][CALL] from=0x79b105, to=Evolution, depositNFT(_nftId(uint256): 62362) -> None
+          [6][CALL] from=Evolution, to=GenNFT, safeTransferFrom(from(address): 0x79B105, to(address): 0x1C28c5, tokenId(uint256): 62362) -> None
+            [7][CALL] from=GenNFT, to=Evolution, onERC721Received((address): b'') -> 0x150b7a02
+        [5][CALL] from=0x79b105, to=MasterChef, updatePower(_pid(uint256): 0) -> None
+          [6][STATICCALL] from=MasterChef, to=Proxy, bonus(user(address): 0x79B105) -> 14
+            [7][STATICCALL] from=Proxy, to=Evolution, bonus(user(address): 0x79B105) -> 14
+              [8][STATICCALL] from=Evolution, to=GenNFT, getTypeByTokenId(id(uint256): 62362) -> None
+        [5][CALL] from=0x79b105, to=MasterChef, withdraw(_pid(uint256): 0, _amount(uint256): 437544499353526985577096) -> None
+          [6][STATICCALL] from=MasterChef, to=GenToken, balanceOf(account(address): 0xF1F8E3) -> 730638014197948661475766
+          [6][STATICCALL] from=MasterChef, to=GenToken, balanceOf(account(address): 0xF1F8E3) -> 730638014197948661475766
+          [6][CALL] from=MasterChef, to=GenToken, transfer(recipient(address): 0x79B105, amount(uint256): 69277378181771618071485) -> True
+          [6][CALL] from=MasterChef, to=GenToken, transfer(recipient(address): 0x79B105, amount(uint256): 437544499353526985577096) -> True
+          [6][STATICCALL] from=MasterChef, to=Proxy, bonus(user(address): 0x79B105) -> 14
+            [7][STATICCALL] from=Proxy, to=Evolution, bonus(user(address): 0x79B105) -> 14
+              [8][STATICCALL] from=Evolution, to=GenNFT, getTypeByTokenId(id(uint256): 62362) -> None
+        [5][STATICCALL] from=0x79b105, to=0x79b105, owner() -> 0x000000
+        [5][STATICCALL] from=0x79b105, to=GenToken, balanceOf(account(address): 0x79B105) -> 506821877535298603648581
+        [5][CALL] from=0x79b105, to=GenToken, transfer(recipient(address): 0x1Cb6d2, amount(uint256): 506821877535298603648581) -> True
+      [4][STATICCALL] from=0x1cb6d2, to=GenToken, balanceOf(account(address): 0x1Cb6d2) -> 506821877535298603648581
+      [4][STATICCALL] from=0x1cb6d2, to=MasterChef, poolInfo((uint256): 0) -> ['661253341524108246733255', '0xb0f293', '6000', '8169232', '1130944204110', '0']
+      [4][STATICCALL] from=0x1cb6d2, to=GenToken, balanceOf(account(address): 0xF1F8E3) -> 223816136662650057827185
+      [4][STATICCALL] from=0x1cb6d2, to=GenToken, balanceOf(account(address): 0x1Cb6d2) -> 506821877535298603648581
+      [4][CALL] from=0x1cb6d2, to=GenToken, transfer(recipient(address): 0x00A8b0, amount(uint256): 506821877535298603648581) -> True
+      [4][CALL] from=0x1cb6d2, to=0x00a8b0, 0x6ead30df() -> None
+        [5][CALL] from=0x00a8b0, to=GenToken, approve(spender(address): 0xF1F8E3, amount(uint256): 100000000000000000000000000000000000000000...) -> True
+        [5][CALL] from=0x00a8b0, to=GenNFT, setApprovalForAll(operator(address): 0x1C28c5, approved(bool): True) -> None
+        [5][STATICCALL] from=0x00a8b0, to=GenToken, balanceOf(account(address): 0x00A8b0) -> 506821877535298603648581
+        [5][CALL] from=0x00a8b0, to=MasterChef, deposit(_pid(uint256): 0, _amount(uint256): 506821877535298603648581) -> None
+          [6][CALL] from=MasterChef, to=GenToken, transferFrom(sender(address): 0x00A8b0, recipient(address): 0xF1F8E3, amount(uint256): 506821877535298603648581) -> True
+          [6][STATICCALL] from=MasterChef, to=Proxy, bonus(user(address): 0x00A8b0) -> 0
+            [7][STATICCALL] from=Proxy, to=Evolution, bonus(user(address): 0x00A8b0) -> 0
+        [5][CALL] from=0x00a8b0, to=Evolution, depositNFT(_nftId(uint256): 62347) -> None
+          [6][CALL] from=Evolution, to=GenNFT, safeTransferFrom(from(address): 0x00A8b0, to(address): 0x1C28c5, tokenId(uint256): 62347) -> None
+            [7][CALL] from=GenNFT, to=Evolution, onERC721Received((address): b'') -> 0x150b7a02
+        [5][CALL] from=0x00a8b0, to=MasterChef, updatePower(_pid(uint256): 0) -> None
+          [6][STATICCALL] from=MasterChef, to=Proxy, bonus(user(address): 0x00A8b0) -> 14
+            [7][STATICCALL] from=Proxy, to=Evolution, bonus(user(address): 0x00A8b0) -> 14
+              [8][STATICCALL] from=Evolution, to=GenNFT, getTypeByTokenId(id(uint256): 62347) -> None
+        [5][CALL] from=0x00a8b0, to=MasterChef, withdraw(_pid(uint256): 0, _amount(uint256): 506821877535298603648581) -> None
+          [6][STATICCALL] from=MasterChef, to=GenToken, balanceOf(account(address): 0xF1F8E3) -> 730638014197948661475766
+          [6][STATICCALL] from=MasterChef, to=GenToken, balanceOf(account(address): 0xF1F8E3) -> 730638014197948661475766
+          [6][CALL] from=MasterChef, to=GenToken, transfer(recipient(address): 0x00A8b0, amount(uint256): 80246217088057183482835) -> True
+          [6][CALL] from=MasterChef, to=GenToken, transfer(recipient(address): 0x00A8b0, amount(uint256): 506821877535298603648581) -> True
+          [6][STATICCALL] from=MasterChef, to=Proxy, bonus(user(address): 0x00A8b0) -> 14
+            [7][STATICCALL] from=Proxy, to=Evolution, bonus(user(address): 0x00A8b0) -> 14
+              [8][STATICCALL] from=Evolution, to=GenNFT, getTypeByTokenId(id(uint256): 62347) -> None
+        [5][STATICCALL] from=0x00a8b0, to=0x00a8b0, owner() -> 0x000000
+        [5][STATICCALL] from=0x00a8b0, to=GenToken, balanceOf(account(address): 0x00A8b0) -> 587068094623355787131416
+        [5][CALL] from=0x00a8b0, to=GenToken, transfer(recipient(address): 0x1Cb6d2, amount(uint256): 587068094623355787131416) -> True
+      [4][STATICCALL] from=0x1cb6d2, to=GenToken, balanceOf(account(address): 0x1Cb6d2) -> 587068094623355787131416
+      [4][STATICCALL] from=0x1cb6d2, to=MasterChef, poolInfo((uint256): 0) -> ['661253341524108246733255', '0xb0f293', '6000', '8169232', '1130944204110', '0']
+      [4][STATICCALL] from=0x1cb6d2, to=GenToken, balanceOf(account(address): 0xF1F8E3) -> 143569919574592874344350
+      [4][STATICCALL] from=0x1cb6d2, to=GenToken, balanceOf(account(address): 0x1Cb6d2) -> 587068094623355787131416
+      [4][CALL] from=0x1cb6d2, to=GenToken, transfer(recipient(address): 0x7C5dD8, amount(uint256): 587068094623355787131416) -> True
+      [4][CALL] from=0x1cb6d2, to=0x7c5dd8, 0x6ead30df() -> None
+        [5][CALL] from=0x7c5dd8, to=GenToken, approve(spender(address): 0xF1F8E3, amount(uint256): 100000000000000000000000000000000000000000...) -> True
+        [5][CALL] from=0x7c5dd8, to=GenNFT, setApprovalForAll(operator(address): 0x1C28c5, approved(bool): True) -> None
+        [5][STATICCALL] from=0x7c5dd8, to=GenToken, balanceOf(account(address): 0x7C5dD8) -> 587068094623355787131416
+        [5][CALL] from=0x7c5dd8, to=MasterChef, deposit(_pid(uint256): 0, _amount(uint256): 587068094623355787131416) -> None
+          [6][CALL] from=MasterChef, to=GenToken, transferFrom(sender(address): 0x7C5dD8, recipient(address): 0xF1F8E3, amount(uint256): 587068094623355787131416) -> True
+          [6][STATICCALL] from=MasterChef, to=Proxy, bonus(user(address): 0x7C5dD8) -> 0
+            [7][STATICCALL] from=Proxy, to=Evolution, bonus(user(address): 0x7C5dD8) -> 0
+        [5][CALL] from=0x7c5dd8, to=Evolution, depositNFT(_nftId(uint256): 62340) -> None
+          [6][CALL] from=Evolution, to=GenNFT, safeTransferFrom(from(address): 0x7C5dD8, to(address): 0x1C28c5, tokenId(uint256): 62340) -> None
+            [7][CALL] from=GenNFT, to=Evolution, onERC721Received((address): b'') -> 0x150b7a02
+        [5][CALL] from=0x7c5dd8, to=MasterChef, updatePower(_pid(uint256): 0) -> None
+          [6][STATICCALL] from=MasterChef, to=Proxy, bonus(user(address): 0x7C5dD8) -> 14
+            [7][STATICCALL] from=Proxy, to=Evolution, bonus(user(address): 0x7C5dD8) -> 14
+              [8][STATICCALL] from=Evolution, to=GenNFT, getTypeByTokenId(id(uint256): 62340) -> None
+        [5][CALL] from=0x7c5dd8, to=MasterChef, withdraw(_pid(uint256): 0, _amount(uint256): 587068094623355787131416) -> None
+          [6][STATICCALL] from=MasterChef, to=GenToken, balanceOf(account(address): 0xF1F8E3) -> 730638014197948661475766
+          [6][STATICCALL] from=MasterChef, to=GenToken, balanceOf(account(address): 0xF1F8E3) -> 730638014197948661475766
+          [6][CALL] from=MasterChef, to=GenToken, transfer(recipient(address): 0x7C5dD8, amount(uint256): 92951776264505939325258) -> True
+          [6][CALL] from=MasterChef, to=GenToken, transfer(recipient(address): 0x7C5dD8, amount(uint256): 587068094623355787131416) -> True
+          [6][STATICCALL] from=MasterChef, to=Proxy, bonus(user(address): 0x7C5dD8) -> 14
+            [7][STATICCALL] from=Proxy, to=Evolution, bonus(user(address): 0x7C5dD8) -> 14
+              [8][STATICCALL] from=Evolution, to=GenNFT, getTypeByTokenId(id(uint256): 62340) -> None
+        [5][STATICCALL] from=0x7c5dd8, to=0x7c5dd8, owner() -> 0x000000
+        [5][STATICCALL] from=0x7c5dd8, to=GenToken, balanceOf(account(address): 0x7C5dD8) -> 680019870887861726456674
+        [5][CALL] from=0x7c5dd8, to=GenToken, transfer(recipient(address): 0x1Cb6d2, amount(uint256): 680019870887861726456674) -> True
+      [4][STATICCALL] from=0x1cb6d2, to=GenToken, balanceOf(account(address): 0x1Cb6d2) -> 680019870887861726456674
+      [4][STATICCALL] from=0x1cb6d2, to=MasterChef, poolInfo((uint256): 0) -> ['661253341524108246733255', '0xb0f293', '6000', '8169232', '1130944204110', '0']
+      [4][STATICCALL] from=0x1cb6d2, to=GenToken, balanceOf(account(address): 0xF1F8E3) -> 50618143310086935019092
+      [4][STATICCALL] from=0x1cb6d2, to=GenToken, balanceOf(account(address): 0xF1F8E3) -> 50618143310086935019092
+      [4][CALL] from=0x1cb6d2, to=GenToken, transfer(recipient(address): 0x78e480, amount(uint256): 313283794478296121655136) -> True
+      [4][CALL] from=0x1cb6d2, to=0x78e480, 0x6ead30df() -> None
+        [5][CALL] from=0x78e480, to=GenToken, approve(spender(address): 0xF1F8E3, amount(uint256): 100000000000000000000000000000000000000000...) -> True
+        [5][CALL] from=0x78e480, to=GenNFT, setApprovalForAll(operator(address): 0x1C28c5, approved(bool): True) -> None
+        [5][STATICCALL] from=0x78e480, to=GenToken, balanceOf(account(address): 0x78e480) -> 313283794478296121655136
+        [5][CALL] from=0x78e480, to=MasterChef, deposit(_pid(uint256): 0, _amount(uint256): 313283794478296121655136) -> None
+          [6][CALL] from=MasterChef, to=GenToken, transferFrom(sender(address): 0x78e480, recipient(address): 0xF1F8E3, amount(uint256): 313283794478296121655136) -> True
+          [6][STATICCALL] from=MasterChef, to=Proxy, bonus(user(address): 0x78e480) -> 0
+            [7][STATICCALL] from=Proxy, to=Evolution, bonus(user(address): 0x78e480) -> 0
+        [5][CALL] from=0x78e480, to=Evolution, depositNFT(_nftId(uint256): 62333) -> None
+          [6][CALL] from=Evolution, to=GenNFT, safeTransferFrom(from(address): 0x78e480, to(address): 0x1C28c5, tokenId(uint256): 62333) -> None
+            [7][CALL] from=GenNFT, to=Evolution, onERC721Received((address): b'') -> 0x150b7a02
+        [5][CALL] from=0x78e480, to=MasterChef, updatePower(_pid(uint256): 0) -> None
+          [6][STATICCALL] from=MasterChef, to=Proxy, bonus(user(address): 0x78e480) -> 14
+            [7][STATICCALL] from=Proxy, to=Evolution, bonus(user(address): 0x78e480) -> 14
+              [8][STATICCALL] from=Evolution, to=GenNFT, getTypeByTokenId(id(uint256): 62333) -> None
+        [5][CALL] from=0x78e480, to=MasterChef, withdraw(_pid(uint256): 0, _amount(uint256): 313283794478296121655136) -> None
+          [6][STATICCALL] from=MasterChef, to=GenToken, balanceOf(account(address): 0xF1F8E3) -> 363901937788383056674228
+          [6][STATICCALL] from=MasterChef, to=GenToken, balanceOf(account(address): 0xF1F8E3) -> 363901937788383056674228
+          [6][CALL] from=MasterChef, to=GenToken, transfer(recipient(address): 0x78e480, amount(uint256): 49602908824954438796383) -> True
+          [6][CALL] from=MasterChef, to=GenToken, transfer(recipient(address): 0x78e480, amount(uint256): 313283794478296121655136) -> True
+          [6][STATICCALL] from=MasterChef, to=Proxy, bonus(user(address): 0x78e480) -> 14
+            [7][STATICCALL] from=Proxy, to=Evolution, bonus(user(address): 0x78e480) -> 14
+              [8][STATICCALL] from=Evolution, to=GenNFT, getTypeByTokenId(id(uint256): 62333) -> None
+        [5][STATICCALL] from=0x78e480, to=0x78e480, owner() -> 0x000000
+        [5][STATICCALL] from=0x78e480, to=GenToken, balanceOf(account(address): 0x78e480) -> 362886703303250560451519
+        [5][CALL] from=0x78e480, to=GenToken, transfer(recipient(address): 0x1Cb6d2, amount(uint256): 362886703303250560451519) -> True
+      [4][STATICCALL] from=0x1cb6d2, to=GenToken, balanceOf(account(address): 0x1Cb6d2) -> 729622779712816165253057
+      [4][CALL] from=0x1cb6d2, to=GenToken, transfer(recipient(address): 0xC89fba, amount(uint256): 274045925386634889778255) -> True
+    [3][STATICCALL] from=PancakePair, to=GenToken, balanceOf(account(address): 0xC89fba) -> 274045925386634889778256
+    [3][STATICCALL] from=PancakePair, to=BEP20Token, balanceOf(account(address): 0xC89fba) -> 537112167720908273950221

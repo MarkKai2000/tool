@@ -1,0 +1,511 @@
+[1][CALL] from=0xa3aa81, to=0x9a3660, pre() -> None
+  [2][CREATE] from=0x9a3660, to=0xa74bc1, atInversebrahint248() -> 0x608060
+  [2][CALL] from=0x9a3660, to=BEP20USDT, transferFrom(sender(address): 0xa3aa81, recipient(address): 0xA74Bc1, amount(uint256): 100000000000000000000) -> True
+  [2][CALL] from=0x9a3660, to=0xa74bc1, stakeaddress() -> None
+    [3][CALL] from=0xa74bc1, to=BEP20USDT, approve(spender(address): 0xeaF834, amount(uint256): 100000000000000000000) -> True
+    [3][CALL] from=0xa74bc1, to=StakingRewards, stake(token(address): 0x0B464d, token1(address): 0xa64599, token2(address): 0x55d398, up(address): 0xa3aa81, amount(uint256): 100000000000000000000) -> None
+      [4][STATICCALL] from=StakingRewards, to=PancakeRouter, factory() -> 0x2c3765
+      [4][STATICCALL] from=StakingRewards, to=PancakeFactory, getPair((address): 0xa64599) -> 0x56712d
+      [4][CALL] from=StakingRewards, to=BEP20USDT, transferFrom(sender(address): 0xA74Bc1, recipient(address): 0xeaF834, amount(uint256): 100000000000000000000) -> True
+      [4][CALL] from=StakingRewards, to=BEP20USDT, approve(spender(address): 0x10ED43, amount(uint256): 100000000000000000000) -> True
+      [4][STATICCALL] from=StakingRewards, to=SellToken, balanceOf(account(address): 0xeaF834) -> 2060184032295835622117
+      [4][STATICCALL] from=StakingRewards, to=PancakeRouter, getAmountsOut(amountIn(uint256): 100000000000000000000, path(address[]): ['0x55d398326f99059fF775485246999027B31979...) -> [100000000000000000000, 320712307467349261, 5445461370718323420327]
+        [5][STATICCALL] from=PancakeRouter, to=PancakePair, getReserves() -> ['53975074827339589675502533', '173538875034101129773793', '1684019839']
+        [5][STATICCALL] from=PancakeRouter, to=PancakePair, getReserves() -> ['8573765866259174629056827', '503372571586039261278', '1684019845']
+      [4][CALL] from=StakingRewards, to=PancakeRouter, swapExactTokensForTokens(amountIn(uint256): 100000000000000000000, amountOutMin(uint256): 5445461370718323420327, path(address[]): ['0x55d398326f99059fF775485246999027B31979..., to(address): 0xeaF834, deadline(uint256): 1684019845) -> [100000000000000000000, 320712307467349261, 5445461370718323420327]
+        [5][STATICCALL] from=PancakeRouter, to=PancakePair, getReserves() -> ['53975074827339589675502533', '173538875034101129773793', '1684019839']
+        [5][STATICCALL] from=PancakeRouter, to=PancakePair, getReserves() -> ['8573765866259174629056827', '503372571586039261278', '1684019845']
+        [5][CALL] from=PancakeRouter, to=BEP20USDT, transferFrom(sender(address): 0xeaF834, recipient(address): 0x16b9a8, amount(uint256): 100000000000000000000) -> True
+        [5][CALL] from=PancakeRouter, to=PancakePair, swap(amount0Out(uint256): 0, amount1Out(uint256): 320712307467349261, to(address): 0x358EfC, data(bytes): b'') -> None
+          [6][CALL] from=PancakePair, to=WBNB, transfer(dst(address): 0x358EfC, wad(uint256): 320712307467349261) -> True
+          [6][STATICCALL] from=PancakePair, to=BEP20USDT, balanceOf(account(address): 0x16b9a8) -> 53975174827339589675502533
+          [6][STATICCALL] from=PancakePair, to=WBNB, balanceOf((address): 0x16b9a8) -> 173538554321793662424532
+        [5][CALL] from=PancakeRouter, to=PancakePair, swap(amount0Out(uint256): 5445461370718323420327, amount1Out(uint256): 0, to(address): 0xeaF834, data(bytes): b'') -> None
+          [6][CALL] from=PancakePair, to=SellToken, transfer(recipient(address): 0xeaF834, amount(uint256): 5445461370718323420327) -> True
+          [6][STATICCALL] from=PancakePair, to=SellToken, balanceOf(account(address): 0x358EfC) -> 8568320404888456305636500
+          [6][STATICCALL] from=PancakePair, to=WBNB, balanceOf((address): 0x358EfC) -> 503693283893506610539
+      [4][STATICCALL] from=StakingRewards, to=SellToken, balanceOf(account(address): 0xeaF834) -> 7505645403014159042444
+      [4][STATICCALL] from=StakingRewards, to=SellToken, balanceOf(account(address): 0xeaF834) -> 7505645403014159042444
+      [4][CALL] from=StakingRewards, to=SellToken, transfer(recipient(address): 0x2F98Fa, amount(uint256): 108909227414366468406) -> True
+      [4][CALL] from=StakingRewards, to=SellToken, transfer(recipient(address): 0x2F98Fa, amount(uint256): 54454613707183234203) -> True
+      [4][CALL] from=StakingRewards, to=SellToken, approve(spender(address): 0xBDDFA4, amount(uint256): 2668276071651978475960) -> True
+      [4][STATICCALL] from=StakingRewards, to=SellToken, balanceOf(account(address): 0xeaF834) -> 34359483013990832536411690
+      [4][CALL] from=StakingRewards, to=PancakeRouter, swapExactTokensForTokens(amountIn(uint256): 2668276071651978475960, amountOutMin(uint256): 0, path(address[]): ['0xa645995e9801F2ca6e2361eDF4c2A138362BAD..., to(address): 0xeaF834, deadline(uint256): 1684020205) -> [2668276071651978475960, 1322282144075823506859]
+        [5][STATICCALL] from=PancakeRouter, to=PancakePair, getReserves() -> ['2031819944479036608353485', '4087163643063508995840566', '1684016728']
+        [5][CALL] from=PancakeRouter, to=SellToken, transferFrom(sender(address): 0xeaF834, recipient(address): 0x56712D, amount(uint256): 2668276071651978475960) -> True
+        [5][CALL] from=PancakeRouter, to=PancakePair, swap(amount0Out(uint256): 1322282144075823506859, amount1Out(uint256): 0, to(address): 0xeaF834, data(bytes): b'') -> None
+          [6][CALL] from=PancakePair, to=SellToken, transfer(recipient(address): 0xeaF834, amount(uint256): 1322282144075823506859) -> True
+          [6][STATICCALL] from=PancakePair, to=SellToken, balanceOf(account(address): 0x56712D) -> 2030497662334960784846626
+          [6][STATICCALL] from=PancakePair, to=SellToken, balanceOf(account(address): 0x56712D) -> 4089831919135160974316526
+      [4][STATICCALL] from=StakingRewards, to=SellToken, balanceOf(account(address): 0xeaF834) -> 34360805296134908359918549
+      [4][STATICCALL] from=StakingRewards, to=SellToken, balanceOf(account(address): 0xeaF834) -> 34360805296134908359918549
+      [4][CALL] from=StakingRewards, to=SellToken, approve(spender(address): 0xBDDFA4, amount(uint256): 1322282144075823506859) -> True
+      [4][CALL] from=StakingRewards, to=SellToken, approve(spender(address): 0xBDDFA4, amount(uint256): 2613821457944795241756) -> True
+      [4][CALL] from=StakingRewards, to=PancakeRouter, addLiquidity(tokenA(address): 0x0B464d, tokenB(address): 0xa64599, amountADesired(uint256): 1322282144075823506859, amountBDesired(uint256): 2613821457944795241756, amountAMin(uint256): 0, amountBMin(uint256): 0, to(address): 0xeaF834, deadline(uint256): 1684019945) -> ['1297695960385619920651', '2613821457944795241756', '1839930215870021964551']
+        [5][STATICCALL] from=PancakeRouter, to=PancakeFactory, getPair((address): 0xa64599) -> 0x56712d
+        [5][STATICCALL] from=PancakeRouter, to=PancakePair, getReserves() -> ['2030497662334960784846626', '4089831919135160974316526', '1684019845']
+        [5][CALL] from=PancakeRouter, to=SellToken, transferFrom(sender(address): 0xeaF834, recipient(address): 0x56712D, amount(uint256): 1297695960385619920651) -> True
+        [5][CALL] from=PancakeRouter, to=SellToken, transferFrom(sender(address): 0xeaF834, recipient(address): 0x56712D, amount(uint256): 2613821457944795241756) -> True
+        [5][CALL] from=PancakeRouter, to=PancakePair, mint(to(address): 0xeaF834) -> 1839930215870021964551
+          [6][STATICCALL] from=PancakePair, to=SellToken, balanceOf(account(address): 0x56712D) -> 2031795358295346404767277
+          [6][STATICCALL] from=PancakePair, to=SellToken, balanceOf(account(address): 0x56712D) -> 4092445740593105769558282
+          [6][STATICCALL] from=PancakePair, to=PancakeFactory, feeTo() -> 0x74449f
+  [2][CREATE] from=0x9a3660, to=0x6db55a, atInversebrahint248() -> 0x608060
+  [2][CALL] from=0x9a3660, to=BEP20USDT, transferFrom(sender(address): 0xa3aa81, recipient(address): 0x6db55a, amount(uint256): 100000000000000000000) -> True
+  [2][CALL] from=0x9a3660, to=0x6db55a, stakeaddress() -> None
+    [3][CALL] from=0x6db55a, to=BEP20USDT, approve(spender(address): 0xeaF834, amount(uint256): 100000000000000000000) -> True
+    [3][CALL] from=0x6db55a, to=StakingRewards, stake(token(address): 0x0B464d, token1(address): 0xa64599, token2(address): 0x55d398, up(address): 0xA74Bc1, amount(uint256): 100000000000000000000) -> None
+      [4][STATICCALL] from=StakingRewards, to=PancakeRouter, factory() -> 0x2c3765
+      [4][STATICCALL] from=StakingRewards, to=PancakeFactory, getPair((address): 0xa64599) -> 0x56712d
+      [4][CALL] from=StakingRewards, to=BEP20USDT, transferFrom(sender(address): 0x6db55a, recipient(address): 0xeaF834, amount(uint256): 100000000000000000000) -> True
+      [4][CALL] from=StakingRewards, to=BEP20USDT, approve(spender(address): 0x10ED43, amount(uint256): 100000000000000000000) -> True
+      [4][STATICCALL] from=StakingRewards, to=SellToken, balanceOf(account(address): 0xeaF834) -> 2060184032295835622119
+      [4][STATICCALL] from=StakingRewards, to=PancakeRouter, getAmountsOut(amountIn(uint256): 100000000000000000000, path(address[]): ['0x55d398326f99059fF775485246999027B31979...) -> [100000000000000000000, 320711120585320068, 5438519836928763062585]
+        [5][STATICCALL] from=PancakeRouter, to=PancakePair, getReserves() -> ['53975174827339589675502533', '173538554321793662424532', '1684019845']
+        [5][STATICCALL] from=PancakeRouter, to=PancakePair, getReserves() -> ['8568320404888456305636500', '503693283893506610539', '1684019845']
+      [4][CALL] from=StakingRewards, to=PancakeRouter, swapExactTokensForTokens(amountIn(uint256): 100000000000000000000, amountOutMin(uint256): 5438519836928763062585, path(address[]): ['0x55d398326f99059fF775485246999027B31979..., to(address): 0xeaF834, deadline(uint256): 1684019845) -> [100000000000000000000, 320711120585320068, 5438519836928763062585]
+        [5][STATICCALL] from=PancakeRouter, to=PancakePair, getReserves() -> ['53975174827339589675502533', '173538554321793662424532', '1684019845']
+        [5][STATICCALL] from=PancakeRouter, to=PancakePair, getReserves() -> ['8568320404888456305636500', '503693283893506610539', '1684019845']
+        [5][CALL] from=PancakeRouter, to=BEP20USDT, transferFrom(sender(address): 0xeaF834, recipient(address): 0x16b9a8, amount(uint256): 100000000000000000000) -> True
+        [5][CALL] from=PancakeRouter, to=PancakePair, swap(amount0Out(uint256): 0, amount1Out(uint256): 320711120585320068, to(address): 0x358EfC, data(bytes): b'') -> None
+          [6][CALL] from=PancakePair, to=WBNB, transfer(dst(address): 0x358EfC, wad(uint256): 320711120585320068) -> True
+          [6][STATICCALL] from=PancakePair, to=BEP20USDT, balanceOf(account(address): 0x16b9a8) -> 53975274827339589675502533
+          [6][STATICCALL] from=PancakePair, to=WBNB, balanceOf((address): 0x16b9a8) -> 173538233610673077104464
+        [5][CALL] from=PancakeRouter, to=PancakePair, swap(amount0Out(uint256): 5438519836928763062585, amount1Out(uint256): 0, to(address): 0xeaF834, data(bytes): b'') -> None
+          [6][CALL] from=PancakePair, to=SellToken, transfer(recipient(address): 0xeaF834, amount(uint256): 5438519836928763062585) -> True
+          [6][STATICCALL] from=PancakePair, to=SellToken, balanceOf(account(address): 0x358EfC) -> 8562881885051527542573915
+          [6][STATICCALL] from=PancakePair, to=WBNB, balanceOf((address): 0x358EfC) -> 504013995014091930607
+      [4][STATICCALL] from=StakingRewards, to=SellToken, balanceOf(account(address): 0xeaF834) -> 7498703869224598684704
+      [4][STATICCALL] from=StakingRewards, to=SellToken, balanceOf(account(address): 0xeaF834) -> 7498703869224598684704
+      [4][CALL] from=StakingRewards, to=SellToken, transfer(recipient(address): 0x2F98Fa, amount(uint256): 108770396738575261251) -> True
+      [4][CALL] from=StakingRewards, to=SellToken, transfer(recipient(address): 0x2F98Fa, amount(uint256): 54385198369287630625) -> True
+      [4][CALL] from=StakingRewards, to=SellToken, approve(spender(address): 0xBDDFA4, amount(uint256): 2664874720095093900666) -> True
+      [4][STATICCALL] from=StakingRewards, to=SellToken, balanceOf(account(address): 0xeaF834) -> 34359507600174522739997898
+      [4][CALL] from=StakingRewards, to=PancakeRouter, swapExactTokensForTokens(amountIn(uint256): 2664874720095093900666, amountOutMin(uint256): 0, path(address[]): ['0xa645995e9801F2ca6e2361eDF4c2A138362BAD..., to(address): 0xeaF834, deadline(uint256): 1684020205) -> [2664874720095093900666, 1318878335771589061564]
+        [5][STATICCALL] from=PancakeRouter, to=PancakePair, getReserves() -> ['2031795358295346404767277', '4092445740593105769558282', '1684019845']
+        [5][CALL] from=PancakeRouter, to=SellToken, transferFrom(sender(address): 0xeaF834, recipient(address): 0x56712D, amount(uint256): 2664874720095093900666) -> True
+        [5][CALL] from=PancakeRouter, to=PancakePair, swap(amount0Out(uint256): 1318878335771589061564, amount1Out(uint256): 0, to(address): 0xeaF834, data(bytes): b'') -> None
+          [6][CALL] from=PancakePair, to=SellToken, transfer(recipient(address): 0xeaF834, amount(uint256): 1318878335771589061564) -> True
+          [6][STATICCALL] from=PancakePair, to=SellToken, balanceOf(account(address): 0x56712D) -> 2030476479959574815705713
+          [6][STATICCALL] from=PancakePair, to=SellToken, balanceOf(account(address): 0x56712D) -> 4095110615313200863458948
+      [4][STATICCALL] from=StakingRewards, to=SellToken, balanceOf(account(address): 0xeaF834) -> 34360826478510294329059462
+      [4][STATICCALL] from=StakingRewards, to=SellToken, balanceOf(account(address): 0xeaF834) -> 34360826478510294329059462
+      [4][CALL] from=StakingRewards, to=SellToken, approve(spender(address): 0xBDDFA4, amount(uint256): 1318878335771589061564) -> True
+      [4][CALL] from=StakingRewards, to=SellToken, approve(spender(address): 0xBDDFA4, amount(uint256): 2610489521725806270040) -> True
+      [4][CALL] from=StakingRewards, to=PancakeRouter, addLiquidity(tokenA(address): 0x0B464d, tokenB(address): 0xa64599, amountADesired(uint256): 1318878335771589061564, amountBDesired(uint256): 2610489521725806270040, amountAMin(uint256): 0, amountBMin(uint256): 0, to(address): 0xeaF834, deadline(uint256): 1684019945) -> ['1294357606660101219343', '2610489521725806270040', '1836389465850307752326']
+        [5][STATICCALL] from=PancakeRouter, to=PancakeFactory, getPair((address): 0xa64599) -> 0x56712d
+        [5][STATICCALL] from=PancakeRouter, to=PancakePair, getReserves() -> ['2030476479959574815705713', '4095110615313200863458948', '1684019845']
+        [5][CALL] from=PancakeRouter, to=SellToken, transferFrom(sender(address): 0xeaF834, recipient(address): 0x56712D, amount(uint256): 1294357606660101219343) -> True
+        [5][CALL] from=PancakeRouter, to=SellToken, transferFrom(sender(address): 0xeaF834, recipient(address): 0x56712D, amount(uint256): 2610489521725806270040) -> True
+        [5][CALL] from=PancakeRouter, to=PancakePair, mint(to(address): 0xeaF834) -> 1836389465850307752326
+          [6][STATICCALL] from=PancakePair, to=SellToken, balanceOf(account(address): 0x56712D) -> 2031770837566234916925056
+          [6][STATICCALL] from=PancakePair, to=SellToken, balanceOf(account(address): 0x56712D) -> 4097721104834926669728988
+          [6][STATICCALL] from=PancakePair, to=PancakeFactory, feeTo() -> 0x74449f
+  [2][CREATE] from=0x9a3660, to=0x37cafb, atInversebrahint248() -> 0x608060
+  [2][CALL] from=0x9a3660, to=BEP20USDT, transferFrom(sender(address): 0xa3aa81, recipient(address): 0x37cAFb, amount(uint256): 100000000000000000000) -> True
+  [2][CALL] from=0x9a3660, to=0x37cafb, stakeaddress() -> None
+    [3][CALL] from=0x37cafb, to=BEP20USDT, approve(spender(address): 0xeaF834, amount(uint256): 100000000000000000000) -> True
+    [3][CALL] from=0x37cafb, to=StakingRewards, stake(token(address): 0x0B464d, token1(address): 0xa64599, token2(address): 0x55d398, up(address): 0x6db55a, amount(uint256): 100000000000000000000) -> None
+      [4][STATICCALL] from=StakingRewards, to=PancakeRouter, factory() -> 0x2c3765
+      [4][STATICCALL] from=StakingRewards, to=PancakeFactory, getPair((address): 0xa64599) -> 0x56712d
+      [4][CALL] from=StakingRewards, to=BEP20USDT, transferFrom(sender(address): 0x37cAFb, recipient(address): 0xeaF834, amount(uint256): 100000000000000000000) -> True
+      [4][CALL] from=StakingRewards, to=BEP20USDT, approve(spender(address): 0x10ED43, amount(uint256): 100000000000000000000) -> True
+      [4][STATICCALL] from=StakingRewards, to=SellToken, balanceOf(account(address): 0xeaF834) -> 2060184032295835622122
+      [4][STATICCALL] from=StakingRewards, to=PancakeRouter, getAmountsOut(amountIn(uint256): 100000000000000000000, path(address[]): ['0x55d398326f99059fF775485246999027B31979...) -> [100000000000000000000, 320709933709882175, 5431591573126179916012]
+        [5][STATICCALL] from=PancakeRouter, to=PancakePair, getReserves() -> ['53975274827339589675502533', '173538233610673077104464', '1684019845']
+        [5][STATICCALL] from=PancakeRouter, to=PancakePair, getReserves() -> ['8562881885051527542573915', '504013995014091930607', '1684019845']
+      [4][CALL] from=StakingRewards, to=PancakeRouter, swapExactTokensForTokens(amountIn(uint256): 100000000000000000000, amountOutMin(uint256): 5431591573126179916012, path(address[]): ['0x55d398326f99059fF775485246999027B31979..., to(address): 0xeaF834, deadline(uint256): 1684019845) -> [100000000000000000000, 320709933709882175, 5431591573126179916012]
+        [5][STATICCALL] from=PancakeRouter, to=PancakePair, getReserves() -> ['53975274827339589675502533', '173538233610673077104464', '1684019845']
+        [5][STATICCALL] from=PancakeRouter, to=PancakePair, getReserves() -> ['8562881885051527542573915', '504013995014091930607', '1684019845']
+        [5][CALL] from=PancakeRouter, to=BEP20USDT, transferFrom(sender(address): 0xeaF834, recipient(address): 0x16b9a8, amount(uint256): 100000000000000000000) -> True
+        [5][CALL] from=PancakeRouter, to=PancakePair, swap(amount0Out(uint256): 0, amount1Out(uint256): 320709933709882175, to(address): 0x358EfC, data(bytes): b'') -> None
+          [6][CALL] from=PancakePair, to=WBNB, transfer(dst(address): 0x358EfC, wad(uint256): 320709933709882175) -> True
+          [6][STATICCALL] from=PancakePair, to=BEP20USDT, balanceOf(account(address): 0x16b9a8) -> 53975374827339589675502533
+          [6][STATICCALL] from=PancakePair, to=WBNB, balanceOf((address): 0x16b9a8) -> 173537912900739367222289
+        [5][CALL] from=PancakeRouter, to=PancakePair, swap(amount0Out(uint256): 5431591573126179916012, amount1Out(uint256): 0, to(address): 0xeaF834, data(bytes): b'') -> None
+          [6][CALL] from=PancakePair, to=SellToken, transfer(recipient(address): 0xeaF834, amount(uint256): 5431591573126179916012) -> True
+          [6][STATICCALL] from=PancakePair, to=SellToken, balanceOf(account(address): 0x358EfC) -> 8557450293478401362657903
+          [6][STATICCALL] from=PancakePair, to=WBNB, balanceOf((address): 0x358EfC) -> 504334704947801812782
+      [4][STATICCALL] from=StakingRewards, to=SellToken, balanceOf(account(address): 0xeaF834) -> 7491775605422015538134
+      [4][STATICCALL] from=StakingRewards, to=SellToken, balanceOf(account(address): 0xeaF834) -> 7491775605422015538134
+      [4][CALL] from=StakingRewards, to=SellToken, transfer(recipient(address): 0x2F98Fa, amount(uint256): 108631831462523598320) -> True
+      [4][CALL] from=StakingRewards, to=SellToken, transfer(recipient(address): 0x2F98Fa, amount(uint256): 54315915731261799160) -> True
+      [4][CALL] from=StakingRewards, to=SellToken, approve(spender(address): 0xBDDFA4, amount(uint256): 2661479870831828158845) -> True
+      [4][STATICCALL] from=StakingRewards, to=SellToken, balanceOf(account(address): 0xeaF834) -> 34359532120903634227840119
+      [4][CALL] from=StakingRewards, to=PancakeRouter, swapExactTokensForTokens(amountIn(uint256): 2661479870831828158845, amountOutMin(uint256): 0, path(address[]): ['0xa645995e9801F2ca6e2361eDF4c2A138362BAD..., to(address): 0xeaF834, deadline(uint256): 1684020205) -> [2661479870831828158845, 1315488746427295335519]
+        [5][STATICCALL] from=PancakeRouter, to=PancakePair, getReserves() -> ['2031770837566234916925056', '4097721104834926669728988', '1684019845']
+        [5][CALL] from=PancakeRouter, to=SellToken, transferFrom(sender(address): 0xeaF834, recipient(address): 0x56712D, amount(uint256): 2661479870831828158845) -> True
+        [5][CALL] from=PancakeRouter, to=PancakePair, swap(amount0Out(uint256): 1315488746427295335519, amount1Out(uint256): 0, to(address): 0xeaF834, data(bytes): b'') -> None
+          [6][CALL] from=PancakePair, to=SellToken, transfer(recipient(address): 0xeaF834, amount(uint256): 1315488746427295335519) -> True
+          [6][STATICCALL] from=PancakePair, to=SellToken, balanceOf(account(address): 0x56712D) -> 2030455348819807621589537
+          [6][STATICCALL] from=PancakePair, to=SellToken, balanceOf(account(address): 0x56712D) -> 4100382584705758497887833
+      [4][STATICCALL] from=StakingRewards, to=SellToken, balanceOf(account(address): 0xeaF834) -> 34360847609650061523175638
+      [4][STATICCALL] from=StakingRewards, to=SellToken, balanceOf(account(address): 0xeaF834) -> 34360847609650061523175638
+      [4][CALL] from=StakingRewards, to=SellToken, approve(spender(address): 0xBDDFA4, amount(uint256): 1315488746427295335519) -> True
+      [4][CALL] from=StakingRewards, to=SellToken, approve(spender(address): 0xBDDFA4, amount(uint256): 2607163955100566359685) -> True
+      [4][CALL] from=StakingRewards, to=PancakeRouter, addLiquidity(tokenA(address): 0x0B464d, tokenB(address): 0xa64599, amountADesired(uint256): 1315488746427295335519, amountBDesired(uint256): 2607163955100566359685, amountAMin(uint256): 0, amountBMin(uint256): 0, to(address): 0xeaF834, deadline(uint256): 1684019945) -> ['1291033187398054776469', '2607163955100566359685', '1832860073354013483723']
+        [5][STATICCALL] from=PancakeRouter, to=PancakeFactory, getPair((address): 0xa64599) -> 0x56712d
+        [5][STATICCALL] from=PancakeRouter, to=PancakePair, getReserves() -> ['2030455348819807621589537', '4100382584705758497887833', '1684019845']
+        [5][CALL] from=PancakeRouter, to=SellToken, transferFrom(sender(address): 0xeaF834, recipient(address): 0x56712D, amount(uint256): 1291033187398054776469) -> True
+        [5][CALL] from=PancakeRouter, to=SellToken, transferFrom(sender(address): 0xeaF834, recipient(address): 0x56712D, amount(uint256): 2607163955100566359685) -> True
+        [5][CALL] from=PancakeRouter, to=PancakePair, mint(to(address): 0xeaF834) -> 1832860073354013483723
+          [6][STATICCALL] from=PancakePair, to=SellToken, balanceOf(account(address): 0x56712D) -> 2031746382007205676366006
+          [6][STATICCALL] from=PancakePair, to=SellToken, balanceOf(account(address): 0x56712D) -> 4102989748660859064247518
+          [6][STATICCALL] from=PancakePair, to=PancakeFactory, feeTo() -> 0x74449f
+  [2][CREATE] from=0x9a3660, to=0x39b8ad, atInversebrahint248() -> 0x608060
+  [2][CALL] from=0x9a3660, to=BEP20USDT, transferFrom(sender(address): 0xa3aa81, recipient(address): 0x39B8Ad, amount(uint256): 100000000000000000000) -> True
+  [2][CALL] from=0x9a3660, to=0x39b8ad, stakeaddress() -> None
+    [3][CALL] from=0x39b8ad, to=BEP20USDT, approve(spender(address): 0xeaF834, amount(uint256): 100000000000000000000) -> True
+    [3][CALL] from=0x39b8ad, to=StakingRewards, stake(token(address): 0x0B464d, token1(address): 0xa64599, token2(address): 0x55d398, up(address): 0x37cAFb, amount(uint256): 100000000000000000000) -> None
+      [4][STATICCALL] from=StakingRewards, to=PancakeRouter, factory() -> 0x2c3765
+      [4][STATICCALL] from=StakingRewards, to=PancakeFactory, getPair((address): 0xa64599) -> 0x56712d
+      [4][CALL] from=StakingRewards, to=BEP20USDT, transferFrom(sender(address): 0x39B8Ad, recipient(address): 0xeaF834, amount(uint256): 100000000000000000000) -> True
+      [4][CALL] from=StakingRewards, to=BEP20USDT, approve(spender(address): 0x10ED43, amount(uint256): 100000000000000000000) -> True
+      [4][STATICCALL] from=StakingRewards, to=SellToken, balanceOf(account(address): 0xeaF834) -> 2060184032295835622124
+      [4][STATICCALL] from=StakingRewards, to=PancakeRouter, getAmountsOut(amountIn(uint256): 100000000000000000000, path(address[]): ['0x55d398326f99059fF775485246999027B31979...) -> [100000000000000000000, 320708746841035533, 5424676545501156886450]
+        [5][STATICCALL] from=PancakeRouter, to=PancakePair, getReserves() -> ['53975374827339589675502533', '173537912900739367222289', '1684019845']
+        [5][STATICCALL] from=PancakeRouter, to=PancakePair, getReserves() -> ['8557450293478401362657903', '504334704947801812782', '1684019845']
+      [4][CALL] from=StakingRewards, to=PancakeRouter, swapExactTokensForTokens(amountIn(uint256): 100000000000000000000, amountOutMin(uint256): 5424676545501156886450, path(address[]): ['0x55d398326f99059fF775485246999027B31979..., to(address): 0xeaF834, deadline(uint256): 1684019845) -> [100000000000000000000, 320708746841035533, 5424676545501156886450]
+        [5][STATICCALL] from=PancakeRouter, to=PancakePair, getReserves() -> ['53975374827339589675502533', '173537912900739367222289', '1684019845']
+        [5][STATICCALL] from=PancakeRouter, to=PancakePair, getReserves() -> ['8557450293478401362657903', '504334704947801812782', '1684019845']
+        [5][CALL] from=PancakeRouter, to=BEP20USDT, transferFrom(sender(address): 0xeaF834, recipient(address): 0x16b9a8, amount(uint256): 100000000000000000000) -> True
+        [5][CALL] from=PancakeRouter, to=PancakePair, swap(amount0Out(uint256): 0, amount1Out(uint256): 320708746841035533, to(address): 0x358EfC, data(bytes): b'') -> None
+          [6][CALL] from=PancakePair, to=WBNB, transfer(dst(address): 0x358EfC, wad(uint256): 320708746841035533) -> True
+          [6][STATICCALL] from=PancakePair, to=BEP20USDT, balanceOf(account(address): 0x16b9a8) -> 53975474827339589675502533
+          [6][STATICCALL] from=PancakePair, to=WBNB, balanceOf((address): 0x16b9a8) -> 173537592191992526186756
+        [5][CALL] from=PancakeRouter, to=PancakePair, swap(amount0Out(uint256): 5424676545501156886450, amount1Out(uint256): 0, to(address): 0xeaF834, data(bytes): b'') -> None
+          [6][CALL] from=PancakePair, to=SellToken, transfer(recipient(address): 0xeaF834, amount(uint256): 5424676545501156886450) -> True
+          [6][STATICCALL] from=PancakePair, to=SellToken, balanceOf(account(address): 0x358EfC) -> 8552025616932900205771453
+          [6][STATICCALL] from=PancakePair, to=WBNB, balanceOf((address): 0x358EfC) -> 504655413694642848315
+      [4][STATICCALL] from=StakingRewards, to=SellToken, balanceOf(account(address): 0xeaF834) -> 7484860577796992508574
+      [4][STATICCALL] from=StakingRewards, to=SellToken, balanceOf(account(address): 0xeaF834) -> 7484860577796992508574
+      [4][CALL] from=StakingRewards, to=SellToken, transfer(recipient(address): 0x2F98Fa, amount(uint256): 108493530910023137729) -> True
+      [4][CALL] from=StakingRewards, to=SellToken, transfer(recipient(address): 0x2F98Fa, amount(uint256): 54246765455011568864) -> True
+      [4][CALL] from=StakingRewards, to=SellToken, approve(spender(address): 0xBDDFA4, amount(uint256): 2658091507295566874360) -> True
+      [4][STATICCALL] from=StakingRewards, to=SellToken, balanceOf(account(address): 0xeaF834) -> 34359556576462663468399169
+      [4][CALL] from=StakingRewards, to=PancakeRouter, swapExactTokensForTokens(amountIn(uint256): 2658091507295566874360, amountOutMin(uint256): 0, path(address[]): ['0xa645995e9801F2ca6e2361eDF4c2A138362BAD..., to(address): 0xeaF834, deadline(uint256): 1684020205) -> [2658091507295566874360, 1312113291859129509089]
+        [5][STATICCALL] from=PancakeRouter, to=PancakePair, getReserves() -> ['2031746382007205676366006', '4102989748660859064247518', '1684019845']
+        [5][CALL] from=PancakeRouter, to=SellToken, transferFrom(sender(address): 0xeaF834, recipient(address): 0x56712D, amount(uint256): 2658091507295566874360) -> True
+        [5][CALL] from=PancakeRouter, to=PancakePair, swap(amount0Out(uint256): 1312113291859129509089, amount1Out(uint256): 0, to(address): 0xeaF834, data(bytes): b'') -> None
+          [6][CALL] from=PancakePair, to=SellToken, transfer(recipient(address): 0xeaF834, amount(uint256): 1312113291859129509089) -> True
+          [6][STATICCALL] from=PancakePair, to=SellToken, balanceOf(account(address): 0x56712D) -> 2030434268715346546856917
+          [6][STATICCALL] from=PancakePair, to=SellToken, balanceOf(account(address): 0x56712D) -> 4105647840168154631121878
+      [4][STATICCALL] from=StakingRewards, to=SellToken, balanceOf(account(address): 0xeaF834) -> 34360868689754522597908258
+      [4][STATICCALL] from=StakingRewards, to=SellToken, balanceOf(account(address): 0xeaF834) -> 34360868689754522597908258
+      [4][CALL] from=StakingRewards, to=SellToken, approve(spender(address): 0xBDDFA4, amount(uint256): 1312113291859129509089) -> True
+      [4][CALL] from=StakingRewards, to=SellToken, approve(spender(address): 0xBDDFA4, amount(uint256): 2603844741840555305496) -> True
+      [4][CALL] from=StakingRewards, to=PancakeRouter, addLiquidity(tokenA(address): 0x0B464d, tokenB(address): 0xa64599, amountADesired(uint256): 1312113291859129509089, amountBDesired(uint256): 2603844741840555305496, amountAMin(uint256): 0, amountBMin(uint256): 0, to(address): 0xeaF834, deadline(uint256): 1684019945) -> ['1287722620172603918916', '2603844741840555305496', '1829341984516113260165']
+        [5][STATICCALL] from=PancakeRouter, to=PancakeFactory, getPair((address): 0xa64599) -> 0x56712d
+        [5][STATICCALL] from=PancakeRouter, to=PancakePair, getReserves() -> ['2030434268715346546856917', '4105647840168154631121878', '1684019845']
+        [5][CALL] from=PancakeRouter, to=SellToken, transferFrom(sender(address): 0xeaF834, recipient(address): 0x56712D, amount(uint256): 1287722620172603918916) -> True
+        [5][CALL] from=PancakeRouter, to=SellToken, transferFrom(sender(address): 0xeaF834, recipient(address): 0x56712D, amount(uint256): 2603844741840555305496) -> True
+        [5][CALL] from=PancakeRouter, to=PancakePair, mint(to(address): 0xeaF834) -> 1829341984516113260165
+          [6][STATICCALL] from=PancakePair, to=SellToken, balanceOf(account(address): 0x56712D) -> 2031721991335519150775833
+          [6][STATICCALL] from=PancakePair, to=SellToken, balanceOf(account(address): 0x56712D) -> 4108251684909995186427374
+          [6][STATICCALL] from=PancakePair, to=PancakeFactory, feeTo() -> 0x74449f
+  [2][CREATE] from=0x9a3660, to=0x7ce4a6, atInversebrahint248() -> 0x608060
+  [2][CALL] from=0x9a3660, to=BEP20USDT, transferFrom(sender(address): 0xa3aa81, recipient(address): 0x7cE4a6, amount(uint256): 100000000000000000000) -> True
+  [2][CALL] from=0x9a3660, to=0x7ce4a6, stakeaddress() -> None
+    [3][CALL] from=0x7ce4a6, to=BEP20USDT, approve(spender(address): 0xeaF834, amount(uint256): 100000000000000000000) -> True
+    [3][CALL] from=0x7ce4a6, to=StakingRewards, stake(token(address): 0x0B464d, token1(address): 0xa64599, token2(address): 0x55d398, up(address): 0x39B8Ad, amount(uint256): 100000000000000000000) -> None
+      [4][STATICCALL] from=StakingRewards, to=PancakeRouter, factory() -> 0x2c3765
+      [4][STATICCALL] from=StakingRewards, to=PancakeFactory, getPair((address): 0xa64599) -> 0x56712d
+      [4][CALL] from=StakingRewards, to=BEP20USDT, transferFrom(sender(address): 0x7cE4a6, recipient(address): 0xeaF834, amount(uint256): 100000000000000000000) -> True
+      [4][CALL] from=StakingRewards, to=BEP20USDT, approve(spender(address): 0x10ED43, amount(uint256): 100000000000000000000) -> True
+      [4][STATICCALL] from=StakingRewards, to=SellToken, balanceOf(account(address): 0xeaF834) -> 2060184032295835622125
+      [4][STATICCALL] from=StakingRewards, to=PancakeRouter, getAmountsOut(amountIn(uint256): 100000000000000000000, path(address[]): ['0x55d398326f99059fF775485246999027B31979...) -> [100000000000000000000, 320707559978780094, 5417774720351896747371]
+        [5][STATICCALL] from=PancakeRouter, to=PancakePair, getReserves() -> ['53975474827339589675502533', '173537592191992526186756', '1684019845']
+        [5][STATICCALL] from=PancakeRouter, to=PancakePair, getReserves() -> ['8552025616932900205771453', '504655413694642848315', '1684019845']
+      [4][CALL] from=StakingRewards, to=PancakeRouter, swapExactTokensForTokens(amountIn(uint256): 100000000000000000000, amountOutMin(uint256): 5417774720351896747371, path(address[]): ['0x55d398326f99059fF775485246999027B31979..., to(address): 0xeaF834, deadline(uint256): 1684019845) -> [100000000000000000000, 320707559978780094, 5417774720351896747371]
+        [5][STATICCALL] from=PancakeRouter, to=PancakePair, getReserves() -> ['53975474827339589675502533', '173537592191992526186756', '1684019845']
+        [5][STATICCALL] from=PancakeRouter, to=PancakePair, getReserves() -> ['8552025616932900205771453', '504655413694642848315', '1684019845']
+        [5][CALL] from=PancakeRouter, to=BEP20USDT, transferFrom(sender(address): 0xeaF834, recipient(address): 0x16b9a8, amount(uint256): 100000000000000000000) -> True
+        [5][CALL] from=PancakeRouter, to=PancakePair, swap(amount0Out(uint256): 0, amount1Out(uint256): 320707559978780094, to(address): 0x358EfC, data(bytes): b'') -> None
+          [6][CALL] from=PancakePair, to=WBNB, transfer(dst(address): 0x358EfC, wad(uint256): 320707559978780094) -> True
+          [6][STATICCALL] from=PancakePair, to=BEP20USDT, balanceOf(account(address): 0x16b9a8) -> 53975574827339589675502533
+          [6][STATICCALL] from=PancakePair, to=WBNB, balanceOf((address): 0x16b9a8) -> 173537271484432547406662
+        [5][CALL] from=PancakeRouter, to=PancakePair, swap(amount0Out(uint256): 5417774720351896747371, amount1Out(uint256): 0, to(address): 0xeaF834, data(bytes): b'') -> None
+          [6][CALL] from=PancakePair, to=SellToken, transfer(recipient(address): 0xeaF834, amount(uint256): 5417774720351896747371) -> True
+          [6][STATICCALL] from=PancakePair, to=SellToken, balanceOf(account(address): 0x358EfC) -> 8546607842212548309024082
+          [6][STATICCALL] from=PancakePair, to=WBNB, balanceOf((address): 0x358EfC) -> 504976121254621628409
+      [4][STATICCALL] from=StakingRewards, to=SellToken, balanceOf(account(address): 0xeaF834) -> 7477958752647732369496
+      [4][STATICCALL] from=StakingRewards, to=SellToken, balanceOf(account(address): 0xeaF834) -> 7477958752647732369496
+      [4][CALL] from=StakingRewards, to=SellToken, transfer(recipient(address): 0x2F98Fa, amount(uint256): 108355494407037934947) -> True
+      [4][CALL] from=StakingRewards, to=SellToken, transfer(recipient(address): 0x2F98Fa, amount(uint256): 54177747203518967473) -> True
+      [4][CALL] from=StakingRewards, to=SellToken, approve(spender(address): 0xBDDFA4, amount(uint256): 2654709612972429406211) -> True
+      [4][STATICCALL] from=StakingRewards, to=SellToken, balanceOf(account(address): 0xeaF834) -> 34359580967134349993989342
+      [4][CALL] from=StakingRewards, to=PancakeRouter, swapExactTokensForTokens(amountIn(uint256): 2654709612972429406211, amountOutMin(uint256): 0, path(address[]): ['0xa645995e9801F2ca6e2361eDF4c2A138362BAD..., to(address): 0xeaF834, deadline(uint256): 1684020205) -> [2654709612972429406211, 1308751888535165892810]
+        [5][STATICCALL] from=PancakeRouter, to=PancakePair, getReserves() -> ['2031721991335519150775833', '4108251684909995186427374', '1684019845']
+        [5][CALL] from=PancakeRouter, to=SellToken, transferFrom(sender(address): 0xeaF834, recipient(address): 0x56712D, amount(uint256): 2654709612972429406211) -> True
+        [5][CALL] from=PancakeRouter, to=PancakePair, swap(amount0Out(uint256): 1308751888535165892810, amount1Out(uint256): 0, to(address): 0xeaF834, data(bytes): b'') -> None
+          [6][CALL] from=PancakePair, to=SellToken, transfer(recipient(address): 0xeaF834, amount(uint256): 1308751888535165892810) -> True
+          [6][STATICCALL] from=PancakePair, to=SellToken, balanceOf(account(address): 0x56712D) -> 2030413239446983984883023
+          [6][STATICCALL] from=PancakePair, to=SellToken, balanceOf(account(address): 0x56712D) -> 4110906394522967615833585
+      [4][STATICCALL] from=StakingRewards, to=SellToken, balanceOf(account(address): 0xeaF834) -> 34360889719022885159882152
+      [4][STATICCALL] from=StakingRewards, to=SellToken, balanceOf(account(address): 0xeaF834) -> 34360889719022885159882152
+      [4][CALL] from=StakingRewards, to=SellToken, approve(spender(address): 0xBDDFA4, amount(uint256): 1308751888535165892810) -> True
+      [4][CALL] from=StakingRewards, to=SellToken, approve(spender(address): 0xBDDFA4, amount(uint256): 2600531865768910438738) -> True
+      [4][CALL] from=StakingRewards, to=PancakeRouter, addLiquidity(tokenA(address): 0x0B464d, tokenB(address): 0xa64599, amountADesired(uint256): 1308751888535165892810, amountBDesired(uint256): 2600531865768910438738, amountAMin(uint256): 0, amountBMin(uint256): 0, to(address): 0xeaF834, deadline(uint256): 1684019945) -> ['1284425823194564730126', '2600531865768910438738', '1825835145820831159804']
+        [5][STATICCALL] from=PancakeRouter, to=PancakeFactory, getPair((address): 0xa64599) -> 0x56712d
+        [5][STATICCALL] from=PancakeRouter, to=PancakePair, getReserves() -> ['2030413239446983984883023', '4110906394522967615833585', '1684019845']
+        [5][CALL] from=PancakeRouter, to=SellToken, transferFrom(sender(address): 0xeaF834, recipient(address): 0x56712D, amount(uint256): 1284425823194564730126) -> True
+        [5][CALL] from=PancakeRouter, to=SellToken, transferFrom(sender(address): 0xeaF834, recipient(address): 0x56712D, amount(uint256): 2600531865768910438738) -> True
+        [5][CALL] from=PancakeRouter, to=PancakePair, mint(to(address): 0xeaF834) -> 1825835145820831159804
+          [6][STATICCALL] from=PancakePair, to=SellToken, balanceOf(account(address): 0x56712D) -> 2031697665270178549613149
+          [6][STATICCALL] from=PancakePair, to=SellToken, balanceOf(account(address): 0x56712D) -> 4113506926388736526272323
+          [6][STATICCALL] from=PancakePair, to=PancakeFactory, feeTo() -> 0x74449f
+  [2][CREATE] from=0x9a3660, to=0xd9c6e5, atInversebrahint248() -> 0x608060
+  [2][CALL] from=0x9a3660, to=BEP20USDT, transferFrom(sender(address): 0xa3aa81, recipient(address): 0xD9C6E5, amount(uint256): 100000000000000000000) -> True
+  [2][CALL] from=0x9a3660, to=0xd9c6e5, stakeaddress() -> None
+    [3][CALL] from=0xd9c6e5, to=BEP20USDT, approve(spender(address): 0xeaF834, amount(uint256): 100000000000000000000) -> True
+    [3][CALL] from=0xd9c6e5, to=StakingRewards, stake(token(address): 0x0B464d, token1(address): 0xa64599, token2(address): 0x55d398, up(address): 0x7cE4a6, amount(uint256): 100000000000000000000) -> None
+      [4][STATICCALL] from=StakingRewards, to=PancakeRouter, factory() -> 0x2c3765
+      [4][STATICCALL] from=StakingRewards, to=PancakeFactory, getPair((address): 0xa64599) -> 0x56712d
+      [4][CALL] from=StakingRewards, to=BEP20USDT, transferFrom(sender(address): 0xD9C6E5, recipient(address): 0xeaF834, amount(uint256): 100000000000000000000) -> True
+      [4][CALL] from=StakingRewards, to=BEP20USDT, approve(spender(address): 0x10ED43, amount(uint256): 100000000000000000000) -> True
+      [4][STATICCALL] from=StakingRewards, to=SellToken, balanceOf(account(address): 0xeaF834) -> 2060184032295835622127
+      [4][STATICCALL] from=StakingRewards, to=PancakeRouter, getAmountsOut(amountIn(uint256): 100000000000000000000, path(address[]): ['0x55d398326f99059fF775485246999027B31979...) -> [100000000000000000000, 320706373123115808, 5410886064083811234745]
+        [5][STATICCALL] from=PancakeRouter, to=PancakePair, getReserves() -> ['53975574827339589675502533', '173537271484432547406662', '1684019845']
+        [5][STATICCALL] from=PancakeRouter, to=PancakePair, getReserves() -> ['8546607842212548309024082', '504976121254621628409', '1684019845']
+      [4][CALL] from=StakingRewards, to=PancakeRouter, swapExactTokensForTokens(amountIn(uint256): 100000000000000000000, amountOutMin(uint256): 5410886064083811234745, path(address[]): ['0x55d398326f99059fF775485246999027B31979..., to(address): 0xeaF834, deadline(uint256): 1684019845) -> [100000000000000000000, 320706373123115808, 5410886064083811234745]
+        [5][STATICCALL] from=PancakeRouter, to=PancakePair, getReserves() -> ['53975574827339589675502533', '173537271484432547406662', '1684019845']
+        [5][STATICCALL] from=PancakeRouter, to=PancakePair, getReserves() -> ['8546607842212548309024082', '504976121254621628409', '1684019845']
+        [5][CALL] from=PancakeRouter, to=BEP20USDT, transferFrom(sender(address): 0xeaF834, recipient(address): 0x16b9a8, amount(uint256): 100000000000000000000) -> True
+        [5][CALL] from=PancakeRouter, to=PancakePair, swap(amount0Out(uint256): 0, amount1Out(uint256): 320706373123115808, to(address): 0x358EfC, data(bytes): b'') -> None
+          [6][CALL] from=PancakePair, to=WBNB, transfer(dst(address): 0x358EfC, wad(uint256): 320706373123115808) -> True
+          [6][STATICCALL] from=PancakePair, to=BEP20USDT, balanceOf(account(address): 0x16b9a8) -> 53975674827339589675502533
+          [6][STATICCALL] from=PancakePair, to=WBNB, balanceOf((address): 0x16b9a8) -> 173536950778059424290854
+        [5][CALL] from=PancakeRouter, to=PancakePair, swap(amount0Out(uint256): 5410886064083811234745, amount1Out(uint256): 0, to(address): 0xeaF834, data(bytes): b'') -> None
+          [6][CALL] from=PancakePair, to=SellToken, transfer(recipient(address): 0xeaF834, amount(uint256): 5410886064083811234745) -> True
+          [6][STATICCALL] from=PancakePair, to=SellToken, balanceOf(account(address): 0x358EfC) -> 8541196956148464497789337
+          [6][STATICCALL] from=PancakePair, to=WBNB, balanceOf((address): 0x358EfC) -> 505296827627744744217
+      [4][STATICCALL] from=StakingRewards, to=SellToken, balanceOf(account(address): 0xeaF834) -> 7471070096379646856872
+      [4][STATICCALL] from=StakingRewards, to=SellToken, balanceOf(account(address): 0xeaF834) -> 7471070096379646856872
+      [4][CALL] from=StakingRewards, to=SellToken, transfer(recipient(address): 0x2F98Fa, amount(uint256): 108217721281676224694) -> True
+      [4][CALL] from=StakingRewards, to=SellToken, transfer(recipient(address): 0x2F98Fa, amount(uint256): 54108860640838112347) -> True
+      [4][CALL] from=StakingRewards, to=SellToken, approve(spender(address): 0xBDDFA4, amount(uint256): 2651334171401067505025) -> True
+      [4][STATICCALL] from=StakingRewards, to=SellToken, balanceOf(account(address): 0xeaF834) -> 34359605293199690595152026
+      [4][CALL] from=StakingRewards, to=PancakeRouter, swapExactTokensForTokens(amountIn(uint256): 2651334171401067505025, amountOutMin(uint256): 0, path(address[]): ['0xa645995e9801F2ca6e2361eDF4c2A138362BAD..., to(address): 0xeaF834, deadline(uint256): 1684020205) -> [2651334171401067505025, 1305404453569104939261]
+        [5][STATICCALL] from=PancakeRouter, to=PancakePair, getReserves() -> ['2031697665270178549613149', '4113506926388736526272323', '1684019845']
+        [5][CALL] from=PancakeRouter, to=SellToken, transferFrom(sender(address): 0xeaF834, recipient(address): 0x56712D, amount(uint256): 2651334171401067505025) -> True
+        [5][CALL] from=PancakeRouter, to=PancakePair, swap(amount0Out(uint256): 1305404453569104939261, amount1Out(uint256): 0, to(address): 0xeaF834, data(bytes): b'') -> None
+          [6][CALL] from=PancakePair, to=SellToken, transfer(recipient(address): 0xeaF834, amount(uint256): 1305404453569104939261) -> True
+          [6][STATICCALL] from=PancakePair, to=SellToken, balanceOf(account(address): 0x56712D) -> 2030392260816609444673888
+          [6][STATICCALL] from=PancakePair, to=SellToken, balanceOf(account(address): 0x56712D) -> 4116158260560137593777348
+      [4][STATICCALL] from=StakingRewards, to=SellToken, balanceOf(account(address): 0xeaF834) -> 34360910697653259700091287
+      [4][STATICCALL] from=StakingRewards, to=SellToken, balanceOf(account(address): 0xeaF834) -> 34360910697653259700091287
+      [4][CALL] from=StakingRewards, to=SellToken, approve(spender(address): 0xBDDFA4, amount(uint256): 1305404453569104939261) -> True
+      [4][CALL] from=StakingRewards, to=SellToken, approve(spender(address): 0xBDDFA4, amount(uint256): 2597225310760229392677) -> True
+      [4][CALL] from=StakingRewards, to=PancakeRouter, addLiquidity(tokenA(address): 0x0B464d, tokenB(address): 0xa64599, amountADesired(uint256): 1305404453569104939261, amountBDesired(uint256): 2597225310760229392677, amountAMin(uint256): 0, amountBMin(uint256): 0, to(address): 0xeaF834, deadline(uint256): 1684019945) -> ['1281142715306327166242', '2597225310760229392677', '1822339504098725328841']
+        [5][STATICCALL] from=PancakeRouter, to=PancakeFactory, getPair((address): 0xa64599) -> 0x56712d
+        [5][STATICCALL] from=PancakeRouter, to=PancakePair, getReserves() -> ['2030392260816609444673888', '4116158260560137593777348', '1684019845']
+        [5][CALL] from=PancakeRouter, to=SellToken, transferFrom(sender(address): 0xeaF834, recipient(address): 0x56712D, amount(uint256): 1281142715306327166242) -> True
+        [5][CALL] from=PancakeRouter, to=SellToken, transferFrom(sender(address): 0xeaF834, recipient(address): 0x56712D, amount(uint256): 2597225310760229392677) -> True
+        [5][CALL] from=PancakeRouter, to=PancakePair, mint(to(address): 0xeaF834) -> 1822339504098725328841
+          [6][STATICCALL] from=PancakePair, to=SellToken, balanceOf(account(address): 0x56712D) -> 2031673403531915771840130
+          [6][STATICCALL] from=PancakePair, to=SellToken, balanceOf(account(address): 0x56712D) -> 4118755485870897823170025
+          [6][STATICCALL] from=PancakePair, to=PancakeFactory, feeTo() -> 0x74449f
+  [2][CREATE] from=0x9a3660, to=0x1e2bc9, atInversebrahint248() -> 0x608060
+  [2][CALL] from=0x9a3660, to=BEP20USDT, transferFrom(sender(address): 0xa3aa81, recipient(address): 0x1e2bC9, amount(uint256): 100000000000000000000) -> True
+  [2][CALL] from=0x9a3660, to=0x1e2bc9, stakeaddress() -> None
+    [3][CALL] from=0x1e2bc9, to=BEP20USDT, approve(spender(address): 0xeaF834, amount(uint256): 100000000000000000000) -> True
+    [3][CALL] from=0x1e2bc9, to=StakingRewards, stake(token(address): 0x0B464d, token1(address): 0xa64599, token2(address): 0x55d398, up(address): 0xD9C6E5, amount(uint256): 100000000000000000000) -> None
+      [4][STATICCALL] from=StakingRewards, to=PancakeRouter, factory() -> 0x2c3765
+      [4][STATICCALL] from=StakingRewards, to=PancakeFactory, getPair((address): 0xa64599) -> 0x56712d
+      [4][CALL] from=StakingRewards, to=BEP20USDT, transferFrom(sender(address): 0x1e2bC9, recipient(address): 0xeaF834, amount(uint256): 100000000000000000000) -> True
+      [4][CALL] from=StakingRewards, to=BEP20USDT, approve(spender(address): 0x10ED43, amount(uint256): 100000000000000000000) -> True
+      [4][STATICCALL] from=StakingRewards, to=SellToken, balanceOf(account(address): 0xeaF834) -> 2060184032295835622129
+      [4][STATICCALL] from=StakingRewards, to=PancakeRouter, getAmountsOut(amountIn(uint256): 100000000000000000000, path(address[]): ['0x55d398326f99059fF775485246999027B31979...) -> [100000000000000000000, 320705186274042627, 5404010543209112089108]
+        [5][STATICCALL] from=PancakeRouter, to=PancakePair, getReserves() -> ['53975674827339589675502533', '173536950778059424290854', '1684019845']
+        [5][STATICCALL] from=PancakeRouter, to=PancakePair, getReserves() -> ['8541196956148464497789337', '505296827627744744217', '1684019845']
+      [4][CALL] from=StakingRewards, to=PancakeRouter, swapExactTokensForTokens(amountIn(uint256): 100000000000000000000, amountOutMin(uint256): 5404010543209112089108, path(address[]): ['0x55d398326f99059fF775485246999027B31979..., to(address): 0xeaF834, deadline(uint256): 1684019845) -> [100000000000000000000, 320705186274042627, 5404010543209112089108]
+        [5][STATICCALL] from=PancakeRouter, to=PancakePair, getReserves() -> ['53975674827339589675502533', '173536950778059424290854', '1684019845']
+        [5][STATICCALL] from=PancakeRouter, to=PancakePair, getReserves() -> ['8541196956148464497789337', '505296827627744744217', '1684019845']
+        [5][CALL] from=PancakeRouter, to=BEP20USDT, transferFrom(sender(address): 0xeaF834, recipient(address): 0x16b9a8, amount(uint256): 100000000000000000000) -> True
+        [5][CALL] from=PancakeRouter, to=PancakePair, swap(amount0Out(uint256): 0, amount1Out(uint256): 320705186274042627, to(address): 0x358EfC, data(bytes): b'') -> None
+          [6][CALL] from=PancakePair, to=WBNB, transfer(dst(address): 0x358EfC, wad(uint256): 320705186274042627) -> True
+          [6][STATICCALL] from=PancakePair, to=BEP20USDT, balanceOf(account(address): 0x16b9a8) -> 53975774827339589675502533
+          [6][STATICCALL] from=PancakePair, to=WBNB, balanceOf((address): 0x16b9a8) -> 173536630072873150248227
+        [5][CALL] from=PancakeRouter, to=PancakePair, swap(amount0Out(uint256): 5404010543209112089108, amount1Out(uint256): 0, to(address): 0xeaF834, data(bytes): b'') -> None
+          [6][CALL] from=PancakePair, to=SellToken, transfer(recipient(address): 0xeaF834, amount(uint256): 5404010543209112089108) -> True
+          [6][STATICCALL] from=PancakePair, to=SellToken, balanceOf(account(address): 0x358EfC) -> 8535792945605255385700229
+          [6][STATICCALL] from=PancakePair, to=WBNB, balanceOf((address): 0x358EfC) -> 505617532814018786844
+      [4][STATICCALL] from=StakingRewards, to=SellToken, balanceOf(account(address): 0xeaF834) -> 7464194575504947711237
+      [4][STATICCALL] from=StakingRewards, to=SellToken, balanceOf(account(address): 0xeaF834) -> 7464194575504947711237
+      [4][CALL] from=StakingRewards, to=SellToken, transfer(recipient(address): 0x2F98Fa, amount(uint256): 108080210864182241782) -> True
+      [4][CALL] from=StakingRewards, to=SellToken, transfer(recipient(address): 0x2F98Fa, amount(uint256): 54040105432091120891) -> True
+      [4][CALL] from=StakingRewards, to=SellToken, approve(spender(address): 0xBDDFA4, amount(uint256): 2647965166172464923662) -> True
+      [4][STATICCALL] from=StakingRewards, to=SellToken, balanceOf(account(address): 0xeaF834) -> 34359629554937953372925045
+      [4][CALL] from=StakingRewards, to=PancakeRouter, swapExactTokensForTokens(amountIn(uint256): 2647965166172464923662, amountOutMin(uint256): 0, path(address[]): ['0xa645995e9801F2ca6e2361eDF4c2A138362BAD..., to(address): 0xeaF834, deadline(uint256): 1684020205) -> [2647965166172464923662, 1302070904714084152651]
+        [5][STATICCALL] from=PancakeRouter, to=PancakePair, getReserves() -> ['2031673403531915771840130', '4118755485870897823170025', '1684019845']
+        [5][CALL] from=PancakeRouter, to=SellToken, transferFrom(sender(address): 0xeaF834, recipient(address): 0x56712D, amount(uint256): 2647965166172464923662) -> True
+        [5][CALL] from=PancakeRouter, to=PancakePair, swap(amount0Out(uint256): 1302070904714084152651, amount1Out(uint256): 0, to(address): 0xeaF834, data(bytes): b'') -> None
+          [6][CALL] from=PancakePair, to=SellToken, transfer(recipient(address): 0xeaF834, amount(uint256): 1302070904714084152651) -> True
+          [6][STATICCALL] from=PancakePair, to=SellToken, balanceOf(account(address): 0x56712D) -> 2030371332627201687687479
+          [6][STATICCALL] from=PancakePair, to=SellToken, balanceOf(account(address): 0x56712D) -> 4121403451037070288093687
+      [4][STATICCALL] from=StakingRewards, to=SellToken, balanceOf(account(address): 0xeaF834) -> 34360931625842667457077696
+      [4][STATICCALL] from=StakingRewards, to=SellToken, balanceOf(account(address): 0xeaF834) -> 34360931625842667457077696
+      [4][CALL] from=StakingRewards, to=SellToken, approve(spender(address): 0xBDDFA4, amount(uint256): 1302070904714084152651) -> True
+      [4][CALL] from=StakingRewards, to=SellToken, approve(spender(address): 0xBDDFA4, amount(uint256): 2593925060740373802771) -> True
+      [4][CALL] from=StakingRewards, to=PancakeRouter, addLiquidity(tokenA(address): 0x0B464d, tokenB(address): 0xa64599, amountADesired(uint256): 1302070904714084152651, amountBDesired(uint256): 2593925060740373802771, amountAMin(uint256): 0, amountBMin(uint256): 0, to(address): 0xeaF834, deadline(uint256): 1684019945) -> ['1277873215975806371419', '2593925060740373802771', '1818855006523802044693']
+        [5][STATICCALL] from=PancakeRouter, to=PancakeFactory, getPair((address): 0xa64599) -> 0x56712d
+        [5][STATICCALL] from=PancakeRouter, to=PancakePair, getReserves() -> ['2030371332627201687687479', '4121403451037070288093687', '1684019845']
+        [5][CALL] from=PancakeRouter, to=SellToken, transferFrom(sender(address): 0xeaF834, recipient(address): 0x56712D, amount(uint256): 1277873215975806371419) -> True
+        [5][CALL] from=PancakeRouter, to=SellToken, transferFrom(sender(address): 0xeaF834, recipient(address): 0x56712D, amount(uint256): 2593925060740373802771) -> True
+        [5][CALL] from=PancakeRouter, to=PancakePair, mint(to(address): 0xeaF834) -> 1818855006523802044693
+          [6][STATICCALL] from=PancakePair, to=SellToken, balanceOf(account(address): 0x56712D) -> 2031649205843177494058898
+          [6][STATICCALL] from=PancakePair, to=SellToken, balanceOf(account(address): 0x56712D) -> 4123997376097810661896458
+          [6][STATICCALL] from=PancakePair, to=PancakeFactory, feeTo() -> 0x74449f
+  [2][CREATE] from=0x9a3660, to=0x7fa9a2, atInversebrahint248() -> 0x608060
+  [2][CALL] from=0x9a3660, to=BEP20USDT, transferFrom(sender(address): 0xa3aa81, recipient(address): 0x7FA9a2, amount(uint256): 100000000000000000000) -> True
+  [2][CALL] from=0x9a3660, to=0x7fa9a2, stakeaddress() -> None
+    [3][CALL] from=0x7fa9a2, to=BEP20USDT, approve(spender(address): 0xeaF834, amount(uint256): 100000000000000000000) -> True
+    [3][CALL] from=0x7fa9a2, to=StakingRewards, stake(token(address): 0x0B464d, token1(address): 0xa64599, token2(address): 0x55d398, up(address): 0x1e2bC9, amount(uint256): 100000000000000000000) -> None
+      [4][STATICCALL] from=StakingRewards, to=PancakeRouter, factory() -> 0x2c3765
+      [4][STATICCALL] from=StakingRewards, to=PancakeFactory, getPair((address): 0xa64599) -> 0x56712d
+      [4][CALL] from=StakingRewards, to=BEP20USDT, transferFrom(sender(address): 0x7FA9a2, recipient(address): 0xeaF834, amount(uint256): 100000000000000000000) -> True
+      [4][CALL] from=StakingRewards, to=BEP20USDT, approve(spender(address): 0x10ED43, amount(uint256): 100000000000000000000) -> True
+      [4][STATICCALL] from=StakingRewards, to=SellToken, balanceOf(account(address): 0xeaF834) -> 2060184032295835622131
+      [4][STATICCALL] from=StakingRewards, to=PancakeRouter, getAmountsOut(amountIn(uint256): 100000000000000000000, path(address[]): ['0x55d398326f99059fF775485246999027B31979...) -> [100000000000000000000, 320703999431560502, 5397148124346403798848]
+        [5][STATICCALL] from=PancakeRouter, to=PancakePair, getReserves() -> ['53975774827339589675502533', '173536630072873150248227', '1684019845']
+        [5][STATICCALL] from=PancakeRouter, to=PancakePair, getReserves() -> ['8535792945605255385700229', '505617532814018786844', '1684019845']
+      [4][CALL] from=StakingRewards, to=PancakeRouter, swapExactTokensForTokens(amountIn(uint256): 100000000000000000000, amountOutMin(uint256): 5397148124346403798848, path(address[]): ['0x55d398326f99059fF775485246999027B31979..., to(address): 0xeaF834, deadline(uint256): 1684019845) -> [100000000000000000000, 320703999431560502, 5397148124346403798848]
+        [5][STATICCALL] from=PancakeRouter, to=PancakePair, getReserves() -> ['53975774827339589675502533', '173536630072873150248227', '1684019845']
+        [5][STATICCALL] from=PancakeRouter, to=PancakePair, getReserves() -> ['8535792945605255385700229', '505617532814018786844', '1684019845']
+        [5][CALL] from=PancakeRouter, to=BEP20USDT, transferFrom(sender(address): 0xeaF834, recipient(address): 0x16b9a8, amount(uint256): 100000000000000000000) -> True
+        [5][CALL] from=PancakeRouter, to=PancakePair, swap(amount0Out(uint256): 0, amount1Out(uint256): 320703999431560502, to(address): 0x358EfC, data(bytes): b'') -> None
+          [6][CALL] from=PancakePair, to=WBNB, transfer(dst(address): 0x358EfC, wad(uint256): 320703999431560502) -> True
+          [6][STATICCALL] from=PancakePair, to=BEP20USDT, balanceOf(account(address): 0x16b9a8) -> 53975874827339589675502533
+          [6][STATICCALL] from=PancakePair, to=WBNB, balanceOf((address): 0x16b9a8) -> 173536309368873718687725
+        [5][CALL] from=PancakeRouter, to=PancakePair, swap(amount0Out(uint256): 5397148124346403798848, amount1Out(uint256): 0, to(address): 0xeaF834, data(bytes): b'') -> None
+          [6][CALL] from=PancakePair, to=SellToken, transfer(recipient(address): 0xeaF834, amount(uint256): 5397148124346403798848) -> True
+          [6][STATICCALL] from=PancakePair, to=SellToken, balanceOf(account(address): 0x358EfC) -> 8530395797480908981901381
+          [6][STATICCALL] from=PancakePair, to=WBNB, balanceOf((address): 0x358EfC) -> 505938236813450347346
+      [4][STATICCALL] from=StakingRewards, to=SellToken, balanceOf(account(address): 0xeaF834) -> 7457332156642239420979
+      [4][STATICCALL] from=StakingRewards, to=SellToken, balanceOf(account(address): 0xeaF834) -> 7457332156642239420979
+      [4][CALL] from=StakingRewards, to=SellToken, transfer(recipient(address): 0x2F98Fa, amount(uint256): 107942962486928075976) -> True
+      [4][CALL] from=StakingRewards, to=SellToken, transfer(recipient(address): 0x2F98Fa, amount(uint256): 53971481243464037988) -> True
+      [4][CALL] from=StakingRewards, to=SellToken, approve(spender(address): 0xBDDFA4, amount(uint256): 2644602580929737861435) -> True
+      [4][STATICCALL] from=StakingRewards, to=SellToken, balanceOf(account(address): 0xeaF834) -> 34359653752626691650706277
+      [4][CALL] from=StakingRewards, to=PancakeRouter, swapExactTokensForTokens(amountIn(uint256): 2644602580929737861435, amountOutMin(uint256): 0, path(address[]): ['0xa645995e9801F2ca6e2361eDF4c2A138362BAD..., to(address): 0xeaF834, deadline(uint256): 1684020205) -> [2644602580929737861435, 1298751160356559879087]
+        [5][STATICCALL] from=PancakeRouter, to=PancakePair, getReserves() -> ['2031649205843177494058898', '4123997376097810661896458', '1684019845']
+        [5][CALL] from=PancakeRouter, to=SellToken, transferFrom(sender(address): 0xeaF834, recipient(address): 0x56712D, amount(uint256): 2644602580929737861435) -> True
+        [5][CALL] from=PancakeRouter, to=PancakePair, swap(amount0Out(uint256): 1298751160356559879087, amount1Out(uint256): 0, to(address): 0xeaF834, data(bytes): b'') -> None
+          [6][CALL] from=PancakePair, to=SellToken, transfer(recipient(address): 0xeaF834, amount(uint256): 1298751160356559879087) -> True
+          [6][STATICCALL] from=PancakePair, to=SellToken, balanceOf(account(address): 0x56712D) -> 2030350454682820934179811
+          [6][STATICCALL] from=PancakePair, to=SellToken, balanceOf(account(address): 0x56712D) -> 4126641978678740399757893
+      [4][STATICCALL] from=StakingRewards, to=SellToken, balanceOf(account(address): 0xeaF834) -> 34360952503787048210585364
+      [4][STATICCALL] from=StakingRewards, to=SellToken, balanceOf(account(address): 0xeaF834) -> 34360952503787048210585364
+      [4][CALL] from=StakingRewards, to=SellToken, approve(spender(address): 0xBDDFA4, amount(uint256): 1298751160356559879087) -> True
+      [4][CALL] from=StakingRewards, to=SellToken, approve(spender(address): 0xBDDFA4, amount(uint256): 2590631099686273823447) -> True
+      [4][CALL] from=StakingRewards, to=PancakeRouter, addLiquidity(tokenA(address): 0x0B464d, tokenB(address): 0xa64599, amountADesired(uint256): 1298751160356559879087, amountBDesired(uint256): 2590631099686273823447, amountAMin(uint256): 0, amountBMin(uint256): 0, to(address): 0xeaF834, deadline(uint256): 1684019945) -> ['1274617245290463199955', '2590631099686273823447', '1815381600610659306458']
+        [5][STATICCALL] from=PancakeRouter, to=PancakeFactory, getPair((address): 0xa64599) -> 0x56712d
+        [5][STATICCALL] from=PancakeRouter, to=PancakePair, getReserves() -> ['2030350454682820934179811', '4126641978678740399757893', '1684019845']
+        [5][CALL] from=PancakeRouter, to=SellToken, transferFrom(sender(address): 0xeaF834, recipient(address): 0x56712D, amount(uint256): 1274617245290463199955) -> True
+        [5][CALL] from=PancakeRouter, to=SellToken, transferFrom(sender(address): 0xeaF834, recipient(address): 0x56712D, amount(uint256): 2590631099686273823447) -> True
+        [5][CALL] from=PancakeRouter, to=PancakePair, mint(to(address): 0xeaF834) -> 1815381600610659306458
+          [6][STATICCALL] from=PancakePair, to=SellToken, balanceOf(account(address): 0x56712D) -> 2031625071928111397379766
+          [6][STATICCALL] from=PancakePair, to=SellToken, balanceOf(account(address): 0x56712D) -> 4129232609778426673581340
+          [6][STATICCALL] from=PancakePair, to=PancakeFactory, feeTo() -> 0x74449f
+  [2][CREATE] from=0x9a3660, to=0x1fe6cb, atInversebrahint248() -> 0x608060
+  [2][CALL] from=0x9a3660, to=BEP20USDT, transferFrom(sender(address): 0xa3aa81, recipient(address): 0x1Fe6CB, amount(uint256): 100000000000000000000) -> True
+  [2][CALL] from=0x9a3660, to=0x1fe6cb, stakeaddress() -> None
+    [3][CALL] from=0x1fe6cb, to=BEP20USDT, approve(spender(address): 0xeaF834, amount(uint256): 100000000000000000000) -> True
+    [3][CALL] from=0x1fe6cb, to=StakingRewards, stake(token(address): 0x0B464d, token1(address): 0xa64599, token2(address): 0x55d398, up(address): 0x7FA9a2, amount(uint256): 100000000000000000000) -> None
+      [4][STATICCALL] from=StakingRewards, to=PancakeRouter, factory() -> 0x2c3765
+      [4][STATICCALL] from=StakingRewards, to=PancakeFactory, getPair((address): 0xa64599) -> 0x56712d
+      [4][CALL] from=StakingRewards, to=BEP20USDT, transferFrom(sender(address): 0x1Fe6CB, recipient(address): 0xeaF834, amount(uint256): 100000000000000000000) -> True
+      [4][CALL] from=StakingRewards, to=BEP20USDT, approve(spender(address): 0x10ED43, amount(uint256): 100000000000000000000) -> True
+      [4][STATICCALL] from=StakingRewards, to=SellToken, balanceOf(account(address): 0xeaF834) -> 2060184032295835622133
+      [4][STATICCALL] from=StakingRewards, to=PancakeRouter, getAmountsOut(amountIn(uint256): 100000000000000000000, path(address[]): ['0x55d398326f99059fF775485246999027B31979...) -> [100000000000000000000, 320702812595669384, 5390298774220278221451]
+        [5][STATICCALL] from=PancakeRouter, to=PancakePair, getReserves() -> ['53975874827339589675502533', '173536309368873718687725', '1684019845']
+        [5][STATICCALL] from=PancakeRouter, to=PancakePair, getReserves() -> ['8530395797480908981901381', '505938236813450347346', '1684019845']
+      [4][CALL] from=StakingRewards, to=PancakeRouter, swapExactTokensForTokens(amountIn(uint256): 100000000000000000000, amountOutMin(uint256): 5390298774220278221451, path(address[]): ['0x55d398326f99059fF775485246999027B31979..., to(address): 0xeaF834, deadline(uint256): 1684019845) -> [100000000000000000000, 320702812595669384, 5390298774220278221451]
+        [5][STATICCALL] from=PancakeRouter, to=PancakePair, getReserves() -> ['53975874827339589675502533', '173536309368873718687725', '1684019845']
+        [5][STATICCALL] from=PancakeRouter, to=PancakePair, getReserves() -> ['8530395797480908981901381', '505938236813450347346', '1684019845']
+        [5][CALL] from=PancakeRouter, to=BEP20USDT, transferFrom(sender(address): 0xeaF834, recipient(address): 0x16b9a8, amount(uint256): 100000000000000000000) -> True
+        [5][CALL] from=PancakeRouter, to=PancakePair, swap(amount0Out(uint256): 0, amount1Out(uint256): 320702812595669384, to(address): 0x358EfC, data(bytes): b'') -> None
+          [6][CALL] from=PancakePair, to=WBNB, transfer(dst(address): 0x358EfC, wad(uint256): 320702812595669384) -> True
+          [6][STATICCALL] from=PancakePair, to=BEP20USDT, balanceOf(account(address): 0x16b9a8) -> 53975974827339589675502533
+          [6][STATICCALL] from=PancakePair, to=WBNB, balanceOf((address): 0x16b9a8) -> 173535988666061123018341
+        [5][CALL] from=PancakeRouter, to=PancakePair, swap(amount0Out(uint256): 5390298774220278221451, amount1Out(uint256): 0, to(address): 0xeaF834, data(bytes): b'') -> None
+          [6][CALL] from=PancakePair, to=SellToken, transfer(recipient(address): 0xeaF834, amount(uint256): 5390298774220278221451) -> True
+          [6][STATICCALL] from=PancakePair, to=SellToken, balanceOf(account(address): 0x358EfC) -> 8525005498706688703679930
+          [6][STATICCALL] from=PancakePair, to=WBNB, balanceOf((address): 0x358EfC) -> 506258939626046016730
+      [4][STATICCALL] from=StakingRewards, to=SellToken, balanceOf(account(address): 0xeaF834) -> 7450482806516113843584
+      [4][STATICCALL] from=StakingRewards, to=SellToken, balanceOf(account(address): 0xeaF834) -> 7450482806516113843584
+      [4][CALL] from=StakingRewards, to=SellToken, transfer(recipient(address): 0x2F98Fa, amount(uint256): 107805975484405564429) -> True
+      [4][CALL] from=StakingRewards, to=SellToken, transfer(recipient(address): 0x2F98Fa, amount(uint256): 53902987742202782214) -> True
+      [4][CALL] from=StakingRewards, to=SellToken, approve(spender(address): 0xBDDFA4, amount(uint256): 2641246399367936328510) -> True
+      [4][STATICCALL] from=StakingRewards, to=SellToken, balanceOf(account(address): 0xeaF834) -> 34359677886541757747385409
+      [4][CALL] from=StakingRewards, to=PancakeRouter, swapExactTokensForTokens(amountIn(uint256): 2641246399367936328510, amountOutMin(uint256): 0, path(address[]): ['0xa645995e9801F2ca6e2361eDF4c2A138362BAD..., to(address): 0xeaF834, deadline(uint256): 1684020205) -> [2641246399367936328510, 1295445139510259077240]
+        [5][STATICCALL] from=PancakeRouter, to=PancakePair, getReserves() -> ['2031625071928111397379766', '4129232609778426673581340', '1684019845']
+        [5][CALL] from=PancakeRouter, to=SellToken, transferFrom(sender(address): 0xeaF834, recipient(address): 0x56712D, amount(uint256): 2641246399367936328510) -> True
+        [5][CALL] from=PancakeRouter, to=PancakePair, swap(amount0Out(uint256): 1295445139510259077240, amount1Out(uint256): 0, to(address): 0xeaF834, data(bytes): b'') -> None
+          [6][CALL] from=PancakePair, to=SellToken, transfer(recipient(address): 0xeaF834, amount(uint256): 1295445139510259077240) -> True
+          [6][STATICCALL] from=PancakePair, to=SellToken, balanceOf(account(address): 0x56712D) -> 2030329626788601138302526
+          [6][STATICCALL] from=PancakePair, to=SellToken, balanceOf(account(address): 0x56712D) -> 4131873856177794609909850
+      [4][STATICCALL] from=StakingRewards, to=SellToken, balanceOf(account(address): 0xeaF834) -> 34360973331681268006462649
+      [4][STATICCALL] from=StakingRewards, to=SellToken, balanceOf(account(address): 0xeaF834) -> 34360973331681268006462649
+      [4][CALL] from=StakingRewards, to=SellToken, approve(spender(address): 0xBDDFA4, amount(uint256): 1295445139510259077240) -> True
+      [4][CALL] from=StakingRewards, to=SellToken, approve(spender(address): 0xBDDFA4, amount(uint256): 2587343411625733546296) -> True
+      [4][CALL] from=StakingRewards, to=PancakeRouter, addLiquidity(tokenA(address): 0x0B464d, tokenB(address): 0xa64599, amountADesired(uint256): 1295445139510259077240, amountBDesired(uint256): 2587343411625733546296, amountAMin(uint256): 0, amountBMin(uint256): 0, to(address): 0xeaF834, deadline(uint256): 1684019945) -> ['1271374723951393067291', '2587343411625733546296', '1811919234211659655628']
+        [5][STATICCALL] from=PancakeRouter, to=PancakeFactory, getPair((address): 0xa64599) -> 0x56712d
+        [5][STATICCALL] from=PancakeRouter, to=PancakePair, getReserves() -> ['2030329626788601138302526', '4131873856177794609909850', '1684019845']
+        [5][CALL] from=PancakeRouter, to=SellToken, transferFrom(sender(address): 0xeaF834, recipient(address): 0x56712D, amount(uint256): 1271374723951393067291) -> True
+        [5][CALL] from=PancakeRouter, to=SellToken, transferFrom(sender(address): 0xeaF834, recipient(address): 0x56712D, amount(uint256): 2587343411625733546296) -> True
+        [5][CALL] from=PancakeRouter, to=PancakePair, mint(to(address): 0xeaF834) -> 1811919234211659655628
+          [6][STATICCALL] from=PancakePair, to=SellToken, balanceOf(account(address): 0x56712D) -> 2031601001512552531369817
+          [6][STATICCALL] from=PancakePair, to=SellToken, balanceOf(account(address): 0x56712D) -> 4134461199589420343456146
+          [6][STATICCALL] from=PancakePair, to=PancakeFactory, feeTo() -> 0x74449f
+  [2][CREATE] from=0x9a3660, to=0x4515ee, atInversebrahint248() -> 0x608060
+  [2][CALL] from=0x9a3660, to=BEP20USDT, transferFrom(sender(address): 0xa3aa81, recipient(address): 0x4515eE, amount(uint256): 100000000000000000000) -> True
+  [2][CALL] from=0x9a3660, to=0x4515ee, stakeaddress() -> None
+    [3][CALL] from=0x4515ee, to=BEP20USDT, approve(spender(address): 0xeaF834, amount(uint256): 100000000000000000000) -> True
+    [3][CALL] from=0x4515ee, to=StakingRewards, stake(token(address): 0x0B464d, token1(address): 0xa64599, token2(address): 0x55d398, up(address): 0x1Fe6CB, amount(uint256): 100000000000000000000) -> None
+      [4][STATICCALL] from=StakingRewards, to=PancakeRouter, factory() -> 0x2c3765
+      [4][STATICCALL] from=StakingRewards, to=PancakeFactory, getPair((address): 0xa64599) -> 0x56712d
+      [4][CALL] from=StakingRewards, to=BEP20USDT, transferFrom(sender(address): 0x4515eE, recipient(address): 0xeaF834, amount(uint256): 100000000000000000000) -> True
+      [4][CALL] from=StakingRewards, to=BEP20USDT, approve(spender(address): 0x10ED43, amount(uint256): 100000000000000000000) -> True
+      [4][STATICCALL] from=StakingRewards, to=SellToken, balanceOf(account(address): 0xeaF834) -> 2060184032295835622135
+      [4][STATICCALL] from=StakingRewards, to=PancakeRouter, getAmountsOut(amountIn(uint256): 100000000000000000000, path(address[]): ['0x55d398326f99059fF775485246999027B31979...) -> [100000000000000000000, 320701625766369224, 5383462459660910988939]
+        [5][STATICCALL] from=PancakeRouter, to=PancakePair, getReserves() -> ['53975974827339589675502533', '173535988666061123018341', '1684019845']
+        [5][STATICCALL] from=PancakeRouter, to=PancakePair, getReserves() -> ['8525005498706688703679930', '506258939626046016730', '1684019845']
+      [4][CALL] from=StakingRewards, to=PancakeRouter, swapExactTokensForTokens(amountIn(uint256): 100000000000000000000, amountOutMin(uint256): 5383462459660910988939, path(address[]): ['0x55d398326f99059fF775485246999027B31979..., to(address): 0xeaF834, deadline(uint256): 1684019845) -> [100000000000000000000, 320701625766369224, 5383462459660910988939]
+        [5][STATICCALL] from=PancakeRouter, to=PancakePair, getReserves() -> ['53975974827339589675502533', '173535988666061123018341', '1684019845']
+        [5][STATICCALL] from=PancakeRouter, to=PancakePair, getReserves() -> ['8525005498706688703679930', '506258939626046016730', '1684019845']
+        [5][CALL] from=PancakeRouter, to=BEP20USDT, transferFrom(sender(address): 0xeaF834, recipient(address): 0x16b9a8, amount(uint256): 100000000000000000000) -> True
+        [5][CALL] from=PancakeRouter, to=PancakePair, swap(amount0Out(uint256): 0, amount1Out(uint256): 320701625766369224, to(address): 0x358EfC, data(bytes): b'') -> None
+          [6][CALL] from=PancakePair, to=WBNB, transfer(dst(address): 0x358EfC, wad(uint256): 320701625766369224) -> True
+          [6][STATICCALL] from=PancakePair, to=BEP20USDT, balanceOf(account(address): 0x16b9a8) -> 53976074827339589675502533
+          [6][STATICCALL] from=PancakePair, to=WBNB, balanceOf((address): 0x16b9a8) -> 173535667964435356649117
+        [5][CALL] from=PancakeRouter, to=PancakePair, swap(amount0Out(uint256): 5383462459660910988939, amount1Out(uint256): 0, to(address): 0xeaF834, data(bytes): b'') -> None
+          [6][CALL] from=PancakePair, to=SellToken, transfer(recipient(address): 0xeaF834, amount(uint256): 5383462459660910988939) -> True
+          [6][STATICCALL] from=PancakePair, to=SellToken, balanceOf(account(address): 0x358EfC) -> 8519622036247027792690991
+          [6][STATICCALL] from=PancakePair, to=WBNB, balanceOf((address): 0x358EfC) -> 506579641251812385954
+      [4][STATICCALL] from=StakingRewards, to=SellToken, balanceOf(account(address): 0xeaF834) -> 7443646491956746611074
+      [4][STATICCALL] from=StakingRewards, to=SellToken, balanceOf(account(address): 0xeaF834) -> 7443646491956746611074
+      [4][CALL] from=StakingRewards, to=SellToken, transfer(recipient(address): 0x2F98Fa, amount(uint256): 107669249193218219778) -> True
+      [4][CALL] from=StakingRewards, to=SellToken, transfer(recipient(address): 0x2F98Fa, amount(uint256): 53834624596609109889) -> True
+      [4][CALL] from=StakingRewards, to=SellToken, approve(spender(address): 0xBDDFA4, amount(uint256): 2637896605233846384580) -> True
+      [4][STATICCALL] from=StakingRewards, to=SellToken, balanceOf(account(address): 0xeaF834) -> 34359701956957316613395358
+      [4][CALL] from=StakingRewards, to=PancakeRouter, swapExactTokensForTokens(amountIn(uint256): 2637896605233846384580, amountOutMin(uint256): 0, path(address[]): ['0xa645995e9801F2ca6e2361eDF4c2A138362BAD..., to(address): 0xeaF834, deadline(uint256): 1684020205) -> [2637896605233846384580, 1292152761810200118136]
+        [5][STATICCALL] from=PancakeRouter, to=PancakePair, getReserves() -> ['2031601001512552531369817', '4134461199589420343456146', '1684019845']
+        [5][CALL] from=PancakeRouter, to=SellToken, transferFrom(sender(address): 0xeaF834, recipient(address): 0x56712D, amount(uint256): 2637896605233846384580) -> True
+        [5][CALL] from=PancakeRouter, to=PancakePair, swap(amount0Out(uint256): 1292152761810200118136, amount1Out(uint256): 0, to(address): 0xeaF834, data(bytes): b'') -> None
+          [6][CALL] from=PancakePair, to=SellToken, transfer(recipient(address): 0xeaF834, amount(uint256): 1292152761810200118136) -> True
+          [6][STATICCALL] from=PancakePair, to=SellToken, balanceOf(account(address): 0x56712D) -> 2030308848750742331251681
+          [6][STATICCALL] from=PancakePair, to=SellToken, balanceOf(account(address): 0x56712D) -> 4137099096194654189840726
+      [4][STATICCALL] from=StakingRewards, to=SellToken, balanceOf(account(address): 0xeaF834) -> 34360994109719126813513494
+      [4][STATICCALL] from=StakingRewards, to=SellToken, balanceOf(account(address): 0xeaF834) -> 34360994109719126813513494
+      [4][CALL] from=StakingRewards, to=SellToken, approve(spender(address): 0xBDDFA4, amount(uint256): 1292152761810200118136) -> True
+      [4][CALL] from=StakingRewards, to=SellToken, approve(spender(address): 0xBDDFA4, amount(uint256): 2584061980637237274690) -> True
+      [4][CALL] from=StakingRewards, to=PancakeRouter, addLiquidity(tokenA(address): 0x0B464d, tokenB(address): 0xa64599, amountADesired(uint256): 1292152761810200118136, amountBDesired(uint256): 2584061980637237274690, amountAMin(uint256): 0, amountBMin(uint256): 0, to(address): 0xeaF834, deadline(uint256): 1684019945) -> ['1268145573267482201822', '2584061980637237274690', '1808467855514131843950']
+        [5][STATICCALL] from=PancakeRouter, to=PancakeFactory, getPair((address): 0xa64599) -> 0x56712d
+        [5][STATICCALL] from=PancakeRouter, to=PancakePair, getReserves() -> ['2030308848750742331251681', '4137099096194654189840726', '1684019845']
+        [5][CALL] from=PancakeRouter, to=SellToken, transferFrom(sender(address): 0xeaF834, recipient(address): 0x56712D, amount(uint256): 1268145573267482201822) -> True
+        [5][CALL] from=PancakeRouter, to=SellToken, transferFrom(sender(address): 0xeaF834, recipient(address): 0x56712D, amount(uint256): 2584061980637237274690) -> True
+        [5][CALL] from=PancakeRouter, to=PancakePair, mint(to(address): 0xeaF834) -> 1808467855514131843950
+          [6][STATICCALL] from=PancakePair, to=SellToken, balanceOf(account(address): 0x56712D) -> 2031576994324009813453503
+          [6][STATICCALL] from=PancakePair, to=SellToken, balanceOf(account(address): 0x56712D) -> 4139683158175291427115416
+          [6][STATICCALL] from=PancakePair, to=PancakeFactory, feeTo() -> 0x74449f

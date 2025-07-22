@@ -1,0 +1,850 @@
+[1][CALL] from=0xd54761, to=0x34c986, 0x58662880() -> None
+  [2][CALL] from=0x34c986, to=AdminUpgradeabilityProxy, flashloan(receiver(address): 0x34C986, token(address): 0xe9e7CE, amount(uint256): 50000000000000000000000, params(bytes): b'') -> None
+    [3][DELEGATECALL] from=AdminUpgradeabilityProxy, to=Bank, flashloan(receiver(address): 0x34C986, token(address): 0xe9e7CE, amount(uint256): 50000000000000000000000, params(bytes): b'') -> None
+      [4][STATICCALL] from=AdminUpgradeabilityProxy, to=AdminUpgradeabilityProxy, balance(token(address): 0xe9e7CE) -> 34981992946606982045953887
+        [5][DELEGATECALL] from=AdminUpgradeabilityProxy, to=BankController, balance(token(address): 0xe9e7CE) -> 34981992946606982045953887
+          [6][STATICCALL] from=AdminUpgradeabilityProxy, to=BEP20Token, balanceOf(account(address): 0xc78248) -> 34981992946606982045953887
+      [4][STATICCALL] from=AdminUpgradeabilityProxy, to=AdminUpgradeabilityProxy, flashloanFeeBips() -> 8
+        [5][DELEGATECALL] from=AdminUpgradeabilityProxy, to=BankController, flashloanFeeBips() -> 8
+      [4][CALL] from=AdminUpgradeabilityProxy, to=AdminUpgradeabilityProxy, transferFlashloanAsset(underlying(address): 0xe9e7CE, account(address): 0x34C986, amount(uint256): 50000000000000000000000) -> None
+        [5][DELEGATECALL] from=AdminUpgradeabilityProxy, to=BankController, transferFlashloanAsset(underlying(address): 0xe9e7CE, account(address): 0x34C986, amount(uint256): 50000000000000000000000) -> None
+          [6][CALL] from=AdminUpgradeabilityProxy, to=BEP20Token, transfer(recipient(address): 0x34C986, amount(uint256): 50000000000000000000000) -> True
+      [4][CALL] from=AdminUpgradeabilityProxy, to=0x34c986, executeOperationaddress() -> None
+        [5][STATICCALL] from=0x34c986, to=BEP20Token, balanceOf(account(address): 0x34C986) -> 50000000000000000000000
+        [5][CALL] from=0x34c986, to=Vyper_contract, exchange_underlying(i(int128): 1, j(int128): 0, _dx(uint256): 50000000000000000000000, _min_dy(uint256): 1) -> 50351068609
+          [6][CALL] from=Vyper_contract, to=0x000000, transferFromaddress() -> 0x23b872
+          [6][CALL] from=Vyper_contract, to=0x000000, fallback() -> 0x000000
+          [6][CALL] from=Vyper_contract, to=BEP20Token, transferFrom(sender(address): 0x34C986, recipient(address): 0x556ea0, amount(uint256): 50000000000000000000000) -> True
+          [6][CALL] from=Vyper_contract, to=0x000000, fallback() -> 0x000000
+          [6][STATICCALL] from=Vyper_contract, to=Vyper_contract, balanceOf(arg0(address): 0x556ea0) -> 82567646628569849515720
+          [6][CALL] from=Vyper_contract, to=Vyper_contract, add_liquidity(amounts(uint256[3]): [50000000000000000000000, 0, 0], min_mint_amount(uint256): 0) -> None
+            [7][STATICCALL] from=Vyper_contract, to=Vyper_contract, totalSupply() -> 393829201860521558679917493
+            [7][CALL] from=Vyper_contract, to=0x000000, transferFromaddress() -> 0x23b872
+            [7][CALL] from=Vyper_contract, to=0x000000, fallback() -> 0x000000
+            [7][CALL] from=Vyper_contract, to=BEP20Token, transferFrom(sender(address): 0x556ea0, recipient(address): 0x160CAe, amount(uint256): 50000000000000000000000) -> True
+            [7][CALL] from=Vyper_contract, to=0x000000, fallback() -> 0x000000
+            [7][CALL] from=Vyper_contract, to=Vyper_contract, mint(_to(address): 0x556ea0, _value(uint256): 48114014771518240180360) -> True
+          [6][STATICCALL] from=Vyper_contract, to=Vyper_contract, balanceOf(arg0(address): 0x556ea0) -> 130681661400088089696080
+          [6][CALL] from=Vyper_contract, to=0x000000, transferaddress() -> 0xa9059c
+          [6][CALL] from=Vyper_contract, to=0x000000, fallback() -> 0x000000
+          [6][CALL] from=Vyper_contract, to=AnyswapV3ERC20, transfer(to(address): 0x34C986, value(uint256): 50351068609) -> True
+          [6][CALL] from=Vyper_contract, to=0x000000, fallback() -> 0x000000
+        [5][STATICCALL] from=0x34c986, to=AnyswapV3ERC20, balanceOf((address): 0x34C986) -> 50351068609
+        [5][CALL] from=0x34c986, to=MetaSwap, swap(tokenIndexFrom(uint8): 0, tokenIndexTo(uint8): 1, dx(uint256): 50351068609, minDy(uint256): 1, deadline(uint256): 1636929728) -> 36959846817384023578100
+          [6][DELEGATECALL] from=MetaSwap, to=MetaSwap, swap(tokenIndexFrom(uint8): 0, tokenIndexTo(uint8): 1, dx(uint256): 50351068609, minDy(uint256): 1, deadline(uint256): 1636929728) -> 36959846817384023578100
+            [7][DELEGATECALL] from=MetaSwap, to=MetaSwapUtils, 0x98414eed() -> 0x000000
+              [8][STATICCALL] from=MetaSwap, to=AnyswapV3ERC20, balanceOf((address): 0x34C986) -> 50351068609
+              [8][STATICCALL] from=MetaSwap, to=AnyswapV3ERC20, balanceOf((address): 0xd0fBF0) -> 360965612978
+              [8][CALL] from=MetaSwap, to=AnyswapV3ERC20, transferFrom(from(address): 0x34C986, to(address): 0xd0fBF0, value(uint256): 50351068609) -> True
+              [8][STATICCALL] from=MetaSwap, to=AnyswapV3ERC20, balanceOf((address): 0xd0fBF0) -> 411316681587
+              [8][CALL] from=MetaSwap, to=LPToken, transfer(recipient(address): 0x34C986, amount(uint256): 36959846817384023578100) -> True
+                [9][CALL] from=LPToken, to=Swap, updateUserWithdrawFeeaddress() -> None
+                  [10][DELEGATECALL] from=Swap, to=SwapUtils, 0xe9252d46() -> None
+        [5][STATICCALL] from=0x34c986, to=LPToken, balanceOf(account(address): 0x34C986) -> 36959846817384023578100
+        [5][CALL] from=0x34c986, to=Swap, removeLiquidityOneTokenuint256() -> 0x000000
+          [6][DELEGATECALL] from=Swap, to=SwapUtils, 0xe7a4db81() -> 0x000000
+            [7][STATICCALL] from=Swap, to=LPToken, totalSupply() -> 5347672508682013832557807
+            [7][STATICCALL] from=Swap, to=LPToken, balanceOf(account(address): 0x34C986) -> 36959846817384023578100
+            [7][DELEGATECALL] from=Swap, to=MathUtils, within1(a(uint256): 5363643193617401779843521, b(uint256): 5363684957040571511535975) -> False
+            [7][DELEGATECALL] from=Swap, to=MathUtils, within1(a(uint256): 5363643193616574672864408, b(uint256): 5363643193617401779843521) -> False
+            [7][DELEGATECALL] from=Swap, to=MathUtils, within1(a(uint256): 5363643193616574672864408, b(uint256): 5363643193616574672864408) -> True
+            [7][STATICCALL] from=Swap, to=LPToken, totalSupply() -> 5347672508682013832557807
+            [7][DELEGATECALL] from=Swap, to=MathUtils, within1(a(uint256): 3266761308236519929890636, b(uint256): 5326572967177440859252680) -> False
+            [7][DELEGATECALL] from=Swap, to=MathUtils, within1(a(uint256): 2337724654045380196112308, b(uint256): 3266761308236519929890636) -> False
+            [7][DELEGATECALL] from=Swap, to=MathUtils, within1(a(uint256): 2019097090034444773053418, b(uint256): 2337724654045380196112308) -> False
+            [7][DELEGATECALL] from=Swap, to=MathUtils, within1(a(uint256): 1970089283820923381407490, b(uint256): 2019097090034444773053418) -> False
+            [7][DELEGATECALL] from=Swap, to=MathUtils, within1(a(uint256): 1968872314797766678484646, b(uint256): 1970089283820923381407490) -> False
+            [7][DELEGATECALL] from=Swap, to=MathUtils, within1(a(uint256): 1968871563444843546205386, b(uint256): 1968872314797766678484646) -> False
+            [7][DELEGATECALL] from=Swap, to=MathUtils, within1(a(uint256): 1968871563444557146066268, b(uint256): 1968871563444843546205386) -> False
+            [7][DELEGATECALL] from=Swap, to=MathUtils, within1(a(uint256): 1968871563444557146066268, b(uint256): 1968871563444557146066268) -> True
+            [7][DELEGATECALL] from=Swap, to=MathUtils, within1(a(uint256): 3266761963319275328748839, b(uint256): 5326572967177440859252680) -> False
+            [7][DELEGATECALL] from=Swap, to=MathUtils, within1(a(uint256): 2337725812510326140966399, b(uint256): 3266761963319275328748839) -> False
+            [7][DELEGATECALL] from=Swap, to=MathUtils, within1(a(uint256): 2019098661587763896206796, b(uint256): 2337725812510326140966399) -> False
+            [7][DELEGATECALL] from=Swap, to=MathUtils, within1(a(uint256): 1970091015629360871759789, b(uint256): 2019098661587763896206796) -> False
+            [7][DELEGATECALL] from=Swap, to=MathUtils, within1(a(uint256): 1968874055627676938691424, b(uint256): 1970091015629360871759789) -> False
+            [7][DELEGATECALL] from=Swap, to=MathUtils, within1(a(uint256): 1968873304286557108037356, b(uint256): 1968874055627676938691424) -> False
+            [7][DELEGATECALL] from=Swap, to=MathUtils, within1(a(uint256): 1968873304286270717149496, b(uint256): 1968873304286557108037356) -> False
+            [7][DELEGATECALL] from=Swap, to=MathUtils, within1(a(uint256): 1968873304286270717149496, b(uint256): 1968873304286270717149496) -> True
+            [7][CALL] from=Swap, to=LPToken, burnFrom(account(address): 0x34C986, amount(uint256): 36959846817384023578100) -> None
+              [8][CALL] from=LPToken, to=Swap, updateUserWithdrawFeeaddress() -> None
+                [9][DELEGATECALL] from=Swap, to=SwapUtils, 0xe9252d46() -> None
+            [7][CALL] from=Swap, to=BEP20Token, transfer(recipient(address): 0x34C986, amount(uint256): 37071890138869402481743) -> True
+        [5][STATICCALL] from=0x34c986, to=BEP20Token, balanceOf(account(address): 0x34C986) -> 37071890138869402481743
+        [5][CALL] from=0x34c986, to=MetaSwap, swapUnderlying(tokenIndexFrom(uint8): 1, tokenIndexTo(uint8): 0, dx(uint256): 37071890138869402481743, minDy(uint256): 1, deadline(uint256): 1636929728) -> 51494230394
+          [6][DELEGATECALL] from=MetaSwap, to=MetaSwap, swapUnderlying(tokenIndexFrom(uint8): 1, tokenIndexTo(uint8): 0, dx(uint256): 37071890138869402481743, minDy(uint256): 1, deadline(uint256): 1636929728) -> 51494230394
+            [7][DELEGATECALL] from=MetaSwap, to=MetaSwapUtils, 0x0080247a() -> 0x000000
+              [8][STATICCALL] from=MetaSwap, to=BEP20Token, balanceOf(account(address): 0xd0fBF0) -> 0
+              [8][CALL] from=MetaSwap, to=BEP20Token, transferFrom(sender(address): 0x34C986, recipient(address): 0xd0fBF0, amount(uint256): 37071890138869402481743) -> True
+              [8][STATICCALL] from=MetaSwap, to=BEP20Token, balanceOf(account(address): 0xd0fBF0) -> 37071890138869402481743
+              [8][STATICCALL] from=MetaSwap, to=LPToken, balanceOf(account(address): 0xd0fBF0) -> 191367105684499864489555
+              [8][CALL] from=MetaSwap, to=Swap, addLiquidityuint256[]() -> 0x000000
+                [9][DELEGATECALL] from=Swap, to=SwapUtils, 0x40370edf() -> 0x000000
+                  [10][STATICCALL] from=Swap, to=LPToken, totalSupply() -> 5310712661864629808979707
+                  [10][DELEGATECALL] from=Swap, to=MathUtils, within1(a(uint256): 5326572967178080115388830, b(uint256): 5326609585198121912683428) -> False
+                  [10][DELEGATECALL] from=Swap, to=MathUtils, within1(a(uint256): 5326572967177441207377260, b(uint256): 5326572967178080115388830) -> False
+                  [10][DELEGATECALL] from=Swap, to=MathUtils, within1(a(uint256): 5326572967177441207377260, b(uint256): 5326572967177441207377260) -> True
+                  [10][STATICCALL] from=Swap, to=LPToken, totalSupply() -> 5310712661864629808979707
+                  [10][STATICCALL] from=Swap, to=BEP20Token, balanceOf(account(address): 0x1B3771) -> 2029190181108761076109590
+                  [10][CALL] from=Swap, to=BEP20Token, transferFrom(sender(address): 0xd0fBF0, recipient(address): 0x1B3771, amount(uint256): 37071890138869402481743) -> True
+                  [10][STATICCALL] from=Swap, to=BEP20Token, balanceOf(account(address): 0x1B3771) -> 2066262071247630478591333
+                  [10][STATICCALL] from=Swap, to=LPToken, totalSupply() -> 5310712661864629808979707
+                  [10][STATICCALL] from=Swap, to=LPToken, totalSupply() -> 5310712661864629808979707
+                  [10][DELEGATECALL] from=Swap, to=MathUtils, within1(a(uint256): 5363639712422237737853510, b(uint256): 5363681475336991315165171) -> False
+                  [10][DELEGATECALL] from=Swap, to=MathUtils, within1(a(uint256): 5363639712421410650650060, b(uint256): 5363639712422237737853510) -> False
+                  [10][DELEGATECALL] from=Swap, to=MathUtils, within1(a(uint256): 5363639712421410650650060, b(uint256): 5363639712421410650650060) -> True
+                  [10][STATICCALL] from=Swap, to=LPToken, totalSupply() -> 5310712661864629808979707
+                  [10][DELEGATECALL] from=Swap, to=MathUtils, difference(a(uint256): 1982572616844182142995963, b(uint256): 2005943453583426896718370) -> 23370836739244753722407
+                  [10][DELEGATECALL] from=Swap, to=MathUtils, difference(a(uint256): 1541743177039952980563994, b(uint256): 1531088583398507800422898) -> 10654593641445180141096
+                  [10][DELEGATECALL] from=Swap, to=MathUtils, difference(a(uint256): 1839360791376739768060312, b(uint256): 1826649438355056618023903) -> 12711353021683150036409
+                  [10][DELEGATECALL] from=Swap, to=MathUtils, within1(a(uint256): 5363636207288355584125311, b(uint256): 5363677970078236137183880) -> False
+                  [10][DELEGATECALL] from=Swap, to=MathUtils, within1(a(uint256): 5363636207287528501362824, b(uint256): 5363636207288355584125311) -> False
+                  [10][DELEGATECALL] from=Swap, to=MathUtils, within1(a(uint256): 5363636207287528501362824, b(uint256): 5363636207287528501362824) -> True
+                  [10][STATICCALL] from=Swap, to=LPToken, totalSupply() -> 5310712661864629808979707
+                  [10][STATICCALL] from=Swap, to=LPToken, totalSupply() -> 5310712661864629808979707
+                  [10][CALL] from=Swap, to=LPToken, mint(recipient(address): 0xd0fBF0, amount(uint256): 36952881290701869085768) -> None
+                    [11][CALL] from=LPToken, to=Swap, updateUserWithdrawFeeaddress() -> None
+                      [12][DELEGATECALL] from=Swap, to=SwapUtils, 0xe9252d46() -> None
+                  [10][STATICCALL] from=Swap, to=LPToken, totalSupply() -> 5347665543155331678065475
+              [8][STATICCALL] from=MetaSwap, to=LPToken, balanceOf(account(address): 0xd0fBF0) -> 228319986975201733575323
+              [8][CALL] from=MetaSwap, to=AnyswapV3ERC20, transfer(to(address): 0x34C986, value(uint256): 51494230394) -> True
+        [5][STATICCALL] from=0x34c986, to=AnyswapV3ERC20, balanceOf((address): 0x34C986) -> 51494230394
+        [5][CALL] from=0x34c986, to=MetaSwap, swap(tokenIndexFrom(uint8): 0, tokenIndexTo(uint8): 1, dx(uint256): 51494230394, minDy(uint256): 1, deadline(uint256): 1636929728) -> 37030473917183893956036
+          [6][DELEGATECALL] from=MetaSwap, to=MetaSwap, swap(tokenIndexFrom(uint8): 0, tokenIndexTo(uint8): 1, dx(uint256): 51494230394, minDy(uint256): 1, deadline(uint256): 1636929728) -> 37030473917183893956036
+            [7][DELEGATECALL] from=MetaSwap, to=MetaSwapUtils, 0x98414eed() -> 0x000000
+              [8][STATICCALL] from=MetaSwap, to=AnyswapV3ERC20, balanceOf((address): 0x34C986) -> 51494230394
+              [8][STATICCALL] from=MetaSwap, to=AnyswapV3ERC20, balanceOf((address): 0xd0fBF0) -> 359822451193
+              [8][CALL] from=MetaSwap, to=AnyswapV3ERC20, transferFrom(from(address): 0x34C986, to(address): 0xd0fBF0, value(uint256): 51494230394) -> True
+              [8][STATICCALL] from=MetaSwap, to=AnyswapV3ERC20, balanceOf((address): 0xd0fBF0) -> 411316681587
+              [8][CALL] from=MetaSwap, to=LPToken, transfer(recipient(address): 0x34C986, amount(uint256): 37030473917183893956036) -> True
+                [9][CALL] from=LPToken, to=Swap, updateUserWithdrawFeeaddress() -> None
+                  [10][DELEGATECALL] from=Swap, to=SwapUtils, 0xe9252d46() -> None
+        [5][STATICCALL] from=0x34c986, to=LPToken, balanceOf(account(address): 0x34C986) -> 37030473917183893956036
+        [5][CALL] from=0x34c986, to=Swap, removeLiquidityOneTokenuint256() -> 0x000000
+          [6][DELEGATECALL] from=Swap, to=SwapUtils, 0xe7a4db81() -> 0x000000
+            [7][STATICCALL] from=Swap, to=LPToken, totalSupply() -> 5347665543155331678065475
+            [7][STATICCALL] from=Swap, to=LPToken, balanceOf(account(address): 0x34C986) -> 37030473917183893956036
+            [7][DELEGATECALL] from=Swap, to=MathUtils, within1(a(uint256): 5363636207288355934638701, b(uint256): 5363677970078236487709757) -> False
+            [7][DELEGATECALL] from=Swap, to=MathUtils, within1(a(uint256): 5363636207287528851876214, b(uint256): 5363636207288355934638701) -> False
+            [7][DELEGATECALL] from=Swap, to=MathUtils, within1(a(uint256): 5363636207287528851876214, b(uint256): 5363636207287528851876214) -> True
+            [7][STATICCALL] from=Swap, to=LPToken, totalSupply() -> 5347665543155331678065475
+            [7][DELEGATECALL] from=Swap, to=MathUtils, within1(a(uint256): 3266695774133967448384802, b(uint256): 5326495142822597560476414) -> False
+            [7][DELEGATECALL] from=Swap, to=MathUtils, within1(a(uint256): 2337659012069418208689672, b(uint256): 3266695774133967448384802) -> False
+            [7][DELEGATECALL] from=Swap, to=MathUtils, within1(a(uint256): 2019024875779713200401053, b(uint256): 2337659012069418208689672) -> False
+            [7][DELEGATECALL] from=Swap, to=MathUtils, within1(a(uint256): 1970013429778387981103230, b(uint256): 2019024875779713200401053) -> False
+            [7][DELEGATECALL] from=Swap, to=MathUtils, within1(a(uint256): 1968796233312363388509426, b(uint256): 1970013429778387981103230) -> False
+            [7][DELEGATECALL] from=Swap, to=MathUtils, within1(a(uint256): 1968795481649540321474814, b(uint256): 1968796233312363388509426) -> False
+            [7][DELEGATECALL] from=Swap, to=MathUtils, within1(a(uint256): 1968795481649253673961923, b(uint256): 1968795481649540321474814) -> False
+            [7][DELEGATECALL] from=Swap, to=MathUtils, within1(a(uint256): 1968795481649253673961923, b(uint256): 1968795481649253673961923) -> True
+            [7][DELEGATECALL] from=Swap, to=MathUtils, within1(a(uint256): 3266696430461871275281803, b(uint256): 5326495142822597560476414) -> False
+            [7][DELEGATECALL] from=Swap, to=MathUtils, within1(a(uint256): 2337660172734974533328685, b(uint256): 3266696430461871275281803) -> False
+            [7][DELEGATECALL] from=Swap, to=MathUtils, within1(a(uint256): 2019026450325225124582463, b(uint256): 2337660172734974533328685) -> False
+            [7][DELEGATECALL] from=Swap, to=MathUtils, within1(a(uint256): 1970015164895778013184022, b(uint256): 2019026450325225124582463) -> False
+            [7][DELEGATECALL] from=Swap, to=MathUtils, within1(a(uint256): 1968797977470124712192996, b(uint256): 1970015164895778013184022) -> False
+            [7][DELEGATECALL] from=Swap, to=MathUtils, within1(a(uint256): 1968797225819132368505835, b(uint256): 1968797977470124712192996) -> False
+            [7][DELEGATECALL] from=Swap, to=MathUtils, within1(a(uint256): 1968797225818845730269888, b(uint256): 1968797225819132368505835) -> False
+            [7][DELEGATECALL] from=Swap, to=MathUtils, within1(a(uint256): 1968797225818845730269888, b(uint256): 1968797225818845730269888) -> True
+            [7][CALL] from=Swap, to=LPToken, burnFrom(account(address): 0x34C986, amount(uint256): 37030473917183893956036) -> None
+              [8][CALL] from=LPToken, to=Swap, updateUserWithdrawFeeaddress() -> None
+                [9][DELEGATECALL] from=Swap, to=SwapUtils, 0xe9252d46() -> None
+            [7][CALL] from=Swap, to=BEP20Token, transfer(recipient(address): 0x34C986, amount(uint256): 37142730762002964747498) -> True
+        [5][STATICCALL] from=0x34c986, to=BEP20Token, balanceOf(account(address): 0x34C986) -> 37142730762002964747498
+        [5][CALL] from=0x34c986, to=MetaSwap, swapUnderlying(tokenIndexFrom(uint8): 1, tokenIndexTo(uint8): 0, dx(uint256): 37142730762002964747498, minDy(uint256): 1, deadline(uint256): 1636929728) -> 52829888747
+          [6][DELEGATECALL] from=MetaSwap, to=MetaSwap, swapUnderlying(tokenIndexFrom(uint8): 1, tokenIndexTo(uint8): 0, dx(uint256): 37142730762002964747498, minDy(uint256): 1, deadline(uint256): 1636929728) -> 52829888747
+            [7][DELEGATECALL] from=MetaSwap, to=MetaSwapUtils, 0x0080247a() -> 0x000000
+              [8][STATICCALL] from=MetaSwap, to=BEP20Token, balanceOf(account(address): 0xd0fBF0) -> 0
+              [8][CALL] from=MetaSwap, to=BEP20Token, transferFrom(sender(address): 0x34C986, recipient(address): 0xd0fBF0, amount(uint256): 37142730762002964747498) -> True
+              [8][STATICCALL] from=MetaSwap, to=BEP20Token, balanceOf(account(address): 0xd0fBF0) -> 37142730762002964747498
+              [8][STATICCALL] from=MetaSwap, to=LPToken, balanceOf(account(address): 0xd0fBF0) -> 191289513058017839619287
+              [8][CALL] from=MetaSwap, to=Swap, addLiquidityuint256[]() -> 0x000000
+                [9][DELEGATECALL] from=Swap, to=SwapUtils, 0x40370edf() -> 0x000000
+                  [10][STATICCALL] from=Swap, to=LPToken, totalSupply() -> 5310635069238147784109439
+                  [10][DELEGATECALL] from=Swap, to=MathUtils, within1(a(uint256): 5326495142823236479014398, b(uint256): 5326531750956818881864505) -> False
+                  [10][DELEGATECALL] from=Swap, to=MathUtils, within1(a(uint256): 5326495142822597909266499, b(uint256): 5326495142823236479014398) -> False
+                  [10][DELEGATECALL] from=Swap, to=MathUtils, within1(a(uint256): 5326495142822597909266499, b(uint256): 5326495142822597909266499) -> True
+                  [10][STATICCALL] from=Swap, to=LPToken, totalSupply() -> 5310635069238147784109439
+                  [10][STATICCALL] from=Swap, to=BEP20Token, balanceOf(account(address): 0x1B3771) -> 2029119340485627513843835
+                  [10][CALL] from=Swap, to=BEP20Token, transferFrom(sender(address): 0xd0fBF0, recipient(address): 0x1B3771, amount(uint256): 37142730762002964747498) -> True
+                  [10][STATICCALL] from=Swap, to=BEP20Token, balanceOf(account(address): 0x1B3771) -> 2066262071247630478591333
+                  [10][STATICCALL] from=Swap, to=LPToken, totalSupply() -> 5310635069238147784109439
+                  [10][STATICCALL] from=Swap, to=LPToken, totalSupply() -> 5310635069238147784109439
+                  [10][DELEGATECALL] from=Swap, to=MathUtils, within1(a(uint256): 5363632719438323696224982, b(uint256): 5363674481718821846612003) -> False
+                  [10][DELEGATECALL] from=Swap, to=MathUtils, within1(a(uint256): 5363632719437496633275462, b(uint256): 5363632719438323696224982) -> False
+                  [10][DELEGATECALL] from=Swap, to=MathUtils, within1(a(uint256): 5363632719437496633275462, b(uint256): 5363632719437496633275462) -> True
+                  [10][STATICCALL] from=Swap, to=LPToken, totalSupply() -> 5310635069238147784109439
+                  [10][DELEGATECALL] from=Swap, to=MathUtils, difference(a(uint256): 1982522386692496035901428, b(uint256): 2005938212411256987545363) -> 23415825718760951643935
+                  [10][DELEGATECALL] from=Swap, to=MathUtils, difference(a(uint256): 1541762888358166494167397, b(uint256): 1531087784303984771943841) -> 10675104054181722223556
+                  [10][DELEGATECALL] from=Swap, to=MathUtils, difference(a(uint256): 1839384307761574949708876, b(uint256): 1826648485003580087122799) -> 12735822757994862586077
+                  [10][DELEGATECALL] from=Swap, to=MathUtils, within1(a(uint256): 5363629207556996127301624, b(uint256): 5363670969712382026296771) -> False
+                  [10][DELEGATECALL] from=Swap, to=MathUtils, within1(a(uint256): 5363629207556169068801514, b(uint256): 5363629207556996127301624) -> False
+                  [10][DELEGATECALL] from=Swap, to=MathUtils, within1(a(uint256): 5363629207556169068801514, b(uint256): 5363629207556169068801514) -> True
+                  [10][STATICCALL] from=Swap, to=LPToken, totalSupply() -> 5310635069238147784109439
+                  [10][STATICCALL] from=Swap, to=LPToken, totalSupply() -> 5310635069238147784109439
+                  [10][CALL] from=Swap, to=LPToken, mint(recipient(address): 0xd0fBF0, amount(uint256): 37023495028094608757097) -> None
+                    [11][CALL] from=LPToken, to=Swap, updateUserWithdrawFeeaddress() -> None
+                      [12][DELEGATECALL] from=Swap, to=SwapUtils, 0xe9252d46() -> None
+                  [10][STATICCALL] from=Swap, to=LPToken, totalSupply() -> 5347658564266242392866536
+              [8][STATICCALL] from=MetaSwap, to=LPToken, balanceOf(account(address): 0xd0fBF0) -> 228313008086112448376384
+              [8][CALL] from=MetaSwap, to=AnyswapV3ERC20, transfer(to(address): 0x34C986, value(uint256): 52829888747) -> True
+        [5][STATICCALL] from=0x34c986, to=AnyswapV3ERC20, balanceOf((address): 0x34C986) -> 52829888747
+        [5][CALL] from=0x34c986, to=MetaSwap, swap(tokenIndexFrom(uint8): 0, tokenIndexTo(uint8): 1, dx(uint256): 52829888747, minDy(uint256): 1, deadline(uint256): 1636929728) -> 37101639161870022332418
+          [6][DELEGATECALL] from=MetaSwap, to=MetaSwap, swap(tokenIndexFrom(uint8): 0, tokenIndexTo(uint8): 1, dx(uint256): 52829888747, minDy(uint256): 1, deadline(uint256): 1636929728) -> 37101639161870022332418
+            [7][DELEGATECALL] from=MetaSwap, to=MetaSwapUtils, 0x98414eed() -> 0x000000
+              [8][STATICCALL] from=MetaSwap, to=AnyswapV3ERC20, balanceOf((address): 0x34C986) -> 52829888747
+              [8][STATICCALL] from=MetaSwap, to=AnyswapV3ERC20, balanceOf((address): 0xd0fBF0) -> 358486792840
+              [8][CALL] from=MetaSwap, to=AnyswapV3ERC20, transferFrom(from(address): 0x34C986, to(address): 0xd0fBF0, value(uint256): 52829888747) -> True
+              [8][STATICCALL] from=MetaSwap, to=AnyswapV3ERC20, balanceOf((address): 0xd0fBF0) -> 411316681587
+              [8][CALL] from=MetaSwap, to=LPToken, transfer(recipient(address): 0x34C986, amount(uint256): 37101639161870022332418) -> True
+                [9][CALL] from=LPToken, to=Swap, updateUserWithdrawFeeaddress() -> None
+                  [10][DELEGATECALL] from=Swap, to=SwapUtils, 0xe9252d46() -> None
+        [5][STATICCALL] from=0x34c986, to=LPToken, balanceOf(account(address): 0x34C986) -> 37101639161870022332418
+        [5][CALL] from=0x34c986, to=Swap, removeLiquidityOneTokenuint256() -> 0x000000
+          [6][DELEGATECALL] from=Swap, to=SwapUtils, 0xe7a4db81() -> 0x000000
+            [7][STATICCALL] from=Swap, to=LPToken, totalSupply() -> 5347658564266242392866536
+            [7][STATICCALL] from=Swap, to=LPToken, balanceOf(account(address): 0x34C986) -> 37101639161870022332418
+            [7][DELEGATECALL] from=Swap, to=MathUtils, within1(a(uint256): 5363629207556996478489758, b(uint256): 5363670969712382377497416) -> False
+            [7][DELEGATECALL] from=Swap, to=MathUtils, within1(a(uint256): 5363629207556169419989648, b(uint256): 5363629207556996478489758) -> False
+            [7][DELEGATECALL] from=Swap, to=MathUtils, within1(a(uint256): 5363629207556169419989648, b(uint256): 5363629207556169419989648) -> True
+            [7][STATICCALL] from=Swap, to=LPToken, totalSupply() -> 5347658564266242392866536
+            [7][DELEGATECALL] from=Swap, to=MathUtils, within1(a(uint256): 3266629771011124841163768, b(uint256): 5326416765313398679029138) -> False
+            [7][DELEGATECALL] from=Swap, to=MathUtils, within1(a(uint256): 2337592897867594573007398, b(uint256): 3266629771011124841163768) -> False
+            [7][DELEGATECALL] from=Swap, to=MathUtils, within1(a(uint256): 2018952140377901216011096, b(uint256): 2337592897867594573007398) -> False
+            [7][DELEGATECALL] from=Swap, to=MathUtils, within1(a(uint256): 1969937027596601818981087, b(uint256): 2018952140377901216011096) -> False
+            [7][DELEGATECALL] from=Swap, to=MathUtils, within1(a(uint256): 1968719601978706924458523, b(uint256): 1969937027596601818981087) -> False
+            [7][DELEGATECALL] from=Swap, to=MathUtils, within1(a(uint256): 1968718850003586379648521, b(uint256): 1968719601978706924458523) -> False
+            [7][DELEGATECALL] from=Swap, to=MathUtils, within1(a(uint256): 1968718850003299482735777, b(uint256): 1968718850003586379648521) -> False
+            [7][DELEGATECALL] from=Swap, to=MathUtils, within1(a(uint256): 1968718850003299482735777, b(uint256): 1968718850003299482735777) -> True
+            [7][DELEGATECALL] from=Swap, to=MathUtils, within1(a(uint256): 3266630428593638110753946, b(uint256): 5326416765313398679029138) -> False
+            [7][DELEGATECALL] from=Swap, to=MathUtils, within1(a(uint256): 2337594060750477182078109, b(uint256): 3266630428593638110753946) -> False
+            [7][DELEGATECALL] from=Swap, to=MathUtils, within1(a(uint256): 2018953717938358862208114, b(uint256): 2337594060750477182078109) -> False
+            [7][DELEGATECALL] from=Swap, to=MathUtils, within1(a(uint256): 1969938766048148041404379, b(uint256): 2018953717938358862208114) -> False
+            [7][DELEGATECALL] from=Swap, to=MathUtils, within1(a(uint256): 1968721349489673112617149, b(uint256): 1969938766048148041404379) -> False
+            [7][DELEGATECALL] from=Swap, to=MathUtils, within1(a(uint256): 1968720597526410941074779, b(uint256): 1968721349489673112617149) -> False
+            [7][DELEGATECALL] from=Swap, to=MathUtils, within1(a(uint256): 1968720597526124053464895, b(uint256): 1968720597526410941074779) -> False
+            [7][DELEGATECALL] from=Swap, to=MathUtils, within1(a(uint256): 1968720597526124053464895, b(uint256): 1968720597526124053464895) -> True
+            [7][CALL] from=Swap, to=LPToken, burnFrom(account(address): 0x34C986, amount(uint256): 37101639161870022332418) -> None
+              [8][CALL] from=LPToken, to=Swap, updateUserWithdrawFeeaddress() -> None
+                [9][DELEGATECALL] from=Swap, to=SwapUtils, 0xe9252d46() -> None
+            [7][CALL] from=Swap, to=BEP20Token, transfer(recipient(address): 0x34C986, amount(uint256): 37214111155070537809100) -> True
+        [5][STATICCALL] from=0x34c986, to=BEP20Token, balanceOf(account(address): 0x34C986) -> 37214111155070537809100
+        [5][CALL] from=0x34c986, to=MetaSwap, swapUnderlying(tokenIndexFrom(uint8): 1, tokenIndexTo(uint8): 0, dx(uint256): 37214111155070537809100, minDy(uint256): 1, deadline(uint256): 1636929728) -> 54415056601
+          [6][DELEGATECALL] from=MetaSwap, to=MetaSwap, swapUnderlying(tokenIndexFrom(uint8): 1, tokenIndexTo(uint8): 0, dx(uint256): 37214111155070537809100, minDy(uint256): 1, deadline(uint256): 1636929728) -> 54415056601
+            [7][DELEGATECALL] from=MetaSwap, to=MetaSwapUtils, 0x0080247a() -> 0x000000
+              [8][STATICCALL] from=MetaSwap, to=BEP20Token, balanceOf(account(address): 0xd0fBF0) -> 0
+              [8][CALL] from=MetaSwap, to=BEP20Token, transferFrom(sender(address): 0x34C986, recipient(address): 0xd0fBF0, amount(uint256): 37214111155070537809100) -> True
+              [8][STATICCALL] from=MetaSwap, to=BEP20Token, balanceOf(account(address): 0xd0fBF0) -> 37214111155070537809100
+              [8][STATICCALL] from=MetaSwap, to=LPToken, balanceOf(account(address): 0xd0fBF0) -> 191211368924242426043966
+              [8][CALL] from=MetaSwap, to=Swap, addLiquidityuint256[]() -> 0x000000
+                [9][DELEGATECALL] from=Swap, to=SwapUtils, 0x40370edf() -> 0x000000
+                  [10][STATICCALL] from=Swap, to=LPToken, totalSupply() -> 5310556925104372370534118
+                  [10][DELEGATECALL] from=Swap, to=MathUtils, within1(a(uint256): 5326416765314037257673016, b(uint256): 5326453363491353953647106) -> False
+                  [10][DELEGATECALL] from=Swap, to=MathUtils, within1(a(uint256): 5326416765313399028489800, b(uint256): 5326416765314037257673016) -> False
+                  [10][DELEGATECALL] from=Swap, to=MathUtils, within1(a(uint256): 5326416765313399028489800, b(uint256): 5326416765313399028489800) -> True
+                  [10][STATICCALL] from=Swap, to=LPToken, totalSupply() -> 5310556925104372370534118
+                  [10][STATICCALL] from=Swap, to=BEP20Token, balanceOf(account(address): 0x1B3771) -> 2029047960092559940782233
+                  [10][CALL] from=Swap, to=BEP20Token, transferFrom(sender(address): 0xd0fBF0, recipient(address): 0x1B3771, amount(uint256): 37214111155070537809100) -> True
+                  [10][STATICCALL] from=Swap, to=BEP20Token, balanceOf(account(address): 0x1B3771) -> 2066262071247630478591333
+                  [10][STATICCALL] from=Swap, to=LPToken, totalSupply() -> 5310556925104372370534118
+                  [10][STATICCALL] from=Swap, to=LPToken, totalSupply() -> 5310556925104372370534118
+                  [10][DELEGATECALL] from=Swap, to=MathUtils, within1(a(uint256): 5363625713001394615470159, b(uint256): 5363667474646424491456206) -> False
+                  [10][DELEGATECALL] from=Swap, to=MathUtils, within1(a(uint256): 5363625713000567576820605, b(uint256): 5363625713001394615470159) -> False
+                  [10][DELEGATECALL] from=Swap, to=MathUtils, within1(a(uint256): 5363625713000567576820605, b(uint256): 5363625713000567576820605) -> True
+                  [10][STATICCALL] from=Swap, to=LPToken, totalSupply() -> 5310556925104372370534118
+                  [10][DELEGATECALL] from=Swap, to=MathUtils, difference(a(uint256): 1982471802490525124603233, b(uint256): 2005932961158370370051473) -> 23461158667845245448240
+                  [10][DELEGATECALL] from=Swap, to=MathUtils, difference(a(uint256): 1541782754954217745211099, b(uint256): 1531086983671180788377956) -> 10695771283036956833143
+                  [10][DELEGATECALL] from=Swap, to=MathUtils, difference(a(uint256): 1839408009399032460041034, b(uint256): 1826647529816873333026777) -> 12760479582159127014257
+                  [10][DELEGATECALL] from=Swap, to=MathUtils, within1(a(uint256): 5363622194321032947051959, b(uint256): 5363663955840709513356510) -> False
+                  [10][DELEGATECALL] from=Swap, to=MathUtils, within1(a(uint256): 5363622194320205912860326, b(uint256): 5363622194321032947051959) -> False
+                  [10][DELEGATECALL] from=Swap, to=MathUtils, within1(a(uint256): 5363622194320205912860326, b(uint256): 5363622194320205912860326) -> True
+                  [10][STATICCALL] from=Swap, to=LPToken, totalSupply() -> 5310556925104372370534118
+                  [10][STATICCALL] from=Swap, to=LPToken, totalSupply() -> 5310556925104372370534118
+                  [10][CALL] from=Swap, to=LPToken, mint(recipient(address): 0xd0fBF0, amount(uint256): 37094646808388071090383) -> None
+                    [11][CALL] from=LPToken, to=Swap, updateUserWithdrawFeeaddress() -> None
+                      [12][DELEGATECALL] from=Swap, to=SwapUtils, 0xe9252d46() -> None
+                  [10][STATICCALL] from=Swap, to=LPToken, totalSupply() -> 5347651571912760441624501
+              [8][STATICCALL] from=MetaSwap, to=LPToken, balanceOf(account(address): 0xd0fBF0) -> 228306015732630497134349
+              [8][CALL] from=MetaSwap, to=AnyswapV3ERC20, transfer(to(address): 0x34C986, value(uint256): 54415056601) -> True
+        [5][STATICCALL] from=0x34c986, to=AnyswapV3ERC20, balanceOf((address): 0x34C986) -> 54415056601
+        [5][CALL] from=0x34c986, to=MetaSwap, swap(tokenIndexFrom(uint8): 0, tokenIndexTo(uint8): 1, dx(uint256): 54415056601, minDy(uint256): 1, deadline(uint256): 1636929728) -> 37173328979580312971325
+          [6][DELEGATECALL] from=MetaSwap, to=MetaSwap, swap(tokenIndexFrom(uint8): 0, tokenIndexTo(uint8): 1, dx(uint256): 54415056601, minDy(uint256): 1, deadline(uint256): 1636929728) -> 37173328979580312971325
+            [7][DELEGATECALL] from=MetaSwap, to=MetaSwapUtils, 0x98414eed() -> 0x000000
+              [8][STATICCALL] from=MetaSwap, to=AnyswapV3ERC20, balanceOf((address): 0x34C986) -> 54415056601
+              [8][STATICCALL] from=MetaSwap, to=AnyswapV3ERC20, balanceOf((address): 0xd0fBF0) -> 356901624986
+              [8][CALL] from=MetaSwap, to=AnyswapV3ERC20, transferFrom(from(address): 0x34C986, to(address): 0xd0fBF0, value(uint256): 54415056601) -> True
+              [8][STATICCALL] from=MetaSwap, to=AnyswapV3ERC20, balanceOf((address): 0xd0fBF0) -> 411316681587
+              [8][CALL] from=MetaSwap, to=LPToken, transfer(recipient(address): 0x34C986, amount(uint256): 37173328979580312971325) -> True
+                [9][CALL] from=LPToken, to=Swap, updateUserWithdrawFeeaddress() -> None
+                  [10][DELEGATECALL] from=Swap, to=SwapUtils, 0xe9252d46() -> None
+        [5][STATICCALL] from=0x34c986, to=LPToken, balanceOf(account(address): 0x34C986) -> 37173328979580312971325
+        [5][CALL] from=0x34c986, to=Swap, removeLiquidityOneTokenuint256() -> 0x000000
+          [6][DELEGATECALL] from=Swap, to=SwapUtils, 0xe7a4db81() -> 0x000000
+            [7][STATICCALL] from=Swap, to=LPToken, totalSupply() -> 5347651571912760441624501
+            [7][STATICCALL] from=Swap, to=LPToken, balanceOf(account(address): 0x34C986) -> 37173328979580312971325
+            [7][DELEGATECALL] from=Swap, to=MathUtils, within1(a(uint256): 5363622194321033298919997, b(uint256): 5363663955840709865237083) -> False
+            [7][DELEGATECALL] from=Swap, to=MathUtils, within1(a(uint256): 5363622194320206264728363, b(uint256): 5363622194321033298919997) -> False
+            [7][DELEGATECALL] from=Swap, to=MathUtils, within1(a(uint256): 5363622194320206264728363, b(uint256): 5363622194320206264728363) -> True
+            [7][STATICCALL] from=Swap, to=LPToken, totalSupply() -> 5347651571912760441624501
+            [7][DELEGATECALL] from=Swap, to=MathUtils, within1(a(uint256): 3266563310372957266888239, b(uint256): 5326337848159948211518783) -> False
+            [7][DELEGATECALL] from=Swap, to=MathUtils, within1(a(uint256): 2337526323063072622118006, b(uint256): 3266563310372957266888239) -> False
+            [7][DELEGATECALL] from=Swap, to=MathUtils, within1(a(uint256): 2018878896670338217239845, b(uint256): 2337526323063072622118006) -> False
+            [7][DELEGATECALL] from=Swap, to=MathUtils, within1(a(uint256): 1969860090773022219040998, b(uint256): 2018878896670338217239845) -> False
+            [7][DELEGATECALL] from=Swap, to=MathUtils, within1(a(uint256): 1968642434334470843495475, b(uint256): 1969860090773022219040998) -> False
+            [7][DELEGATECALL] from=Swap, to=MathUtils, within1(a(uint256): 1968641682044708407093395, b(uint256): 1968642434334470843495475) -> False
+            [7][DELEGATECALL] from=Swap, to=MathUtils, within1(a(uint256): 1968641682044421258794524, b(uint256): 1968641682044708407093395) -> False
+            [7][DELEGATECALL] from=Swap, to=MathUtils, within1(a(uint256): 1968641682044421258794524, b(uint256): 1968641682044421258794524) -> True
+            [7][DELEGATECALL] from=Swap, to=MathUtils, within1(a(uint256): 3266563969219301167199891, b(uint256): 5326337848159948211518783) -> False
+            [7][DELEGATECALL] from=Swap, to=MathUtils, within1(a(uint256): 2337527488179573428009482, b(uint256): 3266563969219301167199891) -> False
+            [7][DELEGATECALL] from=Swap, to=MathUtils, within1(a(uint256): 2018880477267918652000624, b(uint256): 2337527488179573428009482) -> False
+            [7][DELEGATECALL] from=Swap, to=MathUtils, within1(a(uint256): 1969861832583292601887899, b(uint256): 2018880477267918652000624) -> False
+            [7][DELEGATECALL] from=Swap, to=MathUtils, within1(a(uint256): 1968644185223356555915753, b(uint256): 1969861832583292601887899) -> False
+            [7][DELEGATECALL] from=Swap, to=MathUtils, within1(a(uint256): 1968643432945480366155363, b(uint256): 1968644185223356555915753) -> False
+            [7][DELEGATECALL] from=Swap, to=MathUtils, within1(a(uint256): 1968643432945193227185498, b(uint256): 1968643432945480366155363) -> False
+            [7][DELEGATECALL] from=Swap, to=MathUtils, within1(a(uint256): 1968643432945193227185498, b(uint256): 1968643432945193227185498) -> True
+            [7][CALL] from=Swap, to=LPToken, burnFrom(account(address): 0x34C986, amount(uint256): 37173328979580312971325) -> None
+              [8][CALL] from=LPToken, to=Swap, updateUserWithdrawFeeaddress() -> None
+                [9][DELEGATECALL] from=Swap, to=SwapUtils, 0xe9252d46() -> None
+            [7][CALL] from=Swap, to=BEP20Token, transfer(recipient(address): 0x34C986, amount(uint256): 37286017705117220834475) -> True
+        [5][STATICCALL] from=0x34c986, to=BEP20Token, balanceOf(account(address): 0x34C986) -> 37286017705117220834475
+        [5][CALL] from=0x34c986, to=MetaSwap, swapUnderlying(tokenIndexFrom(uint8): 1, tokenIndexTo(uint8): 0, dx(uint256): 37286017705117220834475, minDy(uint256): 1, deadline(uint256): 1636929728) -> 56332148838
+          [6][DELEGATECALL] from=MetaSwap, to=MetaSwap, swapUnderlying(tokenIndexFrom(uint8): 1, tokenIndexTo(uint8): 0, dx(uint256): 37286017705117220834475, minDy(uint256): 1, deadline(uint256): 1636929728) -> 56332148838
+            [7][DELEGATECALL] from=MetaSwap, to=MetaSwapUtils, 0x0080247a() -> 0x000000
+              [8][STATICCALL] from=MetaSwap, to=BEP20Token, balanceOf(account(address): 0xd0fBF0) -> 0
+              [8][CALL] from=MetaSwap, to=BEP20Token, transferFrom(sender(address): 0x34C986, recipient(address): 0xd0fBF0, amount(uint256): 37286017705117220834475) -> True
+              [8][STATICCALL] from=MetaSwap, to=BEP20Token, balanceOf(account(address): 0xd0fBF0) -> 37286017705117220834475
+              [8][STATICCALL] from=MetaSwap, to=LPToken, balanceOf(account(address): 0xd0fBF0) -> 191132686753050184163024
+              [8][CALL] from=MetaSwap, to=Swap, addLiquidityuint256[]() -> 0x000000
+                [9][DELEGATECALL] from=Swap, to=SwapUtils, 0x40370edf() -> 0x000000
+                  [10][STATICCALL] from=Swap, to=LPToken, totalSupply() -> 5310478242933180128653176
+                  [10][DELEGATECALL] from=Swap, to=MathUtils, within1(a(uint256): 5326337848160586448036999, b(uint256): 5326374436313661016597045) -> False
+                  [10][DELEGATECALL] from=Swap, to=MathUtils, within1(a(uint256): 5326337848159948561654964, b(uint256): 5326337848160586448036999) -> False
+                  [10][DELEGATECALL] from=Swap, to=MathUtils, within1(a(uint256): 5326337848159948561654964, b(uint256): 5326337848159948561654964) -> True
+                  [10][STATICCALL] from=Swap, to=LPToken, totalSupply() -> 5310478242933180128653176
+                  [10][STATICCALL] from=Swap, to=BEP20Token, balanceOf(account(address): 0x1B3771) -> 2028976053542513257756858
+                  [10][CALL] from=Swap, to=BEP20Token, transferFrom(sender(address): 0xd0fBF0, recipient(address): 0x1B3771, amount(uint256): 37286017705117220834475) -> True
+                  [10][STATICCALL] from=Swap, to=BEP20Token, balanceOf(account(address): 0x1B3771) -> 2066262071247630478591333
+                  [10][STATICCALL] from=Swap, to=LPToken, totalSupply() -> 5310478242933180128653176
+                  [10][STATICCALL] from=Swap, to=LPToken, totalSupply() -> 5310478242933180128653176
+                  [10][DELEGATECALL] from=Swap, to=MathUtils, within1(a(uint256): 5363618693010438499456937, b(uint256): 5363660454018778237431520) -> False
+                  [10][DELEGATECALL] from=Swap, to=MathUtils, within1(a(uint256): 5363618693009611485153725, b(uint256): 5363618693010438499456937) -> False
+                  [10][DELEGATECALL] from=Swap, to=MathUtils, within1(a(uint256): 5363618693009611485153725, b(uint256): 5363618693009611485153725) -> True
+                  [10][STATICCALL] from=Swap, to=LPToken, totalSupply() -> 5310478242933180128653176
+                  [10][DELEGATECALL] from=Swap, to=MathUtils, difference(a(uint256): 1982420872776423701124801, b(uint256): 2005927699749538829811193) -> 23506826973115128686392
+                  [10][DELEGATECALL] from=Swap, to=MathUtils, difference(a(uint256): 1541802772889544485610847, b(uint256): 1531086181488334640824479) -> 10716591401209844786368
+                  [10][DELEGATECALL] from=Swap, to=MathUtils, difference(a(uint256): 1839431891590251242683145, b(uint256): 1826646572780904766795848) -> 12785318809346475887297
+                  [10][DELEGATECALL] from=Swap, to=MathUtils, within1(a(uint256): 5363615167480745877119274, b(uint256): 5363656928363489462072820) -> False
+                  [10][DELEGATECALL] from=Swap, to=MathUtils, within1(a(uint256): 5363615167479918867282558, b(uint256): 5363615167480745877119274) -> False
+                  [10][DELEGATECALL] from=Swap, to=MathUtils, within1(a(uint256): 5363615167479918867282558, b(uint256): 5363615167479918867282558) -> True
+                  [10][STATICCALL] from=Swap, to=LPToken, totalSupply() -> 5310478242933180128653176
+                  [10][STATICCALL] from=Swap, to=LPToken, totalSupply() -> 5310478242933180128653176
+                  [10][CALL] from=Swap, to=LPToken, mint(recipient(address): 0xd0fBF0, amount(uint256): 37166323062282454345067) -> None
+                    [11][CALL] from=LPToken, to=Swap, updateUserWithdrawFeeaddress() -> None
+                      [12][DELEGATECALL] from=Swap, to=SwapUtils, 0xe9252d46() -> None
+                  [10][STATICCALL] from=Swap, to=LPToken, totalSupply() -> 5347644565995462582998243
+              [8][STATICCALL] from=MetaSwap, to=LPToken, balanceOf(account(address): 0xd0fBF0) -> 228299009815332638508091
+              [8][CALL] from=MetaSwap, to=AnyswapV3ERC20, transfer(to(address): 0x34C986, value(uint256): 56332148838) -> True
+        [5][STATICCALL] from=0x34c986, to=AnyswapV3ERC20, balanceOf((address): 0x34C986) -> 56332148838
+        [5][CALL] from=0x34c986, to=MetaSwap, swap(tokenIndexFrom(uint8): 0, tokenIndexTo(uint8): 1, dx(uint256): 56332148838, minDy(uint256): 1, deadline(uint256): 1636929728) -> 37245527367212140175487
+          [6][DELEGATECALL] from=MetaSwap, to=MetaSwap, swap(tokenIndexFrom(uint8): 0, tokenIndexTo(uint8): 1, dx(uint256): 56332148838, minDy(uint256): 1, deadline(uint256): 1636929728) -> 37245527367212140175487
+            [7][DELEGATECALL] from=MetaSwap, to=MetaSwapUtils, 0x98414eed() -> 0x000000
+              [8][STATICCALL] from=MetaSwap, to=AnyswapV3ERC20, balanceOf((address): 0x34C986) -> 56332148838
+              [8][STATICCALL] from=MetaSwap, to=AnyswapV3ERC20, balanceOf((address): 0xd0fBF0) -> 354984532749
+              [8][CALL] from=MetaSwap, to=AnyswapV3ERC20, transferFrom(from(address): 0x34C986, to(address): 0xd0fBF0, value(uint256): 56332148838) -> True
+              [8][STATICCALL] from=MetaSwap, to=AnyswapV3ERC20, balanceOf((address): 0xd0fBF0) -> 411316681587
+              [8][CALL] from=MetaSwap, to=LPToken, transfer(recipient(address): 0x34C986, amount(uint256): 37245527367212140175487) -> True
+                [9][CALL] from=LPToken, to=Swap, updateUserWithdrawFeeaddress() -> None
+                  [10][DELEGATECALL] from=Swap, to=SwapUtils, 0xe9252d46() -> None
+        [5][STATICCALL] from=0x34c986, to=LPToken, balanceOf(account(address): 0x34C986) -> 37245527367212140175487
+        [5][CALL] from=0x34c986, to=Swap, removeLiquidityOneTokenuint256() -> 0x000000
+          [6][DELEGATECALL] from=Swap, to=SwapUtils, 0xe7a4db81() -> 0x000000
+            [7][STATICCALL] from=Swap, to=LPToken, totalSupply() -> 5347644565995462582998243
+            [7][STATICCALL] from=Swap, to=LPToken, balanceOf(account(address): 0x34C986) -> 37245527367212140175487
+            [7][DELEGATECALL] from=Swap, to=MathUtils, within1(a(uint256): 5363615167480746229672245, b(uint256): 5363656928363489814638351) -> False
+            [7][DELEGATECALL] from=Swap, to=MathUtils, within1(a(uint256): 5363615167479919219835530, b(uint256): 5363615167480746229672245) -> False
+            [7][DELEGATECALL] from=Swap, to=MathUtils, within1(a(uint256): 5363615167479919219835530, b(uint256): 5363615167479919219835530) -> True
+            [7][STATICCALL] from=Swap, to=LPToken, totalSupply() -> 5347644565995462582998243
+            [7][DELEGATECALL] from=Swap, to=MathUtils, within1(a(uint256): 3266496405800310803246300, b(uint256): 5326258407313421467376842) -> False
+            [7][DELEGATECALL] from=Swap, to=MathUtils, within1(a(uint256): 2337459301373862570753892, b(uint256): 3266496405800310803246300) -> False
+            [7][DELEGATECALL] from=Swap, to=MathUtils, within1(a(uint256): 2018805159812278110464015, b(uint256): 2337459301373862570753892) -> False
+            [7][DELEGATECALL] from=Swap, to=MathUtils, within1(a(uint256): 1969782635238394723704589, b(uint256): 2018805159812278110464015) -> False
+            [7][DELEGATECALL] from=Swap, to=MathUtils, within1(a(uint256): 1968564746358063262015556, b(uint256): 1969782635238394723704589) -> False
+            [7][DELEGATECALL] from=Swap, to=MathUtils, within1(a(uint256): 1968563993751377827199991, b(uint256): 1968564746358063262015556) -> False
+            [7][DELEGATECALL] from=Swap, to=MathUtils, within1(a(uint256): 1968563993751090425576718, b(uint256): 1968563993751377827199991) -> False
+            [7][DELEGATECALL] from=Swap, to=MathUtils, within1(a(uint256): 1968563993751090425576718, b(uint256): 1968563993751090425576718) -> True
+            [7][DELEGATECALL] from=Swap, to=MathUtils, within1(a(uint256): 3266497065919423855751252, b(uint256): 5326258407313421467376842) -> False
+            [7][DELEGATECALL] from=Swap, to=MathUtils, within1(a(uint256): 2337460468739773781754574, b(uint256): 3266497065919423855751252) -> False
+            [7][DELEGATECALL] from=Swap, to=MathUtils, within1(a(uint256): 2018806743468479594147723, b(uint256): 2337460468739773781754574) -> False
+            [7][DELEGATECALL] from=Swap, to=MathUtils, within1(a(uint256): 1969784380431207698104344, b(uint256): 2018806743468479594147723) -> False
+            [7][DELEGATECALL] from=Swap, to=MathUtils, within1(a(uint256): 1968566500648829505043548, b(uint256): 1969784380431207698104344) -> False
+            [7][DELEGATECALL] from=Swap, to=MathUtils, within1(a(uint256): 1968565748054058408005080, b(uint256): 1968566500648829505043548) -> False
+            [7][DELEGATECALL] from=Swap, to=MathUtils, within1(a(uint256): 1968565748053771015737179, b(uint256): 1968565748054058408005080) -> False
+            [7][DELEGATECALL] from=Swap, to=MathUtils, within1(a(uint256): 1968565748053771015737179, b(uint256): 1968565748053771015737179) -> True
+            [7][CALL] from=Swap, to=LPToken, burnFrom(account(address): 0x34C986, amount(uint256): 37245527367212140175487) -> None
+              [8][CALL] from=LPToken, to=Swap, updateUserWithdrawFeeaddress() -> None
+                [9][DELEGATECALL] from=Swap, to=SwapUtils, 0xe9252d46() -> None
+            [7][CALL] from=Swap, to=BEP20Token, transfer(recipient(address): 0x34C986, amount(uint256): 37358434360596712172398) -> True
+        [5][STATICCALL] from=0x34c986, to=BEP20Token, balanceOf(account(address): 0x34C986) -> 37358434360596712172398
+        [5][CALL] from=0x34c986, to=MetaSwap, swapUnderlying(tokenIndexFrom(uint8): 1, tokenIndexTo(uint8): 0, dx(uint256): 37358434360596712172398, minDy(uint256): 1, deadline(uint256): 1636929728) -> 58705184268
+          [6][DELEGATECALL] from=MetaSwap, to=MetaSwap, swapUnderlying(tokenIndexFrom(uint8): 1, tokenIndexTo(uint8): 0, dx(uint256): 37358434360596712172398, minDy(uint256): 1, deadline(uint256): 1636929728) -> 58705184268
+            [7][DELEGATECALL] from=MetaSwap, to=MetaSwapUtils, 0x0080247a() -> 0x000000
+              [8][STATICCALL] from=MetaSwap, to=BEP20Token, balanceOf(account(address): 0xd0fBF0) -> 0
+              [8][CALL] from=MetaSwap, to=BEP20Token, transferFrom(sender(address): 0x34C986, recipient(address): 0xd0fBF0, amount(uint256): 37358434360596712172398) -> True
+              [8][STATICCALL] from=MetaSwap, to=BEP20Token, balanceOf(account(address): 0xd0fBF0) -> 37358434360596712172398
+              [8][STATICCALL] from=MetaSwap, to=LPToken, balanceOf(account(address): 0xd0fBF0) -> 191053482448120498332604
+              [8][CALL] from=MetaSwap, to=Swap, addLiquidityuint256[]() -> 0x000000
+                [9][DELEGATECALL] from=Swap, to=SwapUtils, 0x40370edf() -> 0x000000
+                  [10][STATICCALL] from=Swap, to=LPToken, totalSupply() -> 5310399038628250442822756
+                  [10][DELEGATECALL] from=Swap, to=MathUtils, within1(a(uint256): 5326258407314059359613079, b(uint256): 5326294985377064568599907) -> False
+                  [10][DELEGATECALL] from=Swap, to=MathUtils, within1(a(uint256): 5326258407313421818193334, b(uint256): 5326258407314059359613079) -> False
+                  [10][DELEGATECALL] from=Swap, to=MathUtils, within1(a(uint256): 5326258407313421818193334, b(uint256): 5326258407313421818193334) -> True
+                  [10][STATICCALL] from=Swap, to=LPToken, totalSupply() -> 5310399038628250442822756
+                  [10][STATICCALL] from=Swap, to=BEP20Token, balanceOf(account(address): 0x1B3771) -> 2028903636887033766418935
+                  [10][CALL] from=Swap, to=BEP20Token, transferFrom(sender(address): 0xd0fBF0, recipient(address): 0x1B3771, amount(uint256): 37358434360596712172398) -> True
+                  [10][STATICCALL] from=Swap, to=BEP20Token, balanceOf(account(address): 0x1B3771) -> 2066262071247630478591333
+                  [10][STATICCALL] from=Swap, to=LPToken, totalSupply() -> 5310399038628250442822756
+                  [10][STATICCALL] from=Swap, to=LPToken, totalSupply() -> 5310399038628250442822756
+                  [10][DELEGATECALL] from=Swap, to=MathUtils, within1(a(uint256): 5363611659367242293968400, b(uint256): 5363653419737661280772305) -> False
+                  [10][DELEGATECALL] from=Swap, to=MathUtils, within1(a(uint256): 5363611659366415304058241, b(uint256): 5363611659367242293968400) -> False
+                  [10][DELEGATECALL] from=Swap, to=MathUtils, within1(a(uint256): 5363611659366415304058241, b(uint256): 5363611659366415304058241) -> True
+                  [10][STATICCALL] from=Swap, to=LPToken, totalSupply() -> 5310399038628250442822756
+                  [10][DELEGATECALL] from=Swap, to=MathUtils, difference(a(uint256): 1982369607639456708779252, b(uint256): 2005922428111687488611699) -> 23552820472230779832447
+                  [10][DELEGATECALL] from=Swap, to=MathUtils, difference(a(uint256): 1541822937519711748527699, b(uint256): 1531085377743979630460557) -> 10737559775732118067142
+                  [10][DELEGATECALL] from=Swap, to=MathUtils, difference(a(uint256): 1839455948794236076560658, b(uint256): 1826645613881994161700049) -> 12810334912241914860609
+                  [10][DELEGATECALL] from=Swap, to=MathUtils, within1(a(uint256): 5363608126939446005643056, b(uint256): 5363649887184024265411349) -> False
+                  [10][DELEGATECALL] from=Swap, to=MathUtils, within1(a(uint256): 5363608126938619020208029, b(uint256): 5363608126939446005643056) -> False
+                  [10][DELEGATECALL] from=Swap, to=MathUtils, within1(a(uint256): 5363608126938619020208029, b(uint256): 5363608126938619020208029) -> True
+                  [10][STATICCALL] from=Swap, to=LPToken, totalSupply() -> 5310399038628250442822756
+                  [10][STATICCALL] from=Swap, to=LPToken, totalSupply() -> 5310399038628250442822756
+                  [10][CALL] from=Swap, to=LPToken, mint(recipient(address): 0xd0fBF0, amount(uint256): 37238507789697361413563) -> None
+                    [11][CALL] from=LPToken, to=Swap, updateUserWithdrawFeeaddress() -> None
+                      [12][DELEGATECALL] from=Swap, to=SwapUtils, 0xe9252d46() -> None
+                  [10][STATICCALL] from=Swap, to=LPToken, totalSupply() -> 5347637546417947804236319
+              [8][STATICCALL] from=MetaSwap, to=LPToken, balanceOf(account(address): 0xd0fBF0) -> 228291990237817859746167
+              [8][CALL] from=MetaSwap, to=AnyswapV3ERC20, transfer(to(address): 0x34C986, value(uint256): 58705184268) -> True
+        [5][STATICCALL] from=0x34c986, to=AnyswapV3ERC20, balanceOf((address): 0x34C986) -> 58705184268
+        [5][CALL] from=0x34c986, to=MetaSwap, swap(tokenIndexFrom(uint8): 0, tokenIndexTo(uint8): 1, dx(uint256): 58705184268, minDy(uint256): 1, deadline(uint256): 1636929728) -> 37318215853321791769109
+          [6][DELEGATECALL] from=MetaSwap, to=MetaSwap, swap(tokenIndexFrom(uint8): 0, tokenIndexTo(uint8): 1, dx(uint256): 58705184268, minDy(uint256): 1, deadline(uint256): 1636929728) -> 37318215853321791769109
+            [7][DELEGATECALL] from=MetaSwap, to=MetaSwapUtils, 0x98414eed() -> 0x000000
+              [8][STATICCALL] from=MetaSwap, to=AnyswapV3ERC20, balanceOf((address): 0x34C986) -> 58705184268
+              [8][STATICCALL] from=MetaSwap, to=AnyswapV3ERC20, balanceOf((address): 0xd0fBF0) -> 352611497319
+              [8][CALL] from=MetaSwap, to=AnyswapV3ERC20, transferFrom(from(address): 0x34C986, to(address): 0xd0fBF0, value(uint256): 58705184268) -> True
+              [8][STATICCALL] from=MetaSwap, to=AnyswapV3ERC20, balanceOf((address): 0xd0fBF0) -> 411316681587
+              [8][CALL] from=MetaSwap, to=LPToken, transfer(recipient(address): 0x34C986, amount(uint256): 37318215853321791769109) -> True
+                [9][CALL] from=LPToken, to=Swap, updateUserWithdrawFeeaddress() -> None
+                  [10][DELEGATECALL] from=Swap, to=SwapUtils, 0xe9252d46() -> None
+        [5][STATICCALL] from=0x34c986, to=LPToken, balanceOf(account(address): 0x34C986) -> 37318215853321791769109
+        [5][CALL] from=0x34c986, to=Swap, removeLiquidityOneTokenuint256() -> 0x000000
+          [6][DELEGATECALL] from=Swap, to=SwapUtils, 0xe7a4db81() -> 0x000000
+            [7][STATICCALL] from=Swap, to=LPToken, totalSupply() -> 5347637546417947804236319
+            [7][STATICCALL] from=Swap, to=LPToken, balanceOf(account(address): 0x34C986) -> 37318215853321791769109
+            [7][DELEGATECALL] from=Swap, to=MathUtils, within1(a(uint256): 5363608126939446358885836, b(uint256): 5363649887184024618666714) -> False
+            [7][DELEGATECALL] from=Swap, to=MathUtils, within1(a(uint256): 5363608126938619373450810, b(uint256): 5363608126939446358885836) -> False
+            [7][DELEGATECALL] from=Swap, to=MathUtils, within1(a(uint256): 5363608126938619373450810, b(uint256): 5363608126938619373450810) -> True
+            [7][STATICCALL] from=Swap, to=LPToken, totalSupply() -> 5347637546417947804236319
+            [7][DELEGATECALL] from=Swap, to=MathUtils, within1(a(uint256): 3266429072981875863366676, b(uint256): 5326178461203737733400139) -> False
+            [7][DELEGATECALL] from=Swap, to=MathUtils, within1(a(uint256): 2337391848645015032310083, b(uint256): 3266429072981875863366676) -> False
+            [7][DELEGATECALL] from=Swap, to=MathUtils, within1(a(uint256): 2018730947308457339546178, b(uint256): 2337391848645015032310083) -> False
+            [7][DELEGATECALL] from=Swap, to=MathUtils, within1(a(uint256): 1969704679394191880155709, b(uint256): 2018730947308457339546178) -> False
+            [7][DELEGATECALL] from=Swap, to=MathUtils, within1(a(uint256): 1968486556506187715485024, b(uint256): 1969704679394191880155709) -> False
+            [7][DELEGATECALL] from=Swap, to=MathUtils, within1(a(uint256): 1968485803580371839302803, b(uint256): 1968486556506187715485024) -> False
+            [7][DELEGATECALL] from=Swap, to=MathUtils, within1(a(uint256): 1968485803580084182473205, b(uint256): 1968485803580371839302803) -> False
+            [7][DELEGATECALL] from=Swap, to=MathUtils, within1(a(uint256): 1968485803580084182473205, b(uint256): 1968485803580084182473205) -> True
+            [7][DELEGATECALL] from=Swap, to=MathUtils, within1(a(uint256): 3266429734382370434001394, b(uint256): 5326178461203737733400139) -> False
+            [7][DELEGATECALL] from=Swap, to=MathUtils, within1(a(uint256): 2337393018275552294644964, b(uint256): 3266429734382370434001394) -> False
+            [7][DELEGATECALL] from=Swap, to=MathUtils, within1(a(uint256): 2018732534043994811470537, b(uint256): 2337393018275552294644964) -> False
+            [7][DELEGATECALL] from=Swap, to=MathUtils, within1(a(uint256): 1969706427992500741085883, b(uint256): 2018732534043994811470537) -> False
+            [7][DELEGATECALL] from=Swap, to=MathUtils, within1(a(uint256): 1968488314221925581887553, b(uint256): 1969706427992500741085883) -> False
+            [7][DELEGATECALL] from=Swap, to=MathUtils, within1(a(uint256): 1968487561308052345720018, b(uint256): 1968488314221925581887553) -> False
+            [7][DELEGATECALL] from=Swap, to=MathUtils, within1(a(uint256): 1968487561307764698272375, b(uint256): 1968487561308052345720018) -> False
+            [7][DELEGATECALL] from=Swap, to=MathUtils, within1(a(uint256): 1968487561307764698272374, b(uint256): 1968487561307764698272375) -> True
+            [7][CALL] from=Swap, to=LPToken, burnFrom(account(address): 0x34C986, amount(uint256): 37318215853321791769109) -> None
+              [8][CALL] from=LPToken, to=Swap, updateUserWithdrawFeeaddress() -> None
+                [9][DELEGATECALL] from=Swap, to=SwapUtils, 0xe9252d46() -> None
+            [7][CALL] from=Swap, to=BEP20Token, transfer(recipient(address): 0x34C986, amount(uint256): 37431342594158967285526) -> True
+        [5][STATICCALL] from=0x34c986, to=BEP20Token, balanceOf(account(address): 0x34C986) -> 37431342594158967285526
+        [5][CALL] from=0x34c986, to=MetaSwap, swapUnderlying(tokenIndexFrom(uint8): 1, tokenIndexTo(uint8): 0, dx(uint256): 37431342594158967285526, minDy(uint256): 1, deadline(uint256): 1636929728) -> 61730505209
+          [6][DELEGATECALL] from=MetaSwap, to=MetaSwap, swapUnderlying(tokenIndexFrom(uint8): 1, tokenIndexTo(uint8): 0, dx(uint256): 37431342594158967285526, minDy(uint256): 1, deadline(uint256): 1636929728) -> 61730505209
+            [7][DELEGATECALL] from=MetaSwap, to=MetaSwapUtils, 0x0080247a() -> 0x000000
+              [8][STATICCALL] from=MetaSwap, to=BEP20Token, balanceOf(account(address): 0xd0fBF0) -> 0
+              [8][CALL] from=MetaSwap, to=BEP20Token, transferFrom(sender(address): 0x34C986, recipient(address): 0xd0fBF0, amount(uint256): 37431342594158967285526) -> True
+              [8][STATICCALL] from=MetaSwap, to=BEP20Token, balanceOf(account(address): 0xd0fBF0) -> 37431342594158967285526
+              [8][STATICCALL] from=MetaSwap, to=LPToken, balanceOf(account(address): 0xd0fBF0) -> 190973774384496067977058
+              [8][CALL] from=MetaSwap, to=Swap, addLiquidityuint256[]() -> 0x000000
+                [9][DELEGATECALL] from=Swap, to=SwapUtils, 0x40370edf() -> 0x000000
+                  [10][STATICCALL] from=Swap, to=LPToken, totalSupply() -> 5310319330564626012467210
+                  [10][DELEGATECALL] from=Swap, to=MathUtils, within1(a(uint256): 5326178461204375279284304, b(uint256): 5326215029113956904738144) -> False
+                  [10][DELEGATECALL] from=Swap, to=MathUtils, within1(a(uint256): 5326178461203738084901560, b(uint256): 5326178461204375279284304) -> False
+                  [10][DELEGATECALL] from=Swap, to=MathUtils, within1(a(uint256): 5326178461203738084901560, b(uint256): 5326178461203738084901560) -> True
+                  [10][STATICCALL] from=Swap, to=LPToken, totalSupply() -> 5310319330564626012467210
+                  [10][STATICCALL] from=Swap, to=BEP20Token, balanceOf(account(address): 0x1B3771) -> 2028830728653471511305807
+                  [10][CALL] from=Swap, to=BEP20Token, transferFrom(sender(address): 0xd0fBF0, recipient(address): 0x1B3771, amount(uint256): 37431342594158967285526) -> True
+                  [10][STATICCALL] from=Swap, to=BEP20Token, balanceOf(account(address): 0x1B3771) -> 2066262071247630478591333
+                  [10][STATICCALL] from=Swap, to=LPToken, totalSupply() -> 5310319330564626012467210
+                  [10][STATICCALL] from=Swap, to=LPToken, totalSupply() -> 5310319330564626012467210
+                  [10][DELEGATECALL] from=Swap, to=MathUtils, within1(a(uint256): 5363604611976856690297334, b(uint256): 5363646371708115872023670) -> False
+                  [10][DELEGATECALL] from=Swap, to=MathUtils, within1(a(uint256): 5363604611976029724827259, b(uint256): 5363604611976856690297334) -> False
+                  [10][DELEGATECALL] from=Swap, to=MathUtils, within1(a(uint256): 5363604611976029724827259, b(uint256): 5363604611976029724827259) -> True
+                  [10][STATICCALL] from=Swap, to=LPToken, totalSupply() -> 5310319330564626012467210
+                  [10][DELEGATECALL] from=Swap, to=MathUtils, difference(a(uint256): 1982318018744210586606846, b(uint256): 2005917146174243501306322) -> 23599127430032914699476
+                  [10][DELEGATECALL] from=Swap, to=MathUtils, difference(a(uint256): 1541843243483585917206344, b(uint256): 1531084572426996531083401) -> 10758671056589386122943
+                  [10][DELEGATECALL] from=Swap, to=MathUtils, difference(a(uint256): 1839480174614941810415576, b(uint256): 1826644653106875839633947) -> 12835521508065970781629
+                  [10][DELEGATECALL] from=Swap, to=MathUtils, within1(a(uint256): 5363601072603944057626315, b(uint256): 5363642832209116270403301) -> False
+                  [10][DELEGATECALL] from=Swap, to=MathUtils, within1(a(uint256): 5363601072603117096640067, b(uint256): 5363601072603944057626315) -> False
+                  [10][DELEGATECALL] from=Swap, to=MathUtils, within1(a(uint256): 5363601072603117096640067, b(uint256): 5363601072603117096640067) -> True
+                  [10][STATICCALL] from=Swap, to=LPToken, totalSupply() -> 5310319330564626012467210
+                  [10][STATICCALL] from=Swap, to=LPToken, totalSupply() -> 5310319330564626012467210
+                  [10][CALL] from=Swap, to=LPToken, mint(recipient(address): 0xd0fBF0, amount(uint256): 37311182522678296529810) -> None
+                    [11][CALL] from=LPToken, to=Swap, updateUserWithdrawFeeaddress() -> None
+                      [12][DELEGATECALL] from=Swap, to=SwapUtils, 0xe9252d46() -> None
+                  [10][STATICCALL] from=Swap, to=LPToken, totalSupply() -> 5347630513087304308997020
+              [8][STATICCALL] from=MetaSwap, to=LPToken, balanceOf(account(address): 0xd0fBF0) -> 228284956907174364506868
+              [8][CALL] from=MetaSwap, to=AnyswapV3ERC20, transfer(to(address): 0x34C986, value(uint256): 61730505209) -> True
+        [5][STATICCALL] from=0x34c986, to=AnyswapV3ERC20, balanceOf((address): 0x34C986) -> 61730505209
+        [5][CALL] from=0x34c986, to=MetaSwap, swap(tokenIndexFrom(uint8): 0, tokenIndexTo(uint8): 1, dx(uint256): 61730505209, minDy(uint256): 1, deadline(uint256): 1636929728) -> 37391373500760674906335
+          [6][DELEGATECALL] from=MetaSwap, to=MetaSwap, swap(tokenIndexFrom(uint8): 0, tokenIndexTo(uint8): 1, dx(uint256): 61730505209, minDy(uint256): 1, deadline(uint256): 1636929728) -> 37391373500760674906335
+            [7][DELEGATECALL] from=MetaSwap, to=MetaSwapUtils, 0x98414eed() -> 0x000000
+              [8][STATICCALL] from=MetaSwap, to=AnyswapV3ERC20, balanceOf((address): 0x34C986) -> 61730505209
+              [8][STATICCALL] from=MetaSwap, to=AnyswapV3ERC20, balanceOf((address): 0xd0fBF0) -> 349586176378
+              [8][CALL] from=MetaSwap, to=AnyswapV3ERC20, transferFrom(from(address): 0x34C986, to(address): 0xd0fBF0, value(uint256): 61730505209) -> True
+              [8][STATICCALL] from=MetaSwap, to=AnyswapV3ERC20, balanceOf((address): 0xd0fBF0) -> 411316681587
+              [8][CALL] from=MetaSwap, to=LPToken, transfer(recipient(address): 0x34C986, amount(uint256): 37391373500760674906335) -> True
+                [9][CALL] from=LPToken, to=Swap, updateUserWithdrawFeeaddress() -> None
+                  [10][DELEGATECALL] from=Swap, to=SwapUtils, 0xe9252d46() -> None
+        [5][STATICCALL] from=0x34c986, to=LPToken, balanceOf(account(address): 0x34C986) -> 37391373500760674906335
+        [5][CALL] from=0x34c986, to=Swap, removeLiquidityOneTokenuint256() -> 0x000000
+          [6][DELEGATECALL] from=Swap, to=SwapUtils, 0xe7a4db81() -> 0x000000
+            [7][STATICCALL] from=Swap, to=LPToken, totalSupply() -> 5347630513087304308997020
+            [7][STATICCALL] from=Swap, to=LPToken, balanceOf(account(address): 0x34C986) -> 37391373500760674906335
+            [7][DELEGATECALL] from=Swap, to=MathUtils, within1(a(uint256): 5363601072603944411563607, b(uint256): 5363642832209116624353202) -> False
+            [7][DELEGATECALL] from=Swap, to=MathUtils, within1(a(uint256): 5363601072603117450577360, b(uint256): 5363601072603944411563607) -> False
+            [7][DELEGATECALL] from=Swap, to=MathUtils, within1(a(uint256): 5363601072603117450577360, b(uint256): 5363601072603117450577360) -> True
+            [7][STATICCALL] from=Swap, to=LPToken, totalSupply() -> 5347630513087304308997020
+            [7][DELEGATECALL] from=Swap, to=MathUtils, within1(a(uint256): 3266361329712256247921110, b(uint256): 5326098030737384577449248) -> False
+            [7][DELEGATECALL] from=Swap, to=MathUtils, within1(a(uint256): 2337323982846604349330561, b(uint256): 3266361329712256247921110) -> False
+            [7][DELEGATECALL] from=Swap, to=MathUtils, within1(a(uint256): 2018656279010864279819054, b(uint256): 2337323982846604349330561) -> False
+            [7][DELEGATECALL] from=Swap, to=MathUtils, within1(a(uint256): 1969626244110317774201956, b(uint256): 2018656279010864279819054) -> False
+            [7][DELEGATECALL] from=Swap, to=MathUtils, within1(a(uint256): 1968407885711548785883706, b(uint256): 1969626244110317774201956) -> False
+            [7][DELEGATECALL] from=Swap, to=MathUtils, within1(a(uint256): 1968407132464479060852543, b(uint256): 1968407885711548785883706) -> False
+            [7][DELEGATECALL] from=Swap, to=MathUtils, within1(a(uint256): 1968407132464191146999433, b(uint256): 1968407132464479060852543) -> False
+            [7][DELEGATECALL] from=Swap, to=MathUtils, within1(a(uint256): 1968407132464191146999433, b(uint256): 1968407132464191146999433) -> True
+            [7][DELEGATECALL] from=Swap, to=MathUtils, within1(a(uint256): 3266361992402375109635627, b(uint256): 5326098030737384577449248) -> False
+            [7][DELEGATECALL] from=Swap, to=MathUtils, within1(a(uint256): 2337325154756329981300104, b(uint256): 3266361992402375109635627) -> False
+            [7][DELEGATECALL] from=Swap, to=MathUtils, within1(a(uint256): 2018657868845564963631759, b(uint256): 2337325154756329981300104) -> False
+            [7][DELEGATECALL] from=Swap, to=MathUtils, within1(a(uint256): 1969627996136095207526783, b(uint256): 2018657868845564963631759) -> False
+            [7][DELEGATECALL] from=Swap, to=MathUtils, within1(a(uint256): 1968409646874363318373961, b(uint256): 1969627996136095207526783) -> False
+            [7][DELEGATECALL] from=Swap, to=MathUtils, within1(a(uint256): 1968408893639264739068487, b(uint256): 1968409646874363318373961) -> False
+            [7][DELEGATECALL] from=Swap, to=MathUtils, within1(a(uint256): 1968408893638976834624124, b(uint256): 1968408893639264739068487) -> False
+            [7][DELEGATECALL] from=Swap, to=MathUtils, within1(a(uint256): 1968408893638976834624124, b(uint256): 1968408893638976834624124) -> True
+            [7][CALL] from=Swap, to=LPToken, burnFrom(account(address): 0x34C986, amount(uint256): 37391373500760674906335) -> None
+              [8][CALL] from=LPToken, to=Swap, updateUserWithdrawFeeaddress() -> None
+                [9][DELEGATECALL] from=Swap, to=SwapUtils, 0xe9252d46() -> None
+            [7][CALL] from=Swap, to=BEP20Token, transfer(recipient(address): 0x34C986, amount(uint256): 37504721405294795796570) -> True
+        [5][STATICCALL] from=0x34c986, to=BEP20Token, balanceOf(account(address): 0x34C986) -> 37504721405294795796570
+        [5][CALL] from=0x34c986, to=MetaSwap, swapUnderlying(tokenIndexFrom(uint8): 1, tokenIndexTo(uint8): 0, dx(uint256): 37504721405294795796570, minDy(uint256): 1, deadline(uint256): 1636929728) -> 65740327317
+          [6][DELEGATECALL] from=MetaSwap, to=MetaSwap, swapUnderlying(tokenIndexFrom(uint8): 1, tokenIndexTo(uint8): 0, dx(uint256): 37504721405294795796570, minDy(uint256): 1, deadline(uint256): 1636929728) -> 65740327317
+            [7][DELEGATECALL] from=MetaSwap, to=MetaSwapUtils, 0x0080247a() -> 0x000000
+              [8][STATICCALL] from=MetaSwap, to=BEP20Token, balanceOf(account(address): 0xd0fBF0) -> 0
+              [8][CALL] from=MetaSwap, to=BEP20Token, transferFrom(sender(address): 0x34C986, recipient(address): 0xd0fBF0, amount(uint256): 37504721405294795796570) -> True
+              [8][STATICCALL] from=MetaSwap, to=BEP20Token, balanceOf(account(address): 0xd0fBF0) -> 37504721405294795796570
+              [8][STATICCALL] from=MetaSwap, to=LPToken, balanceOf(account(address): 0xd0fBF0) -> 190893583406413689600533
+              [8][CALL] from=MetaSwap, to=Swap, addLiquidityuint256[]() -> 0x000000
+                [9][DELEGATECALL] from=Swap, to=SwapUtils, 0x40370edf() -> 0x000000
+                  [10][STATICCALL] from=Swap, to=LPToken, totalSupply() -> 5310239139586543634090685
+                  [10][DELEGATECALL] from=Swap, to=MathUtils, within1(a(uint256): 5326098030738021775008415, b(uint256): 5326134588433621697758480) -> False
+                  [10][DELEGATECALL] from=Swap, to=MathUtils, within1(a(uint256): 5326098030737384929640018, b(uint256): 5326098030738021775008415) -> False
+                  [10][DELEGATECALL] from=Swap, to=MathUtils, within1(a(uint256): 5326098030737384929640018, b(uint256): 5326098030737384929640018) -> True
+                  [10][STATICCALL] from=Swap, to=LPToken, totalSupply() -> 5310239139586543634090685
+                  [10][STATICCALL] from=Swap, to=BEP20Token, balanceOf(account(address): 0x1B3771) -> 2028757349842335682794763
+                  [10][CALL] from=Swap, to=BEP20Token, transferFrom(sender(address): 0xd0fBF0, recipient(address): 0x1B3771, amount(uint256): 37504721405294795796570) -> True
+                  [10][STATICCALL] from=Swap, to=BEP20Token, balanceOf(account(address): 0x1B3771) -> 2066262071247630478591333
+                  [10][STATICCALL] from=Swap, to=LPToken, totalSupply() -> 5310239139586543634090685
+                  [10][STATICCALL] from=Swap, to=LPToken, totalSupply() -> 5310239139586543634090685
+                  [10][DELEGATECALL] from=Swap, to=MathUtils, within1(a(uint256): 5363597550748064260455633, b(uint256): 5363639309838916493555050) -> False
+                  [10][DELEGATECALL] from=Swap, to=MathUtils, within1(a(uint256): 5363597550747237319472979, b(uint256): 5363597550748064260455633) -> False
+                  [10][DELEGATECALL] from=Swap, to=MathUtils, within1(a(uint256): 5363597550747237319472979, b(uint256): 5363597550747237319472979) -> True
+                  [10][STATICCALL] from=Swap, to=LPToken, totalSupply() -> 5310239139586543634090685
+                  [10][DELEGATECALL] from=Swap, to=MathUtils, difference(a(uint256): 1982266119329507927663871, b(uint256): 2005911853869486295033024) -> 23645734539978367369153
+                  [10][DELEGATECALL] from=Swap, to=MathUtils, difference(a(uint256): 1541863684704042789941164, b(uint256): 1531083765526667367569475) -> 10779919177375422371689
+                  [10][DELEGATECALL] from=Swap, to=MathUtils, difference(a(uint256): 1839504561802118112409188, b(uint256): 1826643690442762830952551) -> 12860871359355281456637
+                  [10][DELEGATECALL] from=Swap, to=MathUtils, within1(a(uint256): 5363594004385018314868845, b(uint256): 5363635763349535740374712) -> False
+                  [10][DELEGATECALL] from=Swap, to=MathUtils, within1(a(uint256): 5363594004384191378378770, b(uint256): 5363594004385018314868845) -> False
+                  [10][DELEGATECALL] from=Swap, to=MathUtils, within1(a(uint256): 5363594004384191378378770, b(uint256): 5363594004384191378378770) -> True
+                  [10][STATICCALL] from=Swap, to=LPToken, totalSupply() -> 5310239139586543634090685
+                  [10][STATICCALL] from=Swap, to=LPToken, totalSupply() -> 5310239139586543634090685
+                  [10][CALL] from=Swap, to=LPToken, mint(recipient(address): 0xd0fBF0, amount(uint256): 37384326328032409921236) -> None
+                    [11][CALL] from=LPToken, to=Swap, updateUserWithdrawFeeaddress() -> None
+                      [12][DELEGATECALL] from=Swap, to=SwapUtils, 0xe9252d46() -> None
+                  [10][STATICCALL] from=Swap, to=LPToken, totalSupply() -> 5347623465914576044011921
+              [8][STATICCALL] from=MetaSwap, to=LPToken, balanceOf(account(address): 0xd0fBF0) -> 228277909734446099521769
+              [8][CALL] from=MetaSwap, to=AnyswapV3ERC20, transfer(to(address): 0x34C986, value(uint256): 65740327317) -> True
+        [5][STATICCALL] from=0x34c986, to=AnyswapV3ERC20, balanceOf((address): 0x34C986) -> 65740327317
+        [5][CALL] from=0x34c986, to=MetaSwap, swap(tokenIndexFrom(uint8): 0, tokenIndexTo(uint8): 1, dx(uint256): 65740327317, minDy(uint256): 1, deadline(uint256): 1636929728) -> 37464976959759458955400
+          [6][DELEGATECALL] from=MetaSwap, to=MetaSwap, swap(tokenIndexFrom(uint8): 0, tokenIndexTo(uint8): 1, dx(uint256): 65740327317, minDy(uint256): 1, deadline(uint256): 1636929728) -> 37464976959759458955400
+            [7][DELEGATECALL] from=MetaSwap, to=MetaSwapUtils, 0x98414eed() -> 0x000000
+              [8][STATICCALL] from=MetaSwap, to=AnyswapV3ERC20, balanceOf((address): 0x34C986) -> 65740327317
+              [8][STATICCALL] from=MetaSwap, to=AnyswapV3ERC20, balanceOf((address): 0xd0fBF0) -> 345576354270
+              [8][CALL] from=MetaSwap, to=AnyswapV3ERC20, transferFrom(from(address): 0x34C986, to(address): 0xd0fBF0, value(uint256): 65740327317) -> True
+              [8][STATICCALL] from=MetaSwap, to=AnyswapV3ERC20, balanceOf((address): 0xd0fBF0) -> 411316681587
+              [8][CALL] from=MetaSwap, to=LPToken, transfer(recipient(address): 0x34C986, amount(uint256): 37464976959759458955400) -> True
+                [9][CALL] from=LPToken, to=Swap, updateUserWithdrawFeeaddress() -> None
+                  [10][DELEGATECALL] from=Swap, to=SwapUtils, 0xe9252d46() -> None
+        [5][STATICCALL] from=0x34c986, to=LPToken, balanceOf(account(address): 0x34C986) -> 37464976959759458955400
+        [5][CALL] from=0x34c986, to=Swap, removeLiquidityOneTokenuint256() -> 0x000000
+          [6][DELEGATECALL] from=Swap, to=SwapUtils, 0xe7a4db81() -> 0x000000
+            [7][STATICCALL] from=Swap, to=LPToken, totalSupply() -> 5347623465914576044011921
+            [7][STATICCALL] from=Swap, to=LPToken, balanceOf(account(address): 0x34C986) -> 37464976959759458955400
+            [7][DELEGATECALL] from=Swap, to=MathUtils, within1(a(uint256): 5363594004385018669505152, b(uint256): 5363635763349536095023652) -> False
+            [7][DELEGATECALL] from=Swap, to=MathUtils, within1(a(uint256): 5363594004384191733015077, b(uint256): 5363594004385018669505152) -> False
+            [7][DELEGATECALL] from=Swap, to=MathUtils, within1(a(uint256): 5363594004384191733015077, b(uint256): 5363594004384191733015077) -> True
+            [7][STATICCALL] from=Swap, to=LPToken, totalSupply() -> 5347623465914576044011921
+            [7][DELEGATECALL] from=Swap, to=MathUtils, within1(a(uint256): 3266293195847001494340310, b(uint256): 5326017139244643091084786) -> False
+            [7][DELEGATECALL] from=Swap, to=MathUtils, within1(a(uint256): 2337255724028275967409054, b(uint256): 3266293195847001494340310) -> False
+            [7][DELEGATECALL] from=Swap, to=MathUtils, within1(a(uint256): 2018581177068529066034913, b(uint256): 2337255724028275967409054) -> False
+            [7][DELEGATECALL] from=Swap, to=MathUtils, within1(a(uint256): 1969547352672361041350647, b(uint256): 2018581177068529066034913) -> False
+            [7][DELEGATECALL] from=Swap, to=MathUtils, within1(a(uint256): 1968328757329952336639351, b(uint256): 1969547352672361041350647) -> False
+            [7][DELEGATECALL] from=Swap, to=MathUtils, within1(a(uint256): 1968328003759599567626672, b(uint256): 1968328757329952336639351) -> False
+            [7][DELEGATECALL] from=Swap, to=MathUtils, within1(a(uint256): 1968328003759311395005854, b(uint256): 1968328003759599567626672) -> False
+            [7][DELEGATECALL] from=Swap, to=MathUtils, within1(a(uint256): 1968328003759311395005854, b(uint256): 1968328003759311395005854) -> True
+            [7][DELEGATECALL] from=Swap, to=MathUtils, within1(a(uint256): 3266293859834575330433817, b(uint256): 5326017139244643091084786) -> False
+            [7][DELEGATECALL] from=Swap, to=MathUtils, within1(a(uint256): 2337256898231023857302617, b(uint256): 3266293859834575330433817) -> False
+            [7][DELEGATECALL] from=Swap, to=MathUtils, within1(a(uint256): 2018582770021230332109992, b(uint256): 2337256898231023857302617) -> False
+            [7][DELEGATECALL] from=Swap, to=MathUtils, within1(a(uint256): 1969549108146486137733774, b(uint256): 2018582770021230332109992) -> False
+            [7][DELEGATECALL] from=Swap, to=MathUtils, within1(a(uint256): 1968330521960848891143638, b(uint256): 1969549108146486137733774) -> False
+            [7][DELEGATECALL] from=Swap, to=MathUtils, within1(a(uint256): 1968329768402495968459169, b(uint256): 1968330521960848891143638) -> False
+            [7][DELEGATECALL] from=Swap, to=MathUtils, within1(a(uint256): 1968329768402207805274092, b(uint256): 1968329768402495968459169) -> False
+            [7][DELEGATECALL] from=Swap, to=MathUtils, within1(a(uint256): 1968329768402207805274092, b(uint256): 1968329768402207805274092) -> True
+            [7][CALL] from=Swap, to=LPToken, burnFrom(account(address): 0x34C986, amount(uint256): 37464976959759458955400) -> None
+              [8][CALL] from=LPToken, to=Swap, updateUserWithdrawFeeaddress() -> None
+                [9][DELEGATECALL] from=Swap, to=SwapUtils, 0xe9252d46() -> None
+            [7][CALL] from=Swap, to=BEP20Token, transfer(recipient(address): 0x34C986, amount(uint256): 37578547373580953283607) -> True
+        [5][STATICCALL] from=0x34c986, to=BEP20Token, balanceOf(account(address): 0x34C986) -> 37578547373580953283607
+        [5][CALL] from=0x34c986, to=MetaSwap, swapUnderlying(tokenIndexFrom(uint8): 1, tokenIndexTo(uint8): 0, dx(uint256): 37578547373580953283607, minDy(uint256): 1, deadline(uint256): 1636929728) -> 71350733879
+          [6][DELEGATECALL] from=MetaSwap, to=MetaSwap, swapUnderlying(tokenIndexFrom(uint8): 1, tokenIndexTo(uint8): 0, dx(uint256): 37578547373580953283607, minDy(uint256): 1, deadline(uint256): 1636929728) -> 71350733879
+            [7][DELEGATECALL] from=MetaSwap, to=MetaSwapUtils, 0x0080247a() -> 0x000000
+              [8][STATICCALL] from=MetaSwap, to=BEP20Token, balanceOf(account(address): 0xd0fBF0) -> 0
+              [8][CALL] from=MetaSwap, to=BEP20Token, transferFrom(sender(address): 0x34C986, recipient(address): 0xd0fBF0, amount(uint256): 37578547373580953283607) -> True
+              [8][STATICCALL] from=MetaSwap, to=BEP20Token, balanceOf(account(address): 0xd0fBF0) -> 37578547373580953283607
+              [8][STATICCALL] from=MetaSwap, to=LPToken, balanceOf(account(address): 0xd0fBF0) -> 190812932774686640566369
+              [8][CALL] from=MetaSwap, to=Swap, addLiquidityuint256[]() -> 0x000000
+                [9][DELEGATECALL] from=Swap, to=SwapUtils, 0x40370edf() -> 0x000000
+                  [10][STATICCALL] from=Swap, to=LPToken, totalSupply() -> 5310158488954816585056521
+                  [10][DELEGATECALL] from=Swap, to=MathUtils, within1(a(uint256): 5326017139245279938453880, b(uint256): 5326053686669451868961675) -> False
+                  [10][DELEGATECALL] from=Swap, to=MathUtils, within1(a(uint256): 5326017139244643443969107, b(uint256): 5326017139245279938453880) -> False
+                  [10][DELEGATECALL] from=Swap, to=MathUtils, within1(a(uint256): 5326017139244643443969107, b(uint256): 5326017139244643443969107) -> True
+                  [10][STATICCALL] from=Swap, to=LPToken, totalSupply() -> 5310158488954816585056521
+                  [10][STATICCALL] from=Swap, to=BEP20Token, balanceOf(account(address): 0x1B3771) -> 2028683523874049525307726
+                  [10][CALL] from=Swap, to=BEP20Token, transferFrom(sender(address): 0xd0fBF0, recipient(address): 0x1B3771, amount(uint256): 37578547373580953283607) -> True
+                  [10][STATICCALL] from=Swap, to=BEP20Token, balanceOf(account(address): 0x1B3771) -> 2066262071247630478591333
+                  [10][STATICCALL] from=Swap, to=LPToken, totalSupply() -> 5310158488954816585056521
+                  [10][STATICCALL] from=Swap, to=LPToken, totalSupply() -> 5310158488954816585056521
+                  [10][DELEGATECALL] from=Swap, to=MathUtils, within1(a(uint256): 5363590475593842378295717, b(uint256): 5363632234043032822245282) -> False
+                  [10][DELEGATECALL] from=Swap, to=MathUtils, within1(a(uint256): 5363590475593015461848114, b(uint256): 5363590475593842378295717) -> False
+                  [10][DELEGATECALL] from=Swap, to=MathUtils, within1(a(uint256): 5363590475593015461848114, b(uint256): 5363590475593015461848114) -> True
+                  [10][STATICCALL] from=Swap, to=LPToken, totalSupply() -> 5310158488954816585056521
+                  [10][DELEGATECALL] from=Swap, to=MathUtils, difference(a(uint256): 1982213924175192554315962, b(uint256): 2005906551132892701220112) -> 23692626957700146904150
+                  [10][DELEGATECALL] from=Swap, to=MathUtils, difference(a(uint256): 1541884254403321081666680, b(uint256): 1531082957032729145262192) -> 10801297370591936404488
+                  [10][DELEGATECALL] from=Swap, to=MathUtils, difference(a(uint256): 1839529102269626806794211, b(uint256): 1826642725877410975762978) -> 12886376392215831031233
+                  [10][DELEGATECALL] from=Swap, to=MathUtils, within1(a(uint256): 5363586922197872503788613, b(uint256): 5363628680520478784151708) -> False
+                  [10][DELEGATECALL] from=Swap, to=MathUtils, within1(a(uint256): 5363586922197045591842394, b(uint256): 5363586922197872503788613) -> False
+                  [10][DELEGATECALL] from=Swap, to=MathUtils, within1(a(uint256): 5363586922197045591842394, b(uint256): 5363586922197045591842394) -> True
+                  [10][STATICCALL] from=Swap, to=LPToken, totalSupply() -> 5310158488954816585056521
+                  [10][STATICCALL] from=Swap, to=LPToken, totalSupply() -> 5310158488954816585056521
+                  [10][CALL] from=Swap, to=LPToken, mint(recipient(address): 0xd0fBF0, amount(uint256): 37457915860402638452474) -> None
+                    [11][CALL] from=LPToken, to=Swap, updateUserWithdrawFeeaddress() -> None
+                      [12][DELEGATECALL] from=Swap, to=SwapUtils, 0xe9252d46() -> None
+                  [10][STATICCALL] from=Swap, to=LPToken, totalSupply() -> 5347616404815219223508995
+              [8][STATICCALL] from=MetaSwap, to=LPToken, balanceOf(account(address): 0xd0fBF0) -> 228270848635089279018843
+              [8][CALL] from=MetaSwap, to=AnyswapV3ERC20, transfer(to(address): 0x34C986, value(uint256): 71350733879) -> True
+        [5][STATICCALL] from=0x34c986, to=AnyswapV3ERC20, balanceOf((address): 0x34C986) -> 71350733879
+        [5][CALL] from=0x34c986, to=MetaSwap, swap(tokenIndexFrom(uint8): 0, tokenIndexTo(uint8): 1, dx(uint256): 71350733879, minDy(uint256): 1, deadline(uint256): 1636929728) -> 37539000592921668316529
+          [6][DELEGATECALL] from=MetaSwap, to=MetaSwap, swap(tokenIndexFrom(uint8): 0, tokenIndexTo(uint8): 1, dx(uint256): 71350733879, minDy(uint256): 1, deadline(uint256): 1636929728) -> 37539000592921668316529
+            [7][DELEGATECALL] from=MetaSwap, to=MetaSwapUtils, 0x98414eed() -> 0x000000
+              [8][STATICCALL] from=MetaSwap, to=AnyswapV3ERC20, balanceOf((address): 0x34C986) -> 71350733879
+              [8][STATICCALL] from=MetaSwap, to=AnyswapV3ERC20, balanceOf((address): 0xd0fBF0) -> 339965947708
+              [8][CALL] from=MetaSwap, to=AnyswapV3ERC20, transferFrom(from(address): 0x34C986, to(address): 0xd0fBF0, value(uint256): 71350733879) -> True
+              [8][STATICCALL] from=MetaSwap, to=AnyswapV3ERC20, balanceOf((address): 0xd0fBF0) -> 411316681587
+              [8][CALL] from=MetaSwap, to=LPToken, transfer(recipient(address): 0x34C986, amount(uint256): 37539000592921668316529) -> True
+                [9][CALL] from=LPToken, to=Swap, updateUserWithdrawFeeaddress() -> None
+                  [10][DELEGATECALL] from=Swap, to=SwapUtils, 0xe9252d46() -> None
+        [5][STATICCALL] from=0x34c986, to=LPToken, balanceOf(account(address): 0x34C986) -> 37539000592921668316529
+        [5][CALL] from=0x34c986, to=Swap, removeLiquidityOneTokenuint256() -> 0x000000
+          [6][DELEGATECALL] from=Swap, to=SwapUtils, 0xe7a4db81() -> 0x000000
+            [7][STATICCALL] from=Swap, to=LPToken, totalSupply() -> 5347616404815219223508995
+            [7][STATICCALL] from=Swap, to=LPToken, balanceOf(account(address): 0x34C986) -> 37539000592921668316529
+            [7][DELEGATECALL] from=Swap, to=MathUtils, within1(a(uint256): 5363586922197872859128211, b(uint256): 5363628680520479139503965) -> False
+            [7][DELEGATECALL] from=Swap, to=MathUtils, within1(a(uint256): 5363586922197045947181992, b(uint256): 5363586922197872859128211) -> False
+            [7][DELEGATECALL] from=Swap, to=MathUtils, within1(a(uint256): 5363586922197045947181992, b(uint256): 5363586922197045947181992) -> True
+            [7][STATICCALL] from=Swap, to=LPToken, totalSupply() -> 5347616404815219223508995
+            [7][DELEGATECALL] from=Swap, to=MathUtils, within1(a(uint256): 3266224693196288090718123, b(uint256): 5325935812354678894455166) -> False
+            [7][DELEGATECALL] from=Swap, to=MathUtils, within1(a(uint256): 2337187094211875406855791, b(uint256): 3266224693196288090718123) -> False
+            [7][DELEGATECALL] from=Swap, to=MathUtils, within1(a(uint256): 2018505665808917857318806, b(uint256): 2337187094211875406855791) -> False
+            [7][DELEGATECALL] from=Swap, to=MathUtils, within1(a(uint256): 1969468030656926636129223, b(uint256): 2018505665808917857318806) -> False
+            [7][DELEGATECALL] from=Swap, to=MathUtils, within1(a(uint256): 1968249197015264862821481, b(uint256): 1969468030656926636129223) -> False
+            [7][DELEGATECALL] from=Swap, to=MathUtils, within1(a(uint256): 1968248443119703749732984, b(uint256): 1968249197015264862821481) -> False
+            [7][DELEGATECALL] from=Swap, to=MathUtils, within1(a(uint256): 1968248443119415316681128, b(uint256): 1968248443119703749732984) -> False
+            [7][DELEGATECALL] from=Swap, to=MathUtils, within1(a(uint256): 1968248443119415316681128, b(uint256): 1968248443119415316681128) -> True
+            [7][DELEGATECALL] from=Swap, to=MathUtils, within1(a(uint256): 3266225358488695206346577, b(uint256): 5325935812354678894455166) -> False
+            [7][DELEGATECALL] from=Swap, to=MathUtils, within1(a(uint256): 2337188270720679814574720, b(uint256): 3266225358488695206346577) -> False
+            [7][DELEGATECALL] from=Swap, to=MathUtils, within1(a(uint256): 2018507261897370387706565, b(uint256): 2337188270720679814574720) -> False
+            [7][DELEGATECALL] from=Swap, to=MathUtils, within1(a(uint256): 1969469789599077759536577, b(uint256): 2018507261897370387706565) -> False
+            [7][DELEGATECALL] from=Swap, to=MathUtils, within1(a(uint256): 1968250965134041358407213, b(uint256): 1969469789599077759536577) -> False
+            [7][DELEGATECALL] from=Swap, to=MathUtils, within1(a(uint256): 1968250211250508977650219, b(uint256): 1968250965134041358407213) -> False
+            [7][DELEGATECALL] from=Swap, to=MathUtils, within1(a(uint256): 1968250211250220554061294, b(uint256): 1968250211250508977650219) -> False
+            [7][DELEGATECALL] from=Swap, to=MathUtils, within1(a(uint256): 1968250211250220554061294, b(uint256): 1968250211250220554061294) -> True
+            [7][CALL] from=Swap, to=LPToken, burnFrom(account(address): 0x34C986, amount(uint256): 37539000592921668316529) -> None
+              [8][CALL] from=LPToken, to=Swap, updateUserWithdrawFeeaddress() -> None
+                [9][DELEGATECALL] from=Swap, to=SwapUtils, 0xe9252d46() -> None
+            [7][CALL] from=Swap, to=BEP20Token, transfer(recipient(address): 0x34C986, amount(uint256): 37652794784052126757995) -> True
+        [5][STATICCALL] from=0x34c986, to=BEP20Token, balanceOf(account(address): 0x34C986) -> 37652794784052126757995
+        [5][CALL] from=0x34c986, to=MetaSwap, swapUnderlying(tokenIndexFrom(uint8): 1, tokenIndexTo(uint8): 0, dx(uint256): 37652794784052126757995, minDy(uint256): 1, deadline(uint256): 1636929728) -> 79871395415
+          [6][DELEGATECALL] from=MetaSwap, to=MetaSwap, swapUnderlying(tokenIndexFrom(uint8): 1, tokenIndexTo(uint8): 0, dx(uint256): 37652794784052126757995, minDy(uint256): 1, deadline(uint256): 1636929728) -> 79871395415
+            [7][DELEGATECALL] from=MetaSwap, to=MetaSwapUtils, 0x0080247a() -> 0x000000
+              [8][STATICCALL] from=MetaSwap, to=BEP20Token, balanceOf(account(address): 0xd0fBF0) -> 0
+              [8][CALL] from=MetaSwap, to=BEP20Token, transferFrom(sender(address): 0x34C986, recipient(address): 0xd0fBF0, amount(uint256): 37652794784052126757995) -> True
+              [8][STATICCALL] from=MetaSwap, to=BEP20Token, balanceOf(account(address): 0xd0fBF0) -> 37652794784052126757995
+              [8][STATICCALL] from=MetaSwap, to=LPToken, balanceOf(account(address): 0xd0fBF0) -> 190731848042167610702314
+              [8][CALL] from=MetaSwap, to=Swap, addLiquidityuint256[]() -> 0x000000
+                [9][DELEGATECALL] from=Swap, to=SwapUtils, 0x40370edf() -> 0x000000
+                  [10][STATICCALL] from=Swap, to=LPToken, totalSupply() -> 5310077404222297555192466
+                  [10][DELEGATECALL] from=Swap, to=MathUtils, within1(a(uint256): 5325935812355315389887043, b(uint256): 5325972349454023758409536) -> False
+                  [10][DELEGATECALL] from=Swap, to=MathUtils, within1(a(uint256): 5325935812354679248036996, b(uint256): 5325935812355315389887043) -> False
+                  [10][DELEGATECALL] from=Swap, to=MathUtils, within1(a(uint256): 5325935812354679248036996, b(uint256): 5325935812354679248036996) -> True
+                  [10][STATICCALL] from=Swap, to=LPToken, totalSupply() -> 5310077404222297555192466
+                  [10][STATICCALL] from=Swap, to=BEP20Token, balanceOf(account(address): 0x1B3771) -> 2028609276463578351833338
+                  [10][CALL] from=Swap, to=BEP20Token, transferFrom(sender(address): 0xd0fBF0, recipient(address): 0x1B3771, amount(uint256): 37652794784052126757995) -> True
+                  [10][STATICCALL] from=Swap, to=BEP20Token, balanceOf(account(address): 0x1B3771) -> 2066262071247630478591333
+                  [10][STATICCALL] from=Swap, to=LPToken, totalSupply() -> 5310077404222297555192466
+                  [10][STATICCALL] from=Swap, to=LPToken, totalSupply() -> 5310077404222297555192466
+                  [10][DELEGATECALL] from=Swap, to=MathUtils, within1(a(uint256): 5363583386431809335533005, b(uint256): 5363625144238075885167531) -> False
+                  [10][DELEGATECALL] from=Swap, to=MathUtils, within1(a(uint256): 5363583386430982443668359, b(uint256): 5363583386431809335533005) -> False
+                  [10][DELEGATECALL] from=Swap, to=MathUtils, within1(a(uint256): 5363583386430982443668359, b(uint256): 5363583386430982443668359) -> True
+                  [10][STATICCALL] from=Swap, to=LPToken, totalSupply() -> 5310077404222297555192466
+                  [10][DELEGATECALL] from=Swap, to=MathUtils, difference(a(uint256): 1982161449523100804252925, b(uint256): 2005901237903467797067364) -> 23739788380366992814439
+                  [10][DELEGATECALL] from=Swap, to=MathUtils, difference(a(uint256): 1541904945139254686814802, b(uint256): 1531082146935426431876693) -> 10822798203828254938109
+                  [10][DELEGATECALL] from=Swap, to=MathUtils, difference(a(uint256): 1839553787138668401312450, b(uint256): 1826641759399181656223474) -> 12912027739486745088976
+                  [10][DELEGATECALL] from=Swap, to=MathUtils, within1(a(uint256): 5363579825962570009141327, b(uint256): 5363621583642001609018069) -> False
+                  [10][DELEGATECALL] from=Swap, to=MathUtils, within1(a(uint256): 5363579825961743121786920, b(uint256): 5363579825962570009141327) -> False
+                  [10][DELEGATECALL] from=Swap, to=MathUtils, within1(a(uint256): 5363579825961743121786920, b(uint256): 5363579825961743121786920) -> True
+                  [10][STATICCALL] from=Swap, to=LPToken, totalSupply() -> 5310077404222297555192466
+                  [10][STATICCALL] from=Swap, to=LPToken, totalSupply() -> 5310077404222297555192466
+                  [10][CALL] from=Swap, to=LPToken, mint(recipient(address): 0xd0fBF0, amount(uint256): 37531925487237694833012) -> None
+                    [11][CALL] from=LPToken, to=Swap, updateUserWithdrawFeeaddress() -> None
+                      [12][DELEGATECALL] from=Swap, to=SwapUtils, 0xe9252d46() -> None
+                  [10][STATICCALL] from=Swap, to=LPToken, totalSupply() -> 5347609329709535250025478
+              [8][STATICCALL] from=MetaSwap, to=LPToken, balanceOf(account(address): 0xd0fBF0) -> 228263773529405305535326
+              [8][CALL] from=MetaSwap, to=AnyswapV3ERC20, transfer(to(address): 0x34C986, value(uint256): 79871395415) -> True
+        [5][STATICCALL] from=0x34c986, to=AnyswapV3ERC20, balanceOf((address): 0x34C986) -> 79871395415
+        [5][CALL] from=0x34c986, to=MetaSwap, swap(tokenIndexFrom(uint8): 0, tokenIndexTo(uint8): 1, dx(uint256): 79871395415, minDy(uint256): 1, deadline(uint256): 1636929728) -> 37613416724257806455571
+          [6][DELEGATECALL] from=MetaSwap, to=MetaSwap, swap(tokenIndexFrom(uint8): 0, tokenIndexTo(uint8): 1, dx(uint256): 79871395415, minDy(uint256): 1, deadline(uint256): 1636929728) -> 37613416724257806455571
+            [7][DELEGATECALL] from=MetaSwap, to=MetaSwapUtils, 0x98414eed() -> 0x000000
+              [8][STATICCALL] from=MetaSwap, to=AnyswapV3ERC20, balanceOf((address): 0x34C986) -> 79871395415
+              [8][STATICCALL] from=MetaSwap, to=AnyswapV3ERC20, balanceOf((address): 0xd0fBF0) -> 331445286172
+              [8][CALL] from=MetaSwap, to=AnyswapV3ERC20, transferFrom(from(address): 0x34C986, to(address): 0xd0fBF0, value(uint256): 79871395415) -> True
+              [8][STATICCALL] from=MetaSwap, to=AnyswapV3ERC20, balanceOf((address): 0xd0fBF0) -> 411316681587
+              [8][CALL] from=MetaSwap, to=LPToken, transfer(recipient(address): 0x34C986, amount(uint256): 37613416724257806455571) -> True
+                [9][CALL] from=LPToken, to=Swap, updateUserWithdrawFeeaddress() -> None
+                  [10][DELEGATECALL] from=Swap, to=SwapUtils, 0xe9252d46() -> None
+        [5][STATICCALL] from=0x34c986, to=LPToken, balanceOf(account(address): 0x34C986) -> 37613416724257806455571
+        [5][CALL] from=0x34c986, to=Swap, removeLiquidityOneTokenuint256() -> 0x000000
+          [6][DELEGATECALL] from=Swap, to=SwapUtils, 0xe7a4db81() -> 0x000000
+            [7][STATICCALL] from=Swap, to=LPToken, totalSupply() -> 5347609329709535250025478
+            [7][STATICCALL] from=Swap, to=LPToken, balanceOf(account(address): 0x34C986) -> 37613416724257806455571
+            [7][DELEGATECALL] from=Swap, to=MathUtils, within1(a(uint256): 5363579825962570365188252, b(uint256): 5363621583642001965077678) -> False
+            [7][DELEGATECALL] from=Swap, to=MathUtils, within1(a(uint256): 5363579825961743477833845, b(uint256): 5363579825962570365188252) -> False
+            [7][DELEGATECALL] from=Swap, to=MathUtils, within1(a(uint256): 5363579825961743477833845, b(uint256): 5363579825961743477833845) -> True
+            [7][STATICCALL] from=Swap, to=LPToken, totalSupply() -> 5347609329709535250025478
+            [7][DELEGATECALL] from=Swap, to=MathUtils, within1(a(uint256): 3266155845312769262976754, b(uint256): 5325854077746198492044750) -> False
+            [7][DELEGATECALL] from=Swap, to=MathUtils, within1(a(uint256): 2337118117177268961380200, b(uint256): 3266155845312769262976754) -> False
+            [7][DELEGATECALL] from=Swap, to=MathUtils, within1(a(uint256): 2018429771501345496989548, b(uint256): 2337118117177268961380200) -> False
+            [7][DELEGATECALL] from=Swap, to=MathUtils, within1(a(uint256): 1969388305682902301423325, b(uint256): 2018429771501345496989548) -> False
+            [7][DELEGATECALL] from=Swap, to=MathUtils, within1(a(uint256): 1968169232469928351793388, b(uint256): 1969388305682902301423325) -> False
+            [7][DELEGATECALL] from=Swap, to=MathUtils, within1(a(uint256): 1968168478247346160579223, b(uint256): 1968169232469928351793388) -> False
+            [7][DELEGATECALL] from=Swap, to=MathUtils, within1(a(uint256): 1968168478247057465520957, b(uint256): 1968168478247346160579223) -> False
+            [7][DELEGATECALL] from=Swap, to=MathUtils, within1(a(uint256): 1968168478247057465520957, b(uint256): 1968168478247057465520957) -> True
+            [7][DELEGATECALL] from=Swap, to=MathUtils, within1(a(uint256): 3266156511916899690830306, b(uint256): 5325854077746198492044750) -> False
+            [7][DELEGATECALL] from=Swap, to=MathUtils, within1(a(uint256): 2337119296004301087193435, b(uint256): 3266156511916899690830306) -> False
+            [7][DELEGATECALL] from=Swap, to=MathUtils, within1(a(uint256): 2018431370742127006003601, b(uint256): 2337119296004301087193435) -> False
+            [7][DELEGATECALL] from=Swap, to=MathUtils, within1(a(uint256): 1969390068111461621339903, b(uint256): 2018431370742127006003601) -> False
+            [7][DELEGATECALL] from=Swap, to=MathUtils, within1(a(uint256): 1968171004095079249555505, b(uint256): 1969390068111461621339903) -> False
+            [7][DELEGATECALL] from=Swap, to=MathUtils, within1(a(uint256): 1968170249884554851769769, b(uint256): 1968171004095079249555505) -> False
+            [7][DELEGATECALL] from=Swap, to=MathUtils, within1(a(uint256): 1968170249884266166201806, b(uint256): 1968170249884554851769769) -> False
+            [7][DELEGATECALL] from=Swap, to=MathUtils, within1(a(uint256): 1968170249884266166201806, b(uint256): 1968170249884266166201806) -> True
+            [7][CALL] from=Swap, to=LPToken, burnFrom(account(address): 0x34C986, amount(uint256): 37613416724257806455571) -> None
+              [8][CALL] from=LPToken, to=Swap, updateUserWithdrawFeeaddress() -> None
+                [9][DELEGATECALL] from=Swap, to=SwapUtils, 0xe9252d46() -> None
+            [7][CALL] from=Swap, to=BEP20Token, transfer(recipient(address): 0x34C986, amount(uint256): 37727435876988516859326) -> True
+        [5][STATICCALL] from=0x34c986, to=BEP20Token, balanceOf(account(address): 0x34C986) -> 37727435876988516859326
+        [5][CALL] from=0x34c986, to=MetaSwap, swapUnderlying(tokenIndexFrom(uint8): 1, tokenIndexTo(uint8): 0, dx(uint256): 37727435876988516859326, minDy(uint256): 1, deadline(uint256): 1636929728) -> 94816147658
+          [6][DELEGATECALL] from=MetaSwap, to=MetaSwap, swapUnderlying(tokenIndexFrom(uint8): 1, tokenIndexTo(uint8): 0, dx(uint256): 37727435876988516859326, minDy(uint256): 1, deadline(uint256): 1636929728) -> 94816147658
+            [7][DELEGATECALL] from=MetaSwap, to=MetaSwapUtils, 0x0080247a() -> 0x000000
+              [8][STATICCALL] from=MetaSwap, to=BEP20Token, balanceOf(account(address): 0xd0fBF0) -> 0
+              [8][CALL] from=MetaSwap, to=BEP20Token, transferFrom(sender(address): 0x34C986, recipient(address): 0xd0fBF0, amount(uint256): 37727435876988516859326) -> True
+              [8][STATICCALL] from=MetaSwap, to=BEP20Token, balanceOf(account(address): 0xd0fBF0) -> 37727435876988516859326
+              [8][STATICCALL] from=MetaSwap, to=LPToken, balanceOf(account(address): 0xd0fBF0) -> 190650356805147499079755
+              [8][CALL] from=MetaSwap, to=Swap, addLiquidityuint256[]() -> 0x000000
+                [9][DELEGATECALL] from=Swap, to=SwapUtils, 0x40370edf() -> 0x000000
+                  [10][STATICCALL] from=Swap, to=LPToken, totalSupply() -> 5309995912985277443569907
+                  [10][DELEGATECALL] from=Swap, to=MathUtils, within1(a(uint256): 5325854077746834633919147, b(uint256): 5325890604469720337336849) -> False
+                  [10][DELEGATECALL] from=Swap, to=MathUtils, within1(a(uint256): 5325854077746198846327788, b(uint256): 5325854077746834633919147) -> False
+                  [10][DELEGATECALL] from=Swap, to=MathUtils, within1(a(uint256): 5325854077746198846327788, b(uint256): 5325854077746198846327788) -> True
+                  [10][STATICCALL] from=Swap, to=LPToken, totalSupply() -> 5309995912985277443569907
+                  [10][STATICCALL] from=Swap, to=BEP20Token, balanceOf(account(address): 0x1B3771) -> 2028534635370641961732007
+                  [10][CALL] from=Swap, to=BEP20Token, transferFrom(sender(address): 0xd0fBF0, recipient(address): 0x1B3771, amount(uint256): 37727435876988516859326) -> True
+                  [10][STATICCALL] from=Swap, to=BEP20Token, balanceOf(account(address): 0x1B3771) -> 2066262071247630478591333
+                  [10][STATICCALL] from=Swap, to=LPToken, totalSupply() -> 5309995912985277443569907
+                  [10][STATICCALL] from=Swap, to=LPToken, totalSupply() -> 5309995912985277443569907
+                  [10][DELEGATECALL] from=Swap, to=MathUtils, within1(a(uint256): 5363576283184635100542181, b(uint256): 5363618040346708854196175) -> False
+                  [10][DELEGATECALL] from=Swap, to=MathUtils, within1(a(uint256): 5363576283183808233308653, b(uint256): 5363576283184635100542181) -> False
+                  [10][DELEGATECALL] from=Swap, to=MathUtils, within1(a(uint256): 5363576283183808233308653, b(uint256): 5363576283183808233308653) -> True
+                  [10][STATICCALL] from=Swap, to=LPToken, totalSupply() -> 5309995912985277443569907
+                  [10][DELEGATECALL] from=Swap, to=MathUtils, difference(a(uint256): 1982108712918992555612920, b(uint256): 2005895914124046336709813) -> 23787201205053781096893
+                  [10][DELEGATECALL] from=Swap, to=MathUtils, difference(a(uint256): 1541925748877523139674818, b(uint256): 1531081335225561225928560) -> 10844413651961913746258
+                  [10][DELEGATECALL] from=Swap, to=MathUtils, difference(a(uint256): 1839578606823979753527418, b(uint256): 1826640790997101291557802) -> 12937815826878461969616
+                  [10][DELEGATECALL] from=Swap, to=MathUtils, within1(a(uint256): 5363572715604420880475577, b(uint256): 5363614472639407562134416) -> False
+                  [10][DELEGATECALL] from=Swap, to=MathUtils, within1(a(uint256): 5363572715603594017761192, b(uint256): 5363572715604420880475577) -> False
+                  [10][DELEGATECALL] from=Swap, to=MathUtils, within1(a(uint256): 5363572715603594017761192, b(uint256): 5363572715603594017761192) -> True
+                  [10][STATICCALL] from=Swap, to=LPToken, totalSupply() -> 5309995912985277443569907
+                  [10][STATICCALL] from=Swap, to=LPToken, totalSupply() -> 5309995912985277443569907
+                  [10][CALL] from=Swap, to=LPToken, mint(recipient(address): 0xd0fBF0, amount(uint256): 37606327537779124949853) -> None
+                    [11][CALL] from=LPToken, to=Swap, updateUserWithdrawFeeaddress() -> None
+                      [12][DELEGATECALL] from=Swap, to=SwapUtils, 0xe9252d46() -> None
+                  [10][STATICCALL] from=Swap, to=LPToken, totalSupply() -> 5347602240523056568519760
+              [8][STATICCALL] from=MetaSwap, to=LPToken, balanceOf(account(address): 0xd0fBF0) -> 228256684342926624029608
+              [8][CALL] from=MetaSwap, to=AnyswapV3ERC20, transfer(to(address): 0x34C986, value(uint256): 94816147658) -> True
+        [5][STATICCALL] from=0x34c986, to=AnyswapV3ERC20, balanceOf((address): 0x34C986) -> 94816147658
+        [5][CALL] from=0x34c986, to=Vyper_contract, exchange_underlying(i(int128): 0, j(int128): 1, _dx(uint256): 94816147658, _min_dy(uint256): 1) -> 93236763880325512588930
+          [6][CALL] from=Vyper_contract, to=0x000000, transferFromaddress() -> 0x23b872
+          [6][CALL] from=Vyper_contract, to=0x000000, fallback() -> 0x000000
+          [6][CALL] from=Vyper_contract, to=AnyswapV3ERC20, transferFrom(from(address): 0x34C986, to(address): 0x556ea0, value(uint256): 94816147658) -> True
+          [6][CALL] from=Vyper_contract, to=0x000000, fallback() -> 0x000000
+          [6][STATICCALL] from=Vyper_contract, to=BEP20Token, balanceOf(account(address): 0x556ea0) -> 0
+          [6][CALL] from=Vyper_contract, to=Vyper_contract, remove_liquidity_one_coin(_token_amount(uint256): 89751716865148886945689, i(int128): 0, min_amount(uint256): 0) -> None
+            [7][STATICCALL] from=Vyper_contract, to=Vyper_contract, totalSupply() -> 393877315875293076920097853
+            [7][CALL] from=Vyper_contract, to=Vyper_contract, burnFrom(_to(address): 0x556ea0, _value(uint256): 89751716865148886945689) -> True
+            [7][CALL] from=Vyper_contract, to=0x000000, transferaddress() -> 0xa9059c
+            [7][CALL] from=Vyper_contract, to=0x000000, fallback() -> 0x000000
+            [7][CALL] from=Vyper_contract, to=BEP20Token, transfer(recipient(address): 0x556ea0, amount(uint256): 93236763880325512588930) -> True
+            [7][CALL] from=Vyper_contract, to=0x000000, fallback() -> 0x000000
+          [6][STATICCALL] from=Vyper_contract, to=BEP20Token, balanceOf(account(address): 0x556ea0) -> 93236763880325512588930
+          [6][CALL] from=Vyper_contract, to=0x000000, transferaddress() -> 0xa9059c
+          [6][CALL] from=Vyper_contract, to=0x000000, fallback() -> 0x000000
+          [6][CALL] from=Vyper_contract, to=BEP20Token, transfer(recipient(address): 0x34C986, amount(uint256): 93236763880325512588930) -> True
+          [6][CALL] from=Vyper_contract, to=0x000000, fallback() -> 0x000000
+        [5][CALL] from=0x34c986, to=BEP20Token, transfer(recipient(address): 0xc78248, amount(uint256): 50040000000000000000000) -> True
+      [4][STATICCALL] from=AdminUpgradeabilityProxy, to=AdminUpgradeabilityProxy, balance(token(address): 0xe9e7CE) -> 34982032946606982045953887
+        [5][DELEGATECALL] from=AdminUpgradeabilityProxy, to=BankController, balance(token(address): 0xe9e7CE) -> 34982032946606982045953887
+          [6][STATICCALL] from=AdminUpgradeabilityProxy, to=BEP20Token, balanceOf(account(address): 0xc78248) -> 34982032946606982045953887
+      [4][STATICCALL] from=AdminUpgradeabilityProxy, to=AdminUpgradeabilityProxy, flashloanVault() -> 0x00ad50
+        [5][DELEGATECALL] from=AdminUpgradeabilityProxy, to=BankController, flashloanVault() -> 0x00ad50
+      [4][CALL] from=AdminUpgradeabilityProxy, to=AdminUpgradeabilityProxy, transferFlashloanAsset(underlying(address): 0xe9e7CE, account(address): 0x00ad50, amount(uint256): 40000000000000000000) -> None
+        [5][DELEGATECALL] from=AdminUpgradeabilityProxy, to=BankController, transferFlashloanAsset(underlying(address): 0xe9e7CE, account(address): 0x00ad50, amount(uint256): 40000000000000000000) -> None
+          [6][CALL] from=AdminUpgradeabilityProxy, to=BEP20Token, transfer(recipient(address): 0x00ad50, amount(uint256): 40000000000000000000) -> True
+  [2][STATICCALL] from=0x34c986, to=BEP20Token, balanceOf(account(address): 0x34C986) -> 43196763880325512588930
+  [2][CALL] from=0x34c986, to=PancakeRouter, swapExactTokensForETH(amountIn(uint256): 43196763880325512588930, amountOutMin(uint256): 1, path(address[]): ['0xe9e7CEA3DedcA5984780Bafc599bD69ADd087D..., to(address): 0xD54761, deadline(uint256): 1636929728) -> [43196763880325512588930, 66247680452193743254]
+    [3][STATICCALL] from=PancakeRouter, to=PancakePair, getReserves() -> ['387059199380705266604388', '251707696574891935281229957', '1636929728']
+    [3][CALL] from=PancakeRouter, to=BEP20Token, transferFrom(sender(address): 0x34C986, recipient(address): 0x58F876, amount(uint256): 43196763880325512588930) -> True
+    [3][CALL] from=PancakeRouter, to=PancakePair, swap(amount0Out(uint256): 66247680452193743254, amount1Out(uint256): 0, to(address): 0x10ED43, data(bytes): b'') -> None
+      [4][CALL] from=PancakePair, to=WBNB, transfer(dst(address): 0x10ED43, wad(uint256): 66247680452193743254) -> True
+      [4][STATICCALL] from=PancakePair, to=WBNB, balanceOf((address): 0x58F876) -> 386992951700253072861134
+      [4][STATICCALL] from=PancakePair, to=BEP20Token, balanceOf(account(address): 0x58F876) -> 251750893338772260793818887
+    [3][CALL] from=PancakeRouter, to=WBNB, withdraw(wad(uint256): 66247680452193743254) -> None
+      [4][CALL][66.24768045219375] from=WBNB, to=PancakeRouter
+    [3][CALL][66.24768045219375] from=PancakeRouter, to=0xd54761

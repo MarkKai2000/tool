@@ -1,0 +1,148 @@
+[1][CALL] from=0xcb36b1, to=Bank, work(id(uint256): 0, goblin(address): 0x9EED72, loan(uint256): 0, maxReturn(uint256): 100000000000000000000000, data(bytes): b"\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00...) -> None
+  [2][STATICCALL] from=Bank, to=ConfigurableInterestBankConfig, getInterestRate(debt(uint256): 90365601241778201829197, floating(uint256): 76171199829220015232033) -> 2150781688
+    [3][STATICCALL] from=ConfigurableInterestBankConfig, to=TripleSlopeModel, getInterestRate(debt(uint256): 90365601241778201829197, floating(uint256): 76171199829220015232033) -> 2150781688
+  [2][STATICCALL] from=Bank, to=ConfigurableInterestBankConfig, getReservePoolBps() -> 1000
+  [2][STATICCALL] from=Bank, to=ConfigurableInterestBankConfig, isGoblin(goblin(address): 0x9EED72) -> True
+  [2][CALL] from=Bank, to=SushiswapGoblin, work(id(uint256): 6570, user(address): 0xCB36b1, debt(uint256): 0, data(bytes): b"\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00...) -> None
+    [3][STATICCALL] from=SushiswapGoblin, to=UniswapV2Pair, balanceOf((address): 0x9EED72) -> 0
+    [3][CALL] from=SushiswapGoblin, to=UniswapV2Pair, transfer(to(address): 0x81796c, value(uint256): 0) -> True
+    [3][CALL] from=SushiswapGoblin, to=StrategyAddTwoSidesOptimal, execute(user(address): 0xCB36b1, (uint256): 0, data(bytes): b'\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00...) -> None
+      [4][STATICCALL] from=StrategyAddTwoSidesOptimal, to=UniswapV2Factory, getPair((address): 0xC02aaA) -> 0x2b498e
+      [4][STATICCALL] from=StrategyAddTwoSidesOptimal, to=UniswapV2Pair, getReserves() -> ['1000000000', '1999999998', '1620481701']
+      [4][STATICCALL] from=StrategyAddTwoSidesOptimal, to=UniswapV2Pair, token0() -> 0x2f755e
+      [4][STATICCALL] from=StrategyAddTwoSidesOptimal, to=0x2f755e, balanceOfaddress() -> 0x000000
+      [4][CALL] from=StrategyAddTwoSidesOptimal, to=0x2f755e, approveaddress() -> 0x000000
+        [5][STATICCALL] from=0x2f755e, to=WETH9, balanceOf((address): 0x1E0447) -> 58903475527669301229326
+        [5][CALL] from=0x2f755e, to=SoloMargin, 0xa67a6a45() -> None
+          [6][DELEGATECALL] from=SoloMargin, to=OperationImpl, 0xbd76ecfd() -> None
+            [7][STATICCALL] from=SoloMargin, to=WethPriceOracle, getPrice((address): 0xC02aaA) -> None
+              [8][STATICCALL] from=WethPriceOracle, to=P1MirrorOracleETHUSD, peek() -> ['0x000000000000c3fa01cd3869e90000', 'True']
+            [7][STATICCALL] from=SoloMargin, to=DoubleExponentInterestSetter, getInterestRate((address): 0xC02aaA, borrowWei(uint256): 545049200632234197490, supplyWei(uint256): 59439286356485181062336) -> None
+            [7][CALL] from=SoloMargin, to=WETH9, transfer(dst(address): 0x2f755e, wad(uint256): 58903475527669301229326) -> True
+            [7][CALL] from=SoloMargin, to=0x2f755e, callFunctionaddress() -> None
+              [8][CALL] from=0x2f755e, to=WETH9, withdraw(wad(uint256): 58903475527669301229326) -> None
+                [9][CALL][58903.4755276693] from=WETH9, to=0x2f755e
+              [8][CALL] from=0x2f755e, to=AdminUpgradeabilityProxy, deposit() -> True
+                [9][DELEGATECALL] from=AdminUpgradeabilityProxy, to=RariFundManager, deposit() -> True
+                  [10][STATICCALL] from=AdminUpgradeabilityProxy, to=AdminUpgradeabilityProxy, totalSupply() -> 6970442703599956351754
+                    [11][DELEGATECALL] from=AdminUpgradeabilityProxy, to=RariFundToken, totalSupply() -> 6970442703599956351754
+                  [10][STATICCALL] from=AdminUpgradeabilityProxy, to=RariFundController, hasETHInPool(pool(uint8): 0) -> False
+                  [10][STATICCALL] from=AdminUpgradeabilityProxy, to=RariFundController, hasETHInPool(pool(uint8): 1) -> False
+                  [10][STATICCALL] from=AdminUpgradeabilityProxy, to=RariFundController, hasETHInPool(pool(uint8): 2) -> False
+                  [10][STATICCALL] from=AdminUpgradeabilityProxy, to=RariFundController, hasETHInPool(pool(uint8): 3) -> False
+                  [10][STATICCALL] from=AdminUpgradeabilityProxy, to=RariFundController, hasETHInPool(pool(uint8): 4) -> True
+                  [10][CALL] from=AdminUpgradeabilityProxy, to=RariFundController, _getPoolBalanceuint8() -> 0x000000
+                    [11][DELEGATECALL] from=RariFundController, to=0xed2cd6, getBalance() -> 0x000000
+                      [12][STATICCALL] from=RariFundController, to=Bank, totalSupply() -> 157155761992627676750453
+                      [12][STATICCALL] from=RariFundController, to=Bank, totalETH() -> 166534683087355871727558
+                      [12][STATICCALL] from=RariFundController, to=Bank, balanceOf(account(address): 0xa42289) -> 6694191371468188591231
+                  [10][STATICCALL] from=AdminUpgradeabilityProxy, to=RariFundController, hasETHInPool(pool(uint8): 5) -> False
+                  [10][STATICCALL] from=AdminUpgradeabilityProxy, to=RariFundController, hasETHInPool(pool(uint8): 0) -> False
+                  [10][STATICCALL] from=AdminUpgradeabilityProxy, to=RariFundController, hasETHInPool(pool(uint8): 1) -> False
+                  [10][STATICCALL] from=AdminUpgradeabilityProxy, to=RariFundController, hasETHInPool(pool(uint8): 2) -> False
+                  [10][STATICCALL] from=AdminUpgradeabilityProxy, to=RariFundController, hasETHInPool(pool(uint8): 3) -> False
+                  [10][STATICCALL] from=AdminUpgradeabilityProxy, to=RariFundController, hasETHInPool(pool(uint8): 4) -> True
+                  [10][CALL] from=AdminUpgradeabilityProxy, to=RariFundController, _getPoolBalanceuint8() -> 0x000000
+                    [11][DELEGATECALL] from=RariFundController, to=0xed2cd6, getBalance() -> 0x000000
+                      [12][STATICCALL] from=RariFundController, to=Bank, totalSupply() -> 157155761992627676750453
+                      [12][STATICCALL] from=RariFundController, to=Bank, totalETH() -> 166534683087355871727558
+                      [12][STATICCALL] from=RariFundController, to=Bank, balanceOf(account(address): 0xa42289) -> 6694191371468188591231
+                  [10][STATICCALL] from=AdminUpgradeabilityProxy, to=RariFundController, hasETHInPool(pool(uint8): 5) -> False
+                  [10][STATICCALL] from=AdminUpgradeabilityProxy, to=RariFundController, hasETHInPool(pool(uint8): 0) -> False
+                  [10][STATICCALL] from=AdminUpgradeabilityProxy, to=RariFundController, hasETHInPool(pool(uint8): 1) -> False
+                  [10][STATICCALL] from=AdminUpgradeabilityProxy, to=RariFundController, hasETHInPool(pool(uint8): 2) -> False
+                  [10][STATICCALL] from=AdminUpgradeabilityProxy, to=RariFundController, hasETHInPool(pool(uint8): 3) -> False
+                  [10][STATICCALL] from=AdminUpgradeabilityProxy, to=RariFundController, hasETHInPool(pool(uint8): 4) -> True
+                  [10][CALL] from=AdminUpgradeabilityProxy, to=RariFundController, _getPoolBalanceuint8() -> 0x000000
+                    [11][DELEGATECALL] from=RariFundController, to=0xed2cd6, getBalance() -> 0x000000
+                      [12][STATICCALL] from=RariFundController, to=Bank, totalSupply() -> 157155761992627676750453
+                      [12][STATICCALL] from=RariFundController, to=Bank, totalETH() -> 166534683087355871727558
+                      [12][STATICCALL] from=RariFundController, to=Bank, balanceOf(account(address): 0xa42289) -> 6694191371468188591231
+                  [10][STATICCALL] from=AdminUpgradeabilityProxy, to=RariFundController, hasETHInPool(pool(uint8): 5) -> False
+                  [10][CALL][58903.4755276693] from=AdminUpgradeabilityProxy, to=RariFundController
+                  [10][CALL] from=AdminUpgradeabilityProxy, to=AdminUpgradeabilityProxy, mint(account(address): 0x2f755e, amount(uint256): 57849509318078246695043) -> True
+                    [11][DELEGATECALL] from=AdminUpgradeabilityProxy, to=RariFundToken, mint(account(address): 0x2f755e, amount(uint256): 57849509318078246695043) -> True
+                      [12][CALL] from=AdminUpgradeabilityProxy, to=AdminUpgradeabilityProxy, distributionStartBlock() -> 11094200
+                        [13][DELEGATECALL] from=AdminUpgradeabilityProxy, to=RariGovernanceTokenDistributor, distributionStartBlock() -> 11094200
+                      [12][CALL] from=AdminUpgradeabilityProxy, to=AdminUpgradeabilityProxy, distributeRgt(holder(address): 0x2f755e, pool(uint8): 2) -> 0
+                        [13][DELEGATECALL] from=AdminUpgradeabilityProxy, to=RariGovernanceTokenDistributor, distributeRgt(holder(address): 0x2f755e, pool(uint8): 2) -> 0
+                          [14][STATICCALL] from=AdminUpgradeabilityProxy, to=AdminUpgradeabilityProxy, balanceOf(account(address): 0x2f755e) -> 1
+                            [15][DELEGATECALL] from=AdminUpgradeabilityProxy, to=RariFundToken, balanceOf(account(address): 0x2f755e) -> 1
+                  [10][STATICCALL] from=AdminUpgradeabilityProxy, to=AdminUpgradeabilityProxy, rariGovernanceTokenDistributor() -> 0x9c0cae
+                    [11][DELEGATECALL] from=AdminUpgradeabilityProxy, to=RariFundToken, rariGovernanceTokenDistributor() -> 0x9c0cae
+                  [10][CALL] from=AdminUpgradeabilityProxy, to=AdminUpgradeabilityProxy, distributionEndBlock() -> 11484200
+                    [11][DELEGATECALL] from=AdminUpgradeabilityProxy, to=RariGovernanceTokenDistributor, distributionEndBlock() -> 11484200
+              [8][CALL][1063.319065291307] from=0x2f755e, to=Bank
+              [8][CALL] from=0x2f755e, to=AdminUpgradeabilityProxy, withdraw(amount(uint256): 58907666610876630264098) -> True
+                [9][DELEGATECALL] from=AdminUpgradeabilityProxy, to=RariFundManager, withdraw(amount(uint256): 58907666610876630264098) -> True
+                  [10][STATICCALL] from=AdminUpgradeabilityProxy, to=AdminUpgradeabilityProxy, totalSupply() -> 64819952021678203046797
+                    [11][DELEGATECALL] from=AdminUpgradeabilityProxy, to=RariFundToken, totalSupply() -> 64819952021678203046797
+                  [10][STATICCALL] from=AdminUpgradeabilityProxy, to=RariFundController, hasETHInPool(pool(uint8): 0) -> False
+                  [10][STATICCALL] from=AdminUpgradeabilityProxy, to=RariFundController, hasETHInPool(pool(uint8): 1) -> False
+                  [10][STATICCALL] from=AdminUpgradeabilityProxy, to=RariFundController, hasETHInPool(pool(uint8): 2) -> False
+                  [10][STATICCALL] from=AdminUpgradeabilityProxy, to=RariFundController, hasETHInPool(pool(uint8): 3) -> False
+                  [10][STATICCALL] from=AdminUpgradeabilityProxy, to=RariFundController, hasETHInPool(pool(uint8): 4) -> True
+                  [10][CALL] from=AdminUpgradeabilityProxy, to=RariFundController, _getPoolBalanceuint8() -> 0x000000
+                    [11][DELEGATECALL] from=RariFundController, to=0xed2cd6, getBalance() -> 0x000000
+                      [12][STATICCALL] from=RariFundController, to=Bank, totalSupply() -> 157155761992627676750453
+                      [12][STATICCALL] from=RariFundController, to=Bank, totalETH() -> 167598002152647178703475
+                      [12][STATICCALL] from=RariFundController, to=Bank, balanceOf(account(address): 0xa42289) -> 6694191371468188591231
+                  [10][STATICCALL] from=AdminUpgradeabilityProxy, to=RariFundController, hasETHInPool(pool(uint8): 5) -> False
+                  [10][STATICCALL] from=AdminUpgradeabilityProxy, to=RariFundController, hasETHInPool(pool(uint8): 0) -> False
+                  [10][STATICCALL] from=AdminUpgradeabilityProxy, to=RariFundController, hasETHInPool(pool(uint8): 1) -> False
+                  [10][STATICCALL] from=AdminUpgradeabilityProxy, to=RariFundController, hasETHInPool(pool(uint8): 2) -> False
+                  [10][STATICCALL] from=AdminUpgradeabilityProxy, to=RariFundController, hasETHInPool(pool(uint8): 3) -> False
+                  [10][STATICCALL] from=AdminUpgradeabilityProxy, to=RariFundController, hasETHInPool(pool(uint8): 4) -> True
+                  [10][STATICCALL] from=AdminUpgradeabilityProxy, to=RariFundController, hasETHInPool(pool(uint8): 5) -> False
+                  [10][STATICCALL] from=AdminUpgradeabilityProxy, to=RariFundController, hasETHInPool(pool(uint8): 0) -> False
+                  [10][STATICCALL] from=AdminUpgradeabilityProxy, to=RariFundController, hasETHInPool(pool(uint8): 1) -> False
+                  [10][STATICCALL] from=AdminUpgradeabilityProxy, to=RariFundController, hasETHInPool(pool(uint8): 2) -> False
+                  [10][STATICCALL] from=AdminUpgradeabilityProxy, to=RariFundController, hasETHInPool(pool(uint8): 3) -> False
+                  [10][STATICCALL] from=AdminUpgradeabilityProxy, to=RariFundController, hasETHInPool(pool(uint8): 4) -> True
+                  [10][STATICCALL] from=AdminUpgradeabilityProxy, to=RariFundController, hasETHInPool(pool(uint8): 5) -> False
+                  [10][STATICCALL] from=AdminUpgradeabilityProxy, to=AdminUpgradeabilityProxy, balanceOf(account(address): 0x2f755e) -> 57849509318078246695044
+                    [11][DELEGATECALL] from=AdminUpgradeabilityProxy, to=RariFundToken, balanceOf(account(address): 0x2f755e) -> 57849509318078246695044
+                  [10][CALL] from=AdminUpgradeabilityProxy, to=AdminUpgradeabilityProxy, fundManagerBurnFrom(account(address): 0x2f755e, amount(uint256): 57820889818556107093299) -> None
+                    [11][DELEGATECALL] from=AdminUpgradeabilityProxy, to=RariFundToken, fundManagerBurnFrom(account(address): 0x2f755e, amount(uint256): 57820889818556107093299) -> None
+                      [12][CALL] from=AdminUpgradeabilityProxy, to=AdminUpgradeabilityProxy, distributionStartBlock() -> 11094200
+                        [13][DELEGATECALL] from=AdminUpgradeabilityProxy, to=RariGovernanceTokenDistributor, distributionStartBlock() -> 11094200
+                      [12][CALL] from=AdminUpgradeabilityProxy, to=AdminUpgradeabilityProxy, distributeRgt(holder(address): 0x2f755e, pool(uint8): 2) -> 0
+                        [13][DELEGATECALL] from=AdminUpgradeabilityProxy, to=RariGovernanceTokenDistributor, distributeRgt(holder(address): 0x2f755e, pool(uint8): 2) -> 0
+                          [14][STATICCALL] from=AdminUpgradeabilityProxy, to=AdminUpgradeabilityProxy, balanceOf(account(address): 0x2f755e) -> 57849509318078246695044
+                            [15][DELEGATECALL] from=AdminUpgradeabilityProxy, to=RariFundToken, balanceOf(account(address): 0x2f755e) -> 57849509318078246695044
+                  [10][CALL] from=AdminUpgradeabilityProxy, to=RariFundController, withdrawToManager(amount(uint256): 58907666610876630264098) -> None
+                    [11][CALL][58907.66661087663] from=RariFundController, to=AdminUpgradeabilityProxy
+                      [12][DELEGATECALL][58907.66661087663] from=AdminUpgradeabilityProxy, to=RariFundManager
+                  [10][CALL][58907.66661087663] from=AdminUpgradeabilityProxy, to=0x2f755e
+                  [10][STATICCALL] from=AdminUpgradeabilityProxy, to=AdminUpgradeabilityProxy, rariGovernanceTokenDistributor() -> 0x9c0cae
+                    [11][DELEGATECALL] from=AdminUpgradeabilityProxy, to=RariFundToken, rariGovernanceTokenDistributor() -> 0x9c0cae
+                  [10][CALL] from=AdminUpgradeabilityProxy, to=AdminUpgradeabilityProxy, distributionEndBlock() -> 11484200
+                    [11][DELEGATECALL] from=AdminUpgradeabilityProxy, to=RariGovernanceTokenDistributor, distributionEndBlock() -> 11484200
+              [8][CALL] from=0x2f755e, to=WETH9, deposit() -> None
+            [7][CALL] from=SoloMargin, to=WETH9, transferFrom(src(address): 0x2f755e, dst(address): 0x1E0447, wad(uint256): 58903475527669301229328) -> True
+      [4][CALL] from=StrategyAddTwoSidesOptimal, to=0x2f755e, approveaddress() -> 0x000000
+      [4][CALL] from=StrategyAddTwoSidesOptimal, to=UniswapV2Router02, swapExactETHForTokens(amountOutMin(uint256): 0, path(address[]): ['0xC02aaA39b223FE8D0A0e5C4F27eAD9083C756C..., to(address): 0x81796c, deadline(uint256): 1620481709) -> [450165084, 183278305]
+        [5][STATICCALL] from=UniswapV2Router02, to=UniswapV2Pair, getReserves() -> ['1000000000', '1999999998', '1620481701']
+        [5][CALL] from=UniswapV2Router02, to=WETH9, deposit() -> None
+        [5][CALL] from=UniswapV2Router02, to=WETH9, transfer(dst(address): 0x2b498e, wad(uint256): 450165084) -> True
+        [5][CALL] from=UniswapV2Router02, to=UniswapV2Pair, swap(amount0Out(uint256): 183278305, amount1Out(uint256): 0, to(address): 0x81796c, data(bytes): b'') -> None
+          [6][CALL] from=UniswapV2Pair, to=0x2f755e, transferaddress() -> 0x000000
+          [6][STATICCALL] from=UniswapV2Pair, to=0x2f755e, balanceOfaddress() -> 0x000000
+          [6][STATICCALL] from=UniswapV2Pair, to=WETH9, balanceOf((address): 0x2b498e) -> 2450165082
+      [4][STATICCALL] from=StrategyAddTwoSidesOptimal, to=0x2f755e, balanceOfaddress() -> 0x000000
+      [4][CALL] from=StrategyAddTwoSidesOptimal, to=UniswapV2Router02, addLiquidityETH(token(address): 0x2f755e, amountTokenDesired(uint256): 183278305, amountTokenMin(uint256): 0, amountETHMin(uint256): 0, to(address): 0x81796c, deadline(uint256): 1620481709) -> ['183278305', '549834914', '317258063']
+        [5][STATICCALL] from=UniswapV2Router02, to=UniswapV2Factory, getPair((address): 0xC02aaA) -> 0x2b498e
+        [5][STATICCALL] from=UniswapV2Router02, to=UniswapV2Pair, getReserves() -> ['816721695', '2450165082', '1620481709']
+        [5][CALL] from=UniswapV2Router02, to=0x2f755e, transferFromaddress() -> 0x000000
+        [5][CALL] from=UniswapV2Router02, to=WETH9, deposit() -> None
+        [5][CALL] from=UniswapV2Router02, to=WETH9, transfer(dst(address): 0x2b498e, wad(uint256): 549834914) -> True
+        [5][CALL] from=UniswapV2Router02, to=UniswapV2Pair, mint(to(address): 0x81796c) -> 317258063
+          [6][STATICCALL] from=UniswapV2Pair, to=0x2f755e, balanceOfaddress() -> 0x000000
+          [6][STATICCALL] from=UniswapV2Pair, to=WETH9, balanceOf((address): 0x2b498e) -> 2999999996
+          [6][STATICCALL] from=UniswapV2Pair, to=UniswapV2Factory, feeTo() -> 0xe11fc0
+        [5][CALL][4e-18] from=UniswapV2Router02, to=StrategyAddTwoSidesOptimal
+      [4][STATICCALL] from=StrategyAddTwoSidesOptimal, to=UniswapV2Pair, balanceOf((address): 0x81796c) -> 317258063
+      [4][CALL] from=StrategyAddTwoSidesOptimal, to=UniswapV2Pair, transfer(to(address): 0x9EED72, value(uint256): 317258063) -> True
+    [3][STATICCALL] from=SushiswapGoblin, to=UniswapV2Pair, balanceOf((address): 0x9EED72) -> 0
+    [3][CALL][0.0] from=SushiswapGoblin, to=Bank
+  [2][CALL][1063.319065291307] from=Bank, to=0xcb36b1

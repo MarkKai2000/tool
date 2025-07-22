@@ -1,0 +1,125 @@
+[1][CALL] from=0xb7cbb4, to=0xf70f69, 0xadf6a75d() -> 0x000000
+  [2][CREATE] from=0xf70f69, to=0x7c4bc7, atInversebrahint248() -> 0x608060
+    [3][STATICCALL] from=0x7c4bc7, to=0xf70f69, collection() -> 0x000000
+    [3][CALL] from=0x7c4bc7, to=BoredApeYachtClub, setApprovalForAll(operator(address): 0xb7CBB4, approved(bool): True) -> None
+  [2][CALL] from=0xf70f69, to=BoredApeYachtClub, transferFrom(from(address): 0xf70F69, to(address): 0x7c4BC7, tokenId(uint256): 5110) -> None
+  [2][CALL] from=0xf70f69, to=0x7c4bc7, 0x97c1edd3() -> None
+    [3][STATICCALL] from=0x7c4bc7, to=0xf70f69, collection() -> 0x000000
+    [3][STATICCALL] from=0x7c4bc7, to=0xf70f69, 0x5c4196e6() -> 0x000000
+    [3][CALL] from=0x7c4bc7, to=BoredApeYachtClub, setApprovalForAll(operator(address): 0xb14B3b, approved(bool): True) -> None
+    [3][STATICCALL] from=0x7c4bc7, to=0xf70f69, 0x5c4196e6() -> 0x000000
+    [3][STATICCALL] from=0x7c4bc7, to=0xf70f69, collection() -> 0x000000
+    [3][STATICCALL] from=0x7c4bc7, to=0xf70f69, tokenId() -> 0x000000
+    [3][STATICCALL] from=0x7c4bc7, to=0xf70f69, 0xc02d0fa2() -> 0x000000
+    [3][CALL] from=0x7c4bc7, to=TransparentUpgradeableProxy, pledgeAndBorrow(_collection(address): 0xBC4CA0, _tokenId(uint256): 5110, _nftType(uint256): 721, xToken(address): 0xA04EC2, borrowAmount(uint256): 0) -> None
+      [4][DELEGATECALL] from=TransparentUpgradeableProxy, to=XNFT, pledgeAndBorrow(_collection(address): 0xBC4CA0, _tokenId(uint256): 5110, _nftType(uint256): 721, xToken(address): 0xA04EC2, borrowAmount(uint256): 0) -> None
+        [5][CALL] from=TransparentUpgradeableProxy, to=BoredApeYachtClub, safeTransferFrom(from(address): 0x7c4BC7, to(address): 0xb14B3b, tokenId(uint256): 5110) -> None
+          [6][CALL] from=BoredApeYachtClub, to=TransparentUpgradeableProxy, onERC721Received(operator(address): 0xb14B3b, from(address): 0x7c4BC7, tokenId(uint256): 5110, data(bytes): b'') -> 0x150b7a02
+            [7][DELEGATECALL] from=TransparentUpgradeableProxy, to=XNFT, onERC721Received(operator(address): 0xb14B3b, from(address): 0x7c4BC7, tokenId(uint256): 5110, data(bytes): b'') -> 0x150b7a02
+        [5][CALL] from=TransparentUpgradeableProxy, to=0xa04ec2, borrowuint256() -> None
+    [3][STATICCALL] from=0x7c4bc7, to=0xf70f69, 0x5c4196e6() -> 0x000000
+    [3][CALL] from=0x7c4bc7, to=TransparentUpgradeableProxy, counter() -> 63
+      [4][DELEGATECALL] from=TransparentUpgradeableProxy, to=XNFT, counter() -> 63
+    [3][STATICCALL] from=0x7c4bc7, to=0xf70f69, 0x5c4196e6() -> 0x000000
+    [3][CALL] from=0x7c4bc7, to=TransparentUpgradeableProxy, withdrawNFT(orderId(uint256): 63) -> None
+      [4][DELEGATECALL] from=TransparentUpgradeableProxy, to=XNFT, withdrawNFT(orderId(uint256): 63) -> None
+        [5][CALL] from=TransparentUpgradeableProxy, to=TransparentUpgradeableProxy, getOrderBorrowBalanceCurrent(orderId(uint256): 63) -> 0
+          [6][DELEGATECALL] from=TransparentUpgradeableProxy, to=P2Controller, getOrderBorrowBalanceCurrent(orderId(uint256): 63) -> 0
+        [5][CALL] from=TransparentUpgradeableProxy, to=BoredApeYachtClub, safeTransferFrom(from(address): 0xb14B3b, to(address): 0x7c4BC7, tokenId(uint256): 5110) -> None
+          [6][CALL] from=BoredApeYachtClub, to=0x7c4bc7, onERC721Receivedaddress() -> 0x150b7a
+    [3][STATICCALL] from=0x7c4bc7, to=0xf70f69, collection() -> 0x000000
+    [3][STATICCALL] from=0x7c4bc7, to=0xf70f69, tokenId() -> 0x000000
+    [3][CALL] from=0x7c4bc7, to=BoredApeYachtClub, transferFrom(from(address): 0x7c4BC7, to(address): 0xf70F69, tokenId(uint256): 5110) -> None
+  [2][CREATE] from=0xf70f69, to=0xA507f4, atInversebrahint248() -> 0x608060
+    [3][STATICCALL] from=0xA507f4, to=0xf70f69, collection() -> 0x000000
+    [3][CALL] from=0xA507f4, to=BoredApeYachtClub, setApprovalForAll(operator(address): 0xb7CBB4, approved(bool): True) -> None
+  [2][CALL] from=0xf70f69, to=BoredApeYachtClub, transferFrom(from(address): 0xf70F69, to(address): 0xA507f4, tokenId(uint256): 5110) -> None
+  [2][CALL] from=0xf70f69, to=0xA507f4, 0x97c1edd3() -> None
+    [3][STATICCALL] from=0xA507f4, to=0xf70f69, collection() -> 0x000000
+    [3][STATICCALL] from=0xA507f4, to=0xf70f69, 0x5c4196e6() -> 0x000000
+    [3][CALL] from=0xA507f4, to=BoredApeYachtClub, setApprovalForAll(operator(address): 0xb14B3b, approved(bool): True) -> None
+    [3][STATICCALL] from=0xA507f4, to=0xf70f69, 0x5c4196e6() -> 0x000000
+    [3][STATICCALL] from=0xA507f4, to=0xf70f69, collection() -> 0x000000
+    [3][STATICCALL] from=0xA507f4, to=0xf70f69, tokenId() -> 0x000000
+    [3][STATICCALL] from=0xA507f4, to=0xf70f69, 0xc02d0fa2() -> 0x000000
+    [3][CALL] from=0xA507f4, to=TransparentUpgradeableProxy, pledgeAndBorrow(_collection(address): 0xBC4CA0, _tokenId(uint256): 5110, _nftType(uint256): 721, xToken(address): 0xA04EC2, borrowAmount(uint256): 0) -> None
+      [4][DELEGATECALL] from=TransparentUpgradeableProxy, to=XNFT, pledgeAndBorrow(_collection(address): 0xBC4CA0, _tokenId(uint256): 5110, _nftType(uint256): 721, xToken(address): 0xA04EC2, borrowAmount(uint256): 0) -> None
+        [5][CALL] from=TransparentUpgradeableProxy, to=BoredApeYachtClub, safeTransferFrom(from(address): 0xA507f4, to(address): 0xb14B3b, tokenId(uint256): 5110) -> None
+          [6][CALL] from=BoredApeYachtClub, to=TransparentUpgradeableProxy, onERC721Received(operator(address): 0xb14B3b, from(address): 0xA507f4, tokenId(uint256): 5110, data(bytes): b'') -> 0x150b7a02
+            [7][DELEGATECALL] from=TransparentUpgradeableProxy, to=XNFT, onERC721Received(operator(address): 0xb14B3b, from(address): 0xA507f4, tokenId(uint256): 5110, data(bytes): b'') -> 0x150b7a02
+        [5][CALL] from=TransparentUpgradeableProxy, to=0xa04ec2, borrowuint256() -> None
+    [3][STATICCALL] from=0xA507f4, to=0xf70f69, 0x5c4196e6() -> 0x000000
+    [3][CALL] from=0xA507f4, to=TransparentUpgradeableProxy, counter() -> 64
+      [4][DELEGATECALL] from=TransparentUpgradeableProxy, to=XNFT, counter() -> 64
+    [3][STATICCALL] from=0xA507f4, to=0xf70f69, 0x5c4196e6() -> 0x000000
+    [3][CALL] from=0xA507f4, to=TransparentUpgradeableProxy, withdrawNFT(orderId(uint256): 64) -> None
+      [4][DELEGATECALL] from=TransparentUpgradeableProxy, to=XNFT, withdrawNFT(orderId(uint256): 64) -> None
+        [5][CALL] from=TransparentUpgradeableProxy, to=TransparentUpgradeableProxy, getOrderBorrowBalanceCurrent(orderId(uint256): 64) -> 0
+          [6][DELEGATECALL] from=TransparentUpgradeableProxy, to=P2Controller, getOrderBorrowBalanceCurrent(orderId(uint256): 64) -> 0
+        [5][CALL] from=TransparentUpgradeableProxy, to=BoredApeYachtClub, safeTransferFrom(from(address): 0xb14B3b, to(address): 0xA507f4, tokenId(uint256): 5110) -> None
+          [6][CALL] from=BoredApeYachtClub, to=0xA507f4, onERC721Receivedaddress() -> 0x150b7a
+    [3][STATICCALL] from=0xA507f4, to=0xf70f69, collection() -> 0x000000
+    [3][STATICCALL] from=0xA507f4, to=0xf70f69, tokenId() -> 0x000000
+    [3][CALL] from=0xA507f4, to=BoredApeYachtClub, transferFrom(from(address): 0xA507f4, to(address): 0xf70F69, tokenId(uint256): 5110) -> None
+  [2][CREATE] from=0xf70f69, to=0x916774, atInversebrahint248() -> 0x608060
+    [3][STATICCALL] from=0x916774, to=0xf70f69, collection() -> 0x000000
+    [3][CALL] from=0x916774, to=BoredApeYachtClub, setApprovalForAll(operator(address): 0xb7CBB4, approved(bool): True) -> None
+  [2][CALL] from=0xf70f69, to=BoredApeYachtClub, transferFrom(from(address): 0xf70F69, to(address): 0x916774, tokenId(uint256): 5110) -> None
+  [2][CALL] from=0xf70f69, to=0x916774, 0x97c1edd3() -> None
+    [3][STATICCALL] from=0x916774, to=0xf70f69, collection() -> 0x000000
+    [3][STATICCALL] from=0x916774, to=0xf70f69, 0x5c4196e6() -> 0x000000
+    [3][CALL] from=0x916774, to=BoredApeYachtClub, setApprovalForAll(operator(address): 0xb14B3b, approved(bool): True) -> None
+    [3][STATICCALL] from=0x916774, to=0xf70f69, 0x5c4196e6() -> 0x000000
+    [3][STATICCALL] from=0x916774, to=0xf70f69, collection() -> 0x000000
+    [3][STATICCALL] from=0x916774, to=0xf70f69, tokenId() -> 0x000000
+    [3][STATICCALL] from=0x916774, to=0xf70f69, 0xc02d0fa2() -> 0x000000
+    [3][CALL] from=0x916774, to=TransparentUpgradeableProxy, pledgeAndBorrow(_collection(address): 0xBC4CA0, _tokenId(uint256): 5110, _nftType(uint256): 721, xToken(address): 0xA04EC2, borrowAmount(uint256): 0) -> None
+      [4][DELEGATECALL] from=TransparentUpgradeableProxy, to=XNFT, pledgeAndBorrow(_collection(address): 0xBC4CA0, _tokenId(uint256): 5110, _nftType(uint256): 721, xToken(address): 0xA04EC2, borrowAmount(uint256): 0) -> None
+        [5][CALL] from=TransparentUpgradeableProxy, to=BoredApeYachtClub, safeTransferFrom(from(address): 0x916774, to(address): 0xb14B3b, tokenId(uint256): 5110) -> None
+          [6][CALL] from=BoredApeYachtClub, to=TransparentUpgradeableProxy, onERC721Received(operator(address): 0xb14B3b, from(address): 0x916774, tokenId(uint256): 5110, data(bytes): b'') -> 0x150b7a02
+            [7][DELEGATECALL] from=TransparentUpgradeableProxy, to=XNFT, onERC721Received(operator(address): 0xb14B3b, from(address): 0x916774, tokenId(uint256): 5110, data(bytes): b'') -> 0x150b7a02
+        [5][CALL] from=TransparentUpgradeableProxy, to=0xa04ec2, borrowuint256() -> None
+    [3][STATICCALL] from=0x916774, to=0xf70f69, 0x5c4196e6() -> 0x000000
+    [3][CALL] from=0x916774, to=TransparentUpgradeableProxy, counter() -> 65
+      [4][DELEGATECALL] from=TransparentUpgradeableProxy, to=XNFT, counter() -> 65
+    [3][STATICCALL] from=0x916774, to=0xf70f69, 0x5c4196e6() -> 0x000000
+    [3][CALL] from=0x916774, to=TransparentUpgradeableProxy, withdrawNFT(orderId(uint256): 65) -> None
+      [4][DELEGATECALL] from=TransparentUpgradeableProxy, to=XNFT, withdrawNFT(orderId(uint256): 65) -> None
+        [5][CALL] from=TransparentUpgradeableProxy, to=TransparentUpgradeableProxy, getOrderBorrowBalanceCurrent(orderId(uint256): 65) -> 0
+          [6][DELEGATECALL] from=TransparentUpgradeableProxy, to=P2Controller, getOrderBorrowBalanceCurrent(orderId(uint256): 65) -> 0
+        [5][CALL] from=TransparentUpgradeableProxy, to=BoredApeYachtClub, safeTransferFrom(from(address): 0xb14B3b, to(address): 0x916774, tokenId(uint256): 5110) -> None
+          [6][CALL] from=BoredApeYachtClub, to=0x916774, onERC721Receivedaddress() -> 0x150b7a
+    [3][STATICCALL] from=0x916774, to=0xf70f69, collection() -> 0x000000
+    [3][STATICCALL] from=0x916774, to=0xf70f69, tokenId() -> 0x000000
+    [3][CALL] from=0x916774, to=BoredApeYachtClub, transferFrom(from(address): 0x916774, to(address): 0xf70F69, tokenId(uint256): 5110) -> None
+  [2][CREATE] from=0xf70f69, to=0xD8Aa36, atInversebrahint248() -> 0x608060
+    [3][STATICCALL] from=0xD8Aa36, to=0xf70f69, collection() -> 0x000000
+    [3][CALL] from=0xD8Aa36, to=BoredApeYachtClub, setApprovalForAll(operator(address): 0xb7CBB4, approved(bool): True) -> None
+  [2][CALL] from=0xf70f69, to=BoredApeYachtClub, transferFrom(from(address): 0xf70F69, to(address): 0xD8Aa36, tokenId(uint256): 5110) -> None
+  [2][CALL] from=0xf70f69, to=0xD8Aa36, 0x97c1edd3() -> None
+    [3][STATICCALL] from=0xD8Aa36, to=0xf70f69, collection() -> 0x000000
+    [3][STATICCALL] from=0xD8Aa36, to=0xf70f69, 0x5c4196e6() -> 0x000000
+    [3][CALL] from=0xD8Aa36, to=BoredApeYachtClub, setApprovalForAll(operator(address): 0xb14B3b, approved(bool): True) -> None
+    [3][STATICCALL] from=0xD8Aa36, to=0xf70f69, 0x5c4196e6() -> 0x000000
+    [3][STATICCALL] from=0xD8Aa36, to=0xf70f69, collection() -> 0x000000
+    [3][STATICCALL] from=0xD8Aa36, to=0xf70f69, tokenId() -> 0x000000
+    [3][STATICCALL] from=0xD8Aa36, to=0xf70f69, 0xc02d0fa2() -> 0x000000
+    [3][CALL] from=0xD8Aa36, to=TransparentUpgradeableProxy, pledgeAndBorrow(_collection(address): 0xBC4CA0, _tokenId(uint256): 5110, _nftType(uint256): 721, xToken(address): 0xA04EC2, borrowAmount(uint256): 0) -> None
+      [4][DELEGATECALL] from=TransparentUpgradeableProxy, to=XNFT, pledgeAndBorrow(_collection(address): 0xBC4CA0, _tokenId(uint256): 5110, _nftType(uint256): 721, xToken(address): 0xA04EC2, borrowAmount(uint256): 0) -> None
+        [5][CALL] from=TransparentUpgradeableProxy, to=BoredApeYachtClub, safeTransferFrom(from(address): 0xD8Aa36, to(address): 0xb14B3b, tokenId(uint256): 5110) -> None
+          [6][CALL] from=BoredApeYachtClub, to=TransparentUpgradeableProxy, onERC721Received(operator(address): 0xb14B3b, from(address): 0xD8Aa36, tokenId(uint256): 5110, data(bytes): b'') -> 0x150b7a02
+            [7][DELEGATECALL] from=TransparentUpgradeableProxy, to=XNFT, onERC721Received(operator(address): 0xb14B3b, from(address): 0xD8Aa36, tokenId(uint256): 5110, data(bytes): b'') -> 0x150b7a02
+        [5][CALL] from=TransparentUpgradeableProxy, to=0xa04ec2, borrowuint256() -> None
+    [3][STATICCALL] from=0xD8Aa36, to=0xf70f69, 0x5c4196e6() -> 0x000000
+    [3][CALL] from=0xD8Aa36, to=TransparentUpgradeableProxy, counter() -> 66
+      [4][DELEGATECALL] from=TransparentUpgradeableProxy, to=XNFT, counter() -> 66
+    [3][STATICCALL] from=0xD8Aa36, to=0xf70f69, 0x5c4196e6() -> 0x000000
+    [3][CALL] from=0xD8Aa36, to=TransparentUpgradeableProxy, withdrawNFT(orderId(uint256): 66) -> None
+      [4][DELEGATECALL] from=TransparentUpgradeableProxy, to=XNFT, withdrawNFT(orderId(uint256): 66) -> None
+        [5][CALL] from=TransparentUpgradeableProxy, to=TransparentUpgradeableProxy, getOrderBorrowBalanceCurrent(orderId(uint256): 66) -> 0
+          [6][DELEGATECALL] from=TransparentUpgradeableProxy, to=P2Controller, getOrderBorrowBalanceCurrent(orderId(uint256): 66) -> 0
+        [5][CALL] from=TransparentUpgradeableProxy, to=BoredApeYachtClub, safeTransferFrom(from(address): 0xb14B3b, to(address): 0xD8Aa36, tokenId(uint256): 5110) -> None
+          [6][CALL] from=BoredApeYachtClub, to=0xD8Aa36, onERC721Receivedaddress() -> 0x150b7a
+    [3][STATICCALL] from=0xD8Aa36, to=0xf70f69, collection() -> 0x000000
+    [3][STATICCALL] from=0xD8Aa36, to=0xf70f69, tokenId() -> 0x000000
+    [3][CALL] from=0xD8Aa36, to=BoredApeYachtClub, transferFrom(from(address): 0xD8Aa36, to(address): 0xf70F69, tokenId(uint256): 5110) -> None

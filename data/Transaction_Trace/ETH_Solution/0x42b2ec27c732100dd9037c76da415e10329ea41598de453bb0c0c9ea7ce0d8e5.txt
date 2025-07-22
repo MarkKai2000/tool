@@ -1,0 +1,287 @@
+[1][CALL] from=0x7a2f4d, to=0x4476b6, 0xe1629e47() -> None
+  [2][STATICCALL] from=0x4476b6, to=TransparentUpgradeableProxy, balanceOf(addr(address): 0xBA1222) -> 1387144695760709012655
+    [3][DELEGATECALL] from=TransparentUpgradeableProxy, to=LendingPool, balanceOf(addr(address): 0xBA1222) -> 1387144695760709012655
+  [2][STATICCALL] from=0x4476b6, to=TransparentUpgradeableProxy, balanceOf(account(address): 0xBA1222) -> 906345923203725548764
+    [3][DELEGATECALL] from=TransparentUpgradeableProxy, to=RswETH, balanceOf(account(address): 0xBA1222) -> 906345923203725548764
+  [2][CALL] from=0x4476b6, to=Vault, flashLoan(recipient(address): 0x4476b6, tokens(address[]): ['0xe1B4d34E8754600962Cd944B535180Bd758E6c..., amounts(uint256[]): [1387144695760709012555, 90634592320372554..., userData(bytes): b'\x00') -> None
+    [3][STATICCALL] from=Vault, to=TransparentUpgradeableProxy, balanceOf(addr(address): 0xBA1222) -> 1387144695760709012655
+      [4][DELEGATECALL] from=TransparentUpgradeableProxy, to=LendingPool, balanceOf(addr(address): 0xBA1222) -> 1387144695760709012655
+    [3][STATICCALL] from=Vault, to=ProtocolFeesCollector, getFlashLoanFeePercentage() -> 0
+    [3][CALL] from=Vault, to=TransparentUpgradeableProxy, transfer(to(address): 0x4476b6, value(uint256): 1387144695760709012555) -> True
+      [4][DELEGATECALL] from=TransparentUpgradeableProxy, to=LendingPool, transfer(to(address): 0x4476b6, value(uint256): 1387144695760709012555) -> True
+    [3][STATICCALL] from=Vault, to=TransparentUpgradeableProxy, balanceOf(account(address): 0xBA1222) -> 906345923203725548764
+      [4][DELEGATECALL] from=TransparentUpgradeableProxy, to=RswETH, balanceOf(account(address): 0xBA1222) -> 906345923203725548764
+    [3][STATICCALL] from=Vault, to=ProtocolFeesCollector, getFlashLoanFeePercentage() -> 0
+    [3][CALL] from=Vault, to=TransparentUpgradeableProxy, transfer(to(address): 0x4476b6, amount(uint256): 906345923203725548664) -> True
+      [4][DELEGATECALL] from=TransparentUpgradeableProxy, to=RswETH, transfer(to(address): 0x4476b6, amount(uint256): 906345923203725548664) -> True
+    [3][CALL] from=Vault, to=0x4476b6, receiveFlashLoanaddress[]() -> None
+      [4][CALL] from=0x4476b6, to=TransparentUpgradeableProxy, batchHarvestMarketRewards(_markets(address[]): ['0x5b6c23aedf704D19d6D8e921E638e8AE03cDCa..., minEthToRecieve(uint256): 0) -> None
+        [5][DELEGATECALL] from=TransparentUpgradeableProxy, to=PendleStaking, batchHarvestMarketRewards(_markets(address[]): ['0x5b6c23aedf704D19d6D8e921E638e8AE03cDCa..., minEthToRecieve(uint256): 0) -> None
+          [6][STATICCALL] from=TransparentUpgradeableProxy, to=PENDLE, balanceOf(account(address): 0x6E7997) -> 54711902411635297664
+          [6][STATICCALL] from=TransparentUpgradeableProxy, to=PendleMarketV3, getRewardTokens() -> ['0x601067', '0x038c1b', '0x808507']
+            [7][STATICCALL] from=PendleMarketV3, to=0x4476b6, getRewardTokens() -> 0x000000
+          [6][STATICCALL] from=TransparentUpgradeableProxy, to=PendleMarketV3, balanceOf(account(address): 0x6E7997) -> 1489388615889064860787
+          [6][STATICCALL] from=TransparentUpgradeableProxy, to=PendleMarketV3, balanceOf(account(address): 0x6E7997) -> 1701514364571963529895
+          [6][STATICCALL] from=TransparentUpgradeableProxy, to=PENDLE, balanceOf(account(address): 0x6E7997) -> 54711902411635297664
+          [6][CALL] from=TransparentUpgradeableProxy, to=PendleMarketV3, redeemRewards(user(address): 0x6E7997) -> [0, 0, 0]
+            [7][STATICCALL] from=PendleMarketV3, to=0x4476b6, getRewardTokens() -> 0x000000
+            [7][CALL] from=PendleMarketV3, to=0x4476b6, claimRewardsaddress() -> 0x000000
+              [8][CALL] from=0x4476b6, to=TransparentUpgradeableProxy, approve(spender(address): 0x888888, value(uint256): 115792089237316195423570985008687907853269...) -> True
+                [9][DELEGATECALL] from=TransparentUpgradeableProxy, to=LendingPool, approve(spender(address): 0x888888, value(uint256): 115792089237316195423570985008687907853269...) -> True
+              [8][STATICCALL] from=0x4476b6, to=TransparentUpgradeableProxy, balanceOf(addr(address): 0x4476b6) -> 1387144695760709012555
+                [9][DELEGATECALL] from=TransparentUpgradeableProxy, to=LendingPool, balanceOf(addr(address): 0x4476b6) -> 1387144695760709012555
+              [8][CALL] from=0x4476b6, to=PendleRouterV4, addLiquiditySingleTokenKeepYt(receiver(address): 0x4476b6, market(address): 0x601067, minLpOut(uint256): 1, minYtOut(uint256): 1, input(tuple): {'tokenIn': '0xe1B4d34E8754600962Cd944B535...) -> ['416513404704868480076', '316104463514107806474', '309357942716940430066', '1387144695760709012555']
+                [9][DELEGATECALL] from=PendleRouterV4, to=ActionAddRemoveLiqV3, addLiquiditySingleTokenKeepYt(receiver(address): 0x4476b6, market(address): 0x601067, minLpOut(uint256): 1, minYtOut(uint256): 1, input(tuple): {'tokenIn': '0xe1B4d34E8754600962Cd944B535...) -> ['416513404704868480076', '316104463514107806474', '309357942716940430066', '1387144695760709012555']
+                  [10][STATICCALL] from=PendleRouterV4, to=PendleMarketV3, readTokens() -> ['0xb1b915', '0x7aa68e', '0x3568f1']
+                  [10][CALL] from=PendleRouterV4, to=TransparentUpgradeableProxy, transferFrom(from(address): 0x4476b6, to(address): 0x888888, value(uint256): 1387144695760709012555) -> True
+                    [11][DELEGATECALL] from=TransparentUpgradeableProxy, to=LendingPool, transferFrom(from(address): 0x4476b6, to(address): 0x888888, value(uint256): 1387144695760709012555) -> True
+                  [10][STATICCALL] from=PendleRouterV4, to=TransparentUpgradeableProxy, allowance(ownerAddr(address): 0x888888, spenderAddr(address): 0xb1B915) -> 115792089237316195423570985008687907853269984665640564009658468616307634389414
+                    [11][DELEGATECALL] from=TransparentUpgradeableProxy, to=LendingPool, allowance(ownerAddr(address): 0x888888, spenderAddr(address): 0xb1B915) -> 115792089237316195423570985008687907853269984665640564009658468616307634389414
+                  [10][CALL] from=PendleRouterV4, to=PendleAgETHSY, deposit(receiver(address): 0x888888, tokenIn(address): 0xe1B4d3, amountTokenToDeposit(uint256): 1387144695760709012555, minSharesOut(uint256): 1) -> 1387144695760709012555
+                    [11][CALL] from=PendleAgETHSY, to=TransparentUpgradeableProxy, transferFrom(from(address): 0x888888, to(address): 0xb1B915, value(uint256): 1387144695760709012555) -> True
+                      [12][DELEGATECALL] from=TransparentUpgradeableProxy, to=LendingPool, transferFrom(from(address): 0x888888, to(address): 0xb1B915, value(uint256): 1387144695760709012555) -> True
+                  [10][STATICCALL] from=PendleRouterV4, to=PendleMarketV3, readState(router(address): 0x888888) -> None
+                    [11][STATICCALL] from=PendleMarketV3, to=PendleMarketFactoryV3, getMarketConfig(market(address): 0x601067, router(address): 0x888888) -> ['0x827040', '0', '80']
+                  [10][CALL] from=PendleRouterV4, to=PendleYieldToken, pyIndexCurrent() -> 1021808138294158423
+                    [11][STATICCALL] from=PendleYieldToken, to=PendleAgETHSY, exchangeRate() -> 1021427322970892774
+                      [12][STATICCALL] from=PendleAgETHSY, to=PendleExchangeRateOracle, getExchangeRate() -> 1022222860106386006
+                      [12][STATICCALL] from=PendleAgETHSY, to=TransparentUpgradeableProxy, convertToAssets(shares(uint256): 1022222860106386006) -> 1021427322970892774
+                        [13][DELEGATECALL] from=TransparentUpgradeableProxy, to=LendingPool, convertToAssets(shares(uint256): 1022222860106386006) -> 1021427322970892774
+                          [14][STATICCALL] from=TransparentUpgradeableProxy, to=TransparentUpgradeableProxy, balanceOf(account(address): 0xe1B4d3) -> 92368453715354759091
+                            [15][DELEGATECALL] from=TransparentUpgradeableProxy, to=RSETH, balanceOf(account(address): 0xe1B4d3) -> 92368453715354759091
+                  [10][CALL] from=PendleRouterV4, to=PendleAgETHSY, transfer(to(address): 0x3568f1, amount(uint256): 309357942716940430066) -> True
+                  [10][CALL] from=PendleRouterV4, to=PendleAgETHSY, transfer(to(address): 0x601067, amount(uint256): 1077786753043768582489) -> True
+                  [10][CALL] from=PendleRouterV4, to=PendleYieldToken, mintPY(receiverPT(address): 0x601067, receiverYT(address): 0x4476b6) -> 316104463514107806474
+                    [11][STATICCALL] from=PendleYieldToken, to=PendleAgETHSY, balanceOf(account(address): 0x3568f1) -> 19753061982819597352208
+                    [11][STATICCALL] from=PendleYieldToken, to=PendleAgETHSY, getRewardTokens() -> []
+                    [11][CALL] from=PendleYieldToken, to=PendleAgETHSY, rewardIndexesCurrent() -> []
+                    [11][CALL] from=PendleYieldToken, to=PendlePrincipalToken, mintByYT(user(address): 0x601067, amount(uint256): 316104463514107806474) -> None
+                    [11][STATICCALL] from=PendleYieldToken, to=PendleAgETHSY, balanceOf(account(address): 0x3568f1) -> 19753061982819597352208
+                  [10][CALL] from=PendleRouterV4, to=PendleMarketV3, mintaddress() -> 0x000000
+                    [11][STATICCALL] from=PendleMarketV3, to=PendleMarketFactoryV3, getMarketConfig(market(address): 0x601067, router(address): 0x888888) -> ['0x827040', '0', '80']
+                    [11][CALL] from=PendleMarketV3, to=PendleYieldToken, pyIndexCurrent() -> 1021808138294158423
+                    [11][STATICCALL] from=PendleMarketV3, to=PendleAgETHSY, getRewardTokens() -> []
+                    [11][CALL] from=PendleMarketV3, to=PendleAgETHSY, claimRewards((address): 0x601067) -> []
+                    [11][CALL] from=PendleMarketV3, to=ERC1967Proxy, redeemMarketReward() -> None
+                      [12][DELEGATECALL] from=ERC1967Proxy, to=PendleGaugeControllerMainchainUpg, redeemMarketReward() -> None
+                        [13][CALL] from=ERC1967Proxy, to=PENDLE, transfer(dst(address): 0x601067, amount(uint256): 6901033423450736448) -> True
+                    [11][STATICCALL] from=PendleMarketV3, to=PENDLE, balanceOf(account(address): 0x601067) -> 4586326654267460777298
+                    [11][CALL] from=PendleMarketV3, to=VotingEscrowPendleMainchain, totalSupplyAndBalanceCurrent(user(address): 0x4476b6) -> ['33311085179802453068196375', '0']
+                    [11][DELEGATECALL] from=PendleMarketV3, to=OracleLib, 0x4af74b68() -> 0x000000
+                    [11][STATICCALL] from=PendleMarketV3, to=PendleAgETHSY, balanceOf(account(address): 0x601067) -> 11967079985738865698213
+                    [11][STATICCALL] from=PendleMarketV3, to=PendlePrincipalToken, balanceOf(account(address): 0x601067) -> 3509829191795584673068
+              [8][STATICCALL] from=0x4476b6, to=PendleMarketV3, balanceOf(account(address): 0x6E7997) -> 1489388615889064860787
+              [8][STATICCALL] from=0x4476b6, to=PendleMarketV3, balanceOf(account(address): 0x4476b6) -> 416513404704868480076
+              [8][CALL] from=0x4476b6, to=PendleMarketV3, approve(spender(address): 0x6E7997, amount(uint256): 416513404704868480076) -> True
+              [8][CALL] from=0x4476b6, to=TransparentUpgradeableProxy, depositMarket(_market(address): 0x601067, _amount(uint256): 416513404704868480076) -> None
+                [9][DELEGATECALL] from=TransparentUpgradeableProxy, to=PendleMarketDepositHelper, depositMarket(_market(address): 0x601067, _amount(uint256): 416513404704868480076) -> None
+                  [10][CALL] from=TransparentUpgradeableProxy, to=TransparentUpgradeableProxy, depositMarket(_market(address): 0x601067, _for(address): 0x4476b6, _from(address): 0x4476b6, _amount(uint256): 416513404704868480076) -> None
+                    [11][DELEGATECALL] from=TransparentUpgradeableProxy, to=PendleStaking, depositMarket(_market(address): 0x601067, _for(address): 0x4476b6, _from(address): 0x4476b6, _amount(uint256): 416513404704868480076) -> None
+                      [12][CALL] from=TransparentUpgradeableProxy, to=PendleMarketV3, transferFrom(from(address): 0x4476b6, to(address): 0x6E7997, amount(uint256): 416513404704868480076) -> True
+                        [13][STATICCALL] from=PendleMarketV3, to=PendleAgETHSY, getRewardTokens() -> []
+                        [13][CALL] from=PendleMarketV3, to=VotingEscrowPendleMainchain, totalSupplyAndBalanceCurrent(user(address): 0x4476b6) -> ['33311085179802453068196375', '0']
+                        [13][CALL] from=PendleMarketV3, to=VotingEscrowPendleMainchain, totalSupplyAndBalanceCurrent(user(address): 0x6E7997) -> ['33311085179802453068196375', '12566329175672493074612409']
+                      [12][CALL] from=TransparentUpgradeableProxy, to=0xd3b665, mintaddress() -> None
+                        [13][CALL] from=0xd3b665, to=TransparentUpgradeableProxy, beforeReceiptTokenTransfer(_from(address): 0x000000, _to(address): 0x4476b6, _amount(uint256): 416513404704868480076) -> None
+                          [14][DELEGATECALL] from=TransparentUpgradeableProxy, to=MasterPenpie, beforeReceiptTokenTransfer(_from(address): 0x000000, _to(address): 0x4476b6, _amount(uint256): 416513404704868480076) -> None
+                            [15][CALL] from=TransparentUpgradeableProxy, to=0x2Da0Cd, updateForaddress() -> None
+                              [16][STATICCALL] from=0x2Da0Cd, to=0xd3b665, balanceOfaddress() -> 0x000000
+                        [13][CALL] from=0xd3b665, to=TransparentUpgradeableProxy, afterReceiptTokenTransfer(_from(address): 0x000000, _to(address): 0x4476b6, _amount(uint256): 416513404704868480076) -> None
+                          [14][DELEGATECALL] from=TransparentUpgradeableProxy, to=MasterPenpie, afterReceiptTokenTransfer(_from(address): 0x000000, _to(address): 0x4476b6, _amount(uint256): 416513404704868480076) -> None
+              [8][CALL] from=0x4476b6, to=TransparentUpgradeableProxy, approve(spender(address): 0x888888, amount(uint256): 115792089237316195423570985008687907853269...) -> True
+                [9][DELEGATECALL] from=TransparentUpgradeableProxy, to=RswETH, approve(spender(address): 0x888888, amount(uint256): 115792089237316195423570985008687907853269...) -> True
+              [8][STATICCALL] from=0x4476b6, to=TransparentUpgradeableProxy, balanceOf(account(address): 0x4476b6) -> 906345923203725548664
+                [9][DELEGATECALL] from=TransparentUpgradeableProxy, to=RswETH, balanceOf(account(address): 0x4476b6) -> 906345923203725548664
+              [8][CALL] from=0x4476b6, to=PendleRouterV4, addLiquiditySingleTokenKeepYt(receiver(address): 0x4476b6, market(address): 0x038C1b, minLpOut(uint256): 1, minYtOut(uint256): 1, input(tuple): {'tokenIn': '0xFAe103DC9cf190eD75350761e95...) -> ['458670606639349413222', '290971437819232481599', '285937998760751616131', '906345923203725548664']
+                [9][DELEGATECALL] from=PendleRouterV4, to=ActionAddRemoveLiqV3, addLiquiditySingleTokenKeepYt(receiver(address): 0x4476b6, market(address): 0x038C1b, minLpOut(uint256): 1, minYtOut(uint256): 1, input(tuple): {'tokenIn': '0xFAe103DC9cf190eD75350761e95...) -> ['458670606639349413222', '290971437819232481599', '285937998760751616131', '906345923203725548664']
+                  [10][STATICCALL] from=PendleRouterV4, to=PendleMarketV3, readTokens() -> ['0x778672', '0xf0574d', '0xd66b56']
+                  [10][CALL] from=PendleRouterV4, to=TransparentUpgradeableProxy, transferFrom(from(address): 0x4476b6, to(address): 0x888888, amount(uint256): 906345923203725548664) -> True
+                    [11][DELEGATECALL] from=TransparentUpgradeableProxy, to=RswETH, transferFrom(from(address): 0x4476b6, to(address): 0x888888, amount(uint256): 906345923203725548664) -> True
+                  [10][STATICCALL] from=PendleRouterV4, to=TransparentUpgradeableProxy, allowance(owner(address): 0x888888, spender(address): 0x778672) -> 115792089237316195423570985008687907853269984665640564039457584007913129639935
+                    [11][DELEGATECALL] from=TransparentUpgradeableProxy, to=RswETH, allowance(owner(address): 0x888888, spender(address): 0x778672) -> 115792089237316195423570985008687907853269984665640564039457584007913129639935
+                  [10][CALL] from=PendleRouterV4, to=PendleRswETHSY, deposit(receiver(address): 0x888888, tokenIn(address): 0xFAe103, amountTokenToDeposit(uint256): 906345923203725548664, minSharesOut(uint256): 1) -> 906345923203725548664
+                    [11][CALL] from=PendleRswETHSY, to=TransparentUpgradeableProxy, transferFrom(from(address): 0x888888, to(address): 0x778672, amount(uint256): 906345923203725548664) -> True
+                      [12][DELEGATECALL] from=TransparentUpgradeableProxy, to=RswETH, transferFrom(from(address): 0x888888, to(address): 0x778672, amount(uint256): 906345923203725548664) -> True
+                  [10][STATICCALL] from=PendleRouterV4, to=PendleMarketV3, readState(router(address): 0x888888) -> None
+                    [11][STATICCALL] from=PendleMarketV3, to=PendleMarketFactoryV3, getMarketConfig(market(address): 0x038C1b, router(address): 0x888888) -> ['0x827040', '0', '80']
+                  [10][CALL] from=PendleRouterV4, to=PendleYieldToken, pyIndexCurrent() -> 1017603253433596335
+                    [11][STATICCALL] from=PendleYieldToken, to=PendleRswETHSY, exchangeRate() -> 1017603253433596335
+                      [12][STATICCALL] from=PendleRswETHSY, to=TransparentUpgradeableProxy, getRate() -> 1017603253433596335
+                        [13][DELEGATECALL] from=TransparentUpgradeableProxy, to=RswETH, getRate() -> 1017603253433596335
+                  [10][CALL] from=PendleRouterV4, to=PendleRswETHSY, transfer(to(address): 0xD66b56, amount(uint256): 285937998760751616131) -> True
+                  [10][CALL] from=PendleRouterV4, to=PendleRswETHSY, transfer(to(address): 0x038C1b, amount(uint256): 620407924442973932533) -> True
+                  [10][CALL] from=PendleRouterV4, to=PendleYieldToken, mintPY(receiverPT(address): 0x038C1b, receiverYT(address): 0x4476b6) -> 290971437819232481599
+                    [11][STATICCALL] from=PendleYieldToken, to=PendleRswETHSY, balanceOf(account(address): 0xD66b56) -> 5256155517424465461584
+                    [11][STATICCALL] from=PendleYieldToken, to=PendleRswETHSY, getRewardTokens() -> []
+                    [11][CALL] from=PendleYieldToken, to=PendleRswETHSY, rewardIndexesCurrent() -> []
+                    [11][CALL] from=PendleYieldToken, to=PendlePrincipalToken, mintByYT(user(address): 0x038C1b, amount(uint256): 290971437819232481599) -> None
+                    [11][STATICCALL] from=PendleYieldToken, to=PendleRswETHSY, balanceOf(account(address): 0xD66b56) -> 5256155517424465461584
+                  [10][CALL] from=PendleRouterV4, to=PendleMarketV3, mintaddress() -> 0x000000
+                    [11][STATICCALL] from=PendleMarketV3, to=PendleMarketFactoryV3, getMarketConfig(market(address): 0x038C1b, router(address): 0x888888) -> ['0x827040', '0', '80']
+                    [11][CALL] from=PendleMarketV3, to=PendleYieldToken, pyIndexCurrent() -> 1017603253433596335
+                    [11][STATICCALL] from=PendleMarketV3, to=PendleRswETHSY, getRewardTokens() -> []
+                    [11][CALL] from=PendleMarketV3, to=PendleRswETHSY, claimRewards((address): 0x038C1b) -> []
+                    [11][CALL] from=PendleMarketV3, to=ERC1967Proxy, redeemMarketReward() -> None
+                      [12][DELEGATECALL] from=ERC1967Proxy, to=PendleGaugeControllerMainchainUpg, redeemMarketReward() -> None
+                        [13][CALL] from=ERC1967Proxy, to=PENDLE, transfer(dst(address): 0x038C1b, amount(uint256): 422679947061307296) -> True
+                    [11][STATICCALL] from=PendleMarketV3, to=PENDLE, balanceOf(account(address): 0x038C1b) -> 9770848711367980131937
+                    [11][CALL] from=PendleMarketV3, to=VotingEscrowPendleMainchain, totalSupplyAndBalanceCurrent(user(address): 0x4476b6) -> ['33311085179802453068196375', '0']
+                    [11][DELEGATECALL] from=PendleMarketV3, to=OracleLib, 0x4af74b68() -> 0x000000
+                    [11][STATICCALL] from=PendleMarketV3, to=PendleRswETHSY, balanceOf(account(address): 0x038C1b) -> 5978878374086534390690
+                    [11][STATICCALL] from=PendleMarketV3, to=PendlePrincipalToken, balanceOf(account(address): 0x038C1b) -> 2804095372604847351303
+              [8][STATICCALL] from=0x4476b6, to=PendleMarketV3, balanceOf(account(address): 0x6E7997) -> 1701514364571963529895
+              [8][STATICCALL] from=0x4476b6, to=PendleMarketV3, balanceOf(account(address): 0x4476b6) -> 458670606639349413222
+              [8][CALL] from=0x4476b6, to=PendleMarketV3, approve(spender(address): 0x6E7997, amount(uint256): 458670606639349413222) -> True
+              [8][CALL] from=0x4476b6, to=TransparentUpgradeableProxy, depositMarket(_market(address): 0x038C1b, _amount(uint256): 458670606639349413222) -> None
+                [9][DELEGATECALL] from=TransparentUpgradeableProxy, to=PendleMarketDepositHelper, depositMarket(_market(address): 0x038C1b, _amount(uint256): 458670606639349413222) -> None
+                  [10][CALL] from=TransparentUpgradeableProxy, to=TransparentUpgradeableProxy, depositMarket(_market(address): 0x038C1b, _for(address): 0x4476b6, _from(address): 0x4476b6, _amount(uint256): 458670606639349413222) -> None
+                    [11][DELEGATECALL] from=TransparentUpgradeableProxy, to=PendleStaking, depositMarket(_market(address): 0x038C1b, _for(address): 0x4476b6, _from(address): 0x4476b6, _amount(uint256): 458670606639349413222) -> None
+                      [12][CALL] from=TransparentUpgradeableProxy, to=PendleMarketV3, transferFrom(from(address): 0x4476b6, to(address): 0x6E7997, amount(uint256): 458670606639349413222) -> True
+                        [13][STATICCALL] from=PendleMarketV3, to=PendleRswETHSY, getRewardTokens() -> []
+                        [13][CALL] from=PendleMarketV3, to=VotingEscrowPendleMainchain, totalSupplyAndBalanceCurrent(user(address): 0x4476b6) -> ['33311085179802453068196375', '0']
+                        [13][CALL] from=PendleMarketV3, to=VotingEscrowPendleMainchain, totalSupplyAndBalanceCurrent(user(address): 0x6E7997) -> ['33311085179802453068196375', '12566329175672493074612409']
+                      [12][CALL] from=TransparentUpgradeableProxy, to=0xe688e4, mintaddress() -> None
+                        [13][CALL] from=0xe688e4, to=TransparentUpgradeableProxy, beforeReceiptTokenTransfer(_from(address): 0x000000, _to(address): 0x4476b6, _amount(uint256): 458670606639349413222) -> None
+                          [14][DELEGATECALL] from=TransparentUpgradeableProxy, to=MasterPenpie, beforeReceiptTokenTransfer(_from(address): 0x000000, _to(address): 0x4476b6, _amount(uint256): 458670606639349413222) -> None
+                            [15][CALL] from=TransparentUpgradeableProxy, to=0x6fe917, updateForaddress() -> None
+                              [16][STATICCALL] from=0x6fe917, to=0xe688e4, balanceOfaddress() -> 0x000000
+                        [13][CALL] from=0xe688e4, to=TransparentUpgradeableProxy, afterReceiptTokenTransfer(_from(address): 0x000000, _to(address): 0x4476b6, _amount(uint256): 458670606639349413222) -> None
+                          [14][DELEGATECALL] from=TransparentUpgradeableProxy, to=MasterPenpie, afterReceiptTokenTransfer(_from(address): 0x000000, _to(address): 0x4476b6, _amount(uint256): 458670606639349413222) -> None
+            [7][CALL] from=PendleMarketV3, to=ERC1967Proxy, redeemMarketReward() -> None
+              [8][DELEGATECALL] from=ERC1967Proxy, to=PendleGaugeControllerMainchainUpg, redeemMarketReward() -> None
+            [7][STATICCALL] from=PendleMarketV3, to=PendleMarketV3, balanceOf(account(address): 0x5b6c23) -> 0
+            [7][STATICCALL] from=PendleMarketV3, to=PendleMarketV3, balanceOf(account(address): 0x5b6c23) -> 0
+            [7][STATICCALL] from=PendleMarketV3, to=PENDLE, balanceOf(account(address): 0x5b6c23) -> 0
+            [7][CALL] from=PendleMarketV3, to=VotingEscrowPendleMainchain, totalSupplyAndBalanceCurrent(user(address): 0x6E7997) -> ['33311085179802453068196375', '12566329175672493074612409']
+            [7][STATICCALL] from=PendleMarketV3, to=0x4476b6, getRewardTokens() -> 0x000000
+          [6][STATICCALL] from=TransparentUpgradeableProxy, to=PendleMarketV3, balanceOf(account(address): 0x6E7997) -> 1905902020593933340863
+          [6][CALL] from=TransparentUpgradeableProxy, to=PendleMarketV3, approve(spender(address): 0xF89140, amount(uint256): 0) -> True
+          [6][STATICCALL] from=TransparentUpgradeableProxy, to=PendleMarketV3, allowance(owner(address): 0x6E7997, spender(address): 0xF89140) -> 0
+          [6][CALL] from=TransparentUpgradeableProxy, to=PendleMarketV3, approve(spender(address): 0xF89140, amount(uint256): 416513404704868480076) -> True
+          [6][CALL] from=TransparentUpgradeableProxy, to=0xF89140, 0x8fcf4822() -> 0x000000
+            [7][CALL] from=0xF89140, to=PendleMarketV3, transferFrom(from(address): 0x6E7997, to(address): 0xF89140, amount(uint256): 416513404704868480076) -> True
+              [8][STATICCALL] from=PendleMarketV3, to=PendleAgETHSY, getRewardTokens() -> []
+              [8][CALL] from=PendleMarketV3, to=VotingEscrowPendleMainchain, totalSupplyAndBalanceCurrent(user(address): 0x6E7997) -> ['33311085179802453068196375', '12566329175672493074612409']
+              [8][CALL] from=PendleMarketV3, to=VotingEscrowPendleMainchain, totalSupplyAndBalanceCurrent(user(address): 0xF89140) -> ['33311085179802453068196375', '0']
+            [7][STATICCALL] from=0xF89140, to=0xc7a208, totalSupply() -> 0x000000
+          [6][STATICCALL] from=TransparentUpgradeableProxy, to=PendleMarketV3, balanceOf(account(address): 0x6E7997) -> 2160184971211312943117
+          [6][CALL] from=TransparentUpgradeableProxy, to=PendleMarketV3, approve(spender(address): 0xF89140, amount(uint256): 0) -> True
+          [6][STATICCALL] from=TransparentUpgradeableProxy, to=PendleMarketV3, allowance(owner(address): 0x6E7997, spender(address): 0xF89140) -> 0
+          [6][CALL] from=TransparentUpgradeableProxy, to=PendleMarketV3, approve(spender(address): 0xF89140, amount(uint256): 458670606639349413222) -> True
+          [6][CALL] from=TransparentUpgradeableProxy, to=0xF89140, 0x8fcf4822() -> 0x000000
+            [7][CALL] from=0xF89140, to=PendleMarketV3, transferFrom(from(address): 0x6E7997, to(address): 0xF89140, amount(uint256): 458670606639349413222) -> True
+              [8][STATICCALL] from=PendleMarketV3, to=PendleRswETHSY, getRewardTokens() -> []
+              [8][CALL] from=PendleMarketV3, to=VotingEscrowPendleMainchain, totalSupplyAndBalanceCurrent(user(address): 0x6E7997) -> ['33311085179802453068196375', '12566329175672493074612409']
+              [8][CALL] from=PendleMarketV3, to=VotingEscrowPendleMainchain, totalSupplyAndBalanceCurrent(user(address): 0xF89140) -> ['33311085179802453068196375', '0']
+            [7][STATICCALL] from=0xF89140, to=0xc7a208, totalSupply() -> 0x000000
+          [6][STATICCALL] from=TransparentUpgradeableProxy, to=PENDLE, balanceOf(account(address): 0x6E7997) -> 54711902411635297664
+          [6][STATICCALL] from=TransparentUpgradeableProxy, to=PENDLE, balanceOf(account(address): 0x6E7997) -> 54711902411635297664
+      [4][CALL] from=0x4476b6, to=TransparentUpgradeableProxy, multiclaim(_stakingTokens(address[]): ['0x5b6c23aedf704D19d6D8e921E638e8AE03cDCa...) -> None
+        [5][DELEGATECALL] from=TransparentUpgradeableProxy, to=MasterPenpie, multiclaim(_stakingTokens(address[]): ['0x5b6c23aedf704D19d6D8e921E638e8AE03cDCa...) -> None
+          [6][CALL] from=TransparentUpgradeableProxy, to=0xF89140, getRewardaddress() -> 0x000000
+            [7][STATICCALL] from=0xF89140, to=0xc7a208, balanceOfaddress() -> 0x000000
+            [7][STATICCALL] from=0xF89140, to=0xc7a208, balanceOfaddress() -> 0x000000
+            [7][CALL] from=0xF89140, to=PendleMarketV3, transfer(to(address): 0x4476b6, amount(uint256): 416513404704868480075) -> True
+              [8][STATICCALL] from=PendleMarketV3, to=PendleAgETHSY, getRewardTokens() -> []
+              [8][CALL] from=PendleMarketV3, to=VotingEscrowPendleMainchain, totalSupplyAndBalanceCurrent(user(address): 0xF89140) -> ['33311085179802453068196375', '0']
+              [8][CALL] from=PendleMarketV3, to=VotingEscrowPendleMainchain, totalSupplyAndBalanceCurrent(user(address): 0x4476b6) -> ['33311085179802453068196375', '0']
+            [7][CALL] from=0xF89140, to=PendleMarketV3, transfer(to(address): 0x4476b6, amount(uint256): 458670606639349413221) -> True
+              [8][STATICCALL] from=PendleMarketV3, to=PendleRswETHSY, getRewardTokens() -> []
+              [8][CALL] from=PendleMarketV3, to=VotingEscrowPendleMainchain, totalSupplyAndBalanceCurrent(user(address): 0xF89140) -> ['33311085179802453068196375', '0']
+              [8][CALL] from=PendleMarketV3, to=VotingEscrowPendleMainchain, totalSupplyAndBalanceCurrent(user(address): 0x4476b6) -> ['33311085179802453068196375', '0']
+      [4][CALL] from=0x4476b6, to=TransparentUpgradeableProxy, withdrawMarket(_market(address): 0x601067, _amount(uint256): 416513404704868480076) -> None
+        [5][DELEGATECALL] from=TransparentUpgradeableProxy, to=PendleMarketDepositHelper, withdrawMarket(_market(address): 0x601067, _amount(uint256): 416513404704868480076) -> None
+          [6][CALL] from=TransparentUpgradeableProxy, to=TransparentUpgradeableProxy, withdrawMarket(_market(address): 0x601067, _for(address): 0x4476b6, _amount(uint256): 416513404704868480076) -> None
+            [7][DELEGATECALL] from=TransparentUpgradeableProxy, to=PendleStaking, withdrawMarket(_market(address): 0x601067, _for(address): 0x4476b6, _amount(uint256): 416513404704868480076) -> None
+              [8][CALL] from=TransparentUpgradeableProxy, to=0xd3b665, burnaddress() -> None
+                [9][CALL] from=0xd3b665, to=TransparentUpgradeableProxy, beforeReceiptTokenTransfer(_from(address): 0x4476b6, _to(address): 0x000000, _amount(uint256): 416513404704868480076) -> None
+                  [10][DELEGATECALL] from=TransparentUpgradeableProxy, to=MasterPenpie, beforeReceiptTokenTransfer(_from(address): 0x4476b6, _to(address): 0x000000, _amount(uint256): 416513404704868480076) -> None
+                    [11][CALL] from=TransparentUpgradeableProxy, to=0x2Da0Cd, updateForaddress() -> None
+                    [11][CALL] from=TransparentUpgradeableProxy, to=0x2Da0Cd, updateForaddress() -> None
+                [9][CALL] from=0xd3b665, to=TransparentUpgradeableProxy, afterReceiptTokenTransfer(_from(address): 0x4476b6, _to(address): 0x000000, _amount(uint256): 416513404704868480076) -> None
+                  [10][DELEGATECALL] from=TransparentUpgradeableProxy, to=MasterPenpie, afterReceiptTokenTransfer(_from(address): 0x4476b6, _to(address): 0x000000, _amount(uint256): 416513404704868480076) -> None
+              [8][CALL] from=TransparentUpgradeableProxy, to=PendleMarketV3, transfer(to(address): 0x4476b6, amount(uint256): 416513404704868480076) -> True
+                [9][STATICCALL] from=PendleMarketV3, to=PendleAgETHSY, getRewardTokens() -> []
+                [9][CALL] from=PendleMarketV3, to=VotingEscrowPendleMainchain, totalSupplyAndBalanceCurrent(user(address): 0x6E7997) -> ['33311085179802453068196375', '12566329175672493074612409']
+                [9][CALL] from=PendleMarketV3, to=VotingEscrowPendleMainchain, totalSupplyAndBalanceCurrent(user(address): 0x4476b6) -> ['33311085179802453068196375', '0']
+      [4][STATICCALL] from=0x4476b6, to=PendleMarketV3, balanceOf(account(address): 0x4476b6) -> 833026809409736960151
+      [4][CALL] from=0x4476b6, to=PendleMarketV3, approve(spender(address): 0x888888, amount(uint256): 833026809409736960151) -> True
+      [4][CALL] from=0x4476b6, to=PendleRouterV4, removeLiquiditySingleToken(receiver(address): 0x4476b6, market(address): 0x601067, netLpToRemove(uint256): 833026809409736960151, output(tuple): {'tokenOut': '0xe1B4d34E8754600962Cd944B53..., limit(tuple): {'limitRouter': '0x00000000000000000000000...) -> ['2754866986766776060190', '185837778775850821', '2754866986766776060190']
+        [5][DELEGATECALL] from=PendleRouterV4, to=ActionAddRemoveLiqV3, removeLiquiditySingleToken(receiver(address): 0x4476b6, market(address): 0x601067, netLpToRemove(uint256): 833026809409736960151, output(tuple): {'tokenOut': '0xe1B4d34E8754600962Cd944B53..., limit(tuple): {'limitRouter': '0x00000000000000000000000...) -> ['2754866986766776060190', '185837778775850821', '2754866986766776060190']
+          [6][STATICCALL] from=PendleRouterV4, to=PendleMarketV3, readTokens() -> ['0xb1b915', '0x7aa68e', '0x3568f1']
+          [6][CALL] from=PendleRouterV4, to=PendleMarketV3, transferFrom(from(address): 0x4476b6, to(address): 0x601067, amount(uint256): 833026809409736960151) -> True
+            [7][STATICCALL] from=PendleMarketV3, to=PendleAgETHSY, getRewardTokens() -> []
+            [7][CALL] from=PendleMarketV3, to=VotingEscrowPendleMainchain, totalSupplyAndBalanceCurrent(user(address): 0x4476b6) -> ['33311085179802453068196375', '0']
+          [6][STATICCALL] from=PendleRouterV4, to=PendleMarketV3, isExpired() -> False
+          [6][CALL] from=PendleRouterV4, to=PendleMarketV3, burnaddress() -> 0x000000
+            [7][STATICCALL] from=PendleMarketV3, to=PendleMarketFactoryV3, getMarketConfig(market(address): 0x601067, router(address): 0x888888) -> ['0x827040', '0', '80']
+            [7][STATICCALL] from=PendleMarketV3, to=PendleAgETHSY, getRewardTokens() -> []
+            [7][CALL] from=PendleMarketV3, to=PendleAgETHSY, transfer(to(address): 0xb1B915, amount(uint256): 2155573506087537164968) -> True
+            [7][DELEGATECALL] from=PendleMarketV3, to=OracleLib, 0x4af74b68() -> 0x000000
+          [6][STATICCALL] from=PendleRouterV4, to=PendleMarketV3, readTokens() -> ['0xb1b915', '0x7aa68e', '0x3568f1']
+          [6][CALL] from=PendleRouterV4, to=PendleMarketV3, 0x29910b11() -> 0x000000
+            [7][STATICCALL] from=PendleMarketV3, to=PendleMarketFactoryV3, getMarketConfig(market(address): 0x601067, router(address): 0x888888) -> ['0x827040', '0', '80']
+            [7][CALL] from=PendleMarketV3, to=PendleYieldToken, pyIndexCurrent() -> 1021808138294158423
+            [7][CALL] from=PendleMarketV3, to=PendleAgETHSY, transfer(to(address): 0xb1B915, amount(uint256): 599293480679238895222) -> True
+            [7][CALL] from=PendleMarketV3, to=PendleAgETHSY, transfer(to(address): 0x827040, amount(uint256): 148670223020680657) -> True
+            [7][DELEGATECALL] from=PendleMarketV3, to=OracleLib, 0x4af74b68() -> 0x000000
+            [7][STATICCALL] from=PendleMarketV3, to=PendlePrincipalToken, balanceOf(account(address): 0x601067) -> 3509829191795584673068
+          [6][CALL] from=PendleRouterV4, to=PendleAgETHSY, redeem(receiver(address): 0x4476b6, amountSharesToRedeem(uint256): 2754866986766776060190, tokenOut(address): 0xe1B4d3, minTokenOut(uint256): 0, burnFromInternalBalance(bool): True) -> 2754866986766776060190
+            [7][CALL] from=PendleAgETHSY, to=TransparentUpgradeableProxy, transfer(to(address): 0x4476b6, value(uint256): 2754866986766776060190) -> True
+              [8][DELEGATECALL] from=TransparentUpgradeableProxy, to=LendingPool, transfer(to(address): 0x4476b6, value(uint256): 2754866986766776060190) -> True
+      [4][CALL] from=0x4476b6, to=TransparentUpgradeableProxy, withdrawMarket(_market(address): 0x038C1b, _amount(uint256): 458670606639349413222) -> None
+        [5][DELEGATECALL] from=TransparentUpgradeableProxy, to=PendleMarketDepositHelper, withdrawMarket(_market(address): 0x038C1b, _amount(uint256): 458670606639349413222) -> None
+          [6][CALL] from=TransparentUpgradeableProxy, to=TransparentUpgradeableProxy, withdrawMarket(_market(address): 0x038C1b, _for(address): 0x4476b6, _amount(uint256): 458670606639349413222) -> None
+            [7][DELEGATECALL] from=TransparentUpgradeableProxy, to=PendleStaking, withdrawMarket(_market(address): 0x038C1b, _for(address): 0x4476b6, _amount(uint256): 458670606639349413222) -> None
+              [8][CALL] from=TransparentUpgradeableProxy, to=0xe688e4, burnaddress() -> None
+                [9][CALL] from=0xe688e4, to=TransparentUpgradeableProxy, beforeReceiptTokenTransfer(_from(address): 0x4476b6, _to(address): 0x000000, _amount(uint256): 458670606639349413222) -> None
+                  [10][DELEGATECALL] from=TransparentUpgradeableProxy, to=MasterPenpie, beforeReceiptTokenTransfer(_from(address): 0x4476b6, _to(address): 0x000000, _amount(uint256): 458670606639349413222) -> None
+                    [11][CALL] from=TransparentUpgradeableProxy, to=0x6fe917, updateForaddress() -> None
+                    [11][CALL] from=TransparentUpgradeableProxy, to=0x6fe917, updateForaddress() -> None
+                [9][CALL] from=0xe688e4, to=TransparentUpgradeableProxy, afterReceiptTokenTransfer(_from(address): 0x4476b6, _to(address): 0x000000, _amount(uint256): 458670606639349413222) -> None
+                  [10][DELEGATECALL] from=TransparentUpgradeableProxy, to=MasterPenpie, afterReceiptTokenTransfer(_from(address): 0x4476b6, _to(address): 0x000000, _amount(uint256): 458670606639349413222) -> None
+              [8][CALL] from=TransparentUpgradeableProxy, to=PendleMarketV3, transfer(to(address): 0x4476b6, amount(uint256): 458670606639349413222) -> True
+                [9][STATICCALL] from=PendleMarketV3, to=PendleRswETHSY, getRewardTokens() -> []
+                [9][CALL] from=PendleMarketV3, to=VotingEscrowPendleMainchain, totalSupplyAndBalanceCurrent(user(address): 0x6E7997) -> ['33311085179802453068196375', '12566329175672493074612409']
+                [9][CALL] from=PendleMarketV3, to=VotingEscrowPendleMainchain, totalSupplyAndBalanceCurrent(user(address): 0x4476b6) -> ['33311085179802453068196375', '0']
+      [4][STATICCALL] from=0x4476b6, to=PendleMarketV3, balanceOf(account(address): 0x4476b6) -> 917341213278698826443
+      [4][CALL] from=0x4476b6, to=PendleMarketV3, approve(spender(address): 0x888888, amount(uint256): 917341213278698826443) -> True
+      [4][CALL] from=0x4476b6, to=PendleRouterV4, removeLiquiditySingleToken(receiver(address): 0x4476b6, market(address): 0x038C1b, netLpToRemove(uint256): 917341213278698826443, output(tuple): {'tokenOut': '0xFAe103DC9cf190eD75350761e9..., limit(tuple): {'limitRouter': '0x00000000000000000000000...) -> ['1808209610587545195088', '34530487126503603', '1808209610587545195088']
+        [5][DELEGATECALL] from=PendleRouterV4, to=ActionAddRemoveLiqV3, removeLiquiditySingleToken(receiver(address): 0x4476b6, market(address): 0x038C1b, netLpToRemove(uint256): 917341213278698826443, output(tuple): {'tokenOut': '0xFAe103DC9cf190eD75350761e9..., limit(tuple): {'limitRouter': '0x00000000000000000000000...) -> ['1808209610587545195088', '34530487126503603', '1808209610587545195088']
+          [6][STATICCALL] from=PendleRouterV4, to=PendleMarketV3, readTokens() -> ['0x778672', '0xf0574d', '0xd66b56']
+          [6][CALL] from=PendleRouterV4, to=PendleMarketV3, transferFrom(from(address): 0x4476b6, to(address): 0x038C1b, amount(uint256): 917341213278698826443) -> True
+            [7][STATICCALL] from=PendleMarketV3, to=PendleRswETHSY, getRewardTokens() -> []
+            [7][CALL] from=PendleMarketV3, to=VotingEscrowPendleMainchain, totalSupplyAndBalanceCurrent(user(address): 0x4476b6) -> ['33311085179802453068196375', '0']
+          [6][STATICCALL] from=PendleRouterV4, to=PendleMarketV3, isExpired() -> False
+          [6][CALL] from=PendleRouterV4, to=PendleMarketV3, burnaddress() -> 0x000000
+            [7][STATICCALL] from=PendleMarketV3, to=PendleMarketFactoryV3, getMarketConfig(market(address): 0x038C1b, router(address): 0x888888) -> ['0x827040', '0', '80']
+            [7][STATICCALL] from=PendleMarketV3, to=PendleRswETHSY, getRewardTokens() -> []
+            [7][CALL] from=PendleMarketV3, to=PendleRswETHSY, transfer(to(address): 0x778672, amount(uint256): 1240815848885947865058) -> True
+            [7][DELEGATECALL] from=PendleMarketV3, to=OracleLib, 0x4af74b68() -> 0x000000
+          [6][STATICCALL] from=PendleRouterV4, to=PendleMarketV3, readTokens() -> ['0x778672', '0xf0574d', '0xd66b56']
+          [6][CALL] from=PendleRouterV4, to=PendleMarketV3, 0x29910b11() -> 0x000000
+            [7][STATICCALL] from=PendleMarketV3, to=PendleMarketFactoryV3, getMarketConfig(market(address): 0x038C1b, router(address): 0x888888) -> ['0x827040', '0', '80']
+            [7][CALL] from=PendleMarketV3, to=PendleYieldToken, pyIndexCurrent() -> 1017603253433596335
+            [7][CALL] from=PendleMarketV3, to=PendleRswETHSY, transfer(to(address): 0x778672, amount(uint256): 567393761701597330030) -> True
+            [7][CALL] from=PendleMarketV3, to=PendleRswETHSY, transfer(to(address): 0x827040, amount(uint256): 27624389701202882) -> True
+            [7][DELEGATECALL] from=PendleMarketV3, to=OracleLib, 0x4af74b68() -> 0x000000
+            [7][STATICCALL] from=PendleMarketV3, to=PendlePrincipalToken, balanceOf(account(address): 0x038C1b) -> 2804095372604847351303
+          [6][CALL] from=PendleRouterV4, to=PendleRswETHSY, redeem(receiver(address): 0x4476b6, amountSharesToRedeem(uint256): 1808209610587545195088, tokenOut(address): 0xFAe103, minTokenOut(uint256): 0, burnFromInternalBalance(bool): True) -> 1808209610587545195088
+            [7][CALL] from=PendleRswETHSY, to=TransparentUpgradeableProxy, transfer(to(address): 0x4476b6, amount(uint256): 1808209610587545195088) -> True
+              [8][DELEGATECALL] from=TransparentUpgradeableProxy, to=RswETH, transfer(to(address): 0x4476b6, amount(uint256): 1808209610587545195088) -> True
+      [4][STATICCALL] from=0x4476b6, to=TransparentUpgradeableProxy, balanceOf(addr(address): 0x4476b6) -> 2754866986766776060190
+        [5][DELEGATECALL] from=TransparentUpgradeableProxy, to=LendingPool, balanceOf(addr(address): 0x4476b6) -> 2754866986766776060190
+      [4][CALL] from=0x4476b6, to=TransparentUpgradeableProxy, transfer(to(address): 0xBA1222, value(uint256): 1387144695760709012555) -> True
+        [5][DELEGATECALL] from=TransparentUpgradeableProxy, to=LendingPool, transfer(to(address): 0xBA1222, value(uint256): 1387144695760709012555) -> True
+      [4][STATICCALL] from=0x4476b6, to=TransparentUpgradeableProxy, balanceOf(account(address): 0x4476b6) -> 1808209610587545195088
+        [5][DELEGATECALL] from=TransparentUpgradeableProxy, to=RswETH, balanceOf(account(address): 0x4476b6) -> 1808209610587545195088
+      [4][CALL] from=0x4476b6, to=TransparentUpgradeableProxy, transfer(to(address): 0xBA1222, amount(uint256): 906345923203725548664) -> True
+        [5][DELEGATECALL] from=TransparentUpgradeableProxy, to=RswETH, transfer(to(address): 0xBA1222, amount(uint256): 906345923203725548664) -> True
+    [3][STATICCALL] from=Vault, to=TransparentUpgradeableProxy, balanceOf(addr(address): 0xBA1222) -> 1387144695760709012655
+      [4][DELEGATECALL] from=TransparentUpgradeableProxy, to=LendingPool, balanceOf(addr(address): 0xBA1222) -> 1387144695760709012655
+    [3][STATICCALL] from=Vault, to=TransparentUpgradeableProxy, balanceOf(account(address): 0xBA1222) -> 906345923203725548764
+      [4][DELEGATECALL] from=TransparentUpgradeableProxy, to=RswETH, balanceOf(account(address): 0xBA1222) -> 906345923203725548764
+  [2][STATICCALL] from=0x4476b6, to=TransparentUpgradeableProxy, balanceOf(addr(address): 0x4476b6) -> 1367722291006067047635
+    [3][DELEGATECALL] from=TransparentUpgradeableProxy, to=LendingPool, balanceOf(addr(address): 0x4476b6) -> 1367722291006067047635
+  [2][STATICCALL] from=0x4476b6, to=TransparentUpgradeableProxy, balanceOf(account(address): 0x4476b6) -> 901863687383819646424
+    [3][DELEGATECALL] from=TransparentUpgradeableProxy, to=RswETH, balanceOf(account(address): 0x4476b6) -> 901863687383819646424

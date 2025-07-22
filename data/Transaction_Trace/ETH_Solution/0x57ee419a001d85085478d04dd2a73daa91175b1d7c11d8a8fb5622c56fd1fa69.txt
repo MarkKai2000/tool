@@ -1,0 +1,69 @@
+[1][CREATE] from=0x48f1d0, to=0xff13d5, atInversebrahint248() -> 0x608060
+  [2][CREATE] from=0xff13d5, to=0xc3d10b, atInversebrahint248() -> 0x608060
+  [2][CALL] from=0xff13d5, to=0xc3d10b, start() -> None
+    [3][CALL] from=0xc3d10b, to=Vault, flashLoanaddress() -> None
+      [4][STATICCALL] from=Vault, to=WETH9, balanceOfaddress() -> 0x000000
+      [4][STATICCALL] from=Vault, to=ProtocolFeesCollector, getFlashLoanFeePercentage() -> 0x000000
+      [4][CALL] from=Vault, to=WETH9, transferaddress() -> 0x000000
+      [4][CALL] from=Vault, to=0xc3d10b, receiveFlashLoanaddress[]() -> None
+        [5][CALL] from=0xc3d10b, to=WETH9, withdrawuint256() -> None
+          [6][CALL][107.0] from=WETH9, to=0xc3d10b
+        [5][CALL] from=0xc3d10b, to=TransparentUpgradeableProxy, depositETHaddress() -> 0x000000
+          [6][DELEGATECALL] from=TransparentUpgradeableProxy, to=Staking, depositETHaddress() -> 0x000000
+            [7][CALL] from=TransparentUpgradeableProxy, to=TransparentUpgradeableProxy, 0xc3e8c4fa() -> 0x000000
+              [8][DELEGATECALL] from=TransparentUpgradeableProxy, to=LiquidUnstakePool, 0xc3e8c4fa() -> 0x000000
+                [9][STATICCALL] from=TransparentUpgradeableProxy, to=TransparentUpgradeableProxy, previewDeposituint256() -> 0x000000
+                  [10][DELEGATECALL] from=TransparentUpgradeableProxy, to=Staking, previewDeposituint256() -> 0x000000
+                [9][CALL] from=TransparentUpgradeableProxy, to=TransparentUpgradeableProxy, transferaddress() -> 0x000000
+                  [10][DELEGATECALL] from=TransparentUpgradeableProxy, to=Staking, transferaddress() -> 0x000000
+        [5][STATICCALL] from=0xc3d10b, to=TransparentUpgradeableProxy, balanceOfaddress() -> 0x000000
+          [6][DELEGATECALL] from=TransparentUpgradeableProxy, to=Staking, balanceOfaddress() -> 0x000000
+        [5][CALL] from=0xc3d10b, to=TransparentUpgradeableProxy, mintuint256() -> 0x000000
+          [6][DELEGATECALL] from=TransparentUpgradeableProxy, to=Staking, mintuint256() -> 0x000000
+        [5][CALL] from=0xc3d10b, to=TransparentUpgradeableProxy, approveaddress() -> 0x000000
+          [6][DELEGATECALL] from=TransparentUpgradeableProxy, to=Staking, approveaddress() -> 0x000000
+        [5][CALL] from=0xc3d10b, to=TransparentUpgradeableProxy, 0x20168730() -> 0x000000
+          [6][DELEGATECALL] from=TransparentUpgradeableProxy, to=LiquidUnstakePool, 0x20168730() -> 0x000000
+            [7][STATICCALL] from=TransparentUpgradeableProxy, to=TransparentUpgradeableProxy, convertToAssetsuint256() -> 0x000000
+              [8][DELEGATECALL] from=TransparentUpgradeableProxy, to=Staking, convertToAssetsuint256() -> 0x000000
+            [7][STATICCALL] from=TransparentUpgradeableProxy, to=TransparentUpgradeableProxy, convertToAssetsuint256() -> 0x000000
+              [8][DELEGATECALL] from=TransparentUpgradeableProxy, to=Staking, convertToAssetsuint256() -> 0x000000
+            [7][CALL] from=TransparentUpgradeableProxy, to=TransparentUpgradeableProxy, transferFromaddress() -> 0x000000
+              [8][DELEGATECALL] from=TransparentUpgradeableProxy, to=Staking, transferFromaddress() -> 0x000000
+            [7][CALL] from=TransparentUpgradeableProxy, to=TransparentUpgradeableProxy, transferaddress() -> 0x000000
+              [8][DELEGATECALL] from=TransparentUpgradeableProxy, to=Staking, transferaddress() -> 0x000000
+            [7][CALL][96.35552563736884] from=TransparentUpgradeableProxy, to=0xc3d10b
+        [5][CALL] from=0xc3d10b, to=TransparentUpgradeableProxy, 0x20168730() -> 0x000000
+          [6][DELEGATECALL] from=TransparentUpgradeableProxy, to=LiquidUnstakePool, 0x20168730() -> 0x000000
+            [7][STATICCALL] from=TransparentUpgradeableProxy, to=TransparentUpgradeableProxy, convertToAssetsuint256() -> 0x000000
+              [8][DELEGATECALL] from=TransparentUpgradeableProxy, to=Staking, convertToAssetsuint256() -> 0x000000
+            [7][STATICCALL] from=TransparentUpgradeableProxy, to=TransparentUpgradeableProxy, convertToAssetsuint256() -> 0x000000
+              [8][DELEGATECALL] from=TransparentUpgradeableProxy, to=Staking, convertToAssetsuint256() -> 0x000000
+            [7][CALL] from=TransparentUpgradeableProxy, to=TransparentUpgradeableProxy, transferFromaddress() -> 0x000000
+              [8][DELEGATECALL] from=TransparentUpgradeableProxy, to=Staking, transferFromaddress() -> 0x000000
+            [7][CALL] from=TransparentUpgradeableProxy, to=TransparentUpgradeableProxy, transferaddress() -> 0x000000
+              [8][DELEGATECALL] from=TransparentUpgradeableProxy, to=Staking, transferaddress() -> 0x000000
+            [7][CALL][9.537275726482632] from=TransparentUpgradeableProxy, to=0xc3d10b
+        [5][CALL] from=0xc3d10b, to=TransparentUpgradeableProxy, approveaddress() -> 0x000000
+          [6][DELEGATECALL] from=TransparentUpgradeableProxy, to=Staking, approveaddress() -> 0x000000
+        [5][CALL] from=0xc3d10b, to=SwapRouter02, 0x04e45aaf() -> 0x000000
+          [6][CALL] from=SwapRouter02, to=UniswapV3Pool, swapaddress() -> 0x000000
+            [7][CALL] from=UniswapV3Pool, to=WETH9, transferaddress() -> 0x000000
+            [7][STATICCALL] from=UniswapV3Pool, to=TransparentUpgradeableProxy, balanceOfaddress() -> 0x000000
+              [8][DELEGATECALL] from=TransparentUpgradeableProxy, to=Staking, balanceOfaddress() -> 0x000000
+            [7][CALL] from=UniswapV3Pool, to=SwapRouter02, uniswapV3SwapCallbackint256() -> None
+              [8][CALL] from=SwapRouter02, to=TransparentUpgradeableProxy, transferFromaddress() -> 0x000000
+                [9][DELEGATECALL] from=TransparentUpgradeableProxy, to=Staking, transferFromaddress() -> 0x000000
+            [7][STATICCALL] from=UniswapV3Pool, to=TransparentUpgradeableProxy, balanceOfaddress() -> 0x000000
+              [8][DELEGATECALL] from=TransparentUpgradeableProxy, to=Staking, balanceOfaddress() -> 0x000000
+        [5][CALL] from=0xc3d10b, to=WETH9, deposit() -> None
+        [5][CALL] from=0xc3d10b, to=WETH9, transferaddress() -> 0x000000
+        [5][STATICCALL] from=0xc3d10b, to=WETH9, balanceOfaddress() -> 0x000000
+        [5][CALL] from=0xc3d10b, to=WETH9, withdrawuint256() -> None
+          [6][CALL][8.891824723356455] from=WETH9, to=0xc3d10b
+        [5][CALL][8.891824723356455] from=0xc3d10b, to=0x48f1d0
+        [5][STATICCALL] from=0xc3d10b, to=TransparentUpgradeableProxy, balanceOfaddress() -> 0x000000
+          [6][DELEGATECALL] from=TransparentUpgradeableProxy, to=Staking, balanceOfaddress() -> 0x000000
+        [5][CALL] from=0xc3d10b, to=TransparentUpgradeableProxy, transferaddress() -> 0x000000
+          [6][DELEGATECALL] from=TransparentUpgradeableProxy, to=Staking, transferaddress() -> 0x000000
+      [4][STATICCALL] from=Vault, to=WETH9, balanceOfaddress() -> 0x000000

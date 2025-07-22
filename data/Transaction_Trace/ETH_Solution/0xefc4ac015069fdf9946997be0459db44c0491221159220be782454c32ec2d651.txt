@@ -1,0 +1,199 @@
+[1][CALL] from=0x5c75e9, to=0x56a35f, 0x278ee0c5() -> None
+  [2][STATICCALL] from=0x56a35f, to=WETH9, balanceOf((address): 0xD417c2) -> 12048400837639563498
+  [2][STATICCALL] from=0x56a35f, to=FiatTokenProxy, balanceOf(account(address): 0x9aa024) -> 103360989567
+    [3][DELEGATECALL] from=FiatTokenProxy, to=FiatTokenV2_1, balanceOf(account(address): 0x9aa024) -> 103360989567
+  [2][CALL] from=0x56a35f, to=InitializableImmutableAdminUpgradeabilityProxy, flashLoan(receiverAddress(address): 0x56A35F, assets(address[]): ['0xC02aaA39b223FE8D0A0e5C4F27eAD9083C756C..., amounts(uint256[]): [2409680167527912699, 20672197913], interestRateModes(uint256[]): [0, 0], onBehalfOf(address): 0x56A35F, params(bytes): b'aave', referralCode(uint16): 0) -> None
+    [3][DELEGATECALL] from=InitializableImmutableAdminUpgradeabilityProxy, to=Pool, flashLoan(receiverAddress(address): 0x56A35F, assets(address[]): ['0xC02aaA39b223FE8D0A0e5C4F27eAD9083C756C..., amounts(uint256[]): [2409680167527912699, 20672197913], interestRateModes(uint256[]): [0, 0], onBehalfOf(address): 0x56A35F, params(bytes): b'aave', referralCode(uint16): 0) -> None
+      [4][STATICCALL] from=InitializableImmutableAdminUpgradeabilityProxy, to=PoolAddressesProvider, getACLManager() -> 0xc2aacf
+      [4][STATICCALL] from=InitializableImmutableAdminUpgradeabilityProxy, to=ACLManager, isFlashBorrower(borrower(address): 0x56A35F) -> False
+      [4][DELEGATECALL] from=InitializableImmutableAdminUpgradeabilityProxy, to=FlashLoanLogic, 0x2e7263ea() -> None
+        [5][CALL] from=InitializableImmutableAdminUpgradeabilityProxy, to=InitializableImmutableAdminUpgradeabilityProxy, transferUnderlyingTo(target(address): 0x56A35F, amount(uint256): 2409680167527912699) -> None
+          [6][DELEGATECALL] from=InitializableImmutableAdminUpgradeabilityProxy, to=AToken, transferUnderlyingTo(target(address): 0x56A35F, amount(uint256): 2409680167527912699) -> None
+            [7][CALL] from=InitializableImmutableAdminUpgradeabilityProxy, to=WETH9, transfer(dst(address): 0x56A35F, wad(uint256): 2409680167527912699) -> True
+        [5][CALL] from=InitializableImmutableAdminUpgradeabilityProxy, to=InitializableImmutableAdminUpgradeabilityProxy, transferUnderlyingTo(target(address): 0x56A35F, amount(uint256): 20672197913) -> None
+          [6][DELEGATECALL] from=InitializableImmutableAdminUpgradeabilityProxy, to=AToken, transferUnderlyingTo(target(address): 0x56A35F, amount(uint256): 20672197913) -> None
+            [7][CALL] from=InitializableImmutableAdminUpgradeabilityProxy, to=FiatTokenProxy, transfer(to(address): 0x56A35F, value(uint256): 20672197913) -> True
+              [8][DELEGATECALL] from=FiatTokenProxy, to=FiatTokenV2_1, transfer(to(address): 0x56A35F, value(uint256): 20672197913) -> True
+        [5][CALL] from=InitializableImmutableAdminUpgradeabilityProxy, to=0x56a35f, executeOperationaddress[]() -> 0x000000
+          [6][CALL] from=0x56a35f, to=Factory, createVault(salt(uint256): 15113, vaultVersion(uint16): 1, baseCurrency(address): 0xC02aaA) -> 0x25f1d5
+            [7][CREATE2] from=Factory, to=Proxy, atInversebrahint248() -> 0x608060
+            [7][CALL] from=Factory, to=Proxy, initialize(owner_(address): 0x56A35F, registry_(address): 0x046fc9, vaultVersion_(uint16): 1, baseCurrency_(address): 0xC02aaA) -> None
+              [8][DELEGATECALL] from=Proxy, to=Vault, initialize(owner_(address): 0x56A35F, registry_(address): 0x046fc9, vaultVersion_(uint16): 1, baseCurrency_(address): 0xC02aaA) -> None
+          [6][CALL] from=0x56a35f, to=Proxy, openTrustedMarginAccount(creditor(address): 0xD417c2) -> None
+            [7][DELEGATECALL] from=Proxy, to=Vault, openTrustedMarginAccount(creditor(address): 0xD417c2) -> None
+              [8][STATICCALL] from=Proxy, to=LendingPool, openMarginAccount(vaultVersion(uint256): 1) -> ['True', '0xc02aaa', '0xd2a347', '75000000000000000']
+          [6][CALL] from=0x56a35f, to=WETH9, approve(guy(address): 0x25F1D5, wad(uint256): 115792089237316195423570985008687907853269...) -> True
+          [6][CALL] from=0x56a35f, to=Proxy, deposit(assetAddresses(address[]): ['0xC02aaA39b223FE8D0A0e5C4F27eAD9083C756C..., assetIds(uint256[]): [0], assetAmounts(uint256[]): [2409680167527912699]) -> None
+            [7][DELEGATECALL] from=Proxy, to=Vault, deposit(assetAddresses(address[]): ['0xC02aaA39b223FE8D0A0e5C4F27eAD9083C756C..., assetIds(uint256[]): [0], assetAmounts(uint256[]): [2409680167527912699]) -> None
+              [8][CALL] from=Proxy, to=MainRegistry, batchProcessDeposit(assetAddresses(address[]): ['0xC02aaA39b223FE8D0A0e5C4F27eAD9083C756C..., assetIds(uint256[]): [0], amounts(uint256[]): [2409680167527912699]) -> [0]
+                [9][STATICCALL] from=MainRegistry, to=Factory, isVault(vault(address): 0x25F1D5) -> True
+                [9][CALL] from=MainRegistry, to=StandardERC20PricingModule, processDeposit((address): 0, asset(address): 0xC02aaA, amount(uint256): 2409680167527912699) -> None
+              [8][CALL] from=Proxy, to=WETH9, transferFrom(src(address): 0x56A35F, dst(address): 0x25F1D5, wad(uint256): 2409680167527912699) -> True
+          [6][STATICCALL] from=0x56a35f, to=WETH9, balanceOf((address): 0xD417c2) -> 12048400837639563498
+          [6][CALL] from=0x56a35f, to=LendingPool, doActionWithLeverage(amountBorrowed(uint256): 11048400837639563498, vault(address): 0x25F1D5, actionHandler(address): 0x2dE7Bb, actionData(bytes): b"\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00..., referrer(bytes3): b'\x00\x00\x00') -> None
+            [7][STATICCALL] from=LendingPool, to=Factory, ownerOfVault(vault(address): 0x25F1D5) -> 0x56a35f
+            [7][CALL] from=LendingPool, to=WETH9, transfer(dst(address): 0x2dE7Bb, wad(uint256): 11048400837639563498) -> True
+            [7][CALL] from=LendingPool, to=Proxy, vaultManagementAction(actionHandler(address): 0x2dE7Bb, actionData(bytes): b"\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00...) -> ['0xd417c2', '1']
+              [8][DELEGATECALL] from=Proxy, to=Vault, vaultManagementAction(actionHandler(address): 0x2dE7Bb, actionData(bytes): b"\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00...) -> ['0xd417c2', '1']
+                [9][STATICCALL] from=Proxy, to=MainRegistry, isActionAllowed((address): 0x2dE7Bb) -> True
+                [9][CALL] from=Proxy, to=MainRegistry, batchProcessWithdrawal(assetAddresses(address[]): [], assetIds(uint256[]): [], amounts(uint256[]): []) -> []
+                  [10][STATICCALL] from=MainRegistry, to=Factory, isVault(vault(address): 0x25F1D5) -> True
+                [9][CALL] from=Proxy, to=ActionMultiCall, executeAction(actionData(bytes): b"\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00...) -> None
+                  [10][CALL] from=ActionMultiCall, to=WETH9, approve(guy(address): 0x25F1D5, wad(uint256): 115792089237316195423570985008687907853269...) -> True
+                  [10][STATICCALL] from=ActionMultiCall, to=WETH9, balanceOf((address): 0x2dE7Bb) -> 11048400837639563498
+                [9][CALL] from=Proxy, to=MainRegistry, batchProcessDeposit(assetAddresses(address[]): ['0xC02aaA39b223FE8D0A0e5C4F27eAD9083C756C..., assetIds(uint256[]): [0], amounts(uint256[]): [11048400837639563498]) -> [0]
+                  [10][STATICCALL] from=MainRegistry, to=Factory, isVault(vault(address): 0x25F1D5) -> True
+                  [10][CALL] from=MainRegistry, to=StandardERC20PricingModule, processDeposit((address): 0, asset(address): 0xC02aaA, amount(uint256): 11048400837639563498) -> None
+                [9][CALL] from=Proxy, to=WETH9, transferFrom(src(address): 0x2dE7Bb, dst(address): 0x25F1D5, wad(uint256): 11048400837639563498) -> True
+                [9][STATICCALL] from=Proxy, to=LendingPool, getOpenPosition(vault(address): 0x25F1D5) -> 11059449238477203062
+                [9][STATICCALL] from=Proxy, to=MainRegistry, 0x2a4e08f2() -> 0x000000
+                  [10][STATICCALL] from=MainRegistry, to=EACAggregatorProxy, latestRoundData() -> ['110680464442257313078', '185610790000', '1688950535', '1688950535', '110680464442257313078']
+                    [11][STATICCALL] from=EACAggregatorProxy, to=AccessControlledOffchainAggregator, latestRoundData() -> ['3382', '185610790000', '1688950535', '1688950535', '3382']
+                  [10][STATICCALL] from=MainRegistry, to=StandardERC20PricingModule, getRiskVariables(asset(address): 0xC02aaA, baseCurrency(uint256): 1) -> ['94', '96']
+                  [10][DELEGATECALL] from=MainRegistry, to=RiskModule, 0x38cc741a() -> 0x000000
+          [6][CREATE] from=0x56a35f, to=0x95D559, atInversebrahint248() -> 0x608060
+          [6][STATICCALL] from=0x56a35f, to=WETH9, balanceOf((address): 0x25F1D5) -> 13458081005167476197
+          [6][CALL] from=0x56a35f, to=Proxy, vaultManagementAction(actionHandler(address): 0x2dE7Bb, actionData(bytes): b"\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00...) -> ['0x000000', '1']
+            [7][DELEGATECALL] from=Proxy, to=Vault, vaultManagementAction(actionHandler(address): 0x2dE7Bb, actionData(bytes): b"\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00...) -> ['0x000000', '1']
+              [8][STATICCALL] from=Proxy, to=MainRegistry, isActionAllowed((address): 0x2dE7Bb) -> True
+              [8][CALL] from=Proxy, to=MainRegistry, batchProcessWithdrawal(assetAddresses(address[]): ['0xC02aaA39b223FE8D0A0e5C4F27eAD9083C756C..., assetIds(uint256[]): [0], amounts(uint256[]): [13458081005167476197]) -> [0]
+                [9][STATICCALL] from=MainRegistry, to=Factory, isVault(vault(address): 0x25F1D5) -> True
+                [9][CALL] from=MainRegistry, to=StandardERC20PricingModule, processWithdrawal((address): 0, asset(address): 0xC02aaA, amount(uint256): 13458081005167476197) -> None
+              [8][CALL] from=Proxy, to=WETH9, transfer(dst(address): 0x2dE7Bb, wad(uint256): 13458081005167476197) -> True
+              [8][CALL] from=Proxy, to=ActionMultiCall, executeAction(actionData(bytes): b"\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00...) -> None
+                [9][CALL] from=ActionMultiCall, to=WETH9, approve(guy(address): 0x95D559, wad(uint256): 115792089237316195423570985008687907853269...) -> True
+                [9][CALL] from=ActionMultiCall, to=0x95D559, 0xb5d456a7() -> None
+                  [10][STATICCALL] from=0x95D559, to=WETH9, balanceOf((address): 0x2dE7Bb) -> 13458081005167476197
+                  [10][CALL] from=0x95D559, to=WETH9, transferFrom(src(address): 0x2dE7Bb, dst(address): 0x56A35F, wad(uint256): 13458081005167476197) -> True
+                  [10][STATICCALL] from=0x95D559, to=WETH9, balanceOf((address): 0x56A35F) -> 13458081005167476197
+                  [10][CALL] from=0x95D559, to=LendingPool, liquidateVault(vault(address): 0x25F1D5) -> None
+                    [11][CALL] from=LendingPool, to=Liquidator, startAuction(vault(address): 0x25F1D5, openDebt(uint256): 11059449238477203062, maxInitiatorFee(uint80): 33000000000000000000) -> None
+                      [12][CALL] from=Liquidator, to=Proxy, liquidateVault(openDebt(uint256): 11059449238477203062) -> ['0x56a35f', '0xc02aaa', '0xd417c2']
+                        [13][DELEGATECALL] from=Proxy, to=Vault, liquidateVault(openDebt(uint256): 11059449238477203062) -> ['0x56a35f', '0xc02aaa', '0xd417c2']
+                          [14][STATICCALL] from=Proxy, to=MainRegistry, 0x540629df() -> 0x000000
+                            [15][STATICCALL] from=MainRegistry, to=EACAggregatorProxy, latestRoundData() -> ['110680464442257313078', '185610790000', '1688950535', '1688950535', '110680464442257313078']
+                              [16][STATICCALL] from=EACAggregatorProxy, to=AccessControlledOffchainAggregator, latestRoundData() -> ['3382', '185610790000', '1688950535', '1688950535', '3382']
+                            [15][DELEGATECALL] from=MainRegistry, to=RiskModule, 0x16a2ff5a() -> 0x000000
+                          [14][STATICCALL] from=Proxy, to=MainRegistry, factory() -> 0x00cb53
+                          [14][CALL] from=Proxy, to=Factory, liquidate(liquidator(address): 0xD2A347) -> None
+                    [11][CALL] from=LendingPool, to=Tranche, setAuctionInProgress(auctionInProgress_(bool): True) -> None
+              [8][CALL] from=Proxy, to=MainRegistry, batchProcessDeposit(assetAddresses(address[]): [], assetIds(uint256[]): [], amounts(uint256[]): []) -> []
+                [9][STATICCALL] from=MainRegistry, to=Factory, isVault(vault(address): 0x25F1D5) -> True
+          [6][CALL] from=0x56a35f, to=Factory, createVault(salt(uint256): 15114, vaultVersion(uint16): 1, baseCurrency(address): 0xA0b869) -> 0xa0300a
+            [7][CREATE2] from=Factory, to=Proxy, atInversebrahint248() -> 0x608060
+            [7][CALL] from=Factory, to=Proxy, initialize(owner_(address): 0x56A35F, registry_(address): 0x046fc9, vaultVersion_(uint16): 1, baseCurrency_(address): 0xA0b869) -> None
+              [8][DELEGATECALL] from=Proxy, to=Vault, initialize(owner_(address): 0x56A35F, registry_(address): 0x046fc9, vaultVersion_(uint16): 1, baseCurrency_(address): 0xA0b869) -> None
+          [6][CALL] from=0x56a35f, to=Proxy, openTrustedMarginAccount(creditor(address): 0x9aa024) -> None
+            [7][DELEGATECALL] from=Proxy, to=Vault, openTrustedMarginAccount(creditor(address): 0x9aa024) -> None
+              [8][STATICCALL] from=Proxy, to=LendingPool, openMarginAccount(vaultVersion(uint256): 1) -> ['True', '0xa0b869', '0xd2a347', '100000000']
+          [6][CALL] from=0x56a35f, to=FiatTokenProxy, approve(spender(address): 0xA0300a, value(uint256): 115792089237316195423570985008687907853269...) -> True
+            [7][DELEGATECALL] from=FiatTokenProxy, to=FiatTokenV2_1, approve(spender(address): 0xA0300a, value(uint256): 115792089237316195423570985008687907853269...) -> True
+          [6][CALL] from=0x56a35f, to=Proxy, deposit(assetAddresses(address[]): ['0xA0b86991c6218b36c1d19D4a2e9Eb0cE3606eB..., assetIds(uint256[]): [0], assetAmounts(uint256[]): [20672197913]) -> None
+            [7][DELEGATECALL] from=Proxy, to=Vault, deposit(assetAddresses(address[]): ['0xA0b86991c6218b36c1d19D4a2e9Eb0cE3606eB..., assetIds(uint256[]): [0], assetAmounts(uint256[]): [20672197913]) -> None
+              [8][CALL] from=Proxy, to=MainRegistry, batchProcessDeposit(assetAddresses(address[]): ['0xA0b86991c6218b36c1d19D4a2e9Eb0cE3606eB..., assetIds(uint256[]): [0], amounts(uint256[]): [20672197913]) -> [0]
+                [9][STATICCALL] from=MainRegistry, to=Factory, isVault(vault(address): 0xA0300a) -> True
+                [9][CALL] from=MainRegistry, to=StandardERC20PricingModule, processDeposit((address): 0, asset(address): 0xA0b869, amount(uint256): 20672197913) -> None
+              [8][CALL] from=Proxy, to=FiatTokenProxy, transferFrom(from(address): 0x56A35F, to(address): 0xA0300a, value(uint256): 20672197913) -> True
+                [9][DELEGATECALL] from=FiatTokenProxy, to=FiatTokenV2_1, transferFrom(from(address): 0x56A35F, to(address): 0xA0300a, value(uint256): 20672197913) -> True
+          [6][STATICCALL] from=0x56a35f, to=FiatTokenProxy, balanceOf(account(address): 0x9aa024) -> 103360989567
+            [7][DELEGATECALL] from=FiatTokenProxy, to=FiatTokenV2_1, balanceOf(account(address): 0x9aa024) -> 103360989567
+          [6][CALL] from=0x56a35f, to=LendingPool, doActionWithLeverage(amountBorrowed(uint256): 103210989567, vault(address): 0xA0300a, actionHandler(address): 0x2dE7Bb, actionData(bytes): b"\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00..., referrer(bytes3): b'\x00\x00\x00') -> None
+            [7][STATICCALL] from=LendingPool, to=Factory, ownerOfVault(vault(address): 0xA0300a) -> 0x56a35f
+            [7][CALL] from=LendingPool, to=FiatTokenProxy, transfer(to(address): 0x2dE7Bb, value(uint256): 103210989567) -> True
+              [8][DELEGATECALL] from=FiatTokenProxy, to=FiatTokenV2_1, transfer(to(address): 0x2dE7Bb, value(uint256): 103210989567) -> True
+            [7][CALL] from=LendingPool, to=Proxy, vaultManagementAction(actionHandler(address): 0x2dE7Bb, actionData(bytes): b"\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00...) -> ['0x9aa024', '1']
+              [8][DELEGATECALL] from=Proxy, to=Vault, vaultManagementAction(actionHandler(address): 0x2dE7Bb, actionData(bytes): b"\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00...) -> ['0x9aa024', '1']
+                [9][STATICCALL] from=Proxy, to=MainRegistry, isActionAllowed((address): 0x2dE7Bb) -> True
+                [9][CALL] from=Proxy, to=MainRegistry, batchProcessWithdrawal(assetAddresses(address[]): [], assetIds(uint256[]): [], amounts(uint256[]): []) -> []
+                  [10][STATICCALL] from=MainRegistry, to=Factory, isVault(vault(address): 0xA0300a) -> True
+                [9][CALL] from=Proxy, to=ActionMultiCall, executeAction(actionData(bytes): b"\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00...) -> None
+                  [10][CALL] from=ActionMultiCall, to=FiatTokenProxy, approve(spender(address): 0xA0300a, value(uint256): 115792089237316195423570985008687907853269...) -> True
+                    [11][DELEGATECALL] from=FiatTokenProxy, to=FiatTokenV2_1, approve(spender(address): 0xA0300a, value(uint256): 115792089237316195423570985008687907853269...) -> True
+                  [10][STATICCALL] from=ActionMultiCall, to=FiatTokenProxy, balanceOf(account(address): 0x2dE7Bb) -> 103210989567
+                    [11][DELEGATECALL] from=FiatTokenProxy, to=FiatTokenV2_1, balanceOf(account(address): 0x2dE7Bb) -> 103210989567
+                [9][CALL] from=Proxy, to=MainRegistry, batchProcessDeposit(assetAddresses(address[]): ['0xA0b86991c6218b36c1d19D4a2e9Eb0cE3606eB..., assetIds(uint256[]): [0], amounts(uint256[]): [103210989567]) -> [0]
+                  [10][STATICCALL] from=MainRegistry, to=Factory, isVault(vault(address): 0xA0300a) -> True
+                  [10][CALL] from=MainRegistry, to=StandardERC20PricingModule, processDeposit((address): 0, asset(address): 0xA0b869, amount(uint256): 103210989567) -> None
+                [9][CALL] from=Proxy, to=FiatTokenProxy, transferFrom(from(address): 0x2dE7Bb, to(address): 0xA0300a, value(uint256): 103210989567) -> True
+                  [10][DELEGATECALL] from=FiatTokenProxy, to=FiatTokenV2_1, transferFrom(from(address): 0x2dE7Bb, to(address): 0xA0300a, value(uint256): 103210989567) -> True
+                [9][STATICCALL] from=Proxy, to=LendingPool, getOpenPosition(vault(address): 0xA0300a) -> 103314200557
+                [9][STATICCALL] from=Proxy, to=MainRegistry, 0x2a4e08f2() -> 0x000000
+                  [10][STATICCALL] from=MainRegistry, to=EACAggregatorProxy, latestRoundData() -> ['36893488147419104559', '100003476', '1688889635', '1688889635', '36893488147419104559']
+                    [11][STATICCALL] from=EACAggregatorProxy, to=AccessControlledOffchainAggregator, latestRoundData() -> ['1327', '100003476', '1688889635', '1688889635', '1327']
+                  [10][STATICCALL] from=MainRegistry, to=StandardERC20PricingModule, getRiskVariables(asset(address): 0xA0b869, baseCurrency(uint256): 2) -> ['93', '98']
+                  [10][DELEGATECALL] from=MainRegistry, to=RiskModule, 0x38cc741a() -> 0x000000
+          [6][CREATE] from=0x56a35f, to=0xe9d3d6, atInversebrahint248() -> 0x608060
+          [6][STATICCALL] from=0x56a35f, to=FiatTokenProxy, balanceOf(account(address): 0xA0300a) -> 123883187480
+            [7][DELEGATECALL] from=FiatTokenProxy, to=FiatTokenV2_1, balanceOf(account(address): 0xA0300a) -> 123883187480
+          [6][CALL] from=0x56a35f, to=Proxy, vaultManagementAction(actionHandler(address): 0x2dE7Bb, actionData(bytes): b'\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00...) -> ['0x000000', '1']
+            [7][DELEGATECALL] from=Proxy, to=Vault, vaultManagementAction(actionHandler(address): 0x2dE7Bb, actionData(bytes): b'\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00...) -> ['0x000000', '1']
+              [8][STATICCALL] from=Proxy, to=MainRegistry, isActionAllowed((address): 0x2dE7Bb) -> True
+              [8][CALL] from=Proxy, to=MainRegistry, batchProcessWithdrawal(assetAddresses(address[]): ['0xA0b86991c6218b36c1d19D4a2e9Eb0cE3606eB..., assetIds(uint256[]): [0], amounts(uint256[]): [123883187480]) -> [0]
+                [9][STATICCALL] from=MainRegistry, to=Factory, isVault(vault(address): 0xA0300a) -> True
+                [9][CALL] from=MainRegistry, to=StandardERC20PricingModule, processWithdrawal((address): 0, asset(address): 0xA0b869, amount(uint256): 123883187480) -> None
+              [8][CALL] from=Proxy, to=FiatTokenProxy, transfer(to(address): 0x2dE7Bb, value(uint256): 123883187480) -> True
+                [9][DELEGATECALL] from=FiatTokenProxy, to=FiatTokenV2_1, transfer(to(address): 0x2dE7Bb, value(uint256): 123883187480) -> True
+              [8][CALL] from=Proxy, to=ActionMultiCall, executeAction(actionData(bytes): b'\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00...) -> None
+                [9][CALL] from=ActionMultiCall, to=FiatTokenProxy, approve(spender(address): 0xE9d3d6, value(uint256): 115792089237316195423570985008687907853269...) -> True
+                  [10][DELEGATECALL] from=FiatTokenProxy, to=FiatTokenV2_1, approve(spender(address): 0xE9d3d6, value(uint256): 115792089237316195423570985008687907853269...) -> True
+                [9][CALL] from=ActionMultiCall, to=0xe9d3d6, 0x87fe9a93() -> None
+                  [10][STATICCALL] from=0xe9d3d6, to=FiatTokenProxy, balanceOf(account(address): 0x2dE7Bb) -> 123883187480
+                    [11][DELEGATECALL] from=FiatTokenProxy, to=FiatTokenV2_1, balanceOf(account(address): 0x2dE7Bb) -> 123883187480
+                  [10][CALL] from=0xe9d3d6, to=FiatTokenProxy, transferFrom(from(address): 0x2dE7Bb, to(address): 0x56A35F, value(uint256): 123883187480) -> True
+                    [11][DELEGATECALL] from=FiatTokenProxy, to=FiatTokenV2_1, transferFrom(from(address): 0x2dE7Bb, to(address): 0x56A35F, value(uint256): 123883187480) -> True
+                  [10][STATICCALL] from=0xe9d3d6, to=FiatTokenProxy, balanceOf(account(address): 0x56A35F) -> 123883187480
+                    [11][DELEGATECALL] from=FiatTokenProxy, to=FiatTokenV2_1, balanceOf(account(address): 0x56A35F) -> 123883187480
+                  [10][CALL] from=0xe9d3d6, to=LendingPool, liquidateVault(vault(address): 0xA0300a) -> None
+                    [11][CALL] from=LendingPool, to=Liquidator, startAuction(vault(address): 0xA0300a, openDebt(uint256): 103314200557, maxInitiatorFee(uint80): 50000000000) -> None
+                      [12][CALL] from=Liquidator, to=Proxy, liquidateVault(openDebt(uint256): 103314200557) -> ['0x56a35f', '0xa0b869', '0x9aa024']
+                        [13][DELEGATECALL] from=Proxy, to=Vault, liquidateVault(openDebt(uint256): 103314200557) -> ['0x56a35f', '0xa0b869', '0x9aa024']
+                          [14][STATICCALL] from=Proxy, to=MainRegistry, 0x540629df() -> 0x000000
+                            [15][STATICCALL] from=MainRegistry, to=EACAggregatorProxy, latestRoundData() -> ['36893488147419104559', '100003476', '1688889635', '1688889635', '36893488147419104559']
+                              [16][STATICCALL] from=EACAggregatorProxy, to=AccessControlledOffchainAggregator, latestRoundData() -> ['1327', '100003476', '1688889635', '1688889635', '1327']
+                            [15][DELEGATECALL] from=MainRegistry, to=RiskModule, 0x16a2ff5a() -> 0x000000
+                          [14][STATICCALL] from=Proxy, to=MainRegistry, factory() -> 0x00cb53
+                          [14][CALL] from=Proxy, to=Factory, liquidate(liquidator(address): 0xD2A347) -> None
+                    [11][CALL] from=LendingPool, to=Tranche, setAuctionInProgress(auctionInProgress_(bool): True) -> None
+              [8][CALL] from=Proxy, to=MainRegistry, batchProcessDeposit(assetAddresses(address[]): [], assetIds(uint256[]): [], amounts(uint256[]): []) -> []
+                [9][STATICCALL] from=MainRegistry, to=Factory, isVault(vault(address): 0xA0300a) -> True
+          [6][CALL] from=0x56a35f, to=WETH9, approve(guy(address): 0x87870B, wad(uint256): 115792089237316195423570985008687907853269...) -> True
+          [6][CALL] from=0x56a35f, to=FiatTokenProxy, approve(spender(address): 0x87870B, value(uint256): 115792089237316195423570985008687907853269...) -> True
+            [7][DELEGATECALL] from=FiatTokenProxy, to=FiatTokenV2_1, approve(spender(address): 0x87870B, value(uint256): 115792089237316195423570985008687907853269...) -> True
+        [5][STATICCALL] from=InitializableImmutableAdminUpgradeabilityProxy, to=InitializableImmutableAdminUpgradeabilityProxy, scaledTotalSupply() -> 167966026690871867019129
+          [6][DELEGATECALL] from=InitializableImmutableAdminUpgradeabilityProxy, to=VariableDebtToken, scaledTotalSupply() -> 167966026690871867019129
+        [5][STATICCALL] from=InitializableImmutableAdminUpgradeabilityProxy, to=InitializableImmutableAdminUpgradeabilityProxy, getSupplyData() -> ['0', '0', '0', '0']
+          [6][DELEGATECALL] from=InitializableImmutableAdminUpgradeabilityProxy, to=StableDebtToken, getSupplyData() -> ['0', '0', '0', '0']
+        [5][STATICCALL] from=InitializableImmutableAdminUpgradeabilityProxy, to=InitializableImmutableAdminUpgradeabilityProxy, totalSupply() -> 306112569904465209812673
+          [6][DELEGATECALL] from=InitializableImmutableAdminUpgradeabilityProxy, to=AToken, totalSupply() -> 306112569904465209812673
+            [7][STATICCALL] from=InitializableImmutableAdminUpgradeabilityProxy, to=InitializableImmutableAdminUpgradeabilityProxy, getReserveNormalizedIncome(asset(address): 0xC02aaA) -> 1008839380866044419073986772
+              [8][DELEGATECALL] from=InitializableImmutableAdminUpgradeabilityProxy, to=Pool, getReserveNormalizedIncome(asset(address): 0xC02aaA) -> 1008839380866044419073986772
+        [5][STATICCALL] from=InitializableImmutableAdminUpgradeabilityProxy, to=DefaultReserveInterestRateStrategy, calculateInterestRates(params(tuple): {'unbacked': 0, 'liquidityAdded': 24108850...) -> ['17321919699082922998417478', '95907092605894704108885790', '36511737975599968903441500']
+          [6][STATICCALL] from=DefaultReserveInterestRateStrategy, to=WETH9, balanceOf((address): 0x4d5F47) -> 135262360374607066266972
+        [5][CALL] from=InitializableImmutableAdminUpgradeabilityProxy, to=WETH9, transferFrom(src(address): 0x56A35F, dst(address): 0x4d5F47, wad(uint256): 2410885007611676655) -> True
+        [5][CALL] from=InitializableImmutableAdminUpgradeabilityProxy, to=InitializableImmutableAdminUpgradeabilityProxy, handleRepayment(user(address): 0x56A35F, onBehalfOf(address): 0x56A35F, amount(uint256): 2410885007611676655) -> None
+          [6][DELEGATECALL] from=InitializableImmutableAdminUpgradeabilityProxy, to=AToken, handleRepayment(user(address): 0x56A35F, onBehalfOf(address): 0x56A35F, amount(uint256): 2410885007611676655) -> None
+        [5][STATICCALL] from=InitializableImmutableAdminUpgradeabilityProxy, to=InitializableImmutableAdminUpgradeabilityProxy, scaledTotalSupply() -> 206143668450179
+          [6][DELEGATECALL] from=InitializableImmutableAdminUpgradeabilityProxy, to=VariableDebtToken, scaledTotalSupply() -> 206143668450179
+        [5][STATICCALL] from=InitializableImmutableAdminUpgradeabilityProxy, to=InitializableImmutableAdminUpgradeabilityProxy, getSupplyData() -> ['0', '0', '0', '0']
+          [6][DELEGATECALL] from=InitializableImmutableAdminUpgradeabilityProxy, to=StableDebtToken, getSupplyData() -> ['0', '0', '0', '0']
+        [5][STATICCALL] from=InitializableImmutableAdminUpgradeabilityProxy, to=InitializableImmutableAdminUpgradeabilityProxy, totalSupply() -> 248251718753391
+          [6][DELEGATECALL] from=InitializableImmutableAdminUpgradeabilityProxy, to=AToken, totalSupply() -> 248251718753391
+            [7][STATICCALL] from=InitializableImmutableAdminUpgradeabilityProxy, to=InitializableImmutableAdminUpgradeabilityProxy, getReserveNormalizedIncome(asset(address): 0xA0b869) -> 1009545591444173497911538638
+              [8][DELEGATECALL] from=InitializableImmutableAdminUpgradeabilityProxy, to=Pool, getReserveNormalizedIncome(asset(address): 0xA0b869) -> 1009545591444173497911538638
+        [5][STATICCALL] from=InitializableImmutableAdminUpgradeabilityProxy, to=DefaultReserveInterestRateStrategy, calculateInterestRates(params(tuple): {'unbacked': 0, 'liquidityAdded': 20682534...) -> ['24819358750015251526153644', '49678307358893975760261210', '32748151512257830321828470']
+          [6][STATICCALL] from=DefaultReserveInterestRateStrategy, to=FiatTokenProxy, balanceOf(account(address): 0x98C23E) -> 39181199910013
+            [7][DELEGATECALL] from=FiatTokenProxy, to=FiatTokenV2_1, balanceOf(account(address): 0x98C23E) -> 39181199910013
+        [5][CALL] from=InitializableImmutableAdminUpgradeabilityProxy, to=FiatTokenProxy, transferFrom(from(address): 0x56A35F, to(address): 0x98C23E, value(uint256): 20682534012) -> True
+          [6][DELEGATECALL] from=FiatTokenProxy, to=FiatTokenV2_1, transferFrom(from(address): 0x56A35F, to(address): 0x98C23E, value(uint256): 20682534012) -> True
+        [5][CALL] from=InitializableImmutableAdminUpgradeabilityProxy, to=InitializableImmutableAdminUpgradeabilityProxy, handleRepayment(user(address): 0x56A35F, onBehalfOf(address): 0x56A35F, amount(uint256): 20682534012) -> None
+          [6][DELEGATECALL] from=InitializableImmutableAdminUpgradeabilityProxy, to=AToken, handleRepayment(user(address): 0x56A35F, onBehalfOf(address): 0x56A35F, amount(uint256): 20682534012) -> None
+  [2][STATICCALL] from=0x56a35f, to=FiatTokenProxy, balanceOf(account(address): 0x56A35F) -> 103200653468
+    [3][DELEGATECALL] from=FiatTokenProxy, to=FiatTokenV2_1, balanceOf(account(address): 0x56A35F) -> 103200653468
+  [2][CALL] from=0x56a35f, to=FiatTokenProxy, transfer(to(address): 0x5C75e9, value(uint256): 103200653468) -> True
+    [3][DELEGATECALL] from=FiatTokenProxy, to=FiatTokenV2_1, transfer(to(address): 0x5C75e9, value(uint256): 103200653468) -> True
+  [2][STATICCALL] from=0x56a35f, to=FiatTokenProxy, balanceOf(account(address): 0x5C75e9) -> 103200653468
+    [3][DELEGATECALL] from=FiatTokenProxy, to=FiatTokenV2_1, balanceOf(account(address): 0x5C75e9) -> 103200653468
+  [2][STATICCALL] from=0x56a35f, to=WETH9, balanceOf((address): 0x56A35F) -> 11047195997555799542
+  [2][CALL] from=0x56a35f, to=WETH9, withdraw(wad(uint256): 11047195997555799542) -> None
+    [3][CALL][11.0471959975558] from=WETH9, to=0x56a35f
+  [2][CALL][11.0471959975558] from=0x56a35f, to=0x5c75e9

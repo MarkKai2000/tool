@@ -1,0 +1,63 @@
+[1][CALL] from=0x55a37a, to=GPv2Settlement, settle(tokens(address[]): ['0x4Fabb145d64652a948d72533023f6E7A623C7C..., clearingPrices(uint256[]): [150280724706138293146560000000000000, 150..., trades(tuple[]): [{'sellTokenIndex': 2, 'buyTokenIndex': 3,..., interactions(tuple[][3]): [[], [{'target': '0x6B175474E89094C44Da98b...) -> None
+  [2][STATICCALL] from=GPv2Settlement, to=EIP173Proxy, isSolver(prospectiveSolver(address): 0x55A37A) -> True
+    [3][DELEGATECALL] from=EIP173Proxy, to=GPv2AllowListAuthentication, isSolver(prospectiveSolver(address): 0x55A37A) -> True
+  [2][STATICCALL] from=GPv2Settlement, to=0x000000, 0x066269f1() -> 0x000000
+  [2][CALL] from=GPv2Settlement, to=GPv2VaultRelayer, transferFromAccounts(transfers(tuple[]): [{'account': '0xFfAB14B181409170378471B13F...) -> None
+    [3][CALL] from=GPv2VaultRelayer, to=Dai, transferFrom(src(address): 0xFfAB14, dst(address): 0x9008D1, wad(uint256): 15035264898124344345696) -> True
+  [2][CALL] from=GPv2Settlement, to=Dai, approve(usr(address): 0xcD07a7, wad(uint256): 115792089237316195423570985008687907853269...) -> True
+  [2][CALL] from=GPv2Settlement, to=Dai, transfer(dst(address): 0xe55B67, wad(uint256): 15028072470613829314656) -> True
+  [2][CALL] from=GPv2Settlement, to=SwapGuard, envelope(interactions(tuple[]): [{'target': '0x259AD5996B223ea2b3FCc26772c..., vault(address): 0x9008D1, tokens(address[]): ['0x6B175474E89094C44Da98b954EedeAC495271d..., tokenPrices(uint256[]): [621790000000000, 621380000000000], balanceChanges(int256[]): [-15028072470613829314656, 150454355551235..., allowedLoss(uint256): 1234123412341234123000000000000000000) -> None
+    [3][STATICCALL] from=SwapGuard, to=Dai, balanceOf((address): 0x9008D1) -> 69785696721240873415
+    [3][STATICCALL] from=SwapGuard, to=AdminUpgradeabilityProxy, balanceOf(_addr(address): 0x9008D1) -> 339822214257718137418
+      [4][DELEGATECALL] from=AdminUpgradeabilityProxy, to=BUSDImplementation, balanceOf(_addr(address): 0x9008D1) -> 339822214257718137418
+    [3][CALL] from=SwapGuard, to=SwapFacade, swap(executor(address): 0xe55B67, amount(uint256): 15028072470613829314656, targetToken(address): 0x4Fabb1, minReturn(uint256): 1, recipient(address): 0x9008D1, deadline(uint256): 1674849243, swapDescriptions(tuple[]): [{'sourceToken': '0x6B175474E89094C44Da98b..., permit(bytes): b'') -> 15023063530922338685191
+      [4][STATICCALL] from=SwapFacade, to=Dai, balanceOf((address): 0xe55B67) -> 15028072470613829314657
+      [4][STATICCALL] from=SwapFacade, to=AdminUpgradeabilityProxy, balanceOf(_addr(address): 0x9008D1) -> 339822214257718137418
+        [5][DELEGATECALL] from=AdminUpgradeabilityProxy, to=BUSDImplementation, balanceOf(_addr(address): 0x9008D1) -> 339822214257718137418
+      [4][CALL] from=SwapFacade, to=SwapExecutor, executeSwap(recipient(address): 0x9008D1, tokenToTransfer(address): 0x4Fabb1, swapDescriptions(tuple[]): [{'sourceToken': '0x6B175474E89094C44Da98b...) -> None
+        [5][STATICCALL] from=SwapExecutor, to=Dai, balanceOf((address): 0xe55B67) -> 15028072470613829314657
+        [5][CALL] from=SwapExecutor, to=0x60594a, swapaddress() -> 0x000000
+          [6][CALL] from=0x60594a, to=WETH9, transfer(dst(address): 0xe55B67, wad(uint256): 7034891025135195589) -> True
+          [6][STATICCALL] from=0x60594a, to=Dai, balanceOf((address): 0x60594a) -> 4831095601587243727212344
+          [6][CALL] from=0x60594a, to=SwapExecutor, uniswapV3SwapCallback(amount0Delta(int256): 11335524783859305313751, amount1Delta(int256): -7034891025135195589, (bytes): b'') -> None
+            [7][STATICCALL] from=SwapExecutor, to=0x60594a, token0() -> 0x000000
+            [7][CALL] from=SwapExecutor, to=Dai, transfer(dst(address): 0x60594a, wad(uint256): 11335524783859305313751) -> True
+          [6][STATICCALL] from=0x60594a, to=Dai, balanceOf((address): 0x60594a) -> 4842431126371103032526095
+        [5][CALL] from=SwapExecutor, to=ProtocolHelper, swapUniswapV2(amountSpecified(uint256): 3692547686754523985876, pair(address): 0xA478c2, recipient(address): 0xe55B67, sourceToken(address): 0x6B1754, targetToken(address): 0xC02aaA) -> ['0xa478c2', '3692547686754523985876', '0x022c0d000000000000000000000000000000000000000000000000000000000000000000000000000000001fd74968e3b93d64000000000000000000000000e55b6780b55edca52088704fcd5f651dbd83a6a600000000000000000000000000000000000000000000000000000000000000800000000000000000000000000000000000000000000000000000000000000000']
+          [6][STATICCALL] from=ProtocolHelper, to=UniswapV2Pair, getReserves() -> ['7385408314739203604764310', '4605063638667341434637', '1674848639']
+        [5][CALL] from=SwapExecutor, to=Dai, transfer(dst(address): 0xA478c2, wad(uint256): 3692547686754523985876) -> True
+        [5][CALL] from=SwapExecutor, to=UniswapV2Pair, swap(amount0Out(uint256): 0, amount1Out(uint256): 2294383250014551396, to(address): 0xe55B67, data(bytes): b'') -> None
+          [6][CALL] from=UniswapV2Pair, to=WETH9, transfer(dst(address): 0xe55B67, wad(uint256): 2294383250014551396) -> True
+          [6][STATICCALL] from=UniswapV2Pair, to=Dai, balanceOf((address): 0xA478c2) -> 7389100862425958128750186
+          [6][STATICCALL] from=UniswapV2Pair, to=WETH9, balanceOf((address): 0xA478c2) -> 4602769255417326883241
+        [5][STATICCALL] from=SwapExecutor, to=WETH9, balanceOf((address): 0xe55B67) -> 9329274275149746986
+        [5][CALL] from=SwapExecutor, to=WETH9, approve(guy(address): 0xD51a44, wad(uint256): 9329274275149746985) -> True
+        [5][CALL] from=SwapExecutor, to=Vyper_contract, exchange(i(uint256): 2, j(uint256): 0, dx(uint256): 9329274275149746985, min_dy(uint256): 1) -> None
+          [6][CALL] from=Vyper_contract, to=WETH9, transferFrom(src(address): 0xe55B67, dst(address): 0xD51a44, wad(uint256): 9329274275149746985) -> True
+          [6][STATICCALL] from=Vyper_contract, to=Vyper_contract, newton_y(ANN(uint256): 1707629, gamma(uint256): 11809167828997, x(uint256[3]): [57468037025394000000000000, 5690444640736..., D(uint256): 170537376098813674006145590, i(uint256): 0) -> 57453001254467501917550522
+          [6][STATICCALL] from=Vyper_contract, to=Vyper_contract, reduction_coefficient(x(uint256[3]): [57453001254467501917550522, 5690444640736..., fee_gamma(uint256): 500000000000000) -> 799177607728410322
+          [6][CALL] from=Vyper_contract, to=TetherToken, transfer(_to(address): 0xe55B67, _value(uint256): 15021905868) -> None
+          [6][STATICCALL] from=Vyper_contract, to=Vyper_contract, halfpow(power(uint256): 40000000000000000, precision(uint256): 10000000000) -> 972654954054770925
+          [6][STATICCALL] from=Vyper_contract, to=Vyper_contract, newton_D(ANN(uint256): 1707629, gamma(uint256): 11809167828997, x_unsorted(uint256[3]): [57453015119526000000000000, 5690444640736...) -> 170537389862685090745616051
+          [6][STATICCALL] from=Vyper_contract, to=Vyper_contract, totalSupply() -> 166617175062586178598977
+          [6][STATICCALL] from=Vyper_contract, to=Vyper_contract, geometric_mean(unsorted_x(uint256[3]): [56845796620895030248538683, 2468388375329...) -> 171311376663105939566356
+        [5][STATICCALL] from=SwapExecutor, to=TetherToken, balanceOf(who(address): 0xe55B67) -> 15021905869
+        [5][CALL] from=SwapExecutor, to=UniswapV3Pool, swap(recipient(address): 0xe55B67, zeroForOne(bool): False, amountSpecified(int256): 15021905868, sqrtPriceLimitX96(uint160): 146144670348521010328727305220398882237872..., data(bytes): b'') -> ['-15023063530922338685192', '15021905868']
+          [6][CALL] from=UniswapV3Pool, to=AdminUpgradeabilityProxy, transfer(_to(address): 0xe55B67, _value(uint256): 15023063530922338685192) -> True
+            [7][DELEGATECALL] from=AdminUpgradeabilityProxy, to=BUSDImplementation, transfer(_to(address): 0xe55B67, _value(uint256): 15023063530922338685192) -> True
+          [6][STATICCALL] from=UniswapV3Pool, to=TetherToken, balanceOf(who(address): 0xc66E3c) -> 168558398879
+          [6][CALL] from=UniswapV3Pool, to=SwapExecutor, uniswapV3SwapCallback(amount0Delta(int256): -15023063530922338685192, amount1Delta(int256): 15021905868, (bytes): b'') -> None
+            [7][STATICCALL] from=SwapExecutor, to=UniswapV3Pool, token1() -> 0xdac17f
+            [7][CALL] from=SwapExecutor, to=TetherToken, transfer(_to(address): 0xc66E3c, _value(uint256): 15021905868) -> None
+          [6][STATICCALL] from=UniswapV3Pool, to=TetherToken, balanceOf(who(address): 0xc66E3c) -> 183580304747
+        [5][STATICCALL] from=SwapExecutor, to=AdminUpgradeabilityProxy, balanceOf(_addr(address): 0xe55B67) -> 15023063530922338685192
+          [6][DELEGATECALL] from=AdminUpgradeabilityProxy, to=BUSDImplementation, balanceOf(_addr(address): 0xe55B67) -> 15023063530922338685192
+        [5][CALL] from=SwapExecutor, to=AdminUpgradeabilityProxy, transfer(_to(address): 0x9008D1, _value(uint256): 15023063530922338685191) -> True
+          [6][DELEGATECALL] from=AdminUpgradeabilityProxy, to=BUSDImplementation, transfer(_to(address): 0x9008D1, _value(uint256): 15023063530922338685191) -> True
+      [4][STATICCALL] from=SwapFacade, to=AdminUpgradeabilityProxy, balanceOf(_addr(address): 0x9008D1) -> 15362885745180056822609
+        [5][DELEGATECALL] from=AdminUpgradeabilityProxy, to=BUSDImplementation, balanceOf(_addr(address): 0x9008D1) -> 15362885745180056822609
+    [3][STATICCALL] from=SwapGuard, to=Dai, balanceOf((address): 0x9008D1) -> 69785696721240873415
+    [3][STATICCALL] from=SwapGuard, to=AdminUpgradeabilityProxy, balanceOf(_addr(address): 0x9008D1) -> 15362885745180056822609
+      [4][DELEGATECALL] from=AdminUpgradeabilityProxy, to=BUSDImplementation, balanceOf(_addr(address): 0x9008D1) -> 15362885745180056822609
+  [2][CALL] from=GPv2Settlement, to=AdminUpgradeabilityProxy, transfer(_to(address): 0xFfAB14, _value(uint256): 15045435555123527803822) -> True
+    [3][DELEGATECALL] from=AdminUpgradeabilityProxy, to=BUSDImplementation, transfer(_to(address): 0xFfAB14, _value(uint256): 15045435555123527803822) -> True

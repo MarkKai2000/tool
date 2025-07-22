@@ -1,0 +1,26 @@
+[1][CALL] from=0xf7552b, to=0x7d7583, transferaddress() -> None
+  [2][STATICCALL] from=0x7d7583, to=0x3599f3, getBlock() -> 0x000000
+  [2][CALL] from=0x7d7583, to=TransitSwapRouterV5, exactInputV3Swap(params(tuple): {'srcToken': '0x00000000000000000000000000...) -> 173907186477338745776
+    [3][CALL] from=TransitSwapRouterV5, to=WBNB, deposit() -> None
+    [3][STATICCALL] from=TransitSwapRouterV5, to=WBNB, balanceOf((address): 0xEce3F2) -> 10000000000000000
+    [3][STATICCALL] from=TransitSwapRouterV5, to=0x7d7583, token0() -> 0x000000
+    [3][STATICCALL] from=TransitSwapRouterV5, to=0x7d7583, token1() -> 0x000000
+    [3][STATICCALL] from=TransitSwapRouterV5, to=0x7d7583, fee() -> 0x000000
+    [3][CALL] from=TransitSwapRouterV5, to=0x7d7583, swapaddress() -> 0x000000
+      [4][STATICCALL] from=0x7d7583, to=BEP20USDT, balanceOf(account(address): 0x000000) -> 43841867959016089190183
+    [3][STATICCALL] from=TransitSwapRouterV5, to=PancakeV3Pool, token0() -> 0x55d398
+    [3][STATICCALL] from=TransitSwapRouterV5, to=PancakeV3Pool, token1() -> 0xbb4cdb
+    [3][STATICCALL] from=TransitSwapRouterV5, to=PancakeV3Pool, fee() -> 500
+    [3][CALL] from=TransitSwapRouterV5, to=PancakeV3Pool, swap(recipient(address): 0xEce3F2, zeroForOne(bool): True, amountSpecified(int256): 43841867959016089190183, sqrtPriceLimitX96(uint160): 4295128740, data(bytes): b"\x01\x00\x00\x00\x00\x00\x00\x00\x00\x00...) -> ['43841867959016089190183', '-173907186477338745776']
+      [4][CALL] from=PancakeV3Pool, to=PancakeV3LmPool, accumulateReward(currTimestamp(uint32): 1703037712) -> None
+        [5][STATICCALL] from=PancakeV3LmPool, to=MasterChefV3, getLatestPeriodInfo(_v3Pool(address): 0x366961) -> ['26200410222253479719515487804', '1703085996']
+      [4][CALL] from=PancakeV3Pool, to=PancakeV3LmPool, crossLmTick(tick(int24): -55300, zeroForOne(bool): True) -> None
+      [4][CALL] from=PancakeV3Pool, to=WBNB, transfer(dst(address): 0xEce3F2, wad(uint256): 173907186477338745776) -> True
+      [4][STATICCALL] from=PancakeV3Pool, to=BEP20USDT, balanceOf(account(address): 0x366961) -> 9485011174029608430218334
+      [4][CALL] from=PancakeV3Pool, to=TransitSwapRouterV5, pancakeV3SwapCallback(amount0Delta(int256): 43841867959016089190183, amount1Delta(int256): -173907186477338745776, _data(bytes): b"\x01\x00\x00\x00\x00\x00\x00\x00\x00\x00...) -> None
+        [5][CALL] from=TransitSwapRouterV5, to=BEP20USDT, transfer(recipient(address): 0x366961, amount(uint256): 43841867959016089190183) -> True
+      [4][STATICCALL] from=PancakeV3Pool, to=BEP20USDT, balanceOf(account(address): 0x366961) -> 9528853041988624519408517
+    [3][STATICCALL] from=TransitSwapRouterV5, to=WBNB, balanceOf((address): 0xEce3F2) -> 173917186477338745776
+  [2][CALL] from=0x7d7583, to=PancakePair, sync() -> None
+    [3][STATICCALL] from=PancakePair, to=0x1f790e, balanceOfaddress() -> 0x000000
+    [3][STATICCALL] from=PancakePair, to=WBNB, balanceOf((address): 0xEce3F2) -> 173917186477338745776

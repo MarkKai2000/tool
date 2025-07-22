@@ -1,0 +1,241 @@
+[1][CALL] from=0xc71e2f, to=0x01eae4, trigger() -> None
+  [2][STATICCALL] from=0x01eae4, to=ElevenNeverSellVault, insideChef() -> 30910261929777403502
+    [3][STATICCALL] from=ElevenNeverSellVault, to=MasterMind, userInfo((uint256): 0x0D5BaE) -> ['30910261929777403502', '12953355906294114978363']
+  [2][STATICCALL] from=0x01eae4, to=PancakeFactory, getPair((address): 0x7130d2) -> 0x61eb78
+  [2][CALL] from=0x01eae4, to=PancakePair, swap(amount0Out(uint256): 30910261929777403502, amount1Out(uint256): 0, to(address): 0x01Eae4, data(bytes): b'ayy') -> None
+    [3][CALL] from=PancakePair, to=BEP20Token, transfer(recipient(address): 0x01Eae4, amount(uint256): 30910261929777403502) -> True
+    [3][CALL] from=PancakePair, to=0x01eae4, pancakeCalladdress() -> None
+      [4][STATICCALL] from=0x01eae4, to=BEP20Token, balanceOf(account(address): 0x01Eae4) -> 30910261929777403502
+      [4][STATICCALL] from=0x01eae4, to=BEP20Token, balanceOf(account(address): 0x01Eae4) -> 30910261929777403502
+      [4][STATICCALL] from=0x01eae4, to=BEP20Token, balanceOf(account(address): 0x01Eae4) -> 30910261929777403502
+      [4][STATICCALL] from=0x01eae4, to=Swap, calculateTokenAmountaddress() -> 0x000000
+        [5][DELEGATECALL] from=Swap, to=0xb264bc, 0x5e58579c() -> 0x000000
+          [6][DELEGATECALL] from=Swap, to=0x63c915, within1uint256() -> 0x000000
+          [6][DELEGATECALL] from=Swap, to=0x63c915, within1uint256() -> 0x000000
+          [6][DELEGATECALL] from=Swap, to=0x63c915, within1uint256() -> 0x000000
+          [6][DELEGATECALL] from=Swap, to=0x63c915, within1uint256() -> 0x000000
+          [6][DELEGATECALL] from=Swap, to=0x63c915, within1uint256() -> 0x000000
+          [6][DELEGATECALL] from=Swap, to=0x63c915, within1uint256() -> 0x000000
+          [6][STATICCALL] from=Swap, to=LPToken, totalSupply() -> 784876593349883927846
+      [4][STATICCALL] from=0x01eae4, to=Swap, getToken(index(uint8): 0) -> 0x7130d2
+      [4][CALL] from=0x01eae4, to=BEP20Token, approve(spender(address): 0x6C3419, amount(uint256): 30910261929777403502) -> True
+      [4][CALL] from=0x01eae4, to=Swap, addLiquidityuint256[]() -> 0x000000
+        [5][DELEGATECALL] from=Swap, to=0xb264bc, 0x40370edf() -> 0x000000
+          [6][STATICCALL] from=Swap, to=LPToken, totalSupply() -> 784876593349883927846
+          [6][DELEGATECALL] from=Swap, to=0x63c915, within1uint256() -> 0x000000
+          [6][DELEGATECALL] from=Swap, to=0x63c915, within1uint256() -> 0x000000
+          [6][DELEGATECALL] from=Swap, to=0x63c915, within1uint256() -> 0x000000
+          [6][STATICCALL] from=Swap, to=BEP20Token, balanceOf(account(address): 0x6C3419) -> 329088255119092899468
+          [6][CALL] from=Swap, to=BEP20Token, transferFrom(sender(address): 0x01Eae4, recipient(address): 0x6C3419, amount(uint256): 30910261929777403502) -> True
+          [6][STATICCALL] from=Swap, to=BEP20Token, balanceOf(account(address): 0x6C3419) -> 359998517048870302970
+          [6][DELEGATECALL] from=Swap, to=0x63c915, within1uint256() -> 0x000000
+          [6][DELEGATECALL] from=Swap, to=0x63c915, within1uint256() -> 0x000000
+          [6][DELEGATECALL] from=Swap, to=0x63c915, within1uint256() -> 0x000000
+          [6][DELEGATECALL] from=Swap, to=0x63c915, differenceuint256() -> 0x000000
+          [6][DELEGATECALL] from=Swap, to=0x63c915, differenceuint256() -> 0x000000
+          [6][DELEGATECALL] from=Swap, to=0x63c915, within1uint256() -> 0x000000
+          [6][DELEGATECALL] from=Swap, to=0x63c915, within1uint256() -> 0x000000
+          [6][DELEGATECALL] from=Swap, to=0x63c915, within1uint256() -> 0x000000
+          [6][STATICCALL] from=Swap, to=LPToken, totalSupply() -> 784876593349883927846
+          [6][CALL] from=Swap, to=LPToken, mint(recipient(address): 0x01Eae4, amount(uint256): 30836253259057738487) -> None
+            [7][CALL] from=LPToken, to=Swap, updateUserWithdrawFeeaddress() -> None
+              [8][DELEGATECALL] from=Swap, to=0xb264bc, 0xe9252d46() -> None
+      [4][STATICCALL] from=0x01eae4, to=LPToken, balanceOf(account(address): 0x01Eae4) -> 30836253259057738487
+      [4][CALL] from=0x01eae4, to=LPToken, approve(spender(address): 0x0D5BaE, amount(uint256): 30836253259057738487) -> True
+      [4][CALL] from=0x01eae4, to=ElevenNeverSellVault, depositAll() -> None
+        [5][STATICCALL] from=ElevenNeverSellVault, to=LPToken, balanceOf(account(address): 0x01Eae4) -> 30836253259057738487
+        [5][STATICCALL] from=ElevenNeverSellVault, to=elevenToken, balanceOf(account(address): 0x0D5BaE) -> 121171492211956345196
+        [5][CALL] from=ElevenNeverSellVault, to=MasterChef, deposit(_pid(uint256): 99, _amount(uint256): 0) -> None
+          [6][STATICCALL] from=MasterChef, to=DummyToken, balanceOf(account(address): 0x1ac6C0) -> 1000000000000000000
+          [6][CALL] from=MasterChef, to=elevenToken, mint(_address(address): 0x0222c6, _amount(uint256): 0) -> None
+          [6][CALL] from=MasterChef, to=elevenToken, mint(_address(address): 0x1ac6C0, _amount(uint256): 0) -> None
+          [6][STATICCALL] from=MasterChef, to=elevenToken, balanceOf(account(address): 0x1ac6C0) -> 49713200914620457548978
+          [6][CALL] from=MasterChef, to=elevenToken, transfer(recipient(address): 0x0D5BaE, amount(uint256): 0) -> True
+          [6][CALL] from=MasterChef, to=DummyToken, transferFrom(sender(address): 0x0D5BaE, recipient(address): 0x1ac6C0, amount(uint256): 0) -> True
+        [5][STATICCALL] from=ElevenNeverSellVault, to=elevenToken, balanceOf(account(address): 0x0D5BaE) -> 121171492211956345196
+        [5][CALL] from=ElevenNeverSellVault, to=MasterMind, deposit(_pid(uint256): 4, _amount(uint256): 0) -> None
+          [6][STATICCALL] from=MasterMind, to=LPToken, balanceOf(account(address): 0x2EBe8C) -> 782783214906400304007
+          [6][CALL] from=MasterMind, to=NerveToken, mint(_to(address): 0x316808, _amount(uint256): 15595573545000000000) -> None
+          [6][CALL] from=MasterMind, to=NerveToken, mint(_to(address): 0x2EBe8C, _amount(uint256): 155955735450000000000) -> None
+          [6][STATICCALL] from=MasterMind, to=NerveToken, balanceOf(account(address): 0x2EBe8C) -> 14503982914430669928158176
+          [6][CALL] from=MasterMind, to=NerveToken, transfer(recipient(address): 0x0D5BaE, amount(uint256): 96718016800119277067) -> True
+          [6][CALL] from=MasterMind, to=LPToken, transferFrom(sender(address): 0x0D5BaE, recipient(address): 0x2EBe8C, amount(uint256): 0) -> True
+            [7][CALL] from=LPToken, to=Swap, updateUserWithdrawFeeaddress() -> None
+              [8][DELEGATECALL] from=Swap, to=0xb264bc, 0xe9252d46() -> None
+        [5][STATICCALL] from=ElevenNeverSellVault, to=NerveToken, balanceOf(account(address): 0x0D5BaE) -> 96718016800119277067
+        [5][CALL] from=ElevenNeverSellVault, to=NerveToken, transfer(recipient(address): 0x4a405F, amount(uint256): 2408278618322969998) -> True
+        [5][CALL] from=ElevenNeverSellVault, to=PartnershipBuybackStrat, chargeFees(_token(address): 0x42F6f5, _call(address): 0x6B3C20) -> None
+        [5][STATICCALL] from=ElevenNeverSellVault, to=ElevenGrowthVault, balanceOf(account(address): 0x0D5BaE) -> 1908297080911057477169
+        [5][STATICCALL] from=ElevenNeverSellVault, to=NerveToken, balanceOf(account(address): 0x0D5BaE) -> 94309738181796307069
+        [5][CALL] from=ElevenNeverSellVault, to=NerveToken, transfer(recipient(address): 0x2B706F, amount(uint256): 94309738181796307069) -> True
+        [5][CALL] from=ElevenNeverSellVault, to=ConvertTo11, convert(_token(address): 0x42F6f5) -> None
+          [6][CALL] from=ConvertTo11, to=ElevenGrowthVault, depositAll() -> None
+            [7][STATICCALL] from=ElevenGrowthVault, to=NerveToken, balanceOf(account(address): 0x2B706F) -> 94309738181796307069
+            [7][STATICCALL] from=ElevenGrowthVault, to=StrategyCakeLP, balanceOf() -> 296482468196372370275699
+              [8][STATICCALL] from=StrategyCakeLP, to=MasterMind, userInfo((uint256): 0x620B96) -> ['296482447374286132821460', '2826843863915516896812329']
+              [8][STATICCALL] from=StrategyCakeLP, to=xNerve, totalSupply() -> 22671506326889039991105897
+              [8][STATICCALL] from=StrategyCakeLP, to=NerveToken, balanceOf(account(address): 0x15B946) -> 22671507919118408212434809
+              [8][STATICCALL] from=StrategyCakeLP, to=NerveToken, balanceOf(account(address): 0x620B96) -> 0
+            [7][STATICCALL] from=ElevenGrowthVault, to=NerveToken, balanceOf(account(address): 0x54f4D5) -> 0
+            [7][STATICCALL] from=ElevenGrowthVault, to=NerveToken, balanceOf(account(address): 0x54f4D5) -> 0
+            [7][CALL] from=ElevenGrowthVault, to=NerveToken, transferFrom(sender(address): 0x2B706F, recipient(address): 0x54f4D5, amount(uint256): 94309738181796307069) -> True
+            [7][STATICCALL] from=ElevenGrowthVault, to=NerveToken, balanceOf(account(address): 0x54f4D5) -> 94309738181796307069
+            [7][STATICCALL] from=ElevenGrowthVault, to=NerveToken, balanceOf(account(address): 0x54f4D5) -> 94309738181796307069
+            [7][CALL] from=ElevenGrowthVault, to=NerveToken, transfer(recipient(address): 0x620B96, amount(uint256): 94309738181796307069) -> True
+            [7][CALL] from=ElevenGrowthVault, to=StrategyCakeLP, deposit() -> None
+              [8][STATICCALL] from=StrategyCakeLP, to=NerveToken, balanceOf(account(address): 0x620B96) -> 94309738181796307069
+              [8][CALL] from=StrategyCakeLP, to=xNerve, enter(_amount(uint256): 94309738181796307069) -> None
+                [9][STATICCALL] from=xNerve, to=NerveToken, balanceOf(account(address): 0x15B946) -> 22671507919118408212434809
+                [9][CALL] from=xNerve, to=NerveToken, transferFrom(sender(address): 0x620B96, recipient(address): 0x15B946, amount(uint256): 94309738181796307069) -> True
+              [8][STATICCALL] from=StrategyCakeLP, to=xNerve, balanceOf(account(address): 0x620B96) -> 94309731558384429128
+              [8][CALL] from=StrategyCakeLP, to=MasterMind, deposit(_pid(uint256): 2, _amount(uint256): 94309731558384429128) -> None
+                [9][STATICCALL] from=MasterMind, to=xNerve, balanceOf(account(address): 0x2EBe8C) -> 22513163216915706240843044
+                [9][CALL] from=MasterMind, to=NerveToken, mint(_to(address): 0x316808, _amount(uint256): 149404905000000000) -> None
+                [9][CALL] from=MasterMind, to=NerveToken, mint(_to(address): 0x2EBe8C, _amount(uint256): 1494049050000000000) -> None
+                [9][STATICCALL] from=MasterMind, to=NerveToken, balanceOf(account(address): 0x2EBe8C) -> 14503887690462919808881109
+                [9][CALL] from=MasterMind, to=NerveToken, transfer(recipient(address): 0x620B96, amount(uint256): 19675464655099750) -> True
+                [9][CALL] from=MasterMind, to=xNerve, transferFrom(sender(address): 0x620B96, recipient(address): 0x2EBe8C, amount(uint256): 94309731558384429128) -> True
+          [6][STATICCALL] from=ConvertTo11, to=ElevenGrowthVault, balanceOf(account(address): 0x2B706F) -> 92236818019801298111
+          [6][CALL] from=ConvertTo11, to=ElevenGrowthVault, transfer(recipient(address): 0x0D5BaE, amount(uint256): 92236818019801298111) -> True
+        [5][STATICCALL] from=ElevenNeverSellVault, to=ElevenGrowthVault, balanceOf(account(address): 0x0D5BaE) -> 2000533898930858775280
+        [5][CALL] from=ElevenNeverSellVault, to=LPToken, transferFrom(sender(address): 0x01Eae4, recipient(address): 0x0D5BaE, amount(uint256): 30836253259057738487) -> True
+          [6][CALL] from=LPToken, to=Swap, updateUserWithdrawFeeaddress() -> None
+            [7][DELEGATECALL] from=Swap, to=0xb264bc, 0xe9252d46() -> None
+        [5][STATICCALL] from=ElevenNeverSellVault, to=LPToken, balanceOf(account(address): 0x0D5BaE) -> 30836253259057738487
+        [5][CALL] from=ElevenNeverSellVault, to=MasterMind, deposit(_pid(uint256): 4, _amount(uint256): 30836253259057738487) -> None
+          [6][STATICCALL] from=MasterMind, to=NerveToken, balanceOf(account(address): 0x2EBe8C) -> 14503887670787455153781359
+          [6][CALL] from=MasterMind, to=NerveToken, transfer(recipient(address): 0x0D5BaE, amount(uint256): 0) -> True
+          [6][CALL] from=MasterMind, to=LPToken, transferFrom(sender(address): 0x0D5BaE, recipient(address): 0x2EBe8C, amount(uint256): 30836253259057738487) -> True
+            [7][CALL] from=LPToken, to=Swap, updateUserWithdrawFeeaddress() -> None
+              [8][DELEGATECALL] from=Swap, to=0xb264bc, 0xe9252d46() -> None
+      [4][CALL] from=0x01eae4, to=ElevenNeverSellVault, emergencyBurn() -> None
+        [5][STATICCALL] from=ElevenNeverSellVault, to=LPToken, balanceOf(account(address): 0x0D5BaE) -> 0
+        [5][CALL] from=ElevenNeverSellVault, to=MasterMind, withdraw(_pid(uint256): 4, _amount(uint256): 30836253259057738487) -> None
+          [6][STATICCALL] from=MasterMind, to=NerveToken, balanceOf(account(address): 0x2EBe8C) -> 14503887670787455153781359
+          [6][CALL] from=MasterMind, to=NerveToken, transfer(recipient(address): 0x0D5BaE, amount(uint256): 0) -> True
+          [6][CALL] from=MasterMind, to=LPToken, transfer(recipient(address): 0x0D5BaE, amount(uint256): 30836253259057738487) -> True
+            [7][CALL] from=LPToken, to=Swap, updateUserWithdrawFeeaddress() -> None
+              [8][DELEGATECALL] from=Swap, to=0xb264bc, 0xe9252d46() -> None
+        [5][CALL] from=ElevenNeverSellVault, to=LPToken, transfer(recipient(address): 0x01Eae4, amount(uint256): 30836253259057738487) -> True
+          [6][CALL] from=LPToken, to=Swap, updateUserWithdrawFeeaddress() -> None
+            [7][DELEGATECALL] from=Swap, to=0xb264bc, 0xe9252d46() -> None
+      [4][CALL] from=0x01eae4, to=ElevenNeverSellVault, withdrawAll() -> None
+        [5][STATICCALL] from=ElevenNeverSellVault, to=elevenToken, balanceOf(account(address): 0x0D5BaE) -> 121171492211956345196
+        [5][CALL] from=ElevenNeverSellVault, to=MasterChef, deposit(_pid(uint256): 99, _amount(uint256): 0) -> None
+          [6][STATICCALL] from=MasterChef, to=elevenToken, balanceOf(account(address): 0x1ac6C0) -> 49713200914620457548978
+          [6][CALL] from=MasterChef, to=elevenToken, transfer(recipient(address): 0x0D5BaE, amount(uint256): 0) -> True
+          [6][CALL] from=MasterChef, to=DummyToken, transferFrom(sender(address): 0x0D5BaE, recipient(address): 0x1ac6C0, amount(uint256): 0) -> True
+        [5][STATICCALL] from=ElevenNeverSellVault, to=elevenToken, balanceOf(account(address): 0x0D5BaE) -> 121171492211956345196
+        [5][CALL] from=ElevenNeverSellVault, to=MasterMind, deposit(_pid(uint256): 4, _amount(uint256): 0) -> None
+          [6][STATICCALL] from=MasterMind, to=NerveToken, balanceOf(account(address): 0x2EBe8C) -> 14503887670787455153781359
+          [6][CALL] from=MasterMind, to=NerveToken, transfer(recipient(address): 0x0D5BaE, amount(uint256): 0) -> True
+          [6][CALL] from=MasterMind, to=LPToken, transferFrom(sender(address): 0x0D5BaE, recipient(address): 0x2EBe8C, amount(uint256): 0) -> True
+            [7][CALL] from=LPToken, to=Swap, updateUserWithdrawFeeaddress() -> None
+              [8][DELEGATECALL] from=Swap, to=0xb264bc, 0xe9252d46() -> None
+        [5][STATICCALL] from=ElevenNeverSellVault, to=NerveToken, balanceOf(account(address): 0x0D5BaE) -> 0
+        [5][CALL] from=ElevenNeverSellVault, to=NerveToken, transfer(recipient(address): 0x4a405F, amount(uint256): 0) -> True
+        [5][CALL] from=ElevenNeverSellVault, to=PartnershipBuybackStrat, chargeFees(_token(address): 0x42F6f5, _call(address): 0x6B3C20) -> None
+        [5][STATICCALL] from=ElevenNeverSellVault, to=ElevenGrowthVault, balanceOf(account(address): 0x0D5BaE) -> 2000533898930858775280
+        [5][STATICCALL] from=ElevenNeverSellVault, to=NerveToken, balanceOf(account(address): 0x0D5BaE) -> 0
+        [5][CALL] from=ElevenNeverSellVault, to=NerveToken, transfer(recipient(address): 0x2B706F, amount(uint256): 0) -> True
+        [5][CALL] from=ElevenNeverSellVault, to=ConvertTo11, convert(_token(address): 0x42F6f5) -> None
+          [6][CALL] from=ConvertTo11, to=ElevenGrowthVault, depositAll() -> None
+            [7][STATICCALL] from=ElevenGrowthVault, to=NerveToken, balanceOf(account(address): 0x2B706F) -> 0
+            [7][STATICCALL] from=ElevenGrowthVault, to=StrategyCakeLP, balanceOf() -> 296576797610018821682518
+              [8][STATICCALL] from=StrategyCakeLP, to=MasterMind, userInfo((uint256): 0x620B96) -> ['296576757105844517250588', '2827743089902113913618327']
+              [8][STATICCALL] from=StrategyCakeLP, to=xNerve, totalSupply() -> 22671600636620598375535025
+              [8][STATICCALL] from=StrategyCakeLP, to=NerveToken, balanceOf(account(address): 0x15B946) -> 22671602228856590008741878
+              [8][STATICCALL] from=StrategyCakeLP, to=NerveToken, balanceOf(account(address): 0x620B96) -> 19675464655099750
+            [7][STATICCALL] from=ElevenGrowthVault, to=NerveToken, balanceOf(account(address): 0x54f4D5) -> 0
+            [7][STATICCALL] from=ElevenGrowthVault, to=NerveToken, balanceOf(account(address): 0x54f4D5) -> 0
+            [7][CALL] from=ElevenGrowthVault, to=NerveToken, transferFrom(sender(address): 0x2B706F, recipient(address): 0x54f4D5, amount(uint256): 0) -> True
+            [7][STATICCALL] from=ElevenGrowthVault, to=NerveToken, balanceOf(account(address): 0x54f4D5) -> 0
+            [7][STATICCALL] from=ElevenGrowthVault, to=NerveToken, balanceOf(account(address): 0x54f4D5) -> 0
+            [7][CALL] from=ElevenGrowthVault, to=NerveToken, transfer(recipient(address): 0x620B96, amount(uint256): 0) -> True
+            [7][CALL] from=ElevenGrowthVault, to=StrategyCakeLP, deposit() -> None
+              [8][STATICCALL] from=StrategyCakeLP, to=NerveToken, balanceOf(account(address): 0x620B96) -> 19675464655099750
+              [8][CALL] from=StrategyCakeLP, to=xNerve, enter(_amount(uint256): 19675464655099750) -> None
+                [9][STATICCALL] from=xNerve, to=NerveToken, balanceOf(account(address): 0x15B946) -> 22671602228856590008741878
+                [9][CALL] from=xNerve, to=NerveToken, transferFrom(sender(address): 0x620B96, recipient(address): 0x15B946, amount(uint256): 19675464655099750) -> True
+              [8][STATICCALL] from=StrategyCakeLP, to=xNerve, balanceOf(account(address): 0x620B96) -> 19675463273283738
+              [8][CALL] from=StrategyCakeLP, to=MasterMind, deposit(_pid(uint256): 2, _amount(uint256): 19675463273283738) -> None
+                [9][STATICCALL] from=MasterMind, to=NerveToken, balanceOf(account(address): 0x2EBe8C) -> 14503887670787455153781359
+                [9][CALL] from=MasterMind, to=NerveToken, transfer(recipient(address): 0x620B96, amount(uint256): 0) -> True
+                [9][CALL] from=MasterMind, to=xNerve, transferFrom(sender(address): 0x620B96, recipient(address): 0x2EBe8C, amount(uint256): 19675463273283738) -> True
+          [6][STATICCALL] from=ConvertTo11, to=ElevenGrowthVault, balanceOf(account(address): 0x2B706F) -> 0
+          [6][CALL] from=ConvertTo11, to=ElevenGrowthVault, transfer(recipient(address): 0x0D5BaE, amount(uint256): 0) -> True
+        [5][STATICCALL] from=ElevenNeverSellVault, to=ElevenGrowthVault, balanceOf(account(address): 0x0D5BaE) -> 2000533898930858775280
+        [5][STATICCALL] from=ElevenNeverSellVault, to=elevenToken, balanceOf(account(address): 0x0D5BaE) -> 121171492211956345196
+        [5][CALL] from=ElevenNeverSellVault, to=elevenToken, transfer(recipient(address): 0x01Eae4, amount(uint256): 0) -> True
+        [5][STATICCALL] from=ElevenNeverSellVault, to=ElevenGrowthVault, balanceOf(account(address): 0x0D5BaE) -> 2000533898930858775280
+        [5][CALL] from=ElevenNeverSellVault, to=ElevenGrowthVault, transfer(recipient(address): 0x01Eae4, amount(uint256): 0) -> True
+        [5][STATICCALL] from=ElevenNeverSellVault, to=LPToken, balanceOf(account(address): 0x0D5BaE) -> 0
+        [5][CALL] from=ElevenNeverSellVault, to=MasterMind, withdraw(_pid(uint256): 4, _amount(uint256): 30836253259057738487) -> None
+          [6][STATICCALL] from=MasterMind, to=NerveToken, balanceOf(account(address): 0x2EBe8C) -> 14503887670787455153781359
+          [6][CALL] from=MasterMind, to=NerveToken, transfer(recipient(address): 0x0D5BaE, amount(uint256): 0) -> True
+          [6][CALL] from=MasterMind, to=LPToken, transfer(recipient(address): 0x0D5BaE, amount(uint256): 30836253259057738487) -> True
+            [7][CALL] from=LPToken, to=Swap, updateUserWithdrawFeeaddress() -> None
+              [8][DELEGATECALL] from=Swap, to=0xb264bc, 0xe9252d46() -> None
+        [5][CALL] from=ElevenNeverSellVault, to=LPToken, transfer(recipient(address): 0x01Eae4, amount(uint256): 30836253259057738487) -> True
+          [6][CALL] from=LPToken, to=Swap, updateUserWithdrawFeeaddress() -> None
+            [7][DELEGATECALL] from=Swap, to=0xb264bc, 0xe9252d46() -> None
+      [4][STATICCALL] from=0x01eae4, to=LPToken, balanceOf(account(address): 0x01Eae4) -> 61672506518115476974
+      [4][STATICCALL] from=0x01eae4, to=Swap, calculateRemoveLiquidityOneTokenaddress() -> 0x000000
+        [5][DELEGATECALL] from=Swap, to=0xb264bc, 0xe4a9a0da() -> 0x000000
+          [6][DELEGATECALL] from=Swap, to=0x63c915, within1uint256() -> 0x000000
+          [6][DELEGATECALL] from=Swap, to=0x63c915, within1uint256() -> 0x000000
+          [6][DELEGATECALL] from=Swap, to=0x63c915, within1uint256() -> 0x000000
+          [6][STATICCALL] from=Swap, to=LPToken, totalSupply() -> 815712846608941666333
+          [6][DELEGATECALL] from=Swap, to=0x63c915, within1uint256() -> 0x000000
+          [6][DELEGATECALL] from=Swap, to=0x63c915, within1uint256() -> 0x000000
+          [6][DELEGATECALL] from=Swap, to=0x63c915, within1uint256() -> 0x000000
+          [6][DELEGATECALL] from=Swap, to=0x63c915, within1uint256() -> 0x000000
+          [6][DELEGATECALL] from=Swap, to=0x63c915, within1uint256() -> 0x000000
+          [6][DELEGATECALL] from=Swap, to=0x63c915, within1uint256() -> 0x000000
+          [6][DELEGATECALL] from=Swap, to=0x63c915, within1uint256() -> 0x000000
+          [6][DELEGATECALL] from=Swap, to=0x63c915, within1uint256() -> 0x000000
+          [6][DELEGATECALL] from=Swap, to=0x63c915, within1uint256() -> 0x000000
+          [6][DELEGATECALL] from=Swap, to=0x63c915, within1uint256() -> 0x000000
+          [6][DELEGATECALL] from=Swap, to=0x63c915, within1uint256() -> 0x000000
+          [6][DELEGATECALL] from=Swap, to=0x63c915, within1uint256() -> 0x000000
+          [6][DELEGATECALL] from=Swap, to=0x63c915, within1uint256() -> 0x000000
+          [6][DELEGATECALL] from=Swap, to=0x63c915, within1uint256() -> 0x000000
+          [6][DELEGATECALL] from=Swap, to=0x63c915, within1uint256() -> 0x000000
+          [6][DELEGATECALL] from=Swap, to=0x63c915, within1uint256() -> 0x000000
+      [4][CALL] from=0x01eae4, to=LPToken, approve(spender(address): 0x6C3419, amount(uint256): 61672506518115476974) -> True
+      [4][CALL] from=0x01eae4, to=Swap, removeLiquidityOneTokenuint256() -> 0x000000
+        [5][DELEGATECALL] from=Swap, to=0xb264bc, 0xe7a4db81() -> 0x000000
+          [6][STATICCALL] from=Swap, to=LPToken, totalSupply() -> 815712846608941666333
+          [6][STATICCALL] from=Swap, to=LPToken, balanceOf(account(address): 0x01Eae4) -> 61672506518115476974
+          [6][DELEGATECALL] from=Swap, to=0x63c915, within1uint256() -> 0x000000
+          [6][DELEGATECALL] from=Swap, to=0x63c915, within1uint256() -> 0x000000
+          [6][DELEGATECALL] from=Swap, to=0x63c915, within1uint256() -> 0x000000
+          [6][STATICCALL] from=Swap, to=LPToken, totalSupply() -> 815712846608941666333
+          [6][DELEGATECALL] from=Swap, to=0x63c915, within1uint256() -> 0x000000
+          [6][DELEGATECALL] from=Swap, to=0x63c915, within1uint256() -> 0x000000
+          [6][DELEGATECALL] from=Swap, to=0x63c915, within1uint256() -> 0x000000
+          [6][DELEGATECALL] from=Swap, to=0x63c915, within1uint256() -> 0x000000
+          [6][DELEGATECALL] from=Swap, to=0x63c915, within1uint256() -> 0x000000
+          [6][DELEGATECALL] from=Swap, to=0x63c915, within1uint256() -> 0x000000
+          [6][DELEGATECALL] from=Swap, to=0x63c915, within1uint256() -> 0x000000
+          [6][DELEGATECALL] from=Swap, to=0x63c915, within1uint256() -> 0x000000
+          [6][DELEGATECALL] from=Swap, to=0x63c915, within1uint256() -> 0x000000
+          [6][DELEGATECALL] from=Swap, to=0x63c915, within1uint256() -> 0x000000
+          [6][DELEGATECALL] from=Swap, to=0x63c915, within1uint256() -> 0x000000
+          [6][DELEGATECALL] from=Swap, to=0x63c915, within1uint256() -> 0x000000
+          [6][DELEGATECALL] from=Swap, to=0x63c915, within1uint256() -> 0x000000
+          [6][DELEGATECALL] from=Swap, to=0x63c915, within1uint256() -> 0x000000
+          [6][DELEGATECALL] from=Swap, to=0x63c915, within1uint256() -> 0x000000
+          [6][DELEGATECALL] from=Swap, to=0x63c915, within1uint256() -> 0x000000
+          [6][CALL] from=Swap, to=LPToken, burnFrom(account(address): 0x01Eae4, amount(uint256): 61672506518115476974) -> None
+            [7][CALL] from=LPToken, to=Swap, updateUserWithdrawFeeaddress() -> None
+              [8][DELEGATECALL] from=Swap, to=0xb264bc, 0xe9252d46() -> None
+          [6][CALL] from=Swap, to=BEP20Token, transfer(recipient(address): 0x01Eae4, amount(uint256): 61754288382343941084) -> True
+      [4][STATICCALL] from=0x01eae4, to=BEP20Token, balanceOf(account(address): 0x01Eae4) -> 61754288382343941084
+      [4][CALL] from=0x01eae4, to=BEP20Token, approve(spender(address): 0x61EB78, amount(uint256): 31003271745012440825) -> True
+      [4][CALL] from=0x01eae4, to=BEP20Token, transfer(recipient(address): 0x61EB78, amount(uint256): 31003271745012440825) -> True
+      [4][STATICCALL] from=0x01eae4, to=BEP20Token, balanceOf(account(address): 0x01Eae4) -> 30751016637331500259
+      [4][CALL] from=0x01eae4, to=BEP20Token, transfer(recipient(address): 0xc71e2F, amount(uint256): 30751016637331500259) -> True
+      [4][STATICCALL] from=0x01eae4, to=BEP20Token, balanceOf(account(address): 0xc71e2F) -> 30751016637331500259
+    [3][STATICCALL] from=PancakePair, to=BEP20Token, balanceOf(account(address): 0x61EB78) -> 1664379211874087505886
+    [3][STATICCALL] from=PancakePair, to=WBNB, balanceOf((address): 0x61EB78) -> 203858255455977843440102

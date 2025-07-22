@@ -1,0 +1,477 @@
+[1][CALL] from=0x133703, to=0x45f013, flashloan() -> None
+  [2][STATICCALL] from=0x45f013, to=BPool, getBalance(token(address): 0x6B1754) -> 102583594513446739457602
+  [2][STATICCALL] from=0x45f013, to=BPool, getBalance(token(address): 0xA0b869) -> 102988506345
+  [2][STATICCALL] from=0x45f013, to=BPool, getBalance(token(address): 0xC02aaA) -> 101828443103443624078
+  [2][STATICCALL] from=0x45f013, to=BPool, getBalance(token(address): 0x2260FA) -> 310188234
+  [2][CALL] from=0x45f013, to=InitializableImmutableAdminUpgradeabilityProxy, flashLoan(receiverAddress(address): 0x45f013, assets(address[]): ['0x6B175474E89094C44Da98b954EedeAC495271d..., amounts(uint256[]): [737063126579114823002870, 739972418088, 1..., modes(uint256[]): [0, 0, 0, 0], onBehalfOf(address): 0x45f013, params(bytes): b'', referralCode(uint16): 0) -> None
+    [3][DELEGATECALL] from=InitializableImmutableAdminUpgradeabilityProxy, to=LendingPool, flashLoan(receiverAddress(address): 0x45f013, assets(address[]): ['0x6B175474E89094C44Da98b954EedeAC495271d..., amounts(uint256[]): [737063126579114823002870, 739972418088, 1..., modes(uint256[]): [0, 0, 0, 0], onBehalfOf(address): 0x45f013, params(bytes): b'', referralCode(uint16): 0) -> None
+      [4][CALL] from=InitializableImmutableAdminUpgradeabilityProxy, to=InitializableImmutableAdminUpgradeabilityProxy, transferUnderlyingTo(target(address): 0x45f013, amount(uint256): 737063126579114823002870) -> 737063126579114823002870
+        [5][DELEGATECALL] from=InitializableImmutableAdminUpgradeabilityProxy, to=AToken, transferUnderlyingTo(target(address): 0x45f013, amount(uint256): 737063126579114823002870) -> 737063126579114823002870
+          [6][CALL] from=InitializableImmutableAdminUpgradeabilityProxy, to=Dai, transfer(dst(address): 0x45f013, wad(uint256): 737063126579114823002870) -> True
+      [4][CALL] from=InitializableImmutableAdminUpgradeabilityProxy, to=InitializableImmutableAdminUpgradeabilityProxy, transferUnderlyingTo(target(address): 0x45f013, amount(uint256): 739972418088) -> 739972418088
+        [5][DELEGATECALL] from=InitializableImmutableAdminUpgradeabilityProxy, to=AToken, transferUnderlyingTo(target(address): 0x45f013, amount(uint256): 739972418088) -> 739972418088
+          [6][CALL] from=InitializableImmutableAdminUpgradeabilityProxy, to=FiatTokenProxy, transfer(to(address): 0x45f013, value(uint256): 739972418088) -> True
+            [7][DELEGATECALL] from=FiatTokenProxy, to=FiatTokenV2_1, transfer(to(address): 0x45f013, value(uint256): 739972418088) -> True
+      [4][CALL] from=InitializableImmutableAdminUpgradeabilityProxy, to=InitializableImmutableAdminUpgradeabilityProxy, transferUnderlyingTo(target(address): 0x45f013, amount(uint256): 1024292309177539414600) -> 1024292309177539414600
+        [5][DELEGATECALL] from=InitializableImmutableAdminUpgradeabilityProxy, to=AToken, transferUnderlyingTo(target(address): 0x45f013, amount(uint256): 1024292309177539414600) -> 1024292309177539414600
+          [6][CALL] from=InitializableImmutableAdminUpgradeabilityProxy, to=WETH9, transfer(dst(address): 0x45f013, wad(uint256): 1024292309177539414600) -> True
+      [4][CALL] from=InitializableImmutableAdminUpgradeabilityProxy, to=InitializableImmutableAdminUpgradeabilityProxy, transferUnderlyingTo(target(address): 0x45f013, amount(uint256): 4457404922) -> 4457404922
+        [5][DELEGATECALL] from=InitializableImmutableAdminUpgradeabilityProxy, to=AToken, transferUnderlyingTo(target(address): 0x45f013, amount(uint256): 4457404922) -> 4457404922
+          [6][CALL] from=InitializableImmutableAdminUpgradeabilityProxy, to=WBTC, transfer(_to(address): 0x45f013, _value(uint256): 4457404922) -> True
+      [4][CALL] from=InitializableImmutableAdminUpgradeabilityProxy, to=0x45f013, executeOperationaddress[]() -> 0x000000
+        [5][STATICCALL] from=0x45f013, to=WBTC, balanceOf(_owner(address): 0x45f013) -> 4457404922
+        [5][CALL] from=0x45f013, to=WBTC, approve(_spender(address): 0x7fC77b, _value(uint256): 115792089237316195423570985008687907853269...) -> True
+        [5][CALL] from=0x45f013, to=Vyper_contract, exchange(i(int128): 1, j(int128): 0, dx(uint256): 2228702461, min_dy(uint256): 0) -> None
+          [6][STATICCALL] from=Vyper_contract, to=RenBTC, exchangeRateCurrent() -> 1000000000000000000
+            [7][DELEGATECALL] from=RenBTC, to=RenERC20LogicV1, exchangeRateCurrent() -> 1000000000000000000
+          [6][CALL] from=Vyper_contract, to=WBTC, transferFrom(_from(address): 0x45f013, _to(address): 0x7fC77b, _value(uint256): 2228702461) -> True
+          [6][CALL] from=Vyper_contract, to=RenBTC, transfer(recipient(address): 0x45f013, amount(uint256): 2227969414) -> True
+            [7][DELEGATECALL] from=RenBTC, to=RenERC20LogicV1, transfer(recipient(address): 0x45f013, amount(uint256): 2227969414) -> True
+        [5][STATICCALL] from=0x45f013, to=BPool, getBalance(token(address): 0xC02aaA) -> 101828443103443624078
+        [5][CALL] from=0x45f013, to=ArrayFinance, buy(token(address): 0xC02aaA, amount(uint256): 49914221551721812039, slippage(uint256): 10) -> 430000907069551749214
+          [6][STATICCALL] from=ArrayFinance, to=EACAggregatorProxy, latestAnswer() -> 20900000000
+            [7][STATICCALL] from=EACAggregatorProxy, to=AccessControlledOffchainAggregator, latestAnswer() -> 20900000000
+          [6][STATICCALL] from=ArrayFinance, to=BPool, getCurrentTokens() -> ['0x6b1754', '0xa0b869', '0xc02aaa', '0x2260fa', '0xeb4c27']
+          [6][STATICCALL] from=ArrayFinance, to=WETH9, allowance((address): 0xC1ceD8) -> 115792089237316195423570985008687907853269984665640564039457584007913129639935
+          [6][STATICCALL] from=ArrayFinance, to=WETH9, balanceOf((address): 0x45f013) -> 1024292309177539414600
+          [6][STATICCALL] from=ArrayFinance, to=BPool, getBalance(token(address): 0xC02aaA) -> 101828443103443624078
+          [6][CALL] from=ArrayFinance, to=WETH9, approve(guy(address): 0xA800cD, wad(uint256): 34939955086205268429) -> True
+          [6][STATICCALL] from=ArrayFinance, to=BPool, getBalance(token(address): 0xC02aaA) -> 101828443103443624078
+          [6][STATICCALL] from=ArrayFinance, to=BPool, getDenormalizedWeight(token(address): 0xC02aaA) -> 8250000000000000000
+          [6][STATICCALL] from=ArrayFinance, to=BPool, getTotalDenormalizedWeight() -> 25000000000000000000
+          [6][STATICCALL] from=ArrayFinance, to=BPool, getSwapFee() -> 10000000000000000
+          [6][STATICCALL] from=ArrayFinance, to=0xa800cd, totalSupply() -> 0x000000
+          [6][STATICCALL] from=ArrayFinance, to=BPool, calcPoolOutGivenSingleIn(tokenBalanceIn(uint256): 101828443103443624078, tokenWeightIn(uint256): 8250000000000000000, poolSupply(uint256): 100000000000000000000, totalWeight(uint256): 25000000000000000000, tokenAmountIn(uint256): 34939955086205268429, swapFee(uint256): 10000000000000000) -> 10162296218708026400
+          [6][STATICCALL] from=ArrayFinance, to=0xa800cd, totalSupply() -> 0x000000
+          [6][STATICCALL] from=ArrayFinance, to=BancorFormula, purchaseTargetAmount(_supply(uint256): 10000000000000000000000, _reserveBalance(uint256): 100000000000000000000, _reserveWeight(uint32): 435000, _amount(uint256): 10162296218708026400) -> 430000907069551749214
+          [6][CALL] from=ArrayFinance, to=WETH9, transferFrom(src(address): 0x45f013, dst(address): 0xC1ceD8, wad(uint256): 49914221551721812039) -> True
+          [6][CALL] from=ArrayFinance, to=WETH9, transfer(dst(address): 0xB60eF6, wad(uint256): 9982844310344362407) -> True
+          [6][CALL] from=ArrayFinance, to=WETH9, transfer(dst(address): 0x3c25c2, wad(uint256): 4991422155172181203) -> True
+          [6][STATICCALL] from=ArrayFinance, to=WETH9, balanceOf((address): 0xC1ceD8) -> 34939955086205268429
+          [6][CALL] from=ArrayFinance, to=0xa800cd, joinswapExternAmountInaddress() -> 0x000000
+            [7][DELEGATECALL] from=0xa800cd, to=SmartPoolManager, joinswapExternAmountInIConfigurableRightsPool() -> 0x000000
+              [8][STATICCALL] from=0xa800cd, to=BPool, isBound(t(address): 0xC02aaA) -> True
+              [8][STATICCALL] from=0xa800cd, to=BPool, getBalance(token(address): 0xC02aaA) -> 101828443103443624078
+              [8][STATICCALL] from=0xa800cd, to=BPool, getBalance(token(address): 0xC02aaA) -> 101828443103443624078
+              [8][STATICCALL] from=0xa800cd, to=BPool, getDenormalizedWeight(token(address): 0xC02aaA) -> 8250000000000000000
+              [8][STATICCALL] from=0xa800cd, to=0xa800cd, totalSupply() -> 0x000000
+              [8][STATICCALL] from=0xa800cd, to=BPool, getTotalDenormalizedWeight() -> 25000000000000000000
+              [8][STATICCALL] from=0xa800cd, to=BPool, getSwapFee() -> 10000000000000000
+              [8][STATICCALL] from=0xa800cd, to=BPool, calcPoolOutGivenSingleIn(tokenBalanceIn(uint256): 101828443103443624078, tokenWeightIn(uint256): 8250000000000000000, poolSupply(uint256): 100000000000000000000, totalWeight(uint256): 25000000000000000000, tokenAmountIn(uint256): 34939955086205268429, swapFee(uint256): 10000000000000000) -> 10162296218708026400
+            [7][STATICCALL] from=0xa800cd, to=BPool, getBalance(token(address): 0xC02aaA) -> 101828443103443624078
+            [7][STATICCALL] from=0xa800cd, to=BPool, getDenormalizedWeight(token(address): 0xC02aaA) -> 8250000000000000000
+            [7][CALL] from=0xa800cd, to=WETH9, transferFrom(src(address): 0xC1ceD8, dst(address): 0xA800cD, wad(uint256): 34939955086205268429) -> True
+            [7][CALL] from=0xa800cd, to=BPool, rebind(token(address): 0xC02aaA, balance(uint256): 136768398189648892507, denorm(uint256): 8250000000000000000) -> None
+              [8][CALL] from=BPool, to=WETH9, transferFrom(src(address): 0xA800cD, dst(address): 0x02e130, wad(uint256): 34939955086205268429) -> True
+        [5][STATICCALL] from=0x45f013, to=0xa800cd, totalSupply() -> 0x000000
+        [5][CALL] from=0x45f013, to=0xa800cd, joinPooluint256() -> None
+          [6][STATICCALL] from=0xa800cd, to=BPool, isPublicSwap() -> True
+          [6][CALL] from=0xa800cd, to=BPool, setPublicSwap(public_(bool): False) -> None
+          [6][DELEGATECALL] from=0xa800cd, to=SmartPoolManager, joinPoolIConfigurableRightsPool() -> 0x000000
+            [7][STATICCALL] from=0xa800cd, to=BPool, getCurrentTokens() -> ['0x6b1754', '0xa0b869', '0xc02aaa', '0x2260fa', '0xeb4c27']
+            [7][STATICCALL] from=0xa800cd, to=0xa800cd, totalSupply() -> 0x000000
+            [7][STATICCALL] from=0xa800cd, to=BPool, getBalance(token(address): 0x6B1754) -> 102583594513446739457602
+            [7][STATICCALL] from=0xa800cd, to=BPool, getBalance(token(address): 0xA0b869) -> 102988506345
+            [7][STATICCALL] from=0xa800cd, to=BPool, getBalance(token(address): 0xC02aaA) -> 136768398189648892507
+            [7][STATICCALL] from=0xa800cd, to=BPool, getBalance(token(address): 0x2260FA) -> 310188234
+            [7][STATICCALL] from=0xa800cd, to=BPool, getBalance(token(address): 0xEB4C27) -> 311757861
+          [6][STATICCALL] from=0xa800cd, to=BPool, getCurrentTokens() -> ['0x6b1754', '0xa0b869', '0xc02aaa', '0x2260fa', '0xeb4c27']
+          [6][STATICCALL] from=0xa800cd, to=BPool, getBalance(token(address): 0x6B1754) -> 102583594513446739457602
+          [6][STATICCALL] from=0xa800cd, to=BPool, getDenormalizedWeight(token(address): 0x6B1754) -> 4250000000000000000
+          [6][CALL] from=0xa800cd, to=Dai, transferFrom(src(address): 0x45f013, dst(address): 0xA800cD, wad(uint256): 51291797256723369728802) -> True
+          [6][CALL] from=0xa800cd, to=BPool, rebind(token(address): 0x6B1754, balance(uint256): 153875391770170109186404, denorm(uint256): 4250000000000000000) -> None
+            [7][CALL] from=BPool, to=Dai, transferFrom(src(address): 0xA800cD, dst(address): 0x02e130, wad(uint256): 51291797256723369728802) -> True
+          [6][STATICCALL] from=0xa800cd, to=BPool, getBalance(token(address): 0xA0b869) -> 102988506345
+          [6][STATICCALL] from=0xa800cd, to=BPool, getDenormalizedWeight(token(address): 0xA0b869) -> 4250000000000000000
+          [6][CALL] from=0xa800cd, to=FiatTokenProxy, transferFrom(from(address): 0x45f013, to(address): 0xA800cD, value(uint256): 51494253173) -> True
+            [7][DELEGATECALL] from=FiatTokenProxy, to=FiatTokenV2_1, transferFrom(from(address): 0x45f013, to(address): 0xA800cD, value(uint256): 51494253173) -> True
+          [6][CALL] from=0xa800cd, to=BPool, rebind(token(address): 0xA0b869, balance(uint256): 154482759518, denorm(uint256): 4250000000000000000) -> None
+            [7][CALL] from=BPool, to=FiatTokenProxy, transferFrom(from(address): 0xA800cD, to(address): 0x02e130, value(uint256): 51494253173) -> True
+              [8][DELEGATECALL] from=FiatTokenProxy, to=FiatTokenV2_1, transferFrom(from(address): 0xA800cD, to(address): 0x02e130, value(uint256): 51494253173) -> True
+          [6][STATICCALL] from=0xa800cd, to=BPool, getBalance(token(address): 0xC02aaA) -> 136768398189648892507
+          [6][STATICCALL] from=0xa800cd, to=BPool, getDenormalizedWeight(token(address): 0xC02aaA) -> 8250000000000000000
+          [6][CALL] from=0xa800cd, to=WETH9, transferFrom(src(address): 0x45f013, dst(address): 0xA800cD, wad(uint256): 68384199094824446254) -> True
+          [6][CALL] from=0xa800cd, to=BPool, rebind(token(address): 0xC02aaA, balance(uint256): 205152597284473338761, denorm(uint256): 8250000000000000000) -> None
+            [7][CALL] from=BPool, to=WETH9, transferFrom(src(address): 0xA800cD, dst(address): 0x02e130, wad(uint256): 68384199094824446254) -> True
+          [6][STATICCALL] from=0xa800cd, to=BPool, getBalance(token(address): 0x2260FA) -> 310188234
+          [6][STATICCALL] from=0xa800cd, to=BPool, getDenormalizedWeight(token(address): 0x2260FA) -> 4125000000000000000
+          [6][CALL] from=0xa800cd, to=WBTC, transferFrom(_from(address): 0x45f013, _to(address): 0xA800cD, _value(uint256): 155094118) -> True
+          [6][CALL] from=0xa800cd, to=BPool, rebind(token(address): 0x2260FA, balance(uint256): 465282352, denorm(uint256): 4125000000000000000) -> None
+            [7][CALL] from=BPool, to=WBTC, transferFrom(_from(address): 0xA800cD, _to(address): 0x02e130, _value(uint256): 155094118) -> True
+          [6][STATICCALL] from=0xa800cd, to=BPool, getBalance(token(address): 0xEB4C27) -> 311757861
+          [6][STATICCALL] from=0xa800cd, to=BPool, getDenormalizedWeight(token(address): 0xEB4C27) -> 4125000000000000000
+          [6][CALL] from=0xa800cd, to=RenBTC, transferFrom(sender(address): 0x45f013, recipient(address): 0xA800cD, amount(uint256): 155878931) -> True
+            [7][DELEGATECALL] from=RenBTC, to=RenERC20LogicV1, transferFrom(sender(address): 0x45f013, recipient(address): 0xA800cD, amount(uint256): 155878931) -> True
+          [6][CALL] from=0xa800cd, to=BPool, rebind(token(address): 0xEB4C27, balance(uint256): 467636792, denorm(uint256): 4125000000000000000) -> None
+            [7][CALL] from=BPool, to=RenBTC, transferFrom(sender(address): 0xA800cD, recipient(address): 0x02e130, amount(uint256): 155878931) -> True
+              [8][DELEGATECALL] from=RenBTC, to=RenERC20LogicV1, transferFrom(sender(address): 0xA800cD, recipient(address): 0x02e130, amount(uint256): 155878931) -> True
+          [6][CALL] from=0xa800cd, to=BPool, setPublicSwap(public_(bool): True) -> None
+        [5][STATICCALL] from=0x45f013, to=0xa800cd, totalSupply() -> 0x000000
+        [5][CALL] from=0x45f013, to=0xa800cd, joinPooluint256() -> None
+          [6][STATICCALL] from=0xa800cd, to=BPool, isPublicSwap() -> True
+          [6][CALL] from=0xa800cd, to=BPool, setPublicSwap(public_(bool): False) -> None
+          [6][DELEGATECALL] from=0xa800cd, to=SmartPoolManager, joinPoolIConfigurableRightsPool() -> 0x000000
+            [7][STATICCALL] from=0xa800cd, to=BPool, getCurrentTokens() -> ['0x6b1754', '0xa0b869', '0xc02aaa', '0x2260fa', '0xeb4c27']
+            [7][STATICCALL] from=0xa800cd, to=0xa800cd, totalSupply() -> 0x000000
+            [7][STATICCALL] from=0xa800cd, to=BPool, getBalance(token(address): 0x6B1754) -> 153875391770170109186404
+            [7][STATICCALL] from=0xa800cd, to=BPool, getBalance(token(address): 0xA0b869) -> 154482759518
+            [7][STATICCALL] from=0xa800cd, to=BPool, getBalance(token(address): 0xC02aaA) -> 205152597284473338761
+            [7][STATICCALL] from=0xa800cd, to=BPool, getBalance(token(address): 0x2260FA) -> 465282352
+            [7][STATICCALL] from=0xa800cd, to=BPool, getBalance(token(address): 0xEB4C27) -> 467636792
+          [6][STATICCALL] from=0xa800cd, to=BPool, getCurrentTokens() -> ['0x6b1754', '0xa0b869', '0xc02aaa', '0x2260fa', '0xeb4c27']
+          [6][STATICCALL] from=0xa800cd, to=BPool, getBalance(token(address): 0x6B1754) -> 153875391770170109186404
+          [6][STATICCALL] from=0xa800cd, to=BPool, getDenormalizedWeight(token(address): 0x6B1754) -> 4250000000000000000
+          [6][CALL] from=0xa800cd, to=Dai, transferFrom(src(address): 0x45f013, dst(address): 0xA800cD, wad(uint256): 76937695885085054593203) -> True
+          [6][CALL] from=0xa800cd, to=BPool, rebind(token(address): 0x6B1754, balance(uint256): 230813087655255163779607, denorm(uint256): 4250000000000000000) -> None
+            [7][CALL] from=BPool, to=Dai, transferFrom(src(address): 0xA800cD, dst(address): 0x02e130, wad(uint256): 76937695885085054593203) -> True
+          [6][STATICCALL] from=0xa800cd, to=BPool, getBalance(token(address): 0xA0b869) -> 154482759518
+          [6][STATICCALL] from=0xa800cd, to=BPool, getDenormalizedWeight(token(address): 0xA0b869) -> 4250000000000000000
+          [6][CALL] from=0xa800cd, to=FiatTokenProxy, transferFrom(from(address): 0x45f013, to(address): 0xA800cD, value(uint256): 77241379760) -> True
+            [7][DELEGATECALL] from=FiatTokenProxy, to=FiatTokenV2_1, transferFrom(from(address): 0x45f013, to(address): 0xA800cD, value(uint256): 77241379760) -> True
+          [6][CALL] from=0xa800cd, to=BPool, rebind(token(address): 0xA0b869, balance(uint256): 231724139278, denorm(uint256): 4250000000000000000) -> None
+            [7][CALL] from=BPool, to=FiatTokenProxy, transferFrom(from(address): 0xA800cD, to(address): 0x02e130, value(uint256): 77241379760) -> True
+              [8][DELEGATECALL] from=FiatTokenProxy, to=FiatTokenV2_1, transferFrom(from(address): 0xA800cD, to(address): 0x02e130, value(uint256): 77241379760) -> True
+          [6][STATICCALL] from=0xa800cd, to=BPool, getBalance(token(address): 0xC02aaA) -> 205152597284473338761
+          [6][STATICCALL] from=0xa800cd, to=BPool, getDenormalizedWeight(token(address): 0xC02aaA) -> 8250000000000000000
+          [6][CALL] from=0xa800cd, to=WETH9, transferFrom(src(address): 0x45f013, dst(address): 0xA800cD, wad(uint256): 102576298642236669381) -> True
+          [6][CALL] from=0xa800cd, to=BPool, rebind(token(address): 0xC02aaA, balance(uint256): 307728895926710008142, denorm(uint256): 8250000000000000000) -> None
+            [7][CALL] from=BPool, to=WETH9, transferFrom(src(address): 0xA800cD, dst(address): 0x02e130, wad(uint256): 102576298642236669381) -> True
+          [6][STATICCALL] from=0xa800cd, to=BPool, getBalance(token(address): 0x2260FA) -> 465282352
+          [6][STATICCALL] from=0xa800cd, to=BPool, getDenormalizedWeight(token(address): 0x2260FA) -> 4125000000000000000
+          [6][CALL] from=0xa800cd, to=WBTC, transferFrom(_from(address): 0x45f013, _to(address): 0xA800cD, _value(uint256): 232641177) -> True
+          [6][CALL] from=0xa800cd, to=BPool, rebind(token(address): 0x2260FA, balance(uint256): 697923529, denorm(uint256): 4125000000000000000) -> None
+            [7][CALL] from=BPool, to=WBTC, transferFrom(_from(address): 0xA800cD, _to(address): 0x02e130, _value(uint256): 232641177) -> True
+          [6][STATICCALL] from=0xa800cd, to=BPool, getBalance(token(address): 0xEB4C27) -> 467636792
+          [6][STATICCALL] from=0xa800cd, to=BPool, getDenormalizedWeight(token(address): 0xEB4C27) -> 4125000000000000000
+          [6][CALL] from=0xa800cd, to=RenBTC, transferFrom(sender(address): 0x45f013, recipient(address): 0xA800cD, amount(uint256): 233818397) -> True
+            [7][DELEGATECALL] from=RenBTC, to=RenERC20LogicV1, transferFrom(sender(address): 0x45f013, recipient(address): 0xA800cD, amount(uint256): 233818397) -> True
+          [6][CALL] from=0xa800cd, to=BPool, rebind(token(address): 0xEB4C27, balance(uint256): 701455189, denorm(uint256): 4125000000000000000) -> None
+            [7][CALL] from=BPool, to=RenBTC, transferFrom(sender(address): 0xA800cD, recipient(address): 0x02e130, amount(uint256): 233818397) -> True
+              [8][DELEGATECALL] from=RenBTC, to=RenERC20LogicV1, transferFrom(sender(address): 0xA800cD, recipient(address): 0x02e130, amount(uint256): 233818397) -> True
+          [6][CALL] from=0xa800cd, to=BPool, setPublicSwap(public_(bool): True) -> None
+        [5][STATICCALL] from=0x45f013, to=0xa800cd, totalSupply() -> 0x000000
+        [5][CALL] from=0x45f013, to=0xa800cd, joinPooluint256() -> None
+          [6][STATICCALL] from=0xa800cd, to=BPool, isPublicSwap() -> True
+          [6][CALL] from=0xa800cd, to=BPool, setPublicSwap(public_(bool): False) -> None
+          [6][DELEGATECALL] from=0xa800cd, to=SmartPoolManager, joinPoolIConfigurableRightsPool() -> 0x000000
+            [7][STATICCALL] from=0xa800cd, to=BPool, getCurrentTokens() -> ['0x6b1754', '0xa0b869', '0xc02aaa', '0x2260fa', '0xeb4c27']
+            [7][STATICCALL] from=0xa800cd, to=0xa800cd, totalSupply() -> 0x000000
+            [7][STATICCALL] from=0xa800cd, to=BPool, getBalance(token(address): 0x6B1754) -> 230813087655255163779607
+            [7][STATICCALL] from=0xa800cd, to=BPool, getBalance(token(address): 0xA0b869) -> 231724139278
+            [7][STATICCALL] from=0xa800cd, to=BPool, getBalance(token(address): 0xC02aaA) -> 307728895926710008142
+            [7][STATICCALL] from=0xa800cd, to=BPool, getBalance(token(address): 0x2260FA) -> 697923529
+            [7][STATICCALL] from=0xa800cd, to=BPool, getBalance(token(address): 0xEB4C27) -> 701455189
+          [6][STATICCALL] from=0xa800cd, to=BPool, getCurrentTokens() -> ['0x6b1754', '0xa0b869', '0xc02aaa', '0x2260fa', '0xeb4c27']
+          [6][STATICCALL] from=0xa800cd, to=BPool, getBalance(token(address): 0x6B1754) -> 230813087655255163779607
+          [6][STATICCALL] from=0xa800cd, to=BPool, getDenormalizedWeight(token(address): 0x6B1754) -> 4250000000000000000
+          [6][CALL] from=0xa800cd, to=Dai, transferFrom(src(address): 0x45f013, dst(address): 0xA800cD, wad(uint256): 115406543827627581889804) -> True
+          [6][CALL] from=0xa800cd, to=BPool, rebind(token(address): 0x6B1754, balance(uint256): 346219631482882745669411, denorm(uint256): 4250000000000000000) -> None
+            [7][CALL] from=BPool, to=Dai, transferFrom(src(address): 0xA800cD, dst(address): 0x02e130, wad(uint256): 115406543827627581889804) -> True
+          [6][STATICCALL] from=0xa800cd, to=BPool, getBalance(token(address): 0xA0b869) -> 231724139278
+          [6][STATICCALL] from=0xa800cd, to=BPool, getDenormalizedWeight(token(address): 0xA0b869) -> 4250000000000000000
+          [6][CALL] from=0xa800cd, to=FiatTokenProxy, transferFrom(from(address): 0x45f013, to(address): 0xA800cD, value(uint256): 115862069640) -> True
+            [7][DELEGATECALL] from=FiatTokenProxy, to=FiatTokenV2_1, transferFrom(from(address): 0x45f013, to(address): 0xA800cD, value(uint256): 115862069640) -> True
+          [6][CALL] from=0xa800cd, to=BPool, rebind(token(address): 0xA0b869, balance(uint256): 347586208918, denorm(uint256): 4250000000000000000) -> None
+            [7][CALL] from=BPool, to=FiatTokenProxy, transferFrom(from(address): 0xA800cD, to(address): 0x02e130, value(uint256): 115862069640) -> True
+              [8][DELEGATECALL] from=FiatTokenProxy, to=FiatTokenV2_1, transferFrom(from(address): 0xA800cD, to(address): 0x02e130, value(uint256): 115862069640) -> True
+          [6][STATICCALL] from=0xa800cd, to=BPool, getBalance(token(address): 0xC02aaA) -> 307728895926710008142
+          [6][STATICCALL] from=0xa800cd, to=BPool, getDenormalizedWeight(token(address): 0xC02aaA) -> 8250000000000000000
+          [6][CALL] from=0xa800cd, to=WETH9, transferFrom(src(address): 0x45f013, dst(address): 0xA800cD, wad(uint256): 153864447963355004072) -> True
+          [6][CALL] from=0xa800cd, to=BPool, rebind(token(address): 0xC02aaA, balance(uint256): 461593343890065012214, denorm(uint256): 8250000000000000000) -> None
+            [7][CALL] from=BPool, to=WETH9, transferFrom(src(address): 0xA800cD, dst(address): 0x02e130, wad(uint256): 153864447963355004072) -> True
+          [6][STATICCALL] from=0xa800cd, to=BPool, getBalance(token(address): 0x2260FA) -> 697923529
+          [6][STATICCALL] from=0xa800cd, to=BPool, getDenormalizedWeight(token(address): 0x2260FA) -> 4125000000000000000
+          [6][CALL] from=0xa800cd, to=WBTC, transferFrom(_from(address): 0x45f013, _to(address): 0xA800cD, _value(uint256): 348961765) -> True
+          [6][CALL] from=0xa800cd, to=BPool, rebind(token(address): 0x2260FA, balance(uint256): 1046885294, denorm(uint256): 4125000000000000000) -> None
+            [7][CALL] from=BPool, to=WBTC, transferFrom(_from(address): 0xA800cD, _to(address): 0x02e130, _value(uint256): 348961765) -> True
+          [6][STATICCALL] from=0xa800cd, to=BPool, getBalance(token(address): 0xEB4C27) -> 701455189
+          [6][STATICCALL] from=0xa800cd, to=BPool, getDenormalizedWeight(token(address): 0xEB4C27) -> 4125000000000000000
+          [6][CALL] from=0xa800cd, to=RenBTC, transferFrom(sender(address): 0x45f013, recipient(address): 0xA800cD, amount(uint256): 350727595) -> True
+            [7][DELEGATECALL] from=RenBTC, to=RenERC20LogicV1, transferFrom(sender(address): 0x45f013, recipient(address): 0xA800cD, amount(uint256): 350727595) -> True
+          [6][CALL] from=0xa800cd, to=BPool, rebind(token(address): 0xEB4C27, balance(uint256): 1052182784, denorm(uint256): 4125000000000000000) -> None
+            [7][CALL] from=BPool, to=RenBTC, transferFrom(sender(address): 0xA800cD, recipient(address): 0x02e130, amount(uint256): 350727595) -> True
+              [8][DELEGATECALL] from=RenBTC, to=RenERC20LogicV1, transferFrom(sender(address): 0xA800cD, recipient(address): 0x02e130, amount(uint256): 350727595) -> True
+          [6][CALL] from=0xa800cd, to=BPool, setPublicSwap(public_(bool): True) -> None
+        [5][STATICCALL] from=0x45f013, to=0xa800cd, totalSupply() -> 0x000000
+        [5][CALL] from=0x45f013, to=0xa800cd, joinPooluint256() -> None
+          [6][STATICCALL] from=0xa800cd, to=BPool, isPublicSwap() -> True
+          [6][CALL] from=0xa800cd, to=BPool, setPublicSwap(public_(bool): False) -> None
+          [6][DELEGATECALL] from=0xa800cd, to=SmartPoolManager, joinPoolIConfigurableRightsPool() -> 0x000000
+            [7][STATICCALL] from=0xa800cd, to=BPool, getCurrentTokens() -> ['0x6b1754', '0xa0b869', '0xc02aaa', '0x2260fa', '0xeb4c27']
+            [7][STATICCALL] from=0xa800cd, to=0xa800cd, totalSupply() -> 0x000000
+            [7][STATICCALL] from=0xa800cd, to=BPool, getBalance(token(address): 0x6B1754) -> 346219631482882745669411
+            [7][STATICCALL] from=0xa800cd, to=BPool, getBalance(token(address): 0xA0b869) -> 347586208918
+            [7][STATICCALL] from=0xa800cd, to=BPool, getBalance(token(address): 0xC02aaA) -> 461593343890065012214
+            [7][STATICCALL] from=0xa800cd, to=BPool, getBalance(token(address): 0x2260FA) -> 1046885294
+            [7][STATICCALL] from=0xa800cd, to=BPool, getBalance(token(address): 0xEB4C27) -> 1052182784
+          [6][STATICCALL] from=0xa800cd, to=BPool, getCurrentTokens() -> ['0x6b1754', '0xa0b869', '0xc02aaa', '0x2260fa', '0xeb4c27']
+          [6][STATICCALL] from=0xa800cd, to=BPool, getBalance(token(address): 0x6B1754) -> 346219631482882745669411
+          [6][STATICCALL] from=0xa800cd, to=BPool, getDenormalizedWeight(token(address): 0x6B1754) -> 4250000000000000000
+          [6][CALL] from=0xa800cd, to=Dai, transferFrom(src(address): 0x45f013, dst(address): 0xA800cD, wad(uint256): 173109815741441372834706) -> True
+          [6][CALL] from=0xa800cd, to=BPool, rebind(token(address): 0x6B1754, balance(uint256): 519329447224324118504117, denorm(uint256): 4250000000000000000) -> None
+            [7][CALL] from=BPool, to=Dai, transferFrom(src(address): 0xA800cD, dst(address): 0x02e130, wad(uint256): 173109815741441372834706) -> True
+          [6][STATICCALL] from=0xa800cd, to=BPool, getBalance(token(address): 0xA0b869) -> 347586208918
+          [6][STATICCALL] from=0xa800cd, to=BPool, getDenormalizedWeight(token(address): 0xA0b869) -> 4250000000000000000
+          [6][CALL] from=0xa800cd, to=FiatTokenProxy, transferFrom(from(address): 0x45f013, to(address): 0xA800cD, value(uint256): 173793104460) -> True
+            [7][DELEGATECALL] from=FiatTokenProxy, to=FiatTokenV2_1, transferFrom(from(address): 0x45f013, to(address): 0xA800cD, value(uint256): 173793104460) -> True
+          [6][CALL] from=0xa800cd, to=BPool, rebind(token(address): 0xA0b869, balance(uint256): 521379313378, denorm(uint256): 4250000000000000000) -> None
+            [7][CALL] from=BPool, to=FiatTokenProxy, transferFrom(from(address): 0xA800cD, to(address): 0x02e130, value(uint256): 173793104460) -> True
+              [8][DELEGATECALL] from=FiatTokenProxy, to=FiatTokenV2_1, transferFrom(from(address): 0xA800cD, to(address): 0x02e130, value(uint256): 173793104460) -> True
+          [6][STATICCALL] from=0xa800cd, to=BPool, getBalance(token(address): 0xC02aaA) -> 461593343890065012214
+          [6][STATICCALL] from=0xa800cd, to=BPool, getDenormalizedWeight(token(address): 0xC02aaA) -> 8250000000000000000
+          [6][CALL] from=0xa800cd, to=WETH9, transferFrom(src(address): 0x45f013, dst(address): 0xA800cD, wad(uint256): 230796671945032506108) -> True
+          [6][CALL] from=0xa800cd, to=BPool, rebind(token(address): 0xC02aaA, balance(uint256): 692390015835097518322, denorm(uint256): 8250000000000000000) -> None
+            [7][CALL] from=BPool, to=WETH9, transferFrom(src(address): 0xA800cD, dst(address): 0x02e130, wad(uint256): 230796671945032506108) -> True
+          [6][STATICCALL] from=0xa800cd, to=BPool, getBalance(token(address): 0x2260FA) -> 1046885294
+          [6][STATICCALL] from=0xa800cd, to=BPool, getDenormalizedWeight(token(address): 0x2260FA) -> 4125000000000000000
+          [6][CALL] from=0xa800cd, to=WBTC, transferFrom(_from(address): 0x45f013, _to(address): 0xA800cD, _value(uint256): 523442648) -> True
+          [6][CALL] from=0xa800cd, to=BPool, rebind(token(address): 0x2260FA, balance(uint256): 1570327942, denorm(uint256): 4125000000000000000) -> None
+            [7][CALL] from=BPool, to=WBTC, transferFrom(_from(address): 0xA800cD, _to(address): 0x02e130, _value(uint256): 523442648) -> True
+          [6][STATICCALL] from=0xa800cd, to=BPool, getBalance(token(address): 0xEB4C27) -> 1052182784
+          [6][STATICCALL] from=0xa800cd, to=BPool, getDenormalizedWeight(token(address): 0xEB4C27) -> 4125000000000000000
+          [6][CALL] from=0xa800cd, to=RenBTC, transferFrom(sender(address): 0x45f013, recipient(address): 0xA800cD, amount(uint256): 526091393) -> True
+            [7][DELEGATECALL] from=RenBTC, to=RenERC20LogicV1, transferFrom(sender(address): 0x45f013, recipient(address): 0xA800cD, amount(uint256): 526091393) -> True
+          [6][CALL] from=0xa800cd, to=BPool, rebind(token(address): 0xEB4C27, balance(uint256): 1578274177, denorm(uint256): 4125000000000000000) -> None
+            [7][CALL] from=BPool, to=RenBTC, transferFrom(sender(address): 0xA800cD, recipient(address): 0x02e130, amount(uint256): 526091393) -> True
+              [8][DELEGATECALL] from=RenBTC, to=RenERC20LogicV1, transferFrom(sender(address): 0xA800cD, recipient(address): 0x02e130, amount(uint256): 526091393) -> True
+          [6][CALL] from=0xa800cd, to=BPool, setPublicSwap(public_(bool): True) -> None
+        [5][STATICCALL] from=0x45f013, to=0xa800cd, totalSupply() -> 0x000000
+        [5][CALL] from=0x45f013, to=0xa800cd, joinPooluint256() -> None
+          [6][STATICCALL] from=0xa800cd, to=BPool, isPublicSwap() -> True
+          [6][CALL] from=0xa800cd, to=BPool, setPublicSwap(public_(bool): False) -> None
+          [6][DELEGATECALL] from=0xa800cd, to=SmartPoolManager, joinPoolIConfigurableRightsPool() -> 0x000000
+            [7][STATICCALL] from=0xa800cd, to=BPool, getCurrentTokens() -> ['0x6b1754', '0xa0b869', '0xc02aaa', '0x2260fa', '0xeb4c27']
+            [7][STATICCALL] from=0xa800cd, to=0xa800cd, totalSupply() -> 0x000000
+            [7][STATICCALL] from=0xa800cd, to=BPool, getBalance(token(address): 0x6B1754) -> 519329447224324118504117
+            [7][STATICCALL] from=0xa800cd, to=BPool, getBalance(token(address): 0xA0b869) -> 521379313378
+            [7][STATICCALL] from=0xa800cd, to=BPool, getBalance(token(address): 0xC02aaA) -> 692390015835097518322
+            [7][STATICCALL] from=0xa800cd, to=BPool, getBalance(token(address): 0x2260FA) -> 1570327942
+            [7][STATICCALL] from=0xa800cd, to=BPool, getBalance(token(address): 0xEB4C27) -> 1578274177
+          [6][STATICCALL] from=0xa800cd, to=BPool, getCurrentTokens() -> ['0x6b1754', '0xa0b869', '0xc02aaa', '0x2260fa', '0xeb4c27']
+          [6][STATICCALL] from=0xa800cd, to=BPool, getBalance(token(address): 0x6B1754) -> 519329447224324118504117
+          [6][STATICCALL] from=0xa800cd, to=BPool, getDenormalizedWeight(token(address): 0x6B1754) -> 4250000000000000000
+          [6][CALL] from=0xa800cd, to=Dai, transferFrom(src(address): 0x45f013, dst(address): 0xA800cD, wad(uint256): 259664723612162059252059) -> True
+          [6][CALL] from=0xa800cd, to=BPool, rebind(token(address): 0x6B1754, balance(uint256): 778994170836486177756176, denorm(uint256): 4250000000000000000) -> None
+            [7][CALL] from=BPool, to=Dai, transferFrom(src(address): 0xA800cD, dst(address): 0x02e130, wad(uint256): 259664723612162059252059) -> True
+          [6][STATICCALL] from=0xa800cd, to=BPool, getBalance(token(address): 0xA0b869) -> 521379313378
+          [6][STATICCALL] from=0xa800cd, to=BPool, getDenormalizedWeight(token(address): 0xA0b869) -> 4250000000000000000
+          [6][CALL] from=0xa800cd, to=FiatTokenProxy, transferFrom(from(address): 0x45f013, to(address): 0xA800cD, value(uint256): 260689656690) -> True
+            [7][DELEGATECALL] from=FiatTokenProxy, to=FiatTokenV2_1, transferFrom(from(address): 0x45f013, to(address): 0xA800cD, value(uint256): 260689656690) -> True
+          [6][CALL] from=0xa800cd, to=BPool, rebind(token(address): 0xA0b869, balance(uint256): 782068970068, denorm(uint256): 4250000000000000000) -> None
+            [7][CALL] from=BPool, to=FiatTokenProxy, transferFrom(from(address): 0xA800cD, to(address): 0x02e130, value(uint256): 260689656690) -> True
+              [8][DELEGATECALL] from=FiatTokenProxy, to=FiatTokenV2_1, transferFrom(from(address): 0xA800cD, to(address): 0x02e130, value(uint256): 260689656690) -> True
+          [6][STATICCALL] from=0xa800cd, to=BPool, getBalance(token(address): 0xC02aaA) -> 692390015835097518322
+          [6][STATICCALL] from=0xa800cd, to=BPool, getDenormalizedWeight(token(address): 0xC02aaA) -> 8250000000000000000
+          [6][CALL] from=0xa800cd, to=WETH9, transferFrom(src(address): 0x45f013, dst(address): 0xA800cD, wad(uint256): 346195007917548759162) -> True
+          [6][CALL] from=0xa800cd, to=BPool, rebind(token(address): 0xC02aaA, balance(uint256): 1038585023752646277484, denorm(uint256): 8250000000000000000) -> None
+            [7][CALL] from=BPool, to=WETH9, transferFrom(src(address): 0xA800cD, dst(address): 0x02e130, wad(uint256): 346195007917548759162) -> True
+          [6][STATICCALL] from=0xa800cd, to=BPool, getBalance(token(address): 0x2260FA) -> 1570327942
+          [6][STATICCALL] from=0xa800cd, to=BPool, getDenormalizedWeight(token(address): 0x2260FA) -> 4125000000000000000
+          [6][CALL] from=0xa800cd, to=WBTC, transferFrom(_from(address): 0x45f013, _to(address): 0xA800cD, _value(uint256): 785163972) -> True
+          [6][CALL] from=0xa800cd, to=BPool, rebind(token(address): 0x2260FA, balance(uint256): 2355491914, denorm(uint256): 4125000000000000000) -> None
+            [7][CALL] from=BPool, to=WBTC, transferFrom(_from(address): 0xA800cD, _to(address): 0x02e130, _value(uint256): 785163972) -> True
+          [6][STATICCALL] from=0xa800cd, to=BPool, getBalance(token(address): 0xEB4C27) -> 1578274177
+          [6][STATICCALL] from=0xa800cd, to=BPool, getDenormalizedWeight(token(address): 0xEB4C27) -> 4125000000000000000
+          [6][CALL] from=0xa800cd, to=RenBTC, transferFrom(sender(address): 0x45f013, recipient(address): 0xA800cD, amount(uint256): 789137089) -> True
+            [7][DELEGATECALL] from=RenBTC, to=RenERC20LogicV1, transferFrom(sender(address): 0x45f013, recipient(address): 0xA800cD, amount(uint256): 789137089) -> True
+          [6][CALL] from=0xa800cd, to=BPool, rebind(token(address): 0xEB4C27, balance(uint256): 2367411266, denorm(uint256): 4125000000000000000) -> None
+            [7][CALL] from=BPool, to=RenBTC, transferFrom(sender(address): 0xA800cD, recipient(address): 0x02e130, amount(uint256): 789137089) -> True
+              [8][DELEGATECALL] from=RenBTC, to=RenERC20LogicV1, transferFrom(sender(address): 0xA800cD, recipient(address): 0x02e130, amount(uint256): 789137089) -> True
+          [6][CALL] from=0xa800cd, to=BPool, setPublicSwap(public_(bool): True) -> None
+        [5][CALL] from=0x45f013, to=ArrayFinance, sell(max(bool): True) -> 77169936910814075474
+          [6][STATICCALL] from=ArrayFinance, to=0xa800cd, totalSupply() -> 0x000000
+          [6][STATICCALL] from=ArrayFinance, to=BancorFormula, saleTargetAmount(_supply(uint256): 10430000907069551749214, _reserveBalance(uint256): 836544936910814075475, _reserveWeight(uint32): 435000, _amount(uint256): 430000907069551749214) -> 77169936910814075474
+          [6][CALL] from=ArrayFinance, to=0xa800cd, transferaddress() -> 0x000000
+        [5][STATICCALL] from=0x45f013, to=0xa800cd, balanceOfaddress() -> 0x000000
+        [5][STATICCALL] from=0x45f013, to=0xa800cd, totalSupply() -> 0x000000
+        [5][STATICCALL] from=0x45f013, to=0xa800cd, balanceOfaddress() -> 0x000000
+        [5][CALL] from=0x45f013, to=0xa800cd, exitPooluint256() -> None
+          [6][STATICCALL] from=0xa800cd, to=BPool, isPublicSwap() -> True
+          [6][CALL] from=0xa800cd, to=BPool, setPublicSwap(public_(bool): False) -> None
+          [6][DELEGATECALL] from=0xa800cd, to=SmartPoolManager, exitPoolIConfigurableRightsPool() -> 0x000000
+            [7][STATICCALL] from=0xa800cd, to=BPool, getCurrentTokens() -> ['0x6b1754', '0xa0b869', '0xc02aaa', '0x2260fa', '0xeb4c27']
+            [7][STATICCALL] from=0xa800cd, to=0xa800cd, totalSupply() -> 0x000000
+            [7][STATICCALL] from=0xa800cd, to=BPool, getBalance(token(address): 0x6B1754) -> 778994170836486177756176
+            [7][STATICCALL] from=0xa800cd, to=BPool, getBalance(token(address): 0xA0b869) -> 782068970068
+            [7][STATICCALL] from=0xa800cd, to=BPool, getBalance(token(address): 0xC02aaA) -> 1038585023752646277484
+            [7][STATICCALL] from=0xa800cd, to=BPool, getBalance(token(address): 0x2260FA) -> 2355491914
+            [7][STATICCALL] from=0xa800cd, to=BPool, getBalance(token(address): 0xEB4C27) -> 2367411266
+          [6][STATICCALL] from=0xa800cd, to=BPool, getCurrentTokens() -> ['0x6b1754', '0xa0b869', '0xc02aaa', '0x2260fa', '0xeb4c27']
+          [6][STATICCALL] from=0xa800cd, to=BPool, getBalance(token(address): 0x6B1754) -> 778994170836486177756176
+          [6][STATICCALL] from=0xa800cd, to=BPool, getDenormalizedWeight(token(address): 0x6B1754) -> 4250000000000000000
+          [6][CALL] from=0xa800cd, to=BPool, rebind(token(address): 0x6B1754, balance(uint256): 30722624032487929285813, denorm(uint256): 4250000000000000000) -> None
+            [7][CALL] from=BPool, to=Dai, transfer(dst(address): 0xA800cD, wad(uint256): 748271546803998248470363) -> True
+            [7][CALL] from=BPool, to=Dai, transfer(dst(address): 0x9424B1, wad(uint256): 0) -> True
+          [6][CALL] from=0xa800cd, to=Dai, transfer(dst(address): 0x45f013, wad(uint256): 748271546803998248470363) -> True
+          [6][STATICCALL] from=0xa800cd, to=BPool, getBalance(token(address): 0xA0b869) -> 782068970068
+          [6][STATICCALL] from=0xa800cd, to=BPool, getDenormalizedWeight(token(address): 0xA0b869) -> 4250000000000000000
+          [6][CALL] from=0xa800cd, to=BPool, rebind(token(address): 0xA0b869, balance(uint256): 30843890539, denorm(uint256): 4250000000000000000) -> None
+            [7][CALL] from=BPool, to=FiatTokenProxy, transfer(to(address): 0xA800cD, value(uint256): 751225079529) -> True
+              [8][DELEGATECALL] from=FiatTokenProxy, to=FiatTokenV2_1, transfer(to(address): 0xA800cD, value(uint256): 751225079529) -> True
+            [7][CALL] from=BPool, to=FiatTokenProxy, transfer(to(address): 0x9424B1, value(uint256): 0) -> True
+              [8][DELEGATECALL] from=FiatTokenProxy, to=FiatTokenV2_1, transfer(to(address): 0x9424B1, value(uint256): 0) -> True
+          [6][CALL] from=0xa800cd, to=FiatTokenProxy, transfer(to(address): 0x45f013, value(uint256): 751225079529) -> True
+            [7][DELEGATECALL] from=FiatTokenProxy, to=FiatTokenV2_1, transfer(to(address): 0x45f013, value(uint256): 751225079529) -> True
+          [6][STATICCALL] from=0xa800cd, to=BPool, getBalance(token(address): 0xC02aaA) -> 1038585023752646277484
+          [6][STATICCALL] from=0xa800cd, to=BPool, getDenormalizedWeight(token(address): 0xC02aaA) -> 8250000000000000000
+          [6][CALL] from=0xa800cd, to=BPool, rebind(token(address): 0xC02aaA, balance(uint256): 40960585335654224385, denorm(uint256): 8250000000000000000) -> None
+            [7][CALL] from=BPool, to=WETH9, transfer(dst(address): 0xA800cD, wad(uint256): 997624438416992053099) -> True
+            [7][CALL] from=BPool, to=WETH9, transfer(dst(address): 0x9424B1, wad(uint256): 0) -> True
+          [6][CALL] from=0xa800cd, to=WETH9, transfer(dst(address): 0x45f013, wad(uint256): 997624438416992053099) -> True
+          [6][STATICCALL] from=0xa800cd, to=BPool, getBalance(token(address): 0x2260FA) -> 2355491914
+          [6][STATICCALL] from=0xa800cd, to=BPool, getDenormalizedWeight(token(address): 0x2260FA) -> 4125000000000000000
+          [6][CALL] from=0xa800cd, to=BPool, rebind(token(address): 0x2260FA, balance(uint256): 92897862, denorm(uint256): 4125000000000000000) -> None
+            [7][CALL] from=BPool, to=WBTC, transfer(_to(address): 0xA800cD, _value(uint256): 2262594052) -> True
+            [7][CALL] from=BPool, to=WBTC, transfer(_to(address): 0x9424B1, _value(uint256): 0) -> True
+          [6][CALL] from=0xa800cd, to=WBTC, transfer(_to(address): 0x45f013, _value(uint256): 2262594052) -> True
+          [6][STATICCALL] from=0xa800cd, to=BPool, getBalance(token(address): 0xEB4C27) -> 2367411266
+          [6][STATICCALL] from=0xa800cd, to=BPool, getDenormalizedWeight(token(address): 0xEB4C27) -> 4125000000000000000
+          [6][CALL] from=0xa800cd, to=BPool, rebind(token(address): 0xEB4C27, balance(uint256): 93367948, denorm(uint256): 4125000000000000000) -> None
+            [7][CALL] from=BPool, to=RenBTC, transfer(recipient(address): 0xA800cD, amount(uint256): 2274043318) -> True
+              [8][DELEGATECALL] from=RenBTC, to=RenERC20LogicV1, transfer(recipient(address): 0xA800cD, amount(uint256): 2274043318) -> True
+            [7][CALL] from=BPool, to=RenBTC, transfer(recipient(address): 0x9424B1, amount(uint256): 0) -> True
+              [8][DELEGATECALL] from=RenBTC, to=RenERC20LogicV1, transfer(recipient(address): 0x9424B1, amount(uint256): 0) -> True
+          [6][CALL] from=0xa800cd, to=RenBTC, transfer(recipient(address): 0x45f013, amount(uint256): 2274043318) -> True
+            [7][DELEGATECALL] from=RenBTC, to=RenERC20LogicV1, transfer(recipient(address): 0x45f013, amount(uint256): 2274043318) -> True
+          [6][CALL] from=0xa800cd, to=BPool, setPublicSwap(public_(bool): True) -> None
+        [5][CALL] from=0x45f013, to=RenBTC, approve(spender(address): 0x7fC77b, amount(uint256): 115792089237316195423570985008687907853269...) -> True
+          [6][DELEGATECALL] from=RenBTC, to=RenERC20LogicV1, approve(spender(address): 0x7fC77b, amount(uint256): 115792089237316195423570985008687907853269...) -> True
+        [5][STATICCALL] from=0x45f013, to=RenBTC, balanceOf(account(address): 0x45f013) -> 2446359327
+          [6][DELEGATECALL] from=RenBTC, to=RenERC20LogicV1, balanceOf(account(address): 0x45f013) -> 2446359327
+        [5][CALL] from=0x45f013, to=Vyper_contract, exchange(i(int128): 0, j(int128): 1, dx(uint256): 2446359327, min_dy(uint256): 0) -> None
+          [6][STATICCALL] from=Vyper_contract, to=RenBTC, exchangeRateCurrent() -> 1000000000000000000
+            [7][DELEGATECALL] from=RenBTC, to=RenERC20LogicV1, exchangeRateCurrent() -> 1000000000000000000
+          [6][CALL] from=Vyper_contract, to=RenBTC, transferFrom(sender(address): 0x45f013, recipient(address): 0x7fC77b, amount(uint256): 2446359327) -> True
+            [7][DELEGATECALL] from=RenBTC, to=RenERC20LogicV1, transferFrom(sender(address): 0x45f013, recipient(address): 0x7fC77b, amount(uint256): 2446359327) -> True
+          [6][CALL] from=Vyper_contract, to=WBTC, transfer(_to(address): 0x45f013, _value(uint256): 2445193371) -> True
+        [5][CALL] from=0x45f013, to=Dai, approve(usr(address): 0x7d2768, wad(uint256): 737726483393036026343572) -> True
+        [5][CALL] from=0x45f013, to=FiatTokenProxy, approve(spender(address): 0x7d2768, value(uint256): 740638393264) -> True
+          [6][DELEGATECALL] from=FiatTokenProxy, to=FiatTokenV2_1, approve(spender(address): 0x7d2768, value(uint256): 740638393264) -> True
+        [5][CALL] from=0x45f013, to=WETH9, approve(guy(address): 0x7d2768, wad(uint256): 1025214172255799200073) -> True
+        [5][CALL] from=0x45f013, to=WBTC, approve(_spender(address): 0x7d2768, _value(uint256): 4461416586) -> True
+      [4][STATICCALL] from=InitializableImmutableAdminUpgradeabilityProxy, to=InitializableImmutableAdminUpgradeabilityProxy, scaledTotalSupply() -> 860464636365938428565980617
+        [5][DELEGATECALL] from=InitializableImmutableAdminUpgradeabilityProxy, to=VariableDebtToken, scaledTotalSupply() -> 860464636365938428565980617
+      [4][STATICCALL] from=InitializableImmutableAdminUpgradeabilityProxy, to=InitializableImmutableAdminUpgradeabilityProxy, getSupplyData() -> ['10685200992540241434163059', '10686625635114044691773334', '106342814936199460332673408', '1626560621']
+        [5][DELEGATECALL] from=InitializableImmutableAdminUpgradeabilityProxy, to=StableDebtToken, getSupplyData() -> ['10685200992540241434163059', '10686625635114044691773334', '106342814936199460332673408', '1626560621']
+      [4][CALL] from=InitializableImmutableAdminUpgradeabilityProxy, to=InitializableImmutableAdminUpgradeabilityProxy, mintToTreasury(amount(uint256): 24951331144591178175, index(uint256): 1045938571272618423796307691) -> None
+        [5][DELEGATECALL] from=InitializableImmutableAdminUpgradeabilityProxy, to=AToken, mintToTreasury(amount(uint256): 24951331144591178175, index(uint256): 1045938571272618423796307691) -> None
+          [6][CALL] from=InitializableImmutableAdminUpgradeabilityProxy, to=InitializableImmutableAdminUpgradeabilityProxy, handleAction(user(address): 0x464C71, totalSupply(uint256): 1249679149084262038409638006, userBalance(uint256): 1316911143950341768274630) -> None
+            [7][DELEGATECALL] from=InitializableImmutableAdminUpgradeabilityProxy, to=StakedTokenIncentivesController, handleAction(user(address): 0x464C71, totalSupply(uint256): 1249679149084262038409638006, userBalance(uint256): 1316911143950341768274630) -> None
+      [4][STATICCALL] from=InitializableImmutableAdminUpgradeabilityProxy, to=InitializableImmutableAdminUpgradeabilityProxy, totalSupply() -> 1307087648693705699509364593
+        [5][DELEGATECALL] from=InitializableImmutableAdminUpgradeabilityProxy, to=AToken, totalSupply() -> 1307087648693705699509364593
+          [6][STATICCALL] from=InitializableImmutableAdminUpgradeabilityProxy, to=InitializableImmutableAdminUpgradeabilityProxy, getReserveNormalizedIncome(asset(address): 0x6B1754) -> 1045938571272618423796307691
+            [7][DELEGATECALL] from=InitializableImmutableAdminUpgradeabilityProxy, to=LendingPool, getReserveNormalizedIncome(asset(address): 0x6B1754) -> 1045938571272618423796307691
+      [4][STATICCALL] from=InitializableImmutableAdminUpgradeabilityProxy, to=InitializableImmutableAdminUpgradeabilityProxy, getTotalSupplyAndAvgRate() -> ['10686625635114044691773334', '106342814936199460332673408']
+        [5][DELEGATECALL] from=InitializableImmutableAdminUpgradeabilityProxy, to=StableDebtToken, getTotalSupplyAndAvgRate() -> ['10686625635114044691773334', '106342814936199460332673408']
+      [4][STATICCALL] from=InitializableImmutableAdminUpgradeabilityProxy, to=InitializableImmutableAdminUpgradeabilityProxy, scaledTotalSupply() -> 860464636365938428565980617
+        [5][DELEGATECALL] from=InitializableImmutableAdminUpgradeabilityProxy, to=VariableDebtToken, scaledTotalSupply() -> 860464636365938428565980617
+      [4][STATICCALL] from=InitializableImmutableAdminUpgradeabilityProxy, to=Dai, balanceOf((address): 0x028171) -> 371131266014755265986620801
+      [4][STATICCALL] from=InitializableImmutableAdminUpgradeabilityProxy, to=DefaultReserveInterestRateStrategy, calculateInterestRates(reserve(address): 0x6B1754, availableLiquidity(uint256): 371868992498148302012964373, totalStableDebt(uint256): 10686625635114044691773334, totalVariableDebt(uint256): 924532710971245690692010239, averageStableBorrowRate(uint256): 106342814936199460332673408, reserveFactor(uint256): 1000) -> ['23556455469743458988714977', '117887454806651869805447844', '35774909613303739610895688']
+        [5][STATICCALL] from=DefaultReserveInterestRateStrategy, to=LendingPoolAddressesProvider, getLendingRateOracle() -> 0x8a32f4
+        [5][STATICCALL] from=DefaultReserveInterestRateStrategy, to=LendingRateOracle, getMarketBorrowRate(asset(address): 0x6B1754) -> 100000000000000000000000000
+      [4][CALL] from=InitializableImmutableAdminUpgradeabilityProxy, to=Dai, transferFrom(src(address): 0x45f013, dst(address): 0x028171, wad(uint256): 737726483393036026343572) -> True
+      [4][STATICCALL] from=InitializableImmutableAdminUpgradeabilityProxy, to=InitializableImmutableAdminUpgradeabilityProxy, scaledTotalSupply() -> 3879772321882912
+        [5][DELEGATECALL] from=InitializableImmutableAdminUpgradeabilityProxy, to=VariableDebtToken, scaledTotalSupply() -> 3879772321882912
+      [4][STATICCALL] from=InitializableImmutableAdminUpgradeabilityProxy, to=InitializableImmutableAdminUpgradeabilityProxy, getSupplyData() -> ['32076220090644', '32079748910909', '103081203108720922153330434', '1626566502']
+        [5][DELEGATECALL] from=InitializableImmutableAdminUpgradeabilityProxy, to=StableDebtToken, getSupplyData() -> ['32076220090644', '32079748910909', '103081203108720922153330434', '1626566502']
+      [4][CALL] from=InitializableImmutableAdminUpgradeabilityProxy, to=InitializableImmutableAdminUpgradeabilityProxy, mintToTreasury(amount(uint256): 89085465, index(uint256): 1045280916309779602776366050) -> None
+        [5][DELEGATECALL] from=InitializableImmutableAdminUpgradeabilityProxy, to=AToken, mintToTreasury(amount(uint256): 89085465, index(uint256): 1045280916309779602776366050) -> None
+          [6][CALL] from=InitializableImmutableAdminUpgradeabilityProxy, to=InitializableImmutableAdminUpgradeabilityProxy, handleAction(user(address): 0x464C71, totalSupply(uint256): 5428714535163839, userBalance(uint256): 3565673266668) -> None
+            [7][DELEGATECALL] from=InitializableImmutableAdminUpgradeabilityProxy, to=StakedTokenIncentivesController, handleAction(user(address): 0x464C71, totalSupply(uint256): 5428714535163839, userBalance(uint256): 3565673266668) -> None
+      [4][STATICCALL] from=InitializableImmutableAdminUpgradeabilityProxy, to=InitializableImmutableAdminUpgradeabilityProxy, totalSupply() -> 5674531792785742
+        [5][DELEGATECALL] from=InitializableImmutableAdminUpgradeabilityProxy, to=AToken, totalSupply() -> 5674531792785742
+          [6][STATICCALL] from=InitializableImmutableAdminUpgradeabilityProxy, to=InitializableImmutableAdminUpgradeabilityProxy, getReserveNormalizedIncome(asset(address): 0xA0b869) -> 1045280916309779602776366050
+            [7][DELEGATECALL] from=InitializableImmutableAdminUpgradeabilityProxy, to=LendingPool, getReserveNormalizedIncome(asset(address): 0xA0b869) -> 1045280916309779602776366050
+      [4][STATICCALL] from=InitializableImmutableAdminUpgradeabilityProxy, to=InitializableImmutableAdminUpgradeabilityProxy, getTotalSupplyAndAvgRate() -> ['32079748910909', '103081203108720922153330434']
+        [5][DELEGATECALL] from=InitializableImmutableAdminUpgradeabilityProxy, to=StableDebtToken, getTotalSupplyAndAvgRate() -> ['32079748910909', '103081203108720922153330434']
+      [4][STATICCALL] from=InitializableImmutableAdminUpgradeabilityProxy, to=InitializableImmutableAdminUpgradeabilityProxy, scaledTotalSupply() -> 3879772321882912
+        [5][DELEGATECALL] from=InitializableImmutableAdminUpgradeabilityProxy, to=VariableDebtToken, scaledTotalSupply() -> 3879772321882912
+      [4][STATICCALL] from=InitializableImmutableAdminUpgradeabilityProxy, to=FiatTokenProxy, balanceOf(account(address): 0xBcca60) -> 1504706333554617
+        [5][DELEGATECALL] from=FiatTokenProxy, to=FiatTokenV2_1, balanceOf(account(address): 0xBcca60) -> 1504706333554617
+      [4][STATICCALL] from=InitializableImmutableAdminUpgradeabilityProxy, to=DefaultReserveInterestRateStrategy, calculateInterestRates(reserve(address): 0xA0b869, availableLiquidity(uint256): 1505446971947881, totalStableDebt(uint256): 32079748910909, totalVariableDebt(uint256): 4137005763283180, averageStableBorrowRate(uint256): 103081203108720922153330434, reserveFactor(uint256): 1000) -> ['21949764559434260293023766', '106326692106236658829862041', '32653384212473317659724082']
+        [5][STATICCALL] from=DefaultReserveInterestRateStrategy, to=LendingPoolAddressesProvider, getLendingRateOracle() -> 0x8a32f4
+        [5][STATICCALL] from=DefaultReserveInterestRateStrategy, to=LendingRateOracle, getMarketBorrowRate(asset(address): 0xA0b869) -> 90000000000000000000000000
+      [4][CALL] from=InitializableImmutableAdminUpgradeabilityProxy, to=FiatTokenProxy, transferFrom(from(address): 0x45f013, to(address): 0xBcca60, value(uint256): 740638393264) -> True
+        [5][DELEGATECALL] from=FiatTokenProxy, to=FiatTokenV2_1, transferFrom(from(address): 0x45f013, to(address): 0xBcca60, value(uint256): 740638393264) -> True
+      [4][STATICCALL] from=InitializableImmutableAdminUpgradeabilityProxy, to=InitializableImmutableAdminUpgradeabilityProxy, scaledTotalSupply() -> 73100040481980572416487
+        [5][DELEGATECALL] from=InitializableImmutableAdminUpgradeabilityProxy, to=VariableDebtToken, scaledTotalSupply() -> 73100040481980572416487
+      [4][STATICCALL] from=InitializableImmutableAdminUpgradeabilityProxy, to=InitializableImmutableAdminUpgradeabilityProxy, getSupplyData() -> ['638886089201374707585', '638901104958254141031', '48144380894758296177421312', '1626584762']
+        [5][DELEGATECALL] from=InitializableImmutableAdminUpgradeabilityProxy, to=StableDebtToken, getSupplyData() -> ['638886089201374707585', '638901104958254141031', '48144380894758296177421312', '1626584762']
+      [4][CALL] from=InitializableImmutableAdminUpgradeabilityProxy, to=InitializableImmutableAdminUpgradeabilityProxy, mintToTreasury(amount(uint256): 1649459968752232, index(uint256): 1007361942852363440367811642) -> None
+        [5][DELEGATECALL] from=InitializableImmutableAdminUpgradeabilityProxy, to=AToken, mintToTreasury(amount(uint256): 1649459968752232, index(uint256): 1007361942852363440367811642) -> None
+          [6][CALL] from=InitializableImmutableAdminUpgradeabilityProxy, to=InitializableImmutableAdminUpgradeabilityProxy, handleAction(user(address): 0x464C71, totalSupply(uint256): 1738594814592092167721309, userBalance(uint256): 36052500325905614191) -> None
+            [7][DELEGATECALL] from=InitializableImmutableAdminUpgradeabilityProxy, to=StakedTokenIncentivesController, handleAction(user(address): 0x464C71, totalSupply(uint256): 1738594814592092167721309, userBalance(uint256): 36052500325905614191) -> None
+      [4][STATICCALL] from=InitializableImmutableAdminUpgradeabilityProxy, to=InitializableImmutableAdminUpgradeabilityProxy, totalSupply() -> 1751394251909994530242312
+        [5][DELEGATECALL] from=InitializableImmutableAdminUpgradeabilityProxy, to=AToken, totalSupply() -> 1751394251909994530242312
+          [6][STATICCALL] from=InitializableImmutableAdminUpgradeabilityProxy, to=InitializableImmutableAdminUpgradeabilityProxy, getReserveNormalizedIncome(asset(address): 0xC02aaA) -> 1007361942852363440367811642
+            [7][DELEGATECALL] from=InitializableImmutableAdminUpgradeabilityProxy, to=LendingPool, getReserveNormalizedIncome(asset(address): 0xC02aaA) -> 1007361942852363440367811642
+      [4][STATICCALL] from=InitializableImmutableAdminUpgradeabilityProxy, to=InitializableImmutableAdminUpgradeabilityProxy, getTotalSupplyAndAvgRate() -> ['638901104958254141031', '48144380894758296177421312']
+        [5][DELEGATECALL] from=InitializableImmutableAdminUpgradeabilityProxy, to=StableDebtToken, getTotalSupplyAndAvgRate() -> ['638901104958254141031', '48144380894758296177421312']
+      [4][STATICCALL] from=InitializableImmutableAdminUpgradeabilityProxy, to=InitializableImmutableAdminUpgradeabilityProxy, scaledTotalSupply() -> 73100040481980572416487
+        [5][DELEGATECALL] from=InitializableImmutableAdminUpgradeabilityProxy, to=VariableDebtToken, scaledTotalSupply() -> 73100040481980572416487
+      [4][STATICCALL] from=InitializableImmutableAdminUpgradeabilityProxy, to=WETH9, balanceOf((address): 0x030bA8) -> 1676027874057572411159054
+      [4][STATICCALL] from=InitializableImmutableAdminUpgradeabilityProxy, to=DefaultReserveInterestRateStrategy, calculateInterestRates(reserve(address): 0xC02aaA, availableLiquidity(uint256): 1677053088229828210359127, totalStableDebt(uint256): 638901104958254141031, totalVariableDebt(uint256): 73703184513125791556143, averageStableBorrowRate(uint256): 48144380894758296177421312, reserveFactor(uint256): 1000) -> ['213672870402694922182336', '36530361686515008813233835', '5224289349212007050587068']
+        [5][STATICCALL] from=DefaultReserveInterestRateStrategy, to=LendingPoolAddressesProvider, getLendingRateOracle() -> 0x8a32f4
+        [5][STATICCALL] from=DefaultReserveInterestRateStrategy, to=LendingRateOracle, getMarketBorrowRate(asset(address): 0xC02aaA) -> 30000000000000000000000000
+      [4][CALL] from=InitializableImmutableAdminUpgradeabilityProxy, to=WETH9, transferFrom(src(address): 0x45f013, dst(address): 0x030bA8, wad(uint256): 1025214172255799200073) -> True
+      [4][STATICCALL] from=InitializableImmutableAdminUpgradeabilityProxy, to=InitializableImmutableAdminUpgradeabilityProxy, scaledTotalSupply() -> 295790306061
+        [5][DELEGATECALL] from=InitializableImmutableAdminUpgradeabilityProxy, to=VariableDebtToken, scaledTotalSupply() -> 295790306061
+      [4][STATICCALL] from=InitializableImmutableAdminUpgradeabilityProxy, to=InitializableImmutableAdminUpgradeabilityProxy, getSupplyData() -> ['840439001', '840589411', '46626633652405587255701381', '1626479124']
+        [5][DELEGATECALL] from=InitializableImmutableAdminUpgradeabilityProxy, to=StableDebtToken, getSupplyData() -> ['840439001', '840589411', '46626633652405587255701381', '1626479124']
+      [4][CALL] from=InitializableImmutableAdminUpgradeabilityProxy, to=InitializableImmutableAdminUpgradeabilityProxy, mintToTreasury(amount(uint256): 5646, index(uint256): 1001342997008916327434277792) -> None
+        [5][DELEGATECALL] from=InitializableImmutableAdminUpgradeabilityProxy, to=AToken, mintToTreasury(amount(uint256): 5646, index(uint256): 1001342997008916327434277792) -> None
+          [6][CALL] from=InitializableImmutableAdminUpgradeabilityProxy, to=InitializableImmutableAdminUpgradeabilityProxy, handleAction(user(address): 0x464C71, totalSupply(uint256): 4117964271405, userBalance(uint256): 105040207) -> None
+            [7][DELEGATECALL] from=InitializableImmutableAdminUpgradeabilityProxy, to=StakedTokenIncentivesController, handleAction(user(address): 0x464C71, totalSupply(uint256): 4117964271405, userBalance(uint256): 105040207) -> None
+      [4][STATICCALL] from=InitializableImmutableAdminUpgradeabilityProxy, to=InitializableImmutableAdminUpgradeabilityProxy, totalSupply() -> 4123494690750
+        [5][DELEGATECALL] from=InitializableImmutableAdminUpgradeabilityProxy, to=AToken, totalSupply() -> 4123494690750
+          [6][STATICCALL] from=InitializableImmutableAdminUpgradeabilityProxy, to=InitializableImmutableAdminUpgradeabilityProxy, getReserveNormalizedIncome(asset(address): 0x2260FA) -> 1001342997008916327434277792
+            [7][DELEGATECALL] from=InitializableImmutableAdminUpgradeabilityProxy, to=LendingPool, getReserveNormalizedIncome(asset(address): 0x2260FA) -> 1001342997008916327434277792
+      [4][STATICCALL] from=InitializableImmutableAdminUpgradeabilityProxy, to=InitializableImmutableAdminUpgradeabilityProxy, getTotalSupplyAndAvgRate() -> ['840589411', '46626633652405587255701381']
+        [5][DELEGATECALL] from=InitializableImmutableAdminUpgradeabilityProxy, to=StableDebtToken, getTotalSupplyAndAvgRate() -> ['840589411', '46626633652405587255701381']
+      [4][STATICCALL] from=InitializableImmutableAdminUpgradeabilityProxy, to=InitializableImmutableAdminUpgradeabilityProxy, scaledTotalSupply() -> 295790306061
+        [5][DELEGATECALL] from=InitializableImmutableAdminUpgradeabilityProxy, to=VariableDebtToken, scaledTotalSupply() -> 295790306061
+      [4][STATICCALL] from=InitializableImmutableAdminUpgradeabilityProxy, to=WBTC, balanceOf(_owner(address): 0x9ff58f) -> 3820629923806
+      [4][STATICCALL] from=InitializableImmutableAdminUpgradeabilityProxy, to=DefaultReserveInterestRateStrategy, calculateInterestRates(reserve(address): 0x2260FA, availableLiquidity(uint256): 3825091340392, totalStableDebt(uint256): 840589411, totalVariableDebt(uint256): 297566772221, averageStableBorrowRate(uint256): 46626633652405587255701381, reserveFactor(uint256): 2000) -> ['521800196466058987420730', '41133464124513342776978069', '8906771299610674221582455']
+        [5][STATICCALL] from=DefaultReserveInterestRateStrategy, to=LendingPoolAddressesProvider, getLendingRateOracle() -> 0x8a32f4
+        [5][STATICCALL] from=DefaultReserveInterestRateStrategy, to=LendingRateOracle, getMarketBorrowRate(asset(address): 0x2260FA) -> 30000000000000000000000000
+      [4][CALL] from=InitializableImmutableAdminUpgradeabilityProxy, to=WBTC, transferFrom(_from(address): 0x45f013, _to(address): 0x9ff58f, _value(uint256): 4461416586) -> True
+  [2][STATICCALL] from=0x45f013, to=WETH9, balanceOf((address): 0x45f013) -> 44971728224013070610
+  [2][CALL] from=0x45f013, to=WETH9, withdraw(wad(uint256): 44971728224013070610) -> None
+    [3][CALL][44.97172822401307] from=WETH9, to=0x45f013
+  [2][STATICCALL] from=0x45f013, to=Dai, balanceOf((address): 0x45f013) -> 71197613667037606831087
+  [2][CALL] from=0x45f013, to=UniswapV2Router02, swapExactTokensForETH(amountIn(uint256): 71197613667037606831087, amountOutMin(uint256): 0, path(address[]): ['0x6B175474E89094C44Da98b954EedeAC495271d..., to(address): 0x45f013, deadline(uint256): 1626600307) -> [71197613667037606831087, 36121343427450152637]
+    [3][STATICCALL] from=UniswapV2Router02, to=UniswapV2Pair, getReserves() -> ['103140521268027661942542069', '52520809399336173815522', '1626599954']
+    [3][CALL] from=UniswapV2Router02, to=Dai, transferFrom(src(address): 0x45f013, dst(address): 0xC3D03e, wad(uint256): 71197613667037606831087) -> True
+    [3][CALL] from=UniswapV2Router02, to=UniswapV2Pair, swap(amount0Out(uint256): 0, amount1Out(uint256): 36121343427450152637, to(address): 0xd9e1cE, data(bytes): b'') -> None
+      [4][CALL] from=UniswapV2Pair, to=WETH9, transfer(dst(address): 0xd9e1cE, wad(uint256): 36121343427450152637) -> True
+      [4][STATICCALL] from=UniswapV2Pair, to=Dai, balanceOf((address): 0xC3D03e) -> 103211718881694699549373156
+      [4][STATICCALL] from=UniswapV2Pair, to=WETH9, balanceOf((address): 0xC3D03e) -> 52484688055908723662885
+    [3][CALL] from=UniswapV2Router02, to=WETH9, withdraw(wad(uint256): 36121343427450152637) -> None
+      [4][CALL][36.12134342745015] from=WETH9, to=UniswapV2Router02
+    [3][CALL][36.12134342745015] from=UniswapV2Router02, to=0x45f013
+  [2][STATICCALL] from=0x45f013, to=FiatTokenProxy, balanceOf(account(address): 0x45f013) -> 71478640630
+    [3][DELEGATECALL] from=FiatTokenProxy, to=FiatTokenV2_1, balanceOf(account(address): 0x45f013) -> 71478640630
+  [2][CALL] from=0x45f013, to=UniswapV2Router02, swapExactTokensForETH(amountIn(uint256): 71478640630, amountOutMin(uint256): 0, path(address[]): ['0xA0b86991c6218b36c1d19D4a2e9Eb0cE3606eB..., to(address): 0x45f013, deadline(uint256): 1626600307) -> [71478640630, 36235229960664443349]
+    [3][STATICCALL] from=UniswapV2Router02, to=UniswapV2Pair, getReserves() -> ['182558101655124', '92860323027617247521378', '1626600132']
+    [3][CALL] from=UniswapV2Router02, to=FiatTokenProxy, transferFrom(from(address): 0x45f013, to(address): 0x397FF1, value(uint256): 71478640630) -> True
+      [4][DELEGATECALL] from=FiatTokenProxy, to=FiatTokenV2_1, transferFrom(from(address): 0x45f013, to(address): 0x397FF1, value(uint256): 71478640630) -> True
+    [3][CALL] from=UniswapV2Router02, to=UniswapV2Pair, swap(amount0Out(uint256): 0, amount1Out(uint256): 36235229960664443349, to(address): 0xd9e1cE, data(bytes): b'') -> None
+      [4][CALL] from=UniswapV2Pair, to=WETH9, transfer(dst(address): 0xd9e1cE, wad(uint256): 36235229960664443349) -> True
+      [4][STATICCALL] from=UniswapV2Pair, to=FiatTokenProxy, balanceOf(account(address): 0x397FF1) -> 182629580295754
+        [5][DELEGATECALL] from=FiatTokenProxy, to=FiatTokenV2_1, balanceOf(account(address): 0x397FF1) -> 182629580295754
+      [4][STATICCALL] from=UniswapV2Pair, to=WETH9, balanceOf((address): 0x397FF1) -> 92824087797656583078029
+    [3][CALL] from=UniswapV2Router02, to=WETH9, withdraw(wad(uint256): 36235229960664443349) -> None
+      [4][CALL][36.23522996066444] from=WETH9, to=UniswapV2Router02
+    [3][CALL][36.23522996066444] from=UniswapV2Router02, to=0x45f013
+  [2][STATICCALL] from=0x45f013, to=WBTC, balanceOf(_owner(address): 0x45f013) -> 429769618
+  [2][CALL] from=0x45f013, to=UniswapV2Router02, swapExactTokensForETH(amountIn(uint256): 429769618, amountOutMin(uint256): 0, path(address[]): ['0x2260FAC5E5542a773Aa44fBCfeDf7C193bc2C5..., to(address): 0x45f013, deadline(uint256): 1626600307) -> [429769618, 69292437461108105718]
+    [3][STATICCALL] from=UniswapV2Router02, to=UniswapV2Pair, getReserves() -> ['643165874087', '104079978940459353592094', '1626599980']
+    [3][CALL] from=UniswapV2Router02, to=WBTC, transferFrom(_from(address): 0x45f013, _to(address): 0xCEfF51, _value(uint256): 429769618) -> True
+    [3][CALL] from=UniswapV2Router02, to=UniswapV2Pair, swap(amount0Out(uint256): 0, amount1Out(uint256): 69292437461108105718, to(address): 0xd9e1cE, data(bytes): b'') -> None
+      [4][CALL] from=UniswapV2Pair, to=WETH9, transfer(dst(address): 0xd9e1cE, wad(uint256): 69292437461108105718) -> True
+      [4][STATICCALL] from=UniswapV2Pair, to=WBTC, balanceOf(_owner(address): 0xCEfF51) -> 643595643705
+      [4][STATICCALL] from=UniswapV2Pair, to=WETH9, balanceOf((address): 0xCEfF51) -> 104010686502998245486376
+    [3][CALL] from=UniswapV2Router02, to=WETH9, withdraw(wad(uint256): 69292437461108105718) -> None
+      [4][CALL][69.29243746110811] from=WETH9, to=UniswapV2Router02
+    [3][CALL][69.29243746110811] from=UniswapV2Router02, to=0x45f013
+  [2][CALL][186.62073907323577] from=0x45f013, to=0x133703

@@ -1,0 +1,46 @@
+[1][CREATE] from=0x089a20, to=0x5f02fD, atInversebrahint248() -> 0x608060
+  [2][CALL] from=0x5f02fD, to=0x641249, approveaddress() -> 0x000000
+  [2][CALL] from=0x5f02fD, to=0x641249, mintaddress() -> 0x000000
+  [2][CALL] from=0x5f02fD, to=TransparentUpgradeableProxy, addCollateral(_colAmount(uint256): 10000000000000000000000) -> None
+    [3][DELEGATECALL] from=TransparentUpgradeableProxy, to=ERC20VaultETH, addCollateral(_colAmount(uint256): 10000000000000000000000) -> None
+      [4][CALL] from=TransparentUpgradeableProxy, to=0x641249, transferFromaddress() -> 0x000000
+  [2][CALL] from=0x5f02fD, to=TransparentUpgradeableProxy, borrow(_amount(uint256): 10000000000000000000000) -> None
+    [3][DELEGATECALL] from=TransparentUpgradeableProxy, to=ERC20VaultETH, borrow(_amount(uint256): 10000000000000000000000) -> None
+      [4][STATICCALL] from=TransparentUpgradeableProxy, to=TransparentUpgradeableProxy, 0x29e463c9() -> 0x000000
+        [5][DELEGATECALL] from=TransparentUpgradeableProxy, to=0x54b978, 0x29e463c9() -> 0x000000
+          [6][STATICCALL] from=TransparentUpgradeableProxy, to=EACAggregatorProxy, latestRoundData() -> ['110680464442257331057', '6320535990400', '1726872935', '1726872935', '110680464442257331057']
+            [7][STATICCALL] from=EACAggregatorProxy, to=AccessControlledOffchainAggregator, latestRoundData() -> ['21361', '6320535990400', '1726872935', '1726872935', '21361']
+          [6][STATICCALL] from=TransparentUpgradeableProxy, to=EACAggregatorProxy, decimals() -> 8
+            [7][STATICCALL] from=EACAggregatorProxy, to=AccessControlledOffchainAggregator, decimals() -> 8
+          [6][STATICCALL] from=TransparentUpgradeableProxy, to=0x641249, decimals() -> 0x000000
+      [4][CALL] from=TransparentUpgradeableProxy, to=ShezmuETH, mint(to(address): 0x5f02fD, amount(uint256): 9900000000000000000000) -> None
+  [2][STATICCALL] from=0x5f02fD, to=ShezmuETH, balanceOf(account(address): 0x5f02fD) -> 9900000000000000000000
+  [2][CALL] from=0x5f02fD, to=ShezmuETH, approve(spender(address): 0x637213, amount(uint256): 9900000000000000000000) -> True
+  [2][CALL] from=0x5f02fD, to=CurveStableSwapNG, exchange(i(int128): 0, j(int128): 1, _dx(uint256): 9900000000000000000000, _min_dy(uint256): 0) -> 331977859691945630683
+    [3][STATICCALL] from=CurveStableSwapNG, to=0x000000, fallback() -> 0x000000
+    [3][STATICCALL] from=CurveStableSwapNG, to=0x000000, fallback() -> 0x000000
+    [3][STATICCALL] from=CurveStableSwapNG, to=0x000000, fallback() -> 0x000000
+    [3][STATICCALL] from=CurveStableSwapNG, to=0x000000, fallback() -> 0x000000
+    [3][STATICCALL] from=CurveStableSwapNG, to=0x000000, fallback() -> 0x000000
+    [3][STATICCALL] from=CurveStableSwapNG, to=0x000000, fallback() -> 0x000000
+    [3][STATICCALL] from=CurveStableSwapNG, to=0x000000, fallback() -> 0x000000
+    [3][STATICCALL] from=CurveStableSwapNG, to=0x000000, fallback() -> 0x000000
+    [3][STATICCALL] from=CurveStableSwapNG, to=ShezmuETH, balanceOf(account(address): 0x637213) -> 136685142446233489552
+    [3][CALL] from=CurveStableSwapNG, to=ShezmuETH, transferFrom(from(address): 0x5f02fD, to(address): 0x637213, amount(uint256): 9900000000000000000000) -> True
+    [3][STATICCALL] from=CurveStableSwapNG, to=ShezmuETH, balanceOf(account(address): 0x637213) -> 10036685142446233489552
+    [3][STATICCALL] from=CurveStableSwapNG, to=0x000000, fallback() -> 0x000000
+    [3][STATICCALL] from=CurveStableSwapNG, to=0x000000, fallback() -> 0x000000
+    [3][STATICCALL] from=CurveStableSwapNG, to=0x000000, fallback() -> 0x000000
+    [3][STATICCALL] from=CurveStableSwapNG, to=0x000000, fallback() -> 0x000000
+    [3][STATICCALL] from=CurveStableSwapNG, to=0x000000, fallback() -> 0x000000
+    [3][STATICCALL] from=CurveStableSwapNG, to=0x000000, fallback() -> 0x000000
+    [3][STATICCALL] from=CurveStableSwapNG, to=0x000000, fallback() -> 0x000000
+    [3][STATICCALL] from=CurveStableSwapNG, to=0x000000, fallback() -> 0x000000
+    [3][STATICCALL] from=CurveStableSwapNG, to=0x000000, fallback() -> 0x000000
+    [3][STATICCALL] from=CurveStableSwapNG, to=0x000000, fallback() -> 0x000000
+    [3][STATICCALL] from=CurveStableSwapNG, to=0x000000, fallback() -> 0x000000
+    [3][STATICCALL] from=CurveStableSwapNG, to=0x000000, fallback() -> 0x000000
+    [3][STATICCALL] from=CurveStableSwapNG, to=0x000000, fallback() -> 0x000000
+    [3][CALL] from=CurveStableSwapNG, to=WETH9, transfer(dst(address): 0x5f02fD, wad(uint256): 331977859691945630683) -> True
+  [2][STATICCALL] from=0x5f02fD, to=WETH9, balanceOf((address): 0x5f02fD) -> 331977859691945630683
+  [2][CALL] from=0x5f02fD, to=WETH9, transfer(dst(address): 0x089A20, wad(uint256): 331977859691945630683) -> True

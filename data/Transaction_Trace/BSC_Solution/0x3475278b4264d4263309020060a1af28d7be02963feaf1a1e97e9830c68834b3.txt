@@ -1,0 +1,10 @@
+[1][CALL] from=0x5695ef, to=CirculateBUSD, startTrading(_trader(address): 0x5695Ef, _borrowAmount(uint256): 2000000000000000000000000, _swappedToken(address): 0xbb4CdB) -> None
+  [2][STATICCALL] from=CirculateBUSD, to=0x112f88, 0x598cd567() -> 0x000000
+  [2][STATICCALL] from=CirculateBUSD, to=0x112f88, 0x598cd567() -> 0x000000
+  [2][STATICCALL] from=CirculateBUSD, to=BEP20Token, balanceOf(account(address): 0x9639D7) -> 2008236626977397916653525
+  [2][STATICCALL] from=CirculateBUSD, to=BEP20Token, allowance(owner(address): 0x9639D7, spender(address): 0x112F88) -> 0
+  [2][CALL] from=CirculateBUSD, to=BEP20Token, approve(spender(address): 0x112F88, amount(uint256): 2000000000000000000000000) -> True
+  [2][CALL] from=CirculateBUSD, to=0x112f88, 0x63437561() -> 0x000000
+    [3][STATICCALL] from=0x112f88, to=BEP20Token, allowance(owner(address): 0x112F88, spender(address): 0x10ED43) -> 115792089237316195423570985008687907853269984665640563955967353204705503127749
+    [3][CALL] from=0x112f88, to=BEP20Token, transferFrom(sender(address): 0x9639D7, recipient(address): 0x112F88, amount(uint256): 2000000000000000000000000) -> True
+    [3][CALL] from=0x112f88, to=BEP20Token, transfer(recipient(address): 0x5695Ef, amount(uint256): 2000000000000000000000000) -> True

@@ -1,0 +1,736 @@
+[1][CALL] from=0x1bd2c3, to=0x5f9294, 0xb1f1e4e0() -> None
+  [2][CALL] from=0x5f9294, to=PancakePair, swap(amount0Out(uint256): 2100000000000000000000, amount1Out(uint256): 0, to(address): 0x5F9294, data(bytes): b'\x00\x00') -> None
+    [3][CALL] from=PancakePair, to=WBNB, transfer(dst(address): 0x5F9294, wad(uint256): 2100000000000000000000) -> True
+    [3][CALL] from=PancakePair, to=0x5f9294, pancakeCalladdress() -> None
+      [4][STATICCALL] from=0x5f9294, to=WBNB, balanceOf((address): 0x569cAA) -> 333920195026023266082
+      [4][CALL] from=0x5f9294, to=InitializableImmutableAdminUpgradeabilityProxy, depositaddress() -> None
+        [5][DELEGATECALL] from=InitializableImmutableAdminUpgradeabilityProxy, to=0x38b5ea, depositaddress() -> None
+          [6][DELEGATECALL] from=InitializableImmutableAdminUpgradeabilityProxy, to=0x6152a5, 0x0eca322b() -> None
+          [6][STATICCALL] from=InitializableImmutableAdminUpgradeabilityProxy, to=VariableDebtToken, scaledTotalSupply() -> 232997827257447631106
+          [6][STATICCALL] from=InitializableImmutableAdminUpgradeabilityProxy, to=VariableDebtToken, scaledTotalSupply() -> 232997827257447631106
+          [6][STATICCALL] from=InitializableImmutableAdminUpgradeabilityProxy, to=WBNB, balanceOf((address): 0x569cAA) -> 333920195026023266082
+          [6][STATICCALL] from=InitializableImmutableAdminUpgradeabilityProxy, to=0x3d809b, calculateInterestRatesuint256() -> 0x000000
+          [6][CALL] from=InitializableImmutableAdminUpgradeabilityProxy, to=WBNB, transferFrom(src(address): 0x5F9294, dst(address): 0x569cAA, wad(uint256): 2000000000000000000000) -> True
+          [6][STATICCALL] from=InitializableImmutableAdminUpgradeabilityProxy, to=VariableDebtToken, balanceOf(user(address): 0x5F9294) -> 0
+          [6][CALL] from=InitializableImmutableAdminUpgradeabilityProxy, to=XToken, mint(user(address): 0x5F9294, amount(uint256): 2000000000000000000000, index(uint256): 1029261962052269178199409234) -> True
+            [7][STATICCALL] from=XToken, to=InitializableImmutableAdminUpgradeabilityProxy, getReserveNormalizedIncomeaddress() -> 0x000000
+              [8][DELEGATECALL] from=InitializableImmutableAdminUpgradeabilityProxy, to=0x38b5ea, getReserveNormalizedIncomeaddress() -> 0x000000
+            [7][STATICCALL] from=XToken, to=InitializableImmutableAdminUpgradeabilityProxy, getReserveNormalizedIncomeaddress() -> 0x000000
+              [8][DELEGATECALL] from=InitializableImmutableAdminUpgradeabilityProxy, to=0x38b5ea, getReserveNormalizedIncomeaddress() -> 0x000000
+            [7][STATICCALL] from=XToken, to=InitializableImmutableAdminUpgradeabilityProxy, getReserveNormalizedIncomeaddress() -> 0x000000
+              [8][DELEGATECALL] from=InitializableImmutableAdminUpgradeabilityProxy, to=0x38b5ea, getReserveNormalizedIncomeaddress() -> 0x000000
+            [7][STATICCALL] from=XToken, to=InitializableImmutableAdminUpgradeabilityProxy, getReserveNormalizedIncomeaddress() -> 0x000000
+              [8][DELEGATECALL] from=InitializableImmutableAdminUpgradeabilityProxy, to=0x38b5ea, getReserveNormalizedIncomeaddress() -> 0x000000
+            [7][STATICCALL] from=XToken, to=InitializableImmutableAdminUpgradeabilityProxy, getReserveNormalizedIncomeaddress() -> 0x000000
+              [8][DELEGATECALL] from=InitializableImmutableAdminUpgradeabilityProxy, to=0x38b5ea, getReserveNormalizedIncomeaddress() -> 0x000000
+      [4][CALL] from=0x5f9294, to=InitializableImmutableAdminUpgradeabilityProxy, borrowaddress() -> None
+        [5][DELEGATECALL] from=InitializableImmutableAdminUpgradeabilityProxy, to=0x38b5ea, borrowaddress() -> None
+          [6][STATICCALL] from=InitializableImmutableAdminUpgradeabilityProxy, to=MarginPoolAddressesProvider, getPriceOracle() -> 0xe038dd
+          [6][STATICCALL] from=InitializableImmutableAdminUpgradeabilityProxy, to=LeverOracle, getAssetPrice(asset(address): 0xbb4CdB) -> 1000000000000000000
+          [6][DELEGATECALL] from=InitializableImmutableAdminUpgradeabilityProxy, to=0x6152a5, 0xe921aa97() -> None
+            [7][STATICCALL] from=InitializableImmutableAdminUpgradeabilityProxy, to=LeverOracle, getAssetPrice(asset(address): 0xbb4CdB) -> 1000000000000000000
+            [7][STATICCALL] from=InitializableImmutableAdminUpgradeabilityProxy, to=XToken, balanceOf(user(address): 0x5F9294) -> 2000000000000000000000
+              [8][STATICCALL] from=XToken, to=InitializableImmutableAdminUpgradeabilityProxy, getReserveNormalizedIncomeaddress() -> 0x000000
+                [9][DELEGATECALL] from=InitializableImmutableAdminUpgradeabilityProxy, to=0x38b5ea, getReserveNormalizedIncomeaddress() -> 0x000000
+          [6][STATICCALL] from=InitializableImmutableAdminUpgradeabilityProxy, to=VariableDebtToken, scaledTotalSupply() -> 232997827257447631106
+          [6][CALL] from=InitializableImmutableAdminUpgradeabilityProxy, to=VariableDebtToken, mint(user(address): 0x5F9294, onBehalfOf(address): 0x5F9294, amount(uint256): 1500000000000000000000, index(uint256): 1050386743938235450481593929) -> True
+            [7][STATICCALL] from=VariableDebtToken, to=InitializableImmutableAdminUpgradeabilityProxy, getReserveNormalizedVariableDebtaddress() -> 0x000000
+              [8][DELEGATECALL] from=InitializableImmutableAdminUpgradeabilityProxy, to=0x38b5ea, getReserveNormalizedVariableDebtaddress() -> 0x000000
+            [7][STATICCALL] from=VariableDebtToken, to=InitializableImmutableAdminUpgradeabilityProxy, getReserveNormalizedVariableDebtaddress() -> 0x000000
+              [8][DELEGATECALL] from=InitializableImmutableAdminUpgradeabilityProxy, to=0x38b5ea, getReserveNormalizedVariableDebtaddress() -> 0x000000
+            [7][STATICCALL] from=VariableDebtToken, to=InitializableImmutableAdminUpgradeabilityProxy, getReserveNormalizedVariableDebtaddress() -> 0x000000
+              [8][DELEGATECALL] from=InitializableImmutableAdminUpgradeabilityProxy, to=0x38b5ea, getReserveNormalizedVariableDebtaddress() -> 0x000000
+            [7][STATICCALL] from=VariableDebtToken, to=InitializableImmutableAdminUpgradeabilityProxy, getReserveNormalizedVariableDebtaddress() -> 0x000000
+              [8][DELEGATECALL] from=InitializableImmutableAdminUpgradeabilityProxy, to=0x38b5ea, getReserveNormalizedVariableDebtaddress() -> 0x000000
+          [6][STATICCALL] from=InitializableImmutableAdminUpgradeabilityProxy, to=VariableDebtToken, scaledTotalSupply() -> 1661043267336042704559
+          [6][STATICCALL] from=InitializableImmutableAdminUpgradeabilityProxy, to=WBNB, balanceOf((address): 0x569cAA) -> 2333920195026023266082
+          [6][STATICCALL] from=InitializableImmutableAdminUpgradeabilityProxy, to=0x3d809b, calculateInterestRatesuint256() -> 0x000000
+          [6][CALL] from=InitializableImmutableAdminUpgradeabilityProxy, to=XToken, transferUnderlyingTo(target(address): 0x5F9294, amount(uint256): 1495500000000000000000) -> 1495500000000000000000
+            [7][CALL] from=XToken, to=WBNB, transfer(dst(address): 0x5F9294, wad(uint256): 1495500000000000000000) -> True
+          [6][STATICCALL] from=InitializableImmutableAdminUpgradeabilityProxy, to=MarginPoolAddressesProvider, getTreasuryAddress() -> 0x4a8d54
+          [6][CALL] from=InitializableImmutableAdminUpgradeabilityProxy, to=XToken, transferUnderlyingTo(target(address): 0x4A8d54, amount(uint256): 4500000000000000000) -> 4500000000000000000
+            [7][CALL] from=XToken, to=WBNB, transfer(dst(address): 0x4A8d54, wad(uint256): 4500000000000000000) -> True
+      [4][CALL] from=0x5f9294, to=WBNB, transfer(dst(address): 0xe32608, wad(uint256): 1500000000000000000000) -> True
+      [4][CALL] from=0x5f9294, to=0xe32608, 0x04a9428d() -> None
+        [5][CALL] from=0xe32608, to=InitializableImmutableAdminUpgradeabilityProxy, depositaddress() -> None
+          [6][DELEGATECALL] from=InitializableImmutableAdminUpgradeabilityProxy, to=0x38b5ea, depositaddress() -> None
+            [7][DELEGATECALL] from=InitializableImmutableAdminUpgradeabilityProxy, to=0x6152a5, 0x0eca322b() -> None
+            [7][STATICCALL] from=InitializableImmutableAdminUpgradeabilityProxy, to=VariableDebtToken, scaledTotalSupply() -> 1661043267336042704559
+            [7][STATICCALL] from=InitializableImmutableAdminUpgradeabilityProxy, to=VariableDebtToken, scaledTotalSupply() -> 1661043267336042704559
+            [7][STATICCALL] from=InitializableImmutableAdminUpgradeabilityProxy, to=WBNB, balanceOf((address): 0x569cAA) -> 833920195026023266082
+            [7][STATICCALL] from=InitializableImmutableAdminUpgradeabilityProxy, to=0x3d809b, calculateInterestRatesuint256() -> 0x000000
+            [7][CALL] from=InitializableImmutableAdminUpgradeabilityProxy, to=WBNB, transferFrom(src(address): 0xe32608, dst(address): 0x569cAA, wad(uint256): 1500000000000000000000) -> True
+            [7][STATICCALL] from=InitializableImmutableAdminUpgradeabilityProxy, to=VariableDebtToken, balanceOf(user(address): 0xe32608) -> 0
+            [7][CALL] from=InitializableImmutableAdminUpgradeabilityProxy, to=XToken, mint(user(address): 0xe32608, amount(uint256): 1500000000000000000000, index(uint256): 1029261962052269178199409234) -> True
+              [8][STATICCALL] from=XToken, to=InitializableImmutableAdminUpgradeabilityProxy, getReserveNormalizedIncomeaddress() -> 0x000000
+                [9][DELEGATECALL] from=InitializableImmutableAdminUpgradeabilityProxy, to=0x38b5ea, getReserveNormalizedIncomeaddress() -> 0x000000
+              [8][STATICCALL] from=XToken, to=InitializableImmutableAdminUpgradeabilityProxy, getReserveNormalizedIncomeaddress() -> 0x000000
+                [9][DELEGATECALL] from=InitializableImmutableAdminUpgradeabilityProxy, to=0x38b5ea, getReserveNormalizedIncomeaddress() -> 0x000000
+              [8][STATICCALL] from=XToken, to=InitializableImmutableAdminUpgradeabilityProxy, getReserveNormalizedIncomeaddress() -> 0x000000
+                [9][DELEGATECALL] from=InitializableImmutableAdminUpgradeabilityProxy, to=0x38b5ea, getReserveNormalizedIncomeaddress() -> 0x000000
+              [8][STATICCALL] from=XToken, to=InitializableImmutableAdminUpgradeabilityProxy, getReserveNormalizedIncomeaddress() -> 0x000000
+                [9][DELEGATECALL] from=InitializableImmutableAdminUpgradeabilityProxy, to=0x38b5ea, getReserveNormalizedIncomeaddress() -> 0x000000
+              [8][STATICCALL] from=XToken, to=InitializableImmutableAdminUpgradeabilityProxy, getReserveNormalizedIncomeaddress() -> 0x000000
+                [9][DELEGATECALL] from=InitializableImmutableAdminUpgradeabilityProxy, to=0x38b5ea, getReserveNormalizedIncomeaddress() -> 0x000000
+        [5][STATICCALL] from=0xe32608, to=BEP20Ethereum, balanceOf(account(address): 0xcB66c1) -> 32880943784568754424
+        [5][CALL] from=0xe32608, to=InitializableImmutableAdminUpgradeabilityProxy, borrowaddress() -> None
+          [6][DELEGATECALL] from=InitializableImmutableAdminUpgradeabilityProxy, to=0x38b5ea, borrowaddress() -> None
+            [7][STATICCALL] from=InitializableImmutableAdminUpgradeabilityProxy, to=MarginPoolAddressesProvider, getPriceOracle() -> 0xe038dd
+            [7][STATICCALL] from=InitializableImmutableAdminUpgradeabilityProxy, to=LeverOracle, getAssetPrice(asset(address): 0x2170Ed) -> 6878334502482690000
+              [8][STATICCALL] from=LeverOracle, to=EACAggregatorProxy, latestAnswer() -> 6878334502482690000
+                [9][STATICCALL] from=EACAggregatorProxy, to=AccessControlledOffchainAggregator, latestAnswer() -> 6878334502482690000
+            [7][DELEGATECALL] from=InitializableImmutableAdminUpgradeabilityProxy, to=0x6152a5, 0xe921aa97() -> None
+              [8][STATICCALL] from=InitializableImmutableAdminUpgradeabilityProxy, to=LeverOracle, getAssetPrice(asset(address): 0xbb4CdB) -> 1000000000000000000
+              [8][STATICCALL] from=InitializableImmutableAdminUpgradeabilityProxy, to=XToken, balanceOf(user(address): 0xe32608) -> 1500000000000000000000
+                [9][STATICCALL] from=XToken, to=InitializableImmutableAdminUpgradeabilityProxy, getReserveNormalizedIncomeaddress() -> 0x000000
+                  [10][DELEGATECALL] from=InitializableImmutableAdminUpgradeabilityProxy, to=0x38b5ea, getReserveNormalizedIncomeaddress() -> 0x000000
+            [7][STATICCALL] from=InitializableImmutableAdminUpgradeabilityProxy, to=VariableDebtToken, scaledTotalSupply() -> 31664299456544660778
+            [7][CALL] from=InitializableImmutableAdminUpgradeabilityProxy, to=VariableDebtToken, mint(user(address): 0xe32608, onBehalfOf(address): 0xe32608, amount(uint256): 32880943784568754414, index(uint256): 1028888437568012515735190828) -> True
+              [8][STATICCALL] from=VariableDebtToken, to=InitializableImmutableAdminUpgradeabilityProxy, getReserveNormalizedVariableDebtaddress() -> 0x000000
+                [9][DELEGATECALL] from=InitializableImmutableAdminUpgradeabilityProxy, to=0x38b5ea, getReserveNormalizedVariableDebtaddress() -> 0x000000
+              [8][STATICCALL] from=VariableDebtToken, to=InitializableImmutableAdminUpgradeabilityProxy, getReserveNormalizedVariableDebtaddress() -> 0x000000
+                [9][DELEGATECALL] from=InitializableImmutableAdminUpgradeabilityProxy, to=0x38b5ea, getReserveNormalizedVariableDebtaddress() -> 0x000000
+              [8][STATICCALL] from=VariableDebtToken, to=InitializableImmutableAdminUpgradeabilityProxy, getReserveNormalizedVariableDebtaddress() -> 0x000000
+                [9][DELEGATECALL] from=InitializableImmutableAdminUpgradeabilityProxy, to=0x38b5ea, getReserveNormalizedVariableDebtaddress() -> 0x000000
+              [8][STATICCALL] from=VariableDebtToken, to=InitializableImmutableAdminUpgradeabilityProxy, getReserveNormalizedVariableDebtaddress() -> 0x000000
+                [9][DELEGATECALL] from=InitializableImmutableAdminUpgradeabilityProxy, to=0x38b5ea, getReserveNormalizedVariableDebtaddress() -> 0x000000
+            [7][STATICCALL] from=InitializableImmutableAdminUpgradeabilityProxy, to=VariableDebtToken, scaledTotalSupply() -> 63622034215708215355
+            [7][STATICCALL] from=InitializableImmutableAdminUpgradeabilityProxy, to=BEP20Ethereum, balanceOf(account(address): 0xcB66c1) -> 32880943784568754424
+            [7][STATICCALL] from=InitializableImmutableAdminUpgradeabilityProxy, to=0xa8491c, calculateInterestRatesuint256() -> 0x000000
+            [7][CALL] from=InitializableImmutableAdminUpgradeabilityProxy, to=XToken, transferUnderlyingTo(target(address): 0xe32608, amount(uint256): 32782300953215048150) -> 32782300953215048150
+              [8][CALL] from=XToken, to=BEP20Ethereum, transfer(recipient(address): 0xe32608, amount(uint256): 32782300953215048150) -> True
+            [7][STATICCALL] from=InitializableImmutableAdminUpgradeabilityProxy, to=MarginPoolAddressesProvider, getTreasuryAddress() -> 0x4a8d54
+            [7][CALL] from=InitializableImmutableAdminUpgradeabilityProxy, to=XToken, transferUnderlyingTo(target(address): 0x4A8d54, amount(uint256): 98642831353706263) -> 98642831353706263
+              [8][CALL] from=XToken, to=BEP20Ethereum, transfer(recipient(address): 0x4A8d54, amount(uint256): 98642831353706263) -> True
+        [5][STATICCALL] from=0xe32608, to=BakeryToken, balanceOf(account(address): 0x39f638) -> 1071267471479660832662
+        [5][CALL] from=0xe32608, to=InitializableImmutableAdminUpgradeabilityProxy, borrowaddress() -> None
+          [6][DELEGATECALL] from=InitializableImmutableAdminUpgradeabilityProxy, to=0x38b5ea, borrowaddress() -> None
+            [7][STATICCALL] from=InitializableImmutableAdminUpgradeabilityProxy, to=MarginPoolAddressesProvider, getPriceOracle() -> 0xe038dd
+            [7][STATICCALL] from=InitializableImmutableAdminUpgradeabilityProxy, to=LeverOracle, getAssetPrice(asset(address): 0xE02dF9) -> 3399780914887361
+              [8][STATICCALL] from=LeverOracle, to=0x56bc0a, getAssetPriceaddress() -> 0x000000
+                [9][STATICCALL] from=0x56bc0a, to=0x12fc48, getAssetPriceaddress() -> 0x000000
+            [7][DELEGATECALL] from=InitializableImmutableAdminUpgradeabilityProxy, to=0x6152a5, 0xe921aa97() -> None
+              [8][STATICCALL] from=InitializableImmutableAdminUpgradeabilityProxy, to=LeverOracle, getAssetPrice(asset(address): 0xbb4CdB) -> 1000000000000000000
+              [8][STATICCALL] from=InitializableImmutableAdminUpgradeabilityProxy, to=XToken, balanceOf(user(address): 0xe32608) -> 1500000000000000000000
+                [9][STATICCALL] from=XToken, to=InitializableImmutableAdminUpgradeabilityProxy, getReserveNormalizedIncomeaddress() -> 0x000000
+                  [10][DELEGATECALL] from=InitializableImmutableAdminUpgradeabilityProxy, to=0x38b5ea, getReserveNormalizedIncomeaddress() -> 0x000000
+              [8][STATICCALL] from=InitializableImmutableAdminUpgradeabilityProxy, to=LeverOracle, getAssetPrice(asset(address): 0x2170Ed) -> 6878334502482690000
+                [9][STATICCALL] from=LeverOracle, to=EACAggregatorProxy, latestAnswer() -> 6878334502482690000
+                  [10][STATICCALL] from=EACAggregatorProxy, to=AccessControlledOffchainAggregator, latestAnswer() -> 6878334502482690000
+              [8][STATICCALL] from=InitializableImmutableAdminUpgradeabilityProxy, to=VariableDebtToken, balanceOf(user(address): 0xe32608) -> 32880943784568754414
+                [9][STATICCALL] from=VariableDebtToken, to=InitializableImmutableAdminUpgradeabilityProxy, getReserveNormalizedVariableDebtaddress() -> 0x000000
+                  [10][DELEGATECALL] from=InitializableImmutableAdminUpgradeabilityProxy, to=0x38b5ea, getReserveNormalizedVariableDebtaddress() -> 0x000000
+            [7][STATICCALL] from=InitializableImmutableAdminUpgradeabilityProxy, to=VariableDebtToken, scaledTotalSupply() -> 1914527043584037283
+            [7][CALL] from=InitializableImmutableAdminUpgradeabilityProxy, to=VariableDebtToken, mint(user(address): 0xe32608, onBehalfOf(address): 0xe32608, amount(uint256): 1071267471479660832652, index(uint256): 1032599468931492883693399474) -> True
+              [8][STATICCALL] from=VariableDebtToken, to=InitializableImmutableAdminUpgradeabilityProxy, getReserveNormalizedVariableDebtaddress() -> 0x000000
+                [9][DELEGATECALL] from=InitializableImmutableAdminUpgradeabilityProxy, to=0x38b5ea, getReserveNormalizedVariableDebtaddress() -> 0x000000
+              [8][STATICCALL] from=VariableDebtToken, to=InitializableImmutableAdminUpgradeabilityProxy, getReserveNormalizedVariableDebtaddress() -> 0x000000
+                [9][DELEGATECALL] from=InitializableImmutableAdminUpgradeabilityProxy, to=0x38b5ea, getReserveNormalizedVariableDebtaddress() -> 0x000000
+              [8][STATICCALL] from=VariableDebtToken, to=InitializableImmutableAdminUpgradeabilityProxy, getReserveNormalizedVariableDebtaddress() -> 0x000000
+                [9][DELEGATECALL] from=InitializableImmutableAdminUpgradeabilityProxy, to=0x38b5ea, getReserveNormalizedVariableDebtaddress() -> 0x000000
+              [8][STATICCALL] from=VariableDebtToken, to=InitializableImmutableAdminUpgradeabilityProxy, getReserveNormalizedVariableDebtaddress() -> 0x000000
+                [9][DELEGATECALL] from=InitializableImmutableAdminUpgradeabilityProxy, to=0x38b5ea, getReserveNormalizedVariableDebtaddress() -> 0x000000
+            [7][STATICCALL] from=InitializableImmutableAdminUpgradeabilityProxy, to=VariableDebtToken, scaledTotalSupply() -> 1039361769378678973832
+            [7][STATICCALL] from=InitializableImmutableAdminUpgradeabilityProxy, to=BakeryToken, balanceOf(account(address): 0x39f638) -> 1071267471479660832662
+            [7][STATICCALL] from=InitializableImmutableAdminUpgradeabilityProxy, to=0x304239, calculateInterestRatesuint256() -> 0x000000
+            [7][CALL] from=InitializableImmutableAdminUpgradeabilityProxy, to=XToken, transferUnderlyingTo(target(address): 0xe32608, amount(uint256): 1068053669065221850154) -> 1068053669065221850154
+              [8][CALL] from=XToken, to=BakeryToken, transfer(recipient(address): 0xe32608, amount(uint256): 1068053669065221850154) -> True
+            [7][STATICCALL] from=InitializableImmutableAdminUpgradeabilityProxy, to=MarginPoolAddressesProvider, getTreasuryAddress() -> 0x4a8d54
+            [7][CALL] from=InitializableImmutableAdminUpgradeabilityProxy, to=XToken, transferUnderlyingTo(target(address): 0x4A8d54, amount(uint256): 3213802414438982497) -> 3213802414438982497
+              [8][CALL] from=XToken, to=BakeryToken, transfer(recipient(address): 0x4A8d54, amount(uint256): 3213802414438982497) -> True
+        [5][STATICCALL] from=0xe32608, to=XVS, balanceOf(account(address): 0x82B611) -> 167753456522846742633
+        [5][CALL] from=0xe32608, to=InitializableImmutableAdminUpgradeabilityProxy, borrowaddress() -> None
+          [6][DELEGATECALL] from=InitializableImmutableAdminUpgradeabilityProxy, to=0x38b5ea, borrowaddress() -> None
+            [7][STATICCALL] from=InitializableImmutableAdminUpgradeabilityProxy, to=MarginPoolAddressesProvider, getPriceOracle() -> 0xe038dd
+            [7][STATICCALL] from=InitializableImmutableAdminUpgradeabilityProxy, to=LeverOracle, getAssetPrice(asset(address): 0xcF6BB5) -> 36010358054105212
+              [8][STATICCALL] from=LeverOracle, to=0x56bc0a, getAssetPriceaddress() -> 0x000000
+                [9][STATICCALL] from=0x56bc0a, to=0xf55d7a, getAssetPriceaddress() -> 0x000000
+                  [10][STATICCALL] from=0xf55d7a, to=EACAggregatorProxy, latestAnswer() -> 2131129000
+                    [11][STATICCALL] from=EACAggregatorProxy, to=AccessControlledOffchainAggregator, latestAnswer() -> 2131129000
+                  [10][STATICCALL] from=0xf55d7a, to=EACAggregatorProxy, latestAnswer() -> 1689731501664386
+                    [11][STATICCALL] from=EACAggregatorProxy, to=AccessControlledOffchainAggregator, latestAnswer() -> 1689731501664386
+            [7][DELEGATECALL] from=InitializableImmutableAdminUpgradeabilityProxy, to=0x6152a5, 0xe921aa97() -> None
+              [8][STATICCALL] from=InitializableImmutableAdminUpgradeabilityProxy, to=LeverOracle, getAssetPrice(asset(address): 0xbb4CdB) -> 1000000000000000000
+              [8][STATICCALL] from=InitializableImmutableAdminUpgradeabilityProxy, to=XToken, balanceOf(user(address): 0xe32608) -> 1500000000000000000000
+                [9][STATICCALL] from=XToken, to=InitializableImmutableAdminUpgradeabilityProxy, getReserveNormalizedIncomeaddress() -> 0x000000
+                  [10][DELEGATECALL] from=InitializableImmutableAdminUpgradeabilityProxy, to=0x38b5ea, getReserveNormalizedIncomeaddress() -> 0x000000
+              [8][STATICCALL] from=InitializableImmutableAdminUpgradeabilityProxy, to=LeverOracle, getAssetPrice(asset(address): 0x2170Ed) -> 6878334502482690000
+                [9][STATICCALL] from=LeverOracle, to=EACAggregatorProxy, latestAnswer() -> 6878334502482690000
+                  [10][STATICCALL] from=EACAggregatorProxy, to=AccessControlledOffchainAggregator, latestAnswer() -> 6878334502482690000
+              [8][STATICCALL] from=InitializableImmutableAdminUpgradeabilityProxy, to=VariableDebtToken, balanceOf(user(address): 0xe32608) -> 32880943784568754414
+                [9][STATICCALL] from=VariableDebtToken, to=InitializableImmutableAdminUpgradeabilityProxy, getReserveNormalizedVariableDebtaddress() -> 0x000000
+                  [10][DELEGATECALL] from=InitializableImmutableAdminUpgradeabilityProxy, to=0x38b5ea, getReserveNormalizedVariableDebtaddress() -> 0x000000
+              [8][STATICCALL] from=InitializableImmutableAdminUpgradeabilityProxy, to=LeverOracle, getAssetPrice(asset(address): 0xE02dF9) -> 3399780914887361
+                [9][STATICCALL] from=LeverOracle, to=0x56bc0a, getAssetPriceaddress() -> 0x000000
+                  [10][STATICCALL] from=0x56bc0a, to=0x12fc48, getAssetPriceaddress() -> 0x000000
+              [8][STATICCALL] from=InitializableImmutableAdminUpgradeabilityProxy, to=VariableDebtToken, balanceOf(user(address): 0xe32608) -> 1071267471479660832652
+                [9][STATICCALL] from=VariableDebtToken, to=InitializableImmutableAdminUpgradeabilityProxy, getReserveNormalizedVariableDebtaddress() -> 0x000000
+                  [10][DELEGATECALL] from=InitializableImmutableAdminUpgradeabilityProxy, to=0x38b5ea, getReserveNormalizedVariableDebtaddress() -> 0x000000
+            [7][STATICCALL] from=InitializableImmutableAdminUpgradeabilityProxy, to=VariableDebtToken, scaledTotalSupply() -> 5250762556117
+            [7][CALL] from=InitializableImmutableAdminUpgradeabilityProxy, to=VariableDebtToken, mint(user(address): 0xe32608, onBehalfOf(address): 0xe32608, amount(uint256): 167753456522846742623, index(uint256): 1050318917517427883369373654) -> True
+              [8][STATICCALL] from=VariableDebtToken, to=InitializableImmutableAdminUpgradeabilityProxy, getReserveNormalizedVariableDebtaddress() -> 0x000000
+                [9][DELEGATECALL] from=InitializableImmutableAdminUpgradeabilityProxy, to=0x38b5ea, getReserveNormalizedVariableDebtaddress() -> 0x000000
+              [8][STATICCALL] from=VariableDebtToken, to=InitializableImmutableAdminUpgradeabilityProxy, getReserveNormalizedVariableDebtaddress() -> 0x000000
+                [9][DELEGATECALL] from=InitializableImmutableAdminUpgradeabilityProxy, to=0x38b5ea, getReserveNormalizedVariableDebtaddress() -> 0x000000
+              [8][STATICCALL] from=VariableDebtToken, to=InitializableImmutableAdminUpgradeabilityProxy, getReserveNormalizedVariableDebtaddress() -> 0x000000
+                [9][DELEGATECALL] from=InitializableImmutableAdminUpgradeabilityProxy, to=0x38b5ea, getReserveNormalizedVariableDebtaddress() -> 0x000000
+              [8][STATICCALL] from=VariableDebtToken, to=InitializableImmutableAdminUpgradeabilityProxy, getReserveNormalizedVariableDebtaddress() -> 0x000000
+                [9][DELEGATECALL] from=InitializableImmutableAdminUpgradeabilityProxy, to=0x38b5ea, getReserveNormalizedVariableDebtaddress() -> 0x000000
+            [7][STATICCALL] from=InitializableImmutableAdminUpgradeabilityProxy, to=VariableDebtToken, scaledTotalSupply() -> 159716691035452537054
+            [7][STATICCALL] from=InitializableImmutableAdminUpgradeabilityProxy, to=XVS, balanceOf(account(address): 0x82B611) -> 167753456522846742633
+            [7][STATICCALL] from=InitializableImmutableAdminUpgradeabilityProxy, to=0x5bf7a5, calculateInterestRatesuint256() -> 0x000000
+            [7][CALL] from=InitializableImmutableAdminUpgradeabilityProxy, to=XToken, transferUnderlyingTo(target(address): 0xe32608, amount(uint256): 167250196153278202395) -> 167250196153278202395
+              [8][CALL] from=XToken, to=XVS, transfer(dst(address): 0xe32608, rawAmount(uint256): 167250196153278202395) -> True
+            [7][STATICCALL] from=InitializableImmutableAdminUpgradeabilityProxy, to=MarginPoolAddressesProvider, getTreasuryAddress() -> 0x4a8d54
+            [7][CALL] from=InitializableImmutableAdminUpgradeabilityProxy, to=XToken, transferUnderlyingTo(target(address): 0x4A8d54, amount(uint256): 503260369568540227) -> 503260369568540227
+              [8][CALL] from=XToken, to=XVS, transfer(dst(address): 0x4A8d54, rawAmount(uint256): 503260369568540227) -> True
+        [5][STATICCALL] from=0xe32608, to=BEP20DAI, balanceOf(account(address): 0x8C8cde) -> 1046032730900728748111
+        [5][CALL] from=0xe32608, to=InitializableImmutableAdminUpgradeabilityProxy, borrowaddress() -> None
+          [6][DELEGATECALL] from=InitializableImmutableAdminUpgradeabilityProxy, to=0x38b5ea, borrowaddress() -> None
+            [7][STATICCALL] from=InitializableImmutableAdminUpgradeabilityProxy, to=MarginPoolAddressesProvider, getPriceOracle() -> 0xe038dd
+            [7][STATICCALL] from=InitializableImmutableAdminUpgradeabilityProxy, to=LeverOracle, getAssetPrice(asset(address): 0x1AF3F3) -> 1697327842552166
+              [8][STATICCALL] from=LeverOracle, to=EACAggregatorProxy, latestAnswer() -> 1697327842552166
+                [9][STATICCALL] from=EACAggregatorProxy, to=AccessControlledOffchainAggregator, latestAnswer() -> 1697327842552166
+            [7][DELEGATECALL] from=InitializableImmutableAdminUpgradeabilityProxy, to=0x6152a5, 0xe921aa97() -> None
+              [8][STATICCALL] from=InitializableImmutableAdminUpgradeabilityProxy, to=LeverOracle, getAssetPrice(asset(address): 0xbb4CdB) -> 1000000000000000000
+              [8][STATICCALL] from=InitializableImmutableAdminUpgradeabilityProxy, to=XToken, balanceOf(user(address): 0xe32608) -> 1500000000000000000000
+                [9][STATICCALL] from=XToken, to=InitializableImmutableAdminUpgradeabilityProxy, getReserveNormalizedIncomeaddress() -> 0x000000
+                  [10][DELEGATECALL] from=InitializableImmutableAdminUpgradeabilityProxy, to=0x38b5ea, getReserveNormalizedIncomeaddress() -> 0x000000
+              [8][STATICCALL] from=InitializableImmutableAdminUpgradeabilityProxy, to=LeverOracle, getAssetPrice(asset(address): 0x2170Ed) -> 6878334502482690000
+                [9][STATICCALL] from=LeverOracle, to=EACAggregatorProxy, latestAnswer() -> 6878334502482690000
+                  [10][STATICCALL] from=EACAggregatorProxy, to=AccessControlledOffchainAggregator, latestAnswer() -> 6878334502482690000
+              [8][STATICCALL] from=InitializableImmutableAdminUpgradeabilityProxy, to=VariableDebtToken, balanceOf(user(address): 0xe32608) -> 32880943784568754414
+                [9][STATICCALL] from=VariableDebtToken, to=InitializableImmutableAdminUpgradeabilityProxy, getReserveNormalizedVariableDebtaddress() -> 0x000000
+                  [10][DELEGATECALL] from=InitializableImmutableAdminUpgradeabilityProxy, to=0x38b5ea, getReserveNormalizedVariableDebtaddress() -> 0x000000
+              [8][STATICCALL] from=InitializableImmutableAdminUpgradeabilityProxy, to=LeverOracle, getAssetPrice(asset(address): 0xE02dF9) -> 3399780914887361
+                [9][STATICCALL] from=LeverOracle, to=0x56bc0a, getAssetPriceaddress() -> 0x000000
+                  [10][STATICCALL] from=0x56bc0a, to=0x12fc48, getAssetPriceaddress() -> 0x000000
+              [8][STATICCALL] from=InitializableImmutableAdminUpgradeabilityProxy, to=VariableDebtToken, balanceOf(user(address): 0xe32608) -> 1071267471479660832652
+                [9][STATICCALL] from=VariableDebtToken, to=InitializableImmutableAdminUpgradeabilityProxy, getReserveNormalizedVariableDebtaddress() -> 0x000000
+                  [10][DELEGATECALL] from=InitializableImmutableAdminUpgradeabilityProxy, to=0x38b5ea, getReserveNormalizedVariableDebtaddress() -> 0x000000
+              [8][STATICCALL] from=InitializableImmutableAdminUpgradeabilityProxy, to=LeverOracle, getAssetPrice(asset(address): 0xcF6BB5) -> 36010358054105212
+                [9][STATICCALL] from=LeverOracle, to=0x56bc0a, getAssetPriceaddress() -> 0x000000
+                  [10][STATICCALL] from=0x56bc0a, to=0xf55d7a, getAssetPriceaddress() -> 0x000000
+                    [11][STATICCALL] from=0xf55d7a, to=EACAggregatorProxy, latestAnswer() -> 2131129000
+                      [12][STATICCALL] from=EACAggregatorProxy, to=AccessControlledOffchainAggregator, latestAnswer() -> 2131129000
+                    [11][STATICCALL] from=0xf55d7a, to=EACAggregatorProxy, latestAnswer() -> 1689731501664386
+                      [12][STATICCALL] from=EACAggregatorProxy, to=AccessControlledOffchainAggregator, latestAnswer() -> 1689731501664386
+              [8][STATICCALL] from=InitializableImmutableAdminUpgradeabilityProxy, to=VariableDebtToken, balanceOf(user(address): 0xe32608) -> 167753456522846742623
+                [9][STATICCALL] from=VariableDebtToken, to=InitializableImmutableAdminUpgradeabilityProxy, getReserveNormalizedVariableDebtaddress() -> 0x000000
+                  [10][DELEGATECALL] from=InitializableImmutableAdminUpgradeabilityProxy, to=0x38b5ea, getReserveNormalizedVariableDebtaddress() -> 0x000000
+            [7][STATICCALL] from=InitializableImmutableAdminUpgradeabilityProxy, to=VariableDebtToken, scaledTotalSupply() -> 110551425635987109806
+            [7][CALL] from=InitializableImmutableAdminUpgradeabilityProxy, to=VariableDebtToken, mint(user(address): 0xe32608, onBehalfOf(address): 0xe32608, amount(uint256): 1046032730900728748101, index(uint256): 1039997828230157673575224583) -> True
+              [8][STATICCALL] from=VariableDebtToken, to=InitializableImmutableAdminUpgradeabilityProxy, getReserveNormalizedVariableDebtaddress() -> 0x000000
+                [9][DELEGATECALL] from=InitializableImmutableAdminUpgradeabilityProxy, to=0x38b5ea, getReserveNormalizedVariableDebtaddress() -> 0x000000
+              [8][STATICCALL] from=VariableDebtToken, to=InitializableImmutableAdminUpgradeabilityProxy, getReserveNormalizedVariableDebtaddress() -> 0x000000
+                [9][DELEGATECALL] from=InitializableImmutableAdminUpgradeabilityProxy, to=0x38b5ea, getReserveNormalizedVariableDebtaddress() -> 0x000000
+              [8][STATICCALL] from=VariableDebtToken, to=InitializableImmutableAdminUpgradeabilityProxy, getReserveNormalizedVariableDebtaddress() -> 0x000000
+                [9][DELEGATECALL] from=InitializableImmutableAdminUpgradeabilityProxy, to=0x38b5ea, getReserveNormalizedVariableDebtaddress() -> 0x000000
+              [8][STATICCALL] from=VariableDebtToken, to=InitializableImmutableAdminUpgradeabilityProxy, getReserveNormalizedVariableDebtaddress() -> 0x000000
+                [9][DELEGATECALL] from=InitializableImmutableAdminUpgradeabilityProxy, to=0x38b5ea, getReserveNormalizedVariableDebtaddress() -> 0x000000
+            [7][STATICCALL] from=InitializableImmutableAdminUpgradeabilityProxy, to=VariableDebtToken, scaledTotalSupply() -> 1116354228783029369642
+            [7][STATICCALL] from=InitializableImmutableAdminUpgradeabilityProxy, to=BEP20DAI, balanceOf(account(address): 0x8C8cde) -> 1046032730900728748111
+            [7][STATICCALL] from=InitializableImmutableAdminUpgradeabilityProxy, to=0x4ed365, calculateInterestRatesuint256() -> 0x000000
+            [7][CALL] from=InitializableImmutableAdminUpgradeabilityProxy, to=XToken, transferUnderlyingTo(target(address): 0xe32608, amount(uint256): 1042894632708026561856) -> 1042894632708026561856
+              [8][CALL] from=XToken, to=BEP20DAI, transfer(recipient(address): 0xe32608, amount(uint256): 1042894632708026561856) -> True
+            [7][STATICCALL] from=InitializableImmutableAdminUpgradeabilityProxy, to=MarginPoolAddressesProvider, getTreasuryAddress() -> 0x4a8d54
+            [7][CALL] from=InitializableImmutableAdminUpgradeabilityProxy, to=XToken, transferUnderlyingTo(target(address): 0x4A8d54, amount(uint256): 3138098192702186244) -> 3138098192702186244
+              [8][CALL] from=XToken, to=BEP20DAI, transfer(recipient(address): 0x4A8d54, amount(uint256): 3138098192702186244) -> True
+        [5][STATICCALL] from=0xe32608, to=BEP20Token, balanceOf(account(address): 0x5B5ac3) -> 64350846461481774170436
+        [5][CALL] from=0xe32608, to=InitializableImmutableAdminUpgradeabilityProxy, borrowaddress() -> None
+          [6][DELEGATECALL] from=InitializableImmutableAdminUpgradeabilityProxy, to=0x38b5ea, borrowaddress() -> None
+            [7][STATICCALL] from=InitializableImmutableAdminUpgradeabilityProxy, to=MarginPoolAddressesProvider, getPriceOracle() -> 0xe038dd
+            [7][STATICCALL] from=InitializableImmutableAdminUpgradeabilityProxy, to=LeverOracle, getAssetPrice(asset(address): 0xe9e7CE) -> 1688618709895306
+              [8][STATICCALL] from=LeverOracle, to=EACAggregatorProxy, latestAnswer() -> 1688618709895306
+                [9][STATICCALL] from=EACAggregatorProxy, to=AccessControlledOffchainAggregator, latestAnswer() -> 1688618709895306
+            [7][DELEGATECALL] from=InitializableImmutableAdminUpgradeabilityProxy, to=0x6152a5, 0xe921aa97() -> None
+              [8][STATICCALL] from=InitializableImmutableAdminUpgradeabilityProxy, to=LeverOracle, getAssetPrice(asset(address): 0xbb4CdB) -> 1000000000000000000
+              [8][STATICCALL] from=InitializableImmutableAdminUpgradeabilityProxy, to=XToken, balanceOf(user(address): 0xe32608) -> 1500000000000000000000
+                [9][STATICCALL] from=XToken, to=InitializableImmutableAdminUpgradeabilityProxy, getReserveNormalizedIncomeaddress() -> 0x000000
+                  [10][DELEGATECALL] from=InitializableImmutableAdminUpgradeabilityProxy, to=0x38b5ea, getReserveNormalizedIncomeaddress() -> 0x000000
+              [8][STATICCALL] from=InitializableImmutableAdminUpgradeabilityProxy, to=LeverOracle, getAssetPrice(asset(address): 0x1AF3F3) -> 1697327842552166
+                [9][STATICCALL] from=LeverOracle, to=EACAggregatorProxy, latestAnswer() -> 1697327842552166
+                  [10][STATICCALL] from=EACAggregatorProxy, to=AccessControlledOffchainAggregator, latestAnswer() -> 1697327842552166
+              [8][STATICCALL] from=InitializableImmutableAdminUpgradeabilityProxy, to=VariableDebtToken, balanceOf(user(address): 0xe32608) -> 1046032730900728748101
+                [9][STATICCALL] from=VariableDebtToken, to=InitializableImmutableAdminUpgradeabilityProxy, getReserveNormalizedVariableDebtaddress() -> 0x000000
+                  [10][DELEGATECALL] from=InitializableImmutableAdminUpgradeabilityProxy, to=0x38b5ea, getReserveNormalizedVariableDebtaddress() -> 0x000000
+              [8][STATICCALL] from=InitializableImmutableAdminUpgradeabilityProxy, to=LeverOracle, getAssetPrice(asset(address): 0x2170Ed) -> 6878334502482690000
+                [9][STATICCALL] from=LeverOracle, to=EACAggregatorProxy, latestAnswer() -> 6878334502482690000
+                  [10][STATICCALL] from=EACAggregatorProxy, to=AccessControlledOffchainAggregator, latestAnswer() -> 6878334502482690000
+              [8][STATICCALL] from=InitializableImmutableAdminUpgradeabilityProxy, to=VariableDebtToken, balanceOf(user(address): 0xe32608) -> 32880943784568754414
+                [9][STATICCALL] from=VariableDebtToken, to=InitializableImmutableAdminUpgradeabilityProxy, getReserveNormalizedVariableDebtaddress() -> 0x000000
+                  [10][DELEGATECALL] from=InitializableImmutableAdminUpgradeabilityProxy, to=0x38b5ea, getReserveNormalizedVariableDebtaddress() -> 0x000000
+              [8][STATICCALL] from=InitializableImmutableAdminUpgradeabilityProxy, to=LeverOracle, getAssetPrice(asset(address): 0xE02dF9) -> 3399780914887361
+                [9][STATICCALL] from=LeverOracle, to=0x56bc0a, getAssetPriceaddress() -> 0x000000
+                  [10][STATICCALL] from=0x56bc0a, to=0x12fc48, getAssetPriceaddress() -> 0x000000
+              [8][STATICCALL] from=InitializableImmutableAdminUpgradeabilityProxy, to=VariableDebtToken, balanceOf(user(address): 0xe32608) -> 1071267471479660832652
+                [9][STATICCALL] from=VariableDebtToken, to=InitializableImmutableAdminUpgradeabilityProxy, getReserveNormalizedVariableDebtaddress() -> 0x000000
+                  [10][DELEGATECALL] from=InitializableImmutableAdminUpgradeabilityProxy, to=0x38b5ea, getReserveNormalizedVariableDebtaddress() -> 0x000000
+              [8][STATICCALL] from=InitializableImmutableAdminUpgradeabilityProxy, to=LeverOracle, getAssetPrice(asset(address): 0xcF6BB5) -> 36010358054105212
+                [9][STATICCALL] from=LeverOracle, to=0x56bc0a, getAssetPriceaddress() -> 0x000000
+                  [10][STATICCALL] from=0x56bc0a, to=0xf55d7a, getAssetPriceaddress() -> 0x000000
+                    [11][STATICCALL] from=0xf55d7a, to=EACAggregatorProxy, latestAnswer() -> 2131129000
+                      [12][STATICCALL] from=EACAggregatorProxy, to=AccessControlledOffchainAggregator, latestAnswer() -> 2131129000
+                    [11][STATICCALL] from=0xf55d7a, to=EACAggregatorProxy, latestAnswer() -> 1689731501664386
+                      [12][STATICCALL] from=EACAggregatorProxy, to=AccessControlledOffchainAggregator, latestAnswer() -> 1689731501664386
+              [8][STATICCALL] from=InitializableImmutableAdminUpgradeabilityProxy, to=VariableDebtToken, balanceOf(user(address): 0xe32608) -> 167753456522846742623
+                [9][STATICCALL] from=VariableDebtToken, to=InitializableImmutableAdminUpgradeabilityProxy, getReserveNormalizedVariableDebtaddress() -> 0x000000
+                  [10][DELEGATECALL] from=InitializableImmutableAdminUpgradeabilityProxy, to=0x38b5ea, getReserveNormalizedVariableDebtaddress() -> 0x000000
+            [7][STATICCALL] from=InitializableImmutableAdminUpgradeabilityProxy, to=VariableDebtToken, scaledTotalSupply() -> 325069737992459364613925
+            [7][CALL] from=InitializableImmutableAdminUpgradeabilityProxy, to=VariableDebtToken, mint(user(address): 0xe32608, onBehalfOf(address): 0xe32608, amount(uint256): 64350846461481774170426, index(uint256): 1092679585414734103486719178) -> True
+              [8][STATICCALL] from=VariableDebtToken, to=InitializableImmutableAdminUpgradeabilityProxy, getReserveNormalizedVariableDebtaddress() -> 0x000000
+                [9][DELEGATECALL] from=InitializableImmutableAdminUpgradeabilityProxy, to=0x38b5ea, getReserveNormalizedVariableDebtaddress() -> 0x000000
+              [8][STATICCALL] from=VariableDebtToken, to=InitializableImmutableAdminUpgradeabilityProxy, getReserveNormalizedVariableDebtaddress() -> 0x000000
+                [9][DELEGATECALL] from=InitializableImmutableAdminUpgradeabilityProxy, to=0x38b5ea, getReserveNormalizedVariableDebtaddress() -> 0x000000
+              [8][STATICCALL] from=VariableDebtToken, to=InitializableImmutableAdminUpgradeabilityProxy, getReserveNormalizedVariableDebtaddress() -> 0x000000
+                [9][DELEGATECALL] from=InitializableImmutableAdminUpgradeabilityProxy, to=0x38b5ea, getReserveNormalizedVariableDebtaddress() -> 0x000000
+              [8][STATICCALL] from=VariableDebtToken, to=InitializableImmutableAdminUpgradeabilityProxy, getReserveNormalizedVariableDebtaddress() -> 0x000000
+                [9][DELEGATECALL] from=InitializableImmutableAdminUpgradeabilityProxy, to=0x38b5ea, getReserveNormalizedVariableDebtaddress() -> 0x000000
+            [7][STATICCALL] from=InitializableImmutableAdminUpgradeabilityProxy, to=VariableDebtToken, scaledTotalSupply() -> 383962433820630222921133
+            [7][STATICCALL] from=InitializableImmutableAdminUpgradeabilityProxy, to=BEP20Token, balanceOf(account(address): 0x5B5ac3) -> 64350846461481774170436
+            [7][STATICCALL] from=InitializableImmutableAdminUpgradeabilityProxy, to=0xdf1636, calculateInterestRatesuint256() -> 0x000000
+            [7][CALL] from=InitializableImmutableAdminUpgradeabilityProxy, to=XToken, transferUnderlyingTo(target(address): 0xe32608, amount(uint256): 64157793922097328847914) -> 64157793922097328847914
+              [8][CALL] from=XToken, to=BEP20Token, transfer(recipient(address): 0xe32608, amount(uint256): 64157793922097328847914) -> True
+            [7][STATICCALL] from=InitializableImmutableAdminUpgradeabilityProxy, to=MarginPoolAddressesProvider, getTreasuryAddress() -> 0x4a8d54
+            [7][CALL] from=InitializableImmutableAdminUpgradeabilityProxy, to=XToken, transferUnderlyingTo(target(address): 0x4A8d54, amount(uint256): 193052539384445322511) -> 193052539384445322511
+              [8][CALL] from=XToken, to=BEP20Token, transfer(recipient(address): 0x4A8d54, amount(uint256): 193052539384445322511) -> True
+        [5][STATICCALL] from=0xe32608, to=BEP20USDT, balanceOf(account(address): 0xdcB78f) -> 54498691305717001701585
+        [5][CALL] from=0xe32608, to=InitializableImmutableAdminUpgradeabilityProxy, borrowaddress() -> None
+          [6][DELEGATECALL] from=InitializableImmutableAdminUpgradeabilityProxy, to=0x38b5ea, borrowaddress() -> None
+            [7][STATICCALL] from=InitializableImmutableAdminUpgradeabilityProxy, to=MarginPoolAddressesProvider, getPriceOracle() -> 0xe038dd
+            [7][STATICCALL] from=InitializableImmutableAdminUpgradeabilityProxy, to=LeverOracle, getAssetPrice(asset(address): 0x55d398) -> 1689731501664386
+              [8][STATICCALL] from=LeverOracle, to=EACAggregatorProxy, latestAnswer() -> 1689731501664386
+                [9][STATICCALL] from=EACAggregatorProxy, to=AccessControlledOffchainAggregator, latestAnswer() -> 1689731501664386
+            [7][DELEGATECALL] from=InitializableImmutableAdminUpgradeabilityProxy, to=0x6152a5, 0xe921aa97() -> None
+              [8][STATICCALL] from=InitializableImmutableAdminUpgradeabilityProxy, to=LeverOracle, getAssetPrice(asset(address): 0xbb4CdB) -> 1000000000000000000
+              [8][STATICCALL] from=InitializableImmutableAdminUpgradeabilityProxy, to=XToken, balanceOf(user(address): 0xe32608) -> 1500000000000000000000
+                [9][STATICCALL] from=XToken, to=InitializableImmutableAdminUpgradeabilityProxy, getReserveNormalizedIncomeaddress() -> 0x000000
+                  [10][DELEGATECALL] from=InitializableImmutableAdminUpgradeabilityProxy, to=0x38b5ea, getReserveNormalizedIncomeaddress() -> 0x000000
+              [8][STATICCALL] from=InitializableImmutableAdminUpgradeabilityProxy, to=LeverOracle, getAssetPrice(asset(address): 0xe9e7CE) -> 1688618709895306
+                [9][STATICCALL] from=LeverOracle, to=EACAggregatorProxy, latestAnswer() -> 1688618709895306
+                  [10][STATICCALL] from=EACAggregatorProxy, to=AccessControlledOffchainAggregator, latestAnswer() -> 1688618709895306
+              [8][STATICCALL] from=InitializableImmutableAdminUpgradeabilityProxy, to=VariableDebtToken, balanceOf(user(address): 0xe32608) -> 64350846461481774170426
+                [9][STATICCALL] from=VariableDebtToken, to=InitializableImmutableAdminUpgradeabilityProxy, getReserveNormalizedVariableDebtaddress() -> 0x000000
+                  [10][DELEGATECALL] from=InitializableImmutableAdminUpgradeabilityProxy, to=0x38b5ea, getReserveNormalizedVariableDebtaddress() -> 0x000000
+              [8][STATICCALL] from=InitializableImmutableAdminUpgradeabilityProxy, to=LeverOracle, getAssetPrice(asset(address): 0x1AF3F3) -> 1697327842552166
+                [9][STATICCALL] from=LeverOracle, to=EACAggregatorProxy, latestAnswer() -> 1697327842552166
+                  [10][STATICCALL] from=EACAggregatorProxy, to=AccessControlledOffchainAggregator, latestAnswer() -> 1697327842552166
+              [8][STATICCALL] from=InitializableImmutableAdminUpgradeabilityProxy, to=VariableDebtToken, balanceOf(user(address): 0xe32608) -> 1046032730900728748101
+                [9][STATICCALL] from=VariableDebtToken, to=InitializableImmutableAdminUpgradeabilityProxy, getReserveNormalizedVariableDebtaddress() -> 0x000000
+                  [10][DELEGATECALL] from=InitializableImmutableAdminUpgradeabilityProxy, to=0x38b5ea, getReserveNormalizedVariableDebtaddress() -> 0x000000
+              [8][STATICCALL] from=InitializableImmutableAdminUpgradeabilityProxy, to=LeverOracle, getAssetPrice(asset(address): 0x2170Ed) -> 6878334502482690000
+                [9][STATICCALL] from=LeverOracle, to=EACAggregatorProxy, latestAnswer() -> 6878334502482690000
+                  [10][STATICCALL] from=EACAggregatorProxy, to=AccessControlledOffchainAggregator, latestAnswer() -> 6878334502482690000
+              [8][STATICCALL] from=InitializableImmutableAdminUpgradeabilityProxy, to=VariableDebtToken, balanceOf(user(address): 0xe32608) -> 32880943784568754414
+                [9][STATICCALL] from=VariableDebtToken, to=InitializableImmutableAdminUpgradeabilityProxy, getReserveNormalizedVariableDebtaddress() -> 0x000000
+                  [10][DELEGATECALL] from=InitializableImmutableAdminUpgradeabilityProxy, to=0x38b5ea, getReserveNormalizedVariableDebtaddress() -> 0x000000
+              [8][STATICCALL] from=InitializableImmutableAdminUpgradeabilityProxy, to=LeverOracle, getAssetPrice(asset(address): 0xE02dF9) -> 3399780914887361
+                [9][STATICCALL] from=LeverOracle, to=0x56bc0a, getAssetPriceaddress() -> 0x000000
+                  [10][STATICCALL] from=0x56bc0a, to=0x12fc48, getAssetPriceaddress() -> 0x000000
+              [8][STATICCALL] from=InitializableImmutableAdminUpgradeabilityProxy, to=VariableDebtToken, balanceOf(user(address): 0xe32608) -> 1071267471479660832652
+                [9][STATICCALL] from=VariableDebtToken, to=InitializableImmutableAdminUpgradeabilityProxy, getReserveNormalizedVariableDebtaddress() -> 0x000000
+                  [10][DELEGATECALL] from=InitializableImmutableAdminUpgradeabilityProxy, to=0x38b5ea, getReserveNormalizedVariableDebtaddress() -> 0x000000
+              [8][STATICCALL] from=InitializableImmutableAdminUpgradeabilityProxy, to=LeverOracle, getAssetPrice(asset(address): 0xcF6BB5) -> 36010358054105212
+                [9][STATICCALL] from=LeverOracle, to=0x56bc0a, getAssetPriceaddress() -> 0x000000
+                  [10][STATICCALL] from=0x56bc0a, to=0xf55d7a, getAssetPriceaddress() -> 0x000000
+                    [11][STATICCALL] from=0xf55d7a, to=EACAggregatorProxy, latestAnswer() -> 2131129000
+                      [12][STATICCALL] from=EACAggregatorProxy, to=AccessControlledOffchainAggregator, latestAnswer() -> 2131129000
+                    [11][STATICCALL] from=0xf55d7a, to=EACAggregatorProxy, latestAnswer() -> 1689731501664386
+                      [12][STATICCALL] from=EACAggregatorProxy, to=AccessControlledOffchainAggregator, latestAnswer() -> 1689731501664386
+              [8][STATICCALL] from=InitializableImmutableAdminUpgradeabilityProxy, to=VariableDebtToken, balanceOf(user(address): 0xe32608) -> 167753456522846742623
+                [9][STATICCALL] from=VariableDebtToken, to=InitializableImmutableAdminUpgradeabilityProxy, getReserveNormalizedVariableDebtaddress() -> 0x000000
+                  [10][DELEGATECALL] from=InitializableImmutableAdminUpgradeabilityProxy, to=0x38b5ea, getReserveNormalizedVariableDebtaddress() -> 0x000000
+            [7][STATICCALL] from=InitializableImmutableAdminUpgradeabilityProxy, to=VariableDebtToken, scaledTotalSupply() -> 405056499166185840994704
+            [7][CALL] from=InitializableImmutableAdminUpgradeabilityProxy, to=VariableDebtToken, mint(user(address): 0xe32608, onBehalfOf(address): 0xe32608, amount(uint256): 54498691305717001701575, index(uint256): 1031633331485588592133237430) -> True
+              [8][STATICCALL] from=VariableDebtToken, to=InitializableImmutableAdminUpgradeabilityProxy, getReserveNormalizedVariableDebtaddress() -> 0x000000
+                [9][DELEGATECALL] from=InitializableImmutableAdminUpgradeabilityProxy, to=0x38b5ea, getReserveNormalizedVariableDebtaddress() -> 0x000000
+              [8][STATICCALL] from=VariableDebtToken, to=InitializableImmutableAdminUpgradeabilityProxy, getReserveNormalizedVariableDebtaddress() -> 0x000000
+                [9][DELEGATECALL] from=InitializableImmutableAdminUpgradeabilityProxy, to=0x38b5ea, getReserveNormalizedVariableDebtaddress() -> 0x000000
+              [8][STATICCALL] from=VariableDebtToken, to=InitializableImmutableAdminUpgradeabilityProxy, getReserveNormalizedVariableDebtaddress() -> 0x000000
+                [9][DELEGATECALL] from=InitializableImmutableAdminUpgradeabilityProxy, to=0x38b5ea, getReserveNormalizedVariableDebtaddress() -> 0x000000
+              [8][STATICCALL] from=VariableDebtToken, to=InitializableImmutableAdminUpgradeabilityProxy, getReserveNormalizedVariableDebtaddress() -> 0x000000
+                [9][DELEGATECALL] from=InitializableImmutableAdminUpgradeabilityProxy, to=0x38b5ea, getReserveNormalizedVariableDebtaddress() -> 0x000000
+            [7][STATICCALL] from=InitializableImmutableAdminUpgradeabilityProxy, to=VariableDebtToken, scaledTotalSupply() -> 457884078154194063845523
+            [7][STATICCALL] from=InitializableImmutableAdminUpgradeabilityProxy, to=BEP20USDT, balanceOf(account(address): 0xdcB78f) -> 54498691305717001701585
+            [7][STATICCALL] from=InitializableImmutableAdminUpgradeabilityProxy, to=0x3ceebd, calculateInterestRatesuint256() -> 0x000000
+            [7][CALL] from=InitializableImmutableAdminUpgradeabilityProxy, to=XToken, transferUnderlyingTo(target(address): 0xe32608, amount(uint256): 54335195231799850696470) -> 54335195231799850696470
+              [8][CALL] from=XToken, to=BEP20USDT, transfer(recipient(address): 0xe32608, amount(uint256): 54335195231799850696470) -> True
+            [7][STATICCALL] from=InitializableImmutableAdminUpgradeabilityProxy, to=MarginPoolAddressesProvider, getTreasuryAddress() -> 0x4a8d54
+            [7][CALL] from=InitializableImmutableAdminUpgradeabilityProxy, to=XToken, transferUnderlyingTo(target(address): 0x4A8d54, amount(uint256): 163496073917151005104) -> 163496073917151005104
+              [8][CALL] from=XToken, to=BEP20USDT, transfer(recipient(address): 0x4A8d54, amount(uint256): 163496073917151005104) -> True
+        [5][STATICCALL] from=0xe32608, to=BEP20Token, balanceOf(account(address): 0x95e783) -> 2889271927427929513
+        [5][CALL] from=0xe32608, to=InitializableImmutableAdminUpgradeabilityProxy, borrowaddress() -> None
+          [6][DELEGATECALL] from=InitializableImmutableAdminUpgradeabilityProxy, to=0x38b5ea, borrowaddress() -> None
+            [7][STATICCALL] from=InitializableImmutableAdminUpgradeabilityProxy, to=MarginPoolAddressesProvider, getPriceOracle() -> 0xe038dd
+            [7][STATICCALL] from=InitializableImmutableAdminUpgradeabilityProxy, to=LeverOracle, getAssetPrice(asset(address): 0x7130d2) -> 91740000000000000000
+              [8][STATICCALL] from=LeverOracle, to=EACAggregatorProxy, latestAnswer() -> 91740000000000000000
+                [9][STATICCALL] from=EACAggregatorProxy, to=AccessControlledOffchainAggregator, latestAnswer() -> 91740000000000000000
+            [7][DELEGATECALL] from=InitializableImmutableAdminUpgradeabilityProxy, to=0x6152a5, 0xe921aa97() -> None
+              [8][STATICCALL] from=InitializableImmutableAdminUpgradeabilityProxy, to=LeverOracle, getAssetPrice(asset(address): 0xbb4CdB) -> 1000000000000000000
+              [8][STATICCALL] from=InitializableImmutableAdminUpgradeabilityProxy, to=XToken, balanceOf(user(address): 0xe32608) -> 1500000000000000000000
+                [9][STATICCALL] from=XToken, to=InitializableImmutableAdminUpgradeabilityProxy, getReserveNormalizedIncomeaddress() -> 0x000000
+                  [10][DELEGATECALL] from=InitializableImmutableAdminUpgradeabilityProxy, to=0x38b5ea, getReserveNormalizedIncomeaddress() -> 0x000000
+              [8][STATICCALL] from=InitializableImmutableAdminUpgradeabilityProxy, to=LeverOracle, getAssetPrice(asset(address): 0xe9e7CE) -> 1688618709895306
+                [9][STATICCALL] from=LeverOracle, to=EACAggregatorProxy, latestAnswer() -> 1688618709895306
+                  [10][STATICCALL] from=EACAggregatorProxy, to=AccessControlledOffchainAggregator, latestAnswer() -> 1688618709895306
+              [8][STATICCALL] from=InitializableImmutableAdminUpgradeabilityProxy, to=VariableDebtToken, balanceOf(user(address): 0xe32608) -> 64350846461481774170426
+                [9][STATICCALL] from=VariableDebtToken, to=InitializableImmutableAdminUpgradeabilityProxy, getReserveNormalizedVariableDebtaddress() -> 0x000000
+                  [10][DELEGATECALL] from=InitializableImmutableAdminUpgradeabilityProxy, to=0x38b5ea, getReserveNormalizedVariableDebtaddress() -> 0x000000
+              [8][STATICCALL] from=InitializableImmutableAdminUpgradeabilityProxy, to=LeverOracle, getAssetPrice(asset(address): 0x1AF3F3) -> 1697327842552166
+                [9][STATICCALL] from=LeverOracle, to=EACAggregatorProxy, latestAnswer() -> 1697327842552166
+                  [10][STATICCALL] from=EACAggregatorProxy, to=AccessControlledOffchainAggregator, latestAnswer() -> 1697327842552166
+              [8][STATICCALL] from=InitializableImmutableAdminUpgradeabilityProxy, to=VariableDebtToken, balanceOf(user(address): 0xe32608) -> 1046032730900728748101
+                [9][STATICCALL] from=VariableDebtToken, to=InitializableImmutableAdminUpgradeabilityProxy, getReserveNormalizedVariableDebtaddress() -> 0x000000
+                  [10][DELEGATECALL] from=InitializableImmutableAdminUpgradeabilityProxy, to=0x38b5ea, getReserveNormalizedVariableDebtaddress() -> 0x000000
+              [8][STATICCALL] from=InitializableImmutableAdminUpgradeabilityProxy, to=LeverOracle, getAssetPrice(asset(address): 0x2170Ed) -> 6878334502482690000
+                [9][STATICCALL] from=LeverOracle, to=EACAggregatorProxy, latestAnswer() -> 6878334502482690000
+                  [10][STATICCALL] from=EACAggregatorProxy, to=AccessControlledOffchainAggregator, latestAnswer() -> 6878334502482690000
+              [8][STATICCALL] from=InitializableImmutableAdminUpgradeabilityProxy, to=VariableDebtToken, balanceOf(user(address): 0xe32608) -> 32880943784568754414
+                [9][STATICCALL] from=VariableDebtToken, to=InitializableImmutableAdminUpgradeabilityProxy, getReserveNormalizedVariableDebtaddress() -> 0x000000
+                  [10][DELEGATECALL] from=InitializableImmutableAdminUpgradeabilityProxy, to=0x38b5ea, getReserveNormalizedVariableDebtaddress() -> 0x000000
+              [8][STATICCALL] from=InitializableImmutableAdminUpgradeabilityProxy, to=LeverOracle, getAssetPrice(asset(address): 0x55d398) -> 1689731501664386
+                [9][STATICCALL] from=LeverOracle, to=EACAggregatorProxy, latestAnswer() -> 1689731501664386
+                  [10][STATICCALL] from=EACAggregatorProxy, to=AccessControlledOffchainAggregator, latestAnswer() -> 1689731501664386
+              [8][STATICCALL] from=InitializableImmutableAdminUpgradeabilityProxy, to=VariableDebtToken, balanceOf(user(address): 0xe32608) -> 54498691305717001701575
+                [9][STATICCALL] from=VariableDebtToken, to=InitializableImmutableAdminUpgradeabilityProxy, getReserveNormalizedVariableDebtaddress() -> 0x000000
+                  [10][DELEGATECALL] from=InitializableImmutableAdminUpgradeabilityProxy, to=0x38b5ea, getReserveNormalizedVariableDebtaddress() -> 0x000000
+              [8][STATICCALL] from=InitializableImmutableAdminUpgradeabilityProxy, to=LeverOracle, getAssetPrice(asset(address): 0xE02dF9) -> 3399780914887361
+                [9][STATICCALL] from=LeverOracle, to=0x56bc0a, getAssetPriceaddress() -> 0x000000
+                  [10][STATICCALL] from=0x56bc0a, to=0x12fc48, getAssetPriceaddress() -> 0x000000
+              [8][STATICCALL] from=InitializableImmutableAdminUpgradeabilityProxy, to=VariableDebtToken, balanceOf(user(address): 0xe32608) -> 1071267471479660832652
+                [9][STATICCALL] from=VariableDebtToken, to=InitializableImmutableAdminUpgradeabilityProxy, getReserveNormalizedVariableDebtaddress() -> 0x000000
+                  [10][DELEGATECALL] from=InitializableImmutableAdminUpgradeabilityProxy, to=0x38b5ea, getReserveNormalizedVariableDebtaddress() -> 0x000000
+              [8][STATICCALL] from=InitializableImmutableAdminUpgradeabilityProxy, to=LeverOracle, getAssetPrice(asset(address): 0xcF6BB5) -> 36010358054105212
+                [9][STATICCALL] from=LeverOracle, to=0x56bc0a, getAssetPriceaddress() -> 0x000000
+                  [10][STATICCALL] from=0x56bc0a, to=0xf55d7a, getAssetPriceaddress() -> 0x000000
+                    [11][STATICCALL] from=0xf55d7a, to=EACAggregatorProxy, latestAnswer() -> 2131129000
+                      [12][STATICCALL] from=EACAggregatorProxy, to=AccessControlledOffchainAggregator, latestAnswer() -> 2131129000
+                    [11][STATICCALL] from=0xf55d7a, to=EACAggregatorProxy, latestAnswer() -> 1689731501664386
+                      [12][STATICCALL] from=EACAggregatorProxy, to=AccessControlledOffchainAggregator, latestAnswer() -> 1689731501664386
+              [8][STATICCALL] from=InitializableImmutableAdminUpgradeabilityProxy, to=VariableDebtToken, balanceOf(user(address): 0xe32608) -> 167753456522846742623
+                [9][STATICCALL] from=VariableDebtToken, to=InitializableImmutableAdminUpgradeabilityProxy, getReserveNormalizedVariableDebtaddress() -> 0x000000
+                  [10][DELEGATECALL] from=InitializableImmutableAdminUpgradeabilityProxy, to=0x38b5ea, getReserveNormalizedVariableDebtaddress() -> 0x000000
+            [7][STATICCALL] from=InitializableImmutableAdminUpgradeabilityProxy, to=VariableDebtToken, scaledTotalSupply() -> 3153652298151222524
+            [7][CALL] from=InitializableImmutableAdminUpgradeabilityProxy, to=VariableDebtToken, mint(user(address): 0xe32608, onBehalfOf(address): 0xe32608, amount(uint256): 2889271927427929503, index(uint256): 1026101613585163216638939824) -> True
+              [8][STATICCALL] from=VariableDebtToken, to=InitializableImmutableAdminUpgradeabilityProxy, getReserveNormalizedVariableDebtaddress() -> 0x000000
+                [9][DELEGATECALL] from=InitializableImmutableAdminUpgradeabilityProxy, to=0x38b5ea, getReserveNormalizedVariableDebtaddress() -> 0x000000
+              [8][STATICCALL] from=VariableDebtToken, to=InitializableImmutableAdminUpgradeabilityProxy, getReserveNormalizedVariableDebtaddress() -> 0x000000
+                [9][DELEGATECALL] from=InitializableImmutableAdminUpgradeabilityProxy, to=0x38b5ea, getReserveNormalizedVariableDebtaddress() -> 0x000000
+              [8][STATICCALL] from=VariableDebtToken, to=InitializableImmutableAdminUpgradeabilityProxy, getReserveNormalizedVariableDebtaddress() -> 0x000000
+                [9][DELEGATECALL] from=InitializableImmutableAdminUpgradeabilityProxy, to=0x38b5ea, getReserveNormalizedVariableDebtaddress() -> 0x000000
+              [8][STATICCALL] from=VariableDebtToken, to=InitializableImmutableAdminUpgradeabilityProxy, getReserveNormalizedVariableDebtaddress() -> 0x000000
+                [9][DELEGATECALL] from=InitializableImmutableAdminUpgradeabilityProxy, to=0x38b5ea, getReserveNormalizedVariableDebtaddress() -> 0x000000
+            [7][STATICCALL] from=InitializableImmutableAdminUpgradeabilityProxy, to=VariableDebtToken, scaledTotalSupply() -> 5969427937888221137
+            [7][STATICCALL] from=InitializableImmutableAdminUpgradeabilityProxy, to=BEP20Token, balanceOf(account(address): 0x95e783) -> 2889271927427929513
+            [7][STATICCALL] from=InitializableImmutableAdminUpgradeabilityProxy, to=0x7c6989, calculateInterestRatesuint256() -> 0x000000
+            [7][CALL] from=InitializableImmutableAdminUpgradeabilityProxy, to=XToken, transferUnderlyingTo(target(address): 0xe32608, amount(uint256): 2880604111645645714) -> 2880604111645645714
+              [8][CALL] from=XToken, to=BEP20Token, transfer(recipient(address): 0xe32608, amount(uint256): 2880604111645645714) -> True
+            [7][STATICCALL] from=InitializableImmutableAdminUpgradeabilityProxy, to=MarginPoolAddressesProvider, getTreasuryAddress() -> 0x4a8d54
+            [7][CALL] from=InitializableImmutableAdminUpgradeabilityProxy, to=XToken, transferUnderlyingTo(target(address): 0x4A8d54, amount(uint256): 8667815782283788) -> 8667815782283788
+              [8][CALL] from=XToken, to=BEP20Token, transfer(recipient(address): 0x4A8d54, amount(uint256): 8667815782283788) -> True
+        [5][STATICCALL] from=0xe32608, to=CakeToken, balanceOf(account(address): 0x55797A) -> 1935822574387915568476
+        [5][CALL] from=0xe32608, to=InitializableImmutableAdminUpgradeabilityProxy, borrowaddress() -> None
+          [6][DELEGATECALL] from=InitializableImmutableAdminUpgradeabilityProxy, to=0x38b5ea, borrowaddress() -> None
+            [7][STATICCALL] from=InitializableImmutableAdminUpgradeabilityProxy, to=MarginPoolAddressesProvider, getPriceOracle() -> 0xe038dd
+            [7][STATICCALL] from=InitializableImmutableAdminUpgradeabilityProxy, to=LeverOracle, getAssetPrice(asset(address): 0x0E09Fa) -> 21859354891450127
+              [8][STATICCALL] from=LeverOracle, to=EACAggregatorProxy, latestAnswer() -> 21859354891450127
+                [9][STATICCALL] from=EACAggregatorProxy, to=AccessControlledOffchainAggregator, latestAnswer() -> 21859354891450127
+            [7][DELEGATECALL] from=InitializableImmutableAdminUpgradeabilityProxy, to=0x6152a5, 0xe921aa97() -> None
+              [8][STATICCALL] from=InitializableImmutableAdminUpgradeabilityProxy, to=LeverOracle, getAssetPrice(asset(address): 0xbb4CdB) -> 1000000000000000000
+              [8][STATICCALL] from=InitializableImmutableAdminUpgradeabilityProxy, to=XToken, balanceOf(user(address): 0xe32608) -> 1500000000000000000000
+                [9][STATICCALL] from=XToken, to=InitializableImmutableAdminUpgradeabilityProxy, getReserveNormalizedIncomeaddress() -> 0x000000
+                  [10][DELEGATECALL] from=InitializableImmutableAdminUpgradeabilityProxy, to=0x38b5ea, getReserveNormalizedIncomeaddress() -> 0x000000
+              [8][STATICCALL] from=InitializableImmutableAdminUpgradeabilityProxy, to=LeverOracle, getAssetPrice(asset(address): 0xe9e7CE) -> 1688618709895306
+                [9][STATICCALL] from=LeverOracle, to=EACAggregatorProxy, latestAnswer() -> 1688618709895306
+                  [10][STATICCALL] from=EACAggregatorProxy, to=AccessControlledOffchainAggregator, latestAnswer() -> 1688618709895306
+              [8][STATICCALL] from=InitializableImmutableAdminUpgradeabilityProxy, to=VariableDebtToken, balanceOf(user(address): 0xe32608) -> 64350846461481774170426
+                [9][STATICCALL] from=VariableDebtToken, to=InitializableImmutableAdminUpgradeabilityProxy, getReserveNormalizedVariableDebtaddress() -> 0x000000
+                  [10][DELEGATECALL] from=InitializableImmutableAdminUpgradeabilityProxy, to=0x38b5ea, getReserveNormalizedVariableDebtaddress() -> 0x000000
+              [8][STATICCALL] from=InitializableImmutableAdminUpgradeabilityProxy, to=LeverOracle, getAssetPrice(asset(address): 0x7130d2) -> 91740000000000000000
+                [9][STATICCALL] from=LeverOracle, to=EACAggregatorProxy, latestAnswer() -> 91740000000000000000
+                  [10][STATICCALL] from=EACAggregatorProxy, to=AccessControlledOffchainAggregator, latestAnswer() -> 91740000000000000000
+              [8][STATICCALL] from=InitializableImmutableAdminUpgradeabilityProxy, to=VariableDebtToken, balanceOf(user(address): 0xe32608) -> 2889271927427929503
+                [9][STATICCALL] from=VariableDebtToken, to=InitializableImmutableAdminUpgradeabilityProxy, getReserveNormalizedVariableDebtaddress() -> 0x000000
+                  [10][DELEGATECALL] from=InitializableImmutableAdminUpgradeabilityProxy, to=0x38b5ea, getReserveNormalizedVariableDebtaddress() -> 0x000000
+              [8][STATICCALL] from=InitializableImmutableAdminUpgradeabilityProxy, to=LeverOracle, getAssetPrice(asset(address): 0x1AF3F3) -> 1697327842552166
+                [9][STATICCALL] from=LeverOracle, to=EACAggregatorProxy, latestAnswer() -> 1697327842552166
+                  [10][STATICCALL] from=EACAggregatorProxy, to=AccessControlledOffchainAggregator, latestAnswer() -> 1697327842552166
+              [8][STATICCALL] from=InitializableImmutableAdminUpgradeabilityProxy, to=VariableDebtToken, balanceOf(user(address): 0xe32608) -> 1046032730900728748101
+                [9][STATICCALL] from=VariableDebtToken, to=InitializableImmutableAdminUpgradeabilityProxy, getReserveNormalizedVariableDebtaddress() -> 0x000000
+                  [10][DELEGATECALL] from=InitializableImmutableAdminUpgradeabilityProxy, to=0x38b5ea, getReserveNormalizedVariableDebtaddress() -> 0x000000
+              [8][STATICCALL] from=InitializableImmutableAdminUpgradeabilityProxy, to=LeverOracle, getAssetPrice(asset(address): 0x2170Ed) -> 6878334502482690000
+                [9][STATICCALL] from=LeverOracle, to=EACAggregatorProxy, latestAnswer() -> 6878334502482690000
+                  [10][STATICCALL] from=EACAggregatorProxy, to=AccessControlledOffchainAggregator, latestAnswer() -> 6878334502482690000
+              [8][STATICCALL] from=InitializableImmutableAdminUpgradeabilityProxy, to=VariableDebtToken, balanceOf(user(address): 0xe32608) -> 32880943784568754414
+                [9][STATICCALL] from=VariableDebtToken, to=InitializableImmutableAdminUpgradeabilityProxy, getReserveNormalizedVariableDebtaddress() -> 0x000000
+                  [10][DELEGATECALL] from=InitializableImmutableAdminUpgradeabilityProxy, to=0x38b5ea, getReserveNormalizedVariableDebtaddress() -> 0x000000
+              [8][STATICCALL] from=InitializableImmutableAdminUpgradeabilityProxy, to=LeverOracle, getAssetPrice(asset(address): 0x55d398) -> 1689731501664386
+                [9][STATICCALL] from=LeverOracle, to=EACAggregatorProxy, latestAnswer() -> 1689731501664386
+                  [10][STATICCALL] from=EACAggregatorProxy, to=AccessControlledOffchainAggregator, latestAnswer() -> 1689731501664386
+              [8][STATICCALL] from=InitializableImmutableAdminUpgradeabilityProxy, to=VariableDebtToken, balanceOf(user(address): 0xe32608) -> 54498691305717001701575
+                [9][STATICCALL] from=VariableDebtToken, to=InitializableImmutableAdminUpgradeabilityProxy, getReserveNormalizedVariableDebtaddress() -> 0x000000
+                  [10][DELEGATECALL] from=InitializableImmutableAdminUpgradeabilityProxy, to=0x38b5ea, getReserveNormalizedVariableDebtaddress() -> 0x000000
+              [8][STATICCALL] from=InitializableImmutableAdminUpgradeabilityProxy, to=LeverOracle, getAssetPrice(asset(address): 0xE02dF9) -> 3399780914887361
+                [9][STATICCALL] from=LeverOracle, to=0x56bc0a, getAssetPriceaddress() -> 0x000000
+                  [10][STATICCALL] from=0x56bc0a, to=0x12fc48, getAssetPriceaddress() -> 0x000000
+              [8][STATICCALL] from=InitializableImmutableAdminUpgradeabilityProxy, to=VariableDebtToken, balanceOf(user(address): 0xe32608) -> 1071267471479660832652
+                [9][STATICCALL] from=VariableDebtToken, to=InitializableImmutableAdminUpgradeabilityProxy, getReserveNormalizedVariableDebtaddress() -> 0x000000
+                  [10][DELEGATECALL] from=InitializableImmutableAdminUpgradeabilityProxy, to=0x38b5ea, getReserveNormalizedVariableDebtaddress() -> 0x000000
+              [8][STATICCALL] from=InitializableImmutableAdminUpgradeabilityProxy, to=LeverOracle, getAssetPrice(asset(address): 0xcF6BB5) -> 36010358054105212
+                [9][STATICCALL] from=LeverOracle, to=0x56bc0a, getAssetPriceaddress() -> 0x000000
+                  [10][STATICCALL] from=0x56bc0a, to=0xf55d7a, getAssetPriceaddress() -> 0x000000
+                    [11][STATICCALL] from=0xf55d7a, to=EACAggregatorProxy, latestAnswer() -> 2131129000
+                      [12][STATICCALL] from=EACAggregatorProxy, to=AccessControlledOffchainAggregator, latestAnswer() -> 2131129000
+                    [11][STATICCALL] from=0xf55d7a, to=EACAggregatorProxy, latestAnswer() -> 1689731501664386
+                      [12][STATICCALL] from=EACAggregatorProxy, to=AccessControlledOffchainAggregator, latestAnswer() -> 1689731501664386
+              [8][STATICCALL] from=InitializableImmutableAdminUpgradeabilityProxy, to=VariableDebtToken, balanceOf(user(address): 0xe32608) -> 167753456522846742623
+                [9][STATICCALL] from=VariableDebtToken, to=InitializableImmutableAdminUpgradeabilityProxy, getReserveNormalizedVariableDebtaddress() -> 0x000000
+                  [10][DELEGATECALL] from=InitializableImmutableAdminUpgradeabilityProxy, to=0x38b5ea, getReserveNormalizedVariableDebtaddress() -> 0x000000
+            [7][STATICCALL] from=InitializableImmutableAdminUpgradeabilityProxy, to=VariableDebtToken, scaledTotalSupply() -> 1670468218587728184405
+            [7][CALL] from=InitializableImmutableAdminUpgradeabilityProxy, to=VariableDebtToken, mint(user(address): 0xe32608, onBehalfOf(address): 0xe32608, amount(uint256): 1935822574387915568466, index(uint256): 1370290606690221099177291620) -> True
+              [8][STATICCALL] from=VariableDebtToken, to=InitializableImmutableAdminUpgradeabilityProxy, getReserveNormalizedVariableDebtaddress() -> 0x000000
+                [9][DELEGATECALL] from=InitializableImmutableAdminUpgradeabilityProxy, to=0x38b5ea, getReserveNormalizedVariableDebtaddress() -> 0x000000
+              [8][STATICCALL] from=VariableDebtToken, to=InitializableImmutableAdminUpgradeabilityProxy, getReserveNormalizedVariableDebtaddress() -> 0x000000
+                [9][DELEGATECALL] from=InitializableImmutableAdminUpgradeabilityProxy, to=0x38b5ea, getReserveNormalizedVariableDebtaddress() -> 0x000000
+              [8][STATICCALL] from=VariableDebtToken, to=InitializableImmutableAdminUpgradeabilityProxy, getReserveNormalizedVariableDebtaddress() -> 0x000000
+                [9][DELEGATECALL] from=InitializableImmutableAdminUpgradeabilityProxy, to=0x38b5ea, getReserveNormalizedVariableDebtaddress() -> 0x000000
+              [8][STATICCALL] from=VariableDebtToken, to=InitializableImmutableAdminUpgradeabilityProxy, getReserveNormalizedVariableDebtaddress() -> 0x000000
+                [9][DELEGATECALL] from=InitializableImmutableAdminUpgradeabilityProxy, to=0x38b5ea, getReserveNormalizedVariableDebtaddress() -> 0x000000
+            [7][STATICCALL] from=InitializableImmutableAdminUpgradeabilityProxy, to=VariableDebtToken, scaledTotalSupply() -> 3083177730669746833388
+            [7][STATICCALL] from=InitializableImmutableAdminUpgradeabilityProxy, to=CakeToken, balanceOf(account(address): 0x55797A) -> 1935822574387915568476
+            [7][STATICCALL] from=InitializableImmutableAdminUpgradeabilityProxy, to=0xfc335a, calculateInterestRatesuint256() -> 0x000000
+            [7][CALL] from=InitializableImmutableAdminUpgradeabilityProxy, to=XToken, transferUnderlyingTo(target(address): 0xe32608, amount(uint256): 1930015106664751821760) -> 1930015106664751821760
+              [8][CALL] from=XToken, to=CakeToken, transfer(recipient(address): 0xe32608, amount(uint256): 1930015106664751821760) -> True
+            [7][STATICCALL] from=InitializableImmutableAdminUpgradeabilityProxy, to=MarginPoolAddressesProvider, getTreasuryAddress() -> 0x4a8d54
+            [7][CALL] from=InitializableImmutableAdminUpgradeabilityProxy, to=XToken, transferUnderlyingTo(target(address): 0x4A8d54, amount(uint256): 5807467723163746705) -> 5807467723163746705
+              [8][CALL] from=XToken, to=CakeToken, transfer(recipient(address): 0x4A8d54, amount(uint256): 5807467723163746705) -> True
+        [5][STATICCALL] from=0xe32608, to=BEP20Polkadot, balanceOf(account(address): 0xD10236) -> 464401020383086680256
+        [5][CALL] from=0xe32608, to=InitializableImmutableAdminUpgradeabilityProxy, borrowaddress() -> None
+          [6][DELEGATECALL] from=InitializableImmutableAdminUpgradeabilityProxy, to=0x38b5ea, borrowaddress() -> None
+            [7][STATICCALL] from=InitializableImmutableAdminUpgradeabilityProxy, to=MarginPoolAddressesProvider, getPriceOracle() -> 0xe038dd
+            [7][STATICCALL] from=InitializableImmutableAdminUpgradeabilityProxy, to=LeverOracle, getAssetPrice(asset(address): 0x708360) -> 59669851255600860
+              [8][STATICCALL] from=LeverOracle, to=EACAggregatorProxy, latestAnswer() -> 59669851255600860
+                [9][STATICCALL] from=EACAggregatorProxy, to=AccessControlledOffchainAggregator, latestAnswer() -> 59669851255600860
+            [7][DELEGATECALL] from=InitializableImmutableAdminUpgradeabilityProxy, to=0x6152a5, 0xe921aa97() -> None
+              [8][STATICCALL] from=InitializableImmutableAdminUpgradeabilityProxy, to=LeverOracle, getAssetPrice(asset(address): 0xbb4CdB) -> 1000000000000000000
+              [8][STATICCALL] from=InitializableImmutableAdminUpgradeabilityProxy, to=XToken, balanceOf(user(address): 0xe32608) -> 1500000000000000000000
+                [9][STATICCALL] from=XToken, to=InitializableImmutableAdminUpgradeabilityProxy, getReserveNormalizedIncomeaddress() -> 0x000000
+                  [10][DELEGATECALL] from=InitializableImmutableAdminUpgradeabilityProxy, to=0x38b5ea, getReserveNormalizedIncomeaddress() -> 0x000000
+              [8][STATICCALL] from=InitializableImmutableAdminUpgradeabilityProxy, to=LeverOracle, getAssetPrice(asset(address): 0xe9e7CE) -> 1688618709895306
+                [9][STATICCALL] from=LeverOracle, to=EACAggregatorProxy, latestAnswer() -> 1688618709895306
+                  [10][STATICCALL] from=EACAggregatorProxy, to=AccessControlledOffchainAggregator, latestAnswer() -> 1688618709895306
+              [8][STATICCALL] from=InitializableImmutableAdminUpgradeabilityProxy, to=VariableDebtToken, balanceOf(user(address): 0xe32608) -> 64350846461481774170426
+                [9][STATICCALL] from=VariableDebtToken, to=InitializableImmutableAdminUpgradeabilityProxy, getReserveNormalizedVariableDebtaddress() -> 0x000000
+                  [10][DELEGATECALL] from=InitializableImmutableAdminUpgradeabilityProxy, to=0x38b5ea, getReserveNormalizedVariableDebtaddress() -> 0x000000
+              [8][STATICCALL] from=InitializableImmutableAdminUpgradeabilityProxy, to=LeverOracle, getAssetPrice(asset(address): 0x7130d2) -> 91740000000000000000
+                [9][STATICCALL] from=LeverOracle, to=EACAggregatorProxy, latestAnswer() -> 91740000000000000000
+                  [10][STATICCALL] from=EACAggregatorProxy, to=AccessControlledOffchainAggregator, latestAnswer() -> 91740000000000000000
+              [8][STATICCALL] from=InitializableImmutableAdminUpgradeabilityProxy, to=VariableDebtToken, balanceOf(user(address): 0xe32608) -> 2889271927427929503
+                [9][STATICCALL] from=VariableDebtToken, to=InitializableImmutableAdminUpgradeabilityProxy, getReserveNormalizedVariableDebtaddress() -> 0x000000
+                  [10][DELEGATECALL] from=InitializableImmutableAdminUpgradeabilityProxy, to=0x38b5ea, getReserveNormalizedVariableDebtaddress() -> 0x000000
+              [8][STATICCALL] from=InitializableImmutableAdminUpgradeabilityProxy, to=LeverOracle, getAssetPrice(asset(address): 0x1AF3F3) -> 1697327842552166
+                [9][STATICCALL] from=LeverOracle, to=EACAggregatorProxy, latestAnswer() -> 1697327842552166
+                  [10][STATICCALL] from=EACAggregatorProxy, to=AccessControlledOffchainAggregator, latestAnswer() -> 1697327842552166
+              [8][STATICCALL] from=InitializableImmutableAdminUpgradeabilityProxy, to=VariableDebtToken, balanceOf(user(address): 0xe32608) -> 1046032730900728748101
+                [9][STATICCALL] from=VariableDebtToken, to=InitializableImmutableAdminUpgradeabilityProxy, getReserveNormalizedVariableDebtaddress() -> 0x000000
+                  [10][DELEGATECALL] from=InitializableImmutableAdminUpgradeabilityProxy, to=0x38b5ea, getReserveNormalizedVariableDebtaddress() -> 0x000000
+              [8][STATICCALL] from=InitializableImmutableAdminUpgradeabilityProxy, to=LeverOracle, getAssetPrice(asset(address): 0x2170Ed) -> 6878334502482690000
+                [9][STATICCALL] from=LeverOracle, to=EACAggregatorProxy, latestAnswer() -> 6878334502482690000
+                  [10][STATICCALL] from=EACAggregatorProxy, to=AccessControlledOffchainAggregator, latestAnswer() -> 6878334502482690000
+              [8][STATICCALL] from=InitializableImmutableAdminUpgradeabilityProxy, to=VariableDebtToken, balanceOf(user(address): 0xe32608) -> 32880943784568754414
+                [9][STATICCALL] from=VariableDebtToken, to=InitializableImmutableAdminUpgradeabilityProxy, getReserveNormalizedVariableDebtaddress() -> 0x000000
+                  [10][DELEGATECALL] from=InitializableImmutableAdminUpgradeabilityProxy, to=0x38b5ea, getReserveNormalizedVariableDebtaddress() -> 0x000000
+              [8][STATICCALL] from=InitializableImmutableAdminUpgradeabilityProxy, to=LeverOracle, getAssetPrice(asset(address): 0x55d398) -> 1689731501664386
+                [9][STATICCALL] from=LeverOracle, to=EACAggregatorProxy, latestAnswer() -> 1689731501664386
+                  [10][STATICCALL] from=EACAggregatorProxy, to=AccessControlledOffchainAggregator, latestAnswer() -> 1689731501664386
+              [8][STATICCALL] from=InitializableImmutableAdminUpgradeabilityProxy, to=VariableDebtToken, balanceOf(user(address): 0xe32608) -> 54498691305717001701575
+                [9][STATICCALL] from=VariableDebtToken, to=InitializableImmutableAdminUpgradeabilityProxy, getReserveNormalizedVariableDebtaddress() -> 0x000000
+                  [10][DELEGATECALL] from=InitializableImmutableAdminUpgradeabilityProxy, to=0x38b5ea, getReserveNormalizedVariableDebtaddress() -> 0x000000
+              [8][STATICCALL] from=InitializableImmutableAdminUpgradeabilityProxy, to=LeverOracle, getAssetPrice(asset(address): 0x0E09Fa) -> 21859354891450127
+                [9][STATICCALL] from=LeverOracle, to=EACAggregatorProxy, latestAnswer() -> 21859354891450127
+                  [10][STATICCALL] from=EACAggregatorProxy, to=AccessControlledOffchainAggregator, latestAnswer() -> 21859354891450127
+              [8][STATICCALL] from=InitializableImmutableAdminUpgradeabilityProxy, to=VariableDebtToken, balanceOf(user(address): 0xe32608) -> 1935822574387915568466
+                [9][STATICCALL] from=VariableDebtToken, to=InitializableImmutableAdminUpgradeabilityProxy, getReserveNormalizedVariableDebtaddress() -> 0x000000
+                  [10][DELEGATECALL] from=InitializableImmutableAdminUpgradeabilityProxy, to=0x38b5ea, getReserveNormalizedVariableDebtaddress() -> 0x000000
+              [8][STATICCALL] from=InitializableImmutableAdminUpgradeabilityProxy, to=LeverOracle, getAssetPrice(asset(address): 0xE02dF9) -> 3399780914887361
+                [9][STATICCALL] from=LeverOracle, to=0x56bc0a, getAssetPriceaddress() -> 0x000000
+                  [10][STATICCALL] from=0x56bc0a, to=0x12fc48, getAssetPriceaddress() -> 0x000000
+              [8][STATICCALL] from=InitializableImmutableAdminUpgradeabilityProxy, to=VariableDebtToken, balanceOf(user(address): 0xe32608) -> 1071267471479660832652
+                [9][STATICCALL] from=VariableDebtToken, to=InitializableImmutableAdminUpgradeabilityProxy, getReserveNormalizedVariableDebtaddress() -> 0x000000
+                  [10][DELEGATECALL] from=InitializableImmutableAdminUpgradeabilityProxy, to=0x38b5ea, getReserveNormalizedVariableDebtaddress() -> 0x000000
+              [8][STATICCALL] from=InitializableImmutableAdminUpgradeabilityProxy, to=LeverOracle, getAssetPrice(asset(address): 0xcF6BB5) -> 36010358054105212
+                [9][STATICCALL] from=LeverOracle, to=0x56bc0a, getAssetPriceaddress() -> 0x000000
+                  [10][STATICCALL] from=0x56bc0a, to=0xf55d7a, getAssetPriceaddress() -> 0x000000
+                    [11][STATICCALL] from=0xf55d7a, to=EACAggregatorProxy, latestAnswer() -> 2131129000
+                      [12][STATICCALL] from=EACAggregatorProxy, to=AccessControlledOffchainAggregator, latestAnswer() -> 2131129000
+                    [11][STATICCALL] from=0xf55d7a, to=EACAggregatorProxy, latestAnswer() -> 1689731501664386
+                      [12][STATICCALL] from=EACAggregatorProxy, to=AccessControlledOffchainAggregator, latestAnswer() -> 1689731501664386
+              [8][STATICCALL] from=InitializableImmutableAdminUpgradeabilityProxy, to=VariableDebtToken, balanceOf(user(address): 0xe32608) -> 167753456522846742623
+                [9][STATICCALL] from=VariableDebtToken, to=InitializableImmutableAdminUpgradeabilityProxy, getReserveNormalizedVariableDebtaddress() -> 0x000000
+                  [10][DELEGATECALL] from=InitializableImmutableAdminUpgradeabilityProxy, to=0x38b5ea, getReserveNormalizedVariableDebtaddress() -> 0x000000
+            [7][STATICCALL] from=InitializableImmutableAdminUpgradeabilityProxy, to=VariableDebtToken, scaledTotalSupply() -> 40793458045696502
+            [7][CALL] from=InitializableImmutableAdminUpgradeabilityProxy, to=VariableDebtToken, mint(user(address): 0xe32608, onBehalfOf(address): 0xe32608, amount(uint256): 464401020383086680246, index(uint256): 1007452008804464213565263638) -> True
+              [8][STATICCALL] from=VariableDebtToken, to=InitializableImmutableAdminUpgradeabilityProxy, getReserveNormalizedVariableDebtaddress() -> 0x000000
+                [9][DELEGATECALL] from=InitializableImmutableAdminUpgradeabilityProxy, to=0x38b5ea, getReserveNormalizedVariableDebtaddress() -> 0x000000
+              [8][STATICCALL] from=VariableDebtToken, to=InitializableImmutableAdminUpgradeabilityProxy, getReserveNormalizedVariableDebtaddress() -> 0x000000
+                [9][DELEGATECALL] from=InitializableImmutableAdminUpgradeabilityProxy, to=0x38b5ea, getReserveNormalizedVariableDebtaddress() -> 0x000000
+              [8][STATICCALL] from=VariableDebtToken, to=InitializableImmutableAdminUpgradeabilityProxy, getReserveNormalizedVariableDebtaddress() -> 0x000000
+                [9][DELEGATECALL] from=InitializableImmutableAdminUpgradeabilityProxy, to=0x38b5ea, getReserveNormalizedVariableDebtaddress() -> 0x000000
+              [8][STATICCALL] from=VariableDebtToken, to=InitializableImmutableAdminUpgradeabilityProxy, getReserveNormalizedVariableDebtaddress() -> 0x000000
+                [9][DELEGATECALL] from=InitializableImmutableAdminUpgradeabilityProxy, to=0x38b5ea, getReserveNormalizedVariableDebtaddress() -> 0x000000
+            [7][STATICCALL] from=InitializableImmutableAdminUpgradeabilityProxy, to=VariableDebtToken, scaledTotalSupply() -> 461006691907330549453
+            [7][STATICCALL] from=InitializableImmutableAdminUpgradeabilityProxy, to=BEP20Polkadot, balanceOf(account(address): 0xD10236) -> 464401020383086680256
+            [7][STATICCALL] from=InitializableImmutableAdminUpgradeabilityProxy, to=0x3f82d9, calculateInterestRatesuint256() -> 0x000000
+            [7][CALL] from=InitializableImmutableAdminUpgradeabilityProxy, to=XToken, transferUnderlyingTo(target(address): 0xe32608, amount(uint256): 463007817321937420205) -> 463007817321937420205
+              [8][CALL] from=XToken, to=BEP20Polkadot, transfer(recipient(address): 0xe32608, amount(uint256): 463007817321937420205) -> True
+            [7][STATICCALL] from=InitializableImmutableAdminUpgradeabilityProxy, to=MarginPoolAddressesProvider, getTreasuryAddress() -> 0x4a8d54
+            [7][CALL] from=InitializableImmutableAdminUpgradeabilityProxy, to=XToken, transferUnderlyingTo(target(address): 0x4A8d54, amount(uint256): 1393203061149260040) -> 1393203061149260040
+              [8][CALL] from=XToken, to=BEP20Polkadot, transfer(recipient(address): 0x4A8d54, amount(uint256): 1393203061149260040) -> True
+        [5][CALL] from=0xe32608, to=InitializableImmutableAdminUpgradeabilityProxy, borrowaddress() -> None
+          [6][DELEGATECALL] from=InitializableImmutableAdminUpgradeabilityProxy, to=0x38b5ea, borrowaddress() -> None
+            [7][STATICCALL] from=InitializableImmutableAdminUpgradeabilityProxy, to=MarginPoolAddressesProvider, getPriceOracle() -> 0xe038dd
+            [7][STATICCALL] from=InitializableImmutableAdminUpgradeabilityProxy, to=LeverOracle, getAssetPrice(asset(address): 0xbb4CdB) -> 1000000000000000000
+            [7][DELEGATECALL] from=InitializableImmutableAdminUpgradeabilityProxy, to=0x6152a5, 0xe921aa97() -> None
+              [8][STATICCALL] from=InitializableImmutableAdminUpgradeabilityProxy, to=LeverOracle, getAssetPrice(asset(address): 0xbb4CdB) -> 1000000000000000000
+              [8][STATICCALL] from=InitializableImmutableAdminUpgradeabilityProxy, to=XToken, balanceOf(user(address): 0xe32608) -> 1500000000000000000000
+                [9][STATICCALL] from=XToken, to=InitializableImmutableAdminUpgradeabilityProxy, getReserveNormalizedIncomeaddress() -> 0x000000
+                  [10][DELEGATECALL] from=InitializableImmutableAdminUpgradeabilityProxy, to=0x38b5ea, getReserveNormalizedIncomeaddress() -> 0x000000
+              [8][STATICCALL] from=InitializableImmutableAdminUpgradeabilityProxy, to=LeverOracle, getAssetPrice(asset(address): 0xe9e7CE) -> 1688618709895306
+                [9][STATICCALL] from=LeverOracle, to=EACAggregatorProxy, latestAnswer() -> 1688618709895306
+                  [10][STATICCALL] from=EACAggregatorProxy, to=AccessControlledOffchainAggregator, latestAnswer() -> 1688618709895306
+              [8][STATICCALL] from=InitializableImmutableAdminUpgradeabilityProxy, to=VariableDebtToken, balanceOf(user(address): 0xe32608) -> 64350846461481774170426
+                [9][STATICCALL] from=VariableDebtToken, to=InitializableImmutableAdminUpgradeabilityProxy, getReserveNormalizedVariableDebtaddress() -> 0x000000
+                  [10][DELEGATECALL] from=InitializableImmutableAdminUpgradeabilityProxy, to=0x38b5ea, getReserveNormalizedVariableDebtaddress() -> 0x000000
+              [8][STATICCALL] from=InitializableImmutableAdminUpgradeabilityProxy, to=LeverOracle, getAssetPrice(asset(address): 0x7130d2) -> 91740000000000000000
+                [9][STATICCALL] from=LeverOracle, to=EACAggregatorProxy, latestAnswer() -> 91740000000000000000
+                  [10][STATICCALL] from=EACAggregatorProxy, to=AccessControlledOffchainAggregator, latestAnswer() -> 91740000000000000000
+              [8][STATICCALL] from=InitializableImmutableAdminUpgradeabilityProxy, to=VariableDebtToken, balanceOf(user(address): 0xe32608) -> 2889271927427929503
+                [9][STATICCALL] from=VariableDebtToken, to=InitializableImmutableAdminUpgradeabilityProxy, getReserveNormalizedVariableDebtaddress() -> 0x000000
+                  [10][DELEGATECALL] from=InitializableImmutableAdminUpgradeabilityProxy, to=0x38b5ea, getReserveNormalizedVariableDebtaddress() -> 0x000000
+              [8][STATICCALL] from=InitializableImmutableAdminUpgradeabilityProxy, to=LeverOracle, getAssetPrice(asset(address): 0x1AF3F3) -> 1697327842552166
+                [9][STATICCALL] from=LeverOracle, to=EACAggregatorProxy, latestAnswer() -> 1697327842552166
+                  [10][STATICCALL] from=EACAggregatorProxy, to=AccessControlledOffchainAggregator, latestAnswer() -> 1697327842552166
+              [8][STATICCALL] from=InitializableImmutableAdminUpgradeabilityProxy, to=VariableDebtToken, balanceOf(user(address): 0xe32608) -> 1046032730900728748101
+                [9][STATICCALL] from=VariableDebtToken, to=InitializableImmutableAdminUpgradeabilityProxy, getReserveNormalizedVariableDebtaddress() -> 0x000000
+                  [10][DELEGATECALL] from=InitializableImmutableAdminUpgradeabilityProxy, to=0x38b5ea, getReserveNormalizedVariableDebtaddress() -> 0x000000
+              [8][STATICCALL] from=InitializableImmutableAdminUpgradeabilityProxy, to=LeverOracle, getAssetPrice(asset(address): 0x2170Ed) -> 6878334502482690000
+                [9][STATICCALL] from=LeverOracle, to=EACAggregatorProxy, latestAnswer() -> 6878334502482690000
+                  [10][STATICCALL] from=EACAggregatorProxy, to=AccessControlledOffchainAggregator, latestAnswer() -> 6878334502482690000
+              [8][STATICCALL] from=InitializableImmutableAdminUpgradeabilityProxy, to=VariableDebtToken, balanceOf(user(address): 0xe32608) -> 32880943784568754414
+                [9][STATICCALL] from=VariableDebtToken, to=InitializableImmutableAdminUpgradeabilityProxy, getReserveNormalizedVariableDebtaddress() -> 0x000000
+                  [10][DELEGATECALL] from=InitializableImmutableAdminUpgradeabilityProxy, to=0x38b5ea, getReserveNormalizedVariableDebtaddress() -> 0x000000
+              [8][STATICCALL] from=InitializableImmutableAdminUpgradeabilityProxy, to=LeverOracle, getAssetPrice(asset(address): 0x55d398) -> 1689731501664386
+                [9][STATICCALL] from=LeverOracle, to=EACAggregatorProxy, latestAnswer() -> 1689731501664386
+                  [10][STATICCALL] from=EACAggregatorProxy, to=AccessControlledOffchainAggregator, latestAnswer() -> 1689731501664386
+              [8][STATICCALL] from=InitializableImmutableAdminUpgradeabilityProxy, to=VariableDebtToken, balanceOf(user(address): 0xe32608) -> 54498691305717001701575
+                [9][STATICCALL] from=VariableDebtToken, to=InitializableImmutableAdminUpgradeabilityProxy, getReserveNormalizedVariableDebtaddress() -> 0x000000
+                  [10][DELEGATECALL] from=InitializableImmutableAdminUpgradeabilityProxy, to=0x38b5ea, getReserveNormalizedVariableDebtaddress() -> 0x000000
+              [8][STATICCALL] from=InitializableImmutableAdminUpgradeabilityProxy, to=LeverOracle, getAssetPrice(asset(address): 0x0E09Fa) -> 21859354891450127
+                [9][STATICCALL] from=LeverOracle, to=EACAggregatorProxy, latestAnswer() -> 21859354891450127
+                  [10][STATICCALL] from=EACAggregatorProxy, to=AccessControlledOffchainAggregator, latestAnswer() -> 21859354891450127
+              [8][STATICCALL] from=InitializableImmutableAdminUpgradeabilityProxy, to=VariableDebtToken, balanceOf(user(address): 0xe32608) -> 1935822574387915568466
+                [9][STATICCALL] from=VariableDebtToken, to=InitializableImmutableAdminUpgradeabilityProxy, getReserveNormalizedVariableDebtaddress() -> 0x000000
+                  [10][DELEGATECALL] from=InitializableImmutableAdminUpgradeabilityProxy, to=0x38b5ea, getReserveNormalizedVariableDebtaddress() -> 0x000000
+              [8][STATICCALL] from=InitializableImmutableAdminUpgradeabilityProxy, to=LeverOracle, getAssetPrice(asset(address): 0xE02dF9) -> 3399780914887361
+                [9][STATICCALL] from=LeverOracle, to=0x56bc0a, getAssetPriceaddress() -> 0x000000
+                  [10][STATICCALL] from=0x56bc0a, to=0x12fc48, getAssetPriceaddress() -> 0x000000
+              [8][STATICCALL] from=InitializableImmutableAdminUpgradeabilityProxy, to=VariableDebtToken, balanceOf(user(address): 0xe32608) -> 1071267471479660832652
+                [9][STATICCALL] from=VariableDebtToken, to=InitializableImmutableAdminUpgradeabilityProxy, getReserveNormalizedVariableDebtaddress() -> 0x000000
+                  [10][DELEGATECALL] from=InitializableImmutableAdminUpgradeabilityProxy, to=0x38b5ea, getReserveNormalizedVariableDebtaddress() -> 0x000000
+              [8][STATICCALL] from=InitializableImmutableAdminUpgradeabilityProxy, to=LeverOracle, getAssetPrice(asset(address): 0x708360) -> 59669851255600860
+                [9][STATICCALL] from=LeverOracle, to=EACAggregatorProxy, latestAnswer() -> 59669851255600860
+                  [10][STATICCALL] from=EACAggregatorProxy, to=AccessControlledOffchainAggregator, latestAnswer() -> 59669851255600860
+              [8][STATICCALL] from=InitializableImmutableAdminUpgradeabilityProxy, to=VariableDebtToken, balanceOf(user(address): 0xe32608) -> 464401020383086680246
+                [9][STATICCALL] from=VariableDebtToken, to=InitializableImmutableAdminUpgradeabilityProxy, getReserveNormalizedVariableDebtaddress() -> 0x000000
+                  [10][DELEGATECALL] from=InitializableImmutableAdminUpgradeabilityProxy, to=0x38b5ea, getReserveNormalizedVariableDebtaddress() -> 0x000000
+              [8][STATICCALL] from=InitializableImmutableAdminUpgradeabilityProxy, to=LeverOracle, getAssetPrice(asset(address): 0xcF6BB5) -> 36010358054105212
+                [9][STATICCALL] from=LeverOracle, to=0x56bc0a, getAssetPriceaddress() -> 0x000000
+                  [10][STATICCALL] from=0x56bc0a, to=0xf55d7a, getAssetPriceaddress() -> 0x000000
+                    [11][STATICCALL] from=0xf55d7a, to=EACAggregatorProxy, latestAnswer() -> 2131129000
+                      [12][STATICCALL] from=EACAggregatorProxy, to=AccessControlledOffchainAggregator, latestAnswer() -> 2131129000
+                    [11][STATICCALL] from=0xf55d7a, to=EACAggregatorProxy, latestAnswer() -> 1689731501664386
+                      [12][STATICCALL] from=EACAggregatorProxy, to=AccessControlledOffchainAggregator, latestAnswer() -> 1689731501664386
+              [8][STATICCALL] from=InitializableImmutableAdminUpgradeabilityProxy, to=VariableDebtToken, balanceOf(user(address): 0xe32608) -> 167753456522846742623
+                [9][STATICCALL] from=VariableDebtToken, to=InitializableImmutableAdminUpgradeabilityProxy, getReserveNormalizedVariableDebtaddress() -> 0x000000
+                  [10][DELEGATECALL] from=InitializableImmutableAdminUpgradeabilityProxy, to=0x38b5ea, getReserveNormalizedVariableDebtaddress() -> 0x000000
+            [7][STATICCALL] from=InitializableImmutableAdminUpgradeabilityProxy, to=VariableDebtToken, scaledTotalSupply() -> 1661043267336042704559
+            [7][CALL] from=InitializableImmutableAdminUpgradeabilityProxy, to=VariableDebtToken, mint(user(address): 0xe32608, onBehalfOf(address): 0xe32608, amount(uint256): 333920195026023266072, index(uint256): 1050386743938235450481593929) -> True
+              [8][STATICCALL] from=VariableDebtToken, to=InitializableImmutableAdminUpgradeabilityProxy, getReserveNormalizedVariableDebtaddress() -> 0x000000
+                [9][DELEGATECALL] from=InitializableImmutableAdminUpgradeabilityProxy, to=0x38b5ea, getReserveNormalizedVariableDebtaddress() -> 0x000000
+              [8][STATICCALL] from=VariableDebtToken, to=InitializableImmutableAdminUpgradeabilityProxy, getReserveNormalizedVariableDebtaddress() -> 0x000000
+                [9][DELEGATECALL] from=InitializableImmutableAdminUpgradeabilityProxy, to=0x38b5ea, getReserveNormalizedVariableDebtaddress() -> 0x000000
+              [8][STATICCALL] from=VariableDebtToken, to=InitializableImmutableAdminUpgradeabilityProxy, getReserveNormalizedVariableDebtaddress() -> 0x000000
+                [9][DELEGATECALL] from=InitializableImmutableAdminUpgradeabilityProxy, to=0x38b5ea, getReserveNormalizedVariableDebtaddress() -> 0x000000
+              [8][STATICCALL] from=VariableDebtToken, to=InitializableImmutableAdminUpgradeabilityProxy, getReserveNormalizedVariableDebtaddress() -> 0x000000
+                [9][DELEGATECALL] from=InitializableImmutableAdminUpgradeabilityProxy, to=0x38b5ea, getReserveNormalizedVariableDebtaddress() -> 0x000000
+            [7][STATICCALL] from=InitializableImmutableAdminUpgradeabilityProxy, to=VariableDebtToken, scaledTotalSupply() -> 1978945408574087830361
+            [7][STATICCALL] from=InitializableImmutableAdminUpgradeabilityProxy, to=WBNB, balanceOf((address): 0x569cAA) -> 2333920195026023266082
+            [7][STATICCALL] from=InitializableImmutableAdminUpgradeabilityProxy, to=0x3d809b, calculateInterestRatesuint256() -> 0x000000
+            [7][CALL] from=InitializableImmutableAdminUpgradeabilityProxy, to=XToken, transferUnderlyingTo(target(address): 0xe32608, amount(uint256): 332918434440945196273) -> 332918434440945196273
+              [8][CALL] from=XToken, to=WBNB, transfer(dst(address): 0xe32608, wad(uint256): 332918434440945196273) -> True
+            [7][STATICCALL] from=InitializableImmutableAdminUpgradeabilityProxy, to=MarginPoolAddressesProvider, getTreasuryAddress() -> 0x4a8d54
+            [7][CALL] from=InitializableImmutableAdminUpgradeabilityProxy, to=XToken, transferUnderlyingTo(target(address): 0x4A8d54, amount(uint256): 1001760585078069798) -> 1001760585078069798
+              [8][CALL] from=XToken, to=WBNB, transfer(dst(address): 0x4A8d54, wad(uint256): 1001760585078069798) -> True
+        [5][CALL] from=0xe32608, to=InitializableImmutableAdminUpgradeabilityProxy, repayaddress() -> 0x000000
+          [6][DELEGATECALL] from=InitializableImmutableAdminUpgradeabilityProxy, to=0x38b5ea, repayaddress() -> 0x000000
+            [7][STATICCALL] from=InitializableImmutableAdminUpgradeabilityProxy, to=VariableDebtToken, balanceOf(user(address): 0x5F9294) -> 1500000000000000000000
+              [8][STATICCALL] from=VariableDebtToken, to=InitializableImmutableAdminUpgradeabilityProxy, getReserveNormalizedVariableDebtaddress() -> 0x000000
+                [9][DELEGATECALL] from=InitializableImmutableAdminUpgradeabilityProxy, to=0x38b5ea, getReserveNormalizedVariableDebtaddress() -> 0x000000
+            [7][STATICCALL] from=InitializableImmutableAdminUpgradeabilityProxy, to=XToken, balanceOf(user(address): 0xe32608) -> 1500000000000000000000
+              [8][STATICCALL] from=XToken, to=InitializableImmutableAdminUpgradeabilityProxy, getReserveNormalizedIncomeaddress() -> 0x000000
+                [9][DELEGATECALL] from=InitializableImmutableAdminUpgradeabilityProxy, to=0x38b5ea, getReserveNormalizedIncomeaddress() -> 0x000000
+            [7][DELEGATECALL] from=InitializableImmutableAdminUpgradeabilityProxy, to=0x6152a5, 0x63ca94a5() -> None
+            [7][STATICCALL] from=InitializableImmutableAdminUpgradeabilityProxy, to=VariableDebtToken, scaledTotalSupply() -> 1978945408574087830361
+            [7][CALL] from=InitializableImmutableAdminUpgradeabilityProxy, to=VariableDebtToken, burn(user(address): 0x5F9294, amount(uint256): 1500000000000000000000, index(uint256): 1050386743938235450481593929) -> None
+              [8][STATICCALL] from=VariableDebtToken, to=InitializableImmutableAdminUpgradeabilityProxy, getReserveNormalizedVariableDebtaddress() -> 0x000000
+                [9][DELEGATECALL] from=InitializableImmutableAdminUpgradeabilityProxy, to=0x38b5ea, getReserveNormalizedVariableDebtaddress() -> 0x000000
+              [8][STATICCALL] from=VariableDebtToken, to=InitializableImmutableAdminUpgradeabilityProxy, getReserveNormalizedVariableDebtaddress() -> 0x000000
+                [9][DELEGATECALL] from=InitializableImmutableAdminUpgradeabilityProxy, to=0x38b5ea, getReserveNormalizedVariableDebtaddress() -> 0x000000
+              [8][STATICCALL] from=VariableDebtToken, to=InitializableImmutableAdminUpgradeabilityProxy, getReserveNormalizedVariableDebtaddress() -> 0x000000
+                [9][DELEGATECALL] from=InitializableImmutableAdminUpgradeabilityProxy, to=0x38b5ea, getReserveNormalizedVariableDebtaddress() -> 0x000000
+              [8][STATICCALL] from=VariableDebtToken, to=InitializableImmutableAdminUpgradeabilityProxy, getReserveNormalizedVariableDebtaddress() -> 0x000000
+                [9][DELEGATECALL] from=InitializableImmutableAdminUpgradeabilityProxy, to=0x38b5ea, getReserveNormalizedVariableDebtaddress() -> 0x000000
+              [8][STATICCALL] from=VariableDebtToken, to=InitializableImmutableAdminUpgradeabilityProxy, getReserveNormalizedVariableDebtaddress() -> 0x000000
+                [9][DELEGATECALL] from=InitializableImmutableAdminUpgradeabilityProxy, to=0x38b5ea, getReserveNormalizedVariableDebtaddress() -> 0x000000
+            [7][STATICCALL] from=InitializableImmutableAdminUpgradeabilityProxy, to=VariableDebtToken, scaledTotalSupply() -> 550899968495492756908
+            [7][STATICCALL] from=InitializableImmutableAdminUpgradeabilityProxy, to=WBNB, balanceOf((address): 0x569cAA) -> 2000000000000000000011
+            [7][STATICCALL] from=InitializableImmutableAdminUpgradeabilityProxy, to=0x3d809b, calculateInterestRatesuint256() -> 0x000000
+            [7][CALL] from=InitializableImmutableAdminUpgradeabilityProxy, to=XToken, burn(user(address): 0xe32608, receiverOfUnderlying(address): 0x569cAA, amount(uint256): 1500000000000000000000, index(uint256): 1029261962052269178199409234) -> None
+              [8][STATICCALL] from=XToken, to=InitializableImmutableAdminUpgradeabilityProxy, getReserveNormalizedIncomeaddress() -> 0x000000
+                [9][DELEGATECALL] from=InitializableImmutableAdminUpgradeabilityProxy, to=0x38b5ea, getReserveNormalizedIncomeaddress() -> 0x000000
+              [8][STATICCALL] from=XToken, to=InitializableImmutableAdminUpgradeabilityProxy, getReserveNormalizedIncomeaddress() -> 0x000000
+                [9][DELEGATECALL] from=InitializableImmutableAdminUpgradeabilityProxy, to=0x38b5ea, getReserveNormalizedIncomeaddress() -> 0x000000
+              [8][STATICCALL] from=XToken, to=InitializableImmutableAdminUpgradeabilityProxy, getReserveNormalizedIncomeaddress() -> 0x000000
+                [9][DELEGATECALL] from=InitializableImmutableAdminUpgradeabilityProxy, to=0x38b5ea, getReserveNormalizedIncomeaddress() -> 0x000000
+              [8][STATICCALL] from=XToken, to=InitializableImmutableAdminUpgradeabilityProxy, getReserveNormalizedIncomeaddress() -> 0x000000
+                [9][DELEGATECALL] from=InitializableImmutableAdminUpgradeabilityProxy, to=0x38b5ea, getReserveNormalizedIncomeaddress() -> 0x000000
+              [8][STATICCALL] from=XToken, to=InitializableImmutableAdminUpgradeabilityProxy, getReserveNormalizedIncomeaddress() -> 0x000000
+                [9][DELEGATECALL] from=InitializableImmutableAdminUpgradeabilityProxy, to=0x38b5ea, getReserveNormalizedIncomeaddress() -> 0x000000
+        [5][CALL] from=0xe32608, to=WBNB, transfer(dst(address): 0x5F9294, wad(uint256): 12263157894736842107) -> True
+      [4][CALL] from=0x5f9294, to=InitializableImmutableAdminUpgradeabilityProxy, withdrawaddress() -> 0x000000
+        [5][DELEGATECALL] from=InitializableImmutableAdminUpgradeabilityProxy, to=0x38b5ea, withdrawaddress() -> 0x000000
+          [6][STATICCALL] from=InitializableImmutableAdminUpgradeabilityProxy, to=XToken, balanceOf(user(address): 0x5F9294) -> 2000000000000000000000
+            [7][STATICCALL] from=XToken, to=InitializableImmutableAdminUpgradeabilityProxy, getReserveNormalizedIncomeaddress() -> 0x000000
+              [8][DELEGATECALL] from=InitializableImmutableAdminUpgradeabilityProxy, to=0x38b5ea, getReserveNormalizedIncomeaddress() -> 0x000000
+          [6][STATICCALL] from=InitializableImmutableAdminUpgradeabilityProxy, to=MarginPoolAddressesProvider, getPriceOracle() -> 0xe038dd
+          [6][DELEGATECALL] from=InitializableImmutableAdminUpgradeabilityProxy, to=0x6152a5, 0xd09db04a() -> None
+            [7][DELEGATECALL] from=InitializableImmutableAdminUpgradeabilityProxy, to=0x0ee56a, 0xe6170424() -> 0x000000
+          [6][STATICCALL] from=InitializableImmutableAdminUpgradeabilityProxy, to=VariableDebtToken, scaledTotalSupply() -> 550899968495492756908
+          [6][STATICCALL] from=InitializableImmutableAdminUpgradeabilityProxy, to=VariableDebtToken, scaledTotalSupply() -> 550899968495492756908
+          [6][STATICCALL] from=InitializableImmutableAdminUpgradeabilityProxy, to=WBNB, balanceOf((address): 0x569cAA) -> 2000000000000000000011
+          [6][STATICCALL] from=InitializableImmutableAdminUpgradeabilityProxy, to=0x3d809b, calculateInterestRatesuint256() -> 0x000000
+          [6][CALL] from=InitializableImmutableAdminUpgradeabilityProxy, to=XToken, burn(user(address): 0x5F9294, receiverOfUnderlying(address): 0x5F9294, amount(uint256): 2000000000000000000000, index(uint256): 1029261962052269178199409234) -> None
+            [7][STATICCALL] from=XToken, to=InitializableImmutableAdminUpgradeabilityProxy, getReserveNormalizedIncomeaddress() -> 0x000000
+              [8][DELEGATECALL] from=InitializableImmutableAdminUpgradeabilityProxy, to=0x38b5ea, getReserveNormalizedIncomeaddress() -> 0x000000
+            [7][STATICCALL] from=XToken, to=InitializableImmutableAdminUpgradeabilityProxy, getReserveNormalizedIncomeaddress() -> 0x000000
+              [8][DELEGATECALL] from=InitializableImmutableAdminUpgradeabilityProxy, to=0x38b5ea, getReserveNormalizedIncomeaddress() -> 0x000000
+            [7][STATICCALL] from=XToken, to=InitializableImmutableAdminUpgradeabilityProxy, getReserveNormalizedIncomeaddress() -> 0x000000
+              [8][DELEGATECALL] from=InitializableImmutableAdminUpgradeabilityProxy, to=0x38b5ea, getReserveNormalizedIncomeaddress() -> 0x000000
+            [7][STATICCALL] from=XToken, to=InitializableImmutableAdminUpgradeabilityProxy, getReserveNormalizedIncomeaddress() -> 0x000000
+              [8][DELEGATECALL] from=InitializableImmutableAdminUpgradeabilityProxy, to=0x38b5ea, getReserveNormalizedIncomeaddress() -> 0x000000
+            [7][STATICCALL] from=XToken, to=InitializableImmutableAdminUpgradeabilityProxy, getReserveNormalizedIncomeaddress() -> 0x000000
+              [8][DELEGATECALL] from=InitializableImmutableAdminUpgradeabilityProxy, to=0x38b5ea, getReserveNormalizedIncomeaddress() -> 0x000000
+            [7][CALL] from=XToken, to=WBNB, transfer(dst(address): 0x5F9294, wad(uint256): 2000000000000000000000) -> True
+      [4][CALL] from=0x5f9294, to=WBNB, transfer(dst(address): 0x58F876, wad(uint256): 2105263157894736842106) -> True
+    [3][STATICCALL] from=PancakePair, to=WBNB, balanceOf((address): 0x58F876) -> 386780018645565624775982
+    [3][STATICCALL] from=PancakePair, to=BEP20Token, balanceOf(account(address): 0x58F876) -> 228743086210264608239893444

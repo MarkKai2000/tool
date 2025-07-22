@@ -1,0 +1,317 @@
+[1][CALL] from=0x1a7b15, to=0x1694d7, depositaddress() -> None
+  [2][DELEGATECALL] from=0x1694d7, to=0x96f69b, depositaddress() -> None
+    [3][CALL] from=0x1694d7, to=0x2e1fc7, transferFromaddress() -> 0x000000
+    [3][STATICCALL] from=0x1694d7, to=TrustPad, balanceOf(account(address): 0x1694d7) -> 41295742091
+    [3][CALL] from=0x1694d7, to=TrustPad, approve(spender(address): 0xE613c0, amount(uint256): 1238872262731) -> True
+    [3][CALL] from=0x1694d7, to=TransparentUpgradeableProxy, receiveUpPool(account(address): 0x1694d7, amount(uint256): 41295742091) -> None
+      [4][DELEGATECALL] from=TransparentUpgradeableProxy, to=LaunchpadLockableStaking, receiveUpPool(account(address): 0x1694d7, amount(uint256): 41295742091) -> None
+        [5][STATICCALL] from=TransparentUpgradeableProxy, to=0x1694d7, isLockedaddress() -> 0x000000
+          [6][DELEGATECALL] from=0x1694d7, to=0x96f69b, isLockedaddress() -> 0x000000
+        [5][STATICCALL] from=TransparentUpgradeableProxy, to=0x1694d7, 0x47334aca() -> 0x000000
+          [6][DELEGATECALL] from=0x1694d7, to=0x96f69b, 0x47334aca() -> 0x000000
+        [5][CALL] from=TransparentUpgradeableProxy, to=TrustPad, transferFrom(sender(address): 0x1694d7, recipient(address): 0xE613c0, amount(uint256): 41295742091) -> True
+    [3][CALL] from=0x1694d7, to=TransparentUpgradeableProxy, withdraw(amount(uint256): 41295742091) -> None
+      [4][DELEGATECALL] from=TransparentUpgradeableProxy, to=LaunchpadLockableStaking, withdraw(amount(uint256): 41295742091) -> None
+        [5][CALL] from=TransparentUpgradeableProxy, to=TrustPad, transfer(recipient(address): 0x1694d7, amount(uint256): 41295742091) -> True
+    [3][CALL] from=0x1694d7, to=TransparentUpgradeableProxy, receiveUpPool(account(address): 0x1694d7, amount(uint256): 41295742091) -> None
+      [4][DELEGATECALL] from=TransparentUpgradeableProxy, to=LaunchpadLockableStaking, receiveUpPool(account(address): 0x1694d7, amount(uint256): 41295742091) -> None
+        [5][STATICCALL] from=TransparentUpgradeableProxy, to=0x1694d7, isLockedaddress() -> 0x000000
+          [6][DELEGATECALL] from=0x1694d7, to=0x96f69b, isLockedaddress() -> 0x000000
+        [5][STATICCALL] from=TransparentUpgradeableProxy, to=0x1694d7, 0x47334aca() -> 0x000000
+          [6][DELEGATECALL] from=0x1694d7, to=0x96f69b, 0x47334aca() -> 0x000000
+        [5][CALL] from=TransparentUpgradeableProxy, to=TrustPad, transferFrom(sender(address): 0x1694d7, recipient(address): 0xE613c0, amount(uint256): 41295742091) -> True
+    [3][CALL] from=0x1694d7, to=TransparentUpgradeableProxy, withdraw(amount(uint256): 41295742091) -> None
+      [4][DELEGATECALL] from=TransparentUpgradeableProxy, to=LaunchpadLockableStaking, withdraw(amount(uint256): 41295742091) -> None
+        [5][CALL] from=TransparentUpgradeableProxy, to=TrustPad, transfer(recipient(address): 0x1694d7, amount(uint256): 41295742091) -> True
+    [3][CALL] from=0x1694d7, to=TransparentUpgradeableProxy, receiveUpPool(account(address): 0x1694d7, amount(uint256): 41295742091) -> None
+      [4][DELEGATECALL] from=TransparentUpgradeableProxy, to=LaunchpadLockableStaking, receiveUpPool(account(address): 0x1694d7, amount(uint256): 41295742091) -> None
+        [5][STATICCALL] from=TransparentUpgradeableProxy, to=0x1694d7, isLockedaddress() -> 0x000000
+          [6][DELEGATECALL] from=0x1694d7, to=0x96f69b, isLockedaddress() -> 0x000000
+        [5][STATICCALL] from=TransparentUpgradeableProxy, to=0x1694d7, 0x47334aca() -> 0x000000
+          [6][DELEGATECALL] from=0x1694d7, to=0x96f69b, 0x47334aca() -> 0x000000
+        [5][CALL] from=TransparentUpgradeableProxy, to=TrustPad, transferFrom(sender(address): 0x1694d7, recipient(address): 0xE613c0, amount(uint256): 41295742091) -> True
+    [3][CALL] from=0x1694d7, to=TransparentUpgradeableProxy, withdraw(amount(uint256): 41295742091) -> None
+      [4][DELEGATECALL] from=TransparentUpgradeableProxy, to=LaunchpadLockableStaking, withdraw(amount(uint256): 41295742091) -> None
+        [5][CALL] from=TransparentUpgradeableProxy, to=TrustPad, transfer(recipient(address): 0x1694d7, amount(uint256): 41295742091) -> True
+    [3][CALL] from=0x1694d7, to=TransparentUpgradeableProxy, receiveUpPool(account(address): 0x1694d7, amount(uint256): 41295742091) -> None
+      [4][DELEGATECALL] from=TransparentUpgradeableProxy, to=LaunchpadLockableStaking, receiveUpPool(account(address): 0x1694d7, amount(uint256): 41295742091) -> None
+        [5][STATICCALL] from=TransparentUpgradeableProxy, to=0x1694d7, isLockedaddress() -> 0x000000
+          [6][DELEGATECALL] from=0x1694d7, to=0x96f69b, isLockedaddress() -> 0x000000
+        [5][STATICCALL] from=TransparentUpgradeableProxy, to=0x1694d7, 0x47334aca() -> 0x000000
+          [6][DELEGATECALL] from=0x1694d7, to=0x96f69b, 0x47334aca() -> 0x000000
+        [5][CALL] from=TransparentUpgradeableProxy, to=TrustPad, transferFrom(sender(address): 0x1694d7, recipient(address): 0xE613c0, amount(uint256): 41295742091) -> True
+    [3][CALL] from=0x1694d7, to=TransparentUpgradeableProxy, withdraw(amount(uint256): 41295742091) -> None
+      [4][DELEGATECALL] from=TransparentUpgradeableProxy, to=LaunchpadLockableStaking, withdraw(amount(uint256): 41295742091) -> None
+        [5][CALL] from=TransparentUpgradeableProxy, to=TrustPad, transfer(recipient(address): 0x1694d7, amount(uint256): 41295742091) -> True
+    [3][CALL] from=0x1694d7, to=TransparentUpgradeableProxy, receiveUpPool(account(address): 0x1694d7, amount(uint256): 41295742091) -> None
+      [4][DELEGATECALL] from=TransparentUpgradeableProxy, to=LaunchpadLockableStaking, receiveUpPool(account(address): 0x1694d7, amount(uint256): 41295742091) -> None
+        [5][STATICCALL] from=TransparentUpgradeableProxy, to=0x1694d7, isLockedaddress() -> 0x000000
+          [6][DELEGATECALL] from=0x1694d7, to=0x96f69b, isLockedaddress() -> 0x000000
+        [5][STATICCALL] from=TransparentUpgradeableProxy, to=0x1694d7, 0x47334aca() -> 0x000000
+          [6][DELEGATECALL] from=0x1694d7, to=0x96f69b, 0x47334aca() -> 0x000000
+        [5][CALL] from=TransparentUpgradeableProxy, to=TrustPad, transferFrom(sender(address): 0x1694d7, recipient(address): 0xE613c0, amount(uint256): 41295742091) -> True
+    [3][CALL] from=0x1694d7, to=TransparentUpgradeableProxy, withdraw(amount(uint256): 41295742091) -> None
+      [4][DELEGATECALL] from=TransparentUpgradeableProxy, to=LaunchpadLockableStaking, withdraw(amount(uint256): 41295742091) -> None
+        [5][CALL] from=TransparentUpgradeableProxy, to=TrustPad, transfer(recipient(address): 0x1694d7, amount(uint256): 41295742091) -> True
+    [3][CALL] from=0x1694d7, to=TransparentUpgradeableProxy, receiveUpPool(account(address): 0x1694d7, amount(uint256): 41295742091) -> None
+      [4][DELEGATECALL] from=TransparentUpgradeableProxy, to=LaunchpadLockableStaking, receiveUpPool(account(address): 0x1694d7, amount(uint256): 41295742091) -> None
+        [5][STATICCALL] from=TransparentUpgradeableProxy, to=0x1694d7, isLockedaddress() -> 0x000000
+          [6][DELEGATECALL] from=0x1694d7, to=0x96f69b, isLockedaddress() -> 0x000000
+        [5][STATICCALL] from=TransparentUpgradeableProxy, to=0x1694d7, 0x47334aca() -> 0x000000
+          [6][DELEGATECALL] from=0x1694d7, to=0x96f69b, 0x47334aca() -> 0x000000
+        [5][CALL] from=TransparentUpgradeableProxy, to=TrustPad, transferFrom(sender(address): 0x1694d7, recipient(address): 0xE613c0, amount(uint256): 41295742091) -> True
+    [3][CALL] from=0x1694d7, to=TransparentUpgradeableProxy, withdraw(amount(uint256): 41295742091) -> None
+      [4][DELEGATECALL] from=TransparentUpgradeableProxy, to=LaunchpadLockableStaking, withdraw(amount(uint256): 41295742091) -> None
+        [5][CALL] from=TransparentUpgradeableProxy, to=TrustPad, transfer(recipient(address): 0x1694d7, amount(uint256): 41295742091) -> True
+    [3][CALL] from=0x1694d7, to=TransparentUpgradeableProxy, receiveUpPool(account(address): 0x1694d7, amount(uint256): 41295742091) -> None
+      [4][DELEGATECALL] from=TransparentUpgradeableProxy, to=LaunchpadLockableStaking, receiveUpPool(account(address): 0x1694d7, amount(uint256): 41295742091) -> None
+        [5][STATICCALL] from=TransparentUpgradeableProxy, to=0x1694d7, isLockedaddress() -> 0x000000
+          [6][DELEGATECALL] from=0x1694d7, to=0x96f69b, isLockedaddress() -> 0x000000
+        [5][STATICCALL] from=TransparentUpgradeableProxy, to=0x1694d7, 0x47334aca() -> 0x000000
+          [6][DELEGATECALL] from=0x1694d7, to=0x96f69b, 0x47334aca() -> 0x000000
+        [5][CALL] from=TransparentUpgradeableProxy, to=TrustPad, transferFrom(sender(address): 0x1694d7, recipient(address): 0xE613c0, amount(uint256): 41295742091) -> True
+    [3][CALL] from=0x1694d7, to=TransparentUpgradeableProxy, withdraw(amount(uint256): 41295742091) -> None
+      [4][DELEGATECALL] from=TransparentUpgradeableProxy, to=LaunchpadLockableStaking, withdraw(amount(uint256): 41295742091) -> None
+        [5][CALL] from=TransparentUpgradeableProxy, to=TrustPad, transfer(recipient(address): 0x1694d7, amount(uint256): 41295742091) -> True
+    [3][CALL] from=0x1694d7, to=TransparentUpgradeableProxy, receiveUpPool(account(address): 0x1694d7, amount(uint256): 41295742091) -> None
+      [4][DELEGATECALL] from=TransparentUpgradeableProxy, to=LaunchpadLockableStaking, receiveUpPool(account(address): 0x1694d7, amount(uint256): 41295742091) -> None
+        [5][STATICCALL] from=TransparentUpgradeableProxy, to=0x1694d7, isLockedaddress() -> 0x000000
+          [6][DELEGATECALL] from=0x1694d7, to=0x96f69b, isLockedaddress() -> 0x000000
+        [5][STATICCALL] from=TransparentUpgradeableProxy, to=0x1694d7, 0x47334aca() -> 0x000000
+          [6][DELEGATECALL] from=0x1694d7, to=0x96f69b, 0x47334aca() -> 0x000000
+        [5][CALL] from=TransparentUpgradeableProxy, to=TrustPad, transferFrom(sender(address): 0x1694d7, recipient(address): 0xE613c0, amount(uint256): 41295742091) -> True
+    [3][CALL] from=0x1694d7, to=TransparentUpgradeableProxy, withdraw(amount(uint256): 41295742091) -> None
+      [4][DELEGATECALL] from=TransparentUpgradeableProxy, to=LaunchpadLockableStaking, withdraw(amount(uint256): 41295742091) -> None
+        [5][CALL] from=TransparentUpgradeableProxy, to=TrustPad, transfer(recipient(address): 0x1694d7, amount(uint256): 41295742091) -> True
+    [3][CALL] from=0x1694d7, to=TransparentUpgradeableProxy, receiveUpPool(account(address): 0x1694d7, amount(uint256): 41295742091) -> None
+      [4][DELEGATECALL] from=TransparentUpgradeableProxy, to=LaunchpadLockableStaking, receiveUpPool(account(address): 0x1694d7, amount(uint256): 41295742091) -> None
+        [5][STATICCALL] from=TransparentUpgradeableProxy, to=0x1694d7, isLockedaddress() -> 0x000000
+          [6][DELEGATECALL] from=0x1694d7, to=0x96f69b, isLockedaddress() -> 0x000000
+        [5][STATICCALL] from=TransparentUpgradeableProxy, to=0x1694d7, 0x47334aca() -> 0x000000
+          [6][DELEGATECALL] from=0x1694d7, to=0x96f69b, 0x47334aca() -> 0x000000
+        [5][CALL] from=TransparentUpgradeableProxy, to=TrustPad, transferFrom(sender(address): 0x1694d7, recipient(address): 0xE613c0, amount(uint256): 41295742091) -> True
+    [3][CALL] from=0x1694d7, to=TransparentUpgradeableProxy, withdraw(amount(uint256): 41295742091) -> None
+      [4][DELEGATECALL] from=TransparentUpgradeableProxy, to=LaunchpadLockableStaking, withdraw(amount(uint256): 41295742091) -> None
+        [5][CALL] from=TransparentUpgradeableProxy, to=TrustPad, transfer(recipient(address): 0x1694d7, amount(uint256): 41295742091) -> True
+    [3][CALL] from=0x1694d7, to=TransparentUpgradeableProxy, receiveUpPool(account(address): 0x1694d7, amount(uint256): 41295742091) -> None
+      [4][DELEGATECALL] from=TransparentUpgradeableProxy, to=LaunchpadLockableStaking, receiveUpPool(account(address): 0x1694d7, amount(uint256): 41295742091) -> None
+        [5][STATICCALL] from=TransparentUpgradeableProxy, to=0x1694d7, isLockedaddress() -> 0x000000
+          [6][DELEGATECALL] from=0x1694d7, to=0x96f69b, isLockedaddress() -> 0x000000
+        [5][STATICCALL] from=TransparentUpgradeableProxy, to=0x1694d7, 0x47334aca() -> 0x000000
+          [6][DELEGATECALL] from=0x1694d7, to=0x96f69b, 0x47334aca() -> 0x000000
+        [5][CALL] from=TransparentUpgradeableProxy, to=TrustPad, transferFrom(sender(address): 0x1694d7, recipient(address): 0xE613c0, amount(uint256): 41295742091) -> True
+    [3][CALL] from=0x1694d7, to=TransparentUpgradeableProxy, withdraw(amount(uint256): 41295742091) -> None
+      [4][DELEGATECALL] from=TransparentUpgradeableProxy, to=LaunchpadLockableStaking, withdraw(amount(uint256): 41295742091) -> None
+        [5][CALL] from=TransparentUpgradeableProxy, to=TrustPad, transfer(recipient(address): 0x1694d7, amount(uint256): 41295742091) -> True
+    [3][CALL] from=0x1694d7, to=TransparentUpgradeableProxy, receiveUpPool(account(address): 0x1694d7, amount(uint256): 41295742091) -> None
+      [4][DELEGATECALL] from=TransparentUpgradeableProxy, to=LaunchpadLockableStaking, receiveUpPool(account(address): 0x1694d7, amount(uint256): 41295742091) -> None
+        [5][STATICCALL] from=TransparentUpgradeableProxy, to=0x1694d7, isLockedaddress() -> 0x000000
+          [6][DELEGATECALL] from=0x1694d7, to=0x96f69b, isLockedaddress() -> 0x000000
+        [5][STATICCALL] from=TransparentUpgradeableProxy, to=0x1694d7, 0x47334aca() -> 0x000000
+          [6][DELEGATECALL] from=0x1694d7, to=0x96f69b, 0x47334aca() -> 0x000000
+        [5][CALL] from=TransparentUpgradeableProxy, to=TrustPad, transferFrom(sender(address): 0x1694d7, recipient(address): 0xE613c0, amount(uint256): 41295742091) -> True
+    [3][CALL] from=0x1694d7, to=TransparentUpgradeableProxy, withdraw(amount(uint256): 41295742091) -> None
+      [4][DELEGATECALL] from=TransparentUpgradeableProxy, to=LaunchpadLockableStaking, withdraw(amount(uint256): 41295742091) -> None
+        [5][CALL] from=TransparentUpgradeableProxy, to=TrustPad, transfer(recipient(address): 0x1694d7, amount(uint256): 41295742091) -> True
+    [3][CALL] from=0x1694d7, to=TransparentUpgradeableProxy, receiveUpPool(account(address): 0x1694d7, amount(uint256): 41295742091) -> None
+      [4][DELEGATECALL] from=TransparentUpgradeableProxy, to=LaunchpadLockableStaking, receiveUpPool(account(address): 0x1694d7, amount(uint256): 41295742091) -> None
+        [5][STATICCALL] from=TransparentUpgradeableProxy, to=0x1694d7, isLockedaddress() -> 0x000000
+          [6][DELEGATECALL] from=0x1694d7, to=0x96f69b, isLockedaddress() -> 0x000000
+        [5][STATICCALL] from=TransparentUpgradeableProxy, to=0x1694d7, 0x47334aca() -> 0x000000
+          [6][DELEGATECALL] from=0x1694d7, to=0x96f69b, 0x47334aca() -> 0x000000
+        [5][CALL] from=TransparentUpgradeableProxy, to=TrustPad, transferFrom(sender(address): 0x1694d7, recipient(address): 0xE613c0, amount(uint256): 41295742091) -> True
+    [3][CALL] from=0x1694d7, to=TransparentUpgradeableProxy, withdraw(amount(uint256): 41295742091) -> None
+      [4][DELEGATECALL] from=TransparentUpgradeableProxy, to=LaunchpadLockableStaking, withdraw(amount(uint256): 41295742091) -> None
+        [5][CALL] from=TransparentUpgradeableProxy, to=TrustPad, transfer(recipient(address): 0x1694d7, amount(uint256): 41295742091) -> True
+    [3][CALL] from=0x1694d7, to=TransparentUpgradeableProxy, receiveUpPool(account(address): 0x1694d7, amount(uint256): 41295742091) -> None
+      [4][DELEGATECALL] from=TransparentUpgradeableProxy, to=LaunchpadLockableStaking, receiveUpPool(account(address): 0x1694d7, amount(uint256): 41295742091) -> None
+        [5][STATICCALL] from=TransparentUpgradeableProxy, to=0x1694d7, isLockedaddress() -> 0x000000
+          [6][DELEGATECALL] from=0x1694d7, to=0x96f69b, isLockedaddress() -> 0x000000
+        [5][STATICCALL] from=TransparentUpgradeableProxy, to=0x1694d7, 0x47334aca() -> 0x000000
+          [6][DELEGATECALL] from=0x1694d7, to=0x96f69b, 0x47334aca() -> 0x000000
+        [5][CALL] from=TransparentUpgradeableProxy, to=TrustPad, transferFrom(sender(address): 0x1694d7, recipient(address): 0xE613c0, amount(uint256): 41295742091) -> True
+    [3][CALL] from=0x1694d7, to=TransparentUpgradeableProxy, withdraw(amount(uint256): 41295742091) -> None
+      [4][DELEGATECALL] from=TransparentUpgradeableProxy, to=LaunchpadLockableStaking, withdraw(amount(uint256): 41295742091) -> None
+        [5][CALL] from=TransparentUpgradeableProxy, to=TrustPad, transfer(recipient(address): 0x1694d7, amount(uint256): 41295742091) -> True
+    [3][CALL] from=0x1694d7, to=TransparentUpgradeableProxy, receiveUpPool(account(address): 0x1694d7, amount(uint256): 41295742091) -> None
+      [4][DELEGATECALL] from=TransparentUpgradeableProxy, to=LaunchpadLockableStaking, receiveUpPool(account(address): 0x1694d7, amount(uint256): 41295742091) -> None
+        [5][STATICCALL] from=TransparentUpgradeableProxy, to=0x1694d7, isLockedaddress() -> 0x000000
+          [6][DELEGATECALL] from=0x1694d7, to=0x96f69b, isLockedaddress() -> 0x000000
+        [5][STATICCALL] from=TransparentUpgradeableProxy, to=0x1694d7, 0x47334aca() -> 0x000000
+          [6][DELEGATECALL] from=0x1694d7, to=0x96f69b, 0x47334aca() -> 0x000000
+        [5][CALL] from=TransparentUpgradeableProxy, to=TrustPad, transferFrom(sender(address): 0x1694d7, recipient(address): 0xE613c0, amount(uint256): 41295742091) -> True
+    [3][CALL] from=0x1694d7, to=TransparentUpgradeableProxy, withdraw(amount(uint256): 41295742091) -> None
+      [4][DELEGATECALL] from=TransparentUpgradeableProxy, to=LaunchpadLockableStaking, withdraw(amount(uint256): 41295742091) -> None
+        [5][CALL] from=TransparentUpgradeableProxy, to=TrustPad, transfer(recipient(address): 0x1694d7, amount(uint256): 41295742091) -> True
+    [3][CALL] from=0x1694d7, to=TransparentUpgradeableProxy, receiveUpPool(account(address): 0x1694d7, amount(uint256): 41295742091) -> None
+      [4][DELEGATECALL] from=TransparentUpgradeableProxy, to=LaunchpadLockableStaking, receiveUpPool(account(address): 0x1694d7, amount(uint256): 41295742091) -> None
+        [5][STATICCALL] from=TransparentUpgradeableProxy, to=0x1694d7, isLockedaddress() -> 0x000000
+          [6][DELEGATECALL] from=0x1694d7, to=0x96f69b, isLockedaddress() -> 0x000000
+        [5][STATICCALL] from=TransparentUpgradeableProxy, to=0x1694d7, 0x47334aca() -> 0x000000
+          [6][DELEGATECALL] from=0x1694d7, to=0x96f69b, 0x47334aca() -> 0x000000
+        [5][CALL] from=TransparentUpgradeableProxy, to=TrustPad, transferFrom(sender(address): 0x1694d7, recipient(address): 0xE613c0, amount(uint256): 41295742091) -> True
+    [3][CALL] from=0x1694d7, to=TransparentUpgradeableProxy, withdraw(amount(uint256): 41295742091) -> None
+      [4][DELEGATECALL] from=TransparentUpgradeableProxy, to=LaunchpadLockableStaking, withdraw(amount(uint256): 41295742091) -> None
+        [5][CALL] from=TransparentUpgradeableProxy, to=TrustPad, transfer(recipient(address): 0x1694d7, amount(uint256): 41295742091) -> True
+    [3][CALL] from=0x1694d7, to=TransparentUpgradeableProxy, receiveUpPool(account(address): 0x1694d7, amount(uint256): 41295742091) -> None
+      [4][DELEGATECALL] from=TransparentUpgradeableProxy, to=LaunchpadLockableStaking, receiveUpPool(account(address): 0x1694d7, amount(uint256): 41295742091) -> None
+        [5][STATICCALL] from=TransparentUpgradeableProxy, to=0x1694d7, isLockedaddress() -> 0x000000
+          [6][DELEGATECALL] from=0x1694d7, to=0x96f69b, isLockedaddress() -> 0x000000
+        [5][STATICCALL] from=TransparentUpgradeableProxy, to=0x1694d7, 0x47334aca() -> 0x000000
+          [6][DELEGATECALL] from=0x1694d7, to=0x96f69b, 0x47334aca() -> 0x000000
+        [5][CALL] from=TransparentUpgradeableProxy, to=TrustPad, transferFrom(sender(address): 0x1694d7, recipient(address): 0xE613c0, amount(uint256): 41295742091) -> True
+    [3][CALL] from=0x1694d7, to=TransparentUpgradeableProxy, withdraw(amount(uint256): 41295742091) -> None
+      [4][DELEGATECALL] from=TransparentUpgradeableProxy, to=LaunchpadLockableStaking, withdraw(amount(uint256): 41295742091) -> None
+        [5][CALL] from=TransparentUpgradeableProxy, to=TrustPad, transfer(recipient(address): 0x1694d7, amount(uint256): 41295742091) -> True
+    [3][CALL] from=0x1694d7, to=TransparentUpgradeableProxy, receiveUpPool(account(address): 0x1694d7, amount(uint256): 41295742091) -> None
+      [4][DELEGATECALL] from=TransparentUpgradeableProxy, to=LaunchpadLockableStaking, receiveUpPool(account(address): 0x1694d7, amount(uint256): 41295742091) -> None
+        [5][STATICCALL] from=TransparentUpgradeableProxy, to=0x1694d7, isLockedaddress() -> 0x000000
+          [6][DELEGATECALL] from=0x1694d7, to=0x96f69b, isLockedaddress() -> 0x000000
+        [5][STATICCALL] from=TransparentUpgradeableProxy, to=0x1694d7, 0x47334aca() -> 0x000000
+          [6][DELEGATECALL] from=0x1694d7, to=0x96f69b, 0x47334aca() -> 0x000000
+        [5][CALL] from=TransparentUpgradeableProxy, to=TrustPad, transferFrom(sender(address): 0x1694d7, recipient(address): 0xE613c0, amount(uint256): 41295742091) -> True
+    [3][CALL] from=0x1694d7, to=TransparentUpgradeableProxy, withdraw(amount(uint256): 41295742091) -> None
+      [4][DELEGATECALL] from=TransparentUpgradeableProxy, to=LaunchpadLockableStaking, withdraw(amount(uint256): 41295742091) -> None
+        [5][CALL] from=TransparentUpgradeableProxy, to=TrustPad, transfer(recipient(address): 0x1694d7, amount(uint256): 41295742091) -> True
+    [3][CALL] from=0x1694d7, to=TransparentUpgradeableProxy, receiveUpPool(account(address): 0x1694d7, amount(uint256): 41295742091) -> None
+      [4][DELEGATECALL] from=TransparentUpgradeableProxy, to=LaunchpadLockableStaking, receiveUpPool(account(address): 0x1694d7, amount(uint256): 41295742091) -> None
+        [5][STATICCALL] from=TransparentUpgradeableProxy, to=0x1694d7, isLockedaddress() -> 0x000000
+          [6][DELEGATECALL] from=0x1694d7, to=0x96f69b, isLockedaddress() -> 0x000000
+        [5][STATICCALL] from=TransparentUpgradeableProxy, to=0x1694d7, 0x47334aca() -> 0x000000
+          [6][DELEGATECALL] from=0x1694d7, to=0x96f69b, 0x47334aca() -> 0x000000
+        [5][CALL] from=TransparentUpgradeableProxy, to=TrustPad, transferFrom(sender(address): 0x1694d7, recipient(address): 0xE613c0, amount(uint256): 41295742091) -> True
+    [3][CALL] from=0x1694d7, to=TransparentUpgradeableProxy, withdraw(amount(uint256): 41295742091) -> None
+      [4][DELEGATECALL] from=TransparentUpgradeableProxy, to=LaunchpadLockableStaking, withdraw(amount(uint256): 41295742091) -> None
+        [5][CALL] from=TransparentUpgradeableProxy, to=TrustPad, transfer(recipient(address): 0x1694d7, amount(uint256): 41295742091) -> True
+    [3][CALL] from=0x1694d7, to=TransparentUpgradeableProxy, receiveUpPool(account(address): 0x1694d7, amount(uint256): 41295742091) -> None
+      [4][DELEGATECALL] from=TransparentUpgradeableProxy, to=LaunchpadLockableStaking, receiveUpPool(account(address): 0x1694d7, amount(uint256): 41295742091) -> None
+        [5][STATICCALL] from=TransparentUpgradeableProxy, to=0x1694d7, isLockedaddress() -> 0x000000
+          [6][DELEGATECALL] from=0x1694d7, to=0x96f69b, isLockedaddress() -> 0x000000
+        [5][STATICCALL] from=TransparentUpgradeableProxy, to=0x1694d7, 0x47334aca() -> 0x000000
+          [6][DELEGATECALL] from=0x1694d7, to=0x96f69b, 0x47334aca() -> 0x000000
+        [5][CALL] from=TransparentUpgradeableProxy, to=TrustPad, transferFrom(sender(address): 0x1694d7, recipient(address): 0xE613c0, amount(uint256): 41295742091) -> True
+    [3][CALL] from=0x1694d7, to=TransparentUpgradeableProxy, withdraw(amount(uint256): 41295742091) -> None
+      [4][DELEGATECALL] from=TransparentUpgradeableProxy, to=LaunchpadLockableStaking, withdraw(amount(uint256): 41295742091) -> None
+        [5][CALL] from=TransparentUpgradeableProxy, to=TrustPad, transfer(recipient(address): 0x1694d7, amount(uint256): 41295742091) -> True
+    [3][CALL] from=0x1694d7, to=TransparentUpgradeableProxy, receiveUpPool(account(address): 0x1694d7, amount(uint256): 41295742091) -> None
+      [4][DELEGATECALL] from=TransparentUpgradeableProxy, to=LaunchpadLockableStaking, receiveUpPool(account(address): 0x1694d7, amount(uint256): 41295742091) -> None
+        [5][STATICCALL] from=TransparentUpgradeableProxy, to=0x1694d7, isLockedaddress() -> 0x000000
+          [6][DELEGATECALL] from=0x1694d7, to=0x96f69b, isLockedaddress() -> 0x000000
+        [5][STATICCALL] from=TransparentUpgradeableProxy, to=0x1694d7, 0x47334aca() -> 0x000000
+          [6][DELEGATECALL] from=0x1694d7, to=0x96f69b, 0x47334aca() -> 0x000000
+        [5][CALL] from=TransparentUpgradeableProxy, to=TrustPad, transferFrom(sender(address): 0x1694d7, recipient(address): 0xE613c0, amount(uint256): 41295742091) -> True
+    [3][CALL] from=0x1694d7, to=TransparentUpgradeableProxy, withdraw(amount(uint256): 41295742091) -> None
+      [4][DELEGATECALL] from=TransparentUpgradeableProxy, to=LaunchpadLockableStaking, withdraw(amount(uint256): 41295742091) -> None
+        [5][CALL] from=TransparentUpgradeableProxy, to=TrustPad, transfer(recipient(address): 0x1694d7, amount(uint256): 41295742091) -> True
+    [3][CALL] from=0x1694d7, to=TransparentUpgradeableProxy, receiveUpPool(account(address): 0x1694d7, amount(uint256): 41295742091) -> None
+      [4][DELEGATECALL] from=TransparentUpgradeableProxy, to=LaunchpadLockableStaking, receiveUpPool(account(address): 0x1694d7, amount(uint256): 41295742091) -> None
+        [5][STATICCALL] from=TransparentUpgradeableProxy, to=0x1694d7, isLockedaddress() -> 0x000000
+          [6][DELEGATECALL] from=0x1694d7, to=0x96f69b, isLockedaddress() -> 0x000000
+        [5][STATICCALL] from=TransparentUpgradeableProxy, to=0x1694d7, 0x47334aca() -> 0x000000
+          [6][DELEGATECALL] from=0x1694d7, to=0x96f69b, 0x47334aca() -> 0x000000
+        [5][CALL] from=TransparentUpgradeableProxy, to=TrustPad, transferFrom(sender(address): 0x1694d7, recipient(address): 0xE613c0, amount(uint256): 41295742091) -> True
+    [3][CALL] from=0x1694d7, to=TransparentUpgradeableProxy, withdraw(amount(uint256): 41295742091) -> None
+      [4][DELEGATECALL] from=TransparentUpgradeableProxy, to=LaunchpadLockableStaking, withdraw(amount(uint256): 41295742091) -> None
+        [5][CALL] from=TransparentUpgradeableProxy, to=TrustPad, transfer(recipient(address): 0x1694d7, amount(uint256): 41295742091) -> True
+    [3][CALL] from=0x1694d7, to=TransparentUpgradeableProxy, receiveUpPool(account(address): 0x1694d7, amount(uint256): 41295742091) -> None
+      [4][DELEGATECALL] from=TransparentUpgradeableProxy, to=LaunchpadLockableStaking, receiveUpPool(account(address): 0x1694d7, amount(uint256): 41295742091) -> None
+        [5][STATICCALL] from=TransparentUpgradeableProxy, to=0x1694d7, isLockedaddress() -> 0x000000
+          [6][DELEGATECALL] from=0x1694d7, to=0x96f69b, isLockedaddress() -> 0x000000
+        [5][STATICCALL] from=TransparentUpgradeableProxy, to=0x1694d7, 0x47334aca() -> 0x000000
+          [6][DELEGATECALL] from=0x1694d7, to=0x96f69b, 0x47334aca() -> 0x000000
+        [5][CALL] from=TransparentUpgradeableProxy, to=TrustPad, transferFrom(sender(address): 0x1694d7, recipient(address): 0xE613c0, amount(uint256): 41295742091) -> True
+    [3][CALL] from=0x1694d7, to=TransparentUpgradeableProxy, withdraw(amount(uint256): 41295742091) -> None
+      [4][DELEGATECALL] from=TransparentUpgradeableProxy, to=LaunchpadLockableStaking, withdraw(amount(uint256): 41295742091) -> None
+        [5][CALL] from=TransparentUpgradeableProxy, to=TrustPad, transfer(recipient(address): 0x1694d7, amount(uint256): 41295742091) -> True
+    [3][CALL] from=0x1694d7, to=TransparentUpgradeableProxy, receiveUpPool(account(address): 0x1694d7, amount(uint256): 41295742091) -> None
+      [4][DELEGATECALL] from=TransparentUpgradeableProxy, to=LaunchpadLockableStaking, receiveUpPool(account(address): 0x1694d7, amount(uint256): 41295742091) -> None
+        [5][STATICCALL] from=TransparentUpgradeableProxy, to=0x1694d7, isLockedaddress() -> 0x000000
+          [6][DELEGATECALL] from=0x1694d7, to=0x96f69b, isLockedaddress() -> 0x000000
+        [5][STATICCALL] from=TransparentUpgradeableProxy, to=0x1694d7, 0x47334aca() -> 0x000000
+          [6][DELEGATECALL] from=0x1694d7, to=0x96f69b, 0x47334aca() -> 0x000000
+        [5][CALL] from=TransparentUpgradeableProxy, to=TrustPad, transferFrom(sender(address): 0x1694d7, recipient(address): 0xE613c0, amount(uint256): 41295742091) -> True
+    [3][CALL] from=0x1694d7, to=TransparentUpgradeableProxy, withdraw(amount(uint256): 41295742091) -> None
+      [4][DELEGATECALL] from=TransparentUpgradeableProxy, to=LaunchpadLockableStaking, withdraw(amount(uint256): 41295742091) -> None
+        [5][CALL] from=TransparentUpgradeableProxy, to=TrustPad, transfer(recipient(address): 0x1694d7, amount(uint256): 41295742091) -> True
+    [3][CALL] from=0x1694d7, to=TransparentUpgradeableProxy, receiveUpPool(account(address): 0x1694d7, amount(uint256): 41295742091) -> None
+      [4][DELEGATECALL] from=TransparentUpgradeableProxy, to=LaunchpadLockableStaking, receiveUpPool(account(address): 0x1694d7, amount(uint256): 41295742091) -> None
+        [5][STATICCALL] from=TransparentUpgradeableProxy, to=0x1694d7, isLockedaddress() -> 0x000000
+          [6][DELEGATECALL] from=0x1694d7, to=0x96f69b, isLockedaddress() -> 0x000000
+        [5][STATICCALL] from=TransparentUpgradeableProxy, to=0x1694d7, 0x47334aca() -> 0x000000
+          [6][DELEGATECALL] from=0x1694d7, to=0x96f69b, 0x47334aca() -> 0x000000
+        [5][CALL] from=TransparentUpgradeableProxy, to=TrustPad, transferFrom(sender(address): 0x1694d7, recipient(address): 0xE613c0, amount(uint256): 41295742091) -> True
+    [3][CALL] from=0x1694d7, to=TransparentUpgradeableProxy, withdraw(amount(uint256): 41295742091) -> None
+      [4][DELEGATECALL] from=TransparentUpgradeableProxy, to=LaunchpadLockableStaking, withdraw(amount(uint256): 41295742091) -> None
+        [5][CALL] from=TransparentUpgradeableProxy, to=TrustPad, transfer(recipient(address): 0x1694d7, amount(uint256): 41295742091) -> True
+    [3][CALL] from=0x1694d7, to=TransparentUpgradeableProxy, receiveUpPool(account(address): 0x1694d7, amount(uint256): 41295742091) -> None
+      [4][DELEGATECALL] from=TransparentUpgradeableProxy, to=LaunchpadLockableStaking, receiveUpPool(account(address): 0x1694d7, amount(uint256): 41295742091) -> None
+        [5][STATICCALL] from=TransparentUpgradeableProxy, to=0x1694d7, isLockedaddress() -> 0x000000
+          [6][DELEGATECALL] from=0x1694d7, to=0x96f69b, isLockedaddress() -> 0x000000
+        [5][STATICCALL] from=TransparentUpgradeableProxy, to=0x1694d7, 0x47334aca() -> 0x000000
+          [6][DELEGATECALL] from=0x1694d7, to=0x96f69b, 0x47334aca() -> 0x000000
+        [5][CALL] from=TransparentUpgradeableProxy, to=TrustPad, transferFrom(sender(address): 0x1694d7, recipient(address): 0xE613c0, amount(uint256): 41295742091) -> True
+    [3][CALL] from=0x1694d7, to=TransparentUpgradeableProxy, withdraw(amount(uint256): 41295742091) -> None
+      [4][DELEGATECALL] from=TransparentUpgradeableProxy, to=LaunchpadLockableStaking, withdraw(amount(uint256): 41295742091) -> None
+        [5][CALL] from=TransparentUpgradeableProxy, to=TrustPad, transfer(recipient(address): 0x1694d7, amount(uint256): 41295742091) -> True
+    [3][CALL] from=0x1694d7, to=TransparentUpgradeableProxy, receiveUpPool(account(address): 0x1694d7, amount(uint256): 41295742091) -> None
+      [4][DELEGATECALL] from=TransparentUpgradeableProxy, to=LaunchpadLockableStaking, receiveUpPool(account(address): 0x1694d7, amount(uint256): 41295742091) -> None
+        [5][STATICCALL] from=TransparentUpgradeableProxy, to=0x1694d7, isLockedaddress() -> 0x000000
+          [6][DELEGATECALL] from=0x1694d7, to=0x96f69b, isLockedaddress() -> 0x000000
+        [5][STATICCALL] from=TransparentUpgradeableProxy, to=0x1694d7, 0x47334aca() -> 0x000000
+          [6][DELEGATECALL] from=0x1694d7, to=0x96f69b, 0x47334aca() -> 0x000000
+        [5][CALL] from=TransparentUpgradeableProxy, to=TrustPad, transferFrom(sender(address): 0x1694d7, recipient(address): 0xE613c0, amount(uint256): 41295742091) -> True
+    [3][CALL] from=0x1694d7, to=TransparentUpgradeableProxy, withdraw(amount(uint256): 41295742091) -> None
+      [4][DELEGATECALL] from=TransparentUpgradeableProxy, to=LaunchpadLockableStaking, withdraw(amount(uint256): 41295742091) -> None
+        [5][CALL] from=TransparentUpgradeableProxy, to=TrustPad, transfer(recipient(address): 0x1694d7, amount(uint256): 41295742091) -> True
+    [3][CALL] from=0x1694d7, to=TransparentUpgradeableProxy, receiveUpPool(account(address): 0x1694d7, amount(uint256): 41295742091) -> None
+      [4][DELEGATECALL] from=TransparentUpgradeableProxy, to=LaunchpadLockableStaking, receiveUpPool(account(address): 0x1694d7, amount(uint256): 41295742091) -> None
+        [5][STATICCALL] from=TransparentUpgradeableProxy, to=0x1694d7, isLockedaddress() -> 0x000000
+          [6][DELEGATECALL] from=0x1694d7, to=0x96f69b, isLockedaddress() -> 0x000000
+        [5][STATICCALL] from=TransparentUpgradeableProxy, to=0x1694d7, 0x47334aca() -> 0x000000
+          [6][DELEGATECALL] from=0x1694d7, to=0x96f69b, 0x47334aca() -> 0x000000
+        [5][CALL] from=TransparentUpgradeableProxy, to=TrustPad, transferFrom(sender(address): 0x1694d7, recipient(address): 0xE613c0, amount(uint256): 41295742091) -> True
+    [3][CALL] from=0x1694d7, to=TransparentUpgradeableProxy, withdraw(amount(uint256): 41295742091) -> None
+      [4][DELEGATECALL] from=TransparentUpgradeableProxy, to=LaunchpadLockableStaking, withdraw(amount(uint256): 41295742091) -> None
+        [5][CALL] from=TransparentUpgradeableProxy, to=TrustPad, transfer(recipient(address): 0x1694d7, amount(uint256): 41295742091) -> True
+    [3][CALL] from=0x1694d7, to=TransparentUpgradeableProxy, receiveUpPool(account(address): 0x1694d7, amount(uint256): 41295742091) -> None
+      [4][DELEGATECALL] from=TransparentUpgradeableProxy, to=LaunchpadLockableStaking, receiveUpPool(account(address): 0x1694d7, amount(uint256): 41295742091) -> None
+        [5][STATICCALL] from=TransparentUpgradeableProxy, to=0x1694d7, isLockedaddress() -> 0x000000
+          [6][DELEGATECALL] from=0x1694d7, to=0x96f69b, isLockedaddress() -> 0x000000
+        [5][STATICCALL] from=TransparentUpgradeableProxy, to=0x1694d7, 0x47334aca() -> 0x000000
+          [6][DELEGATECALL] from=0x1694d7, to=0x96f69b, 0x47334aca() -> 0x000000
+        [5][CALL] from=TransparentUpgradeableProxy, to=TrustPad, transferFrom(sender(address): 0x1694d7, recipient(address): 0xE613c0, amount(uint256): 41295742091) -> True
+    [3][CALL] from=0x1694d7, to=TransparentUpgradeableProxy, withdraw(amount(uint256): 41295742091) -> None
+      [4][DELEGATECALL] from=TransparentUpgradeableProxy, to=LaunchpadLockableStaking, withdraw(amount(uint256): 41295742091) -> None
+        [5][CALL] from=TransparentUpgradeableProxy, to=TrustPad, transfer(recipient(address): 0x1694d7, amount(uint256): 41295742091) -> True
+    [3][CALL] from=0x1694d7, to=TransparentUpgradeableProxy, receiveUpPool(account(address): 0x1694d7, amount(uint256): 41295742091) -> None
+      [4][DELEGATECALL] from=TransparentUpgradeableProxy, to=LaunchpadLockableStaking, receiveUpPool(account(address): 0x1694d7, amount(uint256): 41295742091) -> None
+        [5][STATICCALL] from=TransparentUpgradeableProxy, to=0x1694d7, isLockedaddress() -> 0x000000
+          [6][DELEGATECALL] from=0x1694d7, to=0x96f69b, isLockedaddress() -> 0x000000
+        [5][STATICCALL] from=TransparentUpgradeableProxy, to=0x1694d7, 0x47334aca() -> 0x000000
+          [6][DELEGATECALL] from=0x1694d7, to=0x96f69b, 0x47334aca() -> 0x000000
+        [5][CALL] from=TransparentUpgradeableProxy, to=TrustPad, transferFrom(sender(address): 0x1694d7, recipient(address): 0xE613c0, amount(uint256): 41295742091) -> True
+    [3][CALL] from=0x1694d7, to=TransparentUpgradeableProxy, withdraw(amount(uint256): 41295742091) -> None
+      [4][DELEGATECALL] from=TransparentUpgradeableProxy, to=LaunchpadLockableStaking, withdraw(amount(uint256): 41295742091) -> None
+        [5][CALL] from=TransparentUpgradeableProxy, to=TrustPad, transfer(recipient(address): 0x1694d7, amount(uint256): 41295742091) -> True
+    [3][CALL] from=0x1694d7, to=TransparentUpgradeableProxy, receiveUpPool(account(address): 0x1694d7, amount(uint256): 41295742091) -> None
+      [4][DELEGATECALL] from=TransparentUpgradeableProxy, to=LaunchpadLockableStaking, receiveUpPool(account(address): 0x1694d7, amount(uint256): 41295742091) -> None
+        [5][STATICCALL] from=TransparentUpgradeableProxy, to=0x1694d7, isLockedaddress() -> 0x000000
+          [6][DELEGATECALL] from=0x1694d7, to=0x96f69b, isLockedaddress() -> 0x000000
+        [5][STATICCALL] from=TransparentUpgradeableProxy, to=0x1694d7, 0x47334aca() -> 0x000000
+          [6][DELEGATECALL] from=0x1694d7, to=0x96f69b, 0x47334aca() -> 0x000000
+        [5][CALL] from=TransparentUpgradeableProxy, to=TrustPad, transferFrom(sender(address): 0x1694d7, recipient(address): 0xE613c0, amount(uint256): 41295742091) -> True
+    [3][CALL] from=0x1694d7, to=TransparentUpgradeableProxy, withdraw(amount(uint256): 41295742091) -> None
+      [4][DELEGATECALL] from=TransparentUpgradeableProxy, to=LaunchpadLockableStaking, withdraw(amount(uint256): 41295742091) -> None
+        [5][CALL] from=TransparentUpgradeableProxy, to=TrustPad, transfer(recipient(address): 0x1694d7, amount(uint256): 41295742091) -> True
+    [3][CALL] from=0x1694d7, to=TransparentUpgradeableProxy, receiveUpPool(account(address): 0x1694d7, amount(uint256): 1) -> None
+      [4][DELEGATECALL] from=TransparentUpgradeableProxy, to=LaunchpadLockableStaking, receiveUpPool(account(address): 0x1694d7, amount(uint256): 1) -> None
+        [5][STATICCALL] from=TransparentUpgradeableProxy, to=0x1694d7, isLockedaddress() -> 0x000000
+          [6][DELEGATECALL] from=0x1694d7, to=0x96f69b, isLockedaddress() -> 0x000000
+        [5][STATICCALL] from=TransparentUpgradeableProxy, to=0x1694d7, 0x47334aca() -> 0x000000
+          [6][DELEGATECALL] from=0x1694d7, to=0x96f69b, 0x47334aca() -> 0x000000
+            [7][STATICCALL] from=0x1694d7, to=TransparentUpgradeableProxy, lockPeriod() -> 94608000
+              [8][DELEGATECALL] from=TransparentUpgradeableProxy, to=LaunchpadLockableStaking, lockPeriod() -> 94608000
+        [5][CALL] from=TransparentUpgradeableProxy, to=TrustPad, transferFrom(sender(address): 0x1694d7, recipient(address): 0xE613c0, amount(uint256): 1) -> True
+    [3][CALL] from=0x1694d7, to=TransparentUpgradeableProxy, stakePendingRewards() -> None
+      [4][DELEGATECALL] from=TransparentUpgradeableProxy, to=LaunchpadLockableStaking, stakePendingRewards() -> None
+    [3][STATICCALL] from=0x1694d7, to=TrustPad, balanceOf(account(address): 0x1694d7) -> 41295742090

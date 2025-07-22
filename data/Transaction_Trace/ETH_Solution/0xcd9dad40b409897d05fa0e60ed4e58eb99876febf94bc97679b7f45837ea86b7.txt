@@ -1,0 +1,35 @@
+[1][CALL] from=0xbf2d5d, to=0x9799b4, executeaddress() -> None
+  [2][DELEGATECALL] from=0x9799b4, to=0xa7dab0, executeaddress() -> 0x000000
+    [3][DELEGATECALL] from=0x9799b4, to=0xa18ed5, 0x913149ae() -> 0x000000
+      [4][STATICCALL] from=0x9799b4, to=WETH9, balanceOf((address): 0x9799b4) -> 135967908326406408611
+      [4][STATICCALL] from=0x9799b4, to=Dai, balanceOf((address): 0x9799b4) -> 17454703382126102891593
+      [4][CALL] from=0x9799b4, to=0x5bb456, 0x80d6c5a1() -> None
+        [5][CALL] from=0x5bb456, to=Dai, transfer(dst(address): 0x606e97, wad(uint256): 1) -> True
+        [5][CALL] from=0x5bb456, to=SaverExchange, swapTokenToToken(_src(address): 0x6B1754, _dest(address): 0x6B1754, _amount(uint256): 0, _minPrice(uint256): 0, _exchangeType(uint256): 4, _exchangeAddress(address): 0x6B1754, _callData(bytes): b'#\xb8r\xdd\x00\x00\x00\x00\x00\x00\x00\x..., _0xPrice(uint256): 0) -> None
+          [6][CALL] from=SaverExchange, to=Dai, transferFrom(src(address): 0x5BB456, dst(address): 0x606e97, wad(uint256): 0) -> True
+          [6][STATICCALL] from=SaverExchange, to=Discount, isCustomFeeSet(_user(address): 0x5BB456) -> False
+          [6][CALL] from=SaverExchange, to=Dai, transfer(dst(address): 0x322d58, wad(uint256): 0) -> True
+          [6][CALL] from=SaverExchange, to=Dai, approve(usr(address): 0x95E6F4, wad(uint256): 0) -> True
+          [6][CALL] from=SaverExchange, to=Dai, transferFrom(src(address): 0xc001Cd, dst(address): 0x5BB456, wad(uint256): 310000000000000000000000) -> True
+          [6][STATICCALL] from=SaverExchange, to=Dai, balanceOf((address): 0x606e97) -> 1
+          [6][STATICCALL] from=SaverExchange, to=Dai, balanceOf((address): 0x606e97) -> 1
+          [6][STATICCALL] from=SaverExchange, to=Dai, balanceOf((address): 0x606e97) -> 1
+          [6][STATICCALL] from=SaverExchange, to=Dai, balanceOf((address): 0x606e97) -> 1
+          [6][CALL] from=SaverExchange, to=Dai, transfer(dst(address): 0x5BB456, wad(uint256): 1) -> True
+          [6][STATICCALL] from=SaverExchange, to=Dai, balanceOf((address): 0x606e97) -> 0
+        [5][STATICCALL] from=0x5bb456, to=WETH9, balanceOf((address): 0x5BB456) -> 1
+        [5][STATICCALL] from=0x5bb456, to=Dai, balanceOf((address): 0x5BB456) -> 310000000000000000000001
+        [5][CALL] from=0x5bb456, to=Dai, transfer(dst(address): 0x9799b4, wad(uint256): 310000000000000000000000) -> True
+      [4][STATICCALL] from=0x9799b4, to=WETH9, balanceOf((address): 0x9799b4) -> 135967908326406408611
+      [4][STATICCALL] from=0x9799b4, to=Dai, balanceOf((address): 0x9799b4) -> 327454703382126102891593
+    [3][CALL] from=0x9799b4, to=ChiToken, freeUpTo(value(uint256): 5) -> 5
+      [4][CALL][0.0] from=ChiToken, to=0xf00fed
+        [5][SELFDESTRUCT][0.0] from=0xf00fed, to=ChiToken
+      [4][CALL][0.0] from=ChiToken, to=0xc7afe1
+        [5][SELFDESTRUCT][0.0] from=0xc7afe1, to=ChiToken
+      [4][CALL][0.0] from=ChiToken, to=0x56a837
+        [5][SELFDESTRUCT][0.0] from=0x56a837, to=ChiToken
+      [4][CALL][0.0] from=ChiToken, to=0xe7fad4
+        [5][SELFDESTRUCT][0.0] from=0xe7fad4, to=ChiToken
+      [4][CALL][0.0] from=ChiToken, to=0x9a6428
+        [5][SELFDESTRUCT][0.0] from=0x9a6428, to=ChiToken
