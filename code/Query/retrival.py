@@ -22,20 +22,16 @@ import threading
 
   
 client_deepseek = OpenAI(
-    api_key="sk-khgdwiqxhphealrqnzfwxipryanuaaxmaqewxbqoavoaymna", 
-    base_url="https://api.siliconflow.cn/v1"
+    api_key="", 
+    base_url=""
 )
 client_elastic = Elasticsearch(
     "http://localhost:9200",
-    basic_auth=("elastic", "BaiHwMji")
+    basic_auth=("elastic", "")
 )
 
 
-
-
-
-
-connections.connect("default", host="222.20.126.131", port="19530")
+connections.connect("default", host="", port="19530")
 
 
 def Contract_Name(contract_address,chain):
